@@ -1,0 +1,57 @@
+{
+  "slug": "present-simple",
+  "title": "Present Simple Tense",
+  "description": "Learn when and how to use the present simple tense",
+  "category": "grammar",
+  "level": "A1",
+  "xp_reward": 25,
+  "estimated_minutes": 10,
+  "exercises": [
+    {
+      "id": "ps-001",
+      "type": "multiple_choice",
+      "question": "She ___ to school every day.",
+      "options": ["go", "goes", "going", "gone"],
+      "correct": 1,
+      "explanation": "We use 'goes' for he/she/it in present simple. Add -es to verbs ending in -o.",
+      "hint_pt_br": "Para he/she/it, adicionamos -s ou -es ao verbo."
+    },
+    {
+      "id": "ps-002",
+      "type": "fill_blank",
+      "question": "They ___ (not/like) coffee.",
+      "correct": "don't like",
+      "explanation": "Use 'don't' + base verb for negatives with I/you/we/they.",
+      "hint_pt_br": "Use 'don't' + verbo na forma base para frases negativas com I/you/we/they."
+    },
+    {
+      "id": "ps-003",
+      "type": "multiple_choice",
+      "question": "___ he play football on weekends?",
+      "options": ["Do", "Does", "Is", "Are"],
+      "correct": 1,
+      "explanation": "Use 'Does' for questions with he/she/it in present simple.",
+      "hint_pt_br": "Para perguntas com he/she/it, usamos 'Does' no início."
+    },
+    {
+      "id": "ps-004",
+      "type": "matching",
+      "pairs": [
+        ["I wake up early", "Eu acordo cedo"],
+        ["She eats breakfast", "Ela toma café da manhã"],
+        ["We go to work", "Nós vamos ao trabalho"],
+        ["They study English", "Eles estudam inglês"]
+      ],
+      "explanation": "These are common daily routine phrases using present simple.",
+      "hint_pt_br": "Essas são frases comuns sobre rotina diária."
+    },
+    {
+      "id": "ps-005",
+      "type": "fill_blank",
+      "question": "My mother ___ (work) at a hospital.",
+      "correct": "works",
+      "explanation": "For he/she/it, add -s to the base verb: work → works.",
+      "hint_pt_br": "Para he/she/it, adicione -s ao verbo: work → works."
+    }
+  ]
+}

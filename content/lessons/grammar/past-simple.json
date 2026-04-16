@@ -1,0 +1,57 @@
+{
+  "slug": "past-simple",
+  "title": "Past Simple Tense",
+  "description": "Learn regular and irregular verbs in the past simple",
+  "category": "grammar",
+  "level": "A1",
+  "xp_reward": 25,
+  "estimated_minutes": 10,
+  "exercises": [
+    {
+      "id": "pt-001",
+      "type": "multiple_choice",
+      "question": "I ___ to the supermarket yesterday.",
+      "options": ["go", "goed", "went", "going"],
+      "correct": 2,
+      "explanation": "'Go' is an irregular verb. Its past form is 'went'.",
+      "hint_pt_br": "'Go' é irregular. O passado é 'went'."
+    },
+    {
+      "id": "pt-002",
+      "type": "fill_blank",
+      "question": "She ___ (buy) a new dress last week.",
+      "correct": "bought",
+      "explanation": "'Buy' is irregular: buy → bought.",
+      "hint_pt_br": "'Buy' é irregular: buy → bought."
+    },
+    {
+      "id": "pt-003",
+      "type": "multiple_choice",
+      "question": "We ___ football in the park on Saturday.",
+      "options": ["play", "played", "playing", "plays"],
+      "correct": 1,
+      "explanation": "Regular verb: play → played (add -ed).",
+      "hint_pt_br": "Verbo regular: play → played (adicione -ed)."
+    },
+    {
+      "id": "pt-004",
+      "type": "matching",
+      "pairs": [
+        ["I ate pizza", "Eu comi pizza"],
+        ["She went home", "Ela foi para casa"],
+        ["They watched a movie", "Eles assistiram um filme"],
+        ["He bought shoes", "Ele comprou sapatos"]
+      ],
+      "explanation": "'ate', 'went', 'bought' are irregular. 'watched' is regular.",
+      "hint_pt_br": "'ate', 'went', 'bought' são irregulares. 'watched' é regular."
+    },
+    {
+      "id": "pt-005",
+      "type": "fill_blank",
+      "question": "They ___ (not/go) to the party last night.",
+      "correct": "didn't go",
+      "explanation": "Negatives in past simple: 'didn't' + base verb.",
+      "hint_pt_br": "Negativo no passado: 'didn't' + verbo base."
+    }
+  ]
+}
