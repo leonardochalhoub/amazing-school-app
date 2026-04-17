@@ -18,6 +18,12 @@ import type { ManagementRow } from "@/lib/actions/payments";
 interface Props {
   months: string[]; // newest first
   rows: ManagementRow[];
+  /**
+   * Pie chart grouping axis. Owner view wants "teacher" (revenue share
+   * across teachers); teacher finance view wants "student" (share across
+   * their own students).
+   */
+  groupBy?: "teacher" | "student";
 }
 
 const BRL = (cents: number) =>
@@ -43,7 +49,11 @@ function monthShort(iso: string): string {
   return d.toLocaleDateString("en-US", { month: "short", year: "2-digit" });
 }
 
-export function RevenueAnalytics({ months, rows }: Props) {
+export function RevenueAnalytics({
+  months,
+  rows,
+  groupBy = "teacher",
+}: Props) {
   // Oldest → newest, 24 buckets.
   const ordered = useMemo(() => [...months].slice(0, 24).reverse(), [months]);
 
@@ -67,25 +77,23 @@ export function RevenueAnalytics({ months, rows }: Props) {
     });
   }, [rows, ordered]);
 
-  // Pie: revenue share per teacher (past 24 months, paid only).
+  // Pie: revenue share (past 24 months, paid only) grouped by the selected axis.
   const pieData = useMemo(() => {
-    const byTeacher = new Map<string, number>();
+    const bucket = new Map<string, number>();
     for (const r of rows) {
+      const key = groupBy === "student" ? r.student_name : r.teacher_name;
       for (const m of ordered) {
         const p = r.payments[m];
         if (p?.paid) {
           const amt = p.amount_cents ?? r.monthly_tuition_cents ?? 0;
-          byTeacher.set(
-            r.teacher_name,
-            (byTeacher.get(r.teacher_name) ?? 0) + amt
-          );
+          bucket.set(key, (bucket.get(key) ?? 0) + amt);
         }
       }
     }
-    return [...byTeacher.entries()]
+    return [...bucket.entries()]
       .map(([name, cents]) => ({ name, value: cents / 100 }))
       .sort((a, b) => b.value - a.value);
-  }, [rows, ordered]);
+  }, [rows, ordered, groupBy]);
 
   return (
     <div className="grid gap-4 lg:grid-cols-3">
@@ -132,7 +140,9 @@ export function RevenueAnalytics({ months, rows }: Props) {
 
       <div className="rounded-xl border bg-card p-4">
         <h3 className="mb-3 text-sm font-semibold">
-          Revenue share by teacher
+          {groupBy === "student"
+            ? "Revenue share by student"
+            : "Revenue share by teacher"}
         </h3>
         <div className="h-64">
           {pieData.length === 0 ? (

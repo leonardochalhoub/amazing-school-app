@@ -84,6 +84,7 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
       label: locale === "pt-BR" ? "Banco" : "Bank",
     },
     { href: "/teacher/chat", label: labels.aiTutor },
+    { href: "/teacher/finance", label: locale === "pt-BR" ? "Financeiro" : "Finance" },
     { href: "/teacher/admin", label: "Admin" },
   ];
   if (isOwner) {

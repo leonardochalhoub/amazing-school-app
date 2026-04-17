@@ -2,8 +2,39 @@
 
 import { z } from "zod";
 import { revalidatePath } from "next/cache";
+import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isOwner } from "@/lib/auth/roles";
+
+/**
+ * Authorizes the caller as either the platform owner (full access) or the
+ * specific teacher who owns the given roster student. Returns the user id on
+ * success, or an error string.
+ */
+async function authorizeForStudent(
+  rosterStudentId: string
+): Promise<{ userId: string; isOwner: boolean } | { error: string }> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Not signed in" };
+
+  const owner = await isOwner();
+  if (owner) return { userId: user.id, isOwner: true };
+
+  const admin = createAdminClient();
+  const { data: roster } = await admin
+    .from("roster_students")
+    .select("teacher_id")
+    .eq("id", rosterStudentId)
+    .maybeSingle();
+  if (!roster) return { error: "Student not found" };
+  if ((roster as { teacher_id: string }).teacher_id !== user.id) {
+    return { error: "You don't own this student" };
+  }
+  return { userId: user.id, isOwner: false };
+}
 
 export interface StudentPaymentRow {
   id: string;
@@ -209,8 +240,8 @@ export async function togglePaymentPaid(input: z.input<typeof TogglePaidSchema>)
   if (!parsed.success)
     return { error: parsed.error.issues[0]?.message ?? "Invalid input" };
 
-  const owner = await isOwner();
-  if (!owner) return { error: "Owner access only" };
+  const auth = await authorizeForStudent(parsed.data.rosterStudentId);
+  if ("error" in auth) return { error: auth.error };
 
   const admin = createAdminClient();
   const { data: roster, error: rErr } = await admin
@@ -235,6 +266,7 @@ export async function togglePaymentPaid(input: z.input<typeof TogglePaidSchema>)
   if (error) return { error: error.message };
 
   revalidatePath("/owner/management");
+  revalidatePath("/teacher/finance");
   return { success: true as const };
 }
 
@@ -258,8 +290,8 @@ export async function setStudentTuition(input: z.input<typeof SetTuitionSchema>)
   if (!parsed.success)
     return { error: parsed.error.issues[0]?.message ?? "Invalid input" };
 
-  const owner = await isOwner();
-  if (!owner) return { error: "Owner access only" };
+  const auth = await authorizeForStudent(parsed.data.rosterStudentId);
+  if ("error" in auth) return { error: auth.error };
 
   const admin = createAdminClient();
   const { data: current } = await admin
@@ -286,5 +318,6 @@ export async function setStudentTuition(input: z.input<typeof SetTuitionSchema>)
   if (error) return { error: error.message };
 
   revalidatePath("/owner/management");
+  revalidatePath("/teacher/finance");
   return { success: true as const };
 }

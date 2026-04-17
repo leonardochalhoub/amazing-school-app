@@ -1,0 +1,166 @@
+"use server";
+
+import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
+import type { ManagementData, ManagementRow, StudentPaymentRow } from "./payments";
+
+function firstOfMonth(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  return `${y}-${m}-01`;
+}
+
+function addMonthsDate(d: Date, delta: number): Date {
+  return new Date(d.getFullYear(), d.getMonth() + delta, 1);
+}
+
+/**
+ * Same shape as the owner's getManagementMatrix but scoped to the signed-in
+ * teacher's own roster. Auto-generates missing payment rows the same way.
+ */
+export async function getTeacherManagementMatrix(opts?: {
+  months?: number;
+}): Promise<ManagementData | { error: string }> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Not signed in" };
+
+  const admin = createAdminClient();
+  const { data: profile } = await admin
+    .from("profiles")
+    .select("role")
+    .eq("id", user.id)
+    .maybeSingle();
+  if ((profile as { role?: string } | null)?.role !== "teacher") {
+    return { error: "Teacher access only" };
+  }
+
+  const now = new Date();
+  const count = opts?.months ?? 24;
+  const months = Array.from({ length: count }, (_, i) =>
+    firstOfMonth(addMonthsDate(now, -i))
+  );
+
+  // Auto-gen missing rows for THIS teacher's students.
+  const { data: active } = await admin
+    .from("roster_students")
+    .select("id, teacher_id, monthly_tuition_cents, billing_starts_on, created_at")
+    .eq("teacher_id", user.id)
+    .not("monthly_tuition_cents", "is", null);
+  const activeRows = (active ?? []) as Array<{
+    id: string;
+    teacher_id: string;
+    monthly_tuition_cents: number;
+    billing_starts_on: string | null;
+    created_at: string;
+  }>;
+
+  if (activeRows.length > 0) {
+    const earliest = months[months.length - 1];
+    const latest = months[0];
+    const { data: existing } = await admin
+      .from("student_payments")
+      .select("roster_student_id, billing_month")
+      .in(
+        "roster_student_id",
+        activeRows.map((r) => r.id)
+      )
+      .gte("billing_month", earliest)
+      .lte("billing_month", latest);
+    const have = new Set<string>();
+    for (const e of (existing ?? []) as Array<{
+      roster_student_id: string;
+      billing_month: string;
+    }>) {
+      have.add(`${e.roster_student_id}|${e.billing_month.slice(0, 10)}`);
+    }
+    const rowsToInsert: Array<Record<string, unknown>> = [];
+    for (const r of activeRows) {
+      const startIso =
+        r.billing_starts_on ?? firstOfMonth(new Date(r.created_at));
+      for (const m of months) {
+        if (m < startIso.slice(0, 10)) continue;
+        if (have.has(`${r.id}|${m}`)) continue;
+        rowsToInsert.push({
+          roster_student_id: r.id,
+          teacher_id: r.teacher_id,
+          billing_month: m,
+          amount_cents: r.monthly_tuition_cents,
+          paid: false,
+        });
+      }
+    }
+    if (rowsToInsert.length > 0) {
+      await admin.from("student_payments").insert(rowsToInsert);
+    }
+  }
+
+  const { data: rosterRaw, error } = await admin
+    .from("roster_students")
+    .select(
+      "id, full_name, teacher_id, auth_user_id, classroom_id, monthly_tuition_cents, billing_day, billing_starts_on, classrooms(name)"
+    )
+    .eq("teacher_id", user.id)
+    .order("full_name", { ascending: true });
+  if (error) return { error: error.message };
+
+  const roster = (rosterRaw ?? []) as Array<{
+    id: string;
+    full_name: string;
+    teacher_id: string;
+    auth_user_id: string | null;
+    classroom_id: string | null;
+    monthly_tuition_cents: number | null;
+    billing_day: number | null;
+    billing_starts_on: string | null;
+    classrooms: { name: string } | { name: string }[] | null;
+  }>;
+
+  const { data: teacherProfile } = await admin
+    .from("profiles")
+    .select("full_name")
+    .eq("id", user.id)
+    .maybeSingle();
+  const teacherName =
+    (teacherProfile as { full_name?: string } | null)?.full_name ?? "—";
+
+  const rosterIds = roster.map((r) => r.id);
+  let paymentRows: StudentPaymentRow[] = [];
+  if (rosterIds.length > 0) {
+    const { data: pays } = await admin
+      .from("student_payments")
+      .select("*")
+      .in("roster_student_id", rosterIds)
+      .gte("billing_month", months[months.length - 1])
+      .lte("billing_month", months[0]);
+    paymentRows = (pays ?? []) as StudentPaymentRow[];
+  }
+  const paymentIndex = new Map<string, StudentPaymentRow>();
+  for (const p of paymentRows) {
+    paymentIndex.set(`${p.roster_student_id}|${p.billing_month.slice(0, 10)}`, p);
+  }
+
+  const rows: ManagementRow[] = roster.map((r) => {
+    const classroom = Array.isArray(r.classrooms) ? r.classrooms[0] : r.classrooms;
+    const payments: Record<string, StudentPaymentRow | null> = {};
+    for (const m of months) {
+      payments[m] = paymentIndex.get(`${r.id}|${m}`) ?? null;
+    }
+    return {
+      roster_student_id: r.id,
+      student_name: r.full_name,
+      teacher_id: r.teacher_id,
+      teacher_name: teacherName,
+      classroom_name: classroom?.name ?? null,
+      has_auth: !!r.auth_user_id,
+      monthly_tuition_cents: r.monthly_tuition_cents,
+      billing_day: r.billing_day,
+      billing_starts_on: r.billing_starts_on,
+      payments,
+    };
+  });
+
+  return { months, rows };
+}
