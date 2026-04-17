@@ -20,6 +20,7 @@ import {
   type AssignedLessonMeta,
 } from "@/components/teacher/assigned-lessons-list";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
+import { StudentInviteButton } from "@/components/teacher/student-invite-button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default async function RosterStudentDetailPage({
@@ -109,16 +110,24 @@ export default async function RosterStudentDetailPage({
         Back to dashboard
       </Link>
 
-      <header className="flex flex-col gap-1">
-        <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-          Student
-        </p>
-        <h1 className="text-3xl font-semibold tracking-tight">
-          {student.full_name}
-        </h1>
-        {student.email ? (
-          <p className="text-sm text-muted-foreground">{student.email}</p>
-        ) : null}
+      <header className="flex flex-wrap items-start justify-between gap-3">
+        <div className="flex flex-col gap-1">
+          <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            Student
+          </p>
+          <h1 className="text-3xl font-semibold tracking-tight">
+            {student.full_name}
+          </h1>
+          {student.email ? (
+            <p className="text-sm text-muted-foreground">{student.email}</p>
+          ) : null}
+        </div>
+        <StudentInviteButton
+          rosterStudentId={id}
+          classroomId={student.classroom_id}
+          prefillEmail={student.email}
+          prefillName={student.full_name}
+        />
       </header>
 
       <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
