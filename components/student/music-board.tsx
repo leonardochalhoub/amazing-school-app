@@ -30,6 +30,7 @@ import {
   type MusicSong,
   type SingAlongPrompt,
 } from "@/lib/content/music";
+import { useVocabTranslations } from "@/lib/use-vocab-translations";
 import { submitExerciseResponse } from "@/lib/actions/exercise-responses";
 import type {
   ExerciseAnswer,
@@ -325,6 +326,12 @@ function SingAlongCard({
   onSeek: (seconds: number) => void;
 }) {
   const { locale } = useI18n();
+  // Fetch DeepL translations for any vocab whose author-supplied pt is empty.
+  const termsNeedingTranslation = vocabHint
+    .filter((v) => !v.pt || v.pt.length === 0)
+    .map((v) => v.term);
+  const translations = useVocabTranslations(termsNeedingTranslation);
+  const usingDeepL = termsNeedingTranslation.length > 0;
   return (
     <div className="rounded-xl border border-border bg-card p-5 shadow-xs">
       <p className="text-[11px] font-semibold uppercase tracking-wider text-primary">
@@ -358,23 +365,55 @@ function SingAlongCard({
         ))}
       </div>
       {vocabHint.length > 0 ? (
-        <div className="mt-3 flex flex-wrap gap-1.5 text-[10px]">
-          {vocabHint.map((v) => (
+        <>
+          <div className="mt-3 flex flex-wrap gap-1.5 text-[10px]">
+            {vocabHint.map((v) => {
+              const pt = v.pt && v.pt.length > 0 ? v.pt : translations[v.term];
+              return (
+                <a
+                  key={v.term}
+                  href={cambridgeUrl(v.term)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-full border border-primary/30 px-2 py-0.5 transition-colors hover:bg-primary/10"
+                  title={`${v.note} · Cambridge Dictionary`}
+                >
+                  <strong className="font-medium underline decoration-dotted underline-offset-2">
+                    {v.term}
+                  </strong>
+                  {pt ? (
+                    <span className="ml-1 text-muted-foreground">· {pt}</span>
+                  ) : null}
+                </a>
+              );
+            })}
+          </div>
+          <p className="mt-2 text-[9px] text-muted-foreground/70">
+            {locale === "pt-BR" ? "Definições: " : "Definitions: "}
             <a
-              key={v.term}
-              href={cambridgeUrl(v.term)}
+              href="https://dictionary.cambridge.org/dictionary/english-portuguese/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-full border border-primary/30 px-2 py-0.5 transition-colors hover:bg-primary/10"
-              title={`${v.note} · Cambridge Dictionary`}
+              className="underline decoration-dotted"
             >
-              <strong className="font-medium underline decoration-dotted underline-offset-2">
-                {v.term}
-              </strong>
-              <span className="ml-1 text-muted-foreground">· {v.pt}</span>
+              Cambridge Dictionary
             </a>
-          ))}
-        </div>
+            {usingDeepL ? (
+              <>
+                {" · "}
+                {locale === "pt-BR" ? "Tradução: " : "Translation: "}
+                <a
+                  href="https://www.deepl.com/translator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-dotted"
+                >
+                  DeepL
+                </a>
+              </>
+            ) : null}
+          </p>
+        </>
       ) : null}
     </div>
   );
