@@ -19,15 +19,15 @@ import {
 import Link from "next/link";
 
 export default function SignUpPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [role, setRole] = useState<"teacher" | "student">("student");
 
   async function handleSubmit(formData: FormData) {
     setLoading(true);
     setError(null);
-    formData.set("role", role);
+    // Public signup is teacher-only. Students join through an invitation link.
+    formData.set("role", "teacher");
     const result = await signUp(formData);
     if (result?.error) {
       setError(result.error);
@@ -44,8 +44,16 @@ export default function SignUpPage() {
       <Card>
         <CardHeader className="text-center">
           <div className="text-3xl mb-2">🎓</div>
-          <CardTitle className="text-2xl font-bold">{t.auth.signup}</CardTitle>
-          <CardDescription>{t.auth.signupDesc}</CardDescription>
+          <CardTitle className="text-2xl font-bold">
+            {locale === "pt-BR"
+              ? "Cadastro de professor"
+              : "Teacher sign up"}
+          </CardTitle>
+          <CardDescription>
+            {locale === "pt-BR"
+              ? "O cadastro é apenas para professores. Alunos entram pelo link de convite enviado pelo professor."
+              : "Sign-up is for teachers only. Students join through the invitation link their teacher sends them."}
+          </CardDescription>
         </CardHeader>
         <form action={handleSubmit}>
           <CardContent className="space-y-4">
@@ -83,27 +91,6 @@ export default function SignUpPage() {
                 minLength={6}
                 required
               />
-            </div>
-            <div className="space-y-2">
-              <Label>{t.auth.iAmA}</Label>
-              <div className="grid grid-cols-2 gap-3">
-                <Button
-                  type="button"
-                  variant={role === "teacher" ? "default" : "outline"}
-                  onClick={() => setRole("teacher")}
-                  className="w-full"
-                >
-                  {t.auth.teacher}
-                </Button>
-                <Button
-                  type="button"
-                  variant={role === "student" ? "default" : "outline"}
-                  onClick={() => setRole("student")}
-                  className="w-full"
-                >
-                  {t.auth.student}
-                </Button>
-              </div>
             </div>
           </CardContent>
           <CardFooter className="flex flex-col gap-4">

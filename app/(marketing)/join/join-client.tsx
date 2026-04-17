@@ -54,6 +54,7 @@ export function JoinClient({
       fd.append("password", password);
       fd.append("fullName", fullName.trim() || email.split("@")[0]);
       fd.append("role", "student");
+      fd.append("inviteToken", token);
       const res = await signUp(fd);
       if (res?.error) {
         toast.error(res.error);
