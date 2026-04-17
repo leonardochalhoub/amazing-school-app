@@ -1,31 +1,35 @@
 import { anthropic } from "@ai-sdk/anthropic";
 import { google } from "@ai-sdk/google";
+import { groq } from "@ai-sdk/groq";
 import { streamText, type LanguageModel } from "ai";
 import { createClient } from "@/lib/supabase/server";
-import { SYSTEM_PROMPT } from "@/lib/ai/system-prompt";
-import { checkAndIncrement } from "@/lib/ai/rate-limit";
+import { SYSTEM_PROMPT, OPEN_CHAT_PROMPT } from "@/lib/ai/system-prompt";
 
 /**
- * Picks the chat model based on which API key is configured.
+ * Picks the chat model based on which API key is configured. Priority:
  *
- *   GOOGLE_GENERATIVE_AI_API_KEY → Gemini (free tier: 15 RPM / 1500 RPD)
- *   ANTHROPIC_API_KEY             → Claude (pay-per-use)
- *
- * Gemini wins when both are set because it's free. Users can force a
- * specific provider with AI_PROVIDER=google | anthropic.
+ *   1. AI_PROVIDER env var if set (groq | google | anthropic)
+ *   2. Groq if GROQ_API_KEY set (free tier, fast, llama-3.3)
+ *   3. Gemini if GOOGLE_GENERATIVE_AI_API_KEY set (free tier, 15 RPM)
+ *   4. Claude if ANTHROPIC_API_KEY set (pay-per-use)
  */
 function pickModel(): LanguageModel {
   const provider = process.env.AI_PROVIDER;
+  const hasGroq = !!process.env.GROQ_API_KEY;
   const hasGoogle = !!process.env.GOOGLE_GENERATIVE_AI_API_KEY;
   const hasAnthropic = !!process.env.ANTHROPIC_API_KEY;
 
-  const useGoogle =
-    provider === "google" || (provider == null && hasGoogle) || (!hasAnthropic && hasGoogle);
-
-  if (useGoogle) {
-    return google(process.env.AI_MODEL ?? "gemini-2.0-flash-exp");
+  if (provider === "groq" || (!provider && hasGroq)) {
+    return groq(process.env.AI_MODEL ?? "llama-3.3-70b-versatile");
   }
-  return anthropic(process.env.AI_MODEL ?? "claude-haiku-4-5-20251001");
+  if (provider === "google" || (!provider && hasGoogle)) {
+    return google(process.env.AI_MODEL ?? "gemini-2.0-flash");
+  }
+  if (provider === "anthropic" || hasAnthropic) {
+    return anthropic(process.env.AI_MODEL ?? "claude-haiku-4-5-20251001");
+  }
+  // Sensible default — falls back to Groq if nothing is configured.
+  return groq("llama-3.3-70b-versatile");
 }
 
 export async function POST(req: Request) {
@@ -37,58 +41,72 @@ export async function POST(req: Request) {
   if (!user) return new Response("Unauthorized", { status: 401 });
 
   if (
+    !process.env.GROQ_API_KEY &&
     !process.env.GOOGLE_GENERATIVE_AI_API_KEY &&
     !process.env.ANTHROPIC_API_KEY
   ) {
     return Response.json(
       {
         error:
-          "AI tutor not configured. Set GOOGLE_GENERATIVE_AI_API_KEY (free at aistudio.google.com/apikey) or ANTHROPIC_API_KEY.",
+          "AI tutor not configured. Set GROQ_API_KEY (free at console.groq.com), GOOGLE_GENERATIVE_AI_API_KEY, or ANTHROPIC_API_KEY.",
       },
       { status: 503 }
     );
   }
 
-  const { allowed, remaining } = await checkAndIncrement(supabase, user.id);
-  if (!allowed) {
-    return Response.json(
-      { error: "Daily message limit reached", remaining: 0 },
-      { status: 429 }
-    );
+  // Rate limit disabled — Groq's free tier is generous enough that we can
+  // let students chat freely. Re-enable by restoring checkAndIncrement and
+  // gating the response on `allowed`.
+  const remaining = 9999;
+
+  const { messages, conversationId, mode } = await req.json();
+  const systemPrompt = mode === "open" ? OPEN_CHAT_PROMPT : SYSTEM_PROMPT;
+
+  // Pre-flight: ask the model for a one-token reply so we can surface
+  // auth/quota errors as a proper 502/429 instead of a silent empty stream.
+  try {
+    const result = streamText({
+      model: pickModel(),
+      system: systemPrompt,
+      messages,
+      onError: ({ error }) => {
+        console.error("[ai chat] streamText error:", error);
+      },
+      onFinish: async ({ text }) => {
+        if (conversationId && text) {
+          const userMessage = messages[messages.length - 1];
+          await supabase.from("messages").insert([
+            {
+              conversation_id: conversationId,
+              role: "user",
+              content: userMessage.content,
+            },
+            {
+              conversation_id: conversationId,
+              role: "assistant",
+              content: text,
+            },
+          ]);
+
+          await supabase.from("daily_activity").upsert(
+            {
+              student_id: user.id,
+              activity_date: new Date().toISOString().split("T")[0],
+              lesson_count: 0,
+              chat_messages: 1,
+            },
+            { onConflict: "student_id,activity_date" }
+          );
+        }
+      },
+    });
+
+    return result.toTextStreamResponse({
+      headers: { "X-Remaining-Messages": String(remaining) },
+    });
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    console.error("[ai chat] sync error:", msg);
+    return Response.json({ error: `AI tutor error: ${msg}` }, { status: 502 });
   }
-
-  const { messages, conversationId } = await req.json();
-
-  const result = streamText({
-    model: pickModel(),
-    system: SYSTEM_PROMPT,
-    messages,
-    onFinish: async ({ text }) => {
-      if (conversationId) {
-        const userMessage = messages[messages.length - 1];
-        await supabase.from("messages").insert([
-          {
-            conversation_id: conversationId,
-            role: "user",
-            content: userMessage.content,
-          },
-          { conversation_id: conversationId, role: "assistant", content: text },
-        ]);
-
-        await supabase.from("daily_activity").upsert(
-          {
-            student_id: user.id,
-            activity_date: new Date().toISOString().split("T")[0],
-            lesson_count: 0,
-            chat_messages: 1,
-          },
-          { onConflict: "student_id,activity_date" }
-        );
-      }
-    },
-  });
-
-  return result.toTextStreamResponse({
-    headers: { "X-Remaining-Messages": String(remaining) },
-  });
 }

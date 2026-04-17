@@ -90,7 +90,15 @@ export function MusicBoard({
 }: Props) {
   const { locale } = useI18n();
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const hostname = new URL(song.full_lyrics_url).hostname;
+  const hostname = song.full_lyrics_url
+    ? (() => {
+        try {
+          return new URL(song.full_lyrics_url).hostname;
+        } catch {
+          return "";
+        }
+      })()
+    : "";
   const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(
     `${song.artist} ${song.title} official`
   )}`;

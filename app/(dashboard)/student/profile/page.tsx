@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { getAvatarSignedUrl } from "@/lib/supabase/signed-urls";
+import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
 import { AvatarUploader } from "@/components/shared/avatar-uploader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { redirect } from "next/navigation";
@@ -19,9 +19,7 @@ export default async function StudentProfilePage() {
 
   if (!profile) redirect("/login");
 
-  const signedUrl = profile.avatar_url
-    ? await getAvatarSignedUrl(supabase, user.id)
-    : null;
+  const signedUrl = await resolveMyAvatarUrl(supabase, user.id);
 
   return (
     <div className="space-y-6 max-w-2xl">

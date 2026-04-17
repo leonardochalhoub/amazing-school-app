@@ -1,5 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
-import { peekRemaining } from "@/lib/ai/rate-limit";
+import { getAiProviderInfo } from "@/lib/ai/provider-info";
 import { ChatInterface } from "@/components/chat/chat-interface";
 
 export default async function ChatPage() {
@@ -10,7 +10,7 @@ export default async function ChatPage() {
 
   if (!user) return null;
 
-  const remaining = await peekRemaining(supabase, user.id);
+  const remaining = 9999;
 
   // Get or create a conversation
   let { data: conversation } = await supabase
@@ -43,12 +43,20 @@ export default async function ChatPage() {
     }
   }
 
+  const ai = getAiProviderInfo();
+
   return (
     <div className="space-y-4">
-      <h1 className="text-2xl font-bold">AI English Tutor</h1>
+      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        <h1 className="text-2xl font-bold">AI English Tutor</h1>
+        <span className="text-xs font-medium text-muted-foreground">
+          · {ai.label}
+        </span>
+      </div>
       <ChatInterface
         conversationId={conversation?.id ?? ""}
         remainingMessages={remaining}
+        aiLabel={ai.label}
       />
     </div>
   );

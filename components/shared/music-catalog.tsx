@@ -24,17 +24,24 @@ function normalize(s: string): string {
     .replace(/[\u0300-\u036f]/g, "");
 }
 
+const CEFR_GROUPS = ["a1", "a2", "b1", "b2", "c1"] as const;
+type CefrGroup = (typeof CEFR_GROUPS)[number] | "all";
+
 export function MusicCatalog({ songs, variant = "student" }: Props) {
   const [query, setQuery] = useState("");
+  const [levelFilter, setLevelFilter] = useState<CefrGroup>("all");
 
   const filtered = useMemo(() => {
     const q = normalize(query.trim());
-    if (!q) return songs;
     return songs.filter((s) => {
-      const hay = normalize(`${s.title} ${s.artist}`);
+      if (levelFilter !== "all" && !s.cefr_level.startsWith(levelFilter)) {
+        return false;
+      }
+      if (!q) return true;
+      const hay = normalize(`${s.title} ${s.artist} ${s.year}`);
       return hay.includes(q);
     });
-  }, [songs, query]);
+  }, [songs, query, levelFilter]);
 
   const sorted = useMemo(() => {
     return [...filtered].sort((a, b) => {
@@ -55,27 +62,70 @@ export function MusicCatalog({ songs, variant = "student" }: Props) {
     return m;
   }, [sorted]);
 
+  // Per-group counts for the filter chips so students see how many songs
+  // are available at each level at a glance.
+  const levelCounts = useMemo(() => {
+    const c: Record<string, number> = { all: songs.length };
+    for (const group of CEFR_GROUPS) c[group] = 0;
+    for (const s of songs) {
+      const g = s.cefr_level.slice(0, 2);
+      if (c[g] !== undefined) c[g] += 1;
+    }
+    return c;
+  }, [songs]);
+
+  const isFiltering = query.trim().length > 0 || levelFilter !== "all";
+
   return (
     <div className="space-y-6">
-      <div className="relative max-w-md">
-        <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
-        <Input
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Filter by song title or artist…"
-          className="h-9 pl-8"
-        />
-        {query && (
-          <p className="mt-1 text-xs text-muted-foreground">
-            {sorted.length} match{sorted.length === 1 ? "" : "es"}
-          </p>
-        )}
+      <div className="flex flex-wrap items-start gap-3">
+        <div className="relative max-w-md flex-1 min-w-[240px]">
+          <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
+          <Input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Filter by song title, artist, or year…"
+            className="h-9 pl-8"
+          />
+        </div>
+        <div className="inline-flex flex-wrap items-center gap-1 rounded-lg border bg-muted/40 p-0.5 text-xs">
+          {(["all", ...CEFR_GROUPS] as const).map((g) => {
+            const active = levelFilter === g;
+            const count = levelCounts[g] ?? 0;
+            if (count === 0 && g !== "all") return null;
+            return (
+              <button
+                key={g}
+                type="button"
+                onClick={() => setLevelFilter(g)}
+                className={`rounded-md px-2.5 py-1 font-medium transition-colors ${
+                  active
+                    ? "bg-background shadow-sm"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {g === "all" ? "All" : g.toUpperCase()}
+                <span className="ml-1 text-[10px] opacity-60 tabular-nums">
+                  {count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
       </div>
+
+      {isFiltering && (
+        <p className="-mt-4 text-xs text-muted-foreground">
+          {sorted.length} match{sorted.length === 1 ? "" : "es"}
+        </p>
+      )}
 
       {sorted.length === 0 ? (
         <p className="rounded-lg border border-dashed px-4 py-10 text-center text-sm text-muted-foreground">
-          No songs match &ldquo;{query}&rdquo;. Try a different title or artist.
+          {query
+            ? `No songs match "${query}"${levelFilter !== "all" ? ` at ${levelFilter.toUpperCase()}` : ""}.`
+            : `No songs at ${levelFilter.toUpperCase()} yet.`}
         </p>
       ) : (
         Array.from(byLevel.entries()).map(([level, levelSongs]) => (

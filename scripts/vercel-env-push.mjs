@@ -48,6 +48,11 @@ const KEYS = [
   "NEXT_PUBLIC_SUPABASE_ANON_KEY",
   "SUPABASE_SERVICE_ROLE_KEY",
   "ANTHROPIC_API_KEY",
+  "GOOGLE_GENERATIVE_AI_API_KEY",
+  "GROQ_API_KEY",
+  "AI_PROVIDER",
+  "AI_MODEL",
+  "AI_DAILY_MESSAGE_LIMIT",
 ];
 
 const baseUrl = `https://api.vercel.com/v10/projects/${projectId}/env?teamId=${orgId}&upsert=true`;

@@ -21,6 +21,12 @@ export async function uploadAvatar(formData: FormData) {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { error: "Unauthorized" };
 
+  console.log("[uploadAvatar] start", {
+    userId: user.id,
+    fileSize: file.size,
+    type: file.type,
+  });
+
   const buf = Buffer.from(await file.arrayBuffer());
   let webp: Buffer;
   try {
@@ -29,8 +35,11 @@ export async function uploadAvatar(formData: FormData) {
       .resize(512, 512, { fit: "cover" })
       .webp({ quality: 82 })
       .toBuffer();
-  } catch {
-    return { error: "Image processing failed" };
+  } catch (err) {
+    console.error("[uploadAvatar] sharp error:", err);
+    return {
+      error: `Image processing failed: ${err instanceof Error ? err.message : "unknown"}`,
+    };
   }
 
   const path = `${user.id}.webp`;
@@ -41,13 +50,27 @@ export async function uploadAvatar(formData: FormData) {
       upsert: true,
       cacheControl: "3600",
     });
-  if (upErr) return { error: upErr.message };
+  if (upErr) {
+    console.error("[uploadAvatar] storage upload error:", upErr);
+    return { error: `Storage: ${upErr.message}` };
+  }
 
-  const { error: profileErr } = await supabase
+  const { error: profileErr, data: updated } = await supabase
     .from("profiles")
     .update({ avatar_url: path })
-    .eq("id", user.id);
-  if (profileErr) return { error: profileErr.message };
+    .eq("id", user.id)
+    .select("id, avatar_url");
+  if (profileErr) {
+    console.error("[uploadAvatar] profiles update error:", profileErr);
+    return { error: `Profile update: ${profileErr.message}` };
+  }
+  console.log("[uploadAvatar] updated row(s):", updated);
+  if (!updated || updated.length === 0) {
+    return {
+      error:
+        "Profile row was not updated (likely RLS). Ask an admin to check profiles UPDATE policy.",
+    };
+  }
 
   revalidatePath("/student/profile");
   revalidatePath("/student");

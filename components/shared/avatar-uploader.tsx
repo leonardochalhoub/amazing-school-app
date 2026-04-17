@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,7 @@ interface AvatarUploaderProps {
 }
 
 export function AvatarUploader({ currentSignedUrl, fullName }: AvatarUploaderProps) {
+  const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
@@ -36,6 +38,7 @@ export function AvatarUploader({ currentSignedUrl, fullName }: AvatarUploaderPro
         setPreview(null);
       } else {
         toast.success("Avatar updated");
+        router.refresh();
       }
     });
   }
@@ -48,6 +51,7 @@ export function AvatarUploader({ currentSignedUrl, fullName }: AvatarUploaderPro
       } else {
         setPreview(null);
         toast.success("Avatar removed");
+        router.refresh();
       }
     });
   }

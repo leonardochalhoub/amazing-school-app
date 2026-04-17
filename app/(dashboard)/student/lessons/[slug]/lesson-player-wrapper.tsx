@@ -1,8 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 import { LessonPlayer } from "@/components/lessons/lesson-player";
 import { LevelUpModal } from "@/components/gamification/level-up-modal";
+import { markLessonComplete } from "@/lib/actions/lesson-completion";
 import type { Lesson } from "@/lib/content/loader";
 
 interface LessonPlayerWrapperProps {
@@ -10,20 +13,38 @@ interface LessonPlayerWrapperProps {
 }
 
 export function LessonPlayerWrapper({ lesson }: LessonPlayerWrapperProps) {
+  const router = useRouter();
   const [showLevelUp, setShowLevelUp] = useState(false);
   const [newLevel, setNewLevel] = useState(1);
+  const [, startTransition] = useTransition();
 
   function handleComplete(result: {
     score: number;
     total: number;
     perfect: boolean;
   }) {
-    // In a full implementation, this would call the submitAnswer action
-    // and check if the student leveled up
-    if (result.score === result.total) {
-      setNewLevel((prev) => prev + 1);
-      setShowLevelUp(true);
-    }
+    startTransition(async () => {
+      const r = await markLessonComplete({
+        lessonSlug: lesson.slug,
+        xpReward: lesson.xp_reward,
+      });
+      if ("error" in r && r.error) {
+        toast.error(r.error);
+        return;
+      }
+      if ("success" in r) {
+        if (r.alreadyCompleted) {
+          toast.info("Lesson already completed — no extra XP this time.");
+        } else {
+          toast.success(`Lesson complete! +${r.awardedXp} XP`, { icon: "🎉" });
+          if (result.score === result.total) {
+            setNewLevel((prev) => prev + 1);
+            setShowLevelUp(true);
+          }
+        }
+        router.refresh();
+      }
+    });
   }
 
   return (

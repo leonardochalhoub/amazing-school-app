@@ -16,17 +16,22 @@ interface Message {
 interface ChatInterfaceProps {
   conversationId: string;
   remainingMessages: number;
+  aiLabel?: string;
 }
+
+type ChatMode = "tutor" | "open";
 
 export function ChatInterface({
   conversationId,
   remainingMessages: initialRemaining,
+  aiLabel,
 }: ChatInterfaceProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [remaining, setRemaining] = useState(initialRemaining);
+  const [mode, setMode] = useState<ChatMode>("tutor");
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -58,6 +63,7 @@ export function ChatInterface({
             content: m.content,
           })),
           conversationId,
+          mode,
         }),
       });
 
@@ -109,6 +115,16 @@ export function ChatInterface({
           return updated;
         });
       }
+
+      if (assistantMessage.content.trim().length === 0) {
+        assistantMessage.content =
+          "⚠️ The AI tutor returned no text. This usually means the API key has no quota attached, or the configured model (AI_MODEL) isn't available for this key. Check the server logs for the exact error, or create a new free key at https://aistudio.google.com/apikey.";
+        setMessages((prev) => {
+          const updated = [...prev];
+          updated[updated.length - 1] = { ...assistantMessage };
+          return updated;
+        });
+      }
     } finally {
       setIsLoading(false);
     }
@@ -119,22 +135,68 @@ export function ChatInterface({
     sendMessage(input);
   }
 
-  const limitReached = remaining <= 0 && messages.length > 0;
+  const limitReached = false;
+  const showRemaining = remaining < 500;
 
   return (
     <div className="flex flex-col h-[calc(100vh-12rem)]">
+      <div className="flex items-center justify-between gap-2 border-b p-2">
+        <div className="inline-flex items-center rounded-lg border bg-muted/40 p-0.5 text-xs">
+          <button
+            type="button"
+            onClick={() => {
+              if (mode === "tutor") return;
+              setMode("tutor");
+              setMessages([]);
+              setInput("");
+            }}
+            className={`rounded-md px-3 py-1 font-medium transition-colors ${
+              mode === "tutor"
+                ? "bg-background shadow-sm"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            🎓 Tutor
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              if (mode === "open") return;
+              setMode("open");
+              setMessages([]);
+              setInput("");
+            }}
+            className={`rounded-md px-3 py-1 font-medium transition-colors ${
+              mode === "open"
+                ? "bg-background shadow-sm"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            💬 Open chat
+          </button>
+        </div>
+        {aiLabel ? (
+          <span className="truncate text-[11px] text-muted-foreground">
+            {aiLabel}
+          </span>
+        ) : null}
+      </div>
+
       <ScrollArea className="flex-1 p-4" ref={scrollRef}>
         <div className="space-y-4">
           {messages.length === 0 && (
             <div className="pt-8">
               <h3 className="text-lg font-semibold text-center mb-4">
-                🤖 AI English Tutor
+                {mode === "tutor" ? "🤖 AI English Tutor" : "💬 Open chat"}
               </h3>
               <p className="text-sm text-muted-foreground text-center mb-6">
-                Practice your English! I&apos;ll help you with grammar,
-                vocabulary, and conversation skills.
+                {mode === "tutor"
+                  ? "Practice your English! I'll help you with grammar, vocabulary, and conversation skills."
+                  : "Talk about anything — coding, science, life. I'll reply in English by default (ask in Portuguese if you prefer)."}
               </p>
-              <SuggestedTopics onSelect={(topic) => sendMessage(topic)} />
+              {mode === "tutor" ? (
+                <SuggestedTopics onSelect={(topic) => sendMessage(topic)} />
+              ) : null}
             </div>
           )}
 
@@ -184,9 +246,11 @@ export function ChatInterface({
                 Send
               </Button>
             </form>
-            <p className="text-xs text-muted-foreground text-center">
-              {remaining} messages remaining today
-            </p>
+            {showRemaining ? (
+              <p className="text-xs text-muted-foreground text-center">
+                {remaining} messages remaining today
+              </p>
+            ) : null}
           </>
         )}
       </div>

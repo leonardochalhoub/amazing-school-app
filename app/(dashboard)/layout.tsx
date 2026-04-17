@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
 import { redirect } from "next/navigation";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -20,7 +21,7 @@ export default async function DashboardLayout({
   const admin = createAdminClient();
   const { data: profile, error } = await admin
     .from("profiles")
-    .select("full_name, role")
+    .select("full_name, role, avatar_url")
     .eq("id", user.id)
     .single();
 
@@ -30,6 +31,7 @@ export default async function DashboardLayout({
   }
 
   const role = profile.role as Role;
+  const avatarUrl = await resolveMyAvatarUrl(supabase, user.id);
 
   return (
     <div className="relative flex min-h-screen flex-col bg-background">
@@ -40,7 +42,11 @@ export default async function DashboardLayout({
         <div className="absolute -top-40 left-1/2 h-[480px] w-[880px] -translate-x-1/2 rounded-full bg-gradient-to-br from-indigo-500/8 via-violet-500/5 to-pink-500/8 blur-3xl" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.035)_1px,transparent_0)] [background-size:22px_22px] dark:bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.04)_1px,transparent_0)]" />
       </div>
-      <Navbar fullName={profile.full_name} role={role} />
+      <Navbar
+        fullName={profile.full_name}
+        role={role}
+        avatarUrl={avatarUrl}
+      />
       <main className="flex-1">
         <div className="mx-auto max-w-7xl px-4 py-6 md:px-8 md:py-8">
           {children}

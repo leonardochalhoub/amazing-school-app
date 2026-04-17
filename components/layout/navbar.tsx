@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { LogOut, ChevronDown } from "lucide-react";
 import { signOut } from "@/lib/actions/auth";
 import { useI18n } from "@/lib/i18n/context";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,9 +21,10 @@ import { cn } from "@/lib/utils";
 interface NavbarProps {
   fullName: string;
   role: "teacher" | "student";
+  avatarUrl?: string | null;
 }
 
-export function Navbar({ fullName, role }: NavbarProps) {
+export function Navbar({ fullName, role, avatarUrl }: NavbarProps) {
   const { locale } = useI18n();
   const pathname = usePathname();
 
@@ -81,6 +82,7 @@ export function Navbar({ fullName, role }: NavbarProps) {
       href: "/teacher/bank",
       label: locale === "pt-BR" ? "Banco" : "Bank",
     },
+    { href: "/teacher/chat", label: labels.aiTutor },
   ];
 
   const nav = role === "teacher" ? teacherNav : studentNav;
@@ -158,6 +160,9 @@ export function Navbar({ fullName, role }: NavbarProps) {
           <DropdownMenu>
             <DropdownMenuTrigger className="group inline-flex h-9 items-center gap-1.5 rounded-full border border-border/70 bg-background/50 pl-1 pr-2 transition-colors hover:bg-accent">
               <Avatar className="h-7 w-7">
+                {avatarUrl ? (
+                  <AvatarImage src={avatarUrl} alt={fullName} />
+                ) : null}
                 <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-violet-500 text-[10px] font-semibold text-white">
                   {initials}
                 </AvatarFallback>
