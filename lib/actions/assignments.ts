@@ -193,11 +193,28 @@ export async function getAssignmentsForStudent(
   studentId: string
 ): Promise<LessonAssignment[]> {
   const supabase = await createClient();
+
+  // A student signed up from an invite is linked to a roster row via
+  // roster_students.auth_user_id. Assignments the teacher made BEFORE the
+  // student accepted the invitation live on that roster row. We union them
+  // in so students see everything their teacher intended for them.
+  const admin = createAdminClient();
+  const { data: rosterLink } = await admin
+    .from("roster_students")
+    .select("id")
+    .eq("auth_user_id", studentId)
+    .maybeSingle();
+  const rosterId = (rosterLink as { id: string } | null)?.id ?? null;
+
+  const filter = rosterId
+    ? `student_id.is.null,student_id.eq.${studentId},roster_student_id.eq.${rosterId}`
+    : `student_id.is.null,student_id.eq.${studentId}`;
+
   const { data } = await supabase
     .from("lesson_assignments")
     .select("*")
     .eq("classroom_id", classroomId)
-    .or(`student_id.is.null,student_id.eq.${studentId}`)
+    .or(filter)
     .order("order_index", { ascending: true })
     .order("assigned_at", { ascending: false });
   return (data as LessonAssignment[] | null) ?? [];

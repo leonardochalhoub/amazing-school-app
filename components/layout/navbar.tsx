@@ -63,12 +63,14 @@ export function Navbar({ fullName, role }: NavbarProps) {
           student: "Student",
         };
 
+  // Students see a minimal nav — only surfaces that act on assignments
+  // sent to them. No lessons catalog (they only consume what was assigned;
+  // the per-lesson page at /student/lessons/[slug] is still reachable via
+  // deep link). Music catalog stays so they can revisit assigned songs.
   const studentNav = [
     { href: "/student", label: labels.dashboard },
-    { href: "/student/lessons", label: labels.lessons },
     { href: "/student/music", label: labels.music },
     { href: "/student/chat", label: labels.aiTutor },
-    { href: "/student/leaderboard", label: labels.leaderboard },
     { href: "/student/profile", label: labels.profile },
   ];
 
