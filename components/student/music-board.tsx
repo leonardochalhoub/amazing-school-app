@@ -135,10 +135,15 @@ export function MusicBoard({
     );
   }, []);
 
+  // youtube-nocookie.com is Google's privacy-enhanced embed domain. Fewer
+  // regional restrictions + fewer cookies + often plays videos that the
+  // regular youtube.com embed refuses (especially on mobile).
   const embedSrc =
-    `https://www.youtube.com/embed/${song.youtube_id}` +
-    `?enablejsapi=1&rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=en` +
+    `https://www.youtube-nocookie.com/embed/${song.youtube_id}` +
+    `?enablejsapi=1&rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=en&playsinline=1` +
     (origin ? `&origin=${encodeURIComponent(origin)}` : "");
+
+  const watchOnYouTube = `https://www.youtube.com/watch?v=${song.youtube_id}`;
 
   const firstListenAndFill = song.exercises.find(
     (e) => e.type === "listen_and_fill"
@@ -205,6 +210,17 @@ export function MusicBoard({
               </p>
               <div className="flex flex-wrap gap-3 text-xs">
                 <a
+                  href={watchOnYouTube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
+                >
+                  {locale === "pt-BR"
+                    ? "Vídeo indisponível? Abrir no YouTube"
+                    : "Video unavailable? Open on YouTube"}
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+                <a
                   href={song.full_lyrics_url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -220,7 +236,7 @@ export function MusicBoard({
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground"
                 >
-                  {locale === "pt-BR" ? "Vídeo falhou? Buscar" : "Video not working? Search"}
+                  {locale === "pt-BR" ? "Buscar alternativa" : "Search alternative"}
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </div>
