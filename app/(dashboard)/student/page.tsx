@@ -231,23 +231,21 @@ export default async function StudentHome() {
   const firstName =
     profile?.full_name?.split(" ")[0] ?? user.email?.split("@")[0] ?? "there";
 
-  // Activity chart — last 5 years bucketed by month.
-  const fiveYearsAgo = new Date();
-  fiveYearsAgo.setFullYear(fiveYearsAgo.getFullYear() - 5);
-  fiveYearsAgo.setDate(1);
-  fiveYearsAgo.setHours(0, 0, 0, 0);
+  // Activity chart — 60 monthly buckets ending at the CURRENT month (so a
+  // completion today falls into the last bucket, not past the edge).
+  const now = new Date();
+  const rangeStart = new Date(now.getFullYear(), now.getMonth() - 59, 1);
+
   const { data: completions } = await admin
     .from("lesson_progress")
     .select("lesson_slug, completed_at")
     .eq("student_id", user.id)
     .not("completed_at", "is", null)
-    .gte("completed_at", fiveYearsAgo.toISOString());
+    .gte("completed_at", rangeStart.toISOString());
 
-  // Build 60 monthly buckets (oldest → newest).
   const activityBuckets: ActivityBucket[] = [];
   for (let i = 0; i < 60; i++) {
-    const d = new Date(fiveYearsAgo);
-    d.setMonth(d.getMonth() + i);
+    const d = new Date(rangeStart.getFullYear(), rangeStart.getMonth() + i, 1);
     activityBuckets.push({
       start: d.toISOString().slice(0, 10),
       lessons: 0,
@@ -257,8 +255,8 @@ export default async function StudentHome() {
   for (const c of completions ?? []) {
     const t = new Date(c.completed_at as string);
     const idx =
-      (t.getFullYear() - fiveYearsAgo.getFullYear()) * 12 +
-      (t.getMonth() - fiveYearsAgo.getMonth());
+      (t.getFullYear() - rangeStart.getFullYear()) * 12 +
+      (t.getMonth() - rangeStart.getMonth());
     if (idx < 0 || idx >= activityBuckets.length) continue;
     const isMusic = (c.lesson_slug as string).startsWith("music:");
     if (isMusic) activityBuckets[idx].music++;
