@@ -1,14 +1,31 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { BookOpen, Sparkles, Plus, Pencil } from "lucide-react";
+import { BookOpen, Sparkles, Plus, Pencil, Library } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { listLessonDrafts } from "@/lib/actions/lesson-drafts";
 import { listMyTeacherLessons } from "@/lib/actions/teacher-lessons";
+import { listMyBank } from "@/lib/actions/exercise-bank";
 import { LessonRow } from "@/components/teacher/lesson-row";
 import { CEFR_LEVELS, SKILLS } from "@/lib/content/schema";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import type { LessonDraftMeta } from "@/lib/actions/lesson-drafts";
+import type { TeacherLessonRow } from "@/lib/actions/teacher-lessons-types";
+
+type Source = "all" | "curated" | "mine" | "bank";
+
+interface UnifiedRow {
+  source: "curated" | "mine";
+  slug: string;
+  title: string;
+  cefr_level: string;
+  category: string;
+  published: boolean;
+  updated_at: string;
+  href: string;
+  exerciseCount?: number;
+}
 
 export default async function TeacherLessonsPage({
   searchParams,
@@ -18,6 +35,7 @@ export default async function TeacherLessonsPage({
     skill?: string;
     status?: string;
     course?: string;
+    source?: string;
   }>;
 }) {
   const supabase = await createClient();
@@ -47,14 +65,63 @@ export default async function TeacherLessonsPage({
       : ("all" as const),
     courseId: params.course,
   };
+  const source: Source = (
+    ["all", "curated", "mine", "bank"] as const
+  ).includes(params.source as Source)
+    ? (params.source as Source)
+    : "all";
 
-  const lessons = await listLessonDrafts(filters);
+  const [curatedLessons, myLessons, bankItems] = await Promise.all([
+    listLessonDrafts(filters),
+    listMyTeacherLessons(),
+    listMyBank(),
+  ]);
 
-  const draftCount = lessons.filter((l) => !l.published).length;
-  const publishedCount = lessons.length - draftCount;
+  // Apply CEFR / skill / status filters to teacher-authored lessons too.
+  const filteredMine = myLessons.filter((l) => {
+    if (filters.cefrLevel && l.cefr_level !== filters.cefrLevel) return false;
+    if (filters.category && l.category !== filters.category) return false;
+    if (filters.status === "draft" && l.published) return false;
+    if (filters.status === "published" && !l.published) return false;
+    return true;
+  });
 
-  const byCefr = new Map<string, typeof lessons>();
-  for (const l of lessons) {
+  const unified: UnifiedRow[] = [];
+  if (source === "all" || source === "curated") {
+    for (const l of curatedLessons as LessonDraftMeta[]) {
+      unified.push({
+        source: "curated",
+        slug: l.slug,
+        title: l.title,
+        cefr_level: l.cefr_level,
+        category: l.category,
+        published: l.published,
+        updated_at: l.updated_at,
+        href: `/teacher/lessons/${l.slug}`,
+      });
+    }
+  }
+  if (source === "all" || source === "mine") {
+    for (const l of filteredMine as TeacherLessonRow[]) {
+      unified.push({
+        source: "mine",
+        slug: l.slug,
+        title: l.title,
+        cefr_level: l.cefr_level ?? "a1.1",
+        category: l.category ?? "custom",
+        published: l.published,
+        updated_at: l.updated_at,
+        href: `/teacher/lessons/edit/${l.slug}`,
+        exerciseCount: l.exercises.length,
+      });
+    }
+  }
+
+  const draftCount = unified.filter((l) => !l.published).length;
+  const publishedCount = unified.length - draftCount;
+
+  const byCefr = new Map<string, UnifiedRow[]>();
+  for (const l of unified) {
     const list = byCefr.get(l.cefr_level) ?? [];
     list.push(l);
     byCefr.set(l.cefr_level, list);
@@ -91,9 +158,24 @@ export default async function TeacherLessonsPage({
         </div>
       </header>
 
-      <MyLessonsSection />
-
       <nav className="flex flex-wrap gap-2 rounded-xl border border-border bg-card p-3 shadow-xs">
+        <FilterGroup label="Source" name="source" active={source === "all" ? undefined : source}>
+          {(
+            [
+              { key: "all", label: "All" },
+              { key: "curated", label: "Curated" },
+              { key: "mine", label: "My lessons" },
+              { key: "bank", label: "My exercises" },
+            ] as const
+          ).map((s) => (
+            <FilterPill
+              key={s.key}
+              href={s.key === "all" ? urlWithout("source") : urlWith("source", s.key)}
+              label={s.label}
+              active={source === s.key}
+            />
+          ))}
+        </FilterGroup>
         <FilterGroup label="CEFR" name="cefr" active={filters.cefrLevel}>
           <FilterPill href={urlWithout("cefr")} label="All" active={!filters.cefrLevel} />
           {CEFR_LEVELS.map((l) => (
@@ -128,13 +210,18 @@ export default async function TeacherLessonsPage({
         </FilterGroup>
       </nav>
 
-      {lessons.length === 0 ? (
+      {source === "bank" ? (
+        <BankItemsList items={bankItems} filters={filters} />
+      ) : unified.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-border bg-card/40 p-12 text-center">
           <Sparkles className="mx-auto h-10 w-10 text-muted-foreground" />
-          <p className="mt-3 text-sm font-medium">No lessons yet</p>
+          <p className="mt-3 text-sm font-medium">No lessons match</p>
           <p className="mt-1 text-xs text-muted-foreground">
-            Claude will generate Year-1 US English lessons in a separate run.
-            They will appear here as drafts for you to review.
+            Adjust the filters above, or{" "}
+            <Link href="/teacher/lessons/new" className="underline hover:text-foreground">
+              create a new lesson
+            </Link>
+            .
           </p>
         </div>
       ) : (
@@ -154,15 +241,124 @@ export default async function TeacherLessonsPage({
                     </h2>
                   </div>
                   <div className="space-y-2">
-                    {group.map((l) => (
-                      <LessonRow key={l.slug} lesson={l} />
-                    ))}
+                    {group.map((l) =>
+                      l.source === "curated" ? (
+                        <LessonRow
+                          key={`curated-${l.slug}`}
+                          lesson={
+                            (curatedLessons.find((c) => c.slug === l.slug) ?? null) as LessonDraftMeta
+                          }
+                        />
+                      ) : (
+                        <MyLessonRow key={`mine-${l.slug}`} row={l} />
+                      )
+                    )}
                   </div>
                 </section>
               );
             })}
         </div>
       )}
+    </div>
+  );
+}
+
+function MyLessonRow({ row }: { row: UnifiedRow }) {
+  return (
+    <Link
+      href={row.href}
+      className="group flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-3 shadow-xs transition-colors hover:border-primary/40"
+    >
+      <div className="min-w-0 flex-1">
+        <div className="flex items-center gap-2">
+          <p className="truncate text-sm font-semibold">{row.title}</p>
+          <Badge variant="secondary" className="shrink-0 gap-1 text-[10px]">
+            <Pencil className="h-3 w-3" />
+            Mine
+          </Badge>
+        </div>
+        <p className="mt-0.5 truncate text-[11px] text-muted-foreground">
+          {row.cefr_level.toUpperCase()} · {row.category}
+          {row.exerciseCount != null ? ` · ${row.exerciseCount} exercises` : ""}
+        </p>
+      </div>
+      <Badge
+        variant={row.published ? "default" : "outline"}
+        className="shrink-0 text-[10px]"
+      >
+        {row.published ? "Published" : "Draft"}
+      </Badge>
+    </Link>
+  );
+}
+
+function BankItemsList({
+  items,
+  filters,
+}: {
+  items: Awaited<ReturnType<typeof listMyBank>>;
+  filters: { cefrLevel?: string; category?: string };
+}) {
+  const filtered = items.filter((i) => {
+    if (filters.cefrLevel && i.cefr_level !== filters.cefrLevel) return false;
+    return true;
+  });
+  if (filtered.length === 0) {
+    return (
+      <div className="rounded-2xl border border-dashed border-border bg-card/40 p-12 text-center">
+        <Library className="mx-auto h-10 w-10 text-muted-foreground" />
+        <p className="mt-3 text-sm font-medium">Your exercise bank is empty</p>
+        <p className="mt-1 text-xs text-muted-foreground">
+          Save exercises as you build lessons to reuse them later. Manage the
+          full bank at{" "}
+          <Link href="/teacher/bank" className="underline hover:text-foreground">
+            /teacher/bank
+          </Link>
+          .
+        </p>
+      </div>
+    );
+  }
+  return (
+    <div className="space-y-3">
+      <p className="text-xs text-muted-foreground">
+        Your saved exercises (not full lessons). Manage public/private status on{" "}
+        <Link href="/teacher/bank" className="underline hover:text-foreground">
+          the bank page
+        </Link>
+        .
+      </p>
+      <ul className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+        {filtered.map((item) => (
+          <li
+            key={item.id}
+            className="rounded-xl border border-border bg-card p-4 shadow-xs"
+          >
+            <div className="flex items-start justify-between gap-2">
+              <p className="truncate font-medium">{item.title}</p>
+              <Badge
+                variant={item.is_public ? "default" : "outline"}
+                className="shrink-0 text-[10px]"
+              >
+                {item.is_public ? "Public" : "Private"}
+              </Badge>
+            </div>
+            <p className="mt-1 flex flex-wrap gap-1 text-[10px]">
+              {item.cefr_level ? (
+                <Badge variant="outline" className="text-[10px]">
+                  {item.cefr_level.toUpperCase()}
+                </Badge>
+              ) : null}
+              <Badge variant="secondary" className="text-[10px]">
+                {item.exercise.type.replace(/_/g, " ")}
+              </Badge>
+              <span className="ml-auto text-muted-foreground tabular-nums">
+                {item.uses_count} uses
+              </span>
+            </p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -219,64 +415,3 @@ function urlWithout(_key: string): string {
   return `/teacher/lessons`;
 }
 
-async function MyLessonsSection() {
-  const mine = await listMyTeacherLessons();
-  if (mine.length === 0) {
-    return (
-      <section className="rounded-xl border border-dashed border-primary/30 bg-primary/5 p-5">
-        <div className="flex items-center justify-between gap-3">
-          <div>
-            <h2 className="text-base font-semibold">Your own lessons</h2>
-            <p className="mt-1 text-xs text-muted-foreground">
-              Build freeform lessons with your own exercise blocks. Only you
-              can see them until you assign them.
-            </p>
-          </div>
-          <Link href="/teacher/lessons/new">
-            <Button size="sm" className="gap-1.5">
-              <Plus className="h-4 w-4" />
-              Create
-            </Button>
-          </Link>
-        </div>
-      </section>
-    );
-  }
-  return (
-    <section className="space-y-3">
-      <h2 className="text-lg font-semibold">Your own lessons</h2>
-      <ul className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-        {mine.map((l) => (
-          <li
-            key={l.id}
-            className="rounded-xl border border-border bg-card p-4 shadow-xs"
-          >
-            <div className="flex items-start justify-between gap-2">
-              <div className="min-w-0">
-                <p className="truncate font-medium">{l.title}</p>
-                <p className="mt-0.5 truncate text-xs text-muted-foreground">
-                  {l.cefr_level ? l.cefr_level.toUpperCase() : "—"} ·{" "}
-                  {l.category ?? "custom"} · {l.exercises.length} exercises
-                </p>
-              </div>
-              <Badge
-                variant={l.published ? "default" : "outline"}
-                className="shrink-0 text-[10px]"
-              >
-                {l.published ? "Published" : "Draft"}
-              </Badge>
-            </div>
-            <div className="mt-3 flex justify-end">
-              <Link href={`/teacher/lessons/edit/${l.slug}`}>
-                <Button size="sm" variant="outline" className="gap-1.5 text-xs">
-                  <Pencil className="h-3 w-3" />
-                  Edit
-                </Button>
-              </Link>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
