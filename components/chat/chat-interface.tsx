@@ -156,7 +156,7 @@ export function ChatInterface({
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            🎓 Tutor
+            📘 Tutor
           </button>
           <button
             type="button"

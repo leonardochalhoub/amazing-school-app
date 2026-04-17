@@ -177,7 +177,7 @@ export default function Home() {
       <footer className="border-t border-border py-8 px-4">
         <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>🎓</span>
+            <BrandMark className="h-5 w-5" />
             <span>Amazing School</span>
             <span>&middot;</span>
             <span>{t.landing.openSourceTag}</span>

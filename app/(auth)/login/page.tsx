@@ -5,6 +5,7 @@ import { signIn } from "@/lib/actions/auth";
 import { useI18n } from "@/lib/i18n/context";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleToggle } from "@/components/locale-toggle";
+import { BrandMark } from "@/components/layout/brand-mark";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -40,8 +41,8 @@ export default function LoginPage() {
         <ThemeToggle />
       </div>
       <Card>
-        <CardHeader className="text-center">
-          <div className="text-3xl mb-2">🎓</div>
+        <CardHeader className="flex flex-col items-center text-center">
+          <BrandMark className="mb-2 h-12 w-12" />
           <CardTitle className="text-2xl font-bold">{t.auth.login}</CardTitle>
           <CardDescription>{t.auth.loginDesc}</CardDescription>
         </CardHeader>

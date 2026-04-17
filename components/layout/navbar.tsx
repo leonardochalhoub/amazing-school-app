@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LogOut, ChevronDown } from "lucide-react";
+import { LogOut, ChevronDown, UserCog } from "lucide-react";
 import { signOut } from "@/lib/actions/auth";
 import { useI18n } from "@/lib/i18n/context";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -189,6 +189,16 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
                 <span className="font-medium">{fullName}</span>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
+              <DropdownMenuItem
+                onClick={() => {
+                  window.location.href =
+                    role === "teacher" ? "/teacher/profile" : "/student/profile";
+                }}
+                className="cursor-pointer"
+              >
+                <UserCog className="mr-2 h-4 w-4" />
+                {labels.profile}
+              </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => signOut()}
                 className="cursor-pointer text-red-600 focus:text-red-700"
