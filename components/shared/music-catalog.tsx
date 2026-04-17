@@ -26,10 +26,25 @@ function normalize(s: string): string {
 
 const CEFR_GROUPS = ["a1", "a2", "b1", "b2", "c1"] as const;
 type CefrGroup = (typeof CEFR_GROUPS)[number] | "all";
+const TOP_GENRES_LIMIT = 10;
 
 export function MusicCatalog({ songs, variant = "student" }: Props) {
   const [query, setQuery] = useState("");
   const [levelFilter, setLevelFilter] = useState<CefrGroup>("all");
+  const [genreFilter, setGenreFilter] = useState<string>("all");
+
+  // Top N genres across the whole catalog (by song count).
+  const topGenres = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const s of songs) {
+      for (const g of s.genre ?? []) {
+        counts.set(g, (counts.get(g) ?? 0) + 1);
+      }
+    }
+    return [...counts.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, TOP_GENRES_LIMIT);
+  }, [songs]);
 
   const filtered = useMemo(() => {
     const q = normalize(query.trim());
@@ -37,11 +52,14 @@ export function MusicCatalog({ songs, variant = "student" }: Props) {
       if (levelFilter !== "all" && !s.cefr_level.startsWith(levelFilter)) {
         return false;
       }
+      if (genreFilter !== "all" && !(s.genre ?? []).includes(genreFilter)) {
+        return false;
+      }
       if (!q) return true;
       const hay = normalize(`${s.title} ${s.artist} ${s.year}`);
       return hay.includes(q);
     });
-  }, [songs, query, levelFilter]);
+  }, [songs, query, levelFilter, genreFilter]);
 
   const sorted = useMemo(() => {
     return [...filtered].sort((a, b) => {
@@ -74,7 +92,8 @@ export function MusicCatalog({ songs, variant = "student" }: Props) {
     return c;
   }, [songs]);
 
-  const isFiltering = query.trim().length > 0 || levelFilter !== "all";
+  const isFiltering =
+    query.trim().length > 0 || levelFilter !== "all" || genreFilter !== "all";
 
   return (
     <div className="space-y-6">
@@ -113,6 +132,38 @@ export function MusicCatalog({ songs, variant = "student" }: Props) {
             );
           })}
         </div>
+      </div>
+
+      <div className="flex flex-wrap gap-1">
+        <button
+          type="button"
+          onClick={() => setGenreFilter("all")}
+          className={`rounded-full px-2.5 py-0.5 text-[11px] font-medium transition-colors ${
+            genreFilter === "all"
+              ? "bg-primary text-primary-foreground"
+              : "border border-border/60 text-muted-foreground hover:border-primary/40 hover:text-foreground"
+          }`}
+        >
+          All genres
+        </button>
+        {topGenres.map(([g, n]) => {
+          const active = genreFilter === g;
+          return (
+            <button
+              key={g}
+              type="button"
+              onClick={() => setGenreFilter(active ? "all" : g)}
+              className={`rounded-full px-2.5 py-0.5 text-[11px] font-medium capitalize transition-colors ${
+                active
+                  ? "bg-primary text-primary-foreground"
+                  : "border border-border/60 text-muted-foreground hover:border-primary/40 hover:text-foreground"
+              }`}
+            >
+              {g.replace(/-/g, " ")}
+              <span className="ml-1 opacity-60 tabular-nums">{n}</span>
+            </button>
+          );
+        })}
       </div>
 
       {isFiltering && (
