@@ -88,6 +88,10 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
   ];
   if (isOwner) {
     teacherNav.push({
+      href: "/owner/users",
+      label: locale === "pt-BR" ? "Usuários" : "Users",
+    });
+    teacherNav.push({
       href: "/owner/management",
       label: locale === "pt-BR" ? "Gestão" : "Management",
     });

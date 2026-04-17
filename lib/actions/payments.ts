@@ -2,7 +2,6 @@
 
 import { z } from "zod";
 import { revalidatePath } from "next/cache";
-import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isOwner } from "@/lib/auth/roles";
 
@@ -10,7 +9,7 @@ export interface StudentPaymentRow {
   id: string;
   roster_student_id: string;
   teacher_id: string;
-  billing_month: string; // YYYY-MM-01
+  billing_month: string;
   amount_cents: number | null;
   currency: string;
   paid: boolean;
@@ -20,56 +19,121 @@ export interface StudentPaymentRow {
   updated_at: string;
 }
 
+export interface ManagementRow {
+  roster_student_id: string;
+  student_name: string;
+  teacher_id: string;
+  teacher_name: string;
+  classroom_name: string | null;
+  has_auth: boolean;
+  monthly_tuition_cents: number | null;
+  billing_day: number | null;
+  billing_starts_on: string | null;
+  payments: Record<string, StudentPaymentRow | null>;
+}
+
+export interface ManagementData {
+  months: string[]; // newest first (YYYY-MM-01)
+  rows: ManagementRow[];
+}
+
 function firstOfMonth(d: Date): string {
   const y = d.getFullYear();
   const m = String(d.getMonth() + 1).padStart(2, "0");
   return `${y}-${m}-01`;
 }
 
-function addMonths(iso: string, delta: number): string {
-  const [y, m] = iso.split("-").map(Number);
-  const d = new Date(y, (m || 1) - 1 + delta, 1);
-  return firstOfMonth(d);
-}
-
-export async function listMonths(count = 12): Promise<string[]> {
-  const now = new Date();
-  // Current month + 11 previous — newest first.
-  return Array.from({ length: count }, (_, i) => firstOfMonth(addMonthsDate(now, -i)));
-}
-
 function addMonthsDate(d: Date, delta: number): Date {
   return new Date(d.getFullYear(), d.getMonth() + delta, 1);
 }
 
-interface ManagementRow {
-  roster_student_id: string;
-  student_name: string;
-  teacher_id: string;
-  teacher_name: string;
-  has_auth: boolean;
-  classroom_name: string | null;
-  payments: Record<string, StudentPaymentRow | null>;
+/**
+ * Auto-creates the student_payments rows that SHOULD exist given every
+ * active student's tuition config. Called at the top of the Management
+ * view so the grid always reflects reality.
+ */
+async function ensurePaymentRows(months: string[]) {
+  const admin = createAdminClient();
+  const { data: active } = await admin
+    .from("roster_students")
+    .select(
+      "id, teacher_id, monthly_tuition_cents, billing_day, billing_starts_on, created_at"
+    )
+    .not("monthly_tuition_cents", "is", null);
+  const list = (active ?? []) as Array<{
+    id: string;
+    teacher_id: string;
+    monthly_tuition_cents: number;
+    billing_day: number | null;
+    billing_starts_on: string | null;
+    created_at: string;
+  }>;
+  if (list.length === 0) return;
+
+  const rosterIds = list.map((r) => r.id);
+  const earliest = months[months.length - 1];
+  const latest = months[0];
+  const { data: existing } = await admin
+    .from("student_payments")
+    .select("roster_student_id, billing_month")
+    .in("roster_student_id", rosterIds)
+    .gte("billing_month", earliest)
+    .lte("billing_month", latest);
+  const have = new Set<string>();
+  for (const e of (existing ?? []) as Array<{
+    roster_student_id: string;
+    billing_month: string;
+  }>) {
+    have.add(`${e.roster_student_id}|${e.billing_month.slice(0, 10)}`);
+  }
+
+  const rowsToInsert: Array<{
+    roster_student_id: string;
+    teacher_id: string;
+    billing_month: string;
+    amount_cents: number;
+    paid: boolean;
+  }> = [];
+  for (const r of list) {
+    const startIso =
+      r.billing_starts_on ?? firstOfMonth(new Date(r.created_at));
+    for (const m of months) {
+      if (m < startIso.slice(0, 10)) continue;
+      const key = `${r.id}|${m}`;
+      if (have.has(key)) continue;
+      rowsToInsert.push({
+        roster_student_id: r.id,
+        teacher_id: r.teacher_id,
+        billing_month: m,
+        amount_cents: r.monthly_tuition_cents,
+        paid: false,
+      });
+    }
+  }
+  if (rowsToInsert.length > 0) {
+    await admin.from("student_payments").insert(rowsToInsert);
+  }
 }
 
-/**
- * OWNER ONLY — returns every student across every teacher, plus a per-month
- * matrix of payment rows so the CRM can render a grid.
- */
 export async function getManagementMatrix(opts?: {
   months?: number;
-}): Promise<{ months: string[]; rows: ManagementRow[] } | { error: string }> {
+}): Promise<ManagementData | { error: string }> {
   const owner = await isOwner();
   if (!owner) return { error: "Owner access only" };
 
   const admin = createAdminClient();
-  const months = await listMonths(opts?.months ?? 12);
+  const now = new Date();
+  const count = opts?.months ?? 24;
+  const months = Array.from({ length: count }, (_, i) =>
+    firstOfMonth(addMonthsDate(now, -i))
+  );
 
-  // All roster students + their teacher + classroom.
+  await ensurePaymentRows(months);
+
   const { data: rosterRaw, error } = await admin
     .from("roster_students")
     .select(
-      "id, full_name, teacher_id, auth_user_id, classroom_id, classrooms(name)"
+      "id, full_name, teacher_id, auth_user_id, classroom_id, monthly_tuition_cents, billing_day, billing_starts_on, classrooms(name)"
     )
     .order("full_name", { ascending: true });
   if (error) return { error: error.message };
@@ -80,10 +144,10 @@ export async function getManagementMatrix(opts?: {
     teacher_id: string;
     auth_user_id: string | null;
     classroom_id: string | null;
-    classrooms:
-      | { name: string }
-      | { name: string }[]
-      | null;
+    monthly_tuition_cents: number | null;
+    billing_day: number | null;
+    billing_starts_on: string | null;
+    classrooms: { name: string } | { name: string }[] | null;
   }>;
 
   const teacherIds = [...new Set(roster.map((r) => r.teacher_id))];
@@ -96,17 +160,14 @@ export async function getManagementMatrix(opts?: {
   );
 
   const rosterIds = roster.map((r) => r.id);
-  const earliest = months[months.length - 1];
-  const latest = months[0];
-
   let paymentRows: StudentPaymentRow[] = [];
   if (rosterIds.length > 0) {
     const { data: pays } = await admin
       .from("student_payments")
       .select("*")
       .in("roster_student_id", rosterIds)
-      .gte("billing_month", earliest)
-      .lte("billing_month", latest);
+      .gte("billing_month", months[months.length - 1])
+      .lte("billing_month", months[0]);
     paymentRows = (pays ?? []) as StudentPaymentRow[];
   }
   const paymentIndex = new Map<string, StudentPaymentRow>();
@@ -125,8 +186,11 @@ export async function getManagementMatrix(opts?: {
       student_name: r.full_name,
       teacher_id: r.teacher_id,
       teacher_name: teacherMap.get(r.teacher_id) ?? "—",
-      has_auth: !!r.auth_user_id,
       classroom_name: classroom?.name ?? null,
+      has_auth: !!r.auth_user_id,
+      monthly_tuition_cents: r.monthly_tuition_cents,
+      billing_day: r.billing_day,
+      billing_starts_on: r.billing_starts_on,
       payments,
     };
   });
@@ -138,13 +202,8 @@ const TogglePaidSchema = z.object({
   rosterStudentId: z.string().uuid(),
   billingMonth: z.string().regex(/^\d{4}-\d{2}-01$/),
   paid: z.boolean(),
-  amountCents: z.number().int().min(0).max(1_000_000).optional(),
 });
 
-/**
- * Owner flips paid/unpaid for a (student, month). Auto-creates the row when
- * missing so the grid can start from zero.
- */
 export async function togglePaymentPaid(input: z.input<typeof TogglePaidSchema>) {
   const parsed = TogglePaidSchema.safeParse(input);
   if (!parsed.success)
@@ -156,19 +215,19 @@ export async function togglePaymentPaid(input: z.input<typeof TogglePaidSchema>)
   const admin = createAdminClient();
   const { data: roster, error: rErr } = await admin
     .from("roster_students")
-    .select("teacher_id")
+    .select("teacher_id, monthly_tuition_cents")
     .eq("id", parsed.data.rosterStudentId)
     .maybeSingle();
-  if (rErr || !roster)
-    return { error: "Student not found" };
+  if (rErr || !roster) return { error: "Student not found" };
+  const r = roster as { teacher_id: string; monthly_tuition_cents: number | null };
 
   const row = {
     roster_student_id: parsed.data.rosterStudentId,
-    teacher_id: (roster as { teacher_id: string }).teacher_id,
+    teacher_id: r.teacher_id,
     billing_month: parsed.data.billingMonth,
     paid: parsed.data.paid,
     paid_at: parsed.data.paid ? new Date().toISOString() : null,
-    amount_cents: parsed.data.amountCents ?? null,
+    amount_cents: r.monthly_tuition_cents ?? null,
   };
   const { error } = await admin
     .from("student_payments")
@@ -179,14 +238,23 @@ export async function togglePaymentPaid(input: z.input<typeof TogglePaidSchema>)
   return { success: true as const };
 }
 
-const SetAmountSchema = z.object({
+const SetTuitionSchema = z.object({
   rosterStudentId: z.string().uuid(),
-  billingMonth: z.string().regex(/^\d{4}-\d{2}-01$/),
-  amountCents: z.number().int().min(0).max(1_000_000),
+  monthlyAmountCents: z.number().int().min(0).max(10_000_000).nullable(),
+  billingDay: z.number().int().min(1).max(28).nullable(),
+  startsOn: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .nullable(),
 });
 
-export async function setPaymentAmount(input: z.input<typeof SetAmountSchema>) {
-  const parsed = SetAmountSchema.safeParse(input);
+/**
+ * Writes the fixed monthly tuition config. When amount OR day is set and
+ * the student has no billing_starts_on yet, defaults it to the first of
+ * the current month so auto-generation has an anchor.
+ */
+export async function setStudentTuition(input: z.input<typeof SetTuitionSchema>) {
+  const parsed = SetTuitionSchema.safeParse(input);
   if (!parsed.success)
     return { error: parsed.error.issues[0]?.message ?? "Invalid input" };
 
@@ -194,83 +262,29 @@ export async function setPaymentAmount(input: z.input<typeof SetAmountSchema>) {
   if (!owner) return { error: "Owner access only" };
 
   const admin = createAdminClient();
-  const { data: roster } = await admin
+  const { data: current } = await admin
     .from("roster_students")
-    .select("teacher_id")
+    .select("billing_starts_on")
     .eq("id", parsed.data.rosterStudentId)
     .maybeSingle();
-  if (!roster) return { error: "Student not found" };
 
-  const row = {
-    roster_student_id: parsed.data.rosterStudentId,
-    teacher_id: (roster as { teacher_id: string }).teacher_id,
-    billing_month: parsed.data.billingMonth,
-    amount_cents: parsed.data.amountCents,
+  const patch: Record<string, unknown> = {
+    monthly_tuition_cents: parsed.data.monthlyAmountCents,
+    billing_day: parsed.data.billingDay,
   };
+  if (parsed.data.startsOn !== null) {
+    patch.billing_starts_on = parsed.data.startsOn;
+  } else if (!current?.billing_starts_on && parsed.data.monthlyAmountCents) {
+    const now = new Date();
+    patch.billing_starts_on = firstOfMonth(now);
+  }
+
   const { error } = await admin
-    .from("student_payments")
-    .upsert(row, { onConflict: "roster_student_id,billing_month" });
+    .from("roster_students")
+    .update(patch)
+    .eq("id", parsed.data.rosterStudentId);
   if (error) return { error: error.message };
 
   revalidatePath("/owner/management");
   return { success: true as const };
-}
-
-/**
- * Rolls every active roster student into a brand-new month: creates a
- * student_payments row (paid=false) for each roster entry that doesn't
- * already have one for that month. Carries forward the most recent amount.
- */
-export async function generateMonth(input: { billingMonth: string }) {
-  const month = input.billingMonth;
-  if (!/^\d{4}-\d{2}-01$/.test(month)) return { error: "Invalid month" };
-
-  const owner = await isOwner();
-  if (!owner) return { error: "Owner access only" };
-
-  const admin = createAdminClient();
-  const { data: roster } = await admin
-    .from("roster_students")
-    .select("id, teacher_id");
-  const list = (roster ?? []) as Array<{ id: string; teacher_id: string }>;
-  if (list.length === 0) return { success: true as const, created: 0 };
-
-  const { data: existing } = await admin
-    .from("student_payments")
-    .select("roster_student_id")
-    .eq("billing_month", month);
-  const haveRows = new Set(
-    (existing ?? []).map((x: { roster_student_id: string }) => x.roster_student_id)
-  );
-
-  // Pull the most recent amount per student so we can carry it forward.
-  const { data: recent } = await admin
-    .from("student_payments")
-    .select("roster_student_id, amount_cents, billing_month")
-    .order("billing_month", { ascending: false });
-  const amountByRoster = new Map<string, number | null>();
-  for (const r of (recent ?? []) as Array<{
-    roster_student_id: string;
-    amount_cents: number | null;
-  }>) {
-    if (!amountByRoster.has(r.roster_student_id)) {
-      amountByRoster.set(r.roster_student_id, r.amount_cents);
-    }
-  }
-
-  const newRows = list
-    .filter((r) => !haveRows.has(r.id))
-    .map((r) => ({
-      roster_student_id: r.id,
-      teacher_id: r.teacher_id,
-      billing_month: month,
-      amount_cents: amountByRoster.get(r.id) ?? null,
-      paid: false,
-    }));
-  if (newRows.length === 0) return { success: true as const, created: 0 };
-
-  const { error } = await admin.from("student_payments").insert(newRows);
-  if (error) return { error: error.message };
-  revalidatePath("/owner/management");
-  return { success: true as const, created: newRows.length };
 }

@@ -1,69 +1,41 @@
 "use client";
 
-import { useMemo, useState, useTransition } from "react";
+import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { Check, Loader2, Plus } from "lucide-react";
+import { Check, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import {
   togglePaymentPaid,
-  setPaymentAmount,
-  generateMonth,
+  setStudentTuition,
+  type ManagementRow,
 } from "@/lib/actions/payments";
 
-interface Payment {
-  id: string;
-  paid: boolean;
-  amount_cents: number | null;
-}
-
-interface Row {
-  roster_student_id: string;
-  student_name: string;
-  teacher_id: string;
-  teacher_name: string;
-  has_auth: boolean;
-  classroom_name: string | null;
-  payments: Record<string, Payment | null>;
-}
-
 interface Props {
-  months: string[]; // newest first, YYYY-MM-01
-  rows: Row[];
+  months: string[]; // newest first
+  rows: ManagementRow[];
 }
 
-function formatMonthShort(iso: string): string {
+function monthShort(iso: string): string {
   const [y, m] = iso.split("-").map(Number);
   const d = new Date(y, (m ?? 1) - 1, 1);
   return d.toLocaleDateString("en-US", { month: "short", year: "2-digit" });
 }
 
-function formatBrl(cents: number): string {
-  return new Intl.NumberFormat("pt-BR", {
+const BRL = (cents: number) =>
+  new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL",
   }).format(cents / 100);
-}
 
 export function ManagementGrid({ months, rows }: Props) {
   const router = useRouter();
   const [query, setQuery] = useState("");
-  const [teacherFilter, setTeacherFilter] = useState<string>("all");
   const [pendingCell, setPendingCell] = useState<string | null>(null);
-  const [pendingGen, startGenTransition] = useTransition();
-
-  const teachers = useMemo(() => {
-    const m = new Map<string, string>();
-    for (const r of rows) m.set(r.teacher_id, r.teacher_name);
-    return [...m.entries()].sort((a, b) => a[1].localeCompare(b[1]));
-  }, [rows]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return rows.filter((r) => {
-      if (teacherFilter !== "all" && r.teacher_id !== teacherFilter)
-        return false;
       if (!q) return true;
       return (
         r.student_name.toLowerCase().includes(q) ||
@@ -71,13 +43,14 @@ export function ManagementGrid({ months, rows }: Props) {
         (r.classroom_name ?? "").toLowerCase().includes(q)
       );
     });
-  }, [rows, query, teacherFilter]);
+  }, [rows, query]);
 
-  // Display oldest→newest so the grid reads left-to-right like a calendar
-  const orderedMonths = useMemo(() => [...months].reverse(), [months]);
+  // Display oldest → newest; cap at 12 to keep the grid readable. Full 24
+  // months still drive the KPIs + charts.
+  const orderedMonths = useMemo(() => [...months].slice(0, 12).reverse(), [months]);
 
-  function toggleCell(rosterId: string, month: string, next: boolean) {
-    const key = `${rosterId}|${month}`;
+  function togglePaid(rosterId: string, month: string, next: boolean) {
+    const key = `paid-${rosterId}|${month}`;
     setPendingCell(key);
     togglePaymentPaid({
       rosterStudentId: rosterId,
@@ -90,19 +63,20 @@ export function ManagementGrid({ months, rows }: Props) {
     });
   }
 
-  function saveAmount(rosterId: string, month: string, value: string) {
+  function saveAmount(rosterId: string, value: string, billingDay: number | null) {
     const brl = Number(value.replace(",", "."));
     if (!Number.isFinite(brl) || brl < 0) {
       toast.error("Invalid amount");
       return;
     }
     const cents = Math.round(brl * 100);
-    const key = `amount-${rosterId}|${month}`;
+    const key = `amt-${rosterId}`;
     setPendingCell(key);
-    setPaymentAmount({
+    setStudentTuition({
       rosterStudentId: rosterId,
-      billingMonth: month,
-      amountCents: cents,
+      monthlyAmountCents: cents > 0 ? cents : null,
+      billingDay,
+      startsOn: null,
     }).then((res) => {
       setPendingCell(null);
       if ("error" in res && res.error) toast.error(res.error);
@@ -110,61 +84,39 @@ export function ManagementGrid({ months, rows }: Props) {
     });
   }
 
-  function handleGenerate() {
-    const now = new Date();
-    const month = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-01`;
-    startGenTransition(async () => {
-      const r = await generateMonth({ billingMonth: month });
-      if ("error" in r && r.error) toast.error(r.error);
-      else if ("success" in r) {
-        const created = r.created ?? 0;
-        toast.success(
-          created > 0
-            ? `Generated ${created} payment rows for ${month.slice(0, 7)}`
-            : "All students already have a row for this month"
-        );
-        router.refresh();
-      }
+  function saveDay(rosterId: string, value: string, amountCents: number | null) {
+    const n = Number(value);
+    if (!Number.isInteger(n) || n < 1 || n > 28) {
+      toast.error("Due day must be between 1 and 28");
+      return;
+    }
+    const key = `day-${rosterId}`;
+    setPendingCell(key);
+    setStudentTuition({
+      rosterStudentId: rosterId,
+      monthlyAmountCents: amountCents,
+      billingDay: n,
+      startsOn: null,
+    }).then((res) => {
+      setPendingCell(null);
+      if ("error" in res && res.error) toast.error(res.error);
+      else router.refresh();
     });
   }
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <div className="flex flex-wrap gap-2">
-          <Input
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Filter by student, teacher, or classroom…"
-            className="h-9 w-72"
-          />
-          <select
-            value={teacherFilter}
-            onChange={(e) => setTeacherFilter(e.target.value)}
-            className="h-9 rounded-lg border border-input bg-transparent px-2 text-sm"
-          >
-            <option value="all">All teachers</option>
-            {teachers.map(([id, name]) => (
-              <option key={id} value={id}>
-                {name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <Button
-          onClick={handleGenerate}
-          disabled={pendingGen}
-          size="sm"
-          className="gap-1"
-        >
-          {pendingGen ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
-          ) : (
-            <Plus className="h-4 w-4" />
-          )}
-          Generate current month
-        </Button>
+      <div className="flex items-center justify-between gap-3">
+        <Input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Filter by student, teacher, or classroom…"
+          className="h-9 w-72"
+        />
+        <p className="text-xs text-muted-foreground">
+          Showing {filtered.length} of {rows.length} students
+        </p>
       </div>
 
       <div className="overflow-x-auto rounded-xl border">
@@ -177,30 +129,27 @@ export function ManagementGrid({ months, rows }: Props) {
               <th className="px-3 py-2 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
                 Teacher
               </th>
-              <th className="px-3 py-2 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                Classroom
-              </th>
               <th className="px-3 py-2 text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
                 Monthly (BRL)
+              </th>
+              <th className="px-3 py-2 text-center text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                Due day
               </th>
               {orderedMonths.map((m) => (
                 <th
                   key={m}
                   className="px-2 py-2 text-center text-[11px] font-semibold uppercase tracking-wider text-muted-foreground"
                 >
-                  {formatMonthShort(m)}
+                  {monthShort(m)}
                 </th>
               ))}
             </tr>
           </thead>
           <tbody>
             {filtered.map((r) => {
-              // Use the newest month's amount as the "default monthly rate"
-              // input — cascades when the owner sets it.
-              const current = r.payments[months[0]];
-              const monthlyBrl =
-                current?.amount_cents != null
-                  ? (current.amount_cents / 100).toFixed(2)
+              const amountBrl =
+                r.monthly_tuition_cents != null
+                  ? (r.monthly_tuition_cents / 100).toFixed(2)
                   : "";
               return (
                 <tr key={r.roster_student_id} className="border-t">
@@ -211,46 +160,66 @@ export function ManagementGrid({ months, rows }: Props) {
                         (invite pending)
                       </span>
                     ) : null}
+                    {r.classroom_name ? (
+                      <span className="ml-1 text-[10px] text-muted-foreground">
+                        · {r.classroom_name}
+                      </span>
+                    ) : null}
                   </td>
-                  <td className="px-3 py-2 text-muted-foreground">
+                  <td className="whitespace-nowrap px-3 py-2 text-muted-foreground">
                     {r.teacher_name}
-                  </td>
-                  <td className="px-3 py-2 text-muted-foreground">
-                    {r.classroom_name ?? "—"}
                   </td>
                   <td className="px-3 py-2 text-right">
                     <AmountInput
-                      defaultValue={monthlyBrl}
+                      defaultValue={amountBrl}
                       onSave={(v) =>
-                        saveAmount(r.roster_student_id, months[0], v)
+                        saveAmount(r.roster_student_id, v, r.billing_day)
                       }
-                      pending={
-                        pendingCell === `amount-${r.roster_student_id}|${months[0]}`
+                      pending={pendingCell === `amt-${r.roster_student_id}`}
+                    />
+                  </td>
+                  <td className="px-3 py-2 text-center">
+                    <DayInput
+                      defaultValue={r.billing_day ? String(r.billing_day) : ""}
+                      onSave={(v) =>
+                        saveDay(
+                          r.roster_student_id,
+                          v,
+                          r.monthly_tuition_cents
+                        )
                       }
+                      pending={pendingCell === `day-${r.roster_student_id}`}
                     />
                   </td>
                   {orderedMonths.map((m) => {
                     const p = r.payments[m];
                     const paid = !!p?.paid;
-                    const key = `${r.roster_student_id}|${m}`;
+                    const exists = !!p;
+                    const key = `paid-${r.roster_student_id}|${m}`;
                     const pending = pendingCell === key;
+                    const title = p
+                      ? p.paid
+                        ? `Paid ${BRL(p.amount_cents ?? 0)}`
+                        : `Pending ${BRL(p.amount_cents ?? r.monthly_tuition_cents ?? 0)}`
+                      : r.monthly_tuition_cents
+                        ? "Set due day to auto-generate"
+                        : "Set monthly tuition first";
                     return (
                       <td key={m} className="px-2 py-2 text-center">
                         <button
                           type="button"
                           onClick={() =>
-                            toggleCell(r.roster_student_id, m, !paid)
+                            exists &&
+                            togglePaid(r.roster_student_id, m, !paid)
                           }
-                          disabled={pending}
-                          title={
-                            p?.amount_cents != null
-                              ? formatBrl(p.amount_cents)
-                              : "No amount set"
-                          }
+                          disabled={pending || !exists}
+                          title={title}
                           className={`mx-auto flex h-6 w-6 items-center justify-center rounded-md border text-xs transition-colors ${
                             paid
                               ? "border-emerald-500/30 bg-emerald-500 text-white"
-                              : "border-border bg-background text-muted-foreground hover:border-primary/40"
+                              : exists
+                                ? "border-amber-500/30 bg-amber-500/10 text-amber-700 hover:bg-amber-500/20"
+                                : "border-dashed border-border bg-muted/20 text-muted-foreground/50"
                           } ${pending ? "opacity-50" : ""}`}
                         >
                           {pending ? (
@@ -280,9 +249,9 @@ export function ManagementGrid({ months, rows }: Props) {
       </div>
 
       <p className="text-xs text-muted-foreground">
-        Tip: set the monthly rate once per student, then use{" "}
-        <strong>Generate current month</strong> each time a new month starts —
-        the previous amount is carried forward automatically.
+        Green = paid. Amber = open debt (click to mark paid). Dashed = no
+        monthly rate yet — set the BRL value and due day to start
+        auto-generating invoices.
       </p>
     </div>
   );
@@ -309,12 +278,43 @@ function AmountInput({
           if (value !== defaultValue) onSave(value);
         }}
         onKeyDown={(e) => {
-          if (e.key === "Enter") {
-            (e.target as HTMLInputElement).blur();
-          }
+          if (e.key === "Enter") (e.target as HTMLInputElement).blur();
         }}
         placeholder="0.00"
         className="h-7 w-20 text-right text-xs"
+        disabled={pending}
+      />
+      {pending ? <Loader2 className="h-3 w-3 animate-spin" /> : null}
+    </div>
+  );
+}
+
+function DayInput({
+  defaultValue,
+  onSave,
+  pending,
+}: {
+  defaultValue: string;
+  onSave: (value: string) => void;
+  pending: boolean;
+}) {
+  const [value, setValue] = useState(defaultValue);
+  return (
+    <div className="flex items-center justify-center gap-1">
+      <Input
+        type="number"
+        min={1}
+        max={28}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        onBlur={() => {
+          if (value !== defaultValue && value !== "") onSave(value);
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") (e.target as HTMLInputElement).blur();
+        }}
+        placeholder="10"
+        className="h-7 w-14 text-center text-xs"
         disabled={pending}
       />
       {pending ? <Loader2 className="h-3 w-3 animate-spin" /> : null}
