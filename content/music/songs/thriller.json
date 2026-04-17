@@ -56,12 +56,366 @@
       "youtube_end": 72
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And no one's",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "save you",
+      "youtube_start": 93,
+      "youtube_end": 107
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You hear a",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "creature",
+      "excerpt_after": "creepin' up behind",
+      "youtube_start": 140,
+      "youtube_end": 154
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "For you and I to",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "cuddle",
+      "excerpt_after": "close together, yeah",
+      "youtube_start": 203,
+      "youtube_end": 217
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "terrorize",
+      "excerpt_after": "y'alls neighborhood",
+      "youtube_start": 275,
+      "youtube_end": 289
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "foulest",
+      "excerpt_after": "stench is in the air",
+      "youtube_start": 314,
+      "youtube_end": 328
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
       "excerpt": "You try to scream",
       "model_answer_pt": "",
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "As horror looks you right between the eyes",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You know it's thriller",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You hear the door slam",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And wonder if you'll ever see the sun",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's",
+      "excerpt_after": "to midnight",
+      "options": [
+        "close",
+        "gonna",
+        "night",
+        "strike"
+      ],
+      "answer_index": 0,
+      "youtube_start": 58,
+      "youtube_end": 70
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Inside a",
+      "excerpt_after": "thriller tonight, yeah",
+      "options": [
+        "gonna",
+        "killer",
+        "midnight",
+        "youre"
+      ],
+      "answer_index": 1,
+      "youtube_start": 103,
+      "youtube_end": 115
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The",
+      "excerpt_after": "start to walk in their masquerade",
+      "options": [
+        "dead",
+        "evils",
+        "ones",
+        "strike"
+      ],
+      "answer_index": 0,
+      "youtube_start": 167,
+      "youtube_end": 179
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Than any ghoul would",
+      "excerpt_after": "dare try",
+      "options": [
+        "between",
+        "ever",
+        "save",
+        "sight"
+      ],
+      "answer_index": 1,
+      "youtube_start": 243,
+      "youtube_end": 255
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm gonna thrill you",
+      "excerpt_after": "(Thriller)",
+      "options": [
+        "dark",
+        "night",
+        "tonight",
+        "youre"
+      ],
+      "answer_index": 2,
+      "youtube_start": 294,
+      "youtube_end": 306
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "midnight",
+        "It's",
+        "close"
+      ],
+      "answer": [
+        "It's",
+        "close",
+        "to",
+        "midnight"
+      ],
+      "youtube_start": 58
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "hear",
+        "You",
+        "slam",
+        "door",
+        "the"
+      ],
+      "answer": [
+        "You",
+        "hear",
+        "the",
+        "door",
+        "slam"
+      ],
+      "youtube_start": 115
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "out",
+        "to",
+        "get",
+        "you",
+        "They're"
+      ],
+      "answer": [
+        "They're",
+        "out",
+        "to",
+        "get",
+        "you"
+      ],
+      "youtube_start": 186
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "thrill",
+        "you",
+        "gonna",
+        "tonight",
+        "I'm"
+      ],
+      "answer": [
+        "I'm",
+        "gonna",
+        "thrill",
+        "you",
+        "tonight"
+      ],
+      "youtube_start": 261
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "gonna",
+        "thrill",
+        "tonight",
+        "I'm",
+        "Oh",
+        "you",
+        "babe"
+      ],
+      "answer": [
+        "Oh",
+        "babe",
+        "I'm",
+        "gonna",
+        "thrill",
+        "you",
+        "tonight"
+      ],
+      "youtube_start": 301
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"thriller\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"thriller\" na música inteira?",
+      "word": "thriller",
+      "answer": 29
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"close\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"close\" na música inteira?",
+      "word": "close",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "It's close to midnight",
+          "order": 0
+        },
+        {
+          "text": "You're fighting for your life",
+          "order": 1
+        },
+        {
+          "text": "So let me hold you tight",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Something evil's lurkin' in the dark",
+          "order": 0
+        },
+        {
+          "text": "That this is thriller",
+          "order": 1
+        },
+        {
+          "text": "And whosoever shall be found",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Thriller\" was released in 1982. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Thriller\" foi lançada em 1982. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "thriller",
+        "creature",
+        "close",
+        "hide"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Thriller\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Thriller\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "thriller",
+        "creature",
+        "close",
+        "hide"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "thriller",
+        "creature",
+        "close",
+        "hide"
+      ]
     },
     {
       "type": "spot_the_grammar",
@@ -83,18 +437,15 @@
         {
           "short": "there's",
           "full": "there is"
+        },
+        {
+          "short": "you'll",
+          "full": "you will"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
         }
-      ]
-    },
-    {
-      "type": "discussion",
-      "prompt_en": "\"Thriller\" was released in 1982. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
-      "prompt_pt": "\"Thriller\" foi lançada em 1982. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
-      "target_vocab": [
-        "thriller",
-        "creature",
-        "close",
-        "hide"
       ]
     },
     {
@@ -117,66 +468,6 @@
         {
           "en": "hide",
           "pt": "esconder"
-        }
-      ]
-    },
-    {
-      "type": "unscramble_line",
-      "prompt_en": "Put the words in the right order:",
-      "prompt_pt": "Coloque as palavras na ordem certa:",
-      "shuffled": [
-        "to",
-        "midnight",
-        "It's",
-        "close"
-      ],
-      "answer": [
-        "It's",
-        "close",
-        "to",
-        "midnight"
-      ],
-      "youtube_start": 58
-    },
-    {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "It's",
-      "excerpt_after": "to midnight",
-      "options": [
-        "close",
-        "evils",
-        "lurkin",
-        "midnight"
-      ],
-      "answer_index": 0,
-      "youtube_start": 58,
-      "youtube_end": 70
-    },
-    {
-      "type": "count_word",
-      "prompt_en": "How many times do you hear the word \"thriller\" in the whole song?",
-      "prompt_pt": "Quantas vezes você ouve a palavra \"thriller\" na música inteira?",
-      "word": "thriller",
-      "answer": 29
-    },
-    {
-      "type": "line_order",
-      "prompt_en": "Put these three lines in the order they appear in the song:",
-      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
-      "excerpts": [
-        {
-          "text": "It's close to midnight",
-          "order": 0
-        },
-        {
-          "text": "You're fighting for your life",
-          "order": 1
-        },
-        {
-          "text": "So let me hold you tight",
-          "order": 2
         }
       ]
     }

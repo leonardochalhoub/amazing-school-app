@@ -1,0 +1,449 @@
+{
+  "slug": "always-on-my-mind",
+  "title": "Always on My Mind",
+  "artist": "Willie Nelson",
+  "year": 1982,
+  "album": "The Songs",
+  "genre": [
+    "country"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 210,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Always on My Mind by Willie Nelson (1982) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "always",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"You were always on my mind\""
+    },
+    {
+      "term": "mind",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"You were always on my mind\""
+    },
+    {
+      "term": "maybe",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Maybe I didn't love you\""
+    },
+    {
+      "term": "didn't",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Maybe I didn't love you\""
+    },
+    {
+      "term": "should",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Quite as good as I should have\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "You were always on my mind",
+          "You were always on my mind",
+          "And maybe I didn't hold you",
+          "All those lonely, lonely times"
+        ],
+        "start_seconds": 48,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I just never took the time",
+          "You were always on my mind",
+          "You were always on my mind",
+          "Tell me"
+        ],
+        "start_seconds": 94,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Maybe I",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "didnt",
+      "excerpt_after": "love you",
+      "youtube_start": 8,
+      "youtube_end": 22
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "maybe",
+      "excerpt_after": "I didn't treat you",
+      "youtube_start": 21,
+      "youtube_end": 35
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If I made you feel",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "second",
+      "excerpt_after": "best",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "All",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "those",
+      "excerpt_after": "lonely, lonely times",
+      "youtube_start": 68,
+      "youtube_end": 82
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I am so",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "happy",
+      "excerpt_after": "that you're mine",
+      "youtube_start": 81,
+      "youtube_end": 95
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I just",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "took the time",
+      "youtube_start": 94,
+      "youtube_end": 108
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Maybe I didn't love you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And maybe I didn't treat you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If I made you feel second best",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You were always on my mind",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I guess I never told you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Maybe I",
+      "excerpt_after": "love you",
+      "options": [
+        "didnt",
+        "never",
+        "sweet",
+        "tell"
+      ],
+      "answer_index": 0,
+      "youtube_start": 8,
+      "youtube_end": 20
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Quite as",
+      "excerpt_after": "as I should have",
+      "options": [
+        "good",
+        "second",
+        "things",
+        "told"
+      ],
+      "answer_index": 0,
+      "youtube_start": 28,
+      "youtube_end": 40
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And maybe I didn't",
+      "excerpt_after": "you",
+      "options": [
+        "good",
+        "hold",
+        "often",
+        "those"
+      ],
+      "answer_index": 1,
+      "youtube_start": 61,
+      "youtube_end": 73
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I am so",
+      "excerpt_after": "that you're mine",
+      "options": [
+        "happy",
+        "second",
+        "tell",
+        "treat"
+      ],
+      "answer_index": 0,
+      "youtube_start": 81,
+      "youtube_end": 93
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Give me one more",
+      "excerpt_after": "to keep you satisfied",
+      "options": [
+        "chance",
+        "give",
+        "often",
+        "time"
+      ],
+      "answer_index": 0,
+      "youtube_start": 132,
+      "youtube_end": 144
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "love",
+        "you",
+        "didn't",
+        "I",
+        "Maybe"
+      ],
+      "answer": [
+        "Maybe",
+        "I",
+        "didn't",
+        "love",
+        "you"
+      ],
+      "youtube_start": 8
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "treat",
+        "you",
+        "didn't",
+        "And",
+        "I",
+        "maybe"
+      ],
+      "answer": [
+        "And",
+        "maybe",
+        "I",
+        "didn't",
+        "treat",
+        "you"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "was",
+        "Girl",
+        "sorry",
+        "I",
+        "I'm",
+        "blind"
+      ],
+      "answer": [
+        "Girl",
+        "I'm",
+        "sorry",
+        "I",
+        "was",
+        "blind"
+      ],
+      "youtube_start": 41
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "maybe",
+        "And",
+        "hold",
+        "I",
+        "didn't"
+      ],
+      "answer": [
+        "And",
+        "maybe",
+        "I",
+        "didn't",
+        "hold",
+        "you"
+      ],
+      "youtube_start": 61
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "happy",
+        "am",
+        "mine",
+        "you're",
+        "I",
+        "so",
+        "that"
+      ],
+      "answer": [
+        "I",
+        "am",
+        "so",
+        "happy",
+        "that",
+        "you're",
+        "mine"
+      ],
+      "youtube_start": 81
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"always\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"always\" na música inteira?",
+      "word": "always",
+      "answer": 10
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"mind\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"mind\" na música inteira?",
+      "word": "mind",
+      "answer": 10
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Always on My Mind\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Always on My Mind\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "always",
+        "mind",
+        "maybe",
+        "didn't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "always",
+        "mind",
+        "maybe",
+        "didn't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "always",
+        "mind",
+        "maybe",
+        "didn't"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "didn't",
+          "full": "did not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "hasn't",
+          "full": "has not"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,487 @@
+{
+  "slug": "sweet-love",
+  "title": "Sweet Love",
+  "artist": "Anita Baker",
+  "year": 1986,
+  "album": "The Best of Anita Baker",
+  "genre": [
+    "r&b"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 262,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Sweet Love by Anita Baker (1986) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "sweet",
+      "pt": "",
+      "note": "Appears 23 times; first heard in: \"I'm in love, sweet love (sweet love)\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"With all my heart I love you, baby\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Don't you ever go away, it'll always be this way\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Never leave, 'cause I believe\""
+    },
+    {
+      "term": "leave",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Never leave, 'cause I believe\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I'm in love, sweet love (sweet love)",
+          "Hear me calling out your name, I feel no shame",
+          "I'm in love, sweet love (sweet love)",
+          "Don't you ever go away, it'll always be this way"
+        ],
+        "start_seconds": 43,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Never leave, 'cause baby I believe",
+          "In this love, sweet love (sweet love)",
+          "Hear me calling out your name, I feel no shame",
+          "I'm in love, sweet love"
+        ],
+        "start_seconds": 82,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "With all my",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heart",
+      "excerpt_after": "I love you, baby",
+      "youtube_start": 21,
+      "youtube_end": 35
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm in love,",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sweet",
+      "excerpt_after": "love (sweet love)",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Just",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "trust",
+      "excerpt_after": "in what we're feeling",
+      "youtube_start": 76,
+      "youtube_end": 90
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh baby no,",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "my man, I'm your girl",
+      "youtube_start": 113,
+      "youtube_end": 127
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh, the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sweetest",
+      "excerpt_after": "dream, a lovely baby",
+      "youtube_start": 130,
+      "youtube_end": 144
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh, baby no",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sweeter",
+      "excerpt_after": "love (sweet love)",
+      "youtube_start": 215,
+      "youtube_end": 229
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "With all my heart I love you, baby",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "My arms will hold you, baby",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm in love, sweet love sweet love",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I will be all that you need",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Never leave, 'cause baby I believe",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "With all my",
+      "excerpt_after": "I love you, baby",
+      "options": [
+        "always",
+        "believe",
+        "cause",
+        "heart"
+      ],
+      "answer_index": 3,
+      "youtube_start": 21,
+      "youtube_end": 33
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm in love,",
+      "excerpt_after": "love (sweet love)",
+      "options": [
+        "belong",
+        "calling",
+        "girl",
+        "sweet"
+      ],
+      "answer_index": 3,
+      "youtube_start": 43,
+      "youtube_end": 55
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Never leave,",
+      "excerpt_after": "baby I believe",
+      "options": [
+        "calling",
+        "cause",
+        "hear",
+        "theres"
+      ],
+      "answer_index": 1,
+      "youtube_start": 82,
+      "youtube_end": 94
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'll",
+      "excerpt_after": "go, wait and see, can't be wrong",
+      "options": [
+        "cause",
+        "dream",
+        "never",
+        "stronger"
+      ],
+      "answer_index": 2,
+      "youtube_start": 119,
+      "youtube_end": 131
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Stay",
+      "excerpt_after": "here, never fear",
+      "options": [
+        "dream",
+        "nobody",
+        "right",
+        "wrong"
+      ],
+      "answer_index": 2,
+      "youtube_start": 137,
+      "youtube_end": 149
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "and",
+        "will",
+        "with",
+        "see",
+        "Stay",
+        "me"
+      ],
+      "answer": [
+        "Stay",
+        "with",
+        "me",
+        "and",
+        "you",
+        "will",
+        "see"
+      ],
+      "youtube_start": 27
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "you",
+        "will",
+        "need",
+        "that",
+        "be",
+        "all"
+      ],
+      "answer": [
+        "I",
+        "will",
+        "be",
+        "all",
+        "that",
+        "you",
+        "need"
+      ],
+      "youtube_start": 71
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "love",
+        "love,",
+        "sweet",
+        "I'm",
+        "in"
+      ],
+      "answer": [
+        "I'm",
+        "in",
+        "love,",
+        "sweet",
+        "love"
+      ],
+      "youtube_start": 98
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "love,",
+        "hmm",
+        "Sweet",
+        "umm"
+      ],
+      "answer": [
+        "Sweet",
+        "love,",
+        "umm",
+        "hmm"
+      ],
+      "youtube_start": 187
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Don't",
+        "sweet",
+        "nobody",
+        "know",
+        "love"
+      ],
+      "answer": [
+        "Don't",
+        "nobody",
+        "know",
+        "sweet",
+        "love"
+      ],
+      "youtube_start": 230
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"sweet\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"sweet\" na música inteira?",
+      "word": "sweet",
+      "answer": 23
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"baby\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"baby\" na música inteira?",
+      "word": "baby",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "With all my heart I love you, baby",
+          "order": 0
+        },
+        {
+          "text": "In this love, sweet love (sweet love)",
+          "order": 1
+        },
+        {
+          "text": "Oh, no, no, no, no, no, no, no",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Stay with me and you will see",
+          "order": 0
+        },
+        {
+          "text": "I will be all that you need",
+          "order": 1
+        },
+        {
+          "text": "Oh, baby no sweeter love (sweet love)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Sweet Love\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Sweet Love\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "sweet",
+        "baby",
+        "don't",
+        "never"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "sweet",
+        "baby",
+        "don't",
+        "never"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "sweet",
+        "baby",
+        "don't",
+        "never"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        }
+      ]
+    }
+  ]
+}

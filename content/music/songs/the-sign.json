@@ -1,0 +1,475 @@
+{
+  "slug": "the-sign",
+  "title": "The Sign",
+  "artist": "Ace of Base",
+  "year": 1993,
+  "album": "The Sign",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 159,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "The Sign by Ace of Base (1993) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "sign",
+      "pt": "",
+      "note": "Appears 20 times; first heard in: \"I saw the sign and it opened up my eyes\""
+    },
+    {
+      "term": "opened",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I saw the sign and it opened up my eyes\""
+    },
+    {
+      "term": "eyes",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I saw the sign and it opened up my eyes\""
+    },
+    {
+      "term": "belong",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"To get into the light where you belong\""
+    },
+    {
+      "term": "enough",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Is enough, enough?\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I saw the sign",
+          "Life is demanding without understanding",
+          "I saw the sign and it opened up my eyes",
+          "I saw the sign"
+        ],
+        "start_seconds": 56,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "I saw the sign",
+          "No one's gonna drag you up",
+          "To get into the light where you belong",
+          "But where do you belong?"
+        ],
+        "start_seconds": 118,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You would",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "hardly",
+      "excerpt_after": "recognize me",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "How can a",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "person",
+      "excerpt_after": "like me care for you?",
+      "youtube_start": 37,
+      "youtube_end": 51
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Life is",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "demanding",
+      "excerpt_after": "without understanding",
+      "youtube_start": 57,
+      "youtube_end": 71
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To get into the",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "light",
+      "excerpt_after": "where you belong",
+      "youtube_start": 69,
+      "youtube_end": 83
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "For so many",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "years",
+      "excerpt_after": "I've wondered who you are",
+      "youtube_start": 86,
+      "youtube_end": 100
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Life is demanding",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "without",
+      "excerpt_after": "understanding",
+      "youtube_start": 109,
+      "youtube_end": 123
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I, I got a new life",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm so glad",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When you're not the one for me?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "No one's gonna drag you up",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But where do you belong?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You would",
+      "excerpt_after": "recognize me",
+      "options": [
+        "belong",
+        "enough",
+        "hardly",
+        "stars"
+      ],
+      "answer_index": 2,
+      "youtube_start": 34,
+      "youtube_end": 46
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Life is",
+      "excerpt_after": "without understanding",
+      "options": [
+        "belong",
+        "demanding",
+        "living",
+        "opened"
+      ],
+      "answer_index": 1,
+      "youtube_start": 57,
+      "youtube_end": 69
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "(Ah)",
+      "excerpt_after": "the pale moon",
+      "options": [
+        "enough",
+        "gonna",
+        "opened",
+        "under"
+      ],
+      "answer_index": 3,
+      "youtube_start": 84,
+      "youtube_end": 96
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Under the",
+      "excerpt_after": "moon",
+      "options": [
+        "drag",
+        "enough",
+        "living",
+        "pale"
+      ],
+      "answer_index": 3,
+      "youtube_start": 94,
+      "youtube_end": 106
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I am",
+      "excerpt_after": "now",
+      "options": [
+        "drag",
+        "happy",
+        "light",
+        "wondered"
+      ],
+      "answer_index": 1,
+      "youtube_start": 150,
+      "youtube_end": 162
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "new",
+        "I",
+        "got",
+        "I,",
+        "life"
+      ],
+      "answer": [
+        "I,",
+        "I",
+        "got",
+        "a",
+        "new",
+        "life"
+      ],
+      "youtube_start": 32
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "bother",
+        "do",
+        "Why",
+        "I"
+      ],
+      "answer": [
+        "Why",
+        "do",
+        "I",
+        "bother"
+      ],
+      "youtube_start": 42
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "sign",
+        "the",
+        "I",
+        "saw"
+      ],
+      "answer": [
+        "I",
+        "saw",
+        "the",
+        "sign"
+      ],
+      "youtube_start": 56
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "But",
+        "where",
+        "do",
+        "belong?",
+        "you"
+      ],
+      "answer": [
+        "But",
+        "where",
+        "do",
+        "you",
+        "belong?"
+      ],
+      "youtube_start": 73
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "stars",
+        "lot",
+        "I",
+        "a",
+        "see",
+        "of",
+        "Where"
+      ],
+      "answer": [
+        "Where",
+        "I",
+        "see",
+        "a",
+        "lot",
+        "of",
+        "stars"
+      ],
+      "youtube_start": 96
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"sign\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"sign\" na música inteira?",
+      "word": "sign",
+      "answer": 20
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"opened\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"opened\" na música inteira?",
+      "word": "opened",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I, I got a new life",
+          "order": 0
+        },
+        {
+          "text": "But where do you belong?",
+          "order": 1
+        },
+        {
+          "text": "Oh, oh, oh, oh",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You would hardly recognize me",
+          "order": 0
+        },
+        {
+          "text": "I saw the sign",
+          "order": 1
+        },
+        {
+          "text": "I've left you, oh, oh, oh, oh, oh",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Ace of Base one question about \"The Sign\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Ace of Base sobre \"The Sign\", o que seria e por quê?",
+      "target_vocab": [
+        "sign",
+        "opened",
+        "eyes",
+        "belong"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"The Sign\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"The Sign\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "sign",
+        "opened",
+        "eyes",
+        "belong"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"The Sign\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"The Sign\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "sign",
+        "opened",
+        "eyes",
+        "belong"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        }
+      ]
+    }
+  ]
+}

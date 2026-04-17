@@ -1,0 +1,485 @@
+{
+  "slug": "ms-jackson",
+  "title": "Ms. Jackson",
+  "artist": "Outkast",
+  "year": 2000,
+  "album": "Original Album Classics: OutKast",
+  "genre": [
+    "hip-hop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 271,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Ms. Jackson by Outkast (2000) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "jackson",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"I'm sorry Ms. Jackson (oh), I am for real\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Never meant to make your daughter cry\""
+    },
+    {
+      "term": "daughter",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Never meant to make your daughter cry\""
+    },
+    {
+      "term": "times",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"I apologize a trillion times\""
+    },
+    {
+      "term": "sorry",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"I'm sorry Ms. Jackson (oh), I am for real\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I apologize a trillion times",
+          "I'm sorry Ms. Jackson (oh), I am for real",
+          "Never meant to make your daughter cry",
+          "I apologize a trillion times"
+        ],
+        "start_seconds": 30,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "I apologize a trillion times",
+          "Me and yo' daughter, got this thing going on (We got a special kind of thing going on)",
+          "You say it's puppy love",
+          "We say it's full grown"
+        ],
+        "start_seconds": 91,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Mamas,",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "mamas",
+      "excerpt_after": "baby mamas, mamas",
+      "youtube_start": 13,
+      "youtube_end": 27
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm sorry Ms.",
+      "blank_hint": "word starting with \"j\"",
+      "answer": "jackson",
+      "excerpt_after": "(oh), I am for real",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "studio",
+      "excerpt_after": "trying to fight me",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Forever,",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "forever",
+      "excerpt_after": "ever, forever, ever?",
+      "youtube_start": 126,
+      "youtube_end": 140
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "happened",
+      "excerpt_after": "for a reason one can't be, mad",
+      "youtube_start": 147,
+      "youtube_end": 161
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You see your",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "little",
+      "excerpt_after": "nosy-ass home girls",
+      "youtube_start": 177,
+      "youtube_end": 191
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I apologize a trillion times",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We say it's full grown",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "\"Look at the way he treats me\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You see your little nosy-ass home girls",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Know what I'm talking about? Jealousy, infidelity, envy",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Mamas,",
+      "excerpt_after": "baby mamas, mamas",
+      "options": [
+        "boys",
+        "mamas",
+        "meant",
+        "studio"
+      ],
+      "answer_index": 1,
+      "youtube_start": 13,
+      "youtube_end": 25
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Never meant to make your",
+      "excerpt_after": "cry",
+      "options": [
+        "daughter",
+        "meant",
+        "paycheck",
+        "sorry"
+      ],
+      "answer_index": 0,
+      "youtube_start": 38,
+      "youtube_end": 50
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You say it's",
+      "excerpt_after": "love",
+      "options": [
+        "lights",
+        "puppy",
+        "real",
+        "thats"
+      ],
+      "answer_index": 1,
+      "youtube_start": 99,
+      "youtube_end": 111
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Become a",
+      "excerpt_after": "to abacadabra all the sadder",
+      "options": [
+        "lights",
+        "magician",
+        "school",
+        "wanna"
+      ],
+      "answer_index": 1,
+      "youtube_start": 136,
+      "youtube_end": 148
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Shit, look at the way you",
+      "excerpt_after": "me",
+      "options": [
+        "meant",
+        "paycheck",
+        "times",
+        "treat"
+      ],
+      "answer_index": 3,
+      "youtube_start": 176,
+      "youtube_end": 188
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "mamas,",
+        "mamas,",
+        "Mamas,",
+        "baby",
+        "mamas"
+      ],
+      "answer": [
+        "Mamas,",
+        "mamas,",
+        "baby",
+        "mamas,",
+        "mamas"
+      ],
+      "youtube_start": 13
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "apologize",
+        "times",
+        "a",
+        "trillion"
+      ],
+      "answer": [
+        "I",
+        "apologize",
+        "a",
+        "trillion",
+        "times"
+      ],
+      "youtube_start": 30
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "You",
+        "love",
+        "it's",
+        "say",
+        "puppy"
+      ],
+      "answer": [
+        "You",
+        "say",
+        "it's",
+        "puppy",
+        "love"
+      ],
+      "youtube_start": 99
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ever,",
+        "forever,",
+        "Forever,",
+        "forever,",
+        "ever?"
+      ],
+      "answer": [
+        "Forever,",
+        "forever,",
+        "ever,",
+        "forever,",
+        "ever?"
+      ],
+      "youtube_start": 126
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "your",
+        "You",
+        "see",
+        "little",
+        "home",
+        "nosy-ass",
+        "girls"
+      ],
+      "answer": [
+        "You",
+        "see",
+        "your",
+        "little",
+        "nosy-ass",
+        "home",
+        "girls"
+      ],
+      "youtube_start": 177
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"jackson\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"jackson\" na música inteira?",
+      "word": "jackson",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"never\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"never\" na música inteira?",
+      "word": "never",
+      "answer": 12
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Mamas, mamas, baby mamas, mamas",
+          "order": 0
+        },
+        {
+          "text": "You say it's puppy love",
+          "order": 1
+        },
+        {
+          "text": "You see your little nosy-ass home girls",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Yeah, go like this",
+          "order": 0
+        },
+        {
+          "text": "So know this, know that everything's cool",
+          "order": 1
+        },
+        {
+          "text": "Know what I'm talking about? Jealousy, infidelity, envy",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Ms. Jackson\" was released in 2000. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Ms. Jackson\" foi lançada em 2000. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "jackson",
+        "never",
+        "daughter",
+        "times"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Ms. Jackson\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Ms. Jackson\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "jackson",
+        "never",
+        "daughter",
+        "times"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "jackson",
+        "never",
+        "daughter",
+        "times"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

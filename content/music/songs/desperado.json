@@ -1,0 +1,493 @@
+{
+  "slug": "desperado",
+  "title": "Desperado",
+  "artist": "Eagles",
+  "year": 1973,
+  "album": "Desperado",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 214,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Desperado by Eagles (1973) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Why don't you come to your senses?\""
+    },
+    {
+      "term": "desperado",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Desperado\""
+    },
+    {
+      "term": "somebody",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"You better let somebody love you\""
+    },
+    {
+      "term": "senses",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Why don't you come to your senses?\""
+    },
+    {
+      "term": "fences",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"You've been out ridin' fences for so long now\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Why don't you come to your senses?",
+          "You've been out ridin' fences for so long now",
+          "Oh, you're a hard one",
+          "I know that you got your reasons"
+        ],
+        "start_seconds": 23,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "You better let somebody love you",
+          "(Let somebody love you)",
+          "You better let somebody love you",
+          "Before it's too late"
+        ],
+        "start_seconds": 174,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You've been out",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "ridin",
+      "excerpt_after": "fences for so long now",
+      "youtube_start": 28,
+      "youtube_end": 42
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "These",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "things",
+      "excerpt_after": "that are pleasin' you",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh, you ain't",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gettin",
+      "excerpt_after": "no younger",
+      "youtube_start": 88,
+      "youtube_end": 102
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well,",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "just some people talkin'",
+      "youtube_start": 106,
+      "youtube_end": 120
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You're",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "losing",
+      "excerpt_after": "all your highs and lows",
+      "youtube_start": 131,
+      "youtube_end": 145
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "theres",
+      "excerpt_after": "a rainbow above you",
+      "youtube_start": 170,
+      "youtube_end": 184
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Why don't you come to your senses?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I know that you got your reasons",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Can hurt you somehow",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "She'll beat you if she's able",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They're drivin' you home",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Why",
+      "excerpt_after": "you come to your senses?",
+      "options": [
+        "dont",
+        "fences",
+        "seems",
+        "theyre"
+      ],
+      "answer_index": 0,
+      "youtube_start": 23,
+      "youtube_end": 35
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "These",
+      "excerpt_after": "that are pleasin' you",
+      "options": [
+        "ones",
+        "ridin",
+        "things",
+        "younger"
+      ],
+      "answer_index": 2,
+      "youtube_start": 43,
+      "youtube_end": 55
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Have been",
+      "excerpt_after": "upon your table",
+      "options": [
+        "hearts",
+        "know",
+        "laid",
+        "reasons"
+      ],
+      "answer_index": 2,
+      "youtube_start": 74,
+      "youtube_end": 86
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well,",
+      "excerpt_after": "just some people talkin'",
+      "options": [
+        "fences",
+        "shell",
+        "somehow",
+        "thats"
+      ],
+      "answer_index": 3,
+      "youtube_start": 106,
+      "youtube_end": 118
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You're",
+      "excerpt_after": "all your highs and lows",
+      "options": [
+        "dont",
+        "fences",
+        "losing",
+        "shes"
+      ],
+      "answer_index": 2,
+      "youtube_start": 131,
+      "youtube_end": 143
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "to",
+        "your",
+        "senses?",
+        "come",
+        "Why",
+        "don't"
+      ],
+      "answer": [
+        "Why",
+        "don't",
+        "you",
+        "come",
+        "to",
+        "your",
+        "senses?"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "things",
+        "are",
+        "These",
+        "that",
+        "pleasin'"
+      ],
+      "answer": [
+        "These",
+        "things",
+        "that",
+        "are",
+        "pleasin'",
+        "you"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "younger",
+        "Oh,",
+        "ain't",
+        "gettin'",
+        "no",
+        "you"
+      ],
+      "answer": [
+        "Oh,",
+        "you",
+        "ain't",
+        "gettin'",
+        "no",
+        "younger"
+      ],
+      "youtube_start": 88
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "just",
+        "talkin'",
+        "Well,",
+        "people",
+        "that's",
+        "some"
+      ],
+      "answer": [
+        "Well,",
+        "that's",
+        "just",
+        "some",
+        "people",
+        "talkin'"
+      ],
+      "youtube_start": 106
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "above",
+        "there's",
+        "a",
+        "But",
+        "you",
+        "rainbow"
+      ],
+      "answer": [
+        "But",
+        "there's",
+        "a",
+        "rainbow",
+        "above",
+        "you"
+      ],
+      "youtube_start": 170
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 4
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"desperado\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"desperado\" na música inteira?",
+      "word": "desperado",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Why don't you come to your senses?",
+          "order": 0
+        },
+        {
+          "text": "Have been laid upon your table",
+          "order": 1
+        },
+        {
+          "text": "Ain't it funny how the feeling goes away?",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Oh, you're a hard one",
+          "order": 0
+        },
+        {
+          "text": "Freedom, oh freedom",
+          "order": 1
+        },
+        {
+          "text": "Come down from your fences",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "don't",
+        "desperado",
+        "somebody",
+        "senses"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Desperado\" was released in 1973. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Desperado\" foi lançada em 1973. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "don't",
+        "desperado",
+        "somebody",
+        "senses"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Desperado\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Desperado\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "don't",
+        "desperado",
+        "somebody",
+        "senses"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "she's",
+          "full": "she is"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,487 @@
+{
+  "slug": "father-figure",
+  "title": "Father Figure",
+  "artist": "George Michael",
+  "year": 1987,
+  "album": "Faith",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 337,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Father Figure by George Michael (1987) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"W-h-o-a baby\""
+    },
+    {
+      "term": "father",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I will be your father figure\""
+    },
+    {
+      "term": "time",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Maybe this time is forever say it can be\""
+    },
+    {
+      "term": "figure",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I will be your father figure\""
+    },
+    {
+      "term": "that's",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"That's all I wanted\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I will be your father figure",
+          "Oh baby",
+          "Put your tiny hand in mine",
+          "I will be your preacher teacher"
+        ],
+        "start_seconds": 113,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "That's all I wanted",
+          "Something special something sacred in your eyes",
+          "For just one moment to be bold and naked at your side",
+          "Sometimes I think that you never understand me (understand me)"
+        ],
+        "start_seconds": 37,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Something",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "special",
+      "excerpt_after": "something sacred in your eyes",
+      "youtube_start": 40,
+      "youtube_end": 54
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Something special",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "someone",
+      "excerpt_after": "sacred in your life",
+      "youtube_start": 78,
+      "youtube_end": 92
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I will be your",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "preacher",
+      "excerpt_after": "teacher",
+      "youtube_start": 117,
+      "youtube_end": 131
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Just to see my",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "babys",
+      "excerpt_after": "blue eyes shine",
+      "youtube_start": 162,
+      "youtube_end": 176
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If you are the",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "desert",
+      "excerpt_after": "I'll be the sea",
+      "youtube_start": 207,
+      "youtube_end": 221
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So when you",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "remember",
+      "excerpt_after": "the ones who have lied",
+      "youtube_start": 226,
+      "youtube_end": 240
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "That's all I wanted",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But something tells me together we'd be happy",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I will be your preacher teacher",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I have had enough of crime",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Whatever you ask for that's what I'll be",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Something",
+      "excerpt_after": "something sacred in your eyes",
+      "options": [
+        "daddy",
+        "father",
+        "special",
+        "think"
+      ],
+      "answer_index": 2,
+      "youtube_start": 40,
+      "youtube_end": 52
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I will be your",
+      "excerpt_after": "figure",
+      "options": [
+        "father",
+        "loves",
+        "mine",
+        "never"
+      ],
+      "answer_index": 0,
+      "youtube_start": 113,
+      "youtube_end": 125
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Just to see my",
+      "excerpt_after": "blue eyes shine",
+      "options": [
+        "babys",
+        "enough",
+        "forever",
+        "together"
+      ],
+      "answer_index": 0,
+      "youtube_start": 162,
+      "youtube_end": 174
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "If you",
+      "excerpt_after": "hunger hunger for me",
+      "options": [
+        "ever",
+        "hand",
+        "moment",
+        "warm"
+      ],
+      "answer_index": 0,
+      "youtube_start": 212,
+      "youtube_end": 224
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And love",
+      "excerpt_after": "lie no",
+      "options": [
+        "cant",
+        "each",
+        "father",
+        "teacher"
+      ],
+      "answer_index": 0,
+      "youtube_start": 260,
+      "youtube_end": 272
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "That's",
+        "wanted",
+        "I",
+        "all"
+      ],
+      "answer": [
+        "That's",
+        "all",
+        "I",
+        "wanted"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "will",
+        "figure",
+        "your",
+        "be",
+        "father"
+      ],
+      "answer": [
+        "I",
+        "will",
+        "be",
+        "your",
+        "father",
+        "figure"
+      ],
+      "youtube_start": 113
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "If",
+        "me",
+        "ever",
+        "hunger",
+        "for",
+        "hunger"
+      ],
+      "answer": [
+        "If",
+        "you",
+        "ever",
+        "hunger",
+        "hunger",
+        "for",
+        "me"
+      ],
+      "youtube_start": 212
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "lie",
+        "no",
+        "And",
+        "can't",
+        "love"
+      ],
+      "answer": [
+        "And",
+        "love",
+        "can't",
+        "lie",
+        "no"
+      ],
+      "youtube_start": 260
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "in",
+        "Anything",
+        "you",
+        "have",
+        "baby",
+        "mine"
+      ],
+      "answer": [
+        "Anything",
+        "you",
+        "have",
+        "in",
+        "mine",
+        "baby"
+      ],
+      "youtube_start": 289
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"baby\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"baby\" na música inteira?",
+      "word": "baby",
+      "answer": 10
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"father\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"father\" na música inteira?",
+      "word": "father",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "That's all I wanted",
+          "order": 0
+        },
+        {
+          "text": "Just to see my baby's blue eyes shine",
+          "order": 1
+        },
+        {
+          "text": "My love is always telling me so",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Something special something sacred in your eyes",
+          "order": 0
+        },
+        {
+          "text": "I have had enough of crime",
+          "order": 1
+        },
+        {
+          "text": "Just hold on hold on",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Father Figure\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Father Figure\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "baby",
+        "father",
+        "time",
+        "figure"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Father Figure\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Father Figure\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "baby",
+        "father",
+        "time",
+        "figure"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Father Figure\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Father Figure\", o que aconteceria?",
+      "target_vocab": [
+        "baby",
+        "father",
+        "time",
+        "figure"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        }
+      ]
+    }
+  ]
+}

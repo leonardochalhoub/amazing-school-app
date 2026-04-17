@@ -1,0 +1,474 @@
+{
+  "slug": "fields-of-gold",
+  "title": "Fields of Gold",
+  "artist": "Sting",
+  "year": 1993,
+  "album": "...All This Time (UK Only Version)",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 230,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Fields of Gold by Sting (1993) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "fields",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"Upon the fields of barley\""
+    },
+    {
+      "term": "gold",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"As we walk in fields of gold\""
+    },
+    {
+      "term": "barley",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Upon the fields of barley\""
+    },
+    {
+      "term": "upon",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Upon the fields of barley\""
+    },
+    {
+      "term": "among",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Among the fields of gold\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Upon the fields of barley",
+          "You'll forget the sun in his jealous sky",
+          "As we walk in fields of gold"
+        ],
+        "start_seconds": 23,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Among the fields of gold",
+          "Will you stay with me?",
+          "Will you be my love?",
+          "Upon the fields of barley"
+        ],
+        "start_seconds": 57,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You'll",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "remember",
+      "excerpt_after": "me when the west wind moves",
+      "youtube_start": 13,
+      "youtube_end": 27
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Upon the",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fields",
+      "excerpt_after": "of barley",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We'll forget the sun in his",
+      "blank_hint": "word starting with \"j\"",
+      "answer": "jealous",
+      "excerpt_after": "sky",
+      "youtube_start": 70,
+      "youtube_end": 84
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "made promises lightly",
+      "youtube_start": 107,
+      "youtube_end": 121
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But I",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "swear",
+      "excerpt_after": "in the days still left",
+      "youtube_start": 115,
+      "youtube_end": 129
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "See the",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "children",
+      "excerpt_after": "run as the sun goes down",
+      "youtube_start": 158,
+      "youtube_end": 172
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You'll remember me when the west wind moves",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "As we walk in fields of gold",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Will you stay with me?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We'll forget the sun in his jealous sky",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I never made promises lightly",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You'll",
+      "excerpt_after": "me when the west wind moves",
+      "options": [
+        "barley",
+        "promises",
+        "remember",
+        "walked"
+      ],
+      "answer_index": 2,
+      "youtube_start": 13,
+      "youtube_end": 25
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "As we",
+      "excerpt_after": "in fields of gold",
+      "options": [
+        "body",
+        "broken",
+        "gold",
+        "walk"
+      ],
+      "answer_index": 3,
+      "youtube_start": 32,
+      "youtube_end": 44
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We'll forget the sun in his",
+      "excerpt_after": "sky",
+      "options": [
+        "jealous",
+        "stay",
+        "swear",
+        "wind"
+      ],
+      "answer_index": 0,
+      "youtube_start": 70,
+      "youtube_end": 82
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "made promises lightly",
+      "options": [
+        "barley",
+        "many",
+        "never",
+        "rise"
+      ],
+      "answer_index": 2,
+      "youtube_start": 107,
+      "youtube_end": 119
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "See the",
+      "excerpt_after": "run as the sun goes down",
+      "options": [
+        "children",
+        "promises",
+        "summer",
+        "there"
+      ],
+      "answer_index": 0,
+      "youtube_start": 158,
+      "youtube_end": 170
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "fields",
+        "of",
+        "the",
+        "Upon",
+        "barley"
+      ],
+      "answer": [
+        "Upon",
+        "the",
+        "fields",
+        "of",
+        "barley"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "her",
+        "love",
+        "So",
+        "took",
+        "she"
+      ],
+      "answer": [
+        "So",
+        "she",
+        "took",
+        "her",
+        "love"
+      ],
+      "youtube_start": 42
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Among",
+        "fields",
+        "of",
+        "gold",
+        "the"
+      ],
+      "answer": [
+        "Among",
+        "the",
+        "fields",
+        "of",
+        "gold"
+      ],
+      "youtube_start": 57
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "gold",
+        "of",
+        "lie",
+        "in",
+        "fields",
+        "we",
+        "As"
+      ],
+      "answer": [
+        "As",
+        "we",
+        "lie",
+        "in",
+        "fields",
+        "of",
+        "gold"
+      ],
+      "youtube_start": 75
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "We'll",
+        "of",
+        "fields",
+        "gold",
+        "in",
+        "walk"
+      ],
+      "answer": [
+        "We'll",
+        "walk",
+        "in",
+        "fields",
+        "of",
+        "gold"
+      ],
+      "youtube_start": 119
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"fields\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"fields\" na música inteira?",
+      "word": "fields",
+      "answer": 16
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"gold\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"gold\" na música inteira?",
+      "word": "gold",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You'll remember me when the west wind moves",
+          "order": 0
+        },
+        {
+          "text": "Will you be my love?",
+          "order": 1
+        },
+        {
+          "text": "We'll walk in fields of gold",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Upon the fields of barley",
+          "order": 0
+        },
+        {
+          "text": "Among the fields of gold",
+          "order": 1
+        },
+        {
+          "text": "Among the fields of barley",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Fields of Gold\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Fields of Gold\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "fields",
+        "gold",
+        "barley",
+        "upon"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Sting one question about \"Fields of Gold\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Sting sobre \"Fields of Gold\", o que seria e por quê?",
+      "target_vocab": [
+        "fields",
+        "gold",
+        "barley",
+        "upon"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Fields of Gold\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Fields of Gold\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "fields",
+        "gold",
+        "barley",
+        "upon"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you'll",
+          "full": "you will"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        }
+      ]
+    }
+  ]
+}

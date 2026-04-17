@@ -1,0 +1,481 @@
+{
+  "slug": "both-sides-now",
+  "title": "Both Sides Now",
+  "artist": "Joni Mitchell",
+  "year": 1969,
+  "album": "Clouds",
+  "genre": [
+    "folk"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 275,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Both Sides Now by Joni Mitchell (1969) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "i've",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I've looked at clouds that way\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I really don't know clouds at all\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"It's cloud illusions, I recall\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I really don't know clouds at all\""
+    },
+    {
+      "term": "life",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I've looked at life that way\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "From up and down, and still somehow",
+          "It's cloud illusions, I recall",
+          "I really don't know clouds at all",
+          "Moons and Junes and Ferris wheels"
+        ],
+        "start_seconds": 78,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "It's life's illusions, I recall",
+          "I really don't know life at all"
+        ],
+        "start_seconds": 257,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Rows and",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "flows",
+      "excerpt_after": "of angel hair",
+      "youtube_start": 16,
+      "youtube_end": 30
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But now they only",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "block",
+      "excerpt_after": "the sun",
+      "youtube_start": 45,
+      "youtube_end": 59
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "really",
+      "excerpt_after": "don't know clouds at all",
+      "youtube_start": 90,
+      "youtube_end": 104
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But now it's just",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "another",
+      "excerpt_after": "show",
+      "youtube_start": 130,
+      "youtube_end": 144
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Tears and",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fears",
+      "excerpt_after": "and feeling proud",
+      "youtube_start": 196,
+      "youtube_end": 210
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "They",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "shake",
+      "excerpt_after": "their heads, they say I've changed",
+      "youtube_start": 226,
+      "youtube_end": 240
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've looked at clouds that way",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They rain and snow on everyone",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've looked at clouds from both sides now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I really don't know clouds at all",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've looked at love that way",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Rows and",
+      "excerpt_after": "of angel hair",
+      "options": [
+        "both",
+        "cloud",
+        "dancin",
+        "flows"
+      ],
+      "answer_index": 3,
+      "youtube_start": 16,
+      "youtube_end": 28
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So",
+      "excerpt_after": "things I would've done",
+      "options": [
+        "many",
+        "really",
+        "somehow",
+        "wouldve"
+      ],
+      "answer_index": 0,
+      "youtube_start": 59,
+      "youtube_end": 71
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "As",
+      "excerpt_after": "fairy tale comes real",
+      "options": [
+        "comes",
+        "every",
+        "laughin",
+        "moons"
+      ],
+      "answer_index": 1,
+      "youtube_start": 118,
+      "youtube_end": 130
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I really",
+      "excerpt_after": "know love at all",
+      "options": [
+        "another",
+        "dont",
+        "hair",
+        "moons"
+      ],
+      "answer_index": 1,
+      "youtube_start": 175,
+      "youtube_end": 187
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "They",
+      "excerpt_after": "their heads, they say I've changed",
+      "options": [
+        "dancin",
+        "everyone",
+        "know",
+        "shake"
+      ],
+      "answer_index": 3,
+      "youtube_start": 226,
+      "youtube_end": 238
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Rows",
+        "angel",
+        "of",
+        "hair",
+        "and",
+        "flows"
+      ],
+      "answer": [
+        "Rows",
+        "and",
+        "flows",
+        "of",
+        "angel",
+        "hair"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "would've",
+        "done",
+        "So",
+        "many",
+        "I",
+        "things"
+      ],
+      "answer": [
+        "So",
+        "many",
+        "things",
+        "I",
+        "would've",
+        "done"
+      ],
+      "youtube_start": 59
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "way",
+        "The",
+        "dizzy",
+        "dancin'",
+        "you",
+        "feel"
+      ],
+      "answer": [
+        "The",
+        "dizzy",
+        "dancin'",
+        "way",
+        "you",
+        "feel"
+      ],
+      "youtube_start": 112
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "and",
+        "somehow",
+        "give",
+        "and",
+        "From",
+        "take,",
+        "still"
+      ],
+      "answer": [
+        "From",
+        "give",
+        "and",
+        "take,",
+        "and",
+        "still",
+        "somehow"
+      ],
+      "youtube_start": 161
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "are",
+        "old",
+        "But",
+        "now",
+        "acting",
+        "friends",
+        "strange"
+      ],
+      "answer": [
+        "But",
+        "now",
+        "old",
+        "friends",
+        "are",
+        "acting",
+        "strange"
+      ],
+      "youtube_start": 221
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"i've\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"i've\" na música inteira?",
+      "word": "i've",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Rows and flows of angel hair",
+          "order": 0
+        },
+        {
+          "text": "The dizzy dancin' way you feel",
+          "order": 1
+        },
+        {
+          "text": "Dreams and schemes and circus crowds",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And ice cream castles in the air",
+          "order": 0
+        },
+        {
+          "text": "I've looked at love from both sides now",
+          "order": 1
+        },
+        {
+          "text": "Well, something's lost, but something's gained",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "i've",
+        "don't",
+        "it's",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Both Sides Now\" was released in 1969. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Both Sides Now\" foi lançada em 1969. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "i've",
+        "don't",
+        "it's",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Both Sides Now\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Both Sides Now\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "i've",
+        "don't",
+        "it's",
+        "know"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,493 @@
+{
+  "slug": "take-on-me",
+  "title": "Take On Me",
+  "artist": "A-ha",
+  "year": 1985,
+  "album": "Hunting High And Low",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 225,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Take On Me by A-ha (1985) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "i'll",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I'll say it anyway\""
+    },
+    {
+      "term": "gone",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I'll be gone\""
+    },
+    {
+      "term": "anyway",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I'll say it anyway\""
+    },
+    {
+      "term": "shying",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Shying away\""
+    },
+    {
+      "term": "coming",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I'll be coming for your love, okay?\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Take on me (take on me)",
+          "Take me on (take on me)",
+          "I'll be gone",
+          "In a day or two"
+        ],
+        "start_seconds": 51,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Take on me (take on me)",
+          "Take me on (take on me)",
+          "I'll be gone in a day",
+          "Take on me (take on me)"
+        ],
+        "start_seconds": 170,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Today is",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "another",
+      "excerpt_after": "day to find you",
+      "youtube_start": 42,
+      "youtube_end": 56
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'll be",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "coming",
+      "excerpt_after": "for your love, okay?",
+      "youtube_start": 48,
+      "youtube_end": 62
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "needless",
+      "excerpt_after": "to say",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But I'll be",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "stumbling",
+      "excerpt_after": "away",
+      "youtube_start": 78,
+      "youtube_end": 92
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Slowly",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "learning",
+      "excerpt_after": "that life is okay",
+      "youtube_start": 82,
+      "youtube_end": 96
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It's no",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "better",
+      "excerpt_after": "to be safe than sorry",
+      "youtube_start": 88,
+      "youtube_end": 102
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We're talking away",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll say it anyway",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll be coming for your love, okay?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm odds and ends",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "All the things that you say, yeah",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "know what I'm to say",
+      "options": [
+        "coming",
+        "dont",
+        "play",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 36,
+      "youtube_end": 48
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'll be",
+      "excerpt_after": "for your love, okay?",
+      "options": [
+        "anyway",
+        "coming",
+        "odds",
+        "stumbling"
+      ],
+      "answer_index": 1,
+      "youtube_start": 48,
+      "youtube_end": 60
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm",
+      "excerpt_after": "and ends",
+      "options": [
+        "dont",
+        "odds",
+        "yeah",
+        "youre"
+      ],
+      "answer_index": 1,
+      "youtube_start": 76,
+      "youtube_end": 88
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Slowly",
+      "excerpt_after": "that life is okay",
+      "options": [
+        "anyway",
+        "better",
+        "learning",
+        "sorry"
+      ],
+      "answer_index": 2,
+      "youtube_start": 82,
+      "youtube_end": 94
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "All the",
+      "excerpt_after": "that you say, yeah",
+      "options": [
+        "dont",
+        "gone",
+        "talking",
+        "things"
+      ],
+      "answer_index": 3,
+      "youtube_start": 153,
+      "youtube_end": 165
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "what",
+        "say",
+        "I",
+        "I'm",
+        "don't",
+        "to",
+        "know"
+      ],
+      "answer": [
+        "I",
+        "don't",
+        "know",
+        "what",
+        "I'm",
+        "to",
+        "say"
+      ],
+      "youtube_start": 36
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "is",
+        "to",
+        "you",
+        "find",
+        "Today",
+        "another",
+        "day"
+      ],
+      "answer": [
+        "Today",
+        "is",
+        "another",
+        "day",
+        "to",
+        "find",
+        "you"
+      ],
+      "youtube_start": 42
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "on",
+        "on",
+        "me",
+        "take",
+        "Take"
+      ],
+      "answer": [
+        "Take",
+        "me",
+        "on",
+        "take",
+        "on",
+        "me"
+      ],
+      "youtube_start": 56
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ends",
+        "I'm",
+        "odds",
+        "and"
+      ],
+      "answer": [
+        "I'm",
+        "odds",
+        "and",
+        "ends"
+      ],
+      "youtube_start": 76
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "that",
+        "things",
+        "All",
+        "you",
+        "yeah",
+        "the",
+        "say,"
+      ],
+      "answer": [
+        "All",
+        "the",
+        "things",
+        "that",
+        "you",
+        "say,",
+        "yeah"
+      ],
+      "youtube_start": 153
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"i'll\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"i'll\" na música inteira?",
+      "word": "i'll",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"gone\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"gone\" na música inteira?",
+      "word": "gone",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "We're talking away",
+          "order": 0
+        },
+        {
+          "text": "I'm odds and ends",
+          "order": 1
+        },
+        {
+          "text": "You're all the things I've got to remember",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I don't know what I'm to say",
+          "order": 0
+        },
+        {
+          "text": "It's no better to be safe than sorry",
+          "order": 1
+        },
+        {
+          "text": "You're shying away",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Take On Me\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Take On Me\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "i'll",
+        "gone",
+        "anyway",
+        "shying"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Take On Me\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Take On Me\", o que aconteceria?",
+      "target_vocab": [
+        "i'll",
+        "gone",
+        "anyway",
+        "shying"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Take On Me\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Take On Me\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "i'll",
+        "gone",
+        "anyway",
+        "shying"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    }
+  ]
+}

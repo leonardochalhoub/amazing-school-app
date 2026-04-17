@@ -1,0 +1,485 @@
+{
+  "slug": "anti-hero",
+  "title": "Anti-Hero",
+  "artist": "Taylor Swift",
+  "year": 2022,
+  "album": "Midnights",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 201,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Anti-Hero by Taylor Swift (2022) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"It's me\""
+    },
+    {
+      "term": "problem",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I'm the problem, it's me\""
+    },
+    {
+      "term": "everybody",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Everybody agrees\""
+    },
+    {
+      "term": "agrees",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Everybody agrees\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I have this thing where I get older but just never wiser\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "It's me",
+          "Hi!",
+          "I'm the problem, it's me",
+          "At teatime"
+        ],
+        "start_seconds": 44,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "It's me",
+          "Hi!",
+          "Everybody agrees",
+          "Everybody agrees"
+        ],
+        "start_seconds": 163,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Midnights",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "become",
+      "excerpt_after": "my afternoons",
+      "youtube_start": 10,
+      "youtube_end": 24
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "They come with",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "prices",
+      "excerpt_after": "and vices",
+      "youtube_start": 28,
+      "youtube_end": 42
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm the",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "problem",
+      "excerpt_after": "it's me",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Slowly",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lurching",
+      "excerpt_after": "toward your favorite city",
+      "youtube_start": 81,
+      "youtube_end": 95
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "One day I'll watch as",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "leaving",
+      "youtube_start": 101,
+      "youtube_end": 115
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And then",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "someone",
+      "excerpt_after": "screams out",
+      "youtube_start": 146,
+      "youtube_end": 160
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They come with prices and vices",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I wake up screaming from dreaming",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Cause you got tired of my scheming",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I'm a monster on the hill",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I disguise as altruism",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Midnights",
+      "excerpt_after": "my afternoons",
+      "options": [
+        "become",
+        "directly",
+        "last",
+        "older"
+      ],
+      "answer_index": 0,
+      "youtube_start": 10,
+      "youtube_end": 22
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "One day I'll",
+      "excerpt_after": "as you're leaving",
+      "options": [
+        "ghosted",
+        "sexy",
+        "watch",
+        "youre"
+      ],
+      "answer_index": 2,
+      "youtube_start": 37,
+      "youtube_end": 49
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I'm a",
+      "excerpt_after": "on the hill",
+      "options": [
+        "cause",
+        "directly",
+        "monster",
+        "works"
+      ],
+      "answer_index": 2,
+      "youtube_start": 74,
+      "youtube_end": 86
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "as altruism",
+      "options": [
+        "disguise",
+        "graveyard",
+        "prices",
+        "scheming"
+      ],
+      "answer_index": 0,
+      "youtube_start": 92,
+      "youtube_end": 104
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "She",
+      "excerpt_after": "I left them in the will",
+      "options": [
+        "agrees",
+        "prices",
+        "thinks",
+        "works"
+      ],
+      "answer_index": 2,
+      "youtube_start": 138,
+      "youtube_end": 150
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "become",
+        "Midnights",
+        "afternoons"
+      ],
+      "answer": [
+        "Midnights",
+        "become",
+        "my",
+        "afternoons"
+      ],
+      "youtube_start": 10
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "time",
+        "as",
+        "Tale",
+        "old",
+        "as"
+      ],
+      "answer": [
+        "Tale",
+        "as",
+        "old",
+        "as",
+        "time"
+      ],
+      "youtube_start": 32
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "For",
+        "time",
+        "the",
+        "last"
+      ],
+      "answer": [
+        "For",
+        "the",
+        "last",
+        "time"
+      ],
+      "youtube_start": 42
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "never",
+        "Pierced",
+        "but",
+        "heart",
+        "through",
+        "killed"
+      ],
+      "answer": [
+        "Pierced",
+        "through",
+        "the",
+        "heart",
+        "but",
+        "never",
+        "killed"
+      ],
+      "youtube_start": 84
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "will",
+        "lose",
+        "all",
+        "And",
+        "life",
+        "meaning",
+        "its"
+      ],
+      "answer": [
+        "And",
+        "life",
+        "will",
+        "lose",
+        "all",
+        "its",
+        "meaning"
+      ],
+      "youtube_start": 104
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"it's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"it's\" na música inteira?",
+      "word": "it's",
+      "answer": 13
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"problem\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"problem\" na música inteira?",
+      "word": "problem",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Midnights become my afternoons",
+          "order": 0
+        },
+        {
+          "text": "I'm the problem, it's me",
+          "order": 1
+        },
+        {
+          "text": "I wake up screaming from dreaming",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "When my depression works the graveyard shift",
+          "order": 0
+        },
+        {
+          "text": "Did you hear my covert narcissism",
+          "order": 1
+        },
+        {
+          "text": "For the last time",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Taylor Swift one question about \"Anti-Hero\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Taylor Swift sobre \"Anti-Hero\", o que seria e por quê?",
+      "target_vocab": [
+        "it's",
+        "problem",
+        "everybody",
+        "agrees"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Anti-Hero\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Anti-Hero\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "it's",
+        "problem",
+        "everybody",
+        "agrees"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Anti-Hero\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Anti-Hero\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "it's",
+        "problem",
+        "everybody",
+        "agrees"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "she's",
+          "full": "she is"
+        }
+      ]
+    }
+  ]
+}

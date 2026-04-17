@@ -1,0 +1,426 @@
+{
+  "slug": "immigrant-song",
+  "title": "Immigrant Song",
+  "artist": "Led Zeppelin",
+  "year": 1970,
+  "album": "Led Zeppelin III",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 146,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Immigrant Song by Led Zeppelin (1970) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "land",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"We come from the land of the ice and snow\""
+    },
+    {
+      "term": "snow",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"We come from the land of the ice and snow\""
+    },
+    {
+      "term": "midnight",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"From the midnight sun, where the hot springs flow\""
+    },
+    {
+      "term": "springs",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"From the midnight sun, where the hot springs flow\""
+    },
+    {
+      "term": "flow",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"From the midnight sun, where the hot springs flow\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Ah! Ah!",
+          "Ah! Ah!",
+          "We come from the land of the ice and snow",
+          "From the midnight sun, where the hot springs flow"
+        ],
+        "start_seconds": 9,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Ah! Ah!",
+          "Ah! Ah!",
+          "We come from the land of the ice and snow",
+          "From the midnight sun, where the hot springs flow"
+        ],
+        "start_seconds": 56,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "From the",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "midnight",
+      "excerpt_after": "sun, where the hot springs flow",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fight",
+      "excerpt_after": "the horde and sing, and cry",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Our only goal will be the",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "western",
+      "excerpt_after": "shore",
+      "youtube_start": 48,
+      "youtube_end": 62
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "From the midnight sun, where the hot",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "springs",
+      "excerpt_after": "flow",
+      "youtube_start": 67,
+      "youtube_end": 81
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Can",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "whisper",
+      "excerpt_after": "tales of gore",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Of how we",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "calmed",
+      "excerpt_after": "the tides of war",
+      "youtube_start": 77,
+      "youtube_end": 91
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Valhalla, I am coming",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "On we sweep with with threshing oar",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We are your overlords",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "To fight the horde and sing, and cry",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "How soft your fields, so green",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "From the",
+      "excerpt_after": "sun, where the hot springs flow",
+      "options": [
+        "calmed",
+        "fight",
+        "midnight",
+        "whisper"
+      ],
+      "answer_index": 2,
+      "youtube_start": 20,
+      "youtube_end": 32
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "On we",
+      "excerpt_after": "with with threshing oar",
+      "options": [
+        "better",
+        "flow",
+        "sweep",
+        "whisper"
+      ],
+      "answer_index": 2,
+      "youtube_start": 44,
+      "youtube_end": 56
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "From the midnight sun, where the hot",
+      "excerpt_after": "flow",
+      "options": [
+        "better",
+        "gods",
+        "hammer",
+        "springs"
+      ],
+      "answer_index": 3,
+      "youtube_start": 67,
+      "youtube_end": 79
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Can",
+      "excerpt_after": "tales of gore",
+      "options": [
+        "better",
+        "calmed",
+        "valhalla",
+        "whisper"
+      ],
+      "answer_index": 3,
+      "youtube_start": 73,
+      "youtube_end": 85
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "On we sweep with",
+      "excerpt_after": "oar",
+      "options": [
+        "despite",
+        "losing",
+        "threshing",
+        "valhalla"
+      ],
+      "answer_index": 2,
+      "youtube_start": 91,
+      "youtube_end": 103
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "am",
+        "I",
+        "Valhalla,",
+        "coming"
+      ],
+      "answer": [
+        "Valhalla,",
+        "I",
+        "am",
+        "coming"
+      ],
+      "youtube_start": 35
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "threshing",
+        "sweep",
+        "with",
+        "we",
+        "oar",
+        "with",
+        "On"
+      ],
+      "answer": [
+        "On",
+        "we",
+        "sweep",
+        "with",
+        "with",
+        "threshing",
+        "oar"
+      ],
+      "youtube_start": 44
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "fields,",
+        "How",
+        "green",
+        "so",
+        "soft",
+        "your"
+      ],
+      "answer": [
+        "How",
+        "soft",
+        "your",
+        "fields,",
+        "so",
+        "green"
+      ],
+      "youtube_start": 70
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "whisper",
+        "of",
+        "tales",
+        "Can",
+        "gore"
+      ],
+      "answer": [
+        "Can",
+        "whisper",
+        "tales",
+        "of",
+        "gore"
+      ],
+      "youtube_start": 73
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "are",
+        "overlords",
+        "We",
+        "your"
+      ],
+      "answer": [
+        "We",
+        "are",
+        "your",
+        "overlords"
+      ],
+      "youtube_start": 82
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"land\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"land\" na música inteira?",
+      "word": "land",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "To fight the horde and sing, and cry",
+          "order": 0
+        },
+        {
+          "text": "Our only goal will be the western shore",
+          "order": 1
+        },
+        {
+          "text": "Of how we calmed the tides of war",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "land",
+        "snow",
+        "midnight",
+        "springs"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "land",
+        "snow",
+        "midnight",
+        "springs"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Immigrant Song\" was released in 1970. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Immigrant Song\" foi lançada em 1970. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "land",
+        "snow",
+        "midnight",
+        "springs"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,471 @@
+{
+  "slug": "respect",
+  "title": "Respect",
+  "artist": "Aretha Franklin",
+  "year": 1967,
+  "album": "I Never Loved A Man The Way I Love You",
+  "genre": [
+    "soul",
+    "r&b"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 144,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Respect by Aretha Franklin (1967) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "little",
+      "pt": "",
+      "note": "Appears 24 times; first heard in: \"All I'm askin' is for a little respect when you get home\""
+    },
+    {
+      "term": "home",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"All I'm askin' is for a little respect when you get home\""
+    },
+    {
+      "term": "sock",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"(Sock it to me, sock it to me, sock it to me, sock it to me)\""
+    },
+    {
+      "term": "respect",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"All I'm askin' is for a little respect when you get home\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"What you want, baby, I got it\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "(Just a little bit)",
+          "I ain't gon' do you wrong while you're gone",
+          "Ain't gon' do you wrong 'cause I don't wanna",
+          "All I'm askin' is for a little respect when you come home"
+        ],
+        "start_seconds": 28,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "(Just a little bit)",
+          "Ooh, your kisses, sweeter than honey",
+          "And guess what? So is my money",
+          "All I want you to do for me, is give it to me when you get home"
+        ],
+        "start_seconds": 70,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(Just a",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "little",
+      "excerpt_after": "bit) hey, baby",
+      "youtube_start": 22,
+      "youtube_end": 36
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I ain't gon' do you",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wrong",
+      "excerpt_after": "while you're gone",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And all I'm",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "askin",
+      "excerpt_after": "in return, honey",
+      "youtube_start": 56,
+      "youtube_end": 70
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "guess",
+      "excerpt_after": "what? So is my money",
+      "youtube_start": 93,
+      "youtube_end": 107
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(Just a little bit)",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "runnin' out of fools",
+      "youtube_start": 128,
+      "youtube_end": 142
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(Re, re, re,",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "respect",
+      "excerpt_after": "or you might walk in",
+      "youtube_start": 136,
+      "youtube_end": 150
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "What you want, baby, I got it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And all I'm askin' in return, honey",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Just a little bit and I ain't lyin'",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Just a little bit hey, baby",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Just a little bit",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "What you",
+      "excerpt_after": "baby, I got it",
+      "options": [
+        "babe",
+        "little",
+        "want",
+        "yeah"
+      ],
+      "answer_index": 2,
+      "youtube_start": 10,
+      "youtube_end": 22
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "gon' do you wrong while you're gone",
+      "options": [
+        "aint",
+        "keep",
+        "lyin",
+        "wanna"
+      ],
+      "answer_index": 0,
+      "youtube_start": 30,
+      "youtube_end": 42
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ooh, your",
+      "excerpt_after": "sweeter than honey",
+      "options": [
+        "fools",
+        "kisses",
+        "little",
+        "tired"
+      ],
+      "answer_index": 1,
+      "youtube_start": 88,
+      "youtube_end": 100
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Find out what it",
+      "excerpt_after": "to me",
+      "options": [
+        "home",
+        "kisses",
+        "means",
+        "want"
+      ],
+      "answer_index": 2,
+      "youtube_start": 111,
+      "youtube_end": 123
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "(Re, re, re, re)",
+      "excerpt_after": "when you come home",
+      "options": [
+        "home",
+        "return",
+        "start",
+        "youre"
+      ],
+      "answer_index": 2,
+      "youtube_start": 134,
+      "youtube_end": 146
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "baby,",
+        "want,",
+        "What",
+        "got",
+        "I",
+        "it"
+      ],
+      "answer": [
+        "What",
+        "you",
+        "want,",
+        "baby,",
+        "I",
+        "got",
+        "it"
+      ],
+      "youtube_start": 10
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "bit",
+        "little",
+        "Just",
+        "a"
+      ],
+      "answer": [
+        "Just",
+        "a",
+        "little",
+        "bit"
+      ],
+      "youtube_start": 28
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "honey",
+        "all",
+        "return,",
+        "in",
+        "I'm",
+        "askin'"
+      ],
+      "answer": [
+        "And",
+        "all",
+        "I'm",
+        "askin'",
+        "in",
+        "return,",
+        "honey"
+      ],
+      "youtube_start": 56
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "baby",
+        "re,",
+        "Re,",
+        "yeah,",
+        "re,",
+        "re"
+      ],
+      "answer": [
+        "Re,",
+        "re,",
+        "re,",
+        "re",
+        "yeah,",
+        "baby"
+      ],
+      "youtube_start": 100
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "bit",
+        "little",
+        "little",
+        "respect",
+        "a",
+        "Just"
+      ],
+      "answer": [
+        "Just",
+        "a",
+        "little",
+        "bit",
+        "a",
+        "little",
+        "respect"
+      ],
+      "youtube_start": 122
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"little\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"little\" na música inteira?",
+      "word": "little",
+      "answer": 24
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"home\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"home\" na música inteira?",
+      "word": "home",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "(Just a little bit) hey, baby",
+          "order": 0
+        },
+        {
+          "text": "Ooh, your kisses, sweeter than honey",
+          "order": 1
+        },
+        {
+          "text": "Take care, TCB, oh",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Respect\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Respect\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "little",
+        "home",
+        "sock",
+        "respect"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Respect\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Respect\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "little",
+        "home",
+        "sock",
+        "respect"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Respect\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Respect\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "little",
+        "home",
+        "sock",
+        "respect"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        }
+      ]
+    }
+  ]
+}

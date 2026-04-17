@@ -1,0 +1,468 @@
+{
+  "slug": "girlfriend",
+  "title": "Girlfriend",
+  "artist": "Avril Lavigne",
+  "year": 2007,
+  "album": "The Best Damn Thing",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "fast",
+  "duration_seconds": 217,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Girlfriend by Avril Lavigne (2007) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "girlfriend",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"I don't like your girlfriend\""
+    },
+    {
+      "term": "think",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"I think you need a new one\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"I know that you like me\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I don't like your girlfriend\""
+    },
+    {
+      "term": "want",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I want to be your girlfriend\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Hey, hey, you, you",
+          "I don't like your girlfriend",
+          "No way, no way",
+          "I think you need a new one"
+        ],
+        "start_seconds": 1,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "She's like, so whatever",
+          "You can do so much better",
+          "I think we should get together now",
+          "And that's what everyone's talking about"
+        ],
+        "start_seconds": 48,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "think",
+      "excerpt_after": "you need a new one",
+      "youtube_start": 5,
+      "youtube_end": 19
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And hell yeah, I'm the",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "motherfucking",
+      "excerpt_after": "princess",
+      "youtube_start": 39,
+      "youtube_end": 53
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "what everyone's talking about",
+      "youtube_start": 57,
+      "youtube_end": 71
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And that's what",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "everyones",
+      "excerpt_after": "talking about",
+      "youtube_start": 115,
+      "youtube_end": 129
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Cause I can,",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "cause",
+      "excerpt_after": "I can do it better",
+      "youtube_start": 144,
+      "youtube_end": 158
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "She's so",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "stupid",
+      "excerpt_after": "what the hell were you thinking?",
+      "youtube_start": 150,
+      "youtube_end": 164
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Hey, hey, you, you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I think you need a new one",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I know that you like me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And hell yeah, I'm the motherfucking princess",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You can do so much better",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "like your girlfriend",
+      "options": [
+        "dont",
+        "secret",
+        "should",
+        "wanna"
+      ],
+      "answer_index": 0,
+      "youtube_start": 2,
+      "youtube_end": 14
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "to be your girlfriend",
+      "options": [
+        "cause",
+        "sink",
+        "want",
+        "wrapped"
+      ],
+      "answer_index": 2,
+      "youtube_start": 20,
+      "youtube_end": 32
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "what everyone's talking about",
+      "options": [
+        "precious",
+        "secret",
+        "tell",
+        "thats"
+      ],
+      "answer_index": 3,
+      "youtube_start": 57,
+      "youtube_end": 69
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I think we should get",
+      "excerpt_after": "now",
+      "options": [
+        "thats",
+        "together",
+        "whens",
+        "youre"
+      ],
+      "answer_index": 1,
+      "youtube_start": 112,
+      "youtube_end": 124
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There's no",
+      "excerpt_after": "so when's it gonna sink in",
+      "options": [
+        "mine",
+        "other",
+        "think",
+        "whatever"
+      ],
+      "answer_index": 1,
+      "youtube_start": 147,
+      "youtube_end": 159
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "hey,",
+        "Hey,",
+        "you",
+        "you,"
+      ],
+      "answer": [
+        "Hey,",
+        "hey,",
+        "you,",
+        "you"
+      ],
+      "youtube_start": 1
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "think",
+        "need",
+        "a",
+        "I",
+        "one",
+        "you",
+        "new"
+      ],
+      "answer": [
+        "I",
+        "think",
+        "you",
+        "need",
+        "a",
+        "new",
+        "one"
+      ],
+      "youtube_start": 5
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "No,",
+        "not",
+        "secret",
+        "a",
+        "it's"
+      ],
+      "answer": [
+        "No,",
+        "it's",
+        "not",
+        "a",
+        "secret"
+      ],
+      "youtube_start": 17
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "do",
+        "so",
+        "much",
+        "You",
+        "can",
+        "better"
+      ],
+      "answer": [
+        "You",
+        "can",
+        "do",
+        "so",
+        "much",
+        "better"
+      ],
+      "youtube_start": 50
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "girlfriend",
+        "make",
+        "yet,",
+        "your",
+        "Better",
+        "disappear"
+      ],
+      "answer": [
+        "Better",
+        "yet,",
+        "make",
+        "your",
+        "girlfriend",
+        "disappear"
+      ],
+      "youtube_start": 97
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"girlfriend\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"girlfriend\" na música inteira?",
+      "word": "girlfriend",
+      "answer": 16
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"think\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"think\" na música inteira?",
+      "word": "think",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Hey, hey, you, you",
+          "order": 0
+        },
+        {
+          "text": "No way, no way",
+          "order": 1
+        },
+        {
+          "text": "I think you need a new one",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Girlfriend\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Girlfriend\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "girlfriend",
+        "think",
+        "know",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Avril Lavigne one question about \"Girlfriend\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Avril Lavigne sobre \"Girlfriend\", o que seria e por quê?",
+      "target_vocab": [
+        "girlfriend",
+        "think",
+        "know",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Girlfriend\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Girlfriend\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "girlfriend",
+        "think",
+        "know",
+        "don't"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "she's",
+          "full": "she is"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        }
+      ]
+    }
+  ]
+}

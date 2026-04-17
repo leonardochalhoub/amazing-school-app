@@ -1,0 +1,469 @@
+{
+  "slug": "material-girl",
+  "title": "Material Girl",
+  "artist": "Madonna",
+  "year": 1984,
+  "album": "Like A Virgin (Reissue)",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 241,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Material Girl by Madonna (1984) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "material",
+      "pt": "",
+      "note": "Appears 41 times; first heard in: \"'Cause we are living in a material world\""
+    },
+    {
+      "term": "world",
+      "pt": "",
+      "note": "Appears 22 times; first heard in: \"'Cause we are living in a material world\""
+    },
+    {
+      "term": "living",
+      "pt": "",
+      "note": "Appears 21 times; first heard in: \"'Cause we are living in a material world\""
+    },
+    {
+      "term": "girl",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"And I am a material girl\""
+    },
+    {
+      "term": "boys",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Some boys kiss me, some boys hug me\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Living in a material world",
+          "And I am a material girl",
+          "You know that we are living in a material world",
+          "And I am a material girl"
+        ],
+        "start_seconds": 124,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Living in a material world",
+          "(Material)",
+          "Living in a material world",
+          "Living in a material world"
+        ],
+        "start_seconds": 206,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "think",
+      "excerpt_after": "they're okay",
+      "youtube_start": 37,
+      "youtube_end": 51
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But they can't see the",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "light",
+      "excerpt_after": "that's right",
+      "youtube_start": 51,
+      "youtube_end": 65
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Cause we are",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "living",
+      "excerpt_after": "in a material world",
+      "youtube_start": 61,
+      "youtube_end": 75
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Some boys",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "romance",
+      "excerpt_after": "some boys slow dance",
+      "youtube_start": 82,
+      "youtube_end": 96
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If they can't",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "raise",
+      "excerpt_after": "my interest then I",
+      "youtube_start": 88,
+      "youtube_end": 102
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "alright you see",
+      "youtube_start": 153,
+      "youtube_end": 167
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I think they're okay",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I just walk away",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But they can't see the light, that's right",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I am a material girl",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I don't let them play, no way",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Some",
+      "excerpt_after": "kiss me, some boys hug me",
+      "options": [
+        "boys",
+        "dance",
+        "girl",
+        "hard"
+      ],
+      "answer_index": 0,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I just",
+      "excerpt_after": "away",
+      "options": [
+        "cold",
+        "hard",
+        "right",
+        "walk"
+      ],
+      "answer_index": 3,
+      "youtube_start": 43,
+      "youtube_end": 55
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "'Cause we are",
+      "excerpt_after": "in a material world",
+      "options": [
+        "dont",
+        "living",
+        "raise",
+        "thats"
+      ],
+      "answer_index": 1,
+      "youtube_start": 61,
+      "youtube_end": 73
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That's",
+      "excerpt_after": "with me",
+      "options": [
+        "alright",
+        "living",
+        "okay",
+        "rich"
+      ],
+      "answer_index": 0,
+      "youtube_start": 84,
+      "youtube_end": 96
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Make my",
+      "excerpt_after": "day",
+      "options": [
+        "alright",
+        "boys",
+        "play",
+        "rainy"
+      ],
+      "answer_index": 3,
+      "youtube_start": 105,
+      "youtube_end": 117
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "think",
+        "they're",
+        "okay",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "think",
+        "they're",
+        "okay"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Is",
+        "Right",
+        "always",
+        "Mister"
+      ],
+      "answer": [
+        "Is",
+        "always",
+        "Mister",
+        "Right"
+      ],
+      "youtube_start": 58
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "let",
+        "be",
+        "them",
+        "to",
+        "Have"
+      ],
+      "answer": [
+        "Have",
+        "to",
+        "let",
+        "them",
+        "be"
+      ],
+      "youtube_start": 91
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "Living",
+        "material",
+        "in",
+        "world"
+      ],
+      "answer": [
+        "Living",
+        "in",
+        "a",
+        "material",
+        "world"
+      ],
+      "youtube_start": 124
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "now",
+        "they're",
+        "me",
+        "And",
+        "after"
+      ],
+      "answer": [
+        "And",
+        "now",
+        "they're",
+        "after",
+        "me"
+      ],
+      "youtube_start": 160
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"material\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"material\" na música inteira?",
+      "word": "material",
+      "answer": 41
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"world\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"world\" na música inteira?",
+      "word": "world",
+      "answer": 22
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Some boys kiss me, some boys hug me",
+          "order": 0
+        },
+        {
+          "text": "I don't let them play, no way",
+          "order": 1
+        },
+        {
+          "text": "And now they're after me",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I think they're okay",
+          "order": 0
+        },
+        {
+          "text": "And I am a material girl",
+          "order": 1
+        },
+        {
+          "text": "Living in a material world",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Material Girl\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Material Girl\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "material",
+        "world",
+        "living",
+        "girl"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Material Girl\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Material Girl\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "material",
+        "world",
+        "living",
+        "girl"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Material Girl\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Material Girl\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "material",
+        "world",
+        "living",
+        "girl"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "they're",
+          "full": "they are"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        }
+      ]
+    }
+  ]
+}

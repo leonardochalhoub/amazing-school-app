@@ -1,0 +1,438 @@
+{
+  "slug": "fly-me-to-the-moon",
+  "title": "Fly Me to the Moon",
+  "artist": "Frank Sinatra",
+  "year": 1964,
+  "album": "Nothing But The Best (Remastered)",
+  "genre": [
+    "jazz"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 153,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Fly Me to the Moon by Frank Sinatra (1964) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "other",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"In other words, hold my hand\""
+    },
+    {
+      "term": "words",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"In other words, hold my hand\""
+    },
+    {
+      "term": "fill",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Fill my heart with song\""
+    },
+    {
+      "term": "heart",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Fill my heart with song\""
+    },
+    {
+      "term": "song",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Fill my heart with song\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "In other words, please be true",
+          "In other words, I love you"
+        ],
+        "start_seconds": 55,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "In other words, please be true",
+          "In other words, in other words",
+          "I love you!"
+        ],
+        "start_seconds": 121,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Let me play up",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "there",
+      "excerpt_after": "with those stars",
+      "youtube_start": 11,
+      "youtube_end": 25
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "On",
+      "blank_hint": "word starting with \"j\"",
+      "answer": "jupiter",
+      "excerpt_after": "and Mars",
+      "youtube_start": 19,
+      "youtube_end": 33
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "In",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "other",
+      "excerpt_after": "words, hold my hand",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Fill my",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heart",
+      "excerpt_after": "with song",
+      "youtube_start": 39,
+      "youtube_end": 53
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Let me",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "swing",
+      "excerpt_after": "for ever more",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "All I",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "worship",
+      "excerpt_after": "and adore",
+      "youtube_start": 51,
+      "youtube_end": 65
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You are all I long for",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "In other words, I love you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You are all I worship",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I love you!",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Let me play up there with those stars",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Let me",
+      "excerpt_after": "up there with those stars",
+      "options": [
+        "fill",
+        "play",
+        "sing",
+        "worship"
+      ],
+      "answer_index": 1,
+      "youtube_start": 11,
+      "youtube_end": 23
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "On",
+      "excerpt_after": "and Mars",
+      "options": [
+        "fill",
+        "heart",
+        "jupiter",
+        "swing"
+      ],
+      "answer_index": 2,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "In other",
+      "excerpt_after": "darling, kiss me",
+      "options": [
+        "adore",
+        "long",
+        "please",
+        "words"
+      ],
+      "answer_index": 3,
+      "youtube_start": 31,
+      "youtube_end": 43
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You are all I",
+      "excerpt_after": "for",
+      "options": [
+        "hand",
+        "jupiter",
+        "long",
+        "other"
+      ],
+      "answer_index": 2,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "In other words,",
+      "excerpt_after": "be true",
+      "options": [
+        "adore",
+        "hold",
+        "please",
+        "words"
+      ],
+      "answer_index": 2,
+      "youtube_start": 55,
+      "youtube_end": 67
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "Fly",
+        "moon",
+        "me",
+        "to"
+      ],
+      "answer": [
+        "Fly",
+        "me",
+        "to",
+        "the",
+        "moon"
+      ],
+      "youtube_start": 6
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "words,",
+        "my",
+        "hold",
+        "other",
+        "hand",
+        "In"
+      ],
+      "answer": [
+        "In",
+        "other",
+        "words,",
+        "hold",
+        "my",
+        "hand"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "swing",
+        "more",
+        "Let",
+        "for",
+        "ever"
+      ],
+      "answer": [
+        "Let",
+        "me",
+        "swing",
+        "for",
+        "ever",
+        "more"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "In",
+        "be",
+        "other",
+        "true",
+        "words,",
+        "please"
+      ],
+      "answer": [
+        "In",
+        "other",
+        "words,",
+        "please",
+        "be",
+        "true"
+      ],
+      "youtube_start": 55
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "sing",
+        "me",
+        "Let",
+        "ever",
+        "because",
+        "more",
+        "for"
+      ],
+      "answer": [
+        "Let",
+        "me",
+        "sing",
+        "for",
+        "ever",
+        "more",
+        "because"
+      ],
+      "youtube_start": 107
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"other\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"other\" na música inteira?",
+      "word": "other",
+      "answer": 7
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"words\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"words\" na música inteira?",
+      "word": "words",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Fly me to the moon",
+          "order": 0
+        },
+        {
+          "text": "Fill my heart with song",
+          "order": 1
+        },
+        {
+          "text": "You fill my heart with song",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Fly Me to the Moon\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Fly Me to the Moon\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "other",
+        "words",
+        "fill",
+        "heart"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Fly Me to the Moon\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Fly Me to the Moon\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "other",
+        "words",
+        "fill",
+        "heart"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Fly Me to the Moon\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Fly Me to the Moon\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "other",
+        "words",
+        "fill",
+        "heart"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,481 @@
+{
+  "slug": "play-that-funky-music",
+  "title": "Play That Funky Music",
+  "artist": "Wild Cherry",
+  "year": 1976,
+  "album": "Club Epic - A Collection Of Classic Dance Mixes: Volume 4",
+  "genre": [
+    "funk"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 299,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Play That Funky Music by Wild Cherry (1976) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "funky",
+      "pt": "",
+      "note": "Appears 29 times; first heard in: \"\"Play that funky music, white boy\""
+    },
+    {
+      "term": "play",
+      "pt": "",
+      "note": "Appears 28 times; first heard in: \"\"Play that funky music, white boy\""
+    },
+    {
+      "term": "music",
+      "pt": "",
+      "note": "Appears 28 times; first heard in: \"\"Play that funky music, white boy\""
+    },
+    {
+      "term": "white",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"\"Play that funky music, white boy\""
+    },
+    {
+      "term": "right",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Play that funky music right\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "\"Play that funky music, white boy",
+          "Play that funky music right",
+          "Play that funky music, white boy",
+          "Lay down the boogie and play that funky music 'til you die\" (heh, heh)"
+        ],
+        "start_seconds": 61,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Play that funky music right, yeah",
+          "Play that funky music, white boy",
+          "Play that funky music right, yeah",
+          "Play that funky music (white boy)"
+        ],
+        "start_seconds": 266,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Hey, once I was a",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "boogie",
+      "excerpt_after": "singer",
+      "youtube_start": 16,
+      "youtube_end": 30
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It got to",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "start",
+      "excerpt_after": "to feeling so low",
+      "youtube_start": 38,
+      "youtube_end": 52
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "moving",
+      "excerpt_after": "to the grooving",
+      "youtube_start": 54,
+      "youtube_end": 68
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Play that funky music,",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "white",
+      "excerpt_after": "boy",
+      "youtube_start": 70,
+      "youtube_end": 84
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Play that funky music",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "right",
+      "excerpt_after": "oh",
+      "youtube_start": 135,
+      "youtube_end": 149
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thought",
+      "excerpt_after": "I'd have to leave it behind, uh",
+      "youtube_start": 187,
+      "youtube_end": 201
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Hey, once I was a boogie singer",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I decided quickly, yes, I did, heh",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Til you die, yeah, uh",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "To not see I was the one behind?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Til you die yeah",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Hey, once I was a",
+      "excerpt_after": "singer",
+      "options": [
+        "band",
+        "boogie",
+        "losing",
+        "moving"
+      ],
+      "answer_index": 1,
+      "youtube_start": 16,
+      "youtube_end": 28
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It got to",
+      "excerpt_after": "to feeling so low",
+      "options": [
+        "decided",
+        "grooving",
+        "never",
+        "start"
+      ],
+      "answer_index": 3,
+      "youtube_start": 38,
+      "youtube_end": 50
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "\"Play that",
+      "excerpt_after": "music, white boy",
+      "options": [
+        "check",
+        "funky",
+        "playing",
+        "somebody"
+      ],
+      "answer_index": 1,
+      "youtube_start": 61,
+      "youtube_end": 73
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So still I",
+      "excerpt_after": "on fighting",
+      "options": [
+        "band",
+        "behind",
+        "funky",
+        "kept"
+      ],
+      "answer_index": 3,
+      "youtube_start": 105,
+      "youtube_end": 117
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Yeah,",
+      "excerpt_after": "were getting shaky (yeah)",
+      "options": [
+        "minds",
+        "right",
+        "rock",
+        "things"
+      ],
+      "answer_index": 3,
+      "youtube_start": 184,
+      "youtube_end": 196
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "now,",
+        "do",
+        "huh",
+        "it",
+        "Hey,"
+      ],
+      "answer": [
+        "Hey,",
+        "do",
+        "it",
+        "now,",
+        "huh"
+      ],
+      "youtube_start": 6
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "everything",
+        "Then",
+        "yeah",
+        "around",
+        "me,"
+      ],
+      "answer": [
+        "Then",
+        "everything",
+        "around",
+        "me,",
+        "yeah"
+      ],
+      "youtube_start": 33
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "right",
+        "funky",
+        "Play",
+        "music",
+        "that"
+      ],
+      "answer": [
+        "Play",
+        "that",
+        "funky",
+        "music",
+        "right"
+      ],
+      "youtube_start": 65
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "'Til",
+        "die",
+        "yeah"
+      ],
+      "answer": [
+        "'Til",
+        "you",
+        "die",
+        "yeah"
+      ],
+      "youtube_start": 151
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "When",
+        "and",
+        "they",
+        "singing",
+        "were",
+        "dancing"
+      ],
+      "answer": [
+        "When",
+        "they",
+        "were",
+        "dancing",
+        "and",
+        "singing"
+      ],
+      "youtube_start": 210
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"funky\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"funky\" na música inteira?",
+      "word": "funky",
+      "answer": 29
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"play\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"play\" na música inteira?",
+      "word": "play",
+      "answer": 28
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Hey, do it now, huh",
+          "order": 0
+        },
+        {
+          "text": "Well, I tried to understand this (yeah)",
+          "order": 1
+        },
+        {
+          "text": "When they were dancing and singing",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Hey, once I was a boogie singer",
+          "order": 0
+        },
+        {
+          "text": "'Til you die (yeah)",
+          "order": 1
+        },
+        {
+          "text": "Play that funky music, white boy",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Play That Funky Music\" was released in 1976. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Play That Funky Music\" foi lançada em 1976. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "funky",
+        "play",
+        "music",
+        "white"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Play That Funky Music\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Play That Funky Music\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "funky",
+        "play",
+        "music",
+        "white"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "funky",
+        "play",
+        "music",
+        "white"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "wasn't",
+          "full": "was not"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        }
+      ]
+    }
+  ]
+}

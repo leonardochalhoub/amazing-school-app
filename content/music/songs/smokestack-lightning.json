@@ -1,0 +1,400 @@
+{
+  "slug": "smokestack-lightning",
+  "title": "Smokestack Lightning",
+  "artist": "Howlin' Wolf",
+  "year": 1956,
+  "album": "The Howlin' Wolf Album",
+  "genre": [
+    "blues"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 237,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Smokestack Lightning by Howlin' Wolf (1956) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "whoo",
+      "pt": "",
+      "note": "Appears 18 times; first heard in: \"A-whoo-hoo, a-whoo-hoo, whoo\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Why don't you hear me cryin'?\""
+    },
+    {
+      "term": "hear",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Why don't you hear me cryin'?\""
+    },
+    {
+      "term": "cryin'",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Why don't you hear me cryin'?\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Whoa-oh, tell me, baby\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Why don't you hear me cryin'?",
+          "A-whoo-hoo, a-whoo-hoo, whoo",
+          "Whoa-oh, tell me, baby",
+          "What's the matter here?"
+        ],
+        "start_seconds": 18,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Whoo-hoo, whoo-hoo, whoo",
+          "Whoa-oh, tell me, baby",
+          "Where did you stay last night?",
+          "Why don't you hear me cryin'?"
+        ],
+        "start_seconds": 48,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "What's the",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "matter",
+      "excerpt_after": "here?",
+      "youtube_start": 42,
+      "youtube_end": 56
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I, I been gone a",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "little",
+      "excerpt_after": "bitty boy?",
+      "youtube_start": 157,
+      "youtube_end": 171
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Why don't you hear me cryin'?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Never see a you no more",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Whoa, smokestack lightnin'",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "A-whoo-hoo, a-whoo-hoo, whoo",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "What's the matter here?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Why",
+      "excerpt_after": "you hear me cryin'?",
+      "options": [
+        "dont",
+        "gold",
+        "matter",
+        "train"
+      ],
+      "answer_index": 0,
+      "youtube_start": 18,
+      "youtube_end": 30
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Whoa-oh,",
+      "excerpt_after": "me, baby",
+      "options": [
+        "girl",
+        "stop",
+        "tell",
+        "whoa-oh"
+      ],
+      "answer_index": 2,
+      "youtube_start": 36,
+      "youtube_end": 48
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Why don't you",
+      "excerpt_after": "me cryin'?",
+      "options": [
+        "hear",
+        "poor",
+        "whats",
+        "whoa-oh"
+      ],
+      "answer_index": 0,
+      "youtube_start": 45,
+      "youtube_end": 57
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Whoa-oh,",
+      "excerpt_after": "your train",
+      "options": [
+        "dont",
+        "girl",
+        "matter",
+        "stop"
+      ],
+      "answer_index": 3,
+      "youtube_start": 96,
+      "youtube_end": 108
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Whoa-oh, who been here",
+      "excerpt_after": "since",
+      "options": [
+        "baby",
+        "gold",
+        "train",
+        "whoa"
+      ],
+      "answer_index": 0,
+      "youtube_start": 153,
+      "youtube_end": 165
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "just",
+        "like",
+        "Shinin'",
+        "gold"
+      ],
+      "answer": [
+        "Shinin'",
+        "just",
+        "like",
+        "gold"
+      ],
+      "youtube_start": 15
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "you",
+        "Why",
+        "don't",
+        "cryin'?",
+        "hear"
+      ],
+      "answer": [
+        "Why",
+        "don't",
+        "you",
+        "hear",
+        "me",
+        "cryin'?"
+      ],
+      "youtube_start": 18
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "What's",
+        "matter",
+        "here?",
+        "the"
+      ],
+      "answer": [
+        "What's",
+        "the",
+        "matter",
+        "here?"
+      ],
+      "youtube_start": 42
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "stop",
+        "your",
+        "train",
+        "Whoa-oh,"
+      ],
+      "answer": [
+        "Whoa-oh,",
+        "stop",
+        "your",
+        "train"
+      ],
+      "youtube_start": 96
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "more",
+        "no",
+        "Never",
+        "see",
+        "a"
+      ],
+      "answer": [
+        "Never",
+        "see",
+        "a",
+        "you",
+        "no",
+        "more"
+      ],
+      "youtube_start": 130
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"whoo\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"whoo\" na música inteira?",
+      "word": "whoo",
+      "answer": 18
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 5
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Whoa, smokestack lightnin'",
+          "order": 0
+        },
+        {
+          "text": "Whoo-hoo, whoo-hoo, whoo",
+          "order": 1
+        },
+        {
+          "text": "Why don't you hear me cryin'?",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "whoo",
+        "don't",
+        "hear",
+        "cryin'"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "whoo",
+        "don't",
+        "hear",
+        "cryin'"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Smokestack Lightning\" was released in 1956. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Smokestack Lightning\" foi lançada em 1956. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "whoo",
+        "don't",
+        "hear",
+        "cryin'"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "what's",
+          "full": "what is"
+        }
+      ]
+    }
+  ]
+}

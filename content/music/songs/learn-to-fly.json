@@ -1,0 +1,483 @@
+{
+  "slug": "learn-to-fly",
+  "title": "Learn to Fly",
+  "artist": "Foo Fighters",
+  "year": 1999,
+  "album": "There Is Nothing Left To Lose",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 235,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Learn to Fly by Foo Fighters (1999) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "lookin'",
+      "pt": "",
+      "note": "Appears 20 times; first heard in: \"Now, I'm lookin' to the sky to save me\""
+    },
+    {
+      "term": "life",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Lookin' for a sign of life\""
+    },
+    {
+      "term": "home",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Make my way back home when I learn to fly high\""
+    },
+    {
+      "term": "learn",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Make my way back home when I learn to fly high\""
+    },
+    {
+      "term": "help",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Think I need a devil to help me get things right\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Lookin' for a sign of life",
+          "Lookin' for somethin' to help me burn out bright",
+          "And I'm lookin' for a complication",
+          "Lookin' cause I'm tired of lyin'"
+        ],
+        "start_seconds": 48,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Lookin' cause I'm tired of tryin'",
+          "Make my way back home when I learn to fly high",
+          "Make my way back home when I learn to",
+          "Fly along with me, I can't quite make it alone"
+        ],
+        "start_seconds": 129,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Now, I'm",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lookin",
+      "excerpt_after": "to the sky to save me",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Lookin' for",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "somethin",
+      "excerpt_after": "to help me burn out bright",
+      "youtube_start": 52,
+      "youtube_end": 66
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Lookin'",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "cause",
+      "excerpt_after": "I'm tired of lyin'",
+      "youtube_start": 62,
+      "youtube_end": 76
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "think",
+      "excerpt_after": "I'm dyin' nursing patience",
+      "youtube_start": 85,
+      "youtube_end": 99
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Run and tell the",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "angels",
+      "excerpt_after": "that everything's alright",
+      "youtube_start": 104,
+      "youtube_end": 118
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Lookin' cause I'm",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tired",
+      "excerpt_after": "of tryin'",
+      "youtube_start": 129,
+      "youtube_end": 143
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I'm lookin' for a complication",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I think I'm dyin' nursing patience",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Lookin' cause I'm tired of tryin'",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Run and tell all of the angels",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Hook me up a new revolution",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Run and",
+      "excerpt_after": "all of the angels",
+      "options": [
+        "cause",
+        "lookin",
+        "tell",
+        "things"
+      ],
+      "answer_index": 2,
+      "youtube_start": 18,
+      "youtube_end": 30
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Lookin' for",
+      "excerpt_after": "to help me burn out bright",
+      "options": [
+        "cause",
+        "lookin",
+        "somethin",
+        "watched"
+      ],
+      "answer_index": 2,
+      "youtube_start": 52,
+      "youtube_end": 64
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It can",
+      "excerpt_after": "one night",
+      "options": [
+        "alright",
+        "give",
+        "tryin",
+        "wait"
+      ],
+      "answer_index": 3,
+      "youtube_start": 88,
+      "youtube_end": 100
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Lookin' for somethin' to",
+      "excerpt_after": "me burn out bright",
+      "options": [
+        "help",
+        "lyin",
+        "think",
+        "tired"
+      ],
+      "answer_index": 0,
+      "youtube_start": 119,
+      "youtube_end": 131
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Try to make this",
+      "excerpt_after": "my own",
+      "options": [
+        "cause",
+        "home",
+        "life",
+        "things"
+      ],
+      "answer_index": 2,
+      "youtube_start": 149,
+      "youtube_end": 161
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "angels",
+        "and",
+        "of",
+        "all",
+        "tell",
+        "the",
+        "Run"
+      ],
+      "answer": [
+        "Run",
+        "and",
+        "tell",
+        "all",
+        "of",
+        "the",
+        "angels"
+      ],
+      "youtube_start": 18
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "new",
+        "Hook",
+        "up",
+        "a",
+        "revolution",
+        "me"
+      ],
+      "answer": [
+        "Hook",
+        "me",
+        "up",
+        "a",
+        "new",
+        "revolution"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "of",
+        "a",
+        "life",
+        "sign",
+        "for",
+        "Lookin'"
+      ],
+      "answer": [
+        "Lookin'",
+        "for",
+        "a",
+        "sign",
+        "of",
+        "life"
+      ],
+      "youtube_start": 48
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "nursing",
+        "patience",
+        "I",
+        "I'm",
+        "dyin'",
+        "think"
+      ],
+      "answer": [
+        "I",
+        "think",
+        "I'm",
+        "dyin'",
+        "nursing",
+        "patience"
+      ],
+      "youtube_start": 85
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "complication",
+        "lookin'",
+        "I'm",
+        "for",
+        "a"
+      ],
+      "answer": [
+        "I'm",
+        "lookin'",
+        "for",
+        "a",
+        "complication"
+      ],
+      "youtube_start": 124
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"lookin'\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"lookin'\" na música inteira?",
+      "word": "lookin'",
+      "answer": 20
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"life\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"life\" na música inteira?",
+      "word": "life",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Run and tell all of the angels",
+          "order": 0
+        },
+        {
+          "text": "I think I'm dyin' nursing patience",
+          "order": 1
+        },
+        {
+          "text": "Try to make this life my own",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "This could take all night",
+          "order": 0
+        },
+        {
+          "text": "Lookin' for a sign of life",
+          "order": 1
+        },
+        {
+          "text": "I'm lookin' to the sky to save me",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Learn to Fly\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Learn to Fly\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "lookin'",
+        "life",
+        "home",
+        "learn"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Learn to Fly\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Learn to Fly\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "lookin'",
+        "life",
+        "home",
+        "learn"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Learn to Fly\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Learn to Fly\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "lookin'",
+        "life",
+        "home",
+        "learn"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    }
+  ]
+}

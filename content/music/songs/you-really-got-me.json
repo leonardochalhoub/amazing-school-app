@@ -1,0 +1,425 @@
+{
+  "slug": "you-really-got-me",
+  "title": "You Really Got Me",
+  "artist": "The Kinks",
+  "year": 1964,
+  "album": "Kinks (Reissue)",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 134,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "You Really Got Me by The Kinks (1964) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "really",
+      "pt": "",
+      "note": "Appears 19 times; first heard in: \"Girl, you really got me goin'\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"You got me so I don't know what I'm doin' now\""
+    },
+    {
+      "term": "can't",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"You got me so I can't sleep at night\""
+    },
+    {
+      "term": "sleep",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"You got me so I can't sleep at night\""
+    },
+    {
+      "term": "night",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"You got me so I can't sleep at night\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "You really got me",
+          "You really got me",
+          "You really got me",
+          "See, don't ever set me free"
+        ],
+        "start_seconds": 33,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "You really got me",
+          "You really got me",
+          "You really got me",
+          "Ohh no"
+        ],
+        "start_seconds": 68,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Girl, you",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "really",
+      "excerpt_after": "got me goin'",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You got me so I can't",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sleep",
+      "excerpt_after": "at night",
+      "youtube_start": 17,
+      "youtube_end": 31
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "always",
+      "excerpt_after": "want to be by your side",
+      "youtube_start": 45,
+      "youtube_end": 59
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Girl, you really got me goin'",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yeah, you really got me now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh yeah, you really got me now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I always want to be by your side",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Girl, you really got me now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Girl, you",
+      "excerpt_after": "got me goin'",
+      "options": [
+        "doin",
+        "dont",
+        "night",
+        "really"
+      ],
+      "answer_index": 3,
+      "youtube_start": 7,
+      "youtube_end": 19
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You got me so I",
+      "excerpt_after": "sleep at night",
+      "options": [
+        "cant",
+        "doin",
+        "really",
+        "sleep"
+      ],
+      "answer_index": 0,
+      "youtube_start": 17,
+      "youtube_end": 29
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You got me so I can't",
+      "excerpt_after": "at night",
+      "options": [
+        "cant",
+        "dont",
+        "ever",
+        "sleep"
+      ],
+      "answer_index": 3,
+      "youtube_start": 31,
+      "youtube_end": 43
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "See,",
+      "excerpt_after": "ever set me free",
+      "options": [
+        "dont",
+        "girl",
+        "really",
+        "yeah"
+      ],
+      "answer_index": 0,
+      "youtube_start": 42,
+      "youtube_end": 54
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "See, don't",
+      "excerpt_after": "set me free",
+      "options": [
+        "ever",
+        "goin",
+        "really",
+        "side"
+      ],
+      "answer_index": 0,
+      "youtube_start": 94,
+      "youtube_end": 106
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "got",
+        "you",
+        "goin'",
+        "me",
+        "Girl,",
+        "really"
+      ],
+      "answer": [
+        "Girl,",
+        "you",
+        "really",
+        "got",
+        "me",
+        "goin'"
+      ],
+      "youtube_start": 7
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "got",
+        "me",
+        "Yeah,",
+        "you",
+        "really",
+        "now"
+      ],
+      "answer": [
+        "Yeah,",
+        "you",
+        "really",
+        "got",
+        "me",
+        "now"
+      ],
+      "youtube_start": 14
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "yeah,",
+        "me",
+        "really",
+        "now",
+        "Oh",
+        "you",
+        "got"
+      ],
+      "answer": [
+        "Oh",
+        "yeah,",
+        "you",
+        "really",
+        "got",
+        "me",
+        "now"
+      ],
+      "youtube_start": 28
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "got",
+        "me",
+        "You",
+        "really"
+      ],
+      "answer": [
+        "You",
+        "really",
+        "got",
+        "me"
+      ],
+      "youtube_start": 33
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "don't",
+        "See,",
+        "ever",
+        "set",
+        "me",
+        "free"
+      ],
+      "answer": [
+        "See,",
+        "don't",
+        "ever",
+        "set",
+        "me",
+        "free"
+      ],
+      "youtube_start": 42
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"really\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"really\" na música inteira?",
+      "word": "really",
+      "answer": 19
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Girl, you really got me goin'",
+          "order": 0
+        },
+        {
+          "text": "See, don't ever set me free",
+          "order": 1
+        },
+        {
+          "text": "You really got me",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask The Kinks one question about \"You Really Got Me\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para The Kinks sobre \"You Really Got Me\", o que seria e por quê?",
+      "target_vocab": [
+        "really",
+        "don't",
+        "can't",
+        "sleep"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"You Really Got Me\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"You Really Got Me\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "really",
+        "don't",
+        "can't",
+        "sleep"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"You Really Got Me\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"You Really Got Me\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "really",
+        "don't",
+        "can't",
+        "sleep"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    }
+  ]
+}

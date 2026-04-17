@@ -1,0 +1,464 @@
+{
+  "slug": "lithium",
+  "title": "Lithium",
+  "artist": "Nirvana",
+  "year": 1991,
+  "album": "Nevermind",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 237,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Lithium by Nirvana (1991) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "crack",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"I like it, I'm not gonna crack\""
+    },
+    {
+      "term": "cause",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I'm so happy 'cause today I found my friends\""
+    },
+    {
+      "term": "found",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I'm so happy 'cause today I found my friends\""
+    },
+    {
+      "term": "that's",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I'm so ugly, that's okay, 'cause so are you\""
+    },
+    {
+      "term": "okay",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I'm so ugly, that's okay, 'cause so are you\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Yeah, yeah",
+          "Yeah, yeah",
+          "Yeah, yeah",
+          "Yeah, yeah"
+        ],
+        "start_seconds": 37,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I like it, I'm not gonna crack",
+          "I miss you, I'm not gonna crack",
+          "I love you, I'm not gonna crack",
+          "I killed you, I'm not gonna crack"
+        ],
+        "start_seconds": 117,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm so",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "happy",
+      "excerpt_after": "'cause today I found my friends",
+      "youtube_start": 8,
+      "youtube_end": 22
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm so ugly,",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "okay, 'cause so are you",
+      "youtube_start": 16,
+      "youtube_end": 30
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Light my",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "candles",
+      "excerpt_after": "in a daze",
+      "youtube_start": 32,
+      "youtube_end": 46
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm so",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lonely",
+      "excerpt_after": "that's okay, I shaved my head",
+      "youtube_start": 63,
+      "youtube_end": 77
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I like it, I'm not",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "crack",
+      "youtube_start": 117,
+      "youtube_end": 131
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm so happy",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "cause",
+      "excerpt_after": "today I found my friends",
+      "youtube_start": 160,
+      "youtube_end": 174
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They're in my head",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I'm not scared",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I'm not sad",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I don't care",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I like it, I'm not gonna crack",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm so",
+      "excerpt_after": "'cause today I found my friends",
+      "options": [
+        "broke",
+        "happy",
+        "shaved",
+        "sure"
+      ],
+      "answer_index": 1,
+      "youtube_start": 8,
+      "youtube_end": 20
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Sunday",
+      "excerpt_after": "is everyday, for all I care",
+      "options": [
+        "found",
+        "good",
+        "head",
+        "morning"
+      ],
+      "answer_index": 3,
+      "youtube_start": 24,
+      "youtube_end": 36
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm so",
+      "excerpt_after": "that's okay, I shaved my head",
+      "options": [
+        "broke",
+        "cause",
+        "friends",
+        "lonely"
+      ],
+      "answer_index": 3,
+      "youtube_start": 63,
+      "youtube_end": 75
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I like it, I'm not",
+      "excerpt_after": "crack",
+      "options": [
+        "found",
+        "friends",
+        "gonna",
+        "scared"
+      ],
+      "answer_index": 2,
+      "youtube_start": 117,
+      "youtube_end": 129
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm so happy",
+      "excerpt_after": "today I found my friends",
+      "options": [
+        "cause",
+        "mirrors",
+        "there",
+        "ugly"
+      ],
+      "answer_index": 0,
+      "youtube_start": 160,
+      "youtube_end": 172
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "in",
+        "head",
+        "They're"
+      ],
+      "answer": [
+        "They're",
+        "in",
+        "my",
+        "head"
+      ],
+      "youtube_start": 14
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "Light",
+        "a",
+        "in",
+        "candles",
+        "daze"
+      ],
+      "answer": [
+        "Light",
+        "my",
+        "candles",
+        "in",
+        "a",
+        "daze"
+      ],
+      "youtube_start": 32
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "sure",
+        "not",
+        "But",
+        "I'm"
+      ],
+      "answer": [
+        "But",
+        "I'm",
+        "not",
+        "sure"
+      ],
+      "youtube_start": 76
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I'm",
+        "okay",
+        "that's",
+        "horny,",
+        "so"
+      ],
+      "answer": [
+        "I'm",
+        "so",
+        "horny,",
+        "that's",
+        "okay"
+      ],
+      "youtube_start": 86
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "I'm",
+        "you,",
+        "crack",
+        "gonna",
+        "miss",
+        "not"
+      ],
+      "answer": [
+        "I",
+        "miss",
+        "you,",
+        "I'm",
+        "not",
+        "gonna",
+        "crack"
+      ],
+      "youtube_start": 121
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"crack\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"crack\" na música inteira?",
+      "word": "crack",
+      "answer": 16
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"cause\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"cause\" na música inteira?",
+      "word": "cause",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "They're in my head",
+          "order": 0
+        },
+        {
+          "text": "Yeah, yeah, yeah",
+          "order": 1
+        },
+        {
+          "text": "And I'm not scared",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Lithium\" was released in 1991. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Lithium\" foi lançada em 1991. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "crack",
+        "cause",
+        "found",
+        "that's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Lithium\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Lithium\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "crack",
+        "cause",
+        "found",
+        "that's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "crack",
+        "cause",
+        "found",
+        "that's"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    }
+  ]
+}

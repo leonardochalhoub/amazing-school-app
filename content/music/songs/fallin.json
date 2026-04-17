@@ -1,0 +1,457 @@
+{
+  "slug": "fallin",
+  "title": "Fallin'",
+  "artist": "Alicia Keys",
+  "year": 2001,
+  "album": "Songs In A Minor",
+  "genre": [
+    "r&b"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 210,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Fallin' by Alicia Keys (2001) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "fallin'",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"I keep on fallin' in\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I never loved someone\""
+    },
+    {
+      "term": "loved",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I never loved someone\""
+    },
+    {
+      "term": "someone",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I never loved someone\""
+    },
+    {
+      "term": "keep",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I keep on fallin' in\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "The way that I love you",
+          "Oh, oh, I",
+          "Never felt this way",
+          "How do you give me so much pleasure"
+        ],
+        "start_seconds": 50,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I'm fallin' in and out",
+          "Of love (Of love), with you (With you)",
+          "I never loved someone",
+          "The way that I love you"
+        ],
+        "start_seconds": 144,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I keep on",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fallin",
+      "excerpt_after": "in",
+      "youtube_start": 0,
+      "youtube_end": 14
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "At",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "times",
+      "excerpt_after": "I feel used",
+      "youtube_start": 27,
+      "youtube_end": 41
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "loved someone",
+      "youtube_start": 46,
+      "youtube_end": 60
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "taken",
+      "excerpt_after": "more than would a fool",
+      "youtube_start": 72,
+      "youtube_end": 86
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "start",
+      "excerpt_after": "fallin' back in love with you",
+      "youtube_start": 76,
+      "youtube_end": 90
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I never",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "loved",
+      "excerpt_after": "someone",
+      "youtube_start": 91,
+      "youtube_end": 105
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I keep on fallin' in",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Sometimes I love you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Sometimes I feel good",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Lovin' you darlin'",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Of love with you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "on fallin' in",
+      "options": [
+        "fall",
+        "feel",
+        "keep",
+        "loved"
+      ],
+      "answer_index": 2,
+      "youtube_start": 0,
+      "youtube_end": 12
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "At",
+      "excerpt_after": "I feel used",
+      "options": [
+        "fall",
+        "feel",
+        "keep",
+        "times"
+      ],
+      "answer_index": 3,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Never",
+      "excerpt_after": "this way",
+      "options": [
+        "fallin",
+        "felt",
+        "good",
+        "sing"
+      ],
+      "answer_index": 1,
+      "youtube_start": 57,
+      "youtube_end": 69
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've",
+      "excerpt_after": "more than would a fool",
+      "options": [
+        "feel",
+        "pain",
+        "start",
+        "taken"
+      ],
+      "answer_index": 3,
+      "youtube_start": 72,
+      "youtube_end": 84
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I, I, I, I'm fallin'",
+      "excerpt_after": "yeah)",
+      "options": [
+        "fool",
+        "lovin",
+        "makes",
+        "yeah"
+      ],
+      "answer_index": 3,
+      "youtube_start": 100,
+      "youtube_end": 112
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "keep",
+        "in",
+        "on",
+        "I",
+        "fallin'"
+      ],
+      "answer": [
+        "I",
+        "keep",
+        "on",
+        "fallin'",
+        "in"
+      ],
+      "youtube_start": 0
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Sometimes",
+        "I",
+        "good",
+        "feel"
+      ],
+      "answer": [
+        "Sometimes",
+        "I",
+        "feel",
+        "good"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Of",
+        "love",
+        "you",
+        "with"
+      ],
+      "answer": [
+        "Of",
+        "love",
+        "with",
+        "you"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Just",
+        "when",
+        "think",
+        "I"
+      ],
+      "answer": [
+        "Just",
+        "when",
+        "I",
+        "think"
+      ],
+      "youtube_start": 69
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "fall,",
+        "fall",
+        "Sing",
+        "Fall,"
+      ],
+      "answer": [
+        "Fall,",
+        "fall,",
+        "fall",
+        "Sing"
+      ],
+      "youtube_start": 115
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"fallin'\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"fallin'\" na música inteira?",
+      "word": "fallin'",
+      "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"never\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"never\" na música inteira?",
+      "word": "never",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I keep on fallin' in",
+          "order": 0
+        },
+        {
+          "text": "Oh, oh, I",
+          "order": 1
+        },
+        {
+          "text": "I, I, I, I'm fallin'",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And out of love with you",
+          "order": 0
+        },
+        {
+          "text": "I start fallin' back in love with you",
+          "order": 1
+        },
+        {
+          "text": "Of love (Love), with you (With you)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Fallin'\" was released in 2001. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Fallin'\" foi lançada em 2001. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "fallin'",
+        "never",
+        "loved",
+        "someone"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Fallin'\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Fallin'\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "fallin'",
+        "never",
+        "loved",
+        "someone"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "fallin'",
+        "never",
+        "loved",
+        "someone"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

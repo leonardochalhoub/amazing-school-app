@@ -1,0 +1,433 @@
+{
+  "slug": "waterloo",
+  "title": "Waterloo",
+  "artist": "ABBA",
+  "year": 1974,
+  "album": "Waterloo (Deluxe Edition)",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 166,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Waterloo by ABBA (1974) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "waterloo",
+      "pt": "",
+      "note": "Appears 21 times; first heard in: \"At Waterloo, Napoleon did surrender\""
+    },
+    {
+      "term": "knowing",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Knowing my fate is to be with you\""
+    },
+    {
+      "term": "fate",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Knowing my fate is to be with you\""
+    },
+    {
+      "term": "finally",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Finally facing my Waterloo\""
+    },
+    {
+      "term": "facing",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Finally facing my Waterloo\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Finally facing my Waterloo",
+          "My, my",
+          "I tried to hold you back, but you were stronger",
+          "Oh, yeah"
+        ],
+        "start_seconds": 56,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "My, my",
+          "At Waterloo, Napoleon did surrender",
+          "Oh, yeah",
+          "And I have met my destiny in quite a similar way"
+        ],
+        "start_seconds": 6,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "At",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "waterloo",
+      "excerpt_after": "Napoleon did surrender",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "history",
+      "excerpt_after": "book on the shelf",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Is",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "always",
+      "excerpt_after": "repeating itself",
+      "youtube_start": 24,
+      "youtube_end": 38
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Promise to love you",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "forever",
+      "excerpt_after": "more",
+      "youtube_start": 37,
+      "youtube_end": 51
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Couldn't",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "escape",
+      "excerpt_after": "if I wanted to",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Finally",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "facing",
+      "excerpt_after": "my Waterloo",
+      "youtube_start": 56,
+      "youtube_end": 70
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I was defeated, you won the war",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Couldn't escape if I wanted to",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And how could I ever refuse",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Promise to love you for ever more",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "At Waterloo, Napoleon did surrender",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "At",
+      "excerpt_after": "Napoleon did surrender",
+      "options": [
+        "couldnt",
+        "finally",
+        "history",
+        "waterloo"
+      ],
+      "answer_index": 3,
+      "youtube_start": 7,
+      "youtube_end": 19
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Is",
+      "excerpt_after": "repeating itself",
+      "options": [
+        "always",
+        "destiny",
+        "surrender",
+        "waterloo"
+      ],
+      "answer_index": 0,
+      "youtube_start": 24,
+      "youtube_end": 36
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Promise to love you",
+      "excerpt_after": "more",
+      "options": [
+        "fate",
+        "forever",
+        "hold",
+        "tried"
+      ],
+      "answer_index": 1,
+      "youtube_start": 37,
+      "youtube_end": 49
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Knowing my",
+      "excerpt_after": "is to be with you",
+      "options": [
+        "fate",
+        "feel",
+        "history",
+        "knowing"
+      ],
+      "answer_index": 0,
+      "youtube_start": 50,
+      "youtube_end": 62
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And how could I",
+      "excerpt_after": "refuse",
+      "options": [
+        "ever",
+        "fight",
+        "itself",
+        "lose"
+      ],
+      "answer_index": 0,
+      "youtube_start": 79,
+      "youtube_end": 91
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "did",
+        "Waterloo,",
+        "Napoleon",
+        "surrender",
+        "At"
+      ],
+      "answer": [
+        "At",
+        "Waterloo,",
+        "Napoleon",
+        "did",
+        "surrender"
+      ],
+      "youtube_start": 7
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "repeating",
+        "always",
+        "itself",
+        "Is"
+      ],
+      "answer": [
+        "Is",
+        "always",
+        "repeating",
+        "itself"
+      ],
+      "youtube_start": 24
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "love",
+        "more",
+        "forever",
+        "Promise",
+        "you",
+        "to"
+      ],
+      "answer": [
+        "Promise",
+        "to",
+        "love",
+        "you",
+        "forever",
+        "more"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Finally",
+        "my",
+        "facing",
+        "Waterloo"
+      ],
+      "answer": [
+        "Finally",
+        "facing",
+        "my",
+        "Waterloo"
+      ],
+      "youtube_start": 56
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "to",
+        "Promise",
+        "more",
+        "love",
+        "for",
+        "ever"
+      ],
+      "answer": [
+        "Promise",
+        "to",
+        "love",
+        "you",
+        "for",
+        "ever",
+        "more"
+      ],
+      "youtube_start": 96
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"waterloo\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"waterloo\" na música inteira?",
+      "word": "waterloo",
+      "answer": 21
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"knowing\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"knowing\" na música inteira?",
+      "word": "knowing",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "The history book on the shelf",
+          "order": 0
+        },
+        {
+          "text": "I was defeated, you won the war",
+          "order": 1
+        },
+        {
+          "text": "So how could I ever refuse",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask ABBA one question about \"Waterloo\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para ABBA sobre \"Waterloo\", o que seria e por quê?",
+      "target_vocab": [
+        "waterloo",
+        "knowing",
+        "fate",
+        "finally"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Waterloo\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Waterloo\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "waterloo",
+        "knowing",
+        "fate",
+        "finally"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Waterloo\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Waterloo\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "waterloo",
+        "knowing",
+        "fate",
+        "finally"
+      ]
+    }
+  ]
+}

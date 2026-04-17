@@ -1,0 +1,475 @@
+{
+  "slug": "curious",
+  "title": "Curious",
+  "artist": "Hayley Kiyoko",
+  "year": 2018,
+  "album": "Expectations",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 183,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Curious by Hayley Kiyoko (2018) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "touch",
+      "pt": "",
+      "note": "Appears 24 times; first heard in: \"If you let him touch ya, touch ya\""
+    },
+    {
+      "term": "used",
+      "pt": "",
+      "note": "Appears 24 times; first heard in: \"The way I used to, used to, used to, used to, used to, used to (Yeah)\""
+    },
+    {
+      "term": "handle",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I can handle things\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"But don't you worry I can handle it\""
+    },
+    {
+      "term": "worry",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"But don't you worry I can handle it\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I'm just curious, is it serious?",
+          "I'm just curious, is it serious?",
+          "Calling me up so late at night",
+          "Are we just friends?"
+        ],
+        "start_seconds": 55,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "I'm just curious, is it serious?",
+          "If you let him touch ya, touch ya",
+          "Touch ya, touch ya, touch ya, touch ya (Yeah)",
+          "The way I used to, used to, used to, used to, used to, used to (Yeah)"
+        ],
+        "start_seconds": 115,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I can",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "handle",
+      "excerpt_after": "things",
+      "youtube_start": 9,
+      "youtube_end": 23
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "think",
+      "excerpt_after": "that you should",
+      "youtube_start": 17,
+      "youtube_end": 31
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm just on the",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "floor",
+      "excerpt_after": "I'm like a model",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But don't you",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "worry",
+      "excerpt_after": "I can handle it",
+      "youtube_start": 31,
+      "youtube_end": 45
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm just",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "curious",
+      "excerpt_after": "is it serious?",
+      "youtube_start": 55,
+      "youtube_end": 69
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Been looking",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "through",
+      "excerpt_after": "the texts and all the photos",
+      "youtube_start": 87,
+      "youtube_end": 101
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I need a drink",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Like I wish that you would",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I think that you should",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Whose been loving you good?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "No, don't you worry I can handle it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "a drink",
+      "options": [
+        "jacket",
+        "need",
+        "texts",
+        "worry"
+      ],
+      "answer_index": 1,
+      "youtube_start": 5,
+      "youtube_end": 17
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I can",
+      "excerpt_after": "things",
+      "options": [
+        "handle",
+        "jacket",
+        "should",
+        "used"
+      ],
+      "answer_index": 0,
+      "youtube_start": 9,
+      "youtube_end": 21
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Whose been",
+      "excerpt_after": "you good?",
+      "options": [
+        "bring",
+        "handle",
+        "late",
+        "loving"
+      ],
+      "answer_index": 3,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But",
+      "excerpt_after": "you worry I can handle it",
+      "options": [
+        "dont",
+        "photos",
+        "wanted",
+        "whiskey"
+      ],
+      "answer_index": 0,
+      "youtube_start": 31,
+      "youtube_end": 43
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Calling me up so",
+      "excerpt_after": "at night",
+      "options": [
+        "late",
+        "serious",
+        "whiskey",
+        "yeah"
+      ],
+      "answer_index": 0,
+      "youtube_start": 63,
+      "youtube_end": 75
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "need",
+        "drink",
+        "a"
+      ],
+      "answer": [
+        "I",
+        "need",
+        "a",
+        "drink"
+      ],
+      "youtube_start": 5
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "is",
+        "shit",
+        "all",
+        "But",
+        "good"
+      ],
+      "answer": [
+        "But",
+        "shit",
+        "is",
+        "all",
+        "good"
+      ],
+      "youtube_start": 7
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "you",
+        "should",
+        "that",
+        "think"
+      ],
+      "answer": [
+        "I",
+        "think",
+        "that",
+        "you",
+        "should"
+      ],
+      "youtube_start": 17
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "serious?",
+        "is",
+        "just",
+        "it",
+        "I'm",
+        "curious,"
+      ],
+      "answer": [
+        "I'm",
+        "just",
+        "curious,",
+        "is",
+        "it",
+        "serious?"
+      ],
+      "youtube_start": 55
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "sky",
+        "look",
+        "When",
+        "at",
+        "you",
+        "the"
+      ],
+      "answer": [
+        "When",
+        "you",
+        "look",
+        "at",
+        "the",
+        "sky"
+      ],
+      "youtube_start": 76
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"touch\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"touch\" na música inteira?",
+      "word": "touch",
+      "answer": 24
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"used\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"used\" na música inteira?",
+      "word": "used",
+      "answer": 24
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I need a drink",
+          "order": 0
+        },
+        {
+          "text": "No, don't you worry I can handle it",
+          "order": 1
+        },
+        {
+          "text": "But don't you worry I can handle it",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Whiskey ain't my thing",
+          "order": 0
+        },
+        {
+          "text": "You think of me, I'm what you see",
+          "order": 1
+        },
+        {
+          "text": "If you let him touch ya, touch ya",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Curious\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Curious\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "touch",
+        "used",
+        "handle",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Curious\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Curious\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "touch",
+        "used",
+        "handle",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Curious\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Curious\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "touch",
+        "used",
+        "handle",
+        "don't"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    }
+  ]
+}

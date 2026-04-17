@@ -1,0 +1,483 @@
+{
+  "slug": "my-girl",
+  "title": "My Girl",
+  "artist": "The Temptations",
+  "year": 1964,
+  "album": "The Temptations Sing Smokey",
+  "genre": [
+    "soul"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 165,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "My Girl by The Temptations (1964) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "girl",
+      "pt": "",
+      "note": "Appears 18 times; first heard in: \"My girl, my girl, my girl\""
+    },
+    {
+      "term": "i've",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I've got sunshine on a cloudy day\""
+    },
+    {
+      "term": "talkin'",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Talkin' 'bout my girl\""
+    },
+    {
+      "term": "bout",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Talkin' 'bout my girl\""
+    },
+    {
+      "term": "guess",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"I guess you'd say\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "What can make me feel this way",
+          "My girl, my girl, my girl",
+          "Talkin' 'bout my girl",
+          "My girl"
+        ],
+        "start_seconds": 32,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Hey hey hey",
+          "Hey hey hey",
+          "Oh yeah",
+          "I don't need no money, fortune, or fame"
+        ],
+        "start_seconds": 95,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've got",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sunshine",
+      "excerpt_after": "on a cloudy day",
+      "youtube_start": 8,
+      "youtube_end": 22
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've got the",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "month",
+      "excerpt_after": "of May",
+      "youtube_start": 22,
+      "youtube_end": 36
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "guess",
+      "excerpt_after": "you'd say",
+      "youtube_start": 28,
+      "youtube_end": 42
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've got a",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sweeter",
+      "excerpt_after": "song",
+      "youtube_start": 54,
+      "youtube_end": 68
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Than the",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "birds",
+      "excerpt_after": "in the trees",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I don't need no",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "money",
+      "excerpt_after": "fortune, or fame",
+      "youtube_start": 109,
+      "youtube_end": 123
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've got sunshine on a cloudy day",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I guess you'd say",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've got a sweeter song",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I don't need no money, fortune, or fame",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "What can make me feel this way",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've got",
+      "excerpt_after": "on a cloudy day",
+      "options": [
+        "birds",
+        "money",
+        "riches",
+        "sunshine"
+      ],
+      "answer_index": 3,
+      "youtube_start": 8,
+      "youtube_end": 20
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've got the",
+      "excerpt_after": "of May",
+      "options": [
+        "claim",
+        "cloudy",
+        "month",
+        "need"
+      ],
+      "answer_index": 2,
+      "youtube_start": 22,
+      "youtube_end": 34
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "My",
+      "excerpt_after": "my girl, my girl",
+      "options": [
+        "baby",
+        "birds",
+        "girl",
+        "outside"
+      ],
+      "answer_index": 2,
+      "youtube_start": 37,
+      "youtube_end": 49
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The",
+      "excerpt_after": "envy me",
+      "options": [
+        "baby",
+        "bees",
+        "riches",
+        "trees"
+      ],
+      "answer_index": 1,
+      "youtube_start": 50,
+      "youtube_end": 62
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well, I guess",
+      "excerpt_after": "say",
+      "options": [
+        "girl",
+        "money",
+        "month",
+        "youd"
+      ],
+      "answer_index": 3,
+      "youtube_start": 63,
+      "youtube_end": 75
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "got",
+        "sunshine",
+        "on",
+        "day",
+        "cloudy",
+        "a",
+        "I've"
+      ],
+      "answer": [
+        "I've",
+        "got",
+        "sunshine",
+        "on",
+        "a",
+        "cloudy",
+        "day"
+      ],
+      "youtube_start": 8
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "May",
+        "got",
+        "I've",
+        "month",
+        "the",
+        "of"
+      ],
+      "answer": [
+        "I've",
+        "got",
+        "the",
+        "month",
+        "of",
+        "May"
+      ],
+      "youtube_start": 22
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "girl,",
+        "my",
+        "My",
+        "girl,",
+        "my",
+        "girl"
+      ],
+      "answer": [
+        "My",
+        "girl,",
+        "my",
+        "girl,",
+        "my",
+        "girl"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "so",
+        "got",
+        "I've",
+        "much",
+        "honey"
+      ],
+      "answer": [
+        "I've",
+        "got",
+        "so",
+        "much",
+        "honey"
+      ],
+      "youtube_start": 45
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Than",
+        "the",
+        "trees",
+        "in",
+        "birds",
+        "the"
+      ],
+      "answer": [
+        "Than",
+        "the",
+        "birds",
+        "in",
+        "the",
+        "trees"
+      ],
+      "youtube_start": 58
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"girl\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"girl\" na música inteira?",
+      "word": "girl",
+      "answer": 18
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"i've\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"i've\" na música inteira?",
+      "word": "i've",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I've got sunshine on a cloudy day",
+          "order": 0
+        },
+        {
+          "text": "I've got so much honey",
+          "order": 1
+        },
+        {
+          "text": "Talkin' 'bout my girl",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "When it's cold outside",
+          "order": 0
+        },
+        {
+          "text": "Than the birds in the trees",
+          "order": 1
+        },
+        {
+          "text": "Hey hey hey",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask The Temptations one question about \"My Girl\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para The Temptations sobre \"My Girl\", o que seria e por quê?",
+      "target_vocab": [
+        "girl",
+        "i've",
+        "talkin'",
+        "bout"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"My Girl\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"My Girl\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "girl",
+        "i've",
+        "talkin'",
+        "bout"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"My Girl\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"My Girl\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "girl",
+        "i've",
+        "talkin'",
+        "bout"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you'd",
+          "full": "you would"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    }
+  ]
+}

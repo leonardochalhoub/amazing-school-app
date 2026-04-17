@@ -1,0 +1,492 @@
+{
+  "slug": "where-is-the-love",
+  "title": "Where Is the Love?",
+  "artist": "Black Eyed Peas",
+  "year": 2003,
+  "album": "Elephunk",
+  "genre": [
+    "pop",
+    "hip-hop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 273,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Where Is the Love? by Black Eyed Peas (2003) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "world",
+      "pt": "",
+      "note": "Appears 15 times; first heard in: \"What's wrong with the world, mama?\""
+    },
+    {
+      "term": "people",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"People livin' like they ain't got no mamas\""
+    },
+    {
+      "term": "father",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Father, Father, Father, help us\""
+    },
+    {
+      "term": "wrong",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"What's wrong with the world, mama?\""
+    },
+    {
+      "term": "y'all",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Let your soul gravitate to the love, y'all, y'all\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Where is the love? (The love)",
+          "Where is the love? (The love)",
+          "Where is the love, the love, the love?",
+          "It just ain't the same, old ways have changed"
+        ],
+        "start_seconds": 83,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Where is the love?",
+          "Where is the love?",
+          "Where is the love?",
+          "Where is the love?"
+        ],
+        "start_seconds": 226,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "What's",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wrong",
+      "excerpt_after": "with the world, mama?",
+      "youtube_start": 19,
+      "youtube_end": 33
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Then you only",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "leave",
+      "excerpt_after": "space to discriminate",
+      "youtube_start": 42,
+      "youtube_end": 56
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Father,",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "father",
+      "excerpt_after": "Father, help us",
+      "youtube_start": 72,
+      "youtube_end": 86
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "With",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "ongoin",
+      "excerpt_after": "sufferin' as the youth die young",
+      "youtube_start": 104,
+      "youtube_end": 118
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Selfishness got us",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "followin",
+      "excerpt_after": "the wrong direction",
+      "youtube_start": 191,
+      "youtube_end": 205
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Lack of",
+      "blank_hint": "word starting with \"u\"",
+      "answer": "understanding",
+      "excerpt_after": "leading us away from unity",
+      "youtube_start": 212,
+      "youtube_end": 226
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "People livin' like they ain't got no mamas",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Overseas, yeah, we tryna stop terrorism",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Then you only leave space to discriminate",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Can you practice what you preach",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "As I'm gettin' older, y'all, people gets colder",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "What's",
+      "excerpt_after": "with the world, mama?",
+      "options": [
+        "world",
+        "worlds",
+        "wrong",
+        "yeah"
+      ],
+      "answer_index": 2,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Take",
+      "excerpt_after": "of your mind and meditate",
+      "options": [
+        "bloods",
+        "bound",
+        "control",
+        "worlds"
+      ],
+      "answer_index": 2,
+      "youtube_start": 57,
+      "youtube_end": 69
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "New",
+      "excerpt_after": "are strange, is the world insane?",
+      "options": [
+        "days",
+        "madness",
+        "tryna",
+        "worlds"
+      ],
+      "answer_index": 0,
+      "youtube_start": 94,
+      "youtube_end": 106
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Where's the",
+      "excerpt_after": "y'all, come on? (I don't know)",
+      "options": [
+        "people",
+        "thatll",
+        "truth",
+        "youre"
+      ],
+      "answer_index": 2,
+      "youtube_start": 130,
+      "youtube_end": 142
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Whatever",
+      "excerpt_after": "to the values of humanity?",
+      "options": [
+        "drama",
+        "happened",
+        "madness",
+        "terrorists"
+      ],
+      "answer_index": 1,
+      "youtube_start": 205,
+      "youtube_end": 217
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "with",
+        "wrong",
+        "world,",
+        "What's",
+        "the",
+        "mama?"
+      ],
+      "answer": [
+        "What's",
+        "wrong",
+        "with",
+        "the",
+        "world,",
+        "mama?"
+      ],
+      "youtube_start": 19
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "demonstrate",
+        "what",
+        "is",
+        "Madness",
+        "you"
+      ],
+      "answer": [
+        "Madness",
+        "is",
+        "what",
+        "you",
+        "demonstrate"
+      ],
+      "youtube_start": 50
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "us",
+        "Father,",
+        "Father,",
+        "help",
+        "Father,"
+      ],
+      "answer": [
+        "Father,",
+        "Father,",
+        "Father,",
+        "help",
+        "us"
+      ],
+      "youtube_start": 72
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "deny",
+        "respectin'",
+        "thy",
+        "brother",
+        "Not",
+        "other,",
+        "each"
+      ],
+      "answer": [
+        "Not",
+        "respectin'",
+        "each",
+        "other,",
+        "deny",
+        "thy",
+        "brother"
+      ],
+      "youtube_start": 118
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "the",
+        "of",
+        "values",
+        "happened",
+        "humanity?",
+        "Whatever"
+      ],
+      "answer": [
+        "Whatever",
+        "happened",
+        "to",
+        "the",
+        "values",
+        "of",
+        "humanity?"
+      ],
+      "youtube_start": 205
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"world\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"world\" na música inteira?",
+      "word": "world",
+      "answer": 15
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"people\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"people\" na música inteira?",
+      "word": "people",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "What's wrong with the world, mama?",
+          "order": 0
+        },
+        {
+          "text": "Nations droppin' bombs",
+          "order": 1
+        },
+        {
+          "text": "Wrong information always shown by the media",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "People livin' like they ain't got no mamas",
+          "order": 0
+        },
+        {
+          "text": "'Cause people got me, got me questionin'",
+          "order": 1
+        },
+        {
+          "text": "That's the reason why sometimes I'm feelin' under",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Where Is the Love?\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Where Is the Love?\", o que aconteceria?",
+      "target_vocab": [
+        "world",
+        "people",
+        "father",
+        "wrong"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Where Is the Love?\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Where Is the Love?\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "world",
+        "people",
+        "father",
+        "wrong"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Where Is the Love?\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Where Is the Love?\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "world",
+        "people",
+        "father",
+        "wrong"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "what's",
+          "full": "what is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

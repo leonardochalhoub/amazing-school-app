@@ -1,0 +1,445 @@
+{
+  "slug": "time",
+  "title": "Time",
+  "artist": "Pink Floyd",
+  "year": 1973,
+  "album": "The Dark Side of the Moon",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 414,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Time by Pink Floyd (1973) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "home",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Staying home to watch the rain\""
+    },
+    {
+      "term": "time",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"And there is time to kill today\""
+    },
+    {
+      "term": "something",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Waiting for someone or something to show you the way\""
+    },
+    {
+      "term": "tired",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Tired of lying in the sunshine\""
+    },
+    {
+      "term": "find",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"And then one day you find\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Tired of",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lying",
+      "excerpt_after": "in the sunshine",
+      "youtube_start": 167,
+      "youtube_end": 181
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "there",
+      "excerpt_after": "is time to kill today",
+      "youtube_start": 178,
+      "youtube_end": 192
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Racing around to come up",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "behind",
+      "excerpt_after": "you again",
+      "youtube_start": 291,
+      "youtube_end": 305
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Plans that",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "either",
+      "excerpt_after": "come to naught",
+      "youtube_start": 320,
+      "youtube_end": 334
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Is the",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "english",
+      "excerpt_after": "way",
+      "youtube_start": 333,
+      "youtube_end": 347
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Far away,",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "across",
+      "excerpt_after": "the field",
+      "youtube_start": 390,
+      "youtube_end": 404
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And you are young and life is long",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Ten years have got behind you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You missed the starting gun",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But you're older",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I like to be here when I can",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Tired of",
+      "excerpt_after": "in the sunshine",
+      "options": [
+        "ground",
+        "home",
+        "lying",
+        "waste"
+      ],
+      "answer_index": 2,
+      "youtube_start": 167,
+      "youtube_end": 179
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ten",
+      "excerpt_after": "have got behind you",
+      "options": [
+        "hometown",
+        "kicking",
+        "watch",
+        "years"
+      ],
+      "answer_index": 3,
+      "youtube_start": 186,
+      "youtube_end": 198
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Shorter of",
+      "excerpt_after": "and one day closer to death",
+      "options": [
+        "breath",
+        "dull",
+        "long",
+        "time"
+      ],
+      "answer_index": 0,
+      "youtube_start": 305,
+      "youtube_end": 317
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Hanging on in",
+      "excerpt_after": "desperation",
+      "options": [
+        "quiet",
+        "told",
+        "years",
+        "young"
+      ],
+      "answer_index": 0,
+      "youtube_start": 327,
+      "youtube_end": 339
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's",
+      "excerpt_after": "to warm my bones beside the fire",
+      "options": [
+        "closer",
+        "good",
+        "show",
+        "years"
+      ],
+      "answer_index": 1,
+      "youtube_start": 382,
+      "youtube_end": 394
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "lying",
+        "sunshine",
+        "in",
+        "the",
+        "of",
+        "Tired"
+      ],
+      "answer": [
+        "Tired",
+        "of",
+        "lying",
+        "in",
+        "the",
+        "sunshine"
+      ],
+      "youtube_start": 167
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "one",
+        "you",
+        "day",
+        "find",
+        "then"
+      ],
+      "answer": [
+        "And",
+        "then",
+        "one",
+        "day",
+        "you",
+        "find"
+      ],
+      "youtube_start": 183
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "shorter",
+        "getting",
+        "year",
+        "is",
+        "Every"
+      ],
+      "answer": [
+        "Every",
+        "year",
+        "is",
+        "getting",
+        "shorter"
+      ],
+      "youtube_start": 313
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "on",
+        "Hanging",
+        "in",
+        "quiet",
+        "desperation"
+      ],
+      "answer": [
+        "Hanging",
+        "on",
+        "in",
+        "quiet",
+        "desperation"
+      ],
+      "youtube_start": 327
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Far",
+        "the",
+        "across",
+        "away,",
+        "field"
+      ],
+      "answer": [
+        "Far",
+        "away,",
+        "across",
+        "the",
+        "field"
+      ],
+      "youtube_start": 390
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"home\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"home\" na música inteira?",
+      "word": "home",
+      "answer": 4
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"time\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"time\" na música inteira?",
+      "word": "time",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Tired of lying in the sunshine",
+          "order": 0
+        },
+        {
+          "text": "But it's sinking",
+          "order": 1
+        },
+        {
+          "text": "Is the English way",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Staying home to watch the rain",
+          "order": 0
+        },
+        {
+          "text": "Never seem to find the time",
+          "order": 1
+        },
+        {
+          "text": "Thought I'd something more to say",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Time\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Time\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "home",
+        "time",
+        "something",
+        "tired"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Time\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Time\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "home",
+        "time",
+        "something",
+        "tired"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Time\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Time\", o que aconteceria?",
+      "target_vocab": [
+        "home",
+        "time",
+        "something",
+        "tired"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "slug": "say-my-name",
+  "title": "Say My Name",
+  "artist": "Destiny's Child",
+  "year": 1999,
+  "album": "The Writing's On The Wall",
+  "genre": [
+    "r&b"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "fast",
+  "duration_seconds": 271,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Say My Name by Destiny's Child (1999) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "name",
+      "pt": "",
+      "note": "Appears 46 times; first heard in: \"Say my name, say my name\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 21 times; first heard in: \"If no one is around you, say, \"Baby I love you\"\""
+    },
+    {
+      "term": "ain't",
+      "pt": "",
+      "note": "Appears 21 times; first heard in: \"If you ain't runnin' game\""
+    },
+    {
+      "term": "acting",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"You acting kind of shady, ain't callin' me baby\""
+    },
+    {
+      "term": "game",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"If you ain't runnin' game\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Say my name, say my name",
+          "If no one is around you, say, \"Baby I love you\"",
+          "If you ain't runnin' game",
+          "Say my name, say my name"
+        ],
+        "start_seconds": 1,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "'Cause I know how you usually do",
+          "When you sayin' everything to me times two",
+          "Why can't you just tell the truth?",
+          "If somebody's there then tell me who"
+        ],
+        "start_seconds": 63,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If you ain't",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "runnin",
+      "excerpt_after": "game",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You acting kind of",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "shady",
+      "excerpt_after": "ain't callin' me baby",
+      "youtube_start": 24,
+      "youtube_end": 38
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Something's goin' down",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "the way it seems",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When you sayin'",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "everything",
+      "excerpt_after": "to me times two",
+      "youtube_start": 65,
+      "youtube_end": 79
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I know you sayin' that I'm",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "assuming",
+      "excerpt_after": "things",
+      "youtube_start": 126,
+      "youtube_end": 140
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If somebody's",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "there",
+      "excerpt_after": "tell me who",
+      "youtube_start": 138,
+      "youtube_end": 152
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If you ain't runnin' game",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Shouldn't be no reason, why you're acting strange?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Cause I know how you usually do",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Why can't you just tell the truth?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I can't hear ya",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Say my",
+      "excerpt_after": "say my name",
+      "options": [
+        "every",
+        "name",
+        "okay",
+        "there"
+      ],
+      "answer_index": 1,
+      "youtube_start": 1,
+      "youtube_end": 13
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Any",
+      "excerpt_after": "day I would call, you would say",
+      "options": [
+        "baby",
+        "callin",
+        "okay",
+        "other"
+      ],
+      "answer_index": 3,
+      "youtube_start": 29,
+      "youtube_end": 41
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "'Cause I know how you",
+      "excerpt_after": "do",
+      "options": [
+        "cravin",
+        "crib",
+        "name",
+        "usually"
+      ],
+      "answer_index": 3,
+      "youtube_start": 63,
+      "youtube_end": 75
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I know you sayin' that I'm",
+      "excerpt_after": "things",
+      "options": [
+        "assuming",
+        "other",
+        "sayin",
+        "somebodys"
+      ],
+      "answer_index": 0,
+      "youtube_start": 126,
+      "youtube_end": 138
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "If somebody's",
+      "excerpt_after": "tell me who",
+      "options": [
+        "name",
+        "there",
+        "word",
+        "yourself"
+      ],
+      "answer_index": 1,
+      "youtube_start": 138,
+      "youtube_end": 150
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "name",
+        "say",
+        "my",
+        "my",
+        "Say",
+        "name,"
+      ],
+      "answer": [
+        "Say",
+        "my",
+        "name,",
+        "say",
+        "my",
+        "name"
+      ],
+      "youtube_start": 1
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "say",
+        "Betta",
+        "name"
+      ],
+      "answer": [
+        "Betta",
+        "say",
+        "my",
+        "name"
+      ],
+      "youtube_start": 28
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Why",
+        "truth?",
+        "the",
+        "just",
+        "tell",
+        "you",
+        "can't"
+      ],
+      "answer": [
+        "Why",
+        "can't",
+        "you",
+        "just",
+        "tell",
+        "the",
+        "truth?"
+      ],
+      "youtube_start": 67
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "somebody's",
+        "If",
+        "who",
+        "there",
+        "tell"
+      ],
+      "answer": [
+        "If",
+        "somebody's",
+        "there",
+        "tell",
+        "me",
+        "who"
+      ],
+      "youtube_start": 138
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ya",
+        "can't",
+        "hear",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "can't",
+        "hear",
+        "ya"
+      ],
+      "youtube_start": 179
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"name\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"name\" na música inteira?",
+      "word": "name",
+      "answer": 46
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"baby\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"baby\" na música inteira?",
+      "word": "baby",
+      "answer": 21
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Say my name, say my name",
+          "order": 0
+        },
+        {
+          "text": "Betta say my name",
+          "order": 1
+        },
+        {
+          "text": "Uh, uh, uh",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "If you ain't runnin' game",
+          "order": 0
+        },
+        {
+          "text": "Why the sudden change?",
+          "order": 1
+        },
+        {
+          "text": "'Cause I know how you usually do",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Say My Name\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Say My Name\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "name",
+        "baby",
+        "ain't",
+        "acting"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Destiny's Child one question about \"Say My Name\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Destiny's Child sobre \"Say My Name\", o que seria e por quê?",
+      "target_vocab": [
+        "name",
+        "baby",
+        "ain't",
+        "acting"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Say My Name\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Say My Name\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "name",
+        "baby",
+        "ain't",
+        "acting"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "shouldn't",
+          "full": "should not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    }
+  ]
+}

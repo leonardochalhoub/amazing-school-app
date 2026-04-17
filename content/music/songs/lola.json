@@ -1,0 +1,479 @@
+{
+  "slug": "lola",
+  "title": "Lola",
+  "artist": "The Kinks",
+  "year": 1970,
+  "album": "Lola",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 327,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Lola by The Kinks (1970) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "lola",
+      "pt": "",
+      "note": "Appears 37 times; first heard in: \"I asked her her name and in a dark brown voice she said Lola\""
+    },
+    {
+      "term": "well",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Well, I'm not the world's most physical guy\""
+    },
+    {
+      "term": "walked",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"She walked up to me and she asked me to dance\""
+    },
+    {
+      "term": "world's",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Well, I'm not the world's most physical guy\""
+    },
+    {
+      "term": "champagne",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Where you drink champagne and it tastes just like coca cola\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "La-la-la-la Lola",
+          "Well, I'm not the world's most physical guy",
+          "But when she squeezed me tight she nearly broke my spine",
+          "Oh my Lola"
+        ],
+        "start_seconds": 32,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "La-la-la-la Lola",
+          "La-la-la-la Lola",
+          "Well, we drank champagne and danced all night",
+          "Under electric candlelight"
+        ],
+        "start_seconds": 64,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well, I'm not the",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "worlds",
+      "excerpt_after": "most physical guy",
+      "youtube_start": 37,
+      "youtube_end": 51
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well, we",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "drank",
+      "excerpt_after": "champagne and danced all night",
+      "youtube_start": 78,
+      "youtube_end": 92
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well, I'm not the world's most",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "passionate",
+      "excerpt_after": "guy",
+      "youtube_start": 91,
+      "youtube_end": 105
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "walked",
+      "excerpt_after": "to the door",
+      "youtube_start": 125,
+      "youtube_end": 139
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I'd",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "ever kissed a woman before",
+      "youtube_start": 167,
+      "youtube_end": 181
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But Lola",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "smiled",
+      "excerpt_after": "and took me by the hand",
+      "youtube_start": 171,
+      "youtube_end": 185
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, I'm not the world's most physical guy",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, we drank champagne and danced all night",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I pushed her away",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I fell to the floor",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, I left home just a week before",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well, I'm not the",
+      "excerpt_after": "most physical guy",
+      "options": [
+        "drank",
+        "home",
+        "night",
+        "worlds"
+      ],
+      "answer_index": 3,
+      "youtube_start": 37,
+      "youtube_end": 49
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well, we",
+      "excerpt_after": "champagne and danced all night",
+      "options": [
+        "cola",
+        "dark",
+        "drank",
+        "name"
+      ],
+      "answer_index": 2,
+      "youtube_start": 78,
+      "youtube_end": 90
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "her away",
+      "options": [
+        "cola",
+        "physical",
+        "pushed",
+        "walked"
+      ],
+      "answer_index": 2,
+      "youtube_start": 123,
+      "youtube_end": 135
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Girls will be",
+      "excerpt_after": "and boys will be girls",
+      "options": [
+        "boys",
+        "coca",
+        "dear",
+        "under"
+      ],
+      "answer_index": 0,
+      "youtube_start": 151,
+      "youtube_end": 163
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I'd",
+      "excerpt_after": "ever kissed a woman before",
+      "options": [
+        "c-o-l-a",
+        "dumb",
+        "knee",
+        "never"
+      ],
+      "answer_index": 3,
+      "youtube_start": 167,
+      "youtube_end": 179
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "her",
+        "I",
+        "pushed",
+        "away"
+      ],
+      "answer": [
+        "I",
+        "pushed",
+        "her",
+        "away"
+      ],
+      "youtube_start": 123
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "door",
+        "I",
+        "the",
+        "to",
+        "walked"
+      ],
+      "answer": [
+        "I",
+        "walked",
+        "to",
+        "the",
+        "door"
+      ],
+      "youtube_start": 125
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "floor",
+        "the",
+        "fell",
+        "to",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "fell",
+        "to",
+        "the",
+        "floor"
+      ],
+      "youtube_start": 129
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "on",
+        "got",
+        "I",
+        "knees",
+        "down",
+        "my"
+      ],
+      "answer": [
+        "I",
+        "got",
+        "down",
+        "on",
+        "my",
+        "knees"
+      ],
+      "youtube_start": 132
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "so",
+        "is",
+        "Lola",
+        "And"
+      ],
+      "answer": [
+        "And",
+        "so",
+        "is",
+        "Lola"
+      ],
+      "youtube_start": 180
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"lola\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"lola\" na música inteira?",
+      "word": "lola",
+      "answer": 37
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"well\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"well\" na música inteira?",
+      "word": "well",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Well, I'm not the world's most physical guy",
+          "order": 0
+        },
+        {
+          "text": "Under electric candlelight",
+          "order": 1
+        },
+        {
+          "text": "I got down on my knees",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Oh my Lola",
+          "order": 0
+        },
+        {
+          "text": "Well, I'm not the world's most passionate guy",
+          "order": 1
+        },
+        {
+          "text": "I fell to the floor",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Lola\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Lola\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "lola",
+        "well",
+        "walked",
+        "world's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Lola\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Lola\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "lola",
+        "well",
+        "walked",
+        "world's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Lola\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Lola\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "lola",
+        "well",
+        "walked",
+        "world's"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,476 @@
+{
+  "slug": "alone",
+  "title": "Alone",
+  "artist": "Heart",
+  "year": 1987,
+  "album": "Bad Animals",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 219,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Alone by Heart (1987) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "alone",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Alone\""
+    },
+    {
+      "term": "tonight",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I wonder where you are tonight\""
+    },
+    {
+      "term": "till",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Till now\""
+    },
+    {
+      "term": "always",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I always got by on my own\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I never really cared until I met you\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "How do I get you alone",
+          "How do I get you alone",
+          "You don't know how long I have wanted",
+          "To touch your lips and hold you tight"
+        ],
+        "start_seconds": 66,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "How do I get you alone",
+          "How do I get you alone"
+        ],
+        "start_seconds": 145,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I hear the",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "ticking",
+      "excerpt_after": "of the clock",
+      "youtube_start": 11,
+      "youtube_end": 25
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wonder",
+      "excerpt_after": "where you are tonight",
+      "youtube_start": 22,
+      "youtube_end": 36
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And the",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "night",
+      "excerpt_after": "goes by so very slow",
+      "youtube_start": 32,
+      "youtube_end": 46
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "really cared until I met you",
+      "youtube_start": 56,
+      "youtube_end": 70
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "touch",
+      "excerpt_after": "your lips and hold you tight",
+      "youtube_start": 83,
+      "youtube_end": 97
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "secret",
+      "excerpt_after": "is still my own",
+      "youtube_start": 101,
+      "youtube_end": 115
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I hear the ticking of the clock",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I wonder where you are tonight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I always got by on my own",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "How do I get you alone",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "To touch your lips and hold you tight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "the ticking of the clock",
+      "options": [
+        "hear",
+        "lips",
+        "slow",
+        "though"
+      ],
+      "answer_index": 0,
+      "youtube_start": 11,
+      "youtube_end": 23
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "No",
+      "excerpt_after": "on the telephone",
+      "options": [
+        "always",
+        "answer",
+        "lying",
+        "till"
+      ],
+      "answer_index": 1,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "got by on my own",
+      "options": [
+        "always",
+        "goes",
+        "pitch",
+        "secret"
+      ],
+      "answer_index": 0,
+      "youtube_start": 52,
+      "youtube_end": 64
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "know how long I have wanted",
+      "options": [
+        "answer",
+        "dont",
+        "never",
+        "wanted"
+      ],
+      "answer_index": 1,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I was",
+      "excerpt_after": "to tell you tonight",
+      "options": [
+        "alone",
+        "dark",
+        "going",
+        "tonight"
+      ],
+      "answer_index": 2,
+      "youtube_start": 94,
+      "youtube_end": 106
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ticking",
+        "the",
+        "the",
+        "hear",
+        "clock",
+        "of",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "hear",
+        "the",
+        "ticking",
+        "of",
+        "the",
+        "clock"
+      ],
+      "youtube_start": 11
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "lying",
+        "here",
+        "I'm",
+        "room's",
+        "the",
+        "dark",
+        "pitch"
+      ],
+      "answer": [
+        "I'm",
+        "lying",
+        "here",
+        "the",
+        "room's",
+        "pitch",
+        "dark"
+      ],
+      "youtube_start": 14
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "wonder",
+        "tonight",
+        "where",
+        "you",
+        "are",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "wonder",
+        "where",
+        "you",
+        "are",
+        "tonight"
+      ],
+      "youtube_start": 22
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "on",
+        "I",
+        "my",
+        "by",
+        "got",
+        "always",
+        "own"
+      ],
+      "answer": [
+        "I",
+        "always",
+        "got",
+        "by",
+        "on",
+        "my",
+        "own"
+      ],
+      "youtube_start": 52
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "How",
+        "you",
+        "get",
+        "I",
+        "do",
+        "alone"
+      ],
+      "answer": [
+        "How",
+        "do",
+        "I",
+        "get",
+        "you",
+        "alone"
+      ],
+      "youtube_start": 66
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"alone\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"alone\" na música inteira?",
+      "word": "alone",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I hear the ticking of the clock",
+          "order": 0
+        },
+        {
+          "text": "And now it chills me to the bone",
+          "order": 1
+        },
+        {
+          "text": "And my love for you is still unknown",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I'm lying here the room's pitch dark",
+          "order": 0
+        },
+        {
+          "text": "To touch your lips and hold you tight",
+          "order": 1
+        },
+        {
+          "text": "I always got by on my own",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Alone\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Alone\", o que aconteceria?",
+      "target_vocab": [
+        "alone",
+        "tonight",
+        "till",
+        "always"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Alone\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Alone\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "alone",
+        "tonight",
+        "till",
+        "always"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Alone\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Alone\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "alone",
+        "tonight",
+        "till",
+        "always"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    }
+  ]
+}

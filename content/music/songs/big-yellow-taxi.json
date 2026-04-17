@@ -1,0 +1,391 @@
+{
+  "slug": "big-yellow-taxi",
+  "title": "Big Yellow Taxi",
+  "artist": "Joni Mitchell",
+  "year": 1970,
+  "album": "Ladies of the Canyon",
+  "genre": [
+    "folk"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 135,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Big Yellow Taxi by Joni Mitchell (1970) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Don't it always seem to go\""
+    },
+    {
+      "term": "paved",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"They paved paradise, put up a parking lot\""
+    },
+    {
+      "term": "paradise",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"They paved paradise, put up a parking lot\""
+    },
+    {
+      "term": "parking",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"They paved paradise, put up a parking lot\""
+    },
+    {
+      "term": "always",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Don't it always seem to go\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Don't it always seem to go",
+          "That you don't know what you've got 'til it's gone",
+          "They paved paradise, put up a parking lot",
+          "(Ooh, bop-bop-bop-bop, ooh, bop-bop-bop-bop)"
+        ],
+        "start_seconds": 22,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Don't it always seem to go",
+          "That you don't know what you've got 'til it's gone",
+          "They paved paradise, put up a parking lot (ooh, bop-bop-bop-bop)",
+          "I said don't it always seem to go"
+        ],
+        "start_seconds": 98,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "They",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "paved",
+      "excerpt_after": "paradise, put up a parking lot",
+      "youtube_start": 11,
+      "youtube_end": 25
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Don't it",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "always",
+      "excerpt_after": "seem to go",
+      "youtube_start": 22,
+      "youtube_end": 36
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "They paved",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "paradise",
+      "excerpt_after": "put up a parking lot",
+      "youtube_start": 27,
+      "youtube_end": 41
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(Ooh,",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "bop-bop-bop-bop",
+      "excerpt_after": "ooh, bop-bop-bop-bop)",
+      "youtube_start": 31,
+      "youtube_end": 45
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "They paved paradise, put up a",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "parking",
+      "excerpt_after": "lot",
+      "youtube_start": 53,
+      "youtube_end": 67
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Hey",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "farmer",
+      "excerpt_after": "farmer put away that DDT now",
+      "youtube_start": 61,
+      "youtube_end": 75
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They paved paradise, put up a parking lot",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I said don't it always seem to go",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They paved paradise",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Ooh, bop-bop-bop-bop, ooh, bop-bop-bop-bop",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Hey farmer, farmer put away that DDT now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "They",
+      "excerpt_after": "paradise, put up a parking lot",
+      "options": [
+        "door",
+        "paved",
+        "taxi",
+        "trees"
+      ],
+      "answer_index": 1,
+      "youtube_start": 11,
+      "youtube_end": 23
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Don't it",
+      "excerpt_after": "seem to go",
+      "options": [
+        "always",
+        "boutique",
+        "charged",
+        "leave"
+      ],
+      "answer_index": 0,
+      "youtube_start": 22,
+      "youtube_end": 34
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Don't it always",
+      "excerpt_after": "to go",
+      "options": [
+        "last",
+        "seem",
+        "took",
+        "trees"
+      ],
+      "answer_index": 1,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "They paved paradise, put up a",
+      "excerpt_after": "lot",
+      "options": [
+        "last",
+        "night",
+        "parking",
+        "spot"
+      ],
+      "answer_index": 2,
+      "youtube_start": 53,
+      "youtube_end": 65
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Late",
+      "excerpt_after": "night I heard the screen door slam",
+      "options": [
+        "apples",
+        "farmer",
+        "last",
+        "parking"
+      ],
+      "answer_index": 2,
+      "youtube_start": 86,
+      "youtube_end": 98
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "seem",
+        "it",
+        "Don't",
+        "always",
+        "go",
+        "to"
+      ],
+      "answer": [
+        "Don't",
+        "it",
+        "always",
+        "seem",
+        "to",
+        "go"
+      ],
+      "youtube_start": 22
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "bop-bop-bop-bop,",
+        "ooh,",
+        "Ooh,",
+        "bop-bop-bop-bop"
+      ],
+      "answer": [
+        "Ooh,",
+        "bop-bop-bop-bop,",
+        "ooh,",
+        "bop-bop-bop-bop"
+      ],
+      "youtube_start": 31
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "parking",
+        "a",
+        "lot",
+        "up",
+        "Put"
+      ],
+      "answer": [
+        "Put",
+        "up",
+        "a",
+        "parking",
+        "lot"
+      ],
+      "youtube_start": 128
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 10
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"paved\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"paved\" na música inteira?",
+      "word": "paved",
+      "answer": 8
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Big Yellow Taxi\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Big Yellow Taxi\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "don't",
+        "paved",
+        "paradise",
+        "parking"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Big Yellow Taxi\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Big Yellow Taxi\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "don't",
+        "paved",
+        "paradise",
+        "parking"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Big Yellow Taxi\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Big Yellow Taxi\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "don't",
+        "paved",
+        "paradise",
+        "parking"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

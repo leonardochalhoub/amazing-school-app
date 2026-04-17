@@ -1,0 +1,470 @@
+{
+  "slug": "is-this-love",
+  "title": "Is This Love",
+  "artist": "Bob Marley",
+  "year": 1978,
+  "album": "Legend (Deluxe Edition)",
+  "genre": [
+    "reggae"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 232,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Is This Love by Bob Marley (1978) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"I wanna know, wanna know, wanna know now\""
+    },
+    {
+      "term": "we'll",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"We'll be together\""
+    },
+    {
+      "term": "share",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"We'll share the shelter\""
+    },
+    {
+      "term": "right",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"And treat you right\""
+    },
+    {
+      "term": "every",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Every day and every night\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I wanna love you",
+          "And treat you right",
+          "I wanna love you",
+          "Every day and every night"
+        ],
+        "start_seconds": 16,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Is this love that I'm feelin'?",
+          "Is this love, is this love, is this love",
+          "Is this love that I'm feelin'?"
+        ],
+        "start_seconds": 57,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "love you",
+      "youtube_start": 16,
+      "youtube_end": 30
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Every day and",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "every",
+      "excerpt_after": "night",
+      "youtube_start": 27,
+      "youtube_end": 41
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We'll",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "share",
+      "excerpt_after": "the shelter",
+      "youtube_start": 37,
+      "youtube_end": 51
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "For Jah",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "provide",
+      "excerpt_after": "the bread",
+      "youtube_start": 50,
+      "youtube_end": 64
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So I",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "throw",
+      "excerpt_after": "my cards on your table",
+      "youtube_start": 93,
+      "youtube_end": 107
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We'll share the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "shelter",
+      "excerpt_after": "yeah, oh, yeah",
+      "youtube_start": 122,
+      "youtube_end": 136
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I wanna love you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We'll be together",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We'll share the same room, yeah",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I wanna know, wanna know, wanna know now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So I throw my cards on your table",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "love you",
+      "options": [
+        "bread",
+        "single",
+        "wanna",
+        "willing"
+      ],
+      "answer_index": 2,
+      "youtube_start": 16,
+      "youtube_end": 28
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "With a",
+      "excerpt_after": "right over our heads",
+      "options": [
+        "right",
+        "roof",
+        "table",
+        "well"
+      ],
+      "answer_index": 1,
+      "youtube_start": 34,
+      "youtube_end": 46
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We'll share the",
+      "excerpt_after": "room, yeah",
+      "options": [
+        "feelin",
+        "heads",
+        "same",
+        "shelter"
+      ],
+      "answer_index": 2,
+      "youtube_start": 45,
+      "youtube_end": 57
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So I",
+      "excerpt_after": "my cards on your table",
+      "options": [
+        "every",
+        "roof",
+        "single",
+        "throw"
+      ],
+      "answer_index": 3,
+      "youtube_start": 93,
+      "youtube_end": 105
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We'll share the",
+      "excerpt_after": "yeah, oh, yeah",
+      "options": [
+        "feelin",
+        "heads",
+        "know",
+        "shelter"
+      ],
+      "answer_index": 3,
+      "youtube_start": 122,
+      "youtube_end": 134
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "wanna",
+        "you",
+        "I",
+        "love"
+      ],
+      "answer": [
+        "I",
+        "wanna",
+        "love",
+        "you"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "over",
+        "right",
+        "heads",
+        "our",
+        "roof",
+        "With"
+      ],
+      "answer": [
+        "With",
+        "a",
+        "roof",
+        "right",
+        "over",
+        "our",
+        "heads"
+      ],
+      "youtube_start": 34
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "provide",
+        "Jah",
+        "the",
+        "For",
+        "bread"
+      ],
+      "answer": [
+        "For",
+        "Jah",
+        "provide",
+        "the",
+        "bread"
+      ],
+      "youtube_start": 50
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "right",
+        "you",
+        "Love",
+        "and",
+        "treat"
+      ],
+      "answer": [
+        "Love",
+        "and",
+        "treat",
+        "you",
+        "right"
+      ],
+      "youtube_start": 105
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "love",
+        "I",
+        "See,",
+        "wanna"
+      ],
+      "answer": [
+        "See,",
+        "I",
+        "wanna",
+        "love",
+        "you"
+      ],
+      "youtube_start": 184
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"know\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"know\" na música inteira?",
+      "word": "know",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"we'll\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"we'll\" na música inteira?",
+      "word": "we'll",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I wanna love you",
+          "order": 0
+        },
+        {
+          "text": "So I throw my cards on your table",
+          "order": 1
+        },
+        {
+          "text": "I-I-I-I-I, I'm willing and able",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And treat you right",
+          "order": 0
+        },
+        {
+          "text": "We'll be together, yeah",
+          "order": 1
+        },
+        {
+          "text": "See, I wanna love you",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Is This Love\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Is This Love\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "know",
+        "we'll",
+        "share",
+        "right"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Bob Marley one question about \"Is This Love\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Bob Marley sobre \"Is This Love\", o que seria e por quê?",
+      "target_vocab": [
+        "know",
+        "we'll",
+        "share",
+        "right"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Is This Love\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Is This Love\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "know",
+        "we'll",
+        "share",
+        "right"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

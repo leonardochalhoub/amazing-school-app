@@ -1,0 +1,484 @@
+{
+  "slug": "rolling-in-the-deep",
+  "title": "Rolling in the Deep",
+  "artist": "Adele",
+  "year": 2010,
+  "album": "21",
+  "genre": [
+    "pop",
+    "soul"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 228,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Rolling in the Deep by Adele (2010) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "rolling",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"Rolling in the deep (tears are gonna fall)\""
+    },
+    {
+      "term": "deep",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"Rolling in the deep (tears are gonna fall)\""
+    },
+    {
+      "term": "you're",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"We could've had it all (you're gonna wish you)\""
+    },
+    {
+      "term": "wish",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"We could've had it all (you're gonna wish you)\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"(Never had met me)\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "(Rolling in the deep)",
+          "You had my heart inside (you're gonna wish you)",
+          "Of your hands (never had met me)",
+          "And you played it (tears are gonna fall)"
+        ],
+        "start_seconds": 63,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "There's a fire starting in my heart",
+          "Reaching a fever pitch, it's bringing me out the dark",
+          "Finally I can see you crystal clear",
+          "Go ahead and sell me out and I'll lay your ship bare"
+        ],
+        "start_seconds": 1,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There's a fire",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "starting",
+      "excerpt_after": "in my heart",
+      "youtube_start": 1,
+      "youtube_end": 15
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Don't",
+      "blank_hint": "word starting with \"u\"",
+      "answer": "underestimate",
+      "excerpt_after": "the things that I will do",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You had my",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heart",
+      "excerpt_after": "inside (you're gonna wish you)",
+      "youtube_start": 64,
+      "youtube_end": 78
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Baby, I have no",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "story",
+      "excerpt_after": "to be told",
+      "youtube_start": 74,
+      "youtube_end": 88
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The scars of your love",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "had met me)",
+      "youtube_start": 93,
+      "youtube_end": 107
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We could've had it all",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "gonna wish you)",
+      "youtube_start": 109,
+      "youtube_end": 123
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Finally I can see you crystal clear",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I can't help feeling",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Baby, I have no story to be told",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They keep me thinking rolling in the deep",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I can't help feeling rolling in the deep",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There's a",
+      "excerpt_after": "starting in my heart",
+      "options": [
+        "beat",
+        "fire",
+        "gonna",
+        "help"
+      ],
+      "answer_index": 1,
+      "youtube_start": 1,
+      "youtube_end": 13
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "help feeling",
+      "options": [
+        "almost",
+        "cant",
+        "gonna",
+        "story"
+      ],
+      "answer_index": 1,
+      "youtube_start": 52,
+      "youtube_end": 64
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And you",
+      "excerpt_after": "it (tears are gonna fall)",
+      "options": [
+        "cant",
+        "hands",
+        "played",
+        "sell"
+      ],
+      "answer_index": 2,
+      "youtube_start": 68,
+      "youtube_end": 80
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The scars of your love",
+      "excerpt_after": "had met me)",
+      "options": [
+        "deep",
+        "never",
+        "pitch",
+        "thinking"
+      ],
+      "answer_index": 1,
+      "youtube_start": 93,
+      "youtube_end": 105
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We could've had it all",
+      "excerpt_after": "gonna wish you)",
+      "options": [
+        "bringing",
+        "couldve",
+        "every",
+        "youre"
+      ],
+      "answer_index": 3,
+      "youtube_start": 109,
+      "youtube_end": 121
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "starting",
+        "fire",
+        "heart",
+        "a",
+        "There's",
+        "my",
+        "in"
+      ],
+      "answer": [
+        "There's",
+        "a",
+        "fire",
+        "starting",
+        "in",
+        "my",
+        "heart"
+      ],
+      "youtube_start": 1
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "help",
+        "feeling",
+        "can't"
+      ],
+      "answer": [
+        "I",
+        "can't",
+        "help",
+        "feeling"
+      ],
+      "youtube_start": 52
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Rolling",
+        "deep",
+        "in",
+        "the"
+      ],
+      "answer": [
+        "Rolling",
+        "in",
+        "the",
+        "deep"
+      ],
+      "youtube_start": 63
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "gonna",
+        "You're",
+        "wish"
+      ],
+      "answer": [
+        "You're",
+        "gonna",
+        "wish",
+        "you"
+      ],
+      "youtube_start": 93
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "played",
+        "you",
+        "it",
+        "a",
+        "with",
+        "But",
+        "beating"
+      ],
+      "answer": [
+        "But",
+        "you",
+        "played",
+        "it",
+        "with",
+        "a",
+        "beating"
+      ],
+      "youtube_start": 131
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"rolling\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"rolling\" na música inteira?",
+      "word": "rolling",
+      "answer": 16
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"deep\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"deep\" na música inteira?",
+      "word": "deep",
+      "answer": 16
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "There's a fire starting in my heart",
+          "order": 0
+        },
+        {
+          "text": "They keep me thinking (rolling in the deep)",
+          "order": 1
+        },
+        {
+          "text": "Turn my sorrow into treasured gold (whoa)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Finally I can see you crystal clear",
+          "order": 0
+        },
+        {
+          "text": "Of your hands (never had met me)",
+          "order": 1
+        },
+        {
+          "text": "(Never had met me)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Rolling in the Deep\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Rolling in the Deep\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "rolling",
+        "deep",
+        "you're",
+        "wish"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Rolling in the Deep\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Rolling in the Deep\", o que aconteceria?",
+      "target_vocab": [
+        "rolling",
+        "deep",
+        "you're",
+        "wish"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Rolling in the Deep\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Rolling in the Deep\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "rolling",
+        "deep",
+        "you're",
+        "wish"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    }
+  ]
+}

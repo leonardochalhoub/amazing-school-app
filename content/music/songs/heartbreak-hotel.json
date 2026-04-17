@@ -1,0 +1,489 @@
+{
+  "slug": "heartbreak-hotel",
+  "title": "Heartbreak Hotel",
+  "artist": "Elvis Presley",
+  "year": 1956,
+  "album": "The Essential Elvis Presley",
+  "genre": [
+    "rock-and-roll"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 126,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Heartbreak Hotel by Elvis Presley (1956) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "lonely",
+      "pt": "",
+      "note": "Appears 18 times; first heard in: \"Well, it's down at the end of Lonely Street\""
+    },
+    {
+      "term": "well",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Well, since my baby left me\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Well, since my baby left me\""
+    },
+    {
+      "term": "they'll",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"They'll be so\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Well, it's down at the end of Lonely Street\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Oh, and although it's always crowded",
+          "You still can find some room",
+          "For broken-hearted lovers",
+          "To cry there in their gloom"
+        ],
+        "start_seconds": 20,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "They get so lonely, baby",
+          "Well, they're so lonely",
+          "They'll get so lonely, they could die",
+          "Well, now, if your baby leaves you"
+        ],
+        "start_seconds": 51,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well,",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "since",
+      "excerpt_after": "my baby left me",
+      "youtube_start": 0,
+      "youtube_end": 14
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well, it's down at the end of",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lonely",
+      "excerpt_after": "Street",
+      "youtube_start": 5,
+      "youtube_end": 19
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To cry",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "there",
+      "excerpt_after": "in their gloom",
+      "youtube_start": 28,
+      "youtube_end": 42
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And the desk",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "clerks",
+      "excerpt_after": "dressed in black",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "They'll",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "never look back",
+      "youtube_start": 48,
+      "youtube_end": 62
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well, now, if your baby",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "leaves",
+      "excerpt_after": "you",
+      "youtube_start": 61,
+      "youtube_end": 75
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, I found a new place to dwell",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll be so lonely, baby",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll be so lonely, I could die",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They'll be so",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, they get so lonely",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well,",
+      "excerpt_after": "my baby left me",
+      "options": [
+        "dressed",
+        "place",
+        "since",
+        "theyve"
+      ],
+      "answer_index": 2,
+      "youtube_start": 0,
+      "youtube_end": 12
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh, and",
+      "excerpt_after": "it's always crowded",
+      "options": [
+        "although",
+        "heartbreak",
+        "theyll",
+        "theyve"
+      ],
+      "answer_index": 0,
+      "youtube_start": 20,
+      "youtube_end": 32
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Now, the",
+      "excerpt_after": "hop's tears keep flowin'",
+      "options": [
+        "bell",
+        "keep",
+        "tears",
+        "tell"
+      ],
+      "answer_index": 0,
+      "youtube_start": 40,
+      "youtube_end": 52
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "They'll",
+      "excerpt_after": "never look back",
+      "options": [
+        "never",
+        "theyre",
+        "walk",
+        "youll"
+      ],
+      "answer_index": 0,
+      "youtube_start": 48,
+      "youtube_end": 60
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And you got a",
+      "excerpt_after": "to tell",
+      "options": [
+        "bell",
+        "lovers",
+        "street",
+        "tale"
+      ],
+      "answer_index": 3,
+      "youtube_start": 64,
+      "youtube_end": 76
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "left",
+        "since",
+        "my",
+        "Well,",
+        "baby",
+        "me"
+      ],
+      "answer": [
+        "Well,",
+        "since",
+        "my",
+        "baby",
+        "left",
+        "me"
+      ],
+      "youtube_start": 0
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "still",
+        "You",
+        "room",
+        "find",
+        "some",
+        "can"
+      ],
+      "answer": [
+        "You",
+        "still",
+        "can",
+        "find",
+        "some",
+        "room"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "tears",
+        "hop's",
+        "bell",
+        "the",
+        "flowin'",
+        "Now,",
+        "keep"
+      ],
+      "answer": [
+        "Now,",
+        "the",
+        "bell",
+        "hop's",
+        "tears",
+        "keep",
+        "flowin'"
+      ],
+      "youtube_start": 40
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "so",
+        "they're",
+        "lonely",
+        "Well,"
+      ],
+      "answer": [
+        "Well,",
+        "they're",
+        "so",
+        "lonely"
+      ],
+      "youtube_start": 54
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "be",
+        "You",
+        "baby",
+        "so",
+        "lonely,",
+        "will"
+      ],
+      "answer": [
+        "You",
+        "will",
+        "be",
+        "so",
+        "lonely,",
+        "baby"
+      ],
+      "youtube_start": 71
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"lonely\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"lonely\" na música inteira?",
+      "word": "lonely",
+      "answer": 18
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"well\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"well\" na música inteira?",
+      "word": "well",
+      "answer": 11
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Well, since my baby left me",
+          "order": 0
+        },
+        {
+          "text": "Well, they get so lonely",
+          "order": 1
+        },
+        {
+          "text": "To Heartbreak Hotel",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Well, I found a new place to dwell",
+          "order": 0
+        },
+        {
+          "text": "They'll never, never look back",
+          "order": 1
+        },
+        {
+          "text": "Where you will be",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Heartbreak Hotel\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Heartbreak Hotel\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "lonely",
+        "well",
+        "baby",
+        "they'll"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Heartbreak Hotel\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Heartbreak Hotel\", o que aconteceria?",
+      "target_vocab": [
+        "lonely",
+        "well",
+        "baby",
+        "they'll"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Heartbreak Hotel\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Heartbreak Hotel\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "lonely",
+        "well",
+        "baby",
+        "they'll"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "they'll",
+          "full": "they will"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
+        },
+        {
+          "short": "they've",
+          "full": "they have"
+        }
+      ]
+    }
+  ]
+}

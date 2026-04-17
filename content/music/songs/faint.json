@@ -1,0 +1,491 @@
+{
+  "slug": "faint",
+  "title": "Faint",
+  "artist": "Linkin Park",
+  "year": 2003,
+  "album": "Meteora",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 164,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Faint by Linkin Park (2003) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "won't",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"Don't turn your back on me; I won't be ignored\""
+    },
+    {
+      "term": "turn",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Turn your back like you always do\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Don't turn your back on me; I won't be ignored\""
+    },
+    {
+      "term": "ignored",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Don't turn your back on me; I won't be ignored\""
+    },
+    {
+      "term": "can't",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"A handful of complaints but I can't help the fact\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Time won't heal this damage anymore",
+          "Don't turn your back on me; I won't be ignored",
+          "I am a little bit insecure, a little unconfident",
+          "Because you don't understand I do what I can"
+        ],
+        "start_seconds": 57,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Time won't heal this damage anymore",
+          "Don't turn your back on me; I won't be ignored",
+          "No, hear me out now",
+          "You're gonna listen to me like it or not"
+        ],
+        "start_seconds": 96,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "everyone",
+      "excerpt_after": "can see these scars",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To just",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "believe",
+      "excerpt_after": "this is real",
+      "youtube_start": 41,
+      "youtube_end": 55
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Turn your back like you",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "always",
+      "excerpt_after": "do",
+      "youtube_start": 45,
+      "youtube_end": 59
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Time won't heal this",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "damage",
+      "excerpt_after": "anymore",
+      "youtube_start": 57,
+      "youtube_end": 71
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Because you don't",
+      "blank_hint": "word starting with \"u\"",
+      "answer": "understand",
+      "excerpt_after": "I do what I can",
+      "youtube_start": 69,
+      "youtube_end": 83
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You're",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "listen to me like it or not",
+      "youtube_start": 109,
+      "youtube_end": 123
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So I let go, watching you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Face away and pretend that I'm not",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But sometimes I don't make sense",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "That everyone can see these scars",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Time won't heal this damage anymore",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That",
+      "excerpt_after": "can see these scars",
+      "options": [
+        "cause",
+        "disregard",
+        "everyone",
+        "never"
+      ],
+      "answer_index": 2,
+      "youtube_start": 34,
+      "youtube_end": 46
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Turn your back like you",
+      "excerpt_after": "do",
+      "options": [
+        "always",
+        "face",
+        "fact",
+        "heal"
+      ],
+      "answer_index": 0,
+      "youtube_start": 45,
+      "youtube_end": 57
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Time",
+      "excerpt_after": "heal this damage anymore",
+      "options": [
+        "dont",
+        "feel",
+        "real",
+        "wont"
+      ],
+      "answer_index": 3,
+      "youtube_start": 57,
+      "youtube_end": 69
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But",
+      "excerpt_after": "I don't make sense",
+      "options": [
+        "anymore",
+        "sometimes",
+        "unconfident",
+        "understand"
+      ],
+      "answer_index": 1,
+      "youtube_start": 71,
+      "youtube_end": 83
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Time won't",
+      "excerpt_after": "this damage anymore",
+      "options": [
+        "dont",
+        "face",
+        "heal",
+        "right"
+      ],
+      "answer_index": 2,
+      "youtube_start": 96,
+      "youtube_end": 108
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "scars",
+        "see",
+        "everyone",
+        "can",
+        "That",
+        "these"
+      ],
+      "answer": [
+        "That",
+        "everyone",
+        "can",
+        "see",
+        "these",
+        "scars"
+      ],
+      "youtube_start": 34
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "go,",
+        "let",
+        "I",
+        "watching",
+        "So",
+        "you"
+      ],
+      "answer": [
+        "So",
+        "I",
+        "let",
+        "go,",
+        "watching",
+        "you"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "pretend",
+        "and",
+        "not",
+        "away",
+        "I'm",
+        "that",
+        "Face"
+      ],
+      "answer": [
+        "Face",
+        "away",
+        "and",
+        "pretend",
+        "that",
+        "I'm",
+        "not"
+      ],
+      "youtube_start": 47
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "But",
+        "don't",
+        "make",
+        "sometimes",
+        "I",
+        "sense"
+      ],
+      "answer": [
+        "But",
+        "sometimes",
+        "I",
+        "don't",
+        "make",
+        "sense"
+      ],
+      "youtube_start": 71
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "hear",
+        "me",
+        "No,",
+        "out",
+        "now"
+      ],
+      "answer": [
+        "No,",
+        "hear",
+        "me",
+        "out",
+        "now"
+      ],
+      "youtube_start": 105
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"won't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"won't\" na música inteira?",
+      "word": "won't",
+      "answer": 13
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"turn\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"turn\" na música inteira?",
+      "word": "turn",
+      "answer": 11
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "That everyone can see these scars",
+          "order": 0
+        },
+        {
+          "text": "But sometimes I don't make sense",
+          "order": 1
+        },
+        {
+          "text": "No, hear me out now",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "To just believe this is real",
+          "order": 0
+        },
+        {
+          "text": "Turn your back like you always do",
+          "order": 1
+        },
+        {
+          "text": "Right now, hear me out now",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Faint\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Faint\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "won't",
+        "turn",
+        "don't",
+        "ignored"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Faint\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Faint\", o que aconteceria?",
+      "target_vocab": [
+        "won't",
+        "turn",
+        "don't",
+        "ignored"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Faint\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Faint\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "won't",
+        "turn",
+        "don't",
+        "ignored"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    }
+  ]
+}

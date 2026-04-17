@@ -1,0 +1,484 @@
+{
+  "slug": "wont-get-fooled-again",
+  "title": "Won't Get Fooled Again",
+  "artist": "The Who",
+  "year": 1971,
+  "album": "Who's Next",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 560,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Won't Get Fooled Again by The Who (1971) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "i'll",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I'll tip my hat to the new constitution\""
+    },
+    {
+      "term": "smile",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Smile and grin at the change all around me\""
+    },
+    {
+      "term": "change",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Smile and grin at the change all around me\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"We don't get fooled again\""
+    },
+    {
+      "term": "fooled",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"We don't get fooled again\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Take a bow for the new revolution",
+          "Smile and grin at the change all around me",
+          "Pick up my guitar and play",
+          "Just like yesterday"
+        ],
+        "start_seconds": 76,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "No, no"
+        ],
+        "start_seconds": 171,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We'll be",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fighting",
+      "excerpt_after": "in the streets",
+      "youtube_start": 44,
+      "youtube_end": 58
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And the men who",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "spurred",
+      "excerpt_after": "us on",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Pick up my",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "guitar",
+      "excerpt_after": "and play",
+      "youtube_start": 83,
+      "youtube_end": 97
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We were",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "liberated",
+      "excerpt_after": "from the fold, that's all",
+      "youtube_start": 120,
+      "youtube_end": 134
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If we",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "happen",
+      "excerpt_after": "to be left half alive",
+      "youtube_start": 208,
+      "youtube_end": 222
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Looks any",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "different",
+      "excerpt_after": "to me",
+      "youtube_start": 279,
+      "youtube_end": 293
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We'll be fighting in the streets",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll tip my hat to the new constitution",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We don't get fooled again",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We were liberated from the fold, that's all",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If we happen to be left half alive",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We'll be",
+      "excerpt_after": "in the streets",
+      "options": [
+        "decide",
+        "fighting",
+        "papers",
+        "thats"
+      ],
+      "answer_index": 1,
+      "youtube_start": 44,
+      "youtube_end": 56
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Sit in",
+      "excerpt_after": "of all wrong",
+      "options": [
+        "guitar",
+        "hypnotized",
+        "judgment",
+        "thats"
+      ],
+      "answer_index": 2,
+      "youtube_start": 62,
+      "youtube_end": 74
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We",
+      "excerpt_after": "get fooled again",
+      "options": [
+        "dont",
+        "fold",
+        "morals",
+        "myself"
+      ],
+      "answer_index": 0,
+      "youtube_start": 97,
+      "youtube_end": 109
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Smile and grin at the",
+      "excerpt_after": "all around me",
+      "options": [
+        "change",
+        "dont",
+        "feet",
+        "grin"
+      ],
+      "answer_index": 0,
+      "youtube_start": 149,
+      "youtube_end": 161
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There's",
+      "excerpt_after": "in the street",
+      "options": [
+        "knew",
+        "nothing",
+        "streets",
+        "yesterday"
+      ],
+      "answer_index": 1,
+      "youtube_start": 276,
+      "youtube_end": 288
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "in",
+        "fighting",
+        "We'll",
+        "streets",
+        "be",
+        "the"
+      ],
+      "answer": [
+        "We'll",
+        "be",
+        "fighting",
+        "in",
+        "the",
+        "streets"
+      ],
+      "youtube_start": 44
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "revolution",
+        "a",
+        "new",
+        "the",
+        "bow",
+        "for",
+        "Take"
+      ],
+      "answer": [
+        "Take",
+        "a",
+        "bow",
+        "for",
+        "the",
+        "new",
+        "revolution"
+      ],
+      "youtube_start": 76
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "along",
+        "all",
+        "knew",
+        "it",
+        "We"
+      ],
+      "answer": [
+        "We",
+        "knew",
+        "it",
+        "all",
+        "along"
+      ],
+      "youtube_start": 117
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "nothing",
+        "street",
+        "the",
+        "There's",
+        "in"
+      ],
+      "answer": [
+        "There's",
+        "nothing",
+        "in",
+        "the",
+        "street"
+      ],
+      "youtube_start": 276
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "now",
+        "right",
+        "parting",
+        "on",
+        "the",
+        "Is"
+      ],
+      "answer": [
+        "Is",
+        "now",
+        "the",
+        "parting",
+        "on",
+        "the",
+        "right"
+      ],
+      "youtube_start": 293
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"i'll\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"i'll\" na música inteira?",
+      "word": "i'll",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"smile\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"smile\" na música inteira?",
+      "word": "smile",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "We'll be fighting in the streets",
+          "order": 0
+        },
+        {
+          "text": "We were liberated from the fold, that's all",
+          "order": 1
+        },
+        {
+          "text": "Looks any different to me",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "With our children at our feet",
+          "order": 0
+        },
+        {
+          "text": "And I'll get on my knees and pray",
+          "order": 1
+        },
+        {
+          "text": "And the beards have all grown longer overnight",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Won't Get Fooled Again\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Won't Get Fooled Again\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "i'll",
+        "smile",
+        "change",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Won't Get Fooled Again\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Won't Get Fooled Again\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "i'll",
+        "smile",
+        "change",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Won't Get Fooled Again\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Won't Get Fooled Again\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "i'll",
+        "smile",
+        "change",
+        "don't"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        }
+      ]
+    }
+  ]
+}

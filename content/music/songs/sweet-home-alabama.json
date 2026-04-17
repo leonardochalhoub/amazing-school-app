@@ -1,0 +1,472 @@
+{
+  "slug": "sweet-home-alabama",
+  "title": "Sweet Home Alabama",
+  "artist": "Lynyrd Skynyrd",
+  "year": 1974,
+  "album": "Second Helping",
+  "genre": [
+    "rock",
+    "southern-rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 284,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Sweet Home Alabama by Lynyrd Skynyrd (1974) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "home",
+      "pt": "",
+      "note": "Appears 14 times; first heard in: \"Carry me home to see my kin\""
+    },
+    {
+      "term": "alabama",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"Sweet home Alabama\""
+    },
+    {
+      "term": "sweet",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Sweet home Alabama\""
+    },
+    {
+      "term": "blue",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Where the skies are so blue\""
+    },
+    {
+      "term": "lord",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Lord, I'm coming home to you\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Sweet home Alabama",
+          "Where the skies are so blue",
+          "Sweet home Alabama",
+          "Lord, I'm coming home to you"
+        ],
+        "start_seconds": 72,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "(Ah-ah-ah, Alabama)",
+          "(Ah-ah-ah, Alabama)",
+          "(Ah-ah-ah, Alabama)",
+          "(Ah-ah-ah, Alabama)"
+        ],
+        "start_seconds": 160,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Big",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wheels",
+      "excerpt_after": "keep on turning",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I miss",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "alabamy",
+      "excerpt_after": "once again",
+      "youtube_start": 38,
+      "youtube_end": 52
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well, I hope Neil",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "young",
+      "excerpt_after": "will remember",
+      "youtube_start": 62,
+      "youtube_end": 76
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Where the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "skies",
+      "excerpt_after": "are so blue",
+      "youtube_start": 77,
+      "youtube_end": 91
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Now",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "watergate",
+      "excerpt_after": "does not bother me",
+      "youtube_start": 111,
+      "youtube_end": 125
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Now",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "muscle",
+      "excerpt_after": "Shoals has got the Swampers",
+      "youtube_start": 190,
+      "youtube_end": 204
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I miss Alabamy once again",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, I heard Mr. Young sing about her",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, I hope Neil Young will remember",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Now we all did what we could do",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Here I come, Alabama",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Big",
+      "excerpt_after": "keep on turning",
+      "options": [
+        "does",
+        "need",
+        "truth",
+        "wheels"
+      ],
+      "answer_index": 3,
+      "youtube_start": 23,
+      "youtube_end": 35
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "Alabamy once again",
+      "options": [
+        "bout",
+        "heard",
+        "miss",
+        "truth"
+      ],
+      "answer_index": 2,
+      "youtube_start": 38,
+      "youtube_end": 50
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well, I",
+      "excerpt_after": "Neil Young will remember",
+      "options": [
+        "bout",
+        "hope",
+        "skies",
+        "songs"
+      ],
+      "answer_index": 1,
+      "youtube_start": 62,
+      "youtube_end": 74
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "In",
+      "excerpt_after": "they love the governor (boo! Boo! Boo!)",
+      "options": [
+        "birmingham",
+        "feeling",
+        "governors",
+        "turning"
+      ],
+      "answer_index": 0,
+      "youtube_start": 101,
+      "youtube_end": 113
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "They",
+      "excerpt_after": "me up when I'm feeling blue",
+      "options": [
+        "does",
+        "pick",
+        "truth",
+        "wheels"
+      ],
+      "answer_index": 1,
+      "youtube_start": 204,
+      "youtube_end": 216
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "keep",
+        "turning",
+        "wheels",
+        "on",
+        "Big"
+      ],
+      "answer": [
+        "Big",
+        "wheels",
+        "keep",
+        "on",
+        "turning"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "once",
+        "I",
+        "Alabamy",
+        "again",
+        "miss"
+      ],
+      "answer": [
+        "I",
+        "miss",
+        "Alabamy",
+        "once",
+        "again"
+      ],
+      "youtube_start": 38
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "skies",
+        "so",
+        "the",
+        "are",
+        "blue",
+        "Where"
+      ],
+      "answer": [
+        "Where",
+        "the",
+        "skies",
+        "are",
+        "so",
+        "blue"
+      ],
+      "youtube_start": 77
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Here",
+        "come,",
+        "I",
+        "Alabama"
+      ],
+      "answer": [
+        "Here",
+        "I",
+        "come,",
+        "Alabama"
+      ],
+      "youtube_start": 138
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Now",
+        "you?",
+        "how",
+        "'bout"
+      ],
+      "answer": [
+        "Now",
+        "how",
+        "'bout",
+        "you?"
+      ],
+      "youtube_start": 207
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"home\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"home\" na música inteira?",
+      "word": "home",
+      "answer": 14
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"alabama\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"alabama\" na música inteira?",
+      "word": "alabama",
+      "answer": 13
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "One, two, three",
+          "order": 0
+        },
+        {
+          "text": "Where the skies are so blue",
+          "order": 1
+        },
+        {
+          "text": "Now Muscle Shoals has got the Swampers",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Turn it up",
+          "order": 0
+        },
+        {
+          "text": "Tell the truth",
+          "order": 1
+        },
+        {
+          "text": "Now how 'bout you?",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Sweet Home Alabama\" was released in 1974. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Sweet Home Alabama\" foi lançada em 1974. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "home",
+        "alabama",
+        "sweet",
+        "blue"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Sweet Home Alabama\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Sweet Home Alabama\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "home",
+        "alabama",
+        "sweet",
+        "blue"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "home",
+        "alabama",
+        "sweet",
+        "blue"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "they've",
+          "full": "they have"
+        }
+      ]
+    }
+  ]
+}

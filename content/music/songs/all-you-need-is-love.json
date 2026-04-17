@@ -1,0 +1,428 @@
+{
+  "slug": "all-you-need-is-love",
+  "title": "All You Need Is Love",
+  "artist": "The Beatles",
+  "year": 1967,
+  "album": "At Home with The Beatles - EP",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 228,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "All You Need Is Love by The Beatles (1967) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "need",
+      "pt": "",
+      "note": "Appears 47 times; first heard in: \"All you need is love\""
+    },
+    {
+      "term": "nothing",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"There's nothing you can do that can't be done\""
+    },
+    {
+      "term": "can't",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"There's nothing you can do that can't be done\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"It's easy\""
+    },
+    {
+      "term": "easy",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"It's easy\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Love is all you need",
+          "Love, love, love",
+          "Love, love, love",
+          "Love, love, love"
+        ],
+        "start_seconds": 75,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "It's easy",
+          "Nothing you can make that can't be made",
+          "No one you can save that can't be saved",
+          "Nothing you can do, but you can learn"
+        ],
+        "start_seconds": 39,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There's",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nothing",
+      "excerpt_after": "you can do that can't be done",
+      "youtube_start": 26,
+      "youtube_end": 40
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There's",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nowhere",
+      "excerpt_after": "you can be that isn't where",
+      "youtube_start": 121,
+      "youtube_end": 135
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You're",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "meant",
+      "excerpt_after": "to be",
+      "youtube_start": 123,
+      "youtube_end": 137
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "All you need is love (all",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "together",
+      "excerpt_after": "now!)",
+      "youtube_start": 147,
+      "youtube_end": 161
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(She",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "loves",
+      "excerpt_after": "you, yeah, yeah, yeah)",
+      "youtube_start": 202,
+      "youtube_end": 216
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Nothing you can sing that can't be sung",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Nothing you can make that can't be made",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "How to be you in time",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "All you need is love, love",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Nothing you can know that isn't known",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There's",
+      "excerpt_after": "you can do that can't be done",
+      "options": [
+        "know",
+        "learn",
+        "nothing",
+        "theres"
+      ],
+      "answer_index": 2,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "How to",
+      "excerpt_after": "the game",
+      "options": [
+        "learn",
+        "play",
+        "save",
+        "saved"
+      ],
+      "answer_index": 1,
+      "youtube_start": 37,
+      "youtube_end": 49
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "All you",
+      "excerpt_after": "is love",
+      "options": [
+        "cant",
+        "need",
+        "save",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 61,
+      "youtube_end": 73
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Nothing you can see that",
+      "excerpt_after": "shown",
+      "options": [
+        "easy",
+        "isnt",
+        "save",
+        "sung"
+      ],
+      "answer_index": 1,
+      "youtube_start": 117,
+      "youtube_end": 129
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "All you need is love (all",
+      "excerpt_after": "now!)",
+      "options": [
+        "everybody",
+        "learn",
+        "together",
+        "youre"
+      ],
+      "answer_index": 2,
+      "youtube_start": 147,
+      "youtube_end": 159
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "play",
+        "game",
+        "to",
+        "the",
+        "How"
+      ],
+      "answer": [
+        "How",
+        "to",
+        "play",
+        "the",
+        "game"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "is",
+        "need",
+        "you",
+        "love",
+        "All"
+      ],
+      "answer": [
+        "All",
+        "you",
+        "need",
+        "is",
+        "love"
+      ],
+      "youtube_start": 61
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "is",
+        "Love",
+        "all",
+        "you",
+        "need"
+      ],
+      "answer": [
+        "Love",
+        "is",
+        "all",
+        "you",
+        "need"
+      ],
+      "youtube_start": 75
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "be",
+        "to",
+        "You're",
+        "meant"
+      ],
+      "answer": [
+        "You're",
+        "meant",
+        "to",
+        "be"
+      ],
+      "youtube_start": 123
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Yesterday",
+        "need",
+        "love",
+        "all",
+        "is",
+        "you"
+      ],
+      "answer": [
+        "Yesterday",
+        "love",
+        "is",
+        "all",
+        "you",
+        "need"
+      ],
+      "youtube_start": 192
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"need\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"need\" na música inteira?",
+      "word": "need",
+      "answer": 47
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"nothing\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"nothing\" na música inteira?",
+      "word": "nothing",
+      "answer": 7
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"All You Need Is Love\" was released in 1967. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"All You Need Is Love\" foi lançada em 1967. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "need",
+        "nothing",
+        "can't",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"All You Need Is Love\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"All You Need Is Love\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "need",
+        "nothing",
+        "can't",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "need",
+        "nothing",
+        "can't",
+        "it's"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "isn't",
+          "full": "is not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    }
+  ]
+}

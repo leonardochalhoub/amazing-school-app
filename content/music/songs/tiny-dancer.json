@@ -56,12 +56,366 @@
       "youtube_end": 48
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Tiny",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dancer",
+      "excerpt_after": "in my hand",
+      "youtube_start": 60,
+      "youtube_end": 74
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "boulevard",
+      "excerpt_after": "is not that bad",
+      "youtube_start": 93,
+      "youtube_end": 107
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "words",
+      "excerpt_after": "she knows",
+      "youtube_start": 120,
+      "youtube_end": 134
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When I say",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "softly",
+      "excerpt_after": "slowly",
+      "youtube_start": 145,
+      "youtube_end": 159
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Count the",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "headlights",
+      "excerpt_after": "on the highway",
+      "youtube_start": 160,
+      "youtube_end": 174
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
       "excerpt": "You'll marry a music man",
       "model_answer_pt": "",
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And now she's in me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "He makes his stand",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The words she knows",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Only you and you can hear me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You'll",
+      "excerpt_after": "a music man",
+      "options": [
+        "baby",
+        "makes",
+        "marry",
+        "sings"
+      ],
+      "answer_index": 2,
+      "youtube_start": 34,
+      "youtube_end": 46
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Handing",
+      "excerpt_after": "out for God",
+      "options": [
+        "baby",
+        "handing",
+        "shes",
+        "tickets"
+      ],
+      "answer_index": 3,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The",
+      "excerpt_after": "she knows",
+      "options": [
+        "hand",
+        "songs",
+        "tickets",
+        "words"
+      ],
+      "answer_index": 3,
+      "youtube_start": 120,
+      "youtube_end": 132
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When I say",
+      "excerpt_after": "slowly",
+      "options": [
+        "handing",
+        "softly",
+        "tickets",
+        "tiny"
+      ],
+      "answer_index": 1,
+      "youtube_start": 145,
+      "youtube_end": 157
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You had a",
+      "excerpt_after": "day today",
+      "options": [
+        "busy",
+        "lady",
+        "near",
+        "turning"
+      ],
+      "answer_index": 0,
+      "youtube_start": 174,
+      "youtube_end": 186
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "band",
+        "Seamstress",
+        "for"
+      ],
+      "answer": [
+        "Seamstress",
+        "for",
+        "the",
+        "band"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "in",
+        "now",
+        "she's",
+        "me"
+      ],
+      "answer": [
+        "And",
+        "now",
+        "she's",
+        "in",
+        "me"
+      ],
+      "youtube_start": 53
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "his",
+        "makes",
+        "stand",
+        "He"
+      ],
+      "answer": [
+        "He",
+        "makes",
+        "his",
+        "stand"
+      ],
+      "youtube_start": 103
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "near",
+        "Lying",
+        "with",
+        "here,",
+        "one",
+        "no"
+      ],
+      "answer": [
+        "Lying",
+        "here,",
+        "with",
+        "no",
+        "one",
+        "near"
+      ],
+      "youtube_start": 136
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "linen",
+        "of",
+        "down",
+        "me",
+        "in",
+        "Lay",
+        "sheets"
+      ],
+      "answer": [
+        "Lay",
+        "me",
+        "down",
+        "in",
+        "sheets",
+        "of",
+        "linen"
+      ],
+      "youtube_start": 167
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"dancer\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"dancer\" na música inteira?",
+      "word": "dancer",
+      "answer": 6
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"tiny\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"tiny\" na música inteira?",
+      "word": "tiny",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Seamstress for the band",
+          "order": 0
+        },
+        {
+          "text": "The tune she hums",
+          "order": 1
+        },
+        {
+          "text": "You must have seen her",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You'll marry a music man",
+          "order": 0
+        },
+        {
+          "text": "Lay me down in sheets of linen",
+          "order": 1
+        },
+        {
+          "text": "Always with me",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Tiny Dancer\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Tiny Dancer\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "seamstress",
+        "dancer",
+        "ballerina",
+        "hold me closer"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Tiny Dancer\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Tiny Dancer\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "seamstress",
+        "dancer",
+        "ballerina",
+        "hold me closer"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Tiny Dancer\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Tiny Dancer\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "seamstress",
+        "dancer",
+        "ballerina",
+        "hold me closer"
+      ]
     },
     {
       "type": "spot_the_grammar",
@@ -76,17 +430,6 @@
           "short": "she's",
           "full": "she is"
         }
-      ]
-    },
-    {
-      "type": "discussion",
-      "prompt_en": "Compare \"Tiny Dancer\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
-      "prompt_pt": "Compare \"Tiny Dancer\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
-      "target_vocab": [
-        "seamstress",
-        "dancer",
-        "ballerina",
-        "hold me closer"
       ]
     },
     {
@@ -109,66 +452,6 @@
         {
           "en": "hold me closer",
           "pt": "me abrace mais perto"
-        }
-      ]
-    },
-    {
-      "type": "unscramble_line",
-      "prompt_en": "Put the words in the right order:",
-      "prompt_pt": "Coloque as palavras na ordem certa:",
-      "shuffled": [
-        "the",
-        "band",
-        "Seamstress",
-        "for"
-      ],
-      "answer": [
-        "Seamstress",
-        "for",
-        "the",
-        "band"
-      ],
-      "youtube_start": 21
-    },
-    {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "You'll",
-      "excerpt_after": "a music man",
-      "options": [
-        "baby",
-        "band",
-        "lady",
-        "marry"
-      ],
-      "answer_index": 3,
-      "youtube_start": 34,
-      "youtube_end": 46
-    },
-    {
-      "type": "count_word",
-      "prompt_en": "How many times do you hear the word \"dancer\" in the whole song?",
-      "prompt_pt": "Quantas vezes você ouve a palavra \"dancer\" na música inteira?",
-      "word": "dancer",
-      "answer": 6
-    },
-    {
-      "type": "line_order",
-      "prompt_en": "Put these three lines in the order they appear in the song:",
-      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
-      "excerpts": [
-        {
-          "text": "Seamstress for the band",
-          "order": 0
-        },
-        {
-          "text": "The tune she hums",
-          "order": 1
-        },
-        {
-          "text": "You must have seen her",
-          "order": 2
         }
       ]
     }

@@ -1,0 +1,435 @@
+{
+  "slug": "toxicity",
+  "title": "Toxicity",
+  "artist": "System of a Down",
+  "year": 2001,
+  "album": "Toxicity",
+  "genre": [
+    "metal"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 219,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Toxicity by System of a Down (2001) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "disorder",
+      "pt": "",
+      "note": "Appears 14 times; first heard in: \"How do you own disorder, disorder?\""
+    },
+    {
+      "term": "sacred",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Now somewhere between the sacred silence\""
+    },
+    {
+      "term": "silence",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Now somewhere between the sacred silence\""
+    },
+    {
+      "term": "somewhere",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Now somewhere between the sacred silence\""
+    },
+    {
+      "term": "between",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Now somewhere between the sacred silence\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "New, what do you own the world?",
+          "How do you own disorder, disorder?",
+          "Now somewhere between the sacred silence",
+          "Sacred silence and sleep"
+        ],
+        "start_seconds": 73,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "New, what do you own the world?",
+          "How do you own disorder, disorder?",
+          "Now somewhere between the sacred silence",
+          "Sacred silence and sleep"
+        ],
+        "start_seconds": 135,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Conversion,",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "software",
+      "excerpt_after": "version 7.0",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Eating",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "seeds",
+      "excerpt_after": "as a pastime activity",
+      "youtube_start": 61,
+      "youtube_end": 75
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "How do you own",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "disorder",
+      "excerpt_after": "disorder?",
+      "youtube_start": 76,
+      "youtube_end": 90
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Sacred",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "silence",
+      "excerpt_after": "and sleep",
+      "youtube_start": 83,
+      "youtube_end": 97
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "More wood for their",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fires",
+      "excerpt_after": "loud neighbors",
+      "youtube_start": 111,
+      "youtube_end": 125
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Eating seeds as a",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "pastime",
+      "excerpt_after": "activity",
+      "youtube_start": 123,
+      "youtube_end": 137
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "New, what do you own the world?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "How do you own disorder?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Eating seeds as a pastime activity",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Now somewhere between the sacred silence",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Somewhere between the sacred silence and sleep",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Conversion,",
+      "excerpt_after": "version 7.0",
+      "options": [
+        "eating",
+        "shone",
+        "software",
+        "version"
+      ],
+      "answer_index": 2,
+      "youtube_start": 49,
+      "youtube_end": 61
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The",
+      "excerpt_after": "of our city, of our city",
+      "options": [
+        "disorder",
+        "eating",
+        "looking",
+        "toxicity"
+      ],
+      "answer_index": 3,
+      "youtube_start": 68,
+      "youtube_end": 80
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Now",
+      "excerpt_after": "between the sacred silence",
+      "options": [
+        "caught",
+        "sacred",
+        "silence",
+        "somewhere"
+      ],
+      "answer_index": 3,
+      "youtube_start": 79,
+      "youtube_end": 91
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "More",
+      "excerpt_after": "for their fires, loud neighbors",
+      "options": [
+        "eyes",
+        "through",
+        "version",
+        "wood"
+      ],
+      "answer_index": 3,
+      "youtube_start": 111,
+      "youtube_end": 123
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Eating seeds as a",
+      "excerpt_after": "activity",
+      "options": [
+        "activity",
+        "pastime",
+        "sacred",
+        "silence"
+      ],
+      "answer_index": 1,
+      "youtube_start": 123,
+      "youtube_end": 135
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "software",
+        "version",
+        "Conversion,",
+        "7.0"
+      ],
+      "answer": [
+        "Conversion,",
+        "software",
+        "version",
+        "7.0"
+      ],
+      "youtube_start": 49
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "as",
+        "seeds",
+        "a",
+        "Eating",
+        "activity",
+        "pastime"
+      ],
+      "answer": [
+        "Eating",
+        "seeds",
+        "as",
+        "a",
+        "pastime",
+        "activity"
+      ],
+      "youtube_start": 61
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "do",
+        "disorder?",
+        "you",
+        "How",
+        "own",
+        "disorder,"
+      ],
+      "answer": [
+        "How",
+        "do",
+        "you",
+        "own",
+        "disorder,",
+        "disorder?"
+      ],
+      "youtube_start": 76
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Sacred",
+        "and",
+        "silence",
+        "sleep"
+      ],
+      "answer": [
+        "Sacred",
+        "silence",
+        "and",
+        "sleep"
+      ],
+      "youtube_start": 83
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "fires,",
+        "More",
+        "wood",
+        "neighbors",
+        "their",
+        "for",
+        "loud"
+      ],
+      "answer": [
+        "More",
+        "wood",
+        "for",
+        "their",
+        "fires,",
+        "loud",
+        "neighbors"
+      ],
+      "youtube_start": 111
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"disorder\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"disorder\" na música inteira?",
+      "word": "disorder",
+      "answer": 14
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"sacred\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"sacred\" na música inteira?",
+      "word": "sacred",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Conversion, software version 7.0",
+          "order": 0
+        },
+        {
+          "text": "Disorder, disorder, disorder",
+          "order": 1
+        },
+        {
+          "text": "Somewhere between the sacred silence and sleep",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Toxicity\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Toxicity\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "disorder",
+        "sacred",
+        "silence",
+        "somewhere"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Toxicity\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Toxicity\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "disorder",
+        "sacred",
+        "silence",
+        "somewhere"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask System of a Down one question about \"Toxicity\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para System of a Down sobre \"Toxicity\", o que seria e por quê?",
+      "target_vocab": [
+        "disorder",
+        "sacred",
+        "silence",
+        "somewhere"
+      ]
+    }
+  ]
+}

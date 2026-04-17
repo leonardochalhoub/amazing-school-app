@@ -1,0 +1,489 @@
+{
+  "slug": "bohemian-rhapsody",
+  "title": "Bohemian Rhapsody",
+  "artist": "Queen",
+  "year": 1975,
+  "album": "Stone Cold Classics",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 355,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Bohemian Rhapsody by Queen (1975) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "really",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Any way the wind blows doesn't really matter to me, to me\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I sometimes wish I'd never been born at all\""
+    },
+    {
+      "term": "galileo",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"(Galileo) Galileo, (Galileo) Galileo, Galileo Figaro, magnifico\""
+    },
+    {
+      "term": "poor",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I'm just a poor boy, I need no sympathy\""
+    },
+    {
+      "term": "easy",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Because I'm easy come, easy go, little high, little low\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "بِسْمِ ٱللَّٰهِ",
+          "No, we will not let you go (let him go)",
+          "بِسْمِ ٱللَّٰهِ",
+          "We will not let you go (let him go)"
+        ],
+        "start_seconds": 216,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "Caught in a landslide, no escape from reality",
+          "Open your eyes, look up to the skies and see",
+          "I'm just a poor boy, I need no sympathy",
+          "Because I'm easy come, easy go, little high, little low"
+        ],
+        "start_seconds": 7,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Caught in a",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "landslide",
+      "excerpt_after": "no escape from reality",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Mama, ooh,",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "didnt",
+      "excerpt_after": "mean to make you cry",
+      "youtube_start": 82,
+      "youtube_end": 96
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Gotta",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "leave",
+      "excerpt_after": "you all behind and face the truth",
+      "youtube_start": 134,
+      "youtube_end": 148
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I see a",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "little",
+      "excerpt_after": "silhouetto of a man",
+      "youtube_start": 185,
+      "youtube_end": 199
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(Galileo)",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "galileo",
+      "excerpt_after": "(Galileo) Galileo, Galileo Figaro, magnifico",
+      "youtube_start": 196,
+      "youtube_end": 210
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh,",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "mamma",
+      "excerpt_after": "mia, mamma mia",
+      "youtube_start": 233,
+      "youtube_end": 247
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Mama, ooh, didn't mean to make you cry",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Goodbye, everybody, I've got to go",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I see a little silhouetto of a man",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Will not let you go let me go",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Mama, just killed a man",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Is this the",
+      "excerpt_after": "life? Is this just fantasy?",
+      "options": [
+        "eyes",
+        "matter",
+        "real",
+        "reality"
+      ],
+      "answer_index": 2,
+      "youtube_start": 0,
+      "youtube_end": 12
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But now I've",
+      "excerpt_after": "and thrown it all away",
+      "options": [
+        "begun",
+        "gone",
+        "time",
+        "trigger"
+      ],
+      "answer_index": 1,
+      "youtube_start": 75,
+      "youtube_end": 87
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Goodbye,",
+      "excerpt_after": "I've got to go",
+      "options": [
+        "everybody",
+        "galileo",
+        "landslide",
+        "matters"
+      ],
+      "answer_index": 0,
+      "youtube_start": 128,
+      "youtube_end": 140
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Scaramouche,",
+      "excerpt_after": "will you do the Fandango?",
+      "options": [
+        "beelzebub",
+        "magnifico",
+        "scaramouche",
+        "silhouetto"
+      ],
+      "answer_index": 2,
+      "youtube_start": 188,
+      "youtube_end": 200
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Never,",
+      "excerpt_after": "never, never let me go",
+      "options": [
+        "head",
+        "never",
+        "open",
+        "tomorrow"
+      ],
+      "answer_index": 1,
+      "youtube_start": 227,
+      "youtube_end": 239
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "man",
+        "a",
+        "just",
+        "Mama,",
+        "killed"
+      ],
+      "answer": [
+        "Mama,",
+        "just",
+        "killed",
+        "a",
+        "man"
+      ],
+      "youtube_start": 55
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I've",
+        "to",
+        "got",
+        "Goodbye,",
+        "go",
+        "everybody,"
+      ],
+      "answer": [
+        "Goodbye,",
+        "everybody,",
+        "I've",
+        "got",
+        "to",
+        "go"
+      ],
+      "youtube_start": 128
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "life",
+        "this",
+        "him",
+        "monstrosity",
+        "from",
+        "his",
+        "Spare"
+      ],
+      "answer": [
+        "Spare",
+        "him",
+        "his",
+        "life",
+        "from",
+        "this",
+        "monstrosity"
+      ],
+      "youtube_start": 208
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "mia,",
+        "mamma",
+        "Oh,",
+        "mia",
+        "mamma"
+      ],
+      "answer": [
+        "Oh,",
+        "mamma",
+        "mia,",
+        "mamma",
+        "mia"
+      ],
+      "youtube_start": 233
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "can",
+        "anyone",
+        "really",
+        "Nothing",
+        "see",
+        "matters,"
+      ],
+      "answer": [
+        "Nothing",
+        "really",
+        "matters,",
+        "anyone",
+        "can",
+        "see"
+      ],
+      "youtube_start": 311
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"really\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"really\" na música inteira?",
+      "word": "really",
+      "answer": 5
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"never\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"never\" na música inteira?",
+      "word": "never",
+      "answer": 5
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Caught in a landslide, no escape from reality",
+          "order": 0
+        },
+        {
+          "text": "I don't wanna die",
+          "order": 1
+        },
+        {
+          "text": "No, no, no, no, no, no, no",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Mama, just killed a man",
+          "order": 0
+        },
+        {
+          "text": "(Galileo) Galileo, (Galileo) Galileo, Galileo Figaro, magnifico",
+          "order": 1
+        },
+        {
+          "text": "Mamma mia, let me go",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Bohemian Rhapsody\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Bohemian Rhapsody\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "really",
+        "never",
+        "galileo",
+        "poor"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Bohemian Rhapsody\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Bohemian Rhapsody\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "really",
+        "never",
+        "galileo",
+        "poor"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Bohemian Rhapsody\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Bohemian Rhapsody\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "really",
+        "never",
+        "galileo",
+        "poor"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "doesn't",
+          "full": "does not"
+        },
+        {
+          "short": "he's",
+          "full": "he is"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "didn't",
+          "full": "did not"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        }
+      ]
+    }
+  ]
+}

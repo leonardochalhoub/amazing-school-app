@@ -1,0 +1,461 @@
+{
+  "slug": "how-will-i-know",
+  "title": "How Will I Know",
+  "artist": "Whitney Houston",
+  "year": 1985,
+  "album": "Whitney Houston",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 276,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "How Will I Know by Whitney Houston (1985) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 29 times; first heard in: \"There's a boy I know, he's the one I dream of\""
+    },
+    {
+      "term": "loves",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"How will I know if he really loves me?\""
+    },
+    {
+      "term": "really",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"When I wake from dreaming, tell me is it really love?\""
+    },
+    {
+      "term": "he's",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"There's a boy I know, he's the one I dream of\""
+    },
+    {
+      "term": "can't",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Ooh, I lose control, can't seem to get enough, uh-huh\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "How will I know?",
+          "How will I know? (Love can be deceiving)",
+          "How will I know?",
+          "How will I know if he really loves me?"
+        ],
+        "start_seconds": 78,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Falling in love is so bittersweet",
+          "This love is strong, why do I feel weak?",
+          "Oh, wake me, I'm shaking, wish I had you near me now, uh-huh"
+        ],
+        "start_seconds": 113,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ooh, how will I know? (Don't",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "trust",
+      "excerpt_after": "your feelings)",
+      "youtube_start": 72,
+      "youtube_end": 86
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "How will I know if he",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "really",
+      "excerpt_after": "loves me?",
+      "youtube_start": 89,
+      "youtube_end": 103
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I fall in love",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "whenever",
+      "excerpt_after": "we meet",
+      "youtube_start": 97,
+      "youtube_end": 111
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "How will I know if he's",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thinking",
+      "excerpt_after": "of me?",
+      "youtube_start": 105,
+      "youtube_end": 119
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "This love is",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "strong",
+      "excerpt_after": "why do I feel weak?",
+      "youtube_start": 117,
+      "youtube_end": 131
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I say a prayer with",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "every",
+      "excerpt_after": "heartbeat",
+      "youtube_start": 158,
+      "youtube_end": 172
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "How will I know?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I say a prayer with every heartbeat",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "How will I know? Don't trust your feelings",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If he loves me not, mm",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Hey, if he loves me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ooh, how will I",
+      "excerpt_after": "(Don't trust your feelings)",
+      "options": [
+        "dream",
+        "know",
+        "mmm-hmm",
+        "seem"
+      ],
+      "answer_index": 1,
+      "youtube_start": 72,
+      "youtube_end": 84
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I say a",
+      "excerpt_after": "with every heartbeat",
+      "options": [
+        "cant",
+        "clouds",
+        "prayer",
+        "theres"
+      ],
+      "answer_index": 2,
+      "youtube_start": 93,
+      "youtube_end": 105
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "How will I know if he's",
+      "excerpt_after": "of me?",
+      "options": [
+        "clouds",
+        "phone",
+        "strong",
+        "thinking"
+      ],
+      "answer_index": 3,
+      "youtube_start": 105,
+      "youtube_end": 117
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "How will I know?",
+      "excerpt_after": "trust your feelings)",
+      "options": [
+        "control",
+        "dont",
+        "seem",
+        "trust"
+      ],
+      "answer_index": 1,
+      "youtube_start": 138,
+      "youtube_end": 150
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I fall in love",
+      "excerpt_after": "we meet",
+      "options": [
+        "deceiving",
+        "dreaming",
+        "speak",
+        "whenever"
+      ],
+      "answer_index": 3,
+      "youtube_start": 162,
+      "youtube_end": 174
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "know?",
+        "How",
+        "will",
+        "I"
+      ],
+      "answer": [
+        "How",
+        "will",
+        "I",
+        "know?"
+      ],
+      "youtube_start": 78
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "we",
+        "whenever",
+        "in",
+        "fall",
+        "love",
+        "meet",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "fall",
+        "in",
+        "love",
+        "whenever",
+        "we",
+        "meet"
+      ],
+      "youtube_start": 97
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "mm",
+        "If",
+        "he",
+        "not,",
+        "me",
+        "loves"
+      ],
+      "answer": [
+        "If",
+        "he",
+        "loves",
+        "me",
+        "not,",
+        "mm"
+      ],
+      "youtube_start": 189
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "if",
+        "loves",
+        "Hey,",
+        "he"
+      ],
+      "answer": [
+        "Hey,",
+        "if",
+        "he",
+        "loves",
+        "me"
+      ],
+      "youtube_start": 200
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "will",
+        "how",
+        "Ooh,",
+        "know?"
+      ],
+      "answer": [
+        "Ooh,",
+        "how",
+        "will",
+        "I",
+        "know?"
+      ],
+      "youtube_start": 212
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"know\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"know\" na música inteira?",
+      "word": "know",
+      "answer": 29
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"loves\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"loves\" na música inteira?",
+      "word": "loves",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "How will I know? (Love can be deceiving)",
+          "order": 0
+        },
+        {
+          "text": "If he loves me",
+          "order": 1
+        },
+        {
+          "text": "I say a prayer with every heartbeat",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "know",
+        "loves",
+        "really",
+        "he's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"How Will I Know\" was released in 1985. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"How Will I Know\" foi lançada em 1985. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "know",
+        "loves",
+        "really",
+        "he's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"How Will I Know\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"How Will I Know\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "know",
+        "loves",
+        "really",
+        "he's"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "he's",
+          "full": "he is"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

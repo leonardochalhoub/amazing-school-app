@@ -1,0 +1,409 @@
+{
+  "slug": "porcelain",
+  "title": "Porcelain",
+  "artist": "Moby",
+  "year": 1999,
+  "album": "Play",
+  "genre": [
+    "electronic"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 239,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Porcelain by Moby (1999) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "mind",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"As I wake its kaleidoscopic mind\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"I never meant to hurt you\""
+    },
+    {
+      "term": "dreams",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"In my dreams I'm dying all the time\""
+    },
+    {
+      "term": "time",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"In my dreams I'm dying all the time\""
+    },
+    {
+      "term": "wake",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"As I wake its kaleidoscopic mind\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "In my",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dreams",
+      "excerpt_after": "I'm dying all the time",
+      "youtube_start": 60,
+      "youtube_end": 74
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "As I wake its",
+      "blank_hint": "word starting with \"k\"",
+      "answer": "kaleidoscopic",
+      "excerpt_after": "mind",
+      "youtube_start": 70,
+      "youtube_end": 84
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "meant to hurt you",
+      "youtube_start": 80,
+      "youtube_end": 94
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I never",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "meant",
+      "excerpt_after": "to lie",
+      "youtube_start": 85,
+      "youtube_end": 99
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Tell the",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "truth",
+      "excerpt_after": "you never wanted me",
+      "youtube_start": 119,
+      "youtube_end": 133
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "In my dreams I'm",
+      "blank_hint": "word starting with \"j\"",
+      "answer": "jealous",
+      "excerpt_after": "all the time",
+      "youtube_start": 151,
+      "youtube_end": 165
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "In my dreams I'm dying all the time",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "As I wake its kaleidoscopic mind",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I never meant to lie",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "In my dreams I'm jealous all the time",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "This is goodbye",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "In my",
+      "excerpt_after": "I'm dying all the time",
+      "options": [
+        "dreams",
+        "meant",
+        "never",
+        "wake"
+      ],
+      "answer_index": 0,
+      "youtube_start": 60,
+      "youtube_end": 72
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "As I",
+      "excerpt_after": "its kaleidoscopic mind",
+      "options": [
+        "going",
+        "mind",
+        "wake",
+        "wanted"
+      ],
+      "answer_index": 2,
+      "youtube_start": 70,
+      "youtube_end": 82
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "meant to hurt you",
+      "options": [
+        "dreams",
+        "dying",
+        "never",
+        "truth"
+      ],
+      "answer_index": 2,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Tell the",
+      "excerpt_after": "you never wanted me",
+      "options": [
+        "dreams",
+        "dying",
+        "hurt",
+        "truth"
+      ],
+      "answer_index": 3,
+      "youtube_start": 119,
+      "youtube_end": 131
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "In my dreams I'm",
+      "excerpt_after": "all the time",
+      "options": [
+        "goodbye",
+        "hurt",
+        "jealous",
+        "tell"
+      ],
+      "answer_index": 2,
+      "youtube_start": 151,
+      "youtube_end": 163
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "its",
+        "mind",
+        "wake",
+        "I",
+        "As",
+        "kaleidoscopic"
+      ],
+      "answer": [
+        "As",
+        "I",
+        "wake",
+        "its",
+        "kaleidoscopic",
+        "mind"
+      ],
+      "youtube_start": 70
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "hurt",
+        "meant",
+        "I",
+        "never",
+        "you",
+        "to"
+      ],
+      "answer": [
+        "I",
+        "never",
+        "meant",
+        "to",
+        "hurt",
+        "you"
+      ],
+      "youtube_start": 80
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "lie",
+        "to",
+        "never",
+        "meant"
+      ],
+      "answer": [
+        "I",
+        "never",
+        "meant",
+        "to",
+        "lie"
+      ],
+      "youtube_start": 85
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "So",
+        "is",
+        "goodbye",
+        "this"
+      ],
+      "answer": [
+        "So",
+        "this",
+        "is",
+        "goodbye"
+      ],
+      "youtube_start": 93
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "Tell",
+        "you",
+        "wanted",
+        "truth",
+        "never",
+        "the"
+      ],
+      "answer": [
+        "Tell",
+        "the",
+        "truth",
+        "you",
+        "never",
+        "wanted",
+        "me"
+      ],
+      "youtube_start": 119
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"mind\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"mind\" na música inteira?",
+      "word": "mind",
+      "answer": 3
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"never\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"never\" na música inteira?",
+      "word": "never",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "In my dreams I'm dying all the time",
+          "order": 0
+        },
+        {
+          "text": "I never meant to lie",
+          "order": 1
+        },
+        {
+          "text": "Tell the truth you never wanted me",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Porcelain\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Porcelain\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "mind",
+        "never",
+        "dreams",
+        "time"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Porcelain\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Porcelain\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "mind",
+        "never",
+        "dreams",
+        "time"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Moby one question about \"Porcelain\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Moby sobre \"Porcelain\", o que seria e por quê?",
+      "target_vocab": [
+        "mind",
+        "never",
+        "dreams",
+        "time"
+      ]
+    }
+  ]
+}

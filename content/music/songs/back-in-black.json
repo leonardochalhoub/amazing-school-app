@@ -1,0 +1,463 @@
+{
+  "slug": "back-in-black",
+  "title": "Back in Black",
+  "artist": "AC/DC",
+  "year": 1980,
+  "album": "Back In Black",
+  "genre": [
+    "rock",
+    "hard-rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 255,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Back in Black by AC/DC (1980) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "well",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Well, I'm back\""
+    },
+    {
+      "term": "black",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Back in black\""
+    },
+    {
+      "term": "cause",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"'Cause it's gettin' me high\""
+    },
+    {
+      "term": "i've",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"I've been too long, I'm glad to be back\""
+    },
+    {
+      "term": "sack",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I hit the sack\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Yes, I'm back",
+          "Well, I'm back",
+          "Yes, I'm back",
+          "Well, I'm back, back"
+        ],
+        "start_seconds": 49,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Back (I'm back)",
+          "Back (I'm back)",
+          "Back (I'm back)",
+          "Back (I'm back)"
+        ],
+        "start_seconds": 192,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That's kept me",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "hanging",
+      "excerpt_after": "about",
+      "youtube_start": 35,
+      "youtube_end": 49
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've been",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "looking",
+      "excerpt_after": "at the sky",
+      "youtube_start": 37,
+      "youtube_end": 51
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Forget the",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "hearse",
+      "excerpt_after": "'cause I never die",
+      "youtube_start": 40,
+      "youtube_end": 54
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Abusin'",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "every",
+      "excerpt_after": "one of them and running wild",
+      "youtube_start": 45,
+      "youtube_end": 59
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I'm",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "beatin",
+      "excerpt_after": "the flack",
+      "youtube_start": 79,
+      "youtube_end": 93
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Nobody's",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "get me on another rap",
+      "youtube_start": 80,
+      "youtube_end": 94
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I hit the sack",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've been looking at the sky",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I got nine lives",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yes, I'm back",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, I'm back, back",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've been too",
+      "excerpt_after": "I'm glad to be back",
+      "options": [
+        "long",
+        "nine",
+        "running",
+        "well"
+      ],
+      "answer_index": 0,
+      "youtube_start": 29,
+      "youtube_end": 41
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've been",
+      "excerpt_after": "at the sky",
+      "options": [
+        "every",
+        "hang",
+        "looking",
+        "nobodys"
+      ],
+      "answer_index": 2,
+      "youtube_start": 37,
+      "youtube_end": 49
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Forget the",
+      "excerpt_after": "'cause I never die",
+      "options": [
+        "bullet",
+        "gang",
+        "hearse",
+        "sack"
+      ],
+      "answer_index": 2,
+      "youtube_start": 40,
+      "youtube_end": 52
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Number one with a",
+      "excerpt_after": "I'm a power pack",
+      "options": [
+        "abusin",
+        "bullet",
+        "kept",
+        "power"
+      ],
+      "answer_index": 1,
+      "youtube_start": 70,
+      "youtube_end": 82
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Nobody's",
+      "excerpt_after": "get me on another rap",
+      "options": [
+        "bang",
+        "eyes",
+        "gonna",
+        "hearse"
+      ],
+      "answer_index": 2,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "sack",
+        "the",
+        "hit",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "hit",
+        "the",
+        "sack"
+      ],
+      "youtube_start": 28
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "high",
+        "'Cause",
+        "gettin'",
+        "me",
+        "it's"
+      ],
+      "answer": [
+        "'Cause",
+        "it's",
+        "gettin'",
+        "me",
+        "high"
+      ],
+      "youtube_start": 38
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Well,",
+        "in",
+        "back",
+        "black",
+        "I'm"
+      ],
+      "answer": [
+        "Well,",
+        "I'm",
+        "back",
+        "in",
+        "black"
+      ],
+      "youtube_start": 62
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "on",
+        "track",
+        "the",
+        "'Cause",
+        "I'm",
+        "back"
+      ],
+      "answer": [
+        "'Cause",
+        "I'm",
+        "back",
+        "on",
+        "the",
+        "track"
+      ],
+      "youtube_start": 78
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "makin'",
+        "play",
+        "my",
+        "I'm",
+        "just"
+      ],
+      "answer": [
+        "I'm",
+        "just",
+        "makin'",
+        "my",
+        "play"
+      ],
+      "youtube_start": 84
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"well\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"well\" na música inteira?",
+      "word": "well",
+      "answer": 11
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"black\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"black\" na música inteira?",
+      "word": "black",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I hit the sack",
+          "order": 0
+        },
+        {
+          "text": "So look at me now",
+          "order": 1
+        },
+        {
+          "text": "Well, I'm back in black",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Back in Black\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Back in Black\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "well",
+        "black",
+        "cause",
+        "i've"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Back in Black\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Back in Black\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "well",
+        "black",
+        "cause",
+        "i've"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Back in Black\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Back in Black\", o que aconteceria?",
+      "target_vocab": [
+        "well",
+        "black",
+        "cause",
+        "i've"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "they've",
+          "full": "they have"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        }
+      ]
+    }
+  ]
+}

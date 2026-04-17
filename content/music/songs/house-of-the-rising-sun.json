@@ -1,0 +1,480 @@
+{
+  "slug": "house-of-the-rising-sun",
+  "title": "House of the Rising Sun",
+  "artist": "The Animals",
+  "year": 1964,
+  "album": "The Animals",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 271,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "House of the Rising Sun by The Animals (1964) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "orleans",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"There is a house in New Orleans\""
+    },
+    {
+      "term": "house",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"There is a house in New Orleans\""
+    },
+    {
+      "term": "rising",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"They call the Rising Sun\""
+    },
+    {
+      "term": "there",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"There is a house in New Orleans\""
+    },
+    {
+      "term": "call",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"They call the Rising Sun\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "They call the Rising Sun",
+          "And it's been the ruin of many a poor boy",
+          "And God, I know I'm one",
+          "My mother was a tailor"
+        ],
+        "start_seconds": 18,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "They call the Rising Sun",
+          "And it's been the ruin of many a poor boy",
+          "And God, I know I'm one"
+        ],
+        "start_seconds": 220,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There is a",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "house",
+      "excerpt_after": "in New Orleans",
+      "youtube_start": 12,
+      "youtube_end": 26
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "They call the",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "rising",
+      "excerpt_after": "Sun",
+      "youtube_start": 18,
+      "youtube_end": 32
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "She",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sewed",
+      "excerpt_after": "my new blue jeans",
+      "youtube_start": 52,
+      "youtube_end": 66
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Now the only",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thing",
+      "excerpt_after": "a gambler needs",
+      "youtube_start": 80,
+      "youtube_end": 94
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Is a",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "suitcase",
+      "excerpt_after": "and a trunk",
+      "youtube_start": 86,
+      "youtube_end": 100
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "other",
+      "excerpt_after": "foot on the train",
+      "youtube_start": 187,
+      "youtube_end": 201
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They call the Rising Sun",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "She sewed my new blue jeans",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Is when he's all drunk",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, I got one foot on the platform",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "There is a house in New Orleans",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There is a",
+      "excerpt_after": "in New Orleans",
+      "options": [
+        "call",
+        "father",
+        "gambler",
+        "house"
+      ],
+      "answer_index": 3,
+      "youtube_start": 12,
+      "youtube_end": 24
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "My",
+      "excerpt_after": "was a tailor",
+      "options": [
+        "goin",
+        "mother",
+        "thing",
+        "train"
+      ],
+      "answer_index": 1,
+      "youtube_start": 46,
+      "youtube_end": 58
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Now the only",
+      "excerpt_after": "a gambler needs",
+      "options": [
+        "call",
+        "platform",
+        "thing",
+        "time"
+      ],
+      "answer_index": 2,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Spend your",
+      "excerpt_after": "in sin and misery",
+      "options": [
+        "father",
+        "foot",
+        "lives",
+        "well"
+      ],
+      "answer_index": 2,
+      "youtube_start": 160,
+      "youtube_end": 172
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The",
+      "excerpt_after": "foot on the train",
+      "options": [
+        "needs",
+        "other",
+        "poor",
+        "tell"
+      ],
+      "answer_index": 1,
+      "youtube_start": 187,
+      "youtube_end": 199
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "house",
+        "Orleans",
+        "is",
+        "New",
+        "in",
+        "There",
+        "a"
+      ],
+      "answer": [
+        "There",
+        "is",
+        "a",
+        "house",
+        "in",
+        "New",
+        "Orleans"
+      ],
+      "youtube_start": 12
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "mother",
+        "My",
+        "tailor",
+        "was"
+      ],
+      "answer": [
+        "My",
+        "mother",
+        "was",
+        "a",
+        "tailor"
+      ],
+      "youtube_start": 46
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "thing",
+        "needs",
+        "a",
+        "only",
+        "Now",
+        "gambler",
+        "the"
+      ],
+      "answer": [
+        "Now",
+        "the",
+        "only",
+        "thing",
+        "a",
+        "gambler",
+        "needs"
+      ],
+      "youtube_start": 80
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Is",
+        "drunk",
+        "he's",
+        "when",
+        "all"
+      ],
+      "answer": [
+        "Is",
+        "when",
+        "he's",
+        "all",
+        "drunk"
+      ],
+      "youtube_start": 99
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Sun",
+        "In",
+        "Rising",
+        "the",
+        "of",
+        "House",
+        "the"
+      ],
+      "answer": [
+        "In",
+        "the",
+        "House",
+        "of",
+        "the",
+        "Rising",
+        "Sun"
+      ],
+      "youtube_start": 166
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"orleans\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"orleans\" na música inteira?",
+      "word": "orleans",
+      "answer": 4
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"house\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"house\" na música inteira?",
+      "word": "house",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "There is a house in New Orleans",
+          "order": 0
+        },
+        {
+          "text": "Now the only thing a gambler needs",
+          "order": 1
+        },
+        {
+          "text": "In the House of the Rising Sun",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "They call the Rising Sun",
+          "order": 0
+        },
+        {
+          "text": "Is when he's all drunk",
+          "order": 1
+        },
+        {
+          "text": "Well, I got one foot on the platform",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "orleans",
+        "house",
+        "rising",
+        "there"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "orleans",
+        "house",
+        "rising",
+        "there"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"House of the Rising Sun\" was released in 1964. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"House of the Rising Sun\" foi lançada em 1964. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "orleans",
+        "house",
+        "rising",
+        "there"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "he's",
+          "full": "he is"
+        }
+      ]
+    }
+  ]
+}

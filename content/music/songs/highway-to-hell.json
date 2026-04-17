@@ -1,0 +1,471 @@
+{
+  "slug": "highway-to-hell",
+  "title": "Highway to Hell",
+  "artist": "AC/DC",
+  "year": 1979,
+  "album": "Highway To Hell",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 208,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Highway to Hell by AC/DC (1979) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "highway",
+      "pt": "",
+      "note": "Appears 20 times; first heard in: \"I'm on the highway to hell\""
+    },
+    {
+      "term": "hell",
+      "pt": "",
+      "note": "Appears 20 times; first heard in: \"I'm on the highway to hell\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Don't need reason, don't need rhyme\""
+    },
+    {
+      "term": "nothin'",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Askin' nothin', leave me be\""
+    },
+    {
+      "term": "need",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Don't need reason, don't need rhyme\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I'm on the highway to hell",
+          "On the highway to hell",
+          "Highway to hell",
+          "I'm on the highway to hell"
+        ],
+        "start_seconds": 52,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "I'm on the highway to hell",
+          "On the highway to",
+          "Hell",
+          "Highway to hell (I'm on the highway to hell)"
+        ],
+        "start_seconds": 156,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Livin' easy,",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lovin",
+      "excerpt_after": "free",
+      "youtube_start": 18,
+      "youtube_end": 32
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Askin'",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nothin",
+      "excerpt_after": "leave me be",
+      "youtube_start": 26,
+      "youtube_end": 40
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ain't nothin' I'd",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "rather",
+      "excerpt_after": "do",
+      "youtube_start": 39,
+      "youtube_end": 53
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm on the",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "highway",
+      "excerpt_after": "to hell",
+      "youtube_start": 52,
+      "youtube_end": 66
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Nobody's",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "slow me down",
+      "youtube_start": 76,
+      "youtube_end": 90
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Playin' in a",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "rocking",
+      "excerpt_after": "band",
+      "youtube_start": 94,
+      "youtube_end": 108
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Ain't nothin' I'd rather do",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I'm goin' down",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Season ticket on a one-way ride",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Takin' everything in my stride",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Goin' down, party time",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Livin'",
+      "excerpt_after": "lovin' free",
+      "options": [
+        "easy",
+        "friends",
+        "need",
+        "speed"
+      ],
+      "answer_index": 0,
+      "youtube_start": 18,
+      "youtube_end": 30
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Don't",
+      "excerpt_after": "reason, don't need rhyme",
+      "options": [
+        "friends",
+        "need",
+        "slow",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 35,
+      "youtube_end": 47
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm on the",
+      "excerpt_after": "to hell",
+      "options": [
+        "highway",
+        "rather",
+        "there",
+        "yeah"
+      ],
+      "answer_index": 0,
+      "youtube_start": 52,
+      "youtube_end": 64
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Nobody's gonna",
+      "excerpt_after": "me around",
+      "options": [
+        "easy",
+        "limit",
+        "mess",
+        "playin"
+      ],
+      "answer_index": 2,
+      "youtube_start": 85,
+      "youtube_end": 97
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm on my way to the",
+      "excerpt_after": "Land, ow",
+      "options": [
+        "party",
+        "playin",
+        "promised",
+        "stride"
+      ],
+      "answer_index": 2,
+      "youtube_start": 101,
+      "youtube_end": 113
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Livin'",
+        "lovin'",
+        "free",
+        "easy,"
+      ],
+      "answer": [
+        "Livin'",
+        "easy,",
+        "lovin'",
+        "free"
+      ],
+      "youtube_start": 18
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "rhyme",
+        "need",
+        "need",
+        "Don't",
+        "reason,",
+        "don't"
+      ],
+      "answer": [
+        "Don't",
+        "need",
+        "reason,",
+        "don't",
+        "need",
+        "rhyme"
+      ],
+      "youtube_start": 35
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "highway",
+        "On",
+        "the",
+        "to",
+        "hell"
+      ],
+      "answer": [
+        "On",
+        "the",
+        "highway",
+        "to",
+        "hell"
+      ],
+      "youtube_start": 57
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "gonna",
+        "Nobody's",
+        "around",
+        "mess",
+        "me"
+      ],
+      "answer": [
+        "Nobody's",
+        "gonna",
+        "mess",
+        "me",
+        "around"
+      ],
+      "youtube_start": 85
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Mmm,",
+        "stop",
+        "don't",
+        "me"
+      ],
+      "answer": [
+        "Mmm,",
+        "don't",
+        "stop",
+        "me"
+      ],
+      "youtube_start": 123
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"highway\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"highway\" na música inteira?",
+      "word": "highway",
+      "answer": 20
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"hell\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"hell\" na música inteira?",
+      "word": "hell",
+      "answer": 20
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Livin' easy, lovin' free",
+          "order": 0
+        },
+        {
+          "text": "I'm on the highway to hell",
+          "order": 1
+        },
+        {
+          "text": "Highway to hell",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Season ticket on a one-way ride",
+          "order": 0
+        },
+        {
+          "text": "Hey Satan, payin' my dues",
+          "order": 1
+        },
+        {
+          "text": "Ehh, ehh, oww",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Highway to Hell\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Highway to Hell\", o que aconteceria?",
+      "target_vocab": [
+        "highway",
+        "hell",
+        "don't",
+        "nothin'"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Highway to Hell\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Highway to Hell\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "highway",
+        "hell",
+        "don't",
+        "nothin'"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Highway to Hell\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Highway to Hell\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "highway",
+        "hell",
+        "don't",
+        "nothin'"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,412 @@
+{
+  "slug": "my-generation",
+  "title": "My Generation",
+  "artist": "The Who",
+  "year": 1965,
+  "album": "My Generation (50th Anniversary / Super Deluxe)",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 200,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "My Generation by The Who (1965) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "generation",
+      "pt": "",
+      "note": "Appears 45 times; first heard in: \"People try to put us d-down (talkin' 'bout my generation)\""
+    },
+    {
+      "term": "talkin'",
+      "pt": "",
+      "note": "Appears 27 times; first heard in: \"People try to put us d-down (talkin' 'bout my generation)\""
+    },
+    {
+      "term": "bout",
+      "pt": "",
+      "note": "Appears 26 times; first heard in: \"People try to put us d-down (talkin' 'bout my generation)\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"This is my generation, baby\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Why don't you all f-fade away (talkin' 'bout my generation)\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "This is my generation, baby",
+          "Why don't you all f-fade away (talkin' 'bout my generation)",
+          "And don't try dig what we all s-s-say (talkin' 'bout my generation)",
+          "I'm not trying to cause a big s-s-sensation (talkin' 'bout my generation)"
+        ],
+        "start_seconds": 26,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Talkin' 'bout my generation (my generation)",
+          "Talkin' 'bout my generation (my generation)",
+          "Talkin' 'bout my generation (this is my generation, baby)",
+          "Talkin' 'bout my generation (this is my generation)"
+        ],
+        "start_seconds": 173,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Just",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "because",
+      "excerpt_after": "we get around (talkin' 'bout my generation)",
+      "youtube_start": 10,
+      "youtube_end": 24
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "This is my",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "generation",
+      "excerpt_after": "baby",
+      "youtube_start": 26,
+      "youtube_end": 40
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Just because we",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "g-g-get",
+      "excerpt_after": "around (talkin' 'bout my generation)",
+      "youtube_start": 119,
+      "youtube_end": 133
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Talkin' 'bout my generation",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "talkin",
+      "excerpt_after": "about)",
+      "youtube_start": 172,
+      "youtube_end": 186
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "This is my generation",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "This is my generation, baby",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "My, my, my, my, my generation",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Talkin' 'bout my generation talkin' about",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Talkin' 'bout my generation this is my generation",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Just",
+      "excerpt_after": "we get around (talkin' 'bout my generation)",
+      "options": [
+        "because",
+        "d-dig",
+        "generation",
+        "yeah"
+      ],
+      "answer_index": 0,
+      "youtube_start": 10,
+      "youtube_end": 22
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "This is my",
+      "excerpt_after": "baby",
+      "options": [
+        "because",
+        "g-generation",
+        "generation",
+        "s-s-sensation"
+      ],
+      "answer_index": 2,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Just because we",
+      "excerpt_after": "around (talkin' 'bout my generation)",
+      "options": [
+        "awful",
+        "g-g-get",
+        "hope",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 119,
+      "youtube_end": 131
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Talkin'",
+      "excerpt_after": "my generation (talkin' about)",
+      "options": [
+        "awful",
+        "bout",
+        "d-dig",
+        "d-down"
+      ],
+      "answer_index": 1,
+      "youtube_start": 172,
+      "youtube_end": 184
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "This",
+        "is",
+        "generation"
+      ],
+      "answer": [
+        "This",
+        "is",
+        "my",
+        "generation"
+      ],
+      "youtube_start": 24
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "baby",
+        "my",
+        "This",
+        "generation,",
+        "is"
+      ],
+      "answer": [
+        "This",
+        "is",
+        "my",
+        "generation,",
+        "baby"
+      ],
+      "youtube_start": 26
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my,",
+        "My,",
+        "my,",
+        "generation",
+        "my",
+        "my,"
+      ],
+      "answer": [
+        "My,",
+        "my,",
+        "my,",
+        "my,",
+        "my",
+        "generation"
+      ],
+      "youtube_start": 108
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "about",
+        "my",
+        "'bout",
+        "Talkin'",
+        "generation",
+        "talkin'"
+      ],
+      "answer": [
+        "Talkin'",
+        "'bout",
+        "my",
+        "generation",
+        "talkin'",
+        "about"
+      ],
+      "youtube_start": 172
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "'bout",
+        "generation",
+        "generation",
+        "my",
+        "Talkin'",
+        "my"
+      ],
+      "answer": [
+        "Talkin'",
+        "'bout",
+        "my",
+        "generation",
+        "my",
+        "generation"
+      ],
+      "youtube_start": 173
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"generation\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"generation\" na música inteira?",
+      "word": "generation",
+      "answer": 45
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"talkin'\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"talkin'\" na música inteira?",
+      "word": "talkin'",
+      "answer": 27
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "This is my generation",
+          "order": 0
+        },
+        {
+          "text": "My, my g-generation",
+          "order": 1
+        },
+        {
+          "text": "Talkin' 'bout my generation (talkin' about)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask The Who one question about \"My Generation\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para The Who sobre \"My Generation\", o que seria e por quê?",
+      "target_vocab": [
+        "generation",
+        "talkin'",
+        "bout",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"My Generation\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"My Generation\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "generation",
+        "talkin'",
+        "bout",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"My Generation\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"My Generation\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "generation",
+        "talkin'",
+        "bout",
+        "baby"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

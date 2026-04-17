@@ -1,0 +1,406 @@
+{
+  "slug": "peggy-sue",
+  "title": "Peggy Sue",
+  "artist": "Buddy Holly",
+  "year": 1957,
+  "album": "The Buddy Holly Collection",
+  "genre": [
+    "rock-and-roll"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 149,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Peggy Sue by Buddy Holly (1957) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "peggy",
+      "pt": "",
+      "note": "Appears 30 times; first heard in: \"If you knew Peggy Sue\""
+    },
+    {
+      "term": "pretty",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Pretty, pretty, pretty, pretty, Peggy Sue\""
+    },
+    {
+      "term": "well",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Oh, well, I love you, gal\""
+    },
+    {
+      "term": "want",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"I want you, Peggy Sue\""
+    },
+    {
+      "term": "need",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"And I need you, Peggy Sue\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Oh, well, I love you, gal",
+          "Yes, I love you, Peggy Sue",
+          "Peggy Sue, Peggy Sue",
+          "Oh, how my heart yearns for you"
+        ],
+        "start_seconds": 19,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Pretty, pretty, pretty, pretty, Peggy Sue",
+          "Oh, Peggy, my Peggy Sue",
+          "Oh, well, I love you, gal",
+          "And I need you, Peggy Sue"
+        ],
+        "start_seconds": 49,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If you knew",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "peggy",
+      "excerpt_after": "Sue",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh, how my",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heart",
+      "excerpt_after": "yearns for you",
+      "youtube_start": 29,
+      "youtube_end": 43
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Pretty,",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "pretty",
+      "excerpt_after": "pretty, pretty, Peggy Sue",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If you knew Peggy Sue",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh, well, I love you, gal",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh, how my heart yearns for you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I love you, Peggy Sue",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I want you, Peggy Sue",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "If you",
+      "excerpt_after": "Peggy Sue",
+      "options": [
+        "knew",
+        "need",
+        "peggy",
+        "youd"
+      ],
+      "answer_index": 0,
+      "youtube_start": 7,
+      "youtube_end": 19
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Then",
+      "excerpt_after": "know why I feel blue",
+      "options": [
+        "heart",
+        "know",
+        "need",
+        "youd"
+      ],
+      "answer_index": 3,
+      "youtube_start": 10,
+      "youtube_end": 22
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh,",
+      "excerpt_after": "I love you, gal",
+      "options": [
+        "feel",
+        "peggy",
+        "pretty",
+        "well"
+      ],
+      "answer_index": 3,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Pretty,",
+      "excerpt_after": "pretty, pretty, Peggy Sue",
+      "options": [
+        "heart",
+        "pretty",
+        "without",
+        "yearns"
+      ],
+      "answer_index": 1,
+      "youtube_start": 49,
+      "youtube_end": 61
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "With a love so",
+      "excerpt_after": "and true",
+      "options": [
+        "knew",
+        "need",
+        "peggy",
+        "rare"
+      ],
+      "answer_index": 3,
+      "youtube_start": 68,
+      "youtube_end": 80
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "knew",
+        "If",
+        "Peggy",
+        "Sue"
+      ],
+      "answer": [
+        "If",
+        "you",
+        "knew",
+        "Peggy",
+        "Sue"
+      ],
+      "youtube_start": 7
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Oh,",
+        "well,",
+        "I",
+        "you,",
+        "gal",
+        "love"
+      ],
+      "answer": [
+        "Oh,",
+        "well,",
+        "I",
+        "love",
+        "you,",
+        "gal"
+      ],
+      "youtube_start": 19
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "heart",
+        "how",
+        "for",
+        "Oh,",
+        "yearns",
+        "you"
+      ],
+      "answer": [
+        "Oh,",
+        "how",
+        "my",
+        "heart",
+        "yearns",
+        "for",
+        "you"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "Sue",
+        "And",
+        "need",
+        "Peggy",
+        "you,"
+      ],
+      "answer": [
+        "And",
+        "I",
+        "need",
+        "you,",
+        "Peggy",
+        "Sue"
+      ],
+      "youtube_start": 59
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Well,",
+        "I",
+        "love",
+        "gal",
+        "you,"
+      ],
+      "answer": [
+        "Well,",
+        "I",
+        "love",
+        "you,",
+        "gal"
+      ],
+      "youtube_start": 77
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"peggy\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"peggy\" na música inteira?",
+      "word": "peggy",
+      "answer": 30
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"pretty\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"pretty\" na música inteira?",
+      "word": "pretty",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Then you'd know why I feel blue",
+          "order": 0
+        },
+        {
+          "text": "With a love so rare and true",
+          "order": 1
+        },
+        {
+          "text": "Yes, I need you, Peggy Sue",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Peggy Sue\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Peggy Sue\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "peggy",
+        "pretty",
+        "well",
+        "want"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Peggy Sue\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Peggy Sue\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "peggy",
+        "pretty",
+        "well",
+        "want"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Peggy Sue\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Peggy Sue\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "peggy",
+        "pretty",
+        "well",
+        "want"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "slug": "jump",
+  "title": "Jump",
+  "artist": "Van Halen",
+  "year": 1983,
+  "album": "1984",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 240,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Jump by Van Halen (1983) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "jump",
+      "pt": "",
+      "note": "Appears 23 times; first heard in: \"Ah, might as well jump (jump!)\""
+    },
+    {
+      "term": "head",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Go 'head an' jump (jump!)\""
+    },
+    {
+      "term": "might",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Ah, might as well jump (jump!)\""
+    },
+    {
+      "term": "well",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Ah, might as well jump (jump!)\""
+    },
+    {
+      "term": "can't",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Ah, can't ya see me standin' here?\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Go 'head an' jump",
+          "Hello! Hey, you! Who said that?",
+          "Baby, how you been?",
+          "You said you don't kn-oh-oh-ow"
+        ],
+        "start_seconds": 85,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Go 'head and jump",
+          "Might as well jump (jump!)",
+          "Go 'head an' jump",
+          "Jump!"
+        ],
+        "start_seconds": 124,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nothin",
+      "excerpt_after": "gets me down",
+      "youtube_start": 32,
+      "youtube_end": 46
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've seen the",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "toughest",
+      "excerpt_after": "around",
+      "youtube_start": 38,
+      "youtube_end": 52
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To get to",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "whats",
+      "excerpt_after": "real",
+      "youtube_start": 54,
+      "youtube_end": 68
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I got my back",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "against",
+      "excerpt_after": "the record machine",
+      "youtube_start": 60,
+      "youtube_end": 74
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ah,",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "might",
+      "excerpt_after": "as well jump (jump!)",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've got my back against the",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "record",
+      "excerpt_after": "machine",
+      "youtube_start": 106,
+      "youtube_end": 120
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You got it tough",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I know",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You got to ro-oh-oh-ll with the punches",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I ain't the worst that you've seen",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Hello! Hey, you! Who said that?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "gets me down",
+      "options": [
+        "gets",
+        "might",
+        "nothin",
+        "ooowww"
+      ],
+      "answer_index": 2,
+      "youtube_start": 32,
+      "youtube_end": 44
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ah,",
+      "excerpt_after": "ya see me standin' here?",
+      "options": [
+        "cant",
+        "dont",
+        "head",
+        "know"
+      ],
+      "answer_index": 0,
+      "youtube_start": 58,
+      "youtube_end": 70
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ah,",
+      "excerpt_after": "as well jump (jump!)",
+      "options": [
+        "jump",
+        "might",
+        "punches",
+        "well"
+      ],
+      "answer_index": 1,
+      "youtube_start": 73,
+      "youtube_end": 85
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You said you",
+      "excerpt_after": "kn-oh-oh-ow",
+      "options": [
+        "dont",
+        "jump",
+        "mean",
+        "ooowww"
+      ],
+      "answer_index": 0,
+      "youtube_start": 96,
+      "youtube_end": 108
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've got my back against the",
+      "excerpt_after": "machine",
+      "options": [
+        "dont",
+        "punches",
+        "record",
+        "toughest"
+      ],
+      "answer_index": 2,
+      "youtube_start": 106,
+      "youtube_end": 118
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "down",
+        "gets",
+        "And",
+        "nothin'",
+        "me"
+      ],
+      "answer": [
+        "And",
+        "nothin'",
+        "gets",
+        "me",
+        "down"
+      ],
+      "youtube_start": 32
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "You",
+        "punches",
+        "ro-oh-oh-ll",
+        "the",
+        "to",
+        "got",
+        "with"
+      ],
+      "answer": [
+        "You",
+        "got",
+        "to",
+        "ro-oh-oh-ll",
+        "with",
+        "the",
+        "punches"
+      ],
+      "youtube_start": 50
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ya",
+        "Ah,",
+        "what",
+        "see",
+        "I",
+        "can't",
+        "mean?"
+      ],
+      "answer": [
+        "Ah,",
+        "can't",
+        "ya",
+        "see",
+        "what",
+        "I",
+        "mean?"
+      ],
+      "youtube_start": 68
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Who",
+        "Hey,",
+        "said",
+        "Hello!",
+        "that?",
+        "you!"
+      ],
+      "answer": [
+        "Hello!",
+        "Hey,",
+        "you!",
+        "Who",
+        "said",
+        "that?"
+      ],
+      "youtube_start": 90
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "here?",
+        "can't",
+        "see",
+        "standin'",
+        "So",
+        "me",
+        "you"
+      ],
+      "answer": [
+        "So",
+        "can't",
+        "you",
+        "see",
+        "me",
+        "standin'",
+        "here?"
+      ],
+      "youtube_start": 104
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"jump\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"jump\" na música inteira?",
+      "word": "jump",
+      "answer": 23
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"head\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"head\" na música inteira?",
+      "word": "head",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I get up",
+          "order": 0
+        },
+        {
+          "text": "I ain't the worst that you've seen",
+          "order": 1
+        },
+        {
+          "text": "So can't you see me standin' here?",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And nothin' gets me down",
+          "order": 0
+        },
+        {
+          "text": "Hello! Hey, you! Who said that?",
+          "order": 1
+        },
+        {
+          "text": "Ah, might as well jump (jump!)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "jump",
+        "head",
+        "might",
+        "well"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "jump",
+        "head",
+        "might",
+        "well"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Jump\" was released in 1983. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Jump\" foi lançada em 1983. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "jump",
+        "head",
+        "might",
+        "well"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "what's",
+          "full": "what is"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "slug": "problem",
+  "title": "Problem",
+  "artist": "Ariana Grande",
+  "year": 2014,
+  "album": "My Everything (Deluxe)",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "fast",
+  "duration_seconds": 193,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Problem by Ariana Grande (2014) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "problem",
+      "pt": "",
+      "note": "Appears 32 times; first heard in: \"I got one more problem with you girl\""
+    },
+    {
+      "term": "without",
+      "pt": "",
+      "note": "Appears 22 times; first heard in: \"One less problem without ya\""
+    },
+    {
+      "term": "want",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"(I want you)\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"It's Iggy Iggs\""
+    },
+    {
+      "term": "iggy",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"It's Iggy Iggs\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I got one less problem without ya",
+          "I got one less problem without ya",
+          "I got one less, one less problem",
+          "One less problem without ya"
+        ],
+        "start_seconds": 40,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "(One less, one less problem)",
+          "Hey baby even though I hate ya",
+          "I wanna love ya",
+          "(I want you)"
+        ],
+        "start_seconds": 8,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I got one more",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "problem",
+      "excerpt_after": "with you girl",
+      "youtube_start": 6,
+      "youtube_end": 20
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "really",
+      "excerpt_after": "want ya",
+      "youtube_start": 16,
+      "youtube_end": 30
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Got no",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "weight",
+      "excerpt_after": "on my shoulders",
+      "youtube_start": 31,
+      "youtube_end": 45
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I know",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "never gonna wake up",
+      "youtube_start": 59,
+      "youtube_end": 73
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "In no time, I'll be",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "forgettin",
+      "excerpt_after": "all about you",
+      "youtube_start": 115,
+      "youtube_end": 129
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thinkin",
+      "excerpt_after": "I love the thought of you",
+      "youtube_start": 125,
+      "youtube_end": 139
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I got one more problem with you girl",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I wanna love ya",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And even though I can't forgive you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Why can't you leave me?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I gotta have it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I got one more",
+      "excerpt_after": "with you girl",
+      "options": [
+        "know",
+        "problem",
+        "weight",
+        "without"
+      ],
+      "answer_index": 1,
+      "youtube_start": 6,
+      "youtube_end": 18
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Tell me,",
+      "excerpt_after": "me baby",
+      "options": [
+        "give",
+        "tell",
+        "wake",
+        "wanna"
+      ],
+      "answer_index": 1,
+      "youtube_start": 20,
+      "youtube_end": 32
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "that I've got",
+      "options": [
+        "never",
+        "realize",
+        "should",
+        "shoulders"
+      ],
+      "answer_index": 1,
+      "youtube_start": 35,
+      "youtube_end": 47
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I get a",
+      "excerpt_after": "bit breathless",
+      "options": [
+        "cant",
+        "little",
+        "really",
+        "time"
+      ],
+      "answer_index": 1,
+      "youtube_start": 76,
+      "youtube_end": 88
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "To",
+      "excerpt_after": "to be here stressin'",
+      "options": [
+        "biggie",
+        "call",
+        "really",
+        "time"
+      ],
+      "answer_index": 0,
+      "youtube_start": 123,
+      "youtube_end": 135
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "less,",
+        "One",
+        "one",
+        "less",
+        "problem"
+      ],
+      "answer": [
+        "One",
+        "less,",
+        "one",
+        "less",
+        "problem"
+      ],
+      "youtube_start": 8
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "shouldn't",
+        "I",
+        "it",
+        "though",
+        "Cause",
+        "even",
+        "want"
+      ],
+      "answer": [
+        "Cause",
+        "even",
+        "though",
+        "I",
+        "shouldn't",
+        "want",
+        "it"
+      ],
+      "youtube_start": 25
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "one",
+        "ya",
+        "got",
+        "without",
+        "I",
+        "problem",
+        "less"
+      ],
+      "answer": [
+        "I",
+        "got",
+        "one",
+        "less",
+        "problem",
+        "without",
+        "ya"
+      ],
+      "youtube_start": 40
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "love",
+        "say",
+        "me",
+        "And",
+        "you"
+      ],
+      "answer": [
+        "And",
+        "say",
+        "you",
+        "love",
+        "me"
+      ],
+      "youtube_start": 73
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "here",
+        "To",
+        "to",
+        "stressin'",
+        "biggie",
+        "be"
+      ],
+      "answer": [
+        "To",
+        "biggie",
+        "to",
+        "be",
+        "here",
+        "stressin'"
+      ],
+      "youtube_start": 123
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"problem\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"problem\" na música inteira?",
+      "word": "problem",
+      "answer": 32
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"without\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"without\" na música inteira?",
+      "word": "without",
+      "answer": 22
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "It's Iggy Iggs",
+          "order": 0
+        },
+        {
+          "text": "I know you're never gonna wake up",
+          "order": 1
+        },
+        {
+          "text": "You saying that you know",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I got one more problem with you girl",
+          "order": 0
+        },
+        {
+          "text": "And realize that I've got",
+          "order": 1
+        },
+        {
+          "text": "I'm listening to you knowin'",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Problem\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Problem\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "problem",
+        "without",
+        "want",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Problem\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Problem\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "problem",
+        "without",
+        "want",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Ariana Grande one question about \"Problem\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Ariana Grande sobre \"Problem\", o que seria e por quê?",
+      "target_vocab": [
+        "problem",
+        "without",
+        "want",
+        "it's"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "shouldn't",
+          "full": "should not"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        }
+      ]
+    }
+  ]
+}

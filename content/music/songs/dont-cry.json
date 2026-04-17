@@ -1,0 +1,461 @@
+{
+  "slug": "dont-cry",
+  "title": "Don't Cry",
+  "artist": "Guns N' Roses",
+  "year": 1991,
+  "album": "Use Your Illusion II",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 284,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Don't Cry by Guns N' Roses (1991) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 22 times; first heard in: \"Don't hang your head in sorrow, and please don't cry\""
+    },
+    {
+      "term": "tonight",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"Don't you cry tonight, I still love you, baby\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Don't you cry tonight, I still love you, baby\""
+    },
+    {
+      "term": "there's",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Talk to me softly, there's something in your eyes\""
+    },
+    {
+      "term": "please",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Don't hang your head in sorrow, and please don't cry\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "And don't you cry tonight",
+          "Give me a whisper and give me a sigh (ah)",
+          "Give me a kiss before you tell me goodbye",
+          "Don't you take it so hard now, and please don't take it so bad"
+        ],
+        "start_seconds": 72,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "And don't you cry tonight",
+          "Don't you cry tonight",
+          "Don't you cry tonight, there's a heaven above you, baby",
+          "And don't you cry tonight"
+        ],
+        "start_seconds": 113,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Talk to me",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "softly",
+      "excerpt_after": "there's something in your eyes",
+      "youtube_start": 19,
+      "youtube_end": 33
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Something is",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "changing",
+      "excerpt_after": "inside you, and don't you know?",
+      "youtube_start": 42,
+      "youtube_end": 56
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Don't you cry",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tonight",
+      "excerpt_after": "I still love you, baby",
+      "youtube_start": 50,
+      "youtube_end": 64
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "please",
+      "excerpt_after": "remember that I never lied",
+      "youtube_start": 175,
+      "youtube_end": 189
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Don't you cry tonight, baby,",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "maybe",
+      "excerpt_after": "someday",
+      "youtube_start": 237,
+      "youtube_end": 251
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Don't you cry tonight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And don't you cry tonight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And please remember that I never lied",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And don't you cry, don't you ever cry",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Don't you cry tonight, baby, maybe someday",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Talk to me",
+      "excerpt_after": "there's something in your eyes",
+      "options": [
+        "goodbye",
+        "heaven",
+        "softly",
+        "tell"
+      ],
+      "answer_index": 2,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Something is",
+      "excerpt_after": "inside you, and don't you know?",
+      "options": [
+        "changing",
+        "light",
+        "remember",
+        "sugar"
+      ],
+      "answer_index": 0,
+      "youtube_start": 42,
+      "youtube_end": 54
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "you cry tonight",
+      "options": [
+        "dont",
+        "feel",
+        "honey",
+        "kiss"
+      ],
+      "answer_index": 0,
+      "youtube_start": 72,
+      "youtube_end": 84
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Give me a",
+      "excerpt_after": "before you tell me goodbye",
+      "options": [
+        "above",
+        "kiss",
+        "tell",
+        "there"
+      ],
+      "answer_index": 1,
+      "youtube_start": 88,
+      "youtube_end": 100
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And don't you cry, don't you",
+      "excerpt_after": "cry",
+      "options": [
+        "ever",
+        "eyes",
+        "never",
+        "youll"
+      ],
+      "answer_index": 0,
+      "youtube_start": 229,
+      "youtube_end": 241
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "tonight",
+        "Don't",
+        "cry",
+        "you"
+      ],
+      "answer": [
+        "Don't",
+        "you",
+        "cry",
+        "tonight"
+      ],
+      "youtube_start": 57
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "tonight",
+        "cry",
+        "And",
+        "don't",
+        "you"
+      ],
+      "answer": [
+        "And",
+        "don't",
+        "you",
+        "cry",
+        "tonight"
+      ],
+      "youtube_start": 72
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "remember",
+        "never",
+        "lied",
+        "please",
+        "I",
+        "that"
+      ],
+      "answer": [
+        "And",
+        "please",
+        "remember",
+        "that",
+        "I",
+        "never",
+        "lied"
+      ],
+      "youtube_start": 175
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "maybe",
+        "someday",
+        "Don't",
+        "cry",
+        "you",
+        "baby,",
+        "tonight,"
+      ],
+      "answer": [
+        "Don't",
+        "you",
+        "cry",
+        "tonight,",
+        "baby,",
+        "maybe",
+        "someday"
+      ],
+      "youtube_start": 237
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "cry",
+        "don't",
+        "you",
+        "you",
+        "cry,",
+        "ever",
+        "Don't"
+      ],
+      "answer": [
+        "Don't",
+        "you",
+        "cry,",
+        "don't",
+        "you",
+        "ever",
+        "cry"
+      ],
+      "youtube_start": 244
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 22
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"tonight\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"tonight\" na música inteira?",
+      "word": "tonight",
+      "answer": 13
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Don't you cry tonight",
+          "order": 0
+        },
+        {
+          "text": "And don't you cry tonight",
+          "order": 1
+        },
+        {
+          "text": "And don't you cry, don't you ever cry",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Don't Cry\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Don't Cry\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "don't",
+        "tonight",
+        "baby",
+        "there's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Don't Cry\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Don't Cry\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "don't",
+        "tonight",
+        "baby",
+        "there's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Don't Cry\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Don't Cry\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "don't",
+        "tonight",
+        "baby",
+        "there's"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "you'll",
+          "full": "you will"
+        }
+      ]
+    }
+  ]
+}

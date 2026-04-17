@@ -1,0 +1,495 @@
+{
+  "slug": "hurricane",
+  "title": "Hurricane",
+  "artist": "Bob Dylan",
+  "year": 1976,
+  "album": "The Essential (2014 Revised)",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "b1.2",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 513,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Hurricane by Bob Dylan (1976) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "time",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Put in a prison cell, but one time he could-a been\""
+    },
+    {
+      "term": "cops",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"\"One of us had better call up the cops\"\""
+    },
+    {
+      "term": "rubin",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Rubin Carter and a couple of friends are drivin' around\""
+    },
+    {
+      "term": "patty",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Enter Patty Valentine from the upper hall\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"For somethin' that he never done\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "The man the authorities came to blame",
+          "For somethin' that he never done",
+          "Put in a prison cell, but one time he could-a been",
+          "The champion of the world"
+        ],
+        "start_seconds": 34,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "The man the authorities came to blame",
+          "For somethin' that he never done",
+          "Put in a prison cell, but one time he could-a been",
+          "A champion of the world"
+        ],
+        "start_seconds": 200,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Pistol",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "shots",
+      "excerpt_after": "ring out in the barroom night",
+      "youtube_start": 16,
+      "youtube_end": 30
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Three",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "bodies",
+      "excerpt_after": "lyin' there does Patty see",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Less you",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "draw the heat",
+      "youtube_start": 129,
+      "youtube_end": 143
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Rubin's in",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "south",
+      "excerpt_after": "America fightin' for his name",
+      "youtube_start": 226,
+      "youtube_end": 240
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We want to pin this",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "triple",
+      "excerpt_after": "murder on him",
+      "youtube_start": 289,
+      "youtube_end": 303
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Rubin",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "carter",
+      "excerpt_after": "was falsely tried",
+      "youtube_start": 386,
+      "youtube_end": 400
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Cries out, \"My God, they've killed them all!\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And they arrive on the scene",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So they took him to the infirmary",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "\"Don't forget that you are white\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You'll be doin' society a favor",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Pistol",
+      "excerpt_after": "ring out in the barroom night",
+      "options": [
+        "hall",
+        "pistol",
+        "pool",
+        "shots"
+      ],
+      "answer_index": 3,
+      "youtube_start": 16,
+      "youtube_end": 28
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "\"One of us had",
+      "excerpt_after": "call up the cops\"",
+      "options": [
+        "bello",
+        "better",
+        "sees",
+        "story"
+      ],
+      "answer_index": 1,
+      "youtube_start": 76,
+      "youtube_end": 88
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "They",
+      "excerpt_after": "him he could identify the guilty men",
+      "options": [
+        "hall",
+        "story",
+        "theyve",
+        "told"
+      ],
+      "answer_index": 3,
+      "youtube_start": 168,
+      "youtube_end": 180
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You'll be",
+      "excerpt_after": "society a favor",
+      "options": [
+        "doin",
+        "named",
+        "pool",
+        "theyve"
+      ],
+      "answer_index": 0,
+      "youtube_start": 278,
+      "youtube_end": 290
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Rubin",
+      "excerpt_after": "was falsely tried",
+      "options": [
+        "carter",
+        "done",
+        "named",
+        "patty"
+      ],
+      "answer_index": 0,
+      "youtube_start": 386,
+      "youtube_end": 398
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "Enter",
+        "Patty",
+        "Valentine",
+        "upper",
+        "from",
+        "hall"
+      ],
+      "answer": [
+        "Enter",
+        "Patty",
+        "Valentine",
+        "from",
+        "the",
+        "upper",
+        "hall"
+      ],
+      "youtube_start": 19
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "does",
+        "Three",
+        "Patty",
+        "lyin'",
+        "see",
+        "bodies",
+        "there"
+      ],
+      "answer": [
+        "Three",
+        "bodies",
+        "lyin'",
+        "there",
+        "does",
+        "Patty",
+        "see"
+      ],
+      "youtube_start": 58
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "took",
+        "infirmary",
+        "the",
+        "So",
+        "they",
+        "him",
+        "to"
+      ],
+      "answer": [
+        "So",
+        "they",
+        "took",
+        "him",
+        "to",
+        "the",
+        "infirmary"
+      ],
+      "youtube_start": 162
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "favor",
+        "society",
+        "a",
+        "be",
+        "You'll",
+        "doin'"
+      ],
+      "answer": [
+        "You'll",
+        "be",
+        "doin'",
+        "society",
+        "a",
+        "favor"
+      ],
+      "youtube_start": 278
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "agreed",
+        "And",
+        "the",
+        "jury",
+        "all-white"
+      ],
+      "answer": [
+        "And",
+        "the",
+        "all-white",
+        "jury",
+        "agreed"
+      ],
+      "youtube_start": 374
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"time\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"time\" na música inteira?",
+      "word": "time",
+      "answer": 6
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"cops\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"cops\" na música inteira?",
+      "word": "cops",
+      "answer": 5
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Pistol shots ring out in the barroom night",
+          "order": 0
+        },
+        {
+          "text": "So they took him to the infirmary",
+          "order": 1
+        },
+        {
+          "text": "Up to some paradise",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Enter Patty Valentine from the upper hall",
+          "order": 0
+        },
+        {
+          "text": "\"Remember that murder that happened in a bar?\"",
+          "order": 1
+        },
+        {
+          "text": "No one doubted that he pulled the trigger",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Bob Dylan one question about \"Hurricane\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Bob Dylan sobre \"Hurricane\", o que seria e por quê?",
+      "target_vocab": [
+        "time",
+        "cops",
+        "rubin",
+        "patty"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Hurricane\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Hurricane\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "time",
+        "cops",
+        "rubin",
+        "patty"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Hurricane\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Hurricane\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "time",
+        "cops",
+        "rubin",
+        "patty"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "they've",
+          "full": "they have"
+        },
+        {
+          "short": "didn't",
+          "full": "did not"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "you'd",
+          "full": "you would"
+        }
+      ]
+    }
+  ]
+}

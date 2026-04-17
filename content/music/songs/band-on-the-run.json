@@ -1,0 +1,469 @@
+{
+  "slug": "band-on-the-run",
+  "title": "Band on the Run",
+  "artist": "Paul McCartney",
+  "year": 1973,
+  "album": "Back In The U.S.",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 300,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Band on the Run by Paul McCartney (1973) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "band",
+      "pt": "",
+      "note": "Appears 20 times; first heard in: \"Band on the run\""
+    },
+    {
+      "term": "ever",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"If I ever get out of here\""
+    },
+    {
+      "term": "well",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Well, the rain exploded with a mighty crash\""
+    },
+    {
+      "term": "searching",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Were searching everyone\""
+    },
+    {
+      "term": "inside",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Stuck inside these four walls\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Band on the run",
+          "Band on the run",
+          "And the jailer man and sailor Sam",
+          "Were searching everyone"
+        ],
+        "start_seconds": 157,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Band on the run",
+          "Band on the run",
+          "And the county judge",
+          "Who held a grudge"
+        ],
+        "start_seconds": 270,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Stuck",
+      "blank_hint": "word starting with \"i\"",
+      "answer": "inside",
+      "excerpt_after": "these four walls",
+      "youtube_start": 37,
+      "youtube_end": 51
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To a",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "registered",
+      "excerpt_after": "charity",
+      "youtube_start": 114,
+      "youtube_end": 128
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "\"I hope",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "having fun\"",
+      "youtube_start": 153,
+      "youtube_end": 167
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And a bell was",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "ringing",
+      "excerpt_after": "in the village square",
+      "youtube_start": 194,
+      "youtube_end": 208
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well, the",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "night",
+      "excerpt_after": "was falling as the desert world",
+      "youtube_start": 254,
+      "youtube_end": 268
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But you're",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "gonna be found",
+      "youtube_start": 265,
+      "youtube_end": 279
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Nice again like you, mama",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "All I need is a pint a day",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If we ever get outta here",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "\"I hope you're having fun\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But you're never gonna be found",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Stuck",
+      "excerpt_after": "these four walls",
+      "options": [
+        "crash",
+        "inside",
+        "sent",
+        "thought"
+      ],
+      "answer_index": 1,
+      "youtube_start": 37,
+      "youtube_end": 49
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "All I",
+      "excerpt_after": "is a pint a day",
+      "options": [
+        "fell",
+        "heavy",
+        "need",
+        "there"
+      ],
+      "answer_index": 2,
+      "youtube_start": 117,
+      "youtube_end": 129
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And the",
+      "excerpt_after": "man and sailor Sam",
+      "options": [
+        "heavy",
+        "jailer",
+        "pint",
+        "there"
+      ],
+      "answer_index": 1,
+      "youtube_start": 164,
+      "youtube_end": 176
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "For the",
+      "excerpt_after": "on the run",
+      "options": [
+        "first",
+        "rabbits",
+        "sailor",
+        "these"
+      ],
+      "answer_index": 1,
+      "youtube_start": 198,
+      "youtube_end": 210
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But",
+      "excerpt_after": "never gonna be found",
+      "options": [
+        "band",
+        "never",
+        "outta",
+        "youre"
+      ],
+      "answer_index": 3,
+      "youtube_start": 265,
+      "youtube_end": 277
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Stuck",
+        "walls",
+        "these",
+        "four",
+        "inside"
+      ],
+      "answer": [
+        "Stuck",
+        "inside",
+        "these",
+        "four",
+        "walls"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "all",
+        "Thought",
+        "of",
+        "giving",
+        "away",
+        "it"
+      ],
+      "answer": [
+        "Thought",
+        "of",
+        "giving",
+        "it",
+        "all",
+        "away"
+      ],
+      "youtube_start": 111
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "hope",
+        "you're",
+        "\"I",
+        "having",
+        "fun\""
+      ],
+      "answer": [
+        "\"I",
+        "hope",
+        "you're",
+        "having",
+        "fun\""
+      ],
+      "youtube_start": 153
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "run",
+        "on",
+        "band",
+        "The"
+      ],
+      "answer": [
+        "The",
+        "band",
+        "on",
+        "the",
+        "run"
+      ],
+      "youtube_start": 179
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "Began",
+        "settle",
+        "down"
+      ],
+      "answer": [
+        "Began",
+        "to",
+        "settle",
+        "down"
+      ],
+      "youtube_start": 258
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"band\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"band\" na música inteira?",
+      "word": "band",
+      "answer": 20
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"ever\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"ever\" na música inteira?",
+      "word": "ever",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Stuck inside these four walls",
+          "order": 0
+        },
+        {
+          "text": "And the jailer man and sailor Sam",
+          "order": 1
+        },
+        {
+          "text": "Yeah, for the band on the run",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Sent inside forever",
+          "order": 0
+        },
+        {
+          "text": "Seeing no one else had come",
+          "order": 1
+        },
+        {
+          "text": "For the band on the run",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Band on the Run\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Band on the Run\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "band",
+        "ever",
+        "well",
+        "searching"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Band on the Run\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Band on the Run\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "band",
+        "ever",
+        "well",
+        "searching"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Band on the Run\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Band on the Run\", o que aconteceria?",
+      "target_vocab": [
+        "band",
+        "ever",
+        "well",
+        "searching"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,475 @@
+{
+  "slug": "call-me",
+  "title": "Call Me",
+  "artist": "Blondie",
+  "year": 1980,
+  "album": "Against The Odds: 1974 - 1982",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 212,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Call Me by Blondie (1980) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "call",
+      "pt": "",
+      "note": "Appears 41 times; first heard in: \"Call me (call me) on the line\""
+    },
+    {
+      "term": "color",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Color me your color, baby\""
+    },
+    {
+      "term": "anytime",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Call me, call me any, anytime\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"I know who you are\""
+    },
+    {
+      "term": "line",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Call me (call me) on the line\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Call me, call me any, anytime",
+          "Call me (call me) I'll arrive",
+          "You can call me any day or night",
+          "Call me"
+        ],
+        "start_seconds": 38,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Call me (call me) my love",
+          "Call me, call me any, anytime",
+          "Call me (call me) for a ride",
+          "Call me, call me for some overtime"
+        ],
+        "start_seconds": 162,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Color me your",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "color",
+      "excerpt_after": "baby",
+      "youtube_start": 15,
+      "youtube_end": 29
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Cover me with",
+      "blank_hint": "word starting with \"k\"",
+      "answer": "kisses",
+      "excerpt_after": "baby",
+      "youtube_start": 55,
+      "youtube_end": 69
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'll",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "get enough",
+      "youtube_start": 65,
+      "youtube_end": 79
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When you're",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "ready",
+      "excerpt_after": "we can share the wine",
+      "youtube_start": 86,
+      "youtube_end": 100
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Appelle-moi mon",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "cheri",
+      "excerpt_after": "appelle-moi",
+      "youtube_start": 113,
+      "youtube_end": 127
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Anytime, anyplace,",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "anywhere",
+      "excerpt_after": "any day",
+      "youtube_start": 123,
+      "youtube_end": 137
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I know who you are",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Call me call me I'll arrive",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll never get enough",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When you're ready we can share the wine",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Color me your color, baby",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Color me your",
+      "excerpt_after": "baby",
+      "options": [
+        "ah-ah",
+        "color",
+        "ready",
+        "wine"
+      ],
+      "answer_index": 1,
+      "youtube_start": 15,
+      "youtube_end": 27
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Call me",
+      "excerpt_after": "me) on the line",
+      "options": [
+        "alibi",
+        "arrive",
+        "call",
+        "never"
+      ],
+      "answer_index": 2,
+      "youtube_start": 35,
+      "youtube_end": 47
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'll",
+      "excerpt_after": "get enough",
+      "options": [
+        "chart",
+        "emotions",
+        "never",
+        "ready"
+      ],
+      "answer_index": 2,
+      "youtube_start": 65,
+      "youtube_end": 77
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When you're",
+      "excerpt_after": "we can share the wine",
+      "options": [
+        "anywhere",
+        "design",
+        "ready",
+        "youre"
+      ],
+      "answer_index": 2,
+      "youtube_start": 86,
+      "youtube_end": 98
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Anytime,",
+      "excerpt_after": "anywhere, any way",
+      "options": [
+        "alibi",
+        "anyplace",
+        "arrive",
+        "color"
+      ],
+      "answer_index": 1,
+      "youtube_start": 117,
+      "youtube_end": 129
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Color",
+        "color,",
+        "your",
+        "me",
+        "baby"
+      ],
+      "answer": [
+        "Color",
+        "me",
+        "your",
+        "color,",
+        "baby"
+      ],
+      "youtube_start": 15
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "where",
+        "coming",
+        "you're",
+        "from",
+        "know"
+      ],
+      "answer": [
+        "I",
+        "know",
+        "where",
+        "you're",
+        "coming",
+        "from"
+      ],
+      "youtube_start": 32
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "with",
+        "Cover",
+        "love"
+      ],
+      "answer": [
+        "Cover",
+        "me",
+        "with",
+        "love"
+      ],
+      "youtube_start": 58
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "of",
+        "love",
+        "speaks",
+        "languages",
+        "the",
+        "He"
+      ],
+      "answer": [
+        "He",
+        "speaks",
+        "the",
+        "languages",
+        "of",
+        "love"
+      ],
+      "youtube_start": 99
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "call",
+        "ride",
+        "a",
+        "me",
+        "me",
+        "for",
+        "Call"
+      ],
+      "answer": [
+        "Call",
+        "me",
+        "call",
+        "me",
+        "for",
+        "a",
+        "ride"
+      ],
+      "youtube_start": 169
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"call\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"call\" na música inteira?",
+      "word": "call",
+      "answer": 41
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"color\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"color\" na música inteira?",
+      "word": "color",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Color me your color, baby",
+          "order": 0
+        },
+        {
+          "text": "Roll me in designer sheets",
+          "order": 1
+        },
+        {
+          "text": "Anytime, anyplace, anywhere, any day",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Color me your car",
+          "order": 0
+        },
+        {
+          "text": "Call me (call me) I'll arrive",
+          "order": 1
+        },
+        {
+          "text": "Call me (call me) for a ride",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Call Me\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Call Me\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "call",
+        "color",
+        "anytime",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Call Me\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Call Me\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "call",
+        "color",
+        "anytime",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Blondie one question about \"Call Me\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Blondie sobre \"Call Me\", o que seria e por quê?",
+      "target_vocab": [
+        "call",
+        "color",
+        "anytime",
+        "know"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    }
+  ]
+}

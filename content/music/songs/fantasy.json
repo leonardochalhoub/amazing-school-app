@@ -1,0 +1,479 @@
+{
+  "slug": "fantasy",
+  "title": "Fantasy",
+  "artist": "Mariah Carey",
+  "year": 1995,
+  "album": "Daydream",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 243,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Fantasy by Mariah Carey (1995) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "sweet",
+      "pt": "",
+      "note": "Appears 25 times; first heard in: \"Talking sweet and looking fine\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"Mmm, baby I'm so into you\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"But it's just a sweet sweet fantasy baby\""
+    },
+    {
+      "term": "fantasy",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"But it's just a sweet sweet fantasy baby\""
+    },
+    {
+      "term": "close",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"When I close my eyes\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "When I close my eyes",
+          "You come and you take me",
+          "It's so deep in my daydreams",
+          "But it's just a sweet, sweet fantasy baby"
+        ],
+        "start_seconds": 61,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Sweet, sweet fantasy baby",
+          "When I close my eyes",
+          "You come and you take me",
+          "It's so deep in my daydreams"
+        ],
+        "start_seconds": 153,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh, when you walk by",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "every",
+      "excerpt_after": "night",
+      "youtube_start": 39,
+      "youtube_end": 53
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Talking",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sweet",
+      "excerpt_after": "and looking fine",
+      "youtube_start": 42,
+      "youtube_end": 56
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "All the",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "things",
+      "excerpt_after": "that flow through my mind",
+      "youtube_start": 54,
+      "youtube_end": 68
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But it's just a sweet sweet",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fantasy",
+      "excerpt_after": "baby",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "As",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "go into my head",
+      "youtube_start": 101,
+      "youtube_end": 115
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And my",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heart",
+      "excerpt_after": "beats faster",
+      "youtube_start": 105,
+      "youtube_end": 119
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh, when you walk by every night",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Mmm, baby I'm so into you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When I close my eyes",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "As you're go into my head",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm in heaven",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh, when you",
+      "excerpt_after": "by every night",
+      "options": [
+        "deep",
+        "fantasy",
+        "theres",
+        "walk"
+      ],
+      "answer_index": 3,
+      "youtube_start": 39,
+      "youtube_end": 51
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I get",
+      "excerpt_after": "hectic inside",
+      "options": [
+        "fantasy",
+        "kinda",
+        "knew",
+        "mind"
+      ],
+      "answer_index": 1,
+      "youtube_start": 44,
+      "youtube_end": 56
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "All the",
+      "excerpt_after": "that flow through my mind",
+      "options": [
+        "sweet",
+        "theres",
+        "things",
+        "time"
+      ],
+      "answer_index": 2,
+      "youtube_start": 54,
+      "youtube_end": 66
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's so",
+      "excerpt_after": "in my daydreams",
+      "options": [
+        "creep",
+        "deep",
+        "every",
+        "inside"
+      ],
+      "answer_index": 1,
+      "youtube_start": 67,
+      "youtube_end": 79
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And my",
+      "excerpt_after": "beats faster",
+      "options": [
+        "baby",
+        "fine",
+        "heart",
+        "looking"
+      ],
+      "answer_index": 2,
+      "youtube_start": 105,
+      "youtube_end": 117
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "every",
+        "night",
+        "Oh,",
+        "by",
+        "when",
+        "walk",
+        "you"
+      ],
+      "answer": [
+        "Oh,",
+        "when",
+        "you",
+        "walk",
+        "by",
+        "every",
+        "night"
+      ],
+      "youtube_start": 39
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "baby",
+        "I'm",
+        "so",
+        "Mmm,",
+        "into"
+      ],
+      "answer": [
+        "Mmm,",
+        "baby",
+        "I'm",
+        "so",
+        "into",
+        "you"
+      ],
+      "youtube_start": 48
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "you",
+        "You",
+        "come",
+        "and",
+        "take"
+      ],
+      "answer": [
+        "You",
+        "come",
+        "and",
+        "you",
+        "take",
+        "me"
+      ],
+      "youtube_start": 64
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "faster",
+        "my",
+        "beats",
+        "heart",
+        "And"
+      ],
+      "answer": [
+        "And",
+        "my",
+        "heart",
+        "beats",
+        "faster"
+      ],
+      "youtube_start": 105
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "fantasy",
+        "Sweet,",
+        "baby",
+        "sweet"
+      ],
+      "answer": [
+        "Sweet,",
+        "sweet",
+        "fantasy",
+        "baby"
+      ],
+      "youtube_start": 153
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"sweet\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"sweet\" na música inteira?",
+      "word": "sweet",
+      "answer": 25
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"baby\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"baby\" na música inteira?",
+      "word": "baby",
+      "answer": 13
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Oh, when you walk by every night",
+          "order": 0
+        },
+        {
+          "text": "When you take me over",
+          "order": 1
+        },
+        {
+          "text": "There's no beginning",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Talking sweet and looking fine",
+          "order": 0
+        },
+        {
+          "text": "Sweet, sweet fantasy baby",
+          "order": 1
+        },
+        {
+          "text": "But I'm not sleeping",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Fantasy\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Fantasy\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "sweet",
+        "baby",
+        "it's",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Fantasy\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Fantasy\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "sweet",
+        "baby",
+        "it's",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Fantasy\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Fantasy\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "sweet",
+        "baby",
+        "it's",
+        "fantasy"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        }
+      ]
+    }
+  ]
+}

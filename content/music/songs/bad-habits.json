@@ -1,0 +1,460 @@
+{
+  "slug": "bad-habits",
+  "title": "Bad Habits",
+  "artist": "Ed Sheeran",
+  "year": 2021,
+  "album": "=",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 231,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Bad Habits by Ed Sheeran (2021) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "habits",
+      "pt": "",
+      "note": "Appears 14 times; first heard in: \"My bad habits lead to late nights endin' alone\""
+    },
+    {
+      "term": "lead",
+      "pt": "",
+      "note": "Appears 14 times; first heard in: \"My bad habits lead to late nights endin' alone\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Every time you come around, you know I can't say no\""
+    },
+    {
+      "term": "nothin'",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I got nothin' left to lose, or use, or do\""
+    },
+    {
+      "term": "lose",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I got nothin' left to lose, or use, or do\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Ooh-ooh, ooh-ooh-ooh",
+          "Every time you come around, you know I can't say no",
+          "Every time the sun goes down, I let you take control",
+          "I can feel the paradise before my world implodes"
+        ],
+        "start_seconds": 4,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "My bad habits lead to you",
+          "Ooh-ooh, ooh-ooh-ooh",
+          "My bad habits lead to you",
+          "Every pure intention ends when the good times start"
+        ],
+        "start_seconds": 77,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "One, two,",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "three",
+      "excerpt_after": "four",
+      "youtube_start": 0,
+      "youtube_end": 14
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tonight",
+      "excerpt_after": "had something wonderful",
+      "youtube_start": 32,
+      "youtube_end": 46
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Conversations with a",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "stranger",
+      "excerpt_after": "I barely know",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Every pure",
+      "blank_hint": "word starting with \"i\"",
+      "answer": "intention",
+      "excerpt_after": "ends when the good times start",
+      "youtube_start": 88,
+      "youtube_end": 102
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "My bad habits lead to late",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nights",
+      "excerpt_after": "endin' alone",
+      "youtube_start": 117,
+      "youtube_end": 131
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "burned",
+      "excerpt_after": "'til the fun ran out, now",
+      "youtube_start": 172,
+      "youtube_end": 186
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Conversations with a stranger I barely know",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "It's true, my bad habits lead to you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I only know how to go too far",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "One, two, three, four",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Nothin' happens after two, it's true",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "One, two,",
+      "excerpt_after": "four",
+      "options": [
+        "nothin",
+        "ooh-ooh",
+        "three",
+        "time"
+      ],
+      "answer_index": 2,
+      "youtube_start": 0,
+      "youtube_end": 12
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "My bad",
+      "excerpt_after": "lead to late nights endin' alone",
+      "options": [
+        "four",
+        "habits",
+        "happens",
+        "swearin"
+      ],
+      "answer_index": 1,
+      "youtube_start": 39,
+      "youtube_end": 51
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's",
+      "excerpt_after": "my bad habits lead to you",
+      "options": [
+        "control",
+        "last",
+        "time",
+        "true"
+      ],
+      "answer_index": 3,
+      "youtube_start": 69,
+      "youtube_end": 81
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Fallin' over",
+      "excerpt_after": "to reach the first time's spark",
+      "options": [
+        "conversations",
+        "everything",
+        "ooh-ooh-ooh",
+        "started"
+      ],
+      "answer_index": 1,
+      "youtube_start": 96,
+      "youtube_end": 108
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Conversations with a stranger I",
+      "excerpt_after": "know",
+      "options": [
+        "barely",
+        "four",
+        "stranger",
+        "tonight"
+      ],
+      "answer_index": 0,
+      "youtube_start": 121,
+      "youtube_end": 133
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "two,",
+        "One,",
+        "three,",
+        "four"
+      ],
+      "answer": [
+        "One,",
+        "two,",
+        "three,",
+        "four"
+      ],
+      "youtube_start": 0
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "had",
+        "tonight",
+        "something",
+        "wonderful",
+        "And"
+      ],
+      "answer": [
+        "And",
+        "tonight",
+        "had",
+        "something",
+        "wonderful"
+      ],
+      "youtube_start": 32
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "stranger",
+        "a",
+        "Conversations",
+        "know",
+        "I",
+        "with",
+        "barely"
+      ],
+      "answer": [
+        "Conversations",
+        "with",
+        "a",
+        "stranger",
+        "I",
+        "barely",
+        "know"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Nothin'",
+        "two,",
+        "true",
+        "it's",
+        "happens",
+        "after"
+      ],
+      "answer": [
+        "Nothin'",
+        "happens",
+        "after",
+        "two,",
+        "it's",
+        "true"
+      ],
+      "youtube_start": 66
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "My",
+        "lead",
+        "habits",
+        "to",
+        "bad"
+      ],
+      "answer": [
+        "My",
+        "bad",
+        "habits",
+        "lead",
+        "to",
+        "you"
+      ],
+      "youtube_start": 77
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"habits\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"habits\" na música inteira?",
+      "word": "habits",
+      "answer": 14
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"lead\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"lead\" na música inteira?",
+      "word": "lead",
+      "answer": 14
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "One, two, three, four",
+          "order": 0
+        },
+        {
+          "text": "My bad habits lead to you",
+          "order": 1
+        },
+        {
+          "text": "We took the long way 'round",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Bad Habits\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Bad Habits\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "habits",
+        "lead",
+        "know",
+        "nothin'"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "habits",
+        "lead",
+        "know",
+        "nothin'"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "habits",
+        "lead",
+        "know",
+        "nothin'"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

@@ -56,6 +56,61 @@
       "youtube_end": 14
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'll sail the",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "world",
+      "excerpt_after": "to find you",
+      "youtube_start": 10,
+      "youtube_end": 24
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'll be the",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "light",
+      "excerpt_after": "to guide you",
+      "youtube_start": 21,
+      "youtube_end": 35
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'll sing a song",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "beside",
+      "excerpt_after": "you",
+      "youtube_start": 75,
+      "youtube_end": 89
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Every day I will",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "remind",
+      "excerpt_after": "you, oh",
+      "youtube_start": 85,
+      "youtube_end": 99
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You'll",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "always",
+      "excerpt_after": "have my shoulder when you cry",
+      "youtube_start": 134,
+      "youtube_end": 148
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
@@ -64,61 +119,116 @@
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "spot_the_grammar",
-      "prompt_en": "Write the full form of each contraction:",
-      "prompt_pt": "Escreva a forma completa de cada contração:",
-      "expected": [
-        {
-          "short": "i'll",
-          "full": "I will"
-        },
-        {
-          "short": "can't",
-          "full": "cannot"
-        },
-        {
-          "short": "we'll",
-          "full": "we will"
-        },
-        {
-          "short": "we're",
-          "full": "we are"
-        }
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We'll find out what we're made of",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "discussion",
-      "prompt_en": "Describe the mood of \"Count on Me\" in three adjectives. What part of the song makes you feel that way?",
-      "prompt_pt": "Descreva o clima de \"Count on Me\" em três adjetivos. Que parte da música te faz sentir isso?",
-      "target_vocab": [
-        "count on",
-        "friend",
-        "sail",
-        "lost"
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll sing a song beside you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "word_to_meaning",
-      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
-      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
-      "pairs": [
-        {
-          "en": "count on",
-          "pt": "contar com"
-        },
-        {
-          "en": "friend",
-          "pt": "amigo(a)"
-        },
-        {
-          "en": "sail",
-          "pt": "velejar / navegar"
-        },
-        {
-          "en": "lost",
-          "pt": "perdido(a)"
-        }
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You'll always have my shoulder when you cry",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Count on Me - Bruno Mars",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Count on Me -",
+      "excerpt_after": "Mars",
+      "options": [
+        "bruno",
+        "help",
+        "world",
+        "youll"
+      ],
+      "answer_index": 0,
+      "youtube_start": 0,
+      "youtube_end": 12
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'll be the",
+      "excerpt_after": "to guide you",
+      "options": [
+        "find",
+        "light",
+        "turnin",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 21,
+      "youtube_end": 33
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I",
+      "excerpt_after": "when I need it",
+      "options": [
+        "bruno",
+        "every",
+        "know",
+        "turnin"
+      ],
+      "answer_index": 2,
+      "youtube_start": 45,
+      "youtube_end": 57
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Every day I will",
+      "excerpt_after": "you, oh",
+      "options": [
+        "called",
+        "mars",
+        "mean",
+        "remind"
+      ],
+      "answer_index": 3,
+      "youtube_start": 85,
+      "youtube_end": 97
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You'll",
+      "excerpt_after": "have my shoulder when you cry",
+      "options": [
+        "always",
+        "count",
+        "dark",
+        "find"
+      ],
+      "answer_index": 0,
+      "youtube_start": 134,
+      "youtube_end": 146
     },
     {
       "type": "unscramble_line",
@@ -143,20 +253,100 @@
       "youtube_start": 0
     },
     {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "Count on Me -",
-      "excerpt_after": "Mars",
-      "options": [
-        "bruno",
-        "count",
-        "mars",
-        "oh-oh-oh"
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "find",
+        "to",
+        "I'll",
+        "sail",
+        "you",
+        "the",
+        "world"
       ],
-      "answer_index": 0,
-      "youtube_start": 0,
-      "youtube_end": 12
+      "answer": [
+        "I'll",
+        "sail",
+        "the",
+        "world",
+        "to",
+        "find",
+        "you"
+      ],
+      "youtube_start": 10
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "made",
+        "out",
+        "of",
+        "find",
+        "we're",
+        "We'll",
+        "what"
+      ],
+      "answer": [
+        "We'll",
+        "find",
+        "out",
+        "what",
+        "we're",
+        "made",
+        "of"
+      ],
+      "youtube_start": 28
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "need",
+        "And",
+        "it",
+        "know",
+        "I",
+        "I",
+        "when"
+      ],
+      "answer": [
+        "And",
+        "I",
+        "know",
+        "when",
+        "I",
+        "need",
+        "it"
+      ],
+      "youtube_start": 45
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "remind",
+        "you,",
+        "will",
+        "oh",
+        "day",
+        "Every"
+      ],
+      "answer": [
+        "Every",
+        "day",
+        "I",
+        "will",
+        "remind",
+        "you,",
+        "oh"
+      ],
+      "youtube_start": 85
     },
     {
       "type": "count_word",
@@ -164,6 +354,13 @@
       "prompt_pt": "Quantas vezes você ouve a palavra \"count\" na música inteira?",
       "word": "count",
       "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"i'll\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"i'll\" na música inteira?",
+      "word": "i'll",
+      "answer": 7
     },
     {
       "type": "line_order",
@@ -181,6 +378,93 @@
         {
           "text": "We'll find out what we're made of",
           "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Count on Me\" was released in 2010. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Count on Me\" foi lançada em 2010. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "count on",
+        "friend",
+        "sail",
+        "lost"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Count on Me\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Count on Me\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "count on",
+        "friend",
+        "sail",
+        "lost"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "count on",
+        "friend",
+        "sail",
+        "lost"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "you'll",
+          "full": "you will"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        }
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "count on",
+          "pt": "contar com"
+        },
+        {
+          "en": "friend",
+          "pt": "amigo(a)"
+        },
+        {
+          "en": "sail",
+          "pt": "velejar / navegar"
+        },
+        {
+          "en": "lost",
+          "pt": "perdido(a)"
         }
       ]
     }

@@ -1,0 +1,455 @@
+{
+  "slug": "no-surprises",
+  "title": "No Surprises",
+  "artist": "Radiohead",
+  "year": 1997,
+  "album": "OK Computer",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 229,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "No Surprises by Radiohead (1997) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "alarms",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"No alarms and no surprises\""
+    },
+    {
+      "term": "surprises",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"No alarms and no surprises\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"They don't, they don't speak for us\""
+    },
+    {
+      "term": "silent",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Silent\""
+    },
+    {
+      "term": "final",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"This is my final fit\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "No alarms and no surprises",
+          "No alarms and no surprises",
+          "No alarms and no surprises",
+          "Silent"
+        ],
+        "start_seconds": 88,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "No alarms and no surprises, please"
+        ],
+        "start_seconds": 145,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "A",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heart",
+      "excerpt_after": "that's full up like a landfill",
+      "youtube_start": 25,
+      "youtube_end": 39
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "A job that",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "slowly",
+      "excerpt_after": "kills you",
+      "youtube_start": 35,
+      "youtube_end": 49
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "They don't, they don't",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "speak",
+      "excerpt_after": "for us",
+      "youtube_start": 64,
+      "youtube_end": 78
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "A",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "handshake",
+      "excerpt_after": "of carbon monoxide",
+      "youtube_start": 82,
+      "youtube_end": 96
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "This is my",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "final",
+      "excerpt_after": "fit",
+      "youtube_start": 120,
+      "youtube_end": 134
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "No alarms and no",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "surprises",
+      "excerpt_after": "please",
+      "youtube_start": 145,
+      "youtube_end": 159
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "A job that slowly kills you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They don't, they don't speak for us",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "A heart that's full up like a landfill",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Bring down the government",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "No alarms and no surprises",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "A",
+      "excerpt_after": "that's full up like a landfill",
+      "options": [
+        "heart",
+        "thats",
+        "unhappy",
+        "wont"
+      ],
+      "answer_index": 0,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Bruises that",
+      "excerpt_after": "heal",
+      "options": [
+        "carbon",
+        "house",
+        "silent",
+        "wont"
+      ],
+      "answer_index": 3,
+      "youtube_start": 41,
+      "youtube_end": 53
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'll take a",
+      "excerpt_after": "life",
+      "options": [
+        "alarms",
+        "please",
+        "pretty",
+        "quiet"
+      ],
+      "answer_index": 3,
+      "youtube_start": 76,
+      "youtube_end": 88
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "No",
+      "excerpt_after": "and no surprises",
+      "options": [
+        "alarms",
+        "heal",
+        "life",
+        "pretty"
+      ],
+      "answer_index": 0,
+      "youtube_start": 88,
+      "youtube_end": 100
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "No alarms and no",
+      "excerpt_after": "please",
+      "options": [
+        "carbon",
+        "pretty",
+        "surprises",
+        "unhappy"
+      ],
+      "answer_index": 2,
+      "youtube_start": 145,
+      "youtube_end": 157
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "A",
+        "kills",
+        "slowly",
+        "that",
+        "job",
+        "you"
+      ],
+      "answer": [
+        "A",
+        "job",
+        "that",
+        "slowly",
+        "kills",
+        "you"
+      ],
+      "youtube_start": 35
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "so",
+        "unhappy",
+        "You",
+        "look",
+        "tired,"
+      ],
+      "answer": [
+        "You",
+        "look",
+        "so",
+        "tired,",
+        "unhappy"
+      ],
+      "youtube_start": 51
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "take",
+        "I'll",
+        "life",
+        "a",
+        "quiet"
+      ],
+      "answer": [
+        "I'll",
+        "take",
+        "a",
+        "quiet",
+        "life"
+      ],
+      "youtube_start": 76
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "and",
+        "No",
+        "alarms",
+        "no",
+        "surprises"
+      ],
+      "answer": [
+        "No",
+        "alarms",
+        "and",
+        "no",
+        "surprises"
+      ],
+      "youtube_start": 88
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "alarms",
+        "surprises,",
+        "please",
+        "and",
+        "No",
+        "no"
+      ],
+      "answer": [
+        "No",
+        "alarms",
+        "and",
+        "no",
+        "surprises,",
+        "please"
+      ],
+      "youtube_start": 145
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"alarms\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"alarms\" na música inteira?",
+      "word": "alarms",
+      "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"surprises\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"surprises\" na música inteira?",
+      "word": "surprises",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "A heart that's full up like a landfill",
+          "order": 0
+        },
+        {
+          "text": "A handshake of carbon monoxide",
+          "order": 1
+        },
+        {
+          "text": "No alarms and no surprises",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "alarms",
+        "surprises",
+        "don't",
+        "silent"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "alarms",
+        "surprises",
+        "don't",
+        "silent"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"No Surprises\" was released in 1997. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"No Surprises\" foi lançada em 1997. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "alarms",
+        "surprises",
+        "don't",
+        "silent"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        }
+      ]
+    }
+  ]
+}

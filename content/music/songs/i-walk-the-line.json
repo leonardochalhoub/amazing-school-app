@@ -1,0 +1,321 @@
+{
+  "slug": "i-walk-the-line",
+  "title": "I Walk the Line",
+  "artist": "Johnny Cash",
+  "year": 1956,
+  "album": "I Walk the Line",
+  "genre": [
+    "country"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 155,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "I Walk the Line by Johnny Cash (1956) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "keep",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I keep a close watch on this heart of mine\""
+    },
+    {
+      "term": "mine",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I keep a close watch on this heart of mine\""
+    },
+    {
+      "term": "because",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Because you're mine, I walk the line\""
+    },
+    {
+      "term": "you're",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Because you're mine, I walk the line\""
+    },
+    {
+      "term": "walk",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Because you're mine, I walk the line\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Because you're mine, I walk the line",
+          "I find it very, very easy to be true",
+          "I find myself alone when each day is through",
+          "Yes, I'll admit that I'm a fool for you"
+        ],
+        "start_seconds": 35,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Because you're mine, I walk the line",
+          "You've got a way to keep me on your side",
+          "You give me cause for love that I can't hide",
+          "For you I know I'd even try to turn the tide"
+        ],
+        "start_seconds": 89,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Because",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "mine, I walk the line",
+      "youtube_start": 35,
+      "youtube_end": 49
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I find",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "myself",
+      "excerpt_after": "alone when each day is through",
+      "youtube_start": 53,
+      "youtube_end": 67
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Yes, I'll",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "admit",
+      "excerpt_after": "that I'm a fool for you",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "happiness",
+      "excerpt_after": "I've known proves that it's right",
+      "youtube_start": 85,
+      "youtube_end": 99
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Because you're mine, I walk the line",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And happiness I've known proves that it's right",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "my eyes wide open all the time",
+      "options": [
+        "cause",
+        "dark",
+        "keep",
+        "line"
+      ],
+      "answer_index": 2,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Because",
+      "excerpt_after": "mine, I walk the line",
+      "options": [
+        "known",
+        "myself",
+        "open",
+        "youre"
+      ],
+      "answer_index": 3,
+      "youtube_start": 35,
+      "youtube_end": 47
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I find",
+      "excerpt_after": "alone when each day is through",
+      "options": [
+        "ends",
+        "myself",
+        "walk",
+        "watch"
+      ],
+      "answer_index": 1,
+      "youtube_start": 53,
+      "youtube_end": 65
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Because you're",
+      "excerpt_after": "I walk the line",
+      "options": [
+        "fool",
+        "keep",
+        "line",
+        "mine"
+      ],
+      "answer_index": 3,
+      "youtube_start": 62,
+      "youtube_end": 74
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Because you're mine, I",
+      "excerpt_after": "the line",
+      "options": [
+        "admit",
+        "both",
+        "time",
+        "walk"
+      ],
+      "answer_index": 3,
+      "youtube_start": 89,
+      "youtube_end": 101
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Because",
+        "walk",
+        "I",
+        "line",
+        "the",
+        "mine,",
+        "you're"
+      ],
+      "answer": [
+        "Because",
+        "you're",
+        "mine,",
+        "I",
+        "walk",
+        "the",
+        "line"
+      ],
+      "youtube_start": 35
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"keep\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"keep\" na música inteira?",
+      "word": "keep",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"mine\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"mine\" na música inteira?",
+      "word": "mine",
+      "answer": 7
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"I Walk the Line\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"I Walk the Line\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "keep",
+        "mine",
+        "because",
+        "you're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"I Walk the Line\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"I Walk the Line\", o que aconteceria?",
+      "target_vocab": [
+        "keep",
+        "mine",
+        "because",
+        "you're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"I Walk the Line\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"I Walk the Line\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "keep",
+        "mine",
+        "because",
+        "you're"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        }
+      ]
+    }
+  ]
+}

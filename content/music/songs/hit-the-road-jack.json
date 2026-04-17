@@ -1,0 +1,392 @@
+{
+  "slug": "hit-the-road-jack",
+  "title": "Hit the Road Jack",
+  "artist": "Ray Charles",
+  "year": 1961,
+  "album": "True Genius",
+  "genre": [
+    "soul",
+    "blues"
+  ],
+  "cefr_level": "a1.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 120,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Hit the Road Jack by Ray Charles (1961) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 23 times; first heard in: \"Hit the road Jack and don't you come back\""
+    },
+    {
+      "term": "road",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Hit the road Jack and don't you come back\""
+    },
+    {
+      "term": "jack",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Hit the road Jack and don't you come back\""
+    },
+    {
+      "term": "woman",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Old woman, old woman, don't treat me so mean\""
+    },
+    {
+      "term": "treat",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Old woman, old woman, don't treat me so mean\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "What you say?",
+          "Hit the road Jack and don't you come back",
+          "No more, no more, no more, no more",
+          "Hit the road Jack and don't you come back no more"
+        ],
+        "start_seconds": 15,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "What you say?",
+          "Hit the road Jack and don't you come back",
+          "No more, no more, no more, no more",
+          "Hit the road Jack and don't you come back no more"
+        ],
+        "start_seconds": 48,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Old",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "woman",
+      "excerpt_after": "old woman, don't treat me so mean",
+      "youtube_start": 27,
+      "youtube_end": 41
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You're the",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "meanest",
+      "excerpt_after": "old woman that I've ever seen",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "guess",
+      "excerpt_after": "if you said so",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(Don't care if you do",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "cause",
+      "excerpt_after": "it's understood)",
+      "youtube_start": 66,
+      "youtube_end": 80
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "What you say?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I guess if you said so",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Don't care if you do 'cause it's understood",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, I guess if you say so",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well don't you come back no more",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Hit the",
+      "excerpt_after": "Jack and don't you come back",
+      "options": [
+        "dont",
+        "feet",
+        "road",
+        "things"
+      ],
+      "answer_index": 2,
+      "youtube_start": 5,
+      "youtube_end": 17
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Hit the road",
+      "excerpt_after": "and don't you come back",
+      "options": [
+        "ever",
+        "jack",
+        "mean",
+        "tryin"
+      ],
+      "answer_index": 1,
+      "youtube_start": 17,
+      "youtube_end": 29
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You're the",
+      "excerpt_after": "old woman that I've ever seen",
+      "options": [
+        "dont",
+        "meanest",
+        "right",
+        "woman"
+      ],
+      "answer_index": 1,
+      "youtube_start": 30,
+      "youtube_end": 42
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "if you said so",
+      "options": [
+        "aint",
+        "care",
+        "guess",
+        "tryin"
+      ],
+      "answer_index": 2,
+      "youtube_start": 33,
+      "youtube_end": 45
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "'Cause I'll be back on my",
+      "excerpt_after": "some day",
+      "options": [
+        "feet",
+        "listen",
+        "mean",
+        "tryin"
+      ],
+      "answer_index": 0,
+      "youtube_start": 63,
+      "youtube_end": 75
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "if",
+        "so",
+        "said",
+        "you",
+        "guess"
+      ],
+      "answer": [
+        "I",
+        "guess",
+        "if",
+        "you",
+        "said",
+        "so"
+      ],
+      "youtube_start": 33
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "say",
+        "guess",
+        "Well,",
+        "I",
+        "if",
+        "so"
+      ],
+      "answer": [
+        "Well,",
+        "I",
+        "guess",
+        "if",
+        "you",
+        "say",
+        "so"
+      ],
+      "youtube_start": 71
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "more",
+        "back",
+        "Well",
+        "don't",
+        "you",
+        "no",
+        "come"
+      ],
+      "answer": [
+        "Well",
+        "don't",
+        "you",
+        "come",
+        "back",
+        "no",
+        "more"
+      ],
+      "youtube_start": 97
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 23
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"road\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"road\" na música inteira?",
+      "word": "road",
+      "answer": 12
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Hit the Road Jack\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Hit the Road Jack\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "don't",
+        "road",
+        "jack",
+        "woman"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Hit the Road Jack\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Hit the Road Jack\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "don't",
+        "road",
+        "jack",
+        "woman"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Hit the Road Jack\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Hit the Road Jack\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "don't",
+        "road",
+        "jack",
+        "woman"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

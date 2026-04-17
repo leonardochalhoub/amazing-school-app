@@ -1,0 +1,458 @@
+{
+  "slug": "hey-joe",
+  "title": "Hey Joe",
+  "artist": "Jimi Hendrix",
+  "year": 1966,
+  "album": "Are You Experienced",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 210,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Hey Joe by Jimi Hendrix (1966) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "going",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Where you going with that gun in your hand?\""
+    },
+    {
+      "term": "shot",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I heard you shot your woman down\""
+    },
+    {
+      "term": "messing",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"You know, I caught her messing around with another man\""
+    },
+    {
+      "term": "lady",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I'm going down to shoot my old lady\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"You know, I caught her messing around with another man\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Hey Joe",
+          "Where you going with that gun in your hand?",
+          "Hey Joe",
+          "I said, where you going with that gun in your hand?"
+        ],
+        "start_seconds": 9,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Yes I did, I shot her",
+          "You know, I caught her messing around, messing around town",
+          "Yes I did, I shot her",
+          "You know, I caught my old lady messing around town"
+        ],
+        "start_seconds": 78,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Where you",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "going",
+      "excerpt_after": "with that gun in your hand?",
+      "youtube_start": 12,
+      "youtube_end": 26
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm going down to",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "shoot",
+      "excerpt_after": "my old lady",
+      "youtube_start": 31,
+      "youtube_end": 45
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heard",
+      "excerpt_after": "you shot your woman down",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Way down to",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "mexico",
+      "excerpt_after": "way",
+      "youtube_start": 161,
+      "youtube_end": 175
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ain't no",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "hangman",
+      "excerpt_after": "going to",
+      "youtube_start": 180,
+      "youtube_end": 194
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "He ain't",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "put a rope around me",
+      "youtube_start": 183,
+      "youtube_end": 197
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm going down to shoot my old lady",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You shot her down, now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You shot her down to the ground",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I gave her the gun",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Where you going to run to now?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Where you",
+      "excerpt_after": "with that gun in your hand?",
+      "options": [
+        "find",
+        "free",
+        "going",
+        "south"
+      ],
+      "answer_index": 2,
+      "youtube_start": 12,
+      "youtube_end": 24
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And that",
+      "excerpt_after": "too cool",
+      "options": [
+        "aint",
+        "gonna",
+        "heard",
+        "messing"
+      ],
+      "answer_index": 0,
+      "youtube_start": 50,
+      "youtube_end": 62
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "her down, now",
+      "options": [
+        "alright",
+        "shot",
+        "south",
+        "well"
+      ],
+      "answer_index": 1,
+      "youtube_start": 61,
+      "youtube_end": 73
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Way down to",
+      "excerpt_after": "way",
+      "options": [
+        "aint",
+        "mexico",
+        "shoot",
+        "town"
+      ],
+      "answer_index": 1,
+      "youtube_start": 161,
+      "youtube_end": 173
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ain't no",
+      "excerpt_after": "going to",
+      "options": [
+        "find",
+        "gave",
+        "hangman",
+        "shot"
+      ],
+      "answer_index": 2,
+      "youtube_start": 180,
+      "youtube_end": 192
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "too",
+        "And",
+        "ain't",
+        "cool",
+        "that"
+      ],
+      "answer": [
+        "And",
+        "that",
+        "ain't",
+        "too",
+        "cool"
+      ],
+      "youtube_start": 50
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "You",
+        "to",
+        "the",
+        "down",
+        "shot",
+        "ground",
+        "her"
+      ],
+      "answer": [
+        "You",
+        "shot",
+        "her",
+        "down",
+        "to",
+        "the",
+        "ground"
+      ],
+      "youtube_start": 72
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "going",
+        "to",
+        "you",
+        "now?",
+        "run",
+        "to",
+        "Where"
+      ],
+      "answer": [
+        "Where",
+        "you",
+        "going",
+        "to",
+        "run",
+        "to",
+        "now?"
+      ],
+      "youtube_start": 138
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "way",
+        "south",
+        "going",
+        "down",
+        "I'm"
+      ],
+      "answer": [
+        "I'm",
+        "going",
+        "way",
+        "down",
+        "south"
+      ],
+      "youtube_start": 157
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "hangman",
+        "to",
+        "Ain't",
+        "going",
+        "no"
+      ],
+      "answer": [
+        "Ain't",
+        "no",
+        "hangman",
+        "going",
+        "to"
+      ],
+      "youtube_start": 180
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"going\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"going\" na música inteira?",
+      "word": "going",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"shot\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"shot\" na música inteira?",
+      "word": "shot",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I'm going down to shoot my old lady",
+          "order": 0
+        },
+        {
+          "text": "I shot her!",
+          "order": 1
+        },
+        {
+          "text": "I'm going way down south",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Hey Joe\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Hey Joe\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "going",
+        "shot",
+        "messing",
+        "lady"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Hey Joe\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Hey Joe\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "going",
+        "shot",
+        "messing",
+        "lady"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Jimi Hendrix one question about \"Hey Joe\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Jimi Hendrix sobre \"Hey Joe\", o que seria e por quê?",
+      "target_vocab": [
+        "going",
+        "shot",
+        "messing",
+        "lady"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        }
+      ]
+    }
+  ]
+}

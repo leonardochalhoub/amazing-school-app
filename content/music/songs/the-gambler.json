@@ -1,0 +1,464 @@
+{
+  "slug": "the-gambler",
+  "title": "The Gambler",
+  "artist": "Kenny Rogers",
+  "year": 1978,
+  "album": "The Gambler",
+  "genre": [
+    "country"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 211,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "The Gambler by Kenny Rogers (1978) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"You got to know when to hold 'em\""
+    },
+    {
+      "term": "you're",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I can see you're out of aces\""
+    },
+    {
+      "term": "hold",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"You got to know when to hold 'em\""
+    },
+    {
+      "term": "fold",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Know when to fold 'em\""
+    },
+    {
+      "term": "walk",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Know when to walk away\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Know when to fold 'em",
+          "Know when to walk away",
+          "And know when to run",
+          "You never count your money"
+        ],
+        "start_seconds": 73,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "On a warm summer's evening",
+          "On a train bound for nowhere",
+          "I met up with a gambler",
+          "We were both too tired to sleep"
+        ],
+        "start_seconds": 5,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "On a warm",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "summers",
+      "excerpt_after": "evening",
+      "youtube_start": 5,
+      "youtube_end": 19
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Til",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "boredom",
+      "excerpt_after": "overtook us",
+      "youtube_start": 21,
+      "youtube_end": 35
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So I",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "handed",
+      "excerpt_after": "him my bottle",
+      "youtube_start": 48,
+      "youtube_end": 62
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gotta",
+      "excerpt_after": "learn to play it right\"",
+      "youtube_start": 68,
+      "youtube_end": 82
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "secret",
+      "excerpt_after": "to surviving",
+      "youtube_start": 99,
+      "youtube_end": 113
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "faded",
+      "excerpt_after": "off to sleep",
+      "youtube_start": 127,
+      "youtube_end": 141
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I met up with a gambler",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So we took turns a-staring",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "He said, \"Son, I've made a life",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So if you don't mind my saying",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll give you some advice\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "On a",
+      "excerpt_after": "summer's evening",
+      "options": [
+        "bummed",
+        "evening",
+        "tired",
+        "warm"
+      ],
+      "answer_index": 3,
+      "youtube_start": 5,
+      "youtube_end": 17
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Knowing what the",
+      "excerpt_after": "were",
+      "options": [
+        "cards",
+        "dont",
+        "drank",
+        "taste"
+      ],
+      "answer_index": 0,
+      "youtube_start": 31,
+      "youtube_end": 43
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "me for a light",
+      "options": [
+        "asked",
+        "began",
+        "evening",
+        "speak"
+      ],
+      "answer_index": 0,
+      "youtube_start": 57,
+      "youtube_end": 69
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When you're",
+      "excerpt_after": "at the table",
+      "options": [
+        "advice",
+        "sittin",
+        "speak",
+        "turns"
+      ],
+      "answer_index": 1,
+      "youtube_start": 84,
+      "youtube_end": 96
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "He",
+      "excerpt_after": "back toward the window",
+      "options": [
+        "dont",
+        "mind",
+        "saying",
+        "turned"
+      ],
+      "answer_index": 3,
+      "youtube_start": 121,
+      "youtube_end": 133
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "On",
+        "evening",
+        "summer's",
+        "a",
+        "warm"
+      ],
+      "answer": [
+        "On",
+        "a",
+        "warm",
+        "summer's",
+        "evening"
+      ],
+      "youtube_start": 5
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "faces",
+        "Out",
+        "people's",
+        "of",
+        "readin'"
+      ],
+      "answer": [
+        "Out",
+        "of",
+        "readin'",
+        "people's",
+        "faces"
+      ],
+      "youtube_start": 28
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "Then",
+        "bummed",
+        "cigarette",
+        "he"
+      ],
+      "answer": [
+        "Then",
+        "he",
+        "bummed",
+        "a",
+        "cigarette"
+      ],
+      "youtube_start": 54
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "at",
+        "table",
+        "the",
+        "you're",
+        "When",
+        "sittin'"
+      ],
+      "answer": [
+        "When",
+        "you're",
+        "sittin'",
+        "at",
+        "the",
+        "table"
+      ],
+      "youtube_start": 84
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "when",
+        "he",
+        "finished",
+        "And",
+        "speaking"
+      ],
+      "answer": [
+        "And",
+        "when",
+        "he",
+        "finished",
+        "speaking"
+      ],
+      "youtube_start": 118
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"know\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"know\" na música inteira?",
+      "word": "know",
+      "answer": 16
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"you're\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"you're\" na música inteira?",
+      "word": "you're",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "On a train bound for nowhere",
+          "order": 0
+        },
+        {
+          "text": "'Cause every hand's a winner",
+          "order": 1
+        },
+        {
+          "text": "There'll be time enough for countin'",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "know",
+        "you're",
+        "hold",
+        "fold"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "know",
+        "you're",
+        "hold",
+        "fold"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"The Gambler\" was released in 1978. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"The Gambler\" foi lançada em 1978. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "know",
+        "you're",
+        "hold",
+        "fold"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        }
+      ]
+    }
+  ]
+}

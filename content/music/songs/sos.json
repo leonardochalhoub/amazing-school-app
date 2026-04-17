@@ -1,0 +1,389 @@
+{
+  "slug": "sos",
+  "title": "SOS",
+  "artist": "ABBA",
+  "year": 1975,
+  "album": "Abba",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 202,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "SOS by ABBA (1975) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "you're",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"So when you're near me, darling\""
+    },
+    {
+      "term": "gone",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"When you're gone, how can I even try to go on?\""
+    },
+    {
+      "term": "though",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"When you're gone, though I try, how can I carry on?\""
+    },
+    {
+      "term": "near",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"So when you're near me, darling\""
+    },
+    {
+      "term": "carry",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"When you're gone, though I try, how can I carry on?\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "So when you're near me, darling",
+          "Can't you hear me, S.O.S.?",
+          "The love you gave me",
+          "Nothing else can save me, S.O.S."
+        ],
+        "start_seconds": 43,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "So when you're near me, darling",
+          "Can't you hear me, S.O.S.?",
+          "The love you gave me",
+          "Nothing else can save me, S.O.S."
+        ],
+        "start_seconds": 102,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Whatever",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "happened",
+      "excerpt_after": "to our love? I wish I understood",
+      "youtube_start": 27,
+      "youtube_end": 41
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So when",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "near me, darling",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So when you're near me, darling",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Can't you hear me, S.O.S.?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The love you gave me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And the love you gave me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Nothing else can save me, S.O.S.",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Whatever",
+      "excerpt_after": "to our love? I wish I understood",
+      "options": [
+        "happened",
+        "happy",
+        "reach",
+        "standing"
+      ],
+      "answer_index": 0,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So when",
+      "excerpt_after": "near me, darling",
+      "options": [
+        "gone",
+        "save",
+        "wish",
+        "youre"
+      ],
+      "answer_index": 3,
+      "youtube_start": 43,
+      "youtube_end": 55
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Can't you",
+      "excerpt_after": "me, S.O.S.?",
+      "options": [
+        "alive",
+        "gone",
+        "hear",
+        "nothing"
+      ],
+      "answer_index": 2,
+      "youtube_start": 46,
+      "youtube_end": 58
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Nothing",
+      "excerpt_after": "can save me, S.O.S.",
+      "options": [
+        "closed",
+        "else",
+        "nothing",
+        "those"
+      ],
+      "answer_index": 1,
+      "youtube_start": 53,
+      "youtube_end": 65
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So when you're",
+      "excerpt_after": "me, darling",
+      "options": [
+        "mind",
+        "near",
+        "used",
+        "wish"
+      ],
+      "answer_index": 1,
+      "youtube_start": 102,
+      "youtube_end": 114
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you're",
+        "darling",
+        "So",
+        "me,",
+        "when",
+        "near"
+      ],
+      "answer": [
+        "So",
+        "when",
+        "you're",
+        "near",
+        "me,",
+        "darling"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Can't",
+        "S.O.S.?",
+        "you",
+        "hear",
+        "me,"
+      ],
+      "answer": [
+        "Can't",
+        "you",
+        "hear",
+        "me,",
+        "S.O.S.?"
+      ],
+      "youtube_start": 46
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "gave",
+        "The",
+        "me",
+        "love"
+      ],
+      "answer": [
+        "The",
+        "love",
+        "you",
+        "gave",
+        "me"
+      ],
+      "youtube_start": 51
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "can",
+        "Nothing",
+        "S.O.S.",
+        "else",
+        "save",
+        "me,"
+      ],
+      "answer": [
+        "Nothing",
+        "else",
+        "can",
+        "save",
+        "me,",
+        "S.O.S."
+      ],
+      "youtube_start": 53
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "love",
+        "me",
+        "gave",
+        "you",
+        "the",
+        "And"
+      ],
+      "answer": [
+        "And",
+        "the",
+        "love",
+        "you",
+        "gave",
+        "me"
+      ],
+      "youtube_start": 151
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"you're\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"you're\" na música inteira?",
+      "word": "you're",
+      "answer": 11
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"gone\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"gone\" na música inteira?",
+      "word": "gone",
+      "answer": 8
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"SOS\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"SOS\", o que aconteceria?",
+      "target_vocab": [
+        "you're",
+        "gone",
+        "though",
+        "near"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"SOS\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"SOS\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "you're",
+        "gone",
+        "though",
+        "near"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"SOS\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"SOS\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "you're",
+        "gone",
+        "though",
+        "near"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    }
+  ]
+}

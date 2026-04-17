@@ -1,0 +1,462 @@
+{
+  "slug": "big-yellow-taxi-counting-crows",
+  "title": "Big Yellow Taxi",
+  "artist": "Counting Crows",
+  "year": 2002,
+  "album": "Big Yellow Taxi",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 237,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Big Yellow Taxi by Counting Crows (2002) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"Don't it always seem to go\""
+    },
+    {
+      "term": "paved",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"They paved paradise and put up a parking lot\""
+    },
+    {
+      "term": "paradise",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"They paved paradise and put up a parking lot\""
+    },
+    {
+      "term": "parking",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"They paved paradise and put up a parking lot\""
+    },
+    {
+      "term": "give",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I don't wanna give it, why you wanna give it?\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Ooh, bop-bop-bop",
+          "Ooh, bop-bop-bop (na-na-na-na-na)",
+          "They took all the trees and put 'em in a tree museum",
+          "And they charged the people a dollar and a half to see them"
+        ],
+        "start_seconds": 30,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Ooh, bop-bop-bop",
+          "Listen, late last night, I heard the screen door sway"
+        ],
+        "start_seconds": 88,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "They",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "paved",
+      "excerpt_after": "paradise and put up a parking lot",
+      "youtube_start": 10,
+      "youtube_end": 24
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "They paved",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "paradise",
+      "excerpt_after": "and put up a parking lot",
+      "youtube_start": 27,
+      "youtube_end": 41
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ooh,",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "bop-bop-bop",
+      "excerpt_after": "(oh-oh, na-na-na-na-na)",
+      "youtube_start": 57,
+      "youtube_end": 71
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I don't care about",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "spots",
+      "excerpt_after": "on my apples",
+      "youtube_start": 64,
+      "youtube_end": 78
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And a big",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "yellow",
+      "excerpt_after": "taxi took my girl away",
+      "youtube_start": 119,
+      "youtube_end": 133
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Why you",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "give it all away?",
+      "youtube_start": 176,
+      "youtube_end": 190
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I don't care about spots on my apples",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Why you wanna give it all away?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Don't it always seem to go",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "No, no, no",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Hey, farmer, farmer, put away your DDT",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "They",
+      "excerpt_after": "paradise and put up a parking lot",
+      "options": [
+        "know",
+        "last",
+        "paved",
+        "took"
+      ],
+      "answer_index": 2,
+      "youtube_start": 10,
+      "youtube_end": 22
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Don't it always",
+      "excerpt_after": "to go",
+      "options": [
+        "charged",
+        "listen",
+        "seem",
+        "sway"
+      ],
+      "answer_index": 2,
+      "youtube_start": 46,
+      "youtube_end": 58
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Hey,",
+      "excerpt_after": "farmer, put away your DDT",
+      "options": [
+        "boutique",
+        "care",
+        "farmer",
+        "museum"
+      ],
+      "answer_index": 2,
+      "youtube_start": 59,
+      "youtube_end": 71
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And a big",
+      "excerpt_after": "taxi took my girl away",
+      "options": [
+        "know",
+        "night",
+        "tree",
+        "yellow"
+      ],
+      "answer_index": 3,
+      "youtube_start": 119,
+      "youtube_end": 131
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Why",
+      "excerpt_after": "want me?",
+      "options": [
+        "care",
+        "dyou",
+        "wanna",
+        "yellow"
+      ],
+      "answer_index": 1,
+      "youtube_start": 186,
+      "youtube_end": 198
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "seem",
+        "it",
+        "Don't",
+        "always",
+        "go",
+        "to"
+      ],
+      "answer": [
+        "Don't",
+        "it",
+        "always",
+        "seem",
+        "to",
+        "go"
+      ],
+      "youtube_start": 22
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "your",
+        "DDT",
+        "away",
+        "farmer,",
+        "Hey,",
+        "put",
+        "farmer,"
+      ],
+      "answer": [
+        "Hey,",
+        "farmer,",
+        "farmer,",
+        "put",
+        "away",
+        "your",
+        "DDT"
+      ],
+      "youtube_start": 59
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "bop-bop-bop",
+        "why",
+        "not?",
+        "Ooh,"
+      ],
+      "answer": [
+        "Ooh,",
+        "bop-bop-bop",
+        "why",
+        "not?"
+      ],
+      "youtube_start": 85
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "away?",
+        "you",
+        "give",
+        "all",
+        "wanna",
+        "Why",
+        "it"
+      ],
+      "answer": [
+        "Why",
+        "you",
+        "wanna",
+        "give",
+        "it",
+        "all",
+        "away?"
+      ],
+      "youtube_start": 176
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "La-la-la,",
+        "la-la-la,",
+        "la-la-la",
+        "la-la-la,"
+      ],
+      "answer": [
+        "La-la-la,",
+        "la-la-la,",
+        "la-la-la,",
+        "la-la-la"
+      ],
+      "youtube_start": 198
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 13
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"paved\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"paved\" na música inteira?",
+      "word": "paved",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Don't it always seem to go",
+          "order": 0
+        },
+        {
+          "text": "Hey, farmer, farmer, put away your DDT",
+          "order": 1
+        },
+        {
+          "text": "Now, don't it always seem to go",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "don't",
+        "paved",
+        "paradise",
+        "parking"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Big Yellow Taxi\" was released in 2002. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Big Yellow Taxi\" foi lançada em 2002. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "don't",
+        "paved",
+        "paradise",
+        "parking"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Big Yellow Taxi\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Big Yellow Taxi\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "don't",
+        "paved",
+        "paradise",
+        "parking"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "she's",
+          "full": "she is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    }
+  ]
+}

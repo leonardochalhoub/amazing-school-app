@@ -56,6 +56,61 @@
       "youtube_end": 28
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I heard that your",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dreams",
+      "excerpt_after": "came true",
+      "youtube_start": 29,
+      "youtube_end": 43
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Never mind, I'll find",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "someone",
+      "excerpt_after": "like you",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Only",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "yesterday",
+      "excerpt_after": "was the time of our lives",
+      "youtube_start": 117,
+      "youtube_end": 131
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Bound by the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "surprise",
+      "excerpt_after": "of our glory days",
+      "youtube_start": 131,
+      "youtube_end": 145
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Nothing",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "compares",
+      "excerpt_after": "no worries or cares",
+      "youtube_start": 185,
+      "youtube_end": 199
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
@@ -64,61 +119,116 @@
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "spot_the_grammar",
-      "prompt_en": "Write the full form of each contraction:",
-      "prompt_pt": "Escreva a forma completa de cada contração:",
-      "expected": [
-        {
-          "short": "you're",
-          "full": "you are"
-        },
-        {
-          "short": "didn't",
-          "full": "did not"
-        },
-        {
-          "short": "couldn't",
-          "full": "could not"
-        },
-        {
-          "short": "you'd",
-          "full": "you would"
-        }
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Old friend, why are you so shy?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "discussion",
-      "prompt_en": "Compare \"Someone Like You\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
-      "prompt_pt": "Compare \"Someone Like You\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
-      "target_vocab": [
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You know how the time flies",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I wish nothing but the best for you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Only yesterday was the time of our lives",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "that you're settled down",
+      "options": [
+        "face",
+        "heard",
         "someone",
-        "married",
-        "settled",
-        "dreams"
-      ]
+        "true"
+      ],
+      "answer_index": 1,
+      "youtube_start": 14,
+      "youtube_end": 26
     },
     {
-      "type": "word_to_meaning",
-      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
-      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
-      "pairs": [
-        {
-          "en": "someone",
-          "pt": "alguém"
-        },
-        {
-          "en": "married",
-          "pt": "casado(a)"
-        },
-        {
-          "en": "settled",
-          "pt": "estabelecido(a)"
-        },
-        {
-          "en": "dreams",
-          "pt": "sonhos"
-        }
-      ]
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But I",
+      "excerpt_after": "stay away, I couldn't fight it",
+      "options": [
+        "aint",
+        "couldnt",
+        "things",
+        "youd"
+      ],
+      "answer_index": 1,
+      "youtube_start": 60,
+      "youtube_end": 72
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Don't",
+      "excerpt_after": "me, I beg, I remember you said",
+      "options": [
+        "forget",
+        "light",
+        "married",
+        "stay"
+      ],
+      "answer_index": 0,
+      "youtube_start": 86,
+      "youtube_end": 98
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But I couldn't",
+      "excerpt_after": "away, I couldn't fight it",
+      "options": [
+        "hold",
+        "know",
+        "stay",
+        "true"
+      ],
+      "answer_index": 2,
+      "youtube_start": 142,
+      "youtube_end": 154
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Nothing",
+      "excerpt_after": "no worries or cares",
+      "options": [
+        "compares",
+        "glory",
+        "hurts",
+        "married"
+      ],
+      "answer_index": 0,
+      "youtube_start": 185,
+      "youtube_end": 197
     },
     {
       "type": "unscramble_line",
@@ -143,20 +253,96 @@
       "youtube_start": 14
     },
     {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "I",
-      "excerpt_after": "that you're settled down",
-      "options": [
-        "down",
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "your",
+        "that",
+        "true",
         "heard",
-        "settled",
-        "youre"
+        "I",
+        "came",
+        "dreams"
       ],
-      "answer_index": 1,
-      "youtube_start": 14,
-      "youtube_end": 26
+      "answer": [
+        "I",
+        "heard",
+        "that",
+        "your",
+        "dreams",
+        "came",
+        "true"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "isn't",
+        "That,",
+        "it",
+        "over",
+        "for",
+        "me,"
+      ],
+      "answer": [
+        "That,",
+        "for",
+        "me,",
+        "it",
+        "isn't",
+        "over"
+      ],
+      "youtube_start": 67
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "like",
+        "find",
+        "mind,",
+        "Never",
+        "you",
+        "I'll",
+        "someone"
+      ],
+      "answer": [
+        "Never",
+        "mind,",
+        "I'll",
+        "find",
+        "someone",
+        "like",
+        "you"
+      ],
+      "youtube_start": 73
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "or",
+        "cares",
+        "compares,",
+        "no",
+        "Nothing",
+        "worries"
+      ],
+      "answer": [
+        "Nothing",
+        "compares,",
+        "no",
+        "worries",
+        "or",
+        "cares"
+      ],
+      "youtube_start": 185
     },
     {
       "type": "count_word",
@@ -164,6 +350,13 @@
       "prompt_pt": "Quantas vezes você ouve a palavra \"someone\" na música inteira?",
       "word": "someone",
       "answer": 4
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"sometimes\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"sometimes\" na música inteira?",
+      "word": "sometimes",
+      "answer": 12
     },
     {
       "type": "line_order",
@@ -181,6 +374,112 @@
         {
           "text": "Nothing compares, no worries or cares",
           "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I heard that your dreams came true",
+          "order": 0
+        },
+        {
+          "text": "Only yesterday was the time of our lives",
+          "order": 1
+        },
+        {
+          "text": "Never mind, I'll find someone like you",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Someone Like You\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Someone Like You\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "someone",
+        "married",
+        "settled",
+        "dreams"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Someone Like You\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Someone Like You\", o que aconteceria?",
+      "target_vocab": [
+        "someone",
+        "married",
+        "settled",
+        "dreams"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Someone Like You\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Someone Like You\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "someone",
+        "married",
+        "settled",
+        "dreams"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "didn't",
+          "full": "did not"
+        },
+        {
+          "short": "couldn't",
+          "full": "could not"
+        },
+        {
+          "short": "you'd",
+          "full": "you would"
+        },
+        {
+          "short": "isn't",
+          "full": "is not"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        }
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "someone",
+          "pt": "alguém"
+        },
+        {
+          "en": "married",
+          "pt": "casado(a)"
+        },
+        {
+          "en": "settled",
+          "pt": "estabelecido(a)"
+        },
+        {
+          "en": "dreams",
+          "pt": "sonhos"
         }
       ]
     }

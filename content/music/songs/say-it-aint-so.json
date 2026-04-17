@@ -1,0 +1,454 @@
+{
+  "slug": "say-it-aint-so",
+  "title": "Say It Ain't So",
+  "artist": "Weezer",
+  "year": 1994,
+  "album": "Weezer",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 259,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Say It Ain't So by Weezer (1994) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "ain't",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Say it ain't so\""
+    },
+    {
+      "term": "drug",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Your drug is a heartbreaker\""
+    },
+    {
+      "term": "heartbreaker",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Your drug is a heartbreaker\""
+    },
+    {
+      "term": "life",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"My love is a life taker\""
+    },
+    {
+      "term": "taker",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"My love is a life taker\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Say it ain't so",
+          "Your drug is a heartbreaker",
+          "Say it ain't so",
+          "My love is a life taker"
+        ],
+        "start_seconds": 79,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Oh, yeah",
+          "Alright",
+          "Somebody's Heine'",
+          "Is crowdin' my icebox"
+        ],
+        "start_seconds": 13,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Is",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "crowdin",
+      "excerpt_after": "my icebox",
+      "youtube_start": 28,
+      "youtube_end": 42
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Guess I'll just",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "close",
+      "excerpt_after": "my eyes",
+      "youtube_start": 38,
+      "youtube_end": 52
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I can't",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "confront",
+      "excerpt_after": "you",
+      "youtube_start": 115,
+      "youtube_end": 129
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "This way is a",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "waterslide",
+      "excerpt_after": "away from me",
+      "youtube_start": 128,
+      "youtube_end": 142
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Dear",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "daddy",
+      "excerpt_after": "I write you",
+      "youtube_start": 165,
+      "youtube_end": 179
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You've",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "cleaned",
+      "excerpt_after": "up, found Jesus",
+      "youtube_start": 172,
+      "youtube_end": 186
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Guess I'll just close my eyes",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I never could do",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When I say",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You've cleaned up, found Jesus",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Is crowdin' my icebox",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Is",
+      "excerpt_after": "my icebox",
+      "options": [
+        "aint",
+        "alright",
+        "crowdin",
+        "guess"
+      ],
+      "answer_index": 2,
+      "youtube_start": 28,
+      "youtube_end": 40
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The",
+      "excerpt_after": "is ready to blow",
+      "options": [
+        "bottle",
+        "dear",
+        "givin",
+        "yeah"
+      ],
+      "answer_index": 0,
+      "youtube_start": 70,
+      "youtube_end": 82
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "confront you",
+      "options": [
+        "blow",
+        "cant",
+        "never",
+        "years"
+      ],
+      "answer_index": 1,
+      "youtube_start": 115,
+      "youtube_end": 127
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That",
+      "excerpt_after": "her further every day",
+      "options": [
+        "chills",
+        "eyes",
+        "flip",
+        "takes"
+      ],
+      "answer_index": 3,
+      "youtube_start": 132,
+      "youtube_end": 144
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Things are",
+      "excerpt_after": "or so I hear",
+      "options": [
+        "good",
+        "inside",
+        "silence",
+        "which"
+      ],
+      "answer_index": 0,
+      "youtube_start": 175,
+      "youtube_end": 187
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "icebox",
+        "crowdin'",
+        "my",
+        "Is"
+      ],
+      "answer": [
+        "Is",
+        "crowdin'",
+        "my",
+        "icebox"
+      ],
+      "youtube_start": 28
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "The",
+        "blow",
+        "bottle",
+        "ready",
+        "is"
+      ],
+      "answer": [
+        "The",
+        "bottle",
+        "is",
+        "ready",
+        "to",
+        "blow"
+      ],
+      "youtube_start": 70
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "can't",
+        "you",
+        "confront",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "can't",
+        "confront",
+        "you"
+      ],
+      "youtube_start": 115
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "day",
+        "her",
+        "That",
+        "further",
+        "every",
+        "takes"
+      ],
+      "answer": [
+        "That",
+        "takes",
+        "her",
+        "further",
+        "every",
+        "day"
+      ],
+      "youtube_start": 132
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "are",
+        "good,",
+        "so",
+        "or",
+        "hear",
+        "Things"
+      ],
+      "answer": [
+        "Things",
+        "are",
+        "good,",
+        "or",
+        "so",
+        "I",
+        "hear"
+      ],
+      "youtube_start": 175
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"ain't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"ain't\" na música inteira?",
+      "word": "ain't",
+      "answer": 6
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"drug\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"drug\" na música inteira?",
+      "word": "drug",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Somebody's cold one",
+          "order": 0
+        },
+        {
+          "text": "This way is a waterslide away from me",
+          "order": 1
+        },
+        {
+          "text": "You've cleaned up, found Jesus",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Say It Ain't So\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Say It Ain't So\", o que aconteceria?",
+      "target_vocab": [
+        "ain't",
+        "drug",
+        "heartbreaker",
+        "life"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Say It Ain't So\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Say It Ain't So\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "ain't",
+        "drug",
+        "heartbreaker",
+        "life"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Say It Ain't So\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Say It Ain't So\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "ain't",
+        "drug",
+        "heartbreaker",
+        "life"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        }
+      ]
+    }
+  ]
+}

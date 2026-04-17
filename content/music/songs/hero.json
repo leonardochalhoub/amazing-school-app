@@ -1,0 +1,462 @@
+{
+  "slug": "hero",
+  "title": "Hero",
+  "artist": "Mariah Carey",
+  "year": 1993,
+  "album": "Music Box",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 258,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Hero by Mariah Carey (1993) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "hero",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"There's a hero\""
+    },
+    {
+      "term": "lies",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"That a hero lies in you\""
+    },
+    {
+      "term": "inside",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"If you look inside your heart\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"And the sorrow that you know\""
+    },
+    {
+      "term": "you'll",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"And you'll finally see the truth\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "That a hero lies in you",
+          "It's a long road",
+          "When you face the world alone",
+          "No one reaches out a hand"
+        ],
+        "start_seconds": 78,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "That a hero lies in you",
+          "Lord knows",
+          "Dreams are hard to follow",
+          "But don't let anyone"
+        ],
+        "start_seconds": 150,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If you look",
+      "blank_hint": "word starting with \"i\"",
+      "answer": "inside",
+      "excerpt_after": "your heart",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sorrow",
+      "excerpt_after": "that you know",
+      "youtube_start": 40,
+      "youtube_end": 54
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "With the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "strength",
+      "excerpt_after": "to carry on",
+      "youtube_start": 53,
+      "youtube_end": 67
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youll",
+      "excerpt_after": "finally see the truth",
+      "youtube_start": 74,
+      "youtube_end": 88
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "No one",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "reaches",
+      "excerpt_after": "out a hand",
+      "youtube_start": 96,
+      "youtube_end": 110
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And the",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "emptiness",
+      "excerpt_after": "you felt",
+      "youtube_start": 112,
+      "youtube_end": 126
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If you look inside your heart",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Of what you are",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And the sorrow that you know",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And you know you can survive",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Look inside you and be strong",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "If you look",
+      "excerpt_after": "your heart",
+      "options": [
+        "afraid",
+        "comes",
+        "gone",
+        "inside"
+      ],
+      "answer_index": 3,
+      "youtube_start": 20,
+      "youtube_end": 32
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And then a",
+      "excerpt_after": "comes along",
+      "options": [
+        "hand",
+        "hero",
+        "lies",
+        "sorrow"
+      ],
+      "answer_index": 1,
+      "youtube_start": 49,
+      "youtube_end": 61
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "finally see the truth",
+      "options": [
+        "dont",
+        "felt",
+        "within",
+        "youll"
+      ],
+      "answer_index": 3,
+      "youtube_start": 74,
+      "youtube_end": 86
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "No one",
+      "excerpt_after": "out a hand",
+      "options": [
+        "alone",
+        "find",
+        "reaches",
+        "truth"
+      ],
+      "answer_index": 2,
+      "youtube_start": 96,
+      "youtube_end": 108
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "With the strength to",
+      "excerpt_after": "on",
+      "options": [
+        "aside",
+        "carry",
+        "face",
+        "world"
+      ],
+      "answer_index": 1,
+      "youtube_start": 125,
+      "youtube_end": 137
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "heart",
+        "you",
+        "If",
+        "inside",
+        "your",
+        "look"
+      ],
+      "answer": [
+        "If",
+        "you",
+        "look",
+        "inside",
+        "your",
+        "heart"
+      ],
+      "youtube_start": 20
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "that",
+        "sorrow",
+        "And",
+        "the",
+        "you",
+        "know"
+      ],
+      "answer": [
+        "And",
+        "the",
+        "sorrow",
+        "that",
+        "you",
+        "know"
+      ],
+      "youtube_start": 40
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "inside",
+        "you",
+        "Look",
+        "be",
+        "strong",
+        "and"
+      ],
+      "answer": [
+        "Look",
+        "inside",
+        "you",
+        "and",
+        "be",
+        "strong"
+      ],
+      "youtube_start": 69
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "When",
+        "world",
+        "the",
+        "alone",
+        "face",
+        "you"
+      ],
+      "answer": [
+        "When",
+        "you",
+        "face",
+        "the",
+        "world",
+        "alone"
+      ],
+      "youtube_start": 92
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "felt",
+        "emptiness",
+        "the",
+        "you"
+      ],
+      "answer": [
+        "And",
+        "the",
+        "emptiness",
+        "you",
+        "felt"
+      ],
+      "youtube_start": 112
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"hero\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"hero\" na música inteira?",
+      "word": "hero",
+      "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"lies\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"lies\" na música inteira?",
+      "word": "lies",
+      "answer": 5
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "If you look inside your heart",
+          "order": 0
+        },
+        {
+          "text": "And the emptiness you felt",
+          "order": 1
+        },
+        {
+          "text": "Tear them away",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Hero\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Hero\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "hero",
+        "lies",
+        "inside",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Mariah Carey one question about \"Hero\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Mariah Carey sobre \"Hero\", o que seria e por quê?",
+      "target_vocab": [
+        "hero",
+        "lies",
+        "inside",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Hero\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Hero\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "hero",
+        "lies",
+        "inside",
+        "know"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you'll",
+          "full": "you will"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

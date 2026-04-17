@@ -56,12 +56,372 @@
       "youtube_end": 21
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Be",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "loving",
+      "excerpt_after": "you 'til we're 70",
+      "youtube_start": 26,
+      "youtube_end": 40
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I just",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "tell you I am",
+      "youtube_start": 66,
+      "youtube_end": 80
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Maybe we",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "found",
+      "excerpt_after": "love right where we are",
+      "youtube_start": 96,
+      "youtube_end": 110
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "maybe",
+      "excerpt_after": "it's all part of a plan",
+      "youtube_start": 157,
+      "youtube_end": 171
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Kiss me under the",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "light",
+      "excerpt_after": "of a thousand stars",
+      "youtube_start": 186,
+      "youtube_end": 200
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
       "excerpt": "And, darling, I will",
       "model_answer_pt": "",
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I'm thinking 'bout how",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm thinking out loud",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm thinking 'bout how",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And we found love right where we are",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I",
+      "excerpt_after": "sweep you off of your feet",
+      "options": [
+        "cant",
+        "found",
+        "touch",
+        "wanna"
+      ],
+      "answer_index": 0,
+      "youtube_start": 7,
+      "youtube_end": 19
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Could still",
+      "excerpt_after": "as hard at 23",
+      "options": [
+        "cheeks",
+        "fall",
+        "head",
+        "honey"
+      ],
+      "answer_index": 1,
+      "youtube_start": 38,
+      "youtube_end": 50
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Kiss me",
+      "excerpt_after": "the light of a thousand stars",
+      "options": [
+        "legs",
+        "thinking",
+        "under",
+        "used"
+      ],
+      "answer_index": 2,
+      "youtube_start": 83,
+      "youtube_end": 95
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Could",
+      "excerpt_after": "grow old, it's evergreen",
+      "options": [
+        "feet",
+        "never",
+        "touch",
+        "under"
+      ],
+      "answer_index": 1,
+      "youtube_start": 129,
+      "youtube_end": 141
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Hoping that",
+      "excerpt_after": "understand",
+      "options": [
+        "cant",
+        "head",
+        "stars",
+        "youll"
+      ],
+      "answer_index": 3,
+      "youtube_start": 170,
+      "youtube_end": 182
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "will",
+        "And,",
+        "darling,"
+      ],
+      "answer": [
+        "And,",
+        "darling,",
+        "I",
+        "will"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "23",
+        "still",
+        "fall",
+        "hard",
+        "Could",
+        "at",
+        "as"
+      ],
+      "answer": [
+        "Could",
+        "still",
+        "fall",
+        "as",
+        "hard",
+        "at",
+        "23"
+      ],
+      "youtube_start": 38
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Maybe",
+        "just",
+        "of",
+        "hand",
+        "the",
+        "a",
+        "touch"
+      ],
+      "answer": [
+        "Maybe",
+        "just",
+        "the",
+        "touch",
+        "of",
+        "a",
+        "hand"
+      ],
+      "youtube_start": 54
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "don't",
+        "the",
+        "And",
+        "name",
+        "remember",
+        "crowds",
+        "my"
+      ],
+      "answer": [
+        "And",
+        "the",
+        "crowds",
+        "don't",
+        "remember",
+        "my",
+        "name"
+      ],
+      "youtube_start": 110
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "your",
+        "baby,",
+        "And,",
+        "smile's"
+      ],
+      "answer": [
+        "And,",
+        "baby,",
+        "your",
+        "smile's"
+      ],
+      "youtube_start": 139
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"fall\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"fall\" na música inteira?",
+      "word": "fall",
+      "answer": 4
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"baby\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"baby\" na música inteira?",
+      "word": "baby",
+      "answer": 5
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Will your eyes still smile from your cheeks?",
+          "order": 0
+        },
+        {
+          "text": "Take me into your loving arms",
+          "order": 1
+        },
+        {
+          "text": "People fall in love in mysterious ways",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And, darling, I will",
+          "order": 0
+        },
+        {
+          "text": "And the crowds don't remember my name",
+          "order": 1
+        },
+        {
+          "text": "And maybe it's all part of a plan",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Thinking Out Loud\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Thinking Out Loud\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "fall",
+        "strangers",
+        "weight",
+        "memory"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Thinking Out Loud\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Thinking Out Loud\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "fall",
+        "strangers",
+        "weight",
+        "memory"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Thinking Out Loud\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Thinking Out Loud\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "fall",
+        "strangers",
+        "weight",
+        "memory"
+      ]
     },
     {
       "type": "spot_the_grammar",
@@ -83,18 +443,15 @@
         {
           "short": "i'm",
           "full": "I am"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
         }
-      ]
-    },
-    {
-      "type": "discussion",
-      "prompt_en": "\"Thinking Out Loud\" was released in 2014. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
-      "prompt_pt": "\"Thinking Out Loud\" foi lançada em 2014. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
-      "target_vocab": [
-        "fall",
-        "strangers",
-        "weight",
-        "memory"
       ]
     },
     {
@@ -117,66 +474,6 @@
         {
           "en": "memory",
           "pt": "memória"
-        }
-      ]
-    },
-    {
-      "type": "unscramble_line",
-      "prompt_en": "Put the words in the right order:",
-      "prompt_pt": "Coloque as palavras na ordem certa:",
-      "shuffled": [
-        "I",
-        "will",
-        "And,",
-        "darling,"
-      ],
-      "answer": [
-        "And,",
-        "darling,",
-        "I",
-        "will"
-      ],
-      "youtube_start": 23
-    },
-    {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "And I",
-      "excerpt_after": "sweep you off of your feet",
-      "options": [
-        "cant",
-        "dont",
-        "legs",
-        "work"
-      ],
-      "answer_index": 0,
-      "youtube_start": 7,
-      "youtube_end": 19
-    },
-    {
-      "type": "count_word",
-      "prompt_en": "How many times do you hear the word \"fall\" in the whole song?",
-      "prompt_pt": "Quantas vezes você ouve a palavra \"fall\" na música inteira?",
-      "word": "fall",
-      "answer": 4
-    },
-    {
-      "type": "line_order",
-      "prompt_en": "Put these three lines in the order they appear in the song:",
-      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
-      "excerpts": [
-        {
-          "text": "Will your eyes still smile from your cheeks?",
-          "order": 0
-        },
-        {
-          "text": "Take me into your loving arms",
-          "order": 1
-        },
-        {
-          "text": "People fall in love in mysterious ways",
-          "order": 2
         }
       ]
     }

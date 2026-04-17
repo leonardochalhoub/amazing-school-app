@@ -1,0 +1,459 @@
+{
+  "slug": "chop-suey",
+  "title": "Chop Suey!",
+  "artist": "System of a Down",
+  "year": 2001,
+  "album": "Toxicity",
+  "genre": [
+    "rock",
+    "metal"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 210,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Chop Suey! by System of a Down (2001) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "father",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Father (father)\""
+    },
+    {
+      "term": "wanted",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"You wanted to\""
+    },
+    {
+      "term": "hide",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Hide the scars to fade away the shake-up\""
+    },
+    {
+      "term": "scars",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Hide the scars to fade away the shake-up\""
+    },
+    {
+      "term": "fade",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Hide the scars to fade away the shake-up\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "You wanted to",
+          "Grab a brush and put a little makeup",
+          "You wanted to",
+          "Hide the scars to fade away the shake-up"
+        ],
+        "start_seconds": 54,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Father (father)",
+          "Father (father)",
+          "Father (father)",
+          "Father (father)"
+        ],
+        "start_seconds": 140,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Grab a",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "brush",
+      "excerpt_after": "and put a little make-up",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Why'd you",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "leave",
+      "excerpt_after": "the keys upon the table?",
+      "youtube_start": 51,
+      "youtube_end": 65
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Grab a brush and put a",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "little",
+      "excerpt_after": "makeup",
+      "youtube_start": 54,
+      "youtube_end": 68
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I... Cry... When",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "angels",
+      "excerpt_after": "deserve to die",
+      "youtube_start": 70,
+      "youtube_end": 84
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I... Cry... When angels",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "deserve",
+      "excerpt_after": "to die",
+      "youtube_start": 110,
+      "youtube_end": 124
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Why have you",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "forsaken",
+      "excerpt_after": "me?",
+      "youtube_start": 154,
+      "youtube_end": 168
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Why'd you leave the keys upon the table?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You wanted to",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I... Cry... When angels deserve to die",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Why have you forsaken me?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Hide the scars to fade away the shake-up",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Grab a",
+      "excerpt_after": "and put a little make-up",
+      "options": [
+        "brush",
+        "deserve",
+        "table",
+        "whyd"
+      ],
+      "answer_index": 0,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Why'd you",
+      "excerpt_after": "the keys upon the table?",
+      "options": [
+        "keys",
+        "leave",
+        "table",
+        "thoughts"
+      ],
+      "answer_index": 1,
+      "youtube_start": 51,
+      "youtube_end": 63
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Why'd you leave the",
+      "excerpt_after": "upon the table?",
+      "options": [
+        "dont",
+        "keys",
+        "think",
+        "wanted"
+      ],
+      "answer_index": 1,
+      "youtube_start": 58,
+      "youtube_end": 70
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I don't",
+      "excerpt_after": "you trust",
+      "options": [
+        "hide",
+        "think",
+        "trust",
+        "whyd"
+      ],
+      "answer_index": 1,
+      "youtube_start": 100,
+      "youtube_end": 112
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Why have you",
+      "excerpt_after": "me?",
+      "options": [
+        "brush",
+        "forsaken",
+        "shake-up",
+        "wanted"
+      ],
+      "answer_index": 1,
+      "youtube_start": 154,
+      "youtube_end": 166
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Hide",
+        "scars",
+        "fade",
+        "to",
+        "away",
+        "the",
+        "the..."
+      ],
+      "answer": [
+        "Hide",
+        "the",
+        "scars",
+        "to",
+        "fade",
+        "away",
+        "the..."
+      ],
+      "youtube_start": 50
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "trust",
+        "don't",
+        "I",
+        "you",
+        "think"
+      ],
+      "answer": [
+        "I",
+        "don't",
+        "think",
+        "you",
+        "trust"
+      ],
+      "youtube_start": 60
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "angels",
+        "I...",
+        "to",
+        "die",
+        "When",
+        "Cry...",
+        "deserve"
+      ],
+      "answer": [
+        "I...",
+        "Cry...",
+        "When",
+        "angels",
+        "deserve",
+        "to",
+        "die"
+      ],
+      "youtube_start": 70
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "me?",
+        "Why",
+        "forsaken",
+        "have"
+      ],
+      "answer": [
+        "Why",
+        "have",
+        "you",
+        "forsaken",
+        "me?"
+      ],
+      "youtube_start": 154
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "forsaken",
+        "your",
+        "thoughts",
+        "In"
+      ],
+      "answer": [
+        "In",
+        "your",
+        "thoughts",
+        "forsaken",
+        "me"
+      ],
+      "youtube_start": 161
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"father\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"father\" na música inteira?",
+      "word": "father",
+      "answer": 10
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"wanted\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"wanted\" na música inteira?",
+      "word": "wanted",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Grab a brush and put a little make-up",
+          "order": 0
+        },
+        {
+          "text": "I... Cry... When angels deserve to die",
+          "order": 1
+        },
+        {
+          "text": "In... My... Self-righteous suicide",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Hide the scars to fade away the shake-up",
+          "order": 0
+        },
+        {
+          "text": "You wanted to",
+          "order": 1
+        },
+        {
+          "text": "In, my, Self-righteous suicide",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask System of a Down one question about \"Chop Suey!\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para System of a Down sobre \"Chop Suey!\", o que seria e por quê?",
+      "target_vocab": [
+        "father",
+        "wanted",
+        "hide",
+        "scars"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Chop Suey!\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Chop Suey!\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "father",
+        "wanted",
+        "hide",
+        "scars"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Chop Suey!\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Chop Suey!\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "father",
+        "wanted",
+        "hide",
+        "scars"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,490 @@
+{
+  "slug": "elastic-heart",
+  "title": "Elastic Heart",
+  "artist": "Sia",
+  "year": 2014,
+  "album": "1000 Forms Of Fear",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 257,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Elastic Heart by Sia (2014) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "i've",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"I've got thick skin and an elastic heart\""
+    },
+    {
+      "term": "elastic",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"I've got thick skin and an elastic heart\""
+    },
+    {
+      "term": "heart",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"I've got thick skin and an elastic heart\""
+    },
+    {
+      "term": "hard",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I'm like a rubber band until you pull too hard\""
+    },
+    {
+      "term": "won't",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"But you won't see me fall apart\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "But you won't see me fall apart",
+          "'Cause I've got an elastic heart",
+          "I've got an elastic heart",
+          "Yeah, I've got an elastic heart"
+        ],
+        "start_seconds": 69,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "But you won't see me fall apart",
+          "'Cause I've got an elastic heart",
+          "I've got thick skin and an elastic heart"
+        ],
+        "start_seconds": 158,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "another",
+      "excerpt_after": "one bites the dust",
+      "youtube_start": 11,
+      "youtube_end": 25
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Wanted to",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fight",
+      "excerpt_after": "this war without weapons",
+      "youtube_start": 22,
+      "youtube_end": 36
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Now another one",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "bites",
+      "excerpt_after": "the dust",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm still",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fighting",
+      "excerpt_after": "for peace",
+      "youtube_start": 48,
+      "youtube_end": 62
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Cause I've got an",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "elastic",
+      "excerpt_after": "heart",
+      "youtube_start": 76,
+      "youtube_end": 90
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "doing",
+      "excerpt_after": "everything I can",
+      "youtube_start": 119,
+      "youtube_end": 133
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh, why can I not conquer love?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yeah, let's be clear I'll trust no one",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm still fighting for peace",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I may snap and I move fast",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Cause I've got an elastic heart",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "one bites the dust",
+      "options": [
+        "another",
+        "hard",
+        "lets",
+        "many"
+      ],
+      "answer_index": 0,
+      "youtube_start": 11,
+      "youtube_end": 23
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But",
+      "excerpt_after": "were so many red flags",
+      "options": [
+        "another",
+        "peace",
+        "pull",
+        "there"
+      ],
+      "answer_index": 3,
+      "youtube_start": 30,
+      "youtube_end": 42
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've got",
+      "excerpt_after": "skin and an elastic heart",
+      "options": [
+        "conquer",
+        "fast",
+        "sharp",
+        "thick"
+      ],
+      "answer_index": 3,
+      "youtube_start": 54,
+      "youtube_end": 66
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I will",
+      "excerpt_after": "up through the night",
+      "options": [
+        "clear",
+        "fight",
+        "night",
+        "stay"
+      ],
+      "answer_index": 3,
+      "youtube_start": 100,
+      "youtube_end": 112
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's",
+      "excerpt_after": "to lose a chosen one",
+      "options": [
+        "conquer",
+        "hard",
+        "pull",
+        "sharp"
+      ],
+      "answer_index": 1,
+      "youtube_start": 126,
+      "youtube_end": 138
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "bites",
+        "one",
+        "dust",
+        "another",
+        "And"
+      ],
+      "answer": [
+        "And",
+        "another",
+        "one",
+        "bites",
+        "the",
+        "dust"
+      ],
+      "youtube_start": 11
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "so",
+        "flags",
+        "many",
+        "But",
+        "there",
+        "were",
+        "red"
+      ],
+      "answer": [
+        "But",
+        "there",
+        "were",
+        "so",
+        "many",
+        "red",
+        "flags"
+      ],
+      "youtube_start": 30
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I'm",
+        "still",
+        "peace",
+        "fighting",
+        "for"
+      ],
+      "answer": [
+        "I'm",
+        "still",
+        "fighting",
+        "for",
+        "peace"
+      ],
+      "youtube_start": 48
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "an",
+        "heart",
+        "I've",
+        "got",
+        "elastic"
+      ],
+      "answer": [
+        "I've",
+        "got",
+        "an",
+        "elastic",
+        "heart"
+      ],
+      "youtube_start": 84
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "that",
+        "I",
+        "know",
+        "survive",
+        "can",
+        "And",
+        "I"
+      ],
+      "answer": [
+        "And",
+        "I",
+        "know",
+        "that",
+        "I",
+        "can",
+        "survive"
+      ],
+      "youtube_start": 108
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"i've\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"i've\" na música inteira?",
+      "word": "i've",
+      "answer": 11
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"elastic\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"elastic\" na música inteira?",
+      "word": "elastic",
+      "answer": 11
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And another one bites the dust",
+          "order": 0
+        },
+        {
+          "text": "'Cause I've got an elastic heart",
+          "order": 1
+        },
+        {
+          "text": "But your blade it might be too sharp",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Oh, why can I not conquer love?",
+          "order": 0
+        },
+        {
+          "text": "I'm doing everything I can",
+          "order": 1
+        },
+        {
+          "text": "I've got thick skin and an elastic heart",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Elastic Heart\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Elastic Heart\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "i've",
+        "elastic",
+        "heart",
+        "hard"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Sia one question about \"Elastic Heart\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Sia sobre \"Elastic Heart\", o que seria e por quê?",
+      "target_vocab": [
+        "i've",
+        "elastic",
+        "heart",
+        "hard"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Elastic Heart\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Elastic Heart\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "i've",
+        "elastic",
+        "heart",
+        "hard"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "let's",
+          "full": "let us"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

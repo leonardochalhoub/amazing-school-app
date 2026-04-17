@@ -56,12 +56,354 @@
       "youtube_end": 25
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We are the",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "champions",
+      "excerpt_after": "my friends",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And we'll keep on",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fighting",
+      "excerpt_after": "till the end",
+      "youtube_start": 41,
+      "youtube_end": 55
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "taken",
+      "excerpt_after": "my bows",
+      "youtube_start": 76,
+      "youtube_end": 90
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And my",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "curtain",
+      "excerpt_after": "calls",
+      "youtube_start": 80,
+      "youtube_end": 94
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thank",
+      "excerpt_after": "you all",
+      "youtube_start": 89,
+      "youtube_end": 103
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
       "excerpt": "I've paid my dues",
       "model_answer_pt": "",
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've made a few",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We are the champions, my friends",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We are the champions, we are the champions",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I thank you all",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've",
+      "excerpt_after": "my dues",
+      "options": [
+        "calls",
+        "cruise",
+        "losers",
+        "paid"
+      ],
+      "answer_index": 3,
+      "youtube_start": 0,
+      "youtube_end": 12
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But",
+      "excerpt_after": "no crime",
+      "options": [
+        "challenge",
+        "committed",
+        "fortune",
+        "mistakes"
+      ],
+      "answer_index": 1,
+      "youtube_start": 11,
+      "youtube_end": 23
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "keep on fighting till the end",
+      "options": [
+        "bows",
+        "kicked",
+        "mean",
+        "well"
+      ],
+      "answer_index": 3,
+      "youtube_start": 41,
+      "youtube_end": 53
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And my",
+      "excerpt_after": "calls",
+      "options": [
+        "calls",
+        "crime",
+        "curtain",
+        "kicked"
+      ],
+      "answer_index": 2,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And we'll",
+      "excerpt_after": "on fighting till the end",
+      "options": [
+        "done",
+        "face",
+        "keep",
+        "world"
+      ],
+      "answer_index": 2,
+      "youtube_start": 117,
+      "youtube_end": 129
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "I've",
+        "paid",
+        "dues"
+      ],
+      "answer": [
+        "I've",
+        "paid",
+        "my",
+        "dues"
+      ],
+      "youtube_start": 0
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "no",
+        "But",
+        "committed",
+        "crime"
+      ],
+      "answer": [
+        "But",
+        "committed",
+        "no",
+        "crime"
+      ],
+      "youtube_start": 11
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I've",
+        "through",
+        "come",
+        "But"
+      ],
+      "answer": [
+        "But",
+        "I've",
+        "come",
+        "through"
+      ],
+      "youtube_start": 27
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I've",
+        "taken",
+        "bows",
+        "my"
+      ],
+      "answer": [
+        "I've",
+        "taken",
+        "my",
+        "bows"
+      ],
+      "youtube_start": 76
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "thank",
+        "you",
+        "all",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "thank",
+        "you",
+        "all"
+      ],
+      "youtube_start": 89
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"champions\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"champions\" na música inteira?",
+      "word": "champions",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"i've\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"i've\" na música inteira?",
+      "word": "i've",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I've paid my dues",
+          "order": 0
+        },
+        {
+          "text": "But I've come through",
+          "order": 1
+        },
+        {
+          "text": "I thank you all",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Time after time",
+          "order": 0
+        },
+        {
+          "text": "I've taken my bows",
+          "order": 1
+        },
+        {
+          "text": "We are the champions, my friends",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "champion",
+        "dues",
+        "bow",
+        "mistake"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "champion",
+        "dues",
+        "bow",
+        "mistake"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"We Are the Champions\" was released in 1977. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"We Are the Champions\" foi lançada em 1977. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "champion",
+        "dues",
+        "bow",
+        "mistake"
+      ]
     },
     {
       "type": "spot_the_grammar",
@@ -87,17 +429,6 @@
       ]
     },
     {
-      "type": "discussion",
-      "prompt_en": "Rewrite the chorus of \"We Are the Champions\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
-      "prompt_pt": "Reescreva o refrão de \"We Are the Champions\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
-      "target_vocab": [
-        "champion",
-        "dues",
-        "bow",
-        "mistake"
-      ]
-    },
-    {
       "type": "word_to_meaning",
       "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
       "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
@@ -117,66 +448,6 @@
         {
           "en": "mistake",
           "pt": "erro"
-        }
-      ]
-    },
-    {
-      "type": "unscramble_line",
-      "prompt_en": "Put the words in the right order:",
-      "prompt_pt": "Coloque as palavras na ordem certa:",
-      "shuffled": [
-        "my",
-        "I've",
-        "paid",
-        "dues"
-      ],
-      "answer": [
-        "I've",
-        "paid",
-        "my",
-        "dues"
-      ],
-      "youtube_start": 0
-    },
-    {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "I've",
-      "excerpt_after": "my dues",
-      "options": [
-        "after",
-        "dues",
-        "paid",
-        "time"
-      ],
-      "answer_index": 2,
-      "youtube_start": 0,
-      "youtube_end": 12
-    },
-    {
-      "type": "count_word",
-      "prompt_en": "How many times do you hear the word \"champions\" in the whole song?",
-      "prompt_pt": "Quantas vezes você ouve a palavra \"champions\" na música inteira?",
-      "word": "champions",
-      "answer": 12
-    },
-    {
-      "type": "line_order",
-      "prompt_en": "Put these three lines in the order they appear in the song:",
-      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
-      "excerpts": [
-        {
-          "text": "I've paid my dues",
-          "order": 0
-        },
-        {
-          "text": "But I've come through",
-          "order": 1
-        },
-        {
-          "text": "I thank you all",
-          "order": 2
         }
       ]
     }

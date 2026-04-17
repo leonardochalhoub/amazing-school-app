@@ -1,0 +1,299 @@
+{
+  "slug": "people-are-strange",
+  "title": "People Are Strange",
+  "artist": "The Doors",
+  "year": 1967,
+  "album": "Strange Days",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 130,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "People Are Strange by The Doors (1967) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "you're",
+      "pt": "",
+      "note": "Appears 23 times; first heard in: \"When you're a stranger\""
+    },
+    {
+      "term": "strange",
+      "pt": "",
+      "note": "Appears 17 times; first heard in: \"People are strange\""
+    },
+    {
+      "term": "faces",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Faces look ugly\""
+    },
+    {
+      "term": "rain",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Faces come out of the rain\""
+    },
+    {
+      "term": "remembers",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"No one remembers your name\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "When you're strange",
+          "Faces come out of the rain",
+          "When you're strange",
+          "No one remembers your name"
+        ],
+        "start_seconds": 19,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "When you're strange",
+          "When you're strange",
+          "When you're strange",
+          "All right, yeah"
+        ],
+        "start_seconds": 83,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "a stranger",
+      "youtube_start": 4,
+      "youtube_end": 18
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "No one",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "remembers",
+      "excerpt_after": "your name",
+      "youtube_start": 26,
+      "youtube_end": 40
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When you're a stranger",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When you're unwanted",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When you're strange",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Faces look ugly",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Streets are uneven",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When",
+      "excerpt_after": "a stranger",
+      "options": [
+        "right",
+        "streets",
+        "uneven",
+        "youre"
+      ],
+      "answer_index": 3,
+      "youtube_start": 4,
+      "youtube_end": 16
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "No one",
+      "excerpt_after": "your name",
+      "options": [
+        "people",
+        "remembers",
+        "streets",
+        "unwanted"
+      ],
+      "answer_index": 1,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you're",
+        "a",
+        "stranger",
+        "When"
+      ],
+      "answer": [
+        "When",
+        "you're",
+        "a",
+        "stranger"
+      ],
+      "youtube_start": 4
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "out",
+        "Faces",
+        "of",
+        "the",
+        "rain",
+        "come"
+      ],
+      "answer": [
+        "Faces",
+        "come",
+        "out",
+        "of",
+        "the",
+        "rain"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "one",
+        "No",
+        "remembers",
+        "name",
+        "your"
+      ],
+      "answer": [
+        "No",
+        "one",
+        "remembers",
+        "your",
+        "name"
+      ],
+      "youtube_start": 26
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"you're\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"you're\" na música inteira?",
+      "word": "you're",
+      "answer": 23
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"strange\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"strange\" na música inteira?",
+      "word": "strange",
+      "answer": 17
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "People are strange",
+          "order": 0
+        },
+        {
+          "text": "When you're strange",
+          "order": 1
+        },
+        {
+          "text": "Faces come out of the rain",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "you're",
+        "strange",
+        "faces",
+        "rain"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"People Are Strange\" was released in 1967. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"People Are Strange\" foi lançada em 1967. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "you're",
+        "strange",
+        "faces",
+        "rain"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"People Are Strange\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"People Are Strange\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "you're",
+        "strange",
+        "faces",
+        "rain"
+      ]
+    }
+  ]
+}

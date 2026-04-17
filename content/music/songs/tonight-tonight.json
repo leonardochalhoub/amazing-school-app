@@ -1,0 +1,481 @@
+{
+  "slug": "tonight-tonight",
+  "title": "Tonight, Tonight",
+  "artist": "The Smashing Pumpkins",
+  "year": 1995,
+  "album": "Mellon Collie And The Infinite Sadness",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 255,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Tonight, Tonight by The Smashing Pumpkins (1995) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "tonight",
+      "pt": "",
+      "note": "Appears 23 times; first heard in: \"Tonight\""
+    },
+    {
+      "term": "believe",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Believe\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Time is never time at all\""
+    },
+    {
+      "term": "we'll",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"We'll crucify the insincere tonight\""
+    },
+    {
+      "term": "you're",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"That you're not stuck in vain\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Believe in me",
+          "Believe, believe",
+          "That life can change",
+          "That you're not stuck in vain"
+        ],
+        "start_seconds": 74,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Tonight, so bright",
+          "Tonight",
+          "Tonight",
+          "And you know you're never sure"
+        ],
+        "start_seconds": 104,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Time is",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "time at all",
+      "youtube_start": 44,
+      "youtube_end": 58
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And our",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lives",
+      "excerpt_after": "are forever changed",
+      "youtube_start": 59,
+      "youtube_end": 73
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If you held",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "yourself",
+      "excerpt_after": "up to the light",
+      "youtube_start": 135,
+      "youtube_end": 149
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "place",
+      "excerpt_after": "where you were born",
+      "youtube_start": 147,
+      "youtube_end": 161
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We'll",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "crucify",
+      "excerpt_after": "the insincere tonight",
+      "youtube_start": 194,
+      "youtube_end": 208
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We'll find a way to",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "offer",
+      "excerpt_after": "up the night",
+      "youtube_start": 207,
+      "youtube_end": 221
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You can never ever leave",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The more you change, the less you feel",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We're not the same, we're different",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But you're sure you could be right",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The place where you were born",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Time is",
+      "excerpt_after": "time at all",
+      "options": [
+        "never",
+        "theres",
+        "yourself",
+        "youth"
+      ],
+      "answer_index": 0,
+      "youtube_start": 44,
+      "youtube_end": 56
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The more you",
+      "excerpt_after": "the less you feel",
+      "options": [
+        "change",
+        "right",
+        "stuck",
+        "without"
+      ],
+      "answer_index": 0,
+      "youtube_start": 65,
+      "youtube_end": 77
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And you",
+      "excerpt_after": "you're never sure",
+      "options": [
+        "crucify",
+        "fade",
+        "know",
+        "never"
+      ],
+      "answer_index": 2,
+      "youtube_start": 128,
+      "youtube_end": 140
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "In your",
+      "excerpt_after": "by the lake",
+      "options": [
+        "born",
+        "chance",
+        "city",
+        "tonight"
+      ],
+      "answer_index": 2,
+      "youtube_start": 144,
+      "youtube_end": 156
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We'll",
+      "excerpt_after": "the insincere tonight",
+      "options": [
+        "believe",
+        "born",
+        "crucify",
+        "time"
+      ],
+      "answer_index": 2,
+      "youtube_start": 194,
+      "youtube_end": 206
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "all",
+        "time",
+        "never",
+        "at",
+        "Time",
+        "is"
+      ],
+      "answer": [
+        "Time",
+        "is",
+        "never",
+        "time",
+        "at",
+        "all"
+      ],
+      "youtube_start": 44
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "forever",
+        "lives",
+        "are",
+        "changed",
+        "our"
+      ],
+      "answer": [
+        "And",
+        "our",
+        "lives",
+        "are",
+        "forever",
+        "changed"
+      ],
+      "youtube_start": 59
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "not",
+        "stuck",
+        "vain",
+        "in",
+        "That",
+        "you're"
+      ],
+      "answer": [
+        "That",
+        "you're",
+        "not",
+        "stuck",
+        "in",
+        "vain"
+      ],
+      "youtube_start": 85
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "never",
+        "fade",
+        "embers",
+        "the",
+        "And"
+      ],
+      "answer": [
+        "And",
+        "the",
+        "embers",
+        "never",
+        "fade"
+      ],
+      "youtube_start": 141
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "of",
+        "the",
+        "urgency",
+        "In",
+        "now",
+        "resolute"
+      ],
+      "answer": [
+        "In",
+        "the",
+        "resolute",
+        "urgency",
+        "of",
+        "now"
+      ],
+      "youtube_start": 165
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"tonight\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"tonight\" na música inteira?",
+      "word": "tonight",
+      "answer": 23
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"believe\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"believe\" na música inteira?",
+      "word": "believe",
+      "answer": 11
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Time is never time at all",
+          "order": 0
+        },
+        {
+          "text": "That you're not stuck in vain",
+          "order": 1
+        },
+        {
+          "text": "The place where you were born",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You can never ever leave",
+          "order": 0
+        },
+        {
+          "text": "But you're sure you could be right",
+          "order": 1
+        },
+        {
+          "text": "In the resolute urgency of now",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask The Smashing Pumpkins one question about \"Tonight, Tonight\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para The Smashing Pumpkins sobre \"Tonight, Tonight\", o que seria e por quê?",
+      "target_vocab": [
+        "tonight",
+        "believe",
+        "never",
+        "we'll"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Tonight, Tonight\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Tonight, Tonight\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "tonight",
+        "believe",
+        "never",
+        "we'll"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Tonight, Tonight\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Tonight, Tonight\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "tonight",
+        "believe",
+        "never",
+        "we'll"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        }
+      ]
+    }
+  ]
+}

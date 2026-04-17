@@ -1,0 +1,465 @@
+{
+  "slug": "at-last",
+  "title": "At Last",
+  "artist": "Etta James",
+  "year": 1960,
+  "album": "Heart of a Woman",
+  "genre": [
+    "blues",
+    "soul"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 280,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "At Last by Etta James (1960) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "last",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"At last, my love has come along\""
+    },
+    {
+      "term": "found",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I found a dream, that I could speak to\""
+    },
+    {
+      "term": "dream",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I found a dream, that I could speak to\""
+    },
+    {
+      "term": "thrill",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I found a thrill to rest my cheek to\""
+    },
+    {
+      "term": "smile",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"You smile\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "You smile",
+          "You smile",
+          "Oh and then the spell was cast"
+        ],
+        "start_seconds": 119,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "At last, my love has come along",
+          "My lonely days are over",
+          "And life is like a song"
+        ],
+        "start_seconds": 19,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "My",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lonely",
+      "excerpt_after": "days are over",
+      "youtube_start": 35,
+      "youtube_end": 49
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "At last, the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "skies",
+      "excerpt_after": "above are blue",
+      "youtube_start": 54,
+      "youtube_end": 68
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "night",
+      "excerpt_after": "I looked at you",
+      "youtube_start": 76,
+      "youtube_end": 90
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "found",
+      "excerpt_after": "a dream, that I could speak to",
+      "youtube_start": 86,
+      "youtube_end": 100
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I found a",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thrill",
+      "excerpt_after": "to rest my cheek to",
+      "youtube_start": 102,
+      "youtube_end": 116
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "A thrill that I have",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "known",
+      "youtube_start": 111,
+      "youtube_end": 125
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The night I looked at you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "A thrill that I have never known",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "For you are mine",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "My lonely days are over",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Ooh yeah, yeah",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "At",
+      "excerpt_after": "my love has come along",
+      "options": [
+        "days",
+        "found",
+        "last",
+        "wrapped"
+      ],
+      "answer_index": 2,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "is like a song",
+      "options": [
+        "call",
+        "days",
+        "life",
+        "thrill"
+      ],
+      "answer_index": 2,
+      "youtube_start": 43,
+      "youtube_end": 55
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "My",
+      "excerpt_after": "was wrapped up in clover",
+      "options": [
+        "heart",
+        "heaven",
+        "last",
+        "wrapped"
+      ],
+      "answer_index": 0,
+      "youtube_start": 68,
+      "youtube_end": 80
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "a dream, that I could speak to",
+      "options": [
+        "found",
+        "life",
+        "spell",
+        "wrapped"
+      ],
+      "answer_index": 0,
+      "youtube_start": 86,
+      "youtube_end": 98
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I found a",
+      "excerpt_after": "to rest my cheek to",
+      "options": [
+        "days",
+        "found",
+        "thrill",
+        "wrapped"
+      ],
+      "answer_index": 2,
+      "youtube_start": 102,
+      "youtube_end": 114
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "At",
+        "come",
+        "my",
+        "has",
+        "last,",
+        "love",
+        "along"
+      ],
+      "answer": [
+        "At",
+        "last,",
+        "my",
+        "love",
+        "has",
+        "come",
+        "along"
+      ],
+      "youtube_start": 19
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "is",
+        "a",
+        "like",
+        "song",
+        "life",
+        "And"
+      ],
+      "answer": [
+        "And",
+        "life",
+        "is",
+        "like",
+        "a",
+        "song"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "in",
+        "wrapped",
+        "clover",
+        "up",
+        "My",
+        "heart",
+        "was"
+      ],
+      "answer": [
+        "My",
+        "heart",
+        "was",
+        "wrapped",
+        "up",
+        "in",
+        "clover"
+      ],
+      "youtube_start": 68
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "known",
+        "thrill",
+        "A",
+        "never",
+        "that",
+        "I",
+        "have"
+      ],
+      "answer": [
+        "A",
+        "thrill",
+        "that",
+        "I",
+        "have",
+        "never",
+        "known"
+      ],
+      "youtube_start": 111
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "are",
+        "in",
+        "heaven",
+        "And",
+        "here",
+        "we"
+      ],
+      "answer": [
+        "And",
+        "here",
+        "we",
+        "are",
+        "in",
+        "heaven"
+      ],
+      "youtube_start": 134
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"last\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"last\" na música inteira?",
+      "word": "last",
+      "answer": 3
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"yeah\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"yeah\" na música inteira?",
+      "word": "yeah",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "At last, my love has come along",
+          "order": 0
+        },
+        {
+          "text": "At last, the skies above are blue",
+          "order": 1
+        },
+        {
+          "text": "A thrill that I have never known",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "My lonely days are over",
+          "order": 0
+        },
+        {
+          "text": "The night I looked at you",
+          "order": 1
+        },
+        {
+          "text": "Ohh yeah yeah",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"At Last\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"At Last\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "last",
+        "found",
+        "dream",
+        "thrill"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"At Last\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"At Last\", o que aconteceria?",
+      "target_vocab": [
+        "last",
+        "found",
+        "dream",
+        "thrill"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"At Last\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"At Last\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "last",
+        "found",
+        "dream",
+        "thrill"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,486 @@
+{
+  "slug": "layla",
+  "title": "Layla",
+  "artist": "Eric Clapton",
+  "year": 1970,
+  "album": "Eric Clapton's Rainbow Concert",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 386,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Layla by Eric Clapton (1970) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "layla",
+      "pt": "",
+      "note": "Appears 18 times; first heard in: \"Layla\""
+    },
+    {
+      "term": "darling",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Begging darling please\""
+    },
+    {
+      "term": "please",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Begging darling please\""
+    },
+    {
+      "term": "knees",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Got me on my knees\""
+    },
+    {
+      "term": "begging",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Begging darling please\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Got me on my knees",
+          "Layla",
+          "Begging darling please",
+          "Layla"
+        ],
+        "start_seconds": 54,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "See if you can spot this one"
+        ],
+        "start_seconds": 0,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "No one",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "waiting",
+      "excerpt_after": "by your side",
+      "youtube_start": 36,
+      "youtube_end": 50
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You've been",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "running",
+      "excerpt_after": "hiding much too long",
+      "youtube_start": 41,
+      "youtube_end": 55
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Darling won't you ease my",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "worried",
+      "excerpt_after": "mind?",
+      "youtube_start": 64,
+      "youtube_end": 78
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "turned",
+      "excerpt_after": "my whole world upside down, Layla",
+      "youtube_start": 88,
+      "youtube_end": 102
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Please don't say we'll",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "find a way",
+      "youtube_start": 123,
+      "youtube_end": 137
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Tell me all my",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "loves",
+      "excerpt_after": "in vain",
+      "youtube_start": 129,
+      "youtube_end": 143
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "See if you can spot this one",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You've been running hiding much too long",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Darling won't you ease my worried mind?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When your old man had let you down",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Fore I finally go insane",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "See if you can",
+      "excerpt_after": "this one",
+      "options": [
+        "best",
+        "fell",
+        "spot",
+        "turned"
+      ],
+      "answer_index": 2,
+      "youtube_start": 0,
+      "youtube_end": 12
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "it's just your foolish pride",
+      "options": [
+        "find",
+        "know",
+        "lonely",
+        "turned"
+      ],
+      "answer_index": 1,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Like a",
+      "excerpt_after": "I fell in love with you",
+      "options": [
+        "fool",
+        "knees",
+        "upside",
+        "youve"
+      ],
+      "answer_index": 0,
+      "youtube_start": 83,
+      "youtube_end": 95
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Make the",
+      "excerpt_after": "of the situation",
+      "options": [
+        "best",
+        "fool",
+        "long",
+        "running"
+      ],
+      "answer_index": 0,
+      "youtube_start": 114,
+      "youtube_end": 126
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Tell me all my",
+      "excerpt_after": "in vain",
+      "options": [
+        "finally",
+        "loves",
+        "upside",
+        "well"
+      ],
+      "answer_index": 1,
+      "youtube_start": 129,
+      "youtube_end": 141
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "this",
+        "can",
+        "one",
+        "spot",
+        "you",
+        "if",
+        "See"
+      ],
+      "answer": [
+        "See",
+        "if",
+        "you",
+        "can",
+        "spot",
+        "this",
+        "one"
+      ],
+      "youtube_start": 0
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "long",
+        "too",
+        "hiding",
+        "running",
+        "been",
+        "much",
+        "You've"
+      ],
+      "answer": [
+        "You've",
+        "been",
+        "running",
+        "hiding",
+        "much",
+        "too",
+        "long"
+      ],
+      "youtube_start": 41
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "on",
+        "my",
+        "Got",
+        "me",
+        "knees"
+      ],
+      "answer": [
+        "Got",
+        "me",
+        "on",
+        "my",
+        "knees"
+      ],
+      "youtube_start": 54
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "Tried",
+        "consolation",
+        "give",
+        "you"
+      ],
+      "answer": [
+        "Tried",
+        "to",
+        "give",
+        "you",
+        "consolation"
+      ],
+      "youtube_start": 73
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "finally",
+        "'Fore",
+        "insane",
+        "go"
+      ],
+      "answer": [
+        "'Fore",
+        "I",
+        "finally",
+        "go",
+        "insane"
+      ],
+      "youtube_start": 119
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"layla\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"layla\" na música inteira?",
+      "word": "layla",
+      "answer": 18
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"darling\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"darling\" na música inteira?",
+      "word": "darling",
+      "answer": 12
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "See if you can spot this one",
+          "order": 0
+        },
+        {
+          "text": "You turned my whole world upside down, Layla",
+          "order": 1
+        },
+        {
+          "text": "Darling won't you ease my worried mind?",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "What will you do when you get lonely?",
+          "order": 0
+        },
+        {
+          "text": "Make the best of the situation",
+          "order": 1
+        },
+        {
+          "text": "Got me on my knees",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "layla",
+        "darling",
+        "please",
+        "knees"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Layla\" was released in 1970. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Layla\" foi lançada em 1970. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "layla",
+        "darling",
+        "please",
+        "knees"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Layla\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Layla\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "layla",
+        "darling",
+        "please",
+        "knees"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

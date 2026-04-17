@@ -1,4 +1,5 @@
 import { getLesson } from "@/lib/content/loader";
+import { getPublishedLessonDraft } from "@/lib/actions/lesson-drafts";
 import { LessonPlayerWrapper } from "./lesson-player-wrapper";
 
 export default async function LessonPage({
@@ -7,7 +8,8 @@ export default async function LessonPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const lesson = await getLesson(slug);
+  const lesson =
+    (await getLesson(slug)) ?? (await getPublishedLessonDraft(slug));
 
   if (!lesson) {
     return (

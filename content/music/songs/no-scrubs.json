@@ -1,0 +1,495 @@
+{
+  "slug": "no-scrubs",
+  "title": "No Scrubs",
+  "artist": "TLC",
+  "year": 1999,
+  "album": "Fanmail",
+  "genre": [
+    "r&b"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 214,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "No Scrubs by TLC (1999) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "scrub",
+      "pt": "",
+      "note": "Appears 30 times; first heard in: \"A scrub is a guy that thinks he's fine\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 23 times; first heard in: \"So, no, I don't want your number\""
+    },
+    {
+      "term": "want",
+      "pt": "",
+      "note": "Appears 21 times; first heard in: \"So, no, I don't want your number\""
+    },
+    {
+      "term": "can't",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"A scrub is a guy that can't get no love from me\""
+    },
+    {
+      "term": "passenger",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Hangin' out the passenger side of his best friend's ride\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Trying to holla at me",
+          "I don't want no scrub",
+          "A scrub is a guy that can't get no love from me",
+          "Hangin' out the passenger side of his best friend's ride"
+        ],
+        "start_seconds": 39,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Oh yes son, I'm talking to you",
+          "If you live at home wit' your momma",
+          "Oh yes son, I'm talking to you",
+          "If you have a shorty that you don't show love"
+        ],
+        "start_seconds": 95,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "A",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "scrub",
+      "excerpt_after": "is a guy that thinks he's fine",
+      "youtube_start": 9,
+      "youtube_end": 23
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And is, also",
+      "blank_hint": "word starting with \"k\"",
+      "answer": "known",
+      "excerpt_after": "as a busta",
+      "youtube_start": 12,
+      "youtube_end": 26
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And just sits on his",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "broke",
+      "excerpt_after": "ass",
+      "youtube_start": 17,
+      "youtube_end": 31
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Trying to",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "holla",
+      "excerpt_after": "at me",
+      "youtube_start": 39,
+      "youtube_end": 53
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Can't get wit' a",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "deadbeat",
+      "excerpt_after": "ass",
+      "youtube_start": 59,
+      "youtube_end": 73
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If you don't have a car and",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "walking",
+      "youtube_start": 93,
+      "youtube_end": 107
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Always talkin' about what he wants",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "No, I don't want to meet you nowhere",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I don't want no scrub",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh yes son, I'm talking to you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh no, I don't want no",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "A",
+      "excerpt_after": "is a guy that thinks he's fine",
+      "options": [
+        "deadbeat",
+        "fine",
+        "lookin",
+        "scrub"
+      ],
+      "answer_index": 3,
+      "youtube_start": 9,
+      "youtube_end": 21
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And just",
+      "excerpt_after": "on his broke ass",
+      "options": [
+        "dont",
+        "scrub",
+        "sits",
+        "talkin"
+      ],
+      "answer_index": 2,
+      "youtube_start": 17,
+      "youtube_end": 29
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "No, I don't want to",
+      "excerpt_after": "you nowhere",
+      "options": [
+        "game",
+        "know",
+        "known",
+        "meet"
+      ],
+      "answer_index": 3,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I",
+      "excerpt_after": "that he cannot approach me",
+      "options": [
+        "holla",
+        "know",
+        "thinks",
+        "trash"
+      ],
+      "answer_index": 1,
+      "youtube_start": 53,
+      "youtube_end": 65
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "If you don't have a car and",
+      "excerpt_after": "walking",
+      "options": [
+        "kinda",
+        "none",
+        "wants",
+        "youre"
+      ],
+      "answer_index": 3,
+      "youtube_start": 93,
+      "youtube_end": 105
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "also",
+        "as",
+        "a",
+        "is,",
+        "busta",
+        "known",
+        "And"
+      ],
+      "answer": [
+        "And",
+        "is,",
+        "also",
+        "known",
+        "as",
+        "a",
+        "busta"
+      ],
+      "youtube_start": 12
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ass",
+        "And",
+        "on",
+        "his",
+        "sits",
+        "just",
+        "broke"
+      ],
+      "answer": [
+        "And",
+        "just",
+        "sits",
+        "on",
+        "his",
+        "broke",
+        "ass"
+      ],
+      "youtube_start": 17
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "holla",
+        "Trying",
+        "at",
+        "me",
+        "to"
+      ],
+      "answer": [
+        "Trying",
+        "to",
+        "holla",
+        "at",
+        "me"
+      ],
+      "youtube_start": 39
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "No,",
+        "your",
+        "none",
+        "want",
+        "don't",
+        "time",
+        "of"
+      ],
+      "answer": [
+        "No,",
+        "don't",
+        "want",
+        "none",
+        "of",
+        "your",
+        "time"
+      ],
+      "youtube_start": 70
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "no,",
+        "no",
+        "I",
+        "don't",
+        "Oh",
+        "want"
+      ],
+      "answer": [
+        "Oh",
+        "no,",
+        "I",
+        "don't",
+        "want",
+        "no"
+      ],
+      "youtube_start": 110
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"scrub\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"scrub\" na música inteira?",
+      "word": "scrub",
+      "answer": 30
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 23
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And is, also known as a busta",
+          "order": 0
+        },
+        {
+          "text": "No, don't want none of your time",
+          "order": 1
+        },
+        {
+          "text": "No, I don't want no scrub",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Always talkin' about what he wants",
+          "order": 0
+        },
+        {
+          "text": "If you live at home wit' your momma",
+          "order": 1
+        },
+        {
+          "text": "I don't want no scrub",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"No Scrubs\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"No Scrubs\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "scrub",
+        "don't",
+        "want",
+        "can't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"No Scrubs\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"No Scrubs\", o que aconteceria?",
+      "target_vocab": [
+        "scrub",
+        "don't",
+        "want",
+        "can't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"No Scrubs\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"No Scrubs\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "scrub",
+        "don't",
+        "want",
+        "can't"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "he's",
+          "full": "he is"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        }
+      ]
+    }
+  ]
+}

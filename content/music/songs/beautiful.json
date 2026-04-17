@@ -1,0 +1,481 @@
+{
+  "slug": "beautiful",
+  "title": "Beautiful",
+  "artist": "Christina Aguilera",
+  "year": 2002,
+  "album": "Stripped - 20th Anniversary Edition",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 239,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Beautiful by Christina Aguilera (2002) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "bring",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Words can't bring me down\""
+    },
+    {
+      "term": "beautiful",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I am beautiful no matter what they say\""
+    },
+    {
+      "term": "matter",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I am beautiful no matter what they say\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Don't look at me\""
+    },
+    {
+      "term": "words",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Words can't bring me down\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "So don't you bring me down today",
+          "To all your friends you're delirious",
+          "So consumed in all your doom",
+          "Trying hard to fill the emptiness"
+        ],
+        "start_seconds": 77,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "No matter what we do",
+          "(No matter what we do)",
+          "No matter what we say",
+          "(No matter what we say)"
+        ],
+        "start_seconds": 147,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Then",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "suddenly",
+      "excerpt_after": "it's hard to breathe",
+      "youtube_start": 31,
+      "youtube_end": 45
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Words can't",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "bring",
+      "excerpt_after": "me down",
+      "youtube_start": 57,
+      "youtube_end": 71
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Yes,",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "words",
+      "excerpt_after": "can't bring me down, oh no",
+      "youtube_start": 69,
+      "youtube_end": 83
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "pieces",
+      "excerpt_after": "gone, left the puzzle undone",
+      "youtube_start": 110,
+      "youtube_end": 124
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You are beautiful in every",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "single",
+      "excerpt_after": "way",
+      "youtube_start": 130,
+      "youtube_end": 144
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "everywhere",
+      "excerpt_after": "we go",
+      "youtube_start": 159,
+      "youtube_end": 173
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Now and then I get insecure",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I am beautiful no matter what they say",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So don't you bring me down today",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You are beautiful no matter what they say",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You are beautiful in every single way",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Then",
+      "excerpt_after": "it's hard to breathe",
+      "options": [
+        "beautiful",
+        "suddenly",
+        "tomorrow",
+        "words"
+      ],
+      "answer_index": 1,
+      "youtube_start": 31,
+      "youtube_end": 43
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I am beautiful in",
+      "excerpt_after": "single way",
+      "options": [
+        "bring",
+        "every",
+        "friends",
+        "inside"
+      ],
+      "answer_index": 1,
+      "youtube_start": 64,
+      "youtube_end": 76
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So",
+      "excerpt_after": "in all your doom",
+      "options": [
+        "cause",
+        "consumed",
+        "emptiness",
+        "ooh-oh-oh"
+      ],
+      "answer_index": 1,
+      "youtube_start": 97,
+      "youtube_end": 109
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You are beautiful no",
+      "excerpt_after": "what they say",
+      "options": [
+        "inside",
+        "matter",
+        "might",
+        "single"
+      ],
+      "answer_index": 1,
+      "youtube_start": 117,
+      "youtube_end": 129
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "we go",
+      "options": [
+        "everywhere",
+        "insecure",
+        "mistakes",
+        "tomorrow"
+      ],
+      "answer_index": 0,
+      "youtube_start": 159,
+      "youtube_end": 171
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "at",
+        "look",
+        "Don't",
+        "me"
+      ],
+      "answer": [
+        "Don't",
+        "look",
+        "at",
+        "me"
+      ],
+      "youtube_start": 0
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "down",
+        "bring",
+        "can't",
+        "Words",
+        "me"
+      ],
+      "answer": [
+        "Words",
+        "can't",
+        "bring",
+        "me",
+        "down"
+      ],
+      "youtube_start": 57
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "fill",
+        "hard",
+        "the",
+        "emptiness",
+        "Trying",
+        "to"
+      ],
+      "answer": [
+        "Trying",
+        "hard",
+        "to",
+        "fill",
+        "the",
+        "emptiness"
+      ],
+      "youtube_start": 105
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "No",
+        "what",
+        "do",
+        "matter",
+        "we"
+      ],
+      "answer": [
+        "No",
+        "matter",
+        "what",
+        "we",
+        "do"
+      ],
+      "youtube_start": 147
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "The",
+        "sun",
+        "will",
+        "shine",
+        "always"
+      ],
+      "answer": [
+        "The",
+        "sun",
+        "will",
+        "always",
+        "shine"
+      ],
+      "youtube_start": 162
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"bring\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"bring\" na música inteira?",
+      "word": "bring",
+      "answer": 11
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"beautiful\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"beautiful\" na música inteira?",
+      "word": "beautiful",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Don't look at me",
+          "order": 0
+        },
+        {
+          "text": "So consumed in all your doom",
+          "order": 1
+        },
+        {
+          "text": "(No matter what we say)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Every day is so wonderful",
+          "order": 0
+        },
+        {
+          "text": "You are beautiful in every single way",
+          "order": 1
+        },
+        {
+          "text": "And everywhere we go",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "bring",
+        "beautiful",
+        "matter",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Beautiful\" was released in 2002. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Beautiful\" foi lançada em 2002. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "bring",
+        "beautiful",
+        "matter",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Beautiful\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Beautiful\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "bring",
+        "beautiful",
+        "matter",
+        "don't"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        }
+      ]
+    }
+  ]
+}

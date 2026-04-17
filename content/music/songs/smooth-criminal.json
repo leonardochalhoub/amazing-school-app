@@ -1,0 +1,484 @@
+{
+  "slug": "smooth-criminal",
+  "title": "Smooth Criminal",
+  "artist": "Michael Jackson",
+  "year": 1987,
+  "album": "Manila 1996",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 359,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Smooth Criminal by Michael Jackson (1987) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "annie",
+      "pt": "",
+      "note": "Appears 50 times; first heard in: \"Annie, are you okay?\""
+    },
+    {
+      "term": "okay",
+      "pt": "",
+      "note": "Appears 48 times; first heard in: \"Annie, are you okay?\""
+    },
+    {
+      "term": "struck",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"So she ran into the bedroom, she was struck down\""
+    },
+    {
+      "term": "came",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"As he came into the window was a sound of a crescendo\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Annie, are you okay? (I don't know)\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Annie, are you okay?",
+          "So, Annie, are you okay? Are you okay, Annie?",
+          "Annie, are you okay?",
+          "So, Annie, are you okay? Are you okay, Annie?"
+        ],
+        "start_seconds": 47,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "You've been hit by",
+          "You've been hit by",
+          "A smooth criminal"
+        ],
+        "start_seconds": 92,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So,",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "annie",
+      "excerpt_after": "are you okay? Are you okay, Annie?",
+      "youtube_start": 48,
+      "youtube_end": 62
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Will you tell us that",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "okay?",
+      "youtube_start": 65,
+      "youtube_end": 79
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Then he",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "struck",
+      "excerpt_after": "you, a crescendo, Annie",
+      "youtube_start": 69,
+      "youtube_end": 83
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It was",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sunday",
+      "excerpt_after": "what a black day",
+      "youtube_start": 105,
+      "youtube_end": 119
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There's a sound at the",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "window",
+      "excerpt_after": "(I don't know)",
+      "youtube_start": 189,
+      "youtube_end": 203
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And then you ran into the",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "bedroom",
+      "excerpt_after": "(help me)",
+      "youtube_start": 197,
+      "youtube_end": 211
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Annie, are you okay?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Then he struck you, a crescendo, Annie",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And then you ran into the bedroom",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You've been hit by",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Annie, are you okay? Annie, are you okay?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So,",
+      "excerpt_after": "are you okay? Are you okay, Annie?",
+      "options": [
+        "annie",
+        "bedroom",
+        "window",
+        "youve"
+      ],
+      "answer_index": 0,
+      "youtube_start": 48,
+      "youtube_end": 60
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There's a",
+      "excerpt_after": "at the window",
+      "options": [
+        "baby",
+        "sound",
+        "theres",
+        "youve"
+      ],
+      "answer_index": 1,
+      "youtube_start": 67,
+      "youtube_end": 79
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It was",
+      "excerpt_after": "what a black day",
+      "options": [
+        "left",
+        "sound",
+        "sunday",
+        "tell"
+      ],
+      "answer_index": 2,
+      "youtube_start": 105,
+      "youtube_end": 117
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There's a sound at the",
+      "excerpt_after": "(I don't know)",
+      "options": [
+        "left",
+        "sound",
+        "struck",
+        "window"
+      ],
+      "answer_index": 3,
+      "youtube_start": 189,
+      "youtube_end": 201
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It was your",
+      "excerpt_after": "Annie (dag gone it)",
+      "options": [
+        "black",
+        "doom",
+        "smooth",
+        "struck"
+      ],
+      "answer_index": 1,
+      "youtube_start": 200,
+      "youtube_end": 212
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "her",
+        "doom",
+        "It",
+        "was"
+      ],
+      "answer": [
+        "It",
+        "was",
+        "her",
+        "doom"
+      ],
+      "youtube_start": 46
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "There's",
+        "the",
+        "window",
+        "a",
+        "sound",
+        "at"
+      ],
+      "answer": [
+        "There's",
+        "a",
+        "sound",
+        "at",
+        "the",
+        "window"
+      ],
+      "youtube_start": 67
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "into",
+        "then",
+        "bedroom",
+        "you",
+        "ran",
+        "the"
+      ],
+      "answer": [
+        "And",
+        "then",
+        "you",
+        "ran",
+        "into",
+        "the",
+        "bedroom"
+      ],
+      "youtube_start": 75
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "what",
+        "day",
+        "It",
+        "black",
+        "Sunday,",
+        "was"
+      ],
+      "answer": [
+        "It",
+        "was",
+        "Sunday,",
+        "what",
+        "a",
+        "black",
+        "day"
+      ],
+      "youtube_start": 105
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "are",
+        "Annie,",
+        "okay?",
+        "know",
+        "you",
+        "I",
+        "don't"
+      ],
+      "answer": [
+        "Annie,",
+        "are",
+        "you",
+        "okay?",
+        "I",
+        "don't",
+        "know"
+      ],
+      "youtube_start": 185
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"annie\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"annie\" na música inteira?",
+      "word": "annie",
+      "answer": 50
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"okay\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"okay\" na música inteira?",
+      "word": "okay",
+      "answer": 48
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "It was her doom",
+          "order": 0
+        },
+        {
+          "text": "You've been hit by",
+          "order": 1
+        },
+        {
+          "text": "Left the bloodstains on the carpet",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Annie, are you okay?",
+          "order": 0
+        },
+        {
+          "text": "Annie, are you okay? (Annie, are you okay?)",
+          "order": 1
+        },
+        {
+          "text": "It was your doom",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Smooth Criminal\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Smooth Criminal\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "annie",
+        "okay",
+        "struck",
+        "came"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Michael Jackson one question about \"Smooth Criminal\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Michael Jackson sobre \"Smooth Criminal\", o que seria e por quê?",
+      "target_vocab": [
+        "annie",
+        "okay",
+        "struck",
+        "came"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Smooth Criminal\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Smooth Criminal\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "annie",
+        "okay",
+        "struck",
+        "came"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    }
+  ]
+}

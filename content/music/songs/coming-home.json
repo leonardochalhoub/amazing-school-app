@@ -1,0 +1,483 @@
+{
+  "slug": "coming-home",
+  "title": "Coming Home",
+  "artist": "Leon Bridges",
+  "year": 2015,
+  "album": "Coming Home",
+  "genre": [
+    "soul"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 206,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Coming Home by Leon Bridges (2015) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "girl",
+      "pt": "",
+      "note": "Appears 14 times; first heard in: \"The world leaves a bitter taste in my mouth, girl\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Baby, baby, baby\""
+    },
+    {
+      "term": "you're",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"You're my one and only woman\""
+    },
+    {
+      "term": "want",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"You're the only one that I want\""
+    },
+    {
+      "term": "loving",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"To your tender sweet loving\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Wanna be around, girl",
+          "Wanna be around, girl",
+          "Ooh, wanna be around, girl",
+          "Baby, how I'd be grieving"
+        ],
+        "start_seconds": 55,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Baby, baby, baby",
+          "I'm coming home",
+          "To your tender sweet loving",
+          "You're my one and only woman"
+        ],
+        "start_seconds": 25,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To your",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tender",
+      "excerpt_after": "sweet loving",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ooh,",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "be around, girl",
+      "youtube_start": 67,
+      "youtube_end": 81
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If you",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanted",
+      "excerpt_after": "to leave me all alone now",
+      "youtube_start": 79,
+      "youtube_end": 93
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "By",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "myself",
+      "excerpt_after": "I don't want nobody else",
+      "youtube_start": 83,
+      "youtube_end": 97
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To your tender",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sweet",
+      "excerpt_after": "loving",
+      "youtube_start": 132,
+      "youtube_end": 146
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I need your",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "loving",
+      "excerpt_after": "darling",
+      "youtube_start": 187,
+      "youtube_end": 201
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm coming home",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You're the only one that I want",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "By myself, I don't want nobody else",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I need your loving, darling",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Baby, baby, baby",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "To your",
+      "excerpt_after": "sweet loving",
+      "options": [
+        "myself",
+        "taste",
+        "tender",
+        "world"
+      ],
+      "answer_index": 2,
+      "youtube_start": 30,
+      "youtube_end": 42
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ooh,",
+      "excerpt_after": "be around, girl",
+      "options": [
+        "grieving",
+        "mouth",
+        "wanna",
+        "woman"
+      ],
+      "answer_index": 2,
+      "youtube_start": 67,
+      "youtube_end": 79
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "By",
+      "excerpt_after": "I don't want nobody else",
+      "options": [
+        "home",
+        "myself",
+        "tender",
+        "world"
+      ],
+      "answer_index": 1,
+      "youtube_start": 83,
+      "youtube_end": 95
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "To your tender",
+      "excerpt_after": "loving",
+      "options": [
+        "alone",
+        "dont",
+        "sweet",
+        "world"
+      ],
+      "answer_index": 2,
+      "youtube_start": 132,
+      "youtube_end": 144
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I need your",
+      "excerpt_after": "darling",
+      "options": [
+        "darling",
+        "loving",
+        "myself",
+        "nobody"
+      ],
+      "answer_index": 1,
+      "youtube_start": 187,
+      "youtube_end": 199
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "tender",
+        "sweet",
+        "loving",
+        "your",
+        "To"
+      ],
+      "answer": [
+        "To",
+        "your",
+        "tender",
+        "sweet",
+        "loving"
+      ],
+      "youtube_start": 30
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "one",
+        "only",
+        "You're",
+        "the",
+        "that",
+        "want"
+      ],
+      "answer": [
+        "You're",
+        "the",
+        "only",
+        "one",
+        "that",
+        "I",
+        "want"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "be",
+        "girl",
+        "Ooh,",
+        "around,",
+        "wanna"
+      ],
+      "answer": [
+        "Ooh,",
+        "wanna",
+        "be",
+        "around,",
+        "girl"
+      ],
+      "youtube_start": 67
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "By",
+        "myself,",
+        "nobody",
+        "want",
+        "don't",
+        "else"
+      ],
+      "answer": [
+        "By",
+        "myself,",
+        "I",
+        "don't",
+        "want",
+        "nobody",
+        "else"
+      ],
+      "youtube_start": 83
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "baby",
+        "you,",
+        "need"
+      ],
+      "answer": [
+        "I",
+        "need",
+        "you,",
+        "baby"
+      ],
+      "youtube_start": 180
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"girl\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"girl\" na música inteira?",
+      "word": "girl",
+      "answer": 14
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"baby\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"baby\" na música inteira?",
+      "word": "baby",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Baby, baby, baby",
+          "order": 0
+        },
+        {
+          "text": "Baby, how I'd be grieving",
+          "order": 1
+        },
+        {
+          "text": "To your tender sweet loving",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I'm coming home",
+          "order": 0
+        },
+        {
+          "text": "Wanna be around, girl",
+          "order": 1
+        },
+        {
+          "text": "Wanna be around",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Coming Home\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Coming Home\", o que aconteceria?",
+      "target_vocab": [
+        "girl",
+        "baby",
+        "you're",
+        "want"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Coming Home\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Coming Home\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "girl",
+        "baby",
+        "you're",
+        "want"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Coming Home\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Coming Home\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "girl",
+        "baby",
+        "you're",
+        "want"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    }
+  ]
+}

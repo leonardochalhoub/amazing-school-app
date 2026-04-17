@@ -1,0 +1,483 @@
+{
+  "slug": "never-gonna-give-you-up",
+  "title": "Never Gonna Give You Up",
+  "artist": "Rick Astley",
+  "year": 1987,
+  "album": "Whenever You Need Somebody",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 214,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Never Gonna Give You Up by Rick Astley (1987) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 40 times; first heard in: \"Never gonna give you up\""
+    },
+    {
+      "term": "give",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Never gonna give you up\""
+    },
+    {
+      "term": "tell",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"I just wanna tell you how I'm feelin'\""
+    },
+    {
+      "term": "desert",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Never gonna run around and desert you\""
+    },
+    {
+      "term": "goodbye",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Never gonna say goodbye\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Never gonna give you up",
+          "Never gonna let you down",
+          "Never gonna run around and desert you",
+          "Never gonna make you cry"
+        ],
+        "start_seconds": 43,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Ooh-ooh, give you up",
+          "Ooh-ooh, give you up",
+          "Never gonna give, never gonna give",
+          "Never gonna give, never gonna give"
+        ],
+        "start_seconds": 119,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We're no",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "strangers",
+      "excerpt_after": "to love",
+      "youtube_start": 18,
+      "youtube_end": 32
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "A full",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "commitments",
+      "excerpt_after": "what I'm thinkin' of",
+      "youtube_start": 26,
+      "youtube_end": 40
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I just",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "tell you how I'm feelin'",
+      "youtube_start": 35,
+      "youtube_end": 49
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Never gonna run around and",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "desert",
+      "excerpt_after": "you",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Inside we both know",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "whats",
+      "excerpt_after": "been goin' on",
+      "youtube_start": 69,
+      "youtube_end": 83
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Never gonna give,",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "gonna give",
+      "youtube_start": 127,
+      "youtube_end": 141
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We're no strangers to love",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "A full commitment's what I'm thinkin' of",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I just wanna tell you how I'm feelin'",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Never gonna give you up",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Never gonna run around and desert you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We're no",
+      "excerpt_after": "to love",
+      "options": [
+        "hearts",
+        "inside",
+        "strangers",
+        "wouldnt"
+      ],
+      "answer_index": 2,
+      "youtube_start": 18,
+      "youtube_end": 30
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "get this from any other guy",
+      "options": [
+        "gotta",
+        "other",
+        "play",
+        "wouldnt"
+      ],
+      "answer_index": 3,
+      "youtube_start": 31,
+      "youtube_end": 43
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Never gonna",
+      "excerpt_after": "a lie and hurt you",
+      "options": [
+        "both",
+        "goin",
+        "gonna",
+        "tell"
+      ],
+      "answer_index": 3,
+      "youtube_start": 55,
+      "youtube_end": 67
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We know the",
+      "excerpt_after": "and we're gonna play it",
+      "options": [
+        "game",
+        "hearts",
+        "other",
+        "weve"
+      ],
+      "answer_index": 0,
+      "youtube_start": 73,
+      "youtube_end": 85
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Never gonna give,",
+      "excerpt_after": "gonna give",
+      "options": [
+        "full",
+        "inside",
+        "know",
+        "never"
+      ],
+      "answer_index": 3,
+      "youtube_start": 127,
+      "youtube_end": 139
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "strangers",
+        "love",
+        "to",
+        "We're",
+        "no"
+      ],
+      "answer": [
+        "We're",
+        "no",
+        "strangers",
+        "to",
+        "love"
+      ],
+      "youtube_start": 18
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "make",
+        "Gotta",
+        "you",
+        "understand"
+      ],
+      "answer": [
+        "Gotta",
+        "make",
+        "you",
+        "understand"
+      ],
+      "youtube_start": 40
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Never",
+        "down",
+        "you",
+        "gonna",
+        "let"
+      ],
+      "answer": [
+        "Never",
+        "gonna",
+        "let",
+        "you",
+        "down"
+      ],
+      "youtube_start": 45
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "gonna",
+        "make",
+        "cry",
+        "Never"
+      ],
+      "answer": [
+        "Never",
+        "gonna",
+        "make",
+        "you",
+        "cry"
+      ],
+      "youtube_start": 51
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "so",
+        "for",
+        "long",
+        "We've",
+        "known",
+        "each",
+        "other"
+      ],
+      "answer": [
+        "We've",
+        "known",
+        "each",
+        "other",
+        "for",
+        "so",
+        "long"
+      ],
+      "youtube_start": 60
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"never\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"never\" na música inteira?",
+      "word": "never",
+      "answer": 40
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"give\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"give\" na música inteira?",
+      "word": "give",
+      "answer": 12
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "We're no strangers to love",
+          "order": 0
+        },
+        {
+          "text": "Never gonna run around and desert you",
+          "order": 1
+        },
+        {
+          "text": "Never gonna give you up",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You know the rules and so do I",
+          "order": 0
+        },
+        {
+          "text": "Never gonna say goodbye",
+          "order": 1
+        },
+        {
+          "text": "Never gonna make you cry",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Never Gonna Give You Up\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Never Gonna Give You Up\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "never",
+        "give",
+        "tell",
+        "desert"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Never Gonna Give You Up\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Never Gonna Give You Up\", o que aconteceria?",
+      "target_vocab": [
+        "never",
+        "give",
+        "tell",
+        "desert"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Never Gonna Give You Up\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Never Gonna Give You Up\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "never",
+        "give",
+        "tell",
+        "desert"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "wouldn't",
+          "full": "would not"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        }
+      ]
+    }
+  ]
+}

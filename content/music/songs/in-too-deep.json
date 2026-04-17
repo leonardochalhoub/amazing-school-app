@@ -1,0 +1,481 @@
+{
+  "slug": "in-too-deep",
+  "title": "In Too Deep",
+  "artist": "Sum 41",
+  "year": 2001,
+  "album": "All Killer, No Filler",
+  "genre": [
+    "punk"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 207,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "In Too Deep by Sum 41 (2001) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "instead",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"Instead of going under\""
+    },
+    {
+      "term": "going",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"Instead of going under\""
+    },
+    {
+      "term": "under",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"Instead of going under\""
+    },
+    {
+      "term": "trying",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"But still, we're trying one more time\""
+    },
+    {
+      "term": "we're",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"The faster we're falling\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Instead of going under",
+          "'Cause I'm in too deep",
+          "And I'm trying to keep",
+          "Up above in my head"
+        ],
+        "start_seconds": 38,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Instead of going under again",
+          "Instead of going under",
+          "Instead of going under again",
+          "Instead of going under again (instead of going under again)"
+        ],
+        "start_seconds": 164,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "faster",
+      "excerpt_after": "we're falling",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We're",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "running",
+      "excerpt_after": "in circles again",
+      "youtube_start": 12,
+      "youtube_end": 26
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But still, we're",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "trying",
+      "excerpt_after": "one more time",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Up",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "above",
+      "excerpt_after": "in my head",
+      "youtube_start": 36,
+      "youtube_end": 50
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Because I'm",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "bending",
+      "excerpt_after": "over backwards to relate",
+      "youtube_start": 63,
+      "youtube_end": 77
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "believe",
+      "excerpt_after": "me, it's not easy",
+      "youtube_start": 136,
+      "youtube_end": 150
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The faster we're falling",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We're running in circles again",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But still, we're trying one more time",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Cause I'm in too deep",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Because I'm bending over backwards to relate",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The",
+      "excerpt_after": "we're falling",
+      "options": [
+        "cause",
+        "faster",
+        "good",
+        "things"
+      ],
+      "answer_index": 1,
+      "youtube_start": 7,
+      "youtube_end": 19
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Just as",
+      "excerpt_after": "were looking up",
+      "options": [
+        "bending",
+        "complain",
+        "running",
+        "things"
+      ],
+      "answer_index": 3,
+      "youtube_start": 15,
+      "youtube_end": 27
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When",
+      "excerpt_after": "it's closer than it is too far",
+      "options": [
+        "because",
+        "instead",
+        "really",
+        "seems"
+      ],
+      "answer_index": 2,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Because I'm",
+      "excerpt_after": "over backwards to relate",
+      "options": [
+        "bending",
+        "falling",
+        "seems",
+        "stopping"
+      ],
+      "answer_index": 0,
+      "youtube_start": 63,
+      "youtube_end": 75
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I",
+      "excerpt_after": "it when you fake it",
+      "options": [
+        "deep",
+        "hate",
+        "trying",
+        "under"
+      ],
+      "answer_index": 1,
+      "youtube_start": 128,
+      "youtube_end": 140
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "faster",
+        "we're",
+        "The",
+        "falling"
+      ],
+      "answer": [
+        "The",
+        "faster",
+        "we're",
+        "falling"
+      ],
+      "youtube_start": 7
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "looking",
+        "as",
+        "Just",
+        "up",
+        "things",
+        "were"
+      ],
+      "answer": [
+        "Just",
+        "as",
+        "things",
+        "were",
+        "looking",
+        "up"
+      ],
+      "youtube_start": 15
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I'm",
+        "in",
+        "deep",
+        "'Cause",
+        "too"
+      ],
+      "answer": [
+        "'Cause",
+        "I'm",
+        "in",
+        "too",
+        "deep"
+      ],
+      "youtube_start": 32
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Instead",
+        "of",
+        "under",
+        "going"
+      ],
+      "answer": [
+        "Instead",
+        "of",
+        "going",
+        "under"
+      ],
+      "youtube_start": 38
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me,",
+        "So",
+        "it's",
+        "believe",
+        "not",
+        "easy"
+      ],
+      "answer": [
+        "So",
+        "believe",
+        "me,",
+        "it's",
+        "not",
+        "easy"
+      ],
+      "youtube_start": 136
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"instead\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"instead\" na música inteira?",
+      "word": "instead",
+      "answer": 16
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"going\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"going\" na música inteira?",
+      "word": "going",
+      "answer": 16
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "The faster we're falling",
+          "order": 0
+        },
+        {
+          "text": "Instead of going under",
+          "order": 1
+        },
+        {
+          "text": "It took so long for this to die",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "We're stopping and stalling",
+          "order": 0
+        },
+        {
+          "text": "'Cause I'm in too deep",
+          "order": 1
+        },
+        {
+          "text": "It seems that something's telling me",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"In Too Deep\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"In Too Deep\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "instead",
+        "going",
+        "under",
+        "trying"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"In Too Deep\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"In Too Deep\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "instead",
+        "going",
+        "under",
+        "trying"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"In Too Deep\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"In Too Deep\", o que aconteceria?",
+      "target_vocab": [
+        "instead",
+        "going",
+        "under",
+        "trying"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "wasn't",
+          "full": "was not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    }
+  ]
+}

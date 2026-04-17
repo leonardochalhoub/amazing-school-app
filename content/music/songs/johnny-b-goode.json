@@ -1,0 +1,411 @@
+{
+  "slug": "johnny-b-goode",
+  "title": "Johnny B. Goode",
+  "artist": "Chuck Berry",
+  "year": 1958,
+  "album": "The Definitive Collection",
+  "genre": [
+    "rock-and-roll"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 159,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Johnny B. Goode by Chuck Berry (1958) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "johnny",
+      "pt": "",
+      "note": "Appears 17 times; first heard in: \"Where lived a country boy named Johnny B. Goode\""
+    },
+    {
+      "term": "goode",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Where lived a country boy named Johnny B. Goode\""
+    },
+    {
+      "term": "play",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"But he could play the guitar just like a-ringing a bell\""
+    },
+    {
+      "term": "country",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Where lived a country boy named Johnny B. Goode\""
+    },
+    {
+      "term": "guitar",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"But he could play the guitar just like a-ringing a bell\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Go, Johnny, go, go",
+          "Go, Johnny, go, go",
+          "Go, Johnny, go, go",
+          "Go, Johnny, go, go"
+        ],
+        "start_seconds": 35,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Go, go, go, Johnny, go",
+          "Go, go, go, Johnny, go",
+          "Go, go, go, Johnny, go",
+          "Go"
+        ],
+        "start_seconds": 139,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Deep down in",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "louisiana",
+      "excerpt_after": "close to New Orleans",
+      "youtube_start": 17,
+      "youtube_end": 31
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Way back up in the",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "woods",
+      "excerpt_after": "among the evergreens",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Go,",
+      "blank_hint": "word starting with \"j\"",
+      "answer": "johnny",
+      "excerpt_after": "go, go",
+      "youtube_start": 35,
+      "youtube_end": 49
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Stroming with the",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "rhythm",
+      "excerpt_after": "that the drivers made",
+      "youtube_start": 59,
+      "youtube_end": 73
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "\"Oh my, that",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "little",
+      "excerpt_after": "country boy could play\"",
+      "youtube_start": 65,
+      "youtube_end": 79
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Maybe",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "someday",
+      "excerpt_after": "your name would be in lights",
+      "youtube_start": 131,
+      "youtube_end": 145
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "People passing by, they would stop and say",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Go, Johnny, go, go",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Stroming with the rhythm that the drivers made",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Many people coming from miles around",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Saying, \"Johnny B. Goode tonight\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Deep down in",
+      "excerpt_after": "close to New Orleans",
+      "options": [
+        "louisiana",
+        "people",
+        "railroad",
+        "someday"
+      ],
+      "answer_index": 0,
+      "youtube_start": 17,
+      "youtube_end": 29
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Where",
+      "excerpt_after": "a country boy named Johnny B. Goode",
+      "options": [
+        "lived",
+        "people",
+        "there",
+        "woods"
+      ],
+      "answer_index": 0,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Go sit",
+      "excerpt_after": "the trees by the railroad track",
+      "options": [
+        "a-ringing",
+        "bell",
+        "beneath",
+        "close"
+      ],
+      "answer_index": 2,
+      "youtube_start": 54,
+      "youtube_end": 66
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "People",
+      "excerpt_after": "by, they would stop and say",
+      "options": [
+        "passing",
+        "play",
+        "read",
+        "write"
+      ],
+      "answer_index": 0,
+      "youtube_start": 62,
+      "youtube_end": 74
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Many",
+      "excerpt_after": "coming from miles around",
+      "options": [
+        "bell",
+        "close",
+        "people",
+        "woods"
+      ],
+      "answer_index": 2,
+      "youtube_start": 125,
+      "youtube_end": 137
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Johnny,",
+        "Go,",
+        "go",
+        "go,"
+      ],
+      "answer": [
+        "Go,",
+        "Johnny,",
+        "go,",
+        "go"
+      ],
+      "youtube_start": 35
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Many",
+        "around",
+        "coming",
+        "from",
+        "miles",
+        "people"
+      ],
+      "answer": [
+        "Many",
+        "people",
+        "coming",
+        "from",
+        "miles",
+        "around"
+      ],
+      "youtube_start": 125
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Saying,",
+        "tonight\"",
+        "B.",
+        "\"Johnny",
+        "Goode"
+      ],
+      "answer": [
+        "Saying,",
+        "\"Johnny",
+        "B.",
+        "Goode",
+        "tonight\""
+      ],
+      "youtube_start": 134
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "go",
+        "go,",
+        "Johnny,",
+        "go,",
+        "Go,"
+      ],
+      "answer": [
+        "Go,",
+        "go,",
+        "go,",
+        "Johnny,",
+        "go"
+      ],
+      "youtube_start": 139
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"johnny\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"johnny\" na música inteira?",
+      "word": "johnny",
+      "answer": 17
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"goode\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"goode\" na música inteira?",
+      "word": "goode",
+      "answer": 5
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Deep down in Louisiana, close to New Orleans",
+          "order": 0
+        },
+        {
+          "text": "People passing by, they would stop and say",
+          "order": 1
+        },
+        {
+          "text": "Many people coming from miles around",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Johnny B. Goode\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Johnny B. Goode\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "johnny",
+        "goode",
+        "play",
+        "country"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Chuck Berry one question about \"Johnny B. Goode\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Chuck Berry sobre \"Johnny B. Goode\", o que seria e por quê?",
+      "target_vocab": [
+        "johnny",
+        "goode",
+        "play",
+        "country"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Johnny B. Goode\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Johnny B. Goode\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "johnny",
+        "goode",
+        "play",
+        "country"
+      ]
+    }
+  ]
+}

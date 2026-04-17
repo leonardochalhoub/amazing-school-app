@@ -1,0 +1,451 @@
+{
+  "slug": "smooth-operator",
+  "title": "Smooth Operator",
+  "artist": "Sade",
+  "year": 1984,
+  "album": "Diamond Life",
+  "genre": [
+    "r&b",
+    "jazz"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 299,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Smooth Operator by Sade (1984) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "smooth",
+      "pt": "",
+      "note": "Appears 19 times; first heard in: \"He's a smooth operator\""
+    },
+    {
+      "term": "operator",
+      "pt": "",
+      "note": "Appears 19 times; first heard in: \"He's a smooth operator\""
+    },
+    {
+      "term": "he's",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"He's laughing with another girl\""
+    },
+    {
+      "term": "coast",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Coast to coast, LA to Chicago, western male\""
+    },
+    {
+      "term": "need",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"No need to ask\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Smooth operator",
+          "Smooth operator",
+          "Smooth operator",
+          "Coast to coast, LA to Chicago, western male"
+        ],
+        "start_seconds": 115,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "He's laughing with another girl",
+          "And playing with another heart",
+          "Placing high stakes making hearts ache",
+          "He's loved in seven languages"
+        ],
+        "start_seconds": 5,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "He's",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "laughing",
+      "excerpt_after": "with another girl",
+      "youtube_start": 5,
+      "youtube_end": 19
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "He's",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "loved",
+      "excerpt_after": "in seven languages",
+      "youtube_start": 35,
+      "youtube_end": 49
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "City",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lights",
+      "excerpt_after": "and business nights",
+      "youtube_start": 72,
+      "youtube_end": 86
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sentiment",
+      "excerpt_after": "is left to chance",
+      "youtube_start": 94,
+      "youtube_end": 108
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Coast to",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "coast",
+      "excerpt_after": "LA to Chicago, western male",
+      "youtube_start": 128,
+      "youtube_end": 142
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "A",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "license",
+      "excerpt_after": "to love, insurance to hold",
+      "youtube_start": 191,
+      "youtube_end": 205
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "He's laughing with another girl",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Heaven help him when he falls",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "He's a smooth operator",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And playing with another heart",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Diamond life, lover boy",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "He's",
+      "excerpt_after": "with another girl",
+      "options": [
+        "falls",
+        "heart",
+        "laughing",
+        "seven"
+      ],
+      "answer_index": 2,
+      "youtube_start": 5,
+      "youtube_end": 17
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Diamond",
+      "excerpt_after": "and ruby lights high in the sky",
+      "options": [
+        "chance",
+        "lights",
+        "nights",
+        "playing"
+      ],
+      "answer_index": 2,
+      "youtube_start": 39,
+      "youtube_end": 51
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When you",
+      "excerpt_after": "streetcar desire for higher heights",
+      "options": [
+        "desire",
+        "heaven",
+        "move",
+        "require"
+      ],
+      "answer_index": 3,
+      "youtube_start": 79,
+      "youtube_end": 91
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "No",
+      "excerpt_after": "to ask",
+      "options": [
+        "left",
+        "move",
+        "need",
+        "waste"
+      ],
+      "answer_index": 2,
+      "youtube_start": 110,
+      "youtube_end": 122
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We",
+      "excerpt_after": "box and double cross",
+      "options": [
+        "higher",
+        "nights",
+        "shadow",
+        "stakes"
+      ],
+      "answer_index": 2,
+      "youtube_start": 183,
+      "youtube_end": 195
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "He's",
+        "another",
+        "girl",
+        "laughing",
+        "with"
+      ],
+      "answer": [
+        "He's",
+        "laughing",
+        "with",
+        "another",
+        "girl"
+      ],
+      "youtube_start": 5
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "seven",
+        "loved",
+        "languages",
+        "in",
+        "He's"
+      ],
+      "answer": [
+        "He's",
+        "loved",
+        "in",
+        "seven",
+        "languages"
+      ],
+      "youtube_start": 35
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "lights",
+        "and",
+        "City",
+        "business",
+        "nights"
+      ],
+      "answer": [
+        "City",
+        "lights",
+        "and",
+        "business",
+        "nights"
+      ],
+      "youtube_start": 72
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "No",
+        "need",
+        "ask"
+      ],
+      "answer": [
+        "No",
+        "need",
+        "to",
+        "ask"
+      ],
+      "youtube_start": 110
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "We",
+        "shadow",
+        "cross",
+        "and",
+        "box",
+        "double"
+      ],
+      "answer": [
+        "We",
+        "shadow",
+        "box",
+        "and",
+        "double",
+        "cross"
+      ],
+      "youtube_start": 183
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"smooth\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"smooth\" na música inteira?",
+      "word": "smooth",
+      "answer": 19
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"operator\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"operator\" na música inteira?",
+      "word": "operator",
+      "answer": 19
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "He's laughing with another girl",
+          "order": 0
+        },
+        {
+          "text": "When you require streetcar desire for higher heights",
+          "order": 1
+        },
+        {
+          "text": "We shadow box and double cross",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And playing with another heart",
+          "order": 0
+        },
+        {
+          "text": "No need to ask",
+          "order": 1
+        },
+        {
+          "text": "Yet need the chase",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Smooth Operator\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Smooth Operator\", o que aconteceria?",
+      "target_vocab": [
+        "smooth",
+        "operator",
+        "he's",
+        "coast"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Smooth Operator\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Smooth Operator\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "smooth",
+        "operator",
+        "he's",
+        "coast"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Smooth Operator\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Smooth Operator\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "smooth",
+        "operator",
+        "he's",
+        "coast"
+      ]
+    }
+  ]
+}

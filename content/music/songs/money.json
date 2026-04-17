@@ -1,0 +1,472 @@
+{
+  "slug": "money",
+  "title": "Money",
+  "artist": "Pink Floyd",
+  "year": 1973,
+  "album": "The Dark Side of the Moon",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 383,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Money by Pink Floyd (1973) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "money",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Money\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"It's a gas\""
+    },
+    {
+      "term": "right",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I was in the right\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Don't give me that do goody good bullshit\""
+    },
+    {
+      "term": "good",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"You get a good job with more pay and you're okay\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Away, away, away",
+          "Away, away, away",
+          "I was in the right",
+          "Yes, absolutely in the right"
+        ],
+        "start_seconds": 345,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "It's a gas",
+          "Grab that cash with both hands and make a stash",
+          "New car, caviar, four star, daydream",
+          "Think I'll buy me a football team"
+        ],
+        "start_seconds": 56,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "New car,",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "caviar",
+      "excerpt_after": "four star, daydream",
+      "youtube_start": 66,
+      "youtube_end": 80
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Think I'll buy me a",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "football",
+      "excerpt_after": "team",
+      "youtube_start": 72,
+      "youtube_end": 86
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm in the",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "high-fidelity",
+      "excerpt_after": "first-class traveling set",
+      "youtube_start": 107,
+      "youtube_end": 121
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It's no",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "surprise",
+      "excerpt_after": "that they're giving none away",
+      "youtube_start": 340,
+      "youtube_end": 354
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Yes,",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "absolutely",
+      "excerpt_after": "in the right",
+      "youtube_start": 358,
+      "youtube_end": 372
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Why does",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "anyone",
+      "excerpt_after": "do anything?",
+      "youtube_start": 373,
+      "youtube_end": 387
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Think I'll buy me a football team",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I think I need a Lear jet",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But if you ask for a rise",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I was in the right",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "It's a gas",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "New car,",
+      "excerpt_after": "four star, daydream",
+      "options": [
+        "caviar",
+        "evil",
+        "football",
+        "give"
+      ],
+      "answer_index": 0,
+      "youtube_start": 66,
+      "youtube_end": 78
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Don't",
+      "excerpt_after": "me that do goody good bullshit",
+      "options": [
+        "both",
+        "give",
+        "star",
+        "think"
+      ],
+      "answer_index": 1,
+      "youtube_start": 99,
+      "youtube_end": 111
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I",
+      "excerpt_after": "I need a Lear jet",
+      "options": [
+        "hands",
+        "jack",
+        "surprise",
+        "think"
+      ],
+      "answer_index": 3,
+      "youtube_start": 113,
+      "youtube_end": 125
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's no",
+      "excerpt_after": "that they're giving none away",
+      "options": [
+        "anyone",
+        "money",
+        "right",
+        "surprise"
+      ],
+      "answer_index": 3,
+      "youtube_start": 340,
+      "youtube_end": 352
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "was in the right",
+      "options": [
+        "anything",
+        "bullshit",
+        "certainly",
+        "screaming"
+      ],
+      "answer_index": 2,
+      "youtube_start": 360,
+      "youtube_end": 372
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "caviar,",
+        "daydream",
+        "New",
+        "star,",
+        "four",
+        "car,"
+      ],
+      "answer": [
+        "New",
+        "car,",
+        "caviar,",
+        "four",
+        "star,",
+        "daydream"
+      ],
+      "youtube_start": 66
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "high-fidelity",
+        "first-class",
+        "set",
+        "in",
+        "the",
+        "I'm",
+        "traveling"
+      ],
+      "answer": [
+        "I'm",
+        "in",
+        "the",
+        "high-fidelity",
+        "first-class",
+        "traveling",
+        "set"
+      ],
+      "youtube_start": 107
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "rise",
+        "if",
+        "for",
+        "a",
+        "ask",
+        "But",
+        "you"
+      ],
+      "answer": [
+        "But",
+        "if",
+        "you",
+        "ask",
+        "for",
+        "a",
+        "rise"
+      ],
+      "youtube_start": 336
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "in",
+        "Yes,",
+        "the",
+        "absolutely",
+        "right"
+      ],
+      "answer": [
+        "Yes,",
+        "absolutely",
+        "in",
+        "the",
+        "right"
+      ],
+      "youtube_start": 358
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Why",
+        "anyone",
+        "does",
+        "anything?",
+        "do"
+      ],
+      "answer": [
+        "Why",
+        "does",
+        "anyone",
+        "do",
+        "anything?"
+      ],
+      "youtube_start": 373
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"money\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"money\" na música inteira?",
+      "word": "money",
+      "answer": 6
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"it's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"it's\" na música inteira?",
+      "word": "it's",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "It's a gas",
+          "order": 0
+        },
+        {
+          "text": "And I think I need a Lear jet",
+          "order": 1
+        },
+        {
+          "text": "Away, away, away",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Money\" was released in 1973. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Money\" foi lançada em 1973. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "money",
+        "it's",
+        "right",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Money\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Money\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "money",
+        "it's",
+        "right",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "money",
+        "it's",
+        "right",
+        "don't"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
+        }
+      ]
+    }
+  ]
+}

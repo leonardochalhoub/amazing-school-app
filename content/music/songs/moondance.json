@@ -1,0 +1,464 @@
+{
+  "slug": "moondance",
+  "title": "Moondance",
+  "artist": "Van Morrison",
+  "year": 1970,
+  "album": "Moondance",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 274,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Moondance by Van Morrison (1970) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"You know I'm tryin' to please to the calling\""
+    },
+    {
+      "term": "night",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Well, it's a marvelous night for a moondance\""
+    },
+    {
+      "term": "moondance",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Well, it's a marvelous night for a moondance\""
+    },
+    {
+      "term": "romance",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"A fantabulous night to make romance\""
+    },
+    {
+      "term": "soft",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Of your heartstrings that play soft and low\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "A fantabulous night to make romance",
+          "'Neath the cover of October skies",
+          "And all the leaves on the trees are falling",
+          "To the sound of the breezes that blow"
+        ],
+        "start_seconds": 13,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "On a magic night",
+          "La, la, la, la, la, in the moonlight",
+          "On a magic night",
+          "Can't I just have one more, more dance with you, my love?"
+        ],
+        "start_seconds": 246,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well, it's a",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "marvelous",
+      "excerpt_after": "night for a moondance",
+      "youtube_start": 6,
+      "youtube_end": 20
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Neath the",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "cover",
+      "excerpt_after": "of October skies",
+      "youtube_start": 16,
+      "youtube_end": 30
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Of your",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heartstrings",
+      "excerpt_after": "that play soft and low",
+      "youtube_start": 31,
+      "youtube_end": 45
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "straight",
+      "excerpt_after": "into my arms you will run",
+      "youtube_start": 74,
+      "youtube_end": 88
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "With the stars up",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "above",
+      "excerpt_after": "in your eyes",
+      "youtube_start": 183,
+      "youtube_end": 197
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To the sound of the",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "breezes",
+      "excerpt_after": "that blow",
+      "youtube_start": 199,
+      "youtube_end": 213
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, I wanna make love to you tonight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And straight into my arms you will run",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "One more moondance with you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "With the stars up above in your eyes",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Neath the cover of October skies",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well, it's a",
+      "excerpt_after": "night for a moondance",
+      "options": [
+        "marvelous",
+        "mornin",
+        "tonight",
+        "waiting"
+      ],
+      "answer_index": 0,
+      "youtube_start": 6,
+      "youtube_end": 18
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And all the",
+      "excerpt_after": "on the trees are falling",
+      "options": [
+        "cover",
+        "leaves",
+        "moonlight",
+        "tryin"
+      ],
+      "answer_index": 1,
+      "youtube_start": 20,
+      "youtube_end": 32
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well, I",
+      "excerpt_after": "make love to you tonight",
+      "options": [
+        "seems",
+        "tryin",
+        "wait",
+        "wanna"
+      ],
+      "answer_index": 3,
+      "youtube_start": 63,
+      "youtube_end": 75
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well, it's a marvelous",
+      "excerpt_after": "for a moondance",
+      "options": [
+        "blush",
+        "eyes",
+        "night",
+        "october"
+      ],
+      "answer_index": 2,
+      "youtube_start": 179,
+      "youtube_end": 191
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "To the sound of the",
+      "excerpt_after": "that blow",
+      "options": [
+        "breezes",
+        "moondance",
+        "skies",
+        "straight"
+      ],
+      "answer_index": 0,
+      "youtube_start": 199,
+      "youtube_end": 211
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "make",
+        "romance",
+        "fantabulous",
+        "night",
+        "to",
+        "A"
+      ],
+      "answer": [
+        "A",
+        "fantabulous",
+        "night",
+        "to",
+        "make",
+        "romance"
+      ],
+      "youtube_start": 13
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "of",
+        "cover",
+        "'Neath",
+        "the",
+        "skies",
+        "October"
+      ],
+      "answer": [
+        "'Neath",
+        "the",
+        "cover",
+        "of",
+        "October",
+        "skies"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "alone",
+        "never",
+        "To",
+        "that",
+        "make",
+        "sure",
+        "you're"
+      ],
+      "answer": [
+        "To",
+        "make",
+        "sure",
+        "that",
+        "you're",
+        "never",
+        "alone"
+      ],
+      "youtube_start": 81
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "moondance",
+        "you",
+        "more",
+        "with",
+        "One"
+      ],
+      "answer": [
+        "One",
+        "more",
+        "moondance",
+        "with",
+        "you"
+      ],
+      "youtube_start": 239
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "On",
+        "magic",
+        "night",
+        "a"
+      ],
+      "answer": [
+        "On",
+        "a",
+        "magic",
+        "night"
+      ],
+      "youtube_start": 246
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"know\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"know\" na música inteira?",
+      "word": "know",
+      "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"night\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"night\" na música inteira?",
+      "word": "night",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Well, it's a marvelous night for a moondance",
+          "order": 0
+        },
+        {
+          "text": "I can't wait 'til the mornin' has come",
+          "order": 1
+        },
+        {
+          "text": "To the sound of the breezes that blow",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Moondance\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Moondance\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "know",
+        "night",
+        "moondance",
+        "romance"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Van Morrison one question about \"Moondance\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Van Morrison sobre \"Moondance\", o que seria e por quê?",
+      "target_vocab": [
+        "know",
+        "night",
+        "moondance",
+        "romance"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Moondance\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Moondance\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "know",
+        "night",
+        "moondance",
+        "romance"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    }
+  ]
+}

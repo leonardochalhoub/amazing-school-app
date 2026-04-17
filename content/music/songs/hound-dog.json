@@ -1,0 +1,360 @@
+{
+  "slug": "hound-dog",
+  "title": "Hound Dog",
+  "artist": "Elvis Presley",
+  "year": 1956,
+  "album": "Elvis' Golden Records",
+  "genre": [
+    "rock-and-roll"
+  ],
+  "cefr_level": "a1.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 135,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Hound Dog by Elvis Presley (1956) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "ain't",
+      "pt": "",
+      "note": "Appears 18 times; first heard in: \"You ain't nothin' but a hound dog\""
+    },
+    {
+      "term": "well",
+      "pt": "",
+      "note": "Appears 15 times; first heard in: \"Well, you ain't never caught a rabbit and you ain't no friend of mine\""
+    },
+    {
+      "term": "nothin'",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"You ain't nothin' but a hound dog\""
+    },
+    {
+      "term": "hound",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"You ain't nothin' but a hound dog\""
+    },
+    {
+      "term": "cryin'",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Cryin' all the time\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "You ain't nothin' but a hound dog",
+          "Cryin' all the time",
+          "You ain't nothin' but a hound dog",
+          "Cryin' all the time"
+        ],
+        "start_seconds": 1,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Yeah they said you was high-classed",
+          "Well, that was just a lie",
+          "Well, you ain't never caught a rabbit and you ain't no friend of mine",
+          "You ain't nothin' but a hound dog"
+        ],
+        "start_seconds": 22,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You ain't",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nothin",
+      "excerpt_after": "but a hound dog",
+      "youtube_start": 1,
+      "youtube_end": 15
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You ain't nothin' but a",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "hound",
+      "excerpt_after": "dog",
+      "youtube_start": 5,
+      "youtube_end": 19
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You ain't nothin' but a hound dog",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well they said you was high-classed",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yeah they said you was high-classed",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Ya know they said you was high-classed",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Cryin' all the time",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "nothin' but a hound dog",
+      "options": [
+        "aint",
+        "hound",
+        "well",
+        "yeah"
+      ],
+      "answer_index": 0,
+      "youtube_start": 1,
+      "youtube_end": 13
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You ain't",
+      "excerpt_after": "but a hound dog",
+      "options": [
+        "aint",
+        "caught",
+        "nothin",
+        "well"
+      ],
+      "answer_index": 2,
+      "youtube_start": 5,
+      "youtube_end": 17
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You ain't nothin' but a",
+      "excerpt_after": "dog",
+      "options": [
+        "cryin",
+        "hound",
+        "time",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 33,
+      "youtube_end": 45
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ya",
+      "excerpt_after": "they said you was high-classed",
+      "options": [
+        "aint",
+        "know",
+        "never",
+        "rabbit"
+      ],
+      "answer_index": 1,
+      "youtube_start": 105,
+      "youtube_end": 117
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "dog",
+        "hound",
+        "a",
+        "nothin'",
+        "ain't",
+        "but",
+        "You"
+      ],
+      "answer": [
+        "You",
+        "ain't",
+        "nothin'",
+        "but",
+        "a",
+        "hound",
+        "dog"
+      ],
+      "youtube_start": 1
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "all",
+        "the",
+        "time",
+        "Cryin'"
+      ],
+      "answer": [
+        "Cryin'",
+        "all",
+        "the",
+        "time"
+      ],
+      "youtube_start": 3
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "Well",
+        "they",
+        "high-classed",
+        "was",
+        "said"
+      ],
+      "answer": [
+        "Well",
+        "they",
+        "said",
+        "you",
+        "was",
+        "high-classed"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Well,",
+        "a",
+        "was",
+        "lie",
+        "just",
+        "that"
+      ],
+      "answer": [
+        "Well,",
+        "that",
+        "was",
+        "just",
+        "a",
+        "lie"
+      ],
+      "youtube_start": 19
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Yeah",
+        "was",
+        "said",
+        "high-classed",
+        "you",
+        "they"
+      ],
+      "answer": [
+        "Yeah",
+        "they",
+        "said",
+        "you",
+        "was",
+        "high-classed"
+      ],
+      "youtube_start": 22
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"ain't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"ain't\" na música inteira?",
+      "word": "ain't",
+      "answer": 18
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"well\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"well\" na música inteira?",
+      "word": "well",
+      "answer": 15
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Hound Dog\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Hound Dog\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "ain't",
+        "well",
+        "nothin'",
+        "hound"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "ain't",
+        "well",
+        "nothin'",
+        "hound"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "ain't",
+        "well",
+        "nothin'",
+        "hound"
+      ]
+    }
+  ]
+}

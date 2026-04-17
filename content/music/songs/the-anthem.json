@@ -1,0 +1,475 @@
+{
+  "slug": "the-anthem",
+  "title": "The Anthem",
+  "artist": "Good Charlotte",
+  "year": 2002,
+  "album": "The Young and The Hopeless",
+  "genre": [
+    "punk"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "fast",
+  "duration_seconds": 175,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "The Anthem by Good Charlotte (2002) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"That I don't ever wanna be like you\""
+    },
+    {
+      "term": "anthem",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"This is the anthem\""
+    },
+    {
+      "term": "ever",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"That I don't ever wanna be like you\""
+    },
+    {
+      "term": "another",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Do you really wanna be another trend?\""
+    },
+    {
+      "term": "that's",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"That's what I'm told\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Don't wanna be just like you",
+          "Oh, what I'm saying is",
+          "This is the anthem",
+          "Throw all your hands up"
+        ],
+        "start_seconds": 50,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Another loser anthem",
+          "(Whoa-oh)",
+          "Another loser anthem",
+          "(Whoa-oh)"
+        ],
+        "start_seconds": 161,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But it all",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "feels",
+      "excerpt_after": "old",
+      "youtube_start": 17,
+      "youtube_end": 31
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "My time",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "spent",
+      "excerpt_after": "there, it only made me see",
+      "youtube_start": 32,
+      "youtube_end": 46
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "gonna hear the words you say",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "get by",
+      "youtube_start": 80,
+      "youtube_end": 94
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Do you really wanna be",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "another",
+      "excerpt_after": "trend?",
+      "youtube_start": 94,
+      "youtube_end": 108
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Shake it",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "three",
+      "excerpt_after": "times",
+      "youtube_start": 119,
+      "youtube_end": 133
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Here we go",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "That I don't ever wanna be like you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm never gonna hear the words you say",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I don't ever wanna be you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh, what I'm saying is",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But it all",
+      "excerpt_after": "old",
+      "options": [
+        "feels",
+        "gonna",
+        "jail",
+        "live"
+      ],
+      "answer_index": 0,
+      "youtube_start": 17,
+      "youtube_end": 29
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Like a",
+      "excerpt_after": "cell",
+      "options": [
+        "gonna",
+        "jail",
+        "mind",
+        "throw"
+      ],
+      "answer_index": 1,
+      "youtube_start": 29,
+      "youtube_end": 41
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I don't",
+      "excerpt_after": "wanna",
+      "options": [
+        "ever",
+        "things",
+        "throw",
+        "told"
+      ],
+      "answer_index": 0,
+      "youtube_start": 45,
+      "youtube_end": 57
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm",
+      "excerpt_after": "get by",
+      "options": [
+        "gonna",
+        "never",
+        "outta",
+        "there"
+      ],
+      "answer_index": 0,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Shake it once,",
+      "excerpt_after": "fine",
+      "options": [
+        "dont",
+        "never",
+        "thats",
+        "told"
+      ],
+      "answer_index": 2,
+      "youtube_start": 114,
+      "youtube_end": 126
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "day",
+        "It's",
+        "new",
+        "a"
+      ],
+      "answer": [
+        "It's",
+        "a",
+        "new",
+        "day"
+      ],
+      "youtube_start": 15
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "cell",
+        "jail",
+        "a",
+        "Like"
+      ],
+      "answer": [
+        "Like",
+        "a",
+        "jail",
+        "cell"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "all",
+        "your",
+        "hands",
+        "Throw",
+        "up"
+      ],
+      "answer": [
+        "Throw",
+        "all",
+        "your",
+        "hands",
+        "up"
+      ],
+      "youtube_start": 55
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "They",
+        "get",
+        "line",
+        "all",
+        "in"
+      ],
+      "answer": [
+        "They",
+        "all",
+        "get",
+        "in",
+        "line"
+      ],
+      "youtube_start": 84
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "times",
+        "it",
+        "three",
+        "Shake"
+      ],
+      "answer": [
+        "Shake",
+        "it",
+        "three",
+        "times"
+      ],
+      "youtube_start": 119
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"anthem\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"anthem\" na música inteira?",
+      "word": "anthem",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Here we go",
+          "order": 0
+        },
+        {
+          "text": "Don't wanna be you",
+          "order": 1
+        },
+        {
+          "text": "Shake it once, that's fine",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "It's a new day",
+          "order": 0
+        },
+        {
+          "text": "Do you wanna be part of that crowd?",
+          "order": 1
+        },
+        {
+          "text": "This is the anthem",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Good Charlotte one question about \"The Anthem\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Good Charlotte sobre \"The Anthem\", o que seria e por quê?",
+      "target_vocab": [
+        "don't",
+        "anthem",
+        "ever",
+        "another"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"The Anthem\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"The Anthem\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "don't",
+        "anthem",
+        "ever",
+        "another"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"The Anthem\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"The Anthem\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "don't",
+        "anthem",
+        "ever",
+        "another"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        }
+      ]
+    }
+  ]
+}

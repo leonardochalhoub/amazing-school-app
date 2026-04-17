@@ -1,0 +1,470 @@
+{
+  "slug": "the-boxer",
+  "title": "The Boxer",
+  "artist": "Simon & Garfunkel",
+  "year": 1969,
+  "album": "The Essential Simon & Garfunkel CD2",
+  "genre": [
+    "folk"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 309,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "The Boxer by Simon & Garfunkel (1969) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "home",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"When I left my home and my family\""
+    },
+    {
+      "term": "laying",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Laying low, seeking out the poorer quarters\""
+    },
+    {
+      "term": "looking",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Looking for the places only they would know\""
+    },
+    {
+      "term": "there",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I do declare, there were times when I was so lonesome\""
+    },
+    {
+      "term": "going",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"And wishing I was gone, going home\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Lie-la-lie-lie-lie-lie-lie, lie-lie-lie-lie-lie",
+          "Asking only workman's wages, I come looking for a job",
+          "But I get no offers",
+          "Just a come-on from the whores on 7th Avenue"
+        ],
+        "start_seconds": 69,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Lie-la-lie-lie-lie-lie-lie, lie-lie-lie-lie-lie",
+          "Then I'm laying out my winter clothes",
+          "And wishing I was gone, going home",
+          "Where the New York City winters aren't bleeding me"
+        ],
+        "start_seconds": 137,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Though my",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "storys",
+      "excerpt_after": "seldom told",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Still a man",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "hears",
+      "excerpt_after": "what he wants to hear",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Laying low,",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "seeking",
+      "excerpt_after": "out the poorer quarters",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I took some",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "comfort",
+      "excerpt_after": "there, la-la-la-la-la-la-la",
+      "youtube_start": 95,
+      "youtube_end": 109
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Leading me,",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "going",
+      "excerpt_after": "home",
+      "youtube_start": 159,
+      "youtube_end": 173
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Of",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "every",
+      "excerpt_after": "glove that laid him down",
+      "youtube_start": 180,
+      "youtube_end": 194
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I am just a poor boy",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When I left my home and my family",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Looking for the places only they would know",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I took some comfort there, la-la-la-la-la-la-la",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And wishing I was gone, going home",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I am just a",
+      "excerpt_after": "boy",
+      "options": [
+        "jest",
+        "poor",
+        "ragged",
+        "took"
+      ],
+      "answer_index": 1,
+      "youtube_start": 5,
+      "youtube_end": 17
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Still a man",
+      "excerpt_after": "what he wants to hear",
+      "options": [
+        "hears",
+        "home",
+        "ragged",
+        "rest"
+      ],
+      "answer_index": 0,
+      "youtube_start": 20,
+      "youtube_end": 32
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Laying low,",
+      "excerpt_after": "out the poorer quarters",
+      "options": [
+        "home",
+        "people",
+        "quiet",
+        "seeking"
+      ],
+      "answer_index": 3,
+      "youtube_start": 49,
+      "youtube_end": 61
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Then I'm",
+      "excerpt_after": "out my winter clothes",
+      "options": [
+        "laying",
+        "railway",
+        "though",
+        "wants"
+      ],
+      "answer_index": 0,
+      "youtube_start": 145,
+      "youtube_end": 157
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And a",
+      "excerpt_after": "by his trade",
+      "options": [
+        "fighter",
+        "people",
+        "running",
+        "station"
+      ],
+      "answer_index": 0,
+      "youtube_start": 175,
+      "youtube_end": 187
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "poor",
+        "just",
+        "boy",
+        "I",
+        "a",
+        "am"
+      ],
+      "answer": [
+        "I",
+        "am",
+        "just",
+        "a",
+        "poor",
+        "boy"
+      ],
+      "youtube_start": 5
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "All",
+        "and",
+        "lies",
+        "jest"
+      ],
+      "answer": [
+        "All",
+        "lies",
+        "and",
+        "jest"
+      ],
+      "youtube_start": 19
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "poorer",
+        "low,",
+        "quarters",
+        "out",
+        "seeking",
+        "the",
+        "Laying"
+      ],
+      "answer": [
+        "Laying",
+        "low,",
+        "seeking",
+        "out",
+        "the",
+        "poorer",
+        "quarters"
+      ],
+      "youtube_start": 49
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "going",
+        "gone,",
+        "wishing",
+        "I",
+        "And",
+        "home",
+        "was"
+      ],
+      "answer": [
+        "And",
+        "wishing",
+        "I",
+        "was",
+        "gone,",
+        "going",
+        "home"
+      ],
+      "youtube_start": 148
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "every",
+        "down",
+        "Of",
+        "him",
+        "that",
+        "laid",
+        "glove"
+      ],
+      "answer": [
+        "Of",
+        "every",
+        "glove",
+        "that",
+        "laid",
+        "him",
+        "down"
+      ],
+      "youtube_start": 180
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"home\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"home\" na música inteira?",
+      "word": "home",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I am just a poor boy",
+          "order": 0
+        },
+        {
+          "text": "In the company of strangers",
+          "order": 1
+        },
+        {
+          "text": "Leading me, going home",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Though my story's seldom told",
+          "order": 0
+        },
+        {
+          "text": "But I get no offers",
+          "order": 1
+        },
+        {
+          "text": "And he carries the reminders",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"The Boxer\" was released in 1969. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"The Boxer\" foi lançada em 1969. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "home",
+        "laying",
+        "looking",
+        "there"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"The Boxer\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"The Boxer\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "home",
+        "laying",
+        "looking",
+        "there"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "home",
+        "laying",
+        "looking",
+        "there"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "aren't",
+          "full": "are not"
+        }
+      ]
+    }
+  ]
+}

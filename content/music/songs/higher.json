@@ -83,6 +83,61 @@
       "youtube_end": 41
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Cause",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "theres",
+      "excerpt_after": "a hunger, a longing to escape",
+      "youtube_start": 50,
+      "youtube_end": 64
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Although I would like our",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "world",
+      "excerpt_after": "to change",
+      "youtube_start": 100,
+      "youtube_end": 114
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'd",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sacrifice",
+      "excerpt_after": "all those nights",
+      "youtube_start": 113,
+      "youtube_end": 127
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To let love",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "replace",
+      "excerpt_after": "all our hate",
+      "youtube_start": 128,
+      "youtube_end": 142
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Alive for the very",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "first",
+      "excerpt_after": "time",
+      "youtube_start": 203,
+      "youtube_end": 217
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
@@ -91,61 +146,116 @@
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "spot_the_grammar",
-      "prompt_en": "Write the full form of each contraction:",
-      "prompt_pt": "Escreva a forma completa de cada contração:",
-      "expected": [
-        {
-          "short": "i'm",
-          "full": "I am"
-        },
-        {
-          "short": "don't",
-          "full": "do not"
-        },
-        {
-          "short": "there's",
-          "full": "there is"
-        },
-        {
-          "short": "let's",
-          "full": "let us"
-        }
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "From the life I live when I'm awake",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "discussion",
-      "prompt_en": "If you could ask Creed one question about \"Higher\", what would it be and why?",
-      "prompt_pt": "Se você pudesse perguntar uma coisa para Creed sobre \"Higher\", o que seria e por quê?",
-      "target_vocab": [
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Can you take me higher",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'd sacrifice all those nights",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Said up high, I'm strong enough",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm",
+      "excerpt_after": "to another world",
+      "options": [
+        "guided",
+        "sacrifice",
+        "there",
+        "time"
+      ],
+      "answer_index": 0,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "From the",
+      "excerpt_after": "I live when I'm awake",
+      "options": [
+        "awake",
+        "feel",
+        "life",
+        "place"
+      ],
+      "answer_index": 2,
+      "youtube_start": 54,
+      "youtube_end": 66
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Although I would like our",
+      "excerpt_after": "to change",
+      "options": [
+        "dont",
         "higher",
-        "place",
-        "golden",
-        "fly"
-      ]
+        "same",
+        "world"
+      ],
+      "answer_index": 3,
+      "youtube_start": 100,
+      "youtube_end": 112
     },
     {
-      "type": "word_to_meaning",
-      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
-      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
-      "pairs": [
-        {
-          "en": "higher",
-          "pt": "mais alto"
-        },
-        {
-          "en": "place",
-          "pt": "lugar"
-        },
-        {
-          "en": "golden",
-          "pt": "dourado"
-        },
-        {
-          "en": "fly",
-          "pt": "voar"
-        }
-      ]
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The only",
+      "excerpt_after": "is",
+      "options": [
+        "comfort",
+        "difference",
+        "streets",
+        "sunrise"
+      ],
+      "answer_index": 1,
+      "youtube_start": 124,
+      "youtube_end": 136
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Up",
+      "excerpt_after": "I feel like I'm",
+      "options": [
+        "high",
+        "leave",
+        "lets",
+        "sunrise"
+      ],
+      "answer_index": 0,
+      "youtube_start": 198,
+      "youtube_end": 210
     },
     {
       "type": "unscramble_line",
@@ -168,20 +278,88 @@
       "youtube_start": 27
     },
     {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "I'm",
-      "excerpt_after": "to another world",
-      "options": [
-        "another",
-        "dreaming",
-        "guided",
-        "world"
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "make",
+        "our",
+        "escape",
+        "Let's"
       ],
-      "answer_index": 2,
-      "youtube_start": 27,
-      "youtube_end": 39
+      "answer": [
+        "Let's",
+        "make",
+        "our",
+        "escape"
+      ],
+      "youtube_start": 65
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "blind",
+        "To",
+        "see",
+        "men",
+        "a",
+        "place",
+        "where"
+      ],
+      "answer": [
+        "To",
+        "a",
+        "place",
+        "where",
+        "blind",
+        "men",
+        "see"
+      ],
+      "youtube_start": 81
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I'd",
+        "sacrifice",
+        "those",
+        "all",
+        "nights"
+      ],
+      "answer": [
+        "I'd",
+        "sacrifice",
+        "all",
+        "those",
+        "nights"
+      ],
+      "youtube_start": 113
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I'm",
+        "high,",
+        "I",
+        "like",
+        "feel",
+        "Up"
+      ],
+      "answer": [
+        "Up",
+        "high,",
+        "I",
+        "feel",
+        "like",
+        "I'm"
+      ],
+      "youtube_start": 198
     },
     {
       "type": "count_word",
@@ -189,6 +367,13 @@
       "prompt_pt": "Quantas vezes você ouve a palavra \"higher\" na música inteira?",
       "word": "higher",
       "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"place\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"place\" na música inteira?",
+      "word": "place",
+      "answer": 9
     },
     {
       "type": "line_order",
@@ -206,6 +391,108 @@
         {
           "text": "Let's ask can we stay",
           "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Time and time again",
+          "order": 0
+        },
+        {
+          "text": "Come on, let's go there",
+          "order": 1
+        },
+        {
+          "text": "Said up high, I'm strong enough",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Higher\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Higher\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "higher",
+        "place",
+        "golden",
+        "fly"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Higher\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Higher\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "higher",
+        "place",
+        "golden",
+        "fly"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Creed one question about \"Higher\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Creed sobre \"Higher\", o que seria e por quê?",
+      "target_vocab": [
+        "higher",
+        "place",
+        "golden",
+        "fly"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "let's",
+          "full": "let us"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        }
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "higher",
+          "pt": "mais alto"
+        },
+        {
+          "en": "place",
+          "pt": "lugar"
+        },
+        {
+          "en": "golden",
+          "pt": "dourado"
+        },
+        {
+          "en": "fly",
+          "pt": "voar"
         }
       ]
     }

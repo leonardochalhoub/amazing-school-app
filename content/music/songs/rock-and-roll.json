@@ -1,0 +1,377 @@
+{
+  "slug": "rock-and-roll",
+  "title": "Rock and Roll",
+  "artist": "Led Zeppelin",
+  "year": 1971,
+  "album": "Led Zeppelin IV",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 220,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Rock and Roll by Led Zeppelin (1971) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "lonely",
+      "pt": "",
+      "note": "Appears 20 times; first heard in: \"Been a long lonely, lonely, lonely, lonely, lonely time\""
+    },
+    {
+      "term": "long",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"It's been a long time since I rock and rolled\""
+    },
+    {
+      "term": "time",
+      "pt": "",
+      "note": "Appears 15 times; first heard in: \"It's been a long time since I rock and rolled\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"It's been a long time since I rock and rolled\""
+    },
+    {
+      "term": "since",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"It's been a long time since I rock and rolled\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Yeah, yeah",
+          "Yeah, yeah",
+          "Ooh yeah, ooh yeah",
+          "Ooh yeah, ooh yeah"
+        ],
+        "start_seconds": 175,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "Yes, it has",
+          "It's been a long time since the Book of Love",
+          "I can't count the tears of a life with no love",
+          "Carry me back, carry me back"
+        ],
+        "start_seconds": 53,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Been a long",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lonely",
+      "excerpt_after": "lonely, lonely, lonely, lonely time",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Carry me back,",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "carry",
+      "excerpt_after": "me back",
+      "youtube_start": 68,
+      "youtube_end": 82
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh yeah, open your arms,",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "opens",
+      "excerpt_after": "your arms",
+      "youtube_start": 151,
+      "youtube_end": 165
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Carry me back, baby, where I come from",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yes, it has",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Carry me back, carry me back",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Making vows that just can't work right",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh yeah, open your arms, opens your arms",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's been a",
+      "excerpt_after": "time, been a long time",
+      "options": [
+        "cant",
+        "life",
+        "lonely",
+        "long"
+      ],
+      "answer_index": 3,
+      "youtube_start": 45,
+      "youtube_end": 57
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Been a long",
+      "excerpt_after": "lonely, lonely, lonely, lonely time",
+      "options": [
+        "lonely",
+        "since",
+        "stroll",
+        "walked"
+      ],
+      "answer_index": 0,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Carry me back,",
+      "excerpt_after": "me back",
+      "options": [
+        "arms",
+        "carry",
+        "right",
+        "work"
+      ],
+      "answer_index": 1,
+      "youtube_start": 68,
+      "youtube_end": 80
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's been a long",
+      "excerpt_after": "been a long time",
+      "options": [
+        "rock",
+        "rolled",
+        "tears",
+        "time"
+      ],
+      "answer_index": 3,
+      "youtube_start": 79,
+      "youtube_end": 91
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Making",
+      "excerpt_after": "that just can't work right",
+      "options": [
+        "carry",
+        "count",
+        "life",
+        "vows"
+      ],
+      "answer_index": 3,
+      "youtube_start": 147,
+      "youtube_end": 159
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Carry",
+        "me",
+        "back",
+        "back,",
+        "carry",
+        "me"
+      ],
+      "answer": [
+        "Carry",
+        "me",
+        "back,",
+        "carry",
+        "me",
+        "back"
+      ],
+      "youtube_start": 68
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "just",
+        "can't",
+        "right",
+        "Making",
+        "that",
+        "work",
+        "vows"
+      ],
+      "answer": [
+        "Making",
+        "vows",
+        "that",
+        "just",
+        "can't",
+        "work",
+        "right"
+      ],
+      "youtube_start": 147
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "yeah,",
+        "ooh",
+        "yeah",
+        "Ooh"
+      ],
+      "answer": [
+        "Ooh",
+        "yeah,",
+        "ooh",
+        "yeah"
+      ],
+      "youtube_start": 192
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"lonely\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"lonely\" na música inteira?",
+      "word": "lonely",
+      "answer": 20
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"long\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"long\" na música inteira?",
+      "word": "long",
+      "answer": 16
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Yes, it has",
+          "order": 0
+        },
+        {
+          "text": "Carry me back, baby, where I come from",
+          "order": 1
+        },
+        {
+          "text": "Making vows that just can't work right",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Rock and Roll\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Rock and Roll\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "lonely",
+        "long",
+        "time",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Rock and Roll\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Rock and Roll\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "lonely",
+        "long",
+        "time",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Led Zeppelin one question about \"Rock and Roll\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Led Zeppelin sobre \"Rock and Roll\", o que seria e por quê?",
+      "target_vocab": [
+        "lonely",
+        "long",
+        "time",
+        "it's"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    }
+  ]
+}

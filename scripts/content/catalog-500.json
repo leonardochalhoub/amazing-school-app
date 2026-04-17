@@ -1,0 +1,1447 @@
+{
+  "_note": "Curated catalog of ~500 globally iconic rock / pop / blues / soul / R&B / country songs. Each entry is metadata only — duration, YouTube ID, sing-along, and exercises are populated by scripts/seed-from-catalog.mjs via LRCLIB. CEFR is a starting guess; teachers can adjust later.",
+  "songs": [
+    { "artist": "The Beatles", "title": "Hey Jude", "year": 1968, "genre": ["rock", "classic-rock"], "cefr": "a1.2" },
+    { "artist": "The Beatles", "title": "Let It Be", "year": 1970, "genre": ["rock", "classic-rock"], "cefr": "a1.2" },
+    { "artist": "The Beatles", "title": "Here Comes the Sun", "year": 1969, "genre": ["rock", "classic-rock"], "cefr": "a1.1" },
+    { "artist": "The Beatles", "title": "Yesterday", "year": 1965, "genre": ["rock", "classic-rock"], "cefr": "a1.2" },
+    { "artist": "The Beatles", "title": "Help!", "year": 1965, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "The Beatles", "title": "A Day in the Life", "year": 1967, "genre": ["rock", "psychedelic"], "cefr": "b1.1" },
+    { "artist": "The Beatles", "title": "Something", "year": 1969, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "The Beatles", "title": "In My Life", "year": 1965, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "The Beatles", "title": "Twist and Shout", "year": 1963, "genre": ["rock"], "cefr": "a1.1" },
+    { "artist": "The Beatles", "title": "Strawberry Fields Forever", "year": 1967, "genre": ["rock", "psychedelic"], "cefr": "b1.1" },
+    { "artist": "The Beatles", "title": "Come Together", "year": 1969, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "The Beatles", "title": "All You Need Is Love", "year": 1967, "genre": ["rock"], "cefr": "a1.1" },
+    { "artist": "The Beatles", "title": "Yellow Submarine", "year": 1966, "genre": ["rock"], "cefr": "a1.1" },
+    { "artist": "The Beatles", "title": "While My Guitar Gently Weeps", "year": 1968, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "The Beatles", "title": "Eleanor Rigby", "year": 1966, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "The Rolling Stones", "title": "(I Can't Get No) Satisfaction", "year": 1965, "genre": ["rock", "classic-rock"], "cefr": "a2.1" },
+    { "artist": "The Rolling Stones", "title": "Paint It, Black", "year": 1966, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "The Rolling Stones", "title": "Angie", "year": 1973, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "The Rolling Stones", "title": "Gimme Shelter", "year": 1969, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "The Rolling Stones", "title": "Wild Horses", "year": 1971, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "The Rolling Stones", "title": "Sympathy for the Devil", "year": 1968, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "The Rolling Stones", "title": "Start Me Up", "year": 1981, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "The Rolling Stones", "title": "You Can't Always Get What You Want", "year": 1969, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Led Zeppelin", "title": "Stairway to Heaven", "year": 1971, "genre": ["rock", "hard-rock"], "cefr": "b1.1" },
+    { "artist": "Led Zeppelin", "title": "Whole Lotta Love", "year": 1969, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Led Zeppelin", "title": "Black Dog", "year": 1971, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Led Zeppelin", "title": "Kashmir", "year": 1975, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Led Zeppelin", "title": "Rock and Roll", "year": 1971, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Led Zeppelin", "title": "Immigrant Song", "year": 1970, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Led Zeppelin", "title": "Going to California", "year": 1971, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Pink Floyd", "title": "Wish You Were Here", "year": 1975, "genre": ["rock", "prog-rock"], "cefr": "a2.1" },
+    { "artist": "Pink Floyd", "title": "Comfortably Numb", "year": 1979, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Pink Floyd", "title": "Another Brick in the Wall", "year": 1979, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Pink Floyd", "title": "Money", "year": 1973, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Pink Floyd", "title": "Time", "year": 1973, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Pink Floyd", "title": "Shine On You Crazy Diamond", "year": 1975, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Queen", "title": "Bohemian Rhapsody", "year": 1975, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Queen", "title": "We Will Rock You", "year": 1977, "genre": ["rock"], "cefr": "a1.1" },
+    { "artist": "Queen", "title": "Don't Stop Me Now", "year": 1978, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Queen", "title": "Somebody to Love", "year": 1976, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Queen", "title": "Killer Queen", "year": 1974, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Queen", "title": "Under Pressure", "year": 1981, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Queen", "title": "Radio Ga Ga", "year": 1984, "genre": ["rock", "pop"], "cefr": "a1.2" },
+    { "artist": "Queen", "title": "I Want to Break Free", "year": 1984, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Queen", "title": "Crazy Little Thing Called Love", "year": 1979, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Queen", "title": "Fat Bottomed Girls", "year": 1978, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "David Bowie", "title": "Space Oddity", "year": 1969, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "David Bowie", "title": "Heroes", "year": 1977, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "David Bowie", "title": "Life on Mars?", "year": 1971, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "David Bowie", "title": "Let's Dance", "year": 1983, "genre": ["rock", "pop"], "cefr": "a1.1" },
+    { "artist": "David Bowie", "title": "Starman", "year": 1972, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "David Bowie", "title": "Changes", "year": 1971, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "David Bowie", "title": "Rebel Rebel", "year": 1974, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "David Bowie", "title": "Under Pressure", "year": 1981, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Bob Dylan", "title": "Like a Rolling Stone", "year": 1965, "genre": ["rock", "folk"], "cefr": "b1.2" },
+    { "artist": "Bob Dylan", "title": "Blowin' in the Wind", "year": 1963, "genre": ["folk"], "cefr": "a2.2" },
+    { "artist": "Bob Dylan", "title": "The Times They Are a-Changin'", "year": 1964, "genre": ["folk"], "cefr": "b1.1" },
+    { "artist": "Bob Dylan", "title": "Knockin' on Heaven's Door", "year": 1973, "genre": ["folk", "rock"], "cefr": "a1.2" },
+    { "artist": "Bob Dylan", "title": "Mr. Tambourine Man", "year": 1965, "genre": ["folk"], "cefr": "b1.1" },
+    { "artist": "Bob Dylan", "title": "Hurricane", "year": 1976, "genre": ["rock"], "cefr": "b1.2" },
+
+    { "artist": "The Who", "title": "Baba O'Riley", "year": 1971, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "The Who", "title": "My Generation", "year": 1965, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "The Who", "title": "Won't Get Fooled Again", "year": 1971, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "The Who", "title": "Behind Blue Eyes", "year": 1971, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Eagles", "title": "Hotel California", "year": 1976, "genre": ["rock"], "cefr": "b1.2" },
+    { "artist": "Eagles", "title": "Take It Easy", "year": 1972, "genre": ["rock", "country-rock"], "cefr": "a2.1" },
+    { "artist": "Eagles", "title": "Desperado", "year": 1973, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Eagles", "title": "Life in the Fast Lane", "year": 1977, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Eagles", "title": "New Kid in Town", "year": 1976, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Fleetwood Mac", "title": "Dreams", "year": 1977, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Fleetwood Mac", "title": "Go Your Own Way", "year": 1977, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Fleetwood Mac", "title": "The Chain", "year": 1977, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Fleetwood Mac", "title": "Rhiannon", "year": 1975, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Fleetwood Mac", "title": "Landslide", "year": 1975, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Fleetwood Mac", "title": "Little Lies", "year": 1987, "genre": ["rock", "pop"], "cefr": "a1.2" },
+    { "artist": "Fleetwood Mac", "title": "Don't Stop", "year": 1977, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Elton John", "title": "Rocket Man", "year": 1972, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Elton John", "title": "Your Song", "year": 1970, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Elton John", "title": "Tiny Dancer", "year": 1971, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Elton John", "title": "Candle in the Wind", "year": 1973, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Elton John", "title": "Goodbye Yellow Brick Road", "year": 1973, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Elton John", "title": "Crocodile Rock", "year": 1972, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Elton John", "title": "I'm Still Standing", "year": 1983, "genre": ["rock", "pop"], "cefr": "a1.2" },
+    { "artist": "Elton John", "title": "Don't Let the Sun Go Down on Me", "year": 1974, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Elton John", "title": "Sacrifice", "year": 1989, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Billy Joel", "title": "Piano Man", "year": 1973, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Billy Joel", "title": "We Didn't Start the Fire", "year": 1989, "genre": ["rock", "pop"], "cefr": "b1.2" },
+    { "artist": "Billy Joel", "title": "Uptown Girl", "year": 1983, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Billy Joel", "title": "Just the Way You Are", "year": 1977, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Billy Joel", "title": "New York State of Mind", "year": 1976, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Bruce Springsteen", "title": "Born in the U.S.A.", "year": 1984, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Bruce Springsteen", "title": "Born to Run", "year": 1975, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Bruce Springsteen", "title": "Dancing in the Dark", "year": 1984, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Bruce Springsteen", "title": "Thunder Road", "year": 1975, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Bruce Springsteen", "title": "The River", "year": 1980, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Bob Marley", "title": "No Woman No Cry", "year": 1974, "genre": ["reggae"], "cefr": "a1.2" },
+    { "artist": "Bob Marley", "title": "Three Little Birds", "year": 1977, "genre": ["reggae"], "cefr": "a1.1" },
+    { "artist": "Bob Marley", "title": "One Love", "year": 1977, "genre": ["reggae"], "cefr": "a1.1" },
+    { "artist": "Bob Marley", "title": "Redemption Song", "year": 1980, "genre": ["reggae"], "cefr": "a2.2" },
+    { "artist": "Bob Marley", "title": "Buffalo Soldier", "year": 1983, "genre": ["reggae"], "cefr": "a2.2" },
+    { "artist": "Bob Marley", "title": "Is This Love", "year": 1978, "genre": ["reggae"], "cefr": "a1.2" },
+    { "artist": "Bob Marley", "title": "Get Up, Stand Up", "year": 1973, "genre": ["reggae"], "cefr": "a1.2" },
+
+    { "artist": "Michael Jackson", "title": "Billie Jean", "year": 1982, "genre": ["pop", "funk"], "cefr": "a2.1" },
+    { "artist": "Michael Jackson", "title": "Thriller", "year": 1982, "genre": ["pop", "disco"], "cefr": "a2.2" },
+    { "artist": "Michael Jackson", "title": "Beat It", "year": 1982, "genre": ["pop", "rock"], "cefr": "a2.1" },
+    { "artist": "Michael Jackson", "title": "Bad", "year": 1987, "genre": ["pop", "funk"], "cefr": "a2.1" },
+    { "artist": "Michael Jackson", "title": "Man in the Mirror", "year": 1988, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Michael Jackson", "title": "Smooth Criminal", "year": 1987, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Michael Jackson", "title": "Black or White", "year": 1991, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Michael Jackson", "title": "Rock with You", "year": 1979, "genre": ["pop", "disco"], "cefr": "a1.2" },
+    { "artist": "Michael Jackson", "title": "Don't Stop 'Til You Get Enough", "year": 1979, "genre": ["pop", "disco"], "cefr": "a2.1" },
+    { "artist": "Michael Jackson", "title": "Heal the World", "year": 1991, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Prince", "title": "Purple Rain", "year": 1984, "genre": ["rock", "pop"], "cefr": "a2.2" },
+    { "artist": "Prince", "title": "When Doves Cry", "year": 1984, "genre": ["pop", "funk"], "cefr": "b1.1" },
+    { "artist": "Prince", "title": "Kiss", "year": 1986, "genre": ["pop", "funk"], "cefr": "a1.2" },
+    { "artist": "Prince", "title": "Little Red Corvette", "year": 1982, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Prince", "title": "1999", "year": 1982, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Prince", "title": "Raspberry Beret", "year": 1985, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Madonna", "title": "Like a Prayer", "year": 1989, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Madonna", "title": "Like a Virgin", "year": 1984, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Madonna", "title": "Material Girl", "year": 1984, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Madonna", "title": "Vogue", "year": 1990, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Madonna", "title": "Papa Don't Preach", "year": 1986, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Madonna", "title": "Holiday", "year": 1983, "genre": ["pop"], "cefr": "a1.1" },
+    { "artist": "Madonna", "title": "Hung Up", "year": 2005, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Madonna", "title": "La Isla Bonita", "year": 1987, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Whitney Houston", "title": "I Will Always Love You", "year": 1992, "genre": ["pop", "r&b"], "cefr": "a1.2" },
+    { "artist": "Whitney Houston", "title": "I Wanna Dance with Somebody", "year": 1987, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Whitney Houston", "title": "Greatest Love of All", "year": 1985, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Whitney Houston", "title": "How Will I Know", "year": 1985, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Whitney Houston", "title": "Saving All My Love for You", "year": 1985, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Mariah Carey", "title": "Hero", "year": 1993, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Mariah Carey", "title": "Without You", "year": 1993, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Mariah Carey", "title": "All I Want for Christmas Is You", "year": 1994, "genre": ["pop"], "cefr": "a1.1" },
+    { "artist": "Mariah Carey", "title": "Vision of Love", "year": 1990, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Mariah Carey", "title": "Fantasy", "year": 1995, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Celine Dion", "title": "My Heart Will Go On", "year": 1997, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Celine Dion", "title": "The Power of Love", "year": 1993, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Celine Dion", "title": "Because You Loved Me", "year": 1996, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Celine Dion", "title": "It's All Coming Back to Me Now", "year": 1996, "genre": ["pop"], "cefr": "b1.1" },
+
+    { "artist": "Stevie Wonder", "title": "Superstition", "year": 1972, "genre": ["funk", "r&b"], "cefr": "a2.2" },
+    { "artist": "Stevie Wonder", "title": "I Just Called to Say I Love You", "year": 1984, "genre": ["pop"], "cefr": "a1.1" },
+    { "artist": "Stevie Wonder", "title": "Isn't She Lovely", "year": 1976, "genre": ["r&b"], "cefr": "a1.2" },
+    { "artist": "Stevie Wonder", "title": "Sir Duke", "year": 1976, "genre": ["r&b"], "cefr": "a2.2" },
+    { "artist": "Stevie Wonder", "title": "Signed, Sealed, Delivered I'm Yours", "year": 1970, "genre": ["r&b"], "cefr": "a1.2" },
+
+    { "artist": "Aretha Franklin", "title": "Respect", "year": 1967, "genre": ["soul", "r&b"], "cefr": "a1.2" },
+    { "artist": "Aretha Franklin", "title": "(You Make Me Feel Like) A Natural Woman", "year": 1967, "genre": ["soul"], "cefr": "a2.1" },
+    { "artist": "Aretha Franklin", "title": "Think", "year": 1968, "genre": ["soul"], "cefr": "a1.2" },
+    { "artist": "Aretha Franklin", "title": "Chain of Fools", "year": 1967, "genre": ["soul"], "cefr": "a2.1" },
+
+    { "artist": "Ray Charles", "title": "Hit the Road Jack", "year": 1961, "genre": ["soul", "blues"], "cefr": "a1.1" },
+    { "artist": "Ray Charles", "title": "Georgia on My Mind", "year": 1960, "genre": ["soul"], "cefr": "a2.1" },
+    { "artist": "Ray Charles", "title": "I Got a Woman", "year": 1954, "genre": ["soul"], "cefr": "a1.2" },
+    { "artist": "Ray Charles", "title": "What'd I Say", "year": 1959, "genre": ["soul"], "cefr": "a1.1" },
+
+    { "artist": "Otis Redding", "title": "(Sittin' On) The Dock of the Bay", "year": 1968, "genre": ["soul"], "cefr": "a2.1" },
+    { "artist": "Otis Redding", "title": "Try a Little Tenderness", "year": 1966, "genre": ["soul"], "cefr": "a2.1" },
+    { "artist": "Otis Redding", "title": "These Arms of Mine", "year": 1962, "genre": ["soul"], "cefr": "a2.1" },
+
+    { "artist": "Sam Cooke", "title": "A Change Is Gonna Come", "year": 1964, "genre": ["soul"], "cefr": "a2.2" },
+    { "artist": "Sam Cooke", "title": "Wonderful World", "year": 1960, "genre": ["soul"], "cefr": "a2.1" },
+    { "artist": "Sam Cooke", "title": "Cupid", "year": 1961, "genre": ["soul"], "cefr": "a1.2" },
+
+    { "artist": "Marvin Gaye", "title": "What's Going On", "year": 1971, "genre": ["soul", "r&b"], "cefr": "a2.2" },
+    { "artist": "Marvin Gaye", "title": "Let's Get It On", "year": 1973, "genre": ["soul"], "cefr": "a2.1" },
+    { "artist": "Marvin Gaye", "title": "Sexual Healing", "year": 1982, "genre": ["r&b"], "cefr": "a2.1" },
+    { "artist": "Marvin Gaye", "title": "I Heard It Through the Grapevine", "year": 1968, "genre": ["soul"], "cefr": "a2.2" },
+
+    { "artist": "Elvis Presley", "title": "Jailhouse Rock", "year": 1957, "genre": ["rock", "rock-and-roll"], "cefr": "a1.2" },
+    { "artist": "Elvis Presley", "title": "Hound Dog", "year": 1956, "genre": ["rock-and-roll"], "cefr": "a1.1" },
+    { "artist": "Elvis Presley", "title": "Heartbreak Hotel", "year": 1956, "genre": ["rock-and-roll"], "cefr": "a2.1" },
+    { "artist": "Elvis Presley", "title": "Can't Help Falling in Love", "year": 1961, "genre": ["rock-and-roll"], "cefr": "a1.2" },
+    { "artist": "Elvis Presley", "title": "Suspicious Minds", "year": 1969, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Elvis Presley", "title": "Love Me Tender", "year": 1956, "genre": ["rock-and-roll"], "cefr": "a1.2" },
+    { "artist": "Elvis Presley", "title": "Blue Suede Shoes", "year": 1956, "genre": ["rock-and-roll"], "cefr": "a1.1" },
+
+    { "artist": "Chuck Berry", "title": "Johnny B. Goode", "year": 1958, "genre": ["rock-and-roll"], "cefr": "a1.2" },
+    { "artist": "Chuck Berry", "title": "Roll Over Beethoven", "year": 1956, "genre": ["rock-and-roll"], "cefr": "a1.2" },
+    { "artist": "Chuck Berry", "title": "Maybellene", "year": 1955, "genre": ["rock-and-roll"], "cefr": "a1.2" },
+
+    { "artist": "Buddy Holly", "title": "That'll Be the Day", "year": 1957, "genre": ["rock-and-roll"], "cefr": "a1.2" },
+    { "artist": "Buddy Holly", "title": "Peggy Sue", "year": 1957, "genre": ["rock-and-roll"], "cefr": "a1.2" },
+
+    { "artist": "Johnny Cash", "title": "Ring of Fire", "year": 1963, "genre": ["country"], "cefr": "a1.2" },
+    { "artist": "Johnny Cash", "title": "Folsom Prison Blues", "year": 1955, "genre": ["country", "blues"], "cefr": "a2.1" },
+    { "artist": "Johnny Cash", "title": "Hurt", "year": 2002, "genre": ["country", "rock"], "cefr": "b1.1" },
+    { "artist": "Johnny Cash", "title": "I Walk the Line", "year": 1956, "genre": ["country"], "cefr": "a1.2" },
+
+    { "artist": "Dolly Parton", "title": "Jolene", "year": 1973, "genre": ["country"], "cefr": "a2.1" },
+    { "artist": "Dolly Parton", "title": "9 to 5", "year": 1980, "genre": ["country", "pop"], "cefr": "a1.2" },
+    { "artist": "Dolly Parton", "title": "I Will Always Love You", "year": 1974, "genre": ["country"], "cefr": "a1.2" },
+
+    { "artist": "Willie Nelson", "title": "On the Road Again", "year": 1980, "genre": ["country"], "cefr": "a1.2" },
+    { "artist": "Willie Nelson", "title": "Always on My Mind", "year": 1982, "genre": ["country"], "cefr": "a2.1" },
+
+    { "artist": "Patsy Cline", "title": "Crazy", "year": 1961, "genre": ["country"], "cefr": "a2.1" },
+    { "artist": "Patsy Cline", "title": "Walkin' After Midnight", "year": 1957, "genre": ["country"], "cefr": "a1.2" },
+
+    { "artist": "Creedence Clearwater Revival", "title": "Have You Ever Seen the Rain", "year": 1970, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Creedence Clearwater Revival", "title": "Fortunate Son", "year": 1969, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Creedence Clearwater Revival", "title": "Proud Mary", "year": 1969, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Creedence Clearwater Revival", "title": "Bad Moon Rising", "year": 1969, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Creedence Clearwater Revival", "title": "Down on the Corner", "year": 1969, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Jimi Hendrix", "title": "Purple Haze", "year": 1967, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Jimi Hendrix", "title": "All Along the Watchtower", "year": 1968, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Jimi Hendrix", "title": "Hey Joe", "year": 1966, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Jimi Hendrix", "title": "Little Wing", "year": 1967, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Simon & Garfunkel", "title": "The Sound of Silence", "year": 1964, "genre": ["folk"], "cefr": "a2.2" },
+    { "artist": "Simon & Garfunkel", "title": "Bridge Over Troubled Water", "year": 1970, "genre": ["folk"], "cefr": "a2.2" },
+    { "artist": "Simon & Garfunkel", "title": "Mrs. Robinson", "year": 1968, "genre": ["folk"], "cefr": "a2.1" },
+    { "artist": "Simon & Garfunkel", "title": "Scarborough Fair", "year": 1966, "genre": ["folk"], "cefr": "b1.1" },
+    { "artist": "Simon & Garfunkel", "title": "The Boxer", "year": 1969, "genre": ["folk"], "cefr": "b1.1" },
+    { "artist": "Simon & Garfunkel", "title": "Cecilia", "year": 1970, "genre": ["folk"], "cefr": "a1.2" },
+
+    { "artist": "Neil Young", "title": "Heart of Gold", "year": 1972, "genre": ["rock", "folk"], "cefr": "a2.1" },
+    { "artist": "Neil Young", "title": "Old Man", "year": 1972, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Neil Young", "title": "Harvest Moon", "year": 1992, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Joni Mitchell", "title": "Big Yellow Taxi", "year": 1970, "genre": ["folk"], "cefr": "a2.1" },
+    { "artist": "Joni Mitchell", "title": "Both Sides Now", "year": 1969, "genre": ["folk"], "cefr": "a2.2" },
+    { "artist": "Joni Mitchell", "title": "A Case of You", "year": 1971, "genre": ["folk"], "cefr": "b1.1" },
+
+    { "artist": "James Taylor", "title": "Fire and Rain", "year": 1970, "genre": ["folk"], "cefr": "a2.1" },
+    { "artist": "James Taylor", "title": "You've Got a Friend", "year": 1971, "genre": ["folk"], "cefr": "a2.1" },
+
+    { "artist": "Carole King", "title": "You've Got a Friend", "year": 1971, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Carole King", "title": "It's Too Late", "year": 1971, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "John Lennon", "title": "Imagine", "year": 1971, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "John Lennon", "title": "Give Peace a Chance", "year": 1969, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "John Lennon", "title": "Instant Karma!", "year": 1970, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "John Lennon", "title": "Woman", "year": 1980, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Paul McCartney", "title": "Live and Let Die", "year": 1973, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Paul McCartney", "title": "Band on the Run", "year": 1973, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "George Harrison", "title": "My Sweet Lord", "year": 1970, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "George Harrison", "title": "Here Comes the Sun", "year": 1969, "genre": ["rock"], "cefr": "a1.1" },
+
+    { "artist": "Van Morrison", "title": "Brown Eyed Girl", "year": 1967, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Van Morrison", "title": "Moondance", "year": 1970, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "AC/DC", "title": "Back in Black", "year": 1980, "genre": ["rock", "hard-rock"], "cefr": "a2.1" },
+    { "artist": "AC/DC", "title": "Highway to Hell", "year": 1979, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "AC/DC", "title": "Thunderstruck", "year": 1990, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "AC/DC", "title": "You Shook Me All Night Long", "year": 1980, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "AC/DC", "title": "T.N.T.", "year": 1975, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Metallica", "title": "Enter Sandman", "year": 1991, "genre": ["metal"], "cefr": "a2.2" },
+    { "artist": "Metallica", "title": "Nothing Else Matters", "year": 1991, "genre": ["metal"], "cefr": "a2.1" },
+    { "artist": "Metallica", "title": "Master of Puppets", "year": 1986, "genre": ["metal"], "cefr": "b1.1" },
+    { "artist": "Metallica", "title": "One", "year": 1988, "genre": ["metal"], "cefr": "b1.1" },
+    { "artist": "Metallica", "title": "Fade to Black", "year": 1984, "genre": ["metal"], "cefr": "a2.2" },
+
+    { "artist": "Guns N' Roses", "title": "Sweet Child o' Mine", "year": 1987, "genre": ["rock", "hard-rock"], "cefr": "b1.2" },
+    { "artist": "Guns N' Roses", "title": "November Rain", "year": 1991, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Guns N' Roses", "title": "Paradise City", "year": 1987, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Guns N' Roses", "title": "Welcome to the Jungle", "year": 1987, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Guns N' Roses", "title": "Knockin' on Heaven's Door", "year": 1991, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Guns N' Roses", "title": "Don't Cry", "year": 1991, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Bon Jovi", "title": "Livin' on a Prayer", "year": 1986, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Bon Jovi", "title": "It's My Life", "year": 2000, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Bon Jovi", "title": "Wanted Dead or Alive", "year": 1986, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Bon Jovi", "title": "You Give Love a Bad Name", "year": 1986, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Bon Jovi", "title": "Always", "year": 1994, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Aerosmith", "title": "Dream On", "year": 1973, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Aerosmith", "title": "I Don't Want to Miss a Thing", "year": 1998, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Aerosmith", "title": "Walk This Way", "year": 1975, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Aerosmith", "title": "Crazy", "year": 1993, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Journey", "title": "Don't Stop Believin'", "year": 1981, "genre": ["rock"], "cefr": "b1.2" },
+    { "artist": "Journey", "title": "Faithfully", "year": 1983, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Journey", "title": "Open Arms", "year": 1981, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Journey", "title": "Separate Ways", "year": 1983, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Foreigner", "title": "I Want to Know What Love Is", "year": 1984, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Foreigner", "title": "Cold as Ice", "year": 1977, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Foreigner", "title": "Hot Blooded", "year": 1978, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Styx", "title": "Come Sail Away", "year": 1977, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Toto", "title": "Africa", "year": 1982, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Toto", "title": "Rosanna", "year": 1982, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Toto", "title": "Hold the Line", "year": 1978, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Oasis", "title": "Wonderwall", "year": 1995, "genre": ["rock", "britpop"], "cefr": "b1.1" },
+    { "artist": "Oasis", "title": "Don't Look Back in Anger", "year": 1995, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Oasis", "title": "Champagne Supernova", "year": 1995, "genre": ["rock"], "cefr": "b1.2" },
+    { "artist": "Oasis", "title": "Live Forever", "year": 1994, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Oasis", "title": "Stop Crying Your Heart Out", "year": 2002, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Radiohead", "title": "Creep", "year": 1992, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Radiohead", "title": "Karma Police", "year": 1997, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Radiohead", "title": "No Surprises", "year": 1997, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Radiohead", "title": "High and Dry", "year": 1995, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Radiohead", "title": "Fake Plastic Trees", "year": 1995, "genre": ["rock"], "cefr": "b1.2" },
+
+    { "artist": "U2", "title": "With or Without You", "year": 1987, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "U2", "title": "One", "year": 1991, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "U2", "title": "Sunday Bloody Sunday", "year": 1983, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "U2", "title": "Beautiful Day", "year": 2000, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "U2", "title": "I Still Haven't Found What I'm Looking For", "year": 1987, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "U2", "title": "Where the Streets Have No Name", "year": 1987, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "U2", "title": "Pride (In the Name of Love)", "year": 1984, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "U2", "title": "Vertigo", "year": 2004, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Coldplay", "title": "Yellow", "year": 2000, "genre": ["rock", "alternative"], "cefr": "a1.2" },
+    { "artist": "Coldplay", "title": "Fix You", "year": 2005, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Coldplay", "title": "Viva la Vida", "year": 2008, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Coldplay", "title": "The Scientist", "year": 2002, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Coldplay", "title": "Clocks", "year": 2002, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Coldplay", "title": "Paradise", "year": 2011, "genre": ["rock", "pop"], "cefr": "a2.1" },
+    { "artist": "Coldplay", "title": "A Sky Full of Stars", "year": 2014, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Coldplay", "title": "Something Just Like This", "year": 2017, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Coldplay", "title": "Hymn for the Weekend", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Nirvana", "title": "Smells Like Teen Spirit", "year": 1991, "genre": ["rock", "grunge"], "cefr": "a2.2" },
+    { "artist": "Nirvana", "title": "Come as You Are", "year": 1991, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Nirvana", "title": "Heart-Shaped Box", "year": 1993, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Nirvana", "title": "Lithium", "year": 1991, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Pearl Jam", "title": "Alive", "year": 1991, "genre": ["rock", "grunge"], "cefr": "a2.2" },
+    { "artist": "Pearl Jam", "title": "Jeremy", "year": 1991, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Pearl Jam", "title": "Black", "year": 1991, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Pearl Jam", "title": "Even Flow", "year": 1991, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Soundgarden", "title": "Black Hole Sun", "year": 1994, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Red Hot Chili Peppers", "title": "Under the Bridge", "year": 1991, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Red Hot Chili Peppers", "title": "Californication", "year": 1999, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Red Hot Chili Peppers", "title": "Otherside", "year": 1999, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Red Hot Chili Peppers", "title": "Scar Tissue", "year": 1999, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Red Hot Chili Peppers", "title": "By the Way", "year": 2002, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Red Hot Chili Peppers", "title": "Dani California", "year": 2006, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Green Day", "title": "Good Riddance (Time of Your Life)", "year": 1997, "genre": ["rock", "punk"], "cefr": "a2.1" },
+    { "artist": "Green Day", "title": "Basket Case", "year": 1994, "genre": ["rock", "punk"], "cefr": "a2.2" },
+    { "artist": "Green Day", "title": "American Idiot", "year": 2004, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Green Day", "title": "Boulevard of Broken Dreams", "year": 2004, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Green Day", "title": "Wake Me Up When September Ends", "year": 2004, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Foo Fighters", "title": "Everlong", "year": 1997, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Foo Fighters", "title": "Learn to Fly", "year": 1999, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Foo Fighters", "title": "The Pretender", "year": 2007, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Foo Fighters", "title": "Best of You", "year": 2005, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Foo Fighters", "title": "Times Like These", "year": 2003, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Imagine Dragons", "title": "Believer", "year": 2017, "genre": ["rock", "alternative"], "cefr": "a1.2" },
+    { "artist": "Imagine Dragons", "title": "Radioactive", "year": 2012, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Imagine Dragons", "title": "Thunder", "year": 2017, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Imagine Dragons", "title": "Demons", "year": 2012, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Imagine Dragons", "title": "Whatever It Takes", "year": 2017, "genre": ["pop", "rock"], "cefr": "a2.2" },
+
+    { "artist": "Linkin Park", "title": "In the End", "year": 2001, "genre": ["rock", "nu-metal"], "cefr": "a2.2" },
+    { "artist": "Linkin Park", "title": "Numb", "year": 2003, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Linkin Park", "title": "Crawling", "year": 2001, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Linkin Park", "title": "Faint", "year": 2003, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Linkin Park", "title": "What I've Done", "year": 2007, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Creed", "title": "With Arms Wide Open", "year": 1999, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Creed", "title": "Higher", "year": 1999, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Creed", "title": "My Sacrifice", "year": 2001, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Creed", "title": "One Last Breath", "year": 2001, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Evanescence", "title": "Bring Me to Life", "year": 2003, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Evanescence", "title": "My Immortal", "year": 2003, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Muse", "title": "Uprising", "year": 2009, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Muse", "title": "Supermassive Black Hole", "year": 2006, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Muse", "title": "Starlight", "year": 2006, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Muse", "title": "Time Is Running Out", "year": 2003, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Arctic Monkeys", "title": "Do I Wanna Know?", "year": 2013, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Arctic Monkeys", "title": "I Bet You Look Good on the Dancefloor", "year": 2005, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Arctic Monkeys", "title": "505", "year": 2007, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "The Killers", "title": "Mr. Brightside", "year": 2003, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "The Killers", "title": "Somebody Told Me", "year": 2004, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "The Killers", "title": "Human", "year": 2008, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "The Killers", "title": "When You Were Young", "year": 2006, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "The Strokes", "title": "Last Nite", "year": 2001, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "The Strokes", "title": "Reptilia", "year": 2003, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Kings of Leon", "title": "Use Somebody", "year": 2008, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Kings of Leon", "title": "Sex on Fire", "year": 2008, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Maroon 5", "title": "Sugar", "year": 2014, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Maroon 5", "title": "Moves Like Jagger", "year": 2011, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Maroon 5", "title": "Memories", "year": 2019, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Maroon 5", "title": "She Will Be Loved", "year": 2002, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Maroon 5", "title": "This Love", "year": 2002, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Maroon 5", "title": "Payphone", "year": 2012, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Maroon 5", "title": "Girls Like You", "year": 2017, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Adele", "title": "Someone Like You", "year": 2011, "genre": ["pop", "soul"], "cefr": "a1.2" },
+    { "artist": "Adele", "title": "Hello", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Adele", "title": "Rolling in the Deep", "year": 2010, "genre": ["pop", "soul"], "cefr": "a2.2" },
+    { "artist": "Adele", "title": "Set Fire to the Rain", "year": 2011, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Adele", "title": "Skyfall", "year": 2012, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Adele", "title": "Easy on Me", "year": 2021, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Adele", "title": "When We Were Young", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Adele", "title": "Chasing Pavements", "year": 2008, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Ed Sheeran", "title": "Perfect", "year": 2017, "genre": ["pop", "folk-pop"], "cefr": "a1.1" },
+    { "artist": "Ed Sheeran", "title": "Thinking Out Loud", "year": 2014, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Ed Sheeran", "title": "Shape of You", "year": 2017, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Ed Sheeran", "title": "Photograph", "year": 2014, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Ed Sheeran", "title": "Castle on the Hill", "year": 2017, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Ed Sheeran", "title": "The A Team", "year": 2011, "genre": ["pop"], "cefr": "b1.1" },
+    { "artist": "Ed Sheeran", "title": "I See Fire", "year": 2013, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Ed Sheeran", "title": "Bad Habits", "year": 2021, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Ed Sheeran", "title": "Shivers", "year": 2021, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Taylor Swift", "title": "Shake It Off", "year": 2014, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Taylor Swift", "title": "Love Story", "year": 2008, "genre": ["country", "pop"], "cefr": "a2.1" },
+    { "artist": "Taylor Swift", "title": "Blank Space", "year": 2014, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Taylor Swift", "title": "Bad Blood", "year": 2014, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Taylor Swift", "title": "You Belong with Me", "year": 2008, "genre": ["country", "pop"], "cefr": "a2.1" },
+    { "artist": "Taylor Swift", "title": "Wildest Dreams", "year": 2014, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Taylor Swift", "title": "Anti-Hero", "year": 2022, "genre": ["pop"], "cefr": "b1.1" },
+    { "artist": "Taylor Swift", "title": "Cruel Summer", "year": 2019, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Taylor Swift", "title": "Cardigan", "year": 2020, "genre": ["pop"], "cefr": "b1.1" },
+    { "artist": "Taylor Swift", "title": "All Too Well", "year": 2012, "genre": ["country", "pop"], "cefr": "b1.1" },
+
+    { "artist": "Bruno Mars", "title": "Count on Me", "year": 2010, "genre": ["pop"], "cefr": "a1.1" },
+    { "artist": "Bruno Mars", "title": "Just the Way You Are", "year": 2010, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Bruno Mars", "title": "Grenade", "year": 2010, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Bruno Mars", "title": "Uptown Funk", "year": 2014, "genre": ["pop", "funk"], "cefr": "a2.1" },
+    { "artist": "Bruno Mars", "title": "When I Was Your Man", "year": 2012, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Bruno Mars", "title": "Locked Out of Heaven", "year": 2012, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Bruno Mars", "title": "The Lazy Song", "year": 2010, "genre": ["pop"], "cefr": "a1.1" },
+    { "artist": "Bruno Mars", "title": "Marry You", "year": 2010, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Backstreet Boys", "title": "Everybody (Backstreet's Back)", "year": 1997, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Backstreet Boys", "title": "I Want It That Way", "year": 1999, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Backstreet Boys", "title": "As Long As You Love Me", "year": 1997, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Backstreet Boys", "title": "Quit Playing Games (With My Heart)", "year": 1996, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Backstreet Boys", "title": "Show Me the Meaning of Being Lonely", "year": 1999, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Backstreet Boys", "title": "Larger Than Life", "year": 1999, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Backstreet Boys", "title": "The Call", "year": 2000, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Backstreet Boys", "title": "Shape of My Heart", "year": 2000, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "NSYNC", "title": "Bye Bye Bye", "year": 2000, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "NSYNC", "title": "It's Gonna Be Me", "year": 2000, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "NSYNC", "title": "Tearin' Up My Heart", "year": 1997, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "NSYNC", "title": "This I Promise You", "year": 2000, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "NSYNC", "title": "Pop", "year": 2001, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Britney Spears", "title": "...Baby One More Time", "year": 1998, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Britney Spears", "title": "Oops!... I Did It Again", "year": 2000, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Britney Spears", "title": "Toxic", "year": 2003, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Britney Spears", "title": "I'm a Slave 4 U", "year": 2001, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Britney Spears", "title": "Hit Me Baby One More Time", "year": 1998, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Christina Aguilera", "title": "Genie in a Bottle", "year": 1999, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Christina Aguilera", "title": "Beautiful", "year": 2002, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Christina Aguilera", "title": "What a Girl Wants", "year": 1999, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Spice Girls", "title": "Wannabe", "year": 1996, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Spice Girls", "title": "Spice Up Your Life", "year": 1997, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "ABBA", "title": "Dancing Queen", "year": 1976, "genre": ["pop", "disco"], "cefr": "a1.2" },
+    { "artist": "ABBA", "title": "Mamma Mia", "year": 1975, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "ABBA", "title": "Waterloo", "year": 1974, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "ABBA", "title": "The Winner Takes It All", "year": 1980, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "ABBA", "title": "Take a Chance on Me", "year": 1978, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "ABBA", "title": "Gimme! Gimme! Gimme!", "year": 1979, "genre": ["pop", "disco"], "cefr": "a1.2" },
+    { "artist": "ABBA", "title": "SOS", "year": 1975, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "ABBA", "title": "Money, Money, Money", "year": 1976, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Bee Gees", "title": "Stayin' Alive", "year": 1977, "genre": ["disco", "pop"], "cefr": "a1.2" },
+    { "artist": "Bee Gees", "title": "How Deep Is Your Love", "year": 1977, "genre": ["disco"], "cefr": "a1.2" },
+    { "artist": "Bee Gees", "title": "Night Fever", "year": 1977, "genre": ["disco"], "cefr": "a2.1" },
+    { "artist": "Bee Gees", "title": "More Than a Woman", "year": 1977, "genre": ["disco"], "cefr": "a2.1" },
+
+    { "artist": "Donna Summer", "title": "I Feel Love", "year": 1977, "genre": ["disco"], "cefr": "a1.1" },
+    { "artist": "Donna Summer", "title": "Hot Stuff", "year": 1979, "genre": ["disco"], "cefr": "a1.2" },
+    { "artist": "Donna Summer", "title": "Bad Girls", "year": 1979, "genre": ["disco"], "cefr": "a1.2" },
+
+    { "artist": "Gloria Gaynor", "title": "I Will Survive", "year": 1978, "genre": ["disco"], "cefr": "a2.1" },
+
+    { "artist": "Earth, Wind & Fire", "title": "September", "year": 1978, "genre": ["funk", "disco"], "cefr": "a2.1" },
+    { "artist": "Earth, Wind & Fire", "title": "Boogie Wonderland", "year": 1979, "genre": ["disco"], "cefr": "a2.1" },
+
+    { "artist": "Kool & the Gang", "title": "Celebration", "year": 1980, "genre": ["disco"], "cefr": "a1.2" },
+    { "artist": "Kool & the Gang", "title": "Get Down on It", "year": 1981, "genre": ["funk"], "cefr": "a1.2" },
+
+    { "artist": "The Jackson 5", "title": "I Want You Back", "year": 1969, "genre": ["pop", "soul"], "cefr": "a1.2" },
+    { "artist": "The Jackson 5", "title": "ABC", "year": 1970, "genre": ["pop"], "cefr": "a1.1" },
+
+    { "artist": "Diana Ross", "title": "Ain't No Mountain High Enough", "year": 1970, "genre": ["soul"], "cefr": "a2.1" },
+    { "artist": "Diana Ross", "title": "Upside Down", "year": 1980, "genre": ["disco"], "cefr": "a1.2" },
+
+    { "artist": "The Temptations", "title": "My Girl", "year": 1964, "genre": ["soul"], "cefr": "a1.2" },
+    { "artist": "The Temptations", "title": "Ain't Too Proud to Beg", "year": 1966, "genre": ["soul"], "cefr": "a2.1" },
+
+    { "artist": "The Supremes", "title": "Stop! In the Name of Love", "year": 1965, "genre": ["pop", "soul"], "cefr": "a1.2" },
+    { "artist": "The Supremes", "title": "You Can't Hurry Love", "year": 1966, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "The Supremes", "title": "Baby Love", "year": 1964, "genre": ["pop"], "cefr": "a1.1" },
+
+    { "artist": "The Four Tops", "title": "I Can't Help Myself (Sugar Pie Honey Bunch)", "year": 1965, "genre": ["soul"], "cefr": "a1.2" },
+    { "artist": "The Four Tops", "title": "Reach Out I'll Be There", "year": 1966, "genre": ["soul"], "cefr": "a2.1" },
+
+    { "artist": "Al Green", "title": "Let's Stay Together", "year": 1971, "genre": ["soul"], "cefr": "a2.1" },
+    { "artist": "Al Green", "title": "Take Me to the River", "year": 1974, "genre": ["soul"], "cefr": "a2.1" },
+
+    { "artist": "James Brown", "title": "I Got You (I Feel Good)", "year": 1965, "genre": ["funk", "soul"], "cefr": "a1.1" },
+    { "artist": "James Brown", "title": "Get Up (I Feel Like Being a) Sex Machine", "year": 1970, "genre": ["funk"], "cefr": "a1.2" },
+    { "artist": "James Brown", "title": "Papa's Got a Brand New Bag", "year": 1965, "genre": ["funk"], "cefr": "a1.2" },
+
+    { "artist": "B.B. King", "title": "The Thrill Is Gone", "year": 1969, "genre": ["blues"], "cefr": "a2.2" },
+    { "artist": "Muddy Waters", "title": "Mannish Boy", "year": 1955, "genre": ["blues"], "cefr": "a1.2" },
+    { "artist": "Muddy Waters", "title": "Hoochie Coochie Man", "year": 1954, "genre": ["blues"], "cefr": "a2.2" },
+    { "artist": "Howlin' Wolf", "title": "Smokestack Lightning", "year": 1956, "genre": ["blues"], "cefr": "a1.2" },
+    { "artist": "Howlin' Wolf", "title": "Spoonful", "year": 1960, "genre": ["blues"], "cefr": "a2.1" },
+    { "artist": "John Lee Hooker", "title": "Boom Boom", "year": 1961, "genre": ["blues"], "cefr": "a1.1" },
+    { "artist": "Robert Johnson", "title": "Cross Road Blues", "year": 1936, "genre": ["blues"], "cefr": "a2.2" },
+    { "artist": "Robert Johnson", "title": "Sweet Home Chicago", "year": 1936, "genre": ["blues"], "cefr": "a1.2" },
+
+    { "artist": "Eric Clapton", "title": "Tears in Heaven", "year": 1992, "genre": ["rock", "blues"], "cefr": "a2.1" },
+    { "artist": "Eric Clapton", "title": "Layla", "year": 1970, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Eric Clapton", "title": "Wonderful Tonight", "year": 1977, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Eric Clapton", "title": "Cocaine", "year": 1977, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Stevie Ray Vaughan", "title": "Pride and Joy", "year": 1983, "genre": ["blues"], "cefr": "a2.1" },
+
+    { "artist": "Amy Winehouse", "title": "Rehab", "year": 2006, "genre": ["soul", "r&b"], "cefr": "a2.1" },
+    { "artist": "Amy Winehouse", "title": "Back to Black", "year": 2006, "genre": ["soul"], "cefr": "a2.2" },
+    { "artist": "Amy Winehouse", "title": "Valerie", "year": 2007, "genre": ["soul"], "cefr": "a2.1" },
+    { "artist": "Amy Winehouse", "title": "You Know I'm No Good", "year": 2006, "genre": ["soul"], "cefr": "b1.1" },
+
+    { "artist": "Norah Jones", "title": "Don't Know Why", "year": 2002, "genre": ["jazz", "pop"], "cefr": "a2.2" },
+    { "artist": "Norah Jones", "title": "Come Away with Me", "year": 2002, "genre": ["jazz"], "cefr": "a2.1" },
+
+    { "artist": "John Mayer", "title": "Gravity", "year": 2006, "genre": ["rock", "blues"], "cefr": "a2.2" },
+    { "artist": "John Mayer", "title": "Slow Dancing in a Burning Room", "year": 2006, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "John Mayer", "title": "Your Body Is a Wonderland", "year": 2001, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "John Mayer", "title": "Waiting on the World to Change", "year": 2006, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Jason Mraz", "title": "I'm Yours", "year": 2008, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Jason Mraz", "title": "Lucky", "year": 2008, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Jack Johnson", "title": "Better Together", "year": 2005, "genre": ["folk"], "cefr": "a2.1" },
+    { "artist": "Jack Johnson", "title": "Banana Pancakes", "year": 2005, "genre": ["folk"], "cefr": "a1.2" },
+
+    { "artist": "Avril Lavigne", "title": "Complicated", "year": 2002, "genre": ["pop", "rock"], "cefr": "a2.1" },
+    { "artist": "Avril Lavigne", "title": "Sk8er Boi", "year": 2002, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Avril Lavigne", "title": "Girlfriend", "year": 2007, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Kelly Clarkson", "title": "Since U Been Gone", "year": 2004, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Kelly Clarkson", "title": "Stronger (What Doesn't Kill You)", "year": 2011, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Kelly Clarkson", "title": "Because of You", "year": 2004, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Pink", "title": "So What", "year": 2008, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Pink", "title": "Just Give Me a Reason", "year": 2012, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Pink", "title": "Try", "year": 2012, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Pink", "title": "What About Us", "year": 2017, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Katy Perry", "title": "Firework", "year": 2010, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Katy Perry", "title": "Roar", "year": 2013, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Katy Perry", "title": "California Gurls", "year": 2010, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Katy Perry", "title": "I Kissed a Girl", "year": 2008, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Katy Perry", "title": "Hot n Cold", "year": 2008, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Lady Gaga", "title": "Bad Romance", "year": 2009, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Lady Gaga", "title": "Poker Face", "year": 2008, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Lady Gaga", "title": "Shallow", "year": 2018, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Lady Gaga", "title": "Born This Way", "year": 2011, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Lady Gaga", "title": "Just Dance", "year": 2008, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Lady Gaga", "title": "Paparazzi", "year": 2008, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Beyoncé", "title": "Halo", "year": 2008, "genre": ["pop", "r&b"], "cefr": "a2.1" },
+    { "artist": "Beyoncé", "title": "Single Ladies (Put a Ring on It)", "year": 2008, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Beyoncé", "title": "Crazy in Love", "year": 2003, "genre": ["pop", "r&b"], "cefr": "a2.1" },
+    { "artist": "Beyoncé", "title": "Irreplaceable", "year": 2006, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Beyoncé", "title": "Listen", "year": 2006, "genre": ["r&b"], "cefr": "a2.2" },
+    { "artist": "Beyoncé", "title": "If I Were a Boy", "year": 2008, "genre": ["r&b"], "cefr": "b1.1" },
+
+    { "artist": "Rihanna", "title": "Umbrella", "year": 2007, "genre": ["pop", "r&b"], "cefr": "a2.1" },
+    { "artist": "Rihanna", "title": "We Found Love", "year": 2011, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Rihanna", "title": "Diamonds", "year": 2012, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Rihanna", "title": "Only Girl (In the World)", "year": 2010, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Rihanna", "title": "Don't Stop the Music", "year": 2007, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Rihanna", "title": "Love the Way You Lie", "year": 2010, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Justin Timberlake", "title": "Cry Me a River", "year": 2002, "genre": ["pop", "r&b"], "cefr": "a2.1" },
+    { "artist": "Justin Timberlake", "title": "SexyBack", "year": 2006, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Justin Timberlake", "title": "Mirrors", "year": 2013, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Justin Timberlake", "title": "Can't Stop the Feeling!", "year": 2016, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Usher", "title": "Yeah!", "year": 2004, "genre": ["r&b"], "cefr": "a2.1" },
+    { "artist": "Usher", "title": "OMG", "year": 2010, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Usher", "title": "U Got It Bad", "year": 2001, "genre": ["r&b"], "cefr": "a2.1" },
+
+    { "artist": "Alicia Keys", "title": "If I Ain't Got You", "year": 2003, "genre": ["r&b"], "cefr": "a2.2" },
+    { "artist": "Alicia Keys", "title": "No One", "year": 2007, "genre": ["r&b"], "cefr": "a2.1" },
+    { "artist": "Alicia Keys", "title": "Fallin'", "year": 2001, "genre": ["r&b"], "cefr": "a2.1" },
+    { "artist": "Alicia Keys", "title": "Girl on Fire", "year": 2012, "genre": ["r&b"], "cefr": "a2.2" },
+
+    { "artist": "John Legend", "title": "All of Me", "year": 2013, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "John Legend", "title": "Ordinary People", "year": 2004, "genre": ["r&b"], "cefr": "a2.2" },
+
+    { "artist": "Sam Smith", "title": "Stay with Me", "year": 2014, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Sam Smith", "title": "I'm Not the Only One", "year": 2014, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Sam Smith", "title": "Too Good at Goodbyes", "year": 2017, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "The Weeknd", "title": "Blinding Lights", "year": 2019, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "The Weeknd", "title": "Can't Feel My Face", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "The Weeknd", "title": "Starboy", "year": 2016, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "The Weeknd", "title": "The Hills", "year": 2015, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "The Weeknd", "title": "Save Your Tears", "year": 2020, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Dua Lipa", "title": "Don't Start Now", "year": 2019, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Dua Lipa", "title": "New Rules", "year": 2017, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Dua Lipa", "title": "Levitating", "year": 2020, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Dua Lipa", "title": "IDGAF", "year": 2017, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Billie Eilish", "title": "Bad Guy", "year": 2019, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Billie Eilish", "title": "Ocean Eyes", "year": 2016, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Billie Eilish", "title": "Everything I Wanted", "year": 2019, "genre": ["pop"], "cefr": "b1.1" },
+    { "artist": "Billie Eilish", "title": "When the Party's Over", "year": 2018, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Billie Eilish", "title": "Lovely", "year": 2018, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Billie Eilish", "title": "What Was I Made For?", "year": 2023, "genre": ["pop"], "cefr": "b1.1" },
+
+    { "artist": "Olivia Rodrigo", "title": "Drivers License", "year": 2021, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Olivia Rodrigo", "title": "Good 4 U", "year": 2021, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Olivia Rodrigo", "title": "Vampire", "year": 2023, "genre": ["pop"], "cefr": "b1.1" },
+
+    { "artist": "Harry Styles", "title": "As It Was", "year": 2022, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Harry Styles", "title": "Watermelon Sugar", "year": 2019, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Harry Styles", "title": "Sign of the Times", "year": 2017, "genre": ["pop", "rock"], "cefr": "b1.1" },
+    { "artist": "Harry Styles", "title": "Adore You", "year": 2019, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Shawn Mendes", "title": "Stitches", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Shawn Mendes", "title": "Señorita", "year": 2019, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Shawn Mendes", "title": "Treat You Better", "year": 2016, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Shawn Mendes", "title": "There's Nothing Holdin' Me Back", "year": 2017, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Charlie Puth", "title": "See You Again", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Charlie Puth", "title": "Attention", "year": 2017, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Charlie Puth", "title": "We Don't Talk Anymore", "year": 2016, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "OneRepublic", "title": "Counting Stars", "year": 2013, "genre": ["pop", "rock"], "cefr": "a2.2" },
+    { "artist": "OneRepublic", "title": "Apologize", "year": 2007, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "OneRepublic", "title": "Secrets", "year": 2009, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "OneRepublic", "title": "I Ain't Worried", "year": 2022, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Lewis Capaldi", "title": "Someone You Loved", "year": 2018, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Lewis Capaldi", "title": "Before You Go", "year": 2019, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "James Arthur", "title": "Say You Won't Let Go", "year": 2016, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "George Ezra", "title": "Shotgun", "year": 2018, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "George Ezra", "title": "Budapest", "year": 2013, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Hozier", "title": "Take Me to Church", "year": 2013, "genre": ["rock"], "cefr": "b1.2" },
+
+    { "artist": "Vance Joy", "title": "Riptide", "year": 2013, "genre": ["folk"], "cefr": "a2.2" },
+
+    { "artist": "Of Monsters and Men", "title": "Little Talks", "year": 2011, "genre": ["folk"], "cefr": "a2.2" },
+
+    { "artist": "Mumford & Sons", "title": "I Will Wait", "year": 2012, "genre": ["folk"], "cefr": "a2.1" },
+    { "artist": "Mumford & Sons", "title": "Little Lion Man", "year": 2009, "genre": ["folk"], "cefr": "a2.2" },
+    { "artist": "Mumford & Sons", "title": "The Cave", "year": 2009, "genre": ["folk"], "cefr": "a2.2" },
+
+    { "artist": "The Lumineers", "title": "Ho Hey", "year": 2012, "genre": ["folk"], "cefr": "a1.2" },
+    { "artist": "The Lumineers", "title": "Ophelia", "year": 2016, "genre": ["folk"], "cefr": "a2.2" },
+
+    { "artist": "Kodaline", "title": "All I Want", "year": 2012, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Florence + the Machine", "title": "Dog Days Are Over", "year": 2008, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Florence + the Machine", "title": "Shake It Out", "year": 2011, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Alanis Morissette", "title": "Ironic", "year": 1995, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Alanis Morissette", "title": "You Oughta Know", "year": 1995, "genre": ["rock"], "cefr": "b1.2" },
+
+    { "artist": "Alannah Myles", "title": "Black Velvet", "year": 1989, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Sinéad O'Connor", "title": "Nothing Compares 2 U", "year": 1990, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Tracy Chapman", "title": "Fast Car", "year": 1988, "genre": ["folk"], "cefr": "a2.2" },
+    { "artist": "Tracy Chapman", "title": "Talkin' 'bout a Revolution", "year": 1988, "genre": ["folk"], "cefr": "a2.2" },
+    { "artist": "Tracy Chapman", "title": "Give Me One Reason", "year": 1995, "genre": ["folk", "blues"], "cefr": "a2.1" },
+
+    { "artist": "Bonnie Tyler", "title": "Total Eclipse of the Heart", "year": 1983, "genre": ["rock", "pop"], "cefr": "a2.2" },
+    { "artist": "Cyndi Lauper", "title": "Girls Just Want to Have Fun", "year": 1983, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Cyndi Lauper", "title": "Time After Time", "year": 1984, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Tears for Fears", "title": "Everybody Wants to Rule the World", "year": 1985, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Tears for Fears", "title": "Shout", "year": 1984, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Duran Duran", "title": "Hungry Like the Wolf", "year": 1982, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Duran Duran", "title": "Rio", "year": 1982, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Duran Duran", "title": "Ordinary World", "year": 1992, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "A-ha", "title": "Take On Me", "year": 1985, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "A-ha", "title": "The Sun Always Shines on T.V.", "year": 1985, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Eurythmics", "title": "Sweet Dreams (Are Made of This)", "year": 1983, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Eurythmics", "title": "Here Comes the Rain Again", "year": 1983, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Blondie", "title": "Heart of Glass", "year": 1978, "genre": ["rock", "disco"], "cefr": "a2.1" },
+    { "artist": "Blondie", "title": "Call Me", "year": 1980, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Blondie", "title": "One Way or Another", "year": 1978, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Depeche Mode", "title": "Personal Jesus", "year": 1989, "genre": ["rock", "new-wave"], "cefr": "a2.1" },
+    { "artist": "Depeche Mode", "title": "Enjoy the Silence", "year": 1990, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "The Cure", "title": "Friday I'm in Love", "year": 1992, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "The Cure", "title": "Lovesong", "year": 1989, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "The Cure", "title": "Just Like Heaven", "year": 1987, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "New Order", "title": "Blue Monday", "year": 1983, "genre": ["rock", "electronic"], "cefr": "a2.1" },
+
+    { "artist": "Joy Division", "title": "Love Will Tear Us Apart", "year": 1980, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Talking Heads", "title": "Once in a Lifetime", "year": 1980, "genre": ["rock", "new-wave"], "cefr": "b1.2" },
+    { "artist": "Talking Heads", "title": "Psycho Killer", "year": 1977, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Talking Heads", "title": "Burning Down the House", "year": 1983, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "The Police", "title": "Every Breath You Take", "year": 1983, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "The Police", "title": "Roxanne", "year": 1978, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "The Police", "title": "Message in a Bottle", "year": 1979, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "The Police", "title": "Don't Stand So Close to Me", "year": 1980, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Sting", "title": "Englishman in New York", "year": 1987, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Sting", "title": "Fields of Gold", "year": 1993, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Phil Collins", "title": "In the Air Tonight", "year": 1981, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Phil Collins", "title": "Against All Odds", "year": 1984, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Phil Collins", "title": "Another Day in Paradise", "year": 1989, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Phil Collins", "title": "Easy Lover", "year": 1984, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Genesis", "title": "Invisible Touch", "year": 1986, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Genesis", "title": "Land of Confusion", "year": 1986, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Dire Straits", "title": "Money for Nothing", "year": 1985, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Dire Straits", "title": "Sultans of Swing", "year": 1978, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Dire Straits", "title": "Walk of Life", "year": 1985, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Dire Straits", "title": "Brothers in Arms", "year": 1985, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Mark Knopfler", "title": "Sailing to Philadelphia", "year": 2000, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Steve Miller Band", "title": "The Joker", "year": 1973, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Steve Miller Band", "title": "Fly Like an Eagle", "year": 1976, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Lynyrd Skynyrd", "title": "Sweet Home Alabama", "year": 1974, "genre": ["rock", "southern-rock"], "cefr": "a2.1" },
+    { "artist": "Lynyrd Skynyrd", "title": "Free Bird", "year": 1973, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Allman Brothers Band", "title": "Ramblin' Man", "year": 1973, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "The Doors", "title": "Light My Fire", "year": 1967, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "The Doors", "title": "Riders on the Storm", "year": 1971, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "The Doors", "title": "Break On Through (To the Other Side)", "year": 1967, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "The Doors", "title": "People Are Strange", "year": 1967, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Van Halen", "title": "Jump", "year": 1983, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Van Halen", "title": "Panama", "year": 1984, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "ZZ Top", "title": "La Grange", "year": 1973, "genre": ["rock", "blues"], "cefr": "a2.1" },
+    { "artist": "ZZ Top", "title": "Sharp Dressed Man", "year": 1983, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Def Leppard", "title": "Pour Some Sugar on Me", "year": 1987, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Def Leppard", "title": "Love Bites", "year": 1987, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Whitesnake", "title": "Here I Go Again", "year": 1982, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Poison", "title": "Every Rose Has Its Thorn", "year": 1988, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "REO Speedwagon", "title": "Can't Fight This Feeling", "year": 1984, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Survivor", "title": "Eye of the Tiger", "year": 1982, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Europe", "title": "The Final Countdown", "year": 1986, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Scorpions", "title": "Wind of Change", "year": 1990, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Scorpions", "title": "Rock You Like a Hurricane", "year": 1984, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Iron Maiden", "title": "The Trooper", "year": 1983, "genre": ["metal"], "cefr": "b1.2" },
+    { "artist": "Iron Maiden", "title": "Run to the Hills", "year": 1982, "genre": ["metal"], "cefr": "b1.1" },
+    { "artist": "Iron Maiden", "title": "Fear of the Dark", "year": 1992, "genre": ["metal"], "cefr": "a2.2" },
+
+    { "artist": "Black Sabbath", "title": "Paranoid", "year": 1970, "genre": ["metal"], "cefr": "a2.2" },
+    { "artist": "Black Sabbath", "title": "Iron Man", "year": 1970, "genre": ["metal"], "cefr": "a2.1" },
+    { "artist": "Black Sabbath", "title": "War Pigs", "year": 1970, "genre": ["metal"], "cefr": "b1.1" },
+
+    { "artist": "Deep Purple", "title": "Smoke on the Water", "year": 1973, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Deep Purple", "title": "Highway Star", "year": 1972, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Deep Purple", "title": "Child in Time", "year": 1970, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Rainbow", "title": "Stone Cold", "year": 1982, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "System of a Down", "title": "Chop Suey!", "year": 2001, "genre": ["rock", "metal"], "cefr": "b1.1" },
+    { "artist": "System of a Down", "title": "Toxicity", "year": 2001, "genre": ["metal"], "cefr": "b1.1" },
+
+    { "artist": "Disturbed", "title": "Down with the Sickness", "year": 2000, "genre": ["metal"], "cefr": "b1.1" },
+    { "artist": "Disturbed", "title": "The Sound of Silence", "year": 2015, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Marilyn Manson", "title": "The Beautiful People", "year": 1996, "genre": ["metal"], "cefr": "b1.1" },
+
+    { "artist": "Nine Inch Nails", "title": "Closer", "year": 1994, "genre": ["rock", "industrial"], "cefr": "a2.2" },
+    { "artist": "Nine Inch Nails", "title": "Hurt", "year": 1994, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Rage Against the Machine", "title": "Killing in the Name", "year": 1992, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Rage Against the Machine", "title": "Bulls on Parade", "year": 1996, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "The White Stripes", "title": "Seven Nation Army", "year": 2003, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "The White Stripes", "title": "Fell in Love with a Girl", "year": 2001, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Jack White", "title": "Lazaretto", "year": 2014, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Jet", "title": "Are You Gonna Be My Girl", "year": 2003, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Franz Ferdinand", "title": "Take Me Out", "year": 2004, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Kasabian", "title": "Fire", "year": 2009, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "The Smashing Pumpkins", "title": "1979", "year": 1995, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "The Smashing Pumpkins", "title": "Tonight, Tonight", "year": 1995, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "The Smashing Pumpkins", "title": "Bullet with Butterfly Wings", "year": 1995, "genre": ["rock"], "cefr": "b1.2" },
+
+    { "artist": "Weezer", "title": "Say It Ain't So", "year": 1994, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Weezer", "title": "Buddy Holly", "year": 1994, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Weezer", "title": "Island in the Sun", "year": 2001, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Blink-182", "title": "All the Small Things", "year": 1999, "genre": ["punk"], "cefr": "a1.2" },
+    { "artist": "Blink-182", "title": "What's My Age Again?", "year": 1999, "genre": ["punk"], "cefr": "a2.1" },
+    { "artist": "Blink-182", "title": "I Miss You", "year": 2003, "genre": ["punk"], "cefr": "a2.2" },
+
+    { "artist": "Sum 41", "title": "In Too Deep", "year": 2001, "genre": ["punk"], "cefr": "a2.1" },
+    { "artist": "Sum 41", "title": "Fat Lip", "year": 2001, "genre": ["punk"], "cefr": "a2.2" },
+
+    { "artist": "Good Charlotte", "title": "The Anthem", "year": 2002, "genre": ["punk"], "cefr": "a2.1" },
+
+    { "artist": "Jimmy Eat World", "title": "The Middle", "year": 2001, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Semisonic", "title": "Closing Time", "year": 1998, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Counting Crows", "title": "Mr. Jones", "year": 1993, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Counting Crows", "title": "Big Yellow Taxi", "year": 2002, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Goo Goo Dolls", "title": "Iris", "year": 1998, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Goo Goo Dolls", "title": "Name", "year": 1995, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Train", "title": "Hey, Soul Sister", "year": 2009, "genre": ["pop", "rock"], "cefr": "a2.1" },
+    { "artist": "Train", "title": "Drops of Jupiter", "year": 2001, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Snow Patrol", "title": "Chasing Cars", "year": 2006, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Snow Patrol", "title": "Run", "year": 2003, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Keane", "title": "Somewhere Only We Know", "year": 2004, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Gavin DeGraw", "title": "I Don't Want to Be", "year": 2003, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Matchbox Twenty", "title": "3 a.m.", "year": 1996, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Matchbox Twenty", "title": "Unwell", "year": 2002, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Savage Garden", "title": "Truly Madly Deeply", "year": 1997, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Savage Garden", "title": "I Knew I Loved You", "year": 1999, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Roxette", "title": "It Must Have Been Love", "year": 1990, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Roxette", "title": "Listen to Your Heart", "year": 1988, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Ace of Base", "title": "The Sign", "year": 1993, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Ace of Base", "title": "All That She Wants", "year": 1992, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Wham!", "title": "Last Christmas", "year": 1984, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Wham!", "title": "Wake Me Up Before You Go-Go", "year": 1984, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Wham!", "title": "Careless Whisper", "year": 1984, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "George Michael", "title": "Faith", "year": 1987, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "George Michael", "title": "Careless Whisper", "year": 1984, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "George Michael", "title": "Father Figure", "year": 1987, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Rick Astley", "title": "Never Gonna Give You Up", "year": 1987, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Billy Idol", "title": "Rebel Yell", "year": 1983, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Billy Idol", "title": "White Wedding", "year": 1982, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "R.E.M.", "title": "Losing My Religion", "year": 1991, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "R.E.M.", "title": "Everybody Hurts", "year": 1992, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "R.E.M.", "title": "It's the End of the World as We Know It", "year": 1987, "genre": ["rock"], "cefr": "b1.2" },
+
+    { "artist": "The Beach Boys", "title": "Good Vibrations", "year": 1966, "genre": ["rock", "pop"], "cefr": "a2.1" },
+    { "artist": "The Beach Boys", "title": "California Girls", "year": 1965, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "The Beach Boys", "title": "God Only Knows", "year": 1966, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "The Beach Boys", "title": "Wouldn't It Be Nice", "year": 1966, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "The Beach Boys", "title": "Surfin' U.S.A.", "year": 1963, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Frank Sinatra", "title": "My Way", "year": 1969, "genre": ["pop", "jazz"], "cefr": "a2.2" },
+    { "artist": "Frank Sinatra", "title": "New York, New York", "year": 1980, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Frank Sinatra", "title": "Fly Me to the Moon", "year": 1964, "genre": ["jazz"], "cefr": "a1.2" },
+    { "artist": "Frank Sinatra", "title": "Strangers in the Night", "year": 1966, "genre": ["jazz"], "cefr": "a2.1" },
+    { "artist": "Frank Sinatra", "title": "The Way You Look Tonight", "year": 1964, "genre": ["jazz"], "cefr": "a2.1" },
+
+    { "artist": "Nat King Cole", "title": "Unforgettable", "year": 1951, "genre": ["jazz"], "cefr": "a1.2" },
+    { "artist": "Nat King Cole", "title": "L-O-V-E", "year": 1964, "genre": ["jazz"], "cefr": "a1.1" },
+
+    { "artist": "Ella Fitzgerald", "title": "Dream a Little Dream of Me", "year": 1968, "genre": ["jazz"], "cefr": "a2.1" },
+
+    { "artist": "Louis Armstrong", "title": "What a Wonderful World", "year": 1967, "genre": ["jazz"], "cefr": "a1.2" },
+
+    { "artist": "Tony Bennett", "title": "I Left My Heart in San Francisco", "year": 1962, "genre": ["jazz"], "cefr": "a2.1" },
+
+    { "artist": "Etta James", "title": "At Last", "year": 1960, "genre": ["blues", "soul"], "cefr": "a2.1" },
+
+    { "artist": "Nina Simone", "title": "Feeling Good", "year": 1965, "genre": ["jazz", "blues"], "cefr": "a2.1" },
+    { "artist": "Nina Simone", "title": "I Put a Spell on You", "year": 1965, "genre": ["jazz"], "cefr": "a2.2" },
+
+    { "artist": "Bessie Smith", "title": "St. Louis Blues", "year": 1925, "genre": ["blues"], "cefr": "a2.2" },
+
+    { "artist": "Michael Bublé", "title": "Haven't Met You Yet", "year": 2009, "genre": ["pop", "jazz"], "cefr": "a2.2" },
+    { "artist": "Michael Bublé", "title": "Home", "year": 2005, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Michael Bublé", "title": "Feeling Good", "year": 2005, "genre": ["jazz"], "cefr": "a2.1" },
+
+    { "artist": "Josh Groban", "title": "You Raise Me Up", "year": 2003, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Andrea Bocelli", "title": "Time to Say Goodbye", "year": 1995, "genre": ["classical", "pop"], "cefr": "a2.2" },
+
+    { "artist": "Céline Dion", "title": "The Prayer", "year": 1998, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Sia", "title": "Chandelier", "year": 2014, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Sia", "title": "Cheap Thrills", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Sia", "title": "Elastic Heart", "year": 2014, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Ariana Grande", "title": "Thank U, Next", "year": 2018, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Ariana Grande", "title": "7 Rings", "year": 2019, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Ariana Grande", "title": "Break Free", "year": 2014, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Ariana Grande", "title": "Problem", "year": 2014, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Selena Gomez", "title": "Lose You to Love Me", "year": 2019, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Demi Lovato", "title": "Skyscraper", "year": 2011, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Demi Lovato", "title": "Heart Attack", "year": 2013, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Miley Cyrus", "title": "Wrecking Ball", "year": 2013, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Miley Cyrus", "title": "Party in the U.S.A.", "year": 2009, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Miley Cyrus", "title": "Flowers", "year": 2023, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Bebe Rexha", "title": "Me, Myself & I", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Halsey", "title": "Without Me", "year": 2018, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Hayley Kiyoko", "title": "Curious", "year": 2018, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "The Chainsmokers", "title": "Closer", "year": 2016, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "The Chainsmokers", "title": "Don't Let Me Down", "year": 2016, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "The Chainsmokers", "title": "Paris", "year": 2017, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Calvin Harris", "title": "Feel So Close", "year": 2011, "genre": ["pop", "dance"], "cefr": "a2.1" },
+    { "artist": "Calvin Harris", "title": "Summer", "year": 2014, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "David Guetta", "title": "Titanium", "year": 2011, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Avicii", "title": "Wake Me Up", "year": 2013, "genre": ["pop", "dance"], "cefr": "a2.1" },
+    { "artist": "Avicii", "title": "Levels", "year": 2011, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Avicii", "title": "Hey Brother", "year": 2013, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Avicii", "title": "The Nights", "year": 2014, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Kygo", "title": "Firestone", "year": 2014, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Zedd", "title": "Clarity", "year": 2012, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Daft Punk", "title": "Get Lucky", "year": 2013, "genre": ["pop", "funk"], "cefr": "a1.2" },
+    { "artist": "Daft Punk", "title": "One More Time", "year": 2000, "genre": ["dance"], "cefr": "a1.1" },
+    { "artist": "Daft Punk", "title": "Around the World", "year": 1997, "genre": ["dance"], "cefr": "a1.1" },
+
+    { "artist": "Pharrell Williams", "title": "Happy", "year": 2013, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Lorde", "title": "Royals", "year": 2013, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Lorde", "title": "Team", "year": 2013, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Lana Del Rey", "title": "Summertime Sadness", "year": 2012, "genre": ["pop"], "cefr": "b1.1" },
+    { "artist": "Lana Del Rey", "title": "Young and Beautiful", "year": 2013, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Lana Del Rey", "title": "Video Games", "year": 2011, "genre": ["pop"], "cefr": "b1.1" },
+    { "artist": "Lana Del Rey", "title": "Born to Die", "year": 2012, "genre": ["pop"], "cefr": "b1.1" },
+
+    { "artist": "Gotye", "title": "Somebody That I Used to Know", "year": 2011, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Foster the People", "title": "Pumped Up Kicks", "year": 2010, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Passenger", "title": "Let Her Go", "year": 2012, "genre": ["folk"], "cefr": "a2.2" },
+
+    { "artist": "Birdy", "title": "Skinny Love", "year": 2011, "genre": ["folk"], "cefr": "a2.2" },
+
+    { "artist": "Bon Iver", "title": "Skinny Love", "year": 2007, "genre": ["folk"], "cefr": "a2.2" },
+
+    { "artist": "Leon Bridges", "title": "Coming Home", "year": 2015, "genre": ["soul"], "cefr": "a2.1" },
+
+    { "artist": "Leonard Cohen", "title": "Hallelujah", "year": 1984, "genre": ["folk"], "cefr": "b1.1" },
+    { "artist": "Leonard Cohen", "title": "Suzanne", "year": 1967, "genre": ["folk"], "cefr": "b1.1" },
+
+    { "artist": "Jeff Buckley", "title": "Hallelujah", "year": 1994, "genre": ["rock", "folk"], "cefr": "b1.1" },
+
+    { "artist": "The Cranberries", "title": "Zombie", "year": 1994, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "The Cranberries", "title": "Linger", "year": 1993, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "The Cranberries", "title": "Dreams", "year": 1992, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "No Doubt", "title": "Don't Speak", "year": 1996, "genre": ["rock", "pop"], "cefr": "a2.1" },
+    { "artist": "No Doubt", "title": "Just a Girl", "year": 1995, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Gwen Stefani", "title": "Hollaback Girl", "year": 2005, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Black Eyed Peas", "title": "Where Is the Love?", "year": 2003, "genre": ["pop", "hip-hop"], "cefr": "a2.2" },
+    { "artist": "Black Eyed Peas", "title": "I Gotta Feeling", "year": 2009, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Black Eyed Peas", "title": "Let's Get It Started", "year": 2004, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Outkast", "title": "Hey Ya!", "year": 2003, "genre": ["hip-hop", "pop"], "cefr": "a2.1" },
+    { "artist": "Outkast", "title": "Ms. Jackson", "year": 2000, "genre": ["hip-hop"], "cefr": "a2.2" },
+
+    { "artist": "Gorillaz", "title": "Feel Good Inc.", "year": 2005, "genre": ["rock", "alternative"], "cefr": "b1.1" },
+    { "artist": "Gorillaz", "title": "Clint Eastwood", "year": 2001, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Cake", "title": "The Distance", "year": 1996, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Train", "title": "Calling All Angels", "year": 2003, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Collective Soul", "title": "December", "year": 1995, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Cranberries", "title": "Ode to My Family", "year": 1994, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Natasha Bedingfield", "title": "Unwritten", "year": 2004, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Jason Derulo", "title": "Talk Dirty", "year": 2013, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Fergie", "title": "Big Girls Don't Cry", "year": 2006, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Kesha", "title": "Tik Tok", "year": 2009, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Kesha", "title": "Die Young", "year": 2012, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Taio Cruz", "title": "Dynamite", "year": 2010, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Flo Rida", "title": "Low", "year": 2007, "genre": ["hip-hop"], "cefr": "a2.1" },
+
+    { "artist": "Enrique Iglesias", "title": "Hero", "year": 2001, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Enrique Iglesias", "title": "Bailando", "year": 2014, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Ricky Martin", "title": "Livin' La Vida Loca", "year": 1999, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Shakira", "title": "Hips Don't Lie", "year": 2006, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Shakira", "title": "Waka Waka (This Time for Africa)", "year": 2010, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Shakira", "title": "Whenever, Wherever", "year": 2001, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Jennifer Lopez", "title": "On the Floor", "year": 2011, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Santana", "title": "Smooth", "year": 1999, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Santana", "title": "Oye Como Va", "year": 1970, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Don McLean", "title": "American Pie", "year": 1971, "genre": ["rock"], "cefr": "b1.2" },
+    { "artist": "Don McLean", "title": "Vincent", "year": 1971, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Harry Chapin", "title": "Cat's in the Cradle", "year": 1974, "genre": ["folk"], "cefr": "a2.2" },
+
+    { "artist": "Gordon Lightfoot", "title": "If You Could Read My Mind", "year": 1970, "genre": ["folk"], "cefr": "a2.2" },
+
+    { "artist": "Leo Sayer", "title": "When I Need You", "year": 1976, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Lionel Richie", "title": "Hello", "year": 1984, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Lionel Richie", "title": "All Night Long", "year": 1983, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Lionel Richie", "title": "Easy", "year": 1977, "genre": ["soul"], "cefr": "a2.1" },
+
+    { "artist": "Quincy Jones", "title": "Give Me the Night", "year": 1980, "genre": ["funk"], "cefr": "a1.2" },
+
+    { "artist": "Chic", "title": "Le Freak", "year": 1978, "genre": ["disco"], "cefr": "a1.2" },
+
+    { "artist": "Sister Sledge", "title": "We Are Family", "year": 1979, "genre": ["disco"], "cefr": "a1.1" },
+
+    { "artist": "The Pointer Sisters", "title": "I'm So Excited", "year": 1982, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Simple Minds", "title": "Don't You (Forget About Me)", "year": 1985, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Journey", "title": "Any Way You Want It", "year": 1980, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Huey Lewis and the News", "title": "The Power of Love", "year": 1985, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Kenny Loggins", "title": "Footloose", "year": 1984, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Kenny Loggins", "title": "Danger Zone", "year": 1986, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Starship", "title": "Nothing's Gonna Stop Us Now", "year": 1987, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Starship", "title": "We Built This City", "year": 1985, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "REO Speedwagon", "title": "Keep On Loving You", "year": 1980, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Heart", "title": "Alone", "year": 1987, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Heart", "title": "Barracuda", "year": 1977, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Pat Benatar", "title": "Love Is a Battlefield", "year": 1983, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Pat Benatar", "title": "Hit Me with Your Best Shot", "year": 1980, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Stevie Nicks", "title": "Edge of Seventeen", "year": 1981, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Kate Bush", "title": "Running Up That Hill", "year": 1985, "genre": ["pop", "rock"], "cefr": "b1.1" },
+    { "artist": "Kate Bush", "title": "Wuthering Heights", "year": 1978, "genre": ["rock"], "cefr": "b1.2" },
+
+    { "artist": "Carly Simon", "title": "You're So Vain", "year": 1972, "genre": ["pop"], "cefr": "b1.1" },
+
+    { "artist": "Carole King", "title": "I Feel the Earth Move", "year": 1971, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Seal", "title": "Kiss from a Rose", "year": 1994, "genre": ["pop"], "cefr": "b1.1" },
+
+    { "artist": "Savage Garden", "title": "To the Moon and Back", "year": 1996, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Sade", "title": "Smooth Operator", "year": 1984, "genre": ["r&b", "jazz"], "cefr": "a2.1" },
+    { "artist": "Sade", "title": "No Ordinary Love", "year": 1992, "genre": ["r&b"], "cefr": "a2.1" },
+
+    { "artist": "Anita Baker", "title": "Sweet Love", "year": 1986, "genre": ["r&b"], "cefr": "a2.1" },
+
+    { "artist": "Boyz II Men", "title": "End of the Road", "year": 1992, "genre": ["r&b"], "cefr": "a2.1" },
+    { "artist": "Boyz II Men", "title": "I'll Make Love to You", "year": 1994, "genre": ["r&b"], "cefr": "a2.1" },
+
+    { "artist": "TLC", "title": "Waterfalls", "year": 1994, "genre": ["r&b"], "cefr": "b1.1" },
+    { "artist": "TLC", "title": "No Scrubs", "year": 1999, "genre": ["r&b"], "cefr": "a2.2" },
+    { "artist": "TLC", "title": "Unpretty", "year": 1999, "genre": ["r&b"], "cefr": "a2.2" },
+
+    { "artist": "Destiny's Child", "title": "Survivor", "year": 2001, "genre": ["r&b"], "cefr": "a2.1" },
+    { "artist": "Destiny's Child", "title": "Say My Name", "year": 1999, "genre": ["r&b"], "cefr": "a2.1" },
+    { "artist": "Destiny's Child", "title": "Independent Women", "year": 2000, "genre": ["r&b"], "cefr": "a2.1" },
+
+    { "artist": "En Vogue", "title": "Don't Let Go (Love)", "year": 1996, "genre": ["r&b"], "cefr": "a2.1" },
+
+    { "artist": "R. Kelly", "title": "I Believe I Can Fly", "year": 1996, "genre": ["r&b"], "cefr": "a2.1" },
+
+    { "artist": "Lauryn Hill", "title": "Doo Wop (That Thing)", "year": 1998, "genre": ["r&b", "hip-hop"], "cefr": "b1.1" },
+    { "artist": "Lauryn Hill", "title": "Killing Me Softly", "year": 1996, "genre": ["r&b"], "cefr": "a2.2" },
+
+    { "artist": "Enya", "title": "Only Time", "year": 2000, "genre": ["new-age"], "cefr": "a2.2" },
+
+    { "artist": "Enigma", "title": "Return to Innocence", "year": 1993, "genre": ["new-age"], "cefr": "a2.1" },
+
+    { "artist": "Moby", "title": "Porcelain", "year": 1999, "genre": ["electronic"], "cefr": "a2.2" },
+
+    { "artist": "Massive Attack", "title": "Teardrop", "year": 1998, "genre": ["electronic"], "cefr": "b1.1" },
+
+    { "artist": "Portishead", "title": "Glory Box", "year": 1994, "genre": ["trip-hop"], "cefr": "b1.1" },
+
+    { "artist": "The Verve", "title": "Bitter Sweet Symphony", "year": 1997, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "The Verve", "title": "Lucky Man", "year": 1997, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Pulp", "title": "Common People", "year": 1995, "genre": ["rock", "britpop"], "cefr": "b1.2" },
+
+    { "artist": "Blur", "title": "Song 2", "year": 1997, "genre": ["rock"], "cefr": "a1.1" },
+    { "artist": "Blur", "title": "Parklife", "year": 1994, "genre": ["rock"], "cefr": "b1.2" },
+
+    { "artist": "Suede", "title": "Beautiful Ones", "year": 1996, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "The Smiths", "title": "There Is a Light That Never Goes Out", "year": 1986, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "The Smiths", "title": "How Soon Is Now?", "year": 1985, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Morrissey", "title": "Every Day Is Like Sunday", "year": 1988, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Echo & the Bunnymen", "title": "The Killing Moon", "year": 1984, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "New Radicals", "title": "You Get What You Give", "year": 1998, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Fatboy Slim", "title": "Praise You", "year": 1998, "genre": ["electronic"], "cefr": "a2.1" },
+
+    { "artist": "Groove Armada", "title": "At the River", "year": 1999, "genre": ["electronic"], "cefr": "a2.1" },
+
+    { "artist": "Robbie Williams", "title": "Angels", "year": 1997, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Robbie Williams", "title": "Feel", "year": 2002, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Take That", "title": "Back for Good", "year": 1995, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Boyzone", "title": "No Matter What", "year": 1998, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Westlife", "title": "Flying Without Wings", "year": 1999, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Westlife", "title": "My Love", "year": 2000, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Boyz II Men", "title": "Motownphilly", "year": 1991, "genre": ["r&b"], "cefr": "a2.2" },
+
+    { "artist": "Smash Mouth", "title": "All Star", "year": 1999, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Live", "title": "Lightning Crashes", "year": 1994, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Stone Temple Pilots", "title": "Interstate Love Song", "year": 1994, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Alice in Chains", "title": "Man in the Box", "year": 1990, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Alice in Chains", "title": "Would?", "year": 1992, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Temple of the Dog", "title": "Hunger Strike", "year": 1991, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Audioslave", "title": "Like a Stone", "year": 2003, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Chris Cornell", "title": "You Know My Name", "year": 2006, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Beck", "title": "Loser", "year": 1994, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Lenny Kravitz", "title": "Are You Gonna Go My Way", "year": 1993, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Lenny Kravitz", "title": "Fly Away", "year": 1998, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Seal", "title": "Crazy", "year": 1991, "genre": ["pop"], "cefr": "b1.1" },
+
+    { "artist": "Sinead O'Connor", "title": "Mandinka", "year": 1987, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Toad the Wet Sprocket", "title": "All I Want", "year": 1991, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Vertical Horizon", "title": "Everything You Want", "year": 1999, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Third Eye Blind", "title": "Semi-Charmed Life", "year": 1997, "genre": ["rock"], "cefr": "b1.2" },
+    { "artist": "Third Eye Blind", "title": "Jumper", "year": 1997, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Alanis Morissette", "title": "Hand in My Pocket", "year": 1995, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Jewel", "title": "You Were Meant for Me", "year": 1996, "genre": ["folk"], "cefr": "a2.2" },
+
+    { "artist": "Sheryl Crow", "title": "All I Wanna Do", "year": 1993, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Sheryl Crow", "title": "If It Makes You Happy", "year": 1996, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Shania Twain", "title": "Man! I Feel Like a Woman!", "year": 1997, "genre": ["country", "pop"], "cefr": "a1.2" },
+    { "artist": "Shania Twain", "title": "You're Still the One", "year": 1997, "genre": ["country"], "cefr": "a2.1" },
+    { "artist": "Shania Twain", "title": "That Don't Impress Me Much", "year": 1998, "genre": ["country"], "cefr": "a2.2" },
+
+    { "artist": "Faith Hill", "title": "Breathe", "year": 1999, "genre": ["country"], "cefr": "a2.1" },
+
+    { "artist": "Garth Brooks", "title": "Friends in Low Places", "year": 1990, "genre": ["country"], "cefr": "a2.2" },
+    { "artist": "Garth Brooks", "title": "The Dance", "year": 1990, "genre": ["country"], "cefr": "a2.2" },
+
+    { "artist": "Toby Keith", "title": "Red Solo Cup", "year": 2011, "genre": ["country"], "cefr": "a2.1" },
+
+    { "artist": "Kenny Chesney", "title": "Don't Blink", "year": 2007, "genre": ["country"], "cefr": "a2.1" },
+
+    { "artist": "Kenny Rogers", "title": "The Gambler", "year": 1978, "genre": ["country"], "cefr": "b1.1" },
+    { "artist": "Kenny Rogers", "title": "Lady", "year": 1980, "genre": ["country"], "cefr": "a1.2" },
+
+    { "artist": "Alan Jackson", "title": "Chattahoochee", "year": 1993, "genre": ["country"], "cefr": "a2.2" },
+
+    { "artist": "George Strait", "title": "Amarillo by Morning", "year": 1983, "genre": ["country"], "cefr": "a2.2" },
+
+    { "artist": "Carrie Underwood", "title": "Before He Cheats", "year": 2005, "genre": ["country"], "cefr": "a2.2" },
+    { "artist": "Carrie Underwood", "title": "Jesus, Take the Wheel", "year": 2005, "genre": ["country"], "cefr": "b1.1" },
+
+    { "artist": "Miranda Lambert", "title": "The House That Built Me", "year": 2010, "genre": ["country"], "cefr": "a2.2" },
+
+    { "artist": "Rascal Flatts", "title": "Life Is a Highway", "year": 2006, "genre": ["country"], "cefr": "a2.1" },
+
+    { "artist": "Lady Antebellum", "title": "Need You Now", "year": 2010, "genre": ["country"], "cefr": "a2.1" },
+
+    { "artist": "Zac Brown Band", "title": "Chicken Fried", "year": 2008, "genre": ["country"], "cefr": "a2.1" },
+
+    { "artist": "Florida Georgia Line", "title": "Cruise", "year": 2012, "genre": ["country"], "cefr": "a2.1" },
+
+    { "artist": "Luke Bryan", "title": "Country Girl (Shake It for Me)", "year": 2011, "genre": ["country"], "cefr": "a2.1" },
+
+    { "artist": "Keith Urban", "title": "Somebody Like You", "year": 2002, "genre": ["country"], "cefr": "a2.1" },
+
+    { "artist": "Blake Shelton", "title": "God Gave Me You", "year": 2011, "genre": ["country"], "cefr": "a2.1" },
+
+    { "artist": "Lukas Graham", "title": "7 Years", "year": 2015, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Clean Bandit", "title": "Rockabye", "year": 2016, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "The Script", "title": "Hall of Fame", "year": 2012, "genre": ["pop", "rock"], "cefr": "a2.1" },
+    { "artist": "The Script", "title": "Breakeven", "year": 2008, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Passenger", "title": "Holes", "year": 2013, "genre": ["folk"], "cefr": "a2.2" },
+
+    { "artist": "Ellie Goulding", "title": "Lights", "year": 2010, "genre": ["pop"], "cefr": "a2.2" },
+    { "artist": "Ellie Goulding", "title": "Love Me Like You Do", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Ellie Goulding", "title": "Burn", "year": 2013, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Zara Larsson", "title": "Lush Life", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Meghan Trainor", "title": "All About That Bass", "year": 2014, "genre": ["pop"], "cefr": "a1.2" },
+    { "artist": "Meghan Trainor", "title": "Dear Future Husband", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Tori Kelly", "title": "Nobody Love", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Daughtry", "title": "Home", "year": 2007, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Nickelback", "title": "How You Remind Me", "year": 2001, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Nickelback", "title": "Photograph", "year": 2005, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Nickelback", "title": "Someday", "year": 2003, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "3 Doors Down", "title": "Kryptonite", "year": 2000, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "3 Doors Down", "title": "Here Without You", "year": 2003, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Seether", "title": "Broken", "year": 2004, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Puddle of Mudd", "title": "She Hates Me", "year": 2001, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Staind", "title": "It's Been Awhile", "year": 2001, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Shinedown", "title": "Second Chance", "year": 2008, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Breaking Benjamin", "title": "The Diary of Jane", "year": 2006, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Three Days Grace", "title": "Never Too Late", "year": 2006, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Skillet", "title": "Monster", "year": 2009, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "My Chemical Romance", "title": "Welcome to the Black Parade", "year": 2006, "genre": ["rock"], "cefr": "b1.2" },
+    { "artist": "My Chemical Romance", "title": "Helena", "year": 2004, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Fall Out Boy", "title": "Sugar, We're Goin Down", "year": 2005, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Fall Out Boy", "title": "Centuries", "year": 2014, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Fall Out Boy", "title": "Immortals", "year": 2014, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Panic! at the Disco", "title": "I Write Sins Not Tragedies", "year": 2005, "genre": ["rock"], "cefr": "b1.2" },
+    { "artist": "Panic! at the Disco", "title": "High Hopes", "year": 2018, "genre": ["pop", "rock"], "cefr": "a2.1" },
+
+    { "artist": "Twenty One Pilots", "title": "Stressed Out", "year": 2015, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Twenty One Pilots", "title": "Heathens", "year": 2016, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Twenty One Pilots", "title": "Ride", "year": 2015, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Years & Years", "title": "King", "year": 2015, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Disclosure", "title": "Latch", "year": 2012, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "James Bay", "title": "Let It Go", "year": 2014, "genre": ["folk", "pop"], "cefr": "a2.1" },
+
+    { "artist": "Sam Smith", "title": "How Do You Sleep?", "year": 2019, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Jessie J", "title": "Price Tag", "year": 2011, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Tracy Byrd", "title": "Watermelon Crawl", "year": 1994, "genre": ["country"], "cefr": "a2.1" },
+
+    { "artist": "America", "title": "A Horse with No Name", "year": 1971, "genre": ["rock", "folk"], "cefr": "a2.1" },
+
+    { "artist": "The Band", "title": "The Weight", "year": 1968, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Supertramp", "title": "The Logical Song", "year": 1979, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Supertramp", "title": "Give a Little Bit", "year": 1977, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Electric Light Orchestra", "title": "Mr. Blue Sky", "year": 1977, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Electric Light Orchestra", "title": "Don't Bring Me Down", "year": 1979, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Roy Orbison", "title": "Oh, Pretty Woman", "year": 1964, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "Roy Orbison", "title": "Only the Lonely", "year": 1960, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Roy Orbison", "title": "Crying", "year": 1961, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "The Everly Brothers", "title": "Bye Bye Love", "year": 1957, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "The Everly Brothers", "title": "All I Have to Do Is Dream", "year": 1958, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "Beach Boys", "title": "Kokomo", "year": 1988, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "The Moody Blues", "title": "Nights in White Satin", "year": 1967, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Kansas", "title": "Dust in the Wind", "year": 1977, "genre": ["rock"], "cefr": "a2.2" },
+    { "artist": "Kansas", "title": "Carry On Wayward Son", "year": 1976, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Foreigner", "title": "Waiting for a Girl Like You", "year": 1981, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "Chicago", "title": "Hard to Say I'm Sorry", "year": 1982, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Huey Lewis and the News", "title": "If This Is It", "year": 1984, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Paul Simon", "title": "You Can Call Me Al", "year": 1986, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Paul Simon", "title": "Graceland", "year": 1986, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Cat Stevens", "title": "Father and Son", "year": 1970, "genre": ["folk"], "cefr": "a2.2" },
+    { "artist": "Cat Stevens", "title": "Wild World", "year": 1970, "genre": ["folk"], "cefr": "a2.2" },
+
+    { "artist": "Harry Nilsson", "title": "Without You", "year": 1971, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Chuck Mangione", "title": "Feels So Good", "year": 1977, "genre": ["jazz"], "cefr": "a1.2" },
+
+    { "artist": "Steely Dan", "title": "Reelin' in the Years", "year": 1972, "genre": ["rock"], "cefr": "b1.1" },
+    { "artist": "Steely Dan", "title": "Rikki Don't Lose That Number", "year": 1974, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "Crosby, Stills, Nash & Young", "title": "Teach Your Children", "year": 1970, "genre": ["rock"], "cefr": "a2.1" },
+    { "artist": "Crosby, Stills & Nash", "title": "Suite: Judy Blue Eyes", "year": 1969, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "James Brown", "title": "Living in America", "year": 1985, "genre": ["funk"], "cefr": "a2.1" },
+
+    { "artist": "Earth, Wind & Fire", "title": "After the Love Has Gone", "year": 1979, "genre": ["r&b"], "cefr": "a2.1" },
+
+    { "artist": "Hall & Oates", "title": "Rich Girl", "year": 1976, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Hall & Oates", "title": "Maneater", "year": 1982, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Hall & Oates", "title": "Private Eyes", "year": 1981, "genre": ["pop"], "cefr": "a2.1" },
+    { "artist": "Hall & Oates", "title": "You Make My Dreams", "year": 1980, "genre": ["pop"], "cefr": "a1.2" },
+
+    { "artist": "Blondie", "title": "Rapture", "year": 1980, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "The Mamas & the Papas", "title": "California Dreamin'", "year": 1965, "genre": ["folk"], "cefr": "a2.1" },
+
+    { "artist": "The Monkees", "title": "I'm a Believer", "year": 1966, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "The Turtles", "title": "Happy Together", "year": 1967, "genre": ["rock"], "cefr": "a1.2" },
+
+    { "artist": "The Zombies", "title": "Time of the Season", "year": 1968, "genre": ["rock"], "cefr": "a2.1" },
+
+    { "artist": "The Animals", "title": "House of the Rising Sun", "year": 1964, "genre": ["rock"], "cefr": "a2.2" },
+
+    { "artist": "The Kinks", "title": "You Really Got Me", "year": 1964, "genre": ["rock"], "cefr": "a1.2" },
+    { "artist": "The Kinks", "title": "Lola", "year": 1970, "genre": ["rock"], "cefr": "b1.1" },
+
+    { "artist": "Wild Cherry", "title": "Play That Funky Music", "year": 1976, "genre": ["funk"], "cefr": "a1.2" },
+
+    { "artist": "Kool & the Gang", "title": "Ladies' Night", "year": 1979, "genre": ["disco"], "cefr": "a1.2" },
+
+    { "artist": "Gap Band", "title": "You Dropped a Bomb on Me", "year": 1982, "genre": ["funk"], "cefr": "a2.1" },
+
+    { "artist": "Rick James", "title": "Super Freak", "year": 1981, "genre": ["funk"], "cefr": "a2.1" },
+
+    { "artist": "Parliament", "title": "Give Up the Funk (Tear the Roof Off the Sucker)", "year": 1975, "genre": ["funk"], "cefr": "a2.1" },
+
+    { "artist": "Sly and the Family Stone", "title": "Family Affair", "year": 1971, "genre": ["funk"], "cefr": "a2.2" },
+    { "artist": "Sly and the Family Stone", "title": "Dance to the Music", "year": 1967, "genre": ["funk"], "cefr": "a1.1" },
+
+    { "artist": "Stevie Wonder", "title": "Sir Duke", "year": 1976, "genre": ["funk"], "cefr": "a2.2" },
+
+    { "artist": "Earth, Wind & Fire", "title": "Let's Groove", "year": 1981, "genre": ["disco"], "cefr": "a1.2" },
+
+    { "artist": "Chic", "title": "Good Times", "year": 1979, "genre": ["disco"], "cefr": "a1.1" },
+
+    { "artist": "McFadden & Whitehead", "title": "Ain't No Stoppin' Us Now", "year": 1979, "genre": ["disco"], "cefr": "a2.1" },
+
+    { "artist": "Gregory Porter", "title": "Liquid Spirit", "year": 2013, "genre": ["jazz"], "cefr": "a2.2" },
+
+    { "artist": "Michael Jackson", "title": "Remember the Time", "year": 1991, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Michael Jackson", "title": "Wanna Be Startin' Somethin'", "year": 1982, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "Prince", "title": "Let's Go Crazy", "year": 1984, "genre": ["pop"], "cefr": "a2.1" },
+
+    { "artist": "Lionel Richie", "title": "Say You, Say Me", "year": 1985, "genre": ["pop"], "cefr": "a2.2" },
+
+    { "artist": "George Benson", "title": "Give Me the Night", "year": 1980, "genre": ["funk"], "cefr": "a1.2" }
+  ]
+}

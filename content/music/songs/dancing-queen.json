@@ -1,0 +1,444 @@
+{
+  "slug": "dancing-queen",
+  "title": "Dancing Queen",
+  "artist": "ABBA",
+  "year": 1976,
+  "album": "Abba Live",
+  "genre": [
+    "pop",
+    "disco"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 223,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Dancing Queen by ABBA (1976) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "dancing",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Dig in the Dancing Queen\""
+    },
+    {
+      "term": "queen",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Dig in the Dancing Queen\""
+    },
+    {
+      "term": "dance",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"You can dance, you can jive\""
+    },
+    {
+      "term": "you're",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"You're in the mood for a dance\""
+    },
+    {
+      "term": "jive",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"You can dance, you can jive\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Dig in the Dancing Queen",
+          "Friday night and the lights are low",
+          "Looking out for a place to go",
+          "Where they play the right music, getting in the swing"
+        ],
+        "start_seconds": 34,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "You're in the mood for a dance",
+          "And when you get the chance",
+          "You are the Dancing Queen",
+          "Young and sweet, only seventeen"
+        ],
+        "start_seconds": 77,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You can",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dance",
+      "excerpt_after": "you can jive",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Dig in the",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dancing",
+      "excerpt_after": "Queen",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Looking out for a",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "place",
+      "excerpt_after": "to go",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "With a bit of rock",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "music",
+      "excerpt_after": "everything is fine",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Feel the beat from the",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tambourine",
+      "excerpt_after": "oh yeah",
+      "youtube_start": 99,
+      "youtube_end": 113
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Leave them",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "burning",
+      "excerpt_after": "and then you're gone",
+      "youtube_start": 140,
+      "youtube_end": 154
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You can dance, you can jive",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You're in the mood for a dance",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You are the Dancing Queen",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Leave them burning and then you're gone",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "See that girl, watch that scene",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You can",
+      "excerpt_after": "you can jive",
+      "options": [
+        "anybody",
+        "dance",
+        "getting",
+        "gone"
+      ],
+      "answer_index": 1,
+      "youtube_start": 20,
+      "youtube_end": 32
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Dig in the",
+      "excerpt_after": "Queen",
+      "options": [
+        "burning",
+        "dancing",
+        "king",
+        "place"
+      ],
+      "answer_index": 1,
+      "youtube_start": 34,
+      "youtube_end": 46
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Night is",
+      "excerpt_after": "and the music's high",
+      "options": [
+        "burning",
+        "mood",
+        "place",
+        "young"
+      ],
+      "answer_index": 3,
+      "youtube_start": 68,
+      "youtube_end": 80
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Feel the",
+      "excerpt_after": "from the tambourine, oh yeah",
+      "options": [
+        "beat",
+        "friday",
+        "mood",
+        "watch"
+      ],
+      "answer_index": 0,
+      "youtube_start": 99,
+      "youtube_end": 111
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You're a",
+      "excerpt_after": "you turn 'em on",
+      "options": [
+        "life",
+        "looking",
+        "night",
+        "teaser"
+      ],
+      "answer_index": 3,
+      "youtube_start": 135,
+      "youtube_end": 147
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "can",
+        "dance,",
+        "you",
+        "You",
+        "jive",
+        "can"
+      ],
+      "answer": [
+        "You",
+        "can",
+        "dance,",
+        "you",
+        "can",
+        "jive"
+      ],
+      "youtube_start": 20
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "in",
+        "Dig",
+        "the",
+        "Queen",
+        "Dancing"
+      ],
+      "answer": [
+        "Dig",
+        "in",
+        "the",
+        "Dancing",
+        "Queen"
+      ],
+      "youtube_start": 34
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "king",
+        "You",
+        "come",
+        "look",
+        "a",
+        "for"
+      ],
+      "answer": [
+        "You",
+        "come",
+        "to",
+        "look",
+        "for",
+        "a",
+        "king"
+      ],
+      "youtube_start": 58
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "when",
+        "And",
+        "you",
+        "get",
+        "the",
+        "chance"
+      ],
+      "answer": [
+        "And",
+        "when",
+        "you",
+        "get",
+        "the",
+        "chance"
+      ],
+      "youtube_start": 81
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "on",
+        "teaser,",
+        "You're",
+        "you",
+        "'em",
+        "turn",
+        "a"
+      ],
+      "answer": [
+        "You're",
+        "a",
+        "teaser,",
+        "you",
+        "turn",
+        "'em",
+        "on"
+      ],
+      "youtube_start": 135
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"dancing\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"dancing\" na música inteira?",
+      "word": "dancing",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"queen\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"queen\" na música inteira?",
+      "word": "queen",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You can dance, you can jive",
+          "order": 0
+        },
+        {
+          "text": "And when you get the chance",
+          "order": 1
+        },
+        {
+          "text": "Looking out for another, anyone will do",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Dancing Queen\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Dancing Queen\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "dancing",
+        "queen",
+        "dance",
+        "you're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Dancing Queen\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Dancing Queen\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "dancing",
+        "queen",
+        "dance",
+        "you're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Dancing Queen\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Dancing Queen\", o que aconteceria?",
+      "target_vocab": [
+        "dancing",
+        "queen",
+        "dance",
+        "you're"
+      ]
+    }
+  ]
+}

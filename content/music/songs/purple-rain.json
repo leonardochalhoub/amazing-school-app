@@ -1,0 +1,474 @@
+{
+  "slug": "purple-rain",
+  "title": "Purple Rain",
+  "artist": "Prince",
+  "year": 1984,
+  "album": "Purple Rain",
+  "genre": [
+    "rock",
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 521,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Purple Rain by Prince (1984) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "purple",
+      "pt": "",
+      "note": "Appears 23 times; first heard in: \"In the purple rain\""
+    },
+    {
+      "term": "rain",
+      "pt": "",
+      "note": "Appears 23 times; first heard in: \"In the purple rain\""
+    },
+    {
+      "term": "want",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I only want to see you laughing\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I never meant to cause you any sorrow\""
+    },
+    {
+      "term": "wanted",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I only wanted one time to see you laughing\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Purple rain, purple rain",
+          "Purple rain, purple rain",
+          "Purple rain, purple rain",
+          "I only want to see you bathing"
+        ],
+        "start_seconds": 49,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Purple rain, purple rain",
+          "Purple rain, purple rain",
+          "Purple rain, purple rain",
+          "Only wanted to see you underneath the purple rain"
+        ],
+        "start_seconds": 119,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "meant to cause you any sorrow",
+      "youtube_start": 19,
+      "youtube_end": 33
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I only",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanted",
+      "excerpt_after": "one time to see you laughing",
+      "youtube_start": 35,
+      "youtube_end": 49
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I never wanted to be your",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "weekend",
+      "excerpt_after": "lover",
+      "youtube_start": 84,
+      "youtube_end": 98
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Only wanted to see you",
+      "blank_hint": "word starting with \"u\"",
+      "answer": "underneath",
+      "excerpt_after": "the purple rain",
+      "youtube_start": 147,
+      "youtube_end": 161
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "means",
+      "excerpt_after": "you too",
+      "youtube_start": 171,
+      "youtube_end": 185
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And let me",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "guide",
+      "excerpt_after": "you to the purple rain",
+      "youtube_start": 185,
+      "youtube_end": 199
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I never meant to cause you any sorrow",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I only want to see you laughing",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I never wanted to be your weekend lover",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "That means you too",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I think you better close it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "meant to cause you any sorrow",
+      "options": [
+        "guide",
+        "hand",
+        "never",
+        "wanted"
+      ],
+      "answer_index": 2,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I only",
+      "excerpt_after": "to see you laughing",
+      "options": [
+        "purple",
+        "seem",
+        "think",
+        "want"
+      ],
+      "answer_index": 3,
+      "youtube_start": 41,
+      "youtube_end": 53
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I never wanted to be your",
+      "excerpt_after": "lover",
+      "options": [
+        "laughing",
+        "lover",
+        "reach",
+        "weekend"
+      ],
+      "answer_index": 3,
+      "youtube_start": 84,
+      "youtube_end": 96
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's",
+      "excerpt_after": "we all reach out for something new",
+      "options": [
+        "another",
+        "meant",
+        "time",
+        "times"
+      ],
+      "answer_index": 2,
+      "youtube_start": 169,
+      "youtube_end": 181
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I",
+      "excerpt_after": "you better close it",
+      "options": [
+        "better",
+        "kind",
+        "think",
+        "time"
+      ],
+      "answer_index": 2,
+      "youtube_start": 182,
+      "youtube_end": 194
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "want",
+        "only",
+        "to",
+        "I",
+        "see",
+        "laughing",
+        "you"
+      ],
+      "answer": [
+        "I",
+        "only",
+        "want",
+        "to",
+        "see",
+        "you",
+        "laughing"
+      ],
+      "youtube_start": 41
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Purple",
+        "purple",
+        "rain,",
+        "rain"
+      ],
+      "answer": [
+        "Purple",
+        "rain,",
+        "purple",
+        "rain"
+      ],
+      "youtube_start": 49
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "too",
+        "you",
+        "That",
+        "means"
+      ],
+      "answer": [
+        "That",
+        "means",
+        "you",
+        "too"
+      ],
+      "youtube_start": 171
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "And",
+        "better",
+        "you",
+        "close",
+        "it",
+        "think"
+      ],
+      "answer": [
+        "And",
+        "I",
+        "think",
+        "you",
+        "better",
+        "close",
+        "it"
+      ],
+      "youtube_start": 182
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "your",
+        "hand",
+        "on,",
+        "raise",
+        "Come"
+      ],
+      "answer": [
+        "Come",
+        "on,",
+        "raise",
+        "your",
+        "hand"
+      ],
+      "youtube_start": 206
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"purple\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"purple\" na música inteira?",
+      "word": "purple",
+      "answer": 23
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"rain\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"rain\" na música inteira?",
+      "word": "rain",
+      "answer": 23
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I never meant to cause you any sorrow",
+          "order": 0
+        },
+        {
+          "text": "I only want to see you bathing",
+          "order": 1
+        },
+        {
+          "text": "That means you too",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I never meant to cause you any pain",
+          "order": 0
+        },
+        {
+          "text": "Baby, I could never steal you from another",
+          "order": 1
+        },
+        {
+          "text": "You say you want a leader",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Prince one question about \"Purple Rain\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Prince sobre \"Purple Rain\", o que seria e por quê?",
+      "target_vocab": [
+        "purple",
+        "rain",
+        "want",
+        "never"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Purple Rain\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Purple Rain\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "purple",
+        "rain",
+        "want",
+        "never"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Purple Rain\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Purple Rain\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "purple",
+        "rain",
+        "want",
+        "never"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

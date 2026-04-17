@@ -1,0 +1,437 @@
+{
+  "slug": "someone-you-loved",
+  "title": "Someone You Loved",
+  "artist": "Lewis Capaldi",
+  "year": 2018,
+  "album": "Divinely Uninspired To A Hellish Extent",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 182,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Someone You Loved by Lewis Capaldi (2018) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "somebody",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I need somebody to heal, somebody to know\""
+    },
+    {
+      "term": "kinda",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I guess I kinda liked the way you numbed all the pain\""
+    },
+    {
+      "term": "guard",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I let my guard down, and then you pulled the rug\""
+    },
+    {
+      "term": "pulled",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I let my guard down, and then you pulled the rug\""
+    },
+    {
+      "term": "getting",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I was getting kinda used to being someone you loved\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Now the day bleeds into nightfall",
+          "And you're not here to get me through it all",
+          "I let my guard down, and then you pulled the rug",
+          "I was getting kinda used to being someone you loved"
+        ],
+        "start_seconds": 41,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Now the day bleeds into nightfall",
+          "And you're not here to get me through it all",
+          "I let my guard down, and then you pulled the rug",
+          "I was getting kinda used to being someone you loved"
+        ],
+        "start_seconds": 94,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I need",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "somebody",
+      "excerpt_after": "to heal, somebody to know",
+      "youtube_start": 24,
+      "youtube_end": 38
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It's easy to say, but it's",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "the same",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Now the day",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "bleeds",
+      "excerpt_after": "into nightfall",
+      "youtube_start": 41,
+      "youtube_end": 55
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I need somebody to heal, somebody to know",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I fall into your arms",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Somebody to have, somebody to hold",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Now the day bleeds into nightfall",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "For now the day bleeds into nightfall",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "somebody to heal, somebody to know",
+      "options": [
+        "bleeds",
+        "guard",
+        "need",
+        "without"
+      ],
+      "answer_index": 2,
+      "youtube_start": 24,
+      "youtube_end": 36
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Somebody to have,",
+      "excerpt_after": "to hold",
+      "options": [
+        "bleeds",
+        "pulled",
+        "somebody",
+        "sometimes"
+      ],
+      "answer_index": 2,
+      "youtube_start": 29,
+      "youtube_end": 41
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's",
+      "excerpt_after": "to say, but it's never the same",
+      "options": [
+        "bleeds",
+        "easy",
+        "hold",
+        "loved"
+      ],
+      "answer_index": 1,
+      "youtube_start": 33,
+      "youtube_end": 45
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Now, I need somebody to",
+      "excerpt_after": "somebody to heal",
+      "options": [
+        "escape",
+        "getting",
+        "know",
+        "under"
+      ],
+      "answer_index": 2,
+      "youtube_start": 76,
+      "youtube_end": 88
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's easy to say, but it's",
+      "excerpt_after": "the same",
+      "options": [
+        "never",
+        "nothing",
+        "through",
+        "without"
+      ],
+      "answer_index": 0,
+      "youtube_start": 85,
+      "youtube_end": 97
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "somebody",
+        "hold",
+        "have,",
+        "to",
+        "Somebody",
+        "to"
+      ],
+      "answer": [
+        "Somebody",
+        "to",
+        "have,",
+        "somebody",
+        "to",
+        "hold"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "into",
+        "nightfall",
+        "Now",
+        "the",
+        "bleeds",
+        "day"
+      ],
+      "answer": [
+        "Now",
+        "the",
+        "day",
+        "bleeds",
+        "into",
+        "nightfall"
+      ],
+      "youtube_start": 41
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "arms",
+        "into",
+        "your",
+        "fall"
+      ],
+      "answer": [
+        "I",
+        "fall",
+        "into",
+        "your",
+        "arms"
+      ],
+      "youtube_start": 119
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "nightfall",
+        "For",
+        "into",
+        "day",
+        "now",
+        "the",
+        "bleeds"
+      ],
+      "answer": [
+        "For",
+        "now",
+        "the",
+        "day",
+        "bleeds",
+        "into",
+        "nightfall"
+      ],
+      "youtube_start": 129
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "day",
+        "But",
+        "now",
+        "bleeds",
+        "nightfall",
+        "into",
+        "the"
+      ],
+      "answer": [
+        "But",
+        "now",
+        "the",
+        "day",
+        "bleeds",
+        "into",
+        "nightfall"
+      ],
+      "youtube_start": 146
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"somebody\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"somebody\" na música inteira?",
+      "word": "somebody",
+      "answer": 7
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"kinda\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"kinda\" na música inteira?",
+      "word": "kinda",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I need somebody to heal, somebody to know",
+          "order": 0
+        },
+        {
+          "text": "Now the day bleeds into nightfall",
+          "order": 1
+        },
+        {
+          "text": "I fall into your arms",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "somebody",
+        "kinda",
+        "guard",
+        "pulled"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Someone You Loved\" was released in 2018. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Someone You Loved\" foi lançada em 2018. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "somebody",
+        "kinda",
+        "guard",
+        "pulled"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Someone You Loved\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Someone You Loved\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "somebody",
+        "kinda",
+        "guard",
+        "pulled"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        }
+      ]
+    }
+  ]
+}

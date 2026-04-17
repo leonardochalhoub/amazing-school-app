@@ -1,0 +1,477 @@
+{
+  "slug": "heroes",
+  "title": "Heroes",
+  "artist": "David Bowie",
+  "year": 1977,
+  "album": "Montreal 1983",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 303,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Heroes by David Bowie (1977) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "nothing",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Though nothing will drive them away\""
+    },
+    {
+      "term": "heroes",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"We can be heroes, just for one day\""
+    },
+    {
+      "term": "though",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Though nothing will drive them away\""
+    },
+    {
+      "term": "we're",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"'Cause we're lovers, and that is a fact\""
+    },
+    {
+      "term": "beat",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"We can beat them, just for one day\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "We can be heroes",
+          "We can be heroes",
+          "We can be heroes",
+          "Just for one day"
+        ],
+        "start_seconds": 303,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I, I will be king",
+          "And you, you will be queen",
+          "Though nothing will drive them away",
+          "We can beat them, just for one day"
+        ],
+        "start_seconds": 16,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Though",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nothing",
+      "excerpt_after": "will drive them away",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I, I'll",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "drink",
+      "excerpt_after": "all the time",
+      "youtube_start": 68,
+      "youtube_end": 82
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We could",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "steal",
+      "excerpt_after": "time, just for one day",
+      "youtube_start": 101,
+      "youtube_end": 115
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Like the",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dolphins",
+      "excerpt_after": "like dolphins can swim",
+      "youtube_start": 145,
+      "youtube_end": 159
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I, I can",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "remember",
+      "excerpt_after": "(I remember)",
+      "youtube_start": 239,
+      "youtube_end": 253
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Maybe we're",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lying",
+      "excerpt_after": "then you better not stay",
+      "youtube_start": 341,
+      "youtube_end": 355
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I, I will be king",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We can beat them, just for one day",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And you, you can be mean",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Cause we're lovers, and that is a fact",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We could steal time, just for one day",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Though",
+      "excerpt_after": "will drive them away",
+      "options": [
+        "cause",
+        "lying",
+        "nothing",
+        "though"
+      ],
+      "answer_index": 2,
+      "youtube_start": 33,
+      "youtube_end": 45
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I, I'll",
+      "excerpt_after": "all the time",
+      "options": [
+        "drink",
+        "kissed",
+        "safer",
+        "whatd"
+      ],
+      "answer_index": 0,
+      "youtube_start": 68,
+      "youtube_end": 80
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We could",
+      "excerpt_after": "time, just for one day",
+      "options": [
+        "fall",
+        "help",
+        "lovers",
+        "steal"
+      ],
+      "answer_index": 3,
+      "youtube_start": 101,
+      "youtube_end": 113
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Though nothing will",
+      "excerpt_after": "them away",
+      "options": [
+        "drive",
+        "forever",
+        "kissed",
+        "standing"
+      ],
+      "answer_index": 0,
+      "youtube_start": 213,
+      "youtube_end": 225
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And the",
+      "excerpt_after": "was on the other side",
+      "options": [
+        "better",
+        "dolphins",
+        "shame",
+        "time"
+      ],
+      "answer_index": 2,
+      "youtube_start": 273,
+      "youtube_end": 285
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "be",
+        "king",
+        "I,",
+        "I",
+        "will"
+      ],
+      "answer": [
+        "I,",
+        "I",
+        "will",
+        "be",
+        "king"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "be",
+        "you",
+        "you,",
+        "mean",
+        "And",
+        "can"
+      ],
+      "answer": [
+        "And",
+        "you,",
+        "you",
+        "can",
+        "be",
+        "mean"
+      ],
+      "youtube_start": 59
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "keep",
+        "Though",
+        "us",
+        "together",
+        "nothing",
+        "will"
+      ],
+      "answer": [
+        "Though",
+        "nothing",
+        "will",
+        "keep",
+        "us",
+        "together"
+      ],
+      "youtube_start": 93
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "nothing",
+        "Though",
+        "us",
+        "together",
+        "will",
+        "keep",
+        "nothing,"
+      ],
+      "answer": [
+        "Though",
+        "nothing,",
+        "nothing",
+        "will",
+        "keep",
+        "us",
+        "together"
+      ],
+      "youtube_start": 153
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "wall",
+        "by",
+        "Standing,",
+        "by",
+        "the",
+        "wall"
+      ],
+      "answer": [
+        "Standing,",
+        "by",
+        "the",
+        "wall",
+        "by",
+        "the",
+        "wall"
+      ],
+      "youtube_start": 248
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"nothing\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"nothing\" na música inteira?",
+      "word": "nothing",
+      "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"heroes\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"heroes\" na música inteira?",
+      "word": "heroes",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I, I will be king",
+          "order": 0
+        },
+        {
+          "text": "We can be heroes forever and ever",
+          "order": 1
+        },
+        {
+          "text": "I, I can remember (I remember)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And you, you will be queen",
+          "order": 0
+        },
+        {
+          "text": "We can beat them forever and ever",
+          "order": 1
+        },
+        {
+          "text": "And the shame was on the other side",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Heroes\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Heroes\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "nothing",
+        "heroes",
+        "though",
+        "we're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Heroes\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Heroes\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "nothing",
+        "heroes",
+        "though",
+        "we're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Heroes\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Heroes\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "nothing",
+        "heroes",
+        "though",
+        "we're"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        }
+      ]
+    }
+  ]
+}

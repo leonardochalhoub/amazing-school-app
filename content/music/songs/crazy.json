@@ -1,0 +1,463 @@
+{
+  "slug": "crazy",
+  "title": "Crazy",
+  "artist": "Patsy Cline",
+  "year": 1961,
+  "album": "Showcase",
+  "genre": [
+    "country"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 165,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Crazy by Patsy Cline (1961) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "crazy",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Crazy\""
+    },
+    {
+      "term": "feeling",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I'm crazy for feeling so lonely\""
+    },
+    {
+      "term": "you'd",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"You'd love me as long as you wanted\""
+    },
+    {
+      "term": "worry",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Worry\""
+    },
+    {
+      "term": "thinking",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"For thinking that my love could hold you\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I'm crazy for trying",
+          "And crazy for crying",
+          "And I'm crazy for loving you"
+        ],
+        "start_seconds": 108,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "I'm crazy for feeling so lonely",
+          "I'm crazy",
+          "Crazy for feeling so blue",
+          "I knew"
+        ],
+        "start_seconds": 18,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "crazy",
+      "excerpt_after": "for feeling so lonely",
+      "youtube_start": 18,
+      "youtube_end": 32
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Crazy for",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "feeling",
+      "excerpt_after": "so blue",
+      "youtube_start": 32,
+      "youtube_end": 46
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You'd",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "leave",
+      "excerpt_after": "me for somebody new",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Why do I let",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "myself",
+      "excerpt_after": "worry?",
+      "youtube_start": 72,
+      "youtube_end": 86
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "What in the",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "world",
+      "excerpt_after": "did I do",
+      "youtube_start": 85,
+      "youtube_end": 99
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "For",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thinking",
+      "excerpt_after": "that my love could hold you",
+      "youtube_start": 99,
+      "youtube_end": 113
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm crazy for feeling so lonely",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You'd leave me for somebody new",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "What in the world did I do",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm crazy for trying",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Crazy for feeling so blue",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm",
+      "excerpt_after": "for feeling so lonely",
+      "options": [
+        "blue",
+        "crazy",
+        "knew",
+        "thinking"
+      ],
+      "answer_index": 1,
+      "youtube_start": 18,
+      "youtube_end": 30
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Crazy for",
+      "excerpt_after": "so blue",
+      "options": [
+        "crying",
+        "feeling",
+        "somebody",
+        "youd"
+      ],
+      "answer_index": 1,
+      "youtube_start": 32,
+      "youtube_end": 44
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You'd",
+      "excerpt_after": "me for somebody new",
+      "options": [
+        "knew",
+        "leave",
+        "trying",
+        "wanted"
+      ],
+      "answer_index": 1,
+      "youtube_start": 58,
+      "youtube_end": 70
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "What in the",
+      "excerpt_after": "did I do",
+      "options": [
+        "somebody",
+        "thinking",
+        "world",
+        "youd"
+      ],
+      "answer_index": 2,
+      "youtube_start": 85,
+      "youtube_end": 97
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I'm crazy for",
+      "excerpt_after": "you",
+      "options": [
+        "leave",
+        "loving",
+        "trying",
+        "youd"
+      ],
+      "answer_index": 1,
+      "youtube_start": 116,
+      "youtube_end": 128
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "for",
+        "feeling",
+        "crazy",
+        "so",
+        "lonely",
+        "I'm"
+      ],
+      "answer": [
+        "I'm",
+        "crazy",
+        "for",
+        "feeling",
+        "so",
+        "lonely"
+      ],
+      "youtube_start": 18
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "blue",
+        "for",
+        "feeling",
+        "Crazy",
+        "so"
+      ],
+      "answer": [
+        "Crazy",
+        "for",
+        "feeling",
+        "so",
+        "blue"
+      ],
+      "youtube_start": 32
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "do",
+        "myself",
+        "let",
+        "Why",
+        "I",
+        "worry?"
+      ],
+      "answer": [
+        "Why",
+        "do",
+        "I",
+        "let",
+        "myself",
+        "worry?"
+      ],
+      "youtube_start": 72
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "do",
+        "did",
+        "the",
+        "What",
+        "world",
+        "in"
+      ],
+      "answer": [
+        "What",
+        "in",
+        "the",
+        "world",
+        "did",
+        "I",
+        "do"
+      ],
+      "youtube_start": 85
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "crazy",
+        "crying",
+        "And",
+        "for"
+      ],
+      "answer": [
+        "And",
+        "crazy",
+        "for",
+        "crying"
+      ],
+      "youtube_start": 112
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"crazy\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"crazy\" na música inteira?",
+      "word": "crazy",
+      "answer": 12
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I'm crazy for feeling so lonely",
+          "order": 0
+        },
+        {
+          "text": "Why do I let myself worry?",
+          "order": 1
+        },
+        {
+          "text": "And I'm crazy for loving you",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Crazy for feeling so blue",
+          "order": 0
+        },
+        {
+          "text": "What in the world did I do",
+          "order": 1
+        },
+        {
+          "text": "And crazy for crying",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Patsy Cline one question about \"Crazy\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Patsy Cline sobre \"Crazy\", o que seria e por quê?",
+      "target_vocab": [
+        "crazy",
+        "feeling",
+        "you'd",
+        "worry"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Crazy\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Crazy\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "crazy",
+        "feeling",
+        "you'd",
+        "worry"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Crazy\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Crazy\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "crazy",
+        "feeling",
+        "you'd",
+        "worry"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "you'd",
+          "full": "you would"
+        }
+      ]
+    }
+  ]
+}

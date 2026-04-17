@@ -1,0 +1,489 @@
+{
+  "slug": "a-change-is-gonna-come",
+  "title": "A Change Is Gonna Come",
+  "artist": "Sam Cooke",
+  "year": 1964,
+  "album": "Ain't That Good News",
+  "genre": [
+    "soul"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 191,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "A Change Is Gonna Come by Sam Cooke (1964) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "long",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"It's been a long\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"It's been a long\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"A long time coming, but I know\""
+    },
+    {
+      "term": "time",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"A long time coming, but I know\""
+    },
+    {
+      "term": "coming",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"A long time coming, but I know\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "It's been a long",
+          "A long time coming, but I know",
+          "A change gon' come",
+          "Oh yes, it will"
+        ],
+        "start_seconds": 31,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "It's been a long",
+          "A long time coming, but I know",
+          "A change gon' come",
+          "Oh yes, it will"
+        ],
+        "start_seconds": 64,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "In a",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "little",
+      "excerpt_after": "tent",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "A long time",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "coming",
+      "excerpt_after": "but I know",
+      "youtube_start": 35,
+      "youtube_end": 49
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But I'm",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "afraid",
+      "excerpt_after": "to die",
+      "youtube_start": 52,
+      "youtube_end": 66
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "somebody",
+      "excerpt_after": "keep telling me",
+      "youtube_start": 91,
+      "youtube_end": 105
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But he",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "winds",
+      "excerpt_after": "up knockin' me",
+      "youtube_start": 133,
+      "youtube_end": 147
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There been",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "times",
+      "excerpt_after": "that I thought",
+      "youtube_start": 148,
+      "youtube_end": 162
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I was born by the river",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But I'm afraid to die",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I go to the movie",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Then, I go to my brother",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But he winds up knockin' me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I was",
+      "excerpt_after": "by the river",
+      "options": [
+        "afraid",
+        "born",
+        "brother",
+        "coming"
+      ],
+      "answer_index": 1,
+      "youtube_start": 14,
+      "youtube_end": 26
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "A",
+      "excerpt_after": "time coming, but I know",
+      "options": [
+        "coming",
+        "long",
+        "telling",
+        "whats"
+      ],
+      "answer_index": 1,
+      "youtube_start": 35,
+      "youtube_end": 47
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But I'm",
+      "excerpt_after": "to die",
+      "options": [
+        "afraid",
+        "carry",
+        "knockin",
+        "last"
+      ],
+      "answer_index": 0,
+      "youtube_start": 52,
+      "youtube_end": 64
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "A long time",
+      "excerpt_after": "but I know",
+      "options": [
+        "carry",
+        "coming",
+        "little",
+        "tent"
+      ],
+      "answer_index": 1,
+      "youtube_start": 102,
+      "youtube_end": 114
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Back down on my",
+      "excerpt_after": "oh",
+      "options": [
+        "change",
+        "keep",
+        "knees",
+        "think"
+      ],
+      "answer_index": 2,
+      "youtube_start": 142,
+      "youtube_end": 154
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "born",
+        "I",
+        "was",
+        "by",
+        "the",
+        "river"
+      ],
+      "answer": [
+        "I",
+        "was",
+        "born",
+        "by",
+        "the",
+        "river"
+      ],
+      "youtube_start": 14
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "coming,",
+        "but",
+        "I",
+        "time",
+        "know",
+        "A",
+        "long"
+      ],
+      "answer": [
+        "A",
+        "long",
+        "time",
+        "coming,",
+        "but",
+        "I",
+        "know"
+      ],
+      "youtube_start": 35
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "afraid",
+        "I'm",
+        "But",
+        "to",
+        "die"
+      ],
+      "answer": [
+        "But",
+        "I'm",
+        "afraid",
+        "to",
+        "die"
+      ],
+      "youtube_start": 52
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "somebody",
+        "keep",
+        "me",
+        "And",
+        "telling"
+      ],
+      "answer": [
+        "And",
+        "somebody",
+        "keep",
+        "telling",
+        "me"
+      ],
+      "youtube_start": 91
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "oh",
+        "down",
+        "knees,",
+        "on",
+        "my",
+        "Back"
+      ],
+      "answer": [
+        "Back",
+        "down",
+        "on",
+        "my",
+        "knees,",
+        "oh"
+      ],
+      "youtube_start": 142
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"long\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"long\" na música inteira?",
+      "word": "long",
+      "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"it's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"it's\" na música inteira?",
+      "word": "it's",
+      "answer": 5
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I was born by the river",
+          "order": 0
+        },
+        {
+          "text": "A long time coming, but I know",
+          "order": 1
+        },
+        {
+          "text": "Then, I go to my brother",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "In a little tent",
+          "order": 0
+        },
+        {
+          "text": "And somebody keep telling me",
+          "order": 1
+        },
+        {
+          "text": "But he winds up knockin' me",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "long",
+        "it's",
+        "know",
+        "time"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "long",
+        "it's",
+        "know",
+        "time"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"A Change Is Gonna Come\" was released in 1964. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"A Change Is Gonna Come\" foi lançada em 1964. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "long",
+        "it's",
+        "know",
+        "time"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "what's",
+          "full": "what is"
+        },
+        {
+          "short": "couldn't",
+          "full": "could not"
+        }
+      ]
+    }
+  ]
+}

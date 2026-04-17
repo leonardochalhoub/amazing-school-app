@@ -1,0 +1,487 @@
+{
+  "slug": "rebel-yell",
+  "title": "Rebel Yell",
+  "artist": "Billy Idol",
+  "year": 1983,
+  "album": "Rebel Yell",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 289,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Rebel Yell by Billy Idol (1983) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "babe",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"In the midnight hour, babe \"More, more, more\"\""
+    },
+    {
+      "term": "cried",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"In the midnight hour, she cried \"More, more, more\"\""
+    },
+    {
+      "term": "midnight",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"In the midnight hour, she cried \"More, more, more\"\""
+    },
+    {
+      "term": "hour",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"In the midnight hour, she cried \"More, more, more\"\""
+    },
+    {
+      "term": "rebel",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"With a rebel yell she cried \"More, more, more\" wow!\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "With a rebel yell \"More, more, more\"",
+          "\"More, more, more\"",
+          "She don't like slavery, she won't sit and beg",
+          "But when I'm tired and lonely she sleeps in bed"
+        ],
+        "start_seconds": 64,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "She want more",
+          "\"More, more, more, more, more!\"",
+          "Ooh yeah, little angel",
+          "She want more"
+        ],
+        "start_seconds": 262,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And if it",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "expires",
+      "excerpt_after": "pray help from above, because",
+      "youtube_start": 41,
+      "youtube_end": 55
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "With a",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "rebel",
+      "excerpt_after": "yell \"More, more, more\"",
+      "youtube_start": 64,
+      "youtube_end": 78
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "In the midnight hour, she",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "cried",
+      "excerpt_after": "\"More, more, more\"",
+      "youtube_start": 98,
+      "youtube_end": 112
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well, he's out all",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "night",
+      "excerpt_after": "to collect a fare",
+      "youtube_start": 135,
+      "youtube_end": 149
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "A",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thousand",
+      "excerpt_after": "miles for you",
+      "youtube_start": 191,
+      "youtube_end": 205
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "A",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "million",
+      "excerpt_after": "times, for you",
+      "youtube_start": 202,
+      "youtube_end": 216
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "What sets you free?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "He lives in a-his own heaven",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "A thousand miles for you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "A million times, for you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "For money to burn, for you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And if it",
+      "excerpt_after": "pray help from above, because",
+      "options": [
+        "-eleven",
+        "because",
+        "expires",
+        "midnight"
+      ],
+      "answer_index": 2,
+      "youtube_start": 41,
+      "youtube_end": 53
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "She",
+      "excerpt_after": "like slavery, she won't sit and beg",
+      "options": [
+        "collect",
+        "dancer",
+        "dont",
+        "tired"
+      ],
+      "answer_index": 2,
+      "youtube_start": 75,
+      "youtube_end": 87
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "In the midnight hour,",
+      "excerpt_after": "\"More, more, more\"",
+      "options": [
+        "babe",
+        "dancin",
+        "mess",
+        "slavery"
+      ],
+      "answer_index": 0,
+      "youtube_start": 110,
+      "youtube_end": 122
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "the world for you, babe",
+      "options": [
+        "cried",
+        "door",
+        "midnight",
+        "walked"
+      ],
+      "answer_index": 3,
+      "youtube_start": 185,
+      "youtube_end": 197
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'd",
+      "excerpt_after": "my soul, for you, babe",
+      "options": [
+        "angel",
+        "collect",
+        "lonely",
+        "sell"
+      ],
+      "answer_index": 3,
+      "youtube_start": 208,
+      "youtube_end": 220
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "rebel",
+        "\"More,",
+        "more\"",
+        "a",
+        "yell",
+        "more,",
+        "With"
+      ],
+      "answer": [
+        "With",
+        "a",
+        "rebel",
+        "yell",
+        "\"More,",
+        "more,",
+        "more\""
+      ],
+      "youtube_start": 64
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "by",
+        "because",
+        "need",
+        "here",
+        "you",
+        "I",
+        "me,"
+      ],
+      "answer": [
+        "I",
+        "need",
+        "you",
+        "here",
+        "by",
+        "me,",
+        "because"
+      ],
+      "youtube_start": 95
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "babe",
+        "walked",
+        "I",
+        "world",
+        "for",
+        "you,"
+      ],
+      "answer": [
+        "I",
+        "walked",
+        "the",
+        "world",
+        "for",
+        "you,",
+        "babe"
+      ],
+      "youtube_start": 185
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "million",
+        "for",
+        "you",
+        "A",
+        "times,"
+      ],
+      "answer": [
+        "A",
+        "million",
+        "times,",
+        "for",
+        "you"
+      ],
+      "youtube_start": 202
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "little",
+        "yeah,",
+        "Ooh",
+        "baby"
+      ],
+      "answer": [
+        "Ooh",
+        "yeah,",
+        "little",
+        "baby"
+      ],
+      "youtube_start": 259
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"babe\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"babe\" na música inteira?",
+      "word": "babe",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"cried\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"cried\" na música inteira?",
+      "word": "cried",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "In the midnight hour, babe \"More, more, more\"",
+          "order": 0
+        },
+        {
+          "text": "Collects it to go from the 7-Eleven",
+          "order": 1
+        },
+        {
+          "text": "In the midnight hour babe, \"More, more, more\"",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "With a rebel yell \"More, more, more\"",
+          "order": 0
+        },
+        {
+          "text": "A million times, for you",
+          "order": 1
+        },
+        {
+          "text": "Ooh yeah, little baby",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Rebel Yell\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Rebel Yell\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "babe",
+        "cried",
+        "midnight",
+        "hour"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "babe",
+        "cried",
+        "midnight",
+        "hour"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "babe",
+        "cried",
+        "midnight",
+        "hour"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "he's",
+          "full": "he is"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        }
+      ]
+    }
+  ]
+}

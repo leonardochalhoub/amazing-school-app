@@ -1,0 +1,413 @@
+{
+  "slug": "only-the-lonely",
+  "title": "Only the Lonely",
+  "artist": "Roy Orbison",
+  "year": 1960,
+  "album": "Sings Lonely and Blue",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 146,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Only the Lonely by Roy Orbison (1960) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "lonely",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Only the lonely\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Know the way I feel tonight\""
+    },
+    {
+      "term": "there",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"There goes my baby\""
+    },
+    {
+      "term": "goes",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"There goes my baby\""
+    },
+    {
+      "term": "heart",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"There goes my heart\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Only the lonely",
+          "Only the lonely",
+          "Only the lonely",
+          "Know the way I feel tonight"
+        ],
+        "start_seconds": 21,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Only the lonely",
+          "Only the lonely",
+          "Only the lonely",
+          "Know the heartaches I've been through"
+        ],
+        "start_seconds": 91,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Know this",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "feeling",
+      "excerpt_after": "ain't right",
+      "youtube_start": 37,
+      "youtube_end": 51
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Know the",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heartaches",
+      "excerpt_after": "I've been through",
+      "youtube_start": 94,
+      "youtube_end": 108
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "the chance",
+      "youtube_start": 125,
+      "youtube_end": 139
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If your",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lonely",
+      "excerpt_after": "heart breaks",
+      "youtube_start": 133,
+      "youtube_end": 147
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Know the way I feel tonight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Know the heartaches I've been through",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You gotta take",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Know this feeling ain't right",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "There goes my heart",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Know the way I",
+      "excerpt_after": "tonight",
+      "options": [
+        "chance",
+        "feel",
+        "forever",
+        "goes"
+      ],
+      "answer_index": 1,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Know this",
+      "excerpt_after": "ain't right",
+      "options": [
+        "feeling",
+        "heartaches",
+        "know",
+        "thats"
+      ],
+      "answer_index": 0,
+      "youtube_start": 37,
+      "youtube_end": 49
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There",
+      "excerpt_after": "my baby",
+      "options": [
+        "goes",
+        "gotta",
+        "know",
+        "romance"
+      ],
+      "answer_index": 0,
+      "youtube_start": 43,
+      "youtube_end": 55
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Know the",
+      "excerpt_after": "I've been through",
+      "options": [
+        "heartaches",
+        "through",
+        "tomorrow",
+        "tonight"
+      ],
+      "answer_index": 0,
+      "youtube_start": 94,
+      "youtube_end": 106
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But",
+      "excerpt_after": "the chance",
+      "options": [
+        "aint",
+        "breaks",
+        "chance",
+        "thats"
+      ],
+      "answer_index": 3,
+      "youtube_start": 125,
+      "youtube_end": 137
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "way",
+        "Know",
+        "I",
+        "feel",
+        "tonight"
+      ],
+      "answer": [
+        "Know",
+        "the",
+        "way",
+        "I",
+        "feel",
+        "tonight"
+      ],
+      "youtube_start": 26
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "right",
+        "feeling",
+        "Know",
+        "ain't",
+        "this"
+      ],
+      "answer": [
+        "Know",
+        "this",
+        "feeling",
+        "ain't",
+        "right"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "There",
+        "heart",
+        "goes",
+        "my"
+      ],
+      "answer": [
+        "There",
+        "goes",
+        "my",
+        "heart"
+      ],
+      "youtube_start": 47
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "through",
+        "the",
+        "been",
+        "Know",
+        "heartaches",
+        "I've"
+      ],
+      "answer": [
+        "Know",
+        "the",
+        "heartaches",
+        "I've",
+        "been",
+        "through"
+      ],
+      "youtube_start": 94
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "But",
+        "that's",
+        "chance",
+        "the"
+      ],
+      "answer": [
+        "But",
+        "that's",
+        "the",
+        "chance"
+      ],
+      "youtube_start": 125
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"lonely\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"lonely\" na música inteira?",
+      "word": "lonely",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"know\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"know\" na música inteira?",
+      "word": "know",
+      "answer": 5
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Only the Lonely\" was released in 1960. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Only the Lonely\" foi lançada em 1960. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "lonely",
+        "know",
+        "there",
+        "goes"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Only the Lonely\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Only the Lonely\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "lonely",
+        "know",
+        "there",
+        "goes"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "lonely",
+        "know",
+        "there",
+        "goes"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "they're",
+          "full": "they are"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        }
+      ]
+    }
+  ]
+}

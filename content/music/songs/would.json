@@ -1,0 +1,411 @@
+{
+  "slug": "would",
+  "title": "Would?",
+  "artist": "Alice in Chains",
+  "year": 1992,
+  "album": "Dirt",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 207,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Would? by Alice in Chains (1992) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "flood",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Into the flood again\""
+    },
+    {
+      "term": "same",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Same old trip it was back then\""
+    },
+    {
+      "term": "trip",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Same old trip it was back then\""
+    },
+    {
+      "term": "mistake",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"So I made a big mistake\""
+    },
+    {
+      "term": "wrong",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Am I wrong?\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Into the flood again",
+          "Same old trip it was back then",
+          "So I made a big mistake",
+          "Try to see it once my way"
+        ],
+        "start_seconds": 49,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Am I wrong?",
+          "Have I run too far to get home?",
+          "Have I gone?",
+          "And left you here alone?"
+        ],
+        "start_seconds": 162,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Know me",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "broken",
+      "excerpt_after": "by my master",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Teach thee on",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "child",
+      "excerpt_after": "of love hereafter",
+      "youtube_start": 40,
+      "youtube_end": 54
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Into the",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "flood",
+      "excerpt_after": "again",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Flying not yet,",
+      "blank_hint": "word starting with \"q\"",
+      "answer": "quite",
+      "excerpt_after": "the notion",
+      "youtube_start": 96,
+      "youtube_end": 110
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So I made a big mistake",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Have I run too far to get home?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And left you here alone?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Know me broken by my master",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Into the flood again",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Know me",
+      "excerpt_after": "by my master",
+      "options": [
+        "broken",
+        "child",
+        "left",
+        "thee"
+      ],
+      "answer_index": 0,
+      "youtube_start": 30,
+      "youtube_end": 42
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Teach",
+      "excerpt_after": "on child of love hereafter",
+      "options": [
+        "body",
+        "teach",
+        "thee",
+        "wrong"
+      ],
+      "answer_index": 2,
+      "youtube_start": 40,
+      "youtube_end": 52
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Into the",
+      "excerpt_after": "again",
+      "options": [
+        "body",
+        "broken",
+        "flood",
+        "know"
+      ],
+      "answer_index": 2,
+      "youtube_start": 49,
+      "youtube_end": 61
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Drifting",
+      "excerpt_after": "it's sole desertion",
+      "options": [
+        "body",
+        "notion",
+        "same",
+        "wrong"
+      ],
+      "answer_index": 0,
+      "youtube_start": 87,
+      "youtube_end": 99
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Flying not yet,",
+      "excerpt_after": "the notion",
+      "options": [
+        "drifting",
+        "quite",
+        "same",
+        "wrong"
+      ],
+      "answer_index": 1,
+      "youtube_start": 96,
+      "youtube_end": 108
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "master",
+        "my",
+        "broken",
+        "by",
+        "Know"
+      ],
+      "answer": [
+        "Know",
+        "me",
+        "broken",
+        "by",
+        "my",
+        "master"
+      ],
+      "youtube_start": 30
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "Into",
+        "again",
+        "flood"
+      ],
+      "answer": [
+        "Into",
+        "the",
+        "flood",
+        "again"
+      ],
+      "youtube_start": 49
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "made",
+        "big",
+        "So",
+        "a",
+        "I",
+        "mistake"
+      ],
+      "answer": [
+        "So",
+        "I",
+        "made",
+        "a",
+        "big",
+        "mistake"
+      ],
+      "youtube_start": 58
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "desertion",
+        "body,",
+        "sole",
+        "it's",
+        "Drifting"
+      ],
+      "answer": [
+        "Drifting",
+        "body,",
+        "it's",
+        "sole",
+        "desertion"
+      ],
+      "youtube_start": 87
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "here",
+        "you",
+        "left",
+        "And",
+        "alone?"
+      ],
+      "answer": [
+        "And",
+        "left",
+        "you",
+        "here",
+        "alone?"
+      ],
+      "youtube_start": 174
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"flood\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"flood\" na música inteira?",
+      "word": "flood",
+      "answer": 3
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"same\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"same\" na música inteira?",
+      "word": "same",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Know me broken by my master",
+          "order": 0
+        },
+        {
+          "text": "Into the flood again",
+          "order": 1
+        },
+        {
+          "text": "Am I wrong?",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "flood",
+        "same",
+        "trip",
+        "mistake"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Would?\" was released in 1992. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Would?\" foi lançada em 1992. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "flood",
+        "same",
+        "trip",
+        "mistake"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Would?\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Would?\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "flood",
+        "same",
+        "trip",
+        "mistake"
+      ]
+    }
+  ]
+}

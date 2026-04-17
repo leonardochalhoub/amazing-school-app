@@ -1,0 +1,371 @@
+{
+  "slug": "feel-so-close",
+  "title": "Feel So Close",
+  "artist": "Calvin Harris",
+  "year": 2011,
+  "album": "The Move",
+  "genre": [
+    "pop",
+    "dance"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 0,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Feel So Close by Calvin Harris (2011) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "right",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"I feel so close to you right now, it's a force field\""
+    },
+    {
+      "term": "feel",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I feel so close to you right now, it's a force field\""
+    },
+    {
+      "term": "close",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I feel so close to you right now, it's a force field\""
+    },
+    {
+      "term": "there's",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"And there's no stopping us right now\""
+    },
+    {
+      "term": "stopping",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"And there's no stopping us right now\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "And there's no stopping us right now",
+          "I feel so close to you right now"
+        ],
+        "start_seconds": 23,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "And there's no stopping us right now",
+          "I feel so close to you right now"
+        ],
+        "start_seconds": 98,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Your love",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "pours",
+      "excerpt_after": "down on me",
+      "youtube_start": 15,
+      "youtube_end": 29
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "theres",
+      "excerpt_after": "no stopping us right now",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I feel so",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "close",
+      "excerpt_after": "to you right now",
+      "youtube_start": 26,
+      "youtube_end": 40
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And there's no",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "stopping",
+      "excerpt_after": "us right now",
+      "youtube_start": 98,
+      "youtube_end": 112
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I feel so close to you",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "right",
+      "excerpt_after": "now",
+      "youtube_start": 102,
+      "youtube_end": 116
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I feel so close to you right now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Your love pours down on me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Surrounds me like a waterfall",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And there's no stopping us right now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Your love",
+      "excerpt_after": "down on me",
+      "options": [
+        "force",
+        "heart",
+        "pours",
+        "wear"
+      ],
+      "answer_index": 2,
+      "youtube_start": 15,
+      "youtube_end": 27
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "no stopping us right now",
+      "options": [
+        "close",
+        "force",
+        "surrounds",
+        "theres"
+      ],
+      "answer_index": 3,
+      "youtube_start": 23,
+      "youtube_end": 35
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "so close to you right now",
+      "options": [
+        "feel",
+        "force",
+        "heart",
+        "theres"
+      ],
+      "answer_index": 0,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And there's no",
+      "excerpt_after": "us right now",
+      "options": [
+        "close",
+        "sleeve",
+        "stopping",
+        "surrounds"
+      ],
+      "answer_index": 2,
+      "youtube_start": 98,
+      "youtube_end": 110
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I feel so",
+      "excerpt_after": "to you right now",
+      "options": [
+        "close",
+        "deal",
+        "feel",
+        "force"
+      ],
+      "answer_index": 0,
+      "youtube_start": 102,
+      "youtube_end": 114
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "on",
+        "pours",
+        "down",
+        "love",
+        "Your"
+      ],
+      "answer": [
+        "Your",
+        "love",
+        "pours",
+        "down",
+        "on",
+        "me"
+      ],
+      "youtube_start": 15
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "like",
+        "waterfall",
+        "me",
+        "Surrounds"
+      ],
+      "answer": [
+        "Surrounds",
+        "me",
+        "like",
+        "a",
+        "waterfall"
+      ],
+      "youtube_start": 18
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "no",
+        "And",
+        "now",
+        "right",
+        "stopping",
+        "there's",
+        "us"
+      ],
+      "answer": [
+        "And",
+        "there's",
+        "no",
+        "stopping",
+        "us",
+        "right",
+        "now"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"right\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"right\" na música inteira?",
+      "word": "right",
+      "answer": 10
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"feel\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"feel\" na música inteira?",
+      "word": "feel",
+      "answer": 5
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "right",
+        "feel",
+        "close",
+        "there's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "right",
+        "feel",
+        "close",
+        "there's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Feel So Close\" was released in 2011. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Feel So Close\" foi lançada em 2011. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "right",
+        "feel",
+        "close",
+        "there's"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        }
+      ]
+    }
+  ]
+}

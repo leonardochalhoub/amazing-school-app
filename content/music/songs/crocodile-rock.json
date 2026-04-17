@@ -1,0 +1,462 @@
+{
+  "slug": "crocodile-rock",
+  "title": "Crocodile Rock",
+  "artist": "Elton John",
+  "year": 1972,
+  "album": "Don't Shoot Me I'm Only The Piano Player",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 235,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Crocodile Rock by Elton John (1972) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "crocodile",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Was doing a thing called the Crocodile Rock\""
+    },
+    {
+      "term": "rock",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"I remember when rock was young\""
+    },
+    {
+      "term": "rocking",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"While the other kids were rocking 'round the clock\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I never knew me a better time and I guess I never will\""
+    },
+    {
+      "term": "suzie",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"When Suzie wore her dresses tight\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Laa, la-la-la-la-laa",
+          "La-la-la-la-laa",
+          "La-la-la-la-laa",
+          "But the years went by and the rock just died"
+        ],
+        "start_seconds": 66,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I remember when rock was young",
+          "Me and Susie had so much fun",
+          "Holding hands and skimming stones",
+          "Had an old gold Chevy, and a place of my own"
+        ],
+        "start_seconds": 15,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "remember",
+      "excerpt_after": "when rock was young",
+      "youtube_start": 15,
+      "youtube_end": 29
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But the",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "biggest",
+      "excerpt_after": "kick I ever got",
+      "youtube_start": 28,
+      "youtube_end": 42
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh,",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lawdy",
+      "excerpt_after": "mama those Friday nights",
+      "youtube_start": 53,
+      "youtube_end": 67
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Long",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nights",
+      "excerpt_after": "crying by the record machine",
+      "youtube_start": 85,
+      "youtube_end": 99
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "really",
+      "excerpt_after": "thought the Crocodile Rock would last, well",
+      "youtube_start": 101,
+      "youtube_end": 115
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Holding hands and",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "skimming",
+      "excerpt_after": "stones",
+      "youtube_start": 149,
+      "youtube_end": 163
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I remember when rock was young",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But they'll never kill the thrills we've got",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Holding hands and skimming stones",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Crocodile rocking is something shocking",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh, lawdy mama those Friday nights",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "when rock was young",
+      "options": [
+        "machine",
+        "remember",
+        "skimming",
+        "susie"
+      ],
+      "answer_index": 1,
+      "youtube_start": 15,
+      "youtube_end": 27
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "While the",
+      "excerpt_after": "kids were rocking 'round the clock",
+      "options": [
+        "gold",
+        "other",
+        "rock",
+        "round"
+      ],
+      "answer_index": 1,
+      "youtube_start": 34,
+      "youtube_end": 46
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Suzie",
+      "excerpt_after": "and left me for some foreign guy",
+      "options": [
+        "biggest",
+        "hands",
+        "mama",
+        "went"
+      ],
+      "answer_index": 3,
+      "youtube_start": 82,
+      "youtube_end": 94
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Crocodile rocking is",
+      "excerpt_after": "shocking",
+      "options": [
+        "friday",
+        "learning",
+        "something",
+        "theyll"
+      ],
+      "answer_index": 2,
+      "youtube_start": 105,
+      "youtube_end": 117
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But the biggest",
+      "excerpt_after": "I ever got",
+      "options": [
+        "dresses",
+        "hopping",
+        "kick",
+        "while"
+      ],
+      "answer_index": 2,
+      "youtube_start": 156,
+      "youtube_end": 168
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "rock",
+        "I",
+        "was",
+        "when",
+        "young",
+        "remember"
+      ],
+      "answer": [
+        "I",
+        "remember",
+        "when",
+        "rock",
+        "was",
+        "young"
+      ],
+      "youtube_start": 15
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "and",
+        "Holding",
+        "stones",
+        "skimming",
+        "hands"
+      ],
+      "answer": [
+        "Holding",
+        "hands",
+        "and",
+        "skimming",
+        "stones"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "just",
+        "keep",
+        "still",
+        "feet",
+        "your",
+        "When",
+        "can't"
+      ],
+      "answer": [
+        "When",
+        "your",
+        "feet",
+        "just",
+        "can't",
+        "keep",
+        "still"
+      ],
+      "youtube_start": 44
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "tight",
+        "wore",
+        "When",
+        "dresses",
+        "Suzie",
+        "her"
+      ],
+      "answer": [
+        "When",
+        "Suzie",
+        "wore",
+        "her",
+        "dresses",
+        "tight"
+      ],
+      "youtube_start": 56
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "as",
+        "Learning",
+        "went",
+        "weeks",
+        "fast",
+        "the",
+        "past"
+      ],
+      "answer": [
+        "Learning",
+        "fast",
+        "as",
+        "the",
+        "weeks",
+        "went",
+        "past"
+      ],
+      "youtube_start": 98
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"crocodile\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"crocodile\" na música inteira?",
+      "word": "crocodile",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"rock\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"rock\" na música inteira?",
+      "word": "rock",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Me and Susie had so much fun",
+          "order": 0
+        },
+        {
+          "text": "Learning fast as the weeks went past",
+          "order": 1
+        },
+        {
+          "text": "Me and Suzie had so much fun",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Crocodile Rock\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Crocodile Rock\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "crocodile",
+        "rock",
+        "rocking",
+        "never"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Crocodile Rock\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Crocodile Rock\", o que aconteceria?",
+      "target_vocab": [
+        "crocodile",
+        "rock",
+        "rocking",
+        "never"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Crocodile Rock\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Crocodile Rock\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "crocodile",
+        "rock",
+        "rocking",
+        "never"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "they'll",
+          "full": "they will"
+        },
+        {
+          "short": "we've",
+          "full": "we have"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "slug": "the-scientist",
+  "title": "The Scientist",
+  "artist": "Coldplay",
+  "year": 2002,
+  "album": "A Rush of Blood to the Head",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 309,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "The Scientist by Coldplay (2002) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "tell",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Come up to meet you, tell you I'm sorry\""
+    },
+    {
+      "term": "start",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Oh, let's go back to the start\""
+    },
+    {
+      "term": "nobody",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Nobody said it was easy\""
+    },
+    {
+      "term": "easy",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Nobody said it was easy\""
+    },
+    {
+      "term": "apart",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Tell you I set you apart\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Nobody said it was easy",
+          "It's such a shame for us to part",
+          "Nobody said it was easy",
+          "No one ever said it would be this hard"
+        ],
+        "start_seconds": 79,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Nobody said it was easy",
+          "Oh, it's such a shame for us to part",
+          "Nobody said it was easy",
+          "No one ever said it would be so hard"
+        ],
+        "start_seconds": 191,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You don't know how",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lovely",
+      "excerpt_after": "you are",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Tell me your",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "secrets",
+      "excerpt_after": "and ask me your questions",
+      "youtube_start": 54,
+      "youtube_end": 68
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Heads on a",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "science",
+      "excerpt_after": "apart",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I was just",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "guessing",
+      "excerpt_after": "at numbers and figures",
+      "youtube_start": 139,
+      "youtube_end": 153
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Pulling the",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "puzzles",
+      "excerpt_after": "apart",
+      "youtube_start": 145,
+      "youtube_end": 159
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Running in circles,",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "chasing",
+      "excerpt_after": "our tails",
+      "youtube_start": 178,
+      "youtube_end": 192
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You don't know how lovely you are",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I was just guessing at numbers and figures",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Coming back as we are",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh, let's go back to the start",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Heads on a science apart",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Come up to",
+      "excerpt_after": "you, tell you I'm sorry",
+      "options": [
+        "ever",
+        "hard",
+        "meet",
+        "speak"
+      ],
+      "answer_index": 2,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh,",
+      "excerpt_after": "go back to the start",
+      "options": [
+        "chasing",
+        "easy",
+        "heart",
+        "lets"
+      ],
+      "answer_index": 3,
+      "youtube_start": 60,
+      "youtube_end": 72
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's",
+      "excerpt_after": "a shame for us to part",
+      "options": [
+        "figures",
+        "need",
+        "secrets",
+        "such"
+      ],
+      "answer_index": 3,
+      "youtube_start": 86,
+      "youtube_end": 98
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Pulling the",
+      "excerpt_after": "apart",
+      "options": [
+        "ever",
+        "going",
+        "puzzles",
+        "rush"
+      ],
+      "answer_index": 2,
+      "youtube_start": 145,
+      "youtube_end": 157
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Running in circles,",
+      "excerpt_after": "our tails",
+      "options": [
+        "chasing",
+        "going",
+        "heart",
+        "lovely"
+      ],
+      "answer_index": 0,
+      "youtube_start": 178,
+      "youtube_end": 190
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "are",
+        "how",
+        "don't",
+        "lovely",
+        "You",
+        "know",
+        "you"
+      ],
+      "answer": [
+        "You",
+        "don't",
+        "know",
+        "how",
+        "lovely",
+        "you",
+        "are"
+      ],
+      "youtube_start": 34
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "go",
+        "Oh,",
+        "back",
+        "to",
+        "the",
+        "start",
+        "let's"
+      ],
+      "answer": [
+        "Oh,",
+        "let's",
+        "go",
+        "back",
+        "to",
+        "the",
+        "start"
+      ],
+      "youtube_start": 60
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Nobody",
+        "was",
+        "easy",
+        "said",
+        "it"
+      ],
+      "answer": [
+        "Nobody",
+        "said",
+        "it",
+        "was",
+        "easy"
+      ],
+      "youtube_start": 79
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "apart",
+        "Pulling",
+        "the",
+        "puzzles"
+      ],
+      "answer": [
+        "Pulling",
+        "the",
+        "puzzles",
+        "apart"
+      ],
+      "youtube_start": 145
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "chasing",
+        "tails",
+        "Running",
+        "in",
+        "circles,",
+        "our"
+      ],
+      "answer": [
+        "Running",
+        "in",
+        "circles,",
+        "chasing",
+        "our",
+        "tails"
+      ],
+      "youtube_start": 178
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"tell\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"tell\" na música inteira?",
+      "word": "tell",
+      "answer": 5
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"start\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"start\" na música inteira?",
+      "word": "start",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You don't know how lovely you are",
+          "order": 0
+        },
+        {
+          "text": "It's such a shame for us to part",
+          "order": 1
+        },
+        {
+          "text": "Do not speak as loud as my heart",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"The Scientist\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"The Scientist\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "tell",
+        "start",
+        "nobody",
+        "easy"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"The Scientist\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"The Scientist\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "tell",
+        "start",
+        "nobody",
+        "easy"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"The Scientist\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"The Scientist\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "tell",
+        "start",
+        "nobody",
+        "easy"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "let's",
+          "full": "let us"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

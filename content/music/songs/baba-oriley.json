@@ -1,0 +1,462 @@
+{
+  "slug": "baba-oriley",
+  "title": "Baba O'Riley",
+  "artist": "The Who",
+  "year": 1971,
+  "album": "Greatest Hits & More",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 300,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Baba O'Riley by The Who (1971) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I don't need to fight\""
+    },
+    {
+      "term": "teenage",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"It's only teenage wasteland\""
+    },
+    {
+      "term": "wasteland",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"It's only teenage wasteland\""
+    },
+    {
+      "term": "need",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I don't need to fight\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"It's only teenage wasteland\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Teenage wasteland",
+          "It's only teenage wasteland",
+          "Teenage wasteland",
+          "Oh, yeah"
+        ],
+        "start_seconds": 184,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "It's only teenage wasteland",
+          "Sally, take my hand",
+          "We'll travel south cross land",
+          "Put out the fire"
+        ],
+        "start_seconds": 136,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "prove",
+      "excerpt_after": "I'm right",
+      "youtube_start": 86,
+      "youtube_end": 100
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Don't",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "raise",
+      "excerpt_after": "your eye",
+      "youtube_start": 131,
+      "youtube_end": 145
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It's only",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "teenage",
+      "excerpt_after": "wasteland",
+      "youtube_start": 136,
+      "youtube_end": 150
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We'll",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "travel",
+      "excerpt_after": "south cross land",
+      "youtube_start": 148,
+      "youtube_end": 162
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "exodus",
+      "excerpt_after": "is here",
+      "youtube_start": 160,
+      "youtube_end": 174
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "happy",
+      "excerpt_after": "worlds are near",
+      "youtube_start": 164,
+      "youtube_end": 178
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I farm for my meals",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I don't need to fight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I don't need to be forgiven",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Before we get much older",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Out here in the fields",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "for my meals",
+      "options": [
+        "exodus",
+        "farm",
+        "theyre",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 70,
+      "youtube_end": 82
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "To",
+      "excerpt_after": "I'm right",
+      "options": [
+        "exodus",
+        "fight",
+        "fire",
+        "prove"
+      ],
+      "answer_index": 3,
+      "youtube_start": 86,
+      "youtube_end": 98
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Yeah,",
+      "excerpt_after": "yeah, yeah, yeah",
+      "options": [
+        "hand",
+        "near",
+        "older",
+        "yeah"
+      ],
+      "answer_index": 3,
+      "youtube_start": 96,
+      "youtube_end": 108
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's only",
+      "excerpt_after": "wasteland",
+      "options": [
+        "near",
+        "prove",
+        "raise",
+        "teenage"
+      ],
+      "answer_index": 3,
+      "youtube_start": 136,
+      "youtube_end": 148
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And don't look",
+      "excerpt_after": "my shoulder",
+      "options": [
+        "cross",
+        "meals",
+        "past",
+        "right"
+      ],
+      "answer_index": 2,
+      "youtube_start": 154,
+      "youtube_end": 166
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "here",
+        "Out",
+        "in",
+        "fields"
+      ],
+      "answer": [
+        "Out",
+        "here",
+        "in",
+        "the",
+        "fields"
+      ],
+      "youtube_start": 66
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "need",
+        "don't",
+        "to",
+        "I",
+        "fight"
+      ],
+      "answer": [
+        "I",
+        "don't",
+        "need",
+        "to",
+        "fight"
+      ],
+      "youtube_start": 82
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "yeah,",
+        "yeah,",
+        "Yeah,",
+        "yeah",
+        "yeah,"
+      ],
+      "answer": [
+        "Yeah,",
+        "yeah,",
+        "yeah,",
+        "yeah,",
+        "yeah"
+      ],
+      "youtube_start": 96
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "take",
+        "Sally,",
+        "hand",
+        "my"
+      ],
+      "answer": [
+        "Sally,",
+        "take",
+        "my",
+        "hand"
+      ],
+      "youtube_start": 144
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "my",
+        "past",
+        "don't",
+        "look",
+        "shoulder"
+      ],
+      "answer": [
+        "And",
+        "don't",
+        "look",
+        "past",
+        "my",
+        "shoulder"
+      ],
+      "youtube_start": 154
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 5
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"teenage\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"teenage\" na música inteira?",
+      "word": "teenage",
+      "answer": 5
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Out here in the fields",
+          "order": 0
+        },
+        {
+          "text": "Yeah, yeah, yeah, yeah, yeah",
+          "order": 1
+        },
+        {
+          "text": "And don't look past my shoulder",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Baba O'Riley\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Baba O'Riley\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "don't",
+        "teenage",
+        "wasteland",
+        "need"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Baba O'Riley\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Baba O'Riley\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "don't",
+        "teenage",
+        "wasteland",
+        "need"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Baba O'Riley\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Baba O'Riley\", o que aconteceria?",
+      "target_vocab": [
+        "don't",
+        "teenage",
+        "wasteland",
+        "need"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "let's",
+          "full": "let us"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
+        }
+      ]
+    }
+  ]
+}

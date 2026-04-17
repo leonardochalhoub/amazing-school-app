@@ -1,0 +1,483 @@
+{
+  "slug": "like-a-rolling-stone",
+  "title": "Like a Rolling Stone",
+  "artist": "Bob Dylan",
+  "year": 1965,
+  "album": "The Essential (2014 Revised)",
+  "genre": [
+    "rock",
+    "folk"
+  ],
+  "cefr_level": "b1.2",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 368,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Like a Rolling Stone by Bob Dylan (1965) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "does",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"How does it feel?\""
+    },
+    {
+      "term": "feel",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"How does it feel?\""
+    },
+    {
+      "term": "used",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"You used to laugh about\""
+    },
+    {
+      "term": "home",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"To be without a home?\""
+    },
+    {
+      "term": "complete",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Like a complete unknown?\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "How does it feel?",
+          "How does it feel?",
+          "To be without a home?",
+          "Like a complete unknown?"
+        ],
+        "start_seconds": 58,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "With no direction home?",
+          "A complete unknown?",
+          "Like a rolling stone?"
+        ],
+        "start_seconds": 145,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Once upon a time you",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dressed",
+      "excerpt_after": "so fine",
+      "youtube_start": 11,
+      "youtube_end": 25
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "About",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "having",
+      "excerpt_after": "to be scrounging",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And now",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "gonna have to get",
+      "youtube_start": 98,
+      "youtube_end": 112
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ah, you never",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "turned",
+      "excerpt_after": "around to see the frowns",
+      "youtube_start": 164,
+      "youtube_end": 178
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ain't it hard when you",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "discover",
+      "excerpt_after": "that?",
+      "youtube_start": 192,
+      "youtube_end": 206
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But you'd",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "better",
+      "excerpt_after": "take your diamond ring",
+      "youtube_start": 256,
+      "youtube_end": 270
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Once upon a time you dressed so fine",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You used to laugh about",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Now you don't seem so proud",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But you know you only used to get",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You say you never compromise",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Once upon a",
+      "excerpt_after": "you dressed so fine",
+      "options": [
+        "does",
+        "school",
+        "threw",
+        "time"
+      ],
+      "answer_index": 3,
+      "youtube_start": 11,
+      "youtube_end": 23
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "About",
+      "excerpt_after": "to be scrounging",
+      "options": [
+        "beware",
+        "having",
+        "stone",
+        "youre"
+      ],
+      "answer_index": 1,
+      "youtube_start": 49,
+      "youtube_end": 61
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And now",
+      "excerpt_after": "gonna have to get",
+      "options": [
+        "didnt",
+        "laugh",
+        "without",
+        "youre"
+      ],
+      "answer_index": 3,
+      "youtube_start": 98,
+      "youtube_end": 110
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "let other people",
+      "options": [
+        "compromise",
+        "having",
+        "kidding",
+        "shouldnt"
+      ],
+      "answer_index": 3,
+      "youtube_start": 175,
+      "youtube_end": 187
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Exchanging all",
+      "excerpt_after": "gifts",
+      "options": [
+        "compromise",
+        "precious",
+        "taught",
+        "youve"
+      ],
+      "answer_index": 1,
+      "youtube_start": 252,
+      "youtube_end": 264
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "they",
+        "You",
+        "were",
+        "all",
+        "thought"
+      ],
+      "answer": [
+        "You",
+        "thought",
+        "they",
+        "were",
+        "all"
+      ],
+      "youtube_start": 24
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "home?",
+        "a",
+        "be",
+        "without",
+        "To"
+      ],
+      "answer": [
+        "To",
+        "be",
+        "without",
+        "a",
+        "home?"
+      ],
+      "youtube_start": 66
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "not",
+        "He's",
+        "any",
+        "selling",
+        "alibis"
+      ],
+      "answer": [
+        "He's",
+        "not",
+        "selling",
+        "any",
+        "alibis"
+      ],
+      "youtube_start": 114
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "it",
+        "discover",
+        "that?",
+        "Ain't",
+        "when",
+        "you",
+        "hard"
+      ],
+      "answer": [
+        "Ain't",
+        "it",
+        "hard",
+        "when",
+        "you",
+        "discover",
+        "that?"
+      ],
+      "youtube_start": 192
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "At",
+        "in",
+        "Napoleon",
+        "rags"
+      ],
+      "answer": [
+        "At",
+        "Napoleon",
+        "in",
+        "rags"
+      ],
+      "youtube_start": 267
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"does\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"does\" na música inteira?",
+      "word": "does",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"feel\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"feel\" na música inteira?",
+      "word": "feel",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Once upon a time you dressed so fine",
+          "order": 0
+        },
+        {
+          "text": "With the mystery tramp but now you realise",
+          "order": 1
+        },
+        {
+          "text": "Like a rolling stone?",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Threw the bums a dime in your prime",
+          "order": 0
+        },
+        {
+          "text": "Tricks for you",
+          "order": 1
+        },
+        {
+          "text": "Got it made",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Like a Rolling Stone\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Like a Rolling Stone\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "does",
+        "feel",
+        "used",
+        "home"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "does",
+        "feel",
+        "used",
+        "home"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "does",
+        "feel",
+        "used",
+        "home"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "didn't",
+          "full": "did not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "he's",
+          "full": "he is"
+        }
+      ]
+    }
+  ]
+}

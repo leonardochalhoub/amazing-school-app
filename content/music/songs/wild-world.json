@@ -1,0 +1,478 @@
+{
+  "slug": "wild-world",
+  "title": "Wild World",
+  "artist": "Cat Stevens",
+  "year": 1970,
+  "album": "Tea for the Tillerman",
+  "genre": [
+    "folk"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 200,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Wild World by Cat Stevens (1970) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 18 times; first heard in: \"Baby I'm grievin'\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 14 times; first heard in: \"And it's breakin' my heart you're leavin'\""
+    },
+    {
+      "term": "world",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Oh baby, baby, it's a wild world\""
+    },
+    {
+      "term": "wild",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Oh baby, baby, it's a wild world\""
+    },
+    {
+      "term": "remember",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I'll always remember you like a child, girl\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Oh baby, baby, it's a wild world",
+          "It's hard to get by just upon a smile",
+          "Oh baby, baby, it's a wild world",
+          "I'll always remember you like a child, girl"
+        ],
+        "start_seconds": 41,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Oh baby, baby, it's a wild world",
+          "And I'll always remember you like a child, girl",
+          "Baby, I love you",
+          "But if you wanna leave, take good care"
+        ],
+        "start_seconds": 106,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Now that I've lost",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "everything",
+      "excerpt_after": "to you",
+      "youtube_start": 13,
+      "youtube_end": 27
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You say you",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "start something new",
+      "youtube_start": 18,
+      "youtube_end": 32
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But if you wanna",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "leave",
+      "excerpt_after": "take good care",
+      "youtube_start": 26,
+      "youtube_end": 40
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'll",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "always",
+      "excerpt_after": "remember you like a child, girl",
+      "youtube_start": 60,
+      "youtube_end": 74
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Because I",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "wanna see you sad, girl",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I'll always",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "remember",
+      "excerpt_after": "you like a child, girl",
+      "youtube_start": 112,
+      "youtube_end": 126
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Now that I've lost everything to you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And it's breakin' my heart you're leavin'",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But if you wanna leave, take good care",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Because I never wanna see you sad, girl",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh baby, baby, it's a wild world",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Now that I've",
+      "excerpt_after": "everything to you",
+      "options": [
+        "good",
+        "lost",
+        "wanna",
+        "wear"
+      ],
+      "answer_index": 1,
+      "youtube_start": 13,
+      "youtube_end": 25
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And it's",
+      "excerpt_after": "my heart you're leavin'",
+      "options": [
+        "breakin",
+        "girl",
+        "grievin",
+        "seen"
+      ],
+      "answer_index": 0,
+      "youtube_start": 21,
+      "youtube_end": 33
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's",
+      "excerpt_after": "to get by just upon a smile",
+      "options": [
+        "hard",
+        "lost",
+        "never",
+        "smile"
+      ],
+      "answer_index": 0,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'll",
+      "excerpt_after": "remember you like a child, girl",
+      "options": [
+        "always",
+        "breakin",
+        "lost",
+        "start"
+      ],
+      "answer_index": 0,
+      "youtube_start": 60,
+      "youtube_end": 72
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But if you wanna leave, take",
+      "excerpt_after": "care",
+      "options": [
+        "good",
+        "leavin",
+        "never",
+        "seen"
+      ],
+      "answer_index": 0,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "everything",
+        "lost",
+        "to",
+        "that",
+        "Now",
+        "I've"
+      ],
+      "answer": [
+        "Now",
+        "that",
+        "I've",
+        "lost",
+        "everything",
+        "to",
+        "you"
+      ],
+      "youtube_start": 13
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "something",
+        "say",
+        "You",
+        "you",
+        "new",
+        "wanna",
+        "start"
+      ],
+      "answer": [
+        "You",
+        "say",
+        "you",
+        "wanna",
+        "start",
+        "something",
+        "new"
+      ],
+      "youtube_start": 18
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "it's",
+        "heart",
+        "breakin'",
+        "my",
+        "And",
+        "you're",
+        "leavin'"
+      ],
+      "answer": [
+        "And",
+        "it's",
+        "breakin'",
+        "my",
+        "heart",
+        "you're",
+        "leavin'"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "breakin'",
+        "in",
+        "two",
+        "heart",
+        "my",
+        "it's"
+      ],
+      "answer": [
+        "And",
+        "it's",
+        "breakin'",
+        "my",
+        "heart",
+        "in",
+        "two"
+      ],
+      "youtube_start": 70
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "girl",
+        "be",
+        "Don't",
+        "bad"
+      ],
+      "answer": [
+        "Don't",
+        "be",
+        "a",
+        "bad",
+        "girl"
+      ],
+      "youtube_start": 77
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"baby\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"baby\" na música inteira?",
+      "word": "baby",
+      "answer": 18
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"it's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"it's\" na música inteira?",
+      "word": "it's",
+      "answer": 14
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You say you wanna start something new",
+          "order": 0
+        },
+        {
+          "text": "Don't be a bad girl",
+          "order": 1
+        },
+        {
+          "text": "But if you wanna leave, take good care",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Wild World\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Wild World\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "baby",
+        "it's",
+        "world",
+        "wild"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "baby",
+        "it's",
+        "world",
+        "wild"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "baby",
+        "it's",
+        "world",
+        "wild"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        }
+      ]
+    }
+  ]
+}

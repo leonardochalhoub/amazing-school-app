@@ -83,69 +83,179 @@
       "youtube_end": 23
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Taking my",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sulking",
+      "excerpt_after": "to the masses",
+      "youtube_start": 39,
+      "youtube_end": 53
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Speaking my",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lesson",
+      "excerpt_after": "from the brain",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Send a",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "prayer",
+      "excerpt_after": "to the ones up above",
+      "youtube_start": 86,
+      "youtube_end": 100
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Falling like",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "ashes",
+      "excerpt_after": "to the ground",
+      "youtube_start": 103,
+      "youtube_end": 117
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Till it",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "broke",
+      "excerpt_after": "open and it rained down",
+      "youtube_start": 110,
+      "youtube_end": 124
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
-      "excerpt": "I was broken from a young age",
+      "excerpt": "I'ma say all the words inside my head",
       "model_answer_pt": "",
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "spot_the_grammar",
-      "prompt_en": "Write the full form of each contraction:",
-      "prompt_pt": "Escreva a forma completa de cada contração:",
-      "expected": [
-        {
-          "short": "i'm",
-          "full": "I am"
-        },
-        {
-          "short": "don't",
-          "full": "do not"
-        },
-        {
-          "short": "you've",
-          "full": "you have"
-        },
-        {
-          "short": "you're",
-          "full": "you are"
-        }
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I was choking in the crowd",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "discussion",
-      "prompt_en": "Describe the mood of \"Believer\" in three adjectives. What part of the song makes you feel that way?",
-      "prompt_pt": "Descreva o clima de \"Believer\" em três adjetivos. Que parte da música te faz sentir isso?",
-      "target_vocab": [
-        "pain",
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But they never did, ever lived",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The way that things have been, oh-ooh",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The master of my sea, oh-ooh",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'ma say all the",
+      "excerpt_after": "inside my head",
+      "options": [
+        "lesson",
+        "taking",
+        "took",
+        "words"
+      ],
+      "answer_index": 3,
+      "youtube_start": 9,
+      "youtube_end": 21
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Writing my",
+      "excerpt_after": "for the few",
+      "options": [
+        "fired",
+        "first",
+        "poems",
+        "rain"
+      ],
+      "answer_index": 2,
+      "youtube_start": 41,
+      "youtube_end": 53
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh, let the",
+      "excerpt_after": "fly, oh, let them rain",
+      "options": [
         "believer",
-        "break",
-        "stronger"
-      ]
+        "bullets",
+        "message",
+        "sulking"
+      ],
+      "answer_index": 1,
+      "youtube_start": 71,
+      "youtube_end": 83
     },
     {
-      "type": "word_to_meaning",
-      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
-      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
-      "pairs": [
-        {
-          "en": "pain",
-          "pt": "dor"
-        },
-        {
-          "en": "believer",
-          "pt": "crente / quem acredita"
-        },
-        {
-          "en": "break",
-          "pt": "quebrar"
-        },
-        {
-          "en": "stronger",
-          "pt": "mais forte"
-        }
-      ]
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Living my",
+      "excerpt_after": "up in the cloud",
+      "options": [
+        "brain",
+        "fired",
+        "inside",
+        "seeing"
+      ],
+      "answer_index": 0,
+      "youtube_start": 101,
+      "youtube_end": 113
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Till it",
+      "excerpt_after": "open and it rained down",
+      "options": [
+        "broke",
+        "fired",
+        "singing",
+        "veins"
+      ],
+      "answer_index": 0,
+      "youtube_start": 110,
+      "youtube_end": 122
     },
     {
       "type": "unscramble_line",
@@ -172,20 +282,92 @@
       "youtube_start": 18
     },
     {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "I'ma say all the",
-      "excerpt_after": "inside my head",
-      "options": [
-        "first",
-        "inside",
-        "things",
-        "words"
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "my",
+        "to",
+        "masses",
+        "sulking",
+        "Taking"
       ],
-      "answer_index": 3,
-      "youtube_start": 9,
-      "youtube_end": 21
+      "answer": [
+        "Taking",
+        "my",
+        "sulking",
+        "to",
+        "the",
+        "masses"
+      ],
+      "youtube_start": 39
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "brain",
+        "from",
+        "the",
+        "lesson",
+        "my",
+        "Speaking"
+      ],
+      "answer": [
+        "Speaking",
+        "my",
+        "lesson",
+        "from",
+        "the",
+        "brain"
+      ],
+      "youtube_start": 49
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "in",
+        "I",
+        "was",
+        "choking",
+        "crowd"
+      ],
+      "answer": [
+        "I",
+        "was",
+        "choking",
+        "in",
+        "the",
+        "crowd"
+      ],
+      "youtube_start": 99
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "But",
+        "they",
+        "never",
+        "lived",
+        "ever",
+        "did,"
+      ],
+      "answer": [
+        "But",
+        "they",
+        "never",
+        "did,",
+        "ever",
+        "lived"
+      ],
+      "youtube_start": 107
     },
     {
       "type": "count_word",
@@ -193,6 +375,13 @@
       "prompt_pt": "Quantas vezes você ouve a palavra \"pain\" na música inteira?",
       "word": "pain",
       "answer": 13
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"believer\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"believer\" na música inteira?",
+      "word": "believer",
+      "answer": 18
     },
     {
       "type": "line_order",
@@ -210,6 +399,104 @@
         {
           "text": "Living my brain up in the cloud",
           "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I'ma say all the words inside my head",
+          "order": 0
+        },
+        {
+          "text": "Third things third",
+          "order": 1
+        },
+        {
+          "text": "Hoping my feelings, they would drown",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Believer\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Believer\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "pain",
+        "believer",
+        "break",
+        "stronger"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Believer\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Believer\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "pain",
+        "believer",
+        "break",
+        "stronger"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Believer\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Believer\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "pain",
+        "believer",
+        "break",
+        "stronger"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "pain",
+          "pt": "dor"
+        },
+        {
+          "en": "believer",
+          "pt": "crente / quem acredita"
+        },
+        {
+          "en": "break",
+          "pt": "quebrar"
+        },
+        {
+          "en": "stronger",
+          "pt": "mais forte"
         }
       ]
     }

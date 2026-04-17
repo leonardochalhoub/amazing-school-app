@@ -84,6 +84,61 @@
       "youtube_end": 16
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Not",
+      "blank_hint": "word starting with \"k\"",
+      "answer": "knowing",
+      "excerpt_after": "what it was",
+      "youtube_start": 36,
+      "youtube_end": 50
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And in your eyes,",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "holding mine",
+      "youtube_start": 55,
+      "youtube_end": 69
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "whispered",
+      "excerpt_after": "underneath my breath",
+      "youtube_start": 84,
+      "youtube_end": 98
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "carry",
+      "excerpt_after": "love, to carry children of our own",
+      "youtube_start": 124,
+      "youtube_end": 138
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I see my",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "future",
+      "excerpt_after": "in your eyes",
+      "youtube_start": 154,
+      "youtube_end": 168
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
@@ -92,61 +147,116 @@
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "spot_the_grammar",
-      "prompt_en": "Write the full form of each contraction:",
-      "prompt_pt": "Escreva a forma completa de cada contração:",
-      "expected": [
-        {
-          "short": "you're",
-          "full": "you are"
-        },
-        {
-          "short": "i'm",
-          "full": "I am"
-        },
-        {
-          "short": "i'll",
-          "full": "I will"
-        },
-        {
-          "short": "we're",
-          "full": "we are"
-        }
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I will not give you up this time",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "discussion",
-      "prompt_en": "If you had to summarize \"Perfect\" in one sentence to someone who has never heard it, what would you say?",
-      "prompt_pt": "Se você tivesse que resumir \"Perfect\" em uma frase para alguém que nunca ouviu, o que diria?",
-      "target_vocab": [
-        "perfect",
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And in your eyes, you're holding mine",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "With you between my arms",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I whispered underneath my breath",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "a love, for me",
+      "options": [
+        "barefoot",
+        "fell",
         "found",
-        "hold",
-        "beautiful"
-      ]
+        "sweet"
+      ],
+      "answer_index": 2,
+      "youtube_start": 2,
+      "youtube_end": 14
     },
     {
-      "type": "word_to_meaning",
-      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
-      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
-      "pairs": [
-        {
-          "en": "perfect",
-          "pt": "perfeito(a)"
-        },
-        {
-          "en": "found",
-          "pt": "encontrou"
-        },
-        {
-          "en": "hold",
-          "pt": "segurar"
-        },
-        {
-          "en": "beautiful",
-          "pt": "linda / bonito(a)"
-        }
-      ]
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I will not",
+      "excerpt_after": "you up this time",
+      "options": [
+        "give",
+        "someone",
+        "waiting",
+        "well"
+      ],
+      "answer_index": 0,
+      "youtube_start": 40,
+      "youtube_end": 52
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "With you",
+      "excerpt_after": "my arms",
+      "options": [
+        "between",
+        "never",
+        "waiting",
+        "whispered"
+      ],
+      "answer_index": 0,
+      "youtube_start": 69,
+      "youtube_end": 81
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "To",
+      "excerpt_after": "love, to carry children of our own",
+      "options": [
+        "arms",
+        "between",
+        "carry",
+        "give"
+      ],
+      "answer_index": 2,
+      "youtube_start": 124,
+      "youtube_end": 136
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I see my",
+      "excerpt_after": "in your eyes",
+      "options": [
+        "future",
+        "never",
+        "right",
+        "waiting"
+      ],
+      "answer_index": 0,
+      "youtube_start": 154,
+      "youtube_end": 166
     },
     {
       "type": "unscramble_line",
@@ -171,26 +281,103 @@
       "youtube_start": 2
     },
     {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "I",
-      "excerpt_after": "a love, for me",
-      "options": [
-        "darling",
-        "dive",
-        "found",
-        "right"
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "eyes,",
+        "mine",
+        "in",
+        "And",
+        "holding",
+        "your",
+        "you're"
       ],
-      "answer_index": 2,
-      "youtube_start": 2,
-      "youtube_end": 14
+      "answer": [
+        "And",
+        "in",
+        "your",
+        "eyes,",
+        "you're",
+        "holding",
+        "mine"
+      ],
+      "youtube_start": 55
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "a",
+        "said",
+        "you",
+        "When",
+        "looked",
+        "mess"
+      ],
+      "answer": [
+        "When",
+        "you",
+        "said",
+        "you",
+        "looked",
+        "a",
+        "mess"
+      ],
+      "youtube_start": 80
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Fighting",
+        "all",
+        "odds",
+        "against"
+      ],
+      "answer": [
+        "Fighting",
+        "against",
+        "all",
+        "odds"
+      ],
+      "youtube_start": 135
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Listening",
+        "our",
+        "favorite",
+        "to",
+        "song"
+      ],
+      "answer": [
+        "Listening",
+        "to",
+        "our",
+        "favorite",
+        "song"
+      ],
+      "youtube_start": 175
     },
     {
       "type": "count_word",
       "prompt_en": "How many times do you hear the word \"perfect\" in the whole song?",
       "prompt_pt": "Quantas vezes você ouve a palavra \"perfect\" na música inteira?",
       "word": "perfect",
+      "answer": 4
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"found\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"found\" na música inteira?",
+      "word": "found",
       "answer": 4
     },
     {
@@ -209,6 +396,112 @@
         {
           "text": "Barefoot on the grass",
           "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Well, I found a girl, beautiful and sweet",
+          "order": 0
+        },
+        {
+          "text": "I know we'll be alright this time",
+          "order": 1
+        },
+        {
+          "text": "I don't deserve this",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Perfect\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Perfect\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "perfect",
+        "found",
+        "hold",
+        "beautiful"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Perfect\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Perfect\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "perfect",
+        "found",
+        "hold",
+        "beautiful"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Perfect\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Perfect\", o que aconteceria?",
+      "target_vocab": [
+        "perfect",
+        "found",
+        "hold",
+        "beautiful"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "perfect",
+          "pt": "perfeito(a)"
+        },
+        {
+          "en": "found",
+          "pt": "encontrou"
+        },
+        {
+          "en": "hold",
+          "pt": "segurar"
+        },
+        {
+          "en": "beautiful",
+          "pt": "linda / bonito(a)"
         }
       ]
     }

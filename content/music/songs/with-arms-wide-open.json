@@ -56,6 +56,61 @@
       "youtube_end": 30
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "seems",
+      "excerpt_after": "my life is going to change",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "closed",
+      "excerpt_after": "my eyes, begin to pray",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "With arms wide open",
+      "blank_hint": "word starting with \"u\"",
+      "answer": "under",
+      "excerpt_after": "the sunlight",
+      "youtube_start": 42,
+      "youtube_end": 56
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Welcome to this",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "place",
+      "excerpt_after": "I'll show you everything",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "stand",
+      "excerpt_after": "in awe, we've created life",
+      "youtube_start": 91,
+      "youtube_end": 105
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
@@ -64,61 +119,116 @@
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "spot_the_grammar",
-      "prompt_en": "Write the full form of each contraction:",
-      "prompt_pt": "Escreva a forma completa de cada contração:",
-      "expected": [
-        {
-          "short": "i'll",
-          "full": "I will"
-        },
-        {
-          "short": "don't",
-          "full": "do not"
-        },
-        {
-          "short": "i'm",
-          "full": "I am"
-        },
-        {
-          "short": "we've",
-          "full": "we have"
-        }
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Welcome to this place, I'll show you everything",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "discussion",
-      "prompt_en": "If you had to summarize \"With Arms Wide Open\" in one sentence to someone who has never heard it, what would you say?",
-      "prompt_pt": "Se você tivesse que resumir \"With Arms Wide Open\" em uma frase para alguém que nunca ouviu, o que diria?",
-      "target_vocab": [
-        "arms wide open",
-        "welcome",
-        "teach",
-        "hope"
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "To be the man I have to be",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "word_to_meaning",
-      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
-      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
-      "pairs": [
-        {
-          "en": "arms wide open",
-          "pt": "braços bem abertos"
-        },
-        {
-          "en": "welcome",
-          "pt": "dar boas-vindas"
-        },
-        {
-          "en": "teach",
-          "pt": "ensinar"
-        },
-        {
-          "en": "hope",
-          "pt": "esperar / esperança"
-        }
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll show you love, I'll show you everything",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "It seems my life is going to change",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well, I just",
+      "excerpt_after": "the news today",
+      "options": [
+        "demand",
+        "heard",
+        "ready",
+        "welcome"
+      ],
+      "answer_index": 1,
+      "youtube_start": 16,
+      "youtube_end": 28
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "my eyes, begin to pray",
+      "options": [
+        "closed",
+        "eyes",
+        "face",
+        "weve"
+      ],
+      "answer_index": 0,
+      "youtube_start": 30,
+      "youtube_end": 42
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Welcome to this",
+      "excerpt_after": "I'll show you everything",
+      "options": [
+        "hope",
+        "open",
+        "place",
+        "pray"
+      ],
+      "answer_index": 2,
+      "youtube_start": 49,
+      "youtube_end": 61
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We",
+      "excerpt_after": "in awe, we've created life",
+      "options": [
+        "changed",
+        "dont",
+        "hold",
+        "stand"
+      ],
+      "answer_index": 3,
+      "youtube_start": 91,
+      "youtube_end": 103
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "With arms wide open, now",
+      "excerpt_after": "has changed",
+      "options": [
+        "everything",
+        "sunlight",
+        "understands",
+        "welcome"
+      ],
+      "answer_index": 0,
+      "youtube_start": 111,
+      "youtube_end": 123
     },
     {
       "type": "unscramble_line",
@@ -145,20 +255,100 @@
       "youtube_start": 16
     },
     {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "Well, I just",
-      "excerpt_after": "the news today",
-      "options": [
-        "heard",
-        "news",
-        "today",
-        "well"
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "eyes,",
+        "pray",
+        "begin",
+        "my",
+        "I",
+        "to",
+        "closed"
       ],
-      "answer_index": 0,
-      "youtube_start": 16,
-      "youtube_end": 28
+      "answer": [
+        "I",
+        "closed",
+        "my",
+        "eyes,",
+        "begin",
+        "to",
+        "pray"
+      ],
+      "youtube_start": 30
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "With",
+        "arms",
+        "under",
+        "wide",
+        "sunlight",
+        "open",
+        "the"
+      ],
+      "answer": [
+        "With",
+        "arms",
+        "wide",
+        "open",
+        "under",
+        "the",
+        "sunlight"
+      ],
+      "youtube_start": 42
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "know",
+        "Well,",
+        "I'm",
+        "ready",
+        "if",
+        "don't",
+        "I"
+      ],
+      "answer": [
+        "Well,",
+        "I",
+        "don't",
+        "know",
+        "if",
+        "I'm",
+        "ready"
+      ],
+      "youtube_start": 72
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "created",
+        "we've",
+        "awe,",
+        "stand",
+        "life",
+        "We",
+        "in"
+      ],
+      "answer": [
+        "We",
+        "stand",
+        "in",
+        "awe,",
+        "we've",
+        "created",
+        "life"
+      ],
+      "youtube_start": 91
     },
     {
       "type": "count_word",
@@ -166,6 +356,13 @@
       "prompt_pt": "Quantas vezes você ouve a palavra \"welcome\" na música inteira?",
       "word": "welcome",
       "answer": 3
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"wide\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"wide\" na música inteira?",
+      "word": "wide",
+      "answer": 16
     },
     {
       "type": "line_order",
@@ -183,6 +380,89 @@
         {
           "text": "With arms wide open",
           "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Creed one question about \"With Arms Wide Open\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Creed sobre \"With Arms Wide Open\", o que seria e por quê?",
+      "target_vocab": [
+        "arms wide open",
+        "welcome",
+        "teach",
+        "hope"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"With Arms Wide Open\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"With Arms Wide Open\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "arms wide open",
+        "welcome",
+        "teach",
+        "hope"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"With Arms Wide Open\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"With Arms Wide Open\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "arms wide open",
+        "welcome",
+        "teach",
+        "hope"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "we've",
+          "full": "we have"
+        },
+        {
+          "short": "he's",
+          "full": "he is"
+        }
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "arms wide open",
+          "pt": "braços bem abertos"
+        },
+        {
+          "en": "welcome",
+          "pt": "dar boas-vindas"
+        },
+        {
+          "en": "teach",
+          "pt": "ensinar"
+        },
+        {
+          "en": "hope",
+          "pt": "esperar / esperança"
         }
       ]
     }

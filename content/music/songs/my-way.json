@@ -1,0 +1,484 @@
+{
+  "slug": "my-way",
+  "title": "My Way",
+  "artist": "Frank Sinatra",
+  "year": 1969,
+  "album": "My Way (40th Anniversary Edition)",
+  "genre": [
+    "pop",
+    "jazz"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 277,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "My Way by Frank Sinatra (1969) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "i've",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I've lived a life that's full\""
+    },
+    {
+      "term": "each",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"I traveled each and every highway\""
+    },
+    {
+      "term": "i'll",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"My friend, I'll say it clear\""
+    },
+    {
+      "term": "through",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"And saw it through without exemption\""
+    },
+    {
+      "term": "there",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Yes, there were times, I'm sure you knew\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I did it my way",
+          "Regrets, I've had a few",
+          "But then again, too few to mention",
+          "I did what I had to do"
+        ],
+        "start_seconds": 49,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "And did it my way",
+          "I've loved, I've laughed and cried",
+          "I've had my fill, my share of losing",
+          "And now, as tears subside"
+        ],
+        "start_seconds": 137,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And so I face the",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "final",
+      "excerpt_after": "curtain",
+      "youtube_start": 11,
+      "youtube_end": 25
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lived",
+      "excerpt_after": "a life that's full",
+      "youtube_start": 31,
+      "youtube_end": 45
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "planned",
+      "excerpt_after": "each charted course",
+      "youtube_start": 81,
+      "youtube_end": 95
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "faced",
+      "excerpt_after": "it all, and I stood tall",
+      "youtube_start": 130,
+      "youtube_end": 144
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And now, as",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tears",
+      "excerpt_after": "subside",
+      "youtube_start": 156,
+      "youtube_end": 170
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To say the",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "things",
+      "excerpt_after": "he truly feels",
+      "youtube_start": 206,
+      "youtube_end": 220
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And so I face the final curtain",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll state my case, of which I'm certain",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I traveled each and every highway",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Regrets, I've had a few",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I planned each charted course",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And so I",
+      "excerpt_after": "the final curtain",
+      "options": [
+        "careful",
+        "case",
+        "face",
+        "through"
+      ],
+      "answer_index": 2,
+      "youtube_start": 11,
+      "youtube_end": 23
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "each and every highway",
+      "options": [
+        "amusing",
+        "clear",
+        "state",
+        "traveled"
+      ],
+      "answer_index": 3,
+      "youtube_start": 36,
+      "youtube_end": 48
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Yes,",
+      "excerpt_after": "were times, I'm sure you knew",
+      "options": [
+        "near",
+        "regrets",
+        "there",
+        "times"
+      ],
+      "answer_index": 2,
+      "youtube_start": 105,
+      "youtube_end": 117
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've had my",
+      "excerpt_after": "my share of losing",
+      "options": [
+        "along",
+        "course",
+        "fill",
+        "state"
+      ],
+      "answer_index": 2,
+      "youtube_start": 149,
+      "youtube_end": 161
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "If not",
+      "excerpt_after": "then he has naught",
+      "options": [
+        "himself",
+        "lived",
+        "planned",
+        "step"
+      ],
+      "answer_index": 0,
+      "youtube_start": 201,
+      "youtube_end": 213
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "near",
+        "now,",
+        "And",
+        "the",
+        "end",
+        "is"
+      ],
+      "answer": [
+        "And",
+        "now,",
+        "the",
+        "end",
+        "is",
+        "near"
+      ],
+      "youtube_start": 5
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "every",
+        "each",
+        "highway",
+        "I",
+        "and",
+        "traveled"
+      ],
+      "answer": [
+        "I",
+        "traveled",
+        "each",
+        "and",
+        "every",
+        "highway"
+      ],
+      "youtube_start": 36
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "had",
+        "I",
+        "do",
+        "what",
+        "did",
+        "I",
+        "to"
+      ],
+      "answer": [
+        "I",
+        "did",
+        "what",
+        "I",
+        "had",
+        "to",
+        "do"
+      ],
+      "youtube_start": 68
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "did",
+        "And",
+        "it",
+        "way"
+      ],
+      "answer": [
+        "And",
+        "did",
+        "it",
+        "my",
+        "way"
+      ],
+      "youtube_start": 137
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "not",
+        "no,",
+        "no,",
+        "Oh,",
+        "oh,"
+      ],
+      "answer": [
+        "Oh,",
+        "no,",
+        "oh,",
+        "no,",
+        "not",
+        "me"
+      ],
+      "youtube_start": 182
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"i've\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"i've\" na música inteira?",
+      "word": "i've",
+      "answer": 5
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"each\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"each\" na música inteira?",
+      "word": "each",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And now, the end is near",
+          "order": 0
+        },
+        {
+          "text": "And saw it through without exemption",
+          "order": 1
+        },
+        {
+          "text": "I've had my fill, my share of losing",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And so I face the final curtain",
+          "order": 0
+        },
+        {
+          "text": "Yes, there were times, I'm sure you knew",
+          "order": 1
+        },
+        {
+          "text": "I find it all so amusing",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "i've",
+        "each",
+        "i'll",
+        "through"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "i've",
+        "each",
+        "i'll",
+        "through"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"My Way\" was released in 1969. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"My Way\" foi lançada em 1969. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "i've",
+        "each",
+        "i'll",
+        "through"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        }
+      ]
+    }
+  ]
+}

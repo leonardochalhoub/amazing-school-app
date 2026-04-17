@@ -1,0 +1,465 @@
+{
+  "slug": "oops-i-did-it-again",
+  "title": "Oops!... I Did It Again",
+  "artist": "Britney Spears",
+  "year": 2000,
+  "album": "Oops!... I Did It Again",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 211,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Oops!... I Did It Again by Britney Spears (2000) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 14 times; first heard in: \"Oh, baby, it might seem like a crush\""
+    },
+    {
+      "term": "oops",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Oops, I did it again\""
+    },
+    {
+      "term": "think",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I think I did it again\""
+    },
+    {
+      "term": "heart",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I played with your heart\""
+    },
+    {
+      "term": "lost",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Got lost in the game\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I'm not that innocent",
+          "You see, my problem is this",
+          "I'm dreaming away, wishing that heroes, they truly exist"
+        ],
+        "start_seconds": 67,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Yeah, yeah, yeah, yeah, yeah, yeah",
+          "Yeah, yeah, yeah, yeah, yeah, yeah",
+          "I think I did it again",
+          "I made you believe we're more than just friends"
+        ],
+        "start_seconds": 12,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "think",
+      "excerpt_after": "I did it again",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I made you",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "believe",
+      "excerpt_after": "we're more than just friends",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But it",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "doesnt",
+      "excerpt_after": "mean that I'm serious",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "played",
+      "excerpt_after": "with your heart",
+      "youtube_start": 53,
+      "youtube_end": 67
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dreaming",
+      "excerpt_after": "away, wishing that heroes, they truly exist",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh, it's",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "beautiful",
+      "excerpt_after": "but wait a minute, isn't this?",
+      "youtube_start": 136,
+      "youtube_end": 150
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I think I did it again",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oops, I did it again",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oops, you think I'm in love",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm not that innocent",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I cry watching the days",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Yeah,",
+      "excerpt_after": "yeah, yeah, yeah, yeah",
+      "options": [
+        "fool",
+        "minute",
+        "theres",
+        "yeah"
+      ],
+      "answer_index": 3,
+      "youtube_start": 12,
+      "youtube_end": 24
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh,",
+      "excerpt_after": "it might seem like a crush",
+      "options": [
+        "baby",
+        "sent",
+        "wishing",
+        "yeah"
+      ],
+      "answer_index": 0,
+      "youtube_start": 29,
+      "youtube_end": 41
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That is just so",
+      "excerpt_after": "me",
+      "options": [
+        "dropped",
+        "heroes",
+        "typically",
+        "watching"
+      ],
+      "answer_index": 2,
+      "youtube_start": 44,
+      "youtube_end": 56
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That I'm",
+      "excerpt_after": "from above",
+      "options": [
+        "problem",
+        "sent",
+        "serious",
+        "thought"
+      ],
+      "answer_index": 1,
+      "youtube_start": 63,
+      "youtube_end": 75
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I cry",
+      "excerpt_after": "the days",
+      "options": [
+        "aboard",
+        "britney",
+        "played",
+        "watching"
+      ],
+      "answer_index": 3,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "yeah,",
+        "Yeah,",
+        "yeah,",
+        "yeah",
+        "yeah,",
+        "yeah,"
+      ],
+      "answer": [
+        "Yeah,",
+        "yeah,",
+        "yeah,",
+        "yeah,",
+        "yeah,",
+        "yeah"
+      ],
+      "youtube_start": 12
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "'Cause",
+        "all",
+        "lose",
+        "senses",
+        "to",
+        "my"
+      ],
+      "answer": [
+        "'Cause",
+        "to",
+        "lose",
+        "all",
+        "my",
+        "senses"
+      ],
+      "youtube_start": 39
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "with",
+        "heart",
+        "your",
+        "played"
+      ],
+      "answer": [
+        "I",
+        "played",
+        "with",
+        "your",
+        "heart"
+      ],
+      "youtube_start": 53
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "innocent",
+        "I'm",
+        "not",
+        "that"
+      ],
+      "answer": [
+        "I'm",
+        "not",
+        "that",
+        "innocent"
+      ],
+      "youtube_start": 67
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "to",
+        "all",
+        "senses",
+        "lose",
+        "But"
+      ],
+      "answer": [
+        "But",
+        "to",
+        "lose",
+        "all",
+        "my",
+        "senses"
+      ],
+      "youtube_start": 89
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"baby\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"baby\" na música inteira?",
+      "word": "baby",
+      "answer": 14
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"oops\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"oops\" na música inteira?",
+      "word": "oops",
+      "answer": 11
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Yeah, yeah, yeah, yeah, yeah, yeah",
+          "order": 0
+        },
+        {
+          "text": "I cry watching the days",
+          "order": 1
+        },
+        {
+          "text": "Got lost in this game, oh, baby",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "baby",
+        "oops",
+        "think",
+        "heart"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "baby",
+        "oops",
+        "think",
+        "heart"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Oops!... I Did It Again\" was released in 2000. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Oops!... I Did It Again\" foi lançada em 2000. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "baby",
+        "oops",
+        "think",
+        "heart"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "doesn't",
+          "full": "does not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

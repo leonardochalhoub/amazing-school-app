@@ -1,0 +1,430 @@
+{
+  "slug": "come-away-with-me",
+  "title": "Come Away with Me",
+  "artist": "Norah Jones",
+  "year": 2002,
+  "album": "Come Away With Me (Remastered 2022)",
+  "genre": [
+    "jazz"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 198,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Come Away with Me by Norah Jones (2002) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "night",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Come away with me, in the night\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Come away with me",
+          "And I will write you a song",
+          "Come away with me, on a bus",
+          "Come away where they can't tempt us"
+        ],
+        "start_seconds": 31,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Come away with me"
+        ],
+        "start_seconds": 179,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I will",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "write",
+      "excerpt_after": "you a song",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Come away where they can't",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tempt",
+      "excerpt_after": "us",
+      "youtube_start": 53,
+      "youtube_end": 67
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "walk with you",
+      "youtube_start": 66,
+      "youtube_end": 80
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "On a",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "cloudy",
+      "excerpt_after": "day",
+      "youtube_start": 70,
+      "youtube_end": 84
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "In",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fields",
+      "excerpt_after": "where the yellow grass grows knee-high",
+      "youtube_start": 74,
+      "youtube_end": 88
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "On a",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "mountain",
+      "excerpt_after": "top",
+      "youtube_start": 89,
+      "youtube_end": 103
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I will write you a song",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I wanna walk with you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Come away with me, and we'll kiss",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "While I'm safe there in your arms",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Come away with me, in the night",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I will",
+      "excerpt_after": "you a song",
+      "options": [
+        "arms",
+        "mountain",
+        "wake",
+        "write"
+      ],
+      "answer_index": 3,
+      "youtube_start": 33,
+      "youtube_end": 45
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I",
+      "excerpt_after": "walk with you",
+      "options": [
+        "cloudy",
+        "mountain",
+        "wanna",
+        "wont"
+      ],
+      "answer_index": 2,
+      "youtube_start": 66,
+      "youtube_end": 78
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "In",
+      "excerpt_after": "where the yellow grass grows knee-high",
+      "options": [
+        "falling",
+        "fields",
+        "well",
+        "write"
+      ],
+      "answer_index": 1,
+      "youtube_start": 74,
+      "youtube_end": 86
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Come away with me, and",
+      "excerpt_after": "kiss",
+      "options": [
+        "cant",
+        "lies",
+        "rain",
+        "well"
+      ],
+      "answer_index": 3,
+      "youtube_start": 85,
+      "youtube_end": 97
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I wanna",
+      "excerpt_after": "up with the rain",
+      "options": [
+        "fields",
+        "never",
+        "wake",
+        "while"
+      ],
+      "answer_index": 2,
+      "youtube_start": 151,
+      "youtube_end": 163
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "away",
+        "me,",
+        "with",
+        "night",
+        "the",
+        "in",
+        "Come"
+      ],
+      "answer": [
+        "Come",
+        "away",
+        "with",
+        "me,",
+        "in",
+        "the",
+        "night"
+      ],
+      "youtube_start": 22
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "you",
+        "song",
+        "write",
+        "will",
+        "I",
+        "a"
+      ],
+      "answer": [
+        "And",
+        "I",
+        "will",
+        "write",
+        "you",
+        "a",
+        "song"
+      ],
+      "youtube_start": 33
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "wanna",
+        "you",
+        "And",
+        "walk",
+        "I",
+        "with"
+      ],
+      "answer": [
+        "And",
+        "I",
+        "wanna",
+        "walk",
+        "with",
+        "you"
+      ],
+      "youtube_start": 66
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "away",
+        "with",
+        "kiss",
+        "and",
+        "we'll",
+        "me,",
+        "Come"
+      ],
+      "answer": [
+        "Come",
+        "away",
+        "with",
+        "me,",
+        "and",
+        "we'll",
+        "kiss"
+      ],
+      "youtube_start": 85
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "on",
+        "roof",
+        "a",
+        "Falling",
+        "tin"
+      ],
+      "answer": [
+        "Falling",
+        "on",
+        "a",
+        "tin",
+        "roof"
+      ],
+      "youtube_start": 156
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Come away with me, in the night",
+          "order": 0
+        },
+        {
+          "text": "And I wanna walk with you",
+          "order": 1
+        },
+        {
+          "text": "I wanna wake up with the rain",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "night"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Come Away with Me\" was released in 2002. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Come Away with Me\" foi lançada em 2002. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "night"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Come Away with Me\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Come Away with Me\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "night"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

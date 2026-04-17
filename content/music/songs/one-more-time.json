@@ -1,0 +1,400 @@
+{
+  "slug": "one-more-time",
+  "title": "One More Time",
+  "artist": "Daft Punk",
+  "year": 2000,
+  "album": "Discovery",
+  "genre": [
+    "dance"
+  ],
+  "cefr_level": "a1.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 320,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "One More Time by Daft Punk (2000) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "celebrate",
+      "pt": "",
+      "note": "Appears 36 times; first heard in: \"We're gonna celebrate\""
+    },
+    {
+      "term": "time",
+      "pt": "",
+      "note": "Appears 28 times; first heard in: \"One more time\""
+    },
+    {
+      "term": "free",
+      "pt": "",
+      "note": "Appears 28 times; first heard in: \"Celebrate and dance so free\""
+    },
+    {
+      "term": "we're",
+      "pt": "",
+      "note": "Appears 22 times; first heard in: \"We're gonna celebrate\""
+    },
+    {
+      "term": "feeling",
+      "pt": "",
+      "note": "Appears 17 times; first heard in: \"Mmm, you know I'm just feeling\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "One more time",
+          "One more time"
+        ],
+        "start_seconds": 30,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "We're gonna celebrate",
+          "Oh yeah, all right",
+          "Don't stop the dancing",
+          "One more time"
+        ],
+        "start_seconds": 64,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You know we're",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "do it right, tonight",
+      "youtube_start": 183,
+      "youtube_end": 197
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Music's got me",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "feeling",
+      "excerpt_after": "the need",
+      "youtube_start": 191,
+      "youtube_end": 205
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Celebrate and",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dance",
+      "excerpt_after": "so free",
+      "youtube_start": 208,
+      "youtube_end": 222
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We're gonna celebrate",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We don't stop",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You know we're gonna do it right, tonight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh yeah, all right",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Don't wait too late",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh",
+      "excerpt_after": "all right",
+      "options": [
+        "feeling",
+        "know",
+        "need",
+        "yeah"
+      ],
+      "answer_index": 3,
+      "youtube_start": 66,
+      "youtube_end": 78
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Don't",
+      "excerpt_after": "the dancing",
+      "options": [
+        "dance",
+        "gonna",
+        "stop",
+        "tonight"
+      ],
+      "answer_index": 2,
+      "youtube_start": 68,
+      "youtube_end": 80
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Mmm, you",
+      "excerpt_after": "I'm just feeling",
+      "options": [
+        "know",
+        "musics",
+        "tonight",
+        "yeah"
+      ],
+      "answer_index": 0,
+      "youtube_start": 142,
+      "youtube_end": 154
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You know we're",
+      "excerpt_after": "do it right, tonight",
+      "options": [
+        "free",
+        "gonna",
+        "know",
+        "late"
+      ],
+      "answer_index": 1,
+      "youtube_start": 183,
+      "youtube_end": 195
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Music's got me",
+      "excerpt_after": "the need",
+      "options": [
+        "dance",
+        "feeling",
+        "know",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 191,
+      "youtube_end": 203
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "yeah,",
+        "all",
+        "Oh",
+        "right"
+      ],
+      "answer": [
+        "Oh",
+        "yeah,",
+        "all",
+        "right"
+      ],
+      "youtube_start": 66
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "Don't",
+        "stop",
+        "dancing"
+      ],
+      "answer": [
+        "Don't",
+        "stop",
+        "the",
+        "dancing"
+      ],
+      "youtube_start": 68
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "late",
+        "wait",
+        "Don't",
+        "too"
+      ],
+      "answer": [
+        "Don't",
+        "wait",
+        "too",
+        "late"
+      ],
+      "youtube_start": 154
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Music's",
+        "the",
+        "feeling",
+        "got",
+        "need",
+        "me"
+      ],
+      "answer": [
+        "Music's",
+        "got",
+        "me",
+        "feeling",
+        "the",
+        "need"
+      ],
+      "youtube_start": 191
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Celebrate",
+        "dance",
+        "free",
+        "so",
+        "and"
+      ],
+      "answer": [
+        "Celebrate",
+        "and",
+        "dance",
+        "so",
+        "free"
+      ],
+      "youtube_start": 208
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"celebrate\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"celebrate\" na música inteira?",
+      "word": "celebrate",
+      "answer": 36
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"time\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"time\" na música inteira?",
+      "word": "time",
+      "answer": 28
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"One More Time\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"One More Time\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "celebrate",
+        "time",
+        "free",
+        "we're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Daft Punk one question about \"One More Time\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Daft Punk sobre \"One More Time\", o que seria e por quê?",
+      "target_vocab": [
+        "celebrate",
+        "time",
+        "free",
+        "we're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"One More Time\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"One More Time\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "celebrate",
+        "time",
+        "free",
+        "we're"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    }
+  ]
+}

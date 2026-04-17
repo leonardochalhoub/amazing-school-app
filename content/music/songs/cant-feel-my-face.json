@@ -1,0 +1,412 @@
+{
+  "slug": "cant-feel-my-face",
+  "title": "Can't Feel My Face",
+  "artist": "The Weeknd",
+  "year": 2015,
+  "album": "Beauty Behind the Madness",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 214,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Can't Feel My Face by The Weeknd (2015) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "can't",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"We both know we can't go without it\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"And I know she'll be the death of me, at least we'll both be numb\""
+    },
+    {
+      "term": "told",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"She told me, \"Don't worry about it\"\""
+    },
+    {
+      "term": "feel",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I can't feel my face when I'm with you\""
+    },
+    {
+      "term": "face",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I can't feel my face when I'm with you\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "She told me, \"Don't worry about it\"",
+          "She told me, \"Don't worry no more\"",
+          "We both know we can't go without it",
+          "She told me you'll never be in love, oh, oh, woo"
+        ],
+        "start_seconds": 25,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "She told me, \"Don't worry about it\"",
+          "She told me, \"Don't worry no more\"",
+          "We both know we can't go without it",
+          "She told me you'll never be in love, oh, oh, woo"
+        ],
+        "start_seconds": 78,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "She told me, \"Don't",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "worry",
+      "excerpt_after": "about it\"",
+      "youtube_start": 25,
+      "youtube_end": 39
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We both know we can't go",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "without",
+      "excerpt_after": "it",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "This I know, yeah, this I know",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "She told me, \"Don't worry about it\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "She told me, \"Don't worry no more\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We both know we can't go without it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "This I know, girl, I know",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "This I",
+      "excerpt_after": "yeah, this I know",
+      "options": [
+        "always",
+        "face",
+        "know",
+        "told"
+      ],
+      "answer_index": 2,
+      "youtube_start": 21,
+      "youtube_end": 33
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "She told me,",
+      "excerpt_after": "worry no more\"",
+      "options": [
+        "cant",
+        "dont",
+        "forever",
+        "without"
+      ],
+      "answer_index": 1,
+      "youtube_start": 30,
+      "youtube_end": 42
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "feel my face when I'm with you",
+      "options": [
+        "cant",
+        "face",
+        "never",
+        "told"
+      ],
+      "answer_index": 0,
+      "youtube_start": 44,
+      "youtube_end": 56
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "This I know,",
+      "excerpt_after": "I know",
+      "options": [
+        "death",
+        "girl",
+        "without",
+        "worry"
+      ],
+      "answer_index": 1,
+      "youtube_start": 75,
+      "youtube_end": 87
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We both know we can't go",
+      "excerpt_after": "it",
+      "options": [
+        "forever",
+        "never",
+        "without",
+        "young"
+      ],
+      "answer_index": 2,
+      "youtube_start": 87,
+      "youtube_end": 99
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "yeah,",
+        "I",
+        "This",
+        "know,",
+        "this",
+        "know"
+      ],
+      "answer": [
+        "This",
+        "I",
+        "know,",
+        "yeah,",
+        "this",
+        "I",
+        "know"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "She",
+        "worry",
+        "me,",
+        "told",
+        "it\"",
+        "about",
+        "\"Don't"
+      ],
+      "answer": [
+        "She",
+        "told",
+        "me,",
+        "\"Don't",
+        "worry",
+        "about",
+        "it\""
+      ],
+      "youtube_start": 25
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "more\"",
+        "told",
+        "worry",
+        "She",
+        "me,",
+        "no",
+        "\"Don't"
+      ],
+      "answer": [
+        "She",
+        "told",
+        "me,",
+        "\"Don't",
+        "worry",
+        "no",
+        "more\""
+      ],
+      "youtube_start": 30
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "know",
+        "I",
+        "I",
+        "know,",
+        "This",
+        "girl,"
+      ],
+      "answer": [
+        "This",
+        "I",
+        "know,",
+        "girl,",
+        "I",
+        "know"
+      ],
+      "youtube_start": 75
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"can't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"can't\" na música inteira?",
+      "word": "can't",
+      "answer": 11
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"know\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"know\" na música inteira?",
+      "word": "know",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "This I know, yeah, this I know",
+          "order": 0
+        },
+        {
+          "text": "We both know we can't go without it",
+          "order": 1
+        },
+        {
+          "text": "She told me, \"Don't worry no more\"",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Can't Feel My Face\" was released in 2015. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Can't Feel My Face\" foi lançada em 2015. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "can't",
+        "know",
+        "told",
+        "feel"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Can't Feel My Face\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Can't Feel My Face\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "can't",
+        "know",
+        "told",
+        "feel"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "can't",
+        "know",
+        "told",
+        "feel"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "you'll",
+          "full": "you will"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        }
+      ]
+    }
+  ]
+}

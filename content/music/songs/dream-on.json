@@ -1,0 +1,469 @@
+{
+  "slug": "dream-on",
+  "title": "Dream On",
+  "artist": "Aerosmith",
+  "year": 1973,
+  "album": "AEROSMITH",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 267,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Dream On by Aerosmith (1973) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "sing",
+      "pt": "",
+      "note": "Appears 20 times; first heard in: \"Sing with me, sing for a year\""
+    },
+    {
+      "term": "dream",
+      "pt": "",
+      "note": "Appears 17 times; first heard in: \"Dream on\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I know it's everybody's sin\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Yeah, I know nobody knows\""
+    },
+    {
+      "term": "year",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Sing with me, sing for a year\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Dream on",
+          "Dream on",
+          "Dream on",
+          "Dream until your dream come true"
+        ],
+        "start_seconds": 181,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Sing with me, sing for the year",
+          "Sing for the laughter and sing for the tear",
+          "Sing it with me, if it's just for today",
+          "Maybe tomorrow, the good Lord will take you away"
+        ],
+        "start_seconds": 222,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "All",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "these",
+      "excerpt_after": "lines on my face getting clearer",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Yeah, I know",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nobody",
+      "excerpt_after": "knows",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I know it's",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "everybodys",
+      "excerpt_after": "sin",
+      "youtube_start": 80,
+      "youtube_end": 94
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Live and",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "learn",
+      "excerpt_after": "from fools and from sages",
+      "youtube_start": 105,
+      "youtube_end": 119
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Sing for the",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "laughter",
+      "excerpt_after": "and sing for the tear",
+      "youtube_start": 126,
+      "youtube_end": 140
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Dream",
+      "blank_hint": "word starting with \"u\"",
+      "answer": "until",
+      "excerpt_after": "your dream come true",
+      "youtube_start": 185,
+      "youtube_end": 199
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Every time when I look in the mirror",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I know it's everybody's sin",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "All the things come back to you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The past is gone",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Isn't that the way?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Every",
+      "excerpt_after": "when I look in the mirror",
+      "options": [
+        "live",
+        "maybe",
+        "these",
+        "time"
+      ],
+      "answer_index": 3,
+      "youtube_start": 37,
+      "youtube_end": 49
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Everybody's got their",
+      "excerpt_after": "in life to pay",
+      "options": [
+        "dues",
+        "fools",
+        "these",
+        "year"
+      ],
+      "answer_index": 0,
+      "youtube_start": 64,
+      "youtube_end": 76
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You got to",
+      "excerpt_after": "to know how to win",
+      "options": [
+        "comes",
+        "lose",
+        "maybe",
+        "time"
+      ],
+      "answer_index": 1,
+      "youtube_start": 83,
+      "youtube_end": 95
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "All the",
+      "excerpt_after": "come back to you",
+      "options": [
+        "fools",
+        "lines",
+        "things",
+        "year"
+      ],
+      "answer_index": 2,
+      "youtube_start": 118,
+      "youtube_end": 130
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Maybe tomorrow, the",
+      "excerpt_after": "Lord will take you away",
+      "options": [
+        "dawn",
+        "good",
+        "lord",
+        "pages"
+      ],
+      "answer_index": 1,
+      "youtube_start": 172,
+      "youtube_end": 184
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "gone",
+        "past",
+        "is",
+        "The"
+      ],
+      "answer": [
+        "The",
+        "past",
+        "is",
+        "gone"
+      ],
+      "youtube_start": 51
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "that",
+        "Isn't",
+        "the",
+        "way?"
+      ],
+      "answer": [
+        "Isn't",
+        "that",
+        "the",
+        "way?"
+      ],
+      "youtube_start": 62
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "it",
+        "comes",
+        "Where",
+        "it",
+        "goes",
+        "and",
+        "where"
+      ],
+      "answer": [
+        "Where",
+        "it",
+        "comes",
+        "and",
+        "where",
+        "it",
+        "goes"
+      ],
+      "youtube_start": 77
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "know",
+        "true,",
+        "oh",
+        "it's",
+        "You"
+      ],
+      "answer": [
+        "You",
+        "know",
+        "it's",
+        "true,",
+        "oh"
+      ],
+      "youtube_start": 112
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "sing",
+        "with",
+        "a",
+        "for",
+        "year",
+        "Sing",
+        "me,"
+      ],
+      "answer": [
+        "Sing",
+        "with",
+        "me,",
+        "sing",
+        "for",
+        "a",
+        "year"
+      ],
+      "youtube_start": 123
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"sing\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"sing\" na música inteira?",
+      "word": "sing",
+      "answer": 20
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"dream\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"dream\" na música inteira?",
+      "word": "dream",
+      "answer": 17
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Every time when I look in the mirror",
+          "order": 0
+        },
+        {
+          "text": "Yeah, I know nobody knows",
+          "order": 1
+        },
+        {
+          "text": "All the things come back to you",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "All these lines on my face getting clearer",
+          "order": 0
+        },
+        {
+          "text": "Live and learn from fools and from sages",
+          "order": 1
+        },
+        {
+          "text": "Dream until your dream come true",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "sing",
+        "dream",
+        "it's",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Dream On\" was released in 1973. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Dream On\" foi lançada em 1973. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "sing",
+        "dream",
+        "it's",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Dream On\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Dream On\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "sing",
+        "dream",
+        "it's",
+        "know"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "isn't",
+          "full": "is not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

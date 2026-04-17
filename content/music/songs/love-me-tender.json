@@ -1,0 +1,475 @@
+{
+  "slug": "love-me-tender",
+  "title": "Love Me Tender",
+  "artist": "Elvis Presley",
+  "year": 1956,
+  "album": "Love Me Tender",
+  "genre": [
+    "rock-and-roll"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 165,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Love Me Tender by Elvis Presley (1956) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "tender",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Love me tender, love me sweet\""
+    },
+    {
+      "term": "true",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Love me tender, love me true\""
+    },
+    {
+      "term": "dreams",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"All my dreams fulfilled\""
+    },
+    {
+      "term": "fulfilled",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"All my dreams fulfilled\""
+    },
+    {
+      "term": "darling",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"For my darling I love you\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Love me tender, love me true",
+          "All my dreams fulfilled",
+          "For my darling I love you",
+          "And I always will"
+        ],
+        "start_seconds": 28,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Love me tender, love me true",
+          "All my dreams fulfilled",
+          "For my darling I love you",
+          "And I always will"
+        ],
+        "start_seconds": 79,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Love me",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tender",
+      "excerpt_after": "love me sweet",
+      "youtube_start": 3,
+      "youtube_end": 17
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "All my",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dreams",
+      "excerpt_after": "fulfilled",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "For my",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "darling",
+      "excerpt_after": "I love you",
+      "youtube_start": 41,
+      "youtube_end": 55
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "always",
+      "excerpt_after": "will",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "For it's",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "there",
+      "excerpt_after": "that I belong",
+      "youtube_start": 67,
+      "youtube_end": 81
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And we'll",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "part",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You have made my life complete",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "For my darling I love you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "For it's there that I belong",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Tell me you are mine",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Love me tender, love me sweet",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Love me",
+      "excerpt_after": "love me sweet",
+      "options": [
+        "darling",
+        "dreams",
+        "tender",
+        "well"
+      ],
+      "answer_index": 2,
+      "youtube_start": 3,
+      "youtube_end": 15
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You have made my",
+      "excerpt_after": "complete",
+      "options": [
+        "belong",
+        "life",
+        "mine",
+        "never"
+      ],
+      "answer_index": 1,
+      "youtube_start": 16,
+      "youtube_end": 28
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "For my",
+      "excerpt_after": "I love you",
+      "options": [
+        "complete",
+        "darling",
+        "life",
+        "mine"
+      ],
+      "answer_index": 1,
+      "youtube_start": 41,
+      "youtube_end": 53
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I",
+      "excerpt_after": "will",
+      "options": [
+        "always",
+        "dreams",
+        "sweet",
+        "well"
+      ],
+      "answer_index": 0,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "never part",
+      "options": [
+        "dreams",
+        "life",
+        "sweet",
+        "well"
+      ],
+      "answer_index": 3,
+      "youtube_start": 73,
+      "youtube_end": 85
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "love",
+        "tender,",
+        "me",
+        "Love",
+        "sweet"
+      ],
+      "answer": [
+        "Love",
+        "me",
+        "tender,",
+        "love",
+        "me",
+        "sweet"
+      ],
+      "youtube_start": 3
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "love",
+        "I",
+        "And",
+        "you",
+        "so"
+      ],
+      "answer": [
+        "And",
+        "I",
+        "love",
+        "you",
+        "so"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "darling",
+        "love",
+        "For",
+        "I",
+        "my",
+        "you"
+      ],
+      "answer": [
+        "For",
+        "my",
+        "darling",
+        "I",
+        "love",
+        "you"
+      ],
+      "youtube_start": 41
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "your",
+        "to",
+        "Take",
+        "heart",
+        "me"
+      ],
+      "answer": [
+        "Take",
+        "me",
+        "to",
+        "your",
+        "heart"
+      ],
+      "youtube_start": 60
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "dear",
+        "love",
+        "tender,",
+        "me",
+        "Love",
+        "me"
+      ],
+      "answer": [
+        "Love",
+        "me",
+        "tender,",
+        "love",
+        "me",
+        "dear"
+      ],
+      "youtube_start": 105
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"tender\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"tender\" na música inteira?",
+      "word": "tender",
+      "answer": 6
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"true\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"true\" na música inteira?",
+      "word": "true",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Love me tender, love me sweet",
+          "order": 0
+        },
+        {
+          "text": "Love me tender, love me long",
+          "order": 1
+        },
+        {
+          "text": "Love me tender, love me dear",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Never let me go",
+          "order": 0
+        },
+        {
+          "text": "Love me tender, love me true",
+          "order": 1
+        },
+        {
+          "text": "I'll be yours through all the years",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Love Me Tender\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Love Me Tender\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "tender",
+        "true",
+        "dreams",
+        "fulfilled"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Love Me Tender\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Love Me Tender\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "tender",
+        "true",
+        "dreams",
+        "fulfilled"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Love Me Tender\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Love Me Tender\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "tender",
+        "true",
+        "dreams",
+        "fulfilled"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        }
+      ]
+    }
+  ]
+}

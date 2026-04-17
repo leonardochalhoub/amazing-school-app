@@ -1,0 +1,448 @@
+{
+  "slug": "my-sweet-lord",
+  "title": "My Sweet Lord",
+  "artist": "George Harrison",
+  "year": 1970,
+  "album": "All Things Must Pass (Remastered)",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 281,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "My Sweet Lord by George Harrison (1970) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "lord",
+      "pt": "",
+      "note": "Appears 41 times; first heard in: \"My sweet Lord\""
+    },
+    {
+      "term": "really",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"I really want to see you\""
+    },
+    {
+      "term": "want",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"I really want to see you\""
+    },
+    {
+      "term": "hallelujah",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"But it won't take long, my Lord (Hallelujah)\""
+    },
+    {
+      "term": "hare",
+      "pt": "",
+      "note": "Appears 15 times; first heard in: \"Mm, mm, my Lord (Hare Krishna)\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "My sweet Lord (Hallelujah)",
+          "My Lord (Hallelujah)",
+          "My sweet Lord (Hallelujah)",
+          "Really want to see you"
+        ],
+        "start_seconds": 90,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "My Lord",
+          "Mmm, my Lord",
+          "I really want to see you",
+          "Really want to be with you"
+        ],
+        "start_seconds": 34,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "really",
+      "excerpt_after": "want to see you",
+      "youtube_start": 42,
+      "youtube_end": 56
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But it",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "takes",
+      "excerpt_after": "so long, my Lord",
+      "youtube_start": 50,
+      "youtube_end": 64
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "My",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sweet",
+      "excerpt_after": "Lord (Hallelujah)",
+      "youtube_start": 90,
+      "youtube_end": 104
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh, oh my sweet Lord",
+      "blank_hint": "word starting with \"k\"",
+      "answer": "krishna",
+      "excerpt_after": "Krishna)",
+      "youtube_start": 182,
+      "youtube_end": 196
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Mm, mm",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gurur",
+      "excerpt_after": "Brahma)",
+      "youtube_start": 225,
+      "youtube_end": 239
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "My, my, my Lord",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tasmayi",
+      "excerpt_after": "Shree)",
+      "youtube_start": 249,
+      "youtube_end": 263
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I really want to see you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Really want to see you, Lord",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Really want to go with you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Really want to see you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Really want to go with you Hallelujah",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "want to see you",
+      "options": [
+        "guru",
+        "really",
+        "takes",
+        "vishnu"
+      ],
+      "answer_index": 1,
+      "youtube_start": 42,
+      "youtube_end": 54
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I really want to",
+      "excerpt_after": "you",
+      "options": [
+        "guruve",
+        "know",
+        "long",
+        "tasmayi"
+      ],
+      "answer_index": 1,
+      "youtube_start": 70,
+      "youtube_end": 82
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "My",
+      "excerpt_after": "Lord (Hallelujah)",
+      "options": [
+        "brahma",
+        "devo",
+        "krishna",
+        "sweet"
+      ],
+      "answer_index": 3,
+      "youtube_start": 90,
+      "youtube_end": 102
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Mm, mm, my Lord",
+      "excerpt_after": "Krishna)",
+      "options": [
+        "devo",
+        "hare",
+        "really",
+        "tasmayi"
+      ],
+      "answer_index": 1,
+      "youtube_start": 174,
+      "youtube_end": 186
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "My sweet Lord",
+      "excerpt_after": "Sakshata)",
+      "options": [
+        "guru",
+        "gurur",
+        "know",
+        "show"
+      ],
+      "answer_index": 0,
+      "youtube_start": 243,
+      "youtube_end": 255
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "to",
+        "want",
+        "really",
+        "you",
+        "see"
+      ],
+      "answer": [
+        "I",
+        "really",
+        "want",
+        "to",
+        "see",
+        "you"
+      ],
+      "youtube_start": 42
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "want",
+        "with",
+        "you",
+        "go",
+        "to",
+        "Really"
+      ],
+      "answer": [
+        "Really",
+        "want",
+        "to",
+        "go",
+        "with",
+        "you"
+      ],
+      "youtube_start": 74
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Hallelujah",
+        "mm",
+        "mm,",
+        "Mm,"
+      ],
+      "answer": [
+        "Mm,",
+        "mm,",
+        "mm",
+        "Hallelujah"
+      ],
+      "youtube_start": 145
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Lord",
+        "Mm,",
+        "Hallelujah",
+        "my"
+      ],
+      "answer": [
+        "Mm,",
+        "my",
+        "Lord",
+        "Hallelujah"
+      ],
+      "youtube_start": 207
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Devo",
+        "Gurur",
+        "Mm,",
+        "mm"
+      ],
+      "answer": [
+        "Mm,",
+        "mm",
+        "Gurur",
+        "Devo"
+      ],
+      "youtube_start": 233
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"lord\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"lord\" na música inteira?",
+      "word": "lord",
+      "answer": 41
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"really\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"really\" na música inteira?",
+      "word": "really",
+      "answer": 16
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "My sweet Lord",
+          "order": 0
+        },
+        {
+          "text": "Really want to see you, Lord",
+          "order": 1
+        },
+        {
+          "text": "Mm, my Lord (Hallelujah)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Mmm, my Lord",
+          "order": 0
+        },
+        {
+          "text": "Really want to show you, Lord (Ah, ah)",
+          "order": 1
+        },
+        {
+          "text": "My sweet Lord (Hare Krishna)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"My Sweet Lord\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"My Sweet Lord\", o que aconteceria?",
+      "target_vocab": [
+        "lord",
+        "really",
+        "want",
+        "hallelujah"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"My Sweet Lord\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"My Sweet Lord\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "lord",
+        "really",
+        "want",
+        "hallelujah"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"My Sweet Lord\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"My Sweet Lord\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "lord",
+        "really",
+        "want",
+        "hallelujah"
+      ]
+    }
+  ]
+}

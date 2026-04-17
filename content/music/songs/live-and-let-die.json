@@ -1,0 +1,423 @@
+{
+  "slug": "live-and-let-die",
+  "title": "Live and Let Die",
+  "artist": "Paul McCartney",
+  "year": 1973,
+  "album": "All The Best !",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 192,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Live and Let Die by Paul McCartney (1973) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "live",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"You used to say live and let live\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"(You know you did)\""
+    },
+    {
+      "term": "give",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Makes you give in and cry\""
+    },
+    {
+      "term": "used",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"You used to say live and let live\""
+    },
+    {
+      "term": "ever",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"But if this ever changin' world\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "(You know you did)",
+          "(You know you did)",
+          "(You know you did)",
+          "But if this ever changin' world"
+        ],
+        "start_seconds": 14,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Live and let die",
+          "Live and let die",
+          "Live and let die"
+        ],
+        "start_seconds": 36,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When you were",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "young",
+      "excerpt_after": "and your heart",
+      "youtube_start": 2,
+      "youtube_end": 16
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But if this ever",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "changin",
+      "excerpt_after": "world",
+      "youtube_start": 19,
+      "youtube_end": 33
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "In",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "which",
+      "excerpt_after": "we're livin'",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "What did it",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "matter",
+      "excerpt_after": "to ya",
+      "youtube_start": 82,
+      "youtube_end": 96
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You got to give the",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "other",
+      "excerpt_after": "fella hell",
+      "youtube_start": 90,
+      "youtube_end": 104
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When you were young and your heart",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You know you did",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Makes you give in and cry",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Was an open book",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Say live and let die",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When you were",
+      "excerpt_after": "and your heart",
+      "options": [
+        "give",
+        "hell",
+        "world",
+        "young"
+      ],
+      "answer_index": 3,
+      "youtube_start": 2,
+      "youtube_end": 14
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "to say live and let live",
+      "options": [
+        "heart",
+        "matter",
+        "used",
+        "which"
+      ],
+      "answer_index": 2,
+      "youtube_start": 10,
+      "youtube_end": 22
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But if this",
+      "excerpt_after": "changin' world",
+      "options": [
+        "changin",
+        "ever",
+        "hell",
+        "used"
+      ],
+      "answer_index": 1,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Makes you",
+      "excerpt_after": "in and cry",
+      "options": [
+        "give",
+        "open",
+        "used",
+        "which"
+      ],
+      "answer_index": 0,
+      "youtube_start": 24,
+      "youtube_end": 36
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "What did it",
+      "excerpt_after": "to ya",
+      "options": [
+        "ever",
+        "matter",
+        "open",
+        "other"
+      ],
+      "answer_index": 1,
+      "youtube_start": 82,
+      "youtube_end": 94
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "young",
+        "were",
+        "you",
+        "your",
+        "When",
+        "heart",
+        "and"
+      ],
+      "answer": [
+        "When",
+        "you",
+        "were",
+        "young",
+        "and",
+        "your",
+        "heart"
+      ],
+      "youtube_start": 2
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "an",
+        "open",
+        "book",
+        "Was"
+      ],
+      "answer": [
+        "Was",
+        "an",
+        "open",
+        "book"
+      ],
+      "youtube_start": 6
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "changin'",
+        "world",
+        "ever",
+        "this",
+        "if",
+        "But"
+      ],
+      "answer": [
+        "But",
+        "if",
+        "this",
+        "ever",
+        "changin'",
+        "world"
+      ],
+      "youtube_start": 19
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "give",
+        "cry",
+        "Makes",
+        "in",
+        "and",
+        "you"
+      ],
+      "answer": [
+        "Makes",
+        "you",
+        "give",
+        "in",
+        "and",
+        "cry"
+      ],
+      "youtube_start": 24
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Live",
+        "die",
+        "and",
+        "let"
+      ],
+      "answer": [
+        "Live",
+        "and",
+        "let",
+        "die"
+      ],
+      "youtube_start": 36
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"live\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"live\" na música inteira?",
+      "word": "live",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"know\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"know\" na música inteira?",
+      "word": "know",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "When you were young and your heart",
+          "order": 0
+        },
+        {
+          "text": "Makes you give in and cry",
+          "order": 1
+        },
+        {
+          "text": "(You know you did)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Live and Let Die\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Live and Let Die\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "live",
+        "know",
+        "give",
+        "used"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Live and Let Die\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Live and Let Die\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "live",
+        "know",
+        "give",
+        "used"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Paul McCartney one question about \"Live and Let Die\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Paul McCartney sobre \"Live and Let Die\", o que seria e por quê?",
+      "target_vocab": [
+        "live",
+        "know",
+        "give",
+        "used"
+      ]
+    }
+  ]
+}

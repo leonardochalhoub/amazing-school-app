@@ -1,0 +1,475 @@
+{
+  "slug": "watermelon-sugar",
+  "title": "Watermelon Sugar",
+  "artist": "Harry Styles",
+  "year": 2019,
+  "album": "Fine Line",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "fast",
+  "duration_seconds": 174,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Watermelon Sugar by Harry Styles (2019) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "sugar",
+      "pt": "",
+      "note": "Appears 27 times; first heard in: \"Watermelon sugar\""
+    },
+    {
+      "term": "watermelon",
+      "pt": "",
+      "note": "Appears 25 times; first heard in: \"Watermelon sugar\""
+    },
+    {
+      "term": "high",
+      "pt": "",
+      "note": "Appears 23 times; first heard in: \"High\""
+    },
+    {
+      "term": "summer",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"On a summer evenin'\""
+    },
+    {
+      "term": "taste",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I just wanna taste it\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Watermelon sugar",
+          "High",
+          "Watermelon sugar",
+          "High"
+        ],
+        "start_seconds": 40,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I just wanna taste it",
+          "I just wanna taste it",
+          "Watermelon sugar high",
+          "Tastes like strawberries"
+        ],
+        "start_seconds": 101,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "On a",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "summer",
+      "excerpt_after": "evenin'",
+      "youtube_start": 3,
+      "youtube_end": 17
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And it",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sounds",
+      "excerpt_after": "just like a song",
+      "youtube_start": 6,
+      "youtube_end": 20
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm just",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thinking",
+      "excerpt_after": "out loud",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Baby,",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "the end of June",
+      "youtube_start": 57,
+      "youtube_end": 71
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I just",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "taste it",
+      "youtube_start": 101,
+      "youtube_end": 115
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I just wanna",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "taste",
+      "excerpt_after": "it",
+      "youtube_start": 103,
+      "youtube_end": 117
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I want more berries",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Baby, you're the end of June",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Getting washed away in you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Tastes like strawberries",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And it sounds just like a song",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "On a",
+      "excerpt_after": "evenin'",
+      "options": [
+        "sugar",
+        "summer",
+        "taste",
+        "wanna"
+      ],
+      "answer_index": 1,
+      "youtube_start": 3,
+      "youtube_end": 15
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "more berries",
+      "options": [
+        "dont",
+        "feelin",
+        "taste",
+        "want"
+      ],
+      "answer_index": 3,
+      "youtube_start": 10,
+      "youtube_end": 22
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm just",
+      "excerpt_after": "out loud",
+      "options": [
+        "evenin",
+        "feelin",
+        "taste",
+        "thinking"
+      ],
+      "answer_index": 3,
+      "youtube_start": 30,
+      "youtube_end": 42
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Baby,",
+      "excerpt_after": "the end of June",
+      "options": [
+        "belly",
+        "berries",
+        "sounds",
+        "youre"
+      ],
+      "answer_index": 3,
+      "youtube_start": 57,
+      "youtube_end": 69
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I just",
+      "excerpt_after": "taste it",
+      "options": [
+        "belly",
+        "know",
+        "summer",
+        "wanna"
+      ],
+      "answer_index": 3,
+      "youtube_start": 101,
+      "youtube_end": 113
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "evenin'",
+        "On",
+        "a",
+        "summer"
+      ],
+      "answer": [
+        "On",
+        "a",
+        "summer",
+        "evenin'"
+      ],
+      "youtube_start": 3
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "want",
+        "I",
+        "more",
+        "berries"
+      ],
+      "answer": [
+        "I",
+        "want",
+        "more",
+        "berries"
+      ],
+      "youtube_start": 10
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "warm",
+        "It's",
+        "and",
+        "wonderful",
+        "so"
+      ],
+      "answer": [
+        "It's",
+        "so",
+        "wonderful",
+        "and",
+        "warm"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Baby,",
+        "of",
+        "you're",
+        "the",
+        "end",
+        "June"
+      ],
+      "answer": [
+        "Baby,",
+        "you're",
+        "the",
+        "end",
+        "of",
+        "June"
+      ],
+      "youtube_start": 57
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "in",
+        "you",
+        "Getting",
+        "washed",
+        "away"
+      ],
+      "answer": [
+        "Getting",
+        "washed",
+        "away",
+        "in",
+        "you"
+      ],
+      "youtube_start": 67
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"sugar\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"sugar\" na música inteira?",
+      "word": "sugar",
+      "answer": 27
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"watermelon\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"watermelon\" na música inteira?",
+      "word": "watermelon",
+      "answer": 25
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Tastes like strawberries",
+          "order": 0
+        },
+        {
+          "text": "I want your belly",
+          "order": 1
+        },
+        {
+          "text": "And it sounds just like a song",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "On a summer evenin'",
+          "order": 0
+        },
+        {
+          "text": "Watermelon sugar high",
+          "order": 1
+        },
+        {
+          "text": "Watermelon sugar (sugar)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "sugar",
+        "watermelon",
+        "high",
+        "summer"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Watermelon Sugar\" was released in 2019. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Watermelon Sugar\" foi lançada em 2019. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "sugar",
+        "watermelon",
+        "high",
+        "summer"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Watermelon Sugar\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Watermelon Sugar\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "sugar",
+        "watermelon",
+        "high",
+        "summer"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        }
+      ]
+    }
+  ]
+}

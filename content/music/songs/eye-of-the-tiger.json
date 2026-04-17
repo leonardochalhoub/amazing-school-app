@@ -1,0 +1,489 @@
+{
+  "slug": "eye-of-the-tiger",
+  "title": "Eye of the Tiger",
+  "artist": "Survivor",
+  "year": 1982,
+  "album": "Survivor Greatest Hits",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 245,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Eye of the Tiger by Survivor (1982) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "tiger",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"It's the eye of the tiger\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"It's the eye of the tiger\""
+    },
+    {
+      "term": "rising",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Rising up, back on the street\""
+    },
+    {
+      "term": "fight",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"You must fight just to keep them alive\""
+    },
+    {
+      "term": "survive",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Just a man and his will to survive\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "The eye of the tiger",
+          "The eye of the tiger",
+          "The eye of the tiger",
+          "The eye of the tiger"
+        ],
+        "start_seconds": 201,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "It's the eye of the tiger",
+          "It's the thrill of the fight",
+          "Rising up to the challenge of our rival",
+          "And the last known survivor"
+        ],
+        "start_seconds": 82,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Went the",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "distance",
+      "excerpt_after": "now I'm back on my feet",
+      "youtube_start": 57,
+      "youtube_end": 71
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So many",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "times",
+      "excerpt_after": "it happens too fast",
+      "youtube_start": 66,
+      "youtube_end": 80
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You must",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fight",
+      "excerpt_after": "just to keep them alive",
+      "youtube_start": 79,
+      "youtube_end": 93
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Rising up to the",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "challenge",
+      "excerpt_after": "of our rival",
+      "youtube_start": 88,
+      "youtube_end": 102
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Hanging",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tough",
+      "excerpt_after": "staying hungry",
+      "youtube_start": 110,
+      "youtube_end": 124
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Rising up,",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "straight",
+      "excerpt_after": "to the top",
+      "youtube_start": 151,
+      "youtube_end": 165
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You trade your passion for glory",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Went the distance, now I'm not gonna stop",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Did my time, took my chances",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So many times it happens too fast",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "It's the thrill of the fight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Did my",
+      "excerpt_after": "took my chances",
+      "options": [
+        "odds",
+        "stalks",
+        "time",
+        "took"
+      ],
+      "answer_index": 2,
+      "youtube_start": 54,
+      "youtube_end": 66
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "your passion for glory",
+      "options": [
+        "alive",
+        "happens",
+        "street",
+        "trade"
+      ],
+      "answer_index": 3,
+      "youtube_start": 70,
+      "youtube_end": 82
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Rising up to the",
+      "excerpt_after": "of our rival",
+      "options": [
+        "challenge",
+        "happens",
+        "passion",
+        "straight"
+      ],
+      "answer_index": 0,
+      "youtube_start": 88,
+      "youtube_end": 100
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Face to",
+      "excerpt_after": "out in the heat",
+      "options": [
+        "dreams",
+        "face",
+        "feet",
+        "tiger"
+      ],
+      "answer_index": 1,
+      "youtube_start": 103,
+      "youtube_end": 115
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And the last",
+      "excerpt_after": "survivor",
+      "options": [
+        "hungry",
+        "known",
+        "rising",
+        "trade"
+      ],
+      "answer_index": 1,
+      "youtube_start": 131,
+      "youtube_end": 143
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "up,",
+        "the",
+        "on",
+        "back",
+        "Rising",
+        "street"
+      ],
+      "answer": [
+        "Rising",
+        "up,",
+        "back",
+        "on",
+        "the",
+        "street"
+      ],
+      "youtube_start": 49
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "it",
+        "times",
+        "So",
+        "too",
+        "happens",
+        "many",
+        "fast"
+      ],
+      "answer": [
+        "So",
+        "many",
+        "times",
+        "it",
+        "happens",
+        "too",
+        "fast"
+      ],
+      "youtube_start": 66
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "of",
+        "thrill",
+        "fight",
+        "the",
+        "It's",
+        "the"
+      ],
+      "answer": [
+        "It's",
+        "the",
+        "thrill",
+        "of",
+        "the",
+        "fight"
+      ],
+      "youtube_start": 86
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "prey",
+        "his",
+        "in",
+        "Stalks",
+        "night"
+      ],
+      "answer": [
+        "Stalks",
+        "his",
+        "prey",
+        "in",
+        "the",
+        "night"
+      ],
+      "youtube_start": 95
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "straight",
+        "to",
+        "Rising",
+        "the",
+        "top",
+        "up,"
+      ],
+      "answer": [
+        "Rising",
+        "up,",
+        "straight",
+        "to",
+        "the",
+        "top"
+      ],
+      "youtube_start": 151
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"tiger\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"tiger\" na música inteira?",
+      "word": "tiger",
+      "answer": 10
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"it's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"it's\" na música inteira?",
+      "word": "it's",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Rising up, back on the street",
+          "order": 0
+        },
+        {
+          "text": "Stalks his prey in the night",
+          "order": 1
+        },
+        {
+          "text": "Had the guts, got the glory",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Did my time, took my chances",
+          "order": 0
+        },
+        {
+          "text": "Rising up to the challenge of our rival",
+          "order": 1
+        },
+        {
+          "text": "It's the thrill of the fight",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Survivor one question about \"Eye of the Tiger\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Survivor sobre \"Eye of the Tiger\", o que seria e por quê?",
+      "target_vocab": [
+        "tiger",
+        "it's",
+        "rising",
+        "fight"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Eye of the Tiger\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Eye of the Tiger\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "tiger",
+        "it's",
+        "rising",
+        "fight"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Eye of the Tiger\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Eye of the Tiger\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "tiger",
+        "it's",
+        "rising",
+        "fight"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "he's",
+          "full": "he is"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        }
+      ]
+    }
+  ]
+}

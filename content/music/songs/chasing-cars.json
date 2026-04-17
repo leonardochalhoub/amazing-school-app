@@ -1,0 +1,440 @@
+{
+  "slug": "chasing-cars",
+  "title": "Chasing Cars",
+  "artist": "Snow Patrol",
+  "year": 2006,
+  "album": "Eyes Open",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 266,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Chasing Cars by Snow Patrol (2006) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "forget",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Would you lie with me and just forget the world?\""
+    },
+    {
+      "term": "world",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Would you lie with me and just forget the world?\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"We don't need\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"I don't quite know\""
+    },
+    {
+      "term": "need",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"We don't need\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "If I lay here",
+          "If I just lay here",
+          "Would you lie with me and just forget the world?"
+        ],
+        "start_seconds": 40,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Forget what we're told",
+          "Before we get too old",
+          "Show me a garden that's bursting into life"
+        ],
+        "start_seconds": 114,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I don't",
+      "blank_hint": "word starting with \"q\"",
+      "answer": "quite",
+      "excerpt_after": "know",
+      "youtube_start": 62,
+      "youtube_end": 76
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Show me a",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "garden",
+      "excerpt_after": "that's bursting into life",
+      "youtube_start": 123,
+      "youtube_end": 137
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Show me a garden",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "bursting into life",
+      "youtube_start": 197,
+      "youtube_end": 211
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We'll do it all",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If I lay here",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I don't quite know",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They're not enough",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Before we get too old",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "quite know",
+      "options": [
+        "dont",
+        "grace",
+        "know",
+        "need"
+      ],
+      "answer_index": 0,
+      "youtube_start": 62,
+      "youtube_end": 74
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Show me a",
+      "excerpt_after": "that's bursting into life",
+      "options": [
+        "eyes",
+        "find",
+        "garden",
+        "show"
+      ],
+      "answer_index": 2,
+      "youtube_start": 123,
+      "youtube_end": 135
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "your grace",
+      "options": [
+        "chasing",
+        "need",
+        "perfect",
+        "waste"
+      ],
+      "answer_index": 1,
+      "youtube_start": 154,
+      "youtube_end": 166
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Show me a garden",
+      "excerpt_after": "bursting into life",
+      "options": [
+        "dont",
+        "garden",
+        "thats",
+        "words"
+      ],
+      "answer_index": 2,
+      "youtube_start": 197,
+      "youtube_end": 209
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "All that I",
+      "excerpt_after": "was",
+      "options": [
+        "cars",
+        "ever",
+        "thats",
+        "told"
+      ],
+      "answer_index": 1,
+      "youtube_start": 211,
+      "youtube_end": 223
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "it",
+        "do",
+        "all",
+        "We'll"
+      ],
+      "answer": [
+        "We'll",
+        "do",
+        "it",
+        "all"
+      ],
+      "youtube_start": 6
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "If",
+        "here",
+        "lay",
+        "just"
+      ],
+      "answer": [
+        "If",
+        "I",
+        "just",
+        "lay",
+        "here"
+      ],
+      "youtube_start": 45
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "told",
+        "we're",
+        "what",
+        "Forget"
+      ],
+      "answer": [
+        "Forget",
+        "what",
+        "we're",
+        "told"
+      ],
+      "youtube_start": 114
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "need",
+        "grace",
+        "your",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "need",
+        "your",
+        "grace"
+      ],
+      "youtube_start": 154
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ever",
+        "I",
+        "that",
+        "All",
+        "was"
+      ],
+      "answer": [
+        "All",
+        "that",
+        "I",
+        "ever",
+        "was"
+      ],
+      "youtube_start": 211
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"forget\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"forget\" na música inteira?",
+      "word": "forget",
+      "answer": 6
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"world\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"world\" na música inteira?",
+      "word": "world",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "We'll do it all",
+          "order": 0
+        },
+        {
+          "text": "They're not enough",
+          "order": 1
+        },
+        {
+          "text": "To find my own",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "On our own",
+          "order": 0
+        },
+        {
+          "text": "Let's waste time",
+          "order": 1
+        },
+        {
+          "text": "Before we get too old",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Chasing Cars\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Chasing Cars\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "forget",
+        "world",
+        "don't",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Chasing Cars\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Chasing Cars\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "forget",
+        "world",
+        "don't",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Chasing Cars\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Chasing Cars\", o que aconteceria?",
+      "target_vocab": [
+        "forget",
+        "world",
+        "don't",
+        "know"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "let's",
+          "full": "let us"
+        }
+      ]
+    }
+  ]
+}

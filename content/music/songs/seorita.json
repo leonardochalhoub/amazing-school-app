@@ -1,0 +1,468 @@
+{
+  "slug": "seorita",
+  "title": "Señorita",
+  "artist": "Shawn Mendes",
+  "year": 2019,
+  "album": "Romance",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 191,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Señorita by Shawn Mendes (2019) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "coming",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Ooh, you keep me coming for ya\""
+    },
+    {
+      "term": "call",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I love it when you call me señorita\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"It's true, la-la-la\""
+    },
+    {
+      "term": "should",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Ooh, I should be runnin'\""
+    },
+    {
+      "term": "runnin'",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Ooh, I should be runnin'\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Ooh, I should be runnin'",
+          "Ooh, you keep me coming for ya",
+          "Land in Miami",
+          "The air was hot from summer rain"
+        ],
+        "start_seconds": 28,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "For ya",
+          "For ya (Oh, she loves it when I call)",
+          "For ya",
+          "Ooh, I should be runnin'"
+        ],
+        "start_seconds": 171,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I wish I could",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "pretend",
+      "excerpt_after": "I didn't need ya",
+      "youtube_start": 19,
+      "youtube_end": 33
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ooh, you keep me",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "coming",
+      "excerpt_after": "for ya",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It felt like",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "ooh-la-la-la",
+      "excerpt_after": "(Yeah, no)",
+      "youtube_start": 44,
+      "youtube_end": 58
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I wish I could pretend I",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "didnt",
+      "excerpt_after": "need ya",
+      "youtube_start": 68,
+      "youtube_end": 82
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "friends",
+      "excerpt_after": "don't know the way you taste, la-la-la",
+      "youtube_start": 104,
+      "youtube_end": 118
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "All",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "along",
+      "excerpt_after": "I've been coming for ya (For you)",
+      "youtube_start": 157,
+      "youtube_end": 171
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I love it when you call me señorita",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Ooh, you keep me coming for ya",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We danced for hours in the sand",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Coming for ya Coming for you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "It's true, la-la-la",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I love it when you",
+      "excerpt_after": "me señorita",
+      "options": [
+        "call",
+        "drippin",
+        "leave",
+        "wasnt"
+      ],
+      "answer_index": 0,
+      "youtube_start": 15,
+      "youtube_end": 27
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ooh, you",
+      "excerpt_after": "me coming for ya",
+      "options": [
+        "keep",
+        "locked",
+        "miami",
+        "tequila"
+      ],
+      "answer_index": 0,
+      "youtube_start": 30,
+      "youtube_end": 42
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We",
+      "excerpt_after": "for hours in the sand",
+      "options": [
+        "danced",
+        "miami",
+        "name",
+        "touch"
+      ],
+      "answer_index": 0,
+      "youtube_start": 51,
+      "youtube_end": 63
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There's just some",
+      "excerpt_after": "that never change",
+      "options": [
+        "didnt",
+        "know",
+        "sunrise",
+        "things"
+      ],
+      "answer_index": 3,
+      "youtube_start": 100,
+      "youtube_end": 112
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ooh, love, your",
+      "excerpt_after": "is deadly, don't stop",
+      "options": [
+        "drippin",
+        "kiss",
+        "land",
+        "things"
+      ],
+      "answer_index": 1,
+      "youtube_start": 119,
+      "youtube_end": 131
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "touch",
+        "ooh-la-la-la",
+        "every",
+        "But",
+        "is"
+      ],
+      "answer": [
+        "But",
+        "every",
+        "touch",
+        "is",
+        "ooh-la-la-la"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "The",
+        "was",
+        "air",
+        "hot",
+        "rain",
+        "summer",
+        "from"
+      ],
+      "answer": [
+        "The",
+        "air",
+        "was",
+        "hot",
+        "from",
+        "summer",
+        "rain"
+      ],
+      "youtube_start": 35
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "no",
+        "It",
+        "Yeah,",
+        "ooh-la-la-la",
+        "felt",
+        "like"
+      ],
+      "answer": [
+        "It",
+        "felt",
+        "like",
+        "ooh-la-la-la",
+        "Yeah,",
+        "no"
+      ],
+      "youtube_start": 44
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Locked",
+        "hotel",
+        "in",
+        "the"
+      ],
+      "answer": [
+        "Locked",
+        "in",
+        "the",
+        "hotel"
+      ],
+      "youtube_start": 98
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "fall,",
+        "ya",
+        "let",
+        "oh",
+        "Don't",
+        "me"
+      ],
+      "answer": [
+        "Don't",
+        "ya",
+        "let",
+        "me",
+        "fall,",
+        "oh"
+      ],
+      "youtube_start": 112
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"coming\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"coming\" na música inteira?",
+      "word": "coming",
+      "answer": 10
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"call\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"call\" na música inteira?",
+      "word": "call",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "But every touch is ooh-la-la-la",
+          "order": 0
+        },
+        {
+          "text": "It's true, la-la-la",
+          "order": 1
+        },
+        {
+          "text": "Ooh, love, your kiss is deadly, don't stop",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "coming",
+        "call",
+        "it's",
+        "should"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Señorita\" was released in 2019. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Señorita\" foi lançada em 2019. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "coming",
+        "call",
+        "it's",
+        "should"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Señorita\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Señorita\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "coming",
+        "call",
+        "it's",
+        "should"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "didn't",
+          "full": "did not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "wasn't",
+          "full": "was not"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    }
+  ]
+}

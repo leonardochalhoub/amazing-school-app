@@ -179,14 +179,33 @@ export function MusicBoard({
         <Card>
           <CardContent className="p-0">
             <div className="aspect-video w-full overflow-hidden rounded-t-xl bg-black">
-              <iframe
-                ref={iframeRef}
-                src={embedSrc}
-                title={`${song.title} — ${song.artist}`}
-                className="h-full w-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              {song.youtube_id ? (
+                <iframe
+                  ref={iframeRef}
+                  src={embedSrc}
+                  title={`${song.title} — ${song.artist}`}
+                  className="h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : (
+                <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-slate-900 to-slate-700 p-6 text-center">
+                  <p className="text-sm font-medium text-white">
+                    {locale === "pt-BR"
+                      ? "Vídeo ainda não vinculado"
+                      : "Video not yet linked"}
+                  </p>
+                  <a
+                    href={searchUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs text-white hover:bg-white/20"
+                  >
+                    {locale === "pt-BR" ? "Buscar no YouTube" : "Search on YouTube"}
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                </div>
+              )}
             </div>
             <div className="space-y-3 p-5">
               <p className="text-sm leading-relaxed text-muted-foreground">
@@ -209,27 +228,31 @@ export function MusicBoard({
                     } — a small drift is normal.`}
               </p>
               <div className="flex flex-wrap gap-3 text-xs">
-                <a
-                  href={watchOnYouTube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
-                >
-                  {locale === "pt-BR"
-                    ? "Vídeo indisponível? Abrir no YouTube"
-                    : "Video unavailable? Open on YouTube"}
-                  <ExternalLink className="h-3 w-3" />
-                </a>
-                <a
-                  href={song.full_lyrics_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
-                >
-                  {locale === "pt-BR" ? "Letra completa" : "Full lyrics"} ·{" "}
-                  {hostname}
-                  <ExternalLink className="h-3 w-3" />
-                </a>
+                {song.youtube_id ? (
+                  <a
+                    href={watchOnYouTube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
+                  >
+                    {locale === "pt-BR"
+                      ? "Vídeo indisponível? Abrir no YouTube"
+                      : "Video unavailable? Open on YouTube"}
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                ) : null}
+                {song.full_lyrics_url ? (
+                  <a
+                    href={song.full_lyrics_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
+                  >
+                    {locale === "pt-BR" ? "Letra completa" : "Full lyrics"} ·{" "}
+                    {hostname}
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                ) : null}
                 <a
                   href={searchUrl}
                   target="_blank"

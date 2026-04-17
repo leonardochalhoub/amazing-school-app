@@ -48,12 +48,75 @@
       "type": "listen_and_fill",
       "prompt_en": "Fill the blank in this line:",
       "prompt_pt": "Complete a lacuna neste verso:",
-      "excerpt_before": "They told him, \"Don't you ever come",
+      "excerpt_before": "\"Don't",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "see your face, you better disappear\"",
+      "youtube_start": 41,
+      "youtube_end": 55
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You wanna be",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tough",
+      "excerpt_after": "better do what you can",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Showin' how",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "funky",
+      "excerpt_after": "and strong is your fight",
+      "youtube_start": 72,
+      "youtube_end": 86
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You wanna stay",
       "blank_hint": "word starting with \"a\"",
-      "answer": "around",
-      "excerpt_after": "here\"",
-      "youtube_start": 38,
-      "youtube_end": 52
+      "answer": "alive",
+      "excerpt_after": "better do what you can",
+      "youtube_start": 93,
+      "youtube_end": 107
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Showin' how funky and",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "strong",
+      "excerpt_after": "is your fight",
+      "youtube_start": 120,
+      "youtube_end": 134
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It doesn't matter who's",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wrong",
+      "excerpt_after": "or right",
+      "youtube_start": 137,
+      "youtube_end": 151
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "\"Don't wanna see your face, you better disappear\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
       "type": "translate_line",
@@ -64,61 +127,108 @@
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "spot_the_grammar",
-      "prompt_en": "Write the full form of each contraction:",
-      "prompt_pt": "Escreva a forma completa de cada contração:",
-      "expected": [
-        {
-          "short": "don't",
-          "full": "do not"
-        },
-        {
-          "short": "wanna",
-          "full": "want to"
-        },
-        {
-          "short": "doesn't",
-          "full": "does not"
-        },
-        {
-          "short": "who's",
-          "full": "who is"
-        }
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So beat it, just beat it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "discussion",
-      "prompt_en": "Compare \"Beat It\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
-      "prompt_pt": "Compare \"Beat It\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
-      "target_vocab": [
-        "beat it",
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Showin' how funky and strong is your fight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Just beat it beat it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "They",
+      "excerpt_after": "him, \"Don't you ever come around here\"",
+      "options": [
         "funky",
-        "fight",
-        "afraid"
-      ]
+        "really",
+        "told",
+        "tough"
+      ],
+      "answer_index": 2,
+      "youtube_start": 38,
+      "youtube_end": 50
     },
     {
-      "type": "word_to_meaning",
-      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
-      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
-      "pairs": [
-        {
-          "en": "beat it",
-          "pt": "vai embora / foge"
-        },
-        {
-          "en": "funky",
-          "pt": "descolado / legal"
-        },
-        {
-          "en": "fight",
-          "pt": "briga / lutar"
-        },
-        {
-          "en": "afraid",
-          "pt": "com medo"
-        }
-      ]
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "run, you better do what you can",
+      "options": [
+        "better",
+        "clear",
+        "funky",
+        "truth"
+      ],
+      "answer_index": 0,
+      "youtube_start": 51,
+      "youtube_end": 63
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Showin' how",
+      "excerpt_after": "and strong is your fight",
+      "options": [
+        "defeated",
+        "funky",
+        "wanna",
+        "whos"
+      ],
+      "answer_index": 1,
+      "youtube_start": 72,
+      "youtube_end": 84
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "They'll",
+      "excerpt_after": "you, then they'll beat you",
+      "options": [
+        "doesnt",
+        "kick",
+        "theyll",
+        "tough"
+      ],
+      "answer_index": 1,
+      "youtube_start": 106,
+      "youtube_end": 118
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It doesn't",
+      "excerpt_after": "who's wrong or right",
+      "options": [
+        "blood",
+        "matter",
+        "stay",
+        "truth"
+      ],
+      "answer_index": 1,
+      "youtube_start": 124,
+      "youtube_end": 136
     },
     {
       "type": "unscramble_line",
@@ -143,26 +253,103 @@
       "youtube_start": 47
     },
     {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "They",
-      "excerpt_after": "him, \"Don't you ever come around here\"",
-      "options": [
-        "dont",
-        "ever",
-        "they",
-        "told"
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "one",
+        "defeated",
+        "to",
+        "be",
+        "No",
+        "wants"
       ],
-      "answer_index": 3,
-      "youtube_start": 38,
-      "youtube_end": 50
+      "answer": [
+        "No",
+        "one",
+        "wants",
+        "to",
+        "be",
+        "defeated"
+      ],
+      "youtube_start": 68
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "beat",
+        "it",
+        "Just",
+        "beat",
+        "it"
+      ],
+      "answer": [
+        "Just",
+        "beat",
+        "it",
+        "beat",
+        "it"
+      ],
+      "youtube_start": 79
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "uh",
+        "Just",
+        "beat",
+        "beat",
+        "it,",
+        "it"
+      ],
+      "answer": [
+        "Just",
+        "beat",
+        "it",
+        "beat",
+        "it,",
+        "uh"
+      ],
+      "youtube_start": 84
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "Then",
+        "they'll",
+        "tell",
+        "it's",
+        "fair"
+      ],
+      "answer": [
+        "Then",
+        "they'll",
+        "tell",
+        "you",
+        "it's",
+        "fair"
+      ],
+      "youtube_start": 108
     },
     {
       "type": "count_word",
       "prompt_en": "How many times do you hear the word \"funky\" in the whole song?",
       "prompt_pt": "Quantas vezes você ouve a palavra \"funky\" na música inteira?",
       "word": "funky",
+      "answer": 7
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"fight\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"fight\" na música inteira?",
+      "word": "fight",
       "answer": 7
     },
     {
@@ -181,6 +368,112 @@
         {
           "text": "Beat it (beat it), beat it (beat it)",
           "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "So beat it, just beat it",
+          "order": 0
+        },
+        {
+          "text": "Showin' how funky and strong is your fight",
+          "order": 1
+        },
+        {
+          "text": "No one wants to be defeated (no one)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Beat It\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Beat It\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "beat it",
+        "funky",
+        "fight",
+        "afraid"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Michael Jackson one question about \"Beat It\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Michael Jackson sobre \"Beat It\", o que seria e por quê?",
+      "target_vocab": [
+        "beat it",
+        "funky",
+        "fight",
+        "afraid"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Beat It\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Beat It\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "beat it",
+        "funky",
+        "fight",
+        "afraid"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "doesn't",
+          "full": "does not"
+        },
+        {
+          "short": "who's",
+          "full": "who is"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "beat it",
+          "pt": "vai embora / foge"
+        },
+        {
+          "en": "funky",
+          "pt": "descolado / legal"
+        },
+        {
+          "en": "fight",
+          "pt": "briga / lutar"
+        },
+        {
+          "en": "afraid",
+          "pt": "com medo"
         }
       ]
     }

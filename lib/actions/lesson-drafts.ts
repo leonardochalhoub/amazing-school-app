@@ -257,3 +257,24 @@ export async function getLessonDraft(slug: string): Promise<LessonDraftRow | nul
 
   return data as LessonDraftRow;
 }
+
+/**
+ * Public loader — returns a PUBLISHED lesson_drafts row to anyone (students,
+ * anonymous demo users). Does NOT require the teacher role, unlike
+ * getLessonDraft(). Use this whenever a student or unauthed user needs to view
+ * a teacher-authored lesson.
+ */
+export async function getPublishedLessonDraft(
+  slug: string
+): Promise<Lesson | null> {
+  const admin = createAdminClient();
+  const { data, error } = await admin
+    .from("lesson_drafts")
+    .select("content, published")
+    .eq("slug", slug)
+    .eq("published", true)
+    .maybeSingle();
+
+  if (error || !data) return null;
+  return data.content as Lesson;
+}

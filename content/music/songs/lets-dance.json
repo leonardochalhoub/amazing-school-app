@@ -1,0 +1,465 @@
+{
+  "slug": "lets-dance",
+  "title": "Let's Dance",
+  "artist": "David Bowie",
+  "year": 1983,
+  "album": "Montreal 1983",
+  "genre": [
+    "rock",
+    "pop"
+  ],
+  "cefr_level": "a1.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 284,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Let's Dance by David Bowie (1983) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "let's",
+      "pt": "",
+      "note": "Appears 37 times; first heard in: \"Let's dance\""
+    },
+    {
+      "term": "dance",
+      "pt": "",
+      "note": "Appears 29 times; first heard in: \"Let's dance\""
+    },
+    {
+      "term": "sway",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Let's sway\""
+    },
+    {
+      "term": "hide",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"If you say hide\""
+    },
+    {
+      "term": "should",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"If you should fall into my arms\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Let's dance",
+          "Let's dance",
+          "Let's dance",
+          "Put on your red shoes and dance the blues"
+        ],
+        "start_seconds": 7,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Let's sway",
+          "While color lights up your face",
+          "Let's sway",
+          "Sway through the crowd to an empty space"
+        ],
+        "start_seconds": 40,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Put on your red",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "shoes",
+      "excerpt_after": "and dance the blues",
+      "youtube_start": 26,
+      "youtube_end": 40
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "While",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "color",
+      "excerpt_after": "lights up your face",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Would tear my",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heart",
+      "excerpt_after": "in two",
+      "youtube_start": 78,
+      "youtube_end": 92
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tremble",
+      "excerpt_after": "like a flower",
+      "youtube_start": 87,
+      "youtube_end": 101
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "For fear",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tonight",
+      "excerpt_after": "is all",
+      "youtube_start": 117,
+      "youtube_end": 131
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To the song they're",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "playing",
+      "excerpt_after": "on the radio",
+      "youtube_start": 266,
+      "youtube_end": 280
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "To the song they're playin' on the radio",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll run with you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Because my love for you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And if you say hide",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "To the song they're playing on the radio",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Put on your red",
+      "excerpt_after": "and dance the blues",
+      "options": [
+        "lets",
+        "shoes",
+        "under",
+        "while"
+      ],
+      "answer_index": 1,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Sway",
+      "excerpt_after": "the crowd to an empty space",
+      "options": [
+        "heart",
+        "shoes",
+        "through",
+        "tonight"
+      ],
+      "answer_index": 2,
+      "youtube_start": 51,
+      "youtube_end": 63
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "like a flower",
+      "options": [
+        "because",
+        "flower",
+        "song",
+        "tremble"
+      ],
+      "answer_index": 3,
+      "youtube_start": 87,
+      "youtube_end": 99
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Would tear my",
+      "excerpt_after": "in two",
+      "options": [
+        "color",
+        "heart",
+        "playin",
+        "theyre"
+      ],
+      "answer_index": 1,
+      "youtube_start": 142,
+      "youtube_end": 154
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "To the song",
+      "excerpt_after": "playing on the radio",
+      "options": [
+        "crowd",
+        "heart",
+        "theyre",
+        "tonight"
+      ],
+      "answer_index": 2,
+      "youtube_start": 266,
+      "youtube_end": 278
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "color",
+        "your",
+        "up",
+        "lights",
+        "While",
+        "face"
+      ],
+      "answer": [
+        "While",
+        "color",
+        "lights",
+        "up",
+        "your",
+        "face"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "with",
+        "run",
+        "I'll",
+        "you"
+      ],
+      "answer": [
+        "I'll",
+        "run",
+        "with",
+        "you"
+      ],
+      "youtube_start": 62
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "in",
+        "two",
+        "heart",
+        "tear",
+        "Would",
+        "my"
+      ],
+      "answer": [
+        "Would",
+        "tear",
+        "my",
+        "heart",
+        "in",
+        "two"
+      ],
+      "youtube_start": 78
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "your",
+        "grace",
+        "fear",
+        "For",
+        "fall",
+        "should"
+      ],
+      "answer": [
+        "For",
+        "fear",
+        "your",
+        "grace",
+        "should",
+        "fall"
+      ],
+      "youtube_start": 108
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "could",
+        "into",
+        "my",
+        "You",
+        "eyes",
+        "look"
+      ],
+      "answer": [
+        "You",
+        "could",
+        "look",
+        "into",
+        "my",
+        "eyes"
+      ],
+      "youtube_start": 165
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"let's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"let's\" na música inteira?",
+      "word": "let's",
+      "answer": 37
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"dance\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"dance\" na música inteira?",
+      "word": "dance",
+      "answer": 29
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "To the song they're playin' on the radio",
+          "order": 0
+        },
+        {
+          "text": "For fear your grace should fall",
+          "order": 1
+        },
+        {
+          "text": "Under the moonlight",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Let's Dance\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Let's Dance\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "let's",
+        "dance",
+        "sway",
+        "hide"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask David Bowie one question about \"Let's Dance\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para David Bowie sobre \"Let's Dance\", o que seria e por quê?",
+      "target_vocab": [
+        "let's",
+        "dance",
+        "sway",
+        "hide"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Let's Dance\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Let's Dance\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "let's",
+        "dance",
+        "sway",
+        "hide"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "let's",
+          "full": "let us"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        }
+      ]
+    }
+  ]
+}

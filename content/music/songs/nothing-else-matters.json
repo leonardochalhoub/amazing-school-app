@@ -1,0 +1,470 @@
+{
+  "slug": "nothing-else-matters",
+  "title": "Nothing Else Matters",
+  "artist": "Metallica",
+  "year": 1991,
+  "album": "Metallica",
+  "genre": [
+    "metal"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 388,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Nothing Else Matters by Metallica (1991) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Never opened myself this way\""
+    },
+    {
+      "term": "cared",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Never cared for what they do\""
+    },
+    {
+      "term": "nothing",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"And nothing else matters\""
+    },
+    {
+      "term": "else",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"And nothing else matters\""
+    },
+    {
+      "term": "matters",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"And nothing else matters\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "And nothing else matters",
+          "Never opened myself this way",
+          "Life is ours, we live it our way",
+          "All these words, I don't just say"
+        ],
+        "start_seconds": 75,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Never cared for what they do",
+          "Never cared for what they know",
+          "But I know"
+        ],
+        "start_seconds": 128,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "close",
+      "excerpt_after": "no matter how far",
+      "youtube_start": 60,
+      "youtube_end": 74
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nothing",
+      "excerpt_after": "else matters",
+      "youtube_start": 75,
+      "youtube_end": 89
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "All",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "these",
+      "excerpt_after": "words, I don't just say",
+      "youtube_start": 92,
+      "youtube_end": 106
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Open mind for a",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "different",
+      "excerpt_after": "view",
+      "youtube_start": 115,
+      "youtube_end": 129
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So close, no",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "matter",
+      "excerpt_after": "how far",
+      "youtube_start": 145,
+      "youtube_end": 159
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "opened myself this way",
+      "youtube_start": 224,
+      "youtube_end": 238
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Forever trusting who we are",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "All these words, I don't just say",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Never cared for what they do",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But I know",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Never cared for what they say",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So",
+      "excerpt_after": "no matter how far",
+      "options": [
+        "close",
+        "dont",
+        "matters",
+        "ours"
+      ],
+      "answer_index": 0,
+      "youtube_start": 60,
+      "youtube_end": 72
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Life is",
+      "excerpt_after": "we live it our way",
+      "options": [
+        "matter",
+        "nothing",
+        "ours",
+        "trust"
+      ],
+      "answer_index": 2,
+      "youtube_start": 88,
+      "youtube_end": 100
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Every day for us",
+      "excerpt_after": "new",
+      "options": [
+        "forever",
+        "myself",
+        "nothing",
+        "something"
+      ],
+      "answer_index": 3,
+      "youtube_start": 110,
+      "youtube_end": 122
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It",
+      "excerpt_after": "be much more from the heart",
+      "options": [
+        "couldnt",
+        "every",
+        "play",
+        "view"
+      ],
+      "answer_index": 0,
+      "youtube_start": 150,
+      "youtube_end": 162
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Trust I seek and I",
+      "excerpt_after": "in you",
+      "options": [
+        "dont",
+        "find",
+        "matter",
+        "myself"
+      ],
+      "answer_index": 1,
+      "youtube_start": 246,
+      "youtube_end": 258
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "matter",
+        "So",
+        "far",
+        "no",
+        "close,",
+        "how"
+      ],
+      "answer": [
+        "So",
+        "close,",
+        "no",
+        "matter",
+        "how",
+        "far"
+      ],
+      "youtube_start": 60
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "matters",
+        "else",
+        "nothing"
+      ],
+      "answer": [
+        "And",
+        "nothing",
+        "else",
+        "matters"
+      ],
+      "youtube_start": 75
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Every",
+        "something",
+        "new",
+        "us",
+        "day",
+        "for"
+      ],
+      "answer": [
+        "Every",
+        "day",
+        "for",
+        "us",
+        "something",
+        "new"
+      ],
+      "youtube_start": 110
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "for",
+        "cared",
+        "they",
+        "what",
+        "know",
+        "Never"
+      ],
+      "answer": [
+        "Never",
+        "cared",
+        "for",
+        "what",
+        "they",
+        "know"
+      ],
+      "youtube_start": 133
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "they",
+        "Never",
+        "for",
+        "play",
+        "cared",
+        "games"
+      ],
+      "answer": [
+        "Never",
+        "cared",
+        "for",
+        "games",
+        "they",
+        "play"
+      ],
+      "youtube_start": 274
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"never\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"never\" na música inteira?",
+      "word": "never",
+      "answer": 10
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"cared\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"cared\" na música inteira?",
+      "word": "cared",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "So close, no matter how far",
+          "order": 0
+        },
+        {
+          "text": "Never cared for what they know",
+          "order": 1
+        },
+        {
+          "text": "Trust I seek and I find in you",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Couldn't be much more from the heart",
+          "order": 0
+        },
+        {
+          "text": "And nothing else matters",
+          "order": 1
+        },
+        {
+          "text": "Every day for us something new",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Nothing Else Matters\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Nothing Else Matters\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "never",
+        "cared",
+        "nothing",
+        "else"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Nothing Else Matters\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Nothing Else Matters\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "never",
+        "cared",
+        "nothing",
+        "else"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Nothing Else Matters\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Nothing Else Matters\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "never",
+        "cared",
+        "nothing",
+        "else"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "couldn't",
+          "full": "could not"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    }
+  ]
+}

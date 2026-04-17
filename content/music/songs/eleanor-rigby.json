@@ -1,0 +1,334 @@
+{
+  "slug": "eleanor-rigby",
+  "title": "Eleanor Rigby",
+  "artist": "The Beatles",
+  "year": 1966,
+  "album": "The Beatles 1962-1966 (The Red Album)",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 128,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Eleanor Rigby by The Beatles (1966) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "lonely",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Ah, look at all the lonely people\""
+    },
+    {
+      "term": "people",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Ah, look at all the lonely people\""
+    },
+    {
+      "term": "belong",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Where do they all belong?\""
+    },
+    {
+      "term": "eleanor",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Eleanor Rigby\""
+    },
+    {
+      "term": "rigby",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Eleanor Rigby\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Ah, look at all the lonely people",
+          "Ah, look at all the lonely people",
+          "Eleanor Rigby",
+          "Picks up the rice in the church where a wedding has been"
+        ],
+        "start_seconds": 1,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "All the lonely people",
+          "Where do they all come from?",
+          "All the lonely people",
+          "Where do they all belong?"
+        ],
+        "start_seconds": 32,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ah, look at all the",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lonely",
+      "excerpt_after": "people",
+      "youtube_start": 1,
+      "youtube_end": 15
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "No one",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "comes",
+      "excerpt_after": "near",
+      "youtube_start": 50,
+      "youtube_end": 64
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Where do they all come from?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "What does he care?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Lives in a dream",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Who is it for?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "No one comes near",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ah, look at all the",
+      "excerpt_after": "people",
+      "options": [
+        "buried",
+        "church",
+        "lonely",
+        "working"
+      ],
+      "answer_index": 2,
+      "youtube_start": 1,
+      "youtube_end": 13
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "No one",
+      "excerpt_after": "near",
+      "options": [
+        "church",
+        "comes",
+        "father",
+        "writing"
+      ],
+      "answer_index": 1,
+      "youtube_start": 50,
+      "youtube_end": 62
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "What",
+      "excerpt_after": "he care?",
+      "options": [
+        "along",
+        "does",
+        "name",
+        "writing"
+      ],
+      "answer_index": 1,
+      "youtube_start": 59,
+      "youtube_end": 71
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "all",
+        "look",
+        "Ah,",
+        "lonely",
+        "the",
+        "people",
+        "at"
+      ],
+      "answer": [
+        "Ah,",
+        "look",
+        "at",
+        "all",
+        "the",
+        "lonely",
+        "people"
+      ],
+      "youtube_start": 1
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "window",
+        "at",
+        "the",
+        "Waits"
+      ],
+      "answer": [
+        "Waits",
+        "at",
+        "the",
+        "window"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "lonely",
+        "All",
+        "the",
+        "people"
+      ],
+      "answer": [
+        "All",
+        "the",
+        "lonely",
+        "people"
+      ],
+      "youtube_start": 32
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Where",
+        "all",
+        "do",
+        "belong?",
+        "they"
+      ],
+      "answer": [
+        "Where",
+        "do",
+        "they",
+        "all",
+        "belong?"
+      ],
+      "youtube_start": 41
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "at",
+        "Look",
+        "him",
+        "working"
+      ],
+      "answer": [
+        "Look",
+        "at",
+        "him",
+        "working"
+      ],
+      "youtube_start": 53
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"lonely\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"lonely\" na música inteira?",
+      "word": "lonely",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"people\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"people\" na música inteira?",
+      "word": "people",
+      "answer": 12
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Eleanor Rigby\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Eleanor Rigby\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "lonely",
+        "people",
+        "belong",
+        "eleanor"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Eleanor Rigby\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Eleanor Rigby\", o que aconteceria?",
+      "target_vocab": [
+        "lonely",
+        "people",
+        "belong",
+        "eleanor"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Eleanor Rigby\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Eleanor Rigby\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "lonely",
+        "people",
+        "belong",
+        "eleanor"
+      ]
+    }
+  ]
+}

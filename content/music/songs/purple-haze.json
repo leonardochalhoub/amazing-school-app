@@ -1,0 +1,487 @@
+{
+  "slug": "purple-haze",
+  "title": "Purple Haze",
+  "artist": "Jimi Hendrix",
+  "year": 1967,
+  "album": "Are You Experienced",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 172,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Purple Haze by Jimi Hendrix (1967) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "help",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Help me (help me)\""
+    },
+    {
+      "term": "purple",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Purple haze all in my brain\""
+    },
+    {
+      "term": "haze",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Purple haze all in my brain\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Lately, things just don't seem the same\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Actin' funny but I don't know why\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Uhh, ahh",
+          "Uhh, ahh",
+          "Uhh, ahh",
+          "Uhh, ahh"
+        ],
+        "start_seconds": 96,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "No, no (help me)",
+          "No, no (help me)"
+        ],
+        "start_seconds": 156,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Lately,",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "things",
+      "excerpt_after": "just don't seem the same",
+      "youtube_start": 36,
+      "youtube_end": 50
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Actin'",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "funny",
+      "excerpt_after": "but I don't know why",
+      "youtube_start": 41,
+      "youtube_end": 55
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Don't know if I'm",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "comin",
+      "excerpt_after": "up or down",
+      "youtube_start": 56,
+      "youtube_end": 70
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Am I",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "happy",
+      "excerpt_after": "or in misery?",
+      "youtube_start": 61,
+      "youtube_end": 75
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Is it",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tomorrow",
+      "excerpt_after": "or just the end of time?",
+      "youtube_start": 125,
+      "youtube_end": 139
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ah, yeah,",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "purple",
+      "excerpt_after": "haze",
+      "youtube_start": 137,
+      "youtube_end": 151
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Actin' funny but I don't know why",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Don't know if I'm comin' up or down",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You got me blowin', blow my mind",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You're makin' me blow my mind help me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Lately, things just don't seem the same",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Purple",
+      "excerpt_after": "all in my brain",
+      "options": [
+        "funny",
+        "girl",
+        "haze",
+        "purple"
+      ],
+      "answer_index": 2,
+      "youtube_start": 32,
+      "youtube_end": 44
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Actin'",
+      "excerpt_after": "but I don't know why",
+      "options": [
+        "funny",
+        "haze",
+        "know",
+        "seem"
+      ],
+      "answer_index": 0,
+      "youtube_start": 41,
+      "youtube_end": 53
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Am I",
+      "excerpt_after": "or in misery?",
+      "options": [
+        "happy",
+        "mind",
+        "spell",
+        "time"
+      ],
+      "answer_index": 0,
+      "youtube_start": 61,
+      "youtube_end": 73
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You got me",
+      "excerpt_after": "blow my mind",
+      "options": [
+        "blowin",
+        "eyes",
+        "girl",
+        "things"
+      ],
+      "answer_index": 0,
+      "youtube_start": 121,
+      "youtube_end": 133
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Tell me,",
+      "excerpt_after": "tell me (help me)",
+      "options": [
+        "girl",
+        "help",
+        "night",
+        "youre"
+      ],
+      "answer_index": 0,
+      "youtube_start": 147,
+      "youtube_end": 159
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "all",
+        "haze",
+        "brain",
+        "Purple",
+        "in",
+        "my"
+      ],
+      "answer": [
+        "Purple",
+        "haze",
+        "all",
+        "in",
+        "my",
+        "brain"
+      ],
+      "youtube_start": 32
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "sky",
+        "the",
+        "while",
+        "I",
+        "me",
+        "kiss",
+        "'Scuse"
+      ],
+      "answer": [
+        "'Scuse",
+        "me",
+        "while",
+        "I",
+        "kiss",
+        "the",
+        "sky"
+      ],
+      "youtube_start": 45
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Help",
+        "help",
+        "me",
+        "me"
+      ],
+      "answer": [
+        "Help",
+        "me",
+        "help",
+        "me"
+      ],
+      "youtube_start": 72
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "night",
+        "day",
+        "if",
+        "or",
+        "Don't",
+        "know",
+        "it's"
+      ],
+      "answer": [
+        "Don't",
+        "know",
+        "if",
+        "it's",
+        "day",
+        "or",
+        "night"
+      ],
+      "youtube_start": 117
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Tell",
+        "me",
+        "me,",
+        "girl,",
+        "me",
+        "tell",
+        "help"
+      ],
+      "answer": [
+        "Tell",
+        "me,",
+        "girl,",
+        "tell",
+        "me",
+        "help",
+        "me"
+      ],
+      "youtube_start": 147
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"help\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"help\" na música inteira?",
+      "word": "help",
+      "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"purple\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"purple\" na música inteira?",
+      "word": "purple",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Purple haze all in my brain",
+          "order": 0
+        },
+        {
+          "text": "Help me (help me)",
+          "order": 1
+        },
+        {
+          "text": "Oh, no, oh",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Lately, things just don't seem the same",
+          "order": 0
+        },
+        {
+          "text": "Don't know if it's day or night",
+          "order": 1
+        },
+        {
+          "text": "Oh, help me",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Purple Haze\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Purple Haze\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "help",
+        "purple",
+        "haze",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Purple Haze\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Purple Haze\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "help",
+        "purple",
+        "haze",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Purple Haze\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Purple Haze\", o que aconteceria?",
+      "target_vocab": [
+        "help",
+        "purple",
+        "haze",
+        "don't"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    }
+  ]
+}

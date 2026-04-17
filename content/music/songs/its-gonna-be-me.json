@@ -56,12 +56,356 @@
       "youtube_end": 18
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "remember",
+      "excerpt_after": "you told me",
+      "youtube_start": 24,
+      "youtube_end": 38
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Never",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "seems",
+      "excerpt_after": "enough for you",
+      "youtube_start": 37,
+      "youtube_end": 51
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You're just too",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "blind",
+      "excerpt_after": "(Too blind), too see",
+      "youtube_start": 69,
+      "youtube_end": 83
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Never seems",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "enough",
+      "excerpt_after": "for you",
+      "youtube_start": 84,
+      "youtube_end": 98
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "comes",
+      "excerpt_after": "a day",
+      "youtube_start": 114,
+      "youtube_end": 128
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
       "excerpt": "You might've been hurt, babe",
       "model_answer_pt": "",
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I remember you told me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Every little thing I do",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You don't wanna lose it again",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Baby, when you finally",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's",
+      "excerpt_after": "be me",
+      "options": [
+        "aint",
+        "babe",
+        "gonna",
+        "seems"
+      ],
+      "answer_index": 2,
+      "youtube_start": 4,
+      "youtube_end": 16
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "you told me",
+      "options": [
+        "believe",
+        "enough",
+        "remember",
+        "youll"
+      ],
+      "answer_index": 2,
+      "youtube_start": 24,
+      "youtube_end": 36
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You've got no",
+      "excerpt_after": "babe",
+      "options": [
+        "choice",
+        "move",
+        "remember",
+        "youre"
+      ],
+      "answer_index": 0,
+      "youtube_start": 59,
+      "youtube_end": 71
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So just",
+      "excerpt_after": "me why",
+      "options": [
+        "gonna",
+        "tell",
+        "youll",
+        "youve"
+      ],
+      "answer_index": 1,
+      "youtube_start": 79,
+      "youtube_end": 91
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Guess what",
+      "excerpt_after": "what)",
+      "options": [
+        "guess",
+        "remember",
+        "there",
+        "time"
+      ],
+      "answer_index": 0,
+      "youtube_start": 99,
+      "youtube_end": 111
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "be",
+        "gonna",
+        "me",
+        "It's"
+      ],
+      "answer": [
+        "It's",
+        "gonna",
+        "be",
+        "me"
+      ],
+      "youtube_start": 4
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "no",
+        "cry",
+        "man,",
+        "No"
+      ],
+      "answer": [
+        "No",
+        "man,",
+        "no",
+        "cry"
+      ],
+      "youtube_start": 30
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "Get",
+        "love",
+        "somebody"
+      ],
+      "answer": [
+        "Get",
+        "to",
+        "love",
+        "somebody"
+      ],
+      "youtube_start": 49
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "what",
+        "Guess",
+        "Guess",
+        "what"
+      ],
+      "answer": [
+        "Guess",
+        "what",
+        "Guess",
+        "what"
+      ],
+      "youtube_start": 99
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I'm",
+        "But",
+        "like",
+        "that",
+        "not"
+      ],
+      "answer": [
+        "But",
+        "I'm",
+        "not",
+        "like",
+        "that"
+      ],
+      "youtube_start": 137
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"gonna\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"gonna\" na música inteira?",
+      "word": "gonna",
+      "answer": 14
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"it's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"it's\" na música inteira?",
+      "word": "it's",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "It's gonna be me",
+          "order": 0
+        },
+        {
+          "text": "You're just too blind (Too blind), too see",
+          "order": 1
+        },
+        {
+          "text": "Don't wanna lose it",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You might've been hurt, babe",
+          "order": 0
+        },
+        {
+          "text": "Get to love somebody (Somebody)",
+          "order": 1
+        },
+        {
+          "text": "You get to love",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"It's Gonna Be Me\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"It's Gonna Be Me\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "gonna",
+        "right",
+        "tough",
+        "wait"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"It's Gonna Be Me\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"It's Gonna Be Me\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "gonna",
+        "right",
+        "tough",
+        "wait"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"It's Gonna Be Me\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"It's Gonna Be Me\", o que aconteceria?",
+      "target_vocab": [
+        "gonna",
+        "right",
+        "tough",
+        "wait"
+      ]
     },
     {
       "type": "spot_the_grammar",
@@ -83,18 +427,15 @@
         {
           "short": "that's",
           "full": "that is"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
         }
-      ]
-    },
-    {
-      "type": "discussion",
-      "prompt_en": "If you had to summarize \"It's Gonna Be Me\" in one sentence to someone who has never heard it, what would you say?",
-      "prompt_pt": "Se você tivesse que resumir \"It's Gonna Be Me\" em uma frase para alguém que nunca ouviu, o que diria?",
-      "target_vocab": [
-        "gonna",
-        "right",
-        "tough",
-        "wait"
       ]
     },
     {
@@ -117,66 +458,6 @@
         {
           "en": "wait",
           "pt": "esperar"
-        }
-      ]
-    },
-    {
-      "type": "unscramble_line",
-      "prompt_en": "Put the words in the right order:",
-      "prompt_pt": "Coloque as palavras na ordem certa:",
-      "shuffled": [
-        "be",
-        "gonna",
-        "me",
-        "It's"
-      ],
-      "answer": [
-        "It's",
-        "gonna",
-        "be",
-        "me"
-      ],
-      "youtube_start": 4
-    },
-    {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "It's",
-      "excerpt_after": "be me",
-      "options": [
-        "been",
-        "gonna",
-        "mightve",
-        "yeah"
-      ],
-      "answer_index": 1,
-      "youtube_start": 4,
-      "youtube_end": 16
-    },
-    {
-      "type": "count_word",
-      "prompt_en": "How many times do you hear the word \"gonna\" in the whole song?",
-      "prompt_pt": "Quantas vezes você ouve a palavra \"gonna\" na música inteira?",
-      "word": "gonna",
-      "answer": 14
-    },
-    {
-      "type": "line_order",
-      "prompt_en": "Put these three lines in the order they appear in the song:",
-      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
-      "excerpts": [
-        {
-          "text": "It's gonna be me",
-          "order": 0
-        },
-        {
-          "text": "You're just too blind (Too blind), too see",
-          "order": 1
-        },
-        {
-          "text": "Don't wanna lose it",
-          "order": 2
         }
       ]
     }

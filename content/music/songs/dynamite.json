@@ -1,0 +1,476 @@
+{
+  "slug": "dynamite",
+  "title": "Dynamite",
+  "artist": "Taio Cruz",
+  "year": 2010,
+  "album": "Rokstarr",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 204,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Dynamite by Taio Cruz (2010) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "gon'",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"'Cause we gon' rock this club, we gon' go all night\""
+    },
+    {
+      "term": "cause",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"I hit the floor 'cause that's my plans, plans, plans, plans (yeah)\""
+    },
+    {
+      "term": "hands",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Give me some space for both my hands, hands, hands, hands\""
+    },
+    {
+      "term": "saying",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Saying, \"Ayo, gotta let go\"\""
+    },
+    {
+      "term": "light",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"We gon' light it up like it's dynamite\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Saying, \"Ayo, gotta let go\"",
+          "I wanna celebrate and live my life",
+          "Saying, \"Ayo, baby, let's go\"",
+          "'Cause we gon' rock this club, we gon' go all night"
+        ],
+        "start_seconds": 35,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Saying, \"Ayo, gotta let go\"",
+          "I wanna celebrate and live my life",
+          "Saying, \"Ayo, baby, let's go\"",
+          "'Cause we gon' rock this club, we gon' go all night"
+        ],
+        "start_seconds": 91,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I came to",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dance",
+      "excerpt_after": "dance, dance, dance (yeah)",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "throw",
+      "excerpt_after": "my hands up in the air sometimes",
+      "youtube_start": 32,
+      "youtube_end": 46
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "celebrate and live my life",
+      "youtube_start": 40,
+      "youtube_end": 54
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We gon'",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "light",
+      "excerpt_after": "it up like it's dynamite",
+      "youtube_start": 51,
+      "youtube_end": 65
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I wanna",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "celebrate",
+      "excerpt_after": "and live my life",
+      "youtube_start": 96,
+      "youtube_end": 110
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "take it all, I",
+      "youtube_start": 120,
+      "youtube_end": 134
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I came to dance, dance, dance, dance yeah",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We gon' light it up like it's dynamite",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm gonna take it all, I",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Higher overall, I",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Cause I-I-I believe it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I came to",
+      "excerpt_after": "dance, dance, dance (yeah)",
+      "options": [
+        "believe",
+        "dance",
+        "lets",
+        "live"
+      ],
+      "answer_index": 1,
+      "youtube_start": 7,
+      "youtube_end": 19
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Saying, \"Ayo,",
+      "excerpt_after": "let go\"",
+      "options": [
+        "baby",
+        "believe",
+        "gotta",
+        "last"
+      ],
+      "answer_index": 2,
+      "youtube_start": 35,
+      "youtube_end": 47
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We gon'",
+      "excerpt_after": "it up like it's dynamite",
+      "options": [
+        "crew",
+        "light",
+        "plans",
+        "told"
+      ],
+      "answer_index": 1,
+      "youtube_start": 51,
+      "youtube_end": 63
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I wanna",
+      "excerpt_after": "and live my life",
+      "options": [
+        "believe",
+        "celebrate",
+        "landing",
+        "sometimes"
+      ],
+      "answer_index": 1,
+      "youtube_start": 96,
+      "youtube_end": 108
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm gonna be the",
+      "excerpt_after": "one standing",
+      "options": [
+        "last",
+        "lets",
+        "night",
+        "yeah"
+      ],
+      "answer_index": 0,
+      "youtube_start": 124,
+      "youtube_end": 136
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "let",
+        "Saying,",
+        "gotta",
+        "go\"",
+        "\"Ayo,"
+      ],
+      "answer": [
+        "Saying,",
+        "\"Ayo,",
+        "gotta",
+        "let",
+        "go\""
+      ],
+      "youtube_start": 35
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "and",
+        "life",
+        "I",
+        "live",
+        "wanna",
+        "celebrate",
+        "my"
+      ],
+      "answer": [
+        "I",
+        "wanna",
+        "celebrate",
+        "and",
+        "live",
+        "my",
+        "life"
+      ],
+      "youtube_start": 40
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "all,",
+        "take",
+        "it",
+        "gonna",
+        "I'm",
+        "I"
+      ],
+      "answer": [
+        "I'm",
+        "gonna",
+        "take",
+        "it",
+        "all,",
+        "I"
+      ],
+      "youtube_start": 120
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "be",
+        "the",
+        "I'm",
+        "one",
+        "last",
+        "landing",
+        "gonna"
+      ],
+      "answer": [
+        "I'm",
+        "gonna",
+        "be",
+        "the",
+        "last",
+        "one",
+        "landing"
+      ],
+      "youtube_start": 132
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "it",
+        "I",
+        "And",
+        "I-I-I,",
+        "just",
+        "all",
+        "want"
+      ],
+      "answer": [
+        "And",
+        "I-I-I,",
+        "I",
+        "just",
+        "want",
+        "it",
+        "all"
+      ],
+      "youtube_start": 139
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"gon'\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"gon'\" na música inteira?",
+      "word": "gon'",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"cause\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"cause\" na música inteira?",
+      "word": "cause",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I came to dance, dance, dance, dance (yeah)",
+          "order": 0
+        },
+        {
+          "text": "Saying, \"Ayo, gotta let go\"",
+          "order": 1
+        },
+        {
+          "text": "'Cause I-I-I believe it",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Taio Cruz one question about \"Dynamite\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Taio Cruz sobre \"Dynamite\", o que seria e por quê?",
+      "target_vocab": [
+        "gon'",
+        "cause",
+        "hands",
+        "saying"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Dynamite\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Dynamite\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "gon'",
+        "cause",
+        "hands",
+        "saying"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Dynamite\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Dynamite\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "gon'",
+        "cause",
+        "hands",
+        "saying"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "let's",
+          "full": "let us"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

@@ -56,12 +56,332 @@
       "youtube_end": 50
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "everything",
+      "excerpt_after": "you do",
+      "youtube_start": 41,
+      "youtube_end": 55
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And all the",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "things",
+      "excerpt_after": "you do",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And it was",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "called",
+      "excerpt_after": "\"Yellow\"",
+      "youtube_start": 64,
+      "youtube_end": 78
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(Ooh) Turn into",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "something",
+      "excerpt_after": "beautiful",
+      "youtube_start": 94,
+      "youtube_end": 108
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"j\"",
+      "answer": "jumped",
+      "excerpt_after": "across for you",
+      "youtube_start": 135,
+      "youtube_end": 149
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
       "excerpt": "Look how they shine for you",
       "model_answer_pt": "",
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yeah, they were all yellow",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I wrote a song for you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So then I took my turn",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I swam across",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Look how they",
+      "excerpt_after": "for you",
+      "options": [
+        "shine",
+        "things",
+        "turn",
+        "yellow"
+      ],
+      "answer_index": 0,
+      "youtube_start": 36,
+      "youtube_end": 48
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And all the",
+      "excerpt_after": "you do",
+      "options": [
+        "shine",
+        "stars",
+        "thing",
+        "things"
+      ],
+      "answer_index": 3,
+      "youtube_start": 58,
+      "youtube_end": 70
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh, what a",
+      "excerpt_after": "to have done",
+      "options": [
+        "bleed",
+        "skin",
+        "thing",
+        "yeah"
+      ],
+      "answer_index": 2,
+      "youtube_start": 75,
+      "youtube_end": 87
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "I love you so",
+      "options": [
+        "bones",
+        "know",
+        "myself",
+        "wrote"
+      ],
+      "answer_index": 1,
+      "youtube_start": 108,
+      "youtube_end": 120
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I drew a",
+      "excerpt_after": "for you",
+      "options": [
+        "called",
+        "done",
+        "jumped",
+        "line"
+      ],
+      "answer_index": 3,
+      "youtube_start": 152,
+      "youtube_end": 164
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "at",
+        "Look",
+        "stars",
+        "the"
+      ],
+      "answer": [
+        "Look",
+        "at",
+        "the",
+        "stars"
+      ],
+      "youtube_start": 33
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "wrote",
+        "a",
+        "song",
+        "you",
+        "I",
+        "for"
+      ],
+      "answer": [
+        "I",
+        "wrote",
+        "a",
+        "song",
+        "for",
+        "you"
+      ],
+      "youtube_start": 52
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "what",
+        "to",
+        "a",
+        "thing",
+        "have",
+        "done",
+        "Oh,"
+      ],
+      "answer": [
+        "Oh,",
+        "what",
+        "a",
+        "thing",
+        "to",
+        "have",
+        "done"
+      ],
+      "youtube_start": 75
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "jumped",
+        "you",
+        "across",
+        "for",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "jumped",
+        "across",
+        "for",
+        "you"
+      ],
+      "youtube_start": 135
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "for",
+        "I",
+        "drew",
+        "you",
+        "line",
+        "a"
+      ],
+      "answer": [
+        "I",
+        "drew",
+        "a",
+        "line",
+        "for",
+        "you"
+      ],
+      "youtube_start": 152
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"yellow\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"yellow\" na música inteira?",
+      "word": "yellow",
+      "answer": 5
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"skin\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"skin\" na música inteira?",
+      "word": "skin",
+      "answer": 4
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Yellow\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Yellow\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "yellow",
+        "skin",
+        "bones",
+        "turned"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Yellow\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Yellow\", o que aconteceria?",
+      "target_vocab": [
+        "yellow",
+        "skin",
+        "bones",
+        "turned"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Yellow\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Yellow\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "yellow",
+        "skin",
+        "bones",
+        "turned"
+      ]
     },
     {
       "type": "spot_the_grammar",
@@ -76,17 +396,6 @@
           "short": "it's",
           "full": "it is"
         }
-      ]
-    },
-    {
-      "type": "discussion",
-      "prompt_en": "Compare \"Yellow\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
-      "prompt_pt": "Compare \"Yellow\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
-      "target_vocab": [
-        "yellow",
-        "skin",
-        "bones",
-        "turned"
       ]
     },
     {
@@ -111,47 +420,6 @@
           "pt": "virou / se tornou"
         }
       ]
-    },
-    {
-      "type": "unscramble_line",
-      "prompt_en": "Put the words in the right order:",
-      "prompt_pt": "Coloque as palavras na ordem certa:",
-      "shuffled": [
-        "at",
-        "Look",
-        "stars",
-        "the"
-      ],
-      "answer": [
-        "Look",
-        "at",
-        "the",
-        "stars"
-      ],
-      "youtube_start": 33
-    },
-    {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "Look how",
-      "excerpt_after": "shine for you",
-      "options": [
-        "look",
-        "shine",
-        "stars",
-        "they"
-      ],
-      "answer_index": 3,
-      "youtube_start": 36,
-      "youtube_end": 48
-    },
-    {
-      "type": "count_word",
-      "prompt_en": "How many times do you hear the word \"yellow\" in the whole song?",
-      "prompt_pt": "Quantas vezes você ouve a palavra \"yellow\" na música inteira?",
-      "word": "yellow",
-      "answer": 5
     }
   ],
   "teaching_notes_md": "**Pedagogy:** Exceptionally simple vocabulary makes this a low-risk first song. Focus on pronunciation of 'yellow' (/ˈjɛləʊ/) — the 'y' consonant + 'ow' diphthong is tricky for PT speakers.",

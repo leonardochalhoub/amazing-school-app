@@ -1,0 +1,472 @@
+{
+  "slug": "low",
+  "title": "Low",
+  "artist": "Flo Rida",
+  "year": 2007,
+  "album": "Dance Chart, Volume 22 (disc 1)",
+  "genre": [
+    "hip-hop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "fast",
+  "duration_seconds": 227,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Low by Flo Rida (2007) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "floor",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"She hit the Floor (she hit the floor)\""
+    },
+    {
+      "term": "shawty",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Shawty had them Apple Bottom Jeans (jeans)\""
+    },
+    {
+      "term": "jeans",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Shawty had them Apple Bottom Jeans (jeans)\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Next thing you know\""
+    },
+    {
+      "term": "next",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Next thing you know\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Next thing you know",
+          "Shawty got Low Low Low Low Low Low Low Low",
+          "Them baggy sweat pants",
+          "And the Reeboks with the straps (with the straps)"
+        ],
+        "start_seconds": 25,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Apple Bottom Jeans (jeans)",
+          "Boots with the fur (with the fur)",
+          "The whole club was lookin' at her",
+          "She hit the Floor (she hit the floor)"
+        ],
+        "start_seconds": 75,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Shawty had them",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "apple",
+      "excerpt_after": "Bottom Jeans (jeans)",
+      "youtube_start": 15,
+      "youtube_end": 29
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I ain't",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "seen nuthin' that'll make me go",
+      "youtube_start": 45,
+      "youtube_end": 59
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm a say that I",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "prefer",
+      "excerpt_after": "them no clothes",
+      "youtube_start": 67,
+      "youtube_end": 81
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Shawty what I",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gotta",
+      "excerpt_after": "do to get you home",
+      "youtube_start": 106,
+      "youtube_end": 120
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Three stacks, come on, now",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "three grand",
+      "youtube_start": 115,
+      "youtube_end": 129
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Got her them",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "paper",
+      "excerpt_after": "stacks",
+      "youtube_start": 174,
+      "youtube_end": 188
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "She hit the Floor she hit the floor",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Them birthday cakes, they stole the show",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Did I think I seen shorty get Low",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Work the pole, I got the bank roll",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "She had them",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Let me",
+      "excerpt_after": "to 'em come on",
+      "options": [
+        "know",
+        "lookin",
+        "million",
+        "talk"
+      ],
+      "answer_index": 3,
+      "youtube_start": 13,
+      "youtube_end": 25
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Them",
+      "excerpt_after": "cakes, they stole the show",
+      "options": [
+        "birthday",
+        "bottom",
+        "minute",
+        "turned"
+      ],
+      "answer_index": 0,
+      "youtube_start": 51,
+      "youtube_end": 63
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Apple",
+      "excerpt_after": "Jeans (jeans)",
+      "options": [
+        "bottom",
+        "dollar",
+        "know",
+        "million"
+      ],
+      "answer_index": 0,
+      "youtube_start": 75,
+      "youtube_end": 87
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "One",
+      "excerpt_after": "come on",
+      "options": [
+        "club",
+        "lookin",
+        "show",
+        "stack"
+      ],
+      "answer_index": 3,
+      "youtube_start": 113,
+      "youtube_end": 125
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Yea she was",
+      "excerpt_after": "the money",
+      "options": [
+        "gave",
+        "talk",
+        "whole",
+        "worth"
+      ],
+      "answer_index": 3,
+      "youtube_start": 167,
+      "youtube_end": 179
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Let",
+        "'em",
+        "come",
+        "to",
+        "on",
+        "me",
+        "talk"
+      ],
+      "answer": [
+        "Let",
+        "me",
+        "talk",
+        "to",
+        "'em",
+        "come",
+        "on"
+      ],
+      "youtube_start": 13
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "dough",
+        "spendin'",
+        "all",
+        "This",
+        "crazy",
+        "my",
+        "night"
+      ],
+      "answer": [
+        "This",
+        "crazy",
+        "all",
+        "night",
+        "spendin'",
+        "my",
+        "dough"
+      ],
+      "youtube_start": 47
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "jeans",
+        "of",
+        "My",
+        "full",
+        "gwap"
+      ],
+      "answer": [
+        "My",
+        "jeans",
+        "full",
+        "of",
+        "gwap"
+      ],
+      "youtube_start": 107
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "hot",
+        "a",
+        "toaster",
+        "was",
+        "like",
+        "Shorty"
+      ],
+      "answer": [
+        "Shorty",
+        "was",
+        "hot",
+        "like",
+        "a",
+        "toaster"
+      ],
+      "youtube_start": 128
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "her",
+        "Got",
+        "stacks",
+        "paper",
+        "them"
+      ],
+      "answer": [
+        "Got",
+        "her",
+        "them",
+        "paper",
+        "stacks"
+      ],
+      "youtube_start": 174
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"floor\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"floor\" na música inteira?",
+      "word": "floor",
+      "answer": 16
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"shawty\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"shawty\" na música inteira?",
+      "word": "shawty",
+      "answer": 11
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Shawty had them Apple Bottom Jeans (jeans)",
+          "order": 0
+        },
+        {
+          "text": "What you think I'm playin' baby girl",
+          "order": 1
+        },
+        {
+          "text": "Lil' mama took my cash",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Low\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Low\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "floor",
+        "shawty",
+        "jeans",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Low\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Low\", o que aconteceria?",
+      "target_vocab": [
+        "floor",
+        "shawty",
+        "jeans",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Low\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Low\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "floor",
+        "shawty",
+        "jeans",
+        "know"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "couldn't",
+          "full": "could not"
+        }
+      ]
+    }
+  ]
+}

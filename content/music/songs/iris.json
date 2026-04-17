@@ -1,0 +1,494 @@
+{
+  "slug": "iris",
+  "title": "Iris",
+  "artist": "Goo Goo Dolls",
+  "year": 1998,
+  "album": "Dizzy Up the Girl",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 290,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Iris by Goo Goo Dolls (1998) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "want",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"And I don't want to go home right now\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"And I don't want to go home right now\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"'Cause I know that you feel me somehow\""
+    },
+    {
+      "term": "cause",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"'Cause I know that you feel me somehow\""
+    },
+    {
+      "term": "world",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"And I don't want the world to see me\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "'Cause I don't think that they'd understand",
+          "When everything's made to be broken",
+          "I just want you to know who I am"
+        ],
+        "start_seconds": 53,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "And I'd give up forever to touch you",
+          "'Cause I know that you feel me somehow",
+          "You're the closest to heaven that I'll ever be",
+          "And I don't want to go home right now"
+        ],
+        "start_seconds": 12,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I'd give up",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "forever",
+      "excerpt_after": "to touch you",
+      "youtube_start": 12,
+      "youtube_end": 26
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I don't want to go home",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "right",
+      "excerpt_after": "now",
+      "youtube_start": 25,
+      "youtube_end": 39
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sooner",
+      "excerpt_after": "or later, it's over",
+      "youtube_start": 40,
+      "youtube_end": 54
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I don't want the",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "world",
+      "excerpt_after": "to see me",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And you can't",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fight",
+      "excerpt_after": "the tears that ain't coming",
+      "youtube_start": 80,
+      "youtube_end": 94
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "everything",
+      "excerpt_after": "feels like the movies",
+      "youtube_start": 89,
+      "youtube_end": 103
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I'd give up forever to touch you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And all I can taste is this moment",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I just don't wanna miss you tonight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yeah, you bleed just to know, you're alive",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When everything's made to be broken",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I'd",
+      "excerpt_after": "up forever to touch you",
+      "options": [
+        "cant",
+        "give",
+        "know",
+        "somehow"
+      ],
+      "answer_index": 1,
+      "youtube_start": 12,
+      "youtube_end": 24
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I",
+      "excerpt_after": "want to go home right now",
+      "options": [
+        "cause",
+        "dont",
+        "later",
+        "wanna"
+      ],
+      "answer_index": 1,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "or later, it's over",
+      "options": [
+        "cause",
+        "lies",
+        "sooner",
+        "wanna"
+      ],
+      "answer_index": 2,
+      "youtube_start": 40,
+      "youtube_end": 52
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "'Cause I don't",
+      "excerpt_after": "that they'd understand",
+      "options": [
+        "ever",
+        "somehow",
+        "think",
+        "truth"
+      ],
+      "answer_index": 2,
+      "youtube_start": 53,
+      "youtube_end": 65
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When",
+      "excerpt_after": "feels like the movies",
+      "options": [
+        "closest",
+        "everything",
+        "forever",
+        "tonight"
+      ],
+      "answer_index": 1,
+      "youtube_start": 89,
+      "youtube_end": 101
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "it's",
+        "sooner",
+        "or",
+        "And",
+        "over",
+        "later,"
+      ],
+      "answer": [
+        "And",
+        "sooner",
+        "or",
+        "later,",
+        "it's",
+        "over"
+      ],
+      "youtube_start": 40
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "don't",
+        "miss",
+        "you",
+        "I",
+        "just",
+        "wanna",
+        "tonight"
+      ],
+      "answer": [
+        "I",
+        "just",
+        "don't",
+        "wanna",
+        "miss",
+        "you",
+        "tonight"
+      ],
+      "youtube_start": 44
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "that",
+        "don't",
+        "they'd",
+        "think",
+        "understand",
+        "'Cause",
+        "I"
+      ],
+      "answer": [
+        "'Cause",
+        "I",
+        "don't",
+        "think",
+        "that",
+        "they'd",
+        "understand"
+      ],
+      "youtube_start": 53
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "When",
+        "broken",
+        "everything's",
+        "made",
+        "be"
+      ],
+      "answer": [
+        "When",
+        "everything's",
+        "made",
+        "to",
+        "be",
+        "broken"
+      ],
+      "youtube_start": 58
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "everything",
+        "movies",
+        "feels",
+        "When",
+        "the",
+        "like"
+      ],
+      "answer": [
+        "When",
+        "everything",
+        "feels",
+        "like",
+        "the",
+        "movies"
+      ],
+      "youtube_start": 89
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"want\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"want\" na música inteira?",
+      "word": "want",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And I'd give up forever to touch you",
+          "order": 0
+        },
+        {
+          "text": "I just don't wanna miss you tonight",
+          "order": 1
+        },
+        {
+          "text": "Yeah, you bleed just to know, you're alive",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "'Cause I know that you feel me somehow",
+          "order": 0
+        },
+        {
+          "text": "Or the moment of truth in your lies",
+          "order": 1
+        },
+        {
+          "text": "When everything's made to be broken",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Iris\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Iris\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "want",
+        "don't",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Iris\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Iris\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "want",
+        "don't",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Goo Goo Dolls one question about \"Iris\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Goo Goo Dolls sobre \"Iris\", o que seria e por quê?",
+      "target_vocab": [
+        "want",
+        "don't",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'd",
+          "full": "I would"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        }
+      ]
+    }
+  ]
+}

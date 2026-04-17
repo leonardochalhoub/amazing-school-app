@@ -1,0 +1,466 @@
+{
+  "slug": "what-ive-done",
+  "title": "What I've Done",
+  "artist": "Linkin Park",
+  "year": 2007,
+  "album": "Minutes To Midnight",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 206,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "What I've Done by Linkin Park (2007) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "i've",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"'Cause I've drawn regret\""
+    },
+    {
+      "term": "done",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"What I've done\""
+    },
+    {
+      "term": "myself",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I'll face myself\""
+    },
+    {
+      "term": "i'll",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"I'll face myself\""
+    },
+    {
+      "term": "face",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"I'll face myself\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "(Na-na, na, na, na-na, na, na)",
+          "(Na-na, na, na, na-na, na, na)",
+          "What I've done",
+          "(Na-na, na, na, na-na, na, na)"
+        ],
+        "start_seconds": 178,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "What I've done",
+          "I'll face myself",
+          "To cross out what I've become",
+          "Erase myself"
+        ],
+        "start_seconds": 64,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There's no",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "blood",
+      "excerpt_after": "there's no alibi",
+      "youtube_start": 44,
+      "youtube_end": 58
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Cause I've",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "drawn",
+      "excerpt_after": "regret",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So let",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "mercy",
+      "excerpt_after": "come and wash away",
+      "youtube_start": 57,
+      "youtube_end": 71
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "What you",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thought",
+      "excerpt_after": "of me",
+      "youtube_start": 85,
+      "youtube_end": 99
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "While I",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "clean",
+      "excerpt_after": "this slate",
+      "youtube_start": 88,
+      "youtube_end": 102
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "whatever",
+      "excerpt_after": "pain may come",
+      "youtube_start": 146,
+      "youtube_end": 160
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Cause I've drawn regret",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll face myself",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And let go of what I've done",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "While I clean this slate",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I start again",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There's no",
+      "excerpt_after": "there's no alibi",
+      "options": [
+        "blood",
+        "cross",
+        "regret",
+        "wash"
+      ],
+      "answer_index": 0,
+      "youtube_start": 44,
+      "youtube_end": 56
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "From the",
+      "excerpt_after": "of a thousand lies",
+      "options": [
+        "cross",
+        "na-na",
+        "regret",
+        "truth"
+      ],
+      "answer_index": 3,
+      "youtube_start": 52,
+      "youtube_end": 64
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "To",
+      "excerpt_after": "out what I've become",
+      "options": [
+        "cross",
+        "start",
+        "theres",
+        "thought"
+      ],
+      "answer_index": 0,
+      "youtube_start": 70,
+      "youtube_end": 82
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "While I",
+      "excerpt_after": "this slate",
+      "options": [
+        "clean",
+        "myself",
+        "theres",
+        "wash"
+      ],
+      "answer_index": 0,
+      "youtube_start": 88,
+      "youtube_end": 100
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So let mercy come and",
+      "excerpt_after": "away",
+      "options": [
+        "mercy",
+        "start",
+        "wash",
+        "while"
+      ],
+      "answer_index": 2,
+      "youtube_start": 96,
+      "youtube_end": 108
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "no",
+        "there's",
+        "alibi",
+        "There's",
+        "no",
+        "blood,"
+      ],
+      "answer": [
+        "There's",
+        "no",
+        "blood,",
+        "there's",
+        "no",
+        "alibi"
+      ],
+      "youtube_start": 44
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "of",
+        "truth",
+        "lies",
+        "the",
+        "From",
+        "thousand",
+        "a"
+      ],
+      "answer": [
+        "From",
+        "the",
+        "truth",
+        "of",
+        "a",
+        "thousand",
+        "lies"
+      ],
+      "youtube_start": 52
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "let",
+        "go",
+        "And",
+        "of",
+        "what",
+        "I've",
+        "done"
+      ],
+      "answer": [
+        "And",
+        "let",
+        "go",
+        "of",
+        "what",
+        "I've",
+        "done"
+      ],
+      "youtube_start": 79
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "hands",
+        "With",
+        "the",
+        "of",
+        "uncertainty"
+      ],
+      "answer": [
+        "With",
+        "the",
+        "hands",
+        "of",
+        "uncertainty"
+      ],
+      "youtube_start": 91
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "na-na,",
+        "na,",
+        "na,",
+        "Na-na,",
+        "na,",
+        "na"
+      ],
+      "answer": [
+        "Na-na,",
+        "na,",
+        "na,",
+        "na-na,",
+        "na,",
+        "na"
+      ],
+      "youtube_start": 178
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"i've\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"i've\" na música inteira?",
+      "word": "i've",
+      "answer": 13
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"done\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"done\" na música inteira?",
+      "word": "done",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "In this farewell",
+          "order": 0
+        },
+        {
+          "text": "While I clean this slate",
+          "order": 1
+        },
+        {
+          "text": "What I've done",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"What I've Done\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"What I've Done\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "i've",
+        "done",
+        "myself",
+        "i'll"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"What I've Done\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"What I've Done\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "i've",
+        "done",
+        "myself",
+        "i'll"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"What I've Done\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"What I've Done\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "i've",
+        "done",
+        "myself",
+        "i'll"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,456 @@
+{
+  "slug": "think",
+  "title": "Think",
+  "artist": "Aretha Franklin",
+  "year": 1968,
+  "album": "Queen Of Soul",
+  "genre": [
+    "soul"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "fast",
+  "duration_seconds": 135,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Think by Aretha Franklin (1968) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "think",
+      "pt": "",
+      "note": "Appears 28 times; first heard in: \"You better think (think)\""
+    },
+    {
+      "term": "freedom",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Oh freedom (freedom)\""
+    },
+    {
+      "term": "tryin'",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Think about what you're tryin' to do to me\""
+    },
+    {
+      "term": "mind",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Think (think-think) let your mind go\""
+    },
+    {
+      "term": "you're",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Think about what you're tryin' to do to me\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Oh freedom",
+          "Oh, freedom (yeah)",
+          "Oh freedom",
+          "Oh freedom (freedom)"
+        ],
+        "start_seconds": 47,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "You better think (think)",
+          "Think about what you're tryin' to do to me",
+          "Think (think-think) let your mind go",
+          "Let yourself be free"
+        ],
+        "start_seconds": 15,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "better",
+      "excerpt_after": "think (think)",
+      "youtube_start": 15,
+      "youtube_end": 29
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Let",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "yourself",
+      "excerpt_after": "be free",
+      "youtube_start": 21,
+      "youtube_end": 35
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To see what you're",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "doing",
+      "excerpt_after": "to me",
+      "youtube_start": 36,
+      "youtube_end": 50
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There ain't",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nothin",
+      "excerpt_after": "you could ask",
+      "youtube_start": 65,
+      "youtube_end": 79
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If you keep doin'",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "things",
+      "excerpt_after": "I don't (don't)",
+      "youtube_start": 70,
+      "youtube_end": 84
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well, be",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "careful",
+      "excerpt_after": "you don't lose yours",
+      "youtube_start": 84,
+      "youtube_end": 98
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You better think think",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I ain't no psychiatrist",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But it don't take too much I.Q.",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You! think about it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But I was gonna change my mind",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "think (think)",
+      "options": [
+        "better",
+        "child",
+        "there",
+        "well"
+      ],
+      "answer_index": 0,
+      "youtube_start": 15,
+      "youtube_end": 27
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "even know you",
+      "options": [
+        "change",
+        "didnt",
+        "doin",
+        "free"
+      ],
+      "answer_index": 1,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Think about what you're",
+      "excerpt_after": "to do to me",
+      "options": [
+        "aint",
+        "oh-oh-oh",
+        "people",
+        "tryin"
+      ],
+      "answer_index": 3,
+      "youtube_start": 39,
+      "youtube_end": 51
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "If you",
+      "excerpt_after": "doin' things I don't (don't)",
+      "options": [
+        "careful",
+        "degrees",
+        "keep",
+        "things"
+      ],
+      "answer_index": 2,
+      "youtube_start": 70,
+      "youtube_end": 82
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There ain't nothin'",
+      "excerpt_after": "can do",
+      "options": [
+        "answer",
+        "careful",
+        "either",
+        "yourself"
+      ],
+      "answer_index": 2,
+      "youtube_start": 99,
+      "youtube_end": 111
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "better",
+        "think",
+        "You",
+        "think"
+      ],
+      "answer": [
+        "You",
+        "better",
+        "think",
+        "think"
+      ],
+      "youtube_start": 15
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "no",
+        "I",
+        "ain't",
+        "psychiatrist"
+      ],
+      "answer": [
+        "I",
+        "ain't",
+        "no",
+        "psychiatrist"
+      ],
+      "youtube_start": 31
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "about",
+        "think",
+        "Hey!",
+        "it"
+      ],
+      "answer": [
+        "Hey!",
+        "think",
+        "about",
+        "it"
+      ],
+      "youtube_start": 61
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "around",
+        "People",
+        "everyday",
+        "walk"
+      ],
+      "answer": [
+        "People",
+        "walk",
+        "around",
+        "everyday"
+      ],
+      "youtube_start": 79
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ain't",
+        "do",
+        "either",
+        "nothin'",
+        "can",
+        "There"
+      ],
+      "answer": [
+        "There",
+        "ain't",
+        "nothin'",
+        "either",
+        "can",
+        "do"
+      ],
+      "youtube_start": 99
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"think\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"think\" na música inteira?",
+      "word": "think",
+      "answer": 28
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"freedom\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"freedom\" na música inteira?",
+      "word": "freedom",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You better think (think)",
+          "order": 0
+        },
+        {
+          "text": "Oh freedom (freedom)",
+          "order": 1
+        },
+        {
+          "text": "Ooh think (think)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Think\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Think\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "think",
+        "freedom",
+        "tryin'",
+        "mind"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Think\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Think\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "think",
+        "freedom",
+        "tryin'",
+        "mind"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Think\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Think\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "think",
+        "freedom",
+        "tryin'",
+        "mind"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "let's",
+          "full": "let us"
+        },
+        {
+          "short": "didn't",
+          "full": "did not"
+        },
+        {
+          "short": "couldn't",
+          "full": "could not"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        }
+      ]
+    }
+  ]
+}

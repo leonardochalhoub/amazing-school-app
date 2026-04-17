@@ -1,0 +1,438 @@
+{
+  "slug": "i-left-my-heart-in-san-francisco",
+  "title": "I Left My Heart in San Francisco",
+  "artist": "Tony Bennett",
+  "year": 1962,
+  "album": "I Left My Heart In San Francisco",
+  "genre": [
+    "jazz"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 171,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "I Left My Heart in San Francisco by Tony Bennett (1962) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "francisco",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I left my heart in San Francisco\""
+    },
+    {
+      "term": "home",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"I'm going home to my city by the Bay\""
+    },
+    {
+      "term": "golden",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Your golden sun will shine for me\""
+    },
+    {
+      "term": "shine",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Your golden sun will shine for me\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Your golden sun will shine for me",
+          "When I come home to you, San Francisco",
+          "Your golden sun will shine for me"
+        ],
+        "start_seconds": 151,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "The loveliness of Paris seems somehow sadly gay",
+          "The glory that was Rome is of another day",
+          "I've been terribly alone and forgotten in Manhattan",
+          "I'm going home to my city by the Bay"
+        ],
+        "start_seconds": 9,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "loveliness",
+      "excerpt_after": "of Paris seems somehow sadly gay",
+      "youtube_start": 9,
+      "youtube_end": 23
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "glory",
+      "excerpt_after": "that was Rome is of another day",
+      "youtube_start": 18,
+      "youtube_end": 32
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "going",
+      "excerpt_after": "home to my city by the Bay",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "High on a hill, it",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "calls",
+      "excerpt_after": "to me",
+      "youtube_start": 62,
+      "youtube_end": 76
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "My love",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "waits",
+      "excerpt_after": "there in San Francisco",
+      "youtube_start": 105,
+      "youtube_end": 119
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Your",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "golden",
+      "excerpt_after": "sun will shine for me",
+      "youtube_start": 151,
+      "youtube_end": 165
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've been terribly alone and forgotten in Manhattan",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I left my heart in San Francisco",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The loveliness of Paris seems somehow sadly gay",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "High on a hill, it calls to me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Above the blue and windy sea",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The",
+      "excerpt_after": "of Paris seems somehow sadly gay",
+      "options": [
+        "francisco",
+        "halfway",
+        "loveliness",
+        "morning"
+      ],
+      "answer_index": 2,
+      "youtube_start": 9,
+      "youtube_end": 21
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've been",
+      "excerpt_after": "alone and forgotten in Manhattan",
+      "options": [
+        "cable",
+        "golden",
+        "terribly",
+        "there"
+      ],
+      "answer_index": 2,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "my heart in San Francisco",
+      "options": [
+        "dont",
+        "going",
+        "hill",
+        "left"
+      ],
+      "answer_index": 3,
+      "youtube_start": 45,
+      "youtube_end": 57
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "My love",
+      "excerpt_after": "there in San Francisco",
+      "options": [
+        "dont",
+        "paris",
+        "there",
+        "waits"
+      ],
+      "answer_index": 3,
+      "youtube_start": 105,
+      "youtube_end": 117
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When I come",
+      "excerpt_after": "to you, San Francisco",
+      "options": [
+        "another",
+        "golden",
+        "home",
+        "morning"
+      ],
+      "answer_index": 2,
+      "youtube_start": 134,
+      "youtube_end": 146
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "San",
+        "Francisco",
+        "in",
+        "my",
+        "I",
+        "heart",
+        "left"
+      ],
+      "answer": [
+        "I",
+        "left",
+        "my",
+        "heart",
+        "in",
+        "San",
+        "Francisco"
+      ],
+      "youtube_start": 45
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Francisco",
+        "waits",
+        "there",
+        "San",
+        "in",
+        "My",
+        "love"
+      ],
+      "answer": [
+        "My",
+        "love",
+        "waits",
+        "there",
+        "in",
+        "San",
+        "Francisco"
+      ],
+      "youtube_start": 105
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "and",
+        "Above",
+        "sea",
+        "the",
+        "blue",
+        "windy"
+      ],
+      "answer": [
+        "Above",
+        "the",
+        "blue",
+        "and",
+        "windy",
+        "sea"
+      ],
+      "youtube_start": 122
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "will",
+        "for",
+        "shine",
+        "golden",
+        "Your",
+        "sun",
+        "me"
+      ],
+      "answer": [
+        "Your",
+        "golden",
+        "sun",
+        "will",
+        "shine",
+        "for",
+        "me"
+      ],
+      "youtube_start": 151
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"francisco\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"francisco\" na música inteira?",
+      "word": "francisco",
+      "answer": 4
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"home\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"home\" na música inteira?",
+      "word": "home",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "The loveliness of Paris seems somehow sadly gay",
+          "order": 0
+        },
+        {
+          "text": "High on a hill, it calls to me",
+          "order": 1
+        },
+        {
+          "text": "When I come home to you, San Francisco",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "francisco",
+        "home",
+        "golden",
+        "shine"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"I Left My Heart in San Francisco\" was released in 1962. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"I Left My Heart in San Francisco\" foi lançada em 1962. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "francisco",
+        "home",
+        "golden",
+        "shine"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"I Left My Heart in San Francisco\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"I Left My Heart in San Francisco\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "francisco",
+        "home",
+        "golden",
+        "shine"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    }
+  ]
+}

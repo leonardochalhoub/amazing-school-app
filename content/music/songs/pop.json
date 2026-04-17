@@ -1,0 +1,489 @@
+{
+  "slug": "pop",
+  "title": "Pop",
+  "artist": "NSYNC",
+  "year": 2001,
+  "album": "Celebrity",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "fast",
+  "duration_seconds": 238,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Pop by NSYNC (2001) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "wonder",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Do you ever wonder why\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Baby, you can't stop (You can't stop)\""
+    },
+    {
+      "term": "stop",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Baby, you can't stop (You can't stop)\""
+    },
+    {
+      "term": "ever",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Do you ever wonder why\""
+    },
+    {
+      "term": "gets",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"This music gets you high?\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "It takes you on a ride",
+          "Feel it when your body starts to rock",
+          "Baby, you can't stop (You can't stop)",
+          "And the music's all you got"
+        ],
+        "start_seconds": 40,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "(When your body starts to rock)",
+          "Baby, you can't stop (Baby, don't stop)",
+          "And the music's all you got",
+          "C'mon now, this must be..."
+        ],
+        "start_seconds": 157,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Sick and",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tired",
+      "excerpt_after": "of hearin'",
+      "youtube_start": 5,
+      "youtube_end": 19
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thing",
+      "excerpt_after": "you got to realize",
+      "youtube_start": 12,
+      "youtube_end": 26
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Bout the",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "clothes",
+      "excerpt_after": "I wear",
+      "youtube_start": 29,
+      "youtube_end": 43
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "takes",
+      "excerpt_after": "you on a ride",
+      "youtube_start": 40,
+      "youtube_end": 54
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Now, why you",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "try to classify",
+      "youtube_start": 60,
+      "youtube_end": 74
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Now",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "people",
+      "excerpt_after": "can't you see",
+      "youtube_start": 75,
+      "youtube_end": 89
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The thing you got to realize",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We got the gift of melody",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Bout the clothes I wear",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Is that you get hyped",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Do you ever wonder why",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Sick and",
+      "excerpt_after": "of hearin'",
+      "options": [
+        "gift",
+        "matter",
+        "thing",
+        "tired"
+      ],
+      "answer_index": 3,
+      "youtube_start": 5,
+      "youtube_end": 17
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We gonna",
+      "excerpt_after": "it 'til the end",
+      "options": [
+        "bring",
+        "ever",
+        "every",
+        "these"
+      ],
+      "answer_index": 0,
+      "youtube_start": 18,
+      "youtube_end": 30
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Feel it when your",
+      "excerpt_after": "starts to rock",
+      "options": [
+        "body",
+        "bout",
+        "gonna",
+        "music"
+      ],
+      "answer_index": 0,
+      "youtube_start": 42,
+      "youtube_end": 54
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Can we say the",
+      "excerpt_after": "for you?",
+      "options": [
+        "bring",
+        "doin",
+        "drive",
+        "same"
+      ],
+      "answer_index": 3,
+      "youtube_start": 66,
+      "youtube_end": 78
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "This music",
+      "excerpt_after": "you high? (Gets you high)",
+      "options": [
+        "bring",
+        "gets",
+        "matter",
+        "thing"
+      ],
+      "answer_index": 1,
+      "youtube_start": 94,
+      "youtube_end": 106
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "and",
+        "Sick",
+        "of",
+        "tired",
+        "hearin'"
+      ],
+      "answer": [
+        "Sick",
+        "and",
+        "tired",
+        "of",
+        "hearin'"
+      ],
+      "youtube_start": 5
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "end",
+        "it",
+        "gonna",
+        "'til",
+        "We",
+        "bring",
+        "the"
+      ],
+      "answer": [
+        "We",
+        "gonna",
+        "bring",
+        "it",
+        "'til",
+        "the",
+        "end"
+      ],
+      "youtube_start": 18
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "you",
+        "got",
+        "the",
+        "music's",
+        "all"
+      ],
+      "answer": [
+        "And",
+        "the",
+        "music's",
+        "all",
+        "you",
+        "got"
+      ],
+      "youtube_start": 48
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "people",
+        "Now",
+        "can't",
+        "you",
+        "see"
+      ],
+      "answer": [
+        "Now",
+        "people",
+        "can't",
+        "you",
+        "see"
+      ],
+      "youtube_start": 75
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "Do",
+        "why",
+        "ever",
+        "Oh!",
+        "wonder"
+      ],
+      "answer": [
+        "Oh!",
+        "Do",
+        "you",
+        "ever",
+        "wonder",
+        "why"
+      ],
+      "youtube_start": 148
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"wonder\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"wonder\" na música inteira?",
+      "word": "wonder",
+      "answer": 11
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"baby\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"baby\" na música inteira?",
+      "word": "baby",
+      "answer": 11
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Dirty pop, yo",
+          "order": 0
+        },
+        {
+          "text": "The type of thing that we do?",
+          "order": 1
+        },
+        {
+          "text": "(Ever wonder why)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Sick and tired of hearin'",
+          "order": 0
+        },
+        {
+          "text": "Is that you get hyped",
+          "order": 1
+        },
+        {
+          "text": "Baby, you can't stop (Baby, don't stop)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Pop\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Pop\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "wonder",
+        "baby",
+        "stop",
+        "ever"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Pop\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Pop\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "wonder",
+        "baby",
+        "stop",
+        "ever"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Pop\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Pop\", o que aconteceria?",
+      "target_vocab": [
+        "wonder",
+        "baby",
+        "stop",
+        "ever"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "what's",
+          "full": "what is"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "doesn't",
+          "full": "does not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "slug": "california-girls",
+  "title": "California Girls",
+  "artist": "The Beach Boys",
+  "year": 1965,
+  "album": "Summer Days (And Summer Nights) [2001 - Remaster]",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 160,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "California Girls by The Beach Boys (1965) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "girls",
+      "pt": "",
+      "note": "Appears 26 times; first heard in: \"Well, East Coast girls are hip\""
+    },
+    {
+      "term": "wish",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"I wish they all could be California\""
+    },
+    {
+      "term": "california",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"I wish they all could be California\""
+    },
+    {
+      "term": "coast",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Well, East Coast girls are hip\""
+    },
+    {
+      "term": "really",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I really dig those styles they wear\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I wish they all could be California",
+          "I wish they all could be California",
+          "I wish they all could be California girls"
+        ],
+        "start_seconds": 60,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "Well, East Coast girls are hip",
+          "I really dig those styles they wear",
+          "And the Southern girls, with the way they talk",
+          "They knock me out when I'm down there"
+        ],
+        "start_seconds": 27,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well, East",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "coast",
+      "excerpt_after": "girls are hip",
+      "youtube_start": 27,
+      "youtube_end": 41
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "southern",
+      "excerpt_after": "girls, with the way they talk",
+      "youtube_start": 35,
+      "youtube_end": 49
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And the",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "northern",
+      "excerpt_after": "girls, with the way they kiss",
+      "youtube_start": 51,
+      "youtube_end": 65
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I wish they all could be",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "california",
+      "excerpt_after": "girls",
+      "youtube_start": 69,
+      "youtube_end": 83
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I dig a",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "french",
+      "excerpt_after": "bikini on Hawaiian island dolls",
+      "youtube_start": 85,
+      "youtube_end": 99
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I seen all",
+      "blank_hint": "word starting with \"k\"",
+      "answer": "kinds",
+      "excerpt_after": "of girls",
+      "youtube_start": 98,
+      "youtube_end": 112
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I really dig those styles they wear",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They keep their boyfriends warm at night",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I wish they all could be California girls",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I seen all kinds of girls",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The West Coast has the sunshine",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well,",
+      "excerpt_after": "Coast girls are hip",
+      "options": [
+        "coast",
+        "east",
+        "girls",
+        "states"
+      ],
+      "answer_index": 1,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "They",
+      "excerpt_after": "me out when I'm down there",
+      "options": [
+        "coast",
+        "knock",
+        "seen",
+        "tanned"
+      ],
+      "answer_index": 1,
+      "youtube_start": 39,
+      "youtube_end": 51
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "they all could be California",
+      "options": [
+        "couldnt",
+        "farmers",
+        "feel",
+        "wish"
+      ],
+      "answer_index": 3,
+      "youtube_start": 60,
+      "youtube_end": 72
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And the",
+      "excerpt_after": "all get so tanned",
+      "options": [
+        "couldnt",
+        "girls",
+        "talk",
+        "wear"
+      ],
+      "answer_index": 1,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I been all around this",
+      "excerpt_after": "big world",
+      "options": [
+        "farmers",
+        "great",
+        "kiss",
+        "states"
+      ],
+      "answer_index": 1,
+      "youtube_start": 94,
+      "youtube_end": 106
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "girls",
+        "hip",
+        "Coast",
+        "are",
+        "East",
+        "Well,"
+      ],
+      "answer": [
+        "Well,",
+        "East",
+        "Coast",
+        "girls",
+        "are",
+        "hip"
+      ],
+      "youtube_start": 27
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "those",
+        "wear",
+        "dig",
+        "they",
+        "styles",
+        "I",
+        "really"
+      ],
+      "answer": [
+        "I",
+        "really",
+        "dig",
+        "those",
+        "styles",
+        "they",
+        "wear"
+      ],
+      "youtube_start": 30
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "all",
+        "California",
+        "be",
+        "they",
+        "I",
+        "could",
+        "wish"
+      ],
+      "answer": [
+        "I",
+        "wish",
+        "they",
+        "all",
+        "could",
+        "be",
+        "California"
+      ],
+      "youtube_start": 60
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "has",
+        "The",
+        "West",
+        "sunshine",
+        "the",
+        "Coast"
+      ],
+      "answer": [
+        "The",
+        "West",
+        "Coast",
+        "has",
+        "the",
+        "sunshine"
+      ],
+      "youtube_start": 77
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "sand",
+        "a",
+        "the",
+        "tree",
+        "in",
+        "palm",
+        "By"
+      ],
+      "answer": [
+        "By",
+        "a",
+        "palm",
+        "tree",
+        "in",
+        "the",
+        "sand"
+      ],
+      "youtube_start": 89
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"girls\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"girls\" na música inteira?",
+      "word": "girls",
+      "answer": 26
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"wish\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"wish\" na música inteira?",
+      "word": "wish",
+      "answer": 12
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Well, East Coast girls are hip",
+          "order": 0
+        },
+        {
+          "text": "I wish they all could be California",
+          "order": 1
+        },
+        {
+          "text": "I been all around this great big world",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I really dig those styles they wear",
+          "order": 0
+        },
+        {
+          "text": "And the girls all get so tanned",
+          "order": 1
+        },
+        {
+          "text": "Back to the cutest girls in the world",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"California Girls\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"California Girls\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "girls",
+        "wish",
+        "california",
+        "coast"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"California Girls\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"California Girls\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "girls",
+        "wish",
+        "california",
+        "coast"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"California Girls\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"California Girls\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "girls",
+        "wish",
+        "california",
+        "coast"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "couldn't",
+          "full": "could not"
+        }
+      ]
+    }
+  ]
+}

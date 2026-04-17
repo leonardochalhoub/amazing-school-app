@@ -1,0 +1,489 @@
+{
+  "slug": "easy",
+  "title": "Easy",
+  "artist": "Lionel Richie",
+  "year": 1977,
+  "album": "Tuskegee (The Dutch Edition)",
+  "genre": [
+    "soul"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 271,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Easy by Lionel Richie (1977) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "easy",
+      "pt": "",
+      "note": "Appears 21 times; first heard in: \"That's why I'm easy\""
+    },
+    {
+      "term": "mornin'",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"I'm easy like Sunday mornin', yeah\""
+    },
+    {
+      "term": "that's",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"That's why I'm easy\""
+    },
+    {
+      "term": "sunday",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I'm easy like Sunday mornin', yeah\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"I know it sounds funny but I just can't stand the pain\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "That's why I'm easy",
+          "I'm easy like Sunday mornin', yeah",
+          "That's why I'm easy, so easy",
+          "I'm easy like Sunday mornin'"
+        ],
+        "start_seconds": 45,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "That's why I'm easy",
+          "Easy like Sunday mornin'",
+          "Whoa, that's why I'm easy, so easy",
+          "Yes, I'm easy like Sunday mornin'"
+        ],
+        "start_seconds": 195,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Girl, I'm",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "leaving",
+      "excerpt_after": "you tomorrow",
+      "youtube_start": 22,
+      "youtube_end": 36
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You see I",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "begged",
+      "excerpt_after": "stole and I borrowed",
+      "youtube_start": 36,
+      "youtube_end": 50
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm easy like",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sunday",
+      "excerpt_after": "mornin', yeah",
+      "youtube_start": 51,
+      "youtube_end": 65
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "be high, so high",
+      "youtube_start": 135,
+      "youtube_end": 149
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Now play it",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "right",
+      "excerpt_after": "here for me",
+      "youtube_start": 164,
+      "youtube_end": 178
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Whoa,",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "why I'm easy, so easy",
+      "youtube_start": 207,
+      "youtube_end": 221
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Girl, I'm leaving you tomorrow",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "That's why I'm easy",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "That's why I'm easy, so easy",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've paid my dues to make it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I wanna be high, so high",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Girl, I'm",
+      "excerpt_after": "you tomorrow",
+      "options": [
+        "fake",
+        "leaving",
+        "seems",
+        "things"
+      ],
+      "answer_index": 1,
+      "youtube_start": 22,
+      "youtube_end": 34
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm",
+      "excerpt_after": "like Sunday mornin', yeah",
+      "options": [
+        "baby",
+        "done",
+        "easy",
+        "right"
+      ],
+      "answer_index": 2,
+      "youtube_start": 51,
+      "youtube_end": 63
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've",
+      "excerpt_after": "my dues to make it",
+      "options": [
+        "baby",
+        "brother",
+        "dues",
+        "paid"
+      ],
+      "answer_index": 3,
+      "youtube_start": 83,
+      "youtube_end": 95
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I wanna be",
+      "excerpt_after": "just me, oh, baby",
+      "options": [
+        "alright",
+        "cant",
+        "free",
+        "william"
+      ],
+      "answer_index": 2,
+      "youtube_start": 148,
+      "youtube_end": 160
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Whoa,",
+      "excerpt_after": "why I'm easy, so easy",
+      "options": [
+        "sing",
+        "stand",
+        "thats",
+        "yeah"
+      ],
+      "answer_index": 2,
+      "youtube_start": 207,
+      "youtube_end": 219
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "leaving",
+        "Girl,",
+        "I'm",
+        "tomorrow",
+        "you"
+      ],
+      "answer": [
+        "Girl,",
+        "I'm",
+        "leaving",
+        "you",
+        "tomorrow"
+      ],
+      "youtube_start": 22
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "easy",
+        "why",
+        "so",
+        "easy,",
+        "That's",
+        "I'm"
+      ],
+      "answer": [
+        "That's",
+        "why",
+        "I'm",
+        "easy,",
+        "so",
+        "easy"
+      ],
+      "youtube_start": 59
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "make",
+        "it",
+        "paid",
+        "I've",
+        "my",
+        "dues",
+        "to"
+      ],
+      "answer": [
+        "I've",
+        "paid",
+        "my",
+        "dues",
+        "to",
+        "make",
+        "it"
+      ],
+      "youtube_start": 83
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "for",
+        "it",
+        "right",
+        "Now",
+        "play",
+        "here",
+        "me"
+      ],
+      "answer": [
+        "Now",
+        "play",
+        "it",
+        "right",
+        "here",
+        "for",
+        "me"
+      ],
+      "youtube_start": 164
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "easy",
+        "I'm",
+        "Yes,",
+        "Sunday",
+        "mornin'",
+        "like"
+      ],
+      "answer": [
+        "Yes,",
+        "I'm",
+        "easy",
+        "like",
+        "Sunday",
+        "mornin'"
+      ],
+      "youtube_start": 215
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"easy\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"easy\" na música inteira?",
+      "word": "easy",
+      "answer": 21
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"mornin'\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"mornin'\" na música inteira?",
+      "word": "mornin'",
+      "answer": 11
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Girl, I'm leaving you tomorrow",
+          "order": 0
+        },
+        {
+          "text": "I've paid my dues to make it",
+          "order": 1
+        },
+        {
+          "text": "Now play it right here for me",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You see I begged, stole and I borrowed",
+          "order": 0
+        },
+        {
+          "text": "That's why I'm easy, so easy",
+          "order": 1
+        },
+        {
+          "text": "That's why I'm easy",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Easy\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Easy\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "easy",
+        "mornin'",
+        "that's",
+        "sunday"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Easy\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Easy\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "easy",
+        "mornin'",
+        "that's",
+        "sunday"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Easy\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Easy\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "easy",
+        "mornin'",
+        "that's",
+        "sunday"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        }
+      ]
+    }
+  ]
+}

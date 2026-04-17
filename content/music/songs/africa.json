@@ -1,0 +1,495 @@
+{
+  "slug": "africa",
+  "title": "Africa",
+  "artist": "Toto",
+  "year": 1982,
+  "album": "In The Far East",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 499,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Africa by Toto (1982) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "rains",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I bless the rains down in Africa\""
+    },
+    {
+      "term": "bless",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I bless the rains down in Africa\""
+    },
+    {
+      "term": "africa",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I bless the rains down in Africa\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Hurry boy, it's waiting there for you\""
+    },
+    {
+      "term": "time",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Gonna take some time to do the things we never had\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I bless the rains down in Africa",
+          "Gonna take some time to do the things we never had",
+          "The wild dogs cry out in the night",
+          "As they grow restless longing for some solitary company"
+        ],
+        "start_seconds": 87,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "I bless the rains down in Africa",
+          "I passed some rains down in Africa (I bless the rains)",
+          "I bless the rains down in Africa",
+          "I passed some rains down in Africa (I bless)"
+        ],
+        "start_seconds": 210,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I hear the",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "drums",
+      "excerpt_after": "echoing tonight",
+      "youtube_start": 31,
+      "youtube_end": 45
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "She's",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "coming",
+      "excerpt_after": "in 12:30 flight",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "He",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "turned",
+      "excerpt_after": "to me as if to say",
+      "youtube_start": 66,
+      "youtube_end": 80
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "bless",
+      "excerpt_after": "the rains down in Africa",
+      "youtube_start": 87,
+      "youtube_end": 101
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I know that I must do",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "whats",
+      "excerpt_after": "right",
+      "youtube_start": 122,
+      "youtube_end": 136
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I bless the",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "rains",
+      "excerpt_after": "down in Africa",
+      "youtube_start": 154,
+      "youtube_end": 168
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I hear the drums echoing tonight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I stopped an old man along the way",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Hurry boy, it's waiting there for you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I know that I must do what's right",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Frightened of this thing that I've become",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "the drums echoing tonight",
+      "options": [
+        "hear",
+        "shes",
+        "stars",
+        "tonight"
+      ],
+      "answer_index": 0,
+      "youtube_start": 31,
+      "youtube_end": 43
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "an old man along the way",
+      "options": [
+        "coming",
+        "stars",
+        "stopped",
+        "whispers"
+      ],
+      "answer_index": 2,
+      "youtube_start": 55,
+      "youtube_end": 67
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "the rains down in Africa",
+      "options": [
+        "bless",
+        "drums",
+        "hurry",
+        "reflect"
+      ],
+      "answer_index": 0,
+      "youtube_start": 87,
+      "youtube_end": 99
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "that I must do what's right",
+      "options": [
+        "drums",
+        "gonna",
+        "know",
+        "time"
+      ],
+      "answer_index": 2,
+      "youtube_start": 122,
+      "youtube_end": 134
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I bless the",
+      "excerpt_after": "down in Africa",
+      "options": [
+        "hurry",
+        "long",
+        "rains",
+        "things"
+      ],
+      "answer_index": 2,
+      "youtube_start": 154,
+      "youtube_end": 166
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "hear",
+        "drums",
+        "I",
+        "echoing",
+        "tonight"
+      ],
+      "answer": [
+        "I",
+        "hear",
+        "the",
+        "drums",
+        "echoing",
+        "tonight"
+      ],
+      "youtube_start": 31
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "12:30",
+        "coming",
+        "flight",
+        "She's",
+        "in"
+      ],
+      "answer": [
+        "She's",
+        "coming",
+        "in",
+        "12:30",
+        "flight"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "it's",
+        "waiting",
+        "there",
+        "for",
+        "Hurry",
+        "you",
+        "boy,"
+      ],
+      "answer": [
+        "Hurry",
+        "boy,",
+        "it's",
+        "waiting",
+        "there",
+        "for",
+        "you"
+      ],
+      "youtube_start": 70
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "inside",
+        "seek",
+        "to",
+        "cure",
+        "deep",
+        "what's",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "seek",
+        "to",
+        "cure",
+        "what's",
+        "deep",
+        "inside"
+      ],
+      "youtube_start": 134
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "this",
+        "Frightened",
+        "I've",
+        "become",
+        "thing",
+        "of",
+        "that"
+      ],
+      "answer": [
+        "Frightened",
+        "of",
+        "this",
+        "thing",
+        "that",
+        "I've",
+        "become"
+      ],
+      "youtube_start": 137
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"rains\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"rains\" na música inteira?",
+      "word": "rains",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"bless\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"bless\" na música inteira?",
+      "word": "bless",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Come on up",
+          "order": 0
+        },
+        {
+          "text": "Hurry boy, it's waiting there for you",
+          "order": 1
+        },
+        {
+          "text": "Frightened of this thing that I've become",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I hear the drums echoing tonight",
+          "order": 0
+        },
+        {
+          "text": "I bless the rains down in Africa",
+          "order": 1
+        },
+        {
+          "text": "I seek to cure what's deep inside",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Africa\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Africa\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "rains",
+        "bless",
+        "africa",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Africa\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Africa\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "rains",
+        "bless",
+        "africa",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Africa\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Africa\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "rains",
+        "bless",
+        "africa",
+        "it's"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "she's",
+          "full": "she is"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "what's",
+          "full": "what is"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        }
+      ]
+    }
+  ]
+}

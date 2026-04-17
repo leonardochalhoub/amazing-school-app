@@ -1,0 +1,475 @@
+{
+  "slug": "shallow",
+  "title": "Shallow",
+  "artist": "Lady Gaga",
+  "year": 2018,
+  "album": "A Star Is Born Soundtrack",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 216,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Shallow by Lady Gaga (2018) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "llow",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"In the sha-ha, sha-ha-llow\""
+    },
+    {
+      "term": "times",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"In all the good times, I find myself longin' for change\""
+    },
+    {
+      "term": "myself",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"In all the good times, I find myself longin' for change\""
+    },
+    {
+      "term": "we're",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"We're far from the shallow now\""
+    },
+    {
+      "term": "shallow",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"We're far from the shallow now\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "We're far from the shallow now",
+          "In the sha-ha, sha-ha-llow",
+          "In the sha-ha-sha-la-la-la-llow",
+          "In the sha-ha, sha-ha-llow"
+        ],
+        "start_seconds": 119,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Or do you need more?",
+          "Is there something else you're searchin' for?",
+          "I'm falling",
+          "In all the good times, I find myself longin' for change"
+        ],
+        "start_seconds": 25,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Tell me",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "something",
+      "excerpt_after": "girl",
+      "youtube_start": 15,
+      "youtube_end": 29
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Is",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "there",
+      "excerpt_after": "something else you're searchin' for?",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Aren't you",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tired",
+      "excerpt_after": "trying to fill that void?",
+      "youtube_start": 70,
+      "youtube_end": 84
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'll",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "meet the ground",
+      "youtube_start": 110,
+      "youtube_end": 124
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We're far from the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "shallow",
+      "excerpt_after": "now",
+      "youtube_start": 119,
+      "youtube_end": 133
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ah,",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "ha-ah-ah",
+      "excerpt_after": "oh, ah",
+      "youtube_start": 151,
+      "youtube_end": 165
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Are you happy in this modern world?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Is there something else you're searchin' for?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Aren't you tired trying to fill that void?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We're far from the shallow now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Tell me something, boy",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Tell me",
+      "excerpt_after": "girl",
+      "options": [
+        "ha-ah-ah",
+        "longing",
+        "sha-ha-llow",
+        "something"
+      ],
+      "answer_index": 3,
+      "youtube_start": 15,
+      "youtube_end": 27
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Is",
+      "excerpt_after": "something else you're searchin' for?",
+      "options": [
+        "dive",
+        "tell",
+        "there",
+        "tired"
+      ],
+      "answer_index": 2,
+      "youtube_start": 30,
+      "youtube_end": 42
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ain't it",
+      "excerpt_after": "keeping it so hardcore?",
+      "options": [
+        "dive",
+        "falling",
+        "hard",
+        "watch"
+      ],
+      "answer_index": 2,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Crash",
+      "excerpt_after": "the surface, where they can't hurt us",
+      "options": [
+        "crash",
+        "keeping",
+        "through",
+        "trying"
+      ],
+      "answer_index": 2,
+      "youtube_start": 114,
+      "youtube_end": 126
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ah,",
+      "excerpt_after": "oh, ah",
+      "options": [
+        "ha-ah-ah",
+        "sha-ha",
+        "shallow",
+        "trying"
+      ],
+      "answer_index": 0,
+      "youtube_start": 151,
+      "youtube_end": 163
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "something,",
+        "me",
+        "girl",
+        "Tell"
+      ],
+      "answer": [
+        "Tell",
+        "me",
+        "something,",
+        "girl"
+      ],
+      "youtube_start": 15
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "do",
+        "more?",
+        "Or",
+        "need"
+      ],
+      "answer": [
+        "Or",
+        "do",
+        "you",
+        "need",
+        "more?"
+      ],
+      "youtube_start": 25
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "boy",
+        "something,",
+        "Tell",
+        "me"
+      ],
+      "answer": [
+        "Tell",
+        "me",
+        "something,",
+        "boy"
+      ],
+      "youtube_start": 65
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I'll",
+        "ground",
+        "meet",
+        "never",
+        "the"
+      ],
+      "answer": [
+        "I'll",
+        "never",
+        "meet",
+        "the",
+        "ground"
+      ],
+      "youtube_start": 110
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "sha-ha-llow",
+        "In",
+        "sha-ha,"
+      ],
+      "answer": [
+        "In",
+        "the",
+        "sha-ha,",
+        "sha-ha-llow"
+      ],
+      "youtube_start": 125
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"llow\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"llow\" na música inteira?",
+      "word": "llow",
+      "answer": 6
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"times\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"times\" na música inteira?",
+      "word": "times",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Tell me something, girl",
+          "order": 0
+        },
+        {
+          "text": "Or do you need more?",
+          "order": 1
+        },
+        {
+          "text": "In the sha-ha, sha-ha-llow",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Are you happy in this modern world?",
+          "order": 0
+        },
+        {
+          "text": "I'll never meet the ground",
+          "order": 1
+        },
+        {
+          "text": "We're far from the shallow now",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Shallow\" was released in 2018. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Shallow\" foi lançada em 2018. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "llow",
+        "times",
+        "myself",
+        "we're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Shallow\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Shallow\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "llow",
+        "times",
+        "myself",
+        "we're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "llow",
+        "times",
+        "myself",
+        "we're"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "aren't",
+          "full": "are not"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,465 @@
+{
+  "slug": "hey-brother",
+  "title": "Hey Brother",
+  "artist": "Avicii",
+  "year": 2013,
+  "album": "True",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 255,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Hey Brother by Avicii (2013) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "there's",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"There's an endless road to rediscover\""
+    },
+    {
+      "term": "brother",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Hey brother\""
+    },
+    {
+      "term": "sister",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Hey sister\""
+    },
+    {
+      "term": "comes",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Oh, if the sky comes falling down\""
+    },
+    {
+      "term": "falling",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Oh, if the sky comes falling down\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Oh, if the sky comes falling down",
+          "For you",
+          "There's nothing in this world I wouldn't do"
+        ],
+        "start_seconds": 21,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "What if I'm far from home?",
+          "Oh brother, I will hear you call",
+          "What if I lose it all?",
+          "Oh sister, I will help you out"
+        ],
+        "start_seconds": 66,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There's an",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "endless",
+      "excerpt_after": "road to rediscover",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Know that",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "waters",
+      "excerpt_after": "sweet, but blood is thicker",
+      "youtube_start": 15,
+      "youtube_end": 29
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There's",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nothing",
+      "excerpt_after": "in this world I wouldn't do",
+      "youtube_start": 28,
+      "youtube_end": 42
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh, if the sky comes",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "falling",
+      "excerpt_after": "down",
+      "youtube_start": 51,
+      "youtube_end": 65
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There's nothing in this",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "world",
+      "excerpt_after": "I wouldn't do",
+      "youtube_start": 59,
+      "youtube_end": 73
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sister",
+      "excerpt_after": "I will help you out",
+      "youtube_start": 76,
+      "youtube_end": 90
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "There's nothing in this world I wouldn't do",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Do you still believe in love? I wonder",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh brother, I will hear you call",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh sister, I will help you out",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Know that water's sweet, but blood is thicker",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There's an",
+      "excerpt_after": "road to rediscover",
+      "options": [
+        "blood",
+        "endless",
+        "hear",
+        "theres"
+      ],
+      "answer_index": 1,
+      "youtube_start": 7,
+      "youtube_end": 19
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh, if the sky",
+      "excerpt_after": "falling down",
+      "options": [
+        "comes",
+        "theres",
+        "waters",
+        "world"
+      ],
+      "answer_index": 0,
+      "youtube_start": 21,
+      "youtube_end": 33
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh, if the sky comes",
+      "excerpt_after": "down",
+      "options": [
+        "believe",
+        "comes",
+        "falling",
+        "road"
+      ],
+      "answer_index": 2,
+      "youtube_start": 51,
+      "youtube_end": 63
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "What if I",
+      "excerpt_after": "it all?",
+      "options": [
+        "believe",
+        "brother",
+        "lose",
+        "nothing"
+      ],
+      "answer_index": 2,
+      "youtube_start": 73,
+      "youtube_end": 85
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There's an endless",
+      "excerpt_after": "to rediscover",
+      "options": [
+        "falling",
+        "road",
+        "theres",
+        "thicker"
+      ],
+      "answer_index": 1,
+      "youtube_start": 145,
+      "youtube_end": 157
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "rediscover",
+        "an",
+        "There's",
+        "endless",
+        "to",
+        "road"
+      ],
+      "answer": [
+        "There's",
+        "an",
+        "endless",
+        "road",
+        "to",
+        "rediscover"
+      ],
+      "youtube_start": 7
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "Oh,",
+        "down",
+        "sky",
+        "if",
+        "comes",
+        "falling"
+      ],
+      "answer": [
+        "Oh,",
+        "if",
+        "the",
+        "sky",
+        "comes",
+        "falling",
+        "down"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Do",
+        "one",
+        "in",
+        "still",
+        "another?",
+        "you",
+        "believe"
+      ],
+      "answer": [
+        "Do",
+        "you",
+        "still",
+        "believe",
+        "in",
+        "one",
+        "another?"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "brother,",
+        "Oh",
+        "I",
+        "hear",
+        "call",
+        "you",
+        "will"
+      ],
+      "answer": [
+        "Oh",
+        "brother,",
+        "I",
+        "will",
+        "hear",
+        "you",
+        "call"
+      ],
+      "youtube_start": 69
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "What",
+        "it",
+        "all?",
+        "if",
+        "lose",
+        "I"
+      ],
+      "answer": [
+        "What",
+        "if",
+        "I",
+        "lose",
+        "it",
+        "all?"
+      ],
+      "youtube_start": 73
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"there's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"there's\" na música inteira?",
+      "word": "there's",
+      "answer": 7
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"brother\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"brother\" na música inteira?",
+      "word": "brother",
+      "answer": 5
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "There's an endless road to rediscover",
+          "order": 0
+        },
+        {
+          "text": "What if I'm far from home?",
+          "order": 1
+        },
+        {
+          "text": "Oh, if the sky comes falling down",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Hey Brother\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Hey Brother\", o que aconteceria?",
+      "target_vocab": [
+        "there's",
+        "brother",
+        "sister",
+        "comes"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Hey Brother\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Hey Brother\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "there's",
+        "brother",
+        "sister",
+        "comes"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Hey Brother\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Hey Brother\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "there's",
+        "brother",
+        "sister",
+        "comes"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "wouldn't",
+          "full": "would not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

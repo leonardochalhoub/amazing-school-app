@@ -1,0 +1,464 @@
+{
+  "slug": "say-you-say-me",
+  "title": "Say You, Say Me",
+  "artist": "Lionel Richie",
+  "year": 1985,
+  "album": "Back To Front",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 242,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Say You, Say Me by Lionel Richie (1985) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "that's",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"That's the way it should be\""
+    },
+    {
+      "term": "together",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Say it together, naturally\""
+    },
+    {
+      "term": "naturally",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Say it together, naturally\""
+    },
+    {
+      "term": "always",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Say it for always\""
+    },
+    {
+      "term": "should",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"That's the way it should be\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Say you, say me",
+          "Say it for always",
+          "That's the way it should be",
+          "Say you, say me"
+        ],
+        "start_seconds": 16,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Say you, say me",
+          "Say it together, naturally",
+          "As we go down life's lonesome highway",
+          "Seems the hardest thing to do is to find a friend or two"
+        ],
+        "start_seconds": 96,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That's the way it",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "should",
+      "excerpt_after": "be",
+      "youtube_start": 27,
+      "youtube_end": 41
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I had a",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dream",
+      "excerpt_after": "I had an awesome dream",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And what they",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "played",
+      "excerpt_after": "was a masquerade",
+      "youtube_start": 61,
+      "youtube_end": 75
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "helping",
+      "excerpt_after": "hand, someone who understands",
+      "youtube_start": 125,
+      "youtube_end": 139
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So you",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "think",
+      "excerpt_after": "you know the answers, oh no",
+      "youtube_start": 173,
+      "youtube_end": 187
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That's",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "right",
+      "excerpt_after": "I'm telling you",
+      "youtube_start": 179,
+      "youtube_end": 193
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Say you, say me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "As we go down life's lonesome highway",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well the whole world has got you dancing",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Believing who you are",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Say it for always",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That's the way it",
+      "excerpt_after": "be",
+      "options": [
+        "hardest",
+        "naturally",
+        "seems",
+        "should"
+      ],
+      "answer_index": 3,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I had a",
+      "excerpt_after": "I had an awesome dream",
+      "options": [
+        "dream",
+        "right",
+        "thing",
+        "whole"
+      ],
+      "answer_index": 0,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "As we go down",
+      "excerpt_after": "lonesome highway",
+      "options": [
+        "lifes",
+        "park",
+        "playing",
+        "think"
+      ],
+      "answer_index": 0,
+      "youtube_start": 111,
+      "youtube_end": 123
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You got",
+      "excerpt_after": "there to say, \"I'll show you\"",
+      "options": [
+        "dark",
+        "someone",
+        "there",
+        "whole"
+      ],
+      "answer_index": 1,
+      "youtube_start": 136,
+      "youtube_end": 148
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That's",
+      "excerpt_after": "I'm telling you",
+      "options": [
+        "right",
+        "show",
+        "telling",
+        "well"
+      ],
+      "answer_index": 0,
+      "youtube_start": 179,
+      "youtube_end": 191
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "say",
+        "you,",
+        "Say"
+      ],
+      "answer": [
+        "Say",
+        "you,",
+        "say",
+        "me"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "way",
+        "be",
+        "it",
+        "That's",
+        "the",
+        "should"
+      ],
+      "answer": [
+        "That's",
+        "the",
+        "way",
+        "it",
+        "should",
+        "be"
+      ],
+      "youtube_start": 27
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "they",
+        "what",
+        "played",
+        "was",
+        "And",
+        "a",
+        "masquerade"
+      ],
+      "answer": [
+        "And",
+        "what",
+        "they",
+        "played",
+        "was",
+        "a",
+        "masquerade"
+      ],
+      "youtube_start": 61
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "helping",
+        "That",
+        "who",
+        "understands",
+        "hand,",
+        "someone"
+      ],
+      "answer": [
+        "That",
+        "helping",
+        "hand,",
+        "someone",
+        "who",
+        "understands"
+      ],
+      "youtube_start": 125
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "start",
+        "It's",
+        "yes",
+        "believing,",
+        "oh,",
+        "to",
+        "time"
+      ],
+      "answer": [
+        "It's",
+        "time",
+        "to",
+        "start",
+        "believing,",
+        "oh,",
+        "yes"
+      ],
+      "youtube_start": 182
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"that's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"that's\" na música inteira?",
+      "word": "that's",
+      "answer": 5
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"together\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"together\" na música inteira?",
+      "word": "together",
+      "answer": 5
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Say you, say me",
+          "order": 0
+        },
+        {
+          "text": "Say it together, naturally",
+          "order": 1
+        },
+        {
+          "text": "That's right, I'm telling you",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Say You, Say Me\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Say You, Say Me\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "that's",
+        "together",
+        "naturally",
+        "always"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Say You, Say Me\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Say You, Say Me\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "that's",
+        "together",
+        "naturally",
+        "always"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Say You, Say Me\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Say You, Say Me\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "that's",
+        "together",
+        "naturally",
+        "always"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

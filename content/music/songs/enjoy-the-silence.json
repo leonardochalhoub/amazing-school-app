@@ -1,0 +1,362 @@
+{
+  "slug": "enjoy-the-silence",
+  "title": "Enjoy the Silence",
+  "artist": "Depeche Mode",
+  "year": 1990,
+  "album": "Violator",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 373,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Enjoy the Silence by Depeche Mode (1990) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "ever",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"All I ever wanted\""
+    },
+    {
+      "term": "words",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Words like violence\""
+    },
+    {
+      "term": "wanted",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"All I ever wanted\""
+    },
+    {
+      "term": "needed",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"All I ever needed\""
+    },
+    {
+      "term": "arms",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Is here in my arms\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "All I ever wanted",
+          "All I ever needed",
+          "Is here in my arms",
+          "Words are very unnecessary"
+        ],
+        "start_seconds": 42,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "All I ever wanted"
+        ],
+        "start_seconds": 117,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Into my",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "little",
+      "excerpt_after": "world",
+      "youtube_start": 32,
+      "youtube_end": 46
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Pierce",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "right",
+      "excerpt_after": "through me",
+      "youtube_start": 35,
+      "youtube_end": 49
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Can't you understand",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "All I ever needed",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Words like violence",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Come crashing in",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Painful to me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Into my",
+      "excerpt_after": "world",
+      "options": [
+        "little",
+        "pierce",
+        "silence",
+        "wanted"
+      ],
+      "answer_index": 0,
+      "youtube_start": 32,
+      "youtube_end": 44
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Pierce",
+      "excerpt_after": "through me",
+      "options": [
+        "break",
+        "right",
+        "through",
+        "trivial"
+      ],
+      "answer_index": 1,
+      "youtube_start": 35,
+      "youtube_end": 47
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "All I",
+      "excerpt_after": "wanted",
+      "options": [
+        "ever",
+        "needed",
+        "painful",
+        "right"
+      ],
+      "answer_index": 0,
+      "youtube_start": 42,
+      "youtube_end": 54
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So",
+      "excerpt_after": "the pain",
+      "options": [
+        "does",
+        "ever",
+        "intense",
+        "little"
+      ],
+      "answer_index": 0,
+      "youtube_start": 93,
+      "youtube_end": 105
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Into",
+        "little",
+        "my",
+        "world"
+      ],
+      "answer": [
+        "Into",
+        "my",
+        "little",
+        "world"
+      ],
+      "youtube_start": 32
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "right",
+        "me",
+        "through",
+        "Pierce"
+      ],
+      "answer": [
+        "Pierce",
+        "right",
+        "through",
+        "me"
+      ],
+      "youtube_start": 35
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ever",
+        "All",
+        "I",
+        "wanted"
+      ],
+      "answer": [
+        "All",
+        "I",
+        "ever",
+        "wanted"
+      ],
+      "youtube_start": 42
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Is",
+        "my",
+        "in",
+        "arms",
+        "here"
+      ],
+      "answer": [
+        "Is",
+        "here",
+        "in",
+        "my",
+        "arms"
+      ],
+      "youtube_start": 46
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "do",
+        "harm",
+        "only",
+        "They",
+        "can"
+      ],
+      "answer": [
+        "They",
+        "can",
+        "only",
+        "do",
+        "harm"
+      ],
+      "youtube_start": 55
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"ever\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"ever\" na música inteira?",
+      "word": "ever",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"words\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"words\" na música inteira?",
+      "word": "words",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Break the silence",
+          "order": 0
+        },
+        {
+          "text": "Words are trivial",
+          "order": 1
+        },
+        {
+          "text": "All I ever wanted",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Enjoy the Silence\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Enjoy the Silence\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "ever",
+        "words",
+        "wanted",
+        "needed"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Enjoy the Silence\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Enjoy the Silence\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "ever",
+        "words",
+        "wanted",
+        "needed"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Depeche Mode one question about \"Enjoy the Silence\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Depeche Mode sobre \"Enjoy the Silence\", o que seria e por quê?",
+      "target_vocab": [
+        "ever",
+        "words",
+        "wanted",
+        "needed"
+      ]
+    }
+  ]
+}

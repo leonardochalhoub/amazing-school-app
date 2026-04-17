@@ -1,0 +1,458 @@
+{
+  "slug": "scarborough-fair",
+  "title": "Scarborough Fair",
+  "artist": "Simon & Garfunkel",
+  "year": 1966,
+  "album": "The Complete Albums Collection",
+  "genre": [
+    "folk"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 230,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Scarborough Fair by Simon & Garfunkel (1966) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "sage",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Parsley, sage, rosemary and thyme\""
+    },
+    {
+      "term": "rosemary",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Parsley, sage, rosemary and thyme\""
+    },
+    {
+      "term": "thyme",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Parsley, sage, rosemary and thyme\""
+    },
+    {
+      "term": "true",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"She once was a true love of mine\""
+    },
+    {
+      "term": "mine",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"She once was a true love of mine\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Parsely, sage, rosemary and thyme",
+          "(Tracing a sparrow on snow-crested ground)",
+          "Without no seams nor needlework",
+          "(Blankets and bedclothes a child of the mountains)"
+        ],
+        "start_seconds": 62,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Are you going to Scarborough Fair?",
+          "Parsley, sage, rosemary and thyme",
+          "Remember me to one who lives there",
+          "She once was a true love of mine"
+        ],
+        "start_seconds": 18,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Are you",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "going",
+      "excerpt_after": "to Scarborough Fair?",
+      "youtube_start": 18,
+      "youtube_end": 32
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Remember me to one who",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lives",
+      "excerpt_after": "there",
+      "youtube_start": 36,
+      "youtube_end": 50
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Without no",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "seams",
+      "excerpt_after": "nor needlework",
+      "youtube_start": 80,
+      "youtube_end": 94
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(Sleeps",
+      "blank_hint": "word starting with \"u\"",
+      "answer": "unaware",
+      "excerpt_after": "of the clarion call)",
+      "youtube_start": 86,
+      "youtube_end": 100
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Between the salt",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "water",
+      "excerpt_after": "and the sea strand",
+      "youtube_start": 109,
+      "youtube_end": 123
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(Blazing in",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "scarlet",
+      "excerpt_after": "battalions)",
+      "youtube_start": 135,
+      "youtube_end": 149
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Are you going to Scarborough Fair?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Then she'll be a true love of mine",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Remember me to one who lives there",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Tracing a sparrow on snow-crested ground",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Blankets and bedclothes a child of the mountains",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Are you",
+      "excerpt_after": "to Scarborough Fair?",
+      "options": [
+        "call",
+        "going",
+        "side",
+        "sparrow"
+      ],
+      "answer_index": 1,
+      "youtube_start": 18,
+      "youtube_end": 30
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "She once was a",
+      "excerpt_after": "love of mine",
+      "options": [
+        "child",
+        "tell",
+        "thyme",
+        "true"
+      ],
+      "answer_index": 3,
+      "youtube_start": 43,
+      "youtube_end": 55
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Without no",
+      "excerpt_after": "nor needlework",
+      "options": [
+        "forest",
+        "ground",
+        "salt",
+        "seams"
+      ],
+      "answer_index": 3,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Tell her to",
+      "excerpt_after": "me an acre of land",
+      "options": [
+        "between",
+        "find",
+        "parsely",
+        "shell"
+      ],
+      "answer_index": 1,
+      "youtube_start": 90,
+      "youtube_end": 102
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "(A",
+      "excerpt_after": "cleans and polishes a gun)",
+      "options": [
+        "going",
+        "needlework",
+        "sleeps",
+        "soldier"
+      ],
+      "answer_index": 3,
+      "youtube_start": 116,
+      "youtube_end": 128
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "going",
+        "you",
+        "Scarborough",
+        "Fair?",
+        "Are"
+      ],
+      "answer": [
+        "Are",
+        "you",
+        "going",
+        "to",
+        "Scarborough",
+        "Fair?"
+      ],
+      "youtube_start": 18
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "Remember",
+        "one",
+        "lives",
+        "me",
+        "there",
+        "who"
+      ],
+      "answer": [
+        "Remember",
+        "me",
+        "to",
+        "one",
+        "who",
+        "lives",
+        "there"
+      ],
+      "youtube_start": 36
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "snow-crested",
+        "Tracing",
+        "sparrow",
+        "a",
+        "ground",
+        "on"
+      ],
+      "answer": [
+        "Tracing",
+        "a",
+        "sparrow",
+        "on",
+        "snow-crested",
+        "ground"
+      ],
+      "youtube_start": 71
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "unaware",
+        "call",
+        "the",
+        "clarion",
+        "Sleeps",
+        "of"
+      ],
+      "answer": [
+        "Sleeps",
+        "unaware",
+        "of",
+        "the",
+        "clarion",
+        "call"
+      ],
+      "youtube_start": 86
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "scarlet",
+        "in",
+        "battalions",
+        "Blazing"
+      ],
+      "answer": [
+        "Blazing",
+        "in",
+        "scarlet",
+        "battalions"
+      ],
+      "youtube_start": 135
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"sage\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"sage\" na música inteira?",
+      "word": "sage",
+      "answer": 5
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"rosemary\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"rosemary\" na música inteira?",
+      "word": "rosemary",
+      "answer": 5
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Are you going to Scarborough Fair?",
+          "order": 0
+        },
+        {
+          "text": "(Blankets and bedclothes a child of the mountains)",
+          "order": 1
+        },
+        {
+          "text": "Then she'll be a true love of mine",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Parsley, sage, rosemary and thyme",
+          "order": 0
+        },
+        {
+          "text": "Parsely, sage, rosemary, and thyme",
+          "order": 1
+        },
+        {
+          "text": "(Blazing in scarlet battalions)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "sage",
+        "rosemary",
+        "thyme",
+        "true"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "sage",
+        "rosemary",
+        "thyme",
+        "true"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Scarborough Fair\" was released in 1966. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Scarborough Fair\" foi lançada em 1966. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "sage",
+        "rosemary",
+        "thyme",
+        "true"
+      ]
+    }
+  ]
+}

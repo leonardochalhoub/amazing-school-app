@@ -1,0 +1,458 @@
+{
+  "slug": "lets-get-it-on",
+  "title": "Let's Get It On",
+  "artist": "Marvin Gaye",
+  "year": 1973,
+  "album": "Let's Get It On",
+  "genre": [
+    "soul"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 322,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Let's Get It On by Marvin Gaye (1973) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "c'mon",
+      "pt": "",
+      "note": "Appears 14 times; first heard in: \"Then, c'mon, ooh, c'mon\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"I've been really tryin', baby\""
+    },
+    {
+      "term": "let's",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Let's get it on\""
+    },
+    {
+      "term": "wrong",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"There's nothing wrong with me\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Don't you know how sweet and wonderful life can be\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Let's get it on",
+          "Ah, baby, let's get it on",
+          "Let's love, baby",
+          "Let's get it on, sugar"
+        ],
+        "start_seconds": 23,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Stop beatin' 'round the bush",
+          "Let's get it on",
+          "Let's get it on",
+          "You know what I'm talkin' 'bout"
+        ],
+        "start_seconds": 133,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've been",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "really",
+      "excerpt_after": "tryin', baby",
+      "youtube_start": 2,
+      "youtube_end": 16
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We're all",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sensitive",
+      "excerpt_after": "people",
+      "youtube_start": 48,
+      "youtube_end": 62
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I ain't",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "worry",
+      "youtube_start": 118,
+      "youtube_end": 132
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You know what I'm",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "talkin",
+      "excerpt_after": "'bout",
+      "youtube_start": 146,
+      "youtube_end": 160
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Stop beatin'",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "round",
+      "excerpt_after": "the bush",
+      "youtube_start": 212,
+      "youtube_end": 226
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You don't have to",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "worry",
+      "excerpt_after": "that it's wrong",
+      "youtube_start": 221,
+      "youtube_end": 235
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've been really tryin', baby",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We're all sensitive people",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I love you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I ain't gonna worry",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You know what I'm talkin' 'bout",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've been",
+      "excerpt_after": "tryin', baby",
+      "options": [
+        "aint",
+        "really",
+        "sweet",
+        "true"
+      ],
+      "answer_index": 1,
+      "youtube_start": 2,
+      "youtube_end": 14
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ah,",
+      "excerpt_after": "let's get it on",
+      "options": [
+        "baby",
+        "dont",
+        "giving",
+        "really"
+      ],
+      "answer_index": 0,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "yourself to me can never be wrong",
+      "options": [
+        "dont",
+        "giving",
+        "talkin",
+        "yourself"
+      ],
+      "answer_index": 1,
+      "youtube_start": 81,
+      "youtube_end": 93
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "If you",
+      "excerpt_after": "in love",
+      "options": [
+        "believe",
+        "bush",
+        "really",
+        "theres"
+      ],
+      "answer_index": 0,
+      "youtube_start": 158,
+      "youtube_end": 170
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "get it on",
+      "options": [
+        "know",
+        "wanna",
+        "wont",
+        "wrong"
+      ],
+      "answer_index": 1,
+      "youtube_start": 218,
+      "youtube_end": 230
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "tryin',",
+        "I've",
+        "really",
+        "been",
+        "baby"
+      ],
+      "answer": [
+        "I've",
+        "been",
+        "really",
+        "tryin',",
+        "baby"
+      ],
+      "youtube_start": 2
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "sensitive",
+        "all",
+        "We're",
+        "people"
+      ],
+      "answer": [
+        "We're",
+        "all",
+        "sensitive",
+        "people"
+      ],
+      "youtube_start": 48
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ain't",
+        "I",
+        "gonna",
+        "worry"
+      ],
+      "answer": [
+        "I",
+        "ain't",
+        "gonna",
+        "worry"
+      ],
+      "youtube_start": 118
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "it",
+        "baby",
+        "Let's",
+        "on,",
+        "get"
+      ],
+      "answer": [
+        "Let's",
+        "get",
+        "it",
+        "on,",
+        "baby"
+      ],
+      "youtube_start": 168
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "spirit",
+        "ya",
+        "moves",
+        "the",
+        "If"
+      ],
+      "answer": [
+        "If",
+        "the",
+        "spirit",
+        "moves",
+        "ya"
+      ],
+      "youtube_start": 224
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"c'mon\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"c'mon\" na música inteira?",
+      "word": "c'mon",
+      "answer": 14
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"baby\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"baby\" na música inteira?",
+      "word": "baby",
+      "answer": 13
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I've been really tryin', baby",
+          "order": 0
+        },
+        {
+          "text": "Loving you, baby no no",
+          "order": 1
+        },
+        {
+          "text": "Let's get it on",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Let's Get It On\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Let's Get It On\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "c'mon",
+        "baby",
+        "let's",
+        "wrong"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Let's Get It On\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Let's Get It On\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "c'mon",
+        "baby",
+        "let's",
+        "wrong"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Let's Get It On\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Let's Get It On\", o que aconteceria?",
+      "target_vocab": [
+        "c'mon",
+        "baby",
+        "let's",
+        "wrong"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "let's",
+          "full": "let us"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "we've",
+          "full": "we have"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    }
+  ]
+}

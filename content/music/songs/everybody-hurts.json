@@ -1,0 +1,472 @@
+{
+  "slug": "everybody-hurts",
+  "title": "Everybody Hurts",
+  "artist": "R.E.M.",
+  "year": 1992,
+  "album": "Automatic for the People",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 320,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Everybody Hurts by R.E.M. (1992) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "hold",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"When your day is night alone (hold on, hold on)\""
+    },
+    {
+      "term": "everybody",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"'Cause everybody cries\""
+    },
+    {
+      "term": "hurts",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Everybody hurts sometimes\""
+    },
+    {
+      "term": "sometimes",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Everybody hurts sometimes\""
+    },
+    {
+      "term": "alone",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"And the night, the night is yours alone\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Of this life, well hang on",
+          "Don't let yourself go",
+          "'Cause everybody cries",
+          "Everybody hurts sometimes"
+        ],
+        "start_seconds": 37,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Everybody hurts",
+          "Don't throw your hand, oh no",
+          "Don't throw your hand"
+        ],
+        "start_seconds": 131,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And the",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "night",
+      "excerpt_after": "the night is yours alone",
+      "youtube_start": 22,
+      "youtube_end": 36
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Don't let",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "yourself",
+      "excerpt_after": "go",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If you feel like",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "letting",
+      "excerpt_after": "go (hold on)",
+      "youtube_start": 93,
+      "youtube_end": 107
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Take",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "comfort",
+      "excerpt_after": "in your friends",
+      "youtube_start": 124,
+      "youtube_end": 138
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The days and",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nights",
+      "excerpt_after": "are long",
+      "youtube_start": 185,
+      "youtube_end": 199
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well,",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "everybody",
+      "excerpt_after": "hurts sometimes",
+      "youtube_start": 208,
+      "youtube_end": 222
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When you're sure you've had enough",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If you think you've had too much",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "No, no, no, you are not alone",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When you think you've had too much",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And the night, the night is yours alone",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And the",
+      "excerpt_after": "the night is yours alone",
+      "options": [
+        "feel",
+        "night",
+        "well",
+        "youve"
+      ],
+      "answer_index": 1,
+      "youtube_start": 22,
+      "youtube_end": 34
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Don't let",
+      "excerpt_after": "go",
+      "options": [
+        "comfort",
+        "cries",
+        "nights",
+        "yourself"
+      ],
+      "answer_index": 3,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "If you",
+      "excerpt_after": "like letting go (hold on)",
+      "options": [
+        "dont",
+        "enough",
+        "feel",
+        "long"
+      ],
+      "answer_index": 2,
+      "youtube_start": 93,
+      "youtube_end": 105
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Don't",
+      "excerpt_after": "your hand, oh no",
+      "options": [
+        "comfort",
+        "sing",
+        "throw",
+        "well"
+      ],
+      "answer_index": 2,
+      "youtube_start": 138,
+      "youtube_end": 150
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Of this life to",
+      "excerpt_after": "on",
+      "options": [
+        "feel",
+        "hang",
+        "sure",
+        "youve"
+      ],
+      "answer_index": 1,
+      "youtube_start": 198,
+      "youtube_end": 210
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "long",
+        "is",
+        "your",
+        "When",
+        "day"
+      ],
+      "answer": [
+        "When",
+        "your",
+        "day",
+        "is",
+        "long"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "go",
+        "Don't",
+        "let",
+        "yourself"
+      ],
+      "answer": [
+        "Don't",
+        "let",
+        "yourself",
+        "go"
+      ],
+      "youtube_start": 47
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "your",
+        "Take",
+        "friends",
+        "in",
+        "comfort"
+      ],
+      "answer": [
+        "Take",
+        "comfort",
+        "in",
+        "your",
+        "friends"
+      ],
+      "youtube_start": 124
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "alone",
+        "no,",
+        "no,",
+        "you",
+        "No,",
+        "are",
+        "not"
+      ],
+      "answer": [
+        "No,",
+        "no,",
+        "no,",
+        "you",
+        "are",
+        "not",
+        "alone"
+      ],
+      "youtube_start": 168
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "hurts",
+        "sometimes",
+        "Well,",
+        "everybody"
+      ],
+      "answer": [
+        "Well,",
+        "everybody",
+        "hurts",
+        "sometimes"
+      ],
+      "youtube_start": 208
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"hold\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"hold\" na música inteira?",
+      "word": "hold",
+      "answer": 11
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"everybody\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"everybody\" na música inteira?",
+      "word": "everybody",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "When your day is long",
+          "order": 0
+        },
+        {
+          "text": "If you feel like letting go (hold on)",
+          "order": 1
+        },
+        {
+          "text": "If you're on your own in this life",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "And the night, the night is yours alone",
+          "order": 0
+        },
+        {
+          "text": "Don't throw your hand, oh no",
+          "order": 1
+        },
+        {
+          "text": "Of this life to hang on",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Everybody Hurts\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Everybody Hurts\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "hold",
+        "everybody",
+        "hurts",
+        "sometimes"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Everybody Hurts\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Everybody Hurts\", o que aconteceria?",
+      "target_vocab": [
+        "hold",
+        "everybody",
+        "hurts",
+        "sometimes"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Everybody Hurts\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Everybody Hurts\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "hold",
+        "everybody",
+        "hurts",
+        "sometimes"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

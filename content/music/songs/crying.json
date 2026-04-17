@@ -1,0 +1,476 @@
+{
+  "slug": "crying",
+  "title": "Crying",
+  "artist": "Roy Orbison",
+  "year": 1961,
+  "album": "Crying",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 168,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Crying by Roy Orbison (1961) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "crying",
+      "pt": "",
+      "note": "Appears 15 times; first heard in: \"Crying over you\""
+    },
+    {
+      "term": "while",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I was alright, for a while\""
+    },
+    {
+      "term": "hand",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"You held my hand so tight\""
+    },
+    {
+      "term": "alone",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Left me standing all alone\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"It's hard to understand\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Crying over you",
+          "Crying over you",
+          "Then you said so long",
+          "Left me standing all alone"
+        ],
+        "start_seconds": 33,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Crying over you",
+          "Crying over you",
+          "Yes, now you're gone",
+          "And from this moment on"
+        ],
+        "start_seconds": 106,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I was",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "alright",
+      "excerpt_after": "for a while",
+      "youtube_start": 5,
+      "youtube_end": 19
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "As you",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "stopped",
+      "excerpt_after": "to say hello",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Left me",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "standing",
+      "excerpt_after": "all alone",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Can",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "start",
+      "excerpt_after": "me crying",
+      "youtube_start": 71,
+      "youtube_end": 85
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "darling",
+      "excerpt_after": "what can I do?",
+      "youtube_start": 91,
+      "youtube_end": 105
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Yes, now",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "gone",
+      "youtube_start": 116,
+      "youtube_end": 130
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I was alright, for a while",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But I saw you last night",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "As you stopped to say hello",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You couldn't tell",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Crying over you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I was",
+      "excerpt_after": "for a while",
+      "options": [
+        "alright",
+        "crying",
+        "hard",
+        "night"
+      ],
+      "answer_index": 0,
+      "youtube_start": 5,
+      "youtube_end": 17
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "my hand so tight",
+      "options": [
+        "crying",
+        "held",
+        "tell",
+        "well"
+      ],
+      "answer_index": 1,
+      "youtube_start": 18,
+      "youtube_end": 30
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Left me",
+      "excerpt_after": "all alone",
+      "options": [
+        "alright",
+        "darling",
+        "standing",
+        "touch"
+      ],
+      "answer_index": 2,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "that I was over you",
+      "options": [
+        "hello",
+        "left",
+        "long",
+        "thought"
+      ],
+      "answer_index": 3,
+      "youtube_start": 76,
+      "youtube_end": 88
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "For you",
+      "excerpt_after": "love me",
+      "options": [
+        "alright",
+        "dont",
+        "night",
+        "touch"
+      ],
+      "answer_index": 1,
+      "youtube_start": 96,
+      "youtube_end": 108
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "while",
+        "I",
+        "alright,",
+        "was",
+        "for",
+        "a"
+      ],
+      "answer": [
+        "I",
+        "was",
+        "alright,",
+        "for",
+        "a",
+        "while"
+      ],
+      "youtube_start": 5
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "As",
+        "you",
+        "say",
+        "stopped",
+        "hello",
+        "to"
+      ],
+      "answer": [
+        "As",
+        "you",
+        "stopped",
+        "to",
+        "say",
+        "hello"
+      ],
+      "youtube_start": 20
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "hard",
+        "to",
+        "It's",
+        "understand"
+      ],
+      "answer": [
+        "It's",
+        "hard",
+        "to",
+        "understand"
+      ],
+      "youtube_start": 62
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "so",
+        "But",
+        "true",
+        "true,",
+        "it's"
+      ],
+      "answer": [
+        "But",
+        "it's",
+        "true,",
+        "so",
+        "true"
+      ],
+      "youtube_start": 81
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "For",
+        "you",
+        "don't",
+        "love"
+      ],
+      "answer": [
+        "For",
+        "you",
+        "don't",
+        "love",
+        "me"
+      ],
+      "youtube_start": 96
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"crying\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"crying\" na música inteira?",
+      "word": "crying",
+      "answer": 15
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I was alright, for a while",
+          "order": 0
+        },
+        {
+          "text": "Crying over you",
+          "order": 1
+        },
+        {
+          "text": "I love you even more",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I could smile for a while",
+          "order": 0
+        },
+        {
+          "text": "But the touch of your hand",
+          "order": 1
+        },
+        {
+          "text": "For you don't love me",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Crying\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Crying\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "crying",
+        "while",
+        "hand",
+        "alone"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Crying\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Crying\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "crying",
+        "while",
+        "hand",
+        "alone"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Crying\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Crying\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "crying",
+        "while",
+        "hand",
+        "alone"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "couldn't",
+          "full": "could not"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    }
+  ]
+}

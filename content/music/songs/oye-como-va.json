@@ -1,0 +1,202 @@
+{
+  "slug": "oye-como-va",
+  "title": "Oye Como Va",
+  "artist": "Santana",
+  "year": 1970,
+  "album": "Abraxas",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 257,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Oye Como Va by Santana (1970) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "ritmo",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Oye cómo va mi ritmo\""
+    },
+    {
+      "term": "bueno",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Bueno pa' gozar, mulata\""
+    },
+    {
+      "term": "gozar",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Bueno pa' gozar, mulata\""
+    },
+    {
+      "term": "mulata",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Bueno pa' gozar, mulata\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Oye cómo va mi ritmo",
+          "Bueno pa' gozar, mulata",
+          "Oye cómo va mi ritmo",
+          "Bueno pa' gozar, mulata"
+        ],
+        "start_seconds": 37,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Oye cómo va mi ritmo",
+          "Bueno pa' gozar, mulata",
+          "Oye cómo va mi ritmo",
+          "Bueno pa' gozar, mulata"
+        ],
+        "start_seconds": 180,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Bueno pa'",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gozar",
+      "excerpt_after": "mulata",
+      "youtube_start": 41,
+      "youtube_end": 55
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oye cómo va mi ritmo",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Bueno pa' gozar, mulata",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Bueno pa'",
+      "excerpt_after": "mulata",
+      "options": [
+        "bueno",
+        "gozar",
+        "mulata",
+        "sabor"
+      ],
+      "answer_index": 1,
+      "youtube_start": 41,
+      "youtube_end": 53
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ritmo",
+        "mi",
+        "va",
+        "cómo",
+        "Oye"
+      ],
+      "answer": [
+        "Oye",
+        "cómo",
+        "va",
+        "mi",
+        "ritmo"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "mulata",
+        "gozar,",
+        "pa'",
+        "Bueno"
+      ],
+      "answer": [
+        "Bueno",
+        "pa'",
+        "gozar,",
+        "mulata"
+      ],
+      "youtube_start": 41
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"ritmo\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"ritmo\" na música inteira?",
+      "word": "ritmo",
+      "answer": 4
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"bueno\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"bueno\" na música inteira?",
+      "word": "bueno",
+      "answer": 4
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Oye Como Va\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Oye Como Va\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "ritmo",
+        "bueno",
+        "gozar",
+        "mulata"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Oye Como Va\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Oye Como Va\", o que aconteceria?",
+      "target_vocab": [
+        "ritmo",
+        "bueno",
+        "gozar",
+        "mulata"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Oye Como Va\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Oye Como Va\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "ritmo",
+        "bueno",
+        "gozar",
+        "mulata"
+      ]
+    }
+  ]
+}

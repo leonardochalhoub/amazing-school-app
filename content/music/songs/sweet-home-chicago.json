@@ -1,0 +1,464 @@
+{
+  "slug": "sweet-home-chicago",
+  "title": "Sweet Home Chicago",
+  "artist": "Robert Johnson",
+  "year": 1936,
+  "album": "The Complete Recordings",
+  "genre": [
+    "blues"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 179,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Sweet Home Chicago by Robert Johnson (1936) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Oh, baby, don't you want to go?\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Oh, baby, don't you want to go?\""
+    },
+    {
+      "term": "want",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Oh, baby, don't you want to go?\""
+    },
+    {
+      "term": "california",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Back to the land of California\""
+    },
+    {
+      "term": "land",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Back to the land of California\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Back to the land of California",
+          "To my sweet home Chicago",
+          "Oh, baby, don't you want to go?",
+          "Oh, baby, don't you want to go?"
+        ],
+        "start_seconds": 26,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Crying baby",
+          "Honey, don't you want to go?",
+          "Back to the land of California",
+          "To my sweet home Chicago"
+        ],
+        "start_seconds": 75,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "To my",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sweet",
+      "excerpt_after": "home Chicago",
+      "youtube_start": 29,
+      "youtube_end": 43
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heavy",
+      "excerpt_after": "loaded, baby",
+      "youtube_start": 70,
+      "youtube_end": 84
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "booked",
+      "excerpt_after": "I gotta go",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You're gonna get you",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "business",
+      "excerpt_after": "all in a trick",
+      "youtube_start": 101,
+      "youtube_end": 115
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Friend-boy she",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "trick",
+      "excerpt_after": "you one time",
+      "youtube_start": 127,
+      "youtube_end": 141
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "going",
+      "excerpt_after": "to California",
+      "youtube_start": 150,
+      "youtube_end": 164
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh, baby, don't you want to go?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm booked, I gotta go",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You gonna keep monkeyin' 'round here friend, boy",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "She sure gonna do it again",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm going to California",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh,",
+      "excerpt_after": "don't you want to go?",
+      "options": [
+        "baby",
+        "dont",
+        "four",
+        "round"
+      ],
+      "answer_index": 0,
+      "youtube_start": 6,
+      "youtube_end": 18
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "To my",
+      "excerpt_after": "home Chicago",
+      "options": [
+        "booked",
+        "business",
+        "loaded",
+        "sweet"
+      ],
+      "answer_index": 3,
+      "youtube_start": 29,
+      "youtube_end": 41
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm",
+      "excerpt_after": "loaded, baby",
+      "options": [
+        "friend",
+        "heavy",
+        "moines",
+        "want"
+      ],
+      "answer_index": 1,
+      "youtube_start": 70,
+      "youtube_end": 82
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You're gonna get you",
+      "excerpt_after": "all in a trick",
+      "options": [
+        "business",
+        "gonna",
+        "gotta",
+        "trick"
+      ],
+      "answer_index": 0,
+      "youtube_start": 101,
+      "youtube_end": 113
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm",
+      "excerpt_after": "to California",
+      "options": [
+        "going",
+        "help",
+        "moines",
+        "someday"
+      ],
+      "answer_index": 0,
+      "youtube_start": 150,
+      "youtube_end": 162
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "don't",
+        "Oh,",
+        "want",
+        "go?",
+        "you",
+        "baby,",
+        "to"
+      ],
+      "answer": [
+        "Oh,",
+        "baby,",
+        "don't",
+        "you",
+        "want",
+        "to",
+        "go?"
+      ],
+      "youtube_start": 6
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "four",
+        "Two",
+        "and",
+        "two",
+        "is"
+      ],
+      "answer": [
+        "Two",
+        "and",
+        "two",
+        "is",
+        "four"
+      ],
+      "youtube_start": 68
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "is",
+        "and",
+        "four",
+        "two",
+        "two"
+      ],
+      "answer": [
+        "And",
+        "two",
+        "and",
+        "two",
+        "is",
+        "four"
+      ],
+      "youtube_start": 94
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "trick",
+        "Friend-boy",
+        "time",
+        "one",
+        "you",
+        "she"
+      ],
+      "answer": [
+        "Friend-boy",
+        "she",
+        "trick",
+        "you",
+        "one",
+        "time"
+      ],
+      "youtube_start": 127
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I'm",
+        "California",
+        "going",
+        "to"
+      ],
+      "answer": [
+        "I'm",
+        "going",
+        "to",
+        "California"
+      ],
+      "youtube_start": 150
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"baby\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"baby\" na música inteira?",
+      "word": "baby",
+      "answer": 10
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Oh, baby, don't you want to go?",
+          "order": 0
+        },
+        {
+          "text": "Honey, don't you want to go?",
+          "order": 1
+        },
+        {
+          "text": "She sure gonna do it again",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Sweet Home Chicago\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Sweet Home Chicago\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "baby",
+        "don't",
+        "want",
+        "california"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Sweet Home Chicago\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Sweet Home Chicago\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "baby",
+        "don't",
+        "want",
+        "california"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Sweet Home Chicago\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Sweet Home Chicago\", o que aconteceria?",
+      "target_vocab": [
+        "baby",
+        "don't",
+        "want",
+        "california"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    }
+  ]
+}

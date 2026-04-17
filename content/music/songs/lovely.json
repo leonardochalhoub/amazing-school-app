@@ -1,0 +1,464 @@
+{
+  "slug": "lovely",
+  "title": "Lovely",
+  "artist": "Billie Eilish",
+  "year": 2018,
+  "album": "dont smile at me",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 200,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Lovely by Billie Eilish (2018) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "place",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Need a place to hide, but I can't find one near\""
+    },
+    {
+      "term": "can't",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Need a place to hide, but I can't find one near\""
+    },
+    {
+      "term": "found",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Thought I found a way\""
+    },
+    {
+      "term": "mind",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Heart made of glass, my mind of stone\""
+    },
+    {
+      "term": "hello",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Hello, welcome home\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Hello, welcome home",
+          "Walking out of town",
+          "Looking for a better place (looking for a better place)",
+          "Something's on my mind"
+        ],
+        "start_seconds": 83,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Hello, welcome home",
+          "Woah, yeah",
+          "Yeah, ah",
+          "Woah, woah"
+        ],
+        "start_seconds": 154,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Thought I",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "found",
+      "excerpt_after": "a way",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But you",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "go away (never go away)",
+      "youtube_start": 28,
+      "youtube_end": 42
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So I",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "guess",
+      "excerpt_after": "I gotta stay now",
+      "youtube_start": 32,
+      "youtube_end": 46
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Isn't it",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lovely",
+      "excerpt_after": "All alone",
+      "youtube_start": 70,
+      "youtube_end": 84
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Heart made of",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "glass",
+      "excerpt_after": "my mind of stone",
+      "youtube_start": 74,
+      "youtube_end": 88
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Tear me to",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "pieces",
+      "excerpt_after": "skin to bone",
+      "youtube_start": 79,
+      "youtube_end": 93
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Thought I found a way",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But you never go away never go away",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Isn't it lovely? All alone",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Tear me to pieces, skin to bone",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Walking out of town",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Thought I",
+      "excerpt_after": "a way",
+      "options": [
+        "find",
+        "found",
+        "night",
+        "pieces"
+      ],
+      "answer_index": 1,
+      "youtube_start": 20,
+      "youtube_end": 32
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So I",
+      "excerpt_after": "I gotta stay now",
+      "options": [
+        "guess",
+        "heart",
+        "place",
+        "skin"
+      ],
+      "answer_index": 0,
+      "youtube_start": 32,
+      "youtube_end": 44
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Isn't it",
+      "excerpt_after": "All alone",
+      "options": [
+        "hundred",
+        "lovely",
+        "need",
+        "wanna"
+      ],
+      "answer_index": 1,
+      "youtube_start": 70,
+      "youtube_end": 82
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Tear me to",
+      "excerpt_after": "skin to bone",
+      "options": [
+        "lovely",
+        "pieces",
+        "tear",
+        "welcome"
+      ],
+      "answer_index": 1,
+      "youtube_start": 79,
+      "youtube_end": 91
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Wanna feel",
+      "excerpt_after": "outside I can't fight my fear",
+      "options": [
+        "alive",
+        "alone",
+        "mind",
+        "pieces"
+      ],
+      "answer_index": 0,
+      "youtube_start": 132,
+      "youtube_end": 144
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "a",
+        "found",
+        "way",
+        "Thought"
+      ],
+      "answer": [
+        "Thought",
+        "I",
+        "found",
+        "a",
+        "way"
+      ],
+      "youtube_start": 20
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "way",
+        "out",
+        "Thought",
+        "found",
+        "found",
+        "a"
+      ],
+      "answer": [
+        "Thought",
+        "I",
+        "found",
+        "a",
+        "way",
+        "out",
+        "found"
+      ],
+      "youtube_start": 24
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "alone",
+        "lovely?",
+        "it",
+        "Isn't",
+        "All"
+      ],
+      "answer": [
+        "Isn't",
+        "it",
+        "lovely?",
+        "All",
+        "alone"
+      ],
+      "youtube_start": 70
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "bone",
+        "to",
+        "me",
+        "Tear",
+        "pieces,",
+        "skin",
+        "to"
+      ],
+      "answer": [
+        "Tear",
+        "me",
+        "to",
+        "pieces,",
+        "skin",
+        "to",
+        "bone"
+      ],
+      "youtube_start": 79
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "mind",
+        "Something's",
+        "my",
+        "on"
+      ],
+      "answer": [
+        "Something's",
+        "on",
+        "my",
+        "mind"
+      ],
+      "youtube_start": 100
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"place\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"place\" na música inteira?",
+      "word": "place",
+      "answer": 4
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"can't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"can't\" na música inteira?",
+      "word": "can't",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Thought I found a way",
+          "order": 0
+        },
+        {
+          "text": "Heart made of glass, my mind of stone",
+          "order": 1
+        },
+        {
+          "text": "Always in my head space",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Lovely\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Lovely\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "place",
+        "can't",
+        "found",
+        "mind"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Lovely\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Lovely\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "place",
+        "can't",
+        "found",
+        "mind"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Billie Eilish one question about \"Lovely\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Billie Eilish sobre \"Lovely\", o que seria e por quê?",
+      "target_vocab": [
+        "place",
+        "can't",
+        "found",
+        "mind"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "isn't",
+          "full": "is not"
+        }
+      ]
+    }
+  ]
+}

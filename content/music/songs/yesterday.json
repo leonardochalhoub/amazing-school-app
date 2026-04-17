@@ -1,0 +1,477 @@
+{
+  "slug": "yesterday",
+  "title": "Yesterday",
+  "artist": "The Beatles",
+  "year": 1965,
+  "album": "1",
+  "genre": [
+    "rock",
+    "classic-rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 126,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Yesterday by The Beatles (1965) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "yesterday",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Yesterday, all my troubles seemed so far away\""
+    },
+    {
+      "term": "believe",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Oh, I believe in yesterday\""
+    },
+    {
+      "term": "suddenly",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Suddenly, I'm not half the man I used to be\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I don't know, she wouldn't say\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I don't know, she wouldn't say\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Oh, I believe in yesterday",
+          "Suddenly, I'm not half the man I used to be",
+          "There's a shadow hanging over me",
+          "Oh, yesterday came suddenly"
+        ],
+        "start_seconds": 17,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I said something wrong",
+          "Now I long for yesterday",
+          "Yesterday, love was such an easy game to play"
+        ],
+        "start_seconds": 49,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Yesterday, all my",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "troubles",
+      "excerpt_after": "seemed so far away",
+      "youtube_start": 5,
+      "youtube_end": 19
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Now it looks as",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "though",
+      "excerpt_after": "they're here to stay",
+      "youtube_start": 13,
+      "youtube_end": 27
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh, I",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "believe",
+      "excerpt_after": "in yesterday",
+      "youtube_start": 17,
+      "youtube_end": 31
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh,",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "yesterday",
+      "excerpt_after": "came suddenly",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I don't know, she",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wouldnt",
+      "excerpt_after": "say",
+      "youtube_start": 44,
+      "youtube_end": 58
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I said",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "something",
+      "excerpt_after": "wrong",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh, I believe in yesterday",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Why she had to go",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I said something wrong",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Now I need a place to hide away",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "There's a shadow hanging over me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Yesterday, all my",
+      "excerpt_after": "seemed so far away",
+      "options": [
+        "hanging",
+        "seemed",
+        "troubles",
+        "wouldnt"
+      ],
+      "answer_index": 2,
+      "youtube_start": 5,
+      "youtube_end": 17
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh, I",
+      "excerpt_after": "in yesterday",
+      "options": [
+        "believe",
+        "need",
+        "shadow",
+        "yesterday"
+      ],
+      "answer_index": 0,
+      "youtube_start": 17,
+      "youtube_end": 29
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "know, she wouldn't say",
+      "options": [
+        "believe",
+        "dont",
+        "shadow",
+        "though"
+      ],
+      "answer_index": 1,
+      "youtube_start": 44,
+      "youtube_end": 56
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Now I",
+      "excerpt_after": "for yesterday",
+      "options": [
+        "believe",
+        "easy",
+        "long",
+        "theres"
+      ],
+      "answer_index": 2,
+      "youtube_start": 54,
+      "youtube_end": 66
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I don't",
+      "excerpt_after": "she wouldn't say",
+      "options": [
+        "half",
+        "know",
+        "place",
+        "stay"
+      ],
+      "answer_index": 1,
+      "youtube_start": 81,
+      "youtube_end": 93
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "believe",
+        "yesterday",
+        "I",
+        "Oh,",
+        "in"
+      ],
+      "answer": [
+        "Oh,",
+        "I",
+        "believe",
+        "in",
+        "yesterday"
+      ],
+      "youtube_start": 17
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "over",
+        "shadow",
+        "hanging",
+        "There's",
+        "a"
+      ],
+      "answer": [
+        "There's",
+        "a",
+        "shadow",
+        "hanging",
+        "over",
+        "me"
+      ],
+      "youtube_start": 30
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "suddenly",
+        "yesterday",
+        "came",
+        "Oh,"
+      ],
+      "answer": [
+        "Oh,",
+        "yesterday",
+        "came",
+        "suddenly"
+      ],
+      "youtube_start": 34
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "say",
+        "wouldn't",
+        "she",
+        "don't",
+        "know,",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "don't",
+        "know,",
+        "she",
+        "wouldn't",
+        "say"
+      ],
+      "youtube_start": 44
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "something",
+        "said",
+        "wrong",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "said",
+        "something",
+        "wrong"
+      ],
+      "youtube_start": 49
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"yesterday\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"yesterday\" na música inteira?",
+      "word": "yesterday",
+      "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"believe\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"believe\" na música inteira?",
+      "word": "believe",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Yesterday, all my troubles seemed so far away",
+          "order": 0
+        },
+        {
+          "text": "I don't know, she wouldn't say",
+          "order": 1
+        },
+        {
+          "text": "Why she had to go",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Oh, I believe in yesterday",
+          "order": 0
+        },
+        {
+          "text": "Now I need a place to hide away",
+          "order": 1
+        },
+        {
+          "text": "I said something wrong",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Yesterday\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Yesterday\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "yesterday",
+        "believe",
+        "suddenly",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Yesterday\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Yesterday\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "yesterday",
+        "believe",
+        "suddenly",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Yesterday\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Yesterday\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "yesterday",
+        "believe",
+        "suddenly",
+        "don't"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "they're",
+          "full": "they are"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "wouldn't",
+          "full": "would not"
+        }
+      ]
+    }
+  ]
+}

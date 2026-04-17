@@ -1,0 +1,476 @@
+{
+  "slug": "enter-sandman",
+  "title": "Enter Sandman",
+  "artist": "Metallica",
+  "year": 1991,
+  "album": "Metallica",
+  "genre": [
+    "metal"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 331,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Enter Sandman by Metallica (1991) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 19 times; first heard in: \"We're off to never-never land\""
+    },
+    {
+      "term": "we're",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"We're off to never-never land\""
+    },
+    {
+      "term": "land",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"We're off to never-never land\""
+    },
+    {
+      "term": "light",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Exit light\""
+    },
+    {
+      "term": "hand",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Take my hand\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "We're off to never-never land",
+          "Something's wrong, shut the light",
+          "Heavy thoughts tonight",
+          "And they aren't of Snow White"
+        ],
+        "start_seconds": 105,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "We're off to never-never land, yeah"
+        ],
+        "start_seconds": 157,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Say your",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "prayers",
+      "excerpt_after": "little one",
+      "youtube_start": 71,
+      "youtube_end": 85
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Til the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sandman",
+      "excerpt_after": "he comes",
+      "youtube_start": 82,
+      "youtube_end": 96
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We're off to",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never-never",
+      "excerpt_after": "land",
+      "youtube_start": 105,
+      "youtube_end": 119
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Dreams of war,",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dreams",
+      "excerpt_after": "of liars",
+      "youtube_start": 131,
+      "youtube_end": 145
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And of",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "things",
+      "excerpt_after": "that will bite, yeah",
+      "youtube_start": 134,
+      "youtube_end": 148
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "mind that noise you heard",
+      "youtube_start": 225,
+      "youtube_end": 239
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I tuck you in, warm within",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Til the sandman, he comes",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And they aren't of Snow White",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And never mind that noise you heard",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Don't forget, my son",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Say your",
+      "excerpt_after": "little one",
+      "options": [
+        "prayers",
+        "shut",
+        "tuck",
+        "within"
+      ],
+      "answer_index": 0,
+      "youtube_start": 71,
+      "youtube_end": 83
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Keep you",
+      "excerpt_after": "from sin",
+      "options": [
+        "free",
+        "heavy",
+        "night",
+        "tight"
+      ],
+      "answer_index": 0,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We're off to",
+      "excerpt_after": "land",
+      "options": [
+        "everyone",
+        "gripping",
+        "never-never",
+        "somethings"
+      ],
+      "answer_index": 2,
+      "youtube_start": 105,
+      "youtube_end": 117
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Dreams of",
+      "excerpt_after": "fire",
+      "options": [
+        "dragons",
+        "free",
+        "keep",
+        "night"
+      ],
+      "answer_index": 0,
+      "youtube_start": 132,
+      "youtube_end": 144
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Hush,",
+      "excerpt_after": "baby, don't say a word",
+      "options": [
+        "comes",
+        "fire",
+        "free",
+        "little"
+      ],
+      "answer_index": 3,
+      "youtube_start": 221,
+      "youtube_end": 233
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "your",
+        "Say",
+        "little",
+        "one",
+        "prayers,"
+      ],
+      "answer": [
+        "Say",
+        "your",
+        "prayers,",
+        "little",
+        "one"
+      ],
+      "youtube_start": 71
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "sin",
+        "Keep",
+        "you",
+        "free",
+        "from"
+      ],
+      "answer": [
+        "Keep",
+        "you",
+        "free",
+        "from",
+        "sin"
+      ],
+      "youtube_start": 80
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "never-never",
+        "to",
+        "We're",
+        "land",
+        "off"
+      ],
+      "answer": [
+        "We're",
+        "off",
+        "to",
+        "never-never",
+        "land"
+      ],
+      "youtube_start": 105
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "dreams",
+        "of",
+        "Dreams",
+        "liars",
+        "war,",
+        "of"
+      ],
+      "answer": [
+        "Dreams",
+        "of",
+        "war,",
+        "dreams",
+        "of",
+        "liars"
+      ],
+      "youtube_start": 131
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "say",
+        "a",
+        "little",
+        "word",
+        "Hush,",
+        "baby,",
+        "don't"
+      ],
+      "answer": [
+        "Hush,",
+        "little",
+        "baby,",
+        "don't",
+        "say",
+        "a",
+        "word"
+      ],
+      "youtube_start": 221
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"never\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"never\" na música inteira?",
+      "word": "never",
+      "answer": 19
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"we're\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"we're\" na música inteira?",
+      "word": "we're",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Say your prayers, little one",
+          "order": 0
+        },
+        {
+          "text": "Heavy thoughts tonight",
+          "order": 1
+        },
+        {
+          "text": "It's just the beasts under your bed",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Don't forget, my son",
+          "order": 0
+        },
+        {
+          "text": "Sleep with one eye open",
+          "order": 1
+        },
+        {
+          "text": "Grain of sand",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Metallica one question about \"Enter Sandman\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Metallica sobre \"Enter Sandman\", o que seria e por quê?",
+      "target_vocab": [
+        "never",
+        "we're",
+        "land",
+        "light"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Enter Sandman\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Enter Sandman\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "never",
+        "we're",
+        "land",
+        "light"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Enter Sandman\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Enter Sandman\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "never",
+        "we're",
+        "land",
+        "light"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "aren't",
+          "full": "are not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

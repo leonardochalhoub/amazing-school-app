@@ -1,0 +1,441 @@
+{
+  "slug": "space-oddity",
+  "title": "Space Oddity",
+  "artist": "David Bowie",
+  "year": 1969,
+  "album": "Best of Bowie CD1",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 326,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Space Oddity by David Bowie (1969) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "major",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Ground control to Major Tom\""
+    },
+    {
+      "term": "ground",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Ground control to Major Tom\""
+    },
+    {
+      "term": "control",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Ground control to Major Tom\""
+    },
+    {
+      "term": "there's",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Planet Earth is blue, and there's nothing I can do\""
+    },
+    {
+      "term": "hear",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Can you hear me, Major Tom?\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Ground control to Major Tom",
+          "Ground control to Major Tom",
+          "Take your protein pills and put your helmet on",
+          "Ground control to Major Tom (ten, nine, eight, seven)"
+        ],
+        "start_seconds": 30,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Can you hear me, Major Tom?",
+          "Can you hear me, Major Tom?",
+          "Can you hear me, Major Tom?",
+          "Can you?"
+        ],
+        "start_seconds": 214,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ground",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "control",
+      "excerpt_after": "to Major Tom",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Take your",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "protein",
+      "excerpt_after": "pills and put your helmet on",
+      "youtube_start": 44,
+      "youtube_end": 58
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "This is",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "ground",
+      "excerpt_after": "control to Major Tom",
+      "youtube_start": 83,
+      "youtube_end": 97
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I'm",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "floating",
+      "excerpt_after": "in the most peculiar way",
+      "youtube_start": 118,
+      "youtube_end": 132
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "For here am I",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sitting",
+      "excerpt_after": "in a tin can",
+      "youtube_start": 132,
+      "youtube_end": 146
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "feeling",
+      "excerpt_after": "very still",
+      "youtube_start": 188,
+      "youtube_end": 202
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You've really made the grade",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I'm floating in the most peculiar way",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm feeling very still",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Here am I floating 'round my tin can",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Commencing countdown, engines on six, five, four, three",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ground",
+      "excerpt_after": "to Major Tom",
+      "options": [
+        "control",
+        "engines",
+        "through",
+        "whose"
+      ],
+      "answer_index": 0,
+      "youtube_start": 30,
+      "youtube_end": 42
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ground control to Major Tom (ten,",
+      "excerpt_after": "eight, seven)",
+      "options": [
+        "grade",
+        "nine",
+        "three",
+        "world"
+      ],
+      "answer_index": 1,
+      "youtube_start": 51,
+      "youtube_end": 63
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You've",
+      "excerpt_after": "made the grade",
+      "options": [
+        "dare",
+        "know",
+        "really",
+        "wear"
+      ],
+      "answer_index": 2,
+      "youtube_start": 88,
+      "youtube_end": 100
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "For here am I",
+      "excerpt_after": "in a tin can",
+      "options": [
+        "engines",
+        "sitting",
+        "through",
+        "want"
+      ],
+      "answer_index": 1,
+      "youtube_start": 132,
+      "youtube_end": 144
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm",
+      "excerpt_after": "very still",
+      "options": [
+        "eight",
+        "feeling",
+        "five",
+        "gods"
+      ],
+      "answer_index": 1,
+      "youtube_start": 188,
+      "youtube_end": 200
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "control",
+        "Major",
+        "Ground",
+        "to",
+        "Tom"
+      ],
+      "answer": [
+        "Ground",
+        "control",
+        "to",
+        "Major",
+        "Tom"
+      ],
+      "youtube_start": 30
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "really",
+        "grade",
+        "You've",
+        "made",
+        "the"
+      ],
+      "answer": [
+        "You've",
+        "really",
+        "made",
+        "the",
+        "grade"
+      ],
+      "youtube_start": 88
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "door",
+        "I'm",
+        "through",
+        "stepping",
+        "the"
+      ],
+      "answer": [
+        "I'm",
+        "stepping",
+        "through",
+        "the",
+        "door"
+      ],
+      "youtube_start": 113
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "past",
+        "thousand",
+        "hundred",
+        "I'm",
+        "one",
+        "Though",
+        "miles"
+      ],
+      "answer": [
+        "Though",
+        "I'm",
+        "past",
+        "one",
+        "hundred",
+        "thousand",
+        "miles"
+      ],
+      "youtube_start": 183
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "wrong",
+        "Your",
+        "dead,",
+        "something",
+        "circuit's",
+        "there's"
+      ],
+      "answer": [
+        "Your",
+        "circuit's",
+        "dead,",
+        "there's",
+        "something",
+        "wrong"
+      ],
+      "youtube_start": 211
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"major\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"major\" na música inteira?",
+      "word": "major",
+      "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"ground\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"ground\" na música inteira?",
+      "word": "ground",
+      "answer": 6
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Space Oddity\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Space Oddity\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "major",
+        "ground",
+        "control",
+        "there's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask David Bowie one question about \"Space Oddity\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para David Bowie sobre \"Space Oddity\", o que seria e por quê?",
+      "target_vocab": [
+        "major",
+        "ground",
+        "control",
+        "there's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Space Oddity\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Space Oddity\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "major",
+        "ground",
+        "control",
+        "there's"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        }
+      ]
+    }
+  ]
+}

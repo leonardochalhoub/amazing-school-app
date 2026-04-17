@@ -1,0 +1,467 @@
+{
+  "slug": "jailhouse-rock",
+  "title": "Jailhouse Rock",
+  "artist": "Elvis Presley",
+  "year": 1957,
+  "album": "Il Mito",
+  "genre": [
+    "rock",
+    "rock-and-roll"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 154,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Jailhouse Rock by Elvis Presley (1957) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "rock",
+      "pt": "",
+      "note": "Appears 21 times; first heard in: \"Let's rock\""
+    },
+    {
+      "term": "jailhouse",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Was dancin' to the Jailhouse Rock\""
+    },
+    {
+      "term": "let's",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Let's rock\""
+    },
+    {
+      "term": "everybody",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Everybody, let's rock\""
+    },
+    {
+      "term": "dancin'",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Was dancin' to the Jailhouse Rock\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Let's rock",
+          "Everybody, let's rock",
+          "Everybody in the whole cell block",
+          "Was dancin' to the Jailhouse Rock"
+        ],
+        "start_seconds": 18,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Dancin' to the Jailhouse Rock",
+          "Dancin' to the Jailhouse Rock",
+          "Dancin' to the Jailhouse Rock",
+          "Dancin' to the Jailhouse Rock"
+        ],
+        "start_seconds": 132,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "warden",
+      "excerpt_after": "threw a party in the county jail",
+      "youtube_start": 6,
+      "youtube_end": 20
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Everybody in the",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "whole",
+      "excerpt_after": "cell block",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Little Joe was",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "blowin",
+      "excerpt_after": "on the slide trombone",
+      "youtube_start": 32,
+      "youtube_end": 46
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Was dancin' to the",
+      "blank_hint": "word starting with \"j\"",
+      "answer": "jailhouse",
+      "excerpt_after": "Rock",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "\"I sure would be",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "delighted",
+      "excerpt_after": "with your company\"",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Shifty",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "henry",
+      "excerpt_after": "said to Bugs, \"For Heaven's sake\"",
+      "youtube_start": 109,
+      "youtube_end": 123
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You should've heard them knocked out jailbirds sing",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "\"I sure would be delighted with your company\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Everybody in the whole cell block",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Spider Murphy played the tenor saxophone",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The whole rhythm section was the Purple Gang",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The",
+      "excerpt_after": "threw a party in the county jail",
+      "options": [
+        "boom",
+        "dancin",
+        "tenor",
+        "warden"
+      ],
+      "answer_index": 3,
+      "youtube_start": 6,
+      "youtube_end": 18
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Was",
+      "excerpt_after": "to the Jailhouse Rock",
+      "options": [
+        "county",
+        "dancin",
+        "everybody",
+        "little"
+      ],
+      "answer_index": 1,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The whole",
+      "excerpt_after": "section was the Purple Gang",
+      "options": [
+        "played",
+        "rhythm",
+        "saxophone",
+        "shouldve"
+      ],
+      "answer_index": 1,
+      "youtube_start": 38,
+      "youtube_end": 50
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "\"You're the",
+      "excerpt_after": "jailbird I ever did see\"",
+      "options": [
+        "cutest",
+        "illinois",
+        "swing",
+        "trombone"
+      ],
+      "answer_index": 0,
+      "youtube_start": 55,
+      "youtube_end": 67
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Way over in the",
+      "excerpt_after": "weepin' all alone",
+      "options": [
+        "blowin",
+        "corner",
+        "jailhouse",
+        "jumpin"
+      ],
+      "answer_index": 1,
+      "youtube_start": 89,
+      "youtube_end": 101
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "whole",
+        "the",
+        "in",
+        "Everybody",
+        "block",
+        "cell"
+      ],
+      "answer": [
+        "Everybody",
+        "in",
+        "the",
+        "whole",
+        "cell",
+        "block"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "dancin'",
+        "Was",
+        "the",
+        "Rock",
+        "to",
+        "Jailhouse"
+      ],
+      "answer": [
+        "Was",
+        "dancin'",
+        "to",
+        "the",
+        "Jailhouse",
+        "Rock"
+      ],
+      "youtube_start": 26
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "tenor",
+        "Murphy",
+        "saxophone",
+        "the",
+        "played",
+        "Spider"
+      ],
+      "answer": [
+        "Spider",
+        "Murphy",
+        "played",
+        "the",
+        "tenor",
+        "saxophone"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "forty-seven",
+        "number",
+        "said",
+        "Number",
+        "three"
+      ],
+      "answer": [
+        "Number",
+        "forty-seven",
+        "said",
+        "to",
+        "number",
+        "three"
+      ],
+      "youtube_start": 52
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "Rock",
+        "Dancin'",
+        "Jailhouse",
+        "the"
+      ],
+      "answer": [
+        "Dancin'",
+        "to",
+        "the",
+        "Jailhouse",
+        "Rock"
+      ],
+      "youtube_start": 132
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"rock\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"rock\" na música inteira?",
+      "word": "rock",
+      "answer": 21
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"jailhouse\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"jailhouse\" na música inteira?",
+      "word": "jailhouse",
+      "answer": 11
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You should've heard them knocked out jailbirds sing",
+          "order": 0
+        },
+        {
+          "text": "Was dancin' to the Jailhouse Rock",
+          "order": 1
+        },
+        {
+          "text": "Everybody in the whole cell block",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Jailhouse Rock\" was released in 1957. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Jailhouse Rock\" foi lançada em 1957. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "rock",
+        "jailhouse",
+        "let's",
+        "everybody"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Jailhouse Rock\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Jailhouse Rock\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "rock",
+        "jailhouse",
+        "let's",
+        "everybody"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "rock",
+        "jailhouse",
+        "let's",
+        "everybody"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "let's",
+          "full": "let us"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        }
+      ]
+    }
+  ]
+}

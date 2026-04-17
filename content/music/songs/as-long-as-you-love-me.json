@@ -84,6 +84,61 @@
       "youtube_end": 33
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "leaving",
+      "excerpt_after": "my life in your hand",
+      "youtube_start": 24,
+      "youtube_end": 38
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Don't care what is",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "written",
+      "excerpt_after": "in your history",
+      "youtube_start": 48,
+      "youtube_end": 62
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Every",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "little",
+      "excerpt_after": "thing that you have said and done",
+      "youtube_start": 78,
+      "youtube_end": 92
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Feels like it's deep",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "within",
+      "excerpt_after": "me (oooh, ooh-ooh)",
+      "youtube_start": 84,
+      "youtube_end": 98
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "seems",
+      "excerpt_after": "like we're meant to be",
+      "youtube_start": 92,
+      "youtube_end": 106
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
@@ -92,61 +147,116 @@
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "spot_the_grammar",
-      "prompt_en": "Write the full form of each contraction:",
-      "prompt_pt": "Escreva a forma completa de cada contração:",
-      "expected": [
-        {
-          "short": "i'm",
-          "full": "I am"
-        },
-        {
-          "short": "can't",
-          "full": "cannot"
-        },
-        {
-          "short": "don't",
-          "full": "do not"
-        },
-        {
-          "short": "you're",
-          "full": "you are"
-        }
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "As long as you're here with me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "discussion",
-      "prompt_en": "Compare \"As Long As You Love Me\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
-      "prompt_pt": "Compare \"As Long As You Love Me\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
-      "target_vocab": [
-        "as long as",
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Where you're from, what you did",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Who you are, where you're from",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Doesn't really matter if you're on the run",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Although",
+      "excerpt_after": "has always been a friend of mine",
+      "options": [
+        "although",
+        "loneliness",
+        "mystery",
+        "ooh-ooh"
+      ],
+      "answer_index": 1,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "People say I'm",
+      "excerpt_after": "and that I am blind",
+      "options": [
+        "crazy",
+        "head",
+        "leaving",
+        "youre"
+      ],
+      "answer_index": 0,
+      "youtube_start": 29,
+      "youtube_end": 41
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "As",
+      "excerpt_after": "as you're here with me",
+      "options": [
         "care",
-        "hide",
-        "though"
-      ]
+        "feels",
+        "long",
+        "thing"
+      ],
+      "answer_index": 2,
+      "youtube_start": 53,
+      "youtube_end": 65
     },
     {
-      "type": "word_to_meaning",
-      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
-      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
-      "pairs": [
-        {
-          "en": "as long as",
-          "pt": "desde que / contanto que"
-        },
-        {
-          "en": "care",
-          "pt": "se importar"
-        },
-        {
-          "en": "hide",
-          "pt": "esconder"
-        },
-        {
-          "en": "though",
-          "pt": "embora"
-        }
-      ]
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Every",
+      "excerpt_after": "thing that you have said and done",
+      "options": [
+        "blind",
+        "glance",
+        "know",
+        "little"
+      ],
+      "answer_index": 3,
+      "youtube_start": 78,
+      "youtube_end": 90
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It",
+      "excerpt_after": "like we're meant to be",
+      "options": [
+        "crazy",
+        "guess",
+        "knows",
+        "seems"
+      ],
+      "answer_index": 3,
+      "youtube_start": 92,
+      "youtube_end": 104
     },
     {
       "type": "unscramble_line",
@@ -173,20 +283,90 @@
       "youtube_start": 24
     },
     {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "Although",
-      "excerpt_after": "has always been a friend of mine",
-      "options": [
-        "although",
-        "leaving",
-        "loneliness",
-        "risking"
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "don't",
+        "care",
+        "you",
+        "are",
+        "I",
+        "who"
       ],
-      "answer_index": 2,
-      "youtube_start": 19,
-      "youtube_end": 31
+      "answer": [
+        "I",
+        "don't",
+        "care",
+        "who",
+        "you",
+        "are"
+      ],
+      "youtube_start": 58
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "where",
+        "you're",
+        "are,",
+        "you",
+        "Who",
+        "from"
+      ],
+      "answer": [
+        "Who",
+        "you",
+        "are,",
+        "where",
+        "you're",
+        "from"
+      ],
+      "youtube_start": 68
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you're",
+        "Where",
+        "where",
+        "from",
+        "from",
+        "you're"
+      ],
+      "answer": [
+        "Where",
+        "you're",
+        "from",
+        "where",
+        "you're",
+        "from"
+      ],
+      "youtube_start": 99
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "But",
+        "it",
+        "guess",
+        "shows",
+        "I"
+      ],
+      "answer": [
+        "But",
+        "I",
+        "guess",
+        "it",
+        "shows"
+      ],
+      "youtube_start": 140
     },
     {
       "type": "count_word",
@@ -194,6 +374,13 @@
       "prompt_pt": "Quantas vezes você ouve a palavra \"care\" na música inteira?",
       "word": "care",
       "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"you're\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"you're\" na música inteira?",
+      "word": "you're",
+      "answer": 16
     },
     {
       "type": "line_order",
@@ -211,6 +398,112 @@
         {
           "text": "When you look into my eyes",
           "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Risking it all in a glance",
+          "order": 0
+        },
+        {
+          "text": "Where you're from (where you're from)",
+          "order": 1
+        },
+        {
+          "text": "Who you are (who you are)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"As Long As You Love Me\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"As Long As You Love Me\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "as long as",
+        "care",
+        "hide",
+        "though"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"As Long As You Love Me\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"As Long As You Love Me\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "as long as",
+        "care",
+        "hide",
+        "though"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"As Long As You Love Me\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"As Long As You Love Me\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "as long as",
+        "care",
+        "hide",
+        "though"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "doesn't",
+          "full": "does not"
+        }
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "as long as",
+          "pt": "desde que / contanto que"
+        },
+        {
+          "en": "care",
+          "pt": "se importar"
+        },
+        {
+          "en": "hide",
+          "pt": "esconder"
+        },
+        {
+          "en": "though",
+          "pt": "embora"
         }
       ]
     }

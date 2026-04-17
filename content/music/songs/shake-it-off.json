@@ -55,6 +55,61 @@
       "youtube_end": 22
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "At",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "least",
+      "excerpt_after": "that's what people say, mm-mm",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And the",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "haters",
+      "excerpt_after": "gonna hate, hate, hate, hate, hate",
+      "youtube_start": 44,
+      "youtube_end": 58
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Heartbreakers gonna",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "break",
+      "excerpt_after": "break, break, break, break",
+      "youtube_start": 53,
+      "youtube_end": 67
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lightnin",
+      "excerpt_after": "on my feet",
+      "youtube_start": 68,
+      "youtube_end": 82
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Just",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "think",
+      "excerpt_after": "while you've been gettin' down and out",
+      "youtube_start": 140,
+      "youtube_end": 154
+    },
+    {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
@@ -63,61 +118,116 @@
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "spot_the_grammar",
-      "prompt_en": "Write the full form of each contraction:",
-      "prompt_pt": "Escreva a forma completa de cada contração:",
-      "expected": [
-        {
-          "short": "that's",
-          "full": "that is"
-        },
-        {
-          "short": "can't",
-          "full": "cannot"
-        },
-        {
-          "short": "won't",
-          "full": "will not"
-        },
-        {
-          "short": "it's",
-          "full": "it is"
-        }
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But I can't make 'em stay",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "discussion",
-      "prompt_en": "Compare \"Shake It Off\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
-      "prompt_pt": "Compare \"Shake It Off\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
-      "target_vocab": [
-        "shake off",
-        "hater",
-        "players",
-        "gonna"
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "It's like I got this music",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
-      "type": "word_to_meaning",
-      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
-      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
-      "pairs": [
-        {
-          "en": "shake off",
-          "pt": "se livrar / ignorar"
-        },
-        {
-          "en": "hater",
-          "pt": "odiador"
-        },
-        {
-          "en": "players",
-          "pt": "jogadores / pegadores"
-        },
-        {
-          "en": "gonna",
-          "pt": "vou"
-        }
-      ]
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm lightnin' on my feet",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "That's what they don't see, mm-mm",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "out too late",
+      "options": [
+        "dates",
+        "music",
+        "stay",
+        "think"
+      ],
+      "answer_index": 2,
+      "youtube_start": 5,
+      "youtube_end": 17
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "At",
+      "excerpt_after": "that's what people say, mm-mm",
+      "options": [
+        "fake",
+        "least",
+        "lightnin",
+        "mind"
+      ],
+      "answer_index": 1,
+      "youtube_start": 23,
+      "youtube_end": 35
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Baby, I'm just",
+      "excerpt_after": "shake, shake, shake, shake, shake",
+      "options": [
+        "alright",
+        "gonna",
+        "never",
+        "wont"
+      ],
+      "answer_index": 1,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "what they don't see, mm-mm",
+      "options": [
+        "gonna",
+        "movin",
+        "people",
+        "thats"
+      ],
+      "answer_index": 3,
+      "youtube_start": 71,
+      "youtube_end": 83
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "'Cause the players gonna",
+      "excerpt_after": "play, play, play, play",
+      "options": [
+        "beat",
+        "cruisin",
+        "nothin",
+        "play"
+      ],
+      "answer_index": 3,
+      "youtube_start": 101,
+      "youtube_end": 113
     },
     {
       "type": "unscramble_line",
@@ -140,20 +250,88 @@
       "youtube_start": 5
     },
     {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "I",
-      "excerpt_after": "out too late",
-      "options": [
-        "brain",
-        "late",
-        "nothin",
-        "stay"
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "dates",
+        "I",
+        "go",
+        "on",
+        "many",
+        "too"
       ],
-      "answer_index": 3,
-      "youtube_start": 5,
-      "youtube_end": 17
+      "answer": [
+        "I",
+        "go",
+        "on",
+        "too",
+        "many",
+        "dates"
+      ],
+      "youtube_start": 17
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "movin'",
+        "won't",
+        "Can't",
+        "stop,",
+        "stop"
+      ],
+      "answer": [
+        "Can't",
+        "stop,",
+        "won't",
+        "stop",
+        "movin'"
+      ],
+      "youtube_start": 31
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I'm",
+        "my",
+        "lightnin'",
+        "feet",
+        "on"
+      ],
+      "answer": [
+        "I'm",
+        "lightnin'",
+        "on",
+        "my",
+        "feet"
+      ],
+      "youtube_start": 68
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "don't",
+        "they",
+        "know,",
+        "mm-mm",
+        "what",
+        "That's"
+      ],
+      "answer": [
+        "That's",
+        "what",
+        "they",
+        "don't",
+        "know,",
+        "mm-mm"
+      ],
+      "youtube_start": 86
     },
     {
       "type": "count_word",
@@ -161,6 +339,13 @@
       "prompt_pt": "Quantas vezes você ouve a palavra \"players\" na música inteira?",
       "word": "players",
       "answer": 3
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"gonna\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"gonna\" na música inteira?",
+      "word": "gonna",
+      "answer": 22
     },
     {
       "type": "line_order",
@@ -178,6 +363,93 @@
         {
           "text": "Can't stop, won't stop groovin'",
           "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Shake It Off\" was released in 2014. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Shake It Off\" foi lançada em 2014. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "shake off",
+        "hater",
+        "players",
+        "gonna"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Shake It Off\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Shake It Off\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "shake off",
+        "hater",
+        "players",
+        "gonna"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "shake off",
+        "hater",
+        "players",
+        "gonna"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "shake off",
+          "pt": "se livrar / ignorar"
+        },
+        {
+          "en": "hater",
+          "pt": "odiador"
+        },
+        {
+          "en": "players",
+          "pt": "jogadores / pegadores"
+        },
+        {
+          "en": "gonna",
+          "pt": "vou"
         }
       ]
     }

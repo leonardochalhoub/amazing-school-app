@@ -1,0 +1,481 @@
+{
+  "slug": "vincent",
+  "title": "Vincent",
+  "artist": "Don McLean",
+  "year": 1971,
+  "album": "American Pie",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 241,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Vincent by Don McLean (1971) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "starry",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Starry, starry night\""
+    },
+    {
+      "term": "tried",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Now, I understand what you tried to say to me\""
+    },
+    {
+      "term": "listen",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"They would not listen, they did not know how\""
+    },
+    {
+      "term": "night",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Starry, starry night\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"With eyes that know the darkness in my soul\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Starry, starry night",
+          "Paint your palette blue and gray",
+          "Look out on a summer's day",
+          "With eyes that know the darkness in my soul"
+        ],
+        "start_seconds": 5,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Perhaps they'll listen now",
+          "Starry, starry night",
+          "Flaming flowers that brightly blaze",
+          "Swirling clouds in violet haze"
+        ],
+        "start_seconds": 57,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Paint your",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "palette",
+      "excerpt_after": "blue and gray",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Catch the",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "breeze",
+      "excerpt_after": "and the winter chills",
+      "youtube_start": 25,
+      "youtube_end": 39
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Perhaps",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "theyll",
+      "excerpt_after": "listen now",
+      "youtube_start": 57,
+      "youtube_end": 71
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Weathered",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "faces",
+      "excerpt_after": "lined in pain",
+      "youtube_start": 90,
+      "youtube_end": 104
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "As",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "beautiful",
+      "excerpt_after": "as you",
+      "youtube_start": 159,
+      "youtube_end": 173
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "ragged",
+      "excerpt_after": "men in ragged clothes",
+      "youtube_start": 183,
+      "youtube_end": 197
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And how you suffered for your sanity",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Perhaps they'll listen now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "How you tried to set them free",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You took your life as lovers often do",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "As beautiful as you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Paint your",
+      "excerpt_after": "blue and gray",
+      "options": [
+        "blaze",
+        "know",
+        "night",
+        "palette"
+      ],
+      "answer_index": 3,
+      "youtube_start": 7,
+      "youtube_end": 19
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And how you",
+      "excerpt_after": "for your sanity",
+      "options": [
+        "daffodils",
+        "listen",
+        "sketch",
+        "suffered"
+      ],
+      "answer_index": 3,
+      "youtube_start": 45,
+      "youtube_end": 57
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Reflect in",
+      "excerpt_after": "eyes of china blue",
+      "options": [
+        "changing",
+        "flaming",
+        "grain",
+        "vincents"
+      ],
+      "answer_index": 3,
+      "youtube_start": 79,
+      "youtube_end": 91
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "your life as lovers often do",
+      "options": [
+        "breeze",
+        "gray",
+        "soul",
+        "took"
+      ],
+      "answer_index": 3,
+      "youtube_start": 149,
+      "youtube_end": 161
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "With eyes that",
+      "excerpt_after": "the world and can't forget",
+      "options": [
+        "haze",
+        "know",
+        "land",
+        "watch"
+      ],
+      "answer_index": 3,
+      "youtube_start": 172,
+      "youtube_end": 184
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Paint",
+        "and",
+        "palette",
+        "gray",
+        "your",
+        "blue"
+      ],
+      "answer": [
+        "Paint",
+        "your",
+        "palette",
+        "blue",
+        "and",
+        "gray"
+      ],
+      "youtube_start": 7
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "land",
+        "colors",
+        "snowy,",
+        "the",
+        "on",
+        "In",
+        "linen"
+      ],
+      "answer": [
+        "In",
+        "colors",
+        "on",
+        "the",
+        "snowy,",
+        "linen",
+        "land"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "amber",
+        "fields",
+        "of",
+        "Morning",
+        "grain"
+      ],
+      "answer": [
+        "Morning",
+        "fields",
+        "of",
+        "amber",
+        "grain"
+      ],
+      "youtube_start": 89
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "your",
+        "true",
+        "love",
+        "was",
+        "still",
+        "But"
+      ],
+      "answer": [
+        "But",
+        "still",
+        "your",
+        "love",
+        "was",
+        "true"
+      ],
+      "youtube_start": 130
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Portraits",
+        "in",
+        "halls",
+        "empty",
+        "hung"
+      ],
+      "answer": [
+        "Portraits",
+        "hung",
+        "in",
+        "empty",
+        "halls"
+      ],
+      "youtube_start": 166
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"starry\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"starry\" na música inteira?",
+      "word": "starry",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"tried\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"tried\" na música inteira?",
+      "word": "tried",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Starry, starry night",
+          "order": 0
+        },
+        {
+          "text": "Reflect in Vincent's eyes of china blue",
+          "order": 1
+        },
+        {
+          "text": "But I could have told you, Vincent",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Paint your palette blue and gray",
+          "order": 0
+        },
+        {
+          "text": "Perhaps they'll listen now",
+          "order": 1
+        },
+        {
+          "text": "Portraits hung in empty halls",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Vincent\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Vincent\", o que aconteceria?",
+      "target_vocab": [
+        "starry",
+        "tried",
+        "listen",
+        "night"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Vincent\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Vincent\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "starry",
+        "tried",
+        "listen",
+        "night"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Vincent\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Vincent\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "starry",
+        "tried",
+        "listen",
+        "night"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "they'll",
+          "full": "they will"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
+        }
+      ]
+    }
+  ]
+}

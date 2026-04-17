@@ -1,0 +1,191 @@
+{
+  "slug": "levels",
+  "title": "Levels",
+  "artist": "Avicii",
+  "year": 2011,
+  "album": "Levels",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 200,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Levels by Avicii (2011) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Get a feeling that I never, never, never, never had before, no, no\""
+    },
+    {
+      "term": "feeling",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I get a good feeling, yeah\""
+    },
+    {
+      "term": "good",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I get a good feeling, yeah\""
+    },
+    {
+      "term": "sometimes",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Oh, sometimes\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I get a good feeling, yeah",
+          "Get a feeling that I never, never, never, never had before, no, no",
+          "I get a good feeling, yeah",
+          "Oh, sometimes"
+        ],
+        "start_seconds": 86,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "I get a good feeling, yeah"
+        ],
+        "start_seconds": 111,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I get a good",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "feeling",
+      "excerpt_after": "yeah",
+      "youtube_start": 86,
+      "youtube_end": 100
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I get a good feeling, yeah",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I get a",
+      "excerpt_after": "feeling, yeah",
+      "options": [
+        "feeling",
+        "good",
+        "never",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 86,
+      "youtube_end": 98
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I get a good",
+      "excerpt_after": "yeah",
+      "options": [
+        "feeling",
+        "good",
+        "sometimes",
+        "yeah"
+      ],
+      "answer_index": 0,
+      "youtube_start": 96,
+      "youtube_end": 108
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "get",
+        "good",
+        "feeling,",
+        "I",
+        "yeah",
+        "a"
+      ],
+      "answer": [
+        "I",
+        "get",
+        "a",
+        "good",
+        "feeling,",
+        "yeah"
+      ],
+      "youtube_start": 86
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"never\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"never\" na música inteira?",
+      "word": "never",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"feeling\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"feeling\" na música inteira?",
+      "word": "feeling",
+      "answer": 6
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Levels\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Levels\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "never",
+        "feeling",
+        "good",
+        "sometimes"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "never",
+        "feeling",
+        "good",
+        "sometimes"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "never",
+        "feeling",
+        "good",
+        "sometimes"
+      ]
+    }
+  ]
+}

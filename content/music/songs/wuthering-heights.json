@@ -1,0 +1,457 @@
+{
+  "slug": "wuthering-heights",
+  "title": "Wuthering Heights",
+  "artist": "Kate Bush",
+  "year": 1978,
+  "album": "The Kick Inside",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "b1.2",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 206,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Wuthering Heights by Kate Bush (1978) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "heathcliff",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Heathcliff, it's me, I'm Cathy, I've come home\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Heathcliff, it's me, I'm Cathy, I've come home\""
+    },
+    {
+      "term": "cathy",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Heathcliff, it's me, I'm Cathy, I've come home\""
+    },
+    {
+      "term": "home",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Heathcliff, it's me, I'm Cathy, I've come home\""
+    },
+    {
+      "term": "i've",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Heathcliff, it's me, I'm Cathy, I've come home\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Wuthering heights",
+          "Heathcliff, it's me, I'm Cathy, I've come home",
+          "I'm so cold, let me in your window"
+        ],
+        "start_seconds": 44,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "Out on the wily, windy moors",
+          "We'd roll and fall in green",
+          "You had a temper, like my jealousy",
+          "Too hot, too greedy"
+        ],
+        "start_seconds": 7,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Out on the wily,",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "windy",
+      "excerpt_after": "moors",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "How could you",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "leave",
+      "excerpt_after": "me",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "hated",
+      "excerpt_after": "you, I loved you too",
+      "youtube_start": 29,
+      "youtube_end": 43
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Leave",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "behind",
+      "excerpt_after": "my wuthering, wuthering",
+      "youtube_start": 41,
+      "youtube_end": 55
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "On, the",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "other",
+      "excerpt_after": "side from you",
+      "youtube_start": 76,
+      "youtube_end": 90
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "coming",
+      "excerpt_after": "back love, cruel Heathcliff",
+      "youtube_start": 87,
+      "youtube_end": 101
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We'd roll and fall in green",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "How could you leave me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I hated you, I loved you too",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm so cold, let me in your window",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I pine a lot, I find the lot",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Out on the",
+      "excerpt_after": "windy moors",
+      "options": [
+        "cathy",
+        "dream",
+        "wily",
+        "without"
+      ],
+      "answer_index": 2,
+      "youtube_start": 7,
+      "youtube_end": 19
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When I",
+      "excerpt_after": "to possess you?",
+      "options": [
+        "behind",
+        "greedy",
+        "needed",
+        "through"
+      ],
+      "answer_index": 2,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Heathcliff, it's me, I'm",
+      "excerpt_after": "I've come home",
+      "options": [
+        "cathy",
+        "cruel",
+        "hated",
+        "possess"
+      ],
+      "answer_index": 0,
+      "youtube_start": 46,
+      "youtube_end": 58
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "a lot, I find the lot",
+      "options": [
+        "heights",
+        "night",
+        "pine",
+        "temper"
+      ],
+      "answer_index": 2,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Too",
+      "excerpt_after": "I roam in the night",
+      "options": [
+        "cathy",
+        "cold",
+        "long",
+        "told"
+      ],
+      "answer_index": 2,
+      "youtube_start": 97,
+      "youtube_end": 109
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "moors",
+        "the",
+        "on",
+        "wily,",
+        "Out",
+        "windy"
+      ],
+      "answer": [
+        "Out",
+        "on",
+        "the",
+        "wily,",
+        "windy",
+        "moors"
+      ],
+      "youtube_start": 7
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "hot,",
+        "too",
+        "greedy",
+        "Too"
+      ],
+      "answer": [
+        "Too",
+        "hot,",
+        "too",
+        "greedy"
+      ],
+      "youtube_start": 20
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "loved",
+        "I",
+        "I",
+        "too",
+        "you,",
+        "hated",
+        "you"
+      ],
+      "answer": [
+        "I",
+        "hated",
+        "you,",
+        "I",
+        "loved",
+        "you",
+        "too"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "other",
+        "you",
+        "the",
+        "On,",
+        "side",
+        "from"
+      ],
+      "answer": [
+        "On,",
+        "the",
+        "other",
+        "side",
+        "from",
+        "you"
+      ],
+      "youtube_start": 76
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "one",
+        "only",
+        "dream,",
+        "my",
+        "master",
+        "My"
+      ],
+      "answer": [
+        "My",
+        "one",
+        "dream,",
+        "my",
+        "only",
+        "master"
+      ],
+      "youtube_start": 92
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"heathcliff\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"heathcliff\" na música inteira?",
+      "word": "heathcliff",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"it's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"it's\" na música inteira?",
+      "word": "it's",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Out on the wily, windy moors",
+          "order": 0
+        },
+        {
+          "text": "I'm so cold, let me in your window",
+          "order": 1
+        },
+        {
+          "text": "Coming home to wuthering, wuthering",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Wuthering Heights\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Wuthering Heights\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "heathcliff",
+        "it's",
+        "cathy",
+        "home"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Kate Bush one question about \"Wuthering Heights\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Kate Bush sobre \"Wuthering Heights\", o que seria e por quê?",
+      "target_vocab": [
+        "heathcliff",
+        "it's",
+        "cathy",
+        "home"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Wuthering Heights\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Wuthering Heights\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "heathcliff",
+        "it's",
+        "cathy",
+        "home"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        }
+      ]
+    }
+  ]
+}

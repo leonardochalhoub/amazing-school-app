@@ -1,0 +1,367 @@
+{
+  "slug": "the-weight",
+  "title": "The Weight",
+  "artist": "The Band",
+  "year": 1968,
+  "album": "Rolling Stone Magazine's 500 Greatest Songs Of All Time",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 274,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "The Weight by The Band (1968) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "load",
+      "pt": "",
+      "note": "Appears 20 times; first heard in: \"Take a load off Fanny\""
+    },
+    {
+      "term": "fanny",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Take a load off Fanny\""
+    },
+    {
+      "term": "free",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Take a load for free\""
+    },
+    {
+      "term": "right",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"And (and) (and) you put the load right on me\""
+    },
+    {
+      "term": "place",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I just need some place where I can lay my head\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Take a load off Fanny",
+          "Take a load for free",
+          "Take a load off Fanny",
+          "And (and) (and) you put the load right on me"
+        ],
+        "start_seconds": 37,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Take a load off Fanny",
+          "And (and) (and) you put the load right on me",
+          "Go down, Miss Moses, there's nothin' you can say",
+          "It's just ol' Luke and Luke's waitin' on the Judgment Day"
+        ],
+        "start_seconds": 93,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I said, \"Hey,",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "carmen",
+      "excerpt_after": "come on let's go downtown\"",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Go down, Miss",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "moses",
+      "excerpt_after": "there's nothin' you can say",
+      "youtube_start": 109,
+      "youtube_end": 123
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "\"Well, Luke, my",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "friend",
+      "excerpt_after": "what about young Anna Lee?\"",
+      "youtube_start": 123,
+      "youtube_end": 137
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Who sent me here with her",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "regards",
+      "excerpt_after": "for everyone",
+      "youtube_start": 235,
+      "youtube_end": 249
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Take a load off Fanny",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Take a load for free",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yeah, take a load off Fanny",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Take a",
+      "excerpt_after": "off Fanny",
+      "options": [
+        "anna",
+        "grinned",
+        "load",
+        "waitin"
+      ],
+      "answer_index": 2,
+      "youtube_start": 37,
+      "youtube_end": 49
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I said, \"Hey,",
+      "excerpt_after": "come on let's go downtown\"",
+      "options": [
+        "carmen",
+        "free",
+        "friend",
+        "gotta"
+      ],
+      "answer_index": 0,
+      "youtube_start": 73,
+      "youtube_end": 85
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Go down,",
+      "excerpt_after": "Moses, there's nothin' you can say",
+      "options": [
+        "friend",
+        "grinned",
+        "miss",
+        "well"
+      ],
+      "answer_index": 2,
+      "youtube_start": 109,
+      "youtube_end": 121
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "\"Well,",
+      "excerpt_after": "my friend, what about young Anna Lee?\"",
+      "options": [
+        "grinned",
+        "luke",
+        "past",
+        "waitin"
+      ],
+      "answer_index": 1,
+      "youtube_start": 123,
+      "youtube_end": 135
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Who",
+      "excerpt_after": "me here with her regards for everyone",
+      "options": [
+        "might",
+        "sent",
+        "waitin",
+        "went"
+      ],
+      "answer_index": 1,
+      "youtube_start": 235,
+      "youtube_end": 247
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "off",
+        "Take",
+        "load",
+        "Fanny"
+      ],
+      "answer": [
+        "Take",
+        "a",
+        "load",
+        "off",
+        "Fanny"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "for",
+        "load",
+        "a",
+        "Take",
+        "free"
+      ],
+      "answer": [
+        "Take",
+        "a",
+        "load",
+        "for",
+        "free"
+      ],
+      "youtube_start": 40
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "load",
+        "take",
+        "Yeah,",
+        "Fanny",
+        "a",
+        "off"
+      ],
+      "answer": [
+        "Yeah,",
+        "take",
+        "a",
+        "load",
+        "off",
+        "Fanny"
+      ],
+      "youtube_start": 185
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"load\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"load\" na música inteira?",
+      "word": "load",
+      "answer": 20
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"fanny\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"fanny\" na música inteira?",
+      "word": "fanny",
+      "answer": 11
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"The Weight\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"The Weight\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "load",
+        "fanny",
+        "free",
+        "right"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"The Weight\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"The Weight\", o que aconteceria?",
+      "target_vocab": [
+        "load",
+        "fanny",
+        "free",
+        "right"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"The Weight\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"The Weight\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "load",
+        "fanny",
+        "free",
+        "right"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "let's",
+          "full": "let us"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you'll",
+          "full": "you will"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "slug": "cocaine",
+  "title": "Cocaine",
+  "artist": "Eric Clapton",
+  "year": 1977,
+  "album": "Slowhand 35th Anniversary",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 213,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Cocaine by Eric Clapton (1977) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"She don't lie, she don't lie, she don't lie,\""
+    },
+    {
+      "term": "cocaine",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Cocaine\""
+    },
+    {
+      "term": "want",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"If you want to hang out\""
+    },
+    {
+      "term": "ride",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"And you want to ride on cocaine\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You've",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gotta",
+      "excerpt_after": "take her out",
+      "youtube_start": 19,
+      "youtube_end": 33
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Don't",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "forget",
+      "excerpt_after": "this fact",
+      "youtube_start": 145,
+      "youtube_end": 159
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If you want to hang out",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If you want to get down",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You want to kick them blues",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And you want to ride on",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Get down on the ground",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "If you",
+      "excerpt_after": "to hang out",
+      "options": [
+        "blues",
+        "cant",
+        "done",
+        "want"
+      ],
+      "answer_index": 3,
+      "youtube_start": 17,
+      "youtube_end": 29
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You've",
+      "excerpt_after": "take her out",
+      "options": [
+        "blues",
+        "cant",
+        "cocaine",
+        "gotta"
+      ],
+      "answer_index": 3,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "She",
+      "excerpt_after": "lie, she don't lie, she don't lie,",
+      "options": [
+        "cant",
+        "dont",
+        "gotta",
+        "want"
+      ],
+      "answer_index": 1,
+      "youtube_start": 35,
+      "youtube_end": 47
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And you want to",
+      "excerpt_after": "on cocaine",
+      "options": [
+        "cocaine",
+        "forget",
+        "ride",
+        "youve"
+      ],
+      "answer_index": 2,
+      "youtube_start": 60,
+      "youtube_end": 72
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Don't",
+      "excerpt_after": "this fact",
+      "options": [
+        "dont",
+        "forget",
+        "ground",
+        "youve"
+      ],
+      "answer_index": 1,
+      "youtube_start": 145,
+      "youtube_end": 157
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "out",
+        "you",
+        "want",
+        "to",
+        "hang",
+        "If"
+      ],
+      "answer": [
+        "If",
+        "you",
+        "want",
+        "to",
+        "hang",
+        "out"
+      ],
+      "youtube_start": 17
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "want",
+        "If",
+        "get",
+        "to",
+        "down",
+        "you"
+      ],
+      "answer": [
+        "If",
+        "you",
+        "want",
+        "to",
+        "get",
+        "down"
+      ],
+      "youtube_start": 26
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "got",
+        "lose",
+        "you",
+        "If",
+        "that"
+      ],
+      "answer": [
+        "If",
+        "you",
+        "got",
+        "that",
+        "lose"
+      ],
+      "youtube_start": 48
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "you",
+        "ride",
+        "want",
+        "on",
+        "cocaine",
+        "to"
+      ],
+      "answer": [
+        "And",
+        "you",
+        "want",
+        "to",
+        "ride",
+        "on",
+        "cocaine"
+      ],
+      "youtube_start": 60
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ride",
+        "to",
+        "you",
+        "on",
+        "want",
+        "And"
+      ],
+      "answer": [
+        "And",
+        "you",
+        "want",
+        "to",
+        "ride",
+        "on"
+      ],
+      "youtube_start": 138
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 13
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"cocaine\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"cocaine\" na música inteira?",
+      "word": "cocaine",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "If you want to hang out",
+          "order": 0
+        },
+        {
+          "text": "If you got that lose",
+          "order": 1
+        },
+        {
+          "text": "If your day is gone",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You've gotta take her out",
+          "order": 0
+        },
+        {
+          "text": "When your day is done",
+          "order": 1
+        },
+        {
+          "text": "And you want to ride on",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Cocaine\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Cocaine\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "don't",
+        "cocaine",
+        "want",
+        "ride"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Cocaine\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Cocaine\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "don't",
+        "cocaine",
+        "want",
+        "ride"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Cocaine\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Cocaine\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "don't",
+        "cocaine",
+        "want",
+        "ride"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    }
+  ]
+}

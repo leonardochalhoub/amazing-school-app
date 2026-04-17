@@ -1,0 +1,464 @@
+{
+  "slug": "easy-lover",
+  "title": "Easy Lover",
+  "artist": "Phil Collins",
+  "year": 1984,
+  "album": "At Fukuoka Dome",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 306,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Easy Lover by Phil Collins (1984) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "she's",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"She's an easy lover\""
+    },
+    {
+      "term": "you'll",
+      "pt": "",
+      "note": "Appears 14 times; first heard in: \"Before you know it you'll be on your knees\""
+    },
+    {
+      "term": "easy",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Easy lover\""
+    },
+    {
+      "term": "lover",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Easy lover\""
+    },
+    {
+      "term": "she'll",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"She'll get a hold on you, believe it\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "She's an easy lover",
+          "She'll take your heart but you won't feel it",
+          "She's like no other",
+          "And I'm just trying to make you see"
+        ],
+        "start_seconds": 43,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "(Oh, you'll regret it)",
+          "No you'll never change her",
+          "So leave her, leave her",
+          "Get out quick 'cause seein' is believin'"
+        ],
+        "start_seconds": 82,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "She'll get a hold on you,",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "believe",
+      "excerpt_after": "it",
+      "youtube_start": 31,
+      "youtube_end": 45
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I'm just",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "trying",
+      "excerpt_after": "to make you see",
+      "youtube_start": 53,
+      "youtube_end": 67
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(You'd",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "better",
+      "excerpt_after": "forget it)",
+      "youtube_start": 64,
+      "youtube_end": 78
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(You better",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "forget",
+      "excerpt_after": "it)",
+      "youtube_start": 79,
+      "youtube_end": 93
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Get out",
+      "blank_hint": "word starting with \"q\"",
+      "answer": "quick",
+      "excerpt_after": "'cause seein' is believin'",
+      "youtube_start": 91,
+      "youtube_end": 105
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(For",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "shell",
+      "excerpt_after": "say that there's no other)",
+      "youtube_start": 146,
+      "youtube_end": 160
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "She'll get a hold on you, believe it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "She's like no other",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "She's the kind of girl you dream of",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You'll never get it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Leave you and deceive you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "She'll get a",
+      "excerpt_after": "on you, believe it",
+      "options": [
+        "better",
+        "hold",
+        "leave",
+        "youll"
+      ],
+      "answer_index": 1,
+      "youtube_start": 31,
+      "youtube_end": 43
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "(She's the",
+      "excerpt_after": "of girl you dream of)",
+      "options": [
+        "dont",
+        "kind",
+        "know",
+        "other"
+      ],
+      "answer_index": 1,
+      "youtube_start": 57,
+      "youtube_end": 69
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "(You better",
+      "excerpt_after": "it)",
+      "options": [
+        "deceive",
+        "forget",
+        "keeping",
+        "other"
+      ],
+      "answer_index": 1,
+      "youtube_start": 79,
+      "youtube_end": 91
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "She'll get a hold on you,",
+      "excerpt_after": "it",
+      "options": [
+        "believe",
+        "easy",
+        "seeing",
+        "youd"
+      ],
+      "answer_index": 0,
+      "youtube_start": 105,
+      "youtube_end": 117
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "(Oh, you'll",
+      "excerpt_after": "it)",
+      "options": [
+        "leave",
+        "regret",
+        "seein",
+        "youll"
+      ],
+      "answer_index": 1,
+      "youtube_start": 157,
+      "youtube_end": 169
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "lover",
+        "an",
+        "easy",
+        "She's"
+      ],
+      "answer": [
+        "She's",
+        "an",
+        "easy",
+        "lover"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "leave",
+        "you",
+        "She",
+        "play",
+        "will",
+        "and",
+        "around"
+      ],
+      "answer": [
+        "She",
+        "will",
+        "play",
+        "around",
+        "and",
+        "leave",
+        "you"
+      ],
+      "youtube_start": 72
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "leave",
+        "her,",
+        "leave",
+        "her",
+        "So"
+      ],
+      "answer": [
+        "So",
+        "leave",
+        "her,",
+        "leave",
+        "her"
+      ],
+      "youtube_start": 89
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "try",
+        "don't",
+        "her",
+        "change",
+        "to",
+        "And"
+      ],
+      "answer": [
+        "And",
+        "don't",
+        "try",
+        "to",
+        "change",
+        "her"
+      ],
+      "youtube_start": 162
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "And",
+        "no",
+        "other",
+        "like"
+      ],
+      "answer": [
+        "And",
+        "like",
+        "no",
+        "other"
+      ],
+      "youtube_start": 269
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"she's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"she's\" na música inteira?",
+      "word": "she's",
+      "answer": 16
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"you'll\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"you'll\" na música inteira?",
+      "word": "you'll",
+      "answer": 14
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "She'll get a hold on you, believe it",
+          "order": 0
+        },
+        {
+          "text": "Like no other",
+          "order": 1
+        },
+        {
+          "text": "She's an easy lover",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Easy Lover\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Easy Lover\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "she's",
+        "you'll",
+        "easy",
+        "lover"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Easy Lover\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Easy Lover\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "she's",
+        "you'll",
+        "easy",
+        "lover"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Easy Lover\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Easy Lover\", o que aconteceria?",
+      "target_vocab": [
+        "she's",
+        "you'll",
+        "easy",
+        "lover"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you'll",
+          "full": "you will"
+        },
+        {
+          "short": "she's",
+          "full": "she is"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "you'd",
+          "full": "you would"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

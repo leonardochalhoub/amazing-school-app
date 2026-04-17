@@ -1,0 +1,462 @@
+{
+  "slug": "child-in-time",
+  "title": "Child in Time",
+  "artist": "Deep Purple",
+  "year": 1970,
+  "album": "Deep Purple In Rock",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 620,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Child in Time by Deep Purple (1970) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "line",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"You'll see the line\""
+    },
+    {
+      "term": "flying",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Bullets flying\""
+    },
+    {
+      "term": "you've",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"If you've been bad\""
+    },
+    {
+      "term": "sweet",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Sweet child in time\""
+    },
+    {
+      "term": "child",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Sweet child in time\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Oh, no",
+          "Oh, no",
+          "God, oh, no",
+          "Oh, no"
+        ],
+        "start_seconds": 558,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Sweet child in time",
+          "You'll see the line",
+          "The line that's drawn between",
+          "Good and bad"
+        ],
+        "start_seconds": 50,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Sweet",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "child",
+      "excerpt_after": "in time",
+      "youtube_start": 50,
+      "youtube_end": 64
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The line",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "drawn between",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youve",
+      "excerpt_after": "been bad",
+      "youtube_start": 82,
+      "youtube_end": 96
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You'd",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "better",
+      "excerpt_after": "close your eyes",
+      "youtube_start": 98,
+      "youtube_end": 112
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The line that's",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "drawn",
+      "excerpt_after": "between",
+      "youtube_start": 407,
+      "youtube_end": 421
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh, I",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gotta",
+      "excerpt_after": "hear you screaming",
+      "youtube_start": 501,
+      "youtube_end": 515
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You'll see the line",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh Lord, I bet you have",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You'd better close your eyes",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Lord, I bet you have",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Sweet child in time",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Sweet",
+      "excerpt_after": "in time",
+      "options": [
+        "between",
+        "child",
+        "ricochet",
+        "wanna"
+      ],
+      "answer_index": 1,
+      "youtube_start": 50,
+      "youtube_end": 62
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "See the",
+      "excerpt_after": "man",
+      "options": [
+        "between",
+        "blind",
+        "close",
+        "lead"
+      ],
+      "answer_index": 1,
+      "youtube_start": 66,
+      "youtube_end": 78
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh",
+      "excerpt_after": "I bet you have",
+      "options": [
+        "line",
+        "lord",
+        "thats",
+        "toll"
+      ],
+      "answer_index": 1,
+      "youtube_start": 85,
+      "youtube_end": 97
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh, I",
+      "excerpt_after": "hear you sing",
+      "options": [
+        "flying",
+        "ooh-ooh",
+        "shooting",
+        "wanna"
+      ],
+      "answer_index": 3,
+      "youtube_start": 154,
+      "youtube_end": 166
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You'd better",
+      "excerpt_after": "your eyes",
+      "options": [
+        "close",
+        "drawn",
+        "eyes",
+        "sing"
+      ],
+      "answer_index": 0,
+      "youtube_start": 446,
+      "youtube_end": 458
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "in",
+        "child",
+        "Sweet",
+        "time"
+      ],
+      "answer": [
+        "Sweet",
+        "child",
+        "in",
+        "time"
+      ],
+      "youtube_start": 50
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "See",
+        "man",
+        "blind",
+        "the"
+      ],
+      "answer": [
+        "See",
+        "the",
+        "blind",
+        "man"
+      ],
+      "youtube_start": 66
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "have",
+        "Lord,",
+        "I",
+        "you",
+        "Oh",
+        "bet"
+      ],
+      "answer": [
+        "Oh",
+        "Lord,",
+        "I",
+        "bet",
+        "you",
+        "have"
+      ],
+      "youtube_start": 85
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "close",
+        "You'd",
+        "eyes",
+        "better",
+        "your"
+      ],
+      "answer": [
+        "You'd",
+        "better",
+        "close",
+        "your",
+        "eyes"
+      ],
+      "youtube_start": 98
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Oh,",
+        "sing",
+        "I",
+        "hear",
+        "wanna",
+        "you"
+      ],
+      "answer": [
+        "Oh,",
+        "I",
+        "wanna",
+        "hear",
+        "you",
+        "sing"
+      ],
+      "youtube_start": 154
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"line\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"line\" na música inteira?",
+      "word": "line",
+      "answer": 4
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"flying\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"flying\" na música inteira?",
+      "word": "flying",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Sweet child in time",
+          "order": 0
+        },
+        {
+          "text": "You'd better close your eyes",
+          "order": 1
+        },
+        {
+          "text": "If you've been bad",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Child in Time\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Child in Time\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "line",
+        "flying",
+        "you've",
+        "sweet"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Child in Time\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Child in Time\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "line",
+        "flying",
+        "you've",
+        "sweet"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Child in Time\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Child in Time\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "line",
+        "flying",
+        "you've",
+        "sweet"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you'll",
+          "full": "you will"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "you'd",
+          "full": "you would"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,447 @@
+{
+  "slug": "maybellene",
+  "title": "Maybellene",
+  "artist": "Chuck Berry",
+  "year": 1955,
+  "album": "After School Session",
+  "genre": [
+    "rock-and-roll"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 140,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Maybellene by Chuck Berry (1955) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "maybellene",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Maybellene, why can't you be true?\""
+    },
+    {
+      "term": "can't",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Maybellene, why can't you be true?\""
+    },
+    {
+      "term": "true",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Maybellene, why can't you be true?\""
+    },
+    {
+      "term": "started",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"You just started doing the things you used to do\""
+    },
+    {
+      "term": "doing",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"You just started doing the things you used to do\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Oh, Maybellene, why can't you be true?",
+          "You just started doing the things you used to do",
+          "As I was motorvatin' over the hill",
+          "I saw Maybellene in a Coupé De Ville"
+        ],
+        "start_seconds": 8,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Oh, Maybellene, why can't you be true?",
+          "You done started back doing the things you used to do"
+        ],
+        "start_seconds": 56,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh,",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "maybellene",
+      "excerpt_after": "why can't you be true?",
+      "youtube_start": 8,
+      "youtube_end": 22
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "A",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "cadillac",
+      "excerpt_after": "a-rollin' on the open road",
+      "youtube_start": 21,
+      "youtube_end": 35
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The Cadillac",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "pulled",
+      "excerpt_after": "up to a hundred and four",
+      "youtube_start": 41,
+      "youtube_end": 55
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tooted",
+      "excerpt_after": "my horn for the passin' lane",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I knew that was doin' my",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "motor",
+      "excerpt_after": "good",
+      "youtube_start": 51,
+      "youtube_end": 65
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The Cadillac",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sittin",
+      "excerpt_after": "like a ton of lead",
+      "youtube_start": 106,
+      "youtube_end": 120
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Maybellene, why can't you be true?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "As I was motorvatin' over the hill",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I tooted my horn for the passin' lane",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And that's when I heard that highway sound",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Nothin' outrun my V8 Ford",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Maybellene, why",
+      "excerpt_after": "you be true?",
+      "options": [
+        "cant",
+        "passin",
+        "thats",
+        "wouldnt"
+      ],
+      "answer_index": 0,
+      "youtube_start": 4,
+      "youtube_end": 16
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I saw Maybellene in a",
+      "excerpt_after": "De Ville",
+      "options": [
+        "coup",
+        "done",
+        "knew",
+        "open"
+      ],
+      "answer_index": 0,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We was",
+      "excerpt_after": "to bumper, rollin' side by side",
+      "options": [
+        "bumper",
+        "doing",
+        "hundred",
+        "open"
+      ],
+      "answer_index": 0,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "my horn for the passin' lane",
+      "options": [
+        "four",
+        "open",
+        "tooted",
+        "ville"
+      ],
+      "answer_index": 2,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "when I heard that highway sound",
+      "options": [
+        "outrun",
+        "rollin",
+        "thats",
+        "things"
+      ],
+      "answer_index": 2,
+      "youtube_start": 104,
+      "youtube_end": 116
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "be",
+        "can't",
+        "true?",
+        "why",
+        "Maybellene,",
+        "you"
+      ],
+      "answer": [
+        "Maybellene,",
+        "why",
+        "can't",
+        "you",
+        "be",
+        "true?"
+      ],
+      "youtube_start": 4
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "Oh,",
+        "be",
+        "why",
+        "true?",
+        "can't",
+        "Maybellene,"
+      ],
+      "answer": [
+        "Oh,",
+        "Maybellene,",
+        "why",
+        "can't",
+        "you",
+        "be",
+        "true?"
+      ],
+      "youtube_start": 8
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "open",
+        "on",
+        "a-rollin'",
+        "A",
+        "Cadillac",
+        "the",
+        "road"
+      ],
+      "answer": [
+        "A",
+        "Cadillac",
+        "a-rollin'",
+        "on",
+        "the",
+        "open",
+        "road"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Nothin'",
+        "Ford",
+        "my",
+        "V8",
+        "outrun"
+      ],
+      "answer": [
+        "Nothin'",
+        "outrun",
+        "my",
+        "V8",
+        "Ford"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "cloudy",
+        "and",
+        "done",
+        "rain",
+        "It",
+        "to",
+        "started"
+      ],
+      "answer": [
+        "It",
+        "done",
+        "cloudy",
+        "and",
+        "started",
+        "to",
+        "rain"
+      ],
+      "youtube_start": 45
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"maybellene\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"maybellene\" na música inteira?",
+      "word": "maybellene",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"can't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"can't\" na música inteira?",
+      "word": "can't",
+      "answer": 10
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Maybellene\" was released in 1955. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Maybellene\" foi lançada em 1955. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "maybellene",
+        "can't",
+        "true",
+        "started"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Maybellene\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Maybellene\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "maybellene",
+        "can't",
+        "true",
+        "started"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "maybellene",
+        "can't",
+        "true",
+        "started"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "wouldn't",
+          "full": "would not"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

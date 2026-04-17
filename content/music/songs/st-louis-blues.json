@@ -1,0 +1,401 @@
+{
+  "slug": "st-louis-blues",
+  "title": "St. Louis Blues",
+  "artist": "Bessie Smith",
+  "year": 1925,
+  "album": "The Smithsonian Collection of Classic Jazz, Volume 1",
+  "genre": [
+    "blues"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 189,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "St. Louis Blues by Bessie Smith (1925) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "hate",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I hate to see the evening sun go down\""
+    },
+    {
+      "term": "evening",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I hate to see the evening sun go down\""
+    },
+    {
+      "term": "feeling'",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Feeling' tomorrow like I feel today\""
+    },
+    {
+      "term": "tomorrow",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Feeling' tomorrow like I feel today\""
+    },
+    {
+      "term": "feel",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Feeling' tomorrow like I feel today\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Feeling' tomorrow like I feel today",
+          "Feeling' tomorrow like I feel today",
+          "I'll pack my grip and make my getaway"
+        ],
+        "start_seconds": 48,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I hate to see the",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "evening",
+      "excerpt_after": "sun go down",
+      "youtube_start": 4,
+      "youtube_end": 18
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Feeling'",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tomorrow",
+      "excerpt_after": "like I feel today",
+      "youtube_start": 48,
+      "youtube_end": 62
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Saint",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "louis",
+      "excerpt_after": "woman with her diamond rings",
+      "youtube_start": 91,
+      "youtube_end": 105
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Pulls that man around by her",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "apron",
+      "excerpt_after": "strings",
+      "youtube_start": 105,
+      "youtube_end": 119
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Wasn't for",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "powder",
+      "excerpt_after": "and the store-bought hair",
+      "youtube_start": 120,
+      "youtube_end": 134
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The man I love",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wouldnt",
+      "excerpt_after": "go nowhere, nowhere",
+      "youtube_start": 133,
+      "youtube_end": 147
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Feeling' tomorrow like I feel today",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll pack my grip and make my getaway",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The man I love wouldn't go nowhere, nowhere",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Saint Louis woman with her diamond rings",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Pulls that man around by her apron strings",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "to see the evening sun go down",
+      "options": [
+        "diamond",
+        "hate",
+        "last",
+        "wasnt"
+      ],
+      "answer_index": 1,
+      "youtube_start": 4,
+      "youtube_end": 16
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I hate to see the",
+      "excerpt_after": "sun go down",
+      "options": [
+        "evening",
+        "makes",
+        "think",
+        "wasnt"
+      ],
+      "answer_index": 0,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Feeling' tomorrow like I",
+      "excerpt_after": "today",
+      "options": [
+        "diamond",
+        "feel",
+        "hate",
+        "powder"
+      ],
+      "answer_index": 1,
+      "youtube_start": 63,
+      "youtube_end": 75
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Saint",
+      "excerpt_after": "woman with her diamond rings",
+      "options": [
+        "else",
+        "getaway",
+        "last",
+        "louis"
+      ],
+      "answer_index": 3,
+      "youtube_start": 91,
+      "youtube_end": 103
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Wasn't for",
+      "excerpt_after": "and the store-bought hair",
+      "options": [
+        "evening",
+        "louis",
+        "powder",
+        "rings"
+      ],
+      "answer_index": 2,
+      "youtube_start": 120,
+      "youtube_end": 132
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "like",
+        "tomorrow",
+        "feel",
+        "I",
+        "Feeling'",
+        "today"
+      ],
+      "answer": [
+        "Feeling'",
+        "tomorrow",
+        "like",
+        "I",
+        "feel",
+        "today"
+      ],
+      "youtube_start": 48
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "rings",
+        "diamond",
+        "with",
+        "Saint",
+        "Louis",
+        "her",
+        "woman"
+      ],
+      "answer": [
+        "Saint",
+        "Louis",
+        "woman",
+        "with",
+        "her",
+        "diamond",
+        "rings"
+      ],
+      "youtube_start": 91
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "for",
+        "hair",
+        "store-bought",
+        "powder",
+        "and",
+        "the",
+        "Wasn't"
+      ],
+      "answer": [
+        "Wasn't",
+        "for",
+        "powder",
+        "and",
+        "the",
+        "store-bought",
+        "hair"
+      ],
+      "youtube_start": 120
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Feeling' tomorrow like I feel today",
+          "order": 0
+        },
+        {
+          "text": "I'll pack my grip and make my getaway",
+          "order": 1
+        },
+        {
+          "text": "Pulls that man around by her apron strings",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"St. Louis Blues\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"St. Louis Blues\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "hate",
+        "evening",
+        "feeling'",
+        "tomorrow"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"St. Louis Blues\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"St. Louis Blues\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "hate",
+        "evening",
+        "feeling'",
+        "tomorrow"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"St. Louis Blues\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"St. Louis Blues\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "hate",
+        "evening",
+        "feeling'",
+        "tomorrow"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "wasn't",
+          "full": "was not"
+        },
+        {
+          "short": "wouldn't",
+          "full": "would not"
+        },
+        {
+          "short": "he's",
+          "full": "he is"
+        }
+      ]
+    }
+  ]
+}

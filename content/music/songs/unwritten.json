@@ -1,0 +1,456 @@
+{
+  "slug": "unwritten",
+  "title": "Unwritten",
+  "artist": "Natasha Bedingfield",
+  "year": 2004,
+  "album": "Unwritten",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 259,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Unwritten by Natasha Bedingfield (2004) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "else",
+      "pt": "",
+      "note": "Appears 15 times; first heard in: \"No one else can feel it for you\""
+    },
+    {
+      "term": "words",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"Let the sun illuminate the words that you cannot find\""
+    },
+    {
+      "term": "feel",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Feel the rain on your skin\""
+    },
+    {
+      "term": "open",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Open up the dirty window\""
+    },
+    {
+      "term": "unwritten",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I am unwritten\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Feel the rain on your skin",
+          "No one else can feel it for you",
+          "Only you can let it in",
+          "No one else, no one else"
+        ],
+        "start_seconds": 48,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "The rest is still unwritten",
+          "Staring at the blank page before you",
+          "Open up the dirty window",
+          "Let the sun illuminate the words that you cannot find"
+        ],
+        "start_seconds": 155,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The pen's in my hand,",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "ending",
+      "excerpt_after": "unplanned",
+      "youtube_start": 25,
+      "youtube_end": 39
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Open up the",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dirty",
+      "excerpt_after": "window",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "close",
+      "excerpt_after": "you can almost taste it",
+      "youtube_start": 44,
+      "youtube_end": 58
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Drench",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "yourself",
+      "excerpt_after": "in words unspoken",
+      "youtube_start": 60,
+      "youtube_end": 74
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Sometimes my",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tries",
+      "excerpt_after": "are outside the lines yeah, yeah",
+      "youtube_start": 83,
+      "youtube_end": 97
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So close you can",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "almost",
+      "excerpt_after": "taste it",
+      "youtube_start": 111,
+      "youtube_end": 125
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I am unwritten",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm just beginning",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So close you can almost taste it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Only you can let it in",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We've been conditioned to not make mistakes",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Can't",
+      "excerpt_after": "my mind, I'm undefined",
+      "options": [
+        "begins",
+        "pens",
+        "read",
+        "taste"
+      ],
+      "answer_index": 2,
+      "youtube_start": 15,
+      "youtube_end": 27
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Reaching for",
+      "excerpt_after": "in the distance",
+      "options": [
+        "cannot",
+        "distance",
+        "something",
+        "unspoken"
+      ],
+      "answer_index": 2,
+      "youtube_start": 40,
+      "youtube_end": 52
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Drench",
+      "excerpt_after": "in words unspoken",
+      "options": [
+        "close",
+        "sometimes",
+        "unwritten",
+        "yourself"
+      ],
+      "answer_index": 3,
+      "youtube_start": 60,
+      "youtube_end": 72
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We've been",
+      "excerpt_after": "to not make mistakes",
+      "options": [
+        "conditioned",
+        "illuminate",
+        "undefined",
+        "unplanned"
+      ],
+      "answer_index": 0,
+      "youtube_start": 89,
+      "youtube_end": 101
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Can speak the",
+      "excerpt_after": "on your lips",
+      "options": [
+        "close",
+        "live",
+        "rain",
+        "words"
+      ],
+      "answer_index": 3,
+      "youtube_start": 128,
+      "youtube_end": 140
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I'm",
+        "my",
+        "undefined",
+        "mind,",
+        "Can't",
+        "read"
+      ],
+      "answer": [
+        "Can't",
+        "read",
+        "my",
+        "mind,",
+        "I'm",
+        "undefined"
+      ],
+      "youtube_start": 15
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "dirty",
+        "window",
+        "up",
+        "Open",
+        "the"
+      ],
+      "answer": [
+        "Open",
+        "up",
+        "the",
+        "dirty",
+        "window"
+      ],
+      "youtube_start": 34
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Feel",
+        "the",
+        "your",
+        "on",
+        "rain",
+        "skin"
+      ],
+      "answer": [
+        "Feel",
+        "the",
+        "rain",
+        "on",
+        "your",
+        "skin"
+      ],
+      "youtube_start": 48
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "yourself",
+        "words",
+        "Drench",
+        "unspoken",
+        "in"
+      ],
+      "answer": [
+        "Drench",
+        "yourself",
+        "in",
+        "words",
+        "unspoken"
+      ],
+      "youtube_start": 60
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "yeah",
+        "rest",
+        "still",
+        "is",
+        "unwritten,",
+        "The"
+      ],
+      "answer": [
+        "The",
+        "rest",
+        "is",
+        "still",
+        "unwritten,",
+        "yeah"
+      ],
+      "youtube_start": 67
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"else\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"else\" na música inteira?",
+      "word": "else",
+      "answer": 15
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"words\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"words\" na música inteira?",
+      "word": "words",
+      "answer": 13
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Can't read my mind, I'm undefined",
+          "order": 0
+        },
+        {
+          "text": "Feel the rain on your skin",
+          "order": 1
+        },
+        {
+          "text": "No one else, no one else",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Unwritten\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Unwritten\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "else",
+        "words",
+        "feel",
+        "open"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Natasha Bedingfield one question about \"Unwritten\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Natasha Bedingfield sobre \"Unwritten\", o que seria e por quê?",
+      "target_vocab": [
+        "else",
+        "words",
+        "feel",
+        "open"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Unwritten\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Unwritten\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "else",
+        "words",
+        "feel",
+        "open"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "we've",
+          "full": "we have"
+        }
+      ]
+    }
+  ]
+}

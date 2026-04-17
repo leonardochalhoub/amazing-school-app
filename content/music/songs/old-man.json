@@ -1,0 +1,478 @@
+{
+  "slug": "old-man",
+  "title": "Old Man",
+  "artist": "Neil Young",
+  "year": 1972,
+  "album": "Young Shakespeare",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 203,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Old Man by Neil Young (1972) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "life",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Old man, look at my life\""
+    },
+    {
+      "term": "eyes",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Ah, one look in my eyes and you can tell that's true\""
+    },
+    {
+      "term": "alone",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Live alone in a paradise\""
+    },
+    {
+      "term": "lost",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Love lost, such a cost\""
+    },
+    {
+      "term": "rolling",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Rolling home to you\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Old man, look at my life",
+          "I'm a lot like you were",
+          "Old man, look at my life",
+          "I'm a lot like you were"
+        ],
+        "start_seconds": 60,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Rolling home to you",
+          "Old man, take a look at my life, I'm a lot like you",
+          "I need someone to love me the whole day through",
+          "Ah, one look in my eyes and you can tell that's true"
+        ],
+        "start_seconds": 111,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "24 and",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "theres",
+      "excerpt_after": "so much more",
+      "youtube_start": 90,
+      "youtube_end": 104
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Live",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "alone",
+      "excerpt_after": "in a paradise",
+      "youtube_start": 94,
+      "youtube_end": 108
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "makes",
+      "excerpt_after": "me think of two",
+      "youtube_start": 97,
+      "youtube_end": 111
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Give me",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "things",
+      "excerpt_after": "that don't get lost",
+      "youtube_start": 104,
+      "youtube_end": 118
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've been",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "first",
+      "excerpt_after": "and last",
+      "youtube_start": 168,
+      "youtube_end": 182
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm a lot like you were",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "To mean that much to you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But I'm all alone at last",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "24 and there's so much more",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "That makes me think of two",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "24 and",
+      "excerpt_after": "so much more",
+      "options": [
+        "alone",
+        "dont",
+        "theres",
+        "tossed"
+      ],
+      "answer_index": 2,
+      "youtube_start": 90,
+      "youtube_end": 102
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That",
+      "excerpt_after": "me think of two",
+      "options": [
+        "lost",
+        "makes",
+        "past",
+        "tossed"
+      ],
+      "answer_index": 1,
+      "youtube_start": 97,
+      "youtube_end": 109
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Give me",
+      "excerpt_after": "that don't get lost",
+      "options": [
+        "cost",
+        "lullabies",
+        "someone",
+        "things"
+      ],
+      "answer_index": 3,
+      "youtube_start": 104,
+      "youtube_end": 116
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Rolling",
+      "excerpt_after": "to you",
+      "options": [
+        "goes",
+        "home",
+        "rolling",
+        "wont"
+      ],
+      "answer_index": 1,
+      "youtube_start": 111,
+      "youtube_end": 123
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Doesn't",
+      "excerpt_after": "that much to me",
+      "options": [
+        "doesnt",
+        "mean",
+        "same",
+        "someone"
+      ],
+      "answer_index": 1,
+      "youtube_start": 162,
+      "youtube_end": 174
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "life",
+        "Old",
+        "at",
+        "look",
+        "man,",
+        "my"
+      ],
+      "answer": [
+        "Old",
+        "man,",
+        "look",
+        "at",
+        "my",
+        "life"
+      ],
+      "youtube_start": 60
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "in",
+        "paradise",
+        "alone",
+        "Live"
+      ],
+      "answer": [
+        "Live",
+        "alone",
+        "in",
+        "a",
+        "paradise"
+      ],
+      "youtube_start": 94
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "get",
+        "Give",
+        "things",
+        "me",
+        "don't",
+        "that",
+        "lost"
+      ],
+      "answer": [
+        "Give",
+        "me",
+        "things",
+        "that",
+        "don't",
+        "get",
+        "lost"
+      ],
+      "youtube_start": 104
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "eyes",
+        "in",
+        "Lullabies,",
+        "look",
+        "your"
+      ],
+      "answer": [
+        "Lullabies,",
+        "look",
+        "in",
+        "your",
+        "eyes"
+      ],
+      "youtube_start": 154
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "much",
+        "to",
+        "you",
+        "mean",
+        "To",
+        "that"
+      ],
+      "answer": [
+        "To",
+        "mean",
+        "that",
+        "much",
+        "to",
+        "you"
+      ],
+      "youtube_start": 165
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"life\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"life\" na música inteira?",
+      "word": "life",
+      "answer": 7
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"eyes\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"eyes\" na música inteira?",
+      "word": "eyes",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Old man, look at my life",
+          "order": 0
+        },
+        {
+          "text": "Love lost, such a cost",
+          "order": 1
+        },
+        {
+          "text": "I've been first and last",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I'm a lot like you were",
+          "order": 0
+        },
+        {
+          "text": "Lullabies, look in your eyes",
+          "order": 1
+        },
+        {
+          "text": "But I'm all alone at last",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Old Man\" was released in 1972. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Old Man\" foi lançada em 1972. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "life",
+        "eyes",
+        "alone",
+        "lost"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Old Man\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Old Man\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "life",
+        "eyes",
+        "alone",
+        "lost"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "life",
+        "eyes",
+        "alone",
+        "lost"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "doesn't",
+          "full": "does not"
+        }
+      ]
+    }
+  ]
+}

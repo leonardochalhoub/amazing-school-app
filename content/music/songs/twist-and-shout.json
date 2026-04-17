@@ -1,0 +1,450 @@
+{
+  "slug": "twist-and-shout",
+  "title": "Twist and Shout",
+  "artist": "The Beatles",
+  "year": 1963,
+  "album": "Please Please Me (2009 Stereo Remaster)",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 152,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Twist and Shout by The Beatles (1963) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "shake",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Well, shake it up, baby, now\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Well, shake it up, baby, now\""
+    },
+    {
+      "term": "twist",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Twist and shout\""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"You know you look so good\""
+    },
+    {
+      "term": "well",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Well, shake it up, baby, now\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Twist and shout",
+          "(Twist and shout)",
+          "Come on, come on, come on, come on, baby, now",
+          "Come on and work it all out"
+        ],
+        "start_seconds": 10,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "You know you twist so fine",
+          "Come on and twist a little closer now",
+          "And let me know that you're mine, (woo)"
+        ],
+        "start_seconds": 55,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well,",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "shake",
+      "excerpt_after": "it up, baby, now",
+      "youtube_start": 6,
+      "youtube_end": 20
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You know you",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "twist",
+      "excerpt_after": "little girl",
+      "youtube_start": 51,
+      "youtube_end": 65
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Come on and twist a",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "little",
+      "excerpt_after": "closer now",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And let me know that",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "mine, (woo)",
+      "youtube_start": 63,
+      "youtube_end": 77
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Come on and twist a little",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "closer",
+      "excerpt_after": "now",
+      "youtube_start": 117,
+      "youtube_end": 131
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You know you look so good",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Just like I knew you would",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You know you twist so fine",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And let me know that you're mine",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Shake it up baby",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well,",
+      "excerpt_after": "it up, baby, now",
+      "options": [
+        "baby",
+        "honey",
+        "knew",
+        "shake"
+      ],
+      "answer_index": 3,
+      "youtube_start": 6,
+      "youtube_end": 18
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "you look so good",
+      "options": [
+        "baby",
+        "fine",
+        "goin",
+        "know"
+      ],
+      "answer_index": 3,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Just like I",
+      "excerpt_after": "you would",
+      "options": [
+        "baby",
+        "closer",
+        "knew",
+        "shake"
+      ],
+      "answer_index": 2,
+      "youtube_start": 33,
+      "youtube_end": 45
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You know you",
+      "excerpt_after": "little girl",
+      "options": [
+        "closer",
+        "little",
+        "twist",
+        "youre"
+      ],
+      "answer_index": 2,
+      "youtube_start": 51,
+      "youtube_end": 63
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And let me know that",
+      "excerpt_after": "mine, (woo)",
+      "options": [
+        "closer",
+        "knew",
+        "little",
+        "youre"
+      ],
+      "answer_index": 3,
+      "youtube_start": 63,
+      "youtube_end": 75
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "it",
+        "shake",
+        "now",
+        "baby,",
+        "Well,",
+        "up,"
+      ],
+      "answer": [
+        "Well,",
+        "shake",
+        "it",
+        "up,",
+        "baby,",
+        "now"
+      ],
+      "youtube_start": 6
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "on",
+        "work",
+        "out",
+        "Come",
+        "it",
+        "all",
+        "and"
+      ],
+      "answer": [
+        "Come",
+        "on",
+        "and",
+        "work",
+        "it",
+        "all",
+        "out"
+      ],
+      "youtube_start": 18
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "You",
+        "know",
+        "look",
+        "you",
+        "good",
+        "so"
+      ],
+      "answer": [
+        "You",
+        "know",
+        "you",
+        "look",
+        "so",
+        "good"
+      ],
+      "youtube_start": 25
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "like",
+        "knew",
+        "I",
+        "Just",
+        "you",
+        "would"
+      ],
+      "answer": [
+        "Just",
+        "like",
+        "I",
+        "knew",
+        "you",
+        "would"
+      ],
+      "youtube_start": 33
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "know",
+        "You",
+        "twist",
+        "fine",
+        "so",
+        "you"
+      ],
+      "answer": [
+        "You",
+        "know",
+        "you",
+        "twist",
+        "so",
+        "fine"
+      ],
+      "youtube_start": 55
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"shake\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"shake\" na música inteira?",
+      "word": "shake",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"baby\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"baby\" na música inteira?",
+      "word": "baby",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Well, shake it up, baby, now",
+          "order": 0
+        },
+        {
+          "text": "You know you got me goin' now",
+          "order": 1
+        },
+        {
+          "text": "Come on and twist a little closer now",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "(Shake it up baby)",
+          "order": 0
+        },
+        {
+          "text": "Twist and shout",
+          "order": 1
+        },
+        {
+          "text": "And let me know that you're mine, (woo)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "shake",
+        "baby",
+        "twist",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Twist and Shout\" was released in 1963. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Twist and Shout\" foi lançada em 1963. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "shake",
+        "baby",
+        "twist",
+        "know"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Twist and Shout\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Twist and Shout\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "shake",
+        "baby",
+        "twist",
+        "know"
+      ]
+    }
+  ]
+}

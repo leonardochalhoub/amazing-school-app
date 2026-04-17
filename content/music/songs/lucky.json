@@ -1,0 +1,487 @@
+{
+  "slug": "lucky",
+  "title": "Lucky",
+  "artist": "Jason Mraz",
+  "year": 2008,
+  "album": "We Sing. We Dance. We Steal Things.",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 190,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Lucky by Jason Mraz (2008) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "lucky",
+      "pt": "",
+      "note": "Appears 15 times; first heard in: \"I'm lucky I'm in love with my best friend\""
+    },
+    {
+      "term": "oooh",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Ooohh ooooh oooh oooh ooh ooh ooh ooh\""
+    },
+    {
+      "term": "coming",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Lucky to be coming home again\""
+    },
+    {
+      "term": "home",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Lucky to be coming home again\""
+    },
+    {
+      "term": "ooooh",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Ooohh ooooh oooh oooh ooh ooh ooh ooh\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Lucky to be coming home again",
+          "Ooohh ooooh oooh oooh ooh ooh ooh ooh",
+          "They don't know how long it takes",
+          "Waiting for a love like this"
+        ],
+        "start_seconds": 41,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Lucky to be coming home someday",
+          "And so I'm sailing through the sea",
+          "To an island where we'll meet",
+          "You'll hear the music fill the air"
+        ],
+        "start_seconds": 100,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "talking",
+      "excerpt_after": "to you",
+      "youtube_start": 4,
+      "youtube_end": 18
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You make it",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "easier",
+      "excerpt_after": "when life gets hard",
+      "youtube_start": 28,
+      "youtube_end": 42
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ooohh",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "ooooh",
+      "excerpt_after": "oooh oooh ooh ooh ooh ooh",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Lucky to have",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "stayed",
+      "excerpt_after": "where we have stayed",
+      "youtube_start": 96,
+      "youtube_end": 110
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You'll hear the",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "music",
+      "excerpt_after": "fill the air",
+      "youtube_start": 113,
+      "youtube_end": 127
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Move so",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "pretty",
+      "excerpt_after": "you're all I see",
+      "youtube_start": 124,
+      "youtube_end": 138
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Do you hear me,",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Boy I hear you in my dreams",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I keep you with me in my heart",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Lucky to have been where I have been",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Every time we say goodbye",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Do you",
+      "excerpt_after": "me,",
+      "options": [
+        "feel",
+        "hear",
+        "ocean",
+        "water"
+      ],
+      "answer_index": 1,
+      "youtube_start": 2,
+      "youtube_end": 14
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "you with me in my heart",
+      "options": [
+        "keep",
+        "ooooh",
+        "whisper",
+        "wish"
+      ],
+      "answer_index": 0,
+      "youtube_start": 24,
+      "youtube_end": 36
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "They",
+      "excerpt_after": "know how long it takes",
+      "options": [
+        "coming",
+        "dont",
+        "water",
+        "wish"
+      ],
+      "answer_index": 1,
+      "youtube_start": 55,
+      "youtube_end": 67
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Lucky we're in love in",
+      "excerpt_after": "way",
+      "options": [
+        "every",
+        "goodbye",
+        "ooohh",
+        "stayed"
+      ],
+      "answer_index": 0,
+      "youtube_start": 92,
+      "youtube_end": 104
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'll put a",
+      "excerpt_after": "in your hair",
+      "options": [
+        "best",
+        "easier",
+        "flower",
+        "promise"
+      ],
+      "answer_index": 2,
+      "youtube_start": 117,
+      "youtube_end": 129
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "me,",
+        "Do",
+        "hear"
+      ],
+      "answer": [
+        "Do",
+        "you",
+        "hear",
+        "me,"
+      ],
+      "youtube_start": 2
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "sea",
+        "the",
+        "I",
+        "feel",
+        "across",
+        "your",
+        "whisper"
+      ],
+      "answer": [
+        "I",
+        "feel",
+        "your",
+        "whisper",
+        "across",
+        "the",
+        "sea"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "say",
+        "time",
+        "goodbye",
+        "Every",
+        "we"
+      ],
+      "answer": [
+        "Every",
+        "time",
+        "we",
+        "say",
+        "goodbye"
+      ],
+      "youtube_start": 62
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "through",
+        "And",
+        "I'm",
+        "so",
+        "sailing",
+        "sea"
+      ],
+      "answer": [
+        "And",
+        "so",
+        "I'm",
+        "sailing",
+        "through",
+        "the",
+        "sea"
+      ],
+      "youtube_start": 106
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "breezes",
+        "trees",
+        "the",
+        "Though",
+        "through"
+      ],
+      "answer": [
+        "Though",
+        "the",
+        "breezes",
+        "through",
+        "trees"
+      ],
+      "youtube_start": 121
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"lucky\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"lucky\" na música inteira?",
+      "word": "lucky",
+      "answer": 15
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"oooh\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"oooh\" na música inteira?",
+      "word": "oooh",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Do you hear me,",
+          "order": 0
+        },
+        {
+          "text": "Waiting for a love like this",
+          "order": 1
+        },
+        {
+          "text": "I'll put a flower in your hair",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I'm talking to you",
+          "order": 0
+        },
+        {
+          "text": "Lucky we're in love in every way",
+          "order": 1
+        },
+        {
+          "text": "Move so pretty you're all I see",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Lucky\" was released in 2008. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Lucky\" foi lançada em 2008. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "lucky",
+        "oooh",
+        "coming",
+        "home"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Lucky\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Lucky\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "lucky",
+        "oooh",
+        "coming",
+        "home"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "lucky",
+        "oooh",
+        "coming",
+        "home"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "you'll",
+          "full": "you will"
+        }
+      ]
+    }
+  ]
+}

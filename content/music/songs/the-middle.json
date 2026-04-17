@@ -1,0 +1,441 @@
+{
+  "slug": "the-middle",
+  "title": "The Middle",
+  "artist": "Jimmy Eat World",
+  "year": 2001,
+  "album": "Jimmy Eat World",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 166,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "The Middle by Jimmy Eat World (2001) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "everything",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"Try everything you can\""
+    },
+    {
+      "term": "everything'll",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Everything, everything'll be just fine\""
+    },
+    {
+      "term": "alright",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Everything, everything'll be alright, alright\""
+    },
+    {
+      "term": "you're",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"When you're away\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Hey, don't write yourself off yet\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "It just takes some time",
+          "Little girl, you're in the middle of the ride",
+          "Everything, everything'll be just fine",
+          "Everything, everything'll be alright, alright"
+        ],
+        "start_seconds": 34,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Hey, don't write yourself off yet",
+          "It's only in your head, you feel left out",
+          "Or looked down on",
+          "Just try your best"
+        ],
+        "start_seconds": 11,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Hey, don't",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "write",
+      "excerpt_after": "yourself off yet",
+      "youtube_start": 11,
+      "youtube_end": 25
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Try",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "everything",
+      "excerpt_after": "you can",
+      "youtube_start": 25,
+      "youtube_end": 39
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It just",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "takes",
+      "excerpt_after": "some time",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Everything,",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "everythingll",
+      "excerpt_after": "be just fine",
+      "youtube_start": 39,
+      "youtube_end": 53
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Hey, you know",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "theyre",
+      "excerpt_after": "all the same",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Little girl, you're in the",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "middle",
+      "excerpt_after": "of the ride",
+      "youtube_start": 72,
+      "youtube_end": 86
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Try everything you can",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When you're away",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Do everything you can do everything you can",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Or looked down on",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "It just takes some time",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Hey,",
+      "excerpt_after": "write yourself off yet",
+      "options": [
+        "doesnt",
+        "dont",
+        "head",
+        "tell"
+      ],
+      "answer_index": 1,
+      "youtube_start": 11,
+      "youtube_end": 23
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Try",
+      "excerpt_after": "you can",
+      "options": [
+        "everything",
+        "someone",
+        "themselves",
+        "yourself"
+      ],
+      "answer_index": 0,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It just",
+      "excerpt_after": "some time",
+      "options": [
+        "good",
+        "little",
+        "takes",
+        "time"
+      ],
+      "answer_index": 2,
+      "youtube_start": 34,
+      "youtube_end": 46
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It",
+      "excerpt_after": "matter if it's good enough (good enough)",
+      "options": [
+        "better",
+        "doesnt",
+        "else",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 63,
+      "youtube_end": 75
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Little girl, you're in the",
+      "excerpt_after": "of the ride",
+      "options": [
+        "bitter",
+        "feel",
+        "fine",
+        "middle"
+      ],
+      "answer_index": 3,
+      "youtube_start": 84,
+      "youtube_end": 96
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "off",
+        "yet",
+        "Hey,",
+        "yourself",
+        "write",
+        "don't"
+      ],
+      "answer": [
+        "Hey,",
+        "don't",
+        "write",
+        "yourself",
+        "off",
+        "yet"
+      ],
+      "youtube_start": 11
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "your",
+        "try",
+        "best",
+        "Just"
+      ],
+      "answer": [
+        "Just",
+        "try",
+        "your",
+        "best"
+      ],
+      "youtube_start": 22
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "time",
+        "takes",
+        "It",
+        "just",
+        "some"
+      ],
+      "answer": [
+        "It",
+        "just",
+        "takes",
+        "some",
+        "time"
+      ],
+      "youtube_start": 34
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Everything,",
+        "everything'll",
+        "be",
+        "alright",
+        "alright,"
+      ],
+      "answer": [
+        "Everything,",
+        "everything'll",
+        "be",
+        "alright,",
+        "alright"
+      ],
+      "youtube_start": 42
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "buy",
+        "So",
+        "in",
+        "don't"
+      ],
+      "answer": [
+        "So",
+        "don't",
+        "buy",
+        "in"
+      ],
+      "youtube_start": 54
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"everything\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"everything\" na música inteira?",
+      "word": "everything",
+      "answer": 13
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"everything'll\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"everything'll\" na música inteira?",
+      "word": "everything'll",
+      "answer": 10
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"The Middle\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"The Middle\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "everything",
+        "everything'll",
+        "alright",
+        "you're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"The Middle\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"The Middle\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "everything",
+        "everything'll",
+        "alright",
+        "you're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"The Middle\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"The Middle\", o que aconteceria?",
+      "target_vocab": [
+        "everything",
+        "everything'll",
+        "alright",
+        "you're"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
+        },
+        {
+          "short": "doesn't",
+          "full": "does not"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        }
+      ]
+    }
+  ]
+}

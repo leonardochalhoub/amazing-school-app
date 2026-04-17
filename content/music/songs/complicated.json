@@ -1,0 +1,486 @@
+{
+  "slug": "complicated",
+  "title": "Complicated",
+  "artist": "Avril Lavigne",
+  "year": 2002,
+  "album": "Let Go",
+  "genre": [
+    "pop",
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 245,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Complicated by Avril Lavigne (2002) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "you're",
+      "pt": "",
+      "note": "Appears 18 times; first heard in: \"And you're talking to me, one on one\""
+    },
+    {
+      "term": "else",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"Somebody else 'round everyone else\""
+    },
+    {
+      "term": "somebody",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Somebody else 'round everyone else\""
+    },
+    {
+      "term": "life's",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Uh-huh, life's like this\""
+    },
+    {
+      "term": "things",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Why do you have to go and make things so complicated?\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Gets me frustrated",
+          "Life's like this, you",
+          "You fall, and you crawl, and you break",
+          "And you take what you get, and you turn it into"
+        ],
+        "start_seconds": 71,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "No, no, no (no, no)",
+          "No, no, no (no, no)",
+          "No, no, no (no, no)",
+          "No, no, no (no, no)"
+        ],
+        "start_seconds": 149,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Uh-huh,",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lifes",
+      "excerpt_after": "like this",
+      "youtube_start": 2,
+      "youtube_end": 16
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Uh-huh, uh-huh,",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "the way it is",
+      "youtube_start": 19,
+      "youtube_end": 33
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "talking to me, one on one",
+      "youtube_start": 44,
+      "youtube_end": 58
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You're",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "watching",
+      "excerpt_after": "your back like you can't relax",
+      "youtube_start": 53,
+      "youtube_end": 67
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Dressed up like you're",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "something",
+      "excerpt_after": "else",
+      "youtube_start": 94,
+      "youtube_end": 108
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Take off all your",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "preppy",
+      "excerpt_after": "clothes",
+      "youtube_start": 106,
+      "youtube_end": 120
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Chill out, what you yelling for?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You would see",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When we're driving in your car",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But you've become",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You're trying to be cool",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Uh-huh,",
+      "excerpt_after": "like this",
+      "options": [
+        "lifes",
+        "never",
+        "talking",
+        "youre"
+      ],
+      "answer_index": 0,
+      "youtube_start": 2,
+      "youtube_end": 14
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Lay back, it's all been",
+      "excerpt_after": "before",
+      "options": [
+        "acting",
+        "done",
+        "relax",
+        "strike"
+      ],
+      "answer_index": 1,
+      "youtube_start": 28,
+      "youtube_end": 40
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You're",
+      "excerpt_after": "your back like you can't relax",
+      "options": [
+        "dressed",
+        "preppy",
+        "unannounced",
+        "watching"
+      ],
+      "answer_index": 3,
+      "youtube_start": 53,
+      "youtube_end": 65
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Dressed up like you're",
+      "excerpt_after": "else",
+      "options": [
+        "complicated",
+        "dressed",
+        "something",
+        "trying"
+      ],
+      "answer_index": 2,
+      "youtube_start": 94,
+      "youtube_end": 106
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Somebody else",
+      "excerpt_after": "everyone else",
+      "options": [
+        "gonna",
+        "lifes",
+        "round",
+        "things"
+      ],
+      "answer_index": 2,
+      "youtube_start": 115,
+      "youtube_end": 127
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "life's",
+        "like",
+        "Uh-huh,",
+        "this"
+      ],
+      "answer": [
+        "Uh-huh,",
+        "life's",
+        "like",
+        "this"
+      ],
+      "youtube_start": 2
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "for?",
+        "out,",
+        "what",
+        "Chill",
+        "yelling",
+        "you"
+      ],
+      "answer": [
+        "Chill",
+        "out,",
+        "what",
+        "you",
+        "yelling",
+        "for?"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "car",
+        "your",
+        "we're",
+        "in",
+        "When",
+        "driving"
+      ],
+      "answer": [
+        "When",
+        "we're",
+        "driving",
+        "in",
+        "your",
+        "car"
+      ],
+      "youtube_start": 41
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "Life's",
+        "this,",
+        "like"
+      ],
+      "answer": [
+        "Life's",
+        "like",
+        "this,",
+        "you"
+      ],
+      "youtube_start": 73
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "strike",
+        "out,",
+        "your",
+        "you",
+        "pose",
+        "Laugh",
+        "when"
+      ],
+      "answer": [
+        "Laugh",
+        "out,",
+        "when",
+        "you",
+        "strike",
+        "your",
+        "pose"
+      ],
+      "youtube_start": 102
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"you're\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"you're\" na música inteira?",
+      "word": "you're",
+      "answer": 18
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"else\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"else\" na música inteira?",
+      "word": "else",
+      "answer": 11
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Uh-huh, life's like this",
+          "order": 0
+        },
+        {
+          "text": "Life's like this, you",
+          "order": 1
+        },
+        {
+          "text": "No, no, no (no, no)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Uh-huh, uh-huh, that's the way it is",
+          "order": 0
+        },
+        {
+          "text": "When you become",
+          "order": 1
+        },
+        {
+          "text": "Lay back, it's all been done before",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Avril Lavigne one question about \"Complicated\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Avril Lavigne sobre \"Complicated\", o que seria e por quê?",
+      "target_vocab": [
+        "you're",
+        "else",
+        "somebody",
+        "life's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Complicated\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Complicated\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "you're",
+        "else",
+        "somebody",
+        "life's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Complicated\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Complicated\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "you're",
+        "else",
+        "somebody",
+        "life's"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    }
+  ]
+}

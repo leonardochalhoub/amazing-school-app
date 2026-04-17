@@ -48,12 +48,75 @@
       "type": "listen_and_fill",
       "prompt_en": "Fill the blank in this line:",
       "prompt_pt": "Complete a lacuna neste verso:",
-      "excerpt_before": "There's a calm",
-      "blank_hint": "word starting with \"b\"",
-      "answer": "before",
-      "excerpt_after": "the storm",
-      "youtube_start": 17,
-      "youtube_end": 31
+      "excerpt_before": "I know, it's been",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "comin",
+      "excerpt_after": "for some time",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It'll rain a",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sunny",
+      "excerpt_after": "day",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I know,",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "shinin",
+      "excerpt_after": "down like water",
+      "youtube_start": 37,
+      "youtube_end": 51
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wanna",
+      "excerpt_after": "know, have you ever seen the rain?",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Til",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "forever",
+      "excerpt_after": "on it goes",
+      "youtube_start": 87,
+      "youtube_end": 101
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Through the",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "circle",
+      "excerpt_after": "fast and slow",
+      "youtube_start": 92,
+      "youtube_end": 106
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I know, it's been comin' for some time",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
       "type": "translate_line",
@@ -62,6 +125,297 @@
       "excerpt": "I know, shinin' down like water",
       "model_answer_pt": "",
       "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Someone told me long ago",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "It'll rain a sunny day",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yesterday and days before",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Someone",
+      "excerpt_after": "me long ago",
+      "options": [
+        "comin",
+        "goes",
+        "told",
+        "water"
+      ],
+      "answer_index": 2,
+      "youtube_start": 13,
+      "youtube_end": 25
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "it's been comin' for some time",
+      "options": [
+        "days",
+        "know",
+        "slow",
+        "through"
+      ],
+      "answer_index": 1,
+      "youtube_start": 20,
+      "youtube_end": 32
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "know, have you ever seen the rain?",
+      "options": [
+        "goes",
+        "itll",
+        "wanna",
+        "wonder"
+      ],
+      "answer_index": 2,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Yesterday and",
+      "excerpt_after": "before",
+      "options": [
+        "circle",
+        "days",
+        "know",
+        "told"
+      ],
+      "answer_index": 1,
+      "youtube_start": 71,
+      "youtube_end": 83
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Through the",
+      "excerpt_after": "fast and slow",
+      "options": [
+        "circle",
+        "forever",
+        "stop",
+        "wanna"
+      ],
+      "answer_index": 0,
+      "youtube_start": 92,
+      "youtube_end": 104
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Someone",
+        "me",
+        "long",
+        "ago",
+        "told"
+      ],
+      "answer": [
+        "Someone",
+        "told",
+        "me",
+        "long",
+        "ago"
+      ],
+      "youtube_start": 13
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "so",
+        "When",
+        "they",
+        "say",
+        "over,",
+        "it's"
+      ],
+      "answer": [
+        "When",
+        "it's",
+        "over,",
+        "so",
+        "they",
+        "say"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "water",
+        "down",
+        "like",
+        "I",
+        "shinin'",
+        "know,"
+      ],
+      "answer": [
+        "I",
+        "know,",
+        "shinin'",
+        "down",
+        "like",
+        "water"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "and",
+        "before",
+        "days",
+        "Yesterday"
+      ],
+      "answer": [
+        "Yesterday",
+        "and",
+        "days",
+        "before"
+      ],
+      "youtube_start": 71
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "forever",
+        "on",
+        "it",
+        "'Til",
+        "goes"
+      ],
+      "answer": [
+        "'Til",
+        "forever",
+        "on",
+        "it",
+        "goes"
+      ],
+      "youtube_start": 87
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"ever\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"ever\" na música inteira?",
+      "word": "ever",
+      "answer": 6
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"rain\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"rain\" na música inteira?",
+      "word": "rain",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Someone told me long ago",
+          "order": 0
+        },
+        {
+          "text": "It'll rain a sunny day",
+          "order": 1
+        },
+        {
+          "text": "Sun is cold and rain is hard",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "There's a calm before the storm",
+          "order": 0
+        },
+        {
+          "text": "Comin' down on a sunny day?",
+          "order": 1
+        },
+        {
+          "text": "'Til forever on it goes",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Have You Ever Seen the Rain\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Have You Ever Seen the Rain\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "ever",
+        "rain",
+        "sunny",
+        "coming down"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Creedence Clearwater Revival one question about \"Have You Ever Seen the Rain\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Creedence Clearwater Revival sobre \"Have You Ever Seen the Rain\", o que seria e por quê?",
+      "target_vocab": [
+        "ever",
+        "rain",
+        "sunny",
+        "coming down"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Have You Ever Seen the Rain\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Have You Ever Seen the Rain\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "ever",
+        "rain",
+        "sunny",
+        "coming down"
+      ]
     },
     {
       "type": "spot_the_grammar",
@@ -87,17 +441,6 @@
       ]
     },
     {
-      "type": "discussion",
-      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
-      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
-      "target_vocab": [
-        "ever",
-        "rain",
-        "sunny",
-        "coming down"
-      ]
-    },
-    {
       "type": "word_to_meaning",
       "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
       "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
@@ -117,68 +460,6 @@
         {
           "en": "coming down",
           "pt": "caindo"
-        }
-      ]
-    },
-    {
-      "type": "unscramble_line",
-      "prompt_en": "Put the words in the right order:",
-      "prompt_pt": "Coloque as palavras na ordem certa:",
-      "shuffled": [
-        "Someone",
-        "me",
-        "long",
-        "ago",
-        "told"
-      ],
-      "answer": [
-        "Someone",
-        "told",
-        "me",
-        "long",
-        "ago"
-      ],
-      "youtube_start": 13
-    },
-    {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "Someone",
-      "excerpt_after": "me long ago",
-      "options": [
-        "long",
-        "someone",
-        "theres",
-        "told"
-      ],
-      "answer_index": 3,
-      "youtube_start": 13,
-      "youtube_end": 25
-    },
-    {
-      "type": "count_word",
-      "prompt_en": "How many times do you hear the word \"ever\" in the whole song?",
-      "prompt_pt": "Quantas vezes você ouve a palavra \"ever\" na música inteira?",
-      "word": "ever",
-      "answer": 6
-    },
-    {
-      "type": "line_order",
-      "prompt_en": "Put these three lines in the order they appear in the song:",
-      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
-      "excerpts": [
-        {
-          "text": "Someone told me long ago",
-          "order": 0
-        },
-        {
-          "text": "It'll rain a sunny day",
-          "order": 1
-        },
-        {
-          "text": "Sun is cold and rain is hard",
-          "order": 2
         }
       ]
     }

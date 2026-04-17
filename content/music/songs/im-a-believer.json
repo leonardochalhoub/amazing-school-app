@@ -1,0 +1,466 @@
+{
+  "slug": "im-a-believer",
+  "title": "I'm a Believer",
+  "artist": "The Monkees",
+  "year": 1966,
+  "album": "More of the Monkees (Deluxe Edition)",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 167,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "I'm a Believer by The Monkees (1966) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "believer",
+      "pt": "",
+      "note": "Appears 13 times; first heard in: \"Then I saw her face, now I'm a believer\""
+    },
+    {
+      "term": "face",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Then I saw her face, now I'm a believer\""
+    },
+    {
+      "term": "trace",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Not a trace of doubt in my mind\""
+    },
+    {
+      "term": "doubt",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Not a trace of doubt in my mind\""
+    },
+    {
+      "term": "mind",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Not a trace of doubt in my mind\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I'm in love (mm, ah)",
+          "I'm a believer, I couldn't leave her if I tried",
+          "I thought love was more or less a given thing",
+          "Seems the more I gave the less I got"
+        ],
+        "start_seconds": 39,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "I'm in love (mm, ah)",
+          "I'm a believer, I couldn't leave her if I tried",
+          "Oh",
+          "Ah, love was out to get me (duh-duh-duh duh-duh)"
+        ],
+        "start_seconds": 84,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thought",
+      "excerpt_after": "love was only true in fairytales",
+      "youtube_start": 4,
+      "youtube_end": 18
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Meant for",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "someone",
+      "excerpt_after": "else but not for me",
+      "youtube_start": 10,
+      "youtube_end": 24
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That's the way it",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "seemed",
+      "excerpt_after": "(duh-duh-duh duh-duh)",
+      "youtube_start": 19,
+      "youtube_end": 33
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Not a",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "trace",
+      "excerpt_after": "of doubt in my mind",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When I",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "needed",
+      "excerpt_after": "sunshine, I got rain",
+      "youtube_start": 67,
+      "youtube_end": 81
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Now",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "the way it seemed (duh-duh-duh duh-duh)",
+      "youtube_start": 110,
+      "youtube_end": 124
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I thought love was only true in fairytales",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "All you get is pain duh-duh-duh duh-duh",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Said I'm a believer, yeah I'm a believer",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "That's the way it seemed duh-duh-duh duh-duh",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Not a trace of doubt in my mind",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "love was only true in fairytales",
+      "options": [
+        "pain",
+        "thought",
+        "tried",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 4,
+      "youtube_end": 16
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That's the way it",
+      "excerpt_after": "(duh-duh-duh duh-duh)",
+      "options": [
+        "pain",
+        "seemed",
+        "thing",
+        "tried"
+      ],
+      "answer_index": 1,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Not a",
+      "excerpt_after": "of doubt in my mind",
+      "options": [
+        "leave",
+        "meant",
+        "trace",
+        "trying"
+      ],
+      "answer_index": 2,
+      "youtube_start": 33,
+      "youtube_end": 45
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "All you get is",
+      "excerpt_after": "(duh-duh-duh duh-duh)",
+      "options": [
+        "face",
+        "haunted",
+        "mind",
+        "pain"
+      ],
+      "answer_index": 3,
+      "youtube_start": 64,
+      "youtube_end": 76
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Now",
+      "excerpt_after": "the way it seemed (duh-duh-duh duh-duh)",
+      "options": [
+        "meant",
+        "sunshine",
+        "thats",
+        "yeah"
+      ],
+      "answer_index": 2,
+      "youtube_start": 110,
+      "youtube_end": 122
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "duh-duh",
+        "the",
+        "way",
+        "duh-duh-duh",
+        "seemed",
+        "it",
+        "That's"
+      ],
+      "answer": [
+        "That's",
+        "the",
+        "way",
+        "it",
+        "seemed",
+        "duh-duh-duh",
+        "duh-duh"
+      ],
+      "youtube_start": 19
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "haunted",
+        "my",
+        "all",
+        "Disappointment",
+        "dreams"
+      ],
+      "answer": [
+        "Disappointment",
+        "haunted",
+        "all",
+        "my",
+        "dreams"
+      ],
+      "youtube_start": 22
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "in",
+        "ah",
+        "I'm",
+        "mm,",
+        "love"
+      ],
+      "answer": [
+        "I'm",
+        "in",
+        "love",
+        "mm,",
+        "ah"
+      ],
+      "youtube_start": 39
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "duh-duh",
+        "Duh-duh-duh",
+        "use",
+        "What's",
+        "in",
+        "trying?"
+      ],
+      "answer": [
+        "What's",
+        "the",
+        "use",
+        "in",
+        "trying?",
+        "Duh-duh-duh",
+        "duh-duh"
+      ],
+      "youtube_start": 61
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "pain",
+        "get",
+        "is",
+        "All",
+        "duh-duh-duh",
+        "duh-duh",
+        "you"
+      ],
+      "answer": [
+        "All",
+        "you",
+        "get",
+        "is",
+        "pain",
+        "duh-duh-duh",
+        "duh-duh"
+      ],
+      "youtube_start": 64
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"believer\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"believer\" na música inteira?",
+      "word": "believer",
+      "answer": 13
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"face\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"face\" na música inteira?",
+      "word": "face",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Meant for someone else but not for me",
+          "order": 0
+        },
+        {
+          "text": "When I needed sunshine, I got rain",
+          "order": 1
+        },
+        {
+          "text": "Disappointment haunted all my dreams",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"I'm a Believer\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"I'm a Believer\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "believer",
+        "face",
+        "trace",
+        "doubt"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"I'm a Believer\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"I'm a Believer\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "believer",
+        "face",
+        "trace",
+        "doubt"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask The Monkees one question about \"I'm a Believer\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para The Monkees sobre \"I'm a Believer\", o que seria e por quê?",
+      "target_vocab": [
+        "believer",
+        "face",
+        "trace",
+        "doubt"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "couldn't",
+          "full": "could not"
+        },
+        {
+          "short": "what's",
+          "full": "what is"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,457 @@
+{
+  "slug": "no-woman-no-cry",
+  "title": "No Woman No Cry",
+  "artist": "Bob Marley",
+  "year": 1974,
+  "album": "One Love, The Very Best Of",
+  "genre": [
+    "reggae"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 0,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "No Woman No Cry by Bob Marley (1974) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "woman",
+      "pt": "",
+      "note": "Appears 32 times; first heard in: \"No woman no cry\""
+    },
+    {
+      "term": "alright",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"Everything's gonna be alright\""
+    },
+    {
+      "term": "tears",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"So dry your tears I say\""
+    },
+    {
+      "term": "she'd",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Oh my Little sister, don't she'd no tears\""
+    },
+    {
+      "term": "little",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Oh my Little sister, don't she'd no tears\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "No woman no cry"
+        ],
+        "start_seconds": 25,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Ev'rything's gonna be alright",
+          "Ev'rything's gonna be alright",
+          "Ev'rything's gonna be alright",
+          "Ev'rything's gonna be alright"
+        ],
+        "start_seconds": 202,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "No",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "woman",
+      "excerpt_after": "no cry",
+      "youtube_start": 25,
+      "youtube_end": 39
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oba,",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "ob-serving",
+      "excerpt_after": "the hypocrites",
+      "youtube_start": 89,
+      "youtube_end": 103
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And then",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "georgie",
+      "excerpt_after": "would make the fire light",
+      "youtube_start": 163,
+      "youtube_end": 177
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Everything's",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "be alright",
+      "youtube_start": 199,
+      "youtube_end": 213
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Obba, obba,",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "serving",
+      "excerpt_after": "the hypocrites",
+      "youtube_start": 309,
+      "youtube_end": 323
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Then we would cook",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "cornmeal",
+      "excerpt_after": "porridge",
+      "youtube_start": 337,
+      "youtube_end": 351
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Said I remember when we used to sit",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh my Little sister, don't she'd no tears",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Of which I'll share with you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But while I'm gone...",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh, my little darlyn no she'd no tears",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "No",
+      "excerpt_after": "no cry",
+      "options": [
+        "feet",
+        "while",
+        "woman",
+        "yard"
+      ],
+      "answer_index": 2,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Oh my",
+      "excerpt_after": "sister, don't she'd no tears",
+      "options": [
+        "along",
+        "feet",
+        "little",
+        "weve"
+      ],
+      "answer_index": 2,
+      "youtube_start": 140,
+      "youtube_end": 152
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "My",
+      "excerpt_after": "is my only carriage",
+      "options": [
+        "along",
+        "feet",
+        "sister",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 188,
+      "youtube_end": 200
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Obba,",
+      "excerpt_after": "serving the hypocrites",
+      "options": [
+        "forget",
+        "obba",
+        "weve",
+        "yard"
+      ],
+      "answer_index": 1,
+      "youtube_start": 309,
+      "youtube_end": 321
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Of which I'll",
+      "excerpt_after": "with you",
+      "options": [
+        "carriage",
+        "mingle",
+        "past",
+        "share"
+      ],
+      "answer_index": 3,
+      "youtube_start": 337,
+      "youtube_end": 349
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "No",
+        "no",
+        "cry",
+        "woman"
+      ],
+      "answer": [
+        "No",
+        "woman",
+        "no",
+        "cry"
+      ],
+      "youtube_start": 25
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "we",
+        "porridge",
+        "meal",
+        "corn",
+        "Then",
+        "cook",
+        "would"
+      ],
+      "answer": [
+        "Then",
+        "we",
+        "would",
+        "cook",
+        "corn",
+        "meal",
+        "porridge"
+      ],
+      "youtube_start": 175
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "alright",
+        "be",
+        "Ev'rything's",
+        "gonna"
+      ],
+      "answer": [
+        "Ev'rything's",
+        "gonna",
+        "be",
+        "alright"
+      ],
+      "youtube_start": 202
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "serving",
+        "hypocrites",
+        "Obba,",
+        "the",
+        "obba,"
+      ],
+      "answer": [
+        "Obba,",
+        "obba,",
+        "serving",
+        "the",
+        "hypocrites"
+      ],
+      "youtube_start": 309
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "gone",
+        "Oh,",
+        "while",
+        "I'm"
+      ],
+      "answer": [
+        "Oh,",
+        "while",
+        "I'm",
+        "gone"
+      ],
+      "youtube_start": 341
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"woman\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"woman\" na música inteira?",
+      "word": "woman",
+      "answer": 32
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"alright\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"alright\" na música inteira?",
+      "word": "alright",
+      "answer": 16
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "No woman no cry",
+          "order": 0
+        },
+        {
+          "text": "Ev'rything's gonna be alright",
+          "order": 1
+        },
+        {
+          "text": "And then Georgie would make the fire light",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Bob Marley one question about \"No Woman No Cry\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Bob Marley sobre \"No Woman No Cry\", o que seria e por quê?",
+      "target_vocab": [
+        "woman",
+        "alright",
+        "tears",
+        "she'd"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"No Woman No Cry\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"No Woman No Cry\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "woman",
+        "alright",
+        "tears",
+        "she'd"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"No Woman No Cry\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"No Woman No Cry\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "woman",
+        "alright",
+        "tears",
+        "she'd"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "we've",
+          "full": "we have"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

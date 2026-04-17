@@ -84,9 +84,364 @@
       "youtube_end": 26
     },
     {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Speaking",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "words",
+      "excerpt_after": "of wisdom",
+      "youtube_start": 19,
+      "youtube_end": 33
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And when the",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "broken-hearted",
+      "excerpt_after": "people",
+      "youtube_start": 51,
+      "youtube_end": 65
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "For",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "though",
+      "excerpt_after": "they may be parted",
+      "youtube_start": 64,
+      "youtube_end": 78
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Yeah,",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "there",
+      "excerpt_after": "will be an answer",
+      "youtube_start": 84,
+      "youtube_end": 98
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There is still a",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "light",
+      "excerpt_after": "that shines on me",
+      "youtube_start": 163,
+      "youtube_end": 177
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When I find myself in times of trouble",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "For though they may be parted",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Mother Mary comes to me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And in my hour of darkness",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "A-let it be, let it be",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When I",
+      "excerpt_after": "myself in times of trouble",
+      "options": [
+        "a-let",
+        "agree",
+        "find",
+        "people"
+      ],
+      "answer_index": 2,
+      "youtube_start": 12,
+      "youtube_end": 24
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And in my",
+      "excerpt_after": "of darkness",
+      "options": [
+        "hour",
+        "myself",
+        "there",
+        "wake"
+      ],
+      "answer_index": 0,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "For",
+      "excerpt_after": "they may be parted",
+      "options": [
+        "cloudy",
+        "night",
+        "speaking",
+        "though"
+      ],
+      "answer_index": 3,
+      "youtube_start": 64,
+      "youtube_end": 76
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "A-let it be,",
+      "excerpt_after": "let it be",
+      "options": [
+        "hour",
+        "mary",
+        "people",
+        "yeah"
+      ],
+      "answer_index": 3,
+      "youtube_start": 149,
+      "youtube_end": 161
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "up to the sound of music",
+      "options": [
+        "light",
+        "shines",
+        "wake",
+        "world"
+      ],
+      "answer_index": 2,
+      "youtube_start": 174,
+      "youtube_end": 186
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "comes",
+        "to",
+        "Mother",
+        "Mary"
+      ],
+      "answer": [
+        "Mother",
+        "Mary",
+        "comes",
+        "to",
+        "me"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "it",
+        "Let",
+        "be,",
+        "it",
+        "be",
+        "let"
+      ],
+      "answer": [
+        "Let",
+        "it",
+        "be,",
+        "let",
+        "it",
+        "be"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "broken-hearted",
+        "when",
+        "people",
+        "the",
+        "And"
+      ],
+      "answer": [
+        "And",
+        "when",
+        "the",
+        "broken-hearted",
+        "people"
+      ],
+      "youtube_start": 51
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "For",
+        "they",
+        "may",
+        "be",
+        "parted",
+        "though"
+      ],
+      "answer": [
+        "For",
+        "though",
+        "they",
+        "may",
+        "be",
+        "parted"
+      ],
+      "youtube_start": 64
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "night",
+        "when",
+        "cloudy",
+        "And",
+        "is"
+      ],
+      "answer": [
+        "And",
+        "when",
+        "the",
+        "night",
+        "is",
+        "cloudy"
+      ],
+      "youtube_start": 160
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"whisper\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"whisper\" na música inteira?",
+      "word": "whisper",
+      "answer": 4
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"words\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"words\" na música inteira?",
+      "word": "words",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "When I find myself in times of trouble",
+          "order": 0
+        },
+        {
+          "text": "For though they may be parted",
+          "order": 1
+        },
+        {
+          "text": "Shine until tomorrow",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Mother Mary comes to me",
+          "order": 0
+        },
+        {
+          "text": "A-let it be, let it be",
+          "order": 1
+        },
+        {
+          "text": "Speaking words of wisdom",
+          "order": 2
+        }
+      ]
+    },
+    {
       "type": "discussion",
       "prompt_en": "Imagine you are making a short film with \"Let It Be\" as the soundtrack. What scene would you show while the chorus plays?",
       "prompt_pt": "Imagine que você vai fazer um curta com \"Let It Be\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "let",
+        "trouble",
+        "whisper",
+        "mother"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "let",
+        "trouble",
+        "whisper",
+        "mother"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
       "target_vocab": [
         "let",
         "trouble",
@@ -114,68 +469,6 @@
         {
           "en": "mother",
           "pt": "mãe"
-        }
-      ]
-    },
-    {
-      "type": "unscramble_line",
-      "prompt_en": "Put the words in the right order:",
-      "prompt_pt": "Coloque as palavras na ordem certa:",
-      "shuffled": [
-        "me",
-        "comes",
-        "to",
-        "Mother",
-        "Mary"
-      ],
-      "answer": [
-        "Mother",
-        "Mary",
-        "comes",
-        "to",
-        "me"
-      ],
-      "youtube_start": 16
-    },
-    {
-      "type": "cloze_multi_choice",
-      "prompt_en": "Choose the missing word:",
-      "prompt_pt": "Escolha a palavra que falta:",
-      "excerpt_before": "When I",
-      "excerpt_after": "myself in times of trouble",
-      "options": [
-        "find",
-        "myself",
-        "times",
-        "trouble"
-      ],
-      "answer_index": 0,
-      "youtube_start": 12,
-      "youtube_end": 24
-    },
-    {
-      "type": "count_word",
-      "prompt_en": "How many times do you hear the word \"whisper\" in the whole song?",
-      "prompt_pt": "Quantas vezes você ouve a palavra \"whisper\" na música inteira?",
-      "word": "whisper",
-      "answer": 4
-    },
-    {
-      "type": "line_order",
-      "prompt_en": "Put these three lines in the order they appear in the song:",
-      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
-      "excerpts": [
-        {
-          "text": "When I find myself in times of trouble",
-          "order": 0
-        },
-        {
-          "text": "For though they may be parted",
-          "order": 1
-        },
-        {
-          "text": "Shine until tomorrow",
-          "order": 2
         }
       ]
     }

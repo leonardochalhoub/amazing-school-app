@@ -1,0 +1,357 @@
+{
+  "slug": "man-in-the-box",
+  "title": "Man in the Box",
+  "artist": "Alice in Chains",
+  "year": 1990,
+  "album": "Facelift",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 270,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Man in the Box by Alice in Chains (1990) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "feed",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Feed my eyes, can you sew them shut?\""
+    },
+    {
+      "term": "eyes",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Feed my eyes, can you sew them shut?\""
+    },
+    {
+      "term": "shut",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Feed my eyes, can you sew them shut?\""
+    },
+    {
+      "term": "save",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Won't you come and save me, save me?\""
+    },
+    {
+      "term": "jesus",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Jesus Christ, deny your maker\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Jesus Christ, deny your maker",
+          "He who tries, will be wasted",
+          "Feed my eyes, now you've sewn them shut"
+        ],
+        "start_seconds": 82,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Jesus Christ, deny your maker",
+          "He who tries, will be wasted",
+          "Feed my eyes, now you've sewn them shut"
+        ],
+        "start_seconds": 170,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Jesus",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "christ",
+      "excerpt_after": "deny your maker",
+      "youtube_start": 82,
+      "youtube_end": 96
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "He who",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tries",
+      "excerpt_after": "will be wasted",
+      "youtube_start": 90,
+      "youtube_end": 104
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Feed my eyes, now",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youve",
+      "excerpt_after": "sewn them shut",
+      "youtube_start": 99,
+      "youtube_end": 113
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Won't you come and save me, save me?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Feed my eyes, can you sew them shut?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "He who tries, will be wasted",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Feed my eyes, now you've sewn them shut",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Jesus Christ, deny your maker",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Won't you come and",
+      "excerpt_after": "me, save me?",
+      "options": [
+        "gets",
+        "save",
+        "shit",
+        "tries"
+      ],
+      "answer_index": 1,
+      "youtube_start": 55,
+      "youtube_end": 67
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Feed my",
+      "excerpt_after": "can you sew them shut?",
+      "options": [
+        "buried",
+        "eyes",
+        "feed",
+        "nose"
+      ],
+      "answer_index": 1,
+      "youtube_start": 73,
+      "youtube_end": 85
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Jesus",
+      "excerpt_after": "deny your maker",
+      "options": [
+        "beat",
+        "christ",
+        "nose",
+        "tries"
+      ],
+      "answer_index": 1,
+      "youtube_start": 82,
+      "youtube_end": 94
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Feed my eyes, now",
+      "excerpt_after": "sewn them shut",
+      "options": [
+        "maker",
+        "save",
+        "shit",
+        "youve"
+      ],
+      "answer_index": 3,
+      "youtube_start": 99,
+      "youtube_end": 111
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Jesus Christ,",
+      "excerpt_after": "your maker",
+      "options": [
+        "deny",
+        "maker",
+        "shut",
+        "wont"
+      ],
+      "answer_index": 0,
+      "youtube_start": 170,
+      "youtube_end": 182
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "your",
+        "Jesus",
+        "Christ,",
+        "deny",
+        "maker"
+      ],
+      "answer": [
+        "Jesus",
+        "Christ,",
+        "deny",
+        "your",
+        "maker"
+      ],
+      "youtube_start": 82
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "who",
+        "be",
+        "tries,",
+        "He",
+        "will",
+        "wasted"
+      ],
+      "answer": [
+        "He",
+        "who",
+        "tries,",
+        "will",
+        "be",
+        "wasted"
+      ],
+      "youtube_start": 90
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"feed\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"feed\" na música inteira?",
+      "word": "feed",
+      "answer": 6
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"eyes\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"eyes\" na música inteira?",
+      "word": "eyes",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Won't you come and save me, save me?",
+          "order": 0
+        },
+        {
+          "text": "Feed my eyes, now you've sewn them shut",
+          "order": 1
+        },
+        {
+          "text": "He who tries, will be wasted",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Man in the Box\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Man in the Box\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "feed",
+        "eyes",
+        "shut",
+        "save"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Alice in Chains one question about \"Man in the Box\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Alice in Chains sobre \"Man in the Box\", o que seria e por quê?",
+      "target_vocab": [
+        "feed",
+        "eyes",
+        "shut",
+        "save"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Man in the Box\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Man in the Box\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "feed",
+        "eyes",
+        "shut",
+        "save"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        }
+      ]
+    }
+  ]
+}

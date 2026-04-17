@@ -1,0 +1,415 @@
+{
+  "slug": "song-2",
+  "title": "Song 2",
+  "artist": "Blur",
+  "year": 1997,
+  "album": "Blur",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 121,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Song 2 by Blur (1997) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "wooooo",
+      "pt": "",
+      "note": "Appears 10 times; first heard in: \"Wooooo hoooo\""
+    },
+    {
+      "term": "hooooooo",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Wooooo hooooooo\""
+    },
+    {
+      "term": "hoooo",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Wooooo hoooo\""
+    },
+    {
+      "term": "easy",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"It wasn't easy\""
+    },
+    {
+      "term": "head",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"I got my head checked\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Wooooo hooooooo",
+          "When I feel heavy metal",
+          "Wooooo hooooooo",
+          "And I'm pins and I'm needles"
+        ],
+        "start_seconds": 44,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Wooooo hoooo",
+          "Wooooo hoooo",
+          "Wooooo hoooo",
+          "Wooooo hoooo"
+        ],
+        "start_seconds": 14,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "By a",
+      "blank_hint": "word starting with \"j\"",
+      "answer": "jumbo",
+      "excerpt_after": "jet",
+      "youtube_start": 32,
+      "youtube_end": 46
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When I feel",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heavy",
+      "excerpt_after": "metal",
+      "youtube_start": 45,
+      "youtube_end": 59
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "All of the time, but I am",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "sure",
+      "youtube_start": 55,
+      "youtube_end": 69
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I got my head checked",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I'm pins and I'm needles",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Why I need you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I got my head down",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "By a jumbo jet",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I got my",
+      "excerpt_after": "checked",
+      "options": [
+        "head",
+        "heavy",
+        "needles",
+        "sure"
+      ],
+      "answer_index": 0,
+      "youtube_start": 28,
+      "youtube_end": 40
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "By a",
+      "excerpt_after": "jet",
+      "options": [
+        "jumbo",
+        "meet",
+        "pleased",
+        "young"
+      ],
+      "answer_index": 0,
+      "youtube_start": 32,
+      "youtube_end": 44
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I'm",
+      "excerpt_after": "and I'm needles",
+      "options": [
+        "checked",
+        "feel",
+        "pins",
+        "well"
+      ],
+      "answer_index": 2,
+      "youtube_start": 49,
+      "youtube_end": 61
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Why I",
+      "excerpt_after": "you",
+      "options": [
+        "head",
+        "metal",
+        "need",
+        "yeah"
+      ],
+      "answer_index": 2,
+      "youtube_start": 58,
+      "youtube_end": 70
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When I feel",
+      "excerpt_after": "metal",
+      "options": [
+        "heavy",
+        "hooooooo",
+        "needles",
+        "sure"
+      ],
+      "answer_index": 0,
+      "youtube_start": 86,
+      "youtube_end": 98
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "my",
+        "head",
+        "checked",
+        "got"
+      ],
+      "answer": [
+        "I",
+        "got",
+        "my",
+        "head",
+        "checked"
+      ],
+      "youtube_start": 28
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "When",
+        "metal",
+        "heavy",
+        "feel",
+        "I"
+      ],
+      "answer": [
+        "When",
+        "I",
+        "feel",
+        "heavy",
+        "metal"
+      ],
+      "youtube_start": 45
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Well,",
+        "easy",
+        "lie",
+        "I",
+        "and",
+        "I'm"
+      ],
+      "answer": [
+        "Well,",
+        "I",
+        "lie",
+        "and",
+        "I'm",
+        "easy"
+      ],
+      "youtube_start": 53
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "Pleased",
+        "meet",
+        "to"
+      ],
+      "answer": [
+        "Pleased",
+        "to",
+        "meet",
+        "you"
+      ],
+      "youtube_start": 61
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "When",
+        "was",
+        "young",
+        "I"
+      ],
+      "answer": [
+        "When",
+        "I",
+        "was",
+        "young"
+      ],
+      "youtube_start": 73
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"wooooo\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"wooooo\" na música inteira?",
+      "word": "wooooo",
+      "answer": 10
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"hooooooo\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"hooooooo\" na música inteira?",
+      "word": "hooooooo",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I got my head checked",
+          "order": 0
+        },
+        {
+          "text": "Well, I lie and I'm easy",
+          "order": 1
+        },
+        {
+          "text": "It's not my problem",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "wooooo",
+        "hooooooo",
+        "hoooo",
+        "easy"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "wooooo",
+        "hooooooo",
+        "hoooo",
+        "easy"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Song 2\" was released in 1997. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Song 2\" foi lançada em 1997. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "wooooo",
+        "hooooooo",
+        "hoooo",
+        "easy"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "wasn't",
+          "full": "was not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ]
+}

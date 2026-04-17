@@ -1,0 +1,472 @@
+{
+  "slug": "i-gotta-feeling",
+  "title": "I Gotta Feeling",
+  "artist": "Black Eyed Peas",
+  "year": 2009,
+  "album": "The Beginning & The Best Of The E.N.D.",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 289,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "I Gotta Feeling by Black Eyed Peas (2009) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "good",
+      "pt": "",
+      "note": "Appears 32 times; first heard in: \"That tonight's gonna be a good night\""
+    },
+    {
+      "term": "let's",
+      "pt": "",
+      "note": "Appears 30 times; first heard in: \"Tonight's the night, let's live it up\""
+    },
+    {
+      "term": "tonight's",
+      "pt": "",
+      "note": "Appears 26 times; first heard in: \"That tonight's gonna be a good night\""
+    },
+    {
+      "term": "night",
+      "pt": "",
+      "note": "Appears 26 times; first heard in: \"That tonight's gonna be a good night\""
+    },
+    {
+      "term": "feeling",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I got a feeling\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "That tonight's gonna be a good night",
+          "That tonight's gonna be a good night",
+          "That tonight's gonna be a good, good night",
+          "A feeling"
+        ],
+        "start_seconds": 33,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "That tonight's gonna be a good night",
+          "That tonight's gonna be a good, good night",
+          "Tonight's the night, let's live it up",
+          "I got my money, let's spend it up (a fee-)"
+        ],
+        "start_seconds": 82,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tonights",
+      "excerpt_after": "gonna be a good night",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Tonight's the",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "night",
+      "excerpt_after": "let's live it up",
+      "youtube_start": 91,
+      "youtube_end": 105
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I feel,",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "stressed",
+      "excerpt_after": "out, I wanna let it go",
+      "youtube_start": 112,
+      "youtube_end": 126
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Cause I",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gotta",
+      "excerpt_after": "feeling (woo-hoo)",
+      "youtube_start": 151,
+      "youtube_end": 165
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Round and",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "round",
+      "excerpt_after": "up and down, around the clock",
+      "youtube_start": 236,
+      "youtube_end": 250
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Friday,",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "saturday",
+      "excerpt_after": "Saturday to Sunday (do it)",
+      "youtube_start": 245,
+      "youtube_end": 259
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I got a feeling",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Let's paint the town, we'll shut it down",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Easy come, easy go, now we on top",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "That tonight's gonna be a good night",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "A feeling woo-hoo",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That",
+      "excerpt_after": "gonna be a good night",
+      "options": [
+        "drink",
+        "tonights",
+        "wednesday",
+        "woo-hoo"
+      ],
+      "answer_index": 1,
+      "youtube_start": 33,
+      "youtube_end": 45
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Tonight's the",
+      "excerpt_after": "let's live it up",
+      "options": [
+        "good",
+        "money",
+        "night",
+        "paint"
+      ],
+      "answer_index": 2,
+      "youtube_start": 91,
+      "youtube_end": 103
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Fill up my cup,",
+      "excerpt_after": "tov",
+      "options": [
+        "kick",
+        "mazel",
+        "move",
+        "roof"
+      ],
+      "answer_index": 1,
+      "youtube_start": 120,
+      "youtube_end": 132
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Fill up my cup",
+      "excerpt_after": "mazel tov (l'chaim)",
+      "options": [
+        "drink",
+        "jump",
+        "lose",
+        "town"
+      ],
+      "answer_index": 0,
+      "youtube_start": 196,
+      "youtube_end": 208
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Monday,",
+      "excerpt_after": "Wednesday and Thursday (do it)",
+      "options": [
+        "burn",
+        "money",
+        "roof",
+        "tuesday"
+      ],
+      "answer_index": 3,
+      "youtube_start": 240,
+      "youtube_end": 252
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "feeling",
+        "a",
+        "got",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "got",
+        "a",
+        "feeling"
+      ],
+      "youtube_start": 30
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "let's",
+        "Tonight's",
+        "the",
+        "night,",
+        "up",
+        "live",
+        "it"
+      ],
+      "answer": [
+        "Tonight's",
+        "the",
+        "night,",
+        "let's",
+        "live",
+        "it",
+        "up"
+      ],
+      "youtube_start": 91
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "mazel",
+        "tov",
+        "my",
+        "cup,",
+        "Fill",
+        "up"
+      ],
+      "answer": [
+        "Fill",
+        "up",
+        "my",
+        "cup,",
+        "mazel",
+        "tov"
+      ],
+      "youtube_start": 120
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Thursday",
+        "Wednesday",
+        "it",
+        "Monday,",
+        "and",
+        "Tuesday,",
+        "do"
+      ],
+      "answer": [
+        "Monday,",
+        "Tuesday,",
+        "Wednesday",
+        "and",
+        "Thursday",
+        "do",
+        "it"
+      ],
+      "youtube_start": 240
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Party",
+        "day",
+        "every",
+        "day,",
+        "p-p-p-party",
+        "every"
+      ],
+      "answer": [
+        "Party",
+        "every",
+        "day,",
+        "p-p-p-party",
+        "every",
+        "day"
+      ],
+      "youtube_start": 252
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"good\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"good\" na música inteira?",
+      "word": "good",
+      "answer": 32
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"let's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"let's\" na música inteira?",
+      "word": "let's",
+      "answer": 30
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I got a feeling",
+          "order": 0
+        },
+        {
+          "text": "That tonight's gonna be a good night",
+          "order": 1
+        },
+        {
+          "text": "Fill up my cup (drink), mazel tov (l'chaim)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"I Gotta Feeling\" was released in 2009. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"I Gotta Feeling\" foi lançada em 2009. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "good",
+        "let's",
+        "tonight's",
+        "night"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"I Gotta Feeling\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"I Gotta Feeling\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "good",
+        "let's",
+        "tonight's",
+        "night"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "good",
+        "let's",
+        "tonight's",
+        "night"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "let's",
+          "full": "let us"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    }
+  ]
+}

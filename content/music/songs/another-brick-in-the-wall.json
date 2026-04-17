@@ -1,0 +1,443 @@
+{
+  "slug": "another-brick-in-the-wall",
+  "title": "Another Brick in the Wall",
+  "artist": "Pink Floyd",
+  "year": 1979,
+  "album": "The Best Rock - 100 Greatest Hits",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 241,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Another Brick in the Wall by Pink Floyd (1979) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"We don't need no education\""
+    },
+    {
+      "term": "need",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"We don't need no education\""
+    },
+    {
+      "term": "leave",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Teacher, leave them kids alone\""
+    },
+    {
+      "term": "kids",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Teacher, leave them kids alone\""
+    },
+    {
+      "term": "alone",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Teacher, leave them kids alone\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "We don't need no education",
+          "We don't need no thought control",
+          "No dark sarcasm in the classroom",
+          "Teacher, leave them kids alone"
+        ],
+        "start_seconds": 1,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "(Wrong, do it again)",
+          "(Wrong, do it again)",
+          "If you don't eat yer meat, you can't have any pudding",
+          "How can you have any pudding if you don't eat yer meat?"
+        ],
+        "start_seconds": 200,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We don't need no",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thought",
+      "excerpt_after": "control",
+      "youtube_start": 10,
+      "youtube_end": 24
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "No dark",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sarcasm",
+      "excerpt_after": "in the classroom",
+      "youtube_start": 19,
+      "youtube_end": 33
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Teacher,",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "leave",
+      "excerpt_after": "them kids alone",
+      "youtube_start": 28,
+      "youtube_end": 42
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Hey,",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "teacher",
+      "excerpt_after": "leave them kids alone",
+      "youtube_start": 39,
+      "youtube_end": 53
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You! Yes, you",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "behind",
+      "excerpt_after": "the bike stands",
+      "youtube_start": 213,
+      "youtube_end": 227
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We don't need no education",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You! Yes, you behind the bike stands",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Teacher, leave them kids alone",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Teachers, leave them kids alone",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Wrong, do it again",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We",
+      "excerpt_after": "need no education",
+      "options": [
+        "bike",
+        "dont",
+        "kids",
+        "stands"
+      ],
+      "answer_index": 1,
+      "youtube_start": 1,
+      "youtube_end": 13
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We don't",
+      "excerpt_after": "no thought control",
+      "options": [
+        "brick",
+        "control",
+        "laddy",
+        "need"
+      ],
+      "answer_index": 3,
+      "youtube_start": 10,
+      "youtube_end": 22
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Teacher,",
+      "excerpt_after": "them kids alone",
+      "options": [
+        "bike",
+        "leave",
+        "pudding",
+        "teacher"
+      ],
+      "answer_index": 1,
+      "youtube_start": 28,
+      "youtube_end": 40
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We don't need no",
+      "excerpt_after": "control",
+      "options": [
+        "dont",
+        "meat",
+        "thought",
+        "wrong"
+      ],
+      "answer_index": 2,
+      "youtube_start": 75,
+      "youtube_end": 87
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Teachers, leave them",
+      "excerpt_after": "alone",
+      "options": [
+        "kids",
+        "stand",
+        "teacher",
+        "thought"
+      ],
+      "answer_index": 0,
+      "youtube_start": 93,
+      "youtube_end": 105
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "education",
+        "no",
+        "need",
+        "We",
+        "don't"
+      ],
+      "answer": [
+        "We",
+        "don't",
+        "need",
+        "no",
+        "education"
+      ],
+      "youtube_start": 1
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "control",
+        "need",
+        "thought",
+        "don't",
+        "We",
+        "no"
+      ],
+      "answer": [
+        "We",
+        "don't",
+        "need",
+        "no",
+        "thought",
+        "control"
+      ],
+      "youtube_start": 10
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "them",
+        "alone",
+        "kids",
+        "leave",
+        "Teacher,"
+      ],
+      "answer": [
+        "Teacher,",
+        "leave",
+        "them",
+        "kids",
+        "alone"
+      ],
+      "youtube_start": 28
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "them",
+        "alone",
+        "leave",
+        "kids",
+        "Teachers,"
+      ],
+      "answer": [
+        "Teachers,",
+        "leave",
+        "them",
+        "kids",
+        "alone"
+      ],
+      "youtube_start": 93
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "do",
+        "Wrong,",
+        "it",
+        "again"
+      ],
+      "answer": [
+        "Wrong,",
+        "do",
+        "it",
+        "again"
+      ],
+      "youtube_start": 200
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 6
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"need\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"need\" na música inteira?",
+      "word": "need",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "We don't need no education",
+          "order": 0
+        },
+        {
+          "text": "Hey, teacher, leave them kids alone",
+          "order": 1
+        },
+        {
+          "text": "Teachers, leave them kids alone",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Another Brick in the Wall\" was released in 1979. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Another Brick in the Wall\" foi lançada em 1979. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "don't",
+        "need",
+        "leave",
+        "kids"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Another Brick in the Wall\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Another Brick in the Wall\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "don't",
+        "need",
+        "leave",
+        "kids"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "don't",
+        "need",
+        "leave",
+        "kids"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    }
+  ]
+}

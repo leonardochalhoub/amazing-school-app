@@ -1,0 +1,475 @@
+{
+  "slug": "firestone",
+  "title": "Firestone",
+  "artist": "Kygo",
+  "year": 2014,
+  "album": "Firestone",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 274,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Firestone by Kygo (2014) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "world",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"There's a world not far from here\""
+    },
+    {
+      "term": "light",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"I'm the dark in need of light\""
+    },
+    {
+      "term": "strike",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"And when they strike\""
+    },
+    {
+      "term": "feel",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Feel the change in me tonight\""
+    },
+    {
+      "term": "hearts",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Our hearts are like\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "And when they strike",
+          "We feel the love",
+          "Sparks will fly",
+          "They ignite our bones"
+        ],
+        "start_seconds": 72,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "And when they strike",
+          "We light up the world",
+          "Our hearts are like",
+          "Firestones"
+        ],
+        "start_seconds": 192,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm a",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "flame",
+      "excerpt_after": "you're a fire",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When we",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "touch",
+      "excerpt_after": "you inspire",
+      "youtube_start": 42,
+      "youtube_end": 56
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There's a",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "world",
+      "excerpt_after": "not far from here",
+      "youtube_start": 54,
+      "youtube_end": 68
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We can",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dance",
+      "excerpt_after": "in desire",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "They",
+      "blank_hint": "word starting with \"i\"",
+      "answer": "ignite",
+      "excerpt_after": "our bones",
+      "youtube_start": 79,
+      "youtube_end": 93
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "light",
+      "excerpt_after": "up the world",
+      "youtube_start": 82,
+      "youtube_end": 96
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm a flame, you're a fire",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When we touch, you inspire",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Or we can burn in love tonight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We feel the love",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We light up the world",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm a",
+      "excerpt_after": "you're a fire",
+      "options": [
+        "dance",
+        "desire",
+        "feel",
+        "flame"
+      ],
+      "answer_index": 3,
+      "youtube_start": 33,
+      "youtube_end": 45
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When we",
+      "excerpt_after": "you inspire",
+      "options": [
+        "night",
+        "oh-whoa",
+        "touch",
+        "world"
+      ],
+      "answer_index": 2,
+      "youtube_start": 42,
+      "youtube_end": 54
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We can",
+      "excerpt_after": "in desire",
+      "options": [
+        "dance",
+        "hearts",
+        "together",
+        "youre"
+      ],
+      "answer_index": 0,
+      "youtube_start": 58,
+      "youtube_end": 70
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Our",
+      "excerpt_after": "are like",
+      "options": [
+        "dark",
+        "hearts",
+        "night",
+        "tonight"
+      ],
+      "answer_index": 1,
+      "youtube_start": 68,
+      "youtube_end": 80
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We",
+      "excerpt_after": "up the world",
+      "options": [
+        "dark",
+        "light",
+        "sparks",
+        "well"
+      ],
+      "answer_index": 1,
+      "youtube_start": 82,
+      "youtube_end": 94
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you're",
+        "a",
+        "fire",
+        "flame,",
+        "I'm",
+        "a"
+      ],
+      "answer": [
+        "I'm",
+        "a",
+        "flame,",
+        "you're",
+        "a",
+        "fire"
+      ],
+      "youtube_start": 33
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "Feel",
+        "me",
+        "in",
+        "tonight",
+        "change"
+      ],
+      "answer": [
+        "Feel",
+        "the",
+        "change",
+        "in",
+        "me",
+        "tonight"
+      ],
+      "youtube_start": 46
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "We",
+        "desire",
+        "in",
+        "can",
+        "dance"
+      ],
+      "answer": [
+        "We",
+        "can",
+        "dance",
+        "in",
+        "desire"
+      ],
+      "youtube_start": 58
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "strike",
+        "when",
+        "they",
+        "And"
+      ],
+      "answer": [
+        "And",
+        "when",
+        "they",
+        "strike"
+      ],
+      "youtube_start": 72
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "up",
+        "We",
+        "world",
+        "the",
+        "light"
+      ],
+      "answer": [
+        "We",
+        "light",
+        "up",
+        "the",
+        "world"
+      ],
+      "youtube_start": 82
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"world\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"world\" na música inteira?",
+      "word": "world",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"light\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"light\" na música inteira?",
+      "word": "light",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I'm a flame, you're a fire",
+          "order": 0
+        },
+        {
+          "text": "Our hearts are like",
+          "order": 1
+        },
+        {
+          "text": "And when they strike",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I'm the dark in need of light",
+          "order": 0
+        },
+        {
+          "text": "We light up the world",
+          "order": 1
+        },
+        {
+          "text": "They ignite our bones",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Firestone\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Firestone\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "world",
+        "light",
+        "strike",
+        "feel"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Firestone\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Firestone\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "world",
+        "light",
+        "strike",
+        "feel"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Kygo one question about \"Firestone\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Kygo sobre \"Firestone\", o que seria e por quê?",
+      "target_vocab": [
+        "world",
+        "light",
+        "strike",
+        "feel"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,465 @@
+{
+  "slug": "breathe",
+  "title": "Breathe",
+  "artist": "Faith Hill",
+  "year": 1999,
+  "album": "Breathe",
+  "genre": [
+    "country"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 250,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Breathe by Faith Hill (1999) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "breathe",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"'Cause I can feel you breathe\""
+    },
+    {
+      "term": "feel",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"I can feel the magic floating in the air\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Baby, all we need is just to be\""
+    },
+    {
+      "term": "there's",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"There's nothing left to prove\""
+    },
+    {
+      "term": "need",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Baby, all we need is just to be\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Caught up in the touch",
+          "Slow and steady rush",
+          "Baby, isn't that the way that love's supposed to be?"
+        ],
+        "start_seconds": 82,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Being with you gets me that way",
+          "I watch the sunlight dance across your face",
+          "And I've never been this swept away",
+          "All my thoughts just seem to settle on the breeze"
+        ],
+        "start_seconds": 21,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I can feel the",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "magic",
+      "excerpt_after": "floating in the air",
+      "youtube_start": 13,
+      "youtube_end": 27
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I've",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "been this swept away",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "whole",
+      "excerpt_after": "world just fades away",
+      "youtube_start": 55,
+      "youtube_end": 69
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "suddenly",
+      "excerpt_after": "I'm melting into you",
+      "youtube_start": 71,
+      "youtube_end": 85
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Slow and",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "steady",
+      "excerpt_after": "rush",
+      "youtube_start": 84,
+      "youtube_end": 98
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There's no need for",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "words",
+      "excerpt_after": "right now",
+      "youtube_start": 140,
+      "youtube_end": 154
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Being with you gets me that way",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I've never been this swept away",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Cause I can feel you breathe",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Baby, all we need is just to be",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Closer than I've ever felt before",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I can",
+      "excerpt_after": "the magic floating in the air",
+      "options": [
+        "face",
+        "feel",
+        "hear",
+        "wrapped"
+      ],
+      "answer_index": 1,
+      "youtube_start": 13,
+      "youtube_end": 25
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I've",
+      "excerpt_after": "been this swept away",
+      "options": [
+        "cause",
+        "dance",
+        "need",
+        "never"
+      ],
+      "answer_index": 3,
+      "youtube_start": 33,
+      "youtube_end": 45
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "I'm melting into you",
+      "options": [
+        "closer",
+        "loves",
+        "settle",
+        "suddenly"
+      ],
+      "answer_index": 3,
+      "youtube_start": 71,
+      "youtube_end": 83
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Slow and",
+      "excerpt_after": "rush",
+      "options": [
+        "lying",
+        "settle",
+        "steady",
+        "touch"
+      ],
+      "answer_index": 2,
+      "youtube_start": 84,
+      "youtube_end": 96
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There's no need for",
+      "excerpt_after": "right now",
+      "options": [
+        "melting",
+        "thing",
+        "words",
+        "wrapped"
+      ],
+      "answer_index": 2,
+      "youtube_start": 140,
+      "youtube_end": 152
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "way",
+        "that",
+        "gets",
+        "me",
+        "Being",
+        "with"
+      ],
+      "answer": [
+        "Being",
+        "with",
+        "you",
+        "gets",
+        "me",
+        "that",
+        "way"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "away",
+        "fades",
+        "whole",
+        "just",
+        "The",
+        "world"
+      ],
+      "answer": [
+        "The",
+        "whole",
+        "world",
+        "just",
+        "fades",
+        "away"
+      ],
+      "youtube_start": 55
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "melting",
+        "I'm",
+        "suddenly",
+        "And",
+        "you",
+        "into"
+      ],
+      "answer": [
+        "And",
+        "suddenly",
+        "I'm",
+        "melting",
+        "into",
+        "you"
+      ],
+      "youtube_start": 71
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "steady",
+        "rush",
+        "and",
+        "Slow"
+      ],
+      "answer": [
+        "Slow",
+        "and",
+        "steady",
+        "rush"
+      ],
+      "youtube_start": 84
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "than",
+        "I've",
+        "ever",
+        "before",
+        "felt",
+        "Closer"
+      ],
+      "answer": [
+        "Closer",
+        "than",
+        "I've",
+        "ever",
+        "felt",
+        "before"
+      ],
+      "youtube_start": 132
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"breathe\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"breathe\" na música inteira?",
+      "word": "breathe",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"feel\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"feel\" na música inteira?",
+      "word": "feel",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Being with you gets me that way",
+          "order": 0
+        },
+        {
+          "text": "Baby, all we need is just to be",
+          "order": 1
+        },
+        {
+          "text": "Washing over me",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Breathe\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Breathe\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "breathe",
+        "feel",
+        "baby",
+        "there's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Breathe\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Breathe\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "breathe",
+        "feel",
+        "baby",
+        "there's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Breathe\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Breathe\", o que aconteceria?",
+      "target_vocab": [
+        "breathe",
+        "feel",
+        "baby",
+        "there's"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "isn't",
+          "full": "is not"
+        }
+      ]
+    }
+  ]
+}

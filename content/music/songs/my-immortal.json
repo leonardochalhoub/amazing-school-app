@@ -1,0 +1,472 @@
+{
+  "slug": "my-immortal",
+  "title": "My Immortal",
+  "artist": "Evanescence",
+  "year": 2003,
+  "album": "Fallen",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 263,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "My Immortal by Evanescence (2003) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "these",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"These wounds won't seem to heal\""
+    },
+    {
+      "term": "fears",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Suppressed by all my childish fears\""
+    },
+    {
+      "term": "leave",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"And if you have to leave\""
+    },
+    {
+      "term": "won't",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"And it won't leave me alone\""
+    },
+    {
+      "term": "cried",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"When you cried, I'd wipe away all of your tears\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "But you still have all of me",
+          "You used to captivate me by your resonating light",
+          "Now I'm bound by the life you left behind"
+        ],
+        "start_seconds": 73,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "These wounds won't seem to heal",
+          "This pain is just too real",
+          "There's just too much that time cannot erase"
+        ],
+        "start_seconds": 42,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm so",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tired",
+      "excerpt_after": "of being here",
+      "youtube_start": 14,
+      "youtube_end": 28
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Cause your",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "presence",
+      "excerpt_after": "still lingers here",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "These",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wounds",
+      "excerpt_after": "won't seem to heal",
+      "youtube_start": 42,
+      "youtube_end": 56
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You used to",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "captivate",
+      "excerpt_after": "me by your resonating light",
+      "youtube_start": 95,
+      "youtube_end": 109
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Your face it",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "haunts",
+      "excerpt_after": "my once pleasant dreams",
+      "youtube_start": 109,
+      "youtube_end": 123
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've been",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "alone",
+      "excerpt_after": "all along",
+      "youtube_start": 180,
+      "youtube_end": 194
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm so tired of being here",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I wish that you would just leave",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But though you're still with me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Suppressed by all my childish fears",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And it won't leave me alone",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm so",
+      "excerpt_after": "of being here",
+      "options": [
+        "seem",
+        "theres",
+        "tired",
+        "wipe"
+      ],
+      "answer_index": 2,
+      "youtube_start": 14,
+      "youtube_end": 26
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "'Cause your",
+      "excerpt_after": "still lingers here",
+      "options": [
+        "haunts",
+        "presence",
+        "suppressed",
+        "through"
+      ],
+      "answer_index": 1,
+      "youtube_start": 34,
+      "youtube_end": 46
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "This",
+      "excerpt_after": "is just too real",
+      "options": [
+        "behind",
+        "pain",
+        "sanity",
+        "voice"
+      ],
+      "answer_index": 1,
+      "youtube_start": 45,
+      "youtube_end": 57
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Now I'm",
+      "excerpt_after": "by the life you left behind",
+      "options": [
+        "bound",
+        "cannot",
+        "hand",
+        "real"
+      ],
+      "answer_index": 0,
+      "youtube_start": 102,
+      "youtube_end": 114
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "There's just too much that time",
+      "excerpt_after": "erase",
+      "options": [
+        "cannot",
+        "pain",
+        "seem",
+        "wont"
+      ],
+      "answer_index": 0,
+      "youtube_start": 129,
+      "youtube_end": 141
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "so",
+        "tired",
+        "of",
+        "being",
+        "here",
+        "I'm"
+      ],
+      "answer": [
+        "I'm",
+        "so",
+        "tired",
+        "of",
+        "being",
+        "here"
+      ],
+      "youtube_start": 14
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "have",
+        "to",
+        "if",
+        "And",
+        "leave"
+      ],
+      "answer": [
+        "And",
+        "if",
+        "you",
+        "have",
+        "to",
+        "leave"
+      ],
+      "youtube_start": 28
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "here",
+        "still",
+        "'Cause",
+        "presence",
+        "lingers",
+        "your"
+      ],
+      "answer": [
+        "'Cause",
+        "your",
+        "presence",
+        "still",
+        "lingers",
+        "here"
+      ],
+      "youtube_start": 34
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "heal",
+        "seem",
+        "wounds",
+        "won't",
+        "to",
+        "These"
+      ],
+      "answer": [
+        "These",
+        "wounds",
+        "won't",
+        "seem",
+        "to",
+        "heal"
+      ],
+      "youtube_start": 42
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "still",
+        "you",
+        "me",
+        "of",
+        "all",
+        "But",
+        "have"
+      ],
+      "answer": [
+        "But",
+        "you",
+        "still",
+        "have",
+        "all",
+        "of",
+        "me"
+      ],
+      "youtube_start": 73
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"these\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"these\" na música inteira?",
+      "word": "these",
+      "answer": 5
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"fears\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"fears\" na música inteira?",
+      "word": "fears",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I'm so tired of being here",
+          "order": 0
+        },
+        {
+          "text": "These wounds won't seem to heal",
+          "order": 1
+        },
+        {
+          "text": "This pain is just too real",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"My Immortal\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"My Immortal\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "these",
+        "fears",
+        "leave",
+        "won't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"My Immortal\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"My Immortal\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "these",
+        "fears",
+        "leave",
+        "won't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"My Immortal\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"My Immortal\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "these",
+        "fears",
+        "leave",
+        "won't"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        },
+        {
+          "short": "you'd",
+          "full": "you would"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        }
+      ]
+    }
+  ]
+}

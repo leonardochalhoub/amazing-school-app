@@ -1,0 +1,472 @@
+{
+  "slug": "papa-dont-preach",
+  "title": "Papa Don't Preach",
+  "artist": "Madonna",
+  "year": 1986,
+  "album": "True Blue (Reissue)",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 269,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Papa Don't Preach by Madonna (1986) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"And I don't mean maybe, please\""
+    },
+    {
+      "term": "papa",
+      "pt": "",
+      "note": "Appears 15 times; first heard in: \"Papa I know you're going to be upset\""
+    },
+    {
+      "term": "preach",
+      "pt": "",
+      "note": "Appears 14 times; first heard in: \"Papa don't preach\""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"I'm not a baby\""
+    },
+    {
+      "term": "trouble",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I'm in trouble deep\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Papa don't preach",
+          "I'm in trouble deep",
+          "Papa don't preach",
+          "I've been losing sleep"
+        ],
+        "start_seconds": 79,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Papa don't preach",
+          "I've been losing sleep",
+          "But I made up my mind",
+          "I'm keeping my baby, hmm"
+        ],
+        "start_seconds": 133,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Papa I know",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "going to be upset",
+      "youtube_start": 31,
+      "youtube_end": 45
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You always",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "taught",
+      "excerpt_after": "me right from wrong",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We're in an",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "awful",
+      "excerpt_after": "mess",
+      "youtube_start": 71,
+      "youtube_end": 85
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"k\"",
+      "answer": "keeping",
+      "excerpt_after": "my baby, hmm",
+      "youtube_start": 89,
+      "youtube_end": 103
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We can",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "raise",
+      "excerpt_after": "a little family",
+      "youtube_start": 103,
+      "youtube_end": 117
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Just how good he's been",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "treating",
+      "excerpt_after": "me",
+      "youtube_start": 170,
+      "youtube_end": 184
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Papa I know you're going to be upset",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But you should know by now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You always taught me right from wrong",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I may be young at heart",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "The one you warned me all about",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Papa I",
+      "excerpt_after": "you're going to be upset",
+      "options": [
+        "gonna",
+        "know",
+        "mean",
+        "youre"
+      ],
+      "answer_index": 1,
+      "youtube_start": 31,
+      "youtube_end": 43
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I may be",
+      "excerpt_after": "at heart",
+      "options": [
+        "keep",
+        "maybe",
+        "need",
+        "young"
+      ],
+      "answer_index": 3,
+      "youtube_start": 56,
+      "youtube_end": 68
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've been",
+      "excerpt_after": "sleep",
+      "options": [
+        "cause",
+        "know",
+        "losing",
+        "sayin"
+      ],
+      "answer_index": 2,
+      "youtube_start": 84,
+      "youtube_end": 96
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Maybe",
+      "excerpt_after": "be all right",
+      "options": [
+        "awful",
+        "keep",
+        "papa",
+        "well"
+      ],
+      "answer_index": 3,
+      "youtube_start": 107,
+      "youtube_end": 119
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm gonna",
+      "excerpt_after": "my baby, ooh, oh",
+      "options": [
+        "keep",
+        "keeping",
+        "mess",
+        "wrong"
+      ],
+      "answer_index": 0,
+      "youtube_start": 144,
+      "youtube_end": 156
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "always",
+        "girl",
+        "'Cause",
+        "was",
+        "little",
+        "your"
+      ],
+      "answer": [
+        "'Cause",
+        "I",
+        "was",
+        "always",
+        "your",
+        "little",
+        "girl"
+      ],
+      "youtube_start": 36
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "But",
+        "I'm",
+        "sayin'",
+        "know",
+        "what"
+      ],
+      "answer": [
+        "But",
+        "I",
+        "know",
+        "what",
+        "I'm",
+        "sayin'"
+      ],
+      "youtube_start": 58
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "up",
+        "But",
+        "my",
+        "made",
+        "mind"
+      ],
+      "answer": [
+        "But",
+        "I",
+        "made",
+        "up",
+        "my",
+        "mind"
+      ],
+      "youtube_start": 87
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "advice,",
+        "Is",
+        "please",
+        "some",
+        "good"
+      ],
+      "answer": [
+        "Is",
+        "some",
+        "good",
+        "advice,",
+        "please"
+      ],
+      "youtube_start": 125
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "love",
+        "in",
+        "We",
+        "are",
+        "love",
+        "in"
+      ],
+      "answer": [
+        "We",
+        "are",
+        "in",
+        "love",
+        "in",
+        "love"
+      ],
+      "youtube_start": 180
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 16
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"papa\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"papa\" na música inteira?",
+      "word": "papa",
+      "answer": 15
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Papa I know you're going to be upset",
+          "order": 0
+        },
+        {
+          "text": "We can raise a little family",
+          "order": 1
+        },
+        {
+          "text": "Papa don't preach",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Papa Don't Preach\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Papa Don't Preach\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "don't",
+        "papa",
+        "preach",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Papa Don't Preach\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Papa Don't Preach\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "don't",
+        "papa",
+        "preach",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Papa Don't Preach\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Papa Don't Preach\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "don't",
+        "papa",
+        "preach",
+        "baby"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        }
+      ]
+    }
+  ]
+}

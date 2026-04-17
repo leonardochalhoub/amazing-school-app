@@ -1,0 +1,452 @@
+{
+  "slug": "highway-star",
+  "title": "Highway Star",
+  "artist": "Deep Purple",
+  "year": 1972,
+  "album": "Machine Head",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 369,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Highway Star by Deep Purple (1972) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "nobody",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Nobody gonna take my car\""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"It's gonna break the speed of sound\""
+    },
+    {
+      "term": "everything",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"It's got everything\""
+    },
+    {
+      "term": "highway",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I'm a highway star\""
+    },
+    {
+      "term": "star",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I'm a highway star\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I'm a highway star",
+          "Nobody gonna take my girl",
+          "I'm gonna keep her to the end",
+          "Nobody gonna have my girl"
+        ],
+        "start_seconds": 68,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Alright, hold on tight",
+          "I'm a highway star"
+        ],
+        "start_seconds": 106,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Nobody",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "take my car",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ooh, it's a",
+      "blank_hint": "word starting with \"k\"",
+      "answer": "killing",
+      "excerpt_after": "machine",
+      "youtube_start": 46,
+      "youtube_end": 60
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Big fat",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tires",
+      "excerpt_after": "and everything",
+      "youtube_start": 54,
+      "youtube_end": 68
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Like a",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "moving",
+      "excerpt_after": "mouth",
+      "youtube_start": 94,
+      "youtube_end": 108
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Yeah, she",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "turns",
+      "excerpt_after": "me on",
+      "youtube_start": 104,
+      "youtube_end": 118
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Nobody gonna",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "steal",
+      "excerpt_after": "my head",
+      "youtube_start": 191,
+      "youtube_end": 205
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm gonna race it to the ground",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm gonna keep her to the end",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Ooh, she's a killing machine",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yeah, she turns me on",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Now that I'm on the road again",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Nobody",
+      "excerpt_after": "take my car",
+      "options": [
+        "body",
+        "gonna",
+        "highway",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 34,
+      "youtube_end": 46
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ooh, it's a",
+      "excerpt_after": "machine",
+      "options": [
+        "bend",
+        "killing",
+        "nobody",
+        "seed"
+      ],
+      "answer_index": 1,
+      "youtube_start": 46,
+      "youtube_end": 58
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'm gonna",
+      "excerpt_after": "her to the end",
+      "options": [
+        "every",
+        "inside",
+        "keep",
+        "need"
+      ],
+      "answer_index": 2,
+      "youtube_start": 78,
+      "youtube_end": 90
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Body",
+      "excerpt_after": "and everything",
+      "options": [
+        "control",
+        "everything",
+        "girl",
+        "mouth"
+      ],
+      "answer_index": 0,
+      "youtube_start": 95,
+      "youtube_end": 107
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Nobody gonna",
+      "excerpt_after": "my head",
+      "options": [
+        "bend",
+        "control",
+        "need",
+        "steal"
+      ],
+      "answer_index": 3,
+      "youtube_start": 191,
+      "youtube_end": 203
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "take",
+        "car",
+        "my",
+        "Nobody",
+        "gonna"
+      ],
+      "answer": [
+        "Nobody",
+        "gonna",
+        "take",
+        "my",
+        "car"
+      ],
+      "youtube_start": 34
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "power",
+        "driving",
+        "Like",
+        "a"
+      ],
+      "answer": [
+        "Like",
+        "a",
+        "driving",
+        "power"
+      ],
+      "youtube_start": 52
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "to",
+        "gonna",
+        "keep",
+        "I'm",
+        "end",
+        "her"
+      ],
+      "answer": [
+        "I'm",
+        "gonna",
+        "keep",
+        "her",
+        "to",
+        "the",
+        "end"
+      ],
+      "youtube_start": 78
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "everything",
+        "and",
+        "Body",
+        "control"
+      ],
+      "answer": [
+        "Body",
+        "control",
+        "and",
+        "everything"
+      ],
+      "youtube_start": 95
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "gonna",
+        "Nobody",
+        "head",
+        "steal",
+        "my"
+      ],
+      "answer": [
+        "Nobody",
+        "gonna",
+        "steal",
+        "my",
+        "head"
+      ],
+      "youtube_start": 191
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"nobody\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"nobody\" na música inteira?",
+      "word": "nobody",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"it's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"it's\" na música inteira?",
+      "word": "it's",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Nobody gonna take my car",
+          "order": 0
+        },
+        {
+          "text": "Ooh, she's a killing machine",
+          "order": 1
+        },
+        {
+          "text": "Eight cylinders all mine",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "nobody",
+        "it's",
+        "everything",
+        "highway"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "nobody",
+        "it's",
+        "everything",
+        "highway"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Highway Star\" was released in 1972. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Highway Star\" foi lançada em 1972. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "nobody",
+        "it's",
+        "everything",
+        "highway"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "she's",
+          "full": "she is"
+        }
+      ]
+    }
+  ]
+}

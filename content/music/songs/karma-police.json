@@ -1,0 +1,456 @@
+{
+  "slug": "karma-police",
+  "title": "Karma Police",
+  "artist": "Radiohead",
+  "year": 1997,
+  "album": "OK Computer",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 264,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Karma Police by Radiohead (1997) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "lost",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I lost myself\""
+    },
+    {
+      "term": "myself",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I lost myself\""
+    },
+    {
+      "term": "minute",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"For a minute there\""
+    },
+    {
+      "term": "there",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"For a minute there\""
+    },
+    {
+      "term": "karma",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Karma police\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I lost myself",
+          "I lost myself",
+          "Phew, for a minute there",
+          "I lost myself"
+        ],
+        "start_seconds": 157,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "This is what you get",
+          "This is what you get",
+          "This is what you get",
+          "When you mess with us"
+        ],
+        "start_seconds": 78,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "He",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "talks",
+      "excerpt_after": "in maths",
+      "youtube_start": 33,
+      "youtube_end": 47
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "He",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "buzzes",
+      "excerpt_after": "like a fridge",
+      "youtube_start": 37,
+      "youtube_end": 51
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "He's like a",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "detuned",
+      "excerpt_after": "radio",
+      "youtube_start": 39,
+      "youtube_end": 53
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Is",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "making",
+      "excerpt_after": "me feel ill",
+      "youtube_start": 63,
+      "youtube_end": 77
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And we have",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "crashed",
+      "excerpt_after": "her party",
+      "youtube_start": 65,
+      "youtube_end": 79
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I've",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "given",
+      "excerpt_after": "all I can",
+      "youtube_start": 107,
+      "youtube_end": 121
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "He talks in maths",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "He's like a detuned radio",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "This is what you get",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've given all I can",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I lost myself",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "He",
+      "excerpt_after": "in maths",
+      "options": [
+        "karma",
+        "myself",
+        "radio",
+        "talks"
+      ],
+      "answer_index": 3,
+      "youtube_start": 33,
+      "youtube_end": 45
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "He",
+      "excerpt_after": "like a fridge",
+      "options": [
+        "buzzes",
+        "karma",
+        "mess",
+        "there"
+      ],
+      "answer_index": 0,
+      "youtube_start": 37,
+      "youtube_end": 49
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Is",
+      "excerpt_after": "me feel ill",
+      "options": [
+        "lost",
+        "making",
+        "myself",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 63,
+      "youtube_end": 75
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And we have",
+      "excerpt_after": "her party",
+      "options": [
+        "crashed",
+        "feel",
+        "minute",
+        "payroll"
+      ],
+      "answer_index": 0,
+      "youtube_start": 65,
+      "youtube_end": 77
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've",
+      "excerpt_after": "all I can",
+      "options": [
+        "fridge",
+        "given",
+        "myself",
+        "payroll"
+      ],
+      "answer_index": 1,
+      "youtube_start": 107,
+      "youtube_end": 119
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "maths",
+        "He",
+        "talks",
+        "in"
+      ],
+      "answer": [
+        "He",
+        "talks",
+        "in",
+        "maths"
+      ],
+      "youtube_start": 33
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "He's",
+        "radio",
+        "detuned",
+        "like"
+      ],
+      "answer": [
+        "He's",
+        "like",
+        "a",
+        "detuned",
+        "radio"
+      ],
+      "youtube_start": 39
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "party",
+        "her",
+        "And",
+        "we",
+        "have",
+        "crashed"
+      ],
+      "answer": [
+        "And",
+        "we",
+        "have",
+        "crashed",
+        "her",
+        "party"
+      ],
+      "youtube_start": 65
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "mess",
+        "with",
+        "When",
+        "you",
+        "us"
+      ],
+      "answer": [
+        "When",
+        "you",
+        "mess",
+        "with",
+        "us"
+      ],
+      "youtube_start": 94
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "payroll",
+        "still",
+        "on",
+        "we're",
+        "the",
+        "But"
+      ],
+      "answer": [
+        "But",
+        "we're",
+        "still",
+        "on",
+        "the",
+        "payroll"
+      ],
+      "youtube_start": 116
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"lost\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"lost\" na música inteira?",
+      "word": "lost",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"myself\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"myself\" na música inteira?",
+      "word": "myself",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Arrest this man",
+          "order": 0
+        },
+        {
+          "text": "This is what you get",
+          "order": 1
+        },
+        {
+          "text": "For a minute there",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Karma Police\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Karma Police\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "lost",
+        "myself",
+        "minute",
+        "there"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Karma Police\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Karma Police\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "lost",
+        "myself",
+        "minute",
+        "there"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Radiohead one question about \"Karma Police\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Radiohead sobre \"Karma Police\", o que seria e por quê?",
+      "target_vocab": [
+        "lost",
+        "myself",
+        "minute",
+        "there"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "he's",
+          "full": "he is"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        }
+      ]
+    }
+  ]
+}

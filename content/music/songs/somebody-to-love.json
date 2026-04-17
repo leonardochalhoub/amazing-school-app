@@ -1,0 +1,470 @@
+{
+  "slug": "somebody-to-love",
+  "title": "Somebody to Love",
+  "artist": "Queen",
+  "year": 1976,
+  "album": "A Day At The Races",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 473,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Somebody to Love by Queen (1976) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "somebody",
+      "pt": "",
+      "note": "Appears 43 times; first heard in: \"Somebody to love?\""
+    },
+    {
+      "term": "find",
+      "pt": "",
+      "note": "Appears 40 times; first heard in: \"Anybody find me\""
+    },
+    {
+      "term": "anybody",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"Anybody find me\""
+    },
+    {
+      "term": "lord",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"Lord, what you're doing to me\""
+    },
+    {
+      "term": "hard",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"I work hard (he works hard)\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Find me somebody to love",
+          "Find me somebody to love",
+          "Find me somebody to love",
+          "Find me somebody to love"
+        ],
+        "start_seconds": 184,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Somebody to love?",
+          "Ooh-ooh, ooh",
+          "Each morning I get up I die a little",
+          "Can barely stand on my feet"
+        ],
+        "start_seconds": 13,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Each",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "morning",
+      "excerpt_after": "I get up I die a little",
+      "youtube_start": 26,
+      "youtube_end": 40
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I have",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "spent",
+      "excerpt_after": "all my years in believing you",
+      "youtube_start": 40,
+      "youtube_end": 54
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I work hard (he",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "works",
+      "excerpt_after": "hard)",
+      "youtube_start": 64,
+      "youtube_end": 78
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(He works hard)",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "every",
+      "excerpt_after": "day (every day)",
+      "youtube_start": 98,
+      "youtube_end": 112
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(He's got) I got",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "nobody",
+      "excerpt_after": "to believe",
+      "youtube_start": 117,
+      "youtube_end": 131
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I ain't",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "face no defeat (yeah, yeah)",
+      "youtube_start": 169,
+      "youtube_end": 183
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Lord, what you're doing to me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I work hard he works hard",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I get down down on my knees knees",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "He works hard every day every day",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They say I'm goin' crazy",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Each",
+      "excerpt_after": "I get up I die a little",
+      "options": [
+        "believing",
+        "brain",
+        "morning",
+        "stand"
+      ],
+      "answer_index": 2,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Can",
+      "excerpt_after": "find me",
+      "options": [
+        "anybody",
+        "brain",
+        "doing",
+        "start"
+      ],
+      "answer_index": 0,
+      "youtube_start": 50,
+      "youtube_end": 62
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "'Til the",
+      "excerpt_after": "run down from my eyes, Lord",
+      "options": [
+        "cant",
+        "goin",
+        "ooh-ooh",
+        "tears"
+      ],
+      "answer_index": 3,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "No, I got no",
+      "excerpt_after": "sense",
+      "options": [
+        "cant",
+        "common",
+        "each",
+        "works"
+      ],
+      "answer_index": 1,
+      "youtube_start": 114,
+      "youtube_end": 126
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "gonna face no defeat (yeah, yeah)",
+      "options": [
+        "aint",
+        "brain",
+        "cant",
+        "want"
+      ],
+      "answer_index": 0,
+      "youtube_start": 169,
+      "youtube_end": 181
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "feet",
+        "my",
+        "Can",
+        "barely",
+        "on",
+        "stand"
+      ],
+      "answer": [
+        "Can",
+        "barely",
+        "stand",
+        "on",
+        "my",
+        "feet"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "of",
+        "Every",
+        "day",
+        "my",
+        "life"
+      ],
+      "answer": [
+        "Every",
+        "day",
+        "of",
+        "my",
+        "life"
+      ],
+      "youtube_start": 66
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "say",
+        "I'm",
+        "goin'",
+        "They",
+        "crazy"
+      ],
+      "answer": [
+        "They",
+        "say",
+        "I'm",
+        "goin'",
+        "crazy"
+      ],
+      "youtube_start": 107
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "find",
+        "anybody",
+        "love?",
+        "me",
+        "Can",
+        "someone",
+        "to"
+      ],
+      "answer": [
+        "Can",
+        "anybody",
+        "find",
+        "me",
+        "someone",
+        "to",
+        "love?"
+      ],
+      "youtube_start": 154
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "somebody",
+        "find",
+        "Somebody",
+        "me",
+        "to",
+        "love"
+      ],
+      "answer": [
+        "Somebody",
+        "find",
+        "me",
+        "somebody",
+        "to",
+        "love"
+      ],
+      "youtube_start": 219
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"somebody\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"somebody\" na música inteira?",
+      "word": "somebody",
+      "answer": 43
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"find\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"find\" na música inteira?",
+      "word": "find",
+      "answer": 40
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Anybody find me",
+          "order": 0
+        },
+        {
+          "text": "(He works hard) every day (every day)",
+          "order": 1
+        },
+        {
+          "text": "Find me somebody to love",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Somebody to Love\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Somebody to Love\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "somebody",
+        "find",
+        "anybody",
+        "lord"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Somebody to Love\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Somebody to Love\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "somebody",
+        "find",
+        "anybody",
+        "lord"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Somebody to Love\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Somebody to Love\", o que aconteceria?",
+      "target_vocab": [
+        "somebody",
+        "find",
+        "anybody",
+        "lord"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "he's",
+          "full": "he is"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        }
+      ]
+    }
+  ]
+}

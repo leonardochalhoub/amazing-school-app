@@ -1,0 +1,390 @@
+{
+  "slug": "the-chain",
+  "title": "The Chain",
+  "artist": "Fleetwood Mac",
+  "year": 1977,
+  "album": "Rumours",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 271,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "The Chain by Fleetwood Mac (1977) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 15 times; first heard in: \"You will never love me again\""
+    },
+    {
+      "term": "chain",
+      "pt": "",
+      "note": "Appears 15 times; first heard in: \"We would never break the chain (never break the chain)\""
+    },
+    {
+      "term": "break",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"We would never break the chain (never break the chain)\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"And if you don't love me now\""
+    },
+    {
+      "term": "shadows",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Run in the shadows\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "You will never love me again",
+          "I can still hear you saying",
+          "We would never break the chain (never break the chain)",
+          "And if you don't love me now (you don't love me now)"
+        ],
+        "start_seconds": 53,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Listen to the wind blow",
+          "Watch the sun rise",
+          "Run in the shadows",
+          "Damn your love, damn your lies"
+        ],
+        "start_seconds": 27,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You will",
+      "blank_hint": "word starting with \"n\"",
+      "answer": "never",
+      "excerpt_after": "love me again",
+      "youtube_start": 53,
+      "youtube_end": 67
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Down",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "comes",
+      "excerpt_after": "the night",
+      "youtube_start": 94,
+      "youtube_end": 108
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Chain, keep us",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "together",
+      "excerpt_after": "(run in the shadows)",
+      "youtube_start": 231,
+      "youtube_end": 245
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Chain, keep us together",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "running",
+      "excerpt_after": "in the shadows)",
+      "youtube_start": 238,
+      "youtube_end": 252
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And if you don't love me now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I can still hear you saying",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Watch the sun rise",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Damn your love, damn your lies",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Break the silence",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Listen to the",
+      "excerpt_after": "blow",
+      "options": [
+        "comes",
+        "never",
+        "running",
+        "wind"
+      ],
+      "answer_index": 3,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And if you",
+      "excerpt_after": "love me now",
+      "options": [
+        "dark",
+        "dont",
+        "listen",
+        "wind"
+      ],
+      "answer_index": 1,
+      "youtube_start": 50,
+      "youtube_end": 62
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I can still",
+      "excerpt_after": "you saying",
+      "options": [
+        "dark",
+        "hear",
+        "keep",
+        "saying"
+      ],
+      "answer_index": 1,
+      "youtube_start": 57,
+      "youtube_end": 69
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Damn the",
+      "excerpt_after": "damn the light",
+      "options": [
+        "comes",
+        "dark",
+        "running",
+        "silence"
+      ],
+      "answer_index": 1,
+      "youtube_start": 119,
+      "youtube_end": 131
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Chain, keep us",
+      "excerpt_after": "(running in the shadows)",
+      "options": [
+        "comes",
+        "shadows",
+        "silence",
+        "together"
+      ],
+      "answer_index": 3,
+      "youtube_start": 238,
+      "youtube_end": 250
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "wind",
+        "Listen",
+        "blow",
+        "the"
+      ],
+      "answer": [
+        "Listen",
+        "to",
+        "the",
+        "wind",
+        "blow"
+      ],
+      "youtube_start": 27
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "rise",
+        "sun",
+        "the",
+        "Watch"
+      ],
+      "answer": [
+        "Watch",
+        "the",
+        "sun",
+        "rise"
+      ],
+      "youtube_start": 30
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "love,",
+        "your",
+        "damn",
+        "lies",
+        "your",
+        "Damn"
+      ],
+      "answer": [
+        "Damn",
+        "your",
+        "love,",
+        "damn",
+        "your",
+        "lies"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "You",
+        "love",
+        "again",
+        "me",
+        "never",
+        "will"
+      ],
+      "answer": [
+        "You",
+        "will",
+        "never",
+        "love",
+        "me",
+        "again"
+      ],
+      "youtube_start": 53
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "comes",
+        "the",
+        "Down",
+        "night"
+      ],
+      "answer": [
+        "Down",
+        "comes",
+        "the",
+        "night"
+      ],
+      "youtube_start": 94
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"never\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"never\" na música inteira?",
+      "word": "never",
+      "answer": 15
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"chain\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"chain\" na música inteira?",
+      "word": "chain",
+      "answer": 15
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Fleetwood Mac one question about \"The Chain\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Fleetwood Mac sobre \"The Chain\", o que seria e por quê?",
+      "target_vocab": [
+        "never",
+        "chain",
+        "break",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"The Chain\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"The Chain\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "never",
+        "chain",
+        "break",
+        "don't"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"The Chain\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"The Chain\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "never",
+        "chain",
+        "break",
+        "don't"
+      ]
+    }
+  ]
+}

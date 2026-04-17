@@ -1,0 +1,468 @@
+{
+  "slug": "get-up-stand-up",
+  "title": "Get Up, Stand Up",
+  "artist": "Bob Marley",
+  "year": 1973,
+  "album": "Greatest Hits Disc 1",
+  "genre": [
+    "reggae"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 0,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Get Up, Stand Up by Bob Marley (1973) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "stand",
+      "pt": "",
+      "note": "Appears 37 times; first heard in: \"Get up, stand up\""
+    },
+    {
+      "term": "right",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Stand up for your right\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Don't give up the fight\""
+    },
+    {
+      "term": "give",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Don't give up the fight\""
+    },
+    {
+      "term": "fight",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Don't give up the fight\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Get up, stand up",
+          "Stand up for your right",
+          "Get up, stand up",
+          "Stand up for your right"
+        ],
+        "start_seconds": 8,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Get up, stand up",
+          "Don't give up the fight",
+          "Most people think",
+          "Great God will come from the sky"
+        ],
+        "start_seconds": 75,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Get up,",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "stand",
+      "excerpt_after": "up",
+      "youtube_start": 8,
+      "youtube_end": 22
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "What life is",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "really",
+      "excerpt_after": "worth",
+      "youtube_start": 42,
+      "youtube_end": 56
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "So now you see the",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "light",
+      "excerpt_after": "hey",
+      "youtube_start": 51,
+      "youtube_end": 65
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Stand up for your",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "right",
+      "excerpt_after": "(oh-hoo)",
+      "youtube_start": 109,
+      "youtube_end": 123
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Get up, stand up (keep on",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "struggling",
+      "excerpt_after": "on)",
+      "youtube_start": 124,
+      "youtube_end": 138
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Almighty God is a",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "living",
+      "excerpt_after": "man",
+      "youtube_start": 140,
+      "youtube_end": 154
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I know you don't know",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "So now you see the light, hey",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But if you know what life is worth",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And now a you see the light",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We know when we understand",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Get up,",
+      "excerpt_after": "up",
+      "options": [
+        "game",
+        "never",
+        "stand",
+        "yours"
+      ],
+      "answer_index": 2,
+      "youtube_start": 8,
+      "youtube_end": 20
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "you don't know",
+      "options": [
+        "cant",
+        "jesus",
+        "know",
+        "right"
+      ],
+      "answer_index": 2,
+      "youtube_start": 39,
+      "youtube_end": 51
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So now you see the",
+      "excerpt_after": "hey",
+      "options": [
+        "light",
+        "preacher",
+        "rights",
+        "yours"
+      ],
+      "answer_index": 0,
+      "youtube_start": 51,
+      "youtube_end": 63
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Don't give up the",
+      "excerpt_after": "(life is your right)",
+      "options": [
+        "aint",
+        "fight",
+        "rights",
+        "story"
+      ],
+      "answer_index": 1,
+      "youtube_start": 115,
+      "youtube_end": 127
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Dy'n' and go to",
+      "excerpt_after": "in-a Jesus' name, Lord",
+      "options": [
+        "gold",
+        "great",
+        "heaven",
+        "never"
+      ],
+      "answer_index": 2,
+      "youtube_start": 133,
+      "youtube_end": 145
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "up,",
+        "up",
+        "stand",
+        "Get"
+      ],
+      "answer": [
+        "Get",
+        "up,",
+        "stand",
+        "up"
+      ],
+      "youtube_start": 8
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "earth",
+        "the",
+        "under",
+        "Heaven",
+        "is"
+      ],
+      "answer": [
+        "Heaven",
+        "is",
+        "under",
+        "the",
+        "earth"
+      ],
+      "youtube_start": 35
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "been",
+        "that",
+        "Half",
+        "story",
+        "told",
+        "never",
+        "ain't"
+      ],
+      "answer": [
+        "Half",
+        "that",
+        "story",
+        "ain't",
+        "never",
+        "been",
+        "told"
+      ],
+      "youtube_start": 47
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "for",
+        "yours",
+        "earth",
+        "look",
+        "on",
+        "You",
+        "would"
+      ],
+      "answer": [
+        "You",
+        "would",
+        "look",
+        "for",
+        "yours",
+        "on",
+        "earth"
+      ],
+      "youtube_start": 97
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "rights",
+        "Lord",
+        "for",
+        "up",
+        "your",
+        "Stand",
+        "Lord,"
+      ],
+      "answer": [
+        "Stand",
+        "up",
+        "for",
+        "your",
+        "rights",
+        "Lord,",
+        "Lord"
+      ],
+      "youtube_start": 121
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"stand\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"stand\" na música inteira?",
+      "word": "stand",
+      "answer": 37
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"right\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"right\" na música inteira?",
+      "word": "right",
+      "answer": 12
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Get up, stand up",
+          "order": 0
+        },
+        {
+          "text": "Stand up for your right",
+          "order": 1
+        },
+        {
+          "text": "Get up, stand up (get up, stand up)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Get Up, Stand Up\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Get Up, Stand Up\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "stand",
+        "right",
+        "don't",
+        "give"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Get Up, Stand Up\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Get Up, Stand Up\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "stand",
+        "right",
+        "don't",
+        "give"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Get Up, Stand Up\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Get Up, Stand Up\", o que aconteceria?",
+      "target_vocab": [
+        "stand",
+        "right",
+        "don't",
+        "give"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "you'd",
+          "full": "you would"
+        }
+      ]
+    }
+  ]
+}

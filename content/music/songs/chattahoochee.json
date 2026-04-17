@@ -1,0 +1,466 @@
+{
+  "slug": "chattahoochee",
+  "title": "Chattahoochee",
+  "artist": "Alan Jackson",
+  "year": 1993,
+  "album": "W. (Original Motion Picture Soundtrack)",
+  "genre": [
+    "country"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 238,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Chattahoochee by Alan Jackson (1993) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "bout",
+      "pt": "",
+      "note": "Appears 12 times; first heard in: \"Talkin' 'bout cars and dreamin 'bout women\""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"We got a litte crazy but we never got caught\""
+    },
+    {
+      "term": "livin'",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Never had a plan just a-livin' for the minute\""
+    },
+    {
+      "term": "learned",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"But I learned how to swim and I learned who I was\""
+    },
+    {
+      "term": "yonder",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"Yeah way down yonder on the Chattahoochee\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Yeah way down yonder on the Chattahoochee",
+          "It gets hotter than a hoochie coochie",
+          "We laid rubber on the Georgia asphalt",
+          "We got a litte crazy but we never got caught"
+        ],
+        "start_seconds": 13,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I was willin' but she wasn't ready",
+          "So I settled for a burger and a grape snow cone",
+          "Dropped her off early but I didn't go home",
+          "Down by the river on a Friday night"
+        ],
+        "start_seconds": 65,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Yeah way down",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "yonder",
+      "excerpt_after": "on the Chattahoochee",
+      "youtube_start": 13,
+      "youtube_end": 27
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We laid",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "rubber",
+      "excerpt_after": "on the Georgia asphalt",
+      "youtube_start": 20,
+      "youtube_end": 34
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Talkin' 'bout cars and",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dreamin",
+      "excerpt_after": "'bout women",
+      "youtube_start": 31,
+      "youtube_end": 45
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I was",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "willin",
+      "excerpt_after": "but she wasn't ready",
+      "youtube_start": 65,
+      "youtube_end": 79
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Down by the river on a",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "friday",
+      "excerpt_after": "night",
+      "youtube_start": 73,
+      "youtube_end": 87
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It gets hotter than a",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "hoochie",
+      "excerpt_after": "coochie",
+      "youtube_start": 98,
+      "youtube_end": 112
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We laid rubber on the Georgia asphalt",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I was willin' but she wasn't ready",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "It gets hotter than a hoochie coochie",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Down by the river on a Friday night",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Talkin' 'bout cars and dreamin 'bout women",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Yeah way down",
+      "excerpt_after": "on the Chattahoochee",
+      "options": [
+        "bout",
+        "crazy",
+        "little",
+        "yonder"
+      ],
+      "answer_index": 3,
+      "youtube_start": 13,
+      "youtube_end": 25
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Down by the",
+      "excerpt_after": "on a Friday night",
+      "options": [
+        "laid",
+        "muddy",
+        "never",
+        "river"
+      ],
+      "answer_index": 3,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "A lot about",
+      "excerpt_after": "and a little 'bout love",
+      "options": [
+        "crazy",
+        "livin",
+        "minute",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Pyramid of cans in the",
+      "excerpt_after": "moonlight",
+      "options": [
+        "pale",
+        "river",
+        "rubber",
+        "talkin"
+      ],
+      "answer_index": 0,
+      "youtube_start": 76,
+      "youtube_end": 88
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We laid",
+      "excerpt_after": "on the Georgia asphalt",
+      "options": [
+        "asphalt",
+        "georgia",
+        "learned",
+        "rubber"
+      ],
+      "answer_index": 3,
+      "youtube_start": 98,
+      "youtube_end": 110
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Yeah",
+        "down",
+        "on",
+        "the",
+        "way",
+        "yonder",
+        "Chattahoochee"
+      ],
+      "answer": [
+        "Yeah",
+        "way",
+        "down",
+        "yonder",
+        "on",
+        "the",
+        "Chattahoochee"
+      ],
+      "youtube_start": 13
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "gets",
+        "coochie",
+        "a",
+        "than",
+        "It",
+        "hotter",
+        "hoochie"
+      ],
+      "answer": [
+        "It",
+        "gets",
+        "hotter",
+        "than",
+        "a",
+        "hoochie",
+        "coochie"
+      ],
+      "youtube_start": 18
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "on",
+        "asphalt",
+        "laid",
+        "Georgia",
+        "the",
+        "rubber",
+        "We"
+      ],
+      "answer": [
+        "We",
+        "laid",
+        "rubber",
+        "on",
+        "the",
+        "Georgia",
+        "asphalt"
+      ],
+      "youtube_start": 20
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "pale",
+        "in",
+        "of",
+        "the",
+        "moonlight",
+        "cans",
+        "Pyramid"
+      ],
+      "answer": [
+        "Pyramid",
+        "of",
+        "cans",
+        "in",
+        "the",
+        "pale",
+        "moonlight"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "dreamin",
+        "'bout",
+        "Talkin'",
+        "and",
+        "women",
+        "'bout",
+        "cars"
+      ],
+      "answer": [
+        "Talkin'",
+        "'bout",
+        "cars",
+        "and",
+        "dreamin",
+        "'bout",
+        "women"
+      ],
+      "youtube_start": 31
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"bout\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"bout\" na música inteira?",
+      "word": "bout",
+      "answer": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"never\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"never\" na música inteira?",
+      "word": "never",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Yeah way down yonder on the Chattahoochee",
+          "order": 0
+        },
+        {
+          "text": "I was willin' but she wasn't ready",
+          "order": 1
+        },
+        {
+          "text": "We laid rubber on the Georgia asphalt",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Chattahoochee\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Chattahoochee\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "bout",
+        "never",
+        "livin'",
+        "learned"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Chattahoochee\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Chattahoochee\", o que aconteceria?",
+      "target_vocab": [
+        "bout",
+        "never",
+        "livin'",
+        "learned"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Chattahoochee\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Chattahoochee\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "bout",
+        "never",
+        "livin'",
+        "learned"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "wasn't",
+          "full": "was not"
+        },
+        {
+          "short": "didn't",
+          "full": "did not"
+        }
+      ]
+    }
+  ]
+}

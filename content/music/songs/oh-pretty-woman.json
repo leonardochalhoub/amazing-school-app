@@ -1,0 +1,459 @@
+{
+  "slug": "oh-pretty-woman",
+  "title": "Oh, Pretty Woman",
+  "artist": "Roy Orbison",
+  "year": 1964,
+  "album": "Black & White Night",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 396,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Oh, Pretty Woman by Roy Orbison (1964) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "pretty",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"Pretty woman, walking down the street\""
+    },
+    {
+      "term": "woman",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"Pretty woman, walking down the street\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Pretty woman, I don't believe you\""
+    },
+    {
+      "term": "walking",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"Pretty woman, walking down the street\""
+    },
+    {
+      "term": "while",
+      "pt": "",
+      "note": "Appears 2 times; first heard in: \"Pretty woman, stop a while\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Pretty",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "woman",
+      "excerpt_after": "walking down the street",
+      "youtube_start": 17,
+      "youtube_end": 31
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Pretty woman, won't you",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "pardon",
+      "excerpt_after": "me?",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Pretty woman, you look",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lovely",
+      "excerpt_after": "as can be",
+      "youtube_start": 50,
+      "youtube_end": 64
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Pretty woman, say",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youll",
+      "excerpt_after": "stay with me",
+      "youtube_start": 91,
+      "youtube_end": 105
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "the way it must be, okay",
+      "youtube_start": 138,
+      "youtube_end": 152
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "There'll be",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "tomorrow",
+      "excerpt_after": "night, but wait",
+      "youtube_start": 147,
+      "youtube_end": 161
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Pretty woman, the kind I'd like to meet",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You're not the truth",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Pretty woman, won't you pardon me?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Pretty woman, you look lovely as can be",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Pretty woman, say you'll stay with me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Pretty",
+      "excerpt_after": "walking down the street",
+      "options": [
+        "late",
+        "street",
+        "thats",
+        "woman"
+      ],
+      "answer_index": 3,
+      "youtube_start": 17,
+      "youtube_end": 29
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Pretty woman,",
+      "excerpt_after": "you pardon me?",
+      "options": [
+        "night",
+        "stop",
+        "therell",
+        "wont"
+      ],
+      "answer_index": 3,
+      "youtube_start": 43,
+      "youtube_end": 55
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Pretty woman,",
+      "excerpt_after": "a while",
+      "options": [
+        "guess",
+        "okay",
+        "stop",
+        "talk"
+      ],
+      "answer_index": 2,
+      "youtube_start": 69,
+      "youtube_end": 81
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "'Cause I",
+      "excerpt_after": "you",
+      "options": [
+        "give",
+        "need",
+        "walk",
+        "youll"
+      ],
+      "answer_index": 1,
+      "youtube_start": 99,
+      "youtube_end": 111
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "I'll go on home, it's late",
+      "options": [
+        "guess",
+        "mercy",
+        "mine",
+        "stay"
+      ],
+      "answer_index": 0,
+      "youtube_start": 144,
+      "youtube_end": 156
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "walking",
+        "street",
+        "woman,",
+        "down",
+        "Pretty"
+      ],
+      "answer": [
+        "Pretty",
+        "woman,",
+        "walking",
+        "down",
+        "the",
+        "street"
+      ],
+      "youtube_start": 17
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "woman,",
+        "Pretty",
+        "couldn't",
+        "I",
+        "help",
+        "but",
+        "see"
+      ],
+      "answer": [
+        "Pretty",
+        "woman,",
+        "I",
+        "couldn't",
+        "help",
+        "but",
+        "see"
+      ],
+      "youtube_start": 46
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "yeah",
+        "woman,",
+        "yeah,",
+        "Pretty",
+        "yeah,"
+      ],
+      "answer": [
+        "Pretty",
+        "woman,",
+        "yeah,",
+        "yeah,",
+        "yeah"
+      ],
+      "youtube_start": 85
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "right",
+        "I'll",
+        "treat"
+      ],
+      "answer": [
+        "I'll",
+        "treat",
+        "you",
+        "right"
+      ],
+      "youtube_start": 101
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "night,",
+        "tomorrow",
+        "There'll",
+        "wait",
+        "be",
+        "but"
+      ],
+      "answer": [
+        "There'll",
+        "be",
+        "tomorrow",
+        "night,",
+        "but",
+        "wait"
+      ],
+      "youtube_start": 147
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"pretty\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"pretty\" na música inteira?",
+      "word": "pretty",
+      "answer": 16
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"woman\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"woman\" na música inteira?",
+      "word": "woman",
+      "answer": 16
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Pretty woman, walking down the street",
+          "order": 0
+        },
+        {
+          "text": "Pretty woman, stop a while",
+          "order": 1
+        },
+        {
+          "text": "Be mine tonight",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Pretty woman, the kind I'd like to meet",
+          "order": 0
+        },
+        {
+          "text": "Pretty woman, say you'll stay with me",
+          "order": 1
+        },
+        {
+          "text": "Pretty woman, don't walk away, hey",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Oh, Pretty Woman\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Oh, Pretty Woman\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "pretty",
+        "woman",
+        "don't",
+        "walking"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "pretty",
+        "woman",
+        "don't",
+        "walking"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "pretty",
+        "woman",
+        "don't",
+        "walking"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'd",
+          "full": "I would"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        },
+        {
+          "short": "couldn't",
+          "full": "could not"
+        },
+        {
+          "short": "you'll",
+          "full": "you will"
+        }
+      ]
+    }
+  ]
+}

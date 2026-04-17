@@ -1,0 +1,462 @@
+{
+  "slug": "ride",
+  "title": "Ride",
+  "artist": "Twenty One Pilots",
+  "year": 2015,
+  "album": "Blurryface",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 215,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Ride by Twenty One Pilots (2015) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "i've",
+      "pt": "",
+      "note": "Appears 18 times; first heard in: \"I've been thinking too much\""
+    },
+    {
+      "term": "thinking",
+      "pt": "",
+      "note": "Appears 18 times; first heard in: \"I've been thinking too much\""
+    },
+    {
+      "term": "time",
+      "pt": "",
+      "note": "Appears 11 times; first heard in: \"I'm fallin' so I'm taking my time on my ride\""
+    },
+    {
+      "term": "ride",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"I'm fallin' so I'm taking my time on my ride\""
+    },
+    {
+      "term": "fallin'",
+      "pt": "",
+      "note": "Appears 8 times; first heard in: \"I'm fallin' so I'm taking my time on my ride\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Oh, oh, oh, oh",
+          "Oh, oh, oh, oh",
+          "I'm fallin' so I'm taking my time on my ride",
+          "Oh, oh, oh, oh"
+        ],
+        "start_seconds": 38,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I've been thinking too much (Help me)",
+          "I've been thinking too much (I've been thinking too much)",
+          "I've been thinking too much (Help me)",
+          "I've been thinking too much (I've been thinking too much)"
+        ],
+        "start_seconds": 125,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Pieces of",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "peace",
+      "excerpt_after": "in the sun's peace of mind",
+      "youtube_start": 19,
+      "youtube_end": 33
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "\"I'd die for you\"",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "thats",
+      "excerpt_after": "easy to say",
+      "youtube_start": 64,
+      "youtube_end": 78
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "A bullet for",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "everybody",
+      "excerpt_after": "in this room",
+      "youtube_start": 68,
+      "youtube_end": 82
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "literally",
+      "excerpt_after": "I don't know what I'd do",
+      "youtube_start": 75,
+      "youtube_end": 89
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "All",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "these",
+      "excerpt_after": "questions they're for real, like",
+      "youtube_start": 84,
+      "youtube_end": 98
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "fallin",
+      "excerpt_after": "so I'm taking my time",
+      "youtube_start": 150,
+      "youtube_end": 164
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I know it's hard sometimes",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "A bullet for them, a bullet for you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But literally, I don't know what I'd do",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "All these questions they're for real, like",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "\"Who would you die for?\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "it's hard sometimes",
+      "options": [
+        "home",
+        "know",
+        "many",
+        "stay"
+      ],
+      "answer_index": 1,
+      "youtube_start": 16,
+      "youtube_end": 28
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "On my",
+      "excerpt_after": "who wouldn't wish who I was",
+      "options": [
+        "bullets",
+        "enemies",
+        "hard",
+        "literally"
+      ],
+      "answer_index": 1,
+      "youtube_start": 32,
+      "youtube_end": 44
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "A bullet for",
+      "excerpt_after": "in this room",
+      "options": [
+        "enemies",
+        "everybody",
+        "sometimes",
+        "through"
+      ],
+      "answer_index": 1,
+      "youtube_start": 68,
+      "youtube_end": 80
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "\"I'd",
+      "excerpt_after": "for you\" and that's hard to do",
+      "options": [
+        "ignore",
+        "live",
+        "ride",
+        "talking"
+      ],
+      "answer_index": 1,
+      "youtube_start": 76,
+      "youtube_end": 88
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've been",
+      "excerpt_after": "too much",
+      "options": [
+        "fantasize",
+        "theyre",
+        "thinking",
+        "write"
+      ],
+      "answer_index": 2,
+      "youtube_start": 115,
+      "youtube_end": 127
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "know",
+        "sometimes",
+        "hard",
+        "it's"
+      ],
+      "answer": [
+        "I",
+        "know",
+        "it's",
+        "hard",
+        "sometimes"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "my",
+        "Takin'",
+        "ride",
+        "on",
+        "time"
+      ],
+      "answer": [
+        "Takin'",
+        "my",
+        "time",
+        "on",
+        "my",
+        "ride"
+      ],
+      "youtube_start": 56
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "I'm",
+        "Metaphorically,",
+        "man"
+      ],
+      "answer": [
+        "Metaphorically,",
+        "I'm",
+        "the",
+        "man"
+      ],
+      "youtube_start": 73
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "\"Who",
+        "for?\"",
+        "live",
+        "would"
+      ],
+      "answer": [
+        "\"Who",
+        "would",
+        "you",
+        "live",
+        "for?\""
+      ],
+      "youtube_start": 86
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "too",
+        "thinking",
+        "I've",
+        "much",
+        "been"
+      ],
+      "answer": [
+        "I've",
+        "been",
+        "thinking",
+        "too",
+        "much"
+      ],
+      "youtube_start": 115
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"i've\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"i've\" na música inteira?",
+      "word": "i've",
+      "answer": 18
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"thinking\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"thinking\" na música inteira?",
+      "word": "thinking",
+      "answer": 18
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I know it's hard sometimes",
+          "order": 0
+        },
+        {
+          "text": "But then you ignore them still",
+          "order": 1
+        },
+        {
+          "text": "I've been thinking too much",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Ride\" was released in 2015. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Ride\" foi lançada em 2015. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "i've",
+        "thinking",
+        "time",
+        "ride"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Ride\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Ride\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "i've",
+        "thinking",
+        "time",
+        "ride"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "i've",
+        "thinking",
+        "time",
+        "ride"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "wouldn't",
+          "full": "would not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "slug": "praise-you",
+  "title": "Praise You",
+  "artist": "Fatboy Slim",
+  "year": 1998,
+  "album": "You've Come a Long Way Baby",
+  "genre": [
+    "electronic"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 324,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Praise You by Fatboy Slim (1998) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "praise",
+      "pt": "",
+      "note": "Appears 26 times; first heard in: \"I have to praise you like I should\""
+    },
+    {
+      "term": "long",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"We've come a long, long way together\""
+    },
+    {
+      "term": "should",
+      "pt": "",
+      "note": "Appears 5 times; first heard in: \"I have to praise you like I should\""
+    },
+    {
+      "term": "we've",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"We've come a long, long way together\""
+    },
+    {
+      "term": "together",
+      "pt": "",
+      "note": "Appears 3 times; first heard in: \"We've come a long, long way together\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I have to praise you",
+          "I have to praise you",
+          "I have to praise you",
+          "I have to praise you like I should"
+        ],
+        "start_seconds": 112,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "We've come a long, long way together",
+          "Through the hard times and the good",
+          "I have to celebrate you, baby",
+          "I have to praise you like I should"
+        ],
+        "start_seconds": 16,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Through the hard",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "times",
+      "excerpt_after": "and the good",
+      "youtube_start": 21,
+      "youtube_end": 35
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I have to",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "celebrate",
+      "excerpt_after": "you, baby",
+      "youtube_start": 25,
+      "youtube_end": 39
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I have to",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "praise",
+      "excerpt_after": "you like I should",
+      "youtube_start": 29,
+      "youtube_end": 43
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We've come a long, long way together",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I have to celebrate you, baby",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I have to praise you like I should",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I have to praise you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Through the hard times and the good",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We've come a",
+      "excerpt_after": "long way together",
+      "options": [
+        "baby",
+        "hard",
+        "long",
+        "praise"
+      ],
+      "answer_index": 2,
+      "youtube_start": 16,
+      "youtube_end": 28
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Through the",
+      "excerpt_after": "times and the good",
+      "options": [
+        "baby",
+        "good",
+        "hard",
+        "weve"
+      ],
+      "answer_index": 2,
+      "youtube_start": 21,
+      "youtube_end": 33
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I have to",
+      "excerpt_after": "you, baby",
+      "options": [
+        "celebrate",
+        "praise",
+        "should",
+        "through"
+      ],
+      "answer_index": 0,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I have to",
+      "excerpt_after": "you like I should",
+      "options": [
+        "good",
+        "praise",
+        "should",
+        "through"
+      ],
+      "answer_index": 1,
+      "youtube_start": 29,
+      "youtube_end": 41
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Through the hard",
+      "excerpt_after": "and the good",
+      "options": [
+        "baby",
+        "praise",
+        "through",
+        "times"
+      ],
+      "answer_index": 3,
+      "youtube_start": 100,
+      "youtube_end": 112
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "together",
+        "long,",
+        "We've",
+        "a",
+        "long",
+        "come",
+        "way"
+      ],
+      "answer": [
+        "We've",
+        "come",
+        "a",
+        "long,",
+        "long",
+        "way",
+        "together"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "times",
+        "hard",
+        "the",
+        "and",
+        "good",
+        "Through",
+        "the"
+      ],
+      "answer": [
+        "Through",
+        "the",
+        "hard",
+        "times",
+        "and",
+        "the",
+        "good"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "have",
+        "celebrate",
+        "baby",
+        "to",
+        "I",
+        "you,"
+      ],
+      "answer": [
+        "I",
+        "have",
+        "to",
+        "celebrate",
+        "you,",
+        "baby"
+      ],
+      "youtube_start": 25
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "have",
+        "praise",
+        "you",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "have",
+        "to",
+        "praise",
+        "you"
+      ],
+      "youtube_start": 112
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"praise\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"praise\" na música inteira?",
+      "word": "praise",
+      "answer": 26
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"long\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"long\" na música inteira?",
+      "word": "long",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "We've come a long, long way together",
+          "order": 0
+        },
+        {
+          "text": "I have to praise you like I should",
+          "order": 1
+        },
+        {
+          "text": "I have to praise you",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Praise You\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Praise You\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "praise",
+        "long",
+        "should",
+        "we've"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Fatboy Slim one question about \"Praise You\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Fatboy Slim sobre \"Praise You\", o que seria e por quê?",
+      "target_vocab": [
+        "praise",
+        "long",
+        "should",
+        "we've"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Praise You\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Praise You\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "praise",
+        "long",
+        "should",
+        "we've"
+      ]
+    }
+  ]
+}

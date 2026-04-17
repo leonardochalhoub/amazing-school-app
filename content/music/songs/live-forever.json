@@ -1,0 +1,470 @@
+{
+  "slug": "live-forever",
+  "title": "Live Forever",
+  "artist": "Oasis",
+  "year": 1994,
+  "album": "Definitely Maybe",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 277,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Live Forever by Oasis (1994) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "want",
+      "pt": "",
+      "note": "Appears 9 times; first heard in: \"Maybe I don't really want to know\""
+    },
+    {
+      "term": "maybe",
+      "pt": "",
+      "note": "Appears 7 times; first heard in: \"Maybe I don't really want to know\""
+    },
+    {
+      "term": "live",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"I want to live I don't want to die\""
+    },
+    {
+      "term": "forever",
+      "pt": "",
+      "note": "Appears 6 times; first heard in: \"You and I are gonna live forever\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 4 times; first heard in: \"Maybe I don't really want to know\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Maybe I don't really want to know",
+          "How your garden grows",
+          "I just want to fly",
+          "Lately did you ever feel the pain"
+        ],
+        "start_seconds": 11,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "We see things they'll never see",
+          "You and I are gonna live forever",
+          "Maybe I don't really want to know",
+          "How your garden grows"
+        ],
+        "start_seconds": 47,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Maybe I don't",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "really",
+      "excerpt_after": "want to know",
+      "youtube_start": 11,
+      "youtube_end": 25
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "How your",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "garden",
+      "excerpt_after": "grows",
+      "youtube_start": 17,
+      "youtube_end": 31
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "As it",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "soaks",
+      "excerpt_after": "it to the bone",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We see",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "things",
+      "excerpt_after": "they'll never see",
+      "youtube_start": 47,
+      "youtube_end": 61
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You and I are",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "live forever",
+      "youtube_start": 49,
+      "youtube_end": 63
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "think",
+      "excerpt_after": "you're the same as me",
+      "youtube_start": 90,
+      "youtube_end": 104
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Maybe I don't really want to know",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Lately did you ever feel the pain",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Maybe I just want to breath",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Maybe you're the same as me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You and I are gonna live forever",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Maybe I",
+      "excerpt_after": "really want to know",
+      "options": [
+        "dont",
+        "gonna",
+        "maybe",
+        "things"
+      ],
+      "answer_index": 0,
+      "youtube_start": 11,
+      "youtube_end": 23
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Lately did you",
+      "excerpt_after": "feel the pain",
+      "options": [
+        "ever",
+        "feel",
+        "find",
+        "forever"
+      ],
+      "answer_index": 0,
+      "youtube_start": 22,
+      "youtube_end": 34
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I want to",
+      "excerpt_after": "I don't want to die",
+      "options": [
+        "find",
+        "live",
+        "morning",
+        "youre"
+      ],
+      "answer_index": 1,
+      "youtube_start": 36,
+      "youtube_end": 48
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Maybe I don't",
+      "excerpt_after": "want to know",
+      "options": [
+        "believe",
+        "feel",
+        "forever",
+        "really"
+      ],
+      "answer_index": 3,
+      "youtube_start": 57,
+      "youtube_end": 69
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But now is not the",
+      "excerpt_after": "to cry",
+      "options": [
+        "breath",
+        "think",
+        "time",
+        "want"
+      ],
+      "answer_index": 2,
+      "youtube_start": 84,
+      "youtube_end": 96
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "don't",
+        "know",
+        "to",
+        "Maybe",
+        "want",
+        "really"
+      ],
+      "answer": [
+        "Maybe",
+        "I",
+        "don't",
+        "really",
+        "want",
+        "to",
+        "know"
+      ],
+      "youtube_start": 11
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Lately",
+        "you",
+        "the",
+        "feel",
+        "did",
+        "pain",
+        "ever"
+      ],
+      "answer": [
+        "Lately",
+        "did",
+        "you",
+        "ever",
+        "feel",
+        "the",
+        "pain"
+      ],
+      "youtube_start": 22
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "fly",
+        "Maybe",
+        "just",
+        "to",
+        "want",
+        "I"
+      ],
+      "answer": [
+        "Maybe",
+        "I",
+        "just",
+        "want",
+        "to",
+        "fly"
+      ],
+      "youtube_start": 33
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Maybe",
+        "me",
+        "as",
+        "the",
+        "same",
+        "you're"
+      ],
+      "answer": [
+        "Maybe",
+        "you're",
+        "the",
+        "same",
+        "as",
+        "me"
+      ],
+      "youtube_start": 44
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "be",
+        "Maybe",
+        "never",
+        "I",
+        "will"
+      ],
+      "answer": [
+        "Maybe",
+        "I",
+        "will",
+        "never",
+        "be"
+      ],
+      "youtube_start": 78
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"want\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"want\" na música inteira?",
+      "word": "want",
+      "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"maybe\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"maybe\" na música inteira?",
+      "word": "maybe",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Maybe I don't really want to know",
+          "order": 0
+        },
+        {
+          "text": "Maybe you're the same as me",
+          "order": 1
+        },
+        {
+          "text": "Maybe I will never be",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Live Forever\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Live Forever\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "want",
+        "maybe",
+        "live",
+        "forever"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Oasis one question about \"Live Forever\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Oasis sobre \"Live Forever\", o que seria e por quê?",
+      "target_vocab": [
+        "want",
+        "maybe",
+        "live",
+        "forever"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Live Forever\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Live Forever\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "want",
+        "maybe",
+        "live",
+        "forever"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "they'll",
+          "full": "they will"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        }
+      ]
+    }
+  ]
+}

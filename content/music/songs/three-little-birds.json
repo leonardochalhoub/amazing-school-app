@@ -1,0 +1,462 @@
+{
+  "slug": "three-little-birds",
+  "title": "Three Little Birds",
+  "artist": "Bob Marley",
+  "year": 1977,
+  "album": "Greatest Hits",
+  "genre": [
+    "reggae"
+  ],
+  "cefr_level": "a1.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 320,
+  "youtube_id": "",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Three Little Birds by Bob Marley (1977) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "thing",
+      "pt": "",
+      "note": "Appears 32 times; first heard in: \"Don't worry about a thing\""
+    },
+    {
+      "term": "worry",
+      "pt": "",
+      "note": "Appears 28 times; first heard in: \"Don't worry about a thing\""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": "Appears 17 times; first heard in: \"Don't worry about a thing\""
+    },
+    {
+      "term": "alright",
+      "pt": "",
+      "note": "Appears 16 times; first heard in: \"'Cause every little thing gonna be alright\""
+    },
+    {
+      "term": "little",
+      "pt": "",
+      "note": "Appears 15 times; first heard in: \"'Cause every little thing gonna be alright\""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "'Cause every little thing gonna be alright",
+          "Singing, don't worry about a thing",
+          "'Cause every little thing gonna be alright",
+          "Rise up this morning, smile with the rising sun"
+        ],
+        "start_seconds": 20,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Singin', \"Don't worry about a thing\"",
+          "'Cause every little thing is gonna be alright",
+          "Sayin', don't worry (don't worry) about a thing",
+          "'Cause every little thing gonna be alright"
+        ],
+        "start_seconds": 64,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Don't",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "worry",
+      "excerpt_after": "about a thing",
+      "youtube_start": 15,
+      "youtube_end": 29
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Cause every",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "little",
+      "excerpt_after": "thing gonna be alright",
+      "youtube_start": 29,
+      "youtube_end": 43
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Three little",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "birds",
+      "excerpt_after": "pitch by my doorstep",
+      "youtube_start": 43,
+      "youtube_end": 57
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Sayin', this is my",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "message",
+      "excerpt_after": "to you",
+      "youtube_start": 55,
+      "youtube_end": 69
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "'Cause every little thing",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "be alright",
+      "youtube_start": 82,
+      "youtube_end": 96
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Three little birds",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "pitch",
+      "excerpt_after": "by my doorstep",
+      "youtube_start": 95,
+      "youtube_end": 109
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Sayin', this is my message to you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Cause every little thing gonna be alright",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Three little birds pitch by my doorstep",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Singin', \"Don't worry about a thing\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Sayin', don't worry don't worry about a thing",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Don't",
+      "excerpt_after": "about a thing",
+      "options": [
+        "alright",
+        "little",
+        "melodies",
+        "worry"
+      ],
+      "answer_index": 3,
+      "youtube_start": 15,
+      "youtube_end": 27
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Singing,",
+      "excerpt_after": "worry about a thing",
+      "options": [
+        "cause",
+        "dont",
+        "singin",
+        "smile"
+      ],
+      "answer_index": 1,
+      "youtube_start": 23,
+      "youtube_end": 35
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Three little",
+      "excerpt_after": "pitch by my doorstep",
+      "options": [
+        "birds",
+        "rising",
+        "thing",
+        "true"
+      ],
+      "answer_index": 0,
+      "youtube_start": 43,
+      "youtube_end": 55
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "'Cause every little",
+      "excerpt_after": "is gonna be alright",
+      "options": [
+        "rising",
+        "thing",
+        "three",
+        "worry"
+      ],
+      "answer_index": 1,
+      "youtube_start": 71,
+      "youtube_end": 83
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Three little birds",
+      "excerpt_after": "by my doorstep",
+      "options": [
+        "alright",
+        "melodies",
+        "pitch",
+        "songs"
+      ],
+      "answer_index": 2,
+      "youtube_start": 95,
+      "youtube_end": 107
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Don't",
+        "a",
+        "worry",
+        "thing",
+        "about"
+      ],
+      "answer": [
+        "Don't",
+        "worry",
+        "about",
+        "a",
+        "thing"
+      ],
+      "youtube_start": 15
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "alright",
+        "be",
+        "every",
+        "'Cause",
+        "little",
+        "gonna",
+        "thing"
+      ],
+      "answer": [
+        "'Cause",
+        "every",
+        "little",
+        "thing",
+        "gonna",
+        "be",
+        "alright"
+      ],
+      "youtube_start": 20
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "about",
+        "worry",
+        "a",
+        "Singing,",
+        "don't",
+        "thing"
+      ],
+      "answer": [
+        "Singing,",
+        "don't",
+        "worry",
+        "about",
+        "a",
+        "thing"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "this",
+        "Sayin',",
+        "is",
+        "my",
+        "to",
+        "message"
+      ],
+      "answer": [
+        "Sayin',",
+        "this",
+        "is",
+        "my",
+        "message",
+        "to",
+        "you"
+      ],
+      "youtube_start": 55
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "thing\"",
+        "\"Don't",
+        "about",
+        "a",
+        "worry",
+        "Singin',"
+      ],
+      "answer": [
+        "Singin',",
+        "\"Don't",
+        "worry",
+        "about",
+        "a",
+        "thing\""
+      ],
+      "youtube_start": 64
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"thing\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"thing\" na música inteira?",
+      "word": "thing",
+      "answer": 32
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"worry\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"worry\" na música inteira?",
+      "word": "worry",
+      "answer": 28
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Don't worry about a thing",
+          "order": 0
+        },
+        {
+          "text": "Singin', \"Don't worry about a thing\"",
+          "order": 1
+        },
+        {
+          "text": "Meanin', don't worry about a thing",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Three Little Birds\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Three Little Birds\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "thing",
+        "worry",
+        "don't",
+        "alright"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Bob Marley one question about \"Three Little Birds\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Bob Marley sobre \"Three Little Birds\", o que seria e por quê?",
+      "target_vocab": [
+        "thing",
+        "worry",
+        "don't",
+        "alright"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Three Little Birds\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Three Little Birds\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "thing",
+        "worry",
+        "don't",
+        "alright"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        }
+      ]
+    }
+  ]
+}
