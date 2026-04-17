@@ -88,10 +88,19 @@ export default function Home() {
                 {t.landing.getStarted}
               </Button>
             </Link>
-            <Link href="/login">
+            <Link href="/demo/teacher">
               <Button
                 size="lg"
                 variant="outline"
+                className="w-full sm:w-auto text-base px-8 h-12"
+              >
+                {t.landing.seeTeacherDemo}
+              </Button>
+            </Link>
+            <Link href="/login">
+              <Button
+                size="lg"
+                variant="ghost"
                 className="w-full sm:w-auto text-base px-8 h-12"
               >
                 {t.landing.signIn}
@@ -162,7 +171,7 @@ export default function Home() {
             <span>🎓</span>
             <span>Amazing School</span>
             <span>&middot;</span>
-            <span>Open Source</span>
+            <span>{t.landing.openSourceTag}</span>
           </div>
           <div className="flex items-center gap-4">
             <LocaleToggle />

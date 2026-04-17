@@ -1,0 +1,216 @@
+{
+  "slug": "bye-bye-bye",
+  "title": "Bye Bye Bye",
+  "artist": "NSYNC",
+  "year": 2000,
+  "album": "No Strings Attached",
+  "genre": [
+    "pop",
+    "boy-band"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 201,
+  "youtube_id": "Eo-KmOd3i7s",
+  "full_lyrics_url": "https://www.letras.mus.br/nsync/bye-bye-bye/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Future tense assertion + negation ('I don't really want to') — A2 drill on contrasting statements and farewell vocabulary.",
+  "vocab_hooks": [
+    {
+      "term": "lie",
+      "pt": "mentir / mentira",
+      "note": "verb + noun; irregular 'lie / lay / lain'"
+    },
+    {
+      "term": "fool",
+      "pt": "tolo / enganar",
+      "note": "noun + verb"
+    },
+    {
+      "term": "truth",
+      "pt": "verdade",
+      "note": "noun; silent-ish 'th'"
+    },
+    {
+      "term": "bye",
+      "pt": "tchau",
+      "note": "informal farewell"
+    }
+  ],
+  "grammar_callouts": [
+    "future 'will': I'm gonna",
+    "negation: I don't want to be",
+    "imperative interjection 'bye'"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I, I'm",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "doing",
+      "excerpt_after": "this tonight",
+      "youtube_start": 24,
+      "youtube_end": 38
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I, I'm doing this tonight",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Bye Bye Bye\" was released in 2000. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Bye Bye Bye\" foi lançada em 2000. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "lie",
+        "fool",
+        "truth",
+        "bye"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "lie",
+          "pt": "mentir / mentira"
+        },
+        {
+          "en": "fool",
+          "pt": "tolo / enganar"
+        },
+        {
+          "en": "truth",
+          "pt": "verdade"
+        },
+        {
+          "en": "bye",
+          "pt": "tchau"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I,",
+        "doing",
+        "I'm",
+        "tonight",
+        "this"
+      ],
+      "answer": [
+        "I,",
+        "I'm",
+        "doing",
+        "this",
+        "tonight"
+      ],
+      "youtube_start": 24
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I, I'm",
+      "excerpt_after": "this tonight",
+      "options": [
+        "doing",
+        "probably",
+        "tonight",
+        "youre"
+      ],
+      "answer_index": 0,
+      "youtube_start": 24,
+      "youtube_end": 36
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"fool\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"fool\" na música inteira?",
+      "word": "fool",
+      "answer": 5
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Bye, bye, bye",
+          "order": 0
+        },
+        {
+          "text": "Now, girl you're more than welcome to",
+          "order": 1
+        },
+        {
+          "text": "I don't wanna be your fool",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Farewell vocabulary is pragmatically important. Contrast 'bye', 'goodbye', 'see you', 'take care'.",
+  "copyright_notice": "Lyrics are property of Jive Records / Zomba Music. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Baby, bye, bye, bye",
+          "(Bye, bye) I don't want to be a fool for you",
+          "Just another player in your game for two",
+          "You may hate me but it ain't no lie"
+        ],
+        "start_seconds": 55,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Bye, bye, bye",
+          "Bye, bye",
+          "Bye, bye"
+        ],
+        "start_seconds": 10,
+        "style": "hook"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
+}

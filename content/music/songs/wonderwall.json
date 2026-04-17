@@ -46,54 +46,155 @@
   "exercises": [
     {
       "type": "listen_and_fill",
-      "prompt_en": "Listen to the chorus. Fill the blank:",
-      "prompt_pt": "Ouça o refrão. Complete a lacuna:",
-      "excerpt_before": "And after all, you're my",
-      "blank_hint": "noun — the song's title",
-      "answer": "wonderwall",
-      "excerpt_after": "",
-      "youtube_start": 97,
-      "youtube_end": 111
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You're",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "be the one that saves me",
+      "youtube_start": 92,
+      "youtube_end": 106
     },
     {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
-      "excerpt": "Maybe you're gonna be the one that saves me",
-      "model_answer_pt": "Talvez você vá ser aquela que me salva",
-      "teacher_note": "Great line to teach 'gonna' = 'going to', and the relative pronoun 'that' in a defining clause."
-    },
-    {
-      "type": "discussion",
-      "prompt_en": "The word 'wonderwall' isn't a real English word — Oasis invented it as a metaphor. What do you think it means in the song? What would YOUR 'wonderwall' be?",
-      "prompt_pt": "A palavra 'wonderwall' não existe em inglês — Oasis a inventou como metáfora. O que você acha que significa na música? O que seria SEU 'wonderwall'?",
-      "target_vocab": [
-        "metaphor",
-        "invent",
-        "meaning",
-        "maybe"
-      ]
+      "excerpt": "You're my wonderwall",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
       "type": "spot_the_grammar",
-      "prompt_en": "Find three contractions in the chorus and write out their full forms.",
-      "prompt_pt": "Encontre três contrações no refrão e escreva a forma completa.",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
       "expected": [
-        {
-          "short": "you're",
-          "full": "you are"
-        },
         {
           "short": "gonna",
           "full": "going to"
+        },
+        {
+          "short": "they're",
+          "full": "they are"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
         },
         {
           "short": "don't",
           "full": "do not"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Oasis one question about \"Wonderwall\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Oasis sobre \"Wonderwall\", o que seria e por quê?",
+      "target_vocab": [
+        "maybe",
+        "save",
+        "backbeat",
+        "winding road"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "maybe",
+          "pt": "talvez"
+        },
+        {
+          "en": "save",
+          "pt": "salvar / resgatar"
+        },
+        {
+          "en": "backbeat",
+          "pt": "batida (musical)"
+        },
+        {
+          "en": "winding road",
+          "pt": "estrada sinuosa"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "maybe",
+        "I",
+        "said",
+        "said",
+        "I",
+        "maybe"
+      ],
+      "answer": [
+        "I",
+        "said",
+        "maybe",
+        "I",
+        "said",
+        "maybe"
+      ],
+      "youtube_start": 180
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You're",
+      "excerpt_after": "be the one that saves me",
+      "options": [
+        "gonna",
+        "theyre",
+        "throw",
+        "today"
+      ],
+      "answer_index": 0,
+      "youtube_start": 92,
+      "youtube_end": 104
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"maybe\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"maybe\" na música inteira?",
+      "word": "maybe",
+      "answer": 6
     }
   ],
   "teaching_notes_md": "**Why this song works for B1 learners:**\n\n1. The chorus alone contains modals + relative clauses + reductions ('gonna') — a dense mini-lesson.\n2. 'Wonderwall' is famous enough that students' curiosity about its meaning powers the discussion prompt.\n3. British English accent exposure — most Brazilian learners have only heard American English.\n\n**Watch out for:**\n- Liam Gallagher's accent is strong; slow the YouTube playback to 0.75x on first listen.\n- 'By now you should've somehow realised what you gotta do' is a modal-perfect construction worth a full 10 min on its own — maybe save for a follow-up class.\n\n**Suggested follow-up:** pair with 'Don't Look Back in Anger' for an Oasis mini-unit at B1.",
-  "copyright_notice": "Lyrics are property of Sony/ATV Music Publishing. Only short educational excerpts are reproduced here under Brazilian Lei 9.610/98 art. 46 VIII (citação para fins didáticos) and US fair-use doctrine. Full lyrics viewed via external licensed source."
+  "copyright_notice": "Lyrics are property of Sony/ATV Music Publishing. Only short educational excerpts are reproduced here under Brazilian Lei 9.610/98 art. 46 VIII (citação para fins didáticos) and US fair-use doctrine. Full lyrics viewed via external licensed source.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "And after all",
+          "You're my wonderwall",
+          "Today was gonna be the day, but they'll never throw it back to you",
+          "And by now, you should've somehow realised what you're not to do"
+        ],
+        "start_seconds": 97,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I said maybe (I said maybe)",
+          "You're gonna be the one that saves me",
+          "And after all",
+          "You're my wonderwall"
+        ],
+        "start_seconds": 180,
+        "style": "hook"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
 }

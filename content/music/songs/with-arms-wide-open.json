@@ -1,0 +1,220 @@
+{
+  "slug": "with-arms-wide-open",
+  "title": "With Arms Wide Open",
+  "artist": "Creed",
+  "year": 1999,
+  "album": "Human Clay",
+  "genre": [
+    "rock",
+    "post-grunge"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 232,
+  "youtube_id": "99j0zLuNhi8",
+  "full_lyrics_url": "https://www.letras.mus.br/creed/with-arms-wide-open/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Father-to-son narrative in present perfect + future. B1 challenge: follow emotional progression across verses.",
+  "vocab_hooks": [
+    {
+      "term": "arms wide open",
+      "pt": "braços bem abertos",
+      "note": "idiom — welcoming"
+    },
+    {
+      "term": "welcome",
+      "pt": "dar boas-vindas",
+      "note": "verb + noun + adjective"
+    },
+    {
+      "term": "teach",
+      "pt": "ensinar",
+      "note": "irregular: teach / taught / taught"
+    },
+    {
+      "term": "hope",
+      "pt": "esperar / esperança",
+      "note": "verb + noun"
+    }
+  ],
+  "grammar_callouts": [
+    "present perfect: I've just heard",
+    "future with 'will': I'll show you",
+    "imperative 'welcome + noun'"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Well, I just",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heard",
+      "excerpt_after": "the news today",
+      "youtube_start": 16,
+      "youtube_end": 30
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, I just heard the news today",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "we've",
+          "full": "we have"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"With Arms Wide Open\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"With Arms Wide Open\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "arms wide open",
+        "welcome",
+        "teach",
+        "hope"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "arms wide open",
+          "pt": "braços bem abertos"
+        },
+        {
+          "en": "welcome",
+          "pt": "dar boas-vindas"
+        },
+        {
+          "en": "teach",
+          "pt": "ensinar"
+        },
+        {
+          "en": "hope",
+          "pt": "esperar / esperança"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "just",
+        "Well,",
+        "the",
+        "news",
+        "heard",
+        "today"
+      ],
+      "answer": [
+        "Well,",
+        "I",
+        "just",
+        "heard",
+        "the",
+        "news",
+        "today"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Well, I just",
+      "excerpt_after": "the news today",
+      "options": [
+        "heard",
+        "news",
+        "today",
+        "well"
+      ],
+      "answer_index": 0,
+      "youtube_start": 16,
+      "youtube_end": 28
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"welcome\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"welcome\" na música inteira?",
+      "word": "welcome",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Well, I just heard the news today",
+          "order": 0
+        },
+        {
+          "text": "To be the man I have to be",
+          "order": 1
+        },
+        {
+          "text": "With arms wide open",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Slow tempo + clear diction make it accessible for B1. Themes of new beginnings and parenthood — good for emotional vocabulary.",
+  "copyright_notice": "Lyrics are property of Wind-up Records. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "With arms wide open",
+          "With arms wide open",
+          "Well, I don't know if I'm ready",
+          "To be the man I have to be"
+        ],
+        "start_seconds": 56,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I'll show you everything, oh yeah",
+          "With arms wide open",
+          "Wide open"
+        ],
+        "start_seconds": 128,
+        "style": "hook"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
+}

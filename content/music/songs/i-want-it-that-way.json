@@ -1,0 +1,215 @@
+{
+  "slug": "i-want-it-that-way",
+  "title": "I Want It That Way",
+  "artist": "Backstreet Boys",
+  "year": 1999,
+  "album": "Millennium",
+  "genre": [
+    "pop",
+    "boy-band"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 213,
+  "youtube_id": "4fndeDfaWCg",
+  "full_lyrics_url": "https://www.letras.mus.br/backstreet-boys/73977/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Contrasting 'tell me why' questions with 'I want it that way' assertion. A2 drill on wh-questions and 'that way' demonstrative.",
+  "vocab_hooks": [
+    {
+      "term": "way",
+      "pt": "caminho / jeito",
+      "note": "polysemous noun"
+    },
+    {
+      "term": "ain't",
+      "pt": "não é / não está",
+      "note": "informal negation — 'is not / are not'"
+    },
+    {
+      "term": "heartache",
+      "pt": "dor no coração",
+      "note": "compound noun"
+    },
+    {
+      "term": "mistake",
+      "pt": "erro",
+      "note": "noun; 'make a mistake'"
+    }
+  ],
+  "grammar_callouts": [
+    "Why + present simple questions: tell me why",
+    "'ain't' as informal negation (register flag)",
+    "demonstrative 'that way'"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But we are two",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "worlds",
+      "excerpt_after": "apart",
+      "youtube_start": 28,
+      "youtube_end": 42
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You are my fire",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "we've",
+          "full": "we have"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "way",
+        "ain't",
+        "heartache",
+        "mistake"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "way",
+          "pt": "caminho / jeito"
+        },
+        {
+          "en": "ain't",
+          "pt": "não é / não está"
+        },
+        {
+          "en": "heartache",
+          "pt": "dor no coração"
+        },
+        {
+          "en": "mistake",
+          "pt": "erro"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "You",
+        "my",
+        "fire",
+        "are"
+      ],
+      "answer": [
+        "You",
+        "are",
+        "my",
+        "fire"
+      ],
+      "youtube_start": 9
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "it that way",
+      "options": [
+        "desire",
+        "fire",
+        "want",
+        "yeah"
+      ],
+      "answer_index": 2,
+      "youtube_start": 24,
+      "youtube_end": 36
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"ain't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"ain't\" na música inteira?",
+      "word": "ain't",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You are my fire",
+          "order": 0
+        },
+        {
+          "text": "Am I your fire?",
+          "order": 1
+        },
+        {
+          "text": "You are (you are, you are, you are)",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Use 'ain't' as a register lesson — NEVER in formal writing. Compare with 'isn't' / 'aren't'.",
+  "copyright_notice": "Lyrics are property of Sony Music Publishing / Zomba Music. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Tell me why",
+          "Ain't nothin' but a heartache",
+          "Tell me why",
+          "Ain't nothin' but a mistake"
+        ],
+        "start_seconds": 48,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "You are my fire",
+          "The one desire",
+          "Believe when I say",
+          "I want it that way"
+        ],
+        "start_seconds": 9,
+        "style": "hook"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
+}

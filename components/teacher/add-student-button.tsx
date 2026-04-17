@@ -129,8 +129,8 @@ export function AddStudentButton({
       toast.error(result.error);
       return "abort";
     }
-    if ("id" in result) {
-      const newClassroom = { id: result.id, name: result.name };
+    if ("id" in result && result.id && result.name) {
+      const newClassroom: Classroom = { id: result.id, name: result.name };
       setClassrooms((prev) => [newClassroom, ...prev]);
       toast.success(t.classroomCreated(result.name));
       return result.id;

@@ -18,6 +18,28 @@ const AnswerSchema = z.union([
     type: z.literal("listen_and_fill"),
     text: z.string().max(200),
   }),
+  z.object({
+    type: z.literal("word_to_meaning"),
+    pairs: z
+      .array(z.object({ en: z.string().max(80), pt: z.string().max(120) }))
+      .max(10),
+  }),
+  z.object({
+    type: z.literal("unscramble_line"),
+    order: z.array(z.string().max(40)).max(20),
+  }),
+  z.object({
+    type: z.literal("cloze_multi_choice"),
+    selected_index: z.number().int().min(0).max(9),
+  }),
+  z.object({
+    type: z.literal("count_word"),
+    count: z.number().int().min(0).max(200),
+  }),
+  z.object({
+    type: z.literal("line_order"),
+    order: z.array(z.number().int().min(0).max(20)).max(10),
+  }),
 ]);
 
 export const SubmitSchema = z.object({

@@ -47,7 +47,7 @@ export default async function LessonsPage({ searchParams }: LessonsPageProps) {
   let assignedCards: AssignedCard[] = [];
   if (user) {
     const classrooms = await getStudentClassrooms();
-    const first = classrooms?.[0] as
+    const first = classrooms?.[0] as unknown as
       | { id: string; name: string }
       | undefined;
     if (first?.id) {

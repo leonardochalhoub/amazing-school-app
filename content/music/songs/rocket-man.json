@@ -1,0 +1,220 @@
+{
+  "slug": "rocket-man",
+  "title": "Rocket Man",
+  "artist": "Elton John",
+  "year": 1972,
+  "album": "Honky Château",
+  "genre": [
+    "rock",
+    "soft-rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 281,
+  "youtube_id": "DtVBCG6ThDk",
+  "full_lyrics_url": "https://www.letras.mus.br/elton-john/rocket-man/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Present continuous narration from an astronaut's point of view. Great for introducing time-expression vocabulary and 'burn out' idioms.",
+  "vocab_hooks": [
+    {
+      "term": "burn out",
+      "pt": "queimar / esgotar",
+      "note": "phrasal verb — exhaustion"
+    },
+    {
+      "term": "lonely",
+      "pt": "solitário",
+      "note": "adjective; contrast with 'alone'"
+    },
+    {
+      "term": "miss",
+      "pt": "sentir falta",
+      "note": "verb; tricky for BR learners"
+    },
+    {
+      "term": "kids",
+      "pt": "filhos / crianças",
+      "note": "informal plural"
+    }
+  ],
+  "grammar_callouts": [
+    "present continuous: I'm burning out",
+    "frequency adverb 'high as a kite'",
+    "present simple for habits: she packs my bags"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "She",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "packed",
+      "excerpt_after": "my bags last night, pre-flight",
+      "youtube_start": 2,
+      "youtube_end": 16
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I'm gonna be high",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Elton John one question about \"Rocket Man\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Elton John sobre \"Rocket Man\", o que seria e por quê?",
+      "target_vocab": [
+        "burn out",
+        "lonely",
+        "miss",
+        "kids"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "burn out",
+          "pt": "queimar / esgotar"
+        },
+        {
+          "en": "lonely",
+          "pt": "solitário"
+        },
+        {
+          "en": "miss",
+          "pt": "sentir falta"
+        },
+        {
+          "en": "kids",
+          "pt": "filhos / crianças"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "She",
+        "night,",
+        "bags",
+        "packed",
+        "last",
+        "pre-flight"
+      ],
+      "answer": [
+        "She",
+        "packed",
+        "my",
+        "bags",
+        "last",
+        "night,",
+        "pre-flight"
+      ],
+      "youtube_start": 2
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "She",
+      "excerpt_after": "my bags last night, pre-flight",
+      "options": [
+        "bags",
+        "last",
+        "night",
+        "packed"
+      ],
+      "answer_index": 3,
+      "youtube_start": 2,
+      "youtube_end": 14
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"long\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"long\" na música inteira?",
+      "word": "long",
+      "answer": 24
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "She packed my bags last night, pre-flight",
+          "order": 0
+        },
+        {
+          "text": "I'm a rocket man",
+          "order": 1
+        },
+        {
+          "text": "It's just my job five days a week",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Lyrical imagery around space — teach the vocabulary clusters (Mars, kite, high, fuse). Strong narrative voice for retell exercises.",
+  "copyright_notice": "Lyrics are property of Universal Music Publishing Group. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Oh, no, no, no",
+          "I'm a rocket man",
+          "Rocket man, burning out his fuse up here alone"
+        ],
+        "start_seconds": 68,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "A rocket man",
+          "A rocket man",
+          "And I think it's gonna be a long, long time",
+          "'Til touchdown brings me 'round again to find"
+        ],
+        "start_seconds": 154,
+        "style": "hook"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
+}

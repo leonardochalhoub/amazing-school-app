@@ -46,35 +46,143 @@
   "exercises": [
     {
       "type": "listen_and_fill",
-      "prompt_en": "Fill the blank in the opening line:",
-      "prompt_pt": "Complete a lacuna no verso inicial:",
-      "excerpt_before": "Look at the",
-      "blank_hint": "plural — bright things in the night sky",
-      "answer": "stars",
-      "excerpt_after": ", look how they shine for you",
-      "youtube_start": 33,
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Look how they",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "shine",
+      "excerpt_after": "for you",
+      "youtube_start": 36,
       "youtube_end": 50
     },
     {
       "type": "translate_line",
-      "prompt_en": "Translate this line:",
-      "prompt_pt": "Traduza esta linha:",
-      "excerpt": "And they were all yellow",
-      "model_answer_pt": "E elas eram todas amarelas",
-      "teacher_note": "Past-simple 'were' — review of 'to be' conjugation in the past. Plural agreement with 'stars'."
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Look how they shine for you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'd",
+          "full": "I would"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
     },
     {
       "type": "discussion",
-      "prompt_en": "The singer uses 'yellow' to describe a feeling. What color describes how you feel today and why?",
-      "prompt_pt": "O cantor usa 'amarelo' para descrever um sentimento. Que cor descreve como você se sente hoje e por quê?",
+      "prompt_en": "Compare \"Yellow\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Yellow\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
       "target_vocab": [
-        "color",
-        "feel",
-        "today",
-        "because"
+        "yellow",
+        "skin",
+        "bones",
+        "turned"
       ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "yellow",
+          "pt": "amarelo"
+        },
+        {
+          "en": "skin",
+          "pt": "pele"
+        },
+        {
+          "en": "bones",
+          "pt": "ossos"
+        },
+        {
+          "en": "turned",
+          "pt": "virou / se tornou"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "at",
+        "Look",
+        "stars",
+        "the"
+      ],
+      "answer": [
+        "Look",
+        "at",
+        "the",
+        "stars"
+      ],
+      "youtube_start": 33
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Look how",
+      "excerpt_after": "shine for you",
+      "options": [
+        "look",
+        "shine",
+        "stars",
+        "they"
+      ],
+      "answer_index": 3,
+      "youtube_start": 36,
+      "youtube_end": 48
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"yellow\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"yellow\" na música inteira?",
+      "word": "yellow",
+      "answer": 5
     }
   ],
   "teaching_notes_md": "**Pedagogy:** Exceptionally simple vocabulary makes this a low-risk first song. Focus on pronunciation of 'yellow' (/ˈjɛləʊ/) — the 'y' consonant + 'ow' diphthong is tricky for PT speakers.",
-  "copyright_notice": "Lyrics are property of Universal Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+  "copyright_notice": "Lyrics are property of Universal Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Look how they shine for you",
+          "And everything you do",
+          "Yeah, they were all yellow",
+          "I came along"
+        ],
+        "start_seconds": 36,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "And it was all yellow",
+          "(Ah) Your skin, oh, yeah, your skin and bones",
+          "(Ooh) Turn into something beautiful",
+          "(Ah) And you know, you know I love you so"
+        ],
+        "start_seconds": 80,
+        "style": "hook"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
 }

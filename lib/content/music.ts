@@ -48,6 +48,44 @@ export type MusicExercise =
       prompt_en: string;
       prompt_pt: string;
       expected: { short: string; full: string }[];
+    }
+  | {
+      type: "word_to_meaning";
+      prompt_en: string;
+      prompt_pt: string;
+      pairs: { en: string; pt: string }[];
+    }
+  | {
+      type: "unscramble_line";
+      prompt_en: string;
+      prompt_pt: string;
+      shuffled: string[];
+      answer: string[];
+      youtube_start?: number;
+    }
+  | {
+      type: "cloze_multi_choice";
+      prompt_en: string;
+      prompt_pt: string;
+      excerpt_before: string;
+      excerpt_after: string;
+      options: string[];
+      answer_index: number;
+      youtube_start: number;
+      youtube_end: number;
+    }
+  | {
+      type: "count_word";
+      prompt_en: string;
+      prompt_pt: string;
+      word: string;
+      answer: number;
+    }
+  | {
+      type: "line_order";
+      prompt_en: string;
+      prompt_pt: string;
+      excerpts: { text: string; order: number }[];
     };
 
 export interface SingAlongPrompt {
@@ -69,6 +107,12 @@ export interface MusicSong extends MusicMeta {
   grammar_callouts: string[];
   /** Two to three short sing-along challenges per song. Fair-use short excerpts only. */
   sing_along?: { prompts: SingAlongPrompt[] };
+  /**
+   * Provenance of timestamps in sing_along + exercises.
+   *  - "lrclib": auto-synced from community synced-lyrics data (accurate)
+   *  - "manual": hand-authored fallback (approximate, no synced source)
+   */
+  timing_source?: "lrclib" | "manual";
   exercises: MusicExercise[];
   teaching_notes_md: string;
   copyright_notice: string;

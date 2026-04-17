@@ -17,7 +17,6 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { LessonPicker } from "./lesson-picker";
 
@@ -111,9 +110,7 @@ export function AssignmentManager({
       <div className="flex items-center justify-between">
         <h2 className="text-sm font-semibold">Assigned lessons</h2>
         <Dialog open={open} onOpenChange={setOpen}>
-          <DialogTrigger asChild>
-            <Button size="sm">Assign lesson</Button>
-          </DialogTrigger>
+          <Button size="sm" onClick={() => setOpen(true)}>Assign lesson</Button>
           <DialogContent className="max-w-2xl">
             <DialogHeader>
               <DialogTitle>Assign to this student</DialogTitle>

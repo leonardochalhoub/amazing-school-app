@@ -46,23 +46,27 @@
   "sing_along": {
     "prompts": [
       {
-        "label_en": "Sing the chorus",
-        "label_pt": "Cante o refrão",
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
         "lines": [
-          "Here comes the sun, do-do-do-do",
-          "Here comes the sun",
-          "And I say, it's all right"
+          "It's alright",
+          "Little darlin', it's been a long, cold, lonely winter",
+          "Little darlin', it feels like years since it's been here",
+          "Here comes the sun, doo-doo-doo-doo"
         ],
-        "start_seconds": 74,
+        "start_seconds": 22,
         "style": "chorus"
       },
       {
         "label_en": "Echo the hook",
         "label_pt": "Repita o gancho",
         "lines": [
-          "Here comes the sun"
+          "Sun, sun, sun, here it comes",
+          "Sun, sun, sun, here it comes",
+          "Sun, sun, sun, here it comes",
+          "Sun, sun, sun, here it comes"
         ],
-        "start_seconds": 163,
+        "start_seconds": 86,
         "style": "hook"
       }
     ]
@@ -70,35 +74,121 @@
   "exercises": [
     {
       "type": "listen_and_fill",
-      "prompt_en": "Fill the blank in the chorus:",
-      "prompt_pt": "Complete a lacuna no refrão:",
-      "excerpt_before": "Here comes the",
-      "blank_hint": "big yellow star in the sky",
-      "answer": "sun",
-      "excerpt_after": ", and I say it's all right",
-      "youtube_start": 18,
-      "youtube_end": 34
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Here",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "comes",
+      "excerpt_after": "the sun, doo-doo-doo-doo",
+      "youtube_start": 8,
+      "youtube_end": 22
     },
     {
       "type": "translate_line",
-      "prompt_en": "Translate this line:",
-      "prompt_pt": "Traduza esta linha:",
-      "excerpt": "It's been a long, cold, lonely winter",
-      "model_answer_pt": "Foi um inverno longo, frio e solitário",
-      "teacher_note": "Three adjectives in a row — good place to teach comma usage between adjectives."
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Here comes the sun, and I say",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
       "type": "discussion",
-      "prompt_en": "In Brazil you don't have a harsh winter like in England. What does 'sun coming back' feel like in your city?",
-      "prompt_pt": "No Brasil o inverno não é tão rigoroso como na Inglaterra. O que a volta do sol significa na sua cidade?",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
       "target_vocab": [
         "sun",
+        "smile",
         "winter",
-        "warm",
-        "feel"
+        "long"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "sun",
+          "pt": "sol"
+        },
+        {
+          "en": "smile",
+          "pt": "sorriso / sorrir"
+        },
+        {
+          "en": "winter",
+          "pt": "inverno"
+        },
+        {
+          "en": "long",
+          "pt": "longo"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Here",
+        "sun,",
+        "doo-doo-doo-doo",
+        "comes",
+        "the"
+      ],
+      "answer": [
+        "Here",
+        "comes",
+        "the",
+        "sun,",
+        "doo-doo-doo-doo"
+      ],
+      "youtube_start": 8
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Here",
+      "excerpt_after": "the sun, doo-doo-doo-doo",
+      "options": [
+        "alright",
+        "comes",
+        "here",
+        "little"
+      ],
+      "answer_index": 1,
+      "youtube_start": 8,
+      "youtube_end": 20
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"here\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"here\" na música inteira?",
+      "word": "here",
+      "answer": 17
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Here comes the sun, doo-doo-doo-doo",
+          "order": 0
+        },
+        {
+          "text": "Here comes the sun",
+          "order": 1
+        },
+        {
+          "text": "Sun, sun, sun, here it comes",
+          "order": 2
+        }
       ]
     }
   ],
   "teaching_notes_md": "**Pedagogy:** The song's limited vocabulary (~30 unique words) makes it ideal for a first listening-comprehension exercise at A1.1. Pair with a simple weather/seasons unit.\n\n**Classroom tip:** Play only the first 40 seconds first — the intro is instrumental and sets the mood.",
-  "copyright_notice": "Lyrics are property of Harrisongs / Sony Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+  "copyright_notice": "Lyrics are property of Harrisongs / Sony Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "timing_source": "lrclib"
 }

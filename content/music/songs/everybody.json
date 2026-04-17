@@ -1,0 +1,215 @@
+{
+  "slug": "everybody",
+  "title": "Everybody (Backstreet's Back)",
+  "artist": "Backstreet Boys",
+  "year": 1997,
+  "album": "Backstreet's Back",
+  "genre": [
+    "pop",
+    "boy-band"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "fast",
+  "duration_seconds": 265,
+  "youtube_id": "6M6samPEMpM",
+  "full_lyrics_url": "https://www.letras.mus.br/backstreet-boys/85/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Question drill: 'Am I original? Yeah. Am I the only one? Yeah.' — A1/A2 students practice yes/no questions with 'to be'.",
+  "vocab_hooks": [
+    {
+      "term": "everybody",
+      "pt": "todo mundo",
+      "note": "compound pronoun"
+    },
+    {
+      "term": "original",
+      "pt": "original",
+      "note": "cognate adjective"
+    },
+    {
+      "term": "lonely",
+      "pt": "solitário",
+      "note": "adjective, not adverb"
+    },
+    {
+      "term": "sexual",
+      "pt": "sexual",
+      "note": "discuss register appropriateness"
+    }
+  ],
+  "grammar_callouts": [
+    "yes/no questions with 'to be': Am I X?",
+    "imperative 'rock your body'",
+    "contractions: I'm, Backstreet's"
+  ],
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Backstreet's back, alright",
+          "Hey, yeah, well",
+          "Oh, my God, we're back again",
+          "Brothers, sisters, everybody sing"
+        ],
+        "start_seconds": 50,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Rock your body",
+          "Yeah",
+          "Everybody",
+          "Rock your body right"
+        ],
+        "start_seconds": 101,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Brothers,",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sisters",
+      "excerpt_after": "everybody sing",
+      "youtube_start": 66,
+      "youtube_end": 80
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh, my God, we're back again",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Backstreet Boys one question about \"Everybody (Backstreet's Back)\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Backstreet Boys sobre \"Everybody (Backstreet's Back)\", o que seria e por quê?",
+      "target_vocab": [
+        "everybody",
+        "original",
+        "lonely",
+        "sexual"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "everybody",
+          "pt": "todo mundo"
+        },
+        {
+          "en": "original",
+          "pt": "original"
+        },
+        {
+          "en": "lonely",
+          "pt": "solitário"
+        },
+        {
+          "en": "sexual",
+          "pt": "sexual"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "yeah",
+        "body,",
+        "Rock",
+        "your"
+      ],
+      "answer": [
+        "Rock",
+        "your",
+        "body,",
+        "yeah"
+      ],
+      "youtube_start": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Rock your",
+      "excerpt_after": "yeah",
+      "options": [
+        "body",
+        "right",
+        "rock",
+        "yeah"
+      ],
+      "answer_index": 0,
+      "youtube_start": 39,
+      "youtube_end": 51
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"everybody\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"everybody\" na música inteira?",
+      "word": "everybody",
+      "answer": 14
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Rock your body, yeah",
+          "order": 0
+        },
+        {
+          "text": "Rock your body right",
+          "order": 1
+        },
+        {
+          "text": "So everybody everywhere",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** The 'Am I X? Yeah.' call-response is perfect for practicing question intonation. Classroom-friendly (skip the sexual line with younger students).",
+  "copyright_notice": "Lyrics are property of Sony Music Publishing / Zomba Music. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "timing_source": "lrclib"
+}

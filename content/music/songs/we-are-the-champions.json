@@ -46,43 +46,170 @@
   "exercises": [
     {
       "type": "listen_and_fill",
-      "prompt_en": "Fill the blank in the chorus:",
-      "prompt_pt": "Complete a lacuna no refrão:",
-      "excerpt_before": "We are the",
-      "blank_hint": "plural — winners",
-      "answer": "champions",
-      "excerpt_after": ", my friends",
-      "youtube_start": 33,
-      "youtube_end": 51
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "committed",
+      "excerpt_after": "no crime",
+      "youtube_start": 11,
+      "youtube_end": 25
     },
     {
       "type": "translate_line",
-      "prompt_en": "Translate this line:",
-      "prompt_pt": "Traduza esta linha:",
-      "excerpt": "I've paid my dues, time after time",
-      "model_answer_pt": "Eu paguei meus tributos, vez após vez",
-      "teacher_note": "PT simple past often renders EN present perfect. Discuss when we'd use 'tenho pago' (rarer) vs 'paguei'."
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've paid my dues",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
       "type": "spot_the_grammar",
-      "prompt_en": "Find three contractions in the verses and write out their full forms.",
-      "prompt_pt": "Encontre três contrações nos versos e escreva a forma completa.",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
       "expected": [
         {
-          "short": "I've",
+          "short": "i've",
           "full": "I have"
-        },
-        {
-          "short": "we've",
-          "full": "we have"
         },
         {
           "short": "we'll",
           "full": "we will"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"We Are the Champions\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"We Are the Champions\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "champion",
+        "dues",
+        "bow",
+        "mistake"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "champion",
+          "pt": "campeão / campeã"
+        },
+        {
+          "en": "dues",
+          "pt": "dívidas / tributos"
+        },
+        {
+          "en": "bow",
+          "pt": "reverência"
+        },
+        {
+          "en": "mistake",
+          "pt": "erro"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "I've",
+        "paid",
+        "dues"
+      ],
+      "answer": [
+        "I've",
+        "paid",
+        "my",
+        "dues"
+      ],
+      "youtube_start": 0
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I've",
+      "excerpt_after": "my dues",
+      "options": [
+        "after",
+        "dues",
+        "paid",
+        "time"
+      ],
+      "answer_index": 2,
+      "youtube_start": 0,
+      "youtube_end": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"champions\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"champions\" na música inteira?",
+      "word": "champions",
+      "answer": 12
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I've paid my dues",
+          "order": 0
+        },
+        {
+          "text": "But I've come through",
+          "order": 1
+        },
+        {
+          "text": "I thank you all",
+          "order": 2
         }
       ]
     }
   ],
   "teaching_notes_md": "**Pedagogy:** Present perfect in EN vs past simple in PT is a classic confusion zone — this song exposes it across an entire verse. Spend a full 10 minutes on that comparison.",
-  "copyright_notice": "Lyrics are property of Queen Music Ltd / Sony/ATV Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+  "copyright_notice": "Lyrics are property of Queen Music Ltd / Sony/ATV Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "We are the champions, my friends",
+          "And we'll keep on fighting till the end",
+          "We are the champions, we are the champions",
+          "No time for losers, 'cause we are the champions of the world"
+        ],
+        "start_seconds": 33,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "We are the champions, my friends",
+          "And we'll keep on fighting till the end, oh",
+          "We are the champions, we are the champions",
+          "No time for losers, 'cause we are the champions"
+        ],
+        "start_seconds": 142,
+        "style": "chorus"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
 }

@@ -1,0 +1,219 @@
+{
+  "slug": "bad",
+  "title": "Bad",
+  "artist": "Michael Jackson",
+  "year": 1987,
+  "album": "Bad",
+  "genre": [
+    "pop",
+    "funk"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 247,
+  "youtube_id": "dsUXAEzaC3Q",
+  "full_lyrics_url": "https://www.letras.mus.br/michael-jackson/14410/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Repeated assertion using ironic 'bad' (= very good in 80s slang). Great vocabulary lesson on register shift.",
+  "vocab_hooks": [
+    {
+      "term": "bad",
+      "pt": "ruim / ótimo (gíria)",
+      "note": "irony — '80s slang for 'excellent'"
+    },
+    {
+      "term": "tough",
+      "pt": "durão / forte",
+      "note": "adjective; silent 'gh'"
+    },
+    {
+      "term": "cool",
+      "pt": "legal",
+      "note": "adjective; multiple meanings"
+    },
+    {
+      "term": "world",
+      "pt": "mundo",
+      "note": "noun; contrast with 'word'"
+    }
+  ],
+  "grammar_callouts": [
+    "present simple assertions: I'm bad, I'm tough",
+    "'Who's bad?' — question for emphasis",
+    "contractions: I'm, you're, who's"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Just show your face in",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "broad",
+      "excerpt_after": "daylight, ah",
+      "youtube_start": 22,
+      "youtube_end": 36
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I know your game, what you're about",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Bad\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Bad\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "bad",
+        "tough",
+        "cool",
+        "world"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "bad",
+          "pt": "ruim / ótimo (gíria)"
+        },
+        {
+          "en": "tough",
+          "pt": "durão / forte"
+        },
+        {
+          "en": "cool",
+          "pt": "legal"
+        },
+        {
+          "en": "world",
+          "pt": "mundo"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "it",
+        "on",
+        "Lay",
+        "me,",
+        "alright",
+        "ah,"
+      ],
+      "answer": [
+        "Lay",
+        "it",
+        "on",
+        "me,",
+        "ah,",
+        "alright"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Just",
+      "excerpt_after": "your face in broad daylight, ah",
+      "options": [
+        "butt",
+        "mine",
+        "show",
+        "tell"
+      ],
+      "answer_index": 2,
+      "youtube_start": 22,
+      "youtube_end": 34
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"world\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"world\" na música inteira?",
+      "word": "world",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Just show your face in broad daylight, ah",
+          "order": 0
+        },
+        {
+          "text": "Just to tell you once again",
+          "order": 1
+        },
+        {
+          "text": "This could be a better place, ah",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Teach the slang shift (bad = good) explicitly — essential cultural knowledge. Contrast with modern slang: 'sick', 'dope', 'lit'.",
+  "copyright_notice": "Lyrics are property of Mijac Music / Warner Chappell. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Just to tell you once again",
+          "Who's bad?",
+          "The word is out, you're doin' it wrong, ah",
+          "Gon' lock you up before too long, ah"
+        ],
+        "start_seconds": 83,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Just to tell you once again (hoo)",
+          "You know I'm bad, I'm bad, shamone (bad, bad, really, really bad)",
+          "You know I'm bad, I'm bad (bad, bad)",
+          "You know it, you know it (really, really bad)"
+        ],
+        "start_seconds": 193,
+        "style": "hook"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
+}

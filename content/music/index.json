@@ -1,7 +1,20 @@
 {
   "generated_at": "2026-04-17",
-  "catalog_size_target": 25,
+  "catalog_size_target": 30,
   "songs": [
+    {
+      "slug": "count-on-me",
+      "title": "Count on Me",
+      "artist": "Bruno Mars",
+      "year": 2010,
+      "cefr_level": "a1.1",
+      "difficulty": "easy",
+      "genre": [
+        "pop",
+        "acoustic-pop"
+      ],
+      "duration_seconds": 197
+    },
     {
       "slug": "perfect",
       "title": "Perfect",
@@ -9,7 +22,10 @@
       "year": 2017,
       "cefr_level": "a1.1",
       "difficulty": "easy",
-      "genre": ["pop", "folk-pop"],
+      "genre": [
+        "pop",
+        "folk-pop"
+      ],
       "duration_seconds": 263
     },
     {
@@ -19,28 +35,11 @@
       "year": 1969,
       "cefr_level": "a1.1",
       "difficulty": "easy",
-      "genre": ["rock", "classic-rock"],
+      "genre": [
+        "rock",
+        "classic-rock"
+      ],
       "duration_seconds": 185
-    },
-    {
-      "slug": "let-it-be",
-      "title": "Let It Be",
-      "artist": "The Beatles",
-      "year": 1970,
-      "cefr_level": "a1.2",
-      "difficulty": "easy",
-      "genre": ["rock", "classic-rock"],
-      "duration_seconds": 243
-    },
-    {
-      "slug": "imagine",
-      "title": "Imagine",
-      "artist": "John Lennon",
-      "year": 1971,
-      "cefr_level": "a1.2",
-      "difficulty": "easy",
-      "genre": ["rock", "soft-rock"],
-      "duration_seconds": 183
     },
     {
       "slug": "someone-like-you",
@@ -49,8 +48,76 @@
       "year": 2011,
       "cefr_level": "a1.2",
       "difficulty": "easy",
-      "genre": ["pop", "soul"],
+      "genre": [
+        "pop",
+        "soul"
+      ],
       "duration_seconds": 285
+    },
+    {
+      "slug": "everybody",
+      "title": "Everybody (Backstreet's Back)",
+      "artist": "Backstreet Boys",
+      "year": 1997,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "pop",
+        "boy-band"
+      ],
+      "duration_seconds": 265
+    },
+    {
+      "slug": "yellow",
+      "title": "Yellow",
+      "artist": "Coldplay",
+      "year": 2000,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock",
+        "alternative"
+      ],
+      "duration_seconds": 266
+    },
+    {
+      "slug": "believer",
+      "title": "Believer",
+      "artist": "Imagine Dragons",
+      "year": 2017,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock",
+        "alternative"
+      ],
+      "duration_seconds": 204
+    },
+    {
+      "slug": "imagine",
+      "title": "Imagine",
+      "artist": "John Lennon",
+      "year": 1971,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock",
+        "soft-rock"
+      ],
+      "duration_seconds": 183
+    },
+    {
+      "slug": "let-it-be",
+      "title": "Let It Be",
+      "artist": "The Beatles",
+      "year": 1970,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock",
+        "classic-rock"
+      ],
+      "duration_seconds": 243
     },
     {
       "slug": "as-long-as-you-love-me",
@@ -59,8 +126,231 @@
       "year": 1997,
       "cefr_level": "a2.1",
       "difficulty": "easy",
-      "genre": ["pop", "boy-band"],
+      "genre": [
+        "pop",
+        "boy-band"
+      ],
       "duration_seconds": 212
+    },
+    {
+      "slug": "i-want-it-that-way",
+      "title": "I Want It That Way",
+      "artist": "Backstreet Boys",
+      "year": 1999,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "pop",
+        "boy-band"
+      ],
+      "duration_seconds": 213
+    },
+    {
+      "slug": "have-you-ever-seen-the-rain",
+      "title": "Have You Ever Seen the Rain",
+      "artist": "Creedence Clearwater Revival",
+      "year": 1970,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock",
+        "classic-rock"
+      ],
+      "duration_seconds": 160
+    },
+    {
+      "slug": "thinking-out-loud",
+      "title": "Thinking Out Loud",
+      "artist": "Ed Sheeran",
+      "year": 2014,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "pop",
+        "soul"
+      ],
+      "duration_seconds": 281
+    },
+    {
+      "slug": "your-song",
+      "title": "Your Song",
+      "artist": "Elton John",
+      "year": 1970,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock",
+        "soft-rock"
+      ],
+      "duration_seconds": 241
+    },
+    {
+      "slug": "bad",
+      "title": "Bad",
+      "artist": "Michael Jackson",
+      "year": 1987,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "pop",
+        "funk"
+      ],
+      "duration_seconds": 247
+    },
+    {
+      "slug": "beat-it",
+      "title": "Beat It",
+      "artist": "Michael Jackson",
+      "year": 1982,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "pop",
+        "rock"
+      ],
+      "duration_seconds": 258
+    },
+    {
+      "slug": "billie-jean",
+      "title": "Billie Jean",
+      "artist": "Michael Jackson",
+      "year": 1982,
+      "cefr_level": "a2.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop",
+        "funk"
+      ],
+      "duration_seconds": 294
+    },
+    {
+      "slug": "bye-bye-bye",
+      "title": "Bye Bye Bye",
+      "artist": "NSYNC",
+      "year": 2000,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "pop",
+        "boy-band"
+      ],
+      "duration_seconds": 201
+    },
+    {
+      "slug": "its-gonna-be-me",
+      "title": "It's Gonna Be Me",
+      "artist": "NSYNC",
+      "year": 2000,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "pop",
+        "boy-band"
+      ],
+      "duration_seconds": 192
+    },
+    {
+      "slug": "we-are-the-champions",
+      "title": "We Are the Champions",
+      "artist": "Queen",
+      "year": 1977,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock",
+        "classic-rock"
+      ],
+      "duration_seconds": 180
+    },
+    {
+      "slug": "shake-it-off",
+      "title": "Shake It Off",
+      "artist": "Taylor Swift",
+      "year": 2014,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 219
+    },
+    {
+      "slug": "rocket-man",
+      "title": "Rocket Man",
+      "artist": "Elton John",
+      "year": 1972,
+      "cefr_level": "a2.2",
+      "difficulty": "medium",
+      "genre": [
+        "rock",
+        "soft-rock"
+      ],
+      "duration_seconds": 281
+    },
+    {
+      "slug": "landslide",
+      "title": "Landslide",
+      "artist": "Fleetwood Mac",
+      "year": 1975,
+      "cefr_level": "a2.2",
+      "difficulty": "medium",
+      "genre": [
+        "rock",
+        "folk-rock"
+      ],
+      "duration_seconds": 197
+    },
+    {
+      "slug": "thriller",
+      "title": "Thriller",
+      "artist": "Michael Jackson",
+      "year": 1982,
+      "cefr_level": "a2.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop",
+        "disco"
+      ],
+      "duration_seconds": 357
+    },
+    {
+      "slug": "higher",
+      "title": "Higher",
+      "artist": "Creed",
+      "year": 1999,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "rock",
+        "post-grunge"
+      ],
+      "duration_seconds": 304
+    },
+    {
+      "slug": "with-arms-wide-open",
+      "title": "With Arms Wide Open",
+      "artist": "Creed",
+      "year": 1999,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "rock",
+        "post-grunge"
+      ],
+      "duration_seconds": 232
+    },
+    {
+      "slug": "tiny-dancer",
+      "title": "Tiny Dancer",
+      "artist": "Elton John",
+      "year": 1971,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "rock",
+        "soft-rock"
+      ],
+      "duration_seconds": 376
     },
     {
       "slug": "wonderwall",
@@ -69,7 +359,10 @@
       "year": 1995,
       "cefr_level": "b1.1",
       "difficulty": "medium",
-      "genre": ["rock", "britpop"],
+      "genre": [
+        "rock",
+        "britpop"
+      ],
       "duration_seconds": 258
     }
   ]

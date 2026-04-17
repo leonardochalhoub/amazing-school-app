@@ -46,20 +46,8 @@
   "sing_along": {
     "prompts": [
       {
-        "label_en": "Sing the opening verse",
-        "label_pt": "Cante a abertura",
-        "lines": [
-          "I found a love for me",
-          "Darling, just dive right in",
-          "And follow my lead",
-          "Well, I found a girl, beautiful and sweet"
-        ],
-        "start_seconds": 2,
-        "style": "verse"
-      },
-      {
-        "label_en": "Sing the chorus — the iconic line",
-        "label_pt": "Cante o refrão — o verso icônico",
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
         "lines": [
           "Baby, I'm dancing in the dark",
           "With you between my arms",
@@ -68,41 +56,164 @@
         ],
         "start_seconds": 62,
         "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Listening to our favorite song",
+          "When I saw you in that dress, looking so beautiful",
+          "I don't deserve this",
+          "Darling, you look perfect tonight"
+        ],
+        "start_seconds": 175,
+        "style": "hook"
       }
     ]
   },
   "exercises": [
     {
       "type": "listen_and_fill",
-      "prompt_en": "Fill the blank in the chorus:",
-      "prompt_pt": "Complete a lacuna no refrão:",
-      "excerpt_before": "I found a",
-      "blank_hint": "female romantic partner",
-      "answer": "love",
-      "excerpt_after": "for me",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "found",
+      "excerpt_after": "a love, for me",
       "youtube_start": 2,
-      "youtube_end": 18
+      "youtube_end": 16
     },
     {
       "type": "translate_line",
-      "prompt_en": "Translate this line:",
-      "prompt_pt": "Traduza esta linha:",
-      "excerpt": "Baby, you look perfect tonight",
-      "model_answer_pt": "Querida, você está perfeita esta noite",
-      "teacher_note": "English uses 'look' where Portuguese uses 'estar' — important distinction from 'to be' (ser/estar)."
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I found a love, for me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        }
+      ]
     },
     {
       "type": "discussion",
-      "prompt_en": "Ed Sheeran describes the moment he met someone. Describe a moment you'll always remember — it doesn't have to be romantic.",
-      "prompt_pt": "Ed Sheeran descreve o momento em que conheceu alguém. Descreva um momento que você vai lembrar para sempre — não precisa ser romântico.",
+      "prompt_en": "If you had to summarize \"Perfect\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Perfect\" em uma frase para alguém que nunca ouviu, o que diria?",
       "target_vocab": [
-        "remember",
-        "moment",
-        "feel",
-        "first"
+        "perfect",
+        "found",
+        "hold",
+        "beautiful"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "perfect",
+          "pt": "perfeito(a)"
+        },
+        {
+          "en": "found",
+          "pt": "encontrou"
+        },
+        {
+          "en": "hold",
+          "pt": "segurar"
+        },
+        {
+          "en": "beautiful",
+          "pt": "linda / bonito(a)"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "a",
+        "for",
+        "love,",
+        "I",
+        "found",
+        "me"
+      ],
+      "answer": [
+        "I",
+        "found",
+        "a",
+        "love,",
+        "for",
+        "me"
+      ],
+      "youtube_start": 2
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "a love, for me",
+      "options": [
+        "darling",
+        "dive",
+        "found",
+        "right"
+      ],
+      "answer_index": 2,
+      "youtube_start": 2,
+      "youtube_end": 14
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"perfect\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"perfect\" na música inteira?",
+      "word": "perfect",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I found a love, for me",
+          "order": 0
+        },
+        {
+          "text": "When you said you looked a mess",
+          "order": 1
+        },
+        {
+          "text": "Barefoot on the grass",
+          "order": 2
+        }
       ]
     }
   ],
   "teaching_notes_md": "**Pedagogy:** Short words, slow pace, repetitive chorus — a safe first-time listening exercise. Vocabulary crosses into A2 when discussing the verse narrative.",
-  "copyright_notice": "Lyrics are property of Atlantic Records / Sony/ATV Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+  "copyright_notice": "Lyrics are property of Atlantic Records / Sony/ATV Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "timing_source": "lrclib"
 }

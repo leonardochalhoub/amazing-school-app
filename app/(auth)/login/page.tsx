@@ -58,28 +58,37 @@ export default function LoginPage() {
                 id="email"
                 name="email"
                 type="email"
+                autoComplete="username"
                 placeholder="you@example.com"
                 required
               />
             </div>
             <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <Label htmlFor="password">{t.auth.password}</Label>
-                <Link
-                  href="/forgot-password"
-                  className="text-xs text-primary hover:underline"
-                >
-                  {t.auth.forgotPassword}
-                </Link>
-              </div>
+              <Label htmlFor="password">{t.auth.password}</Label>
               <Input
                 id="password"
                 name="password"
                 type="password"
+                autoComplete="current-password"
                 placeholder="••••••••"
                 required
               />
+              <Link
+                href="/forgot-password"
+                className="inline-block text-xs text-primary hover:underline"
+              >
+                {t.auth.forgotPassword}
+              </Link>
             </div>
+            <label className="flex items-center gap-2 text-sm text-muted-foreground">
+              <input
+                type="checkbox"
+                name="remember"
+                defaultChecked
+                className="h-4 w-4 rounded border-border accent-primary"
+              />
+              {t.auth.rememberMe ?? "Remember me on this device"}
+            </label>
           </CardContent>
           <CardFooter className="flex flex-col gap-4">
             <Button type="submit" className="w-full" disabled={loading}>

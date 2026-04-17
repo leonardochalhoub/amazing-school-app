@@ -26,9 +26,9 @@ export default function StudentMusicIndex() {
       <header className="flex flex-col gap-1">
         <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
           <Music2 className="h-3.5 w-3.5" />
-          <span>Music catalog</span>
+          <span>Musics catalog</span>
         </div>
-        <h1 className="text-3xl font-semibold tracking-tight">Music</h1>
+        <h1 className="text-3xl font-semibold tracking-tight">Musics</h1>
         <p className="text-sm text-muted-foreground">
           {songs.length} songs · learn English through real tracks with
           exercises and synced captions.

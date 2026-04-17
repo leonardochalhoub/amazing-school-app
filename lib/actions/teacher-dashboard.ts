@@ -83,6 +83,18 @@ export interface RosterSummary {
   gender: "female" | "male" | null;
 }
 
+export interface RecentAssignmentRow {
+  assignmentId: string;
+  lessonSlug: string;
+  status: "assigned" | "skipped" | "completed";
+  assignedAt: string;
+  classroomId: string;
+  classroomName: string;
+  scope: "classroom-wide" | "per-student";
+  targetStudentId: string | null;
+  targetStudentName: string | null;
+}
+
 export interface TeacherOverview {
   classrooms: ClassroomSummary[];
   roster: RosterSummary[];
@@ -91,6 +103,7 @@ export interface TeacherOverview {
     lessonsAssigned: number;
     lessonsCompleted: number;
   };
+  recentAssignments: RecentAssignmentRow[];
 }
 
 export interface TeacherDashboardKpis {
@@ -321,7 +334,8 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   const zeroKpis = { students: 0, lessonsAssigned: 0, lessonsCompleted: 0 };
-  if (!user) return { classrooms: [], roster: [], kpis: zeroKpis };
+  if (!user)
+    return { classrooms: [], roster: [], kpis: zeroKpis, recentAssignments: [] };
 
   const admin = createAdminClient();
 
@@ -442,6 +456,81 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
     lessonsCompleted = completedRes.count ?? 0;
   }
 
+  let recentAssignments: RecentAssignmentRow[] = [];
+  if (classroomIds.length > 0) {
+    const { data: recentRows } = await admin
+      .from("lesson_assignments")
+      .select(
+        "id, lesson_slug, status, assigned_at, classroom_id, student_id, roster_student_id"
+      )
+      .in("classroom_id", classroomIds)
+      .order("assigned_at", { ascending: false })
+      .limit(8);
+
+    const authStudentIds = Array.from(
+      new Set(
+        (recentRows ?? [])
+          .map((r) => (r as { student_id: string | null }).student_id)
+          .filter((x): x is string => !!x)
+      )
+    );
+    const rosterIdSet = Array.from(
+      new Set(
+        (recentRows ?? [])
+          .map(
+            (r) => (r as { roster_student_id: string | null }).roster_student_id
+          )
+          .filter((x): x is string => !!x)
+      )
+    );
+
+    const [authProfiles, rosterNames] = await Promise.all([
+      authStudentIds.length > 0
+        ? admin
+            .from("profiles")
+            .select("id, full_name")
+            .in("id", authStudentIds)
+        : Promise.resolve({ data: [] as { id: string; full_name: string }[] }),
+      rosterIdSet.length > 0
+        ? admin
+            .from("roster_students")
+            .select("id, full_name")
+            .in("id", rosterIdSet)
+        : Promise.resolve({ data: [] as { id: string; full_name: string }[] }),
+    ]);
+    const authNameById = new Map(
+      (authProfiles.data ?? []).map((p) => [p.id, p.full_name])
+    );
+    const rosterNameById = new Map(
+      (rosterNames.data ?? []).map((p) => [p.id, p.full_name])
+    );
+
+    recentAssignments = (recentRows ?? []).map((a) => {
+      const cid = a.classroom_id as string;
+      const sid = (a as { student_id: string | null }).student_id;
+      const rid = (a as { roster_student_id: string | null }).roster_student_id;
+      const scope: "classroom-wide" | "per-student" =
+        sid === null && rid === null ? "classroom-wide" : "per-student";
+      const targetId = sid ?? rid ?? null;
+      const targetName = sid
+        ? authNameById.get(sid) ?? null
+        : rid
+          ? rosterNameById.get(rid) ?? null
+          : null;
+      return {
+        assignmentId: a.id as string,
+        lessonSlug: a.lesson_slug as string,
+        status: a.status as "assigned" | "skipped" | "completed",
+        assignedAt: a.assigned_at as string,
+        classroomId: cid,
+        classroomName: classroomNameById.get(cid) ?? "",
+        scope,
+        targetStudentId: targetId,
+        targetStudentName: targetName,
+      };
+    });
+  }
+
   return {
     classrooms,
     roster,
@@ -450,5 +539,6 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
       lessonsAssigned,
       lessonsCompleted,
     },
+    recentAssignments,
   };
 }

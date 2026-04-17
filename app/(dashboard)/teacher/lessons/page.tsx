@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { BookOpen, Sparkles } from "lucide-react";
+import { BookOpen, Sparkles, Plus, Pencil } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { listLessonDrafts } from "@/lib/actions/lesson-drafts";
+import { listMyTeacherLessons } from "@/lib/actions/teacher-lessons";
 import { LessonRow } from "@/components/teacher/lesson-row";
 import { CEFR_LEVELS, SKILLS } from "@/lib/content/schema";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export default async function TeacherLessonsPage({
   searchParams,
@@ -80,8 +82,16 @@ export default async function TeacherLessonsPage({
           <Badge variant="outline" className="text-[11px]">
             {draftCount} drafts
           </Badge>
+          <Link href="/teacher/lessons/new">
+            <Button size="sm" className="gap-1.5">
+              <Plus className="h-4 w-4" />
+              New lesson
+            </Button>
+          </Link>
         </div>
       </header>
+
+      <MyLessonsSection />
 
       <nav className="flex flex-wrap gap-2 rounded-xl border border-border bg-card p-3 shadow-xs">
         <FilterGroup label="CEFR" name="cefr" active={filters.cefrLevel}>
@@ -207,4 +217,66 @@ function urlWith(key: string, value: string): string {
 
 function urlWithout(_key: string): string {
   return `/teacher/lessons`;
+}
+
+async function MyLessonsSection() {
+  const mine = await listMyTeacherLessons();
+  if (mine.length === 0) {
+    return (
+      <section className="rounded-xl border border-dashed border-primary/30 bg-primary/5 p-5">
+        <div className="flex items-center justify-between gap-3">
+          <div>
+            <h2 className="text-base font-semibold">Your own lessons</h2>
+            <p className="mt-1 text-xs text-muted-foreground">
+              Build freeform lessons with your own exercise blocks. Only you
+              can see them until you assign them.
+            </p>
+          </div>
+          <Link href="/teacher/lessons/new">
+            <Button size="sm" className="gap-1.5">
+              <Plus className="h-4 w-4" />
+              Create
+            </Button>
+          </Link>
+        </div>
+      </section>
+    );
+  }
+  return (
+    <section className="space-y-3">
+      <h2 className="text-lg font-semibold">Your own lessons</h2>
+      <ul className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+        {mine.map((l) => (
+          <li
+            key={l.id}
+            className="rounded-xl border border-border bg-card p-4 shadow-xs"
+          >
+            <div className="flex items-start justify-between gap-2">
+              <div className="min-w-0">
+                <p className="truncate font-medium">{l.title}</p>
+                <p className="mt-0.5 truncate text-xs text-muted-foreground">
+                  {l.cefr_level ? l.cefr_level.toUpperCase() : "—"} ·{" "}
+                  {l.category ?? "custom"} · {l.exercises.length} exercises
+                </p>
+              </div>
+              <Badge
+                variant={l.published ? "default" : "outline"}
+                className="shrink-0 text-[10px]"
+              >
+                {l.published ? "Published" : "Draft"}
+              </Badge>
+            </div>
+            <div className="mt-3 flex justify-end">
+              <Link href={`/teacher/lessons/edit/${l.slug}`}>
+                <Button size="sm" variant="outline" className="gap-1.5 text-xs">
+                  <Pencil className="h-3 w-3" />
+                  Edit
+                </Button>
+              </Link>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
 }

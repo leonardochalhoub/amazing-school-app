@@ -1,0 +1,211 @@
+{
+  "slug": "billie-jean",
+  "title": "Billie Jean",
+  "artist": "Michael Jackson",
+  "year": 1982,
+  "album": "Thriller",
+  "genre": [
+    "pop",
+    "funk"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 294,
+  "youtube_id": "Zi_XLOBDo_Y",
+  "full_lyrics_url": "https://www.letras.mus.br/michael-jackson/14407/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Narrative storytelling in past simple + repeated denial chorus. A2 challenge: follow a short story told in tense.",
+  "vocab_hooks": [
+    {
+      "term": "lover",
+      "pt": "amante / namorada",
+      "note": "noun — romantic partner"
+    },
+    {
+      "term": "kid",
+      "pt": "criança / filho",
+      "note": "informal noun"
+    },
+    {
+      "term": "claim",
+      "pt": "afirmar / alegar",
+      "note": "verb — to say something is true"
+    },
+    {
+      "term": "beware",
+      "pt": "cuidado",
+      "note": "imperative-only verb"
+    }
+  ],
+  "grammar_callouts": [
+    "past simple narration: she said, I was",
+    "'but the kid is not my son' — present simple denial",
+    "imperative 'Be careful'"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Who will",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dance",
+      "excerpt_after": "on the floor in the round?\"",
+      "youtube_start": 38,
+      "youtube_end": 52
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "She said I am the one",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "she's",
+          "full": "she is"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Billie Jean\" was released in 1982. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Billie Jean\" foi lançada em 1982. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "lover",
+        "kid",
+        "claim",
+        "beware"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "lover",
+          "pt": "amante / namorada"
+        },
+        {
+          "en": "kid",
+          "pt": "criança / filho"
+        },
+        {
+          "en": "claim",
+          "pt": "afirmar / alegar"
+        },
+        {
+          "en": "beware",
+          "pt": "cuidado"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "one",
+        "said",
+        "the",
+        "am",
+        "She",
+        "I"
+      ],
+      "answer": [
+        "She",
+        "said",
+        "I",
+        "am",
+        "the",
+        "one"
+      ],
+      "youtube_start": 43
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Who will",
+      "excerpt_after": "on the floor in the round?\"",
+      "options": [
+        "beauty",
+        "dance",
+        "more",
+        "queen"
+      ],
+      "answer_index": 1,
+      "youtube_start": 38,
+      "youtube_end": 50
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"lover\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"lover\" na música inteira?",
+      "word": "lover",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "She said I am the one",
+          "order": 0
+        },
+        {
+          "text": "Just the smell of sweet perfume",
+          "order": 1
+        },
+        {
+          "text": "But the kid is not my son",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Classic storytelling structure — setup, conflict, denial. Pair with a creative-writing exercise: retell the story from Billie Jean's perspective.",
+  "copyright_notice": "Lyrics are property of Mijac Music / Warner Chappell. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "But the kid is not my son",
+          "(Hee-hee-hee, hee-hee-hee, ooh!) no, no",
+          "For 40 days and for 40 nights, I was on her side",
+          "But who can stand when she's in demand? Her schemes and plans"
+        ],
+        "start_seconds": 103,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "But the kid is not my son",
+          "No-no-no, no-no-no-no-no-no (hoo)",
+          "Billie Jean is not my lover, uh",
+          "She's just a girl who claims that I am the one (oh, baby)"
+        ],
+        "start_seconds": 177,
+        "style": "chorus"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
+}

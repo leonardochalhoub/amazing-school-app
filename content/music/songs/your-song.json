@@ -1,0 +1,217 @@
+{
+  "slug": "your-song",
+  "title": "Your Song",
+  "artist": "Elton John",
+  "year": 1970,
+  "album": "Elton John",
+  "genre": [
+    "rock",
+    "soft-rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 241,
+  "youtube_id": "DPA-u2Eq3XQ",
+  "full_lyrics_url": "https://www.letras.mus.br/elton-john/your-song/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Conversational self-deprecating narrative with lots of modal verbs — 'I hope', 'I wish', 'you can tell'. A2 conversational stretch.",
+  "vocab_hooks": [
+    {
+      "term": "hope",
+      "pt": "esperar / esperança",
+      "note": "verb and noun"
+    },
+    {
+      "term": "wonderful",
+      "pt": "maravilhoso",
+      "note": "expressive adjective"
+    },
+    {
+      "term": "kind of",
+      "pt": "meio que",
+      "note": "softener — common in casual speech"
+    },
+    {
+      "term": "sweetest",
+      "pt": "o mais doce",
+      "note": "superlative of 'sweet'"
+    }
+  ],
+  "grammar_callouts": [
+    "I hope + clause",
+    "superlative adjectives: sweetest",
+    "modal 'would' for polite hypothetical"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It's a",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "little",
+      "excerpt_after": "bit funny",
+      "youtube_start": 8,
+      "youtube_end": 22
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If I was a sculptor, ha",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Your Song\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Your Song\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "hope",
+        "wonderful",
+        "kind of",
+        "sweetest"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "hope",
+          "pt": "esperar / esperança"
+        },
+        {
+          "en": "wonderful",
+          "pt": "maravilhoso"
+        },
+        {
+          "en": "kind of",
+          "pt": "meio que"
+        },
+        {
+          "en": "sweetest",
+          "pt": "o mais doce"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "funny",
+        "It's",
+        "bit",
+        "little",
+        "a"
+      ],
+      "answer": [
+        "It's",
+        "a",
+        "little",
+        "bit",
+        "funny"
+      ],
+      "youtube_start": 8
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's a",
+      "excerpt_after": "bit funny",
+      "options": [
+        "feeling",
+        "funny",
+        "inside",
+        "little"
+      ],
+      "answer_index": 3,
+      "youtube_start": 8,
+      "youtube_end": 20
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"hope\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"hope\" na música inteira?",
+      "word": "hope",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "It's a little bit funny",
+          "order": 0
+        },
+        {
+          "text": "I hope you don't mind",
+          "order": 1
+        },
+        {
+          "text": "Yours are the sweetest eyes I've ever seen",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Verses show the narrator doubting his ability to write — great entry into hedging language ('kind of funny', 'I don't have much money').",
+  "copyright_notice": "Lyrics are property of Universal Music Publishing Group. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I hope you don't mind",
+          "I hope you don't mind",
+          "That I put down in the words",
+          "How wonderful life is while you're in the world"
+        ],
+        "start_seconds": 86,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "It's a little bit funny",
+          "This feeling inside",
+          "I'm not one of those who can easily hide",
+          "I don't have much money, but boy if I did"
+        ],
+        "start_seconds": 8,
+        "style": "verse"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
+}

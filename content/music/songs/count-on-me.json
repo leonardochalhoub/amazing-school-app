@@ -4,7 +4,10 @@
   "artist": "Bruno Mars",
   "year": 2010,
   "album": "Doo-Wops & Hooligans",
-  "genre": ["pop", "acoustic-pop"],
+  "genre": [
+    "pop",
+    "acoustic-pop"
+  ],
   "cefr_level": "a1.1",
   "difficulty": "easy",
   "tempo": "mid",
@@ -14,10 +17,26 @@
   "full_lyrics_source": "Letras.mus.br (licensed)",
   "why_this_song": "Friendship-themed with first-conditional structures and the idiom 'count on someone'. Very clear diction — Bruno Mars enunciates every syllable.",
   "vocab_hooks": [
-    { "term": "count on", "pt": "contar com", "note": "phrasal verb — central to the song" },
-    { "term": "friend", "pt": "amigo(a)", "note": "A1 relationship noun" },
-    { "term": "sail", "pt": "velejar / navegar", "note": "verb; metaphorical in the song" },
-    { "term": "lost", "pt": "perdido(a)", "note": "past participle of 'lose'" }
+    {
+      "term": "count on",
+      "pt": "contar com",
+      "note": "phrasal verb — central to the song"
+    },
+    {
+      "term": "friend",
+      "pt": "amigo(a)",
+      "note": "A1 relationship noun"
+    },
+    {
+      "term": "sail",
+      "pt": "velejar / navegar",
+      "note": "verb; metaphorical in the song"
+    },
+    {
+      "term": "lost",
+      "pt": "perdido(a)",
+      "note": "past participle of 'lose'"
+    }
   ],
   "grammar_callouts": [
     "first conditional: If you ever X, I'll Y",
@@ -27,30 +46,174 @@
   "exercises": [
     {
       "type": "listen_and_fill",
-      "prompt_en": "Fill the blank in the chorus:",
-      "prompt_pt": "Complete a lacuna no refrão:",
-      "excerpt_before": "You can count on me like one, two, three, I'll be",
-      "blank_hint": "adverb meaning 'at this location'",
-      "answer": "there",
-      "excerpt_after": "",
-      "youtube_start": 38,
-      "youtube_end": 55
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Count on Me -",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "bruno",
+      "excerpt_after": "Mars",
+      "youtube_start": 0,
+      "youtube_end": 14
     },
     {
       "type": "translate_line",
-      "prompt_en": "Translate this line:",
-      "prompt_pt": "Traduza esta linha:",
-      "excerpt": "You can count on me",
-      "model_answer_pt": "Você pode contar comigo",
-      "teacher_note": "PT uses 'contar comigo'; note the preposition difference: EN 'on' vs PT 'com'."
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'll sail the world to find you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        }
+      ]
     },
     {
       "type": "discussion",
-      "prompt_en": "Who can you count on in your life? Describe that person in three words.",
-      "prompt_pt": "Com quem você pode contar na sua vida? Descreva essa pessoa em três palavras.",
-      "target_vocab": ["friend", "family", "kind", "help"]
+      "prompt_en": "Describe the mood of \"Count on Me\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Count on Me\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "count on",
+        "friend",
+        "sail",
+        "lost"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "count on",
+          "pt": "contar com"
+        },
+        {
+          "en": "friend",
+          "pt": "amigo(a)"
+        },
+        {
+          "en": "sail",
+          "pt": "velejar / navegar"
+        },
+        {
+          "en": "lost",
+          "pt": "perdido(a)"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "on",
+        "Mars",
+        "Bruno",
+        "-",
+        "Me",
+        "Count"
+      ],
+      "answer": [
+        "Count",
+        "on",
+        "Me",
+        "-",
+        "Bruno",
+        "Mars"
+      ],
+      "youtube_start": 0
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Count on Me -",
+      "excerpt_after": "Mars",
+      "options": [
+        "bruno",
+        "count",
+        "mars",
+        "oh-oh-oh"
+      ],
+      "answer_index": 0,
+      "youtube_start": 0,
+      "youtube_end": 12
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"count\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"count\" na música inteira?",
+      "word": "count",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Count on Me - Bruno Mars",
+          "order": 0
+        },
+        {
+          "text": "And I know when I need it",
+          "order": 1
+        },
+        {
+          "text": "We'll find out what we're made of",
+          "order": 2
+        }
+      ]
     }
   ],
   "teaching_notes_md": "**Pedagogy:** The counting (one, two, three) reinforces basic numbers for A1.1. The first-conditional refrain gives four clean reps in 3 minutes.",
-  "copyright_notice": "Lyrics are property of Warner Chappell Music. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+  "copyright_notice": "Lyrics are property of Warner Chappell Music. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "And I know when I need it",
+          "I can count on you like 4, 3, 2, and you'll be there",
+          "'Cause that's what friends are supposed to do, oh, yeah",
+          "Ooh-ooh-ooh-ooh-ooh"
+        ],
+        "start_seconds": 45,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "Count on Me - Bruno Mars",
+          "Oh-oh-oh",
+          "If you ever find yourself stuck in the middle of the sea",
+          "I'll sail the world to find you"
+        ],
+        "start_seconds": 0,
+        "style": "verse"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
 }

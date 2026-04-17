@@ -1,0 +1,211 @@
+{
+  "slug": "landslide",
+  "title": "Landslide",
+  "artist": "Fleetwood Mac",
+  "year": 1975,
+  "album": "Fleetwood Mac",
+  "genre": [
+    "rock",
+    "folk-rock"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 197,
+  "youtube_id": "ZFFqSu8FcDA",
+  "full_lyrics_url": "https://www.letras.mus.br/fleetwood-mac/landslide/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Reflective past and present simple contrasting — 'Well, I've been afraid of changing'. Great for introducing present perfect continuous.",
+  "vocab_hooks": [
+    {
+      "term": "landslide",
+      "pt": "deslizamento de terra",
+      "note": "metaphorical — sweeping change"
+    },
+    {
+      "term": "afraid",
+      "pt": "com medo",
+      "note": "adjective; 'afraid of + gerund'"
+    },
+    {
+      "term": "building",
+      "pt": "construindo",
+      "note": "gerund of 'build'"
+    },
+    {
+      "term": "reflection",
+      "pt": "reflexo",
+      "note": "noun; also figurative"
+    }
+  ],
+  "grammar_callouts": [
+    "present perfect: I've been afraid",
+    "afraid of + gerund (changing)",
+    "could I? — modal question"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "climbed",
+      "excerpt_after": "a mountain and I turned around",
+      "youtube_start": 18,
+      "youtube_end": 32
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Well, I've been afraid of changin'",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Landslide\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Landslide\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "landslide",
+        "afraid",
+        "building",
+        "reflection"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "landslide",
+          "pt": "deslizamento de terra"
+        },
+        {
+          "en": "afraid",
+          "pt": "com medo"
+        },
+        {
+          "en": "building",
+          "pt": "construindo"
+        },
+        {
+          "en": "reflection",
+          "pt": "reflexo"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "me",
+        "landslide",
+        "'Til",
+        "brought",
+        "down"
+      ],
+      "answer": [
+        "'Til",
+        "the",
+        "landslide",
+        "brought",
+        "me",
+        "down"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "my love, I took it down",
+      "options": [
+        "climbed",
+        "down",
+        "took",
+        "turned"
+      ],
+      "answer_index": 2,
+      "youtube_start": 13,
+      "youtube_end": 25
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"landslide\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"landslide\" na música inteira?",
+      "word": "landslide",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I took my love, I took it down",
+          "order": 0
+        },
+        {
+          "text": "Well, I've been afraid of changin'",
+          "order": 1
+        },
+        {
+          "text": "Even children get older",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Slow acoustic performance makes every word audible. Lyrics are introspective — great for pair discussion about growing up.",
+  "copyright_notice": "Lyrics are property of Warner Chappell Music. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Well, I've been afraid of changin'",
+          "'Cause I've built my life around you",
+          "But time makes you bolder",
+          "Even children get older"
+        ],
+        "start_seconds": 71,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Well, the landslide bring it down",
+          "And if you see my reflection in the snow-covered hills",
+          "Well, the landslide bring it down",
+          "Oh-ohh, the landslide bring it down"
+        ],
+        "start_seconds": 167,
+        "style": "hook"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
+}

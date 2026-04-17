@@ -52,7 +52,7 @@ export function Navbar({ fullName, role }: NavbarProps) {
       : {
           dashboard: "Dashboard",
           lessons: "Lessons",
-          music: "Music",
+          music: "Musics",
           aiTutor: "AI Tutor",
           leaderboard: "Leaderboard",
           profile: "Profile",
@@ -75,6 +75,10 @@ export function Navbar({ fullName, role }: NavbarProps) {
   const teacherNav: { href: string; label: string }[] = [
     { href: "/teacher/lessons", label: labels.lessons },
     { href: "/teacher/music", label: labels.music },
+    {
+      href: "/teacher/bank",
+      label: locale === "pt-BR" ? "Banco" : "Bank",
+    },
   ];
 
   const nav = role === "teacher" ? teacherNav : studentNav;

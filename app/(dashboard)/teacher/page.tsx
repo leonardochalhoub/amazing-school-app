@@ -4,7 +4,13 @@ import {
   ClipboardList,
   CheckCircle2,
   GraduationCap,
+  BookOpen,
+  Music2,
+  UserRound,
 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { findMeta as findLessonMeta } from "@/lib/content/loader";
+import { fromAssignmentSlug, getMusic } from "@/lib/content/music";
 import { AddClassroomButton } from "@/components/teacher/add-classroom-button";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
@@ -39,13 +45,43 @@ export default async function TeacherDashboard() {
     .eq("id", user.id)
     .maybeSingle();
 
-  const [{ classrooms, roster, kpis }, publishedLessons, upcomingBirthdays] =
-    await Promise.all([
-      getTeacherOverview(),
-      listLessonDrafts({ status: "published" }),
-      getUpcomingBirthdays(14),
-    ]);
+  const [
+    { classrooms, roster, kpis, recentAssignments },
+    publishedLessons,
+    upcomingBirthdays,
+  ] = await Promise.all([
+    getTeacherOverview(),
+    listLessonDrafts({ status: "published" }),
+    getUpcomingBirthdays(14),
+  ]);
   const musics = listMusic();
+
+  const resolvedRecent = recentAssignments.map((a) => {
+    const { kind, slug } = fromAssignmentSlug(a.lessonSlug);
+    if (kind === "music") {
+      const m = getMusic(slug);
+      return {
+        ...a,
+        kind,
+        slug,
+        title: m ? `${m.artist} — ${m.title}` : slug,
+        cefr: m?.cefr_level ?? null,
+        category: "music",
+        minutes: m ? Math.max(5, Math.round((m.duration_seconds / 60) * 2)) : null,
+      };
+    }
+    const draft = publishedLessons.find((l) => l.slug === slug);
+    const fileMeta = findLessonMeta(slug);
+    return {
+      ...a,
+      kind: "lesson" as const,
+      slug,
+      title: draft?.title ?? fileMeta?.title ?? slug,
+      cefr: (draft?.cefr_level ?? fileMeta?.cefr_level) ?? null,
+      category: draft?.category ?? fileMeta?.category ?? null,
+      minutes: fileMeta?.estimated_minutes ?? null,
+    };
+  });
   const firstName = profile?.full_name?.split(" ")[0] ?? "there";
   const classroomOptions = classrooms.map((c) => ({ id: c.id, name: c.name }));
   const studentOptions = roster.map((r) => ({
@@ -175,6 +211,81 @@ export default async function TeacherDashboard() {
           <AddClassroomCard />
         </div>
       </section>
+
+      {resolvedRecent.length > 0 ? (
+        <section aria-labelledby="recent-heading" className="space-y-3">
+          <h2 id="recent-heading" className="text-xl font-bold tracking-tight">
+            <TeacherI18nClient en="Recent assignments" pt="Atribuições recentes" />
+          </h2>
+          <ul className="space-y-2">
+            {resolvedRecent.map((a) => {
+              const href =
+                a.kind === "music"
+                  ? `/student/music/${a.slug}`
+                  : `/student/lessons/${a.slug}`;
+              return (
+                <li
+                  key={a.assignmentId}
+                  className="flex flex-wrap items-center gap-3 rounded-xl border border-border bg-card p-3 shadow-xs"
+                >
+                  {a.kind === "music" ? (
+                    <Music2 className="h-4 w-4 shrink-0 text-primary" />
+                  ) : (
+                    <BookOpen className="h-4 w-4 shrink-0 text-muted-foreground" />
+                  )}
+                  <div className="min-w-0 flex-1">
+                    <Link
+                      href={href}
+                      className="truncate text-sm font-semibold hover:text-primary"
+                    >
+                      {a.title}
+                    </Link>
+                    <p className="mt-0.5 flex flex-wrap gap-x-1.5 gap-y-0.5 text-[11px] text-muted-foreground">
+                      {a.cefr ? <span>{a.cefr.toUpperCase()}</span> : null}
+                      {a.cefr && a.category ? <span>·</span> : null}
+                      {a.category ? <span>{a.category}</span> : null}
+                      {a.minutes ? <span>·</span> : null}
+                      {a.minutes ? (
+                        <span className="tabular-nums">{a.minutes} min</span>
+                      ) : null}
+                      <span>·</span>
+                      <span className="inline-flex items-center gap-1">
+                        {a.scope === "classroom-wide" ? (
+                          <Users className="h-3 w-3" />
+                        ) : (
+                          <UserRound className="h-3 w-3" />
+                        )}
+                        {a.scope === "classroom-wide"
+                          ? `Whole class (${a.classroomName})`
+                          : `Assigned to ${a.targetStudentName ?? "student"}`}
+                      </span>
+                      <span>·</span>
+                      <span>
+                        {new Date(a.assignedAt).toLocaleString("en-US", {
+                          dateStyle: "medium",
+                          timeStyle: "short",
+                        })}
+                      </span>
+                    </p>
+                  </div>
+                  <Badge
+                    variant={
+                      a.status === "completed"
+                        ? "default"
+                        : a.status === "skipped"
+                          ? "outline"
+                          : "secondary"
+                    }
+                    className="text-[10px]"
+                  >
+                    {a.status}
+                  </Badge>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ) : null}
     </div>
   );
 }

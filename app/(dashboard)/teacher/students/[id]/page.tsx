@@ -166,6 +166,9 @@ export default async function RosterStudentDetailPage({
                 notes={student.notes}
                 ageGroup={student.age_group}
                 gender={student.gender}
+                birthday={
+                  (student as { birthday?: string | null }).birthday ?? null
+                }
                 hasAvatar={student.has_avatar}
                 classrooms={classroomList}
               />

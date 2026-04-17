@@ -1,0 +1,215 @@
+{
+  "slug": "its-gonna-be-me",
+  "title": "It's Gonna Be Me",
+  "artist": "NSYNC",
+  "year": 2000,
+  "album": "No Strings Attached",
+  "genre": [
+    "pop",
+    "boy-band"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 192,
+  "youtube_id": "GQMlWwIXg3M",
+  "full_lyrics_url": "https://www.letras.mus.br/nsync/its-gonna-be-me/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Future 'gonna' form repeated hook ('it's gonna be me') — A2 drill on informal future + pronoun emphasis.",
+  "vocab_hooks": [
+    {
+      "term": "gonna",
+      "pt": "vou / vai",
+      "note": "reduction of 'going to'"
+    },
+    {
+      "term": "right",
+      "pt": "certo / direito",
+      "note": "adverb/adjective/noun"
+    },
+    {
+      "term": "tough",
+      "pt": "durão",
+      "note": "adjective; silent 'gh'"
+    },
+    {
+      "term": "wait",
+      "pt": "esperar",
+      "note": "verb — 'wait for'"
+    }
+  ],
+  "grammar_callouts": [
+    "informal future: gonna = going to",
+    "'it's gonna be me' — cleft-like emphasis",
+    "modal 'will' vs 'gonna' register"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It's",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "be me",
+      "youtube_start": 4,
+      "youtube_end": 18
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You might've been hurt, babe",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "you've",
+          "full": "you have"
+        },
+        {
+          "short": "that's",
+          "full": "that is"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"It's Gonna Be Me\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"It's Gonna Be Me\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "gonna",
+        "right",
+        "tough",
+        "wait"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "gonna",
+          "pt": "vou / vai"
+        },
+        {
+          "en": "right",
+          "pt": "certo / direito"
+        },
+        {
+          "en": "tough",
+          "pt": "durão"
+        },
+        {
+          "en": "wait",
+          "pt": "esperar"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "be",
+        "gonna",
+        "me",
+        "It's"
+      ],
+      "answer": [
+        "It's",
+        "gonna",
+        "be",
+        "me"
+      ],
+      "youtube_start": 4
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's",
+      "excerpt_after": "be me",
+      "options": [
+        "been",
+        "gonna",
+        "mightve",
+        "yeah"
+      ],
+      "answer_index": 1,
+      "youtube_start": 4,
+      "youtube_end": 16
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"gonna\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"gonna\" na música inteira?",
+      "word": "gonna",
+      "answer": 14
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "It's gonna be me",
+          "order": 0
+        },
+        {
+          "text": "You're just too blind (Too blind), too see",
+          "order": 1
+        },
+        {
+          "text": "Don't wanna lose it",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Famous 'me' pronunciation (sounds like 'meee') — fun hook for vowel-length practice.",
+  "copyright_notice": "Lyrics are property of Jive Records / Zomba Music. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "It's gonna be me",
+          "Ooh, yeah",
+          "You might've been hurt, babe",
+          "That ain't no lie"
+        ],
+        "start_seconds": 4,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Every little thing I do",
+          "Never seems enough for you",
+          "You don't wanna lose it again",
+          "But I'm not like them"
+        ],
+        "start_seconds": 35,
+        "style": "hook"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
+}

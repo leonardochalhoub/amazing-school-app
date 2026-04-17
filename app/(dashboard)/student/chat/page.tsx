@@ -1,5 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
-import { checkRateLimit } from "@/lib/ai/rate-limit";
+import { peekRemaining } from "@/lib/ai/rate-limit";
 import { ChatInterface } from "@/components/chat/chat-interface";
 
 export default async function ChatPage() {
@@ -10,7 +10,7 @@ export default async function ChatPage() {
 
   if (!user) return null;
 
-  const { remaining } = await checkRateLimit(supabase, user.id);
+  const remaining = await peekRemaining(supabase, user.id);
 
   // Get or create a conversation
   let { data: conversation } = await supabase

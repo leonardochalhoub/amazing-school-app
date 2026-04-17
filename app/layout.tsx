@@ -7,6 +7,7 @@ import {
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n/context";
+import { CookieConsent } from "@/components/shared/cookie-consent";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -47,7 +48,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider>
-          <I18nProvider>{children}</I18nProvider>
+          <I18nProvider>
+            {children}
+            <CookieConsent />
+          </I18nProvider>
         </ThemeProvider>
         <Toaster richColors position="top-right" closeButton />
       </body>

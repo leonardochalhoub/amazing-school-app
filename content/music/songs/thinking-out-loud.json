@@ -1,0 +1,214 @@
+{
+  "slug": "thinking-out-loud",
+  "title": "Thinking Out Loud",
+  "artist": "Ed Sheeran",
+  "year": 2014,
+  "album": "x (Multiply)",
+  "genre": [
+    "pop",
+    "soul"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 281,
+  "youtube_id": "lp-EO5I60KA",
+  "full_lyrics_url": "https://www.letras.mus.br/ed-sheeran/thinking-out-loud/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Romantic narrative with future tense and conditionals. Excellent for A2 students practicing 'will' + 'when' time clauses.",
+  "vocab_hooks": [
+    {
+      "term": "fall",
+      "pt": "cair / apaixonar-se",
+      "note": "phrasal 'fall in love'"
+    },
+    {
+      "term": "strangers",
+      "pt": "estranhos / desconhecidos",
+      "note": "plural noun"
+    },
+    {
+      "term": "weight",
+      "pt": "peso",
+      "note": "noun; silent 'gh'"
+    },
+    {
+      "term": "memory",
+      "pt": "memória",
+      "note": "plural: memories"
+    }
+  ],
+  "grammar_callouts": [
+    "future with 'will' + 'when' clauses",
+    "conditional 'if' + present simple",
+    "irregular past: fell, knew, meant"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I can't",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sweep",
+      "excerpt_after": "you off of your feet",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And, darling, I will",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Thinking Out Loud\" was released in 2014. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Thinking Out Loud\" foi lançada em 2014. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "fall",
+        "strangers",
+        "weight",
+        "memory"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "fall",
+          "pt": "cair / apaixonar-se"
+        },
+        {
+          "en": "strangers",
+          "pt": "estranhos / desconhecidos"
+        },
+        {
+          "en": "weight",
+          "pt": "peso"
+        },
+        {
+          "en": "memory",
+          "pt": "memória"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "will",
+        "And,",
+        "darling,"
+      ],
+      "answer": [
+        "And,",
+        "darling,",
+        "I",
+        "will"
+      ],
+      "youtube_start": 23
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I",
+      "excerpt_after": "sweep you off of your feet",
+      "options": [
+        "cant",
+        "dont",
+        "legs",
+        "work"
+      ],
+      "answer_index": 0,
+      "youtube_start": 7,
+      "youtube_end": 19
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"fall\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"fall\" na música inteira?",
+      "word": "fall",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Will your eyes still smile from your cheeks?",
+          "order": 0
+        },
+        {
+          "text": "Take me into your loving arms",
+          "order": 1
+        },
+        {
+          "text": "People fall in love in mysterious ways",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Clear diction, slow pace. Teaches the classic 'I will... when...' future-conditional pattern repeated throughout.",
+  "copyright_notice": "Lyrics are property of Sony/ATV Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Take me into your loving arms",
+          "Kiss me under the light of a thousand stars",
+          "Place your head on my beating heart",
+          "I'm thinking out loud"
+        ],
+        "start_seconds": 77,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "Will your eyes still smile from your cheeks?",
+          "And, darling, I will",
+          "Be loving you 'til we're 70"
+        ],
+        "start_seconds": 19,
+        "style": "verse"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
+}

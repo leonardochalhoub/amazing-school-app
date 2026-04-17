@@ -1,0 +1,207 @@
+{
+  "slug": "tiny-dancer",
+  "title": "Tiny Dancer",
+  "artist": "Elton John",
+  "year": 1971,
+  "album": "Madman Across the Water",
+  "genre": [
+    "rock",
+    "soft-rock"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 376,
+  "youtube_id": "yYcyacLRPNs",
+  "full_lyrics_url": "https://www.letras.mus.br/elton-john/tiny-dancer/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Storytelling verses with compound noun phrases ('blue-jean baby', 'L.A. lady'). B1 challenge: parse layered descriptions.",
+  "vocab_hooks": [
+    {
+      "term": "seamstress",
+      "pt": "costureira",
+      "note": "B1 noun — person who sews"
+    },
+    {
+      "term": "dancer",
+      "pt": "dançarino(a)",
+      "note": "-er suffix for agents"
+    },
+    {
+      "term": "ballerina",
+      "pt": "bailarina",
+      "note": "borrowed from Italian"
+    },
+    {
+      "term": "hold me closer",
+      "pt": "me abrace mais perto",
+      "note": "imperative + comparative adverb"
+    }
+  ],
+  "grammar_callouts": [
+    "imperative + comparative: hold me closer",
+    "present simple habitual actions",
+    "compound noun phrases: blue-jean baby"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You'll",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "marry",
+      "excerpt_after": "a music man",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You'll marry a music man",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you'll",
+          "full": "you will"
+        },
+        {
+          "short": "she's",
+          "full": "she is"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Tiny Dancer\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Tiny Dancer\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "seamstress",
+        "dancer",
+        "ballerina",
+        "hold me closer"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "seamstress",
+          "pt": "costureira"
+        },
+        {
+          "en": "dancer",
+          "pt": "dançarino(a)"
+        },
+        {
+          "en": "ballerina",
+          "pt": "bailarina"
+        },
+        {
+          "en": "hold me closer",
+          "pt": "me abrace mais perto"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "band",
+        "Seamstress",
+        "for"
+      ],
+      "answer": [
+        "Seamstress",
+        "for",
+        "the",
+        "band"
+      ],
+      "youtube_start": 21
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You'll",
+      "excerpt_after": "a music man",
+      "options": [
+        "baby",
+        "band",
+        "lady",
+        "marry"
+      ],
+      "answer_index": 3,
+      "youtube_start": 34,
+      "youtube_end": 46
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"dancer\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"dancer\" na música inteira?",
+      "word": "dancer",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Seamstress for the band",
+          "order": 0
+        },
+        {
+          "text": "The tune she hums",
+          "order": 1
+        },
+        {
+          "text": "You must have seen her",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Long song (~6 minutes). Teach in sections — verse 1 first, then chorus. Great for visualization exercises: what does each character look like?",
+  "copyright_notice": "Lyrics are property of Universal Music Publishing Group. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Hold me closer, tiny dancer",
+          "Count the headlights on the highway",
+          "Lay me down in sheets of linen",
+          "You had a busy day today"
+        ],
+        "start_seconds": 154,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Blue-jean baby",
+          "L.A. lady",
+          "Seamstress for the band",
+          "Pretty-eyed"
+        ],
+        "start_seconds": 14,
+        "style": "hook"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
+}

@@ -6,6 +6,8 @@ import { MusicBoard } from "@/components/student/music-board";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { listMyExerciseResponses } from "@/lib/actions/exercise-responses";
 import { toMusicSlug, cambridgeUrl } from "@/lib/content/music";
+import { getOverrideForStudent } from "@/lib/actions/music-overrides";
+import type { MusicExercise, SingAlongPrompt } from "@/lib/content/music";
 
 interface Params {
   slug: string;
@@ -17,8 +19,20 @@ export default async function StudentMusicPage({
   params: Promise<Params>;
 }) {
   const { slug } = await params;
-  const song = await loadMusicSong(slug);
-  if (!song) notFound();
+  const baseSong = await loadMusicSong(slug);
+  if (!baseSong) notFound();
+
+  const override = await getOverrideForStudent(slug);
+  const song = override
+    ? {
+        ...baseSong,
+        sing_along:
+          (override.sing_along as { prompts: SingAlongPrompt[] } | null) ??
+          baseSong.sing_along,
+        exercises:
+          (override.exercises as MusicExercise[] | null) ?? baseSong.exercises,
+      }
+    : baseSong;
 
   const lessonSlug = toMusicSlug(slug);
   const initialResponses = await listMyExerciseResponses(lessonSlug);
@@ -30,11 +44,11 @@ export default async function StudentMusicPage({
   return (
     <div className="space-y-6 pb-16">
       <Link
-        href="/student/lessons"
+        href="/student/music"
         className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="h-3.5 w-3.5" />
-        Back to lessons
+        Back to musics
       </Link>
 
       <header className="flex flex-col gap-2">

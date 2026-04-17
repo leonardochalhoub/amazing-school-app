@@ -4,7 +4,10 @@
   "artist": "Adele",
   "year": 2011,
   "album": "21",
-  "genre": ["pop", "soul"],
+  "genre": [
+    "pop",
+    "soul"
+  ],
   "cefr_level": "a1.2",
   "difficulty": "easy",
   "tempo": "slow",
@@ -14,10 +17,26 @@
   "full_lyrics_source": "Letras.mus.br (licensed)",
   "why_this_song": "Adele's clean diction and slow tempo help beginners catch every word. The past-simple narration is a perfect bridge into A2 storytelling.",
   "vocab_hooks": [
-    { "term": "someone", "pt": "alguém", "note": "indefinite pronoun" },
-    { "term": "married", "pt": "casado(a)", "note": "adjective / past participle" },
-    { "term": "settled", "pt": "estabelecido(a)", "note": "phrasal 'settle down' = assentar-se" },
-    { "term": "dreams", "pt": "sonhos", "note": "plural noun; contrast with 'dream' verb" }
+    {
+      "term": "someone",
+      "pt": "alguém",
+      "note": "indefinite pronoun"
+    },
+    {
+      "term": "married",
+      "pt": "casado(a)",
+      "note": "adjective / past participle"
+    },
+    {
+      "term": "settled",
+      "pt": "estabelecido(a)",
+      "note": "phrasal 'settle down' = assentar-se"
+    },
+    {
+      "term": "dreams",
+      "pt": "sonhos",
+      "note": "plural noun; contrast with 'dream' verb"
+    }
   ],
   "grammar_callouts": [
     "past simple narration: I heard / you found / she's married now",
@@ -27,30 +46,174 @@
   "exercises": [
     {
       "type": "listen_and_fill",
-      "prompt_en": "Fill the blank in the chorus:",
-      "prompt_pt": "Complete a lacuna no refrão:",
-      "excerpt_before": "Never mind, I'll find someone like",
-      "blank_hint": "pronoun — the person the song is about",
-      "answer": "you",
-      "excerpt_after": "",
-      "youtube_start": 74,
-      "youtube_end": 90
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "heard",
+      "excerpt_after": "that you're settled down",
+      "youtube_start": 14,
+      "youtube_end": 28
     },
     {
       "type": "translate_line",
-      "prompt_en": "Translate this line:",
-      "prompt_pt": "Traduza esta linha:",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
       "excerpt": "I heard that you're settled down",
-      "model_answer_pt": "Soube que você se estabeleceu",
-      "teacher_note": "Phrasal verb 'settle down' — discuss its range of meaning (get married, calm down, move somewhere permanently)."
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "didn't",
+          "full": "did not"
+        },
+        {
+          "short": "couldn't",
+          "full": "could not"
+        },
+        {
+          "short": "you'd",
+          "full": "you would"
+        }
+      ]
     },
     {
       "type": "discussion",
-      "prompt_en": "Adele sings 'I wish nothing but the best for you'. Is it easy or hard to wish someone well after a break-up? Why?",
-      "prompt_pt": "Adele canta 'desejo só o melhor para você'. É fácil ou difícil desejar o bem para alguém depois de um término? Por quê?",
-      "target_vocab": ["wish", "best", "break-up", "feel"]
+      "prompt_en": "Compare \"Someone Like You\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Someone Like You\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "someone",
+        "married",
+        "settled",
+        "dreams"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "someone",
+          "pt": "alguém"
+        },
+        {
+          "en": "married",
+          "pt": "casado(a)"
+        },
+        {
+          "en": "settled",
+          "pt": "estabelecido(a)"
+        },
+        {
+          "en": "dreams",
+          "pt": "sonhos"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "settled",
+        "heard",
+        "down",
+        "I",
+        "that",
+        "you're"
+      ],
+      "answer": [
+        "I",
+        "heard",
+        "that",
+        "you're",
+        "settled",
+        "down"
+      ],
+      "youtube_start": 14
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "that you're settled down",
+      "options": [
+        "down",
+        "heard",
+        "settled",
+        "youre"
+      ],
+      "answer_index": 1,
+      "youtube_start": 14,
+      "youtube_end": 26
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"someone\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"someone\" na música inteira?",
+      "word": "someone",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I heard that you're settled down",
+          "order": 0
+        },
+        {
+          "text": "You know how the time flies",
+          "order": 1
+        },
+        {
+          "text": "Nothing compares, no worries or cares",
+          "order": 2
+        }
+      ]
     }
   ],
   "teaching_notes_md": "**Pedagogy:** Adele's production leaves space between lines, helping learners parse word boundaries. Most vocabulary is A1, but past-simple narration pushes into A2.\n\n**Trigger warning:** Break-up themes — some students may find it heavy. Offer an opt-out alternative like 'Someone Like You' thematic discussion.",
-  "copyright_notice": "Lyrics are property of Universal Music Publishing / Chrysalis Music. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+  "copyright_notice": "Lyrics are property of Universal Music Publishing / Chrysalis Music. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Never mind, I'll find someone like you",
+          "I wish nothing but the best for you, too",
+          "Don't forget me, I beg, I remember you said",
+          "Sometimes it lasts in love, but sometimes it hurts instead"
+        ],
+        "start_seconds": 73,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "I heard that you're settled down",
+          "That you found a girl and you're married now",
+          "I heard that your dreams came true",
+          "Guess she gave you things I didn't give to you"
+        ],
+        "start_seconds": 14,
+        "style": "verse"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
 }

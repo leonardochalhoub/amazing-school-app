@@ -46,24 +46,27 @@
   "sing_along": {
     "prompts": [
       {
-        "label_en": "Sing the chorus",
-        "label_pt": "Cante o refrão",
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
         "lines": [
-          "Let it be, let it be",
-          "Let it be, let it be",
-          "Whisper words of wisdom",
-          "Let it be"
+          "Let it be",
+          "And in my hour of darkness",
+          "She is standing right in front of me",
+          "Speaking words of wisdom"
         ],
-        "start_seconds": 37,
+        "start_seconds": 22,
         "style": "chorus"
       },
       {
-        "label_en": "Echo the mantra",
-        "label_pt": "Repita o mantra",
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
         "lines": [
-          "Let it be"
+          "A-let it be, yeah, let it be",
+          "Whisper words of wisdom",
+          "Let it be",
+          "And when the night is cloudy"
         ],
-        "start_seconds": 48,
+        "start_seconds": 149,
         "style": "hook"
       }
     ]
@@ -71,35 +74,113 @@
   "exercises": [
     {
       "type": "listen_and_fill",
-      "prompt_en": "Listen to the opening line. Fill the blank:",
-      "prompt_pt": "Ouça o primeiro verso. Complete a lacuna:",
-      "excerpt_before": "When I find myself in times of",
-      "blank_hint": "noun — synonym of 'problem'",
-      "answer": "trouble",
-      "excerpt_after": "Mother Mary comes to me",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When I find",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "myself",
+      "excerpt_after": "in times of trouble",
       "youtube_start": 12,
       "youtube_end": 26
     },
     {
-      "type": "translate_line",
-      "prompt_en": "Translate this line to Portuguese:",
-      "prompt_pt": "Traduza esta linha para português:",
-      "excerpt": "Let it be",
-      "model_answer_pt": "Deixe estar / Deixa ser",
-      "teacher_note": "A common Brazilian rendering is 'Deixa ser'. Discuss why PT needs a subject pronoun change where EN uses 'let'."
-    },
-    {
       "type": "discussion",
-      "prompt_en": "The song says 'there will be an answer: let it be'. What does it mean to 'let something be'? Give an example from your own life.",
-      "prompt_pt": "A música diz 'haverá uma resposta: deixe estar'. O que significa 'deixar algo ser'? Dê um exemplo da sua vida.",
+      "prompt_en": "Imagine you are making a short film with \"Let It Be\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Let It Be\" como trilha sonora. Que cena você mostraria no momento do refrão?",
       "target_vocab": [
         "let",
-        "answer",
         "trouble",
-        "peace"
+        "whisper",
+        "mother"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "let",
+          "pt": "deixar"
+        },
+        {
+          "en": "trouble",
+          "pt": "problema"
+        },
+        {
+          "en": "whisper",
+          "pt": "sussurrar"
+        },
+        {
+          "en": "mother",
+          "pt": "mãe"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "me",
+        "comes",
+        "to",
+        "Mother",
+        "Mary"
+      ],
+      "answer": [
+        "Mother",
+        "Mary",
+        "comes",
+        "to",
+        "me"
+      ],
+      "youtube_start": 16
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When I",
+      "excerpt_after": "myself in times of trouble",
+      "options": [
+        "find",
+        "myself",
+        "times",
+        "trouble"
+      ],
+      "answer_index": 0,
+      "youtube_start": 12,
+      "youtube_end": 24
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"whisper\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"whisper\" na música inteira?",
+      "word": "whisper",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "When I find myself in times of trouble",
+          "order": 0
+        },
+        {
+          "text": "For though they may be parted",
+          "order": 1
+        },
+        {
+          "text": "Shine until tomorrow",
+          "order": 2
+        }
       ]
     }
   ],
   "teaching_notes_md": "**Why this song works for A1 learners:**\n\n1. Slow 73 BPM — learners can follow word-by-word.\n2. Only ~40 unique words in the whole song.\n3. The imperative 'let' is a high-value structure that shows up immediately in daily English ('let me help', 'let me see').\n\n**Classroom flow (15 min):**\n\n- 2 min: Play the opening 30s while students raise hands when they hear 'let it be'.\n- 5 min: Listen-and-fill exercise.\n- 4 min: Translate-line — discuss why PT often drops or changes the subject.\n- 4 min: Discussion prompt — let students answer in PT first, then help them bridge to EN.",
-  "copyright_notice": "Lyrics are property of Sony/ATV Music Publishing. Only short educational excerpts are reproduced here under Brazilian Lei 9.610/98 art. 46 VIII (citação para fins didáticos) and US fair-use doctrine. Full lyrics viewed via external licensed source."
+  "copyright_notice": "Lyrics are property of Sony/ATV Music Publishing. Only short educational excerpts are reproduced here under Brazilian Lei 9.610/98 art. 46 VIII (citação para fins didáticos) and US fair-use doctrine. Full lyrics viewed via external licensed source.",
+  "timing_source": "lrclib"
 }

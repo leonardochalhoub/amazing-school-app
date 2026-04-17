@@ -1,0 +1,215 @@
+{
+  "slug": "thriller",
+  "title": "Thriller",
+  "artist": "Michael Jackson",
+  "year": 1982,
+  "album": "Thriller",
+  "genre": [
+    "pop",
+    "disco"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 357,
+  "youtube_id": "sOnqjkJTMaA",
+  "full_lyrics_url": "https://www.letras.mus.br/michael-jackson/thriller/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Spooky narrative in present continuous. Horror vocabulary (creature, close to you, can't hide) stretches A2 into B1 territory.",
+  "vocab_hooks": [
+    {
+      "term": "thriller",
+      "pt": "suspense / arrepiante",
+      "note": "noun + adjective"
+    },
+    {
+      "term": "creature",
+      "pt": "criatura",
+      "note": "A2 noun"
+    },
+    {
+      "term": "close",
+      "pt": "perto / fechar",
+      "note": "homograph — adjective or verb"
+    },
+    {
+      "term": "hide",
+      "pt": "esconder",
+      "note": "irregular: hide / hid / hidden"
+    }
+  ],
+  "grammar_callouts": [
+    "present continuous for unfolding action",
+    "comparative 'colder than' + 'closer than'",
+    "modal 'can't' for impossibility"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It's",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "close",
+      "excerpt_after": "to midnight",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You try to scream",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "there's",
+          "full": "there is"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Thriller\" was released in 1982. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Thriller\" foi lançada em 1982. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "thriller",
+        "creature",
+        "close",
+        "hide"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "thriller",
+          "pt": "suspense / arrepiante"
+        },
+        {
+          "en": "creature",
+          "pt": "criatura"
+        },
+        {
+          "en": "close",
+          "pt": "perto / fechar"
+        },
+        {
+          "en": "hide",
+          "pt": "esconder"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "midnight",
+        "It's",
+        "close"
+      ],
+      "answer": [
+        "It's",
+        "close",
+        "to",
+        "midnight"
+      ],
+      "youtube_start": 58
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's",
+      "excerpt_after": "to midnight",
+      "options": [
+        "close",
+        "evils",
+        "lurkin",
+        "midnight"
+      ],
+      "answer_index": 0,
+      "youtube_start": 58,
+      "youtube_end": 70
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"thriller\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"thriller\" na música inteira?",
+      "word": "thriller",
+      "answer": 29
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "It's close to midnight",
+          "order": 0
+        },
+        {
+          "text": "You're fighting for your life",
+          "order": 1
+        },
+        {
+          "text": "So let me hold you tight",
+          "order": 2
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** The Halloween/horror vocabulary is high-impact and memorable. Pair with a Halloween culture lesson.",
+  "copyright_notice": "Lyrics are property of Mijac Music / Warner Chappell. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Thriller night",
+          "And no one's gonna save you",
+          "From the beast about to strike",
+          "You know it's thriller"
+        ],
+        "start_seconds": 91,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "(Thriller, thriller night)",
+          "You're fighting for your life",
+          "Inside a killer, thriller tonight",
+          "Night creatures callin'"
+        ],
+        "start_seconds": 155,
+        "style": "hook"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
+}

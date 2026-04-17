@@ -46,36 +46,170 @@
   "exercises": [
     {
       "type": "listen_and_fill",
-      "prompt_en": "Fill the blank in the opening line:",
-      "prompt_pt": "Complete a lacuna do verso inicial:",
-      "excerpt_before": "Imagine there's no",
-      "blank_hint": "the opposite of 'hell'",
-      "answer": "heaven",
-      "excerpt_after": ", it's easy if you try",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Imagine",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "theres",
+      "excerpt_after": "no heaven",
       "youtube_start": 14,
-      "youtube_end": 30
+      "youtube_end": 28
     },
     {
       "type": "translate_line",
-      "prompt_en": "Translate this line:",
-      "prompt_pt": "Traduza esta linha:",
-      "excerpt": "Imagine all the people living life in peace",
-      "model_answer_pt": "Imagine todas as pessoas vivendo em paz",
-      "teacher_note": "Notice 'living life' — gerund as noun modifier. In PT we drop 'life' in a natural translation."
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "It's easy if you try",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "there's",
+          "full": "there is"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "isn't",
+          "full": "is not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
     },
     {
       "type": "discussion",
-      "prompt_en": "Lennon asks you to imagine a world without religion or countries. Can you do that? What would change in your daily life?",
-      "prompt_pt": "Lennon pede para imaginar um mundo sem religião ou países. Você consegue? O que mudaria na sua vida diária?",
+      "prompt_en": "Compare \"Imagine\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Imagine\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
       "target_vocab": [
         "imagine",
-        "world",
-        "country",
-        "change",
-        "peace"
+        "heaven",
+        "hell",
+        "brotherhood"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "imagine",
+          "pt": "imaginar"
+        },
+        {
+          "en": "heaven",
+          "pt": "paraíso / céu"
+        },
+        {
+          "en": "hell",
+          "pt": "inferno"
+        },
+        {
+          "en": "brotherhood",
+          "pt": "fraternidade"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "heaven",
+        "there's",
+        "no",
+        "Imagine"
+      ],
+      "answer": [
+        "Imagine",
+        "there's",
+        "no",
+        "heaven"
+      ],
+      "youtube_start": 14
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Imagine",
+      "excerpt_after": "no heaven",
+      "options": [
+        "easy",
+        "heaven",
+        "imagine",
+        "theres"
+      ],
+      "answer_index": 3,
+      "youtube_start": 14,
+      "youtube_end": 26
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"imagine\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"imagine\" na música inteira?",
+      "word": "imagine",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Imagine there's no heaven",
+          "order": 0
+        },
+        {
+          "text": "Nothing to kill or die for",
+          "order": 1
+        },
+        {
+          "text": "Imagine no possessions",
+          "order": 2
+        }
       ]
     }
   ],
   "teaching_notes_md": "**Pedagogy:** Every verse opens with the imperative 'Imagine' — six reps in one song. Great for drilling. Abstract nouns push learners slightly beyond A1 comfort zone.\n\n**Watch out:** 'Brotherhood of man' is dated language; discuss with students what more inclusive alternatives exist today.",
-  "copyright_notice": "Lyrics are property of Lenono Music / Downtown Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+  "copyright_notice": "Lyrics are property of Lenono Music / Downtown Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Imagine all the people",
+          "Living for today, I",
+          "Imagine there's no countries",
+          "It isn't hard to do"
+        ],
+        "start_seconds": 39,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "You may say I'm a dreamer",
+          "But I'm not the only one",
+          "I hope someday you'll join us",
+          "And the world will be as one"
+        ],
+        "start_seconds": 90,
+        "style": "hook"
+      }
+    ]
+  },
+  "timing_source": "lrclib"
 }

@@ -49,20 +49,24 @@
         "label_en": "Sing with the chorus",
         "label_pt": "Cante junto no refrão",
         "lines": [
-          "Where you're from",
-          "What you did",
+          "As long as you love me",
+          "Who you are, where you're from",
+          "Don't care what you did",
           "As long as you love me"
         ],
-        "start_seconds": 60,
+        "start_seconds": 66,
         "style": "chorus"
       },
       {
-        "label_en": "Shout the hook",
-        "label_pt": "Grite o gancho final",
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
         "lines": [
-          "As long as you love me!"
+          "Where you're from (where you're from)",
+          "What you did, as long as you love me (I know)",
+          "Who you are (who you are)",
+          "Where you're from (where you're from)"
         ],
-        "start_seconds": 66,
+        "start_seconds": 99,
         "style": "hook"
       }
     ]
@@ -70,39 +74,36 @@
   "exercises": [
     {
       "type": "listen_and_fill",
-      "prompt_en": "Listen to the chorus. Fill the blank:",
-      "prompt_pt": "Ouça o refrão. Complete a lacuna:",
-      "excerpt_before": "I don't care who you are,",
-      "blank_hint": "preposition of origin",
-      "answer": "where you're from",
-      "excerpt_after": "As long as you love me",
-      "youtube_start": 58,
-      "youtube_end": 74
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Although",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "loneliness",
+      "excerpt_after": "has always been a friend of mine",
+      "youtube_start": 19,
+      "youtube_end": 33
     },
     {
       "type": "translate_line",
       "prompt_en": "Translate this line to Portuguese:",
       "prompt_pt": "Traduza esta linha para português:",
-      "excerpt": "As long as you love me",
-      "model_answer_pt": "Desde que você me ame",
-      "teacher_note": "The subjunctive 'ame' is the natural PT choice — discuss why EN uses present simple here."
-    },
-    {
-      "type": "discussion",
-      "prompt_en": "The singer says he doesn't care about his lover's past. Do you think that's realistic in a real relationship? Why or why not?",
-      "prompt_pt": "O cantor diz que não se importa com o passado do par. Você acha realista em um relacionamento real? Por quê?",
-      "target_vocab": [
-        "care",
-        "past",
-        "realistic",
-        "trust"
-      ]
+      "excerpt": "I'm leaving my life in your hand",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
     },
     {
       "type": "spot_the_grammar",
-      "prompt_en": "Find three contractions in the chorus and write out their full forms.",
-      "prompt_pt": "Encontre três contrações no refrão e escreva a forma completa.",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
       "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
         {
           "short": "don't",
           "full": "do not"
@@ -110,14 +111,111 @@
         {
           "short": "you're",
           "full": "you are"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"As Long As You Love Me\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"As Long As You Love Me\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "as long as",
+        "care",
+        "hide",
+        "though"
+      ]
+    },
+    {
+      "type": "word_to_meaning",
+      "prompt_en": "Match each English word or phrase to its Portuguese meaning.",
+      "prompt_pt": "Associe cada palavra ou expressão em inglês ao significado em português.",
+      "pairs": [
+        {
+          "en": "as long as",
+          "pt": "desde que / contanto que"
         },
         {
-          "short": "it's",
-          "full": "it is"
+          "en": "care",
+          "pt": "se importar"
+        },
+        {
+          "en": "hide",
+          "pt": "esconder"
+        },
+        {
+          "en": "though",
+          "pt": "embora"
+        }
+      ]
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "leaving",
+        "my",
+        "hand",
+        "I'm",
+        "your",
+        "life",
+        "in"
+      ],
+      "answer": [
+        "I'm",
+        "leaving",
+        "my",
+        "life",
+        "in",
+        "your",
+        "hand"
+      ],
+      "youtube_start": 24
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Although",
+      "excerpt_after": "has always been a friend of mine",
+      "options": [
+        "although",
+        "leaving",
+        "loneliness",
+        "risking"
+      ],
+      "answer_index": 2,
+      "youtube_start": 19,
+      "youtube_end": 31
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"care\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"care\" na música inteira?",
+      "word": "care",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I'm leaving my life in your hand",
+          "order": 0
+        },
+        {
+          "text": "Feels like it's deep within me (oooh, ooh-ooh)",
+          "order": 1
+        },
+        {
+          "text": "When you look into my eyes",
+          "order": 2
         }
       ]
     }
   ],
   "teaching_notes_md": "**Why this song works for A2 Brazilian learners:**\n\n1. Slow, clear enunciation — boy-band pop is famously clean vocally.\n2. 'As long as' is a high-value structure that doesn't exist as a single word in Portuguese.\n3. The song repeats the same chorus structure ~6x, so learners internalize the pattern by the end.\n\n**Classroom flow (20 min):**\n\n- 3 min: Play the chorus twice. Students raise a hand every time they hear 'as long as'.\n- 5 min: Do the listen_and_fill exercise in pairs.\n- 5 min: Translate line exercise — compare answers around the room.\n- 7 min: Discussion prompt in pt-BR first, then have students retry in EN.\n\n**Do NOT** print or project the full lyrics. Send students to the Letras.mus.br link on their own devices if they want the whole text.",
-  "copyright_notice": "Lyrics are property of Zomba Music Publishing / Sony Music Publishing. Only short educational excerpts are reproduced here under Brazilian Lei 9.610/98 art. 46 VIII (citação para fins didáticos) and US fair-use doctrine. Full lyrics viewed via external licensed source."
+  "copyright_notice": "Lyrics are property of Zomba Music Publishing / Sony Music Publishing. Only short educational excerpts are reproduced here under Brazilian Lei 9.610/98 art. 46 VIII (citação para fins didáticos) and US fair-use doctrine. Full lyrics viewed via external licensed source.",
+  "timing_source": "lrclib"
 }

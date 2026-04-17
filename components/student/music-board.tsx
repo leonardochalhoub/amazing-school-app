@@ -1,6 +1,14 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, useTransition } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  useTransition,
+} from "react";
 import {
   CheckCircle2,
   ExternalLink,
@@ -32,9 +40,54 @@ interface Props {
   song: MusicSong;
   lessonSlug: string;
   initialResponses: ExerciseResponseRow[];
+  demoMode?: boolean;
 }
 
-export function MusicBoard({ song, lessonSlug, initialResponses }: Props) {
+const DemoModeContext = createContext<boolean>(false);
+
+function useSafeSubmit() {
+  const isDemo = useContext(DemoModeContext);
+  const { locale } = useI18n();
+  return async (
+    params: Parameters<typeof submitExerciseResponse>[0]
+  ): ReturnType<typeof submitExerciseResponse> => {
+    if (isDemo) {
+      toast.info(
+        locale === "pt-BR"
+          ? "Modo demo — crie uma conta para salvar sua resposta."
+          : "Demo mode — sign up to save your answer.",
+        {
+          action: {
+            label: locale === "pt-BR" ? "Criar conta" : "Sign up",
+            onClick: () => {
+              window.location.href = "/login";
+            },
+          },
+        }
+      );
+      return {
+        success: true as const,
+        response: {
+          id: `demo-${Math.random().toString(36).slice(2)}`,
+          lesson_slug: params.lessonSlug,
+          exercise_index: params.exerciseIndex,
+          exercise_type: params.answer.type,
+          answer: params.answer,
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString(),
+        },
+      };
+    }
+    return submitExerciseResponse(params);
+  };
+}
+
+export function MusicBoard({
+  song,
+  lessonSlug,
+  initialResponses,
+  demoMode = false,
+}: Props) {
   const { locale } = useI18n();
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const hostname = new URL(song.full_lyrics_url).hostname;
@@ -49,28 +102,39 @@ export function MusicBoard({ song, lessonSlug, initialResponses }: Props) {
       return map;
     });
 
+  // When a user clicks a timestamp, we hard-reload the iframe with the new
+  // start + autoplay params. This is more reliable than postMessage seekTo,
+  // which silently ignores the command when the player is paused / not ready.
+  const [startAt, setStartAt] = useState<number | null>(null);
+
   function upsertLocal(r: ExerciseResponseRow) {
     setResponses((prev) => ({ ...prev, [r.exercise_index]: r }));
   }
 
   const seekTo = useCallback((seconds: number) => {
+    // Try postMessage first (smooth if player is ready + playing).
     const iframe = iframeRef.current;
-    if (!iframe?.contentWindow) return;
-    iframe.contentWindow.postMessage(
-      JSON.stringify({ event: "command", func: "seekTo", args: [seconds, true] }),
-      "*"
-    );
-    iframe.contentWindow.postMessage(
-      JSON.stringify({ event: "command", func: "playVideo", args: [] }),
-      "*"
-    );
+    if (iframe?.contentWindow) {
+      iframe.contentWindow.postMessage(
+        JSON.stringify({ event: "command", func: "seekTo", args: [seconds, true] }),
+        "*"
+      );
+      iframe.contentWindow.postMessage(
+        JSON.stringify({ event: "command", func: "playVideo", args: [] }),
+        "*"
+      );
+    }
+    // Always also re-key the iframe with start + autoplay — works reliably
+    // whether the player is paused, unloaded, or silently ignoring messages.
+    setStartAt(seconds);
   }, []);
 
+  const baseParams =
+    "enablejsapi=1&rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=en";
   const embedSrc =
-    `https://www.youtube.com/embed/${song.youtube_id}` +
-    `?enablejsapi=1&rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=en`;
-
-  const [first, ...rest] = song.exercises;
+    startAt !== null
+      ? `https://www.youtube.com/embed/${song.youtube_id}?${baseParams}&start=${startAt}&autoplay=1`
+      : `https://www.youtube.com/embed/${song.youtube_id}?${baseParams}`;
 
   const firstListenAndFill = song.exercises.find(
     (e) => e.type === "listen_and_fill"
@@ -100,6 +164,7 @@ export function MusicBoard({ song, lessonSlug, initialResponses }: Props) {
         : [];
 
   return (
+    <DemoModeContext.Provider value={demoMode}>
     <div className="space-y-6">
       <div className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
         <Card>
@@ -107,10 +172,11 @@ export function MusicBoard({ song, lessonSlug, initialResponses }: Props) {
             <div className="aspect-video w-full overflow-hidden rounded-t-xl bg-black">
               <iframe
                 ref={iframeRef}
+                key={startAt ?? "initial"}
                 src={embedSrc}
                 title={`${song.title} — ${song.artist}`}
                 className="h-full w-full"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
             </div>
@@ -123,6 +189,16 @@ export function MusicBoard({ song, lessonSlug, initialResponses }: Props) {
                 {locale === "pt-BR"
                   ? "Clique no botão CC do player para legenda sincronizada."
                   : "Click the CC button on the player for synced captions."}
+              </p>
+              <p className="text-[11px] text-muted-foreground">
+                ⏱{" "}
+                {locale === "pt-BR"
+                  ? `Os tempos são aproximados${
+                      song.timing_source === "manual" ? " (sem dados sincronizados para esta música)" : ""
+                    } — pode haver um pequeno atraso.`
+                  : `Timestamps are approximate${
+                      song.timing_source === "manual" ? " (no synced data for this song)" : ""
+                    } — a small drift is normal.`}
               </p>
               <div className="flex flex-wrap gap-3 text-xs">
                 <a
@@ -149,33 +225,28 @@ export function MusicBoard({ song, lessonSlug, initialResponses }: Props) {
           </CardContent>
         </Card>
 
-        {first ? (
-          <ExerciseCard
-            exercise={first}
-            index={0}
-            lessonSlug={lessonSlug}
-            response={responses[0] ?? null}
-            onResponse={upsertLocal}
+        {singAlongPrompts.length > 0 ? (
+          <SingAlongCard
+            prompts={singAlongPrompts}
+            vocabHint={song.vocab_hooks.slice(0, 3)}
             onSeek={seekTo}
-            singAlongPrompts={singAlongPrompts}
-            vocabHint={song.vocab_hooks.slice(0, 2)}
           />
         ) : null}
       </div>
 
-      {rest.length > 0 ? (
+      {song.exercises.length > 0 ? (
         <section className="space-y-3">
           <h2 className="text-base font-semibold tracking-tight">
-            {locale === "pt-BR" ? "Mais exercícios" : "More exercises"}
+            {locale === "pt-BR" ? "Exercícios" : "Exercises"}
           </h2>
           <div className="grid gap-3 md:grid-cols-2">
-            {rest.map((ex, i) => (
+            {song.exercises.map((ex, i) => (
               <ExerciseCard
-                key={i + 1}
+                key={i}
                 exercise={ex}
-                index={i + 1}
+                index={i}
                 lessonSlug={lessonSlug}
-                response={responses[i + 1] ?? null}
+                response={responses[i] ?? null}
                 onResponse={upsertLocal}
                 onSeek={seekTo}
               />
@@ -184,6 +255,7 @@ export function MusicBoard({ song, lessonSlug, initialResponses }: Props) {
         </section>
       ) : null}
     </div>
+    </DemoModeContext.Provider>
   );
 }
 
@@ -193,6 +265,71 @@ function fmt(secs: number): string {
   return `${m}:${String(s).padStart(2, "0")}`;
 }
 
+function SingAlongCard({
+  prompts,
+  vocabHint,
+  onSeek,
+}: {
+  prompts: SingAlongPrompt[];
+  vocabHint: { term: string; pt: string; note: string }[];
+  onSeek: (seconds: number) => void;
+}) {
+  const { locale } = useI18n();
+  return (
+    <div className="rounded-xl border border-border bg-card p-5 shadow-xs">
+      <p className="text-[11px] font-semibold uppercase tracking-wider text-primary">
+        🎤 {locale === "pt-BR" ? "Cante junto" : "Sing along"}
+      </p>
+      <div className="mt-3 space-y-2">
+        {prompts.map((p, i) => (
+          <div
+            key={i}
+            className="rounded-lg border border-dashed border-primary/30 bg-primary/5 p-3"
+          >
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-[11px] font-semibold text-primary">
+                {locale === "pt-BR" ? p.label_pt : p.label_en}
+              </p>
+              <button
+                type="button"
+                onClick={() => onSeek(p.start_seconds)}
+                className="inline-flex items-center gap-1 rounded-full border border-primary/30 bg-background px-2 py-0.5 text-[10px] font-medium text-primary hover:bg-primary/10"
+              >
+                <PlayCircle className="h-3 w-3" />
+                {fmt(p.start_seconds)}
+              </button>
+            </div>
+            <ul className="mt-2 space-y-0.5 text-sm font-medium italic leading-snug">
+              {p.lines.map((line, li) => (
+                <li key={li}>{line}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      {vocabHint.length > 0 ? (
+        <div className="mt-3 flex flex-wrap gap-1.5 text-[10px]">
+          {vocabHint.map((v) => (
+            <a
+              key={v.term}
+              href={cambridgeUrl(v.term)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-full border border-primary/30 px-2 py-0.5 transition-colors hover:bg-primary/10"
+              title={`${v.note} · Cambridge Dictionary`}
+            >
+              <strong className="font-medium underline decoration-dotted underline-offset-2">
+                {v.term}
+              </strong>
+              <span className="ml-1 text-muted-foreground">· {v.pt}</span>
+            </a>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 function ExerciseCard({
   exercise,
   index,
@@ -200,8 +337,6 @@ function ExerciseCard({
   response,
   onResponse,
   onSeek,
-  singAlongPrompts,
-  vocabHint,
 }: {
   exercise: MusicExercise;
   index: number;
@@ -209,21 +344,10 @@ function ExerciseCard({
   response: ExerciseResponseRow | null;
   onResponse: (r: ExerciseResponseRow) => void;
   onSeek: (seconds: number) => void;
-  singAlongPrompts?: SingAlongPrompt[];
-  vocabHint?: { term: string; pt: string; note: string }[];
 }) {
   const { locale } = useI18n();
 
-  const titleByType: Record<MusicExercise["type"], { en: string; pt: string }> = {
-    listen_and_fill: { en: exercise.prompt_en, pt: exercise.prompt_pt },
-    translate_line: { en: exercise.prompt_en, pt: exercise.prompt_pt },
-    discussion: { en: exercise.prompt_en, pt: exercise.prompt_pt },
-    spot_the_grammar: {
-      en: `${exercise.prompt_en} (write the full form)`,
-      pt: `${exercise.prompt_pt} (escreva a forma completa)`,
-    },
-  };
-  const prompt = locale === "pt-BR" ? titleByType[exercise.type].pt : titleByType[exercise.type].en;
+  const prompt = locale === "pt-BR" ? exercise.prompt_pt : exercise.prompt_en;
 
   return (
     <div className="rounded-xl border border-border bg-card p-5 shadow-xs">
@@ -240,8 +364,6 @@ function ExerciseCard({
             initial={response}
             onSaved={onResponse}
             onSeek={onSeek}
-            singAlongPrompts={singAlongPrompts ?? []}
-            vocabHint={vocabHint ?? []}
           />
         ) : exercise.type === "translate_line" ? (
           <TranslateLine exercise={exercise} />
@@ -261,6 +383,48 @@ function ExerciseCard({
             initial={response}
             onSaved={onResponse}
           />
+        ) : exercise.type === "word_to_meaning" ? (
+          <WordToMeaning
+            exercise={exercise}
+            lessonSlug={lessonSlug}
+            exerciseIndex={index}
+            initial={response}
+            onSaved={onResponse}
+          />
+        ) : exercise.type === "unscramble_line" ? (
+          <UnscrambleLine
+            exercise={exercise}
+            lessonSlug={lessonSlug}
+            exerciseIndex={index}
+            initial={response}
+            onSaved={onResponse}
+            onSeek={onSeek}
+          />
+        ) : exercise.type === "cloze_multi_choice" ? (
+          <ClozeMultiChoice
+            exercise={exercise}
+            lessonSlug={lessonSlug}
+            exerciseIndex={index}
+            initial={response}
+            onSaved={onResponse}
+            onSeek={onSeek}
+          />
+        ) : exercise.type === "count_word" ? (
+          <CountWord
+            exercise={exercise}
+            lessonSlug={lessonSlug}
+            exerciseIndex={index}
+            initial={response}
+            onSaved={onResponse}
+          />
+        ) : exercise.type === "line_order" ? (
+          <LineOrder
+            exercise={exercise}
+            lessonSlug={lessonSlug}
+            exerciseIndex={index}
+            initial={response}
+            onSaved={onResponse}
+          />
         ) : null}
       </div>
     </div>
@@ -274,8 +438,6 @@ function ListenAndFill({
   initial,
   onSaved,
   onSeek,
-  singAlongPrompts,
-  vocabHint,
 }: {
   exercise: Extract<MusicExercise, { type: "listen_and_fill" }>;
   lessonSlug: string;
@@ -283,8 +445,6 @@ function ListenAndFill({
   initial: ExerciseResponseRow | null;
   onSaved: (r: ExerciseResponseRow) => void;
   onSeek: (seconds: number) => void;
-  singAlongPrompts: SingAlongPrompt[];
-  vocabHint: { term: string; pt: string; note: string }[];
 }) {
   const { locale } = useI18n();
   const savedText =
@@ -293,19 +453,37 @@ function ListenAndFill({
   const [value, setValue] = useState(savedText ?? "");
   const [checked, setChecked] = useState<null | "correct" | "wrong">(null);
   const [pending, startTransition] = useTransition();
+  const _safeSubmit = useSafeSubmit();
 
   useEffect(() => {
     setValue(savedText ?? "");
   }, [savedText]);
 
   const normalize = (s: string) =>
-    s.trim().toLowerCase().replace(/[.,!?;:'"]/g, "");
+    s.trim().toLowerCase().replace(/[.,!?;:"]/g, "");
 
   function check() {
+    if (value.trim() === "") {
+      toast.info(
+        locale === "pt-BR"
+          ? "Digite sua resposta primeiro."
+          : "Type your answer first."
+      );
+      return;
+    }
     const isCorrect = normalize(value) === normalize(exercise.answer);
     setChecked(isCorrect ? "correct" : "wrong");
+    toast[isCorrect ? "success" : "error"](
+      isCorrect
+        ? locale === "pt-BR"
+          ? "Correto! Resposta enviada."
+          : "Correct! Answer saved."
+        : locale === "pt-BR"
+          ? `Resposta: ${exercise.answer}. Sua tentativa foi registrada.`
+          : `Answer: ${exercise.answer}. Your attempt was saved.`
+    );
     startTransition(async () => {
-      const r = await submitExerciseResponse({
+      const r = await _safeSubmit({
         lessonSlug,
         exerciseIndex,
         answer: { type: "listen_and_fill", text: value.trim() },
@@ -350,7 +528,7 @@ function ListenAndFill({
         <Button
           size="sm"
           onClick={check}
-          disabled={pending || value.trim() === ""}
+          disabled={pending}
           className="gap-1.5"
         >
           <Send className="h-3.5 w-3.5" />
@@ -384,59 +562,6 @@ function ListenAndFill({
         ) : null}
       </div>
 
-      {singAlongPrompts.length > 0 ? (
-        <div className="mt-2 space-y-2">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-primary">
-            🎤 {locale === "pt-BR" ? "Cante junto" : "Sing along"}
-          </p>
-          <div className="space-y-2">
-            {singAlongPrompts.map((p, i) => (
-              <div
-                key={i}
-                className="rounded-lg border border-dashed border-primary/30 bg-primary/5 p-3"
-              >
-                <div className="flex items-center justify-between gap-2">
-                  <p className="text-[11px] font-semibold text-primary">
-                    {locale === "pt-BR" ? p.label_pt : p.label_en}
-                  </p>
-                  <button
-                    type="button"
-                    onClick={() => onSeek(p.start_seconds)}
-                    className="inline-flex items-center gap-1 rounded-full border border-primary/30 bg-background px-2 py-0.5 text-[10px] font-medium text-primary hover:bg-primary/10"
-                  >
-                    <PlayCircle className="h-3 w-3" />
-                    {fmt(p.start_seconds)}
-                  </button>
-                </div>
-                <ul className="mt-2 space-y-0.5 text-sm font-medium italic leading-snug">
-                  {p.lines.map((line, li) => (
-                    <li key={li}>{line}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          {vocabHint.length > 0 ? (
-            <div className="flex flex-wrap gap-1.5 text-[10px]">
-              {vocabHint.map((v) => (
-                <a
-                  key={v.term}
-                  href={cambridgeUrl(v.term)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full border border-primary/30 px-2 py-0.5 transition-colors hover:bg-primary/10"
-                  title={`${v.note} · Cambridge Dictionary`}
-                >
-                  <strong className="font-medium underline decoration-dotted underline-offset-2">
-                    {v.term}
-                  </strong>
-                  <span className="ml-1 text-muted-foreground">· {v.pt}</span>
-                </a>
-              ))}
-            </div>
-          ) : null}
-        </div>
-      ) : null}
     </div>
   );
 }
@@ -501,6 +626,7 @@ function Discussion({
   const [text, setText] = useState(savedText ?? "");
   const [editing, setEditing] = useState(savedText === null);
   const [pending, startTransition] = useTransition();
+  const _safeSubmit = useSafeSubmit();
 
   useEffect(() => {
     setText(savedText ?? "");
@@ -511,7 +637,7 @@ function Discussion({
     if (text.trim().length === 0) return;
     startTransition(async () => {
       const answer: ExerciseAnswer = { type: "discussion", text: text.trim() };
-      const r = await submitExerciseResponse({
+      const r = await _safeSubmit({
         lessonSlug,
         exerciseIndex,
         answer,
@@ -633,6 +759,7 @@ function SpotTheGrammar({
 }) {
   const { locale } = useI18n();
   const [pending, startTransition] = useTransition();
+  const _safeSubmit = useSafeSubmit();
 
   const savedEntries =
     initial?.answer.type === "spot_the_grammar" ? initial.answer.entries : null;
@@ -659,7 +786,7 @@ function SpotTheGrammar({
   >(null);
 
   function normalize(s: string) {
-    return s.trim().toLowerCase().replace(/[.,!?;:'"]/g, "");
+    return s.trim().toLowerCase().replace(/[.,!?;:"]/g, "");
   }
 
   function send() {
@@ -679,7 +806,7 @@ function SpotTheGrammar({
         type: "spot_the_grammar",
         entries,
       };
-      const r = await submitExerciseResponse({
+      const r = await _safeSubmit({
         lessonSlug,
         exerciseIndex,
         answer,
@@ -779,6 +906,571 @@ function SpotTheGrammar({
           </span>
         ) : null}
       </div>
+    </div>
+  );
+}
+
+// --- Creative exercise types (generated by enrich-music.mjs) ---
+
+function WordToMeaning({
+  exercise,
+  lessonSlug,
+  exerciseIndex,
+  initial,
+  onSaved,
+}: {
+  exercise: Extract<MusicExercise, { type: "word_to_meaning" }>;
+  lessonSlug: string;
+  exerciseIndex: number;
+  initial: ExerciseResponseRow | null;
+  onSaved: (r: ExerciseResponseRow) => void;
+}) {
+  const { locale } = useI18n();
+  const [pending, startTransition] = useTransition();
+  const _safeSubmit = useSafeSubmit();
+  const ptOptions = exercise.pairs.map((p) => p.pt);
+  const [choices, setChoices] = useState<Record<string, string>>(() => {
+    if (initial?.answer.type === "word_to_meaning") {
+      const m: Record<string, string> = {};
+      for (const p of initial.answer.pairs) m[p.en] = p.pt;
+      return m;
+    }
+    return {};
+  });
+  const [result, setResult] = useState<null | { correct: number; total: number }>(
+    null
+  );
+
+  function submit() {
+    let correct = 0;
+    for (const p of exercise.pairs) {
+      if (choices[p.en] === p.pt) correct++;
+    }
+    setResult({ correct, total: exercise.pairs.length });
+    const pairs = exercise.pairs.map((p) => ({
+      en: p.en,
+      pt: choices[p.en] ?? "",
+    }));
+    startTransition(async () => {
+      const r = await _safeSubmit({
+        lessonSlug,
+        exerciseIndex,
+        answer: { type: "word_to_meaning", pairs },
+      });
+      if ("error" in r && r.error) toast.error(r.error);
+      else if ("success" in r && r.response) onSaved(r.response);
+    });
+    toast[correct === exercise.pairs.length ? "success" : "info"](
+      locale === "pt-BR"
+        ? `${correct}/${exercise.pairs.length} corretas`
+        : `${correct}/${exercise.pairs.length} correct`
+    );
+  }
+
+  return (
+    <div className="space-y-3">
+      <ul className="space-y-2">
+        {exercise.pairs.map((p) => {
+          const picked = choices[p.en];
+          const isCorrect = result !== null && picked === p.pt;
+          const isWrong = result !== null && picked && picked !== p.pt;
+          return (
+            <li key={p.en} className="flex flex-wrap items-center gap-2 text-sm">
+              <span className="font-medium">{p.en}</span>
+              <span className="text-muted-foreground">→</span>
+              <select
+                value={picked ?? ""}
+                onChange={(e) =>
+                  setChoices((prev) => ({ ...prev, [p.en]: e.target.value }))
+                }
+                className={`h-8 rounded-md border bg-background px-2 text-sm ${
+                  isCorrect
+                    ? "border-emerald-500/60"
+                    : isWrong
+                      ? "border-rose-500/60"
+                      : "border-border"
+                }`}
+              >
+                <option value="">
+                  {locale === "pt-BR" ? "escolha…" : "pick…"}
+                </option>
+                {ptOptions.map((opt) => (
+                  <option key={opt} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+              {isWrong ? (
+                <span className="text-[11px] text-rose-600">
+                  {locale === "pt-BR" ? `é "${p.pt}"` : `is "${p.pt}"`}
+                </span>
+              ) : null}
+            </li>
+          );
+        })}
+      </ul>
+      <Button
+        size="sm"
+        onClick={submit}
+        disabled={pending}
+        className="gap-1.5"
+      >
+        <Send className="h-3.5 w-3.5" />
+        {locale === "pt-BR" ? "Verificar" : "Check"}
+      </Button>
+      {initial && !result ? (
+        <span className="ml-2 inline-flex items-center gap-1 text-[11px] text-emerald-600">
+          <CheckCircle2 className="h-3.5 w-3.5" />
+          {locale === "pt-BR"
+            ? `Enviado em ${formatWhen(initial.updated_at, locale)}`
+            : `Sent on ${formatWhen(initial.updated_at, locale)}`}
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
+function UnscrambleLine({
+  exercise,
+  lessonSlug,
+  exerciseIndex,
+  initial,
+  onSaved,
+  onSeek,
+}: {
+  exercise: Extract<MusicExercise, { type: "unscramble_line" }>;
+  lessonSlug: string;
+  exerciseIndex: number;
+  initial: ExerciseResponseRow | null;
+  onSaved: (r: ExerciseResponseRow) => void;
+  onSeek: (seconds: number) => void;
+}) {
+  const { locale } = useI18n();
+  const [pending, startTransition] = useTransition();
+  const _safeSubmit = useSafeSubmit();
+  const [picked, setPicked] = useState<string[]>(() => {
+    if (initial?.answer.type === "unscramble_line") return initial.answer.order;
+    return [];
+  });
+  const remaining = exercise.shuffled.filter(
+    (w, i) =>
+      picked.filter((p) => p === w).length <
+      exercise.shuffled.filter((s) => s === w).length
+  );
+  const [result, setResult] = useState<null | "correct" | "wrong">(null);
+
+  function addWord(w: string) {
+    setPicked((prev) => [...prev, w]);
+    setResult(null);
+  }
+  function reset() {
+    setPicked([]);
+    setResult(null);
+  }
+  function submit() {
+    const ok =
+      picked.length === exercise.answer.length &&
+      picked.every((w, i) => w === exercise.answer[i]);
+    setResult(ok ? "correct" : "wrong");
+    startTransition(async () => {
+      const r = await _safeSubmit({
+        lessonSlug,
+        exerciseIndex,
+        answer: { type: "unscramble_line", order: picked },
+      });
+      if ("error" in r && r.error) toast.error(r.error);
+      else if ("success" in r && r.response) onSaved(r.response);
+    });
+    toast[ok ? "success" : "error"](
+      ok
+        ? locale === "pt-BR"
+          ? "Correto!"
+          : "Correct!"
+        : locale === "pt-BR"
+          ? "Tente de novo"
+          : "Try again"
+    );
+  }
+
+  return (
+    <div className="space-y-3">
+      {exercise.youtube_start != null ? (
+        <button
+          type="button"
+          onClick={() => onSeek(exercise.youtube_start!)}
+          className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/10"
+        >
+          <PlayCircle className="h-3.5 w-3.5" />
+          {locale === "pt-BR"
+            ? `Ouvir em ${fmt(exercise.youtube_start!)}`
+            : `Listen at ${fmt(exercise.youtube_start!)}`}
+        </button>
+      ) : null}
+      <div className="min-h-[36px] rounded-md border border-dashed border-border bg-muted/30 p-2 text-sm">
+        {picked.length === 0 ? (
+          <span className="text-muted-foreground italic">
+            {locale === "pt-BR"
+              ? "Clique nas palavras abaixo na ordem correta…"
+              : "Click the words below in the correct order…"}
+          </span>
+        ) : (
+          picked.map((w, i) => (
+            <span
+              key={`${w}-${i}`}
+              className="mr-1 inline-block rounded-md bg-primary/10 px-2 py-0.5"
+            >
+              {w}
+            </span>
+          ))
+        )}
+      </div>
+      <div className="flex flex-wrap gap-1.5">
+        {remaining.map((w, i) => (
+          <button
+            key={`${w}-r-${i}`}
+            type="button"
+            onClick={() => addWord(w)}
+            className="rounded-md border border-border bg-background px-2 py-0.5 text-sm hover:bg-muted"
+          >
+            {w}
+          </button>
+        ))}
+      </div>
+      <div className="flex items-center gap-2">
+        <Button
+          size="sm"
+          onClick={submit}
+          disabled={pending || picked.length === 0}
+          className="gap-1.5"
+        >
+          <Send className="h-3.5 w-3.5" />
+          {locale === "pt-BR" ? "Verificar" : "Check"}
+        </Button>
+        <Button size="sm" variant="outline" onClick={reset} disabled={pending}>
+          {locale === "pt-BR" ? "Limpar" : "Reset"}
+        </Button>
+        {result === "correct" ? (
+          <span className="inline-flex items-center gap-1 text-xs text-emerald-600">
+            <CheckCircle2 className="h-4 w-4" />
+            {locale === "pt-BR" ? "Correto!" : "Correct!"}
+          </span>
+        ) : result === "wrong" ? (
+          <span className="text-xs text-rose-600">
+            {locale === "pt-BR"
+              ? `Resposta: ${exercise.answer.join(" ")}`
+              : `Answer: ${exercise.answer.join(" ")}`}
+          </span>
+        ) : null}
+      </div>
+    </div>
+  );
+}
+
+function ClozeMultiChoice({
+  exercise,
+  lessonSlug,
+  exerciseIndex,
+  initial,
+  onSaved,
+  onSeek,
+}: {
+  exercise: Extract<MusicExercise, { type: "cloze_multi_choice" }>;
+  lessonSlug: string;
+  exerciseIndex: number;
+  initial: ExerciseResponseRow | null;
+  onSaved: (r: ExerciseResponseRow) => void;
+  onSeek: (seconds: number) => void;
+}) {
+  const { locale } = useI18n();
+  const [pending, startTransition] = useTransition();
+  const _safeSubmit = useSafeSubmit();
+  const savedIdx =
+    initial?.answer.type === "cloze_multi_choice"
+      ? initial.answer.selected_index
+      : null;
+  const [selected, setSelected] = useState<number | null>(savedIdx);
+  const [result, setResult] = useState<null | "correct" | "wrong">(null);
+
+  function submit() {
+    if (selected === null) {
+      toast.info(
+        locale === "pt-BR" ? "Escolha uma opção primeiro." : "Pick an option first."
+      );
+      return;
+    }
+    const ok = selected === exercise.answer_index;
+    setResult(ok ? "correct" : "wrong");
+    startTransition(async () => {
+      const r = await _safeSubmit({
+        lessonSlug,
+        exerciseIndex,
+        answer: { type: "cloze_multi_choice", selected_index: selected },
+      });
+      if ("error" in r && r.error) toast.error(r.error);
+      else if ("success" in r && r.response) onSaved(r.response);
+    });
+    toast[ok ? "success" : "error"](
+      ok
+        ? locale === "pt-BR"
+          ? "Correto!"
+          : "Correct!"
+        : locale === "pt-BR"
+          ? `Resposta: ${exercise.options[exercise.answer_index]}`
+          : `Answer: ${exercise.options[exercise.answer_index]}`
+    );
+  }
+
+  return (
+    <div className="space-y-3">
+      <button
+        type="button"
+        onClick={() => onSeek(exercise.youtube_start)}
+        className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/10"
+      >
+        <PlayCircle className="h-3.5 w-3.5" />
+        {locale === "pt-BR"
+          ? `Tocar ${fmt(exercise.youtube_start)} – ${fmt(exercise.youtube_end)}`
+          : `Play ${fmt(exercise.youtube_start)} – ${fmt(exercise.youtube_end)}`}
+      </button>
+      <p className="text-sm">
+        <span>{exercise.excerpt_before} </span>
+        <span className="inline-block min-w-[80px] rounded bg-muted px-2 py-0.5 text-center italic">
+          ?
+        </span>
+        <span> {exercise.excerpt_after}</span>
+      </p>
+      <div className="grid grid-cols-2 gap-2">
+        {exercise.options.map((opt, i) => {
+          const isCorrect = result === "correct" && i === selected;
+          const isWrong = result === "wrong" && i === selected;
+          const isRightAfterSubmit =
+            result !== null && i === exercise.answer_index;
+          return (
+            <button
+              key={opt}
+              type="button"
+              onClick={() => {
+                setSelected(i);
+                setResult(null);
+              }}
+              className={`rounded-md border px-3 py-1.5 text-sm transition-colors ${
+                selected === i
+                  ? "border-primary bg-primary/10"
+                  : "border-border hover:bg-muted/50"
+              } ${
+                isCorrect
+                  ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30"
+                  : ""
+              } ${isWrong ? "border-rose-500 bg-rose-50 dark:bg-rose-950/30" : ""} ${
+                isRightAfterSubmit && !isCorrect
+                  ? "border-emerald-500/60 ring-1 ring-emerald-500/40"
+                  : ""
+              }`}
+            >
+              {opt}
+            </button>
+          );
+        })}
+      </div>
+      <Button size="sm" onClick={submit} disabled={pending} className="gap-1.5">
+        <Send className="h-3.5 w-3.5" />
+        {locale === "pt-BR" ? "Verificar" : "Check"}
+      </Button>
+    </div>
+  );
+}
+
+function CountWord({
+  exercise,
+  lessonSlug,
+  exerciseIndex,
+  initial,
+  onSaved,
+}: {
+  exercise: Extract<MusicExercise, { type: "count_word" }>;
+  lessonSlug: string;
+  exerciseIndex: number;
+  initial: ExerciseResponseRow | null;
+  onSaved: (r: ExerciseResponseRow) => void;
+}) {
+  const { locale } = useI18n();
+  const [pending, startTransition] = useTransition();
+  const _safeSubmit = useSafeSubmit();
+  const savedCount =
+    initial?.answer.type === "count_word" ? initial.answer.count : null;
+  const [value, setValue] = useState<string>(
+    savedCount !== null ? String(savedCount) : ""
+  );
+  const [result, setResult] = useState<null | "correct" | "wrong">(null);
+
+  function submit() {
+    const n = parseInt(value, 10);
+    if (Number.isNaN(n)) {
+      toast.info(
+        locale === "pt-BR" ? "Digite um número." : "Enter a number."
+      );
+      return;
+    }
+    const ok = n === exercise.answer;
+    setResult(ok ? "correct" : "wrong");
+    startTransition(async () => {
+      const r = await _safeSubmit({
+        lessonSlug,
+        exerciseIndex,
+        answer: { type: "count_word", count: n },
+      });
+      if ("error" in r && r.error) toast.error(r.error);
+      else if ("success" in r && r.response) onSaved(r.response);
+    });
+    toast[ok ? "success" : "error"](
+      ok
+        ? locale === "pt-BR"
+          ? "Correto!"
+          : "Correct!"
+        : locale === "pt-BR"
+          ? `Era ${exercise.answer}`
+          : `It was ${exercise.answer}`
+    );
+  }
+
+  return (
+    <div className="space-y-3">
+      <p className="text-sm">
+        <span className="font-medium">"{exercise.word}"</span>
+      </p>
+      <div className="flex items-center gap-2">
+        <Input
+          type="number"
+          min={0}
+          max={100}
+          value={value}
+          onChange={(e) => {
+            setValue(e.target.value);
+            setResult(null);
+          }}
+          placeholder={locale === "pt-BR" ? "quantas vezes?" : "how many?"}
+          className={`h-8 w-28 ${
+            result === "correct"
+              ? "border-emerald-500/60"
+              : result === "wrong"
+                ? "border-rose-500/60"
+                : ""
+          }`}
+        />
+        <Button size="sm" onClick={submit} disabled={pending} className="gap-1.5">
+          <Send className="h-3.5 w-3.5" />
+          {locale === "pt-BR" ? "Verificar" : "Check"}
+        </Button>
+      </div>
+    </div>
+  );
+}
+
+function LineOrder({
+  exercise,
+  lessonSlug,
+  exerciseIndex,
+  initial,
+  onSaved,
+}: {
+  exercise: Extract<MusicExercise, { type: "line_order" }>;
+  lessonSlug: string;
+  exerciseIndex: number;
+  initial: ExerciseResponseRow | null;
+  onSaved: (r: ExerciseResponseRow) => void;
+}) {
+  const { locale } = useI18n();
+  const [pending, startTransition] = useTransition();
+  const _safeSubmit = useSafeSubmit();
+  // We present excerpts shuffled by the natural-text order (not the chronological)
+  // so the student actually has to figure out the time order.
+  const shuffled = [...exercise.excerpts].sort((a, b) =>
+    a.text.localeCompare(b.text)
+  );
+  const savedOrder =
+    initial?.answer.type === "line_order" ? initial.answer.order : null;
+
+  const [ranks, setRanks] = useState<Record<number, number | null>>(() => {
+    if (savedOrder && savedOrder.length === shuffled.length) {
+      const m: Record<number, number | null> = {};
+      for (let i = 0; i < shuffled.length; i++) m[shuffled[i].order] = savedOrder[i];
+      return m;
+    }
+    const m: Record<number, number | null> = {};
+    for (const s of shuffled) m[s.order] = null;
+    return m;
+  });
+  const [result, setResult] = useState<null | { correct: number; total: number }>(
+    null
+  );
+
+  function submit() {
+    let correct = 0;
+    for (const s of shuffled) {
+      if (ranks[s.order] === s.order + 1) correct++;
+    }
+    setResult({ correct, total: shuffled.length });
+    const order = shuffled.map((s) => ranks[s.order] ?? 0);
+    startTransition(async () => {
+      const r = await _safeSubmit({
+        lessonSlug,
+        exerciseIndex,
+        answer: { type: "line_order", order },
+      });
+      if ("error" in r && r.error) toast.error(r.error);
+      else if ("success" in r && r.response) onSaved(r.response);
+    });
+    toast[correct === shuffled.length ? "success" : "info"](
+      locale === "pt-BR"
+        ? `${correct}/${shuffled.length} na posição certa`
+        : `${correct}/${shuffled.length} in the right position`
+    );
+  }
+
+  return (
+    <div className="space-y-3">
+      <ul className="space-y-2">
+        {shuffled.map((s) => {
+          const picked = ranks[s.order];
+          const isCorrect = result !== null && picked === s.order + 1;
+          const isWrong = result !== null && picked !== null && !isCorrect;
+          return (
+            <li
+              key={s.order}
+              className="flex flex-wrap items-center gap-2 rounded-md border border-border bg-card p-2 text-sm"
+            >
+              <select
+                value={picked ?? ""}
+                onChange={(e) =>
+                  setRanks((prev) => ({
+                    ...prev,
+                    [s.order]: e.target.value === "" ? null : Number(e.target.value),
+                  }))
+                }
+                className={`h-8 w-14 rounded-md border bg-background px-1 text-center ${
+                  isCorrect
+                    ? "border-emerald-500/60"
+                    : isWrong
+                      ? "border-rose-500/60"
+                      : "border-border"
+                }`}
+              >
+                <option value=""></option>
+                {shuffled.map((_, i) => (
+                  <option key={i} value={i + 1}>
+                    {i + 1}
+                  </option>
+                ))}
+              </select>
+              <span className="italic">{s.text}</span>
+            </li>
+          );
+        })}
+      </ul>
+      <Button size="sm" onClick={submit} disabled={pending} className="gap-1.5">
+        <Send className="h-3.5 w-3.5" />
+        {locale === "pt-BR" ? "Verificar" : "Check"}
+      </Button>
     </div>
   );
 }

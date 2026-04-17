@@ -1,12 +1,20 @@
 # Amazing School
 
-> **Version 2.0** — Free, open-source English teaching platform for Brazilian Portuguese speakers.
+> **Version 0.1.0 — Early Access / Testing Preview.** Free, open-source English teaching
+> platform for Brazilian Portuguese speakers. APIs, data shapes, and UI copy may
+> change without notice until we reach 1.0.
 
 Your English, Your Teacher, with AI. Real teachers deliver live, personalized classes with a **sober, data-dense admin console**. AI is the tool that keeps students practicing between sessions — correcting grammar, expanding vocabulary, and maintaining momentum.
 
+[![Version](https://img.shields.io/badge/Version-0.1.0--alpha-orange)](CHANGELOG.md)
+[![Status](https://img.shields.io/badge/Status-Testing%20Preview-yellow)](#)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org)
 [![Supabase](https://img.shields.io/badge/Supabase-Postgres-3ECF8E)](https://supabase.com)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+> 🚧 **This is a testing release.** The music + lesson modules work end-to-end
+> but rate limits, content volume, and email delivery are dev-tier. Production
+> deployment instructions below — use for evaluation, not yet for a paid classroom.
 
 ---
 
