@@ -70,16 +70,20 @@ export async function markLessonComplete(
   }
 
   // 1. lesson_progress — detect first-time completion so XP is only awarded once.
-  const { data: existing } = await admin
+  const { data: existing, error: existingErr } = await admin
     .from("lesson_progress")
-    .select("id, completed_at")
+    .select("id, started_at, completed_at")
     .eq("student_id", user.id)
     .eq("classroom_id", classroomId)
     .eq("lesson_slug", parsed.data.lessonSlug)
     .maybeSingle();
+  if (existingErr) {
+    console.error("lesson_progress select error:", existingErr);
+    return { error: `Could not read progress: ${existingErr.message}` };
+  }
   const isFirstCompletion = !existing || !existing.completed_at;
 
-  await admin.from("lesson_progress").upsert(
+  const { error: upErr } = await admin.from("lesson_progress").upsert(
     {
       student_id: user.id,
       classroom_id: classroomId,
@@ -88,19 +92,31 @@ export async function markLessonComplete(
         (existing as { started_at?: string } | null)?.started_at ??
         new Date().toISOString(),
       completed_at: new Date().toISOString(),
+      completed_exercises: 0,
+      total_exercises: 0,
     },
-    { onConflict: "student_id,classroom_id,lesson_slug" }
+    { onConflict: "student_id,lesson_slug,classroom_id" }
   );
+  if (upErr) {
+    console.error("lesson_progress upsert error:", upErr);
+    return { error: `Could not save progress: ${upErr.message}` };
+  }
 
-  // 2. XP — only award on transition.
+  // 2. XP — only award on transition. xp_events schema uses (source, source_id).
   const xp = parsed.data.xpReward ?? 25;
   if (isFirstCompletion && xp > 0) {
-    await admin.from("xp_events").insert({
+    const { error: xpErr } = await admin.from("xp_events").insert({
       student_id: user.id,
       classroom_id: classroomId,
       xp_amount: xp,
-      reason: `Completed ${parsed.data.lessonSlug}`,
+      // xp_events.source has a CHECK constraint: only 'lesson' | 'ai_chat' |
+      // 'streak_bonus' | 'badge'. Music completions go through as 'lesson'
+      // too; source_id distinguishes (music:... prefix).
+      source: "lesson",
+      source_id: parsed.data.lessonSlug,
     });
+    if (xpErr) console.error("xp_events insert error:", xpErr);
+    // xp_events is best-effort; the core progress is already recorded.
   }
 
   // 3. Flip matching lesson_assignments row to completed. Match per-student,
