@@ -192,13 +192,14 @@ export async function getAssignmentsForStudent(
   classroomId: string,
   studentId: string
 ): Promise<LessonAssignment[]> {
-  const supabase = await createClient();
-
-  // A student signed up from an invite is linked to a roster row via
-  // roster_students.auth_user_id. Assignments the teacher made BEFORE the
-  // student accepted the invitation live on that roster row. We union them
-  // in so students see everything their teacher intended for them.
+  // Use the admin client so we don't lose rows to RLS edge cases (e.g. a
+  // student who was invited but whose classroom_members row isn't indexed
+  // in the RLS subquery yet). Authorization is via the studentId argument.
   const admin = createAdminClient();
+
+  // If the user was signed up via a roster invite, there's a roster_students
+  // row linked via auth_user_id. Assignments targeting that roster row
+  // (made before signup) need to be included.
   const { data: rosterLink } = await admin
     .from("roster_students")
     .select("id")
@@ -206,18 +207,58 @@ export async function getAssignmentsForStudent(
     .maybeSingle();
   const rosterId = (rosterLink as { id: string } | null)?.id ?? null;
 
-  const filter = rosterId
-    ? `student_id.is.null,student_id.eq.${studentId},roster_student_id.eq.${rosterId}`
-    : `student_id.is.null,student_id.eq.${studentId}`;
-
-  const { data } = await supabase
+  // Build three separate queries and union. This is cleaner than a single
+  // OR with nested and() — PostgREST's OR grammar is picky about embedded
+  // logical groups.
+  const classroomWide = admin
     .from("lesson_assignments")
     .select("*")
     .eq("classroom_id", classroomId)
-    .or(filter)
-    .order("order_index", { ascending: true })
-    .order("assigned_at", { ascending: false });
-  return (data as LessonAssignment[] | null) ?? [];
+    .is("student_id", null)
+    .is("roster_student_id", null);
+
+  const perUser = admin
+    .from("lesson_assignments")
+    .select("*")
+    .eq("classroom_id", classroomId)
+    .eq("student_id", studentId);
+
+  const perRoster = rosterId
+    ? admin
+        .from("lesson_assignments")
+        .select("*")
+        .eq("classroom_id", classroomId)
+        .eq("roster_student_id", rosterId)
+    : Promise.resolve({ data: [] as LessonAssignment[] });
+
+  const [cw, pu, pr] = await Promise.all([classroomWide, perUser, perRoster]);
+  const merged: LessonAssignment[] = [
+    ...((cw.data as LessonAssignment[] | null) ?? []),
+    ...((pu.data as LessonAssignment[] | null) ?? []),
+    ...((pr.data as LessonAssignment[] | null) ?? []),
+  ];
+
+  // Dedupe by id (in case a row somehow matches two branches).
+  const seen = new Set<string>();
+  const unique = merged.filter((a) => {
+    const id = (a as { id: string }).id;
+    if (seen.has(id)) return false;
+    seen.add(id);
+    return true;
+  });
+
+  // Sort: earliest order_index first, then most recently assigned.
+  unique.sort((a, b) => {
+    const ao = (a as { order_index?: number }).order_index ?? 0;
+    const bo = (b as { order_index?: number }).order_index ?? 0;
+    if (ao !== bo) return ao - bo;
+    return (
+      new Date((b as { assigned_at: string }).assigned_at).getTime() -
+      new Date((a as { assigned_at: string }).assigned_at).getTime()
+    );
+  });
+
+  return unique;
 }
 
 export async function getAssignmentsForClassroom(

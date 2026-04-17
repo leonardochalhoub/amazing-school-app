@@ -67,16 +67,88 @@ export default async function StudentHome() {
     .eq("auth_user_id", user.id)
     .maybeSingle();
 
-  const [stats, classrooms] = await Promise.all([
-    getStudentStats(user.id),
-    getStudentClassrooms(),
-  ]);
+  const stats = await getStudentStats(user.id);
 
-  const firstClassroomRaw = classrooms?.[0] as unknown as
-    | { id: string; name: string }
-    | undefined;
-  const classroomId = firstClassroomRaw?.id ?? null;
-  const classroomName = firstClassroomRaw?.name ?? null;
+  // Auto-claim: if this student has a pending invitation matching their
+  // email (e.g. they signed up directly instead of clicking the invite
+  // link), link them up transparently on first load.
+  if (user.email) {
+    const { data: pending } = await admin
+      .from("student_invitations")
+      .select("id, classroom_id, roster_student_id")
+      .eq("email", user.email)
+      .is("accepted_at", null)
+      .gte("expires_at", new Date().toISOString())
+      .order("created_at", { ascending: false })
+      .limit(1);
+    const inv = pending?.[0] as
+      | {
+          id: string;
+          classroom_id: string;
+          roster_student_id: string | null;
+        }
+      | undefined;
+    if (inv) {
+      if (inv.roster_student_id) {
+        await admin
+          .from("roster_students")
+          .update({ auth_user_id: user.id })
+          .eq("id", inv.roster_student_id);
+      }
+      await admin
+        .from("classroom_members")
+        .upsert(
+          { classroom_id: inv.classroom_id, student_id: user.id },
+          { onConflict: "classroom_id,student_id" }
+        );
+      await admin
+        .from("student_invitations")
+        .update({
+          accepted_at: new Date().toISOString(),
+          accepted_by_user_id: user.id,
+        })
+        .eq("id", inv.id);
+    }
+  }
+
+  // Robust classroom lookup — prefer an actual classroom_members row, but
+  // fall back to the roster_students.classroom_id if the membership row is
+  // missing (common right after an invite claim, before cache refresh).
+  const { data: membership } = await admin
+    .from("classroom_members")
+    .select("classroom_id, classrooms(id, name)")
+    .eq("student_id", user.id)
+    .limit(1)
+    .maybeSingle();
+
+  let classroomId: string | null = null;
+  let classroomName: string | null = null;
+  if (membership) {
+    const c = (membership as {
+      classroom_id: string;
+      classrooms: { id: string; name: string } | { id: string; name: string }[] | null;
+    }).classrooms;
+    const flat = Array.isArray(c) ? c[0] : c;
+    classroomId = flat?.id ?? (membership as { classroom_id: string }).classroom_id;
+    classroomName = flat?.name ?? null;
+  }
+  if (!classroomId && rosterSelf) {
+    const { data: rosterRow } = await admin
+      .from("roster_students")
+      .select("classroom_id")
+      .eq("id", (rosterSelf as { id: string }).id)
+      .maybeSingle();
+    const cid = (rosterRow as { classroom_id: string | null } | null)?.classroom_id ?? null;
+    if (cid) {
+      const { data: cls } = await admin
+        .from("classrooms")
+        .select("id, name")
+        .eq("id", cid)
+        .maybeSingle();
+      classroomId = cid;
+      classroomName = (cls as { name: string } | null)?.name ?? null;
+    }
+  }
 
   // Avatar resolution order: user's own upload → roster avatar the teacher
   // set before the student signed up → cartoon fallback.

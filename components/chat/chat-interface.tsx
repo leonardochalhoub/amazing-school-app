@@ -68,6 +68,21 @@ export function ChatInterface({
         if (res.status === 429) {
           setRemaining(0);
         }
+        let errorText = `AI tutor error (${res.status}). Please try again.`;
+        try {
+          const errBody = await res.json();
+          if (errBody?.error) errorText = errBody.error;
+        } catch {
+          // not json
+        }
+        setMessages((prev) => [
+          ...prev,
+          {
+            id: crypto.randomUUID(),
+            role: "assistant",
+            content: `⚠️ ${errorText}`,
+          },
+        ]);
         return;
       }
 
