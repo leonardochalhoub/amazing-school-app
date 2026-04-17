@@ -2,6 +2,43 @@
 
 import { createClient } from "@/lib/supabase/server";
 import { revalidatePath } from "next/cache";
+import { z } from "zod";
+
+const UuidSchema = z.string().uuid();
+const StatusSchema = z.enum(["held", "cancelled", "rescheduled"]).nullable();
+
+const LogSchema = z.object({
+  classId: UuidSchema,
+  observations: z.string().max(8000).nullable().optional(),
+  completionStatus: StatusSchema.optional(),
+});
+
+export async function updateClassLog(input: z.input<typeof LogSchema>) {
+  const parsed = LogSchema.safeParse(input);
+  if (!parsed.success) return { error: parsed.error.issues[0]?.message ?? "Invalid input" };
+
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" };
+
+  const patch: Record<string, unknown> = { updated_at: new Date().toISOString() };
+  if (parsed.data.observations !== undefined) patch.observations = parsed.data.observations;
+  if (parsed.data.completionStatus !== undefined) patch.completion_status = parsed.data.completionStatus;
+
+  const { data: row, error } = await supabase
+    .from("scheduled_classes")
+    .update(patch)
+    .eq("id", parsed.data.classId)
+    .eq("created_by", user.id)
+    .select("classroom_id")
+    .maybeSingle();
+
+  if (error) return { error: error.message };
+  if (row?.classroom_id) {
+    revalidatePath(`/teacher/classroom/${row.classroom_id}`);
+  }
+  return { success: true as const };
+}
 
 export async function createScheduledClass(
   classroomId: string,

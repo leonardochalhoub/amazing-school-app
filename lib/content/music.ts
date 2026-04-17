@@ -1,0 +1,128 @@
+import musicIndexRaw from "@/content/music/index.json";
+
+export interface MusicMeta {
+  slug: string;
+  title: string;
+  artist: string;
+  year: number;
+  cefr_level: string;
+  difficulty: "easy" | "medium" | "hard";
+  genre: string[];
+  duration_seconds: number;
+}
+
+export interface VocabHook {
+  term: string;
+  pt: string;
+  note: string;
+}
+
+export type MusicExercise =
+  | {
+      type: "listen_and_fill";
+      prompt_en: string;
+      prompt_pt: string;
+      excerpt_before: string;
+      blank_hint: string;
+      answer: string;
+      excerpt_after: string;
+      youtube_start: number;
+      youtube_end: number;
+    }
+  | {
+      type: "translate_line";
+      prompt_en: string;
+      prompt_pt: string;
+      excerpt: string;
+      model_answer_pt: string;
+      teacher_note?: string;
+    }
+  | {
+      type: "discussion";
+      prompt_en: string;
+      prompt_pt: string;
+      target_vocab: string[];
+    }
+  | {
+      type: "spot_the_grammar";
+      prompt_en: string;
+      prompt_pt: string;
+      expected: { short: string; full: string }[];
+    };
+
+export interface SingAlongPrompt {
+  label_en: string;
+  label_pt: string;
+  lines: string[];
+  start_seconds: number;
+  style?: "chorus" | "verse" | "bridge" | "hook";
+}
+
+export interface MusicSong extends MusicMeta {
+  album: string;
+  tempo: "slow" | "mid" | "fast";
+  youtube_id: string;
+  full_lyrics_url: string;
+  full_lyrics_source: string;
+  why_this_song: string;
+  vocab_hooks: VocabHook[];
+  grammar_callouts: string[];
+  /** Two to three short sing-along challenges per song. Fair-use short excerpts only. */
+  sing_along?: { prompts: SingAlongPrompt[] };
+  exercises: MusicExercise[];
+  teaching_notes_md: string;
+  copyright_notice: string;
+}
+
+interface MusicIndex {
+  generated_at: string;
+  catalog_size_target: number;
+  songs: MusicMeta[];
+}
+
+const MUSIC_INDEX: MusicIndex = musicIndexRaw as MusicIndex;
+
+export function listMusic(): MusicMeta[] {
+  return MUSIC_INDEX.songs;
+}
+
+export function getMusic(slug: string): MusicMeta | null {
+  return MUSIC_INDEX.songs.find((s) => s.slug === slug) ?? null;
+}
+
+export const MUSIC_SLUG_PREFIX = "music:";
+
+/**
+ * Builds a Cambridge English→Portuguese dictionary lookup URL for a term.
+ * Multi-word entries become hyphenated (e.g. "as long as" → "as-long-as").
+ */
+export function cambridgeUrl(term: string): string {
+  const slug = term
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-");
+  return `https://dictionary.cambridge.org/dictionary/english-portuguese/${encodeURIComponent(
+    slug
+  )}`;
+}
+
+
+export function isMusicAssignmentSlug(slug: string): boolean {
+  return slug.startsWith(MUSIC_SLUG_PREFIX);
+}
+
+export function toMusicSlug(rawSlug: string): string {
+  return `${MUSIC_SLUG_PREFIX}${rawSlug}`;
+}
+
+export function fromAssignmentSlug(slug: string): {
+  kind: "lesson" | "music";
+  slug: string;
+} {
+  if (slug.startsWith(MUSIC_SLUG_PREFIX)) {
+    return { kind: "music", slug: slug.slice(MUSIC_SLUG_PREFIX.length) };
+  }
+  return { kind: "lesson", slug };
+}
+

@@ -1,0 +1,49 @@
+{
+  "slug": "conditionals-second",
+  "title": "Second Conditional",
+  "description": "Hypothetical present/future with if + past simple, would + base verb",
+  "category": "grammar",
+  "level": "B1",
+  "cefr_level": "b1.2",
+  "xp_reward": 45,
+  "estimated_minutes": 18,
+  "summary_pt_br": "Segundo condicional — if + passado simples, would + verbo base, para situações hipotéticas.",
+  "sources": [
+    {
+      "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/conditionals-second",
+      "title": "British Council — Second Conditional",
+      "license": "cc-by-nc"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "c2-001",
+      "type": "multiple_choice",
+      "question": "If I ___ rich, I would travel the world.",
+      "options": ["am", "was", "were", "will be"],
+      "correct": 2,
+      "explanation": "Formal second conditional uses 'were' for all subjects (though 'was' is common in speech).",
+      "hint_pt_br": "Na forma culta, usamos 'were' para todos os sujeitos no segundo condicional."
+    },
+    {
+      "id": "c2-002",
+      "type": "fill_blank",
+      "question": "If she ___ (have) more time, she would learn Japanese.",
+      "correct": "had",
+      "explanation": "Past simple in the if clause even though the meaning is hypothetical present/future.",
+      "hint_pt_br": "Passado simples no 'if', mesmo com sentido presente/futuro hipotético."
+    },
+    {
+      "id": "c2-003",
+      "type": "matching",
+      "pairs": [
+        ["If I knew, I would tell you.", "Se eu soubesse, eu te diria."],
+        ["If we had a car, we'd drive.", "Se tivéssemos um carro, dirigiríamos."],
+        ["If you asked, I would help.", "Se você pedisse, eu ajudaria."],
+        ["If they tried, they could win.", "Se tentassem, poderiam ganhar."]
+      ],
+      "explanation": "Unreal/hypothetical situations — second conditional.",
+      "hint_pt_br": "Situações irreais/hipotéticas — segundo condicional."
+    }
+  ]
+}

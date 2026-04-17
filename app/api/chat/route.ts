@@ -2,19 +2,15 @@ import { anthropic } from "@ai-sdk/anthropic";
 import { streamText } from "ai";
 import { createClient } from "@/lib/supabase/server";
 import { SYSTEM_PROMPT } from "@/lib/ai/system-prompt";
-import { checkRateLimit } from "@/lib/ai/rate-limit";
+import { checkAndIncrement } from "@/lib/ai/rate-limit";
 
 export async function POST(req: Request) {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
 
-  if (!user) {
-    return new Response("Unauthorized", { status: 401 });
-  }
+  if (!user) return new Response("Unauthorized", { status: 401 });
 
-  const { allowed, remaining } = await checkRateLimit(supabase, user.id);
+  const { allowed, remaining } = await checkAndIncrement(supabase, user.id);
   if (!allowed) {
     return Response.json(
       { error: "Daily message limit reached", remaining: 0 },
@@ -23,7 +19,6 @@ export async function POST(req: Request) {
   }
 
   const { messages, conversationId } = await req.json();
-
   const model = process.env.AI_MODEL ?? "claude-haiku-4-5-20251001";
 
   const result = streamText({
@@ -34,16 +29,8 @@ export async function POST(req: Request) {
       if (conversationId) {
         const userMessage = messages[messages.length - 1];
         await supabase.from("messages").insert([
-          {
-            conversation_id: conversationId,
-            role: "user",
-            content: userMessage.content,
-          },
-          {
-            conversation_id: conversationId,
-            role: "assistant",
-            content: text,
-          },
+          { conversation_id: conversationId, role: "user", content: userMessage.content },
+          { conversation_id: conversationId, role: "assistant", content: text },
         ]);
 
         await supabase.from("daily_activity").upsert(
@@ -60,6 +47,6 @@ export async function POST(req: Request) {
   });
 
   return result.toTextStreamResponse({
-    headers: { "X-Remaining-Messages": String(remaining - 1) },
+    headers: { "X-Remaining-Messages": String(remaining) },
   });
 }

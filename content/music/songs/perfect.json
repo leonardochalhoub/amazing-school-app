@@ -1,0 +1,108 @@
+{
+  "slug": "perfect",
+  "title": "Perfect",
+  "artist": "Ed Sheeran",
+  "year": 2017,
+  "album": "÷ (Divide)",
+  "genre": [
+    "pop",
+    "folk-pop"
+  ],
+  "cefr_level": "a1.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 263,
+  "youtube_id": "2Vv-BfVoq4g",
+  "full_lyrics_url": "https://www.letras.mus.br/ed-sheeran/perfect/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Repeated adjective 'perfect' in a simple declarative pattern. Vocabulary is everyday and emotional — ideal for A1 students practicing simple statements.",
+  "vocab_hooks": [
+    {
+      "term": "perfect",
+      "pt": "perfeito(a)",
+      "note": "adjective — the song's anchor"
+    },
+    {
+      "term": "found",
+      "pt": "encontrou",
+      "note": "irregular past of 'find'"
+    },
+    {
+      "term": "hold",
+      "pt": "segurar",
+      "note": "irregular: hold / held / held"
+    },
+    {
+      "term": "beautiful",
+      "pt": "linda / bonito(a)",
+      "note": "long adjective; teach stress pattern BEAU-ti-ful"
+    }
+  ],
+  "grammar_callouts": [
+    "I found X / I have found X — simple vs present perfect",
+    "she looks perfect — look + adjective",
+    "contractions: I'm, you're, we're"
+  ],
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "I found a love for me",
+          "Darling, just dive right in",
+          "And follow my lead",
+          "Well, I found a girl, beautiful and sweet"
+        ],
+        "start_seconds": 2,
+        "style": "verse"
+      },
+      {
+        "label_en": "Sing the chorus — the iconic line",
+        "label_pt": "Cante o refrão — o verso icônico",
+        "lines": [
+          "Baby, I'm dancing in the dark",
+          "With you between my arms",
+          "Barefoot on the grass",
+          "Listening to our favourite song"
+        ],
+        "start_seconds": 62,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in the chorus:",
+      "prompt_pt": "Complete a lacuna no refrão:",
+      "excerpt_before": "I found a",
+      "blank_hint": "female romantic partner",
+      "answer": "love",
+      "excerpt_after": "for me",
+      "youtube_start": 2,
+      "youtube_end": 18
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line:",
+      "prompt_pt": "Traduza esta linha:",
+      "excerpt": "Baby, you look perfect tonight",
+      "model_answer_pt": "Querida, você está perfeita esta noite",
+      "teacher_note": "English uses 'look' where Portuguese uses 'estar' — important distinction from 'to be' (ser/estar)."
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Ed Sheeran describes the moment he met someone. Describe a moment you'll always remember — it doesn't have to be romantic.",
+      "prompt_pt": "Ed Sheeran descreve o momento em que conheceu alguém. Descreva um momento que você vai lembrar para sempre — não precisa ser romântico.",
+      "target_vocab": [
+        "remember",
+        "moment",
+        "feel",
+        "first"
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Short words, slow pace, repetitive chorus — a safe first-time listening exercise. Vocabulary crosses into A2 when discussing the verse narrative.",
+  "copyright_notice": "Lyrics are property of Atlantic Records / Sony/ATV Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+}

@@ -1,0 +1,123 @@
+import { z } from "zod";
+
+export const SKILLS = ["grammar", "vocabulary", "reading", "listening"] as const;
+export const SKILL_SET = new Set<string>(SKILLS);
+
+export const CEFR_LEVELS = ["a1.1", "a1.2", "a2.1", "a2.2", "b1.1", "b1.2"] as const;
+export const CEFR_SET = new Set<string>(CEFR_LEVELS);
+
+export type Skill = (typeof SKILLS)[number];
+export type CefrLevel = (typeof CEFR_LEVELS)[number];
+
+export const Skill = z.enum(SKILLS);
+export const CefrLevel = z.enum(CEFR_LEVELS);
+
+export const LegacyLevel = z.enum(["A1", "A2", "B1"]);
+
+const BaseExercise = z.object({
+  id: z.string().min(1),
+  explanation: z.string().min(1),
+  hint_pt_br: z.string().min(1),
+});
+
+export const MultipleChoiceExercise = BaseExercise.extend({
+  type: z.literal("multiple_choice"),
+  question: z.string().min(1),
+  options: z.array(z.string().min(1)).min(2).max(6),
+  correct: z.number().int().nonnegative(),
+});
+
+export const FillBlankExercise = BaseExercise.extend({
+  type: z.literal("fill_blank"),
+  question: z.string().min(1),
+  correct: z.string().min(1),
+});
+
+export const MatchingExercise = BaseExercise.extend({
+  type: z.literal("matching"),
+  pairs: z.array(z.tuple([z.string().min(1), z.string().min(1)])).min(2).max(8),
+});
+
+export const Exercise = z.discriminatedUnion("type", [
+  MultipleChoiceExercise,
+  FillBlankExercise,
+  MatchingExercise,
+]);
+export type Exercise = z.infer<typeof Exercise>;
+
+export const License = z.enum(["cc-by", "cc-by-sa", "cc-by-nc", "public-domain", "mit"]);
+
+export const Source = z.object({
+  url: z.string().url(),
+  title: z.string().min(1),
+  license: License,
+});
+export type Source = z.infer<typeof Source>;
+
+export const COURSE_YEAR_1_US = "year-1-us-english-2026" as const;
+export const COURSES = [COURSE_YEAR_1_US] as const;
+export const Course = z.enum(COURSES);
+export type Course = (typeof COURSES)[number];
+
+export const CHARACTER_IDS = [
+  "maria",
+  "tom",
+  "mrs-johnson",
+  "carlos",
+  "dona-helena",
+  "ana",
+  "mr-park",
+  "julia",
+  "biscoito",
+] as const;
+export const CharacterId = z.enum(CHARACTER_IDS);
+export type CharacterId = (typeof CHARACTER_IDS)[number];
+
+export const Lesson = z.object({
+  slug: z.string().min(1),
+  title: z.string().min(1),
+  description: z.string().min(1),
+  category: Skill,
+  level: LegacyLevel,
+  cefr_level: CefrLevel,
+  xp_reward: z.number().int().positive().max(500),
+  estimated_minutes: z.number().int().min(5).max(180),
+  exercises: z.array(Exercise).min(3),
+  summary_pt_br: z.string().min(1).optional(),
+  sources: z.array(Source).min(1).optional(),
+  generator_model: z.string().optional(),
+  generated_at: z.string().datetime().optional(),
+  course_id: z.string().optional(),
+  character_ids: z.array(CharacterId).optional(),
+  hero_image: z.string().optional(),
+});
+export type Lesson = z.infer<typeof Lesson>;
+
+export const LessonMeta = z.object({
+  slug: z.string(),
+  title: z.string(),
+  category: Skill,
+  level: LegacyLevel,
+  cefr_level: CefrLevel,
+  xp_reward: z.number().int(),
+  estimated_minutes: z.number().int(),
+  exercise_count: z.number().int().nonnegative(),
+});
+export type LessonMeta = z.infer<typeof LessonMeta>;
+
+export function toMeta(l: Lesson): LessonMeta {
+  return {
+    slug: l.slug,
+    title: l.title,
+    category: l.category,
+    level: l.level,
+    cefr_level: l.cefr_level,
+    xp_reward: l.xp_reward,
+    estimated_minutes: l.estimated_minutes,
+    exercise_count: l.exercises.length,
+  };
+}
+
+export function cefrDir(cefr: CefrLevel): string {
+  return cefr.replace(".", "-");
+}

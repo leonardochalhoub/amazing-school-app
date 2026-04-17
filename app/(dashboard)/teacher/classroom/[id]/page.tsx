@@ -1,12 +1,19 @@
+import Link from "next/link";
 import { getClassroomDetails } from "@/lib/actions/classroom";
-import { getAssignedLessons } from "@/lib/actions/lessons";
-import { getUpcomingClasses } from "@/lib/actions/schedule";
-import { getLevel } from "@/lib/gamification/engine";
+import { getClassroomStudentRows } from "@/lib/actions/teacher-dashboard";
+import { getAssignmentsForClassroom } from "@/lib/actions/assignments";
+import { getUpcomingClasses, getPastClasses } from "@/lib/actions/schedule";
+import { getAllLessons } from "@/lib/content/loader";
+import { RealtimeGrid } from "@/components/teacher/realtime-grid";
+import { BulkAssignButton } from "@/components/teacher/bulk-assign-button";
+import {
+  PastClassLog,
+  type PastClass,
+} from "@/components/teacher/past-class-log";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
 
 export default async function ClassroomDetail({
   params,
@@ -17,126 +24,133 @@ export default async function ClassroomDetail({
   const data = await getClassroomDetails(id);
 
   if (!data) {
-    return <p className="text-center text-muted-foreground">Classroom not found.</p>;
+    return (
+      <p className="text-center text-muted-foreground">Classroom not found.</p>
+    );
   }
 
-  const { classroom, members } = data;
-  const assignments = await getAssignedLessons(id);
-  const upcomingClasses = await getUpcomingClasses(id);
+  const { classroom } = data;
+  const [rows, assignments, upcoming, pastRaw] = await Promise.all([
+    getClassroomStudentRows(id),
+    getAssignmentsForClassroom(id),
+    getUpcomingClasses(id),
+    getPastClasses(id),
+  ]);
+
+  const past: PastClass[] = (pastRaw as PastClass[]).map((c) => ({
+    id: c.id,
+    title: c.title,
+    meeting_url: c.meeting_url,
+    scheduled_at: c.scheduled_at,
+    observations: c.observations ?? null,
+    completion_status: c.completion_status ?? null,
+  }));
+
+  const allLessons = getAllLessons();
+  const classroomWideAssigned = assignments
+    .filter((a) => a.student_id === null)
+    .map((a) => a.lesson_slug);
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold">{classroom.name}</h1>
-        {classroom.description && (
-          <p className="text-muted-foreground">{classroom.description}</p>
-        )}
-        <Badge variant="outline" className="mt-2">
-          Invite Code: {classroom.invite_code}
-        </Badge>
-      </div>
-
-      <div className="flex gap-2">
-        <Link href={`/teacher/classroom/${id}/assign`}>
-          <Button variant="outline" size="sm">Assign Lesson</Button>
-        </Link>
-        <Link href={`/teacher/classroom/${id}/schedule`}>
-          <Button variant="outline" size="sm">Schedule Class</Button>
-        </Link>
+    <div className="space-y-4">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h1 className="text-xl font-semibold tracking-tight">
+            {classroom.name}
+          </h1>
+          {classroom.description ? (
+            <p className="text-xs text-muted-foreground">
+              {classroom.description}
+            </p>
+          ) : null}
+          <div className="mt-2 flex items-center gap-2">
+            <Badge variant="secondary" className="font-mono text-[10px]">
+              {classroom.invite_code}
+            </Badge>
+            <span className="text-[11px] text-muted-foreground tabular-nums">
+              {rows.length} students · {assignments.length} assignments
+            </span>
+          </div>
+        </div>
+        <div className="flex gap-2">
+          <BulkAssignButton
+            classroomId={id}
+            lessons={allLessons}
+            alreadyAssignedSlugs={classroomWideAssigned}
+          />
+          <Link href={`/teacher/classroom/${id}/schedule`}>
+            <Button size="sm" variant="outline">Schedule</Button>
+          </Link>
+        </div>
       </div>
 
       <Separator />
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <section>
+        <h2 className="text-sm font-semibold mb-2">Students</h2>
+        <RealtimeGrid classroomId={id} initial={rows} />
+      </section>
+
+      <section className="grid gap-4 md:grid-cols-2">
         <Card>
-          <CardHeader>
-            <CardTitle className="text-base">
-              Students ({members.length})
+          <CardHeader className="py-3">
+            <CardTitle className="text-sm">
+              Classroom-wide assignments ({classroomWideAssigned.length})
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {members.length === 0 ? (
-              <p className="text-sm text-muted-foreground">
-                No students yet. Share the invite code!
+            {classroomWideAssigned.length === 0 ? (
+              <p className="text-xs text-muted-foreground">
+                No classroom-wide lessons yet.
               </p>
             ) : (
-              <div className="space-y-3">
-                {members
-                  .sort((a, b) => b.total_xp - a.total_xp)
-                  .map((member) => (
-                    <div
-                      key={member.student_id}
-                      className="flex items-center justify-between"
-                    >
-                      <span className="text-sm font-medium">
-                        {member.full_name}
-                      </span>
-                      <div className="flex items-center gap-2">
-                        <Badge variant="secondary" className="text-xs">
-                          Lv.{getLevel(member.total_xp)}
-                        </Badge>
-                        <span className="text-xs text-muted-foreground">
-                          {member.total_xp} XP
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-              </div>
+              <ul className="text-sm divide-y divide-border">
+                {classroomWideAssigned.map((slug) => (
+                  <li
+                    key={slug}
+                    className="py-1.5 flex items-center justify-between"
+                  >
+                    <span className="truncate">
+                      {allLessons.find((l) => l.slug === slug)?.title ?? slug}
+                    </span>
+                    <Badge variant="outline" className="text-[10px]">
+                      All students
+                    </Badge>
+                  </li>
+                ))}
+              </ul>
             )}
           </CardContent>
         </Card>
 
         <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Upcoming Classes</CardTitle>
+          <CardHeader className="py-3">
+            <CardTitle className="text-sm">Upcoming classes</CardTitle>
           </CardHeader>
           <CardContent>
-            {upcomingClasses.length === 0 ? (
-              <p className="text-sm text-muted-foreground">
+            {upcoming.length === 0 ? (
+              <p className="text-xs text-muted-foreground">
                 No upcoming classes scheduled.
               </p>
             ) : (
-              <div className="space-y-3">
-                {upcomingClasses.map((cls) => (
-                  <div key={cls.id} className="space-y-1">
-                    <p className="text-sm font-medium">{cls.title}</p>
-                    <p className="text-xs text-muted-foreground">
+              <ul className="text-sm divide-y divide-border">
+                {upcoming.map((cls) => (
+                  <li key={cls.id} className="py-1.5">
+                    <p className="font-medium">{cls.title}</p>
+                    <p className="text-[11px] text-muted-foreground tabular-nums">
                       {new Date(cls.scheduled_at).toLocaleString("pt-BR")}
                     </p>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             )}
           </CardContent>
         </Card>
-      </div>
+      </section>
 
       <Card>
-        <CardHeader>
-          <CardTitle className="text-base">
-            Assigned Lessons ({assignments.length})
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          {assignments.length === 0 ? (
-            <p className="text-sm text-muted-foreground">
-              No lessons assigned yet.
-            </p>
-          ) : (
-            <div className="space-y-2">
-              {assignments.map((a) => (
-                <div
-                  key={a.id}
-                  className="flex items-center justify-between py-2 border-b last:border-0"
-                >
-                  <span className="text-sm">{a.lesson_slug}</span>
-                  <span className="text-xs text-muted-foreground">
-                    {new Date(a.assigned_at).toLocaleDateString("pt-BR")}
-                  </span>
-                </div>
-              ))}
-            </div>
-          )}
+        <CardContent className="py-5">
+          <PastClassLog classes={past} />
         </CardContent>
       </Card>
     </div>

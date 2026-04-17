@@ -1,0 +1,34 @@
+{
+  "tier": "advanced",
+  "tier_label_en": "Year 3 — Advanced",
+  "tier_label_pt": "Ano 3 — Avançado",
+  "cefr_span": ["c1.1", "c1.2", "c2-stretch"],
+  "description_en": "Third-year course focused on proficient use: nuance, register, idiom mastery, and discourse-level fluency. C2 content appears as stretch material rather than a required tier.",
+  "description_pt": "Curso do terceiro ano com foco em uso proficiente: nuance, registro, domínio de idiomas e fluência em nível de discurso. O conteúdo C2 aparece como material opcional em vez de uma etapa obrigatória.",
+  "units": [
+    {
+      "unit_slug": "c1-register",
+      "unit_title_en": "Register & nuance",
+      "unit_title_pt": "Registro e nuance",
+      "cefr_level": "c1.1",
+      "lesson_slugs": [],
+      "music_slugs": []
+    },
+    {
+      "unit_slug": "c1-discourse",
+      "unit_title_en": "Discourse fluency",
+      "unit_title_pt": "Fluência discursiva",
+      "cefr_level": "c1.2",
+      "lesson_slugs": [],
+      "music_slugs": []
+    },
+    {
+      "unit_slug": "c2-stretch",
+      "unit_title_en": "Mastery (optional)",
+      "unit_title_pt": "Maestria (opcional)",
+      "cefr_level": "c2-stretch",
+      "lesson_slugs": [],
+      "music_slugs": []
+    }
+  ]
+}

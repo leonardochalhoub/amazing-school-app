@@ -1,0 +1,42 @@
+{
+  "tier": "intermediate",
+  "tier_label_en": "Year 2 — Intermediate",
+  "tier_label_pt": "Ano 2 — Intermediário",
+  "cefr_span": ["b1.1", "b1.2", "b2.1", "b2.2"],
+  "description_en": "Second-year course moving learners toward independent use: conditionals, phrasal verbs, narrative tenses, and opinion-giving.",
+  "description_pt": "Curso do segundo ano levando o aluno ao uso independente: condicionais, phrasal verbs, tempos narrativos e expressão de opinião.",
+  "units": [
+    {
+      "unit_slug": "b1-hypotheticals",
+      "unit_title_en": "Hypotheticals & conditionals",
+      "unit_title_pt": "Hipóteses e condicionais",
+      "cefr_level": "b1.1",
+      "lesson_slugs": ["conditionals-first"],
+      "music_slugs": ["wonderwall"]
+    },
+    {
+      "unit_slug": "b1-second-conditional",
+      "unit_title_en": "Imaginary situations",
+      "unit_title_pt": "Situações imaginárias",
+      "cefr_level": "b1.2",
+      "lesson_slugs": ["conditionals-second"],
+      "music_slugs": []
+    },
+    {
+      "unit_slug": "b2-opinion",
+      "unit_title_en": "Giving opinions",
+      "unit_title_pt": "Dando opiniões",
+      "cefr_level": "b2.1",
+      "lesson_slugs": [],
+      "music_slugs": []
+    },
+    {
+      "unit_slug": "b2-narrative",
+      "unit_title_en": "Complex narratives",
+      "unit_title_pt": "Narrativas complexas",
+      "cefr_level": "b2.2",
+      "lesson_slugs": [],
+      "music_slugs": []
+    }
+  ]
+}

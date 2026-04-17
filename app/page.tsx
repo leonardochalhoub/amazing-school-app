@@ -3,6 +3,7 @@
 import { useI18n } from "@/lib/i18n/context";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleToggle } from "@/components/locale-toggle";
+import { BrandMark } from "@/components/layout/brand-mark";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -23,10 +24,13 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 md:px-6">
-          <div className="flex items-center gap-2">
-            <span className="text-xl">🎓</span>
-            <span className="font-bold text-lg bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+        <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 md:px-6">
+          <div className="flex items-center gap-3">
+            <BrandMark className="h-11 w-11" />
+            <span
+              className="bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text font-[family-name:var(--font-display)] text-3xl italic leading-none text-transparent dark:from-indigo-400 dark:via-violet-400 dark:to-pink-400"
+              style={{ letterSpacing: "-0.01em" }}
+            >
               Amazing School
             </span>
           </div>

@@ -1,0 +1,49 @@
+{
+  "slug": "conditionals-first",
+  "title": "First Conditional",
+  "description": "Real future possibilities with if + present, will + base verb",
+  "category": "grammar",
+  "level": "B1",
+  "cefr_level": "b1.1",
+  "xp_reward": 40,
+  "estimated_minutes": 15,
+  "summary_pt_br": "Primeiro condicional — if + presente, will + verbo base, para possibilidades reais.",
+  "sources": [
+    {
+      "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/conditionals-first",
+      "title": "British Council — First Conditional",
+      "license": "cc-by-nc"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "c1-001",
+      "type": "multiple_choice",
+      "question": "If it ___ tomorrow, we will stay home.",
+      "options": ["will rain", "rains", "rained", "is raining"],
+      "correct": 1,
+      "explanation": "In the 'if' clause we use present simple, even for future meaning.",
+      "hint_pt_br": "Na oração com 'if', usamos presente simples."
+    },
+    {
+      "id": "c1-002",
+      "type": "fill_blank",
+      "question": "If you study hard, you ___ (pass) the exam.",
+      "correct": "will pass",
+      "explanation": "Main clause: will + base verb.",
+      "hint_pt_br": "Na oração principal: will + verbo base."
+    },
+    {
+      "id": "c1-003",
+      "type": "matching",
+      "pairs": [
+        ["If I have time, I'll help.", "Se eu tiver tempo, eu ajudarei."],
+        ["If she calls, I'll answer.", "Se ela ligar, eu atenderei."],
+        ["If they win, we'll celebrate.", "Se eles ganharem, nós comemoraremos."],
+        ["If it's sunny, we'll go out.", "Se estiver ensolarado, nós sairemos."]
+      ],
+      "explanation": "First conditional — real future situations.",
+      "hint_pt_br": "Primeiro condicional — situações reais no futuro."
+    }
+  ]
+}

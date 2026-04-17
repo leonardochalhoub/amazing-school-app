@@ -1,0 +1,56 @@
+{
+  "slug": "count-on-me",
+  "title": "Count on Me",
+  "artist": "Bruno Mars",
+  "year": 2010,
+  "album": "Doo-Wops & Hooligans",
+  "genre": ["pop", "acoustic-pop"],
+  "cefr_level": "a1.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 197,
+  "youtube_id": "6k8cpUkKK4c",
+  "full_lyrics_url": "https://www.letras.mus.br/bruno-mars/count-on-me-nao-oficial/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Friendship-themed with first-conditional structures and the idiom 'count on someone'. Very clear diction — Bruno Mars enunciates every syllable.",
+  "vocab_hooks": [
+    { "term": "count on", "pt": "contar com", "note": "phrasal verb — central to the song" },
+    { "term": "friend", "pt": "amigo(a)", "note": "A1 relationship noun" },
+    { "term": "sail", "pt": "velejar / navegar", "note": "verb; metaphorical in the song" },
+    { "term": "lost", "pt": "perdido(a)", "note": "past participle of 'lose'" }
+  ],
+  "grammar_callouts": [
+    "first conditional: If you ever X, I'll Y",
+    "phrasal verb 'count on'",
+    "future with 'will' contractions (I'll, we'll)"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in the chorus:",
+      "prompt_pt": "Complete a lacuna no refrão:",
+      "excerpt_before": "You can count on me like one, two, three, I'll be",
+      "blank_hint": "adverb meaning 'at this location'",
+      "answer": "there",
+      "excerpt_after": "",
+      "youtube_start": 38,
+      "youtube_end": 55
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line:",
+      "prompt_pt": "Traduza esta linha:",
+      "excerpt": "You can count on me",
+      "model_answer_pt": "Você pode contar comigo",
+      "teacher_note": "PT uses 'contar comigo'; note the preposition difference: EN 'on' vs PT 'com'."
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who can you count on in your life? Describe that person in three words.",
+      "prompt_pt": "Com quem você pode contar na sua vida? Descreva essa pessoa em três palavras.",
+      "target_vocab": ["friend", "family", "kind", "help"]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** The counting (one, two, three) reinforces basic numbers for A1.1. The first-conditional refrain gives four clean reps in 3 minutes.",
+  "copyright_notice": "Lyrics are property of Warner Chappell Music. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+}

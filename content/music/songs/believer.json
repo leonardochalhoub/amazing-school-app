@@ -1,0 +1,80 @@
+{
+  "slug": "believer",
+  "title": "Believer",
+  "artist": "Imagine Dragons",
+  "year": 2017,
+  "album": "Evolve",
+  "genre": [
+    "rock",
+    "alternative"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "fast",
+  "duration_seconds": 204,
+  "youtube_id": "7wtfhZwyrcc",
+  "full_lyrics_url": "https://www.letras.mus.br/imagine-dragons/believer/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "High-energy chorus repeats 'pain / you made me a believer' — great for teaching past simple of irregular verbs and present perfect of 'make'.",
+  "vocab_hooks": [
+    {
+      "term": "pain",
+      "pt": "dor",
+      "note": "abstract noun; contrast with 'painful' adjective"
+    },
+    {
+      "term": "believer",
+      "pt": "crente / quem acredita",
+      "note": "noun from verb 'believe'"
+    },
+    {
+      "term": "break",
+      "pt": "quebrar",
+      "note": "irregular: break / broke / broken"
+    },
+    {
+      "term": "stronger",
+      "pt": "mais forte",
+      "note": "comparative of 'strong'"
+    }
+  ],
+  "grammar_callouts": [
+    "Pain! — interjection as single-word sentence",
+    "You made me a believer — past simple + object + complement",
+    "comparative adjectives (stronger)"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in the chorus:",
+      "prompt_pt": "Complete a lacuna no refrão:",
+      "excerpt_before": "Pain! You made me a",
+      "blank_hint": "noun derived from 'believe'",
+      "answer": "believer",
+      "excerpt_after": "",
+      "youtube_start": 54,
+      "youtube_end": 68
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line:",
+      "prompt_pt": "Traduza esta linha:",
+      "excerpt": "You made me a believer",
+      "model_answer_pt": "Você me fez um crente / Você me fez acreditar",
+      "teacher_note": "Two natural PT translations — discuss nominal ('crente') vs verbal ('acreditar') rendering."
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The song says pain made the singer stronger. Do you agree that difficult experiences make people stronger? Why?",
+      "prompt_pt": "A música diz que a dor fez o cantor ficar mais forte. Você concorda que experiências difíceis fortalecem as pessoas? Por quê?",
+      "target_vocab": [
+        "pain",
+        "strong",
+        "experience",
+        "change"
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** The percussive rhythm helps students internalize stress on 'PAIN' and 'BE-liever' — useful for prosody practice. Watch the volume at the chorus; some learners find it overwhelming.",
+  "copyright_notice": "Lyrics are property of Kobalt Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+}

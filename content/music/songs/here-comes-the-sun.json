@@ -1,0 +1,104 @@
+{
+  "slug": "here-comes-the-sun",
+  "title": "Here Comes the Sun",
+  "artist": "The Beatles",
+  "year": 1969,
+  "album": "Abbey Road",
+  "genre": [
+    "rock",
+    "classic-rock"
+  ],
+  "cefr_level": "a1.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 185,
+  "youtube_id": "KQetemT1sWc",
+  "full_lyrics_url": "https://www.letras.mus.br/the-beatles/here-comes-the-sun/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Very simple vocabulary, repeated phrases, and the structure 'here comes + noun' is a gentle introduction to present simple inversion. Bright mood helps retention.",
+  "vocab_hooks": [
+    {
+      "term": "sun",
+      "pt": "sol",
+      "note": "basic A1 noun"
+    },
+    {
+      "term": "smile",
+      "pt": "sorriso / sorrir",
+      "note": "both noun and verb"
+    },
+    {
+      "term": "winter",
+      "pt": "inverno",
+      "note": "A1 season vocab"
+    },
+    {
+      "term": "long",
+      "pt": "longo",
+      "note": "adjective of duration/length"
+    }
+  ],
+  "grammar_callouts": [
+    "'here comes' + noun (present simple inversion)",
+    "it's been a long X — present perfect with duration",
+    "adverb 'slowly'"
+  ],
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing the chorus",
+        "label_pt": "Cante o refrão",
+        "lines": [
+          "Here comes the sun, do-do-do-do",
+          "Here comes the sun",
+          "And I say, it's all right"
+        ],
+        "start_seconds": 74,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Here comes the sun"
+        ],
+        "start_seconds": 163,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in the chorus:",
+      "prompt_pt": "Complete a lacuna no refrão:",
+      "excerpt_before": "Here comes the",
+      "blank_hint": "big yellow star in the sky",
+      "answer": "sun",
+      "excerpt_after": ", and I say it's all right",
+      "youtube_start": 18,
+      "youtube_end": 34
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line:",
+      "prompt_pt": "Traduza esta linha:",
+      "excerpt": "It's been a long, cold, lonely winter",
+      "model_answer_pt": "Foi um inverno longo, frio e solitário",
+      "teacher_note": "Three adjectives in a row — good place to teach comma usage between adjectives."
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "In Brazil you don't have a harsh winter like in England. What does 'sun coming back' feel like in your city?",
+      "prompt_pt": "No Brasil o inverno não é tão rigoroso como na Inglaterra. O que a volta do sol significa na sua cidade?",
+      "target_vocab": [
+        "sun",
+        "winter",
+        "warm",
+        "feel"
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** The song's limited vocabulary (~30 unique words) makes it ideal for a first listening-comprehension exercise at A1.1. Pair with a simple weather/seasons unit.\n\n**Classroom tip:** Play only the first 40 seconds first — the intro is instrumental and sets the mood.",
+  "copyright_notice": "Lyrics are property of Harrisongs / Sony Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+}

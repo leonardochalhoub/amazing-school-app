@@ -1,0 +1,88 @@
+{
+  "slug": "we-are-the-champions",
+  "title": "We Are the Champions",
+  "artist": "Queen",
+  "year": 1977,
+  "album": "News of the World",
+  "genre": [
+    "rock",
+    "classic-rock"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 180,
+  "youtube_id": "04854XqcfCY",
+  "full_lyrics_url": "https://www.letras.mus.br/queen/we-are-the-champions/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Present-perfect anthem ('I've paid my dues', 'I've taken my bows') — a concentrated drill on a single tense. Globally recognized, so recognition aids comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "champion",
+      "pt": "campeão / campeã",
+      "note": "A2 noun; note stress CHAM-pion"
+    },
+    {
+      "term": "dues",
+      "pt": "dívidas / tributos",
+      "note": "plural noun; idiom 'pay one's dues'"
+    },
+    {
+      "term": "bow",
+      "pt": "reverência",
+      "note": "noun (pronounced /baʊ/); contrast with 'bow' /boʊ/ meaning arrow-launcher"
+    },
+    {
+      "term": "mistake",
+      "pt": "erro",
+      "note": "noun; 'make mistakes' is a high-frequency phrase"
+    }
+  ],
+  "grammar_callouts": [
+    "present perfect: I've paid / I've taken / I've had",
+    "no ordinary X — no + adjective + noun",
+    "chorus uses simple present 'we are'"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in the chorus:",
+      "prompt_pt": "Complete a lacuna no refrão:",
+      "excerpt_before": "We are the",
+      "blank_hint": "plural — winners",
+      "answer": "champions",
+      "excerpt_after": ", my friends",
+      "youtube_start": 33,
+      "youtube_end": 51
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line:",
+      "prompt_pt": "Traduza esta linha:",
+      "excerpt": "I've paid my dues, time after time",
+      "model_answer_pt": "Eu paguei meus tributos, vez após vez",
+      "teacher_note": "PT simple past often renders EN present perfect. Discuss when we'd use 'tenho pago' (rarer) vs 'paguei'."
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Find three contractions in the verses and write out their full forms.",
+      "prompt_pt": "Encontre três contrações nos versos e escreva a forma completa.",
+      "expected": [
+        {
+          "short": "I've",
+          "full": "I have"
+        },
+        {
+          "short": "we've",
+          "full": "we have"
+        },
+        {
+          "short": "we'll",
+          "full": "we will"
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Present perfect in EN vs past simple in PT is a classic confusion zone — this song exposes it across an entire verse. Spend a full 10 minutes on that comparison.",
+  "copyright_notice": "Lyrics are property of Queen Music Ltd / Sony/ATV Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+}

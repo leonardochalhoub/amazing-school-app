@@ -1,0 +1,49 @@
+{
+  "slug": "past-continuous",
+  "title": "Past Continuous",
+  "description": "Describe ongoing actions in the past with was/were + verb-ing",
+  "category": "grammar",
+  "level": "A2",
+  "cefr_level": "a2.1",
+  "xp_reward": 30,
+  "estimated_minutes": 12,
+  "summary_pt_br": "Passado contínuo — was/were + verbo-ing, para ações em progresso no passado.",
+  "sources": [
+    {
+      "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/past-continuous",
+      "title": "British Council — Past Continuous",
+      "license": "cc-by-nc"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pcc-001",
+      "type": "multiple_choice",
+      "question": "While I ___ dinner, the phone rang.",
+      "options": ["cooked", "was cooking", "am cooking", "cook"],
+      "correct": 1,
+      "explanation": "Past continuous for a long action interrupted by a short one.",
+      "hint_pt_br": "Passado contínuo para uma ação longa interrompida por outra curta."
+    },
+    {
+      "id": "pcc-002",
+      "type": "fill_blank",
+      "question": "They ___ (watch) TV when I arrived.",
+      "correct": "were watching",
+      "explanation": "Were + watching — ongoing past action.",
+      "hint_pt_br": "Para 'they', use 'were' + verbo-ing."
+    },
+    {
+      "id": "pcc-003",
+      "type": "matching",
+      "pairs": [
+        ["I was reading", "Eu estava lendo"],
+        ["She was driving", "Ela estava dirigindo"],
+        ["We were laughing", "Nós estávamos rindo"],
+        ["They were sleeping", "Eles estavam dormindo"]
+      ],
+      "explanation": "All past-continuous translations.",
+      "hint_pt_br": "Todas no passado contínuo."
+    }
+  ]
+}

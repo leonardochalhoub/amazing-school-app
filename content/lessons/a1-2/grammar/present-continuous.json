@@ -1,0 +1,63 @@
+{
+  "slug": "present-continuous",
+  "title": "Present Continuous",
+  "description": "Describe actions happening now using 'to be' + verb-ing",
+  "category": "grammar",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 25,
+  "estimated_minutes": 10,
+  "summary_pt_br": "Presente contínuo — para ações acontecendo agora: am/is/are + verbo-ing.",
+  "sources": [
+    {
+      "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/present-continuous",
+      "title": "British Council — Present Continuous",
+      "license": "cc-by-nc"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pc-001",
+      "type": "multiple_choice",
+      "question": "Look! The children ___ in the park.",
+      "options": ["play", "plays", "are playing", "is playing"],
+      "correct": 2,
+      "explanation": "Present continuous for something happening right now: are + verb-ing.",
+      "hint_pt_br": "Para ações agora, use 'are/is' + verbo com -ing."
+    },
+    {
+      "id": "pc-002",
+      "type": "fill_blank",
+      "question": "I ___ (read) a book about Brazil.",
+      "correct": "am reading",
+      "explanation": "With 'I', use 'am' + reading.",
+      "hint_pt_br": "Com 'I', usamos 'am' + verbo-ing."
+    },
+    {
+      "id": "pc-003",
+      "type": "matching",
+      "pairs": [
+        ["She is cooking", "Ela está cozinhando"],
+        ["They are running", "Eles estão correndo"],
+        ["He is working", "Ele está trabalhando"],
+        ["We are studying", "Nós estamos estudando"]
+      ],
+      "explanation": "Translations with present continuous (-ing).",
+      "hint_pt_br": "Traduções com o presente contínuo."
+    },
+    {
+      "id": "pc-004",
+      "type": "multiple_choice",
+      "question": "Which sentence is correct?",
+      "options": [
+        "He is swim now.",
+        "He swimming now.",
+        "He is swimming now.",
+        "He swim now."
+      ],
+      "correct": 2,
+      "explanation": "'is' + 'swim' + '-ming' (double consonant) = is swimming.",
+      "hint_pt_br": "Com 'swim', dobramos o 'm': swimming."
+    }
+  ]
+}

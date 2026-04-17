@@ -1,0 +1,123 @@
+{
+  "slug": "as-long-as-you-love-me",
+  "title": "As Long As You Love Me",
+  "artist": "Backstreet Boys",
+  "year": 1997,
+  "album": "Backstreet's Back",
+  "genre": [
+    "pop",
+    "boy-band"
+  ],
+  "cefr_level": "a2.1",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 212,
+  "youtube_id": "0Gl2QnHNpkA",
+  "full_lyrics_url": "https://www.letras.mus.br/backstreet-boys/as-long-as-you-love-me/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Repetitive chorus with second-conditional modals (don't care who you are, where you're from). Perfect for A2 learners practicing conditional commitment and 'as long as' clauses.",
+  "vocab_hooks": [
+    {
+      "term": "as long as",
+      "pt": "desde que / contanto que",
+      "note": "conditional conjunction — the hook of the whole song"
+    },
+    {
+      "term": "care",
+      "pt": "se importar",
+      "note": "often with 'about' — 'I don't care about it'"
+    },
+    {
+      "term": "hide",
+      "pt": "esconder",
+      "note": "irregular: hide / hid / hidden"
+    },
+    {
+      "term": "though",
+      "pt": "embora",
+      "note": "contrast connector; contrast with 'although' + 'thought'"
+    }
+  ],
+  "grammar_callouts": [
+    "as long as + present simple (conditional)",
+    "don't care + wh-clause",
+    "contractions: don't, it's, you're"
+  ],
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Where you're from",
+          "What you did",
+          "As long as you love me"
+        ],
+        "start_seconds": 60,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Shout the hook",
+        "label_pt": "Grite o gancho final",
+        "lines": [
+          "As long as you love me!"
+        ],
+        "start_seconds": 66,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Listen to the chorus. Fill the blank:",
+      "prompt_pt": "Ouça o refrão. Complete a lacuna:",
+      "excerpt_before": "I don't care who you are,",
+      "blank_hint": "preposition of origin",
+      "answer": "where you're from",
+      "excerpt_after": "As long as you love me",
+      "youtube_start": 58,
+      "youtube_end": 74
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "As long as you love me",
+      "model_answer_pt": "Desde que você me ame",
+      "teacher_note": "The subjunctive 'ame' is the natural PT choice — discuss why EN uses present simple here."
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer says he doesn't care about his lover's past. Do you think that's realistic in a real relationship? Why or why not?",
+      "prompt_pt": "O cantor diz que não se importa com o passado do par. Você acha realista em um relacionamento real? Por quê?",
+      "target_vocab": [
+        "care",
+        "past",
+        "realistic",
+        "trust"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Find three contractions in the chorus and write out their full forms.",
+      "prompt_pt": "Encontre três contrações no refrão e escreva a forma completa.",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Why this song works for A2 Brazilian learners:**\n\n1. Slow, clear enunciation — boy-band pop is famously clean vocally.\n2. 'As long as' is a high-value structure that doesn't exist as a single word in Portuguese.\n3. The song repeats the same chorus structure ~6x, so learners internalize the pattern by the end.\n\n**Classroom flow (20 min):**\n\n- 3 min: Play the chorus twice. Students raise a hand every time they hear 'as long as'.\n- 5 min: Do the listen_and_fill exercise in pairs.\n- 5 min: Translate line exercise — compare answers around the room.\n- 7 min: Discussion prompt in pt-BR first, then have students retry in EN.\n\n**Do NOT** print or project the full lyrics. Send students to the Letras.mus.br link on their own devices if they want the whole text.",
+  "copyright_notice": "Lyrics are property of Zomba Music Publishing / Sony Music Publishing. Only short educational excerpts are reproduced here under Brazilian Lei 9.610/98 art. 46 VIII (citação para fins didáticos) and US fair-use doctrine. Full lyrics viewed via external licensed source."
+}

@@ -1,0 +1,42 @@
+{
+  "tier": "basic",
+  "tier_label_en": "Year 1 — Basic",
+  "tier_label_pt": "Ano 1 — Básico",
+  "cefr_span": ["a1.1", "a1.2", "a2.1", "a2.2"],
+  "description_en": "First-year course covering survival English: greetings, daily routines, simple past storytelling, and elementary conditionals.",
+  "description_pt": "Curso do primeiro ano cobrindo inglês de sobrevivência: cumprimentos, rotinas diárias, narrativas no passado simples e condicionais elementares.",
+  "units": [
+    {
+      "unit_slug": "a1-survival",
+      "unit_title_en": "Survival English",
+      "unit_title_pt": "Inglês de sobrevivência",
+      "cefr_level": "a1.1",
+      "lesson_slugs": ["greetings", "present-simple"],
+      "music_slugs": ["let-it-be"]
+    },
+    {
+      "unit_slug": "a1-daily-life",
+      "unit_title_en": "Daily life",
+      "unit_title_pt": "Vida cotidiana",
+      "cefr_level": "a1.2",
+      "lesson_slugs": ["present-continuous"],
+      "music_slugs": []
+    },
+    {
+      "unit_slug": "a2-telling-stories",
+      "unit_title_en": "Telling stories",
+      "unit_title_pt": "Contando histórias",
+      "cefr_level": "a2.1",
+      "lesson_slugs": ["past-simple", "past-continuous"],
+      "music_slugs": ["as-long-as-you-love-me"]
+    },
+    {
+      "unit_slug": "a2-experience",
+      "unit_title_en": "Talking about experience",
+      "unit_title_pt": "Falando de experiências",
+      "cefr_level": "a2.2",
+      "lesson_slugs": ["present-perfect"],
+      "music_slugs": []
+    }
+  ]
+}

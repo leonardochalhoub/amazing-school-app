@@ -12,6 +12,9 @@
 
 # testing
 /coverage
+/playwright-report
+/test-results
+/playwright/.cache
 
 # next.js
 /.next/
@@ -39,3 +42,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# content pipeline working data (generated, not shipped)
+/scripts/content/data/raw/
+/scripts/content/data/chunks/
+/scripts/content/data/generated/
+/scripts/content/data/validated/
+/scripts/content/data/manifests/
+!/scripts/content/data/.gitkeep

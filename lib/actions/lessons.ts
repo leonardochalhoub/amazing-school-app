@@ -3,51 +3,28 @@
 import { createClient } from "@/lib/supabase/server";
 import { revalidatePath } from "next/cache";
 import { getLesson } from "@/lib/content/loader";
+import type { LessonAssignment } from "@/lib/supabase/types";
 
-export async function assignLesson(
-  classroomId: string,
-  lessonSlug: string,
-  dueDate?: string
-) {
+export async function getAssignedLessons(
+  classroomId: string
+): Promise<LessonAssignment[]> {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) return { error: "Unauthorized" };
-
-  const { error } = await supabase.from("lesson_assignments").insert({
-    classroom_id: classroomId,
-    lesson_slug: lessonSlug,
-    assigned_by: user.id,
-    due_date: dueDate ?? null,
-  });
-
-  if (error) return { error: error.message };
-
-  revalidatePath(`/teacher/classroom/${classroomId}`);
-  return { success: true };
-}
-
-export async function getAssignedLessons(classroomId: string) {
-  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return [];
 
   const { data } = await supabase
     .from("lesson_assignments")
     .select("*")
     .eq("classroom_id", classroomId)
+    .or(`student_id.is.null,student_id.eq.${user.id}`)
+    .order("order_index", { ascending: true })
     .order("assigned_at", { ascending: false });
-
-  return data ?? [];
+  return (data as LessonAssignment[] | null) ?? [];
 }
 
-export async function startLesson(
-  lessonSlug: string,
-  classroomId: string
-) {
+export async function startLesson(lessonSlug: string, classroomId: string) {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { error: "Unauthorized" };
 
   const lesson = await getLesson(lessonSlug);
@@ -59,9 +36,9 @@ export async function startLesson(
     .eq("student_id", user.id)
     .eq("lesson_slug", lessonSlug)
     .eq("classroom_id", classroomId)
-    .single();
+    .maybeSingle();
 
-  if (existing) return { alreadyStarted: true };
+  if (existing) return { alreadyStarted: true as const };
 
   const { error } = await supabase.from("lesson_progress").insert({
     student_id: user.id,
@@ -71,18 +48,16 @@ export async function startLesson(
   });
 
   if (error) return { error: error.message };
-  return { success: true };
+  return { success: true as const };
 }
 
 export async function submitAnswer(
   lessonSlug: string,
-  exerciseId: string,
+  _exerciseId: string,
   classroomId: string
 ) {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { error: "Unauthorized" };
 
   const { data: progress } = await supabase
@@ -91,7 +66,7 @@ export async function submitAnswer(
     .eq("student_id", user.id)
     .eq("lesson_slug", lessonSlug)
     .eq("classroom_id", classroomId)
-    .single();
+    .maybeSingle();
 
   if (!progress) return { error: "Lesson not started" };
 
@@ -126,18 +101,24 @@ export async function submitAnswer(
         },
         { onConflict: "student_id,activity_date" }
       );
+
+      await supabase
+        .from("lesson_assignments")
+        .update({ status: "completed" })
+        .eq("classroom_id", classroomId)
+        .eq("lesson_slug", lessonSlug)
+        .eq("student_id", user.id);
     }
   }
 
   revalidatePath("/student");
+  revalidatePath("/student/lessons");
   return { completed: isComplete };
 }
 
 export async function getStudentProgress(classroomId: string) {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
   if (!user) return [];
 
   const { data } = await supabase

@@ -1,0 +1,133 @@
+export const POSITIVE_MESSAGES = {
+  en: [
+    "Let's make today count.",
+    "Every lesson is a step forward.",
+    "Great teachers change lives.",
+    "Your students are lucky to have you.",
+    "Small wins, every day.",
+    "Progress, not perfection.",
+    "Consistency beats intensity.",
+    "Today is a great day to teach.",
+    "You're building futures, one class at a time.",
+    "Teaching is a superpower — use it well.",
+    "Inspire curiosity. The rest follows.",
+    "Every question deserves a kind answer.",
+    "You've got this.",
+    "Make learning feel like play.",
+    "Show up. Teach. Repeat.",
+    "Your energy sets the room's tone.",
+    "Be the teacher you wish you had.",
+    "One great lesson can spark a lifetime of learning.",
+    "Celebrate the little breakthroughs.",
+    "Progress compounds. Keep going.",
+    "Teach like it matters — because it does.",
+    "The best classrooms feel safe to fail.",
+    "Curiosity is your most valuable asset.",
+    "Students remember how you made them feel.",
+    "Kindness + high standards = magic.",
+    "You're writing tomorrow's stories today.",
+    "Each new word opens a new world.",
+    "Mistakes are data, not defeat.",
+    "Your students' progress is your legacy.",
+    "Teach the learner, not the lesson plan.",
+    "Patience is a form of love.",
+    "Keep it simple. Keep it real.",
+    "Good enough today beats perfect never.",
+    "English is a door. You hold the key.",
+    "Listen first. Teach second.",
+    "Joy is a teaching method.",
+    "Make it meaningful, make it memorable.",
+    "You're closer than you think.",
+    "A small effort, made daily, changes everything.",
+    "Own your craft. Refine your practice.",
+    "Every student has a spark. Find it.",
+    "Great teaching is a conversation.",
+    "Confidence grows in small wins.",
+    "Nothing beats genuine encouragement.",
+    "Stay curious. Stay kind.",
+    "Today, a student learns because of you.",
+    "Keep the momentum going.",
+    "Habits are louder than hopes.",
+    "Let's do something great today.",
+    "Your future self will thank you.",
+  ],
+  "pt-BR": [
+    "Vamos fazer o dia valer a pena.",
+    "Cada lição é um passo adiante.",
+    "Bons professores mudam vidas.",
+    "Seus alunos têm sorte de ter você.",
+    "Pequenas vitórias, todos os dias.",
+    "Progresso, não perfeição.",
+    "Constância vence intensidade.",
+    "Hoje é um ótimo dia para ensinar.",
+    "Você está construindo futuros, uma aula por vez.",
+    "Ensinar é um superpoder — use bem.",
+    "Inspire curiosidade. O resto vem.",
+    "Toda pergunta merece uma resposta gentil.",
+    "Você consegue.",
+    "Faça aprender parecer brincadeira.",
+    "Apareça. Ensine. Repita.",
+    "Sua energia define o tom da sala.",
+    "Seja o professor que você gostaria de ter tido.",
+    "Uma boa aula pode acender uma vida de aprendizado.",
+    "Celebre as pequenas descobertas.",
+    "O progresso compõe. Continue.",
+    "Ensine como se importasse — porque importa.",
+    "As melhores aulas são seguras para errar.",
+    "Curiosidade é seu maior ativo.",
+    "Os alunos lembram como você os fez se sentir.",
+    "Gentileza + altos padrões = mágica.",
+    "Você está escrevendo as histórias de amanhã hoje.",
+    "Cada nova palavra abre um novo mundo.",
+    "Erros são dados, não derrotas.",
+    "O progresso dos seus alunos é seu legado.",
+    "Ensine o aluno, não o plano de aula.",
+    "Paciência é uma forma de amor.",
+    "Mantenha simples. Mantenha verdadeiro.",
+    "Bom hoje supera perfeito nunca.",
+    "Inglês é uma porta. Você tem a chave.",
+    "Ouça primeiro. Ensine depois.",
+    "Alegria é um método de ensino.",
+    "Faça significar. Faça memorável.",
+    "Você está mais perto do que pensa.",
+    "Um pequeno esforço diário muda tudo.",
+    "Domine seu ofício. Refine sua prática.",
+    "Todo aluno tem uma faísca. Encontre-a.",
+    "Ensinar é uma conversa.",
+    "Confiança cresce em pequenas vitórias.",
+    "Nada supera o incentivo sincero.",
+    "Mantenha-se curioso. Mantenha-se gentil.",
+    "Hoje, um aluno aprende por sua causa.",
+    "Mantenha o ritmo.",
+    "Hábitos falam mais alto que esperanças.",
+    "Vamos fazer algo grande hoje.",
+    "Seu eu do futuro vai agradecer.",
+  ],
+} as const;
+
+export const DATE_PREFIX = {
+  en: "Today is",
+  "pt-BR": "Hoje é",
+} as const;
+
+export const DATE_SUFFIX = {
+  en: " — keep it going!",
+  "pt-BR": " — continue firme!",
+} as const;
+
+export function formatToday(locale: "en" | "pt-BR", date = new Date()): string {
+  const formatter = new Intl.DateTimeFormat(
+    locale === "pt-BR" ? "pt-BR" : "en-US",
+    { weekday: "long", month: "long", day: "numeric", year: "numeric" }
+  );
+  return formatter.format(date);
+}
+
+export function pickMessage(
+  locale: "en" | "pt-BR",
+  seed: number = Date.now()
+): string {
+  const pool = POSITIVE_MESSAGES[locale];
+  const idx = Math.floor(Math.abs(seed) % pool.length);
+  return pool[idx];
+}

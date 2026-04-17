@@ -1,0 +1,56 @@
+{
+  "slug": "someone-like-you",
+  "title": "Someone Like You",
+  "artist": "Adele",
+  "year": 2011,
+  "album": "21",
+  "genre": ["pop", "soul"],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 285,
+  "youtube_id": "hLQl3WQQoQ0",
+  "full_lyrics_url": "https://www.letras.mus.br/adele/someone-like-you/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Adele's clean diction and slow tempo help beginners catch every word. The past-simple narration is a perfect bridge into A2 storytelling.",
+  "vocab_hooks": [
+    { "term": "someone", "pt": "alguém", "note": "indefinite pronoun" },
+    { "term": "married", "pt": "casado(a)", "note": "adjective / past participle" },
+    { "term": "settled", "pt": "estabelecido(a)", "note": "phrasal 'settle down' = assentar-se" },
+    { "term": "dreams", "pt": "sonhos", "note": "plural noun; contrast with 'dream' verb" }
+  ],
+  "grammar_callouts": [
+    "past simple narration: I heard / you found / she's married now",
+    "'someone like you' — noun + like + pronoun",
+    "wish you the best — idiom for farewell"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in the chorus:",
+      "prompt_pt": "Complete a lacuna no refrão:",
+      "excerpt_before": "Never mind, I'll find someone like",
+      "blank_hint": "pronoun — the person the song is about",
+      "answer": "you",
+      "excerpt_after": "",
+      "youtube_start": 74,
+      "youtube_end": 90
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line:",
+      "prompt_pt": "Traduza esta linha:",
+      "excerpt": "I heard that you're settled down",
+      "model_answer_pt": "Soube que você se estabeleceu",
+      "teacher_note": "Phrasal verb 'settle down' — discuss its range of meaning (get married, calm down, move somewhere permanently)."
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Adele sings 'I wish nothing but the best for you'. Is it easy or hard to wish someone well after a break-up? Why?",
+      "prompt_pt": "Adele canta 'desejo só o melhor para você'. É fácil ou difícil desejar o bem para alguém depois de um término? Por quê?",
+      "target_vocab": ["wish", "best", "break-up", "feel"]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Adele's production leaves space between lines, helping learners parse word boundaries. Most vocabulary is A1, but past-simple narration pushes into A2.\n\n**Trigger warning:** Break-up themes — some students may find it heavy. Offer an opt-out alternative like 'Someone Like You' thematic discussion.",
+  "copyright_notice": "Lyrics are property of Universal Music Publishing / Chrysalis Music. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+}

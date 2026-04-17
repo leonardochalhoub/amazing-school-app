@@ -1,63 +1,243 @@
-import { getTeacherClassrooms } from "@/lib/actions/classroom";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import {
+  Users,
+  ClipboardList,
+  CheckCircle2,
+  GraduationCap,
+} from "lucide-react";
+import { AddClassroomButton } from "@/components/teacher/add-classroom-button";
+import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { getTeacherOverview } from "@/lib/actions/teacher-dashboard";
+import {
+  ClassroomCard,
+  AddClassroomCard,
+} from "@/components/teacher/classroom-card";
+import { RosterCard } from "@/components/teacher/roster-card";
+import { AddStudentButton } from "@/components/teacher/add-student-button";
+import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
+import { BirthdayAlert } from "@/components/teacher/birthday-alert";
+import { DismissibleHero } from "@/components/teacher/dismissible-hero";
+import { listLessonDrafts } from "@/lib/actions/lesson-drafts";
+import { getUpcomingBirthdays } from "@/lib/actions/birthdays";
+import { listMusic } from "@/lib/content/music";
+import {
+  TeacherSectionLabels,
+  TeacherI18nClient,
+} from "@/components/teacher/section-labels";
 
 export default async function TeacherDashboard() {
-  const classrooms = await getTeacherClassrooms();
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) redirect("/login");
+
+  const admin = createAdminClient();
+  const { data: profile } = await admin
+    .from("profiles")
+    .select("full_name")
+    .eq("id", user.id)
+    .maybeSingle();
+
+  const [{ classrooms, roster, kpis }, publishedLessons, upcomingBirthdays] =
+    await Promise.all([
+      getTeacherOverview(),
+      listLessonDrafts({ status: "published" }),
+      getUpcomingBirthdays(14),
+    ]);
+  const musics = listMusic();
+  const firstName = profile?.full_name?.split(" ")[0] ?? "there";
+  const classroomOptions = classrooms.map((c) => ({ id: c.id, name: c.name }));
+  const studentOptions = roster.map((r) => ({
+    id: r.id,
+    fullName: r.fullName,
+    classroomId: r.classroomId,
+  }));
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">My Classrooms</h1>
-        <Link href="/teacher/classroom/new">
-          <Button>+ New Classroom</Button>
-        </Link>
-      </div>
+    <div className="space-y-10 pb-16">
+      {/* Welcome hero FIRST */}
+      <DismissibleHero firstName={firstName} classrooms={classroomOptions} />
 
-      {classrooms.length === 0 ? (
-        <Card>
-          <CardContent className="py-12 text-center">
-            <p className="text-muted-foreground mb-4">
-              You haven&apos;t created any classrooms yet.
-            </p>
-            <Link href="/teacher/classroom/new">
-              <Button>Create Your First Classroom</Button>
-            </Link>
-          </CardContent>
-        </Card>
-      ) : (
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {classrooms.map((classroom: { id: string; name: string; description: string | null; invite_code: string; classroom_members: { count: number }[] }) => (
-            <Link
-              key={classroom.id}
-              href={`/teacher/classroom/${classroom.id}`}
+      {/* Birthday alert — only renders when there are upcoming birthdays */}
+      <BirthdayAlert birthdays={upcomingBirthdays} />
+
+      {/* KPI STRIP — below hero */}
+      <section
+        aria-label="Key metrics"
+        className="grid grid-cols-1 gap-3 sm:grid-cols-3"
+      >
+        <KpiTile
+          label="Students"
+          labelPt="Alunos"
+          value={kpis.students}
+          hint="across classrooms + roster"
+          hintPt="em turmas + lista"
+          accent="indigo"
+          Icon={Users}
+        />
+        <KpiTile
+          label="Lessons assigned"
+          labelPt="Lições atribuídas"
+          value={kpis.lessonsAssigned}
+          hint="across all classrooms"
+          hintPt="em todas as turmas"
+          accent="sky"
+          Icon={ClipboardList}
+        />
+        <KpiTile
+          label="Lessons completed"
+          labelPt="Lições concluídas"
+          value={kpis.lessonsCompleted}
+          hint="by students so far"
+          hintPt="por alunos até agora"
+          accent="emerald"
+          Icon={CheckCircle2}
+        />
+      </section>
+
+      {/* STUDENTS first — roster cards first, + card last */}
+      <section aria-labelledby="students-heading" className="space-y-4">
+        <div className="flex items-baseline justify-between gap-3">
+          <div className="flex items-baseline gap-3">
+            <h2
+              id="students-heading"
+              className="text-xl font-bold tracking-tight"
             >
-              <Card className="hover:border-primary transition-colors cursor-pointer h-full">
-                <CardHeader>
-                  <CardTitle className="text-lg">{classroom.name}</CardTitle>
-                  {classroom.description && (
-                    <p className="text-sm text-muted-foreground">
-                      {classroom.description}
-                    </p>
-                  )}
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between">
-                    <Badge variant="secondary">
-                      Code: {classroom.invite_code}
-                    </Badge>
-                    <span className="text-sm text-muted-foreground">
-                      {classroom.classroom_members?.[0]?.count ?? 0} students
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
+              <TeacherSectionLabels keyName="students" />
+            </h2>
+            {roster.length > 0 ? (
+              <span className="text-sm font-normal text-muted-foreground tabular-nums">
+                {roster.length}
+              </span>
+            ) : null}
+          </div>
+          <div className="flex items-center gap-2">
+            <AssignLessonButton
+              lessons={publishedLessons}
+              musics={musics}
+              classrooms={classroomOptions}
+              students={studentOptions}
+              variant="subtle"
+            />
+            <AddStudentButton classrooms={classroomOptions} />
+          </div>
         </div>
-      )}
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+          {roster.map((r, i) => (
+            <RosterCard
+              key={r.id}
+              id={r.id}
+              fullName={r.fullName}
+              classroomName={r.classroomName}
+              avatarUrl={r.avatarUrl}
+              accentIndex={i}
+              ageGroup={r.ageGroup}
+              gender={r.gender}
+            />
+          ))}
+          <AddStudentButton classrooms={classroomOptions} variant="card" />
+        </div>
+      </section>
+
+      {/* CLASSROOMS second — classroom cards first, + card last */}
+      <section aria-labelledby="classrooms-heading" className="space-y-4">
+        <div className="flex items-baseline justify-between">
+          <div className="flex items-baseline gap-3">
+            <h2
+              id="classrooms-heading"
+              className="text-xl font-bold tracking-tight"
+            >
+              <TeacherSectionLabels keyName="classrooms" />
+            </h2>
+            {classrooms.length > 0 ? (
+              <span className="text-sm font-normal text-muted-foreground tabular-nums">
+                {classrooms.length}
+              </span>
+            ) : null}
+          </div>
+          <div className="flex items-center gap-2">
+            <AddClassroomButton />
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+          {classrooms.map((c, i) => (
+            <ClassroomCard
+              key={c.id}
+              id={c.id}
+              name={c.name}
+              description={c.description}
+              inviteCode={c.inviteCode}
+              studentCount={c.studentCount}
+              accentIndex={i}
+            />
+          ))}
+          <AddClassroomCard />
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function KpiTile({
+  label,
+  labelPt,
+  value,
+  hint,
+  hintPt,
+  accent,
+  Icon,
+}: {
+  label: string;
+  labelPt: string;
+  value: number;
+  hint: string;
+  hintPt: string;
+  accent: "indigo" | "sky" | "emerald";
+  Icon: React.ComponentType<{ className?: string }>;
+}) {
+  const colorMap = {
+    indigo: {
+      bg: "from-indigo-500/15 to-indigo-500/5",
+      fg: "text-indigo-600 dark:text-indigo-400",
+      ringBg: "bg-indigo-500/10",
+    },
+    sky: {
+      bg: "from-sky-500/15 to-sky-500/5",
+      fg: "text-sky-600 dark:text-sky-400",
+      ringBg: "bg-sky-500/10",
+    },
+    emerald: {
+      bg: "from-emerald-500/15 to-emerald-500/5",
+      fg: "text-emerald-600 dark:text-emerald-400",
+      ringBg: "bg-emerald-500/10",
+    },
+  }[accent];
+
+  return (
+    <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-5 shadow-xs transition-all hover:-translate-y-0.5 hover:shadow-md">
+      <div
+        aria-hidden
+        className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${colorMap.bg} opacity-60`}
+      />
+      <div className="relative flex items-start justify-between">
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+            <TeacherI18nClient en={label} pt={labelPt} />
+          </p>
+          <p className="mt-2 text-3xl font-bold tabular-nums tracking-tight">
+            {value}
+          </p>
+          <p className="mt-1 text-[11px] text-muted-foreground">
+            <TeacherI18nClient en={hint} pt={hintPt} />
+          </p>
+        </div>
+        <span
+          className={`inline-flex h-9 w-9 items-center justify-center rounded-xl ${colorMap.ringBg} ${colorMap.fg}`}
+        >
+          <Icon className="h-4 w-4" />
+        </span>
+      </div>
     </div>
   );
 }

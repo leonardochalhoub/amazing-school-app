@@ -1,0 +1,49 @@
+{
+  "slug": "present-perfect",
+  "title": "Present Perfect",
+  "description": "Connect the past to the present with have/has + past participle",
+  "category": "grammar",
+  "level": "A2",
+  "cefr_level": "a2.2",
+  "xp_reward": 35,
+  "estimated_minutes": 15,
+  "summary_pt_br": "Present perfect — have/has + particípio passado, conectando passado e presente.",
+  "sources": [
+    {
+      "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/present-perfect",
+      "title": "British Council — Present Perfect",
+      "license": "cc-by-nc"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pp-001",
+      "type": "multiple_choice",
+      "question": "I ___ to Rio three times.",
+      "options": ["went", "have been", "go", "am going"],
+      "correct": 1,
+      "explanation": "Experiences: have + past participle. 'Been' is the participle of 'be'.",
+      "hint_pt_br": "Para experiências de vida, use 'have/has' + particípio passado."
+    },
+    {
+      "id": "pp-002",
+      "type": "fill_blank",
+      "question": "She ___ (just/finish) her homework.",
+      "correct": "has just finished",
+      "explanation": "Recent completion — 'just' sits between 'has' and the participle.",
+      "hint_pt_br": "'Just' fica entre 'has' e o particípio para ações recém-terminadas."
+    },
+    {
+      "id": "pp-003",
+      "type": "matching",
+      "pairs": [
+        ["I have lived here for 5 years", "Eu moro aqui há 5 anos"],
+        ["She has worked here since 2020", "Ela trabalha aqui desde 2020"],
+        ["They have never visited London", "Eles nunca visitaram Londres"],
+        ["We have already eaten", "Nós já comemos"]
+      ],
+      "explanation": "Note: in Portuguese these are often present-tense; in English we use present perfect.",
+      "hint_pt_br": "No português muitas vezes é presente; no inglês usamos present perfect."
+    }
+  ]
+}

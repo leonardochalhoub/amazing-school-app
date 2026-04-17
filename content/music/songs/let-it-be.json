@@ -1,0 +1,105 @@
+{
+  "slug": "let-it-be",
+  "title": "Let It Be",
+  "artist": "The Beatles",
+  "year": 1970,
+  "album": "Let It Be",
+  "genre": [
+    "rock",
+    "classic-rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 243,
+  "youtube_id": "CGj85pVzRJs",
+  "full_lyrics_url": "https://www.letras.mus.br/the-beatles/let-it-be/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Slow tempo, repetitive chorus, and the imperative 'let it be' is a stand-alone A1 teaching moment. Every Brazilian has heard this song at least once.",
+  "vocab_hooks": [
+    {
+      "term": "let",
+      "pt": "deixar",
+      "note": "imperative — 'let it be' = 'deixe estar'"
+    },
+    {
+      "term": "trouble",
+      "pt": "problema",
+      "note": "uncountable noun; contrast with 'a problem'"
+    },
+    {
+      "term": "whisper",
+      "pt": "sussurrar",
+      "note": "regular verb, gentle action"
+    },
+    {
+      "term": "mother",
+      "pt": "mãe",
+      "note": "basic kinship vocab"
+    }
+  ],
+  "grammar_callouts": [
+    "imperative mood: let + object + verb",
+    "when + present simple (time clauses)",
+    "there will be (future of 'there is')"
+  ],
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing the chorus",
+        "label_pt": "Cante o refrão",
+        "lines": [
+          "Let it be, let it be",
+          "Let it be, let it be",
+          "Whisper words of wisdom",
+          "Let it be"
+        ],
+        "start_seconds": 37,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the mantra",
+        "label_pt": "Repita o mantra",
+        "lines": [
+          "Let it be"
+        ],
+        "start_seconds": 48,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Listen to the opening line. Fill the blank:",
+      "prompt_pt": "Ouça o primeiro verso. Complete a lacuna:",
+      "excerpt_before": "When I find myself in times of",
+      "blank_hint": "noun — synonym of 'problem'",
+      "answer": "trouble",
+      "excerpt_after": "Mother Mary comes to me",
+      "youtube_start": 12,
+      "youtube_end": 26
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Let it be",
+      "model_answer_pt": "Deixe estar / Deixa ser",
+      "teacher_note": "A common Brazilian rendering is 'Deixa ser'. Discuss why PT needs a subject pronoun change where EN uses 'let'."
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The song says 'there will be an answer: let it be'. What does it mean to 'let something be'? Give an example from your own life.",
+      "prompt_pt": "A música diz 'haverá uma resposta: deixe estar'. O que significa 'deixar algo ser'? Dê um exemplo da sua vida.",
+      "target_vocab": [
+        "let",
+        "answer",
+        "trouble",
+        "peace"
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Why this song works for A1 learners:**\n\n1. Slow 73 BPM — learners can follow word-by-word.\n2. Only ~40 unique words in the whole song.\n3. The imperative 'let' is a high-value structure that shows up immediately in daily English ('let me help', 'let me see').\n\n**Classroom flow (15 min):**\n\n- 2 min: Play the opening 30s while students raise hands when they hear 'let it be'.\n- 5 min: Listen-and-fill exercise.\n- 4 min: Translate-line — discuss why PT often drops or changes the subject.\n- 4 min: Discussion prompt — let students answer in PT first, then help them bridge to EN.",
+  "copyright_notice": "Lyrics are property of Sony/ATV Music Publishing. Only short educational excerpts are reproduced here under Brazilian Lei 9.610/98 art. 46 VIII (citação para fins didáticos) and US fair-use doctrine. Full lyrics viewed via external licensed source."
+}

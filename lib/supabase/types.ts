@@ -1,6 +1,7 @@
 export type Role = "teacher" | "student";
 export type XpSource = "lesson" | "ai_chat" | "streak_bonus" | "badge";
 export type MessageRole = "user" | "assistant";
+export type AssignmentStatus = "assigned" | "skipped" | "completed";
 
 export interface Profile {
   id: string;
@@ -32,6 +33,9 @@ export interface LessonAssignment {
   assigned_by: string;
   assigned_at: string;
   due_date: string | null;
+  student_id: string | null;
+  order_index: number;
+  status: AssignmentStatus;
 }
 
 export interface LessonProgress {
@@ -94,20 +98,83 @@ export interface ScheduledClass {
   created_at: string;
 }
 
+export interface StudentNote {
+  id: string;
+  classroom_id: string;
+  student_id: string;
+  teacher_id: string;
+  body: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface AiUsage {
+  user_id: string;
+  window_date: string;
+  count: number;
+  updated_at: string;
+}
+
+export interface RosterStudent {
+  id: string;
+  teacher_id: string;
+  classroom_id: string | null;
+  full_name: string;
+  preferred_name: string | null;
+  email: string | null;
+  notes: string | null;
+  has_avatar: boolean;
+  age_group: "kid" | "teen" | "adult" | null;
+  gender: "female" | "male" | null;
+  birthday: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
 export interface Database {
   public: {
     Tables: {
       profiles: { Row: Profile; Insert: Omit<Profile, "created_at">; Update: Partial<Profile> };
       classrooms: { Row: Classroom; Insert: Omit<Classroom, "id" | "invite_code" | "created_at">; Update: Partial<Classroom> };
       classroom_members: { Row: ClassroomMember; Insert: Omit<ClassroomMember, "joined_at">; Update: Partial<ClassroomMember> };
-      lesson_assignments: { Row: LessonAssignment; Insert: Omit<LessonAssignment, "id" | "assigned_at">; Update: Partial<LessonAssignment> };
-      lesson_progress: { Row: LessonProgress; Insert: Omit<LessonProgress, "id" | "started_at" | "completed_at" | "completed_exercises">; Update: Partial<LessonProgress> };
+      lesson_assignments: {
+        Row: LessonAssignment;
+        Insert: Omit<LessonAssignment, "id" | "assigned_at" | "order_index" | "status"> & {
+          order_index?: number;
+          status?: AssignmentStatus;
+        };
+        Update: Partial<LessonAssignment>;
+      };
+      lesson_progress: {
+        Row: LessonProgress;
+        Insert: Omit<LessonProgress, "id" | "started_at" | "completed_at" | "completed_exercises">;
+        Update: Partial<LessonProgress>;
+      };
       xp_events: { Row: XpEvent; Insert: Omit<XpEvent, "id" | "created_at">; Update: Partial<XpEvent> };
       daily_activity: { Row: DailyActivity; Insert: DailyActivity; Update: Partial<DailyActivity> };
       badges: { Row: Badge; Insert: Omit<Badge, "id" | "earned_at">; Update: Partial<Badge> };
       conversations: { Row: Conversation; Insert: Omit<Conversation, "id" | "created_at">; Update: Partial<Conversation> };
       messages: { Row: Message; Insert: Omit<Message, "id" | "created_at">; Update: Partial<Message> };
       scheduled_classes: { Row: ScheduledClass; Insert: Omit<ScheduledClass, "id" | "created_at">; Update: Partial<ScheduledClass> };
+      student_notes: {
+        Row: StudentNote;
+        Insert: Omit<StudentNote, "id" | "created_at" | "updated_at">;
+        Update: Partial<StudentNote>;
+      };
+      ai_usage: { Row: AiUsage; Insert: AiUsage; Update: Partial<AiUsage> };
+      roster_students: {
+        Row: RosterStudent;
+        Insert: Omit<RosterStudent, "id" | "created_at" | "updated_at" | "has_avatar"> & {
+          has_avatar?: boolean;
+        };
+        Update: Partial<RosterStudent>;
+      };
+    };
+    Functions: {
+      increment_ai_usage: {
+        Args: { p_user_id: string; p_window_date: string; p_limit: number };
+        Returns: { allowed: boolean; remaining: number; count: number };
+      };
     };
   };
 }

@@ -1,8 +1,8 @@
 # Amazing School
 
-> **Version 1.0** — Free, open-source English teaching platform for Brazilian Portuguese speakers.
+> **Version 2.0** — Free, open-source English teaching platform for Brazilian Portuguese speakers.
 
-Your English, Your Teacher, with AI. Real teachers deliver live, personalized classes. AI is the tool that keeps students practicing between sessions — correcting grammar, expanding vocabulary, and maintaining momentum.
+Your English, Your Teacher, with AI. Real teachers deliver live, personalized classes with a **sober, data-dense admin console**. AI is the tool that keeps students practicing between sessions — correcting grammar, expanding vocabulary, and maintaining momentum.
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org)
 [![Supabase](https://img.shields.io/badge/Supabase-Postgres-3ECF8E)](https://supabase.com)
@@ -10,15 +10,19 @@ Your English, Your Teacher, with AI. Real teachers deliver live, personalized cl
 
 ---
 
-## What's in Version 1
+## What's in Version 2
 
 ### Core Features
 - **Classroom management** — Teachers create classrooms, students join via 8-character invite codes
+- **Sober teacher admin console** — distinct slate/zinc design system with a dense grid of student cards (photo, level, streak, % completion, last activity) and a per-student lesson manager
+- **Per-student + classroom-wide lesson assignment** — assign, unassign, reorder, skip, add private notes; bulk-assign to a whole class in ≤ 3 clicks
+- **CEFR-graded lesson library** — lessons bucketed into A1.1 → B1.2, sourced via an offline hybrid LLM + open-curation pipeline
+- **Student profile photos** — Supabase Storage, auto-compressed to 512×512 WebP, RLS-gated to the classroom
 - **Structured lessons** — Grammar, vocabulary, and reading exercises (multiple choice, fill-in-the-blank, matching pairs)
-- **AI English tutor** — Claude-powered conversation practice with automatic correction, explanations, and PT-BR hints
+- **AI English tutor** — Claude-powered conversation practice with automatic correction, explanations, and PT-BR hints — now with **DB-backed rate limiting** that survives serverless cold starts
 - **Live class scheduling** — Teachers post Zoom/Meet links; students join with one click
 - **Gamification** — XP, levels, daily streaks, 8 badges, realtime in-classroom leaderboard
-- **Progress tracking** — Teachers see every student's XP, lessons completed, streak, and last activity in real time
+- **Realtime teacher dashboard** — student progress updates push live via Supabase Postgres Changes
 
 ### UX
 - **Dark mode by default** with light mode toggle (persisted)
@@ -30,12 +34,15 @@ Your English, Your Teacher, with AI. Real teachers deliver live, personalized cl
 ### Tech Stack
 | Layer | Technology |
 |-------|-----------|
-| Frontend | Next.js 16 (App Router) + TypeScript |
-| UI | Tailwind CSS + shadcn/ui |
+| Frontend | Next.js 16 (App Router) + React 19 + TypeScript |
+| UI | Tailwind CSS + shadcn/ui + dual design tokens (`.theme-student` / `.theme-teacher`) |
 | Auth | Supabase Auth |
 | Database | Supabase Postgres with Row Level Security |
-| Realtime | Supabase Realtime (leaderboard updates) |
-| AI Tutor | Claude Haiku 4.5 via Vercel AI SDK |
+| Storage | Supabase Storage (avatars bucket, private, RLS-gated) |
+| Realtime | Supabase Realtime (teacher dashboard live updates) |
+| AI Tutor | Claude Haiku 4.5 via Vercel AI SDK, DB-backed rate limit |
+| Content pipeline | Offline: Claude Sonnet 4.6 (generate) + Haiku (validate) via `scripts/content/` |
+| Testing | Vitest (unit + integration) + Playwright (e2e) |
 | Hosting | Vercel (free tier) |
 
 ---
@@ -53,9 +60,13 @@ npm install
 ### 2. Set up Supabase
 
 1. Create a free project at [supabase.com](https://supabase.com)
-2. Run the migration SQL in the SQL Editor:
+2. Run each migration in order in the SQL Editor (or `supabase db push`):
    ```
    supabase/migrations/001_initial_schema.sql
+   supabase/migrations/002_assignments_v2.sql
+   supabase/migrations/003_student_notes.sql
+   supabase/migrations/004_ai_usage.sql
+   supabase/migrations/005_lesson_metadata_and_avatars.sql
    ```
 3. Copy your **Project URL** and API keys from Settings → API
 
@@ -147,15 +158,27 @@ amazing-school-app/
 
 ## Included Content
 
-Version 1 ships with 3 sample lessons:
+Version 2 seeds lessons across all six CEFR sub-levels and wires up an offline pipeline to generate the remaining ~400 hours of content:
 
-| Category | Lesson | Level | Exercises |
-|----------|--------|-------|-----------|
-| Grammar | Present Simple Tense | A1 | 5 |
-| Grammar | Past Simple Tense | A1 | 5 |
-| Vocabulary | Greetings & Introductions | A1 | 5 |
+| CEFR | Skill | Slug |
+|------|-------|------|
+| A1.1 | grammar | `present-simple`, `past-simple` |
+| A1.1 | vocabulary | `greetings` |
+| A1.2 | grammar | `present-continuous` |
+| A2.1 | grammar | `past-continuous` |
+| A2.2 | grammar | `present-perfect` |
+| B1.1 | grammar | `conditionals-first` |
+| B1.2 | grammar | `conditionals-second` |
 
-All lessons include Portuguese hints (🇧🇷 Dica) to help learners.
+All lessons include Portuguese hints (🇧🇷 Dica) and an attribution `sources[]` array recording licensed source passages.
+
+### Generating more lessons
+
+See [`scripts/content/README.md`](scripts/content/README.md). Pipeline stages: **fetch → chunk → generate → validate → publish**, with budget caps and per-lesson idempotency so one run can be interrupted and resumed.
+
+```bash
+npm run content:run -- --cefr a2.1 --skill grammar --budget 5.00 --resume
+```
 
 ---
 
@@ -195,12 +218,22 @@ Set all environment variables from `.env.local` in the Vercel dashboard.
 
 ---
 
+## Testing
+
+```bash
+npm test            # Vitest unit + integration
+npm run test:e2e    # Playwright e2e (requires test accounts)
+npm run test:all
+```
+
+Integration and e2e suites auto-skip when their required credentials are missing. See [`tests/README.md`](tests/README.md).
+
 ## Roadmap
 
-Version 1 is focused on the MVP. Future versions may include:
+Version 2 focuses on the teacher admin surface and the content library. Future versions may include:
 
+- Teacher content authoring tools (v3)
 - Voice-based AI conversation (Whisper + TTS)
-- Teacher content authoring tools
 - Cross-classroom leaderboards
 - Mobile native apps (iOS/Android)
 - Google Calendar integration

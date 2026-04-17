@@ -3,6 +3,42 @@
 import { createClient } from "@/lib/supabase/server";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { z } from "zod";
+
+const QuickCreateSchema = z.object({
+  name: z.string().min(1).max(120),
+  description: z.string().max(500).optional(),
+});
+
+export async function createClassroomQuick(
+  input: z.input<typeof QuickCreateSchema>
+) {
+  const parsed = QuickCreateSchema.safeParse(input);
+  if (!parsed.success) return { error: "Invalid name" as const };
+
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" as const };
+
+  const { data, error } = await supabase
+    .from("classrooms")
+    .insert({
+      teacher_id: user.id,
+      name: parsed.data.name,
+      description: parsed.data.description ?? null,
+    })
+    .select("id, name")
+    .single();
+
+  if (error) return { error: error.message };
+
+  revalidatePath("/teacher");
+  return {
+    success: true as const,
+    id: data.id as string,
+    name: data.name as string,
+  };
+}
 
 export async function createClassroom(formData: FormData) {
   const supabase = await createClient();

@@ -1,0 +1,81 @@
+{
+  "slug": "imagine",
+  "title": "Imagine",
+  "artist": "John Lennon",
+  "year": 1971,
+  "album": "Imagine",
+  "genre": [
+    "rock",
+    "soft-rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 183,
+  "youtube_id": "YkgkThdzX-8",
+  "full_lyrics_url": "https://www.letras.mus.br/john-lennon/imagine/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "The imperative 'Imagine' repeats six times — an extended drill on a single verb form. Abstract nouns (heaven, hell, peace) give a vocabulary stretch.",
+  "vocab_hooks": [
+    {
+      "term": "imagine",
+      "pt": "imaginar",
+      "note": "verb — imperative form starts every verse"
+    },
+    {
+      "term": "heaven",
+      "pt": "paraíso / céu",
+      "note": "abstract noun"
+    },
+    {
+      "term": "hell",
+      "pt": "inferno",
+      "note": "abstract noun, opposite of heaven"
+    },
+    {
+      "term": "brotherhood",
+      "pt": "fraternidade",
+      "note": "compound noun: brother + hood"
+    }
+  ],
+  "grammar_callouts": [
+    "imperative mood: Imagine + noun clause",
+    "it's easy if you try — zero conditional",
+    "above / below as prepositions of place"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in the opening line:",
+      "prompt_pt": "Complete a lacuna do verso inicial:",
+      "excerpt_before": "Imagine there's no",
+      "blank_hint": "the opposite of 'hell'",
+      "answer": "heaven",
+      "excerpt_after": ", it's easy if you try",
+      "youtube_start": 14,
+      "youtube_end": 30
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line:",
+      "prompt_pt": "Traduza esta linha:",
+      "excerpt": "Imagine all the people living life in peace",
+      "model_answer_pt": "Imagine todas as pessoas vivendo em paz",
+      "teacher_note": "Notice 'living life' — gerund as noun modifier. In PT we drop 'life' in a natural translation."
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Lennon asks you to imagine a world without religion or countries. Can you do that? What would change in your daily life?",
+      "prompt_pt": "Lennon pede para imaginar um mundo sem religião ou países. Você consegue? O que mudaria na sua vida diária?",
+      "target_vocab": [
+        "imagine",
+        "world",
+        "country",
+        "change",
+        "peace"
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Every verse opens with the imperative 'Imagine' — six reps in one song. Great for drilling. Abstract nouns push learners slightly beyond A1 comfort zone.\n\n**Watch out:** 'Brotherhood of man' is dated language; discuss with students what more inclusive alternatives exist today.",
+  "copyright_notice": "Lyrics are property of Lenono Music / Downtown Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+}

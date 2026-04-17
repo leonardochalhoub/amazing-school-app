@@ -1,0 +1,80 @@
+{
+  "slug": "yellow",
+  "title": "Yellow",
+  "artist": "Coldplay",
+  "year": 2000,
+  "album": "Parachutes",
+  "genre": [
+    "rock",
+    "alternative"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 266,
+  "youtube_id": "yKNxeF4KMsY",
+  "full_lyrics_url": "https://www.letras.mus.br/coldplay/yellow/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Short, repetitive lines with basic color + nature vocabulary. A gentle introduction to past simple ('came') and present simple narration.",
+  "vocab_hooks": [
+    {
+      "term": "yellow",
+      "pt": "amarelo",
+      "note": "color; used as a mood word in the song"
+    },
+    {
+      "term": "skin",
+      "pt": "pele",
+      "note": "body part"
+    },
+    {
+      "term": "bones",
+      "pt": "ossos",
+      "note": "body part; plural"
+    },
+    {
+      "term": "turned",
+      "pt": "virou / se tornou",
+      "note": "past of 'turn'; here means 'became'"
+    }
+  ],
+  "grammar_callouts": [
+    "look at the stars / look how they shine — imperative + how-clause",
+    "for you — preposition of purpose",
+    "color as mood metaphor"
+  ],
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in the opening line:",
+      "prompt_pt": "Complete a lacuna no verso inicial:",
+      "excerpt_before": "Look at the",
+      "blank_hint": "plural — bright things in the night sky",
+      "answer": "stars",
+      "excerpt_after": ", look how they shine for you",
+      "youtube_start": 33,
+      "youtube_end": 50
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line:",
+      "prompt_pt": "Traduza esta linha:",
+      "excerpt": "And they were all yellow",
+      "model_answer_pt": "E elas eram todas amarelas",
+      "teacher_note": "Past-simple 'were' — review of 'to be' conjugation in the past. Plural agreement with 'stars'."
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer uses 'yellow' to describe a feeling. What color describes how you feel today and why?",
+      "prompt_pt": "O cantor usa 'amarelo' para descrever um sentimento. Que cor descreve como você se sente hoje e por quê?",
+      "target_vocab": [
+        "color",
+        "feel",
+        "today",
+        "because"
+      ]
+    }
+  ],
+  "teaching_notes_md": "**Pedagogy:** Exceptionally simple vocabulary makes this a low-risk first song. Focus on pronunciation of 'yellow' (/ˈjɛləʊ/) — the 'y' consonant + 'ow' diphthong is tricky for PT speakers.",
+  "copyright_notice": "Lyrics are property of Universal Music Publishing. Only short educational excerpts reproduced here under Brazilian Lei 9.610/98 art. 46 VIII and US fair-use doctrine."
+}
