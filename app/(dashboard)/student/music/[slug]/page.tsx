@@ -8,6 +8,8 @@ import { listMyExerciseResponses } from "@/lib/actions/exercise-responses";
 import { toMusicSlug, cambridgeUrl } from "@/lib/content/music";
 import { getOverrideForStudent } from "@/lib/actions/music-overrides";
 import type { MusicExercise, SingAlongPrompt } from "@/lib/content/music";
+import { MarkCompleteButton } from "@/components/student/mark-complete-button";
+import { createClient } from "@/lib/supabase/server";
 
 interface Params {
   slug: string;
@@ -36,6 +38,24 @@ export default async function StudentMusicPage({
 
   const lessonSlug = toMusicSlug(slug);
   const initialResponses = await listMyExerciseResponses(lessonSlug);
+
+  // Is this lesson already marked complete for the viewer?
+  let alreadyCompleted = false;
+  const supabaseClient = await createClient();
+  const {
+    data: { user },
+  } = await supabaseClient.auth.getUser();
+  if (user) {
+    const { data: progress } = await supabaseClient
+      .from("lesson_progress")
+      .select("completed_at")
+      .eq("student_id", user.id)
+      .eq("lesson_slug", lessonSlug)
+      .not("completed_at", "is", null)
+      .limit(1)
+      .maybeSingle();
+    alreadyCompleted = !!progress;
+  }
 
   const minutes = Math.floor(song.duration_seconds / 60);
   const seconds = song.duration_seconds % 60;
@@ -132,6 +152,12 @@ export default async function StudentMusicPage({
           </p>
         </aside>
       </div>
+
+      <MarkCompleteButton
+        lessonSlug={lessonSlug}
+        xpReward={25}
+        initiallyCompleted={alreadyCompleted}
+      />
     </div>
   );
 }

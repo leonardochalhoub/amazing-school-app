@@ -385,7 +385,13 @@ function ExerciseCard({
             onSeek={onSeek}
           />
         ) : exercise.type === "translate_line" ? (
-          <TranslateLine exercise={exercise} />
+          <TranslateLine
+            exercise={exercise}
+            lessonSlug={lessonSlug}
+            exerciseIndex={index}
+            initial={response}
+            onSaved={onResponse}
+          />
         ) : exercise.type === "discussion" ? (
           <Discussion
             exercise={exercise}
@@ -587,33 +593,176 @@ function ListenAndFill({
 
 function TranslateLine({
   exercise,
+  lessonSlug,
+  exerciseIndex,
+  initial,
+  onSaved,
 }: {
   exercise: Extract<MusicExercise, { type: "translate_line" }>;
+  lessonSlug: string;
+  exerciseIndex: number;
+  initial: ExerciseResponseRow | null;
+  onSaved: (r: ExerciseResponseRow) => void;
 }) {
   const { locale } = useI18n();
-  const [show, setShow] = useState(false);
+  const [pending, startTransition] = useTransition();
+  const _safeSubmit = useSafeSubmit();
+
+  const savedText =
+    initial?.answer.type === "translate_line" ? initial.answer.text : null;
+  const [text, setText] = useState(savedText ?? "");
+  const [editing, setEditing] = useState(savedText === null);
+  const [showModel, setShowModel] = useState(false);
+
+  useEffect(() => {
+    setText(savedText ?? "");
+    setEditing(savedText === null);
+  }, [savedText]);
+
+  const hasModel =
+    typeof exercise.model_answer_pt === "string" &&
+    exercise.model_answer_pt.trim().length > 0;
+
+  function send() {
+    if (text.trim().length === 0) {
+      toast.info(
+        locale === "pt-BR"
+          ? "Escreva sua tradução primeiro."
+          : "Type your translation first."
+      );
+      return;
+    }
+    startTransition(async () => {
+      const r = await _safeSubmit({
+        lessonSlug,
+        exerciseIndex,
+        answer: { type: "translate_line", text: text.trim() },
+      });
+      if ("error" in r && r.error) {
+        toast.error(r.error);
+        return;
+      }
+      if ("success" in r && r.response) {
+        onSaved(r.response);
+        setEditing(false);
+        toast.success(
+          locale === "pt-BR" ? "Tradução enviada" : "Translation sent"
+        );
+      }
+    });
+  }
+
   return (
     <div className="space-y-3">
       <blockquote className="rounded-md border-l-2 border-primary/60 bg-muted/40 p-3 text-sm italic">
         {exercise.excerpt}
       </blockquote>
-      <Button size="sm" variant="outline" onClick={() => setShow((v) => !v)}>
-        {show ? (
-          <>
-            <EyeOff className="mr-1.5 h-3.5 w-3.5" />
-            {locale === "pt-BR" ? "Ocultar tradução" : "Hide translation"}
-          </>
-        ) : (
-          <>
-            <Eye className="mr-1.5 h-3.5 w-3.5" />
-            {locale === "pt-BR" ? "Ver tradução sugerida" : "Show model translation"}
-          </>
-        )}
-      </Button>
-      {show ? (
-        <div className="rounded-md border border-dashed border-border bg-card p-3 text-sm">
-          {exercise.model_answer_pt}
+
+      {editing ? (
+        <>
+          <textarea
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder={
+              locale === "pt-BR"
+                ? "Sua tradução em português…"
+                : "Your Portuguese translation…"
+            }
+            rows={2}
+            className="w-full rounded-md border border-border bg-background p-2 text-sm"
+          />
+          <div className="flex items-center gap-2">
+            <Button
+              size="sm"
+              onClick={send}
+              disabled={pending}
+              className="gap-1.5"
+            >
+              <Send className="h-3.5 w-3.5" />
+              {pending
+                ? locale === "pt-BR"
+                  ? "Enviando…"
+                  : "Sending…"
+                : initial
+                  ? locale === "pt-BR"
+                    ? "Salvar alterações"
+                    : "Save changes"
+                  : locale === "pt-BR"
+                    ? "Enviar"
+                    : "Send"}
+            </Button>
+            {initial ? (
+              <Button
+                size="sm"
+                variant="ghost"
+                onClick={() => {
+                  setText(savedText ?? "");
+                  setEditing(false);
+                }}
+                disabled={pending}
+              >
+                {locale === "pt-BR" ? "Cancelar" : "Cancel"}
+              </Button>
+            ) : null}
+          </div>
+        </>
+      ) : initial ? (
+        <div className="space-y-2">
+          <div className="rounded-md border border-border bg-muted/30 p-3 text-sm leading-relaxed">
+            {savedText}
+          </div>
+          <div className="flex items-center justify-between gap-2">
+            <p className="inline-flex items-center gap-1 text-[11px] text-emerald-600">
+              <CheckCircle2 className="h-3.5 w-3.5" />
+              {locale === "pt-BR"
+                ? `Enviado em ${formatWhen(initial.updated_at, locale)}`
+                : `Sent on ${formatWhen(initial.updated_at, locale)}`}
+            </p>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => setEditing(true)}
+              className="gap-1.5"
+            >
+              <Pencil className="h-3 w-3" />
+              {locale === "pt-BR" ? "Editar" : "Edit"}
+            </Button>
+          </div>
         </div>
+      ) : null}
+
+      {hasModel ? (
+        <>
+          <Button
+            size="sm"
+            variant="outline"
+            onClick={() => setShowModel((v) => !v)}
+          >
+            {showModel ? (
+              <>
+                <EyeOff className="mr-1.5 h-3.5 w-3.5" />
+                {locale === "pt-BR"
+                  ? "Ocultar tradução sugerida"
+                  : "Hide model translation"}
+              </>
+            ) : (
+              <>
+                <Eye className="mr-1.5 h-3.5 w-3.5" />
+                {locale === "pt-BR"
+                  ? "Ver tradução sugerida"
+                  : "Show model translation"}
+              </>
+            )}
+          </Button>
+          {showModel ? (
+            <div className="rounded-md border border-dashed border-border bg-card p-3 text-sm">
+              <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                {locale === "pt-BR" ? "Tradução sugerida" : "Model translation"}
+              </p>
+              {exercise.model_answer_pt}
+            </div>
+          ) : null}
+        </>
       ) : null}
     </div>
   );
