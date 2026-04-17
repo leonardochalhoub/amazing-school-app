@@ -102,39 +102,43 @@ export function MusicBoard({
       return map;
     });
 
-  // When a user clicks a timestamp, we hard-reload the iframe with the new
-  // start + autoplay params. This is more reliable than postMessage seekTo,
-  // which silently ignores the command when the player is paused / not ready.
-  const [startAt, setStartAt] = useState<number | null>(null);
-
   function upsertLocal(r: ExerciseResponseRow) {
     setResponses((prev) => ({ ...prev, [r.exercise_index]: r }));
   }
 
-  const seekTo = useCallback((seconds: number) => {
-    // Try postMessage first (smooth if player is ready + playing).
-    const iframe = iframeRef.current;
-    if (iframe?.contentWindow) {
-      iframe.contentWindow.postMessage(
-        JSON.stringify({ event: "command", func: "seekTo", args: [seconds, true] }),
-        "*"
-      );
-      iframe.contentWindow.postMessage(
-        JSON.stringify({ event: "command", func: "playVideo", args: [] }),
-        "*"
-      );
-    }
-    // Always also re-key the iframe with start + autoplay — works reliably
-    // whether the player is paused, unloaded, or silently ignoring messages.
-    setStartAt(seconds);
+  // Origin param is required for YouTube IFrame API postMessage to work
+  // reliably on cross-origin pages (silently ignored otherwise). We set it
+  // client-side so the iframe mounts with the real origin.
+  const [origin, setOrigin] = useState("");
+  useEffect(() => {
+    if (typeof window !== "undefined") setOrigin(window.location.origin);
   }, []);
 
-  const baseParams =
-    "enablejsapi=1&rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=en";
+  const seekTo = useCallback((seconds: number) => {
+    const iframe = iframeRef.current;
+    if (!iframe?.contentWindow) return;
+    // Seek + play via IFrame API. No src reload — reloading with
+    // &autoplay=1 fails on mobile (iOS/Android block autoplay) and the
+    // user is left staring at a paused thumbnail. postMessage works as
+    // long as the user has tapped Play at least once on the iframe.
+    iframe.contentWindow.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: "seekTo",
+        args: [seconds, true],
+      }),
+      "*"
+    );
+    iframe.contentWindow.postMessage(
+      JSON.stringify({ event: "command", func: "playVideo", args: [] }),
+      "*"
+    );
+  }, []);
+
   const embedSrc =
-    startAt !== null
-      ? `https://www.youtube.com/embed/${song.youtube_id}?${baseParams}&start=${startAt}&autoplay=1`
-      : `https://www.youtube.com/embed/${song.youtube_id}?${baseParams}`;
+    `https://www.youtube.com/embed/${song.youtube_id}` +
+    `?enablejsapi=1&rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=en` +
+    (origin ? `&origin=${encodeURIComponent(origin)}` : "");
 
   const firstListenAndFill = song.exercises.find(
     (e) => e.type === "listen_and_fill"
@@ -172,7 +176,6 @@ export function MusicBoard({
             <div className="aspect-video w-full overflow-hidden rounded-t-xl bg-black">
               <iframe
                 ref={iframeRef}
-                key={startAt ?? "initial"}
                 src={embedSrc}
                 title={`${song.title} — ${song.artist}`}
                 className="h-full w-full"
