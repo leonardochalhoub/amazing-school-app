@@ -250,15 +250,23 @@ export async function getRosterAvatarSignedUrl(id: string): Promise<string | nul
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return null;
 
-  const { data: row } = await supabase
+  // Allow both the teacher who owns the roster AND the student whose auth
+  // user is linked to it (so invited students see their own photo on
+  // /student without needing a separate profile upload).
+  const admin = createAdminClient();
+  const { data: row } = await admin
     .from("roster_students")
-    .select("id")
+    .select("id, teacher_id, auth_user_id")
     .eq("id", id)
-    .eq("teacher_id", user.id)
     .maybeSingle();
   if (!row) return null;
+  const r = row as {
+    id: string;
+    teacher_id: string;
+    auth_user_id: string | null;
+  };
+  if (r.teacher_id !== user.id && r.auth_user_id !== user.id) return null;
 
-  const admin = createAdminClient();
   const { data, error } = await admin.storage
     .from("avatars")
     .createSignedUrl(`roster/${id}.webp`, 3600);
