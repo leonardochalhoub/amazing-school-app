@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
+import { isOwnerEmail } from "@/lib/auth/roles";
 import { redirect } from "next/navigation";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -32,6 +33,7 @@ export default async function DashboardLayout({
 
   const role = profile.role as Role;
   const avatarUrl = await resolveMyAvatarUrl(supabase, user.id);
+  const isOwner = isOwnerEmail(user.email);
 
   return (
     <div className="relative flex min-h-screen flex-col bg-background">
@@ -46,6 +48,7 @@ export default async function DashboardLayout({
         fullName={profile.full_name}
         role={role}
         avatarUrl={avatarUrl}
+        isOwner={isOwner}
       />
       <main className="flex-1">
         <div className="mx-auto max-w-7xl px-4 py-6 md:px-8 md:py-8">

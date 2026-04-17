@@ -22,9 +22,10 @@ interface NavbarProps {
   fullName: string;
   role: "teacher" | "student";
   avatarUrl?: string | null;
+  isOwner?: boolean;
 }
 
-export function Navbar({ fullName, role, avatarUrl }: NavbarProps) {
+export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
   const { locale } = useI18n();
   const pathname = usePathname();
 
@@ -83,7 +84,14 @@ export function Navbar({ fullName, role, avatarUrl }: NavbarProps) {
       label: locale === "pt-BR" ? "Banco" : "Bank",
     },
     { href: "/teacher/chat", label: labels.aiTutor },
+    { href: "/teacher/admin", label: "Admin" },
   ];
+  if (isOwner) {
+    teacherNav.push({
+      href: "/owner/management",
+      label: locale === "pt-BR" ? "Gestão" : "Management",
+    });
+  }
 
   const nav = role === "teacher" ? teacherNav : studentNav;
   const showNav = nav.length > 0;
