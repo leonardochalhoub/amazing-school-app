@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useI18n } from "@/lib/i18n/context";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleToggle } from "@/components/locale-toggle";
@@ -7,6 +8,7 @@ import { BrandMark } from "@/components/layout/brand-mark";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { getPublicStats, type PublicStats } from "@/lib/actions/public-stats";
 
 const features = [
   { key: "lessons" as const, icon: "📖" },
@@ -18,7 +20,17 @@ const features = [
 ];
 
 export default function Home() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const [stats, setStats] = useState<PublicStats | null>(null);
+
+  useEffect(() => {
+    getPublicStats()
+      .then((s) => setStats(s))
+      .catch(() => setStats(null));
+  }, []);
+
+  const statTeachersLabel = locale === "pt-BR" ? "Professores" : "Teachers";
+  const statSongsLabel = locale === "pt-BR" ? "Músicas" : "Songs";
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -108,18 +120,15 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Stats */}
-          <div className="flex justify-center gap-8 pt-8">
-            {[
-              { value: "1,500+", label: t.landing.stats.students },
-              { value: "50+", label: t.landing.stats.lessons },
-              { value: "100%", label: t.landing.stats.free },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-2xl font-bold">{stat.value}</p>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
+          {/* Stats — live counts pulled from the database */}
+          <div className="grid grid-cols-2 gap-6 pt-8 sm:flex sm:justify-center sm:gap-10">
+            <StatNumber
+              value={stats?.students}
+              label={t.landing.stats.students}
+            />
+            <StatNumber value={stats?.teachers} label={statTeachersLabel} />
+            <StatNumber value={stats?.lessons} label={t.landing.stats.lessons} />
+            <StatNumber value={stats?.songs} label={statSongsLabel} />
           </div>
         </div>
       </section>
@@ -179,6 +188,27 @@ export default function Home() {
           </div>
         </div>
       </footer>
+    </div>
+  );
+}
+
+function StatNumber({
+  value,
+  label,
+}: {
+  value: number | undefined;
+  label: string;
+}) {
+  return (
+    <div className="text-center">
+      {value == null ? (
+        <div className="mx-auto h-8 w-14 animate-pulse rounded bg-muted" />
+      ) : (
+        <p className="text-2xl font-bold tabular-nums">
+          {value.toLocaleString()}
+        </p>
+      )}
+      <p className="text-sm text-muted-foreground">{label}</p>
     </div>
   );
 }
