@@ -1,14 +1,24 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { Sparkles, Eye, Clock, Trophy, BookOpen } from "lucide-react";
+import {
+  ArrowLeft,
+  CheckCircle2,
+  Eye,
+  Users2,
+  Clock,
+  Trophy,
+  BookOpen,
+} from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getLesson } from "@/lib/content/loader";
 import { getCharacters } from "@/lib/content/scenes";
 import type { NarrativeLesson, LessonScene } from "@/lib/content/scenes";
+import { getTeacherOverview } from "@/lib/actions/teacher-dashboard";
+import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
+import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 
 export default async function TeacherLibraryLessonPage({
   params,
@@ -39,69 +49,100 @@ export default async function TeacherLibraryLessonPage({
     : [];
   const chars = Object.fromEntries(getCharacters().map((c) => [c.id, c]));
 
-  const exerciseCount = scenes.filter((s) => s.kind === "exercise").length;
-  const dialogueCount = scenes.filter((s) => s.kind === "dialogue").length;
-  const vocabCount = scenes.filter((s) => s.kind === "vocab_intro").length;
-  const narrativeCount = scenes.filter((s) => s.kind === "narrative").length;
-  const grammarCount = scenes.filter((s) => s.kind === "grammar_note").length;
+  const [overview, assignable] = await Promise.all([
+    getTeacherOverview(),
+    getAssignableLessons(),
+  ]);
+
+  const counts = {
+    narrative: scenes.filter((s) => s.kind === "narrative").length,
+    dialogue: scenes.filter((s) => s.kind === "dialogue").length,
+    vocab: scenes.filter((s) => s.kind === "vocab_intro").length,
+    grammar: scenes.filter((s) => s.kind === "grammar_note").length,
+    exercise: scenes.filter((s) => s.kind === "exercise").length,
+  };
 
   return (
     <div className="space-y-6 pb-16">
       <Link
         href="/teacher/lessons?source=library"
-        className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground"
+        className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground"
       >
-        ← Back to library
+        <ArrowLeft className="h-3.5 w-3.5" />
+        Back to lessons
       </Link>
 
-      <header className="space-y-3">
-        <div className="flex flex-wrap items-center gap-2">
-          <Badge variant="default">Core library</Badge>
-          <Badge variant="secondary" className="gap-1">
-            <Sparkles className="h-3 w-3" />
-            {lesson.category}
-          </Badge>
-          <Badge variant="outline">{lesson.cefr_level.toUpperCase()}</Badge>
+      <header className="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <div className="flex items-center gap-2">
+            <h1 className="text-2xl font-semibold tracking-tight">
+              {lesson.title}
+            </h1>
+            <Badge variant="default" className="gap-1 text-[10px]">
+              <CheckCircle2 className="h-3 w-3" />
+              Published
+            </Badge>
+          </div>
+          <p className="mt-1 text-xs text-muted-foreground tabular-nums">
+            {lesson.cefr_level.toUpperCase()} · {lesson.category} ·{" "}
+            <span className="font-mono">{slug}</span>
+          </p>
         </div>
-        <h1 className="text-3xl font-bold tracking-tight">{lesson.title}</h1>
-        <p className="text-sm text-muted-foreground">{lesson.description}</p>
-        <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
-          <span className="inline-flex items-center gap-1">
-            <Clock className="h-3.5 w-3.5" />
-            {lesson.estimated_minutes} min
-          </span>
-          <span className="inline-flex items-center gap-1">
-            <Trophy className="h-3.5 w-3.5" />
-            {lesson.xp_reward} XP
-          </span>
-          <span className="inline-flex items-center gap-1">
-            <BookOpen className="h-3.5 w-3.5" />
-            {scenes.length > 0 ? `${scenes.length} scenes` : `${(lesson as { exercises?: unknown[] }).exercises?.length ?? 0} exercises`}
-          </span>
+        <div className="flex flex-wrap items-center gap-2">
+          <Link
+            href={`/student/lessons/${slug}`}
+            className="inline-flex h-9 items-center gap-1.5 rounded-md border border-border px-3 text-xs font-medium text-muted-foreground transition-colors hover:border-foreground/40 hover:text-foreground"
+          >
+            <Eye className="h-4 w-4" />
+            View as student
+          </Link>
+          <AssignLessonButton
+            lessons={assignable}
+            classrooms={overview.classrooms.map((c) => ({
+              id: c.id,
+              name: c.name,
+            }))}
+            students={overview.roster.map((r) => ({
+              id: r.id,
+              fullName: r.fullName,
+              classroomId: r.classroomId,
+            }))}
+            variant="primary"
+            label="Assign"
+          />
         </div>
       </header>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <Link href={`/student/lessons/${slug}`}>
-          <Button className="gap-1">
-            <Eye className="h-4 w-4" />
-            See as student
-          </Button>
-        </Link>
-      </div>
-
-      {asNarrative.summary_pt_br ? (
-        <Card>
-          <CardContent className="p-4">
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-              Teacher notes (PT-BR)
-            </p>
-            <p className="mt-1 text-sm leading-relaxed">
+      <Card>
+        <CardContent className="space-y-3 p-5">
+          <p className="text-sm leading-relaxed">{lesson.description}</p>
+          <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
+            <span className="inline-flex items-center gap-1">
+              <Clock className="h-3.5 w-3.5" />
+              {lesson.estimated_minutes} min
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <Trophy className="h-3.5 w-3.5" />
+              {lesson.xp_reward} XP
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <BookOpen className="h-3.5 w-3.5" />
+              {scenes.length > 0
+                ? `${scenes.length} scenes`
+                : `${(lesson as { exercises?: unknown[] }).exercises?.length ?? 0} exercises`}
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <Users2 className="h-3.5 w-3.5" />
+              Library (core)
+            </span>
+          </div>
+          {asNarrative.summary_pt_br ? (
+            <p className="rounded-lg bg-muted/30 p-3 text-xs italic leading-relaxed text-muted-foreground">
               {asNarrative.summary_pt_br}
             </p>
-          </CardContent>
-        </Card>
-      ) : null}
+          ) : null}
+        </CardContent>
+      </Card>
 
       {scenes.length > 0 ? (
         <section className="space-y-3">
@@ -111,19 +152,19 @@ export default async function TeacherLibraryLessonPage({
             </h2>
             <div className="flex flex-wrap gap-1 text-[11px] text-muted-foreground">
               <Badge variant="outline" className="text-[10px]">
-                {narrativeCount} narrative
+                {counts.narrative} narrative
               </Badge>
               <Badge variant="outline" className="text-[10px]">
-                {dialogueCount} dialogue
+                {counts.dialogue} dialogue
               </Badge>
               <Badge variant="outline" className="text-[10px]">
-                {vocabCount} vocab
+                {counts.vocab} vocab
               </Badge>
               <Badge variant="outline" className="text-[10px]">
-                {grammarCount} grammar
+                {counts.grammar} grammar
               </Badge>
               <Badge variant="outline" className="text-[10px]">
-                {exerciseCount} exercise
+                {counts.exercise} exercise
               </Badge>
             </div>
           </div>
@@ -254,7 +295,8 @@ function ScenePreview({
           Exercise · {t}
         </p>
         <p className="mt-0.5 text-sm font-medium">
-          {scene.exercise.question ?? `Match ${scene.exercise.pairs?.length ?? 0} pairs`}
+          {scene.exercise.question ??
+            `Match ${scene.exercise.pairs?.length ?? 0} pairs`}
         </p>
         {scene.exercise.hint_pt_br ? (
           <p className="mt-0.5 text-[11px] italic text-muted-foreground">
