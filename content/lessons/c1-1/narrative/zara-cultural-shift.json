@@ -1,0 +1,283 @@
+{
+  "slug": "zara-cultural-shift",
+  "title": "Zara's Cultural Shift",
+  "description": "A narrative about deep cultural adaptation: moving from tourist to insider.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Adaptação cultural: 'Não traduzo mais', 'Passei a valorizar', 'O estranho virou natural', 'Ainda carrego'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Zara's Cultural Shift",
+      "subtitle_en": "A narrative about deep cultural adaptation: moving from tourist to insider.",
+      "subtitle_pt": "Adaptação cultural: 'Não traduzo mais', 'Passei a valorizar', 'O estranho virou natural', 'Ainda carrego'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "A narrative about deep cultural adaptation: moving from tourist to insider. Focus: zara's cultural shift. I no longer translate conversations in my head.",
+      "text_pt": "Adaptação cultural: 'Não traduzo mais', 'Passei a valorizar', 'O estranho virou natural', 'Ainda carrego'. Foco: zara's cultural shift. Não traduzo mais as conversas na cabeça."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Zara's Cultural Shift",
+      "body_en": "Transition language: 'I no longer translate in my head', 'I've come to value...', 'What used to feel strange now feels natural', 'I still carry...'",
+      "body_pt": "Adaptação cultural: 'Não traduzo mais', 'Passei a valorizar', 'O estranho virou natural', 'Ainda carrego'.",
+      "examples": [
+        {
+          "en": "I no longer translate conversations in my head.",
+          "pt": "Não traduzo mais as conversas na cabeça."
+        },
+        {
+          "en": "I've come to value informality as a form of trust.",
+          "pt": "Passei a valorizar a informalidade como forma de confiança."
+        },
+        {
+          "en": "What used to feel chaotic now feels like rhythm.",
+          "pt": "O que parecia caos hoje parece ritmo."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Zara's Cultural Shift",
+      "items": [
+        {
+          "term": "adaptation",
+          "pt": "adaptação"
+        },
+        {
+          "term": "assimilation",
+          "pt": "assimilação"
+        },
+        {
+          "term": "homesickness",
+          "pt": "saudade de casa"
+        },
+        {
+          "term": "insider",
+          "pt": "de dentro"
+        },
+        {
+          "term": "identity",
+          "pt": "identidade"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-zara-cultural-shift-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I no longer translate ___ in my head.\"",
+        "correct": "conversations",
+        "explanation": "Full sentence: \"I no longer translate conversations in my head.\"",
+        "hint_pt_br": "Não traduzo mais as conversas na cabeça."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-zara-cultural-shift-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "I've come to value informality as a form of trust.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"I've come to value informality as a form of trust.\"",
+        "hint_pt_br": "Passei a valorizar a informalidade como forma de confiança."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-zara-cultural-shift-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "adaptation",
+            "adaptação"
+          ],
+          [
+            "assimilation",
+            "assimilação"
+          ],
+          [
+            "homesickness",
+            "saudade de casa"
+          ],
+          [
+            "insider",
+            "de dentro"
+          ],
+          [
+            "identity",
+            "identidade"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Zara's Cultural Shift — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre zara's cultural shift. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara, when did you stop feeling like a tourist?"
+        },
+        {
+          "speaker": "user",
+          "target": "When I stopped translating in my head.",
+          "pt_hint": "Parei de traduzir."
+        },
+        {
+          "speaker": "ai",
+          "text": "What did you come to value most?"
+        },
+        {
+          "speaker": "user",
+          "target": "Informality as a form of trust.",
+          "pt_hint": "Informalidade = confiança."
+        },
+        {
+          "speaker": "ai",
+          "text": "Was there a moment you felt fully at home?"
+        },
+        {
+          "speaker": "user",
+          "target": "Crying at a funeral for someone I'd just met.",
+          "pt_hint": "Chorei num funeral."
+        },
+        {
+          "speaker": "ai",
+          "text": "What do you still carry from the UK?"
+        },
+        {
+          "speaker": "user",
+          "target": "A preference for silence in elevators.",
+          "pt_hint": "Silêncio no elevador."
+        },
+        {
+          "speaker": "ai",
+          "text": "Any advice for someone new to Brazil?"
+        },
+        {
+          "speaker": "user",
+          "target": "Stop translating. Start listening.",
+          "pt_hint": "Pare de traduzir. Ouça."
+        },
+        {
+          "speaker": "ai",
+          "text": "Cultural shift is grammar, then rhythm, then home."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "zara-cultural-shift-listening-story",
+      "title": "Two decades between worlds",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe Zara's evolution across the years. Use at least three cultural transition phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Twenty years after her arrival, Zara sat with a new expat and shared the slow arithmetic of adaptation."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "I no longer translate conversations in my head — and I didn't notice the exact year that stopped."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "I've come to value the informality of Brazilian hospitality as a form of trust, not of performance."
+        },
+        {
+          "speaker": "New expat",
+          "voice": "female2",
+          "en": "Was there a specific moment when you finally felt like an insider rather than a visitor?"
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "I cried at a funeral for a neighbor I barely knew — that's when London let me go."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Cultural adaptation, Zara knew, is never complete — it is only the slow accumulation of small daily yeses."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Zara's Cultural Shift\". A narrative about deep cultural adaptation: moving from tourist to insider. I no longer translate conversations in my head. I've come to value informality as a form of trust. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Zara's Cultural Shift\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Zara's Cultural Shift",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Zara's Cultural Shift\".",
+        "hint_pt_br": "Ela fala o título: \"Zara's Cultural Shift\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

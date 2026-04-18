@@ -1,0 +1,283 @@
+{
+  "slug": "joca-promotion",
+  "title": "Joca's Promotion",
+  "description": "A narrative lesson on navigating a promotion: acknowledgment, negotiation, new expectations.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Promoção: linguagem de honra, negociação antes de aceitar, primeiros 90 dias, alinhamento.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Joca's Promotion",
+      "subtitle_en": "A narrative lesson on navigating a promotion: acknowledgment, negotiation, new expectations.",
+      "subtitle_pt": "Promoção: linguagem de honra, negociação antes de aceitar, primeiros 90 dias, alinhamento."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "A narrative lesson on navigating a promotion: acknowledgment, negotiation, new expectations. Focus: joca's promotion. I'm honored to be considered for this role.",
+      "text_pt": "Promoção: linguagem de honra, negociação antes de aceitar, primeiros 90 dias, alinhamento. Foco: joca's promotion. Sinto-me honrado de ser considerado."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Joca's Promotion",
+      "body_en": "Navigation language: 'I'm honored to be considered', 'Before I accept, I'd like to discuss', 'My priority in the first ninety days', 'Let's align on expectations'.",
+      "body_pt": "Promoção: linguagem de honra, negociação antes de aceitar, primeiros 90 dias, alinhamento.",
+      "examples": [
+        {
+          "en": "I'm honored to be considered for this role.",
+          "pt": "Sinto-me honrado de ser considerado."
+        },
+        {
+          "en": "Before I accept, I'd like to discuss scope and compensation.",
+          "pt": "Antes de aceitar, gostaria de discutir escopo e remuneração."
+        },
+        {
+          "en": "My priority in the first ninety days is listening.",
+          "pt": "Minha prioridade nos primeiros 90 dias é escutar."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Joca's Promotion",
+      "items": [
+        {
+          "term": "promotion",
+          "pt": "promoção"
+        },
+        {
+          "term": "scope",
+          "pt": "escopo"
+        },
+        {
+          "term": "compensation",
+          "pt": "remuneração"
+        },
+        {
+          "term": "onboarding",
+          "pt": "integração"
+        },
+        {
+          "term": "alignment",
+          "pt": "alinhamento"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-joca-promotion-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I'm honored to be ___ for this role.\"",
+        "correct": "considered",
+        "explanation": "Full sentence: \"I'm honored to be considered for this role.\"",
+        "hint_pt_br": "Sinto-me honrado de ser considerado."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-joca-promotion-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Before I accept, I'd like to discuss scope and compensation.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Before I accept, I'd like to discuss scope and compensation.\"",
+        "hint_pt_br": "Antes de aceitar, gostaria de discutir escopo e remuneração."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-joca-promotion-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "promotion",
+            "promoção"
+          ],
+          [
+            "scope",
+            "escopo"
+          ],
+          [
+            "compensation",
+            "remuneração"
+          ],
+          [
+            "onboarding",
+            "integração"
+          ],
+          [
+            "alignment",
+            "alinhamento"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Joca's Promotion — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre joca's promotion. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, we'd like to offer you the lead role."
+        },
+        {
+          "speaker": "user",
+          "target": "I'm honored — thank you for the trust.",
+          "pt_hint": "Honrado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Would you like to accept today?"
+        },
+        {
+          "speaker": "user",
+          "target": "Before I accept, I'd like to discuss scope.",
+          "pt_hint": "Discutir escopo."
+        },
+        {
+          "speaker": "ai",
+          "text": "What matters most for compensation?"
+        },
+        {
+          "speaker": "user",
+          "target": "Equity growth and clear performance reviews.",
+          "pt_hint": "Equity e reviews."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's your plan for the first ninety days?"
+        },
+        {
+          "speaker": "user",
+          "target": "Listen first, align, then ship fast.",
+          "pt_hint": "Escutar, alinhar, entregar."
+        },
+        {
+          "speaker": "ai",
+          "text": "Any concerns you want to name now?"
+        },
+        {
+          "speaker": "user",
+          "target": "I want to avoid burnout by delegating earlier.",
+          "pt_hint": "Delegar cedo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Clear priorities, clear boundaries. Good leader."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "joca-promotion-listening-story",
+      "title": "The promotion conversation",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize Joca's negotiation approach. Use at least three promotion phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the quiet corner office, Joca met with the CEO to discuss a role he had not applied for."
+        },
+        {
+          "speaker": "CEO",
+          "voice": "female1",
+          "en": "We believe you're ready for the lead engineering role, and we'd like to formalize that this week."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "I'm honored to be considered. Before I accept, I'd like to align on scope and compensation openly."
+        },
+        {
+          "speaker": "CEO",
+          "voice": "female1",
+          "en": "Fair. What are the two non-negotiables you'd want written into the offer up front?"
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Clear performance reviews every quarter, and explicit authority over the hiring plan for my team."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "A promotion, Joca knew, is not a reward — it is a larger invitation to responsibility on tougher terms."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Joca's Promotion\". A narrative lesson on navigating a promotion: acknowledgment, negotiation, new expectations. I'm honored to be considered for this role. Before I accept, I'd like to discuss scope and compensation. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Joca's Promotion\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Joca's Promotion",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Joca's Promotion\".",
+        "hint_pt_br": "Ela fala o título: \"Joca's Promotion\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

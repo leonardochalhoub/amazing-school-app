@@ -1,8 +1,10 @@
 import { redirect } from "next/navigation";
 import { isOwner } from "@/lib/auth/roles";
 import { getManagementMatrix } from "@/lib/actions/payments";
+import { listRecentLogins } from "@/lib/actions/login-log";
 import { ManagementGrid } from "@/components/owner/management-grid";
 import { RevenueAnalytics } from "@/components/owner/revenue-analytics";
+import { LoginLogPanel } from "@/components/owner/login-log-panel";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Users,
@@ -40,6 +42,7 @@ export default async function ManagementPage() {
 
   const { months, rows } = data;
   const currentMonth = months[0];
+  const logins = await listRecentLogins(200);
 
   // === Current-month snapshot ===
   let paidThisMonth = 0;
@@ -146,6 +149,7 @@ export default async function ManagementPage() {
 
       <ManagementGrid months={months} rows={rows} />
       <RevenueAnalytics months={months} rows={rows} />
+      <LoginLogPanel entries={logins} />
     </div>
   );
 }

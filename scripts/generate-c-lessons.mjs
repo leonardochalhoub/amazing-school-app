@@ -10,11 +10,13 @@ const c1_specs = [
   ...(curriculum.c1_specs ?? []),
   ...(curriculum.c1_specs_part2 ?? []),
   ...(curriculum.c1_specs_part3 ?? []),
+  ...(curriculum.c1_specs_part4 ?? []),
 ];
 const c2_specs = [
   ...(curriculum.c2_specs ?? []),
   ...(curriculum.c2_specs_part2 ?? []),
   ...(curriculum.c2_specs_part3 ?? []),
+  ...(curriculum.c2_specs_part4 ?? []),
 ];
 
 const ROOT = process.cwd();

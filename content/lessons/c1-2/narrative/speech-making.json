@@ -1,0 +1,283 @@
+{
+  "slug": "speech-making",
+  "title": "Speech-making Essentials",
+  "description": "Openings, arcs, pauses, refrains — the five moves of a memorable speech.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Cinco movimentos do discurso: hook, promessa, histórias, refrão, chamado à ação. Pausa é pontuação.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Speech-making Essentials",
+      "subtitle_en": "Openings, arcs, pauses, refrains — the five moves of a memorable speech.",
+      "subtitle_pt": "Cinco movimentos do discurso: hook, promessa, histórias, refrão, chamado à ação. Pausa é pontuação."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Openings, arcs, pauses, refrains — the five moves of a memorable speech. Focus: speech-making essentials. I stand here not as a teacher, but as a witness.",
+      "text_pt": "Cinco movimentos do discurso: hook, promessa, histórias, refrão, chamado à ação. Pausa é pontuação. Foco: speech-making essentials. Estou aqui não como professor, mas como testemunha."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Speech-making Essentials",
+      "body_en": "Five moves: HOOK (capture attention), PROMISE (what they'll take away), STORIES (human anchor), REFRAIN (repeated line), CALL (what to do now). Pauses are punctuation.",
+      "body_pt": "Cinco movimentos do discurso: hook, promessa, histórias, refrão, chamado à ação. Pausa é pontuação.",
+      "examples": [
+        {
+          "en": "I stand here not as a teacher, but as a witness.",
+          "pt": "Estou aqui não como professor, mas como testemunha."
+        },
+        {
+          "en": "I will share three small stories and one big request.",
+          "pt": "Vou contar três histórias pequenas e um pedido grande."
+        },
+        {
+          "en": "So let us begin — not tomorrow, not Monday, but today.",
+          "pt": "Então comecemos — não amanhã, não segunda, mas hoje."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Speech-making Essentials",
+      "items": [
+        {
+          "term": "hook",
+          "pt": "gancho"
+        },
+        {
+          "term": "refrain",
+          "pt": "refrão"
+        },
+        {
+          "term": "pause",
+          "pt": "pausa"
+        },
+        {
+          "term": "cadence",
+          "pt": "cadência"
+        },
+        {
+          "term": "call to action",
+          "pt": "chamado à ação"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-speech-making-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I stand here not as a ___, but as a witness.\"",
+        "correct": "teacher",
+        "explanation": "Full sentence: \"I stand here not as a teacher, but as a witness.\"",
+        "hint_pt_br": "Estou aqui não como professor, mas como testemunha."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-speech-making-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "I will share three small stories and one big request.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"I will share three small stories and one big request.\"",
+        "hint_pt_br": "Vou contar três histórias pequenas e um pedido grande."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-speech-making-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "hook",
+            "gancho"
+          ],
+          [
+            "refrain",
+            "refrão"
+          ],
+          [
+            "pause",
+            "pausa"
+          ],
+          [
+            "cadence",
+            "cadência"
+          ],
+          [
+            "call to action",
+            "chamado à ação"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Speech-making Essentials — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre speech-making essentials. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Open a three-minute speech on curiosity."
+        },
+        {
+          "speaker": "user",
+          "target": "I'm here not because I teach, but because I still learn.",
+          "pt_hint": "Estou aqui porque ainda aprendo."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's your promise to the audience?"
+        },
+        {
+          "speaker": "user",
+          "target": "Three small stories and one request.",
+          "pt_hint": "Três histórias e um pedido."
+        },
+        {
+          "speaker": "ai",
+          "text": "Give me a refrain you'd repeat."
+        },
+        {
+          "speaker": "user",
+          "target": "Curiosity is the only luggage that gets lighter.",
+          "pt_hint": "A única bagagem que fica leve."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you handle pauses?"
+        },
+        {
+          "speaker": "user",
+          "target": "I plan three, and hold each two seconds.",
+          "pt_hint": "Três pausas de 2s."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's your call to action?"
+        },
+        {
+          "speaker": "user",
+          "target": "Ask one question today you were afraid to ask.",
+          "pt_hint": "Pergunte o que teme."
+        },
+        {
+          "speaker": "ai",
+          "text": "Speeches are architecture. Pauses are the doors."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "speech-making-listening-story",
+      "title": "The graduation speech",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Outline the five moves of a speech. Include at least three speech-making terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On graduation morning, Kumar practiced his speech in an empty auditorium, stopwatch in hand."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "I stand here not as a teacher, but as a witness to what these students have already become."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "I will share three small stories and one big request before I sit down again."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "female1",
+          "en": "Your refrain — 'curiosity is luggage that gets lighter' — has to repeat at least three times in the speech."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "So let us begin — not tomorrow, not Monday, but today, walking out of this hall together."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Speeches remembered decades later, Kumar believed, always rely on the same five quiet architectural moves."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Speech-making Essentials\". Openings, arcs, pauses, refrains — the five moves of a memorable speech. I stand here not as a teacher, but as a witness. I will share three small stories and one big request. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Speech-making Essentials\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Speech-making Essentials",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Speech-making Essentials\".",
+        "hint_pt_br": "Ela fala o título: \"Speech-making Essentials\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

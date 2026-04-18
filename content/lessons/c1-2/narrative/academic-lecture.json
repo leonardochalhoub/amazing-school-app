@@ -1,0 +1,283 @@
+{
+  "slug": "academic-lecture",
+  "title": "Following an Academic Lecture",
+  "description": "Signposts, hedged claims, visual references, note-taking strategies.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Acompanhando aula: sinalizadores, linguagem hedged, referências visuais, anotar por sinal.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Following an Academic Lecture",
+      "subtitle_en": "Signposts, hedged claims, visual references, note-taking strategies.",
+      "subtitle_pt": "Acompanhando aula: sinalizadores, linguagem hedged, referências visuais, anotar por sinal."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Signposts, hedged claims, visual references, note-taking strategies. Focus: following an academic lecture. Let me turn now to the second half of the argument.",
+      "text_pt": "Acompanhando aula: sinalizadores, linguagem hedged, referências visuais, anotar por sinal. Foco: following an academic lecture. Passemos agora à segunda metade do argumento."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Following an Academic Lecture",
+      "body_en": "Lecturers signpost: 'In the next section...', 'Crucially...', 'Let me turn to...'. Hedging: 'It could be argued that...'. Take notes by the signpost, not word by word.",
+      "body_pt": "Acompanhando aula: sinalizadores, linguagem hedged, referências visuais, anotar por sinal.",
+      "examples": [
+        {
+          "en": "Let me turn now to the second half of the argument.",
+          "pt": "Passemos agora à segunda metade do argumento."
+        },
+        {
+          "en": "Crucially, the data only covers one decade.",
+          "pt": "Crucialmente, os dados cobrem só uma década."
+        },
+        {
+          "en": "As the graph on slide twelve suggests...",
+          "pt": "Como o gráfico do slide 12 sugere..."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Following an Academic Lecture",
+      "items": [
+        {
+          "term": "signpost",
+          "pt": "sinalizador"
+        },
+        {
+          "term": "hedged",
+          "pt": "suavizado"
+        },
+        {
+          "term": "note-taking",
+          "pt": "anotação"
+        },
+        {
+          "term": "synthesize",
+          "pt": "sintetizar"
+        },
+        {
+          "term": "key claim",
+          "pt": "afirmação-chave"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-lecture-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Let me turn now to the second half of the ___.\"",
+        "correct": "argument",
+        "explanation": "Full sentence: \"Let me turn now to the second half of the argument.\"",
+        "hint_pt_br": "Passemos agora à segunda metade do argumento."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-lecture-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Crucially, the data only covers one decade.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Crucially, the data only covers one decade.\"",
+        "hint_pt_br": "Crucialmente, os dados cobrem só uma década."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-lecture-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "signpost",
+            "sinalizador"
+          ],
+          [
+            "hedged",
+            "suavizado"
+          ],
+          [
+            "note-taking",
+            "anotação"
+          ],
+          [
+            "synthesize",
+            "sintetizar"
+          ],
+          [
+            "key claim",
+            "afirmação-chave"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Following an Academic Lecture — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre following an academic lecture. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "How do you decide what to write down?"
+        },
+        {
+          "speaker": "user",
+          "target": "Follow the signposts, not every word.",
+          "pt_hint": "Seguir sinalizadores."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's a common lecture signpost?"
+        },
+        {
+          "speaker": "user",
+          "target": "'Crucially' or 'Let me turn to...'",
+          "pt_hint": "'Crucially', 'Turn to'."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you capture every hedge?"
+        },
+        {
+          "speaker": "user",
+          "target": "Only the ones that change a claim.",
+          "pt_hint": "Só os que mudam a afirmação."
+        },
+        {
+          "speaker": "ai",
+          "text": "What about visual slides?"
+        },
+        {
+          "speaker": "user",
+          "target": "I note the slide number, then synthesize later.",
+          "pt_hint": "Número, síntese depois."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you review notes afterward?"
+        },
+        {
+          "speaker": "user",
+          "target": "Rewrite as one-sentence claims within 24 hours.",
+          "pt_hint": "Reescrevo em 24h."
+        },
+        {
+          "speaker": "ai",
+          "text": "Lectures are listening exercises in disguise."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "academic-lecture-listening-story",
+      "title": "The history lecture",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the lecturer's main claim and one hedged point. Use at least two academic terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the large lecture hall, Kumar attended a history lecture to practice the discipline of listening for structure."
+        },
+        {
+          "speaker": "Lecturer",
+          "voice": "female1",
+          "en": "Let me turn now to the second half of the nineteenth century, and specifically to its industrial upheaval."
+        },
+        {
+          "speaker": "Lecturer",
+          "voice": "female1",
+          "en": "Crucially, the data we rely on covers only western Europe — the global picture was far more uneven."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "I wrote down each signpost the lecturer used, not every fact she mentioned along the way."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "It could be argued that our textbooks inherit exactly these geographic blind spots without even noticing."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Following a lecture well, Kumar believed, is the earliest rehearsal for giving a good one yourself."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Following an Academic Lecture\". Signposts, hedged claims, visual references, note-taking strategies. Let me turn now to the second half of the argument. Crucially, the data only covers one decade. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Following an Academic Lecture\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Following an Academic Lecture",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Following an Academic Lecture\".",
+        "hint_pt_br": "Ela fala o título: \"Following an Academic Lecture\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

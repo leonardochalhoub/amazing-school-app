@@ -1,0 +1,283 @@
+{
+  "slug": "podcast-english",
+  "title": "Podcast English — Interview Style",
+  "description": "Active listening patterns: interruption, follow-up, building on a guest's answer.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Frases de podcast: 'Tell me more', 'Pushing back', 'Come back to that', 'Critics who claim'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Podcast English — Interview Style",
+      "subtitle_en": "Active listening patterns: interruption, follow-up, building on a guest's answer.",
+      "subtitle_pt": "Frases de podcast: 'Tell me more', 'Pushing back', 'Come back to that', 'Critics who claim'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Active listening patterns: interruption, follow-up, building on a guest's answer. Focus: podcast english — interview style. Tell me more about that moment in the story.",
+      "text_pt": "Frases de podcast: 'Tell me more', 'Pushing back', 'Come back to that', 'Critics who claim'. Foco: podcast english — interview style. Me conte mais sobre esse momento da história."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Podcast English — Interview Style",
+      "body_en": "Host moves: 'Tell me more about...', 'Pushing back a little,...', 'You mentioned X — let's come back to that.', 'What do you say to critics who claim...?'",
+      "body_pt": "Frases de podcast: 'Tell me more', 'Pushing back', 'Come back to that', 'Critics who claim'.",
+      "examples": [
+        {
+          "en": "Tell me more about that moment in the story.",
+          "pt": "Me conte mais sobre esse momento da história."
+        },
+        {
+          "en": "Pushing back a little — don't you think that oversimplifies?",
+          "pt": "Provocando um pouco — não acha que simplifica demais?"
+        },
+        {
+          "en": "You mentioned your mentor earlier; let's come back to that.",
+          "pt": "Você mencionou seu mentor; vamos voltar nisso."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Podcast English — Interview Style",
+      "items": [
+        {
+          "term": "follow-up",
+          "pt": "pergunta de acompanhamento"
+        },
+        {
+          "term": "interrupt",
+          "pt": "interromper"
+        },
+        {
+          "term": "rephrase",
+          "pt": "reformular"
+        },
+        {
+          "term": "probe",
+          "pt": "investigar"
+        },
+        {
+          "term": "steer",
+          "pt": "conduzir"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-podcast-english-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Tell me more about that ___ in the story.\"",
+        "correct": "moment",
+        "explanation": "Full sentence: \"Tell me more about that moment in the story.\"",
+        "hint_pt_br": "Me conte mais sobre esse momento da história."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-podcast-english-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Pushing back a little — don't you think that oversimplifies?",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Pushing back a little — don't you think that oversimplifies?\"",
+        "hint_pt_br": "Provocando um pouco — não acha que simplifica demais?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-podcast-english-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "follow-up",
+            "pergunta de acompanhamento"
+          ],
+          [
+            "interrupt",
+            "interromper"
+          ],
+          [
+            "rephrase",
+            "reformular"
+          ],
+          [
+            "probe",
+            "investigar"
+          ],
+          [
+            "steer",
+            "conduzir"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Podcast English — Interview Style — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre podcast english — interview style. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "How do you keep an interview moving without derailing it?"
+        },
+        {
+          "speaker": "user",
+          "target": "Ask short follow-ups, not long statements.",
+          "pt_hint": "Follow-ups curtos."
+        },
+        {
+          "speaker": "ai",
+          "text": "When is it okay to push back?"
+        },
+        {
+          "speaker": "user",
+          "target": "When the claim leaves an important gap.",
+          "pt_hint": "Quando há lacuna."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you steer a rambling guest?"
+        },
+        {
+          "speaker": "user",
+          "target": "Gentle rephrase, then a pointed question.",
+          "pt_hint": "Reformular e apontar."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the first sign of a great interview?"
+        },
+        {
+          "speaker": "user",
+          "target": "The guest says something they didn't plan.",
+          "pt_hint": "Diz algo não planejado."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you close strong?"
+        },
+        {
+          "speaker": "user",
+          "target": "Ask what they've changed their mind about.",
+          "pt_hint": "Mudou de ideia."
+        },
+        {
+          "speaker": "ai",
+          "text": "Podcasting is the quiet craft of asking better."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "podcast-english-listening-story",
+      "title": "The interview",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the host's three best moves. Use at least three podcast-English phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On an afternoon recording, Zara observed a podcast host interview a reluctant expert with remarkable patience."
+        },
+        {
+          "speaker": "Host",
+          "voice": "female1",
+          "en": "Tell me more about that moment — I think our listeners want to hear the uncomfortable version."
+        },
+        {
+          "speaker": "Host",
+          "voice": "female1",
+          "en": "Pushing back a little — doesn't that framing leave out the counter-example you mentioned in chapter three?"
+        },
+        {
+          "speaker": "Guest",
+          "voice": "male1",
+          "en": "Fair point. You've done your reading. Let me rephrase what I actually meant in the book."
+        },
+        {
+          "speaker": "Host",
+          "voice": "female1",
+          "en": "We have two minutes left. What have you changed your mind about since writing the book?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Great interviewing, Zara noted, is mostly quiet — and almost entirely listening for the next real question."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Podcast English — Interview Style\". Active listening patterns: interruption, follow-up, building on a guest's answer. Tell me more about that moment in the story. Pushing back a little — don't you think that oversimplifies? Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Podcast English — Interview Style\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Podcast English — Interview Style",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Podcast English — Interview Style\".",
+        "hint_pt_br": "Ela fala o título: \"Podcast English — Interview Style\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

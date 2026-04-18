@@ -1,0 +1,283 @@
+{
+  "slug": "interview-english",
+  "title": "Being Interviewed — Expert Register",
+  "description": "Answering tough questions with clarity, concessions, and memorable phrases.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Sendo entrevistado: reconheça, posicione, exemplo, fechamento pra frente. Sem rodeios.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Being Interviewed — Expert Register",
+      "subtitle_en": "Answering tough questions with clarity, concessions, and memorable phrases.",
+      "subtitle_pt": "Sendo entrevistado: reconheça, posicione, exemplo, fechamento pra frente. Sem rodeios."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Answering tough questions with clarity, concessions, and memorable phrases. Focus: being interviewed — expert register. That's an important question, and my short answer is yes.",
+      "text_pt": "Sendo entrevistado: reconheça, posicione, exemplo, fechamento pra frente. Sem rodeios. Foco: being interviewed — expert register. Boa pergunta, e minha resposta curta é sim."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Being Interviewed — Expert Register",
+      "body_en": "Formula: ACKNOWLEDGE the question, STATE your view, SUPPORT with one example, CLOSE with a forward-looking sentence. Avoid rambling. Use signposts.",
+      "body_pt": "Sendo entrevistado: reconheça, posicione, exemplo, fechamento pra frente. Sem rodeios.",
+      "examples": [
+        {
+          "en": "That's an important question, and my short answer is yes.",
+          "pt": "Boa pergunta, e minha resposta curta é sim."
+        },
+        {
+          "en": "Let me give one concrete example from last quarter.",
+          "pt": "Um exemplo concreto do último trimestre."
+        },
+        {
+          "en": "Looking ahead, we expect that number to double.",
+          "pt": "Olhando pra frente, esperamos que dobre."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Being Interviewed — Expert Register",
+      "items": [
+        {
+          "term": "acknowledge",
+          "pt": "reconhecer"
+        },
+        {
+          "term": "concise",
+          "pt": "conciso"
+        },
+        {
+          "term": "pivot",
+          "pt": "virar o assunto"
+        },
+        {
+          "term": "frame",
+          "pt": "enquadrar"
+        },
+        {
+          "term": "soundbite",
+          "pt": "frase de impacto"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-interview-english-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"That's an ___ question, and my short answer is yes.\"",
+        "correct": "important",
+        "explanation": "Full sentence: \"That's an important question, and my short answer is yes.\"",
+        "hint_pt_br": "Boa pergunta, e minha resposta curta é sim."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-interview-english-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Let me give one concrete example from last quarter.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"Let me give one concrete example from last quarter.\"",
+        "hint_pt_br": "Um exemplo concreto do último trimestre."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-interview-english-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "acknowledge",
+            "reconhecer"
+          ],
+          [
+            "concise",
+            "conciso"
+          ],
+          [
+            "pivot",
+            "virar o assunto"
+          ],
+          [
+            "frame",
+            "enquadrar"
+          ],
+          [
+            "soundbite",
+            "frase de impacto"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Being Interviewed — Expert Register — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre being interviewed — expert register. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, a journalist asks a hostile question. What do you do?"
+        },
+        {
+          "speaker": "user",
+          "target": "Acknowledge it, then reframe gently.",
+          "pt_hint": "Reconhecer e reformular."
+        },
+        {
+          "speaker": "ai",
+          "text": "Give me a soundbite about your company."
+        },
+        {
+          "speaker": "user",
+          "target": "We build tools that make small teams feel enterprise-strong.",
+          "pt_hint": "Ferramentas grandes pra times pequenos."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you handle a question you can't answer?"
+        },
+        {
+          "speaker": "user",
+          "target": "Say so, then offer what you do know.",
+          "pt_hint": "Admitir, oferecer o que sabe."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's your three-word brand promise?"
+        },
+        {
+          "speaker": "user",
+          "target": "Faster, safer, human.",
+          "pt_hint": "Mais rápido, seguro, humano."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you close a tough interview?"
+        },
+        {
+          "speaker": "user",
+          "target": "One forward-looking sentence and a thank-you.",
+          "pt_hint": "Frase pra frente, obrigado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Expert register is the art of being clear under pressure."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "interview-english-listening-story",
+      "title": "The press interview",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize Joca's answers. Use at least three interview techniques.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the studio, a reporter asked Joca the hardest question he had been dreading for three weeks."
+        },
+        {
+          "speaker": "Reporter",
+          "voice": "female1",
+          "en": "Your company laid off fifteen percent last quarter — how do you justify that publicly now?"
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "That's a fair question, and my short answer is that we mis-sized growth expectations in 2023 clearly."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Let me give one concrete example of how we're supporting every person who left this month."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Looking ahead, we expect to rehire responsibly as revenue stabilizes over the next two quarters."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Interview under pressure, Joca knew, is where vocabulary either wins trust or permanently loses it."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Being Interviewed — Expert Register\". Answering tough questions with clarity, concessions, and memorable phrases. That's an important question, and my short answer is yes. Let me give one concrete example from last quarter. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Being Interviewed — Expert Register\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Being Interviewed — Expert Register",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Being Interviewed — Expert Register\".",
+        "hint_pt_br": "Ela fala o título: \"Being Interviewed — Expert Register\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

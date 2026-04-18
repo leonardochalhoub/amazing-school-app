@@ -1,0 +1,283 @@
+{
+  "slug": "poetry-reading",
+  "title": "Reading Poetry in English",
+  "description": "Line breaks, enjambment, meter, voice — reading slowly on purpose.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Poesia: quebras de linha, enjambement, métrica, voz. Leia em voz alta, duas vezes.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Reading Poetry in English",
+      "subtitle_en": "Line breaks, enjambment, meter, voice — reading slowly on purpose.",
+      "subtitle_pt": "Poesia: quebras de linha, enjambement, métrica, voz. Leia em voz alta, duas vezes."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Line breaks, enjambment, meter, voice — reading slowly on purpose. Focus: reading poetry in english. The line break creates a small silence before the next thought.",
+      "text_pt": "Poesia: quebras de linha, enjambement, métrica, voz. Leia em voz alta, duas vezes. Foco: reading poetry in english. A quebra de linha cria um pequeno silêncio."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Reading Poetry in English",
+      "body_en": "Line breaks carry meaning. ENJAMBMENT = sentence runs past the line. METER = the rhythm (iambic pentameter etc). VOICE = who speaks, not the poet. Read aloud, twice.",
+      "body_pt": "Poesia: quebras de linha, enjambement, métrica, voz. Leia em voz alta, duas vezes.",
+      "examples": [
+        {
+          "en": "The line break creates a small silence before the next thought.",
+          "pt": "A quebra de linha cria um pequeno silêncio."
+        },
+        {
+          "en": "Enjambment lets a sentence spill across lines.",
+          "pt": "Enjambement deixa a frase transbordar as linhas."
+        },
+        {
+          "en": "The speaker is not always the poet.",
+          "pt": "O falante nem sempre é o poeta."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Reading Poetry in English",
+      "items": [
+        {
+          "term": "line break",
+          "pt": "quebra de linha"
+        },
+        {
+          "term": "enjambment",
+          "pt": "enjambement"
+        },
+        {
+          "term": "meter",
+          "pt": "métrica"
+        },
+        {
+          "term": "stanza",
+          "pt": "estrofe"
+        },
+        {
+          "term": "voice",
+          "pt": "voz"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-poetry-reading-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The line break ___ a small silence before the next thought.\"",
+        "correct": "creates",
+        "explanation": "Full sentence: \"The line break creates a small silence before the next thought.\"",
+        "hint_pt_br": "A quebra de linha cria um pequeno silêncio."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-poetry-reading-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Enjambment lets a sentence spill across lines.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Enjambment lets a sentence spill across lines.\"",
+        "hint_pt_br": "Enjambement deixa a frase transbordar as linhas."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-poetry-reading-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "line break",
+            "quebra de linha"
+          ],
+          [
+            "enjambment",
+            "enjambement"
+          ],
+          [
+            "meter",
+            "métrica"
+          ],
+          [
+            "stanza",
+            "estrofe"
+          ],
+          [
+            "voice",
+            "voz"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Reading Poetry in English — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre reading poetry in english. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Lúcia, how do you begin reading a new poem?"
+        },
+        {
+          "speaker": "user",
+          "target": "I read it aloud twice, slowly.",
+          "pt_hint": "Em voz alta, devagar."
+        },
+        {
+          "speaker": "ai",
+          "text": "What do line breaks do for meaning?"
+        },
+        {
+          "speaker": "user",
+          "target": "They create small silences between ideas.",
+          "pt_hint": "Silêncios pequenos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Define enjambment briefly."
+        },
+        {
+          "speaker": "user",
+          "target": "A sentence that spills past the line.",
+          "pt_hint": "Transborda a linha."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is the speaker always the poet?"
+        },
+        {
+          "speaker": "user",
+          "target": "Rarely — the voice is a constructed self.",
+          "pt_hint": "Voz construída."
+        },
+        {
+          "speaker": "ai",
+          "text": "What about meter? Why does it matter?"
+        },
+        {
+          "speaker": "user",
+          "target": "Rhythm carries mood before meaning arrives.",
+          "pt_hint": "Ritmo antes do sentido."
+        },
+        {
+          "speaker": "ai",
+          "text": "Poetry rewards slowness the world rarely grants."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "poetry-reading-listening-story",
+      "title": "A poem, out loud",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Analyze the poem's voice, meter, and one striking line. Use at least three poetry terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the small circle by the window, Dona Lúcia opened a weathered book and read a short poem twice."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Notice how the line break makes you pause — the silence itself belongs to the meaning of that sentence."
+        },
+        {
+          "speaker": "Member",
+          "voice": "male1",
+          "en": "And the enjambment in the third stanza — the sentence refuses to end where the line does."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "The speaker here is a widow, though we know the poet was thirty and newly in love."
+        },
+        {
+          "speaker": "Member",
+          "voice": "female2",
+          "en": "The iambic meter carries her grief like a slow footstep, even before we understand the words."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Poetry, Lúcia said, is the last place where slowness was never considered a flaw."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Reading Poetry in English\". Line breaks, enjambment, meter, voice — reading slowly on purpose. The line break creates a small silence before the next thought. Enjambment lets a sentence spill across lines. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Reading Poetry in English\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Reading Poetry in English",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Reading Poetry in English\".",
+        "hint_pt_br": "Ela fala o título: \"Reading Poetry in English\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

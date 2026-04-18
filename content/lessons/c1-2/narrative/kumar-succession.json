@@ -1,0 +1,283 @@
+{
+  "slug": "kumar-succession",
+  "title": "Kumar's Succession Plan",
+  "description": "A narrative about mentorship, letting go, choosing a successor.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Sucessão: 'Pronto pra o que não faço mais', 'Meu trabalho é diminuir meu trabalho', 'Faça sua'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Kumar's Succession Plan",
+      "subtitle_en": "A narrative about mentorship, letting go, choosing a successor.",
+      "subtitle_pt": "Sucessão: 'Pronto pra o que não faço mais', 'Meu trabalho é diminuir meu trabalho', 'Faça sua'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "A narrative about mentorship, letting go, choosing a successor. Focus: kumar's succession plan. You are ready for what I cannot do anymore.",
+      "text_pt": "Sucessão: 'Pronto pra o que não faço mais', 'Meu trabalho é diminuir meu trabalho', 'Faça sua'. Foco: kumar's succession plan. Você está pronta pro que não faço mais."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Kumar's Succession Plan",
+      "body_en": "Succession language: 'You are ready for what I cannot do anymore', 'My job is to shrink my job', 'Make it yours, not mine', 'I am proud to step aside'.",
+      "body_pt": "Sucessão: 'Pronto pra o que não faço mais', 'Meu trabalho é diminuir meu trabalho', 'Faça sua'.",
+      "examples": [
+        {
+          "en": "You are ready for what I cannot do anymore.",
+          "pt": "Você está pronta pro que não faço mais."
+        },
+        {
+          "en": "My job from now on is to shrink my own job.",
+          "pt": "Minha função agora é diminuir minha própria função."
+        },
+        {
+          "en": "Make this school yours, not mine.",
+          "pt": "Faça desta escola sua, não minha."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Kumar's Succession Plan",
+      "items": [
+        {
+          "term": "succession",
+          "pt": "sucessão"
+        },
+        {
+          "term": "mentorship",
+          "pt": "mentoria"
+        },
+        {
+          "term": "legacy",
+          "pt": "legado"
+        },
+        {
+          "term": "step aside",
+          "pt": "dar um passo atrás"
+        },
+        {
+          "term": "steward",
+          "pt": "guardião"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-kumar-succession-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"You are ready for what I cannot do ___.\"",
+        "correct": "anymore",
+        "explanation": "Full sentence: \"You are ready for what I cannot do anymore.\"",
+        "hint_pt_br": "Você está pronta pro que não faço mais."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-kumar-succession-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "My job from now on is to shrink my own job.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"My job from now on is to shrink my own job.\"",
+        "hint_pt_br": "Minha função agora é diminuir minha própria função."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-kumar-succession-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "succession",
+            "sucessão"
+          ],
+          [
+            "mentorship",
+            "mentoria"
+          ],
+          [
+            "legacy",
+            "legado"
+          ],
+          [
+            "step aside",
+            "dar um passo atrás"
+          ],
+          [
+            "steward",
+            "guardião"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Kumar's Succession Plan — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre kumar's succession plan. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar, why now for this conversation?"
+        },
+        {
+          "speaker": "user",
+          "target": "Because you are ready for what I cannot do anymore.",
+          "pt_hint": "Você está pronta."
+        },
+        {
+          "speaker": "ai",
+          "text": "What will you miss most about the role?"
+        },
+        {
+          "speaker": "user",
+          "target": "The students who arrived frightened and left brave.",
+          "pt_hint": "Os alunos que viraram bravos."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's my mandate from you?"
+        },
+        {
+          "speaker": "user",
+          "target": "Make this school yours, not mine.",
+          "pt_hint": "Faça sua."
+        },
+        {
+          "speaker": "ai",
+          "text": "And if I make a decision you would not have?"
+        },
+        {
+          "speaker": "user",
+          "target": "Good. That is how schools grow.",
+          "pt_hint": "É assim que escolas crescem."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's your one piece of advice for the next decade?"
+        },
+        {
+          "speaker": "user",
+          "target": "Protect the teachers. They protect everything else.",
+          "pt_hint": "Proteja os professores."
+        },
+        {
+          "speaker": "ai",
+          "text": "Succession is the last curriculum a founder writes."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "kumar-succession-listening-story",
+      "title": "The passing of the keys",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize Kumar's message. Use at least three succession phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the same office where he had first hired her, Kumar handed the school's keys to its second principal."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "You are ready for what I cannot do anymore — and that is the best definition of succession I know."
+        },
+        {
+          "speaker": "Successor",
+          "voice": "female1",
+          "en": "I am honored, but I worry I won't carry the culture exactly as you built it over these years."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Make this school yours, not mine. A legacy not revised by the next steward is not a legacy — it's a fossil."
+        },
+        {
+          "speaker": "Successor",
+          "voice": "female1",
+          "en": "Thank you. My first decision is to keep Thursdays sacred, exactly as you always did."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Succession, Kumar believed, is the quietest act of leadership — and the hardest one to do well."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Kumar's Succession Plan\". A narrative about mentorship, letting go, choosing a successor. You are ready for what I cannot do anymore. My job from now on is to shrink my own job. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Kumar's Succession Plan\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Kumar's Succession Plan",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Kumar's Succession Plan\".",
+        "hint_pt_br": "Ela fala o título: \"Kumar's Succession Plan\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}
