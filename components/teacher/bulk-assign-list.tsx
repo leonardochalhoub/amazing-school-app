@@ -31,6 +31,8 @@ export interface BulkRow {
   category: string;
   exerciseCount?: number;
   href: string;
+  source?: "library" | "curated" | "mine";
+  published?: boolean;
 }
 
 interface Classroom {
@@ -60,7 +62,20 @@ export function BulkAssignList({ rows, classrooms, students }: Props) {
   const [studentId, setStudentId] = useState("");
   const [pending, startTransition] = useTransition();
 
+  // Only published rows (library items default to true) can be assigned.
+  const assignable = rows.filter((r) => r.published !== false);
+  const assignableSet = new Set(assignable.map((r) => r.slug));
+
+  // Group by CEFR level for the per-section headings.
+  const byCefr = new Map<string, BulkRow[]>();
+  for (const r of rows) {
+    const list = byCefr.get(r.cefr_level) ?? [];
+    list.push(r);
+    byCefr.set(r.cefr_level, list);
+  }
+
   function toggle(slug: string) {
+    if (!assignableSet.has(slug)) return;
     setSelected((prev) => {
       const next = new Set(prev);
       if (next.has(slug)) next.delete(slug);
@@ -70,7 +85,7 @@ export function BulkAssignList({ rows, classrooms, students }: Props) {
   }
 
   function selectAllVisible() {
-    setSelected(new Set(rows.map((r) => r.slug)));
+    setSelected(new Set(assignable.map((r) => r.slug)));
   }
 
   function clearAll() {
@@ -115,7 +130,8 @@ export function BulkAssignList({ rows, classrooms, students }: Props) {
     });
   }
 
-  const allSelected = rows.length > 0 && selected.size === rows.length;
+  const allSelected =
+    assignable.length > 0 && selected.size === assignable.length;
 
   return (
     <>
@@ -136,51 +152,93 @@ export function BulkAssignList({ rows, classrooms, students }: Props) {
         </div>
       </div>
 
-      <div className="space-y-2">
-        {rows.map((row) => {
-          const isSelected = selected.has(row.slug);
-          return (
-            <div
-              key={row.slug}
-              className={`flex items-center gap-2 rounded-xl border p-3 shadow-xs transition-colors ${
-                isSelected
-                  ? "border-primary bg-primary/5"
-                  : "border-border bg-card hover:border-primary/40"
-              }`}
-            >
-              <input
-                type="checkbox"
-                checked={isSelected}
-                onChange={() => toggle(row.slug)}
-                className="h-4 w-4 shrink-0 rounded border-border accent-primary"
-              />
-              <Link href={row.href} className="group min-w-0 flex-1">
-                <div className="flex items-center gap-2">
-                  <p className="truncate text-sm font-semibold group-hover:text-primary">
-                    {row.title}
-                  </p>
-                  <Badge variant="secondary" className="shrink-0 gap-1 text-[10px]">
-                    {row.category === "narrative" ? (
-                      <Sparkles className="h-3 w-3" />
-                    ) : (
-                      <BookOpen className="h-3 w-3" />
-                    )}
-                    {row.category === "narrative" ? "Story" : "Library"}
-                  </Badge>
-                </div>
-                <p className="mt-0.5 truncate text-[11px] text-muted-foreground">
-                  {row.cefr_level.toUpperCase()} · {row.category}
-                  {row.exerciseCount != null
-                    ? ` · ${row.exerciseCount} exercises`
-                    : ""}
-                </p>
-              </Link>
-              <Badge variant="default" className="shrink-0 text-[10px]">
-                Core
-              </Badge>
+      <div className="space-y-8">
+        {Array.from(byCefr.entries()).map(([level, group]) => (
+          <section key={level} className="space-y-2">
+            <h2 className="text-lg font-bold tracking-tight">
+              {level.toUpperCase()}
+              <span className="ml-2 text-sm font-normal text-muted-foreground tabular-nums">
+                {group.length} lesson{group.length === 1 ? "" : "s"}
+              </span>
+            </h2>
+            <div className="space-y-2">
+              {group.map((row) => {
+                const isSelected = selected.has(row.slug);
+                const isDraft = row.published === false;
+                const sourceBadge =
+                  row.source === "library"
+                    ? { label: "Core", variant: "default" as const }
+                    : row.source === "curated"
+                      ? { label: "Curated", variant: "secondary" as const }
+                      : { label: "Mine", variant: "outline" as const };
+                return (
+                  <div
+                    key={row.slug}
+                    className={`flex items-center gap-2 rounded-xl border p-3 shadow-xs transition-colors ${
+                      isDraft
+                        ? "border-dashed border-muted bg-muted/20 opacity-60"
+                        : isSelected
+                          ? "border-primary bg-primary/5"
+                          : "border-border bg-card hover:border-primary/40"
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isSelected}
+                      onChange={() => toggle(row.slug)}
+                      disabled={isDraft}
+                      title={
+                        isDraft
+                          ? "Publish this lesson before assigning"
+                          : undefined
+                      }
+                      className="h-4 w-4 shrink-0 rounded border-border accent-primary disabled:cursor-not-allowed"
+                    />
+                    <Link href={row.href} className="group min-w-0 flex-1">
+                      <div className="flex items-center gap-2">
+                        <p className="truncate text-sm font-semibold group-hover:text-primary">
+                          {row.title}
+                        </p>
+                        <Badge
+                          variant="secondary"
+                          className="shrink-0 gap-1 text-[10px]"
+                        >
+                          {row.category === "narrative" ? (
+                            <Sparkles className="h-3 w-3" />
+                          ) : (
+                            <BookOpen className="h-3 w-3" />
+                          )}
+                          {row.category === "narrative" ? "Story" : row.category}
+                        </Badge>
+                        {isDraft ? (
+                          <Badge
+                            variant="outline"
+                            className="shrink-0 text-[10px]"
+                          >
+                            Draft
+                          </Badge>
+                        ) : null}
+                      </div>
+                      <p className="mt-0.5 truncate text-[11px] text-muted-foreground">
+                        {row.cefr_level.toUpperCase()}
+                        {row.exerciseCount != null
+                          ? ` · ${row.exerciseCount} exercises`
+                          : ""}
+                        {isDraft ? " · publish to assign" : ""}
+                      </p>
+                    </Link>
+                    <Badge
+                      variant={sourceBadge.variant}
+                      className="shrink-0 text-[10px]"
+                    >
+                      {sourceBadge.label}
+                    </Badge>
+                  </div>
+                );
+              })}
             </div>
-          );
-        })}
+          </section>
+        ))}
       </div>
 
       {selected.size > 0 && (

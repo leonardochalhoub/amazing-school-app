@@ -260,28 +260,6 @@ export default async function TeacherLessonsPage({
 
       {source === "bank" ? (
         <BankItemsList items={bankItems} filters={filters} />
-      ) : source === "library" ? (
-        <BulkAssignList
-          rows={unified
-            .filter((l) => l.source === "library")
-            .map((l) => ({
-              slug: l.slug,
-              title: l.title,
-              cefr_level: l.cefr_level,
-              category: l.category,
-              exerciseCount: l.exerciseCount,
-              href: l.href,
-            }))}
-          classrooms={overview.classrooms.map((c) => ({
-            id: c.id,
-            name: c.name,
-          }))}
-          students={overview.roster.map((r) => ({
-            id: r.id,
-            fullName: r.fullName,
-            classroomId: r.classroomId,
-          }))}
-        />
       ) : unified.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-border bg-card/40 p-12 text-center">
           <Sparkles className="mx-auto h-10 w-10 text-muted-foreground" />
@@ -295,41 +273,27 @@ export default async function TeacherLessonsPage({
           </p>
         </div>
       ) : (
-        <div className="space-y-8">
-          {Array.from(byCefr.keys())
-            .sort()
-            .map((level) => {
-              const group = byCefr.get(level) ?? [];
-              return (
-                <section key={level} className="space-y-3">
-                  <div className="flex items-baseline justify-between">
-                    <h2 className="text-lg font-bold tracking-tight">
-                      {level.toUpperCase()}
-                      <span className="ml-2 text-sm font-normal text-muted-foreground tabular-nums">
-                        {group.length} lesson{group.length === 1 ? "" : "s"}
-                      </span>
-                    </h2>
-                  </div>
-                  <div className="space-y-2">
-                    {group.map((l) =>
-                      l.source === "curated" ? (
-                        <LessonRow
-                          key={`curated-${l.slug}`}
-                          lesson={
-                            (curatedLessons.find((c) => c.slug === l.slug) ?? null) as LessonDraftMeta
-                          }
-                        />
-                      ) : l.source === "library" ? (
-                        <LibraryLessonRow key={`lib-${l.slug}`} row={l} />
-                      ) : (
-                        <MyLessonRow key={`mine-${l.slug}`} row={l} />
-                      )
-                    )}
-                  </div>
-                </section>
-              );
-            })}
-        </div>
+        <BulkAssignList
+          rows={unified.map((l) => ({
+            slug: l.slug,
+            title: l.title,
+            cefr_level: l.cefr_level,
+            category: l.category,
+            exerciseCount: l.exerciseCount,
+            href: l.href,
+            source: l.source,
+            published: l.published,
+          }))}
+          classrooms={overview.classrooms.map((c) => ({
+            id: c.id,
+            name: c.name,
+          }))}
+          students={overview.roster.map((r) => ({
+            id: r.id,
+            fullName: r.fullName,
+            classroomId: r.classroomId,
+          }))}
+        />
       )}
     </div>
   );
