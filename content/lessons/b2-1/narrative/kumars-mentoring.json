@@ -1,0 +1,283 @@
+{
+  "slug": "kumars-mentoring",
+  "title": "Kumar's Mentoring Session",
+  "description": "A narrative lesson on mentorship vocabulary, active listening, and professional advice.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.1",
+  "xp_reward": 65,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Linguagem de mentoria: 'O que eu escuto...', 'Você já considerou?', 'Minha perspectiva honesta'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Kumar's Mentoring Session",
+      "subtitle_en": "A narrative lesson on mentorship vocabulary, active listening, and professional advice.",
+      "subtitle_pt": "Linguagem de mentoria: 'O que eu escuto...', 'Você já considerou?', 'Minha perspectiva honesta'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "A narrative lesson on mentorship vocabulary, active listening, and professional advice. Today's focus: kumar's mentoring session. What I hear you saying is that you feel undervalued.",
+      "text_pt": "Linguagem de mentoria: 'O que eu escuto...', 'Você já considerou?', 'Minha perspectiva honesta'. Foco de hoje: kumar's mentoring session. O que eu escuto é que você se sente desvalorizada."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Kumar's Mentoring Session",
+      "body_en": "Mentoring language: 'What I hear you saying is...', 'Have you considered...?', 'My honest perspective is...', 'Let's explore that further'.",
+      "body_pt": "Linguagem de mentoria: 'O que eu escuto...', 'Você já considerou?', 'Minha perspectiva honesta'.",
+      "examples": [
+        {
+          "en": "What I hear you saying is that you feel undervalued.",
+          "pt": "O que eu escuto é que você se sente desvalorizada."
+        },
+        {
+          "en": "Have you considered speaking directly with your manager?",
+          "pt": "Você já considerou falar diretamente com seu gestor?"
+        },
+        {
+          "en": "My honest perspective is that you're ready for more.",
+          "pt": "Minha visão sincera é que você está pronta pra mais."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Kumar's Mentoring Session",
+      "items": [
+        {
+          "term": "mentor",
+          "pt": "mentor"
+        },
+        {
+          "term": "empathy",
+          "pt": "empatia"
+        },
+        {
+          "term": "perspective",
+          "pt": "perspectiva"
+        },
+        {
+          "term": "reflect",
+          "pt": "refletir"
+        },
+        {
+          "term": "guide",
+          "pt": "guiar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-kumars-mentoring-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"What I hear you saying is that you feel ___.\"",
+        "correct": "undervalued",
+        "explanation": "Full sentence: \"What I hear you saying is that you feel undervalued.\"",
+        "hint_pt_br": "O que eu escuto é que você se sente desvalorizada."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-kumars-mentoring-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Have you considered speaking directly with your manager?",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "The correct sentence is: \"Have you considered speaking directly with your manager?\"",
+        "hint_pt_br": "Você já considerou falar diretamente com seu gestor?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-kumars-mentoring-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "mentor",
+            "mentor"
+          ],
+          [
+            "empathy",
+            "empatia"
+          ],
+          [
+            "perspective",
+            "perspectiva"
+          ],
+          [
+            "reflect",
+            "refletir"
+          ],
+          [
+            "guide",
+            "guiar"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Kumar's Mentoring Session — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre kumar's mentoring session. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar, I feel stuck in my career right now."
+        },
+        {
+          "speaker": "user",
+          "target": "What I hear is you feel undervalued at work.",
+          "pt_hint": "Desvalorizada."
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, exactly. My ideas get ignored."
+        },
+        {
+          "speaker": "user",
+          "target": "Have you considered presenting data with each idea?",
+          "pt_hint": "Apresentar dados?"
+        },
+        {
+          "speaker": "ai",
+          "text": "I haven't. I just speak from experience."
+        },
+        {
+          "speaker": "user",
+          "target": "Try combining both for your next proposal.",
+          "pt_hint": "Combine os dois."
+        },
+        {
+          "speaker": "ai",
+          "text": "What if my manager still dismisses me?"
+        },
+        {
+          "speaker": "user",
+          "target": "Document everything and request a formal review.",
+          "pt_hint": "Documente tudo."
+        },
+        {
+          "speaker": "ai",
+          "text": "That sounds confrontational, doesn't it?"
+        },
+        {
+          "speaker": "user",
+          "target": "It's boundary-setting, not conflict.",
+          "pt_hint": "É limite, não conflito."
+        },
+        {
+          "speaker": "ai",
+          "text": "Lead with curiosity; follow with courage."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "kumars-mentoring-listening-story",
+      "title": "A mentoring Tuesday",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe the mentee's issue and Kumar's approach. Use at least three mentoring phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Every Tuesday at four, Kumar met with a former student over coffee to talk about careers and courage."
+        },
+        {
+          "speaker": "Mentee",
+          "voice": "female1",
+          "en": "I feel invisible at work. My ideas vanish the moment I speak them."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "What I hear you saying is that visibility and validation both feel missing right now."
+        },
+        {
+          "speaker": "Mentee",
+          "voice": "female1",
+          "en": "Exactly. And I don't know how to change the dynamic without sounding difficult."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "My honest perspective is that documenting your contributions is not complaint — it's professional clarity."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Sometimes being heard, Kumar believed, was the single most underrated skill in modern professional life."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Kumar's Mentoring Session\". A narrative lesson on mentorship vocabulary, active listening, and professional advice. What I hear you saying is that you feel undervalued. Have you considered speaking directly with your manager? Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Kumar's Mentoring Session\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Kumar's Mentoring Session",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Kumar's Mentoring Session\".",
+        "hint_pt_br": "Ela fala o título: \"Kumar's Mentoring Session\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

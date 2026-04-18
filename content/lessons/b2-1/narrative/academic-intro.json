@@ -1,0 +1,283 @@
+{
+  "slug": "academic-intro",
+  "title": "Academic Writing Basics",
+  "description": "Introduction structure: hook, context, thesis. Academic vocabulary for essays.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.1",
+  "xp_reward": 65,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Introduções acadêmicas: gancho, contexto, tese. Em vez de 'I think', use 'This essay argues'. Verbos: examine, analyze.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Academic Writing Basics",
+      "subtitle_en": "Introduction structure: hook, context, thesis. Academic vocabulary for essays.",
+      "subtitle_pt": "Introduções acadêmicas: gancho, contexto, tese. Em vez de 'I think', use 'This essay argues'. Verbos: examine, analyze."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Introduction structure: hook, context, thesis. Academic vocabulary for essays. Today's focus: academic writing basics. This essay argues that remote work benefits productivity.",
+      "text_pt": "Introduções acadêmicas: gancho, contexto, tese. Em vez de 'I think', use 'This essay argues'. Verbos: examine, analyze. Foco de hoje: academic writing basics. Este ensaio defende que o trabalho remoto beneficia a produtividade."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Academic Writing Basics",
+      "body_en": "Academic intros usually open with a hook, then funnel to the thesis. Avoid 'I think' — prefer 'This essay argues that...'. Verbs: examine, analyze, explore, demonstrate.",
+      "body_pt": "Introduções acadêmicas: gancho, contexto, tese. Em vez de 'I think', use 'This essay argues'. Verbos: examine, analyze.",
+      "examples": [
+        {
+          "en": "This essay argues that remote work benefits productivity.",
+          "pt": "Este ensaio defende que o trabalho remoto beneficia a produtividade."
+        },
+        {
+          "en": "We will examine three key dimensions of the problem.",
+          "pt": "Examinaremos três dimensões do problema."
+        },
+        {
+          "en": "The evidence demonstrates a clear correlation between X and Y.",
+          "pt": "As evidências demonstram uma correlação clara entre X e Y."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Academic Writing Basics",
+      "items": [
+        {
+          "term": "thesis",
+          "pt": "tese"
+        },
+        {
+          "term": "evidence",
+          "pt": "evidência"
+        },
+        {
+          "term": "examine",
+          "pt": "examinar"
+        },
+        {
+          "term": "demonstrate",
+          "pt": "demonstrar"
+        },
+        {
+          "term": "analyze",
+          "pt": "analisar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-intro-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"This essay argues that remote work benefits ___.\"",
+        "correct": "productivity",
+        "explanation": "Full sentence: \"This essay argues that remote work benefits productivity.\"",
+        "hint_pt_br": "Este ensaio defende que o trabalho remoto beneficia a produtividade."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-intro-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "We will examine three key dimensions of the problem."
+        ],
+        "correct": 3,
+        "explanation": "The correct sentence is: \"We will examine three key dimensions of the problem.\"",
+        "hint_pt_br": "Examinaremos três dimensões do problema."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-intro-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "thesis",
+            "tese"
+          ],
+          [
+            "evidence",
+            "evidência"
+          ],
+          [
+            "examine",
+            "examinar"
+          ],
+          [
+            "demonstrate",
+            "demonstrar"
+          ],
+          [
+            "analyze",
+            "analisar"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Academic Writing Basics — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre academic writing basics. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Let's draft an academic introduction together. Start with a hook."
+        },
+        {
+          "speaker": "user",
+          "target": "Millions of workers changed offices for kitchens overnight.",
+          "pt_hint": "Mudaram escritório por cozinha."
+        },
+        {
+          "speaker": "ai",
+          "text": "Good. Now add context in one sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "Remote work grew from niche to norm during the pandemic.",
+          "pt_hint": "Virou normal."
+        },
+        {
+          "speaker": "ai",
+          "text": "Write your thesis statement."
+        },
+        {
+          "speaker": "user",
+          "target": "This essay argues remote work improves productivity.",
+          "pt_hint": "Melhora produtividade."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now preview your three points."
+        },
+        {
+          "speaker": "user",
+          "target": "We will examine focus, flexibility, and results.",
+          "pt_hint": "Foco, flexibilidade, resultados."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close the intro by gesturing at evidence."
+        },
+        {
+          "speaker": "user",
+          "target": "Evidence from three studies will support the argument.",
+          "pt_hint": "Evidência de 3 estudos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Clean, confident, and grounded. That's an academic opening."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "academic-intro-listening-story",
+      "title": "Kumar's introduction workshop",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Summarize Kumar's four-step intro. Use at least two academic verbs.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the university prep class, Kumar drew four boxes on the board: hook, context, thesis, preview."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "This essay will examine how four simple moves can transform any academic introduction."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "Is it okay to start with a personal anecdote as the hook?"
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Yes, as long as the anecdote funnels directly into the argument you intend to demonstrate."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "So the thesis should be the final sentence of the introduction paragraph?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Writing, Kumar repeated each term, is architecture — and every good building starts at the foundation."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Academic Writing Basics\". Introduction structure: hook, context, thesis. Academic vocabulary for essays. This essay argues that remote work benefits productivity. We will examine three key dimensions of the problem. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Academic Writing Basics\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Academic Writing Basics",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Academic Writing Basics\".",
+        "hint_pt_br": "Ela fala o título: \"Academic Writing Basics\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

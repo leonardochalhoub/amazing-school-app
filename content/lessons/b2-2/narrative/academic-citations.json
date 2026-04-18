@@ -1,0 +1,283 @@
+{
+  "slug": "academic-citations",
+  "title": "Academic Citations",
+  "description": "When to quote, paraphrase, cite; avoiding plagiarism; integrating sources smoothly.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 70,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Citações: aspas pouco, paráfrase muito, sempre cite. Verbos: argues, claims, suggests, demonstrates.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Academic Citations",
+      "subtitle_en": "When to quote, paraphrase, cite; avoiding plagiarism; integrating sources smoothly.",
+      "subtitle_pt": "Citações: aspas pouco, paráfrase muito, sempre cite. Verbos: argues, claims, suggests, demonstrates."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "When to quote, paraphrase, cite; avoiding plagiarism; integrating sources smoothly. Today's focus: academic citations. Smith (2022) argues that remote work reshapes productivity.",
+      "text_pt": "Citações: aspas pouco, paráfrase muito, sempre cite. Verbos: argues, claims, suggests, demonstrates. Foco de hoje: academic citations. Smith (2022) argumenta que o home office remodela a produtividade."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Academic Citations",
+      "body_en": "Use direct quotes sparingly. Paraphrase most of the time. Always cite the source. Integrating verbs: argues, claims, suggests, demonstrates, contends.",
+      "body_pt": "Citações: aspas pouco, paráfrase muito, sempre cite. Verbos: argues, claims, suggests, demonstrates.",
+      "examples": [
+        {
+          "en": "Smith (2022) argues that remote work reshapes productivity.",
+          "pt": "Smith (2022) argumenta que o home office remodela a produtividade."
+        },
+        {
+          "en": "According to recent research, attention spans are shrinking.",
+          "pt": "De acordo com pesquisa recente, a atenção está encurtando."
+        },
+        {
+          "en": "As one scholar puts it, 'information is not knowledge.'",
+          "pt": "Como diz um estudioso, 'informação não é conhecimento'."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Academic Citations",
+      "items": [
+        {
+          "term": "cite",
+          "pt": "citar"
+        },
+        {
+          "term": "paraphrase",
+          "pt": "parafrasear"
+        },
+        {
+          "term": "plagiarism",
+          "pt": "plágio"
+        },
+        {
+          "term": "source",
+          "pt": "fonte"
+        },
+        {
+          "term": "attribute",
+          "pt": "atribuir"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-citations-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Smith (2022) argues that remote work reshapes ___.\"",
+        "correct": "productivity",
+        "explanation": "Full sentence: \"Smith (2022) argues that remote work reshapes productivity.\"",
+        "hint_pt_br": "Smith (2022) argumenta que o home office remodela a produtividade."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-citations-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "According to recent research, attention spans are shrinking.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "The correct sentence is: \"According to recent research, attention spans are shrinking.\"",
+        "hint_pt_br": "De acordo com pesquisa recente, a atenção está encurtando."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-citations-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "cite",
+            "citar"
+          ],
+          [
+            "paraphrase",
+            "parafrasear"
+          ],
+          [
+            "plagiarism",
+            "plágio"
+          ],
+          [
+            "source",
+            "fonte"
+          ],
+          [
+            "attribute",
+            "atribuir"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Academic Citations — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre academic citations. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "When should you use a direct quote?"
+        },
+        {
+          "speaker": "user",
+          "target": "Only when the wording itself is unique.",
+          "pt_hint": "Só se a frase é única."
+        },
+        {
+          "speaker": "ai",
+          "text": "And paraphrase?"
+        },
+        {
+          "speaker": "user",
+          "target": "For most of your sources, in your own words.",
+          "pt_hint": "Maioria com suas palavras."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you introduce a source smoothly?"
+        },
+        {
+          "speaker": "user",
+          "target": "Smith argues, claims, or suggests.",
+          "pt_hint": "'Argues', 'claims', 'suggests'."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the danger of forgetting to cite?"
+        },
+        {
+          "speaker": "user",
+          "target": "It becomes plagiarism, even if unintended.",
+          "pt_hint": "Mesmo sem querer, é plágio."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you balance your own voice and sources?"
+        },
+        {
+          "speaker": "user",
+          "target": "Cite the idea, analyze it in your own words.",
+          "pt_hint": "Cite e analise."
+        },
+        {
+          "speaker": "ai",
+          "text": "Citations turn borrowed light into your own fire."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "academic-citations-listening-story",
+      "title": "The research paper review",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Summarize Kumar's advice. Use at least two reporting verbs and one paraphrased sentence.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Kumar sat with a PhD student whose first paper was strong — but dangerously thin on citations."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Smith argues that attention has shrunk by forty percent in a decade — but where is the original study?"
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "I paraphrased from three articles, but I only cited one because the others said similar things."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Parallel findings still require separate citations, even when the claims overlap substantially."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "So every major claim needs a source, and every direct quote deserves an in-text reference?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Academic writing, Kumar often said, is a long conversation — and every speaker deserves to be introduced."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Academic Citations\". When to quote, paraphrase, cite; avoiding plagiarism; integrating sources smoothly. Smith (2022) argues that remote work reshapes productivity. According to recent research, attention spans are shrinking. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Academic Citations\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Academic Citations",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Academic Citations\".",
+        "hint_pt_br": "Ela fala o título: \"Academic Citations\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "stylistic-variation",
+  "title": "Stylistic Variation",
+  "description": "Matching tone, vocabulary, and rhythm to audience and purpose.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 70,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Variação estilística: jornalismo (curto), acadêmico (longo), casual (contrações), literário (metáfora).",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Stylistic Variation",
+      "subtitle_en": "Matching tone, vocabulary, and rhythm to audience and purpose.",
+      "subtitle_pt": "Variação estilística: jornalismo (curto), acadêmico (longo), casual (contrações), literário (metáfora)."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Matching tone, vocabulary, and rhythm to audience and purpose. Today's focus: stylistic variation. She ran fast. (journalistic)",
+      "text_pt": "Variação estilística: jornalismo (curto), acadêmico (longo), casual (contrações), literário (metáfora). Foco de hoje: stylistic variation. Corrida rápida. Curta."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Stylistic Variation",
+      "body_en": "Journalism: short, active, punchy. Academic: longer, passive, nominal. Casual: contractions, phrasal verbs. Literary: metaphor, rhythm, imagery. Variation shows range.",
+      "body_pt": "Variação estilística: jornalismo (curto), acadêmico (longo), casual (contrações), literário (metáfora).",
+      "examples": [
+        {
+          "en": "She ran fast. (journalistic)",
+          "pt": "Corrida rápida. Curta."
+        },
+        {
+          "en": "Her velocity, measured across three trials, exceeded the previous record. (academic)",
+          "pt": "Sua velocidade, medida em três testes... (acadêmico)"
+        },
+        {
+          "en": "She flew down the track like the wind had given her permission. (literary)",
+          "pt": "Voou pela pista como se o vento permitisse. (literário)"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Stylistic Variation",
+      "items": [
+        {
+          "term": "style",
+          "pt": "estilo"
+        },
+        {
+          "term": "tone",
+          "pt": "tom"
+        },
+        {
+          "term": "voice",
+          "pt": "voz"
+        },
+        {
+          "term": "register",
+          "pt": "registro"
+        },
+        {
+          "term": "rhythm",
+          "pt": "ritmo"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-stylistic-variation-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"She ran fast. (___)\"",
+        "correct": "journalistic",
+        "explanation": "Full sentence: \"She ran fast. (journalistic)\"",
+        "hint_pt_br": "Corrida rápida. Curta."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-stylistic-variation-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Her velocity, measured across three trials, exceeded the previous record. (academic)",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "The correct sentence is: \"Her velocity, measured across three trials, exceeded the previous record. (academic)\"",
+        "hint_pt_br": "Sua velocidade, medida em três testes... (acadêmico)"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-stylistic-variation-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "style",
+            "estilo"
+          ],
+          [
+            "tone",
+            "tom"
+          ],
+          [
+            "voice",
+            "voz"
+          ],
+          [
+            "register",
+            "registro"
+          ],
+          [
+            "rhythm",
+            "ritmo"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Stylistic Variation — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre stylistic variation. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Rewrite 'She ran fast' in journalistic style."
+        },
+        {
+          "speaker": "user",
+          "target": "She broke the record Tuesday.",
+          "pt_hint": "Quebrou recorde."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now academic style."
+        },
+        {
+          "speaker": "user",
+          "target": "Her performance exceeded all prior benchmarks.",
+          "pt_hint": "Superou métricas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now literary, with metaphor."
+        },
+        {
+          "speaker": "user",
+          "target": "She flew past the clock as if time owed her.",
+          "pt_hint": "Voou pelo tempo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now casual, for a friend."
+        },
+        {
+          "speaker": "user",
+          "target": "You should've seen her — she was flying!",
+          "pt_hint": "Ela voou!"
+        },
+        {
+          "speaker": "ai",
+          "text": "Now formal business."
+        },
+        {
+          "speaker": "user",
+          "target": "Her performance significantly surpassed expectations.",
+          "pt_hint": "Superou expectativas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Five voices, one athlete — that's range."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "stylistic-variation-listening-story",
+      "title": "The same sentence, five voices",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Rewrite a short scene in three different styles. Use at least three style shifts.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Kumar asked the class to describe one moment — a runner crossing the finish line — in four voices."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Start simple. 'She broke the record Tuesday' is a headline. Short, active, news-ready."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "An academic might write: 'Her time on Tuesday eclipsed the standing record by one full second.'"
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "A novelist might say: 'She crossed the line like gravity had forgotten her entirely.'"
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Same truth, four rooms, four audiences — style is the outfit your sentence wears to each of them."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Writers, Kumar said, spend their first decade learning grammar and the rest of their lives learning style."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Stylistic Variation\". Matching tone, vocabulary, and rhythm to audience and purpose. She ran fast. (journalistic) Her velocity, measured across three trials, exceeded the previous record. (academic) Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Stylistic Variation\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Stylistic Variation",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Stylistic Variation\".",
+        "hint_pt_br": "Ela fala o título: \"Stylistic Variation\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

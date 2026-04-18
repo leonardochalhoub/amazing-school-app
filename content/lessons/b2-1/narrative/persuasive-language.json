@@ -1,0 +1,283 @@
+{
+  "slug": "persuasive-language",
+  "title": "Persuasive Language",
+  "description": "Rhetorical techniques: rule of three, rhetorical questions, inclusive WE, concrete numbers.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.1",
+  "xp_reward": 65,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Técnicas persuasivas: regra de três, perguntas retóricas, WE inclusivo, números concretos.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Persuasive Language",
+      "subtitle_en": "Rhetorical techniques: rule of three, rhetorical questions, inclusive WE, concrete numbers.",
+      "subtitle_pt": "Técnicas persuasivas: regra de três, perguntas retóricas, WE inclusivo, números concretos."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Rhetorical techniques: rule of three, rhetorical questions, inclusive WE, concrete numbers. Today's focus: persuasive language. Isn't it time we rethought our approach?",
+      "text_pt": "Técnicas persuasivas: regra de três, perguntas retóricas, WE inclusivo, números concretos. Foco de hoje: persuasive language. Não é hora de repensarmos a abordagem?"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Persuasive Language",
+      "body_en": "Rule of three: 'Faster, cheaper, better.' Rhetorical question: 'Isn't it time we acted?' Inclusive WE builds belonging. Concrete numbers beat vague claims.",
+      "body_pt": "Técnicas persuasivas: regra de três, perguntas retóricas, WE inclusivo, números concretos.",
+      "examples": [
+        {
+          "en": "Isn't it time we rethought our approach?",
+          "pt": "Não é hora de repensarmos a abordagem?"
+        },
+        {
+          "en": "Our solution is faster, cheaper, and simpler.",
+          "pt": "Nossa solução é mais rápida, barata e simples."
+        },
+        {
+          "en": "We reduced waste by forty-three percent last year.",
+          "pt": "Reduzimos desperdício em 43% ano passado."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Persuasive Language",
+      "items": [
+        {
+          "term": "persuade",
+          "pt": "persuadir"
+        },
+        {
+          "term": "rhetoric",
+          "pt": "retórica"
+        },
+        {
+          "term": "appeal",
+          "pt": "apelar"
+        },
+        {
+          "term": "concrete",
+          "pt": "concreto"
+        },
+        {
+          "term": "inclusive",
+          "pt": "inclusivo"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-persuasive-language-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Isn't it time we ___ our approach?\"",
+        "correct": "rethought",
+        "explanation": "Full sentence: \"Isn't it time we rethought our approach?\"",
+        "hint_pt_br": "Não é hora de repensarmos a abordagem?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-persuasive-language-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Our solution is faster, cheaper, and simpler.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "The correct sentence is: \"Our solution is faster, cheaper, and simpler.\"",
+        "hint_pt_br": "Nossa solução é mais rápida, barata e simples."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-persuasive-language-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "persuade",
+            "persuadir"
+          ],
+          [
+            "rhetoric",
+            "retórica"
+          ],
+          [
+            "appeal",
+            "apelar"
+          ],
+          [
+            "concrete",
+            "concreto"
+          ],
+          [
+            "inclusive",
+            "inclusivo"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Persuasive Language — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre persuasive language. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, pitch me your company in one rhetorical question."
+        },
+        {
+          "speaker": "user",
+          "target": "Isn't it time small teams had enterprise tools?",
+          "pt_hint": "Não é hora?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Now sell it with the rule of three."
+        },
+        {
+          "speaker": "user",
+          "target": "Our product is faster, safer, and smarter.",
+          "pt_hint": "Mais rápido, seguro, inteligente."
+        },
+        {
+          "speaker": "ai",
+          "text": "Use inclusive 'we' to build belonging."
+        },
+        {
+          "speaker": "user",
+          "target": "Together, we can change how teams ship.",
+          "pt_hint": "Juntos mudamos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Prove it with a concrete number."
+        },
+        {
+          "speaker": "user",
+          "target": "We cut deployment time by seventy percent.",
+          "pt_hint": "70% mais rápido."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with a call to action."
+        },
+        {
+          "speaker": "user",
+          "target": "Let's build the future of work, starting today.",
+          "pt_hint": "Começando hoje."
+        },
+        {
+          "speaker": "ai",
+          "text": "Pure persuasion — nothing extra, nothing missing."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "persuasive-language-listening-story",
+      "title": "The investor pitch rehearsal",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe the rhetorical techniques Joca used. Include at least three persuasive moves.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "The night before the big pitch, Joca practiced in front of his mentor until every line felt natural."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Isn't it time small teams had the same tools that enterprises already take for granted?"
+        },
+        {
+          "speaker": "Mentor",
+          "voice": "female1",
+          "en": "Good. Now layer in a rule of three — short, punchy, and memorable as a chorus."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Our platform is faster, cheaper, and dramatically simpler to operate daily."
+        },
+        {
+          "speaker": "Mentor",
+          "voice": "female1",
+          "en": "Finish with a concrete number. Vague claims are the enemy of real investors."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Persuasion, the mentor said, is never about volume — it is about choosing the three lines they'll remember tomorrow."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Persuasive Language\". Rhetorical techniques: rule of three, rhetorical questions, inclusive WE, concrete numbers. Isn't it time we rethought our approach? Our solution is faster, cheaper, and simpler. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Persuasive Language\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Persuasive Language",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Persuasive Language\".",
+        "hint_pt_br": "Ela fala o título: \"Persuasive Language\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

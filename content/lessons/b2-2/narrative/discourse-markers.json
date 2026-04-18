@@ -1,0 +1,283 @@
+{
+  "slug": "discourse-markers",
+  "title": "Discourse Markers in Advanced Speech",
+  "description": "Subtle markers that organize spoken and written arguments: nevertheless, furthermore, admittedly, by and large.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 70,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Marcadores discursivos: adicionar, contrastar, conceder, resumir. Nevertheless, furthermore, admittedly.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Discourse Markers in Advanced Speech",
+      "subtitle_en": "Subtle markers that organize spoken and written arguments: nevertheless, furthermore, admittedly, by and large.",
+      "subtitle_pt": "Marcadores discursivos: adicionar, contrastar, conceder, resumir. Nevertheless, furthermore, admittedly."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Subtle markers that organize spoken and written arguments: nevertheless, furthermore, admittedly, by and large. Today's focus: discourse markers in advanced speech. The plan has flaws; nevertheless, it is the best option.",
+      "text_pt": "Marcadores discursivos: adicionar, contrastar, conceder, resumir. Nevertheless, furthermore, admittedly. Foco de hoje: discourse markers in advanced speech. O plano tem falhas; mesmo assim, é a melhor opção."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Discourse Markers in Advanced Speech",
+      "body_en": "Types: adding (furthermore, moreover), contrasting (nevertheless, on the contrary), conceding (admittedly, granted), summarizing (overall, by and large).",
+      "body_pt": "Marcadores discursivos: adicionar, contrastar, conceder, resumir. Nevertheless, furthermore, admittedly.",
+      "examples": [
+        {
+          "en": "The plan has flaws; nevertheless, it is the best option.",
+          "pt": "O plano tem falhas; mesmo assim, é a melhor opção."
+        },
+        {
+          "en": "Admittedly, I was skeptical at first.",
+          "pt": "Confesso que no começo fui cético."
+        },
+        {
+          "en": "By and large, the experiment was a success.",
+          "pt": "De modo geral, o experimento foi um sucesso."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Discourse Markers in Advanced Speech",
+      "items": [
+        {
+          "term": "furthermore",
+          "pt": "além disso"
+        },
+        {
+          "term": "nevertheless",
+          "pt": "mesmo assim"
+        },
+        {
+          "term": "admittedly",
+          "pt": "confesso que"
+        },
+        {
+          "term": "conversely",
+          "pt": "inversamente"
+        },
+        {
+          "term": "overall",
+          "pt": "no geral"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-discourse-markers-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The plan has flaws; ___, it is the best option.\"",
+        "correct": "nevertheless",
+        "explanation": "Full sentence: \"The plan has flaws; nevertheless, it is the best option.\"",
+        "hint_pt_br": "O plano tem falhas; mesmo assim, é a melhor opção."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-discourse-markers-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Admittedly, I was skeptical at first.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "The correct sentence is: \"Admittedly, I was skeptical at first.\"",
+        "hint_pt_br": "Confesso que no começo fui cético."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-discourse-markers-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "furthermore",
+            "além disso"
+          ],
+          [
+            "nevertheless",
+            "mesmo assim"
+          ],
+          [
+            "admittedly",
+            "confesso que"
+          ],
+          [
+            "conversely",
+            "inversamente"
+          ],
+          [
+            "overall",
+            "no geral"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Discourse Markers in Advanced Speech — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre discourse markers in advanced speech. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Add a concession to this claim: 'Remote work improves output.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Admittedly, collaboration can suffer.",
+          "pt_hint": "Confesso, colaboração sofre."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now counter the concession."
+        },
+        {
+          "speaker": "user",
+          "target": "Nevertheless, async tools fill the gap.",
+          "pt_hint": "Ferramentas assíncronas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Add another supporting point."
+        },
+        {
+          "speaker": "user",
+          "target": "Furthermore, commute time vanishes entirely.",
+          "pt_hint": "Tempo de ida some."
+        },
+        {
+          "speaker": "ai",
+          "text": "Flip to the other side."
+        },
+        {
+          "speaker": "user",
+          "target": "Conversely, some workers feel isolated.",
+          "pt_hint": "Inversamente, isolam-se."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with a summary marker."
+        },
+        {
+          "speaker": "user",
+          "target": "Overall, remote work wins more than it loses.",
+          "pt_hint": "No geral vence."
+        },
+        {
+          "speaker": "ai",
+          "text": "Five markers, one polished paragraph."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "discourse-markers-listening-story",
+      "title": "The essay rewrite",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Rewrite a short paragraph using at least three discourse markers.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Zara gathered five students around a table with their drafts and one bright red pen between them."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Admittedly, your argument is sharp — but the connective tissue between ideas is weak."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male1",
+          "en": "So words like nevertheless and furthermore are what readers rely on to follow my logic?"
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Furthermore, they signal whether the next sentence agrees or disagrees with the previous one."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female2",
+          "en": "By and large, I had never noticed how much markers guided the way I read essays."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "A single marker, used well, does the work of an entire paragraph of clumsy repetition."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Discourse Markers in Advanced Speech\". Subtle markers that organize spoken and written arguments: nevertheless, furthermore, admittedly, by and large. The plan has flaws; nevertheless, it is the best option. Admittedly, I was skeptical at first. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Discourse Markers in Advanced Speech\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Discourse Markers in Advanced Speech",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Discourse Markers in Advanced Speech\".",
+        "hint_pt_br": "Ela fala o título: \"Discourse Markers in Advanced Speech\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "literary-devices",
+  "title": "Literary Devices Essentials",
+  "description": "Metaphor, simile, personification, alliteration, irony — the building blocks of literature.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 70,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Recursos literários: metáfora, símile, personificação, aliteração, ironia.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Literary Devices Essentials",
+      "subtitle_en": "Metaphor, simile, personification, alliteration, irony — the building blocks of literature.",
+      "subtitle_pt": "Recursos literários: metáfora, símile, personificação, aliteração, ironia."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Metaphor, simile, personification, alliteration, irony — the building blocks of literature. Today's focus: literary devices essentials. Time is a river; it never flows backward.",
+      "text_pt": "Recursos literários: metáfora, símile, personificação, aliteração, ironia. Foco de hoje: literary devices essentials. O tempo é um rio; nunca volta."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Literary Devices Essentials",
+      "body_en": "Metaphor: direct comparison ('time is a river'). Simile: 'like' or 'as' ('quiet as stone'). Personification: human traits to non-human. Irony: the gap between expectation and reality.",
+      "body_pt": "Recursos literários: metáfora, símile, personificação, aliteração, ironia.",
+      "examples": [
+        {
+          "en": "Time is a river; it never flows backward.",
+          "pt": "O tempo é um rio; nunca volta."
+        },
+        {
+          "en": "She was as quiet as stone when she heard the news.",
+          "pt": "Ela ficou quieta como pedra ao ouvir a notícia."
+        },
+        {
+          "en": "The wind whispered secrets through the trees.",
+          "pt": "O vento sussurrava segredos pelas árvores."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Literary Devices Essentials",
+      "items": [
+        {
+          "term": "metaphor",
+          "pt": "metáfora"
+        },
+        {
+          "term": "simile",
+          "pt": "símile"
+        },
+        {
+          "term": "personification",
+          "pt": "personificação"
+        },
+        {
+          "term": "irony",
+          "pt": "ironia"
+        },
+        {
+          "term": "imagery",
+          "pt": "imagens"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-literary-devices-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Time is a river; it never flows ___.\"",
+        "correct": "backward",
+        "explanation": "Full sentence: \"Time is a river; it never flows backward.\"",
+        "hint_pt_br": "O tempo é um rio; nunca volta."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-literary-devices-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "She was as quiet as stone when she heard the news.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "The correct sentence is: \"She was as quiet as stone when she heard the news.\"",
+        "hint_pt_br": "Ela ficou quieta como pedra ao ouvir a notícia."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-literary-devices-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "metaphor",
+            "metáfora"
+          ],
+          [
+            "simile",
+            "símile"
+          ],
+          [
+            "personification",
+            "personificação"
+          ],
+          [
+            "irony",
+            "ironia"
+          ],
+          [
+            "imagery",
+            "imagens"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Literary Devices Essentials — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre literary devices essentials. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Use a metaphor to describe grief."
+        },
+        {
+          "speaker": "user",
+          "target": "Grief is an ocean that remembers every shore.",
+          "pt_hint": "Um oceano."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now a simile for joy."
+        },
+        {
+          "speaker": "user",
+          "target": "Joy is like sunlight on wet leaves.",
+          "pt_hint": "Como sol em folhas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Personify the wind."
+        },
+        {
+          "speaker": "user",
+          "target": "The wind whispered stories through the window.",
+          "pt_hint": "Sussurrava."
+        },
+        {
+          "speaker": "ai",
+          "text": "Give me one line of alliteration."
+        },
+        {
+          "speaker": "user",
+          "target": "Soft sighs silence Sunday afternoons.",
+          "pt_hint": "Suspiros silenciosos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Use irony in a short sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "The fire station burned down last night.",
+          "pt_hint": "Quartel de bombeiros pegou fogo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Literature is grammar dressed for the stars."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "literary-devices-listening-story",
+      "title": "The poetry workshop",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Write about a rainy afternoon using at least three literary devices.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Dona Lúcia read a short poem aloud, then asked the students to find every device hidden inside the lines."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Time is a river, she wrote — a metaphor that even a child can feel in the heart first, mind second."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male1",
+          "en": "And the line 'the wind whispered through the trees' is personification, right?"
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Yes — and the repeated S sounds give it a gentle alliteration that matches the image."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female2",
+          "en": "The irony of the fire station burning down taught me more about irony than any textbook."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Literary devices, Lúcia believed, are not decoration — they are the quiet bones of every memorable sentence."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Literary Devices Essentials\". Metaphor, simile, personification, alliteration, irony — the building blocks of literature. Time is a river; it never flows backward. She was as quiet as stone when she heard the news. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Literary Devices Essentials\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Literary Devices Essentials",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Literary Devices Essentials\".",
+        "hint_pt_br": "Ela fala o título: \"Literary Devices Essentials\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

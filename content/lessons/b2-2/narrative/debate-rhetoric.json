@@ -1,0 +1,283 @@
+{
+  "slug": "debate-rhetoric",
+  "title": "Debate Rhetoric",
+  "description": "Opening, rebuttal, and closing statements in formal debate.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 70,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Retórica de debate: abertura formal, refutação estruturada, fechamento com resumo.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Debate Rhetoric",
+      "subtitle_en": "Opening, rebuttal, and closing statements in formal debate.",
+      "subtitle_pt": "Retórica de debate: abertura formal, refutação estruturada, fechamento com resumo."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Opening, rebuttal, and closing statements in formal debate. Today's focus: debate rhetoric. The motion before us is that technology hinders intimacy.",
+      "text_pt": "Retórica de debate: abertura formal, refutação estruturada, fechamento com resumo. Foco de hoje: debate rhetoric. A moção diante de nós é que a tecnologia prejudica a intimidade."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Debate Rhetoric",
+      "body_en": "Opening: 'The motion before us is...' Rebuttal: 'I'd like to address three claims made by the opposition.' Closing: 'In summary, the evidence supports...'",
+      "body_pt": "Retórica de debate: abertura formal, refutação estruturada, fechamento com resumo.",
+      "examples": [
+        {
+          "en": "The motion before us is that technology hinders intimacy.",
+          "pt": "A moção diante de nós é que a tecnologia prejudica a intimidade."
+        },
+        {
+          "en": "I would like to address three claims made by the opposition.",
+          "pt": "Gostaria de abordar três afirmações da oposição."
+        },
+        {
+          "en": "In summary, the evidence overwhelmingly supports our side.",
+          "pt": "Em resumo, a evidência apoia nosso lado."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Debate Rhetoric",
+      "items": [
+        {
+          "term": "motion",
+          "pt": "moção"
+        },
+        {
+          "term": "opposition",
+          "pt": "oposição"
+        },
+        {
+          "term": "rebut",
+          "pt": "refutar"
+        },
+        {
+          "term": "rhetoric",
+          "pt": "retórica"
+        },
+        {
+          "term": "concede",
+          "pt": "conceder"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-debate-rhetoric-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The motion before us is that ___ hinders intimacy.\"",
+        "correct": "technology",
+        "explanation": "Full sentence: \"The motion before us is that technology hinders intimacy.\"",
+        "hint_pt_br": "A moção diante de nós é que a tecnologia prejudica a intimidade."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-debate-rhetoric-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "I would like to address three claims made by the opposition.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "The correct sentence is: \"I would like to address three claims made by the opposition.\"",
+        "hint_pt_br": "Gostaria de abordar três afirmações da oposição."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-debate-rhetoric-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "motion",
+            "moção"
+          ],
+          [
+            "opposition",
+            "oposição"
+          ],
+          [
+            "rebut",
+            "refutar"
+          ],
+          [
+            "rhetoric",
+            "retórica"
+          ],
+          [
+            "concede",
+            "conceder"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Debate Rhetoric — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre debate rhetoric. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Open a debate on screen time limits for teens."
+        },
+        {
+          "speaker": "user",
+          "target": "The motion is that strict screen limits harm teens.",
+          "pt_hint": "Limites prejudicam."
+        },
+        {
+          "speaker": "ai",
+          "text": "State your first claim."
+        },
+        {
+          "speaker": "user",
+          "target": "First, excessive limits reduce digital literacy.",
+          "pt_hint": "Reduz letramento."
+        },
+        {
+          "speaker": "ai",
+          "text": "Rebut this: 'screens cause anxiety in 70% of teens.'"
+        },
+        {
+          "speaker": "user",
+          "target": "I'd like to address that figure with two studies.",
+          "pt_hint": "Abordo com 2 estudos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Concede something small to sound fair."
+        },
+        {
+          "speaker": "user",
+          "target": "The opposition is right about sleep disruption.",
+          "pt_hint": "Tem razão no sono."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now close with a strong summary."
+        },
+        {
+          "speaker": "user",
+          "target": "In summary, balance beats prohibition every time.",
+          "pt_hint": "Equilíbrio vence."
+        },
+        {
+          "speaker": "ai",
+          "text": "Formal, fair, and firm — that's rhetoric."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "debate-rhetoric-listening-story",
+      "title": "The university debate",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe the motion, the rebuttal, and the closing. Use at least three debate phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the university auditorium, two teams faced off over the most contested question of their year."
+        },
+        {
+          "speaker": "Speaker A",
+          "voice": "female1",
+          "en": "The motion before us tonight is that technology strengthens, not weakens, human intimacy."
+        },
+        {
+          "speaker": "Speaker B",
+          "voice": "male1",
+          "en": "I would like to address three claims made by the affirmative team, starting with their first."
+        },
+        {
+          "speaker": "Speaker A",
+          "voice": "female1",
+          "en": "We concede that asynchronous messaging can erode attention — but it also extends reach."
+        },
+        {
+          "speaker": "Speaker B",
+          "voice": "male1",
+          "en": "In summary, the evidence demonstrates that depth and speed are rarely served by the same tool."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Rhetoric in a debate, the moderator noted, is the quiet promise that two sides can both win the room."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Debate Rhetoric\". Opening, rebuttal, and closing statements in formal debate. The motion before us is that technology hinders intimacy. I would like to address three claims made by the opposition. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Debate Rhetoric\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Debate Rhetoric",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Debate Rhetoric\".",
+        "hint_pt_br": "Ela fala o título: \"Debate Rhetoric\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

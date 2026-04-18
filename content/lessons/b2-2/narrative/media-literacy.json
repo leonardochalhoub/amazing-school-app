@@ -1,0 +1,283 @@
+{
+  "slug": "media-literacy",
+  "title": "Media Literacy",
+  "description": "Spotting bias, verifying sources, distinguishing opinion from fact.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 70,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Alfabetização midiática: quem escreveu, quais fontes, opinião vs fato, contexto, crítica razoável.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Media Literacy",
+      "subtitle_en": "Spotting bias, verifying sources, distinguishing opinion from fact.",
+      "subtitle_pt": "Alfabetização midiática: quem escreveu, quais fontes, opinião vs fato, contexto, crítica razoável."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Spotting bias, verifying sources, distinguishing opinion from fact. Today's focus: media literacy. Always check who wrote the article before you share it.",
+      "text_pt": "Alfabetização midiática: quem escreveu, quais fontes, opinião vs fato, contexto, crítica razoável. Foco de hoje: media literacy. Sempre cheque quem escreveu antes de compartilhar."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Media Literacy",
+      "body_en": "Key questions to ask any news story: Who wrote it? What sources are cited? What claims are opinion vs evidence? Is any context missing? Would a reasonable critic disagree?",
+      "body_pt": "Alfabetização midiática: quem escreveu, quais fontes, opinião vs fato, contexto, crítica razoável.",
+      "examples": [
+        {
+          "en": "Always check who wrote the article before you share it.",
+          "pt": "Sempre cheque quem escreveu antes de compartilhar."
+        },
+        {
+          "en": "Opinion pieces are valuable but shouldn't be confused with reporting.",
+          "pt": "Artigos de opinião têm valor mas não são reportagem."
+        },
+        {
+          "en": "A single anonymous source rarely supports a strong claim.",
+          "pt": "Uma única fonte anônima raramente sustenta uma afirmação forte."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Media Literacy",
+      "items": [
+        {
+          "term": "bias",
+          "pt": "viés"
+        },
+        {
+          "term": "verify",
+          "pt": "verificar"
+        },
+        {
+          "term": "source",
+          "pt": "fonte"
+        },
+        {
+          "term": "fact-check",
+          "pt": "checar fatos"
+        },
+        {
+          "term": "misinformation",
+          "pt": "desinformação"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-media-literacy-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Always check who wrote the ___ before you share it.\"",
+        "correct": "article",
+        "explanation": "Full sentence: \"Always check who wrote the article before you share it.\"",
+        "hint_pt_br": "Sempre cheque quem escreveu antes de compartilhar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-media-literacy-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Opinion pieces are valuable but shouldn't be confused with reporting.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "The correct sentence is: \"Opinion pieces are valuable but shouldn't be confused with reporting.\"",
+        "hint_pt_br": "Artigos de opinião têm valor mas não são reportagem."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-media-literacy-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "bias",
+            "viés"
+          ],
+          [
+            "verify",
+            "verificar"
+          ],
+          [
+            "source",
+            "fonte"
+          ],
+          [
+            "fact-check",
+            "checar fatos"
+          ],
+          [
+            "misinformation",
+            "desinformação"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Media Literacy — dialog",
+      "character": "Maya",
+      "pt_summary": "Diálogo sobre media literacy. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Maya, you saw a wild article today. First step?"
+        },
+        {
+          "speaker": "user",
+          "target": "I check who actually wrote it.",
+          "pt_hint": "Quem escreveu."
+        },
+        {
+          "speaker": "ai",
+          "text": "What if the author is unclear?"
+        },
+        {
+          "speaker": "user",
+          "target": "I assume it might be misinformation.",
+          "pt_hint": "Presumo desinformação."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you verify claims?"
+        },
+        {
+          "speaker": "user",
+          "target": "I find two independent sources for each.",
+          "pt_hint": "Duas fontes independentes."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the tell of opinion dressed as fact?"
+        },
+        {
+          "speaker": "user",
+          "target": "Emotional adjectives and missing data.",
+          "pt_hint": "Adjetivos emocionais."
+        },
+        {
+          "speaker": "ai",
+          "text": "Should you share before verifying?"
+        },
+        {
+          "speaker": "user",
+          "target": "Never. Sharing is endorsement.",
+          "pt_hint": "Compartilhar é endossar."
+        },
+        {
+          "speaker": "ai",
+          "text": "Media literacy is the immune system of democracy."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "media-literacy-listening-story",
+      "title": "The viral post",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Summarize Maya's fact-checking process. Use at least three media literacy terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Maya's classmate shared a shocking headline in the school group chat — and Maya paused before reacting."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "Before sharing, I need to check who wrote it and which sources are actually cited."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "male1",
+          "en": "But the article has thousands of shares already. Doesn't that prove something?"
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "Popularity is not verification — misinformation often spreads faster than corrections ever do."
+        },
+        {
+          "speaker": "Teacher",
+          "voice": "female2",
+          "en": "Fact-checking is not cynicism. It's the bare minimum of respect for your own attention."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Twelve years old, one calm pause, and an entire class learning to read the internet with clearer eyes."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Media Literacy\". Spotting bias, verifying sources, distinguishing opinion from fact. Always check who wrote the article before you share it. Opinion pieces are valuable but shouldn't be confused with reporting. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Media Literacy\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Media Literacy",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Media Literacy\".",
+        "hint_pt_br": "Ela fala o título: \"Media Literacy\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

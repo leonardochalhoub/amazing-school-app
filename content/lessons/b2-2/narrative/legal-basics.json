@@ -1,0 +1,283 @@
+{
+  "slug": "legal-basics",
+  "title": "Legal English Basics",
+  "description": "Contract vocabulary: party, clause, term, breach, liable, waiver.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 70,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Inglês jurídico: 'parties agree', 'neither party shall', 'in the event of breach', 'governed by'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Legal English Basics",
+      "subtitle_en": "Contract vocabulary: party, clause, term, breach, liable, waiver.",
+      "subtitle_pt": "Inglês jurídico: 'parties agree', 'neither party shall', 'in the event of breach', 'governed by'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Contract vocabulary: party, clause, term, breach, liable, waiver. Today's focus: legal english basics. Both parties agree to the terms outlined below.",
+      "text_pt": "Inglês jurídico: 'parties agree', 'neither party shall', 'in the event of breach', 'governed by'. Foco de hoje: legal english basics. Ambas as partes concordam com os termos abaixo."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Legal English Basics",
+      "body_en": "Common patterns: 'The parties agree that...', 'Neither party shall...', 'In the event of a breach...', 'This agreement is governed by...'",
+      "body_pt": "Inglês jurídico: 'parties agree', 'neither party shall', 'in the event of breach', 'governed by'.",
+      "examples": [
+        {
+          "en": "Both parties agree to the terms outlined below.",
+          "pt": "Ambas as partes concordam com os termos abaixo."
+        },
+        {
+          "en": "In the event of a breach, the contract terminates immediately.",
+          "pt": "Em caso de descumprimento, o contrato é rescindido."
+        },
+        {
+          "en": "This agreement shall be governed by Brazilian law.",
+          "pt": "Este acordo será regido pela lei brasileira."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Legal English Basics",
+      "items": [
+        {
+          "term": "party",
+          "pt": "parte"
+        },
+        {
+          "term": "clause",
+          "pt": "cláusula"
+        },
+        {
+          "term": "breach",
+          "pt": "descumprimento"
+        },
+        {
+          "term": "liable",
+          "pt": "responsável"
+        },
+        {
+          "term": "waiver",
+          "pt": "renúncia"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-legal-basics-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Both parties agree to the terms ___ below.\"",
+        "correct": "outlined",
+        "explanation": "Full sentence: \"Both parties agree to the terms outlined below.\"",
+        "hint_pt_br": "Ambas as partes concordam com os termos abaixo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-legal-basics-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "In the event of a breach, the contract terminates immediately.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "The correct sentence is: \"In the event of a breach, the contract terminates immediately.\"",
+        "hint_pt_br": "Em caso de descumprimento, o contrato é rescindido."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-legal-basics-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "party",
+            "parte"
+          ],
+          [
+            "clause",
+            "cláusula"
+          ],
+          [
+            "breach",
+            "descumprimento"
+          ],
+          [
+            "liable",
+            "responsável"
+          ],
+          [
+            "waiver",
+            "renúncia"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Legal English Basics — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre legal english basics. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, summarize this contract in plain English."
+        },
+        {
+          "speaker": "user",
+          "target": "Both parties agree to a six-month project.",
+          "pt_hint": "Acordo de 6 meses."
+        },
+        {
+          "speaker": "ai",
+          "text": "What happens if the client doesn't pay?"
+        },
+        {
+          "speaker": "user",
+          "target": "In the event of breach, the agreement ends.",
+          "pt_hint": "Rescinde."
+        },
+        {
+          "speaker": "ai",
+          "text": "Who is liable for data loss?"
+        },
+        {
+          "speaker": "user",
+          "target": "The vendor is liable only for gross negligence.",
+          "pt_hint": "Só negligência grave."
+        },
+        {
+          "speaker": "ai",
+          "text": "Can either side waive their rights?"
+        },
+        {
+          "speaker": "user",
+          "target": "No waiver applies unless signed in writing.",
+          "pt_hint": "Por escrito."
+        },
+        {
+          "speaker": "ai",
+          "text": "Which law governs the contract?"
+        },
+        {
+          "speaker": "user",
+          "target": "This agreement is governed by Brazilian law.",
+          "pt_hint": "Lei brasileira."
+        },
+        {
+          "speaker": "ai",
+          "text": "Legal English: boring on purpose, precise by design."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "legal-basics-listening-story",
+      "title": "Reviewing the contract",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Summarize the main clauses in plain English. Use at least three legal terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the small conference room, Joca and the vendor sat down to review the final draft clause by clause."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Both parties agree to a six-month engagement with milestones reviewed every thirty days."
+        },
+        {
+          "speaker": "Vendor",
+          "voice": "female1",
+          "en": "In the event of breach, the non-breaching party may terminate with fifteen days' notice."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "The vendor shall only be liable for direct damages arising from gross negligence."
+        },
+        {
+          "speaker": "Vendor",
+          "voice": "female1",
+          "en": "This agreement is governed by Brazilian law and resolved in the courts of São Paulo."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "A good contract, their lawyer reminded them, is not about winning — it's about preventing surprises."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Legal English Basics\". Contract vocabulary: party, clause, term, breach, liable, waiver. Both parties agree to the terms outlined below. In the event of a breach, the contract terminates immediately. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Legal English Basics\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Legal English Basics",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Legal English Basics\".",
+        "hint_pt_br": "Ela fala o título: \"Legal English Basics\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

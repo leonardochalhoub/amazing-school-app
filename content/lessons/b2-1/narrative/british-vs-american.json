@@ -1,0 +1,283 @@
+{
+  "slug": "british-vs-american",
+  "title": "British vs American English",
+  "description": "Key differences in spelling, vocabulary, pronunciation, and grammar between UK and US English.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.1",
+  "xp_reward": 65,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Britânico vs americano: colour/color, lift/elevator, flat/apartment, have got/have.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "British vs American English",
+      "subtitle_en": "Key differences in spelling, vocabulary, pronunciation, and grammar between UK and US English.",
+      "subtitle_pt": "Britânico vs americano: colour/color, lift/elevator, flat/apartment, have got/have."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Key differences in spelling, vocabulary, pronunciation, and grammar between UK and US English. Today's focus: british vs american english. In Britain we take the lift; in America they take the elevator.",
+      "text_pt": "Britânico vs americano: colour/color, lift/elevator, flat/apartment, have got/have. Foco de hoje: british vs american english. No Reino Unido é lift; nos EUA é elevator."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "British vs American English",
+      "body_en": "Spelling: colour/color, centre/center. Vocabulary: lift/elevator, lorry/truck, flat/apartment. Grammar: have got/have, past participle differences.",
+      "body_pt": "Britânico vs americano: colour/color, lift/elevator, flat/apartment, have got/have.",
+      "examples": [
+        {
+          "en": "In Britain we take the lift; in America they take the elevator.",
+          "pt": "No Reino Unido é lift; nos EUA é elevator."
+        },
+        {
+          "en": "She coloured the drawing in blue.",
+          "pt": "Ela coloriu o desenho em azul."
+        },
+        {
+          "en": "I've got three siblings. (UK) / I have three siblings. (US)",
+          "pt": "UK: I've got. US: I have."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — British vs American English",
+      "items": [
+        {
+          "term": "dialect",
+          "pt": "dialeto"
+        },
+        {
+          "term": "variant",
+          "pt": "variante"
+        },
+        {
+          "term": "accent",
+          "pt": "sotaque"
+        },
+        {
+          "term": "localize",
+          "pt": "localizar"
+        },
+        {
+          "term": "vocabulary",
+          "pt": "vocabulário"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-british-vs-american-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"In Britain we take the lift; in America they take the ___.\"",
+        "correct": "elevator",
+        "explanation": "Full sentence: \"In Britain we take the lift; in America they take the elevator.\"",
+        "hint_pt_br": "No Reino Unido é lift; nos EUA é elevator."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-british-vs-american-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "She coloured the drawing in blue.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "The correct sentence is: \"She coloured the drawing in blue.\"",
+        "hint_pt_br": "Ela coloriu o desenho em azul."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-british-vs-american-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "dialect",
+            "dialeto"
+          ],
+          [
+            "variant",
+            "variante"
+          ],
+          [
+            "accent",
+            "sotaque"
+          ],
+          [
+            "localize",
+            "localizar"
+          ],
+          [
+            "vocabulary",
+            "vocabulário"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "British vs American English — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre british vs american english. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "How do you say 'apartment' in British English?"
+        },
+        {
+          "speaker": "user",
+          "target": "We say flat in the UK.",
+          "pt_hint": "Flat no Reino Unido."
+        },
+        {
+          "speaker": "ai",
+          "text": "And 'truck' in British?"
+        },
+        {
+          "speaker": "user",
+          "target": "It's a lorry in the UK.",
+          "pt_hint": "Lorry."
+        },
+        {
+          "speaker": "ai",
+          "text": "Spelling difference for 'center'?"
+        },
+        {
+          "speaker": "user",
+          "target": "Centre in British English.",
+          "pt_hint": "Centre."
+        },
+        {
+          "speaker": "ai",
+          "text": "Which sounds more natural: 'have got' or 'have'?"
+        },
+        {
+          "speaker": "user",
+          "target": "Both work, but have got is more British.",
+          "pt_hint": "Have got é mais britânico."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is one variant 'correct' and the other wrong?"
+        },
+        {
+          "speaker": "user",
+          "target": "Neither; both are standard English.",
+          "pt_hint": "Ambos são corretos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Language is a collection of dialects, not a hierarchy."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "british-vs-american-listening-story",
+      "title": "Two Englishes",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Summarize three UK/US differences. Use at least two from each variant.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Zara played two short recordings — one of a Londoner, one of a New Yorker — for her class to compare."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Notice that he says lift while she says elevator, yet both mean the same box going up and down."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male1",
+          "en": "Is one spelling considered more correct than the other in international exams?"
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "IELTS accepts both, but consistency throughout the text matters more than your choice of variant."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female2",
+          "en": "So British and American English are equal, with different clothes on the same language?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "English, Zara told them, was never one garden — it was a forest grown across continents."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"British vs American English\". Key differences in spelling, vocabulary, pronunciation, and grammar between UK and US English. In Britain we take the lift; in America they take the elevator. She coloured the drawing in blue. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"British vs American English\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "British vs American English",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"British vs American English\".",
+        "hint_pt_br": "Ela fala o título: \"British vs American English\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

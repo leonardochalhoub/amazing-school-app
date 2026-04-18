@@ -1,0 +1,283 @@
+{
+  "slug": "argumentative-essay",
+  "title": "Argumentative Essay Structure",
+  "description": "Thesis, body paragraphs with claim-evidence-analysis, counter-argument, conclusion.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 70,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Ensaio argumentativo: tese, 2-3 parágrafos (afirmação+evidência+análise), contra-argumento, conclusão.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Argumentative Essay Structure",
+      "subtitle_en": "Thesis, body paragraphs with claim-evidence-analysis, counter-argument, conclusion.",
+      "subtitle_pt": "Ensaio argumentativo: tese, 2-3 parágrafos (afirmação+evidência+análise), contra-argumento, conclusão."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Thesis, body paragraphs with claim-evidence-analysis, counter-argument, conclusion. Today's focus: argumentative essay structure. This essay argues that remote work strengthens productivity.",
+      "text_pt": "Ensaio argumentativo: tese, 2-3 parágrafos (afirmação+evidência+análise), contra-argumento, conclusão. Foco de hoje: argumentative essay structure. Este ensaio defende que o home office fortalece a produtividade."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Argumentative Essay Structure",
+      "body_en": "Classic structure: intro with thesis → 2-3 body paragraphs (each: claim + evidence + analysis) → counter-argument + rebuttal → conclusion that restates thesis with new insight.",
+      "body_pt": "Ensaio argumentativo: tese, 2-3 parágrafos (afirmação+evidência+análise), contra-argumento, conclusão.",
+      "examples": [
+        {
+          "en": "This essay argues that remote work strengthens productivity.",
+          "pt": "Este ensaio defende que o home office fortalece a produtividade."
+        },
+        {
+          "en": "Critics may object that collaboration suffers online.",
+          "pt": "Críticos podem argumentar que a colaboração sofre online."
+        },
+        {
+          "en": "However, the evidence from three studies suggests otherwise.",
+          "pt": "Contudo, a evidência de três estudos sugere o contrário."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Argumentative Essay Structure",
+      "items": [
+        {
+          "term": "thesis",
+          "pt": "tese"
+        },
+        {
+          "term": "rebuttal",
+          "pt": "refutação"
+        },
+        {
+          "term": "claim",
+          "pt": "afirmação"
+        },
+        {
+          "term": "counter-argument",
+          "pt": "contra-argumento"
+        },
+        {
+          "term": "conclude",
+          "pt": "concluir"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-argumentative-essay-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"This essay argues that remote work strengthens ___.\"",
+        "correct": "productivity",
+        "explanation": "Full sentence: \"This essay argues that remote work strengthens productivity.\"",
+        "hint_pt_br": "Este ensaio defende que o home office fortalece a produtividade."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-argumentative-essay-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Critics may object that collaboration suffers online.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "The correct sentence is: \"Critics may object that collaboration suffers online.\"",
+        "hint_pt_br": "Críticos podem argumentar que a colaboração sofre online."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-argumentative-essay-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "thesis",
+            "tese"
+          ],
+          [
+            "rebuttal",
+            "refutação"
+          ],
+          [
+            "claim",
+            "afirmação"
+          ],
+          [
+            "counter-argument",
+            "contra-argumento"
+          ],
+          [
+            "conclude",
+            "concluir"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Argumentative Essay Structure — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre argumentative essay structure. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "State your thesis in one sentence, please."
+        },
+        {
+          "speaker": "user",
+          "target": "Remote work improves team productivity.",
+          "pt_hint": "Aumenta produtividade."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's your first piece of evidence?"
+        },
+        {
+          "speaker": "user",
+          "target": "A 2023 study showed a 13% output increase.",
+          "pt_hint": "Estudo de 2023."
+        },
+        {
+          "speaker": "ai",
+          "text": "Strong. What's the counter-argument?"
+        },
+        {
+          "speaker": "user",
+          "target": "Critics claim collaboration weakens online.",
+          "pt_hint": "Críticos dizem sofre."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you rebut that?"
+        },
+        {
+          "speaker": "user",
+          "target": "Daily standups close most collaboration gaps.",
+          "pt_hint": "Standups resolvem."
+        },
+        {
+          "speaker": "ai",
+          "text": "Write a one-sentence conclusion."
+        },
+        {
+          "speaker": "user",
+          "target": "Remote work, done well, outperforms the office.",
+          "pt_hint": "Remoto bem feito."
+        },
+        {
+          "speaker": "ai",
+          "text": "Thesis, evidence, counter, rebut, conclude — five clean moves."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "argumentative-essay-listening-story",
+      "title": "The debate in the seminar",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Summarize the argument and rebuttal. Use at least two argumentative connectors.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Kumar's seminar split the class into two camps to argue both sides of the remote-work question."
+        },
+        {
+          "speaker": "Student A",
+          "voice": "female1",
+          "en": "This essay argues that distributed teams consistently outperform co-located ones on output metrics."
+        },
+        {
+          "speaker": "Student B",
+          "voice": "male1",
+          "en": "Critics may reasonably object that informal collaboration disappears when everyone is online."
+        },
+        {
+          "speaker": "Student A",
+          "voice": "female1",
+          "en": "However, structured standups and documented decisions more than compensate for the loss."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male2",
+          "en": "Both sides cited evidence, challenged counter-arguments, and concluded with humility — that is the shape of an essay."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "A strong argument, Kumar repeated, is not loud — it is honest enough to answer its own best critic."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Argumentative Essay Structure\". Thesis, body paragraphs with claim-evidence-analysis, counter-argument, conclusion. This essay argues that remote work strengthens productivity. Critics may object that collaboration suffers online. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Argumentative Essay Structure\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Argumentative Essay Structure",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Argumentative Essay Structure\".",
+        "hint_pt_br": "Ela fala o título: \"Argumentative Essay Structure\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

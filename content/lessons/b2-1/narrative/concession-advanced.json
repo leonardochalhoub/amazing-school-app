@@ -1,0 +1,283 @@
+{
+  "slug": "concession-advanced",
+  "title": "Advanced Concession",
+  "description": "Express concession with EVEN IF, EVEN THOUGH, WHEREAS, MUCH AS, FOR ALL.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.1",
+  "xp_reward": 65,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Concessões: EVEN IF (hipotético), EVEN THOUGH (real), WHEREAS (comparação), MUCH AS / FOR ALL.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Advanced Concession",
+      "subtitle_en": "Express concession with EVEN IF, EVEN THOUGH, WHEREAS, MUCH AS, FOR ALL.",
+      "subtitle_pt": "Concessões: EVEN IF (hipotético), EVEN THOUGH (real), WHEREAS (comparação), MUCH AS / FOR ALL."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Express concession with EVEN IF, EVEN THOUGH, WHEREAS, MUCH AS, FOR ALL. Today's focus: advanced concession. Even though she is young, she leads the team well.",
+      "text_pt": "Concessões: EVEN IF (hipotético), EVEN THOUGH (real), WHEREAS (comparação), MUCH AS / FOR ALL. Foco de hoje: advanced concession. Embora jovem, ela lidera o time bem."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Advanced Concession",
+      "body_en": "EVEN IF = hypothetical contrast. EVEN THOUGH = real surprise. WHEREAS = direct comparison. MUCH AS I like X, Y. FOR ALL his wealth, he is unhappy.",
+      "body_pt": "Concessões: EVEN IF (hipotético), EVEN THOUGH (real), WHEREAS (comparação), MUCH AS / FOR ALL.",
+      "examples": [
+        {
+          "en": "Even though she is young, she leads the team well.",
+          "pt": "Embora jovem, ela lidera o time bem."
+        },
+        {
+          "en": "Much as I like coffee, I try to limit my intake.",
+          "pt": "Por mais que goste de café, tento limitar."
+        },
+        {
+          "en": "For all his complaints, he loves this job.",
+          "pt": "Apesar das reclamações, ele ama o emprego."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Advanced Concession",
+      "items": [
+        {
+          "term": "concede",
+          "pt": "conceder"
+        },
+        {
+          "term": "contradict",
+          "pt": "contradizer"
+        },
+        {
+          "term": "despite",
+          "pt": "apesar de"
+        },
+        {
+          "term": "albeit",
+          "pt": "embora"
+        },
+        {
+          "term": "nonetheless",
+          "pt": "no entanto"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-concession-advanced-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Even ___ she is young, she leads the team well.\"",
+        "correct": "though",
+        "explanation": "Full sentence: \"Even though she is young, she leads the team well.\"",
+        "hint_pt_br": "Embora jovem, ela lidera o time bem."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-concession-advanced-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Much as I like coffee, I try to limit my intake.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "The correct sentence is: \"Much as I like coffee, I try to limit my intake.\"",
+        "hint_pt_br": "Por mais que goste de café, tento limitar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-concession-advanced-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "concede",
+            "conceder"
+          ],
+          [
+            "contradict",
+            "contradizer"
+          ],
+          [
+            "despite",
+            "apesar de"
+          ],
+          [
+            "albeit",
+            "embora"
+          ],
+          [
+            "nonetheless",
+            "no entanto"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Advanced Concession — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre advanced concession. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Tell me a contradiction in your life using concession."
+        },
+        {
+          "speaker": "user",
+          "target": "Much as I love Brazil, I miss the rain of London.",
+          "pt_hint": "Adoro mas sinto falta."
+        },
+        {
+          "speaker": "ai",
+          "text": "Use EVEN IF for a hypothetical case."
+        },
+        {
+          "speaker": "user",
+          "target": "Even if I had stayed, I would have missed Brazil.",
+          "pt_hint": "Mesmo se ficasse."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now try WHEREAS to compare two things."
+        },
+        {
+          "speaker": "user",
+          "target": "I love literature whereas my sister prefers math.",
+          "pt_hint": "Enquanto ela prefere mat."
+        },
+        {
+          "speaker": "ai",
+          "text": "Describe someone with FOR ALL."
+        },
+        {
+          "speaker": "user",
+          "target": "For all his success, he still feels lonely.",
+          "pt_hint": "Apesar do sucesso."
+        },
+        {
+          "speaker": "ai",
+          "text": "Finish with EVEN THOUGH about your work."
+        },
+        {
+          "speaker": "user",
+          "target": "Even though teaching is hard, I love it.",
+          "pt_hint": "Embora difícil."
+        },
+        {
+          "speaker": "ai",
+          "text": "Your concessions now sound like native essays."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "concession-advanced-listening-story",
+      "title": "Two homes, one heart",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Summarize Zara's mixed feelings using at least three concession structures.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Zara wrote in her journal every Sunday, weighing the joys and costs of living between two countries."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Even though I chose Brazil, London still visits me on quiet Sunday mornings."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female2",
+          "en": "Much as you miss the rain, you would hate returning permanently by now."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Whereas the UK gave me my past, Brazil keeps giving me my present."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female2",
+          "en": "For all the saudade you feel, you've built a life here that fits you completely."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Two identities, one steady pen — the private geometry of an expat at peace."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Advanced Concession\". Express concession with EVEN IF, EVEN THOUGH, WHEREAS, MUCH AS, FOR ALL. Even though she is young, she leads the team well. Much as I like coffee, I try to limit my intake. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Advanced Concession\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Advanced Concession",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Advanced Concession\".",
+        "hint_pt_br": "Ela fala o título: \"Advanced Concession\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

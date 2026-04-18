@@ -1,0 +1,283 @@
+{
+  "slug": "scientific-english",
+  "title": "Scientific English — Methods and Findings",
+  "description": "Vocabulary and structure for describing experiments and research findings.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 70,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Inglês científico: voz passiva, linguagem hedging ('sugere'), verbos precisos (observed, measured).",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Scientific English — Methods and Findings",
+      "subtitle_en": "Vocabulary and structure for describing experiments and research findings.",
+      "subtitle_pt": "Inglês científico: voz passiva, linguagem hedging ('sugere'), verbos precisos (observed, measured)."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Vocabulary and structure for describing experiments and research findings. Today's focus: scientific english — methods and findings. Samples were collected from twenty different locations.",
+      "text_pt": "Inglês científico: voz passiva, linguagem hedging ('sugere'), verbos precisos (observed, measured). Foco de hoje: scientific english — methods and findings. Amostras foram coletadas de 20 locais diferentes."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Scientific English — Methods and Findings",
+      "body_en": "Scientific English uses passive voice ('samples were collected'), hedging ('the data suggests'), and precise verbs (observed, measured, calculated, compared).",
+      "body_pt": "Inglês científico: voz passiva, linguagem hedging ('sugere'), verbos precisos (observed, measured).",
+      "examples": [
+        {
+          "en": "Samples were collected from twenty different locations.",
+          "pt": "Amostras foram coletadas de 20 locais diferentes."
+        },
+        {
+          "en": "The data suggests a correlation between temperature and growth.",
+          "pt": "Os dados sugerem correlação entre temperatura e crescimento."
+        },
+        {
+          "en": "Further research is needed to confirm these findings.",
+          "pt": "Mais pesquisa é necessária pra confirmar esses achados."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Scientific English — Methods and Findings",
+      "items": [
+        {
+          "term": "hypothesis",
+          "pt": "hipótese"
+        },
+        {
+          "term": "correlation",
+          "pt": "correlação"
+        },
+        {
+          "term": "sample",
+          "pt": "amostra"
+        },
+        {
+          "term": "significant",
+          "pt": "significativo"
+        },
+        {
+          "term": "replicate",
+          "pt": "replicar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-scientific-english-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Samples were ___ from twenty different locations.\"",
+        "correct": "collected",
+        "explanation": "Full sentence: \"Samples were collected from twenty different locations.\"",
+        "hint_pt_br": "Amostras foram coletadas de 20 locais diferentes."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-scientific-english-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "The data suggests a correlation between temperature and growth."
+        ],
+        "correct": 3,
+        "explanation": "The correct sentence is: \"The data suggests a correlation between temperature and growth.\"",
+        "hint_pt_br": "Os dados sugerem correlação entre temperatura e crescimento."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-scientific-english-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "hypothesis",
+            "hipótese"
+          ],
+          [
+            "correlation",
+            "correlação"
+          ],
+          [
+            "sample",
+            "amostra"
+          ],
+          [
+            "significant",
+            "significativo"
+          ],
+          [
+            "replicate",
+            "replicar"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Scientific English — Methods and Findings — dialog",
+      "character": "Maya",
+      "pt_summary": "Diálogo sobre scientific english — methods and findings. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Maya, state your hypothesis in one sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "Warmer water accelerates coral growth.",
+          "pt_hint": "Água quente acelera crescimento."
+        },
+        {
+          "speaker": "ai",
+          "text": "How did you collect your samples?"
+        },
+        {
+          "speaker": "user",
+          "target": "Samples were collected from three reef sites.",
+          "pt_hint": "Três recifes."
+        },
+        {
+          "speaker": "ai",
+          "text": "What did the data suggest?"
+        },
+        {
+          "speaker": "user",
+          "target": "The data suggests a weak positive correlation.",
+          "pt_hint": "Correlação fraca positiva."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is the result statistically significant?"
+        },
+        {
+          "speaker": "user",
+          "target": "Not yet; more data is required.",
+          "pt_hint": "Precisa mais dados."
+        },
+        {
+          "speaker": "ai",
+          "text": "Can another lab replicate this?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, our protocol is fully documented.",
+          "pt_hint": "Protocolo documentado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Scientific English: careful, humble, exact."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "scientific-english-listening-story",
+      "title": "The lab meeting",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Summarize Maya's hypothesis and findings. Include at least three scientific verbs.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Maya presented her first research poster to a small audience of university scientists and peers."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "Samples were collected from three reef sites over the course of a twelve-week period."
+        },
+        {
+          "speaker": "Professor",
+          "voice": "male1",
+          "en": "Your hypothesis was that warmer water accelerates coral growth, correct?"
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "The data suggests a weak but consistent positive correlation across all three sites."
+        },
+        {
+          "speaker": "Professor",
+          "voice": "female2",
+          "en": "Further research is needed before we can call this finding statistically significant."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Real science, Maya had learned, sounds less like certainty and more like disciplined curiosity."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Scientific English — Methods and Findings\". Vocabulary and structure for describing experiments and research findings. Samples were collected from twenty different locations. The data suggests a correlation between temperature and growth. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Scientific English — Methods and Findings\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Scientific English — Methods and Findings",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Scientific English — Methods and Findings\".",
+        "hint_pt_br": "Ela fala o título: \"Scientific English — Methods and Findings\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

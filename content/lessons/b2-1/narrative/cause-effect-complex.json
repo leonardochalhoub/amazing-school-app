@@ -1,0 +1,283 @@
+{
+  "slug": "cause-effect-complex",
+  "title": "Complex Cause and Effect",
+  "description": "Advanced connectors: OWING TO, DUE TO, AS A RESULT OF, CONSEQUENTLY, THEREFORE.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.1",
+  "xp_reward": 65,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Conectivos de causa-efeito: OWING TO / DUE TO + substantivo, CONSEQUENTLY + frase, BECAUSE + frase.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Complex Cause and Effect",
+      "subtitle_en": "Advanced connectors: OWING TO, DUE TO, AS A RESULT OF, CONSEQUENTLY, THEREFORE.",
+      "subtitle_pt": "Conectivos de causa-efeito: OWING TO / DUE TO + substantivo, CONSEQUENTLY + frase, BECAUSE + frase."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Advanced connectors: OWING TO, DUE TO, AS A RESULT OF, CONSEQUENTLY, THEREFORE. Today's focus: complex cause and effect. Owing to a technical issue, the launch was delayed.",
+      "text_pt": "Conectivos de causa-efeito: OWING TO / DUE TO + substantivo, CONSEQUENTLY + frase, BECAUSE + frase. Foco de hoje: complex cause and effect. Devido a um problema técnico, o lançamento foi adiado."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Complex Cause and Effect",
+      "body_en": "OWING TO / DUE TO + noun. AS A RESULT OF + noun. CONSEQUENTLY / THEREFORE + clause. BECAUSE / SINCE + clause. Formal writing loves noun-based connectors.",
+      "body_pt": "Conectivos de causa-efeito: OWING TO / DUE TO + substantivo, CONSEQUENTLY + frase, BECAUSE + frase.",
+      "examples": [
+        {
+          "en": "Owing to a technical issue, the launch was delayed.",
+          "pt": "Devido a um problema técnico, o lançamento foi adiado."
+        },
+        {
+          "en": "The team worked overtime; consequently, we shipped on time.",
+          "pt": "O time virou; consequentemente, entregamos no prazo."
+        },
+        {
+          "en": "Due to limited budget, we postponed marketing plans.",
+          "pt": "Por orçamento limitado, adiamos o marketing."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Complex Cause and Effect",
+      "items": [
+        {
+          "term": "consequence",
+          "pt": "consequência"
+        },
+        {
+          "term": "result",
+          "pt": "resultado"
+        },
+        {
+          "term": "attribute",
+          "pt": "atribuir"
+        },
+        {
+          "term": "justify",
+          "pt": "justificar"
+        },
+        {
+          "term": "correlate",
+          "pt": "correlacionar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-cause-effect-complex-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Owing to a ___ issue, the launch was delayed.\"",
+        "correct": "technical",
+        "explanation": "Full sentence: \"Owing to a technical issue, the launch was delayed.\"",
+        "hint_pt_br": "Devido a um problema técnico, o lançamento foi adiado."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-cause-effect-complex-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "The team worked overtime; consequently, we shipped on time."
+        ],
+        "correct": 3,
+        "explanation": "The correct sentence is: \"The team worked overtime; consequently, we shipped on time.\"",
+        "hint_pt_br": "O time virou; consequentemente, entregamos no prazo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-cause-effect-complex-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "consequence",
+            "consequência"
+          ],
+          [
+            "result",
+            "resultado"
+          ],
+          [
+            "attribute",
+            "atribuir"
+          ],
+          [
+            "justify",
+            "justificar"
+          ],
+          [
+            "correlate",
+            "correlacionar"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Complex Cause and Effect — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre complex cause and effect. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, explain the launch delay using formal connectors."
+        },
+        {
+          "speaker": "user",
+          "target": "Owing to a database bug, we paused the launch.",
+          "pt_hint": "Devido ao bug, pausamos."
+        },
+        {
+          "speaker": "ai",
+          "text": "What consequences did the delay have?"
+        },
+        {
+          "speaker": "user",
+          "target": "Consequently, we lost two weeks of marketing.",
+          "pt_hint": "Perdemos 2 semanas."
+        },
+        {
+          "speaker": "ai",
+          "text": "What caused the database bug in the first place?"
+        },
+        {
+          "speaker": "user",
+          "target": "Due to rapid growth, our old schema broke.",
+          "pt_hint": "Crescimento rápido."
+        },
+        {
+          "speaker": "ai",
+          "text": "How did the team respond?"
+        },
+        {
+          "speaker": "user",
+          "target": "As a result, we rebuilt the system in record time.",
+          "pt_hint": "Reconstruímos."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's your long-term lesson?"
+        },
+        {
+          "speaker": "user",
+          "target": "Therefore, we now test every migration twice.",
+          "pt_hint": "Por isso testamos 2x."
+        },
+        {
+          "speaker": "ai",
+          "text": "Formal English makes setbacks sound like strategy."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "cause-effect-complex-listening-story",
+      "title": "Post-mortem meeting",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe the launch problem and its results. Use at least three cause-effect connectors.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "The post-mortem meeting always began at four, with lukewarm coffee and very honest voices."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Owing to an overlooked migration, the production database locked up at peak hours."
+        },
+        {
+          "speaker": "Engineer",
+          "voice": "female1",
+          "en": "As a result of the lock, thousands of users saw an error screen for ninety minutes."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Due to the incident, we now require pre-launch load testing on every release."
+        },
+        {
+          "speaker": "Engineer",
+          "voice": "female1",
+          "en": "Consequently, our deployment confidence has actually risen since the outage."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Failures, handled in writing, stop being failures — and start becoming infrastructure."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Complex Cause and Effect\". Advanced connectors: OWING TO, DUE TO, AS A RESULT OF, CONSEQUENTLY, THEREFORE. Owing to a technical issue, the launch was delayed. The team worked overtime; consequently, we shipped on time. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Complex Cause and Effect\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Complex Cause and Effect",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Complex Cause and Effect\".",
+        "hint_pt_br": "Ela fala o título: \"Complex Cause and Effect\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

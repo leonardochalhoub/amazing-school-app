@@ -1,0 +1,283 @@
+{
+  "slug": "political-discourse",
+  "title": "Political Discourse",
+  "description": "Vocabulary for civic life: policy, electorate, reform, bipartisan, accountability.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 70,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Linguagem política equilibrada: 'Some argue', 'Critics contend', 'A more nuanced view'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Political Discourse",
+      "subtitle_en": "Vocabulary for civic life: policy, electorate, reform, bipartisan, accountability.",
+      "subtitle_pt": "Linguagem política equilibrada: 'Some argue', 'Critics contend', 'A more nuanced view'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Vocabulary for civic life: policy, electorate, reform, bipartisan, accountability. Today's focus: political discourse. Some argue that the new policy strengthens democracy.",
+      "text_pt": "Linguagem política equilibrada: 'Some argue', 'Critics contend', 'A more nuanced view'. Foco de hoje: political discourse. Alguns argumentam que a política nova fortalece a democracia."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Political Discourse",
+      "body_en": "Hedged statements for balanced discussion: 'Some argue that...', 'Critics contend...', 'A more nuanced view holds that...'",
+      "body_pt": "Linguagem política equilibrada: 'Some argue', 'Critics contend', 'A more nuanced view'.",
+      "examples": [
+        {
+          "en": "Some argue that the new policy strengthens democracy.",
+          "pt": "Alguns argumentam que a política nova fortalece a democracia."
+        },
+        {
+          "en": "Critics contend that reform has been too slow.",
+          "pt": "Críticos sustentam que a reforma foi lenta demais."
+        },
+        {
+          "en": "A more nuanced view holds that both sides share blame.",
+          "pt": "Uma visão mais matizada sustenta que os dois lados têm culpa."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Political Discourse",
+      "items": [
+        {
+          "term": "policy",
+          "pt": "política pública"
+        },
+        {
+          "term": "electorate",
+          "pt": "eleitorado"
+        },
+        {
+          "term": "reform",
+          "pt": "reforma"
+        },
+        {
+          "term": "bipartisan",
+          "pt": "bipartidário"
+        },
+        {
+          "term": "accountability",
+          "pt": "responsabilização"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-political-discourse-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Some argue that the new policy ___ democracy.\"",
+        "correct": "strengthens",
+        "explanation": "Full sentence: \"Some argue that the new policy strengthens democracy.\"",
+        "hint_pt_br": "Alguns argumentam que a política nova fortalece a democracia."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-political-discourse-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Critics contend that reform has been too slow.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "The correct sentence is: \"Critics contend that reform has been too slow.\"",
+        "hint_pt_br": "Críticos sustentam que a reforma foi lenta demais."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-political-discourse-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "policy",
+            "política pública"
+          ],
+          [
+            "electorate",
+            "eleitorado"
+          ],
+          [
+            "reform",
+            "reforma"
+          ],
+          [
+            "bipartisan",
+            "bipartidário"
+          ],
+          [
+            "accountability",
+            "responsabilização"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Political Discourse — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre political discourse. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Describe the current policy debate calmly."
+        },
+        {
+          "speaker": "user",
+          "target": "Some argue the reform helps low-income families.",
+          "pt_hint": "Uns argumentam."
+        },
+        {
+          "speaker": "ai",
+          "text": "And what do critics contend?"
+        },
+        {
+          "speaker": "user",
+          "target": "Critics contend the rollout has been too slow.",
+          "pt_hint": "Críticos sustentam."
+        },
+        {
+          "speaker": "ai",
+          "text": "How would you offer a nuanced view?"
+        },
+        {
+          "speaker": "user",
+          "target": "A more nuanced view sees benefits and flaws.",
+          "pt_hint": "Visão matizada."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is bipartisan support possible here?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, if the electorate demands accountability.",
+          "pt_hint": "Se o eleitorado exigir."
+        },
+        {
+          "speaker": "ai",
+          "text": "What single word matters most in politics?"
+        },
+        {
+          "speaker": "user",
+          "target": "Accountability — without it, everything drifts.",
+          "pt_hint": "Responsabilização."
+        },
+        {
+          "speaker": "ai",
+          "text": "Democracy lives on nuance, not volume."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "political-discourse-listening-story",
+      "title": "The dinner-table debate",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Summarize three views expressed. Use at least three political vocabulary words.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the long dinner table, three generations debated the most recent policy announcement."
+        },
+        {
+          "speaker": "Uncle",
+          "voice": "male1",
+          "en": "Some argue that the reform finally modernizes our healthcare system for the better."
+        },
+        {
+          "speaker": "Aunt",
+          "voice": "female1",
+          "en": "Critics contend that implementation has been chaotic and leaves the poorest behind entirely."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male2",
+          "en": "A more nuanced view would grant that the intent was right but the execution was incomplete."
+        },
+        {
+          "speaker": "Young cousin",
+          "voice": "female2",
+          "en": "Accountability matters more than party loyalty — that lesson should cross every dinner table."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Political English, Kumar believed, is practiced in kitchens long before it enters parliaments."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Political Discourse\". Vocabulary for civic life: policy, electorate, reform, bipartisan, accountability. Some argue that the new policy strengthens democracy. Critics contend that reform has been too slow. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Political Discourse\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Political Discourse",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Political Discourse\".",
+        "hint_pt_br": "Ela fala o título: \"Political Discourse\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

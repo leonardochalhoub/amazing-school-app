@@ -1,0 +1,283 @@
+{
+  "slug": "paraphrasing-advanced",
+  "title": "Advanced Paraphrasing",
+  "description": "Rewording ideas without copying structure or vocabulary; three techniques to sound original.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 70,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Parafrasear: mude estrutura (ativa↔passiva), sinônimos nas palavras-chave, junte ou separe frases.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Advanced Paraphrasing",
+      "subtitle_en": "Rewording ideas without copying structure or vocabulary; three techniques to sound original.",
+      "subtitle_pt": "Parafrasear: mude estrutura (ativa↔passiva), sinônimos nas palavras-chave, junte ou separe frases."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Rewording ideas without copying structure or vocabulary; three techniques to sound original. Today's focus: advanced paraphrasing. Original: 'The pandemic reshaped our daily lives.' Paraphrase: 'Everyday routines were fundamentally transformed by COVID-19.'",
+      "text_pt": "Parafrasear: mude estrutura (ativa↔passiva), sinônimos nas palavras-chave, junte ou separe frases. Foco de hoje: advanced paraphrasing. Original vs parafraseado: mude estrutura e sinônimo."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Advanced Paraphrasing",
+      "body_en": "Techniques: 1) Change sentence structure (active↔passive). 2) Replace key nouns with synonyms. 3) Break long sentences into two short ones or combine short ones into a complex one.",
+      "body_pt": "Parafrasear: mude estrutura (ativa↔passiva), sinônimos nas palavras-chave, junte ou separe frases.",
+      "examples": [
+        {
+          "en": "Original: 'The pandemic reshaped our daily lives.' Paraphrase: 'Everyday routines were fundamentally transformed by COVID-19.'",
+          "pt": "Original vs parafraseado: mude estrutura e sinônimo."
+        },
+        {
+          "en": "Paraphrasing well keeps the idea but changes the voice.",
+          "pt": "Boa paráfrase preserva a ideia e muda a voz."
+        },
+        {
+          "en": "Lazy paraphrase is just synonym swapping — avoid it.",
+          "pt": "Paráfrase preguiçosa só troca sinônimo — evite."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Advanced Paraphrasing",
+      "items": [
+        {
+          "term": "paraphrase",
+          "pt": "parafrasear"
+        },
+        {
+          "term": "restate",
+          "pt": "reformular"
+        },
+        {
+          "term": "synonym",
+          "pt": "sinônimo"
+        },
+        {
+          "term": "restructure",
+          "pt": "reestruturar"
+        },
+        {
+          "term": "preserve",
+          "pt": "preservar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-paraphrasing-advanced-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Original: 'The pandemic reshaped our daily lives.' Paraphrase: 'Everyday routines were ___ transformed by COVID-19.'\"",
+        "correct": "fundamentally",
+        "explanation": "Full sentence: \"Original: 'The pandemic reshaped our daily lives.' Paraphrase: 'Everyday routines were fundamentally transformed by COVID-19.'\"",
+        "hint_pt_br": "Original vs parafraseado: mude estrutura e sinônimo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-paraphrasing-advanced-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Paraphrasing well keeps the idea but changes the voice.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "The correct sentence is: \"Paraphrasing well keeps the idea but changes the voice.\"",
+        "hint_pt_br": "Boa paráfrase preserva a ideia e muda a voz."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-paraphrasing-advanced-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "paraphrase",
+            "parafrasear"
+          ],
+          [
+            "restate",
+            "reformular"
+          ],
+          [
+            "synonym",
+            "sinônimo"
+          ],
+          [
+            "restructure",
+            "reestruturar"
+          ],
+          [
+            "preserve",
+            "preservar"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Advanced Paraphrasing — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre advanced paraphrasing. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Paraphrase: 'The storm destroyed three villages.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Three villages were devastated by the storm.",
+          "pt_hint": "Passiva."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now swap synonyms too."
+        },
+        {
+          "speaker": "user",
+          "target": "Three communities were wrecked in the hurricane.",
+          "pt_hint": "Comunidades."
+        },
+        {
+          "speaker": "ai",
+          "text": "Paraphrase: 'Technology changes how we work.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Our working habits are transformed by technology.",
+          "pt_hint": "Mudam hábitos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Make it formal and abstract."
+        },
+        {
+          "speaker": "user",
+          "target": "Innovation reshapes the architecture of modern labor.",
+          "pt_hint": "Reformula a arquitetura."
+        },
+        {
+          "speaker": "ai",
+          "text": "Condense two sentences into one."
+        },
+        {
+          "speaker": "user",
+          "target": "Innovation both reshapes and complicates modern labor.",
+          "pt_hint": "Reformula e complica."
+        },
+        {
+          "speaker": "ai",
+          "text": "Paraphrasing is writing the same idea with new hands."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "paraphrasing-advanced-listening-story",
+      "title": "The paraphrasing workshop",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Paraphrase a single source sentence three different ways. Use at least two paraphrasing techniques.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Zara opened a single sentence on the whiteboard and asked the class to rewrite it five different ways."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "The pandemic reshaped our daily lives — paraphrase this with both structural and lexical changes."
+        },
+        {
+          "speaker": "Student A",
+          "voice": "male1",
+          "en": "Everyday routines were fundamentally transformed by the spread of COVID-19 worldwide."
+        },
+        {
+          "speaker": "Student B",
+          "voice": "female2",
+          "en": "Our habits were remade, almost overnight, by the global health crisis of 2020."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Notice both of you preserved the idea but changed the voice — that's the real skill."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Paraphrasing, Zara said, is the closest thing to translation between one version of yourself and another."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Advanced Paraphrasing\". Rewording ideas without copying structure or vocabulary; three techniques to sound original. Original: 'The pandemic reshaped our daily lives.' Paraphrase: 'Everyday routines were fundamentally transformed by COVID-19.' Paraphrasing well keeps the idea but changes the voice. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Advanced Paraphrasing\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Advanced Paraphrasing",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Advanced Paraphrasing\".",
+        "hint_pt_br": "Ela fala o título: \"Advanced Paraphrasing\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}
