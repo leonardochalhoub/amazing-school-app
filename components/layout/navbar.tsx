@@ -107,21 +107,18 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-auto flex h-32 max-w-7xl items-center justify-between gap-4 px-4 md:px-6">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 md:px-6">
         <Link
           href={`/${role}`}
-          className="group flex shrink-0 items-center gap-5"
+          className="group flex shrink-0 items-center gap-2.5"
         >
-          <BrandMark className="h-20 w-20" />
-          <span className="hidden sm:flex sm:flex-col sm:-space-y-1">
+          <BrandMark className="h-9 w-9" />
+          <span className="hidden lg:flex lg:flex-col lg:leading-tight">
             <span
-              className="bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text font-[family-name:var(--font-display)] text-[52px] italic leading-none text-transparent drop-shadow-sm dark:from-indigo-400 dark:via-violet-400 dark:to-pink-400"
+              className="bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text font-[family-name:var(--font-display)] text-xl italic text-transparent dark:from-indigo-400 dark:via-violet-400 dark:to-pink-400"
               style={{ letterSpacing: "-0.015em" }}
             >
               Amazing School
-            </span>
-            <span className="mt-1 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground">
-              Learn · Teach · Thrive
             </span>
           </span>
         </Link>
@@ -139,7 +136,7 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "relative rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors",
+                      "relative rounded-full px-2.5 py-1 text-[11px] font-medium transition-colors whitespace-nowrap",
                       isActive
                         ? "bg-foreground text-background shadow-sm"
                         : "text-muted-foreground hover:text-foreground"
