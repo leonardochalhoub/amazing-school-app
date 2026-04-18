@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const SKILLS = ["grammar", "vocabulary", "reading", "listening"] as const;
+export const SKILLS = ["grammar", "vocabulary", "reading", "listening", "narrative"] as const;
 export const SKILL_SET = new Set<string>(SKILLS);
 
 export const CEFR_LEVELS = ["a1.1", "a1.2", "a2.1", "a2.2", "b1.1", "b1.2"] as const;

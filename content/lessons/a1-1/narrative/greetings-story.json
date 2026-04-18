@@ -1,0 +1,186 @@
+{
+  "slug": "greetings-story",
+  "title": "First Day at Amazing School",
+  "description": "Bia walks into Amazing School for the first time. Learn greetings through the eyes of a 16-year-old surfer meeting her new classmates.",
+  "category": "vocabulary",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 40,
+  "estimated_minutes": 15,
+  "summary_pt_br": "A primeira aula da Bia na Amazing School. Aprenda cumprimentos conhecendo a Bia, o Rafa, o Mr. Kumar e o Cosmo.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 1 — First Day",
+      "subtitle_en": "Praia do Sol, 7:42 a.m.",
+      "subtitle_pt": "Praia do Sol, 7h42"
+    },
+    {
+      "kind": "narrative",
+      "scene_emoji": "🌅",
+      "text_en": "The sun rises over Praia do Sol. A yellow Labrador is napping by the front door of Amazing School. His name is Cosmo, and he greets every student with a wag of his tail.",
+      "text_pt": "O sol nasce sobre Praia do Sol. Um labrador amarelo cochila na porta da Amazing School. Ele se chama Cosmo, e cumprimenta todo aluno com um abano de rabo."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "Bia walks up the steps carrying her surfboard. She is sixteen and nervous — this is her first English class.",
+      "text_pt": "A Bia sobe os degraus carregando a prancha de surf. Ela tem dezesseis anos e está nervosa — é a primeira aula de inglês dela."
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Front door",
+      "location_pt": "Porta da frente",
+      "turns": [
+        {
+          "character_id": "kumar",
+          "en": "Good morning! Welcome to Amazing School.",
+          "pt": "Bom dia! Bem-vinda à Amazing School."
+        },
+        {
+          "character_id": "bia",
+          "en": "Good morning. I am Bia.",
+          "pt": "Bom dia. Eu sou a Bia."
+        },
+        {
+          "character_id": "kumar",
+          "en": "Nice to meet you, Bia. I am Mr. Kumar.",
+          "pt": "Prazer em conhecer você, Bia. Sou o Mr. Kumar."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "The three magic phrases",
+      "items": [
+        {
+          "term": "Good morning",
+          "pt": "Bom dia",
+          "example_en": "Good morning, Mr. Kumar."
+        },
+        {
+          "term": "Nice to meet you",
+          "pt": "Prazer em conhecer você",
+          "example_en": "Nice to meet you, Bia."
+        },
+        {
+          "term": "My name is…",
+          "pt": "Meu nome é…",
+          "example_en": "My name is Bia."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "grst-001",
+        "type": "multiple_choice",
+        "question": "Mr. Kumar says 'Good morning'. What's Bia's reply?",
+        "options": [
+          "Good night",
+          "Good morning",
+          "Good afternoon",
+          "Goodbye"
+        ],
+        "correct": 1,
+        "explanation": "The polite move is to echo the greeting back. 'Good morning' until about noon, 'Good afternoon' noon–5 p.m., 'Good evening' after 5 p.m.",
+        "hint_pt_br": "O educado é devolver o mesmo cumprimento. Morning vai até meio-dia, afternoon até o fim da tarde, evening à noite."
+      }
+    },
+    {
+      "kind": "narrative",
+      "scene_emoji": "🌮",
+      "character_id": "rafa",
+      "text_en": "Rafa, a 30-year-old food-truck owner, comes in smelling of coffee and coriander. He's the loudest student in the room.",
+      "text_pt": "Rafa, dono de food truck de 30 anos, entra cheirando a café e coentro. É o aluno mais barulhento da sala."
+    },
+    {
+      "kind": "dialogue",
+      "turns": [
+        {
+          "character_id": "rafa",
+          "en": "Hey! What's up? I'm Rafa.",
+          "pt": "Oi! E aí? Sou o Rafa."
+        },
+        {
+          "character_id": "bia",
+          "en": "Hi, Rafa. I'm Bia.",
+          "pt": "Oi, Rafa. Eu sou a Bia."
+        },
+        {
+          "character_id": "rafa",
+          "en": "Cool board. Do you surf?",
+          "pt": "Prancha legal. Você surfa?"
+        }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Formal vs. informal greetings",
+      "body_en": "English has two registers. Formal: 'Good morning. How are you?' Informal: 'Hey! What's up?' Use formal with teachers, strangers, and elders. Use informal with friends your age.",
+      "body_pt": "O inglês tem dois registros. Formal: 'Good morning. How are you?' Informal: 'Hey! What's up?' Use o formal com professores, estranhos e pessoas mais velhas. Informal com amigos da sua idade.",
+      "examples": [
+        { "en": "Good morning, Dona Lúcia.", "pt": "(formal, para uma senhora)" },
+        { "en": "Hey, Rafa!", "pt": "(informal, para um amigo)" }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "grst-002",
+        "type": "matching",
+        "pairs": [
+          ["Hi!", "Oi!"],
+          ["Hello, how are you?", "Olá, como você está?"],
+          ["Nice to meet you", "Prazer em conhecê-lo(a)"],
+          ["See you later", "Até mais"]
+        ],
+        "explanation": "Four expressions that cover ~80% of everyday greetings.",
+        "hint_pt_br": "Essas quatro cobrem a maioria das situações do dia a dia."
+      }
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "rafa",
+      "exercise": {
+        "id": "grst-003",
+        "type": "fill_blank",
+        "question": "Rafa introduces himself: 'Hi! ___ name is Rafa.'",
+        "correct": "My",
+        "explanation": "Possessive 'my' before 'name'. 'My name is Rafa' is how you say your own name.",
+        "hint_pt_br": "'My' = meu/minha. 'My name is…' = 'Meu nome é…'"
+      }
+    },
+    {
+      "kind": "narrative",
+      "character_id": "cosmo",
+      "text_en": "Cosmo wanders in and sits by Bia's feet. He wags his tail. Rafa laughs. Even the dog welcomes her.",
+      "text_pt": "Cosmo entra e senta aos pés da Bia. Ele abana o rabo. Rafa ri. Até o cachorro a recebe bem."
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "grst-004",
+        "type": "multiple_choice",
+        "question": "It's 7:42 a.m. You enter a room. Which greeting fits best?",
+        "options": [
+          "Good evening",
+          "Good night",
+          "Good morning",
+          "Good afternoon"
+        ],
+        "correct": 2,
+        "explanation": "Before noon → 'Good morning'. 'Good night' is NOT a greeting — it's a goodbye used at bedtime.",
+        "hint_pt_br": "Cuidado: 'Good night' não é cumprimento de entrada — é despedida para dormir (boa noite no sentido de 'até amanhã')."
+      }
+    },
+    {
+      "kind": "narrative",
+      "scene_emoji": "🏫",
+      "character_id": "kumar",
+      "text_en": "Mr. Kumar smiles. 'That's our first scene,' he says. 'Tomorrow we'll practice asking names — and Cosmo will be there too.'",
+      "text_pt": "Mr. Kumar sorri. 'Foi nossa primeira cena,' ele diz. 'Amanhã vamos praticar como perguntar o nome — e o Cosmo vai estar lá também.'"
+    }
+  ]
+}

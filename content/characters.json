@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-04-17",
+  "setting": {
+    "school_name": "Amazing School",
+    "city": "Praia do Sol",
+    "description_en": "A boutique English academy on the Brazilian coast, tucked between a surf shop and a café on Avenida do Mar. Mr. Kumar, the owner, believes stories teach faster than drills.",
+    "description_pt": "Uma pequena escola de inglês na costa brasileira, encaixada entre uma loja de surf e um café na Avenida do Mar. Mr. Kumar, o dono, acredita que histórias ensinam mais rápido que exercícios."
+  },
+  "characters": [
+    {
+      "id": "bia",
+      "name": "Bia Andrade",
+      "age": 16,
+      "emoji": "🏄‍♀️",
+      "color": "#0ea5e9",
+      "one_liner_en": "Surfer, dreams of studying marine biology in Hawaii.",
+      "one_liner_pt": "Surfista, sonha em estudar biologia marinha no Havaí.",
+      "speaking_style": "Curious, casual, uses lots of first-person. Makes natural beginner mistakes."
+    },
+    {
+      "id": "rafa",
+      "name": "Rafa Moura",
+      "age": 30,
+      "emoji": "🌮",
+      "color": "#f59e0b",
+      "one_liner_en": "Food-truck owner planning to open Tropical Bites in Orlando.",
+      "one_liner_pt": "Dono de food truck planejando abrir o Tropical Bites em Orlando.",
+      "speaking_style": "Practical, asks directly, wants vocabulary he can use tomorrow."
+    },
+    {
+      "id": "lucia",
+      "name": "Dona Lúcia",
+      "age": 68,
+      "emoji": "👵",
+      "color": "#ec4899",
+      "one_liner_en": "Reading her late husband's 1970s English letters to understand the man she loved.",
+      "one_liner_pt": "Está lendo as cartas em inglês dos anos 70 do marido falecido, para entender o homem que amou.",
+      "speaking_style": "Polite, patient, loves idioms and old expressions."
+    },
+    {
+      "id": "joca",
+      "name": "Joca Pinto",
+      "age": 22,
+      "emoji": "💻",
+      "color": "#8b5cf6",
+      "one_liner_en": "Programmer chasing a remote job at a US startup.",
+      "one_liner_pt": "Programador atrás de uma vaga remota numa startup americana.",
+      "speaking_style": "Tech-minded, overthinks grammar, loves precision."
+    },
+    {
+      "id": "maya",
+      "name": "Maya Ferreira",
+      "age": 12,
+      "emoji": "🧠",
+      "color": "#10b981",
+      "one_liner_en": "Prodigy kid who finishes homework before the teacher finishes the example.",
+      "one_liner_pt": "Garota prodígio que termina a tarefa antes da professora terminar o exemplo.",
+      "speaking_style": "Fast, confident, occasionally shows off irregular verbs on purpose."
+    },
+    {
+      "id": "kumar",
+      "name": "Mr. Kumar",
+      "age": 50,
+      "emoji": "🧔",
+      "color": "#6366f1",
+      "one_liner_en": "Indian-American owner of Amazing School. Sold his NYC bookstore to teach by the sea.",
+      "one_liner_pt": "Dono indo-americano da Amazing School. Vendeu sua livraria em Nova York para ensinar à beira-mar.",
+      "speaking_style": "Warm, patient, slips in idioms and always has a story."
+    },
+    {
+      "id": "cosmo",
+      "name": "Cosmo",
+      "age": 5,
+      "emoji": "🐕",
+      "color": "#fbbf24",
+      "one_liner_en": "The yellow Labrador mascot who wanders between classrooms.",
+      "one_liner_pt": "O labrador amarelo mascote que passeia entre as salas de aula.",
+      "speaking_style": "Just barks. Students write about him."
+    }
+  ]
+}

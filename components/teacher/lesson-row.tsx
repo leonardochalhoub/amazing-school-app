@@ -34,12 +34,14 @@ const SKILL_LABELS = {
     vocabulary: "Vocabulary",
     reading: "Reading",
     listening: "Listening",
+    narrative: "Story",
   },
   pt: {
     grammar: "Gramática",
     vocabulary: "Vocabulário",
     reading: "Leitura",
     listening: "Escuta",
+    narrative: "História",
   },
 } as const;
 

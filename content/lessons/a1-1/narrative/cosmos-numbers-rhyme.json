@@ -1,0 +1,135 @@
+{
+  "slug": "cosmos-numbers-rhyme",
+  "title": "Cosmo's Number Parade",
+  "description": "Cosmo the Labrador counts his friends in a Dr. Seuss–style rhyme. Learn 1–10 with rhythm, rhyme, and a lot of tail-wagging.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 35,
+  "estimated_minutes": 12,
+  "summary_pt_br": "Cosmo, o labrador, conta seus amigos numa rima estilo Dr. Seuss. Aprenda de 1 a 10 com ritmo, rima e muito abanar de rabo.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 2 — Cosmo Counts",
+      "subtitle_en": "A counting song in the classroom",
+      "subtitle_pt": "Uma canção de contagem na sala de aula"
+    },
+    {
+      "kind": "narrative",
+      "scene_emoji": "🐕",
+      "character_id": "cosmo",
+      "text_en": "Cosmo the dog had a lot to say.\nHe couldn't speak English — but he WAGGED all day.\nMr. Kumar said, 'Class, today we'll count.\nCosmo will help. He's a counting hound.'",
+      "text_pt": "Cosmo, o cachorro, tinha muito a dizer.\nNão falava inglês — só sabia abanar.\nMr. Kumar falou: 'Turma, hoje a gente vai contar.\nO Cosmo vai ajudar — um cão de contar.'"
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "One to five",
+      "items": [
+        { "term": "one", "pt": "um", "example_en": "One dog." },
+        { "term": "two", "pt": "dois", "example_en": "Two eyes." },
+        { "term": "three", "pt": "três", "example_en": "Three cats." },
+        { "term": "four", "pt": "quatro", "example_en": "Four paws." },
+        { "term": "five", "pt": "cinco", "example_en": "Five friends." }
+      ]
+    },
+    {
+      "kind": "narrative",
+      "character_id": "cosmo",
+      "text_en": "ONE little Cosmo, wagging with glee.\nTWO shiny eyes, as brown as can be.\nTHREE orange cats snoozing on the floor.\nFOUR funny feet that tap at the door.\nFIVE little friends who laugh more and more.",
+      "text_pt": "UM Cosminho, abanando feliz.\nDOIS olhos marrons, que nem raiz.\nTRÊS gatos laranjas no chão a dormir.\nQUATRO patinhas batendo a abrir.\nCINCO amiguinhos rindo a sorrir."
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "cnr-001",
+        "type": "multiple_choice",
+        "question": "How many orange cats are in the rhyme?",
+        "options": ["two", "three", "four", "five"],
+        "correct": 1,
+        "explanation": "'THREE orange cats snoozing on the floor.' The rhyme uses 3.",
+        "hint_pt_br": "Três gatos laranjas dormindo — THREE."
+      }
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Six to ten",
+      "items": [
+        { "term": "six", "pt": "seis", "example_en": "Six stars." },
+        { "term": "seven", "pt": "sete", "example_en": "Seven days." },
+        { "term": "eight", "pt": "oito", "example_en": "Eight arms — like an octopus!" },
+        { "term": "nine", "pt": "nove", "example_en": "Nine lives for a cat." },
+        { "term": "ten", "pt": "dez", "example_en": "Ten fingers." }
+      ]
+    },
+    {
+      "kind": "narrative",
+      "character_id": "cosmo",
+      "text_en": "SIX silly birds in the Praia do Sol sky.\nSEVEN sharp pencils that Maya holds high.\nEIGHT hungry surfers in Rafa's food line.\nNINE noisy waves — every wave is a sign.\nTEN thumping tails. Yes — ten tails! All MINE!",
+      "text_pt": "SEIS passarinhos no céu da Praia do Sol.\nSETE lápis apontados nas mãos da Maya, pode crer.\nOITO surfistas famintos na fila do Rafa.\nNOVE ondas barulhentas — cada uma diz algo a saber.\nDEZ rabos batendo. Isso mesmo — dez rabos MEUS!"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "How to count things",
+      "body_en": "English puts the number BEFORE the noun, just like Portuguese: 'three cats', 'ten fingers'. For plurals of regular nouns, add -s: cat → cats, bird → birds. Some are irregular: mouse → mice, child → children. But that's a story for another day.",
+      "body_pt": "Em inglês, o número vem ANTES do substantivo: 'three cats' (três gatos). O plural regular é só adicionar -s. Irregulares (mouse → mice, child → children) ficam para depois.",
+      "examples": [
+        { "en": "one surfboard → two surfboards", "pt": "uma prancha → duas pranchas" },
+        { "en": "one child → two children", "pt": "irregular!" }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "cosmo",
+      "exercise": {
+        "id": "cnr-002",
+        "type": "fill_blank",
+        "question": "Cosmo wags his ___ tails? (He only has one!)",
+        "correct": "one",
+        "explanation": "Cosmo is ONE dog with ONE tail — the 'ten tails' was just a silly brag. ONE is the number 1 in English.",
+        "hint_pt_br": "Cosmo tem UM rabo só. 'Ten tails' foi só exagero."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cnr-003",
+        "type": "matching",
+        "pairs": [
+          ["6", "six"],
+          ["7", "seven"],
+          ["8", "eight"],
+          ["9", "nine"],
+          ["10", "ten"]
+        ],
+        "explanation": "Numbers 6–10, matched to their English names. EIGHT has a silent 'gh' — pronounced /eɪt/, just 'ate'.",
+        "hint_pt_br": "Eight se lê /eit/ — igual a 'ate' (o verbo comer no passado)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "cnr-004",
+        "type": "multiple_choice",
+        "question": "Bia asks: 'How many surfboards do you have?' She has 2. What does she say?",
+        "options": [
+          "I have two surfboard",
+          "I have two surfboards",
+          "I has two surfboards",
+          "I two surfboards"
+        ],
+        "correct": 1,
+        "explanation": "Plural -s on the noun ('surfboards'). Subject-verb: I HAVE, not 'I has' (that's he/she/it).",
+        "hint_pt_br": "'I have' + substantivo no plural. 'Has' é só para he/she/it."
+      }
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Mr. Kumar grinned and clapped once or twice.\n'Counting with Cosmo is always quite nice.\nTomorrow,' he said, 'we'll count even more —\ntwenty, and thirty, and right up to a hundred — or four!'",
+      "text_pt": "Mr. Kumar sorriu e bateu palmas ali.\n'Contar com o Cosmo é bom de seguir.\nAmanhã,' ele disse, 'vamos mais além —\nvinte, e trinta, e até cem, meu bem!'"
+    }
+  ]
+}
