@@ -1,0 +1,41 @@
+{
+  "slug": "bias-surfboards",
+  "title": "Which Surfboard Is Better?",
+  "description": "Comparatives and superlatives through Bia's surfboard shop visit. BIGGER, SMALLER, THE BEST — plus the tricky 'more + adjective' rule.",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.1",
+  "xp_reward": 45,
+  "estimated_minutes": 14,
+  "summary_pt_br": "Comparativos (-er / more) e superlativos (-est / most) visitando a loja de pranchas. Regras de quando adicionar -er/-est e quando usar MORE/MOST. Irregulares: good/better/best, bad/worse/worst.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 18 — The Surf Shop", "subtitle_en": "Three boards, one decision", "subtitle_pt": "Três pranchas, uma decisão" },
+    { "kind": "narrative", "character_id": "bia", "text_en": "Three boards on the wall. Three choices, three rides.\nThe first is LONGER and WIDER. It glides.\nThe second is SHORTER and FASTER and light.\nThe third is the MOST EXPENSIVE — and also the TIGHTEST.", "text_pt": "Três pranchas na parede. Três opções, três caminhos.\nA primeira é mais LONGA e mais LARGA. Ela plana bonito.\nA segunda é mais CURTA, mais RÁPIDA, mais leve.\nA terceira é a MAIS CARA — e também a mais apertadinha." },
+    { "kind": "grammar_note", "title": "The comparative rule — short vs long adjectives", "body_en": "SHORT adjectives (1 syllable, or 2 ending in -y): add -ER / -EST. Big → bigger / biggest. Happy → happier / happiest. LONG adjectives (2+ syllables): use MORE / MOST. Expensive → more expensive / most expensive. Irregulars: good → better → best. Bad → worse → worst.", "body_pt": "Adjetivo CURTO (1 sílaba, ou 2 terminando em -y): usa -ER/-EST. Big → bigger/biggest. ADJETIVO LONGO (2+ sílabas): usa MORE/MOST. Expensive → more expensive/most expensive. Irregulares: good→better→best, bad→worse→worst.", "examples": [
+      { "en": "tall → taller → tallest", "pt": "alto → mais alto → o mais alto (curto)" },
+      { "en": "beautiful → more beautiful → most beautiful", "pt": "lindo → mais lindo → o mais lindo (longo)" }
+    ]},
+    { "kind": "vocab_intro", "title": "Comparative structures", "items": [
+      { "term": "X is bigger THAN Y", "pt": "X é maior que Y", "example_en": "A truck is bigger than a car." },
+      { "term": "X is THE biggest", "pt": "X é o maior (de todos)", "example_en": "The whale is the biggest animal." },
+      { "term": "X is AS big AS Y", "pt": "X é tão grande quanto Y", "example_en": "Maya is as smart as Joca." },
+      { "term": "X is NOT AS big AS Y", "pt": "X não é tão grande quanto Y", "example_en": "This taco is not as hot as that one." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "surf-s01", "type": "fill_blank", "question": "Complete: 'The red board is ___ than the blue one.' (fast)", "correct": "faster", "explanation": "FAST is 1-syllable → add -er. Faster than.", "hint_pt_br": "Adjetivo curto → -er. Fast → faster." }},
+    { "kind": "exercise", "exercise": { "id": "surf-s02", "type": "fill_blank", "question": "Complete: 'The third board is the ___ expensive of all.'", "correct": "most", "explanation": "EXPENSIVE is 3 syllables → MOST expensive. And 'the' before superlative.", "hint_pt_br": "Adjetivo longo → most. 'The most expensive'." }},
+    { "kind": "exercise", "exercise": { "id": "surf-s03", "type": "multiple_choice", "question": "Which is correct?", "options": ["more good", "gooder", "better", "most good"], "correct": 2, "explanation": "GOOD is irregular: good → BETTER → best. Never 'gooder' or 'more good'.", "hint_pt_br": "GOOD é irregular: good → better → best." }},
+    { "kind": "dialogue", "location_en": "Surf shop, decision time", "location_pt": "Na loja, hora de decidir", "turns": [
+      { "character_id": "bia", "en": "Which is the best for a beginner?", "pt": "Qual é a melhor pra iniciante?" },
+      { "character_id": "rafa", "en": "The longer one. It's slower — but more stable.", "pt": "A mais longa. É mais lenta — mas mais estável." },
+      { "character_id": "bia", "en": "Is it as good as the expensive one?", "pt": "É tão boa quanto a cara?" },
+      { "character_id": "rafa", "en": "For you? Better. Price is not the best teacher.", "pt": "Pra você? Melhor. Preço não é o melhor professor." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "surf-s04", "type": "matching", "pairs": [
+      ["good", "better → best"],
+      ["bad", "worse → worst"],
+      ["far", "farther → farthest"],
+      ["little", "less → least"]
+    ], "explanation": "Four irregulars worth memorizing. They break every short/long rule.", "hint_pt_br": "Quatro irregulares que quebram todas as regras. Decorar." }},
+    { "kind": "exercise", "exercise": { "id": "surf-s05", "type": "multiple_choice", "question": "Maya is twelve. Bia is sixteen. Which sentence is correct?", "options": ["Maya is as old as Bia", "Maya is not as old as Bia", "Bia is younger than Maya", "Maya is the oldest"], "correct": 1, "explanation": "Maya is YOUNGER. So she is NOT as old as Bia. Negative with 'as...as'.", "hint_pt_br": "Maya é mais nova. Então 'not as old as' — negação do 'tão...quanto'." }}
+  ]
+}

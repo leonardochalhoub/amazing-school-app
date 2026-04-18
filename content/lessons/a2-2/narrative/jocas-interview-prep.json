@@ -1,0 +1,43 @@
+{
+  "slug": "jocas-interview-prep",
+  "title": "Joca Prepares for the Interview",
+  "description": "Future tenses: WILL vs GOING TO. Joca has an interview at a US startup and the class predicts, plans, and promises.",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.2",
+  "xp_reward": 45,
+  "estimated_minutes": 14,
+  "summary_pt_br": "WILL (decisões na hora, previsões) x GOING TO (planos já feitos, evidências visíveis). Joca se prepara para uma entrevista de trabalho remota numa startup dos EUA.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 19 — The Interview", "subtitle_en": "Joca's shot at a remote job", "subtitle_pt": "A chance do Joca num trabalho remoto" },
+    { "kind": "narrative", "character_id": "joca", "text_en": "Joca stared at his calendar. Friday. 3 p.m. sharp.\n'I'M GOING TO wear my blue shirt,' he said, 'and I'll sharpen my charm.\nI'M GOING TO study their product. I'll know it by heart.\nAnd if the wifi cuts out, I'LL use my phone. Smart.'", "text_pt": "O Joca olhou o calendário. Sexta. 15h em ponto.\n'VOU USAR minha camisa azul,' disse. 'E vou afiar meu tino.\nVOU ESTUDAR o produto deles. Vou saber tudo.\nSe o wifi cair, USO o celular. Esperto, meu rumo.'" },
+    { "kind": "grammar_note", "title": "WILL vs GOING TO — the core split", "body_en": "GOING TO = plans already made, decisions in place, predictions based on visible evidence. 'I'M GOING TO study at MIT' (already decided). 'Look at those clouds — it's GOING TO rain.' WILL = spontaneous decisions at the moment, predictions based on opinion, promises, offers. 'Ok, I'LL help.' 'I think it WILL rain tomorrow.'", "body_pt": "GOING TO = plano já feito, evidência visível. 'I'm going to study at MIT' (já decidi). WILL = decisão na hora, opinião, promessa, oferta. 'I'll help you' (acabou de decidir).", "examples": [
+      { "en": "A: Who's closing the door? B: I'll close it.", "pt": "Decisão no momento → will." },
+      { "en": "We're going to visit Orlando next July.", "pt": "Plano já marcado → going to." },
+      { "en": "I think the Lakers will win.", "pt": "Opinião/previsão → will." }
+    ]},
+    { "kind": "vocab_intro", "title": "Interview vocabulary", "items": [
+      { "term": "resume / CV", "pt": "currículo" },
+      { "term": "hire", "pt": "contratar" },
+      { "term": "salary", "pt": "salário" },
+      { "term": "benefits", "pt": "benefícios" },
+      { "term": "offer", "pt": "oferta / proposta" },
+      { "term": "remote", "pt": "remoto" }
+    ]},
+    { "kind": "exercise", "framing_character_id": "joca", "exercise": { "id": "joc-s01", "type": "multiple_choice", "question": "The ceiling starts leaking. You grab a bucket. 'Hold on, I ___ get a bucket.' What fits?", "options": ["am going to", "will", "going to", "am go"], "correct": 1, "explanation": "Spontaneous reaction = WILL. You didn't plan it — you're deciding right now.", "hint_pt_br": "Decisão na hora = will. Sem plano prévio." }},
+    { "kind": "exercise", "exercise": { "id": "joc-s02", "type": "multiple_choice", "question": "'I bought the ticket last week. I ___ visit my brother in Orlando.' Which?", "options": ["will", "am going to", "am", "go"], "correct": 1, "explanation": "Already planned (bought ticket) → GOING TO.", "hint_pt_br": "Plano firme (já comprou passagem) → going to." }},
+    { "kind": "exercise", "exercise": { "id": "joc-s03", "type": "fill_blank", "question": "Promise: 'Don't worry — I ___ call you as soon as I land.' (promise)", "correct": "will", "explanation": "Promises use WILL. 'I will call you'.", "hint_pt_br": "Promessa = will. 'I'll call you'." }},
+    { "kind": "dialogue", "location_en": "Rooftop, night before the interview", "location_pt": "Terraço, véspera da entrevista", "turns": [
+      { "character_id": "bia", "en": "Are you nervous?", "pt": "Tá nervoso?" },
+      { "character_id": "joca", "en": "A little. But I've prepared. I think I'll do well.", "pt": "Um pouco. Mas me preparei. Acho que vou bem." },
+      { "character_id": "bia", "en": "I'll send you a good-luck text at 2:55.", "pt": "Vou te mandar uma mensagem de boa sorte às 14h55." },
+      { "character_id": "joca", "en": "Thanks. I'm going to need it.", "pt": "Obrigado. Vou precisar." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "joc-s04", "type": "matching", "pairs": [
+      ["spontaneous decision", "will"],
+      ["prior plan", "going to"],
+      ["promise", "will"],
+      ["visible evidence / prediction", "going to"]
+    ], "explanation": "Four contexts, two forms. Learn the trigger, not the verb.", "hint_pt_br": "Quatro contextos, duas formas. Pense no gatilho, não no verbo." }}
+  ]
+}

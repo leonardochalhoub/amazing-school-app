@@ -1,0 +1,44 @@
+{
+  "slug": "if-i-had-a-million",
+  "title": "If I Had a Million Dollars",
+  "description": "Second Conditional — hypothetical situations. If I had… I would… Each character dreams their own impossible dream.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.1",
+  "xp_reward": 50,
+  "estimated_minutes": 16,
+  "summary_pt_br": "Segunda condicional (hipotéticas/irreais): IF + past simple, subject + WOULD + base verb. Erros comuns para brasileiros: usar 'will' no IF ('if I will have' — errado), não usar 'were' no lugar de 'was' no formal ('if I WERE you').",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 21 — One Million Dreams", "subtitle_en": "Second Conditional — the impossible present", "subtitle_pt": "Segunda Condicional — o presente impossível" },
+    { "kind": "narrative", "character_id": "bia", "text_en": "Mr. Kumar asked: 'If you HAD a million dollars, what WOULD you do?'\n'I'd buy the best surfboard money can buy,' Bia said,\n'and I'd rent a house in Hawaii for a year.'", "text_pt": "Mr. Kumar perguntou: 'Se VOCÊS TIVESSEM um milhão de dólares, o que FARIAM?'\n'Compraria a melhor prancha do mundo,' disse a Bia,\n'e alugaria uma casa no Havaí por um ano inteiro.'" },
+    { "kind": "narrative", "character_id": "rafa", "text_en": "Rafa laughed: 'I'D OPEN Tropical Bites in Orlando tomorrow.\nI'D SERVE tacos to a thousand people a day. Not borrow.'\nJoca said: 'I'd quit my job. I'd build my own app.'\nAnd Dona Lúcia whispered: 'I'd spend it all on flowers — and stop.'", "text_pt": "Rafa riu: 'ABRIRIA o Tropical Bites em Orlando amanhã.\nSERVIRIA taco pra mil pessoas por dia. Sem pedir emprestado.'\nJoca disse: 'Pediria demissão. Construiria meu próprio app.'\nE Dona Lúcia sussurrou: 'Gastaria tudo em flores — e parava.'" },
+    { "kind": "grammar_note", "title": "Second Conditional — the formula", "body_en": "Structure: IF + subject + PAST SIMPLE, subject + WOULD + BASE VERB. Two halves, one comma when IF comes first. 'If I HAD money, I WOULD travel.' Use this for imagined/impossible/hypothetical situations in the present. NEVER use WILL in the IF-clause. And with 'I/he/she/it', formal English prefers WERE (not was): 'If I WERE you...' — a fossilized subjunctive.", "body_pt": "Estrutura: IF + passado simples, sujeito + WOULD + verbo base. 'If I had, I would travel.' Para situações imaginárias/irreais no presente. NUNCA 'will' depois do IF (erro clássico). E no formal, use WERE em vez de was: 'If I WERE you' (até 'I' e ele).", "examples": [
+      { "en": "If I had wings, I would fly.", "pt": "Se eu tivesse asas, voaria." },
+      { "en": "If she were rich, she would buy a boat.", "pt": "Se ela fosse rica (hipotético), compraria um barco." },
+      { "en": "What would you do if you won the lottery?", "pt": "O que você faria se ganhasse na loteria?" }
+    ]},
+    { "kind": "vocab_intro", "title": "Hypothetical-thinking phrases", "items": [
+      { "term": "If I were you, I would…", "pt": "Se eu fosse você, eu…", "example_en": "If I were you, I would call her." },
+      { "term": "I wish I had…", "pt": "Eu queria ter…", "example_en": "I wish I had more time." },
+      { "term": "What would you do if…?", "pt": "O que você faria se…?", "example_en": "What would you do if you lost your job?" },
+      { "term": "Imagine you were…", "pt": "Imagine que você fosse…", "example_en": "Imagine you were the president." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "joca", "exercise": { "id": "cond-s01", "type": "multiple_choice", "question": "'If I ___ a time machine, I would fix my code from 2020.' (have)", "options": ["have", "had", "will have", "would have"], "correct": 1, "explanation": "Second conditional: IF + past simple. HAD, not 'have' or 'will have'.", "hint_pt_br": "IF + passado simples. 'If I had', não 'if I have' ou 'if I will have'." }},
+    { "kind": "exercise", "exercise": { "id": "cond-s02", "type": "fill_blank", "question": "Complete: 'If she had wings, she ___ fly.'", "correct": "would", "explanation": "The main clause uses WOULD + base verb.", "hint_pt_br": "Depois da parte do 'if', é WOULD + verbo base." }},
+    { "kind": "exercise", "exercise": { "id": "cond-s03", "type": "multiple_choice", "question": "Which is MORE FORMAL?", "options": ["If I was you, I would leave", "If I were you, I would leave", "If I am you, I will leave", "If I be you, I would leave"], "correct": 1, "explanation": "Formal English uses WERE for all subjects in hypotheticals: 'If I WERE you'. 'Was' is accepted in casual speech but 'were' is the textbook form.", "hint_pt_br": "Formal pede WERE para todos os sujeitos. 'If I were you' é a forma padrão." }},
+    { "kind": "dialogue", "location_en": "Rafa's food truck, dreaming out loud", "location_pt": "Food truck do Rafa, sonhando alto", "turns": [
+      { "character_id": "bia", "en": "If Tropical Bites were in Orlando, I'd visit you.", "pt": "Se o Tropical Bites estivesse em Orlando, eu te visitaria." },
+      { "character_id": "rafa", "en": "If you came, I'd cook the tacos myself.", "pt": "Se você viesse, eu faria os tacos eu mesmo." },
+      { "character_id": "bia", "en": "What would Mr. Kumar say?", "pt": "O que o Mr. Kumar diria?" },
+      { "character_id": "rafa", "en": "He'd say: 'If you go, take Cosmo. He loves a good adventure.'", "pt": "Ele diria: 'Se você for, leva o Cosmo. Ele adora uma aventura.'" }
+    ]},
+    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "cond-s04", "type": "matching", "pairs": [
+      ["If I had money", "Se eu tivesse dinheiro"],
+      ["If I were you", "Se eu fosse você"],
+      ["I would travel", "Eu viajaria"],
+      ["I wouldn't worry", "Eu não me preocuparia"],
+      ["Would you help?", "Você ajudaria?"]
+    ], "explanation": "Five conditional fragments. Chain them for practice.", "hint_pt_br": "Cinco fragmentos de condicional. Treine encaixando." }},
+    { "kind": "exercise", "exercise": { "id": "cond-s05", "type": "fill_blank", "question": "Complete: 'What ___ you do if you won the lottery?'", "correct": "would", "explanation": "Standard second conditional question: WOULD + base verb.", "hint_pt_br": "Pergunta com WOULD + verbo base." }}
+  ]
+}

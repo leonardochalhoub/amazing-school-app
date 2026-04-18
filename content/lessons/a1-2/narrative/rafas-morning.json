@@ -1,0 +1,42 @@
+{
+  "slug": "rafas-morning",
+  "title": "Rafa's Morning — Every Single Day",
+  "description": "Present Simple in action through Rafa's daily routine. He WAKES, he SHAVES, he DRIVES. The -s that only lives on HE/SHE/IT.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 40,
+  "estimated_minutes": 13,
+  "summary_pt_br": "A rotina matinal do Rafa em Present Simple. Reforço do -s em he/she/it, verbos irregulares do cotidiano (have, go, do), e a diferença entre DO e MAKE.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 16 — Rafa's Morning", "subtitle_en": "Present Simple, every single day", "subtitle_pt": "Presente simples, todo santo dia" },
+    { "kind": "narrative", "character_id": "rafa", "text_en": "Rafa WAKES at five. He SHAVES his chin.\nHe MAKES a strong coffee. He LETS the morning begin.\nHe HAS his breakfast. He PUTS on his shoes.\nHe DRIVES to the beach. He NEVER has the blues.", "text_pt": "O Rafa ACORDA às cinco. RASPA o queixo.\nFAZ um café forte. DEIXA a manhã nascer, em desvio.\nTOMA café. CALÇA os sapatos.\nDIRIGE pra praia. Sem TRISTEZA, sem atos." },
+    { "kind": "vocab_intro", "title": "Six daily verbs", "items": [
+      { "term": "wake up", "pt": "acordar", "example_en": "I wake up at 7." },
+      { "term": "have breakfast", "pt": "tomar café da manhã", "example_en": "She has breakfast at 8." },
+      { "term": "go to work", "pt": "ir trabalhar", "example_en": "He goes to work at 9." },
+      { "term": "make lunch", "pt": "fazer o almoço", "example_en": "They make lunch at noon." },
+      { "term": "come home", "pt": "voltar pra casa", "example_en": "We come home at 6." },
+      { "term": "go to bed", "pt": "ir dormir", "example_en": "I go to bed at 11." }
+    ]},
+    { "kind": "grammar_note", "title": "DO vs MAKE — the two confused twins", "body_en": "DO = perform a task, an activity. DO homework, DO the dishes, DO exercise. MAKE = create / produce something. MAKE coffee, MAKE a cake, MAKE a decision. Brazilians often use 'fazer' for both — in English, pick carefully.", "body_pt": "DO = realizar uma tarefa, atividade. DO homework, DO the dishes. MAKE = criar/produzir. MAKE coffee, MAKE a decision. Em português 'fazer' cobre os dois; em inglês você escolhe.", "examples": [
+      { "en": "I do my homework and make a sandwich.", "pt": "Faço a lição (DO) e faço um sanduíche (MAKE)." },
+      { "en": "She does yoga and makes plans.", "pt": "Ela faz yoga (DO) e faz planos (MAKE)." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "morn-s01", "type": "fill_blank", "question": "Complete: 'He ___ coffee every morning.' (fazer)", "correct": "makes", "explanation": "MAKES coffee — producing/creating it. Plus the -s for HE.", "hint_pt_br": "Fazer café = MAKE. E com HE, adiciona -s." }},
+    { "kind": "exercise", "exercise": { "id": "morn-s02", "type": "fill_blank", "question": "Complete: 'She ___ her homework at night.' (fazer a lição)", "correct": "does", "explanation": "DO homework. With SHE, DO becomes DOES.", "hint_pt_br": "Lição = DO. She + do = does." }},
+    { "kind": "dialogue", "location_en": "Food truck, 6 a.m.", "location_pt": "Food truck, 6h", "turns": [
+      { "character_id": "bia", "en": "Do you make tacos every day?", "pt": "Você faz taco todo dia?" },
+      { "character_id": "rafa", "en": "I do. And I do the dishes afterwards.", "pt": "Faço. E depois faço a louça." },
+      { "character_id": "bia", "en": "My mother makes dinner. She doesn't make lunch.", "pt": "Minha mãe faz o jantar. Não faz o almoço." }
+    ]},
+    { "kind": "exercise", "exercise": { "id": "morn-s03", "type": "matching", "pairs": [
+      ["do homework", "fazer a lição"],
+      ["make coffee", "fazer café"],
+      ["do the dishes", "lavar a louça"],
+      ["make a decision", "tomar uma decisão"],
+      ["make plans", "fazer planos"]
+    ], "explanation": "Five pairs. Memorize them as chunks, not word-by-word.", "hint_pt_br": "Memorize como blocos fixos, não palavra por palavra." }},
+    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "morn-s04", "type": "multiple_choice", "question": "Which is correct?", "options": ["She don't make coffee", "She doesn't makes coffee", "She doesn't make coffee", "She no make coffee"], "correct": 2, "explanation": "DOESN'T (for she) + base verb (MAKE, not makes).", "hint_pt_br": "Doesn't + verbo na forma base. 'She doesn't make', não 'doesn't makes'." }}
+  ]
+}

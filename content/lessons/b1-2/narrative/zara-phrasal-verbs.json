@@ -1,0 +1,48 @@
+{
+  "slug": "zara-phrasal-verbs",
+  "title": "Zara and the Phrasal Verb Swarm",
+  "description": "Phrasal verbs — the bane of every learner. Zara shows that LOOK UP ≠ LOOK AFTER ≠ LOOK FOR, and none of them has much to do with looking at the ceiling.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.2",
+  "xp_reward": 55,
+  "estimated_minutes": 17,
+  "summary_pt_br": "Phrasal verbs essenciais: LOOK UP/AFTER/FOR, GET UP/OVER/ALONG, PUT ON/OFF/UP WITH, BREAK DOWN/UP. A chave: não traduza literalmente — decore como blocos. Regra de separável x inseparável.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 22 — The Phrasal Verb Swarm", "subtitle_en": "One verb, a preposition, and a whole new meaning", "subtitle_pt": "Um verbo, uma preposição, um sentido novo" },
+    { "kind": "narrative", "character_id": "zara", "text_en": "Zara wrote three phrases on the whiteboard:\n    LOOK UP a word in the dictionary.\n    LOOK AFTER a child.\n    LOOK FOR your keys.\n'Same verb,' she said, 'three completely different meanings. Welcome to phrasal verbs.'", "text_pt": "A Zara escreveu três frases no quadro:\n    LOOK UP — procurar uma palavra no dicionário.\n    LOOK AFTER — cuidar de uma criança.\n    LOOK FOR — buscar as chaves.\n'Mesmo verbo,' ela disse. 'Três sentidos completamente diferentes. Bem-vindos aos phrasal verbs.'" },
+    { "kind": "grammar_note", "title": "Phrasal verbs — don't translate, memorize", "body_en": "A phrasal verb is a verb + preposition/particle that together mean something NEW. You can't work out 'look after' from 'look' + 'after'. Two rules: (1) SEPARABLE verbs let the object go between — 'pick UP the kids' OR 'pick the kids UP'. With pronouns, you MUST separate: 'pick them UP'. (2) INSEPARABLE verbs keep the particle close: 'look AFTER the kids' — never 'look the kids after'.", "body_pt": "Phrasal verb = verbo + partícula = sentido NOVO. Não tente deduzir. Duas regras: SEPARÁVEL aceita o objeto no meio ('pick up the kids' / 'pick the kids up'). Com pronome, TEM que separar: 'pick them up'. INSEPARÁVEL não separa nunca: 'look after them'.", "examples": [
+      { "en": "Pick UP the kids / Pick the kids UP / Pick THEM UP", "pt": "Separável: tudo certo; com pronome TEM que separar." },
+      { "en": "Look after them. NOT 'look them after'.", "pt": "Inseparável — nunca separa." }
+    ]},
+    { "kind": "vocab_intro", "title": "Ten phrasal verbs for the week", "items": [
+      { "term": "look up (a word)", "pt": "procurar (no dicionário)" },
+      { "term": "look after (someone)", "pt": "cuidar de" },
+      { "term": "look for (something)", "pt": "buscar, procurar por" },
+      { "term": "get up", "pt": "levantar da cama" },
+      { "term": "get over (a problem)", "pt": "superar" },
+      { "term": "get along with", "pt": "dar-se bem com" },
+      { "term": "put on (clothes)", "pt": "vestir" },
+      { "term": "put off (postpone)", "pt": "adiar" },
+      { "term": "put up with", "pt": "aguentar, tolerar" },
+      { "term": "break down (a car/a person)", "pt": "quebrar (carro) / desabar (pessoa)" }
+    ]},
+    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "phr-s01", "type": "fill_blank", "question": "Complete: 'Could you ___ ___ the kids tonight? I have an interview.' (cuidar de)", "correct": "look after", "explanation": "LOOK AFTER = to take care of. Inseparable — the object goes AFTER the phrasal verb.", "hint_pt_br": "'Look after' = cuidar de. Inseparável." }},
+    { "kind": "exercise", "exercise": { "id": "phr-s02", "type": "multiple_choice", "question": "Which sentence is correct?", "options": ["Pick up them at the airport", "Pick them up at the airport", "Pick at the airport them up", "Pick them at the airport up"], "correct": 1, "explanation": "Separable verb + pronoun → you MUST separate: 'pick them up'.", "hint_pt_br": "Verbo separável + pronome = separar obrigatoriamente." }},
+    { "kind": "exercise", "exercise": { "id": "phr-s03", "type": "multiple_choice", "question": "'My car ___ on the way to the airport.' (quebrou)", "options": ["broke up", "broke down", "broke off", "broke over"], "correct": 1, "explanation": "BROKE DOWN = stopped working (car, machine). BROKE UP = ended a relationship. Very different!", "hint_pt_br": "Broke DOWN = parou de funcionar. Broke UP = terminar relacionamento. Não confunda." }},
+    { "kind": "dialogue", "location_en": "Staff room, Zara grading papers", "location_pt": "Sala dos professores, Zara corrigindo provas", "turns": [
+      { "character_id": "zara", "en": "I get along with most of the students.", "pt": "Me dou bem com a maioria dos alunos." },
+      { "character_id": "kumar", "en": "And Joca? Do you put up with him?", "pt": "E o Joca? Você tolera ele?" },
+      { "character_id": "zara", "en": "I put up with him. Barely.", "pt": "Tolero. Apenas." },
+      { "character_id": "kumar", "en": "You'll get over it.", "pt": "Você vai superar." }
+    ]},
+    { "kind": "exercise", "exercise": { "id": "phr-s04", "type": "matching", "pairs": [
+      ["look up", "procurar no dicionário"],
+      ["look after", "cuidar de"],
+      ["get along with", "dar-se bem com"],
+      ["put off", "adiar"],
+      ["put up with", "tolerar"]
+    ], "explanation": "Five essential phrasal verbs. Learn them in full sentences — 'I put up with my noisy neighbors'.", "hint_pt_br": "Cinco essenciais. Decore em frases completas, não isolados." }},
+    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "phr-s05", "type": "fill_blank", "question": "Complete: 'The meeting was ___ ___ until next week.' (adiado)", "correct": "put off", "explanation": "PUT OFF = postpone. 'The meeting was put off' (passive).", "hint_pt_br": "'Put off' = adiar. 'Put off until next week' é frase típica." }}
+  ]
+}

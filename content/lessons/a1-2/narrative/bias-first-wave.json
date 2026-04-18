@@ -1,0 +1,52 @@
+{
+  "slug": "bias-first-wave",
+  "title": "Bia's First Wave",
+  "description": "Past Simple for events that happened. Bia tells the class about the wave that changed her life — irregular verbs and all.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 45,
+  "estimated_minutes": 15,
+  "summary_pt_br": "Past Simple contando a história da Bia pegando a primeira onda. Verbos regulares (-ed) e os irregulares essenciais: go/went, come/came, have/had, see/saw, take/took.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 17 — Bia's First Wave", "subtitle_en": "A story told in the Past Simple", "subtitle_pt": "Uma história no Past Simple" },
+    { "kind": "narrative", "character_id": "bia", "text_en": "I WAS eight. The sun WAS hot. I WENT to the beach with my dad.\nI SAW a wave — big and blue. I TOOK a board he HAD.\nI PADDLED out. I FELL once. I CRIED, just a bit.\nThen I STOOD on the board, and I RODE. And I LOVED every bit.", "text_pt": "Eu tinha oito. O sol FOI forte. FUI pra praia com o pai (went).\nVI uma onda — grande e azul (saw). PEGUEI a prancha dele (took).\nREMEI (paddled). CAÍ uma vez (fell). CHOREI um pouquinho (cried).\nAí EM PÉ fiquei, e SURFEI (rode). E ADOREI cada momentinho." },
+    { "kind": "grammar_note", "title": "Past Simple — two halves", "body_en": "Regular verbs: add -ed. PLAY → PLAYED, WALK → WALKED, LIVE → LIVED. Irregular verbs: memorize them. GO → WENT, HAVE → HAD, SEE → SAW, TAKE → TOOK, COME → CAME. No -s, no -ed — the whole word changes.", "body_pt": "Past Simple tem dois lados. Verbos regulares: adiciona -ed (played, walked, lived). Verbos irregulares: decora — go→went, have→had, see→saw, take→took, come→came. Mudam inteiros.", "examples": [
+      { "en": "I walked to school.", "pt": "Caminhei até a escola (regular)." },
+      { "en": "I went to school.", "pt": "Fui até a escola (irregular)." }
+    ]},
+    { "kind": "vocab_intro", "title": "Ten essential irregular verbs", "items": [
+      { "term": "go → went", "pt": "ir / foi" },
+      { "term": "have → had", "pt": "ter / teve" },
+      { "term": "see → saw", "pt": "ver / viu" },
+      { "term": "take → took", "pt": "pegar / pegou" },
+      { "term": "come → came", "pt": "vir / veio" },
+      { "term": "do → did", "pt": "fazer / fez" },
+      { "term": "make → made", "pt": "criar / criou" },
+      { "term": "say → said", "pt": "dizer / disse" },
+      { "term": "give → gave", "pt": "dar / deu" },
+      { "term": "get → got", "pt": "conseguir / conseguiu" }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "wave-s01", "type": "fill_blank", "question": "Complete: 'Yesterday I ___ to the beach.' (go)", "correct": "went", "explanation": "GO is irregular. Past = WENT.", "hint_pt_br": "Go é irregular. Passado = went." }},
+    { "kind": "exercise", "exercise": { "id": "wave-s02", "type": "fill_blank", "question": "Complete: 'She ___ her keys on the table.' (see)", "correct": "saw", "explanation": "SEE is irregular. Past = SAW.", "hint_pt_br": "See é irregular. Passado = saw." }},
+    { "kind": "exercise", "exercise": { "id": "wave-s03", "type": "fill_blank", "question": "Complete: 'We ___ a long walk last Sunday.' (take)", "correct": "took", "explanation": "TAKE → TOOK. 'Take a walk' is a fixed expression.", "hint_pt_br": "Take → took. 'Take a walk' = dar uma caminhada (bloco fixo)." }},
+    { "kind": "grammar_note", "title": "Past Simple questions and negatives use DID", "body_en": "For questions and negatives, use DID (or DIDN'T) + base verb. 'Did you go?' — NOT 'did you went'. 'I didn't see' — NOT 'I didn't saw'. DID carries the past tense; the main verb relaxes.", "body_pt": "Perguntas e negativas usam DID/DIDN'T + verbo BASE. 'Did you go?' não 'did you went'. 'I didn't see' não 'didn't saw'. O DID carrega o passado; o verbo principal relaxa.", "examples": [
+      { "en": "Did you surf yesterday?", "pt": "Você surfou ontem?" },
+      { "en": "No, I didn't go to the beach.", "pt": "Não, não fui à praia." }
+    ]},
+    { "kind": "exercise", "exercise": { "id": "wave-s04", "type": "multiple_choice", "question": "Which is correct?", "options": ["Did you went?", "Did you go?", "Did you gone?", "Do you went?"], "correct": 1, "explanation": "DID + base verb. 'Did you GO?' — never 'did you went'.", "hint_pt_br": "Did + verbo base. 'Did you go?' — nunca 'did you went'." }},
+    { "kind": "dialogue", "location_en": "Classroom, after the story", "location_pt": "Sala, depois da história", "turns": [
+      { "character_id": "maya", "en": "How old were you?", "pt": "Quantos anos você tinha?" },
+      { "character_id": "bia", "en": "I was eight. My dad gave me the board.", "pt": "Eu tinha oito. Meu pai me deu a prancha." },
+      { "character_id": "maya", "en": "Did you fall a lot?", "pt": "Você caiu muito?" },
+      { "character_id": "bia", "en": "I fell once — then I stood up. I didn't give up.", "pt": "Caí uma vez — aí fiquei em pé. Não desisti." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "wave-s05", "type": "matching", "pairs": [
+      ["go", "went"],
+      ["have", "had"],
+      ["see", "saw"],
+      ["take", "took"],
+      ["come", "came"]
+    ], "explanation": "Five irregular verbs — memorize them as pairs. They appear in nearly every past story.", "hint_pt_br": "Cinco irregulares que aparecem em quase toda história no passado." }}
+  ]
+}
