@@ -1,0 +1,46 @@
+{
+  "slug": "mixed-regrets",
+  "title": "Mixed Conditionals — If I Had, I Would Be",
+  "description": "The conditional that bends time. IF + past perfect (then), WOULD + base (now). Dona Lúcia looks back — and forward.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.1",
+  "xp_reward": 60,
+  "estimated_minutes": 16,
+  "summary_pt_br": "Mixed Conditional: condição no passado (IF + past perfect) e consequência no PRESENTE (would + verbo base). 'If I HAD STUDIED more, I WOULD BE fluent now.' Usado para arrependimentos e situações onde o passado moldou o presente.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 27 — If I Had, I Would Be", "subtitle_en": "The conditional that bends time", "subtitle_pt": "A condicional que dobra o tempo" },
+    { "kind": "narrative", "character_id": "lucia", "text_en": "Dona Lúcia traced a line on the letter with her finger.\n'If I HAD LEARNED English back then,\nI WOULDN'T BE reading a dictionary today.\nIf I HAD GONE with him to London,\nmy whole life WOULD BE different now.'", "text_pt": "Dona Lúcia passou o dedo sobre uma linha da carta.\n'Se eu TIVESSE APRENDIDO inglês naquela época,\nnão ESTARIA agora consultando dicionário.\nSe TIVESSE IDO com ele para Londres,\nminha vida toda SERIA diferente.'" },
+    { "kind": "grammar_note", "title": "Mixed conditional — past condition, present result", "body_en": "Structure: IF + PAST PERFECT (had done), subject + WOULD + BASE VERB. The IF half is in the past (what didn't happen); the result half is in the PRESENT (what's true now because of it). Use for regrets and counter-factual current states.", "body_pt": "Estrutura: IF + past perfect (had done), sujeito + would + verbo base. O IF olha para o passado; o resultado está no PRESENTE. Usa para arrependimento + estado atual contrafactual. 'Se eu tivesse estudado (então), eu seria fluente (agora).'", "examples": [
+      { "en": "If I had saved money, I would be traveling now.", "pt": "Se tivesse economizado, estaria viajando agora." },
+      { "en": "If she hadn't quit college, she would be a lawyer today.", "pt": "Se ela não tivesse largado a faculdade, seria advogada hoje." },
+      { "en": "If Rafa had learned English earlier, he'd be in Orlando by now.", "pt": "Se o Rafa tivesse aprendido inglês mais cedo, já estaria em Orlando." }
+    ]},
+    { "kind": "vocab_intro", "title": "Three flavors of conditional — side by side", "items": [
+      { "term": "First (real future)", "pt": "If I work hard, I WILL succeed." },
+      { "term": "Second (unreal present)", "pt": "If I worked hard, I WOULD succeed." },
+      { "term": "Third (unreal past)", "pt": "If I had worked hard, I WOULD HAVE succeeded." },
+      { "term": "Mixed (past → present)", "pt": "If I had worked hard, I WOULD BE successful now." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "lucia", "exercise": { "id": "mix-s01", "type": "multiple_choice", "question": "'If I ___ English when I was young, I ___ reading this letter easily now.' Which?", "options": ["learn / would read", "had learned / would be", "learned / would be", "would have learned / would be"], "correct": 1, "explanation": "Past condition (had learned) + present result (would be) = classic mixed conditional.", "hint_pt_br": "'Had learned' + 'would be' — passado + presente = mista." }},
+    { "kind": "exercise", "exercise": { "id": "mix-s02", "type": "fill_blank", "question": "Complete: 'If we ___ ___ the warning, we wouldn't be in this mess.' (hear, past perfect)", "correct": "had heard", "explanation": "Past condition = HAD + heard. Result is present (wouldn't be).", "hint_pt_br": "Condição no passado = had heard. Resultado presente = wouldn't be." }},
+    { "kind": "exercise", "exercise": { "id": "mix-s03", "type": "multiple_choice", "question": "Which is a 'pure' third conditional (past → past), NOT mixed?", "options": [
+        "If I had studied, I would be a doctor now",
+        "If I had studied, I would have passed the test",
+        "If I studied, I would pass",
+        "If I study, I will pass"
+      ], "correct": 1, "explanation": "Third conditional = past condition + past result. 'Would have passed' is in the past.", "hint_pt_br": "Third conditional: tudo no passado. 'Would have passed' é passado." }},
+    { "kind": "dialogue", "location_en": "Garden, afternoon", "location_pt": "Jardim, tarde", "turns": [
+      { "character_id": "bia", "en": "Do you regret not going with him?", "pt": "Você se arrepende de não ter ido com ele?" },
+      { "character_id": "lucia", "en": "If I had gone, I would have a different life — but I wouldn't have you and Rafa.", "pt": "Se tivesse ido, teria uma vida diferente — mas não teria você e o Rafa." },
+      { "character_id": "bia", "en": "So the past built the present.", "pt": "Então o passado construiu o presente." },
+      { "character_id": "lucia", "en": "The past always does. That's why the mixed conditional exists.", "pt": "O passado sempre constrói. Por isso existe a mixed conditional." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "mix-s04", "type": "matching", "pairs": [
+      ["If + past perfect", "condição no passado"],
+      ["would + base", "resultado no presente"],
+      ["Third conditional", "passado → passado"],
+      ["Mixed conditional", "passado → presente"]
+    ], "explanation": "Four components. Once you see the two halves have different time zones, mixed conditionals click.", "hint_pt_br": "Quatro pedaços. Quando enxerga que as duas metades vivem em tempos diferentes, destrava." }}
+  ]
+}
