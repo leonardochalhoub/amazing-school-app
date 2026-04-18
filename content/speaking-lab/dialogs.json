@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "description": "10 short dialogs for the Speaking Lab. The AI speaks a line via browser TTS; the user records a spoken response and gets scored against the expected English target. When a dialog is picked the user can tap 'Start dialog' and it plays turn by turn.",
+  "dialogs": [
+    {
+      "id": "dlg-01",
+      "band": "a1",
+      "title": "Meeting someone new",
+      "pt_summary": "Apresentações básicas — o Mr. Kumar te cumprimenta e você responde.",
+      "character": "Mr. Kumar",
+      "turns": [
+        { "speaker": "ai", "text": "Good morning! Welcome to Amazing School. What is your name?", "pt": "Bom dia! Bem-vindo à Amazing School. Qual é o seu nome?" },
+        { "speaker": "user", "target": "My name is Leo. Nice to meet you.", "pt_hint": "Diga seu nome e 'prazer em conhecer você'." },
+        { "speaker": "ai", "text": "Nice to meet you too, Leo. Where are you from?", "pt": "Prazer em te conhecer também, Leo. De onde você é?" },
+        { "speaker": "user", "target": "I am from Brazil. I live in São Paulo.", "pt_hint": "'Eu sou do Brasil. Eu moro em São Paulo.'" },
+        { "speaker": "ai", "text": "Wonderful. Enjoy your first day.", "pt": "Maravilha. Aproveite seu primeiro dia." }
+      ]
+    },
+    {
+      "id": "dlg-02",
+      "band": "a1",
+      "title": "Ordering coffee",
+      "pt_summary": "Pedindo um café em uma cafeteria em inglês.",
+      "character": "Barista",
+      "turns": [
+        { "speaker": "ai", "text": "Hi, welcome to the coffee shop. What can I get you today?", "pt": "Oi, bem-vindo à cafeteria. O que posso servir hoje?" },
+        { "speaker": "user", "target": "I would like a small coffee with milk, please.", "pt_hint": "Peça um café pequeno com leite, por favor." },
+        { "speaker": "ai", "text": "Sure. Anything to eat?", "pt": "Claro. Algo para comer?" },
+        { "speaker": "user", "target": "Yes, a chocolate muffin, please.", "pt_hint": "Sim, um muffin de chocolate." },
+        { "speaker": "ai", "text": "That will be six dollars. Thank you!", "pt": "Vai dar seis dólares. Obrigado!" }
+      ]
+    },
+    {
+      "id": "dlg-03",
+      "band": "a1",
+      "title": "Asking for directions",
+      "pt_summary": "Pedindo direção para a rodoviária.",
+      "character": "Local",
+      "turns": [
+        { "speaker": "ai", "text": "Hello there. Can I help you?", "pt": "Olá. Posso ajudar?" },
+        { "speaker": "user", "target": "Excuse me, where is the bus station?", "pt_hint": "Pergunte onde é a rodoviária." },
+        { "speaker": "ai", "text": "It is two blocks to the right, next to the supermarket.", "pt": "Duas quadras à direita, ao lado do supermercado." },
+        { "speaker": "user", "target": "Thank you very much. Have a good day.", "pt_hint": "Agradeça e deseje bom dia." }
+      ]
+    },
+    {
+      "id": "dlg-04",
+      "band": "a2",
+      "title": "Hotel check-in",
+      "pt_summary": "Fazendo o check-in em um hotel.",
+      "character": "Receptionist",
+      "turns": [
+        { "speaker": "ai", "text": "Good evening. Do you have a reservation?", "pt": "Boa noite. Você tem reserva?" },
+        { "speaker": "user", "target": "Yes, I have a reservation under my name for two nights.", "pt_hint": "Diga que tem reserva em seu nome por duas noites." },
+        { "speaker": "ai", "text": "Perfect. May I see your passport, please?", "pt": "Perfeito. Posso ver seu passaporte?" },
+        { "speaker": "user", "target": "Of course, here you are.", "pt_hint": "'Claro, aqui está.'" },
+        { "speaker": "ai", "text": "Breakfast is served from seven to ten. Enjoy your stay.", "pt": "Café da manhã das sete às dez. Boa estadia." }
+      ]
+    },
+    {
+      "id": "dlg-05",
+      "band": "a2",
+      "title": "Ordering tacos with Rafa",
+      "pt_summary": "No food truck do Rafa em Praia do Sol.",
+      "character": "Rafa",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome to Tropical Bites. What can I get you?", "pt": "Bem-vindo ao Tropical Bites. O que vai querer?" },
+        { "speaker": "user", "target": "I want three chicken tacos, please.", "pt_hint": "Peça três tacos de frango." },
+        { "speaker": "ai", "text": "Spicy or mild?", "pt": "Picante ou suave?" },
+        { "speaker": "user", "target": "Mild, please. And a bottle of water.", "pt_hint": "Suave e uma garrafa de água." },
+        { "speaker": "ai", "text": "That will be twelve dollars. Coming right up.", "pt": "Vai dar doze dólares. Já sai." }
+      ]
+    },
+    {
+      "id": "dlg-06",
+      "band": "a2",
+      "title": "Surfing lesson with Bia",
+      "pt_summary": "Bia te apresenta o esporte antes da primeira onda.",
+      "character": "Bia",
+      "turns": [
+        { "speaker": "ai", "text": "Hey! Ready for your first surfing lesson?", "pt": "E aí! Pronto para sua primeira aula de surf?" },
+        { "speaker": "user", "target": "Yes, I am very excited but a little nervous.", "pt_hint": "Diga que está animado mas nervoso." },
+        { "speaker": "ai", "text": "Do not worry. Have you ever been on a surfboard?", "pt": "Relaxa. Já ficou em cima de uma prancha?" },
+        { "speaker": "user", "target": "No, I have never tried surfing before.", "pt_hint": "Nunca surfou antes." },
+        { "speaker": "ai", "text": "Perfect. Let's start on the sand.", "pt": "Ótimo. Vamos começar na areia." }
+      ]
+    },
+    {
+      "id": "dlg-07",
+      "band": "a2",
+      "title": "At the airport check-in",
+      "pt_summary": "Despachando a mala no balcão do aeroporto.",
+      "character": "Agent",
+      "turns": [
+        { "speaker": "ai", "text": "Good morning. Where are you flying today?", "pt": "Bom dia. Para onde voa hoje?" },
+        { "speaker": "user", "target": "I am flying to Orlando.", "pt_hint": "Voando para Orlando." },
+        { "speaker": "ai", "text": "Do you have any bags to check in?", "pt": "Tem malas para despachar?" },
+        { "speaker": "user", "target": "Yes, I have one bag to check in and one carry-on.", "pt_hint": "Uma mala e uma de mão." },
+        { "speaker": "ai", "text": "Here is your boarding pass. Gate twelve. Have a safe flight.", "pt": "Aqui está o cartão de embarque. Portão doze. Bom voo." }
+      ]
+    },
+    {
+      "id": "dlg-08",
+      "band": "a2",
+      "title": "Phone call to a friend",
+      "pt_summary": "Ligação rápida combinando planos.",
+      "character": "Friend",
+      "turns": [
+        { "speaker": "ai", "text": "Hi, it's me. Are you free this weekend?", "pt": "Oi, sou eu. Tá livre este fim de semana?" },
+        { "speaker": "user", "target": "Yes, I am free on Saturday afternoon.", "pt_hint": "Livre sábado à tarde." },
+        { "speaker": "ai", "text": "Great. Do you want to watch a movie?", "pt": "Ótimo. Quer ver um filme?" },
+        { "speaker": "user", "target": "Sure, that sounds like a great idea.", "pt_hint": "'Claro, parece uma ótima ideia.'" },
+        { "speaker": "ai", "text": "Cool. I will text you the details.", "pt": "Legal. Te mando os detalhes por mensagem." }
+      ]
+    },
+    {
+      "id": "dlg-09",
+      "band": "b1",
+      "title": "Job interview warm-up",
+      "pt_summary": "Quebra-gelo de entrevista de emprego em inglês.",
+      "character": "Recruiter",
+      "turns": [
+        { "speaker": "ai", "text": "Thanks for joining us today. Can you tell me about yourself?", "pt": "Obrigado por vir. Pode se apresentar?" },
+        { "speaker": "user", "target": "I am a software engineer with five years of experience building web apps.", "pt_hint": "Engenheiro de software com cinco anos de experiência." },
+        { "speaker": "ai", "text": "Why do you want to join our company?", "pt": "Por que quer entrar na nossa empresa?" },
+        { "speaker": "user", "target": "Because I believe in your mission and I want to grow with a strong team.", "pt_hint": "Acredita na missão e quer crescer com um bom time." },
+        { "speaker": "ai", "text": "Great answer. We will be in touch soon.", "pt": "Ótima resposta. Entraremos em contato em breve." }
+      ]
+    },
+    {
+      "id": "dlg-10",
+      "band": "b1",
+      "title": "Talking about your weekend",
+      "pt_summary": "Conversa informal na segunda-feira.",
+      "character": "Colleague",
+      "turns": [
+        { "speaker": "ai", "text": "Hey, how was your weekend?", "pt": "E aí, como foi o fim de semana?" },
+        { "speaker": "user", "target": "It was amazing. I went to the beach with my family.", "pt_hint": "Incrível, foi à praia com a família." },
+        { "speaker": "ai", "text": "Nice. Did you do anything special?", "pt": "Legal. Fez algo especial?" },
+        { "speaker": "user", "target": "Yes, we had a barbecue and watched the sunset.", "pt_hint": "Fez churrasco e viu o pôr do sol." },
+        { "speaker": "ai", "text": "Sounds wonderful. I am glad you enjoyed it.", "pt": "Parece ótimo. Que bom que curtiu." }
+      ]
+    }
+  ]
+}
