@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 40,
-  "estimated_minutes": 23,
+  "estimated_minutes": 27,
   "summary_pt_br": "Quantificadores em inglês: SOME (afirmativas), ANY (negativas/perguntas), MUCH (incontáveis), MANY (contáveis), A LOT OF (ambos). Armadilha clássica: contável ≠ incontável (information, advice, money são INCONTÁVEIS em inglês).",
   "scenes": [
     {
@@ -177,6 +177,69 @@
         "explanation": "Four pairs covering every quantity need.",
         "hint_pt_br": "Quatro pares cobrindo toda necessidade de quantidade."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Grocery shopping with Dona Lúcia",
+      "character": "Dona Lúcia",
+      "pt_summary": "Compras no mercado — some, any, much, many.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Would you help me with some shopping, dear?",
+          "pt": "Me ajuda com umas compras, querido?"
+        },
+        {
+          "speaker": "user",
+          "target": "Of course. What do you need?",
+          "pt_hint": "'Claro. O que precisa?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I need some bread and a little milk.",
+          "pt": "Preciso de pão e um pouco de leite."
+        },
+        {
+          "speaker": "user",
+          "target": "How much milk do you need?",
+          "pt_hint": "HOW MUCH — incontáveis."
+        },
+        {
+          "speaker": "ai",
+          "text": "Two liters, please.",
+          "pt": "Dois litros."
+        },
+        {
+          "speaker": "user",
+          "target": "And how many apples?",
+          "pt_hint": "HOW MANY — contáveis."
+        },
+        {
+          "speaker": "ai",
+          "text": "Six red apples, please.",
+          "pt": "Seis maçãs vermelhas."
+        },
+        {
+          "speaker": "user",
+          "target": "Do you have any cheese at home?",
+          "pt_hint": "ANY em pergunta."
+        },
+        {
+          "speaker": "ai",
+          "text": "No, I do not have any. Please buy some.",
+          "pt": "Não, não tenho. Compra um."
+        },
+        {
+          "speaker": "user",
+          "target": "OK. I will buy everything.",
+          "pt_hint": "'Vou comprar tudo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you so much, dear.",
+          "pt": "Muito obrigada, querido."
+        }
+      ]
     },
     {
       "kind": "reading",

@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "Como concordar em inglês. Afirmativa: So + auxiliar + sujeito ('So do I', 'So am I'). Me too (informal). Negativa: Neither + auxiliar + sujeito ('Neither do I'). Me neither (informal). Nunca 'Me too' em frase negativa.",
   "scenes": [
     {
@@ -117,6 +117,97 @@
         "explanation": "Five patterns. The auxiliary always mirrors the original.",
         "hint_pt_br": "Cinco padrões. Auxiliar sempre espelha."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-so-me-too-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"So do I. I ___ it too.\"",
+        "correct": "love",
+        "explanation": "The full phrase is: \"So do I. I love it too.\"",
+        "hint_pt_br": "SO DO I."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-so-me-too-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. (NEITHER DO I.)",
+        "options": [
+          "I am not sure.",
+          "Neither do I.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"Neither do I.\"",
+        "hint_pt_br": "NEITHER DO I."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Finding common ground",
+      "character": "Classmate",
+      "pt_summary": "Concordância — so do I, me too, neither do I, me neither.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "I love surfing at Praia do Sol.",
+          "pt": "Adoro surfar em Praia do Sol."
+        },
+        {
+          "speaker": "user",
+          "target": "So do I. I love it too.",
+          "pt_hint": "SO DO I."
+        },
+        {
+          "speaker": "ai",
+          "text": "I don't like cold water.",
+          "pt": "Não gosto de água fria."
+        },
+        {
+          "speaker": "user",
+          "target": "Neither do I.",
+          "pt_hint": "NEITHER DO I."
+        },
+        {
+          "speaker": "ai",
+          "text": "I am learning English this year.",
+          "pt": "Estou aprendendo inglês esse ano."
+        },
+        {
+          "speaker": "user",
+          "target": "Me too. I started in January.",
+          "pt_hint": "ME TOO."
+        },
+        {
+          "speaker": "ai",
+          "text": "I don't have time to study every day.",
+          "pt": "Não tenho tempo de estudar todo dia."
+        },
+        {
+          "speaker": "user",
+          "target": "Me neither. But I try.",
+          "pt_hint": "ME NEITHER."
+        },
+        {
+          "speaker": "ai",
+          "text": "I can swim very well.",
+          "pt": "Sei nadar muito bem."
+        },
+        {
+          "speaker": "user",
+          "target": "So can I. I swim every morning.",
+          "pt_hint": "SO CAN I."
+        },
+        {
+          "speaker": "ai",
+          "text": "We have a lot in common!",
+          "pt": "Temos muito em comum!"
+        }
+      ]
     },
     {
       "kind": "reading",

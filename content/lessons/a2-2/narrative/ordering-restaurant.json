@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "Pedir uma refeição completa em restaurante: starter, main, dessert. Pedir substituições, avisar alergias, pedir a conta. Formas educadas: 'Could I have...', 'Without...', 'I'm allergic to...'.",
   "scenes": [
     {
@@ -131,6 +131,97 @@
         "explanation": "ALLERGIC TO — fixed expression.",
         "hint_pt_br": "'Allergic TO' — expressão fixa."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-ordering-restaurant-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"For two, ___.\"",
+        "correct": "please",
+        "explanation": "The full phrase is: \"For two, please.\"",
+        "hint_pt_br": "'Pra dois.'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-ordering-restaurant-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Dois copos de água.')",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "Two glasses of water, please.",
+          "Yes, of course."
+        ],
+        "correct": 2,
+        "explanation": "The correct response is: \"Two glasses of water, please.\"",
+        "hint_pt_br": "'Dois copos de água.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Dinner at a restaurant",
+      "character": "Waiter",
+      "pt_summary": "Pedindo no restaurante.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Good evening. A table for how many?",
+          "pt": "Boa noite. Mesa pra quantos?"
+        },
+        {
+          "speaker": "user",
+          "target": "For two, please.",
+          "pt_hint": "'Pra dois.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Here is the menu. Any drinks to start?",
+          "pt": "Aqui o cardápio. Bebida pra começar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Two glasses of water, please.",
+          "pt_hint": "'Dois copos de água.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Are you ready to order?",
+          "pt": "Prontos pra pedir?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I will have the fish and salad.",
+          "pt_hint": "'Peixe e salada.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Excellent choice. And your friend?",
+          "pt": "Ótima escolha. E sua amiga?"
+        },
+        {
+          "speaker": "user",
+          "target": "She will have the pasta with chicken.",
+          "pt_hint": "'Massa com frango.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Any dessert tonight?",
+          "pt": "Sobremesa?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, one chocolate cake to share.",
+          "pt_hint": "'Bolo de chocolate pra dividir.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. I will bring your drinks now.",
+          "pt": "Perfeito. Trago as bebidas."
+        }
+      ]
     },
     {
       "kind": "reading",

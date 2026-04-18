@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 40,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "O /ð/ no meio das palavras: MOTHER, FATHER, BROTHER, ANOTHER, TOGETHER, WEATHER, RATHER. Praticado com a carta da Dona Lúcia e trechos de músicas do Pink Floyd e Paul Simon.",
   "scenes": [
     {
@@ -181,6 +181,69 @@
       "scene_emoji": "💌",
       "text_en": "Dona Lúcia folded the letter. She smiled.\n'Two sounds,' she said. 'One with air, one with hum.\nThey filled my husband's English — so they'll fill mine too.\nI'll write him back. It's something I can do.'",
       "text_pt": "Dona Lúcia dobrou a carta. Sorriu.\n'Dois sons,' ela disse. 'Um de ar, outro de zunido.\nEnchiam o inglês do meu marido — e vão encher o meu também.\nVou responder a ele. É algo que eu posso, meu bem.'"
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Family reunion (TH sound)",
+      "character": "Bia",
+      "pt_summary": "TH sonoro em mother, brother, another, other, together.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Here we are with my whole family.",
+          "pt": "Aqui estou com minha família inteira."
+        },
+        {
+          "speaker": "user",
+          "target": "Who is your mother?",
+          "pt_hint": "MOTHER — TH sonoro."
+        },
+        {
+          "speaker": "ai",
+          "text": "My mother is the woman with the red dress.",
+          "pt": "Minha mãe é a mulher de vestido vermelho."
+        },
+        {
+          "speaker": "user",
+          "target": "And who is your brother?",
+          "pt_hint": "BROTHER — TH sonoro."
+        },
+        {
+          "speaker": "ai",
+          "text": "My brother is the tall boy on the left.",
+          "pt": "Meu irmão é o menino alto à esquerda."
+        },
+        {
+          "speaker": "user",
+          "target": "Is there another sister?",
+          "pt_hint": "ANOTHER."
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, another sister — she is away at college.",
+          "pt": "Sim, outra irmã — está na faculdade."
+        },
+        {
+          "speaker": "user",
+          "target": "You and your brother look alike.",
+          "pt_hint": "'Você e seu irmão se parecem.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "People say that all the time.",
+          "pt": "Todo mundo fala isso."
+        },
+        {
+          "speaker": "user",
+          "target": "Can we take a photo together?",
+          "pt_hint": "TOGETHER."
+        },
+        {
+          "speaker": "ai",
+          "text": "Sure! Everyone, gather together.",
+          "pt": "Claro! Pessoal, vamos todos juntos."
+        }
+      ]
     },
     {
       "kind": "reading",

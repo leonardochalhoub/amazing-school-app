@@ -6,19 +6,37 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 10,
+  "estimated_minutes": 14,
   "summary_pt_br": "Objetos da sala de aula e preposições de lugar (on, in, under, next to). O inglês usa preposições específicas que nem sempre batem com o português.",
   "exercises": [
     {
       "id": "cls-001",
       "type": "matching",
       "pairs": [
-        ["caderno", "notebook"],
-        ["livro", "book"],
-        ["caneta", "pen"],
-        ["lápis", "pencil"],
-        ["mochila", "backpack"],
-        ["mesa", "desk"]
+        [
+          "caderno",
+          "notebook"
+        ],
+        [
+          "livro",
+          "book"
+        ],
+        [
+          "caneta",
+          "pen"
+        ],
+        [
+          "lápis",
+          "pencil"
+        ],
+        [
+          "mochila",
+          "backpack"
+        ],
+        [
+          "mesa",
+          "desk"
+        ]
       ],
       "explanation": "Six classroom staples. Note: 'desk' is the school desk; 'table' is the general word for any table at home or a restaurant.",
       "hint_pt_br": "'Desk' é a mesa/carteira escolar. 'Table' é a mesa de casa, restaurante, etc."
@@ -27,7 +45,12 @@
       "id": "cls-002",
       "type": "multiple_choice",
       "question": "The book is ___ the desk.",
-      "options": ["on", "in", "at", "by"],
+      "options": [
+        "on",
+        "in",
+        "at",
+        "by"
+      ],
       "correct": 0,
       "explanation": "ON = on top of (resting on a surface). The book sits on top of the desk → 'on the desk'.",
       "hint_pt_br": "ON = em cima de algo. Sobre a mesa, sobre o chão, sobre a cama."
@@ -36,7 +59,12 @@
       "id": "cls-003",
       "type": "multiple_choice",
       "question": "My pen is ___ my backpack.",
-      "options": ["on", "in", "under", "over"],
+      "options": [
+        "on",
+        "in",
+        "under",
+        "over"
+      ],
       "correct": 1,
       "explanation": "IN = inside. The pen is inside the backpack.",
       "hint_pt_br": "IN = dentro de. Na mochila = 'in the backpack'."
@@ -45,7 +73,12 @@
       "id": "cls-004",
       "type": "multiple_choice",
       "question": "The cat is ___ the table. (the cat is below it)",
-      "options": ["on", "in", "under", "with"],
+      "options": [
+        "on",
+        "in",
+        "under",
+        "with"
+      ],
       "correct": 2,
       "explanation": "UNDER = below. Easy one-to-one with Portuguese 'embaixo de'.",
       "hint_pt_br": "UNDER = embaixo de."
@@ -62,10 +95,22 @@
       "id": "cls-006",
       "type": "matching",
       "pairs": [
-        ["cadeira", "chair"],
-        ["quadro / lousa", "whiteboard"],
-        ["tesoura", "scissors"],
-        ["borracha", "eraser"]
+        [
+          "cadeira",
+          "chair"
+        ],
+        [
+          "quadro / lousa",
+          "whiteboard"
+        ],
+        [
+          "tesoura",
+          "scissors"
+        ],
+        [
+          "borracha",
+          "eraser"
+        ]
       ],
       "explanation": "Four more you'll use weekly. 'Scissors' is always plural in English — 'the scissors are sharp', never 'the scissor is sharp'.",
       "hint_pt_br": "Atenção: 'scissors' é SEMPRE plural em inglês, mesmo quando em português dizemos 'a tesoura'."
@@ -91,6 +136,228 @@
       "correct": 0,
       "explanation": "For existence ('there is/are'), the short answer is 'Yes, there is.' or 'No, there isn't.' Not 'it has' (that's Portuguese 'tem').",
       "hint_pt_br": "Cuidado: em inglês 'tem' no sentido de existir é 'there is/are', não 'have'."
+    }
+  ],
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Classroom Objects & Prepositions of Place",
+      "subtitle_en": "Things around you in a classroom, and where they are — on, in, under, next to."
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cls-001",
+        "type": "matching",
+        "pairs": [
+          [
+            "caderno",
+            "notebook"
+          ],
+          [
+            "livro",
+            "book"
+          ],
+          [
+            "caneta",
+            "pen"
+          ],
+          [
+            "lápis",
+            "pencil"
+          ],
+          [
+            "mochila",
+            "backpack"
+          ],
+          [
+            "mesa",
+            "desk"
+          ]
+        ],
+        "explanation": "Six classroom staples. Note: 'desk' is the school desk; 'table' is the general word for any table at home or a restaurant.",
+        "hint_pt_br": "'Desk' é a mesa/carteira escolar. 'Table' é a mesa de casa, restaurante, etc."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cls-002",
+        "type": "multiple_choice",
+        "question": "The book is ___ the desk.",
+        "options": [
+          "on",
+          "in",
+          "at",
+          "by"
+        ],
+        "correct": 0,
+        "explanation": "ON = on top of (resting on a surface). The book sits on top of the desk → 'on the desk'.",
+        "hint_pt_br": "ON = em cima de algo. Sobre a mesa, sobre o chão, sobre a cama."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cls-003",
+        "type": "multiple_choice",
+        "question": "My pen is ___ my backpack.",
+        "options": [
+          "on",
+          "in",
+          "under",
+          "over"
+        ],
+        "correct": 1,
+        "explanation": "IN = inside. The pen is inside the backpack.",
+        "hint_pt_br": "IN = dentro de. Na mochila = 'in the backpack'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cls-004",
+        "type": "multiple_choice",
+        "question": "The cat is ___ the table. (the cat is below it)",
+        "options": [
+          "on",
+          "in",
+          "under",
+          "with"
+        ],
+        "correct": 2,
+        "explanation": "UNDER = below. Easy one-to-one with Portuguese 'embaixo de'.",
+        "hint_pt_br": "UNDER = embaixo de."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cls-005",
+        "type": "fill_blank",
+        "question": "Complete: 'Maria is sitting ___ ___ Paul.' (beside Paul)",
+        "correct": "next to",
+        "explanation": "NEXT TO = beside / ao lado de. Two words — important.",
+        "hint_pt_br": "'Next to' (duas palavras) = ao lado de."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cls-006",
+        "type": "matching",
+        "pairs": [
+          [
+            "cadeira",
+            "chair"
+          ],
+          [
+            "quadro / lousa",
+            "whiteboard"
+          ],
+          [
+            "tesoura",
+            "scissors"
+          ],
+          [
+            "borracha",
+            "eraser"
+          ]
+        ],
+        "explanation": "Four more you'll use weekly. 'Scissors' is always plural in English — 'the scissors are sharp', never 'the scissor is sharp'.",
+        "hint_pt_br": "Atenção: 'scissors' é SEMPRE plural em inglês, mesmo quando em português dizemos 'a tesoura'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cls-007",
+        "type": "fill_blank",
+        "question": "Complete: 'The whiteboard is ___ ___ ___ the classroom.' (at the front)",
+        "correct": "at the front of",
+        "explanation": "AT THE FRONT OF / AT THE BACK OF for positions in a room.",
+        "hint_pt_br": "'At the front of' = na frente de. 'At the back of' = no fundo de."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cls-008",
+        "type": "multiple_choice",
+        "question": "A teacher asks 'Is there a clock on the wall?' The right answer if yes:",
+        "options": [
+          "Yes, there is.",
+          "Yes, it has.",
+          "Yes, it is.",
+          "Yes, have."
+        ],
+        "correct": 0,
+        "explanation": "For existence ('there is/are'), the short answer is 'Yes, there is.' or 'No, there isn't.' Not 'it has' (that's Portuguese 'tem').",
+        "hint_pt_br": "Cuidado: em inglês 'tem' no sentido de existir é 'there is/are', não 'have'."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Classroom objects drill",
+      "character": "Teacher",
+      "pt_summary": "Objetos da sala de aula.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What is on the desk?",
+          "pt": "O que tá na mesa?"
+        },
+        {
+          "speaker": "user",
+          "target": "There is a book and a pencil.",
+          "pt_hint": "Book, pencil."
+        },
+        {
+          "speaker": "ai",
+          "text": "Where is your notebook?",
+          "pt": "Onde tá seu caderno?"
+        },
+        {
+          "speaker": "user",
+          "target": "My notebook is in my bag.",
+          "pt_hint": "Bag."
+        },
+        {
+          "speaker": "ai",
+          "text": "How many chairs are in the room?",
+          "pt": "Quantas cadeiras?"
+        },
+        {
+          "speaker": "user",
+          "target": "There are twenty chairs.",
+          "pt_hint": "20."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is the board clean?",
+          "pt": "O quadro tá limpo?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, the board is clean.",
+          "pt_hint": "Clean."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you have an eraser?",
+          "pt": "Tem borracha?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I have a new eraser.",
+          "pt_hint": "Eraser."
+        },
+        {
+          "speaker": "ai",
+          "text": "Let's start the lesson.",
+          "pt": "Vamos começar."
+        }
+      ]
     }
   ]
 }

@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 30,
-  "estimated_minutes": 12,
+  "estimated_minutes": 16,
   "summary_pt_br": "Passado contínuo — was/were + verbo-ing, para ações em progresso no passado.",
   "sources": [
     {
@@ -20,7 +20,12 @@
       "id": "pcc-001",
       "type": "multiple_choice",
       "question": "While I ___ dinner, the phone rang.",
-      "options": ["cooked", "was cooking", "am cooking", "cook"],
+      "options": [
+        "cooked",
+        "was cooking",
+        "am cooking",
+        "cook"
+      ],
       "correct": 1,
       "explanation": "Past continuous for a long action interrupted by a short one.",
       "hint_pt_br": "Passado contínuo para uma ação longa interrompida por outra curta."
@@ -37,13 +42,200 @@
       "id": "pcc-003",
       "type": "matching",
       "pairs": [
-        ["I was reading", "Eu estava lendo"],
-        ["She was driving", "Ela estava dirigindo"],
-        ["We were laughing", "Nós estávamos rindo"],
-        ["They were sleeping", "Eles estavam dormindo"]
+        [
+          "I was reading",
+          "Eu estava lendo"
+        ],
+        [
+          "She was driving",
+          "Ela estava dirigindo"
+        ],
+        [
+          "We were laughing",
+          "Nós estávamos rindo"
+        ],
+        [
+          "They were sleeping",
+          "Eles estavam dormindo"
+        ]
       ],
       "explanation": "All past-continuous translations.",
       "hint_pt_br": "Todas no passado contínuo."
+    },
+    {
+      "id": "autobal-past-continuous-1-fb",
+      "type": "fill_blank",
+      "question": "Complete: \"I was ___ dinner at home.\"",
+      "correct": "having",
+      "explanation": "The full phrase is: \"I was having dinner at home.\"",
+      "hint_pt_br": "WAS + -ing."
+    },
+    {
+      "id": "autobal-past-continuous-2-mc",
+      "type": "multiple_choice",
+      "question": "Pick the best response. (WAS EATING.)",
+      "options": [
+        "I am not sure.",
+        "That is a great idea.",
+        "Yes, my family was eating too.",
+        "Yes, of course."
+      ],
+      "correct": 2,
+      "explanation": "The correct response is: \"Yes, my family was eating too.\"",
+      "hint_pt_br": "WAS EATING."
+    }
+  ],
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Past Continuous",
+      "subtitle_en": "Describe ongoing actions in the past with was/were + verb-ing"
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pcc-001",
+        "type": "multiple_choice",
+        "question": "While I ___ dinner, the phone rang.",
+        "options": [
+          "cooked",
+          "was cooking",
+          "am cooking",
+          "cook"
+        ],
+        "correct": 1,
+        "explanation": "Past continuous for a long action interrupted by a short one.",
+        "hint_pt_br": "Passado contínuo para uma ação longa interrompida por outra curta."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pcc-002",
+        "type": "fill_blank",
+        "question": "They ___ (watch) TV when I arrived.",
+        "correct": "were watching",
+        "explanation": "Were + watching — ongoing past action.",
+        "hint_pt_br": "Para 'they', use 'were' + verbo-ing."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pcc-003",
+        "type": "matching",
+        "pairs": [
+          [
+            "I was reading",
+            "Eu estava lendo"
+          ],
+          [
+            "She was driving",
+            "Ela estava dirigindo"
+          ],
+          [
+            "We were laughing",
+            "Nós estávamos rindo"
+          ],
+          [
+            "They were sleeping",
+            "Eles estavam dormindo"
+          ]
+        ],
+        "explanation": "All past-continuous translations.",
+        "hint_pt_br": "Todas no passado contínuo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-past-continuous-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I was ___ dinner at home.\"",
+        "correct": "having",
+        "explanation": "The full phrase is: \"I was having dinner at home.\"",
+        "hint_pt_br": "WAS + -ing."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-past-continuous-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. (WAS EATING.)",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "Yes, my family was eating too.",
+          "Yes, of course."
+        ],
+        "correct": 2,
+        "explanation": "The correct response is: \"Yes, my family was eating too.\"",
+        "hint_pt_br": "WAS EATING."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Past continuous drill",
+      "character": "Detective",
+      "pt_summary": "Past continuous — o que estava acontecendo.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What were you doing at eight?",
+          "pt": "O que tava fazendo às oito?"
+        },
+        {
+          "speaker": "user",
+          "target": "I was having dinner at home.",
+          "pt_hint": "WAS + -ing."
+        },
+        {
+          "speaker": "ai",
+          "text": "Was anyone with you?",
+          "pt": "Tinha alguém com você?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, my family was eating too.",
+          "pt_hint": "WAS EATING."
+        },
+        {
+          "speaker": "ai",
+          "text": "What was your brother doing?",
+          "pt": "O que seu irmão fazia?"
+        },
+        {
+          "speaker": "user",
+          "target": "He was watching TV.",
+          "pt_hint": "HE WAS WATCHING."
+        },
+        {
+          "speaker": "ai",
+          "text": "Were your neighbors home?",
+          "pt": "Os vizinhos estavam?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, they were playing music.",
+          "pt_hint": "THEY WERE."
+        },
+        {
+          "speaker": "ai",
+          "text": "Did you hear anything unusual?",
+          "pt": "Ouviu algo estranho?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, nothing strange was happening.",
+          "pt_hint": "WAS HAPPENING."
+        },
+        {
+          "speaker": "ai",
+          "text": "OK. Thank you for your time.",
+          "pt": "OK. Obrigado."
+        }
+      ]
     }
   ]
 }

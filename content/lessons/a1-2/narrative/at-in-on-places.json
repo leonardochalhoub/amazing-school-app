@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 21,
+  "estimated_minutes": 25,
   "summary_pt_br": "Preposições de lugar: IN (dentro, espaço fechado — in the kitchen, in Brazil), ON (sobre superfície — on the table, on the wall, on the street), AT (ponto específico, endereço — at the door, at school, at 10 Main Street).",
   "scenes": [
     {
@@ -86,6 +86,69 @@
         "explanation": "Five patterns. Learn by context.",
         "hint_pt_br": "Cinco padrões pelo contexto."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Meeting at the café",
+      "character": "Friend",
+      "pt_summary": "Preposições de lugar — at, in, on.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hey, where are you right now?",
+          "pt": "Ei, onde você tá agora?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am at the café on Main Street.",
+          "pt_hint": "AT + café, ON + Main Street."
+        },
+        {
+          "speaker": "ai",
+          "text": "Nice. Are you inside or on the terrace?",
+          "pt": "Legal. Dentro ou na varanda?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am on the terrace, at a small table.",
+          "pt_hint": "ON the terrace, AT a small table."
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. I am in a taxi on my way.",
+          "pt": "Ótimo. Estou num táxi a caminho."
+        },
+        {
+          "speaker": "user",
+          "target": "How long until you arrive?",
+          "pt_hint": "'Quanto tempo pra você chegar?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Ten minutes. I am in heavy traffic.",
+          "pt": "Dez minutos. Estou no trânsito."
+        },
+        {
+          "speaker": "user",
+          "target": "No worries. I am reading a book.",
+          "pt_hint": "'Sem problema. Estou lendo um livro.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. See you soon.",
+          "pt": "Perfeito. Até já."
+        },
+        {
+          "speaker": "user",
+          "target": "OK. See you in a few minutes.",
+          "pt_hint": "'OK. Até daqui a pouco.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I am almost there!",
+          "pt": "Tô quase chegando!"
+        }
+      ]
     },
     {
       "kind": "reading",

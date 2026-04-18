@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 20,
+  "estimated_minutes": 24,
   "summary_pt_br": "GOING TO + verbo base para planos já decididos e previsões com evidência. Estrutura: am/is/are + going to + verbo. 'I'm going to study tonight.' Super comum em conversa real.",
   "scenes": [
     {
@@ -65,6 +65,69 @@
         "explanation": "Am + going to + base verb.",
         "hint_pt_br": "Am + going to + verbo."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Weekend plans",
+      "character": "Joca",
+      "pt_summary": "Going to para planos futuros.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hey, do you have plans this weekend?",
+          "pt": "Ei, tem plano pro fim de semana?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes. I am going to visit my parents.",
+          "pt_hint": "'Vou visitar meus pais.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Nice. What are you going to do with them?",
+          "pt": "Legal. O que vão fazer?"
+        },
+        {
+          "speaker": "user",
+          "target": "We are going to have dinner and watch a movie.",
+          "pt_hint": "'Vamos jantar e ver um filme.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Sounds great. Are you going to stay overnight?",
+          "pt": "Parece ótimo. Vai dormir lá?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I am going to stay until Sunday evening.",
+          "pt_hint": "'Vou ficar até domingo à noite.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Cool. I am going to go hiking on Saturday.",
+          "pt": "Massa. Vou fazer trilha no sábado."
+        },
+        {
+          "speaker": "user",
+          "target": "That is great. Are you going alone?",
+          "pt_hint": "'Vai sozinho?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "No, my friends are going to join me.",
+          "pt": "Não, meus amigos vão comigo."
+        },
+        {
+          "speaker": "user",
+          "target": "Have a wonderful time.",
+          "pt_hint": "'Curtam bastante.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Thanks. You too!",
+          "pt": "Valeu. Você também!"
+        }
+      ]
     },
     {
       "kind": "reading",

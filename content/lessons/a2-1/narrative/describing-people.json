@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "Adjetivos de aparência e personalidade. Armadilha: -ED é o que EU sinto (I am bored — entediado), -ING é o que CAUSA o sentimento (The movie is boring — chato). Trocar muda tudo.",
   "scenes": [
     {
@@ -152,6 +152,97 @@
         "explanation": "Five descriptors for people. Use them in sentences about characters you know.",
         "hint_pt_br": "Cinco descritores. Pratique usando com pessoas que você conhece."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-describing-people-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"He was ___ and thin.\"",
+        "correct": "tall",
+        "explanation": "The full phrase is: \"He was tall and thin.\"",
+        "hint_pt_br": "'Era alto e magro.'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-describing-people-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Cabelo curto, castanho e cacheado.')",
+        "options": [
+          "He had short brown curly hair.",
+          "I am not sure.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 0,
+        "explanation": "The correct response is: \"He had short brown curly hair.\"",
+        "hint_pt_br": "'Cabelo curto, castanho e cacheado.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "The police sketch",
+      "character": "Police officer",
+      "pt_summary": "Descrevendo aparência — tall, short, thin, curly hair.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Please describe the man you saw.",
+          "pt": "Por favor, descreva o homem que viu."
+        },
+        {
+          "speaker": "user",
+          "target": "He was tall and thin.",
+          "pt_hint": "'Era alto e magro.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "What about his hair?",
+          "pt": "E o cabelo?"
+        },
+        {
+          "speaker": "user",
+          "target": "He had short brown curly hair.",
+          "pt_hint": "'Cabelo curto, castanho e cacheado.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "What was he wearing?",
+          "pt": "O que estava vestindo?"
+        },
+        {
+          "speaker": "user",
+          "target": "He was wearing a black jacket and blue jeans.",
+          "pt_hint": "'Jaqueta preta e jeans azul.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Did he have any marks or tattoos?",
+          "pt": "Tinha marcas ou tatuagens?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, a small tattoo on his left arm.",
+          "pt_hint": "'Tatuagem pequena no braço esquerdo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "How old did he look?",
+          "pt": "Qual idade parecia ter?"
+        },
+        {
+          "speaker": "user",
+          "target": "About thirty years old.",
+          "pt_hint": "'Uns trinta anos.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you. You were very helpful.",
+          "pt": "Obrigado. Foi muito útil."
+        }
+      ]
     },
     {
       "kind": "reading",

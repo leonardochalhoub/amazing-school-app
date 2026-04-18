@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 21,
+  "estimated_minutes": 25,
   "summary_pt_br": "Adjetivos possessivos (my/your/his) vêm ANTES de um substantivo: 'This is MY book'. Pronomes possessivos (mine/yours/his) FICAM SOZINHOS: 'This book is MINE'. Troca: 'is my' → 'is mine'.",
   "scenes": [
     {
@@ -143,6 +143,97 @@
         "explanation": "Five pairs. HIS skipped because it's identical.",
         "hint_pt_br": "Cinco pares. HIS é exceção: igual nos dois."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-mine-yours-hers-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Yes, I lost my ___. It is black.\"",
+        "correct": "phone",
+        "explanation": "The full phrase is: \"Yes, I lost my phone. It is black.\"",
+        "hint_pt_br": "'Perdi meu celular.'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-mine-yours-hers-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. (MINE.)",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "Yes, of course.",
+          "Yes, that one is mine!"
+        ],
+        "correct": 3,
+        "explanation": "The correct response is: \"Yes, that one is mine!\"",
+        "hint_pt_br": "MINE."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "At the lost and found",
+      "character": "Clerk",
+      "pt_summary": "Pronomes possessivos — mine, yours, hers, his, ours, theirs.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi. Did you lose something?",
+          "pt": "Oi. Perdeu algo?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I lost my phone. It is black.",
+          "pt_hint": "'Perdi meu celular.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Is this phone yours?",
+          "pt": "Esse celular é seu?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, that one is mine!",
+          "pt_hint": "MINE."
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. Are these keys also yours?",
+          "pt": "Ótimo. Essas chaves são suas?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, those are hers. My friend is here.",
+          "pt_hint": "HERS."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is this wallet his?",
+          "pt": "Essa carteira é dele?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, the wallet is ours — we share it.",
+          "pt_hint": "OURS."
+        },
+        {
+          "speaker": "ai",
+          "text": "And this backpack, is it theirs?",
+          "pt": "Essa mochila é deles?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, that backpack is theirs.",
+          "pt_hint": "THEIRS."
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. Everything is returned.",
+          "pt": "Perfeito. Tudo devolvido."
+        }
+      ]
     },
     {
       "kind": "reading",

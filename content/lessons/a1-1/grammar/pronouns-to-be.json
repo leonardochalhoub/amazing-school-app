@@ -6,17 +6,29 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 30,
-  "estimated_minutes": 12,
+  "estimated_minutes": 16,
   "summary_pt_br": "O verbo TO BE é a base do inglês. I AM, YOU ARE, HE/SHE/IT IS, WE/THEY ARE. Ele também existe onde o português usa 'estar', 'ter' (idade) e 'ser'.",
   "exercises": [
     {
       "id": "tobe-001",
       "type": "matching",
       "pairs": [
-        ["I", "am"],
-        ["you", "are"],
-        ["he / she / it", "is"],
-        ["we / they", "are"]
+        [
+          "I",
+          "am"
+        ],
+        [
+          "you",
+          "are"
+        ],
+        [
+          "he / she / it",
+          "is"
+        ],
+        [
+          "we / they",
+          "are"
+        ]
       ],
       "explanation": "Only one pronoun uses 'am' (I). Three use 'is' (he/she/it). Three use 'are' (you/we/they).",
       "hint_pt_br": "Memorize: só 'I' usa 'am'. Só 'he', 'she', 'it' usam 'is'. Todos os outros usam 'are'."
@@ -41,7 +53,12 @@
       "id": "tobe-004",
       "type": "multiple_choice",
       "question": "Which is the contraction of 'I am'?",
-      "options": ["I's", "I'm", "Im", "I're"],
+      "options": [
+        "I's",
+        "I'm",
+        "Im",
+        "I're"
+      ],
       "correct": 1,
       "explanation": "'I am' → 'I'm'. Natives almost always contract. 'Im' without the apostrophe is a spelling mistake.",
       "hint_pt_br": "I am = I'm. A forma contraída é muito mais natural na fala."
@@ -89,6 +106,198 @@
       "correct": "is",
       "explanation": "IT is the pronoun for weather, time, and unnamed things. 'It is cold' / 'It's cold'.",
       "hint_pt_br": "Em inglês, 'it' é o pronome para tempo, clima e objetos genéricos."
+    }
+  ],
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Personal Pronouns + Verb To Be",
+      "subtitle_en": "I / you / he / she / it / we / they — with am / is / are. The most important verb in English."
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tobe-001",
+        "type": "matching",
+        "pairs": [
+          [
+            "I",
+            "am"
+          ],
+          [
+            "you",
+            "are"
+          ],
+          [
+            "he / she / it",
+            "is"
+          ],
+          [
+            "we / they",
+            "are"
+          ]
+        ],
+        "explanation": "Only one pronoun uses 'am' (I). Three use 'is' (he/she/it). Three use 'are' (you/we/they).",
+        "hint_pt_br": "Memorize: só 'I' usa 'am'. Só 'he', 'she', 'it' usam 'is'. Todos os outros usam 'are'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tobe-002",
+        "type": "fill_blank",
+        "question": "Complete: 'She ___ my sister.'",
+        "correct": "is",
+        "explanation": "SHE → IS. Remember: he/she/it all use 'is'.",
+        "hint_pt_br": "'She' pede 'is'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tobe-003",
+        "type": "fill_blank",
+        "question": "Complete: 'We ___ from Brazil.'",
+        "correct": "are",
+        "explanation": "WE → ARE. Same as you and they.",
+        "hint_pt_br": "'We' pede 'are'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tobe-004",
+        "type": "multiple_choice",
+        "question": "Which is the contraction of 'I am'?",
+        "options": [
+          "I's",
+          "I'm",
+          "Im",
+          "I're"
+        ],
+        "correct": 1,
+        "explanation": "'I am' → 'I'm'. Natives almost always contract. 'Im' without the apostrophe is a spelling mistake.",
+        "hint_pt_br": "I am = I'm. A forma contraída é muito mais natural na fala."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tobe-005",
+        "type": "multiple_choice",
+        "question": "In English, how do you say 'I'm hungry' (fome)?",
+        "options": [
+          "I have hunger",
+          "I am hunger",
+          "I am hungry",
+          "I have hungry"
+        ],
+        "correct": 2,
+        "explanation": "English uses BE + adjective: 'I am hungry/tired/cold/thirsty'. Not 'I have hunger' (Portuguese structure).",
+        "hint_pt_br": "Em inglês usamos 'to be' + adjetivo, não 'to have' + substantivo: I AM hungry (não 'I have hunger')."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tobe-006",
+        "type": "fill_blank",
+        "question": "Question form: '___ you a student?'",
+        "correct": "Are",
+        "explanation": "Yes/no questions with BE start with the verb: Are you…? Is she…? Am I…?",
+        "hint_pt_br": "Para fazer pergunta com 'to be', inverta: 'You are' → 'Are you?'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tobe-007",
+        "type": "multiple_choice",
+        "question": "Which negative is correct?",
+        "options": [
+          "He no is tired",
+          "He don't is tired",
+          "He isn't tired",
+          "He not is tired"
+        ],
+        "correct": 2,
+        "explanation": "Negatives with BE just add 'not' (or contract to n't): is + not = isn't, are + not = aren't, am + not = 'm not.",
+        "hint_pt_br": "Negativa do 'to be': is/are + not. 'Isn't' e 'aren't' são as contrações."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tobe-008",
+        "type": "fill_blank",
+        "question": "Complete: 'It ___ cold today.' (right now)",
+        "correct": "is",
+        "explanation": "IT is the pronoun for weather, time, and unnamed things. 'It is cold' / 'It's cold'.",
+        "hint_pt_br": "Em inglês, 'it' é o pronome para tempo, clima e objetos genéricos."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "To be drill",
+      "character": "Zara",
+      "pt_summary": "I am, you are, he is, she is, we are, they are.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi. What is your name?",
+          "pt": "Oi. Qual seu nome?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am Leo. I am a student.",
+          "pt_hint": "I AM."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is Leo from Brazil?",
+          "pt": "O Leo é do Brasil?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, he is from São Paulo.",
+          "pt_hint": "HE IS."
+        },
+        {
+          "speaker": "ai",
+          "text": "Where is your sister?",
+          "pt": "Onde tá sua irmã?"
+        },
+        {
+          "speaker": "user",
+          "target": "She is at school.",
+          "pt_hint": "SHE IS."
+        },
+        {
+          "speaker": "ai",
+          "text": "Are your parents teachers?",
+          "pt": "Seus pais são professores?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, they are teachers.",
+          "pt_hint": "THEY ARE."
+        },
+        {
+          "speaker": "ai",
+          "text": "Are you both happy?",
+          "pt": "Vocês estão felizes?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, we are very happy.",
+          "pt_hint": "WE ARE."
+        },
+        {
+          "speaker": "ai",
+          "text": "Wonderful. See you next class.",
+          "pt": "Maravilha. Até a próxima."
+        }
+      ]
     }
   ]
 }

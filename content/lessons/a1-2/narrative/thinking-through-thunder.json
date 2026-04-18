@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 45,
-  "estimated_minutes": 24,
+  "estimated_minutes": 28,
   "summary_pt_br": "Pares mínimos que revelam as armadilhas de TH para brasileiros: THINK x TINK x FINK, THREE x TREE x FREE, BATH x BAT. Usando Thunder (Imagine Dragons) e Thunderstruck (AC/DC) como referência.",
   "scenes": [
     {
@@ -184,6 +184,69 @@
         "explanation": "PATH /pæθ/ — ends with /θ/. 'Pat' (tapinha) is different.",
         "hint_pt_br": "PATH (caminho) termina com /θ/. 'Pat' (tapinha) é /t/ puro."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "The storm conversation",
+      "character": "Mr. Kumar",
+      "pt_summary": "TH + clima — thunder, three, thousand, thanks.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Did you hear that thunder?",
+          "pt": "Ouviu o trovão?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I thought it was an earthquake.",
+          "pt_hint": "THOUGHT — TH surdo."
+        },
+        {
+          "speaker": "ai",
+          "text": "It has been thundering for three hours.",
+          "pt": "Tá trovejando há três horas."
+        },
+        {
+          "speaker": "user",
+          "target": "I think the storm is getting worse.",
+          "pt_hint": "'Acho que tá piorando.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Thousands of people lost power.",
+          "pt": "Milhares perderam energia."
+        },
+        {
+          "speaker": "user",
+          "target": "That is terrible. Do we have flashlights?",
+          "pt_hint": "'Isso é terrível. Temos lanternas?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, there are three on the shelf.",
+          "pt": "Sim, três na prateleira."
+        },
+        {
+          "speaker": "user",
+          "target": "Thanks. I will get them.",
+          "pt_hint": "THANKS. 'Vou pegar.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Good thinking. Stay away from the windows.",
+          "pt": "Boa. Fica longe das janelas."
+        },
+        {
+          "speaker": "user",
+          "target": "I will. Thank you for thinking ahead.",
+          "pt_hint": "'Obrigado por pensar adiante.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "We will get through this together.",
+          "pt": "Vamos passar por isso juntos."
+        }
+      ]
     },
     {
       "kind": "reading",

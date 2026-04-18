@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 8,
+  "estimated_minutes": 12,
   "summary_pt_br": "Cumprimentos e apresentações em inglês — formais e informais.",
   "sources": [
     {
@@ -20,10 +20,22 @@
       "id": "gr-001",
       "type": "matching",
       "pairs": [
-        ["Hello, how are you?", "Olá, como você está?"],
-        ["Nice to meet you", "Prazer em conhecê-lo"],
-        ["Good morning", "Bom dia"],
-        ["See you later", "Até mais"]
+        [
+          "Hello, how are you?",
+          "Olá, como você está?"
+        ],
+        [
+          "Nice to meet you",
+          "Prazer em conhecê-lo"
+        ],
+        [
+          "Good morning",
+          "Bom dia"
+        ],
+        [
+          "See you later",
+          "Até mais"
+        ]
       ],
       "explanation": "These are the most common English greetings you'll use every day.",
       "hint_pt_br": "Essas são as saudações mais comuns em inglês."
@@ -32,7 +44,12 @@
       "id": "gr-002",
       "type": "multiple_choice",
       "question": "Someone says 'How do you do?' What's the best response?",
-      "options": ["I'm fine, thanks", "How do you do?", "I do well", "Good"],
+      "options": [
+        "I'm fine, thanks",
+        "How do you do?",
+        "I do well",
+        "Good"
+      ],
       "correct": 1,
       "explanation": "'How do you do?' is a formal greeting. The traditional response is to repeat it back.",
       "hint_pt_br": "'How do you do?' é formal. A resposta tradicional é repetir a mesma frase."
@@ -49,7 +66,12 @@
       "id": "gr-004",
       "type": "multiple_choice",
       "question": "Which greeting is appropriate at 8 PM?",
-      "options": ["Good morning", "Good afternoon", "Good evening", "Good night"],
+      "options": [
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "Good night"
+      ],
       "correct": 2,
       "explanation": "Good evening is used from around 6 PM. 'Good night' is used when saying goodbye at night.",
       "hint_pt_br": "'Good evening' é usado a partir das 18h. 'Good night' é para despedida à noite."
@@ -58,13 +80,194 @@
       "id": "gr-005",
       "type": "matching",
       "pairs": [
-        ["What's your name?", "Qual é o seu nome?"],
-        ["Where are you from?", "De onde você é?"],
-        ["What do you do?", "O que você faz?"],
-        ["How old are you?", "Quantos anos você tem?"]
+        [
+          "What's your name?",
+          "Qual é o seu nome?"
+        ],
+        [
+          "Where are you from?",
+          "De onde você é?"
+        ],
+        [
+          "What do you do?",
+          "O que você faz?"
+        ],
+        [
+          "How old are you?",
+          "Quantos anos você tem?"
+        ]
       ],
       "explanation": "These are common questions used when meeting someone new.",
       "hint_pt_br": "Perguntas comuns ao conhecer alguém."
+    }
+  ],
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Greetings & Introductions",
+      "subtitle_en": "Learn common greetings and how to introduce yourself in English"
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gr-001",
+        "type": "matching",
+        "pairs": [
+          [
+            "Hello, how are you?",
+            "Olá, como você está?"
+          ],
+          [
+            "Nice to meet you",
+            "Prazer em conhecê-lo"
+          ],
+          [
+            "Good morning",
+            "Bom dia"
+          ],
+          [
+            "See you later",
+            "Até mais"
+          ]
+        ],
+        "explanation": "These are the most common English greetings you'll use every day.",
+        "hint_pt_br": "Essas são as saudações mais comuns em inglês."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gr-002",
+        "type": "multiple_choice",
+        "question": "Someone says 'How do you do?' What's the best response?",
+        "options": [
+          "I'm fine, thanks",
+          "How do you do?",
+          "I do well",
+          "Good"
+        ],
+        "correct": 1,
+        "explanation": "'How do you do?' is a formal greeting. The traditional response is to repeat it back.",
+        "hint_pt_br": "'How do you do?' é formal. A resposta tradicional é repetir a mesma frase."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gr-003",
+        "type": "fill_blank",
+        "question": "Hi! My ___ is Maria. I'm from Brazil.",
+        "correct": "name",
+        "explanation": "'My name is...' is the standard way to introduce yourself.",
+        "hint_pt_br": "'My name is...' é a forma padrão de se apresentar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gr-004",
+        "type": "multiple_choice",
+        "question": "Which greeting is appropriate at 8 PM?",
+        "options": [
+          "Good morning",
+          "Good afternoon",
+          "Good evening",
+          "Good night"
+        ],
+        "correct": 2,
+        "explanation": "Good evening is used from around 6 PM. 'Good night' is used when saying goodbye at night.",
+        "hint_pt_br": "'Good evening' é usado a partir das 18h. 'Good night' é para despedida à noite."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gr-005",
+        "type": "matching",
+        "pairs": [
+          [
+            "What's your name?",
+            "Qual é o seu nome?"
+          ],
+          [
+            "Where are you from?",
+            "De onde você é?"
+          ],
+          [
+            "What do you do?",
+            "O que você faz?"
+          ],
+          [
+            "How old are you?",
+            "Quantos anos você tem?"
+          ]
+        ],
+        "explanation": "These are common questions used when meeting someone new.",
+        "hint_pt_br": "Perguntas comuns ao conhecer alguém."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Greetings drill",
+      "character": "Mr. Kumar",
+      "pt_summary": "Formas de cumprimentar em inglês.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Good morning! How are you?",
+          "pt": "Bom dia! Como vai?"
+        },
+        {
+          "speaker": "user",
+          "target": "Good morning. I am fine, thanks.",
+          "pt_hint": "'Bom dia. Bem, obrigado.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Hi there. What's up?",
+          "pt": "Oi. E aí?"
+        },
+        {
+          "speaker": "user",
+          "target": "Not much. How about you?",
+          "pt_hint": "'Nada demais. E você?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I am doing great. Nice to see you.",
+          "pt": "Bem. Prazer em te ver."
+        },
+        {
+          "speaker": "user",
+          "target": "Nice to see you too.",
+          "pt_hint": "'Prazer em te ver também.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "How is your family?",
+          "pt": "Como tá a família?"
+        },
+        {
+          "speaker": "user",
+          "target": "They are all well, thank you.",
+          "pt_hint": "'Todos bem, obrigado.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "See you later then.",
+          "pt": "Até mais então."
+        },
+        {
+          "speaker": "user",
+          "target": "Goodbye. Have a nice day.",
+          "pt_hint": "'Tchau. Tenha um bom dia.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "You too. Take care.",
+          "pt": "Você também. Se cuida."
+        }
+      ]
     }
   ]
 }

@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 20,
+  "estimated_minutes": 24,
   "summary_pt_br": "Zero conditional para VERDADES GERAIS, leis da natureza, regras. Estrutura: IF + present simple, present simple. 'If you heat water, it boils.' Pode trocar IF por WHEN — mesmo sentido. Diferente do first conditional (que fala de futuro).",
   "scenes": [
     {
@@ -65,6 +65,97 @@
         "explanation": "Zero = always-true + present→present.",
         "hint_pt_br": "Zero: sempre verdadeiro. Presente + presente."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-zero-conditional-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"If you heat ___, it melts.\"",
+        "correct": "butter",
+        "explanation": "The full phrase is: \"If you heat butter, it melts.\"",
+        "hint_pt_br": "IF + present → present."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-zero-conditional-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Vira gelo.')",
+        "options": [
+          "I am not sure.",
+          "If you freeze water, it becomes ice.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"If you freeze water, it becomes ice.\"",
+        "hint_pt_br": "'Vira gelo.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "The kitchen experiment",
+      "character": "Chef Rafa",
+      "pt_summary": "Zero conditional — fatos sempre verdadeiros.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "If you heat butter, what happens?",
+          "pt": "Se você aquece manteiga, o que acontece?"
+        },
+        {
+          "speaker": "user",
+          "target": "If you heat butter, it melts.",
+          "pt_hint": "IF + present → present."
+        },
+        {
+          "speaker": "ai",
+          "text": "Exactly. If you freeze water, what happens?",
+          "pt": "Exato. Se congela água?"
+        },
+        {
+          "speaker": "user",
+          "target": "If you freeze water, it becomes ice.",
+          "pt_hint": "'Vira gelo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Good. If you mix red and yellow?",
+          "pt": "Bom. Se mistura vermelho e amarelo?"
+        },
+        {
+          "speaker": "user",
+          "target": "If you mix red and yellow, you get orange.",
+          "pt_hint": "'Fica laranja.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "What happens if you don't sleep?",
+          "pt": "O que acontece se não dorme?"
+        },
+        {
+          "speaker": "user",
+          "target": "If I don't sleep, I feel tired.",
+          "pt_hint": "'Se não durmo, fico cansado.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Last one — if it rains, what do you do?",
+          "pt": "Última — se chove, o que faz?"
+        },
+        {
+          "speaker": "user",
+          "target": "If it rains, I stay at home.",
+          "pt_hint": "'Fico em casa.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. You mastered the zero conditional.",
+          "pt": "Perfeito. Dominou a zero conditional."
+        }
+      ]
     },
     {
       "kind": "reading",

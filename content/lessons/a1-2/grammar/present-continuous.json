@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 25,
-  "estimated_minutes": 10,
+  "estimated_minutes": 14,
   "summary_pt_br": "Presente contínuo — para ações acontecendo agora: am/is/are + verbo-ing.",
   "sources": [
     {
@@ -20,7 +20,12 @@
       "id": "pc-001",
       "type": "multiple_choice",
       "question": "Look! The children ___ in the park.",
-      "options": ["play", "plays", "are playing", "is playing"],
+      "options": [
+        "play",
+        "plays",
+        "are playing",
+        "is playing"
+      ],
       "correct": 2,
       "explanation": "Present continuous for something happening right now: are + verb-ing.",
       "hint_pt_br": "Para ações agora, use 'are/is' + verbo com -ing."
@@ -37,10 +42,22 @@
       "id": "pc-003",
       "type": "matching",
       "pairs": [
-        ["She is cooking", "Ela está cozinhando"],
-        ["They are running", "Eles estão correndo"],
-        ["He is working", "Ele está trabalhando"],
-        ["We are studying", "Nós estamos estudando"]
+        [
+          "She is cooking",
+          "Ela está cozinhando"
+        ],
+        [
+          "They are running",
+          "Eles estão correndo"
+        ],
+        [
+          "He is working",
+          "Ele está trabalhando"
+        ],
+        [
+          "We are studying",
+          "Nós estamos estudando"
+        ]
       ],
       "explanation": "Translations with present continuous (-ing).",
       "hint_pt_br": "Traduções com o presente contínuo."
@@ -58,6 +75,148 @@
       "correct": 2,
       "explanation": "'is' + 'swim' + '-ming' (double consonant) = is swimming.",
       "hint_pt_br": "Com 'swim', dobramos o 'm': swimming."
+    }
+  ],
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Present Continuous",
+      "subtitle_en": "Describe actions happening now using 'to be' + verb-ing"
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pc-001",
+        "type": "multiple_choice",
+        "question": "Look! The children ___ in the park.",
+        "options": [
+          "play",
+          "plays",
+          "are playing",
+          "is playing"
+        ],
+        "correct": 2,
+        "explanation": "Present continuous for something happening right now: are + verb-ing.",
+        "hint_pt_br": "Para ações agora, use 'are/is' + verbo com -ing."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pc-002",
+        "type": "fill_blank",
+        "question": "I ___ (read) a book about Brazil.",
+        "correct": "am reading",
+        "explanation": "With 'I', use 'am' + reading.",
+        "hint_pt_br": "Com 'I', usamos 'am' + verbo-ing."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pc-003",
+        "type": "matching",
+        "pairs": [
+          [
+            "She is cooking",
+            "Ela está cozinhando"
+          ],
+          [
+            "They are running",
+            "Eles estão correndo"
+          ],
+          [
+            "He is working",
+            "Ele está trabalhando"
+          ],
+          [
+            "We are studying",
+            "Nós estamos estudando"
+          ]
+        ],
+        "explanation": "Translations with present continuous (-ing).",
+        "hint_pt_br": "Traduções com o presente contínuo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pc-004",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "He is swim now.",
+          "He swimming now.",
+          "He is swimming now.",
+          "He swim now."
+        ],
+        "correct": 2,
+        "explanation": "'is' + 'swim' + '-ming' (double consonant) = is swimming.",
+        "hint_pt_br": "Com 'swim', dobramos o 'm': swimming."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Present continuous drill",
+      "character": "Mom",
+      "pt_summary": "Present continuous — ações acontecendo agora.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What are you doing right now?",
+          "pt": "O que tá fazendo agora?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am studying English.",
+          "pt_hint": "I AM + -ing."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is your brother helping you?",
+          "pt": "Seu irmão tá ajudando?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, he is playing a game.",
+          "pt_hint": "HE IS."
+        },
+        {
+          "speaker": "ai",
+          "text": "What is your sister doing?",
+          "pt": "O que sua irmã faz?"
+        },
+        {
+          "speaker": "user",
+          "target": "She is reading a book.",
+          "pt_hint": "SHE IS."
+        },
+        {
+          "speaker": "ai",
+          "text": "Are your parents cooking?",
+          "pt": "Seus pais tão cozinhando?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, they are cooking dinner.",
+          "pt_hint": "THEY ARE."
+        },
+        {
+          "speaker": "ai",
+          "text": "What is Cosmo doing?",
+          "pt": "O que o Cosmo tá fazendo?"
+        },
+        {
+          "speaker": "user",
+          "target": "Cosmo is sleeping on the sofa.",
+          "pt_hint": "IS SLEEPING."
+        },
+        {
+          "speaker": "ai",
+          "text": "Everyone is busy. Nice.",
+          "pt": "Todo mundo ocupado. Legal."
+        }
+      ]
     }
   ]
 }

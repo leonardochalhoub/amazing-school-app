@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 40,
-  "estimated_minutes": 24,
+  "estimated_minutes": 28,
   "summary_pt_br": "A primeira aula da Bia na Amazing School. Aprenda cumprimentos conhecendo a Bia, o Rafa, o Mr. Kumar e o Cosmo.",
   "scenes": [
     {
@@ -199,6 +199,69 @@
       "character_id": "kumar",
       "text_en": "Mr. Kumar smiles. 'That's our first scene,' he says. 'Tomorrow we'll practice asking names — and Cosmo will be there too.'",
       "text_pt": "Mr. Kumar sorri. 'Foi nossa primeira cena,' ele diz. 'Amanhã vamos praticar como perguntar o nome — e o Cosmo vai estar lá também.'"
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "First day — meeting Mr. Kumar",
+      "character": "Mr. Kumar",
+      "pt_summary": "Seu primeiro dia na Amazing School. Mr. Kumar te recebe.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Good morning! Welcome to Amazing School.",
+          "pt": "Bom dia! Bem-vindo à Amazing School."
+        },
+        {
+          "speaker": "user",
+          "target": "Good morning. My name is Leo.",
+          "pt_hint": "Bom dia. Meu nome é Leo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Nice to meet you, Leo. How are you today?",
+          "pt": "Prazer em te conhecer, Leo. Como vai hoje?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am fine, thank you. And you?",
+          "pt_hint": "Estou bem, obrigado. E você?"
+        },
+        {
+          "speaker": "ai",
+          "text": "I am very well. Where are you from?",
+          "pt": "Estou muito bem. De onde você é?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am from Brazil.",
+          "pt_hint": "Eu sou do Brasil."
+        },
+        {
+          "speaker": "ai",
+          "text": "Wonderful. Your first class is at nine.",
+          "pt": "Maravilha. Sua primeira aula é às nove."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. See you later.",
+          "pt_hint": "Obrigado. Até mais tarde."
+        },
+        {
+          "speaker": "ai",
+          "text": "One more thing — have a great day!",
+          "pt": "Mais uma coisa — tenha um ótimo dia!"
+        },
+        {
+          "speaker": "user",
+          "target": "You too. Goodbye.",
+          "pt_hint": "Você também. Tchau."
+        },
+        {
+          "speaker": "ai",
+          "text": "Goodbye, Leo. See you tomorrow.",
+          "pt": "Tchau, Leo. Até amanhã."
+        }
+      ]
     },
     {
       "kind": "reading",

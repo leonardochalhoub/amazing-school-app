@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 30,
-  "estimated_minutes": 19,
+  "estimated_minutes": 23,
   "summary_pt_br": "Profissões em inglês + armadilha cultural: 'What do you do?' NÃO é 'o que você está fazendo?' — é 'qual é seu trabalho?'. Resposta: 'I'm a teacher' / 'I work as a chef'.",
   "scenes": [
     {
@@ -91,6 +91,69 @@
         "explanation": "AN before vowel sound (engineer).",
         "hint_pt_br": "Vogal → an."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "At the career fair",
+      "character": "Interviewer",
+      "pt_summary": "Profissões — teacher, doctor, engineer, chef.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome. What do you do for a living?",
+          "pt": "Bem-vindo. O que você faz da vida?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am a software engineer.",
+          "pt_hint": "'Sou engenheiro de software.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. How long have you worked as one?",
+          "pt": "Ótimo. Há quanto tempo trabalha nisso?"
+        },
+        {
+          "speaker": "user",
+          "target": "For five years.",
+          "pt_hint": "'Há cinco anos.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "What do your parents do?",
+          "pt": "O que seus pais fazem?"
+        },
+        {
+          "speaker": "user",
+          "target": "My father is a doctor and my mother is a teacher.",
+          "pt_hint": "'Pai médico, mãe professora.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "And your dream job?",
+          "pt": "E seu trabalho dos sonhos?"
+        },
+        {
+          "speaker": "user",
+          "target": "I want to be a chef someday.",
+          "pt_hint": "'Quero ser chef um dia.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Interesting. Can you cook well?",
+          "pt": "Interessante. Cozinha bem?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I can cook Italian and Brazilian food.",
+          "pt_hint": "'Cozinho comida italiana e brasileira.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "We have a culinary program. Let me tell you more.",
+          "pt": "Temos programa culinário. Deixa eu te contar."
+        }
+      ]
     },
     {
       "kind": "reading",

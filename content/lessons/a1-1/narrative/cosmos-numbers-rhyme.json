@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 21,
+  "estimated_minutes": 25,
   "summary_pt_br": "Cosmo, o labrador, conta seus amigos numa rima estilo Dr. Seuss. Aprenda de 1 a 10 com ritmo, rima e muito abanar de rabo.",
   "scenes": [
     {
@@ -196,6 +196,69 @@
       "character_id": "kumar",
       "text_en": "Mr. Kumar grinned and clapped once or twice.\n'Counting with Cosmo is always quite nice.\nTomorrow,' he said, 'we'll count even more —\ntwenty, and thirty, and right up to a hundred — or four!'",
       "text_pt": "Mr. Kumar sorriu e bateu palmas ali.\n'Contar com o Cosmo é bom de seguir.\nAmanhã,' ele disse, 'vamos mais além —\nvinte, e trinta, e até cem, meu bem!'"
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Phone numbers and prices",
+      "character": "Shopkeeper",
+      "pt_summary": "Treinando números — telefone e preços.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi there. Could I have your phone number?",
+          "pt": "Oi. Pode me passar seu número de telefone?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, it is nine eight seven six five four three two one.",
+          "pt_hint": "Fale os dígitos: 987654321."
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you. How old are you?",
+          "pt": "Obrigado. Quantos anos você tem?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am twenty-five years old.",
+          "pt_hint": "Eu tenho 25 anos."
+        },
+        {
+          "speaker": "ai",
+          "text": "The total is fifteen dollars.",
+          "pt": "O total é quinze dólares."
+        },
+        {
+          "speaker": "user",
+          "target": "Here are twenty dollars.",
+          "pt_hint": "Aqui estão vinte dólares."
+        },
+        {
+          "speaker": "ai",
+          "text": "Your change is five dollars.",
+          "pt": "Seu troco são cinco dólares."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. Have a good day.",
+          "pt_hint": "Obrigado. Tenha um bom dia."
+        },
+        {
+          "speaker": "ai",
+          "text": "You too. One more thing — keep your receipt.",
+          "pt": "Você também. Mais uma coisa — guarde seu recibo."
+        },
+        {
+          "speaker": "user",
+          "target": "OK. Goodbye.",
+          "pt_hint": "OK. Tchau."
+        },
+        {
+          "speaker": "ai",
+          "text": "Goodbye. See you soon.",
+          "pt": "Tchau. Até logo."
+        }
+      ]
     },
     {
       "kind": "reading",

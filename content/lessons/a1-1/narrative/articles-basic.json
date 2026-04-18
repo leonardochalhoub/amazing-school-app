@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 30,
-  "estimated_minutes": 20,
+  "estimated_minutes": 24,
   "summary_pt_br": "Artigos em inglês: A antes de consoante, AN antes de vogal, THE quando os dois falantes sabem qual. Diferente do português, português quase sempre usa 'o/a', inglês deixa muitos substantivos SEM artigo (plurais genéricos, incontáveis).",
   "scenes": [
     {
@@ -82,6 +82,69 @@
         "explanation": "General preference, uncountable → no article. 'I like coffee.'",
         "hint_pt_br": "Gosto geral + incontável = sem artigo."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Ordering at the bakery (A / AN / THE)",
+      "character": "Baker",
+      "pt_summary": "Artigos A / AN / THE em pedidos.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Good morning. What can I get you today?",
+          "pt": "Bom dia. O que posso servir hoje?"
+        },
+        {
+          "speaker": "user",
+          "target": "I would like a coffee and an apple, please.",
+          "pt_hint": "A + coffee, AN + apple."
+        },
+        {
+          "speaker": "ai",
+          "text": "Would you like the big coffee or the small one?",
+          "pt": "O café grande ou o pequeno?"
+        },
+        {
+          "speaker": "user",
+          "target": "The big coffee, please.",
+          "pt_hint": "THE porque o outro já foi mencionado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Anything else?",
+          "pt": "Mais alguma coisa?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, an orange juice, please.",
+          "pt_hint": "AN antes de orange (som de vogal)."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is that for here or to go?",
+          "pt": "É para comer aqui ou levar?"
+        },
+        {
+          "speaker": "user",
+          "target": "To go, please. I am in a hurry.",
+          "pt_hint": "Para levar. Estou com pressa."
+        },
+        {
+          "speaker": "ai",
+          "text": "That will be eight dollars.",
+          "pt": "Vai dar oito dólares."
+        },
+        {
+          "speaker": "user",
+          "target": "Here you are. Thank you.",
+          "pt_hint": "'Aqui está. Obrigado.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Have a wonderful morning.",
+          "pt": "Tenha uma ótima manhã."
+        }
+      ]
     },
     {
       "kind": "reading",

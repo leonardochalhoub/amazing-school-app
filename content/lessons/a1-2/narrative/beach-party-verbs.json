@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 21,
+  "estimated_minutes": 25,
   "summary_pt_br": "Dez verbos fundamentais do cotidiano em inglês, treinados num cenário de festa na praia. Presente simples com he/she/it -s revisitado.",
   "scenes": [
     {
@@ -176,6 +176,69 @@
         "explanation": "Five third-person patterns. Almost every verb fits one of these.",
         "hint_pt_br": "Cinco padrões. Quase todo verbo cabe em um."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "A beach party invitation",
+      "character": "Bia",
+      "pt_summary": "Verbos de ação em festa — dance, play, swim, eat, drink.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi! We are having a beach party tonight.",
+          "pt": "Oi! Vamos ter uma festa na praia hoje à noite."
+        },
+        {
+          "speaker": "user",
+          "target": "That sounds amazing. What time?",
+          "pt_hint": "'Parece demais. Que horas?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "At seven. Can you come?",
+          "pt": "Às sete. Pode vir?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I can come. Should I bring something?",
+          "pt_hint": "'Posso sim. Devo levar algo?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Bring food to share if you want.",
+          "pt": "Traz comida pra compartilhar se quiser."
+        },
+        {
+          "speaker": "user",
+          "target": "I will bring drinks and snacks.",
+          "pt_hint": "'Vou levar bebidas e salgados.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. We are going to dance and swim.",
+          "pt": "Ótimo. Vamos dançar e nadar."
+        },
+        {
+          "speaker": "user",
+          "target": "Cool. Do you play music there?",
+          "pt_hint": "'Legal. Toca música lá?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, I play the guitar and we all sing.",
+          "pt": "Sim, toco violão e todo mundo canta."
+        },
+        {
+          "speaker": "user",
+          "target": "I cannot wait. See you at seven.",
+          "pt_hint": "'Mal posso esperar. Até as sete.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "See you tonight!",
+          "pt": "Até hoje à noite!"
+        }
+      ]
     },
     {
       "kind": "reading",

@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 45,
-  "estimated_minutes": 24,
+  "estimated_minutes": 28,
   "summary_pt_br": "Past Simple contando a história da Bia pegando a primeira onda. Verbos regulares (-ed) e os irregulares essenciais: go/went, come/came, have/had, see/saw, take/took.",
   "scenes": [
     {
@@ -208,6 +208,69 @@
         "explanation": "Five irregular verbs — memorize them as pairs. They appear in nearly every past story.",
         "hint_pt_br": "Cinco irregulares que aparecem em quase toda história no passado."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Catching the first wave",
+      "character": "Bia",
+      "pt_summary": "Primeira aula de surf com a Bia.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi! Ready to catch your first wave?",
+          "pt": "Oi! Pronto pra pegar a primeira onda?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, but I am a little scared.",
+          "pt_hint": "'Tô um pouco com medo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Do not worry. Watch me first.",
+          "pt": "Relaxa. Me observa primeiro."
+        },
+        {
+          "speaker": "user",
+          "target": "OK. What should I do?",
+          "pt_hint": "'OK. O que eu faço?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Lie on the board and paddle with your arms.",
+          "pt": "Deita na prancha e rema com os braços."
+        },
+        {
+          "speaker": "user",
+          "target": "I am paddling now.",
+          "pt_hint": "'Estou remando.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Good. When the wave comes, stand up fast.",
+          "pt": "Bom. Quando a onda vier, levanta rápido."
+        },
+        {
+          "speaker": "user",
+          "target": "I am standing. I am surfing!",
+          "pt_hint": "'Tô em pé. Tô surfando!'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Awesome! You caught your first wave!",
+          "pt": "Demais! Pegou sua primeira onda!"
+        },
+        {
+          "speaker": "user",
+          "target": "I am so happy. Thank you, Bia.",
+          "pt_hint": "'Tô muito feliz. Valeu.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Let's catch another one!",
+          "pt": "Vamos pegar outra!"
+        }
+      ]
     },
     {
       "kind": "reading",

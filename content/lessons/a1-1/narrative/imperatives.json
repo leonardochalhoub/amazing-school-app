@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 19,
+  "estimated_minutes": 23,
   "summary_pt_br": "Imperativo em inglês é apenas o VERBO BASE (sem sujeito). 'Stop!', 'Come here', 'Sit down'. Negativa: DON'T + verbo. 'Don't run'. Pedir educadamente: 'Please + imperativo' ou 'Could you + verbo'.",
   "scenes": [
     {
@@ -61,6 +61,69 @@
         "explanation": "DON'T + base verb.",
         "hint_pt_br": "'Don't be late'."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Cooking with Chef Rafa",
+      "character": "Rafa",
+      "pt_summary": "Imperativos — open, cut, mix, add, stir, serve.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome to my kitchen. Are you ready to cook?",
+          "pt": "Bem-vindo à minha cozinha. Pronto para cozinhar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I am ready. Tell me what to do.",
+          "pt_hint": "'Me diga o que fazer.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "First, wash your hands and open the fridge.",
+          "pt": "Primeiro, lave as mãos e abra a geladeira."
+        },
+        {
+          "speaker": "user",
+          "target": "OK. What should I take out?",
+          "pt_hint": "'OK. O que eu devo tirar?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Take out two eggs and some cheese.",
+          "pt": "Tire dois ovos e queijo."
+        },
+        {
+          "speaker": "user",
+          "target": "Here they are. What's next?",
+          "pt_hint": "'Aqui estão. Qual o próximo?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Now cut the cheese and mix it with the eggs.",
+          "pt": "Agora corte o queijo e misture com os ovos."
+        },
+        {
+          "speaker": "user",
+          "target": "Done. Should I add salt?",
+          "pt_hint": "'Pronto. Devo adicionar sal?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, add a little salt and stir well.",
+          "pt": "Sim, adicione um pouco de sal e mexa bem."
+        },
+        {
+          "speaker": "user",
+          "target": "OK, I am stirring now.",
+          "pt_hint": "'OK, estou mexendo agora.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. Serve it hot. Enjoy!",
+          "pt": "Perfeito. Sirva quente. Aproveite!"
+        }
+      ]
     },
     {
       "kind": "reading",

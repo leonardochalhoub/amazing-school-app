@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "Partes do corpo + sintomas + no caixa da farmácia. Armadilha: em inglês você 'TEM dor de cabeça' (I HAVE a headache), não 'sou com dor'. Expressão comum: 'My X hurts'.",
   "scenes": [
     {
@@ -152,6 +152,97 @@
         "explanation": "Five common symptoms to memorize.",
         "hint_pt_br": "Cinco sintomas comuns."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-body-health-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I have a bad ___ and a sore throat.\"",
+        "correct": "headache",
+        "explanation": "The full phrase is: \"I have a bad headache and a sore throat.\"",
+        "hint_pt_br": "'Dor de cabeça e garganta.'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-body-health-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Há três dias.')",
+        "options": [
+          "For three days.",
+          "I am not sure.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 0,
+        "explanation": "The correct response is: \"For three days.\"",
+        "hint_pt_br": "'Há três dias.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Doctor's visit",
+      "character": "Doctor",
+      "pt_summary": "Partes do corpo e sintomas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hello. What seems to be the problem?",
+          "pt": "Olá. Qual o problema?"
+        },
+        {
+          "speaker": "user",
+          "target": "I have a bad headache and a sore throat.",
+          "pt_hint": "'Dor de cabeça e garganta.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "How long have you felt this way?",
+          "pt": "Há quanto tempo assim?"
+        },
+        {
+          "speaker": "user",
+          "target": "For three days.",
+          "pt_hint": "'Há três dias.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you have a fever?",
+          "pt": "Tem febre?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I have a small fever.",
+          "pt_hint": "'Sim, uma febrezinha.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Does your stomach hurt too?",
+          "pt": "A barriga dói também?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, my stomach feels fine.",
+          "pt_hint": "'A barriga tá boa.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I will give you medicine for three days.",
+          "pt": "Vou receitar remédio por três dias."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you, doctor. When should I return?",
+          "pt_hint": "'Quando devo voltar?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Come back if you do not feel better.",
+          "pt": "Volte se não melhorar."
+        }
+      ]
     },
     {
       "kind": "reading",

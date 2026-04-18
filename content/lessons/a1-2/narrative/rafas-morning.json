@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 40,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "A rotina matinal do Rafa em Present Simple. Reforço do -s em he/she/it, verbos irregulares do cotidiano (have, go, do), e a diferença entre DO e MAKE.",
   "scenes": [
     {
@@ -166,6 +166,69 @@
         "explanation": "DOESN'T (for she) + base verb (MAKE, not makes).",
         "hint_pt_br": "Doesn't + verbo na forma base. 'She doesn't make', não 'doesn't makes'."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Rafa's morning routine",
+      "character": "Rafa",
+      "pt_summary": "Rotina matinal — present simple + frequency adverbs.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi! Come see how I start my day.",
+          "pt": "Oi! Vem ver como começo meu dia."
+        },
+        {
+          "speaker": "user",
+          "target": "What time do you wake up?",
+          "pt_hint": "'Que horas acorda?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I always wake up at five thirty.",
+          "pt": "Sempre acordo às cinco e meia."
+        },
+        {
+          "speaker": "user",
+          "target": "Wow, that is early. What do you do first?",
+          "pt_hint": "'Uau. O que faz primeiro?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I usually drink a coffee and check the weather.",
+          "pt": "Geralmente tomo um café e vejo o tempo."
+        },
+        {
+          "speaker": "user",
+          "target": "Do you eat breakfast at home?",
+          "pt_hint": "'Toma café da manhã em casa?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "No, I never eat at home. I eat at the truck.",
+          "pt": "Não, nunca como em casa. Como no food truck."
+        },
+        {
+          "speaker": "user",
+          "target": "What do you usually eat?",
+          "pt_hint": "'O que geralmente come?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Eggs with toast and fresh orange juice.",
+          "pt": "Ovos com torrada e suco de laranja."
+        },
+        {
+          "speaker": "user",
+          "target": "That sounds healthy and delicious.",
+          "pt_hint": "'Parece saudável e gostoso.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "It is. Now I am ready for the day.",
+          "pt": "É sim. Agora tô pronto pro dia."
+        }
+      ]
     },
     {
       "kind": "reading",

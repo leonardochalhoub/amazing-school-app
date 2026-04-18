@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 45,
-  "estimated_minutes": 24,
+  "estimated_minutes": 28,
   "summary_pt_br": "O som /θ/ (th mudo) em THIN, THREE, THANK. A dica da língua entre os dentes, treinada com a música Three Little Birds do Bob Marley e Thinking Out Loud do Ed Sheeran.",
   "scenes": [
     {
@@ -179,6 +179,69 @@
       "character_id": "cosmo",
       "text_en": "Cosmo tried to bark a TH.\nHe blew. He barked. He did his best.\nWoof /θ/ woof — the dog said it true.\n'Thanks, Cosmo,' Mr. Kumar said. 'That'll do.'",
       "text_pt": "Cosmo tentou latir um TH.\nSoprou. Latiu. Fez o possível, puxa!\n'Woof /θ/ woof' — o cão acertou, que coisa.\n'Thanks, Cosmo,' disse Mr. Kumar. 'Já serviu.'"
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "The Thursday ritual",
+      "character": "Mr. Kumar",
+      "pt_summary": "TH + números — three things every Thursday.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Every Thursday I do three things.",
+          "pt": "Toda quinta faço três coisas."
+        },
+        {
+          "speaker": "user",
+          "target": "What is the first thing?",
+          "pt_hint": "'Qual a primeira?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "First, I call my mother in India.",
+          "pt": "Primeiro, ligo pra minha mãe na Índia."
+        },
+        {
+          "speaker": "user",
+          "target": "And the second thing?",
+          "pt_hint": "'E a segunda?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Second, I eat Thai food for dinner.",
+          "pt": "Segundo, como comida tailandesa no jantar."
+        },
+        {
+          "speaker": "user",
+          "target": "What is the third thing?",
+          "pt_hint": "'Qual a terceira?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Third, I thank three people for something.",
+          "pt": "Terceiro, agradeço três pessoas por algo."
+        },
+        {
+          "speaker": "user",
+          "target": "That is a beautiful ritual.",
+          "pt_hint": "'Isso é um lindo ritual.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "It keeps me thoughtful.",
+          "pt": "Me mantém atento."
+        },
+        {
+          "speaker": "user",
+          "target": "I will try three things this Thursday.",
+          "pt_hint": "'Vou tentar três coisas nesta quinta.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Wonderful. Tell me next week.",
+          "pt": "Maravilha. Me conta semana que vem."
+        }
+      ]
     },
     {
       "kind": "reading",

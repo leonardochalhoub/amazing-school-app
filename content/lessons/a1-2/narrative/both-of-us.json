@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 45,
-  "estimated_minutes": 23,
+  "estimated_minutes": 27,
   "summary_pt_br": "O TH no FIM das palavras (o mais esquecido): BOTH, WITH, FIFTH, MONTH, EARTH, SOUTH. Treinado com With or Without You (U2), Both Sides Now (Joni Mitchell) e What a Wonderful World (Louis Armstrong).",
   "scenes": [
     {
@@ -193,6 +193,69 @@
       "character_id": "kumar",
       "text_en": "Mr. Kumar clapped his hands. 'BOTH sounds, WITH and without voice.\nThe MONTH we spent on TH was worth it, no choice.\nYou can feel it on EARTH. You can feel it in the SOUTH.\nYou can feel it in every English-speaking mouth.'",
       "text_pt": "Mr. Kumar bateu palmas. 'AMBOS os sons, COM e sem voz.\nO MÊS que gastamos com TH valeu, sem mais algoz.\nVocês sentem na TERRA. Sentem no SUL.\nSentem em toda boca que fala inglês — sem mais álcool.'"
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Planning a trip with a friend",
+      "character": "Friend",
+      "pt_summary": "Both, neither, either em planejamento.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hey. We should plan our trip.",
+          "pt": "Ei. Devíamos planejar nossa viagem."
+        },
+        {
+          "speaker": "user",
+          "target": "Yes. Both of us are free in July.",
+          "pt_hint": "BOTH of us — nós dois."
+        },
+        {
+          "speaker": "ai",
+          "text": "Nice. Do you prefer beach or mountains?",
+          "pt": "Legal. Prefere praia ou montanha?"
+        },
+        {
+          "speaker": "user",
+          "target": "Both are good for me.",
+          "pt_hint": "BOTH — os dois."
+        },
+        {
+          "speaker": "ai",
+          "text": "Me too. Neither is too expensive.",
+          "pt": "Eu também. Nenhum é caro demais."
+        },
+        {
+          "speaker": "user",
+          "target": "How about we do both places?",
+          "pt_hint": "'Que tal os dois lugares?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Great idea. Beach first or mountains first?",
+          "pt": "Ótima ideia. Praia ou montanha primeiro?"
+        },
+        {
+          "speaker": "user",
+          "target": "Either is fine with me.",
+          "pt_hint": "EITHER — qualquer um."
+        },
+        {
+          "speaker": "ai",
+          "text": "Let's do beach first, then mountains.",
+          "pt": "Vamos de praia, depois montanha."
+        },
+        {
+          "speaker": "user",
+          "target": "Perfect. I am booking both hotels tonight.",
+          "pt_hint": "'Reservo os dois hotéis hoje.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Awesome. This is going to be amazing.",
+          "pt": "Show. Vai ser incrível."
+        }
+      ]
     },
     {
       "kind": "reading",

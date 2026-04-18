@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 24,
+  "estimated_minutes": 28,
   "summary_pt_br": "Present Perfect (have/has + particípio) para experiências de vida. Key words: EVER (já, em perguntas), NEVER (nunca), BEEN (esteve em), GONE (foi e não voltou).",
   "scenes": [
     {
@@ -137,6 +137,97 @@
         "explanation": "Five key signals for Present Perfect. Learn them together.",
         "hint_pt_br": "Cinco sinais-chave do Present Perfect."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-rafa-been-there-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Yes, I have been ___ twice.\"",
+        "correct": "there",
+        "explanation": "The full phrase is: \"Yes, I have been there twice.\"",
+        "hint_pt_br": "HAVE BEEN."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-rafa-been-there-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Comi vários tipos.')",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "Yes, I have tried many kinds.",
+          "Yes, of course."
+        ],
+        "correct": 2,
+        "explanation": "The correct response is: \"Yes, I have tried many kinds.\"",
+        "hint_pt_br": "'Comi vários tipos.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Rafa's past travels",
+      "character": "Rafa",
+      "pt_summary": "Present perfect — Have you ever been to...?",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Have you ever been to Mexico?",
+          "pt": "Já foi ao México?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I have been there twice.",
+          "pt_hint": "HAVE BEEN."
+        },
+        {
+          "speaker": "ai",
+          "text": "Have you tried real Mexican tacos?",
+          "pt": "Já comeu taco mexicano de verdade?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I have tried many kinds.",
+          "pt_hint": "'Comi vários tipos.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I have been to Argentina but not to Mexico.",
+          "pt": "Fui pra Argentina mas não México."
+        },
+        {
+          "speaker": "user",
+          "target": "Have you ever eaten in Buenos Aires?",
+          "pt_hint": "'Já comeu em Buenos Aires?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, I have eaten the best steak there.",
+          "pt": "Já comi o melhor bife lá."
+        },
+        {
+          "speaker": "user",
+          "target": "Have you ever seen the ocean in winter?",
+          "pt_hint": "'Já viu o mar no inverno?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, I have. It was amazing.",
+          "pt": "Já sim. Foi incrível."
+        },
+        {
+          "speaker": "user",
+          "target": "I have never seen snow in my life.",
+          "pt_hint": "'Nunca vi neve.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "You should visit Argentina with me!",
+          "pt": "Tem que vir pra Argentina comigo!"
+        }
+      ]
     },
     {
       "kind": "reading",

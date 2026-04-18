@@ -49,9 +49,26 @@ export type LessonScene =
   | VocabIntroScene
   | ChapterTitleScene
   | PronunciationScene
+  | DialogPronunciationScene
   | ReadingScene
   | ListeningScene
   | FurtherReadingScene;
+
+/**
+ * Interactive dialog drill: the AI speaks ≥5 lines via TTS, student
+ * responds on each user turn (4-8 turns total), each user turn is
+ * transcribed by Groq Whisper and scored.
+ */
+export interface DialogPronunciationScene {
+  kind: "dialog_pronunciation";
+  title: string;
+  character?: string;
+  pt_summary?: string;
+  turns: (
+    | { speaker: "ai"; text: string; pt?: string }
+    | { speaker: "user"; target: string; pt_hint?: string }
+  )[];
+}
 
 /**
  * Paragraph-length reading passage with optional comprehension question.

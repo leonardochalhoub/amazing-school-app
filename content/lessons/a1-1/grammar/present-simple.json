@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 10,
+  "estimated_minutes": 14,
   "summary_pt_br": "Presente simples em inglês — formas afirmativas, negativas e interrogativas para rotinas diárias.",
   "sources": [
     {
@@ -20,7 +20,12 @@
       "id": "ps-001",
       "type": "multiple_choice",
       "question": "She ___ to school every day.",
-      "options": ["go", "goes", "going", "gone"],
+      "options": [
+        "go",
+        "goes",
+        "going",
+        "gone"
+      ],
       "correct": 1,
       "explanation": "We use 'goes' for he/she/it in present simple. Add -es to verbs ending in -o.",
       "hint_pt_br": "Para he/she/it, adicionamos -s ou -es ao verbo."
@@ -37,7 +42,12 @@
       "id": "ps-003",
       "type": "multiple_choice",
       "question": "___ he play football on weekends?",
-      "options": ["Do", "Does", "Is", "Are"],
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
       "correct": 1,
       "explanation": "Use 'Does' for questions with he/she/it in present simple.",
       "hint_pt_br": "Para perguntas com he/she/it, usamos 'Does' no início."
@@ -46,10 +56,22 @@
       "id": "ps-004",
       "type": "matching",
       "pairs": [
-        ["I wake up early", "Eu acordo cedo"],
-        ["She eats breakfast", "Ela toma café da manhã"],
-        ["We go to work", "Nós vamos ao trabalho"],
-        ["They study English", "Eles estudam inglês"]
+        [
+          "I wake up early",
+          "Eu acordo cedo"
+        ],
+        [
+          "She eats breakfast",
+          "Ela toma café da manhã"
+        ],
+        [
+          "We go to work",
+          "Nós vamos ao trabalho"
+        ],
+        [
+          "They study English",
+          "Eles estudam inglês"
+        ]
       ],
       "explanation": "These are common daily routine phrases using present simple.",
       "hint_pt_br": "Essas são frases comuns sobre rotina diária."
@@ -61,6 +83,159 @@
       "correct": "works",
       "explanation": "For he/she/it, add -s to the base verb: work → works.",
       "hint_pt_br": "Para he/she/it, adicione -s ao verbo: work → works."
+    }
+  ],
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Present Simple Tense",
+      "subtitle_en": "Learn when and how to use the present simple tense"
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "ps-001",
+        "type": "multiple_choice",
+        "question": "She ___ to school every day.",
+        "options": [
+          "go",
+          "goes",
+          "going",
+          "gone"
+        ],
+        "correct": 1,
+        "explanation": "We use 'goes' for he/she/it in present simple. Add -es to verbs ending in -o.",
+        "hint_pt_br": "Para he/she/it, adicionamos -s ou -es ao verbo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "ps-002",
+        "type": "fill_blank",
+        "question": "They ___ (not/like) coffee.",
+        "correct": "don't like",
+        "explanation": "Use 'don't' + base verb for negatives with I/you/we/they.",
+        "hint_pt_br": "Use 'don't' + verbo na forma base para frases negativas com I/you/we/they."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "ps-003",
+        "type": "multiple_choice",
+        "question": "___ he play football on weekends?",
+        "options": [
+          "Do",
+          "Does",
+          "Is",
+          "Are"
+        ],
+        "correct": 1,
+        "explanation": "Use 'Does' for questions with he/she/it in present simple.",
+        "hint_pt_br": "Para perguntas com he/she/it, usamos 'Does' no início."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "ps-004",
+        "type": "matching",
+        "pairs": [
+          [
+            "I wake up early",
+            "Eu acordo cedo"
+          ],
+          [
+            "She eats breakfast",
+            "Ela toma café da manhã"
+          ],
+          [
+            "We go to work",
+            "Nós vamos ao trabalho"
+          ],
+          [
+            "They study English",
+            "Eles estudam inglês"
+          ]
+        ],
+        "explanation": "These are common daily routine phrases using present simple.",
+        "hint_pt_br": "Essas são frases comuns sobre rotina diária."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "ps-005",
+        "type": "fill_blank",
+        "question": "My mother ___ (work) at a hospital.",
+        "correct": "works",
+        "explanation": "For he/she/it, add -s to the base verb: work → works.",
+        "hint_pt_br": "Para he/she/it, adicione -s ao verbo: work → works."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Present simple drill",
+      "character": "Interviewer",
+      "pt_summary": "Present simple em perguntas do dia a dia.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What do you do every morning?",
+          "pt": "O que faz toda manhã?"
+        },
+        {
+          "speaker": "user",
+          "target": "I wake up and drink coffee.",
+          "pt_hint": "'Acordo e tomo café.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Where do you work?",
+          "pt": "Onde trabalha?"
+        },
+        {
+          "speaker": "user",
+          "target": "I work at a tech company.",
+          "pt_hint": "'Empresa de tech.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Does your brother live with you?",
+          "pt": "Seu irmão mora com você?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, he lives in another city.",
+          "pt_hint": "'Ele mora em outra cidade.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "How often do you travel?",
+          "pt": "Com que frequência viaja?"
+        },
+        {
+          "speaker": "user",
+          "target": "I travel twice a year.",
+          "pt_hint": "'Duas vezes por ano.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "What do you do on weekends?",
+          "pt": "O que faz no fim de semana?"
+        },
+        {
+          "speaker": "user",
+          "target": "I play tennis and read books.",
+          "pt_hint": "'Jogo tênis e leio.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Sounds like a balanced life.",
+          "pt": "Parece uma vida equilibrada."
+        }
+      ]
     }
   ]
 }

@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 20,
+  "estimated_minutes": 24,
   "summary_pt_br": "Pronomes reflexivos em inglês: myself, yourself, himself, herself, itself, ourselves, yourselves, themselves. Uso: quando sujeito e objeto são a mesma pessoa ('I hurt myself'). Expressão 'BY + reflexivo' = sozinho ('I went by myself').",
   "scenes": [
     {
@@ -96,6 +96,97 @@
         "explanation": "Five pairs. 'Hisself' and 'theirselves' don't exist.",
         "hint_pt_br": "Cinco pares. 'Hisself' e 'theirselves' não existem."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-reflexive-pronouns-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"My name is Leo. I ___ myself yoga online.\"",
+        "correct": "taught",
+        "explanation": "The full phrase is: \"My name is Leo. I taught myself yoga online.\"",
+        "hint_pt_br": "MYSELF."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-reflexive-pronouns-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Achei um bom lugar sozinho.')",
+        "options": [
+          "I am not sure.",
+          "I found a good spot by myself.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"I found a good spot by myself.\"",
+        "hint_pt_br": "'Achei um bom lugar sozinho.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Yoga with yourself",
+      "character": "Yoga teacher",
+      "pt_summary": "Pronomes reflexivos — myself, yourself, himself, ourselves.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome. Please introduce yourself to the class.",
+          "pt": "Bem-vindo. Se apresente para a turma."
+        },
+        {
+          "speaker": "user",
+          "target": "My name is Leo. I taught myself yoga online.",
+          "pt_hint": "MYSELF."
+        },
+        {
+          "speaker": "ai",
+          "text": "Nice. Find a spot for yourself.",
+          "pt": "Legal. Ache um lugar pra você."
+        },
+        {
+          "speaker": "user",
+          "target": "I found a good spot by myself.",
+          "pt_hint": "'Achei um bom lugar sozinho.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Now breathe and focus on yourself.",
+          "pt": "Agora respire e foque em você."
+        },
+        {
+          "speaker": "user",
+          "target": "I am focusing on myself.",
+          "pt_hint": "'Tô focando em mim.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Be kind to yourself during this practice.",
+          "pt": "Seja gentil consigo durante a prática."
+        },
+        {
+          "speaker": "user",
+          "target": "I will be kind to myself.",
+          "pt_hint": "'Vou ser gentil comigo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "At the end, we thank ourselves for showing up.",
+          "pt": "No fim, agradecemos a nós mesmos por ter vindo."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. I feel great about myself.",
+          "pt_hint": "'Tô me sentindo ótimo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Namaste. See you next week.",
+          "pt": "Namastê. Até semana que vem."
+        }
+      ]
     },
     {
       "kind": "reading",

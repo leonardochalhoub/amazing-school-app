@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "Conectivos básicos: BECAUSE (porque — razão), SO (então — resultado), BUT (mas — contraste), ALTHOUGH (embora — concessão). Regra: BECAUSE + oração, BECAUSE OF + substantivo.",
   "scenes": [
     {
@@ -96,6 +96,97 @@
         "explanation": "Five connectors. Each has a distinct role.",
         "hint_pt_br": "Cinco conectivos com papéis distintos."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-linking-words-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I am ___, I did not have much time.\"",
+        "correct": "sorry",
+        "explanation": "The full phrase is: \"I am sorry, I did not have much time.\"",
+        "hint_pt_br": "'Desculpa, não tive muito tempo.'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-linking-words-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. (HOWEVER.)",
+        "options": [
+          "I am not sure.",
+          "I like your idea, however I find it hard.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"I like your idea, however I find it hard.\"",
+        "hint_pt_br": "HOWEVER."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Essay feedback",
+      "character": "Zara",
+      "pt_summary": "Conectivos — and, but, because, so, however.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Your essay is good, but too short.",
+          "pt": "Seu texto é bom, mas curto."
+        },
+        {
+          "speaker": "user",
+          "target": "I am sorry, I did not have much time.",
+          "pt_hint": "'Desculpa, não tive muito tempo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Use more linking words, such as 'however'.",
+          "pt": "Use mais conectivos, como 'however'."
+        },
+        {
+          "speaker": "user",
+          "target": "I like your idea, however I find it hard.",
+          "pt_hint": "HOWEVER."
+        },
+        {
+          "speaker": "ai",
+          "text": "Good. Also use 'because' for reasons.",
+          "pt": "Bom. Use 'because' pra razões."
+        },
+        {
+          "speaker": "user",
+          "target": "I study English because I love it.",
+          "pt_hint": "BECAUSE."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now use 'so' for a result.",
+          "pt": "Agora 'so' pra consequência."
+        },
+        {
+          "speaker": "user",
+          "target": "I practice every day, so I am improving.",
+          "pt_hint": "SO."
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. One more — 'although'.",
+          "pt": "Perfeito. Mais um — 'although'."
+        },
+        {
+          "speaker": "user",
+          "target": "Although I am tired, I still study.",
+          "pt_hint": "ALTHOUGH."
+        },
+        {
+          "speaker": "ai",
+          "text": "Excellent. Your writing is getting stronger.",
+          "pt": "Excelente. Seu texto tá melhorando."
+        }
+      ]
     },
     {
       "kind": "reading",

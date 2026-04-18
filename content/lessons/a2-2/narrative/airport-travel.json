@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "Vocabulário de aeroporto + viagem: check-in, boarding pass, luggage, gate, delayed, cancelled. Diálogos típicos no balcão. Armadilha: 'luggage' é INCONTÁVEL — diga 'two pieces of luggage', nunca 'two luggages'.",
   "scenes": [
     {
@@ -158,6 +158,97 @@
         "explanation": "Five core airport words.",
         "hint_pt_br": "Cinco palavras essenciais."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-airport-travel-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I am flying to ___.\"",
+        "correct": "Orlando",
+        "explanation": "The full phrase is: \"I am flying to Orlando.\"",
+        "hint_pt_br": "'Para Orlando.'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-airport-travel-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Sim, aqui está.')",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "Yes, here it is.",
+          "Yes, of course."
+        ],
+        "correct": 2,
+        "explanation": "The correct response is: \"Yes, here it is.\"",
+        "hint_pt_br": "'Sim, aqui está.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "At the check-in counter",
+      "character": "Airline agent",
+      "pt_summary": "Check-in em aeroporto — bags, window/aisle, boarding pass.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Good morning. Where are you flying today?",
+          "pt": "Bom dia. Pra onde voa hoje?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am flying to Orlando.",
+          "pt_hint": "'Para Orlando.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "May I see your passport, please?",
+          "pt": "Posso ver seu passaporte?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, here it is.",
+          "pt_hint": "'Sim, aqui está.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "How many bags are you checking in?",
+          "pt": "Quantas malas vai despachar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Two bags and one carry-on.",
+          "pt_hint": "'Duas malas e uma de mão.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Window or aisle seat?",
+          "pt": "Janela ou corredor?"
+        },
+        {
+          "speaker": "user",
+          "target": "Window, please.",
+          "pt_hint": "'Janela.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Here is your boarding pass. Gate twelve.",
+          "pt": "Aqui está seu cartão de embarque. Portão doze."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. What time is boarding?",
+          "pt_hint": "'Que horas é o embarque?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Boarding starts at ten forty-five.",
+          "pt": "O embarque começa às dez e quarenta e cinco."
+        }
+      ]
     },
     {
       "kind": "reading",

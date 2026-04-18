@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 24,
+  "estimated_minutes": 28,
   "summary_pt_br": "HAVE TO (obrigação externa, alguém impôs) x MUST (obrigação interna ou forte) x DON'T HAVE TO (não precisa) x MUSTN'T (proibido). Armadilha: 'don't have to' NÃO significa 'mustn't'.",
   "scenes": [
     {
@@ -134,6 +134,97 @@
         "explanation": "Five levels of obligation. Pick the exact one you mean.",
         "hint_pt_br": "Cinco níveis. Escolha o preciso."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-jocas-obligations-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"What rules do you have to ___?\"",
+        "correct": "follow",
+        "explanation": "The full phrase is: \"What rules do you have to follow?\"",
+        "hint_pt_br": "HAVE TO."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-jocas-obligations-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Tem que usar terno?')",
+        "options": [
+          "Do you have to wear a suit?",
+          "I am not sure.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 0,
+        "explanation": "The correct response is: \"Do you have to wear a suit?\"",
+        "hint_pt_br": "'Tem que usar terno?'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Joca's new job rules",
+      "character": "Joca",
+      "pt_summary": "Must / have to / mustn't / don't have to.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "My new job has many rules.",
+          "pt": "Meu trabalho novo tem muitas regras."
+        },
+        {
+          "speaker": "user",
+          "target": "What rules do you have to follow?",
+          "pt_hint": "HAVE TO."
+        },
+        {
+          "speaker": "ai",
+          "text": "I must arrive at nine every day.",
+          "pt": "Tenho que chegar às nove."
+        },
+        {
+          "speaker": "user",
+          "target": "Do you have to wear a suit?",
+          "pt_hint": "'Tem que usar terno?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "No, I don't have to, but I must look professional.",
+          "pt": "Não preciso, mas tenho que parecer profissional."
+        },
+        {
+          "speaker": "user",
+          "target": "Do you have to work on weekends?",
+          "pt_hint": "'Trabalha nos fins de semana?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Sometimes I have to, but not often.",
+          "pt": "Às vezes, mas não sempre."
+        },
+        {
+          "speaker": "user",
+          "target": "You mustn't be late, right?",
+          "pt_hint": "MUSTN'T."
+        },
+        {
+          "speaker": "ai",
+          "text": "Right. I mustn't be late under any circumstance.",
+          "pt": "Isso. Não posso me atrasar."
+        },
+        {
+          "speaker": "user",
+          "target": "That is a lot of responsibility.",
+          "pt_hint": "'Muita responsabilidade.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "It is, but I love the challenge.",
+          "pt": "É, mas adoro o desafio."
+        }
+      ]
     },
     {
       "kind": "reading",

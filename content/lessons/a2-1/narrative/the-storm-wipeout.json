@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 23,
+  "estimated_minutes": 27,
   "summary_pt_br": "Past Continuous para ações em progresso no passado, e Past Simple para a ação que interrompe. Fórmula: 'While I WAS WALKING, it STARTED to rain'.",
   "scenes": [
     {
@@ -99,6 +99,97 @@
         "explanation": "Plural subject + past continuous = WERE + -ing.",
         "hint_pt_br": "Plural: were + -ing."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-the-storm-wipeout-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"What were you ___?\"",
+        "correct": "doing",
+        "explanation": "The full phrase is: \"What were you doing?\"",
+        "hint_pt_br": "'O que você tava fazendo?'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-the-storm-wipeout-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Tava de roupa de mergulho?')",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "Were you wearing a wetsuit?",
+          "Yes, of course."
+        ],
+        "correct": 2,
+        "explanation": "The correct response is: \"Were you wearing a wetsuit?\"",
+        "hint_pt_br": "'Tava de roupa de mergulho?'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "The wipeout story",
+      "character": "Bia",
+      "pt_summary": "Past continuous — o que estava acontecendo quando a onda veio.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "You should have seen what happened yesterday.",
+          "pt": "Tinha que ter visto o que rolou ontem."
+        },
+        {
+          "speaker": "user",
+          "target": "What were you doing?",
+          "pt_hint": "'O que você tava fazendo?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I was surfing when a huge wave came.",
+          "pt": "Estava surfando quando veio uma onda enorme."
+        },
+        {
+          "speaker": "user",
+          "target": "Were you wearing a wetsuit?",
+          "pt_hint": "'Tava de roupa de mergulho?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, I was. It saved me from the cold.",
+          "pt": "Estava. Me salvou do frio."
+        },
+        {
+          "speaker": "user",
+          "target": "How were your friends reacting?",
+          "pt_hint": "'Como seus amigos reagiram?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "They were shouting and laughing at the same time.",
+          "pt": "Gritavam e riam ao mesmo tempo."
+        },
+        {
+          "speaker": "user",
+          "target": "Were you scared?",
+          "pt_hint": "'Ficou com medo?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "A little, but I was laughing too.",
+          "pt": "Um pouco, mas tava rindo também."
+        },
+        {
+          "speaker": "user",
+          "target": "I was watching from the beach.",
+          "pt_hint": "'Eu estava vendo da praia.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Then you saw my best wipeout ever!",
+          "pt": "Então viu meu melhor wipeout!"
+        }
+      ]
     },
     {
       "kind": "reading",

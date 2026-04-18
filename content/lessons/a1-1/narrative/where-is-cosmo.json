@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 21,
+  "estimated_minutes": 25,
   "summary_pt_br": "O Cosmo se escondeu na sala. A turma tem que usar preposições de lugar (on, in, under, next to, behind) para achá-lo. Aprenda os objetos da sala e as preposições em contexto.",
   "scenes": [
     {
@@ -204,6 +204,69 @@
         {
           "en": "There are two dogs in the room.",
           "pt": "Tem dois cachorros na sala."
+        }
+      ]
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Looking for Cosmo",
+      "character": "Mr. Kumar",
+      "pt_summary": "Preposições de lugar — in, on, under, behind, next to.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Oh no! I cannot find Cosmo. Have you seen him?",
+          "pt": "Ah não! Não acho o Cosmo. Você viu ele?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, I have not. Is he in the house?",
+          "pt_hint": "'Ele está na casa?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I looked in the living room. He is not there.",
+          "pt": "Olhei na sala. Não está lá."
+        },
+        {
+          "speaker": "user",
+          "target": "Is he under the table?",
+          "pt_hint": "'Está embaixo da mesa?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "No, he is not under the table either.",
+          "pt": "Não, também não."
+        },
+        {
+          "speaker": "user",
+          "target": "Maybe he is behind the sofa.",
+          "pt_hint": "'Talvez esteja atrás do sofá.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Good idea. Let me check.",
+          "pt": "Boa ideia. Deixa eu ver."
+        },
+        {
+          "speaker": "user",
+          "target": "Or in the garden, next to the flowers.",
+          "pt_hint": "'Ou no jardim, ao lado das flores.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes! He is on the grass, sleeping.",
+          "pt": "Sim! Está na grama, dormindo."
+        },
+        {
+          "speaker": "user",
+          "target": "I am happy we found him.",
+          "pt_hint": "'Estou feliz que achamos.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you for helping me.",
+          "pt": "Obrigado por ajudar."
         }
       ]
     },

@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 30,
-  "estimated_minutes": 20,
+  "estimated_minutes": 24,
   "summary_pt_br": "Números ordinais em inglês: 1st first, 2nd second, 3rd third, 4th fourth, 5th fifth, 9th ninth, 12th twelfth. Para datas: 'the + ordinal + of + month' (UK) ou 'month + ordinal' (US).",
   "scenes": [
     {
@@ -105,6 +105,69 @@
         "explanation": "UK: 'the first of May'. US: 'May first'. Either works.",
         "hint_pt_br": "'The first of May' (UK) ou 'May first' (EUA)."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Birthday planning",
+      "character": "Bia",
+      "pt_summary": "Datas e números ordinais — first, second, third, twenty-first.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi! My birthday is coming up. Guess when?",
+          "pt": "Oi! Meu aniversário tá chegando. Advinha quando?"
+        },
+        {
+          "speaker": "user",
+          "target": "Is it in June?",
+          "pt_hint": "'É em junho?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes! Can you guess the date?",
+          "pt": "Sim! Advinha o dia?"
+        },
+        {
+          "speaker": "user",
+          "target": "Is it on the fifteenth of June?",
+          "pt_hint": "'15 de junho?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Close. It is on the twenty-first of June.",
+          "pt": "Quase. É 21 de junho."
+        },
+        {
+          "speaker": "user",
+          "target": "That is the first day of winter.",
+          "pt_hint": "'É o primeiro dia de inverno.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Exactly. What day of the week is it this year?",
+          "pt": "Exato. Que dia da semana cai esse ano?"
+        },
+        {
+          "speaker": "user",
+          "target": "It is a Saturday.",
+          "pt_hint": "'É sábado.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. Can you come to my party?",
+          "pt": "Perfeito. Pode vir na minha festa?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I would love to come.",
+          "pt_hint": "'Sim, eu adoraria ir.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Awesome. See you on the twenty-first!",
+          "pt": "Show. Até dia 21!"
+        }
+      ]
     },
     {
       "kind": "reading",

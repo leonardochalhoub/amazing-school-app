@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 50,
-  "estimated_minutes": 25,
+  "estimated_minutes": 29,
   "summary_pt_br": "Uma playlist de 5 músicas focadas em palavras com TH, para consolidar o que foi aprendido. Inclui análise de linhas específicas de Three Little Birds, Thinking Out Loud, Mother, With or Without You e This Is Me.",
   "scenes": [
     {
@@ -163,6 +163,69 @@
         "explanation": "THINK with /θ/. Full sentence: 'I think I can.' Repeat three times — each with a clear TH.",
         "hint_pt_br": "THINK com /θ/. 'I think I can.' Repita três vezes, cada uma com TH limpo."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "TH pronunciation session",
+      "character": "Zara",
+      "pt_summary": "Drill de pronúncia TH surdo e sonoro.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Today we practice the TH sound. Ready?",
+          "pt": "Hoje treinamos o som TH. Pronto?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I am ready.",
+          "pt_hint": "'Tô pronto.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Repeat — Think, thank, thirty, Thursday.",
+          "pt": "Repete — Think, thank, thirty, Thursday."
+        },
+        {
+          "speaker": "user",
+          "target": "Think, thank, thirty, Thursday.",
+          "pt_hint": "Think, thank, thirty, Thursday."
+        },
+        {
+          "speaker": "ai",
+          "text": "Good. Now the voiced TH — this, that, there.",
+          "pt": "Bom. Agora TH sonoro."
+        },
+        {
+          "speaker": "user",
+          "target": "This, that, there.",
+          "pt_hint": "This, that, there."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now a full sentence — I think this is great.",
+          "pt": "Agora uma frase — I think this is great."
+        },
+        {
+          "speaker": "user",
+          "target": "I think this is great.",
+          "pt_hint": "I think this is great."
+        },
+        {
+          "speaker": "ai",
+          "text": "Excellent. Another one — Thirty thirsty thunderbirds.",
+          "pt": "Excelente. Mais uma — Thirty thirsty thunderbirds."
+        },
+        {
+          "speaker": "user",
+          "target": "Thirty thirsty thunderbirds.",
+          "pt_hint": "Trava-língua de TH."
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. You are getting better!",
+          "pt": "Perfeito. Você tá melhorando!"
+        }
+      ]
     },
     {
       "kind": "reading",

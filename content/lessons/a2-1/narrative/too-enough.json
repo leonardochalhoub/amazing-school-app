@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 20,
+  "estimated_minutes": 24,
   "summary_pt_br": "TOO (excessivo) vs ENOUGH (suficiente). Posição: TOO + adjetivo ('too hot'), adjetivo + ENOUGH ('hot enough'). Negativa: not hot enough = não quente o suficiente. TOO não é 'muito' — é 'demais'.",
   "scenes": [
     {
@@ -86,6 +86,97 @@
         "explanation": "ENOUGH before a noun = sufficient.",
         "hint_pt_br": "Enough + substantivo."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-too-enough-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The soup is too ___.\"",
+        "correct": "salty",
+        "explanation": "The full phrase is: \"The soup is too salty.\"",
+        "hint_pt_br": "TOO + adjetivo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-too-enough-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. (ADJ + ENOUGH.)",
+        "options": [
+          "I am not sure.",
+          "Thank you. Also, my tea is not hot enough.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"Thank you. Also, my tea is not hot enough.\"",
+        "hint_pt_br": "ADJ + ENOUGH."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "At the restaurant (complaining politely)",
+      "character": "Waiter",
+      "pt_summary": "TOO + adj, ADJ + ENOUGH.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "How is your food so far?",
+          "pt": "Como tá sua comida?"
+        },
+        {
+          "speaker": "user",
+          "target": "The soup is too salty.",
+          "pt_hint": "TOO + adjetivo."
+        },
+        {
+          "speaker": "ai",
+          "text": "I am sorry. Let me get you another one.",
+          "pt": "Me desculpe. Trago outra."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. Also, my tea is not hot enough.",
+          "pt_hint": "ADJ + ENOUGH."
+        },
+        {
+          "speaker": "ai",
+          "text": "I will heat it up. Is the chair comfortable?",
+          "pt": "Vou esquentar. A cadeira está confortável?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, it is too small.",
+          "pt_hint": "'Muito pequena.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Let me move you to a bigger table.",
+          "pt": "Vou te colocar numa mesa maior."
+        },
+        {
+          "speaker": "user",
+          "target": "That would be wonderful. Thank you.",
+          "pt_hint": "'Seria ótimo. Obrigado.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Is the music too loud?",
+          "pt": "A música tá alta demais?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, a little. It is hard to talk.",
+          "pt_hint": "'Um pouco. Difícil conversar.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I will ask them to turn it down.",
+          "pt": "Vou pedir pra abaixar."
+        }
+      ]
     },
     {
       "kind": "reading",

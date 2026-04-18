@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 40,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "O som /ð/ (TH vibrado, COM voz) nos demonstrativos THIS / THAT / THESE / THOSE. A diferença entre 'dis' (errado) e 'this' (correto) — com dica de vibração na garganta.",
   "scenes": [
     {
@@ -195,6 +195,69 @@
         "explanation": "THIS / THAT / THEY all start with the VOICED /ð/ (you feel vibration). The other groups are /θ/ (just air, no voice).",
         "hint_pt_br": "THIS / THAT / THEY começam com /ð/ — vibra. Os outros grupos são /θ/ — só ar."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "At the shopping mall",
+      "character": "Salesperson",
+      "pt_summary": "This / that / these / those.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome. Can I help you find something?",
+          "pt": "Bem-vindo. Posso ajudar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes. How much is this shirt?",
+          "pt_hint": "THIS — aqui perto."
+        },
+        {
+          "speaker": "ai",
+          "text": "That shirt is forty dollars.",
+          "pt": "Essa camisa custa quarenta dólares."
+        },
+        {
+          "speaker": "user",
+          "target": "And those pants over there?",
+          "pt_hint": "THOSE — longe, plural."
+        },
+        {
+          "speaker": "ai",
+          "text": "Those pants are on sale for thirty.",
+          "pt": "Aquelas calças estão em promoção, trinta."
+        },
+        {
+          "speaker": "user",
+          "target": "I will try these pants, please.",
+          "pt_hint": "THESE — aqui perto, plural."
+        },
+        {
+          "speaker": "ai",
+          "text": "Sure. The fitting room is that way.",
+          "pt": "Claro. O provador é por ali."
+        },
+        {
+          "speaker": "user",
+          "target": "These pants fit perfectly.",
+          "pt_hint": "'Essas calças serviram bem.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Wonderful. Anything else?",
+          "pt": "Maravilha. Mais algo?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I will take this shirt too.",
+          "pt_hint": "'Vou levar essa camisa também.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. That will be seventy dollars.",
+          "pt": "Ótimo. Vai dar setenta dólares."
+        }
+      ]
     },
     {
       "kind": "reading",

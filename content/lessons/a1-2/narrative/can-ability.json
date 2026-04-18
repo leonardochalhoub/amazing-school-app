@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 20,
+  "estimated_minutes": 24,
   "summary_pt_br": "CAN para habilidade e pedidos. Estrutura: CAN + verbo base. Pergunta: Can you swim? Resposta curta: Yes I can / No I can't. Pedidos educados: 'Can you help me?', 'Can I have...?'",
   "scenes": [
     {
@@ -78,6 +78,69 @@
         "explanation": "Short: 'No, I can't.' Or full: 'No, I cannot dance.'",
         "hint_pt_br": "Short: 'No, I can't'. Full: 'No, I cannot dance'."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "A quick skills interview",
+      "character": "Recruiter",
+      "pt_summary": "CAN para habilidades.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hello. Can you tell me your skills?",
+          "pt": "Olá. Pode me dizer suas habilidades?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes. I can speak English and Portuguese.",
+          "pt_hint": "'Falo inglês e português.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Impressive. Can you write code?",
+          "pt": "Impressionante. Sabe programar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I can write in Python and JavaScript.",
+          "pt_hint": "'Sei programar em Python e JavaScript.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Can you work under pressure?",
+          "pt": "Você trabalha sob pressão?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I can stay calm during deadlines.",
+          "pt_hint": "'Consigo manter a calma.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Can you start next Monday?",
+          "pt": "Pode começar segunda que vem?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I can start on Monday.",
+          "pt_hint": "'Posso começar na segunda.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "One last question — can you drive?",
+          "pt": "Uma última — sabe dirigir?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, I cannot, but I take the bus.",
+          "pt_hint": "'Não, mas pego ônibus.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "That is fine. Welcome to the team!",
+          "pt": "Tudo bem. Bem-vindo ao time!"
+        }
+      ]
     },
     {
       "kind": "reading",

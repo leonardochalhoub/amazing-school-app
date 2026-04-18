@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "Pronomes indefinidos em inglês: SOMEBODY/ANYBODY/NOBODY/EVERYBODY para pessoas, e combinações com -thing / -where. Regra: some- em afirmativas, any- em negativas/perguntas, no- para negação com verbo afirmativo.",
   "scenes": [
     {
@@ -143,6 +143,97 @@
         "explanation": "Five of the twelve. Learn the rest by combining.",
         "hint_pt_br": "Cinco das doze. O resto combina igual."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-somebody-nothing-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Yes, ___ was standing near the gate.\"",
+        "correct": "somebody",
+        "explanation": "The full phrase is: \"Yes, somebody was standing near the gate.\"",
+        "hint_pt_br": "SOMEBODY."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-somebody-nothing-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. (NOTHING.)",
+        "options": [
+          "I am not sure.",
+          "No, they said nothing at all.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"No, they said nothing at all.\"",
+        "hint_pt_br": "NOTHING."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Missing person report",
+      "character": "Detective",
+      "pt_summary": "Compound indefinite pronouns — somebody, anyone, nothing, everywhere.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Did you see anybody suspicious last night?",
+          "pt": "Viu alguém suspeito ontem à noite?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, somebody was standing near the gate.",
+          "pt_hint": "SOMEBODY."
+        },
+        {
+          "speaker": "ai",
+          "text": "Did they say anything?",
+          "pt": "Disseram algo?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, they said nothing at all.",
+          "pt_hint": "NOTHING."
+        },
+        {
+          "speaker": "ai",
+          "text": "Did you find anything unusual?",
+          "pt": "Encontrou algo estranho?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I found something near the door.",
+          "pt_hint": "SOMETHING."
+        },
+        {
+          "speaker": "ai",
+          "text": "Was there anyone with you?",
+          "pt": "Tinha alguém com você?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, there was nobody else.",
+          "pt_hint": "NOBODY."
+        },
+        {
+          "speaker": "ai",
+          "text": "We will search everywhere.",
+          "pt": "Vamos procurar em todo lugar."
+        },
+        {
+          "speaker": "user",
+          "target": "I hope you find something useful.",
+          "pt_hint": "'Espero que achem algo útil.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you for your help.",
+          "pt": "Obrigado pela ajuda."
+        }
+      ]
     },
     {
       "kind": "reading",

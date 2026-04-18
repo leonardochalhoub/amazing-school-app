@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 23,
+  "estimated_minutes": 27,
   "summary_pt_br": "Fórmulas fixas para telefone e e-mail em inglês. Telefone: Hello, this is X. May I speak to...? I'll put you through. E-mail: Dear / Hi, I'm writing to... / Looking forward to hearing from you / Best regards.",
   "scenes": [
     {
@@ -152,6 +152,97 @@
         "explanation": "Five blocks to memorize whole.",
         "hint_pt_br": "Cinco blocos inteiros para decorar."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-phone-email-basics-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Hi, may I speak to Mr. Kumar, ___?\"",
+        "correct": "please",
+        "explanation": "The full phrase is: \"Hi, may I speak to Mr. Kumar, please?\"",
+        "hint_pt_br": "'Posso falar com o Mr. Kumar?'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-phone-email-basics-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('É Leo Silva, aluno dele.')",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "This is Leo Silva, his student.",
+          "Yes, of course."
+        ],
+        "correct": 2,
+        "explanation": "The correct response is: \"This is Leo Silva, his student.\"",
+        "hint_pt_br": "'É Leo Silva, aluno dele.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Making a business call",
+      "character": "Receptionist",
+      "pt_summary": "Frases básicas de telefone e email.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hello, Amazing School. How can I help you?",
+          "pt": "Alô, Amazing School. Como posso ajudar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Hi, may I speak to Mr. Kumar, please?",
+          "pt_hint": "'Posso falar com o Mr. Kumar?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Who is calling, please?",
+          "pt": "Quem fala?"
+        },
+        {
+          "speaker": "user",
+          "target": "This is Leo Silva, his student.",
+          "pt_hint": "'É Leo Silva, aluno dele.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Hold on, please. I will put you through.",
+          "pt": "Aguarde, vou transferir."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. I will wait.",
+          "pt_hint": "'Obrigado. Vou esperar.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "He is in a meeting. Can I take a message?",
+          "pt": "Ele está em reunião. Posso anotar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Please tell him to call me back.",
+          "pt_hint": "'Peça pra ele me ligar de volta.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Could I have your phone number?",
+          "pt": "Pode me dar seu telefone?"
+        },
+        {
+          "speaker": "user",
+          "target": "It is nine one five five five one two three four.",
+          "pt_hint": "Soletre os dígitos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you. I will pass the message.",
+          "pt": "Obrigado. Vou passar o recado."
+        }
+      ]
     },
     {
       "kind": "reading",

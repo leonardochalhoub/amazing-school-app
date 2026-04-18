@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 40,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "Comidas e bebidas + fórmulas educadas para pedir: I'd like... / Could I have... / Can I get... A diferença entre soar rude e soar educado na hora de pedir em restaurantes.",
   "scenes": [
     {
@@ -191,6 +191,69 @@
         "explanation": "'Bring me' — object pronoun. 'Could you bring ME some water' is the standard.",
         "hint_pt_br": "'Me' é o objeto de 'bring': 'bring me something' = traga algo para mim."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Exploring the menu",
+      "character": "Rafa",
+      "pt_summary": "Vocabulário de cardápio — burger, taco, salad, smoothie.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome back! Want to see the new menu?",
+          "pt": "Voltou! Quer ver o cardápio novo?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, please. What do you recommend?",
+          "pt_hint": "'Por favor. O que recomenda?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "The fish tacos are excellent today.",
+          "pt": "Os tacos de peixe estão ótimos hoje."
+        },
+        {
+          "speaker": "user",
+          "target": "Do you have vegetarian options?",
+          "pt_hint": "'Tem opção vegetariana?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes. Try our avocado burger and green salad.",
+          "pt": "Sim. O burger de abacate e a salada verde."
+        },
+        {
+          "speaker": "user",
+          "target": "I will have the avocado burger, please.",
+          "pt_hint": "'Vou querer o burger de abacate.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Great choice. Any drink?",
+          "pt": "Boa escolha. Bebida?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, a mango smoothie, please.",
+          "pt_hint": "'Um smoothie de manga.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Excellent. That comes to fourteen dollars.",
+          "pt": "Excelente. Dá quatorze dólares."
+        },
+        {
+          "speaker": "user",
+          "target": "Here you are. Keep the change.",
+          "pt_hint": "'Aqui está. Fica com o troco.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Thanks a lot. Your food will be ready soon.",
+          "pt": "Muito obrigado. Sai rapidinho."
+        }
+      ]
     },
     {
       "kind": "reading",

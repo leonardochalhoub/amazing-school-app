@@ -6,16 +6,25 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 10,
+  "estimated_minutes": 14,
   "summary_pt_br": "Números de 1 a 100 em inglês. As 'teens' (13–19) e os múltiplos de 10 são as duas regras mais importantes.",
   "exercises": [
     {
       "id": "num-001",
       "type": "matching",
       "pairs": [
-        ["3", "three"],
-        ["13", "thirteen"],
-        ["30", "thirty"]
+        [
+          "3",
+          "three"
+        ],
+        [
+          "13",
+          "thirteen"
+        ],
+        [
+          "30",
+          "thirty"
+        ]
       ],
       "explanation": "Watch the -teen vs. -ty pattern: thirTEEN (13) is stressed on the end, THIRty (30) on the start.",
       "hint_pt_br": "Diferença-chave: 13 tem ênfase no final (-teen), 30 no começo (-ty)."
@@ -82,12 +91,210 @@
       "id": "num-007",
       "type": "matching",
       "pairs": [
-        ["12", "twelve"],
-        ["20", "twenty"],
-        ["100", "one hundred"]
+        [
+          "12",
+          "twelve"
+        ],
+        [
+          "20",
+          "twenty"
+        ],
+        [
+          "100",
+          "one hundred"
+        ]
       ],
       "explanation": "Three 'landmarks' worth memorizing exactly — they don't follow the normal pattern.",
       "hint_pt_br": "Números irregulares que é melhor decorar: twelve (12), twenty (20), one hundred (100)."
+    }
+  ],
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Numbers 1–100",
+      "subtitle_en": "Count, give your age, and say phone numbers in English."
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "num-001",
+        "type": "matching",
+        "pairs": [
+          [
+            "3",
+            "three"
+          ],
+          [
+            "13",
+            "thirteen"
+          ],
+          [
+            "30",
+            "thirty"
+          ]
+        ],
+        "explanation": "Watch the -teen vs. -ty pattern: thirTEEN (13) is stressed on the end, THIRty (30) on the start.",
+        "hint_pt_br": "Diferença-chave: 13 tem ênfase no final (-teen), 30 no começo (-ty)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "num-002",
+        "type": "multiple_choice",
+        "question": "How do you say 21 in English?",
+        "options": [
+          "twenty and one",
+          "twenty-one",
+          "two ten one",
+          "twentyone"
+        ],
+        "correct": 1,
+        "explanation": "Two-digit numbers above 20 use a hyphen: twenty-one, thirty-two, forty-five.",
+        "hint_pt_br": "Use hífen entre a dezena e a unidade: twenty-one, forty-three."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "num-003",
+        "type": "fill_blank",
+        "question": "40 is 'forty'. 50 is '___'.",
+        "correct": "fifty",
+        "explanation": "fifty = 50. Note: it's 'fifty' not 'fivety'.",
+        "hint_pt_br": "50 = fifty (não 'fivety'!)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "num-004",
+        "type": "multiple_choice",
+        "question": "Someone asks 'How old are you?' — a natural reply is:",
+        "options": [
+          "I have 25 years",
+          "I am 25 years old",
+          "My age is 25",
+          "25 years"
+        ],
+        "correct": 1,
+        "explanation": "English uses BE for age: 'I AM 25 years old'. Not 'I have 25 years' (that's Portuguese/French structure).",
+        "hint_pt_br": "Cuidado: em inglês usa-se 'to be' (I AM 25), não 'to have'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "num-005",
+        "type": "fill_blank",
+        "question": "The next number: 70, 80, ___.",
+        "correct": "ninety",
+        "explanation": "70 = seventy, 80 = eighty, 90 = ninety.",
+        "hint_pt_br": "90 = ninety (escreva com 'ni' — sem 'y' no lugar do 'i')."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "num-006",
+        "type": "multiple_choice",
+        "question": "Your phone number ends in 007. How would you say it out loud?",
+        "options": [
+          "seven",
+          "double-zero seven",
+          "zero zero seven",
+          "All three are natural in different contexts"
+        ],
+        "correct": 3,
+        "explanation": "For phone numbers, digits are said one by one. 'Double-zero' is common in the UK, 'zero zero' in the US, and British English also says 'oh' /oʊ/ for zero.",
+        "hint_pt_br": "Em números de telefone, cada dígito é dito separadamente."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "num-007",
+        "type": "matching",
+        "pairs": [
+          [
+            "12",
+            "twelve"
+          ],
+          [
+            "20",
+            "twenty"
+          ],
+          [
+            "100",
+            "one hundred"
+          ]
+        ],
+        "explanation": "Three 'landmarks' worth memorizing exactly — they don't follow the normal pattern.",
+        "hint_pt_br": "Números irregulares que é melhor decorar: twelve (12), twenty (20), one hundred (100)."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Numbers drill",
+      "character": "Shopkeeper",
+      "pt_summary": "Números de 1 a 100 em contexto.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "How old are you?",
+          "pt": "Quantos anos?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am twenty-eight years old.",
+          "pt_hint": "28 anos."
+        },
+        {
+          "speaker": "ai",
+          "text": "The bill is forty-five dollars.",
+          "pt": "A conta é quarenta e cinco."
+        },
+        {
+          "speaker": "user",
+          "target": "Here is fifty dollars.",
+          "pt_hint": "'Aqui cinquenta.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Your change is five dollars.",
+          "pt": "Troco cinco."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. What is your phone number?",
+          "pt_hint": "'Qual seu telefone?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "It is seven two three nine eight one.",
+          "pt": "723981."
+        },
+        {
+          "speaker": "user",
+          "target": "Let me repeat — seven two three nine eight one.",
+          "pt_hint": "Repete os dígitos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Correct. How many apples do you want?",
+          "pt": "Certo. Quantas maçãs?"
+        },
+        {
+          "speaker": "user",
+          "target": "I want seventeen apples, please.",
+          "pt_hint": "17."
+        },
+        {
+          "speaker": "ai",
+          "text": "Seventeen apples coming up!",
+          "pt": "Saindo 17 maçãs!"
+        }
+      ]
     }
   ]
 }

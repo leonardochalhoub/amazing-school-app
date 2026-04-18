@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 40,
-  "estimated_minutes": 23,
+  "estimated_minutes": 27,
   "summary_pt_br": "A Bia se confunde com o verbo TO BE. Dona Lúcia, Rafa e Mr. Kumar ajudam — em rimas e diálogos — a separar I am / you are / he is. Inclui a armadilha 'I have 16 years' (errada em inglês).",
   "scenes": [
     {
@@ -168,6 +168,69 @@
         "explanation": "YOU always takes ARE — whether talking to one person or many.",
         "hint_pt_br": "'You' sempre pede 'are', não importa se é singular ou plural."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Introductions with verb TO BE",
+      "character": "Zara",
+      "pt_summary": "Treinando I am / you are / she is em apresentações.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi. I am Zara. I am a teacher.",
+          "pt": "Oi. Eu sou a Zara. Sou professora."
+        },
+        {
+          "speaker": "user",
+          "target": "Hello. I am Leo. I am a student.",
+          "pt_hint": "Use I am para se apresentar."
+        },
+        {
+          "speaker": "ai",
+          "text": "Nice to meet you. Are you from Brazil?",
+          "pt": "Prazer. Você é do Brasil?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I am. I am from São Paulo.",
+          "pt_hint": "Yes, I am."
+        },
+        {
+          "speaker": "ai",
+          "text": "São Paulo is a big city, right?",
+          "pt": "São Paulo é uma cidade grande, né?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, it is very big and very busy.",
+          "pt_hint": "Yes, it is…"
+        },
+        {
+          "speaker": "ai",
+          "text": "Are your parents Brazilian too?",
+          "pt": "Seus pais também são brasileiros?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, they are. They are from Rio.",
+          "pt_hint": "Yes, they are."
+        },
+        {
+          "speaker": "ai",
+          "text": "Wonderful. Welcome to our class.",
+          "pt": "Maravilha. Bem-vindo à nossa aula."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. I am very happy to be here.",
+          "pt_hint": "'I am happy to be here.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. Let's start the lesson.",
+          "pt": "Ótimo. Vamos começar a aula."
+        }
+      ]
     },
     {
       "kind": "reading",

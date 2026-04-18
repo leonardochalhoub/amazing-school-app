@@ -1,0 +1,1392 @@
+{
+  "version": 1,
+  "description": "One dialog_pronunciation scene per A1 and A2 lesson. Each dialog has 6 AI lines (spoken by TTS) and 5 user lines (recorded and scored by Groq Whisper). Injected into each lesson JSON before the recap reading.",
+  "dialogs": {
+    "greetings-story": {
+      "title": "First day — meeting Mr. Kumar",
+      "character": "Mr. Kumar",
+      "pt_summary": "Seu primeiro dia na Amazing School. Mr. Kumar te recebe.",
+      "turns": [
+        { "speaker": "ai", "text": "Good morning! Welcome to Amazing School.", "pt": "Bom dia! Bem-vindo à Amazing School." },
+        { "speaker": "user", "target": "Good morning. My name is Leo.", "pt_hint": "Bom dia. Meu nome é Leo." },
+        { "speaker": "ai", "text": "Nice to meet you, Leo. How are you today?", "pt": "Prazer em te conhecer, Leo. Como vai hoje?" },
+        { "speaker": "user", "target": "I am fine, thank you. And you?", "pt_hint": "Estou bem, obrigado. E você?" },
+        { "speaker": "ai", "text": "I am very well. Where are you from?", "pt": "Estou muito bem. De onde você é?" },
+        { "speaker": "user", "target": "I am from Brazil.", "pt_hint": "Eu sou do Brasil." },
+        { "speaker": "ai", "text": "Wonderful. Your first class is at nine.", "pt": "Maravilha. Sua primeira aula é às nove." },
+        { "speaker": "user", "target": "Thank you. See you later.", "pt_hint": "Obrigado. Até mais tarde." },
+        { "speaker": "ai", "text": "One more thing — have a great day!", "pt": "Mais uma coisa — tenha um ótimo dia!" },
+        { "speaker": "user", "target": "You too. Goodbye.", "pt_hint": "Você também. Tchau." },
+        { "speaker": "ai", "text": "Goodbye, Leo. See you tomorrow.", "pt": "Tchau, Leo. Até amanhã." }
+      ]
+    },
+    "alphabet-parade": {
+      "title": "Spelling your name",
+      "character": "Mr. Kumar",
+      "pt_summary": "Soletrando nomes em inglês — atenção nas letras difíceis G/J, E/I, V/W, Y.",
+      "turns": [
+        { "speaker": "ai", "text": "Hello. Please tell me your full name.", "pt": "Olá. Por favor, diga seu nome completo." },
+        { "speaker": "user", "target": "My name is Maria Silva.", "pt_hint": "Meu nome é Maria Silva." },
+        { "speaker": "ai", "text": "Could you spell your first name, please?", "pt": "Pode soletrar seu primeiro nome, por favor?" },
+        { "speaker": "user", "target": "M. A. R. I. A. Maria.", "pt_hint": "Soletre: M-A-R-I-A." },
+        { "speaker": "ai", "text": "Thank you. And your last name?", "pt": "Obrigado. E seu sobrenome?" },
+        { "speaker": "user", "target": "S. I. L. V. A. Silva.", "pt_hint": "Soletre: S-I-L-V-A." },
+        { "speaker": "ai", "text": "Great. Could you also spell 'Brazil' for me?", "pt": "Ótimo. Pode soletrar 'Brazil' também?" },
+        { "speaker": "user", "target": "B. R. A. Z. I. L. Brazil.", "pt_hint": "B-R-A-Z-I-L." },
+        { "speaker": "ai", "text": "Excellent pronunciation.", "pt": "Pronúncia excelente." },
+        { "speaker": "user", "target": "Thank you very much.", "pt_hint": "Muito obrigado." },
+        { "speaker": "ai", "text": "You are welcome. See you next class.", "pt": "De nada. Até a próxima aula." }
+      ]
+    },
+    "cosmos-numbers-rhyme": {
+      "title": "Phone numbers and prices",
+      "character": "Shopkeeper",
+      "pt_summary": "Treinando números — telefone e preços.",
+      "turns": [
+        { "speaker": "ai", "text": "Hi there. Could I have your phone number?", "pt": "Oi. Pode me passar seu número de telefone?" },
+        { "speaker": "user", "target": "Yes, it is nine eight seven six five four three two one.", "pt_hint": "Fale os dígitos: 987654321." },
+        { "speaker": "ai", "text": "Thank you. How old are you?", "pt": "Obrigado. Quantos anos você tem?" },
+        { "speaker": "user", "target": "I am twenty-five years old.", "pt_hint": "Eu tenho 25 anos." },
+        { "speaker": "ai", "text": "The total is fifteen dollars.", "pt": "O total é quinze dólares." },
+        { "speaker": "user", "target": "Here are twenty dollars.", "pt_hint": "Aqui estão vinte dólares." },
+        { "speaker": "ai", "text": "Your change is five dollars.", "pt": "Seu troco são cinco dólares." },
+        { "speaker": "user", "target": "Thank you. Have a good day.", "pt_hint": "Obrigado. Tenha um bom dia." },
+        { "speaker": "ai", "text": "You too. One more thing — keep your receipt.", "pt": "Você também. Mais uma coisa — guarde seu recibo." },
+        { "speaker": "user", "target": "OK. Goodbye.", "pt_hint": "OK. Tchau." },
+        { "speaker": "ai", "text": "Goodbye. See you soon.", "pt": "Tchau. Até logo." }
+      ]
+    },
+    "to-be-story": {
+      "title": "Introductions with verb TO BE",
+      "character": "Zara",
+      "pt_summary": "Treinando I am / you are / she is em apresentações.",
+      "turns": [
+        { "speaker": "ai", "text": "Hi. I am Zara. I am a teacher.", "pt": "Oi. Eu sou a Zara. Sou professora." },
+        { "speaker": "user", "target": "Hello. I am Leo. I am a student.", "pt_hint": "Use I am para se apresentar." },
+        { "speaker": "ai", "text": "Nice to meet you. Are you from Brazil?", "pt": "Prazer. Você é do Brasil?" },
+        { "speaker": "user", "target": "Yes, I am. I am from São Paulo.", "pt_hint": "Yes, I am." },
+        { "speaker": "ai", "text": "São Paulo is a big city, right?", "pt": "São Paulo é uma cidade grande, né?" },
+        { "speaker": "user", "target": "Yes, it is very big and very busy.", "pt_hint": "Yes, it is…" },
+        { "speaker": "ai", "text": "Are your parents Brazilian too?", "pt": "Seus pais também são brasileiros?" },
+        { "speaker": "user", "target": "Yes, they are. They are from Rio.", "pt_hint": "Yes, they are." },
+        { "speaker": "ai", "text": "Wonderful. Welcome to our class.", "pt": "Maravilha. Bem-vindo à nossa aula." },
+        { "speaker": "user", "target": "Thank you. I am very happy to be here.", "pt_hint": "'I am happy to be here.'" },
+        { "speaker": "ai", "text": "Great. Let's start the lesson.", "pt": "Ótimo. Vamos começar a aula." }
+      ]
+    },
+    "articles-basic": {
+      "title": "Ordering at the bakery (A / AN / THE)",
+      "character": "Baker",
+      "pt_summary": "Artigos A / AN / THE em pedidos.",
+      "turns": [
+        { "speaker": "ai", "text": "Good morning. What can I get you today?", "pt": "Bom dia. O que posso servir hoje?" },
+        { "speaker": "user", "target": "I would like a coffee and an apple, please.", "pt_hint": "A + coffee, AN + apple." },
+        { "speaker": "ai", "text": "Would you like the big coffee or the small one?", "pt": "O café grande ou o pequeno?" },
+        { "speaker": "user", "target": "The big coffee, please.", "pt_hint": "THE porque o outro já foi mencionado." },
+        { "speaker": "ai", "text": "Anything else?", "pt": "Mais alguma coisa?" },
+        { "speaker": "user", "target": "Yes, an orange juice, please.", "pt_hint": "AN antes de orange (som de vogal)." },
+        { "speaker": "ai", "text": "Is that for here or to go?", "pt": "É para comer aqui ou levar?" },
+        { "speaker": "user", "target": "To go, please. I am in a hurry.", "pt_hint": "Para levar. Estou com pressa." },
+        { "speaker": "ai", "text": "That will be eight dollars.", "pt": "Vai dar oito dólares." },
+        { "speaker": "user", "target": "Here you are. Thank you.", "pt_hint": "'Aqui está. Obrigado.'" },
+        { "speaker": "ai", "text": "Have a wonderful morning.", "pt": "Tenha uma ótima manhã." }
+      ]
+    },
+    "there-is-there-are": {
+      "title": "Describing a room",
+      "character": "Realtor",
+      "pt_summary": "There is / There are — descrevendo um apartamento.",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome. Let me show you the apartment.", "pt": "Bem-vindo. Deixa eu te mostrar o apartamento." },
+        { "speaker": "user", "target": "Thank you. Is there a kitchen?", "pt_hint": "'Tem uma cozinha?'" },
+        { "speaker": "ai", "text": "Yes, there is a big kitchen right here.", "pt": "Sim, há uma grande cozinha bem aqui." },
+        { "speaker": "user", "target": "Are there two bedrooms?", "pt_hint": "'Há dois quartos?'" },
+        { "speaker": "ai", "text": "Yes, there are two bedrooms and one bathroom.", "pt": "Sim, há dois quartos e um banheiro." },
+        { "speaker": "user", "target": "Is there a balcony?", "pt_hint": "'Tem varanda?'" },
+        { "speaker": "ai", "text": "Yes, there is a lovely balcony with a view.", "pt": "Sim, há uma varanda linda com vista." },
+        { "speaker": "user", "target": "Are there any shops nearby?", "pt_hint": "'Tem lojas por perto?'" },
+        { "speaker": "ai", "text": "Yes, there are many. The supermarket is next door.", "pt": "Sim, muitas. O supermercado é ao lado." },
+        { "speaker": "user", "target": "I love it. How much is the rent?", "pt_hint": "'Adorei. Quanto é o aluguel?'" },
+        { "speaker": "ai", "text": "It is one thousand dollars per month.", "pt": "Mil dólares por mês." }
+      ]
+    },
+    "plurals-regular-irregular": {
+      "title": "At the fruit market",
+      "character": "Seller",
+      "pt_summary": "Plurais regulares e irregulares — fruit/fruits, child/children, foot/feet.",
+      "turns": [
+        { "speaker": "ai", "text": "Hello. Would you like some fresh fruits?", "pt": "Olá. Quer frutas frescas?" },
+        { "speaker": "user", "target": "Yes. I want three apples and two oranges.", "pt_hint": "Plural regular — apples, oranges." },
+        { "speaker": "ai", "text": "Of course. Do you need any vegetables?", "pt": "Claro. Precisa de vegetais?" },
+        { "speaker": "user", "target": "Yes, four tomatoes and six potatoes.", "pt_hint": "Tomatoes, potatoes (+ES)." },
+        { "speaker": "ai", "text": "Are the apples for your children?", "pt": "As maçãs são para seus filhos?" },
+        { "speaker": "user", "target": "Yes, for my three children.", "pt_hint": "CHILD → CHILDREN." },
+        { "speaker": "ai", "text": "Lovely. Anything else?", "pt": "Lindo. Mais alguma coisa?" },
+        { "speaker": "user", "target": "Yes, I need two loaves of bread.", "pt_hint": "LOAF → LOAVES." },
+        { "speaker": "ai", "text": "Here you go. That is twenty dollars.", "pt": "Aqui está. São vinte dólares." },
+        { "speaker": "user", "target": "Thank you. Have a nice day.", "pt_hint": "Obrigado. Bom dia." },
+        { "speaker": "ai", "text": "You too. Come back tomorrow!", "pt": "Você também. Volte amanhã!" }
+      ]
+    },
+    "countries-nationalities": {
+      "title": "At the international festival",
+      "character": "Host",
+      "pt_summary": "Países e nacionalidades — Brazilian/American/Japanese/French/Italian.",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome to the international festival. Where are you from?", "pt": "Bem-vindo ao festival internacional. De onde você é?" },
+        { "speaker": "user", "target": "I am from Brazil. I am Brazilian.", "pt_hint": "País + nacionalidade." },
+        { "speaker": "ai", "text": "Wonderful. What languages do you speak?", "pt": "Maravilha. Que línguas fala?" },
+        { "speaker": "user", "target": "I speak Portuguese and a little English.", "pt_hint": "'Falo português e um pouco de inglês.'" },
+        { "speaker": "ai", "text": "Have you met our Japanese guests?", "pt": "Já conheceu nossos convidados japoneses?" },
+        { "speaker": "user", "target": "No, I have not. Where are they from in Japan?", "pt_hint": "'De onde são no Japão?'" },
+        { "speaker": "ai", "text": "They are from Tokyo. And our French guests are from Paris.", "pt": "São de Tóquio. Nossos convidados franceses são de Paris." },
+        { "speaker": "user", "target": "That is amazing. Is that Italian food over there?", "pt_hint": "'Aquilo é comida italiana?'" },
+        { "speaker": "ai", "text": "Yes, and it is delicious. Please try some.", "pt": "Sim, e está deliciosa. Prove um pouco." },
+        { "speaker": "user", "target": "Thank you. I love Italian food.", "pt_hint": "'Adoro comida italiana.'" },
+        { "speaker": "ai", "text": "Enjoy the festival!", "pt": "Aproveite o festival!" }
+      ]
+    },
+    "question-words": {
+      "title": "The reporter interview",
+      "character": "Reporter",
+      "pt_summary": "Question words — Who / What / Where / When / Why / How.",
+      "turns": [
+        { "speaker": "ai", "text": "Hi. I am a reporter. Can I ask you some questions?", "pt": "Oi. Sou repórter. Posso te fazer perguntas?" },
+        { "speaker": "user", "target": "Sure. What do you want to know?", "pt_hint": "'O que você quer saber?'" },
+        { "speaker": "ai", "text": "Where do you live?", "pt": "Onde você mora?" },
+        { "speaker": "user", "target": "I live in São Paulo.", "pt_hint": "'Moro em São Paulo.'" },
+        { "speaker": "ai", "text": "When did you move there?", "pt": "Quando você se mudou pra lá?" },
+        { "speaker": "user", "target": "I moved there two years ago.", "pt_hint": "'Me mudei dois anos atrás.'" },
+        { "speaker": "ai", "text": "Why did you choose São Paulo?", "pt": "Por que escolheu São Paulo?" },
+        { "speaker": "user", "target": "Because I got a new job there.", "pt_hint": "'Porque consegui um emprego novo.'" },
+        { "speaker": "ai", "text": "How do you feel about the city?", "pt": "Como se sente na cidade?" },
+        { "speaker": "user", "target": "I feel great. I love it.", "pt_hint": "'Me sinto ótimo. Adoro.'" },
+        { "speaker": "ai", "text": "Thank you for your time.", "pt": "Obrigado pelo seu tempo." }
+      ]
+    },
+    "imperatives": {
+      "title": "Cooking with Chef Rafa",
+      "character": "Rafa",
+      "pt_summary": "Imperativos — open, cut, mix, add, stir, serve.",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome to my kitchen. Are you ready to cook?", "pt": "Bem-vindo à minha cozinha. Pronto para cozinhar?" },
+        { "speaker": "user", "target": "Yes, I am ready. Tell me what to do.", "pt_hint": "'Me diga o que fazer.'" },
+        { "speaker": "ai", "text": "First, wash your hands and open the fridge.", "pt": "Primeiro, lave as mãos e abra a geladeira." },
+        { "speaker": "user", "target": "OK. What should I take out?", "pt_hint": "'OK. O que eu devo tirar?'" },
+        { "speaker": "ai", "text": "Take out two eggs and some cheese.", "pt": "Tire dois ovos e queijo." },
+        { "speaker": "user", "target": "Here they are. What's next?", "pt_hint": "'Aqui estão. Qual o próximo?'" },
+        { "speaker": "ai", "text": "Now cut the cheese and mix it with the eggs.", "pt": "Agora corte o queijo e misture com os ovos." },
+        { "speaker": "user", "target": "Done. Should I add salt?", "pt_hint": "'Pronto. Devo adicionar sal?'" },
+        { "speaker": "ai", "text": "Yes, add a little salt and stir well.", "pt": "Sim, adicione um pouco de sal e mexa bem." },
+        { "speaker": "user", "target": "OK, I am stirring now.", "pt_hint": "'OK, estou mexendo agora.'" },
+        { "speaker": "ai", "text": "Perfect. Serve it hot. Enjoy!", "pt": "Perfeito. Sirva quente. Aproveite!" }
+      ]
+    },
+    "first-words-out-loud": {
+      "title": "Pronunciation diagnostic",
+      "character": "Zara",
+      "pt_summary": "Diagnóstico de pronúncia — frases curtas e diagnósticas.",
+      "turns": [
+        { "speaker": "ai", "text": "Hi! I want to hear your English. Ready?", "pt": "Oi! Quero ouvir seu inglês. Pronto?" },
+        { "speaker": "user", "target": "Yes, I am ready to start.", "pt_hint": "'Sim, estou pronto pra começar.'" },
+        { "speaker": "ai", "text": "Great. Repeat after me — Hello, how are you?", "pt": "Ótimo. Repete depois de mim — Hello, how are you?" },
+        { "speaker": "user", "target": "Hello, how are you?", "pt_hint": "Hello, how are you?" },
+        { "speaker": "ai", "text": "Nice. Now — Thank you very much.", "pt": "Bom. Agora — Thank you very much." },
+        { "speaker": "user", "target": "Thank you very much.", "pt_hint": "Thank you very much." },
+        { "speaker": "ai", "text": "Good. Try — I am a student from Brazil.", "pt": "Tenta — I am a student from Brazil." },
+        { "speaker": "user", "target": "I am a student from Brazil.", "pt_hint": "I am a student from Brazil." },
+        { "speaker": "ai", "text": "Excellent. One more — Nice to meet you.", "pt": "Excelente. Mais uma — Nice to meet you." },
+        { "speaker": "user", "target": "Nice to meet you.", "pt_hint": "Nice to meet you." },
+        { "speaker": "ai", "text": "You did great. Let's keep practicing!", "pt": "Foi ótimo. Vamos continuar praticando!" }
+      ]
+    },
+    "family-photo": {
+      "title": "Showing family photos",
+      "character": "Bia",
+      "pt_summary": "Vocabulário de família — mother, father, brother, sister.",
+      "turns": [
+        { "speaker": "ai", "text": "Hey, look at this photo. This is my family.", "pt": "Ei, olha essa foto. Essa é minha família." },
+        { "speaker": "user", "target": "Who is the man on the left?", "pt_hint": "'Quem é o homem à esquerda?'" },
+        { "speaker": "ai", "text": "That is my father. He is a lawyer.", "pt": "É meu pai. Ele é advogado." },
+        { "speaker": "user", "target": "And the woman in the middle?", "pt_hint": "'E a mulher no meio?'" },
+        { "speaker": "ai", "text": "That is my mother. She is a doctor.", "pt": "É minha mãe. Ela é médica." },
+        { "speaker": "user", "target": "You have a big family. How many siblings?", "pt_hint": "'Quantos irmãos?'" },
+        { "speaker": "ai", "text": "Two — one brother and one sister.", "pt": "Dois — um irmão e uma irmã." },
+        { "speaker": "user", "target": "How old is your sister?", "pt_hint": "'Quantos anos tem sua irmã?'" },
+        { "speaker": "ai", "text": "She is twelve. She loves to swim.", "pt": "Ela tem doze. Adora nadar." },
+        { "speaker": "user", "target": "Your family looks wonderful.", "pt_hint": "'Sua família parece maravilhosa.'" },
+        { "speaker": "ai", "text": "Thank you so much!", "pt": "Muito obrigada!" }
+      ]
+    },
+    "rafas-menu": {
+      "title": "Ordering at Tropical Bites",
+      "character": "Rafa",
+      "pt_summary": "No food truck do Rafa — pedindo tacos, salgados e sucos.",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome to Tropical Bites. What can I get you?", "pt": "Bem-vindo ao Tropical Bites. O que vai querer?" },
+        { "speaker": "user", "target": "Hi. I would like two chicken tacos.", "pt_hint": "'Dois tacos de frango.'" },
+        { "speaker": "ai", "text": "Spicy or mild?", "pt": "Picante ou suave?" },
+        { "speaker": "user", "target": "Mild, please. I cannot eat spicy food.", "pt_hint": "'Suave. Não consigo comer picante.'" },
+        { "speaker": "ai", "text": "No problem. Would you like a drink?", "pt": "Sem problema. Quer bebida?" },
+        { "speaker": "user", "target": "Yes, one orange juice, please.", "pt_hint": "'Um suco de laranja.'" },
+        { "speaker": "ai", "text": "Small, medium, or large?", "pt": "Pequeno, médio ou grande?" },
+        { "speaker": "user", "target": "Medium, please.", "pt_hint": "Médio." },
+        { "speaker": "ai", "text": "That will be twelve dollars.", "pt": "Vai dar doze dólares." },
+        { "speaker": "user", "target": "Here is my card.", "pt_hint": "'Aqui está meu cartão.'" },
+        { "speaker": "ai", "text": "Thank you. Your order will be ready in five minutes.", "pt": "Obrigado. Seu pedido fica pronto em cinco minutos." }
+      ]
+    },
+    "rafas-truck-day": {
+      "title": "A day in the food truck",
+      "character": "Rafa",
+      "pt_summary": "Rotina diária no trabalho — verbos no presente simples.",
+      "turns": [
+        { "speaker": "ai", "text": "Hi! Want to see how my day goes?", "pt": "Oi! Quer ver como é meu dia?" },
+        { "speaker": "user", "target": "Yes, I do. What time do you start?", "pt_hint": "'A que horas você começa?'" },
+        { "speaker": "ai", "text": "I wake up at five and open the truck at seven.", "pt": "Acordo às cinco e abro o food truck às sete." },
+        { "speaker": "user", "target": "That is very early. Do you eat breakfast first?", "pt_hint": "'Você toma café primeiro?'" },
+        { "speaker": "ai", "text": "Yes, I always have coffee and bread.", "pt": "Sim, sempre tomo café e pão." },
+        { "speaker": "user", "target": "How many customers do you have every day?", "pt_hint": "'Quantos clientes por dia?'" },
+        { "speaker": "ai", "text": "About one hundred. We close at eight in the evening.", "pt": "Uns cem. Fechamos às oito da noite." },
+        { "speaker": "user", "target": "Do you work on weekends too?", "pt_hint": "'Trabalha nos fins de semana?'" },
+        { "speaker": "ai", "text": "Yes, but I take Mondays off.", "pt": "Sim, mas folgo às segundas." },
+        { "speaker": "user", "target": "You work really hard. I admire you.", "pt_hint": "'Você trabalha muito. Te admiro.'" },
+        { "speaker": "ai", "text": "Thank you. Come by anytime!", "pt": "Obrigado. Passa quando quiser!" }
+      ]
+    },
+    "where-is-cosmo": {
+      "title": "Looking for Cosmo",
+      "character": "Mr. Kumar",
+      "pt_summary": "Preposições de lugar — in, on, under, behind, next to.",
+      "turns": [
+        { "speaker": "ai", "text": "Oh no! I cannot find Cosmo. Have you seen him?", "pt": "Ah não! Não acho o Cosmo. Você viu ele?" },
+        { "speaker": "user", "target": "No, I have not. Is he in the house?", "pt_hint": "'Ele está na casa?'" },
+        { "speaker": "ai", "text": "I looked in the living room. He is not there.", "pt": "Olhei na sala. Não está lá." },
+        { "speaker": "user", "target": "Is he under the table?", "pt_hint": "'Está embaixo da mesa?'" },
+        { "speaker": "ai", "text": "No, he is not under the table either.", "pt": "Não, também não." },
+        { "speaker": "user", "target": "Maybe he is behind the sofa.", "pt_hint": "'Talvez esteja atrás do sofá.'" },
+        { "speaker": "ai", "text": "Good idea. Let me check.", "pt": "Boa ideia. Deixa eu ver." },
+        { "speaker": "user", "target": "Or in the garden, next to the flowers.", "pt_hint": "'Ou no jardim, ao lado das flores.'" },
+        { "speaker": "ai", "text": "Yes! He is on the grass, sleeping.", "pt": "Sim! Está na grama, dormindo." },
+        { "speaker": "user", "target": "I am happy we found him.", "pt_hint": "'Estou feliz que achamos.'" },
+        { "speaker": "ai", "text": "Thank you for helping me.", "pt": "Obrigado por ajudar." }
+      ]
+    },
+    "bias-week": {
+      "title": "Bia's weekly schedule",
+      "character": "Bia",
+      "pt_summary": "Dias da semana e present simple — o que a Bia faz em cada dia.",
+      "turns": [
+        { "speaker": "ai", "text": "Hi! Want to know what I do every week?", "pt": "Oi! Quer saber o que faço toda semana?" },
+        { "speaker": "user", "target": "Yes. What do you do on Monday?", "pt_hint": "'O que faz na segunda?'" },
+        { "speaker": "ai", "text": "On Monday I go to school and study math.", "pt": "Na segunda vou pra escola e estudo matemática." },
+        { "speaker": "user", "target": "And on Tuesday?", "pt_hint": "'E na terça?'" },
+        { "speaker": "ai", "text": "On Tuesday I have surf practice after school.", "pt": "Na terça tenho treino de surf depois da escola." },
+        { "speaker": "user", "target": "What about Wednesday?", "pt_hint": "'E na quarta?'" },
+        { "speaker": "ai", "text": "Wednesday is my English class with Mr. Kumar.", "pt": "Quarta é minha aula de inglês com o Mr. Kumar." },
+        { "speaker": "user", "target": "Do you rest on the weekend?", "pt_hint": "'Descansa no fim de semana?'" },
+        { "speaker": "ai", "text": "On Saturday I surf, and on Sunday I sleep a lot.", "pt": "No sábado surfo, no domingo durmo bastante." },
+        { "speaker": "user", "target": "Your week sounds busy but fun.", "pt_hint": "'Sua semana parece corrida mas divertida.'" },
+        { "speaker": "ai", "text": "It is. See you on Wednesday!", "pt": "É sim. Até quarta!" }
+      ]
+    },
+    "going-to-future": {
+      "title": "Weekend plans",
+      "character": "Joca",
+      "pt_summary": "Going to para planos futuros.",
+      "turns": [
+        { "speaker": "ai", "text": "Hey, do you have plans this weekend?", "pt": "Ei, tem plano pro fim de semana?" },
+        { "speaker": "user", "target": "Yes. I am going to visit my parents.", "pt_hint": "'Vou visitar meus pais.'" },
+        { "speaker": "ai", "text": "Nice. What are you going to do with them?", "pt": "Legal. O que vão fazer?" },
+        { "speaker": "user", "target": "We are going to have dinner and watch a movie.", "pt_hint": "'Vamos jantar e ver um filme.'" },
+        { "speaker": "ai", "text": "Sounds great. Are you going to stay overnight?", "pt": "Parece ótimo. Vai dormir lá?" },
+        { "speaker": "user", "target": "Yes, I am going to stay until Sunday evening.", "pt_hint": "'Vou ficar até domingo à noite.'" },
+        { "speaker": "ai", "text": "Cool. I am going to go hiking on Saturday.", "pt": "Massa. Vou fazer trilha no sábado." },
+        { "speaker": "user", "target": "That is great. Are you going alone?", "pt_hint": "'Vai sozinho?'" },
+        { "speaker": "ai", "text": "No, my friends are going to join me.", "pt": "Não, meus amigos vão comigo." },
+        { "speaker": "user", "target": "Have a wonderful time.", "pt_hint": "'Curtam bastante.'" },
+        { "speaker": "ai", "text": "Thanks. You too!", "pt": "Valeu. Você também!" }
+      ]
+    },
+    "ordinal-dates": {
+      "title": "Birthday planning",
+      "character": "Bia",
+      "pt_summary": "Datas e números ordinais — first, second, third, twenty-first.",
+      "turns": [
+        { "speaker": "ai", "text": "Hi! My birthday is coming up. Guess when?", "pt": "Oi! Meu aniversário tá chegando. Advinha quando?" },
+        { "speaker": "user", "target": "Is it in June?", "pt_hint": "'É em junho?'" },
+        { "speaker": "ai", "text": "Yes! Can you guess the date?", "pt": "Sim! Advinha o dia?" },
+        { "speaker": "user", "target": "Is it on the fifteenth of June?", "pt_hint": "'15 de junho?'" },
+        { "speaker": "ai", "text": "Close. It is on the twenty-first of June.", "pt": "Quase. É 21 de junho." },
+        { "speaker": "user", "target": "That is the first day of winter.", "pt_hint": "'É o primeiro dia de inverno.'" },
+        { "speaker": "ai", "text": "Exactly. What day of the week is it this year?", "pt": "Exato. Que dia da semana cai esse ano?" },
+        { "speaker": "user", "target": "It is a Saturday.", "pt_hint": "'É sábado.'" },
+        { "speaker": "ai", "text": "Perfect. Can you come to my party?", "pt": "Perfeito. Pode vir na minha festa?" },
+        { "speaker": "user", "target": "Yes, I would love to come.", "pt_hint": "'Sim, eu adoraria ir.'" },
+        { "speaker": "ai", "text": "Awesome. See you on the twenty-first!", "pt": "Show. Até dia 21!" }
+      ]
+    },
+    "at-in-on-places": {
+      "title": "Meeting at the café",
+      "character": "Friend",
+      "pt_summary": "Preposições de lugar — at, in, on.",
+      "turns": [
+        { "speaker": "ai", "text": "Hey, where are you right now?", "pt": "Ei, onde você tá agora?" },
+        { "speaker": "user", "target": "I am at the café on Main Street.", "pt_hint": "AT + café, ON + Main Street." },
+        { "speaker": "ai", "text": "Nice. Are you inside or on the terrace?", "pt": "Legal. Dentro ou na varanda?" },
+        { "speaker": "user", "target": "I am on the terrace, at a small table.", "pt_hint": "ON the terrace, AT a small table." },
+        { "speaker": "ai", "text": "Great. I am in a taxi on my way.", "pt": "Ótimo. Estou num táxi a caminho." },
+        { "speaker": "user", "target": "How long until you arrive?", "pt_hint": "'Quanto tempo pra você chegar?'" },
+        { "speaker": "ai", "text": "Ten minutes. I am in heavy traffic.", "pt": "Dez minutos. Estou no trânsito." },
+        { "speaker": "user", "target": "No worries. I am reading a book.", "pt_hint": "'Sem problema. Estou lendo um livro.'" },
+        { "speaker": "ai", "text": "Perfect. See you soon.", "pt": "Perfeito. Até já." },
+        { "speaker": "user", "target": "OK. See you in a few minutes.", "pt_hint": "'OK. Até daqui a pouco.'" },
+        { "speaker": "ai", "text": "I am almost there!", "pt": "Tô quase chegando!" }
+      ]
+    },
+    "can-ability": {
+      "title": "A quick skills interview",
+      "character": "Recruiter",
+      "pt_summary": "CAN para habilidades.",
+      "turns": [
+        { "speaker": "ai", "text": "Hello. Can you tell me your skills?", "pt": "Olá. Pode me dizer suas habilidades?" },
+        { "speaker": "user", "target": "Yes. I can speak English and Portuguese.", "pt_hint": "'Falo inglês e português.'" },
+        { "speaker": "ai", "text": "Impressive. Can you write code?", "pt": "Impressionante. Sabe programar?" },
+        { "speaker": "user", "target": "Yes, I can write in Python and JavaScript.", "pt_hint": "'Sei programar em Python e JavaScript.'" },
+        { "speaker": "ai", "text": "Can you work under pressure?", "pt": "Você trabalha sob pressão?" },
+        { "speaker": "user", "target": "Yes, I can stay calm during deadlines.", "pt_hint": "'Consigo manter a calma.'" },
+        { "speaker": "ai", "text": "Can you start next Monday?", "pt": "Pode começar segunda que vem?" },
+        { "speaker": "user", "target": "Yes, I can start on Monday.", "pt_hint": "'Posso começar na segunda.'" },
+        { "speaker": "ai", "text": "One last question — can you drive?", "pt": "Uma última — sabe dirigir?" },
+        { "speaker": "user", "target": "No, I cannot, but I take the bus.", "pt_hint": "'Não, mas pego ônibus.'" },
+        { "speaker": "ai", "text": "That is fine. Welcome to the team!", "pt": "Tudo bem. Bem-vindo ao time!" }
+      ]
+    },
+    "like-love-hate-ing": {
+      "title": "What do you like doing?",
+      "character": "New friend",
+      "pt_summary": "Like / love / hate + -ing.",
+      "turns": [
+        { "speaker": "ai", "text": "Hey. What do you like doing in your free time?", "pt": "Ei. O que gosta de fazer no tempo livre?" },
+        { "speaker": "user", "target": "I love reading books and watching movies.", "pt_hint": "'Adoro ler e ver filmes.'" },
+        { "speaker": "ai", "text": "Cool. Do you like cooking?", "pt": "Massa. Gosta de cozinhar?" },
+        { "speaker": "user", "target": "Yes, I like cooking Italian food.", "pt_hint": "'Gosto de cozinhar comida italiana.'" },
+        { "speaker": "ai", "text": "Do you hate anything?", "pt": "Odeia alguma coisa?" },
+        { "speaker": "user", "target": "Yes, I hate waking up early.", "pt_hint": "'Odeio acordar cedo.'" },
+        { "speaker": "ai", "text": "Same here. What about sports?", "pt": "Concordo. E esportes?" },
+        { "speaker": "user", "target": "I love swimming but I do not like running.", "pt_hint": "'Adoro nadar mas não gosto de correr.'" },
+        { "speaker": "ai", "text": "Let's go swimming this Saturday!", "pt": "Vamos nadar no sábado!" },
+        { "speaker": "user", "target": "Great idea. I love that plan.", "pt_hint": "'Ótima ideia. Adorei o plano.'" },
+        { "speaker": "ai", "text": "Perfect. See you on Saturday!", "pt": "Perfeito. Até sábado!" }
+      ]
+    },
+    "jobs-professions": {
+      "title": "At the career fair",
+      "character": "Interviewer",
+      "pt_summary": "Profissões — teacher, doctor, engineer, chef.",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome. What do you do for a living?", "pt": "Bem-vindo. O que você faz da vida?" },
+        { "speaker": "user", "target": "I am a software engineer.", "pt_hint": "'Sou engenheiro de software.'" },
+        { "speaker": "ai", "text": "Great. How long have you worked as one?", "pt": "Ótimo. Há quanto tempo trabalha nisso?" },
+        { "speaker": "user", "target": "For five years.", "pt_hint": "'Há cinco anos.'" },
+        { "speaker": "ai", "text": "What do your parents do?", "pt": "O que seus pais fazem?" },
+        { "speaker": "user", "target": "My father is a doctor and my mother is a teacher.", "pt_hint": "'Pai médico, mãe professora.'" },
+        { "speaker": "ai", "text": "And your dream job?", "pt": "E seu trabalho dos sonhos?" },
+        { "speaker": "user", "target": "I want to be a chef someday.", "pt_hint": "'Quero ser chef um dia.'" },
+        { "speaker": "ai", "text": "Interesting. Can you cook well?", "pt": "Interessante. Cozinha bem?" },
+        { "speaker": "user", "target": "Yes, I can cook Italian and Brazilian food.", "pt_hint": "'Cozinho comida italiana e brasileira.'" },
+        { "speaker": "ai", "text": "We have a culinary program. Let me tell you more.", "pt": "Temos programa culinário. Deixa eu te contar." }
+      ]
+    },
+    "hobbies-play-do-go": {
+      "title": "The hobby club sign-up",
+      "character": "Club leader",
+      "pt_summary": "Play / do / go para hobbies.",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome to the hobby club. What do you enjoy?", "pt": "Bem-vindo ao clube. Do que gosta?" },
+        { "speaker": "user", "target": "I play tennis and I go swimming.", "pt_hint": "PLAY + tennis, GO + swimming." },
+        { "speaker": "ai", "text": "Nice combination. Do you play any instruments?", "pt": "Boa combinação. Toca algum instrumento?" },
+        { "speaker": "user", "target": "Yes, I play the guitar a little.", "pt_hint": "PLAY the + instrument." },
+        { "speaker": "ai", "text": "Do you do yoga?", "pt": "Faz yoga?" },
+        { "speaker": "user", "target": "No, but I do martial arts.", "pt_hint": "DO martial arts." },
+        { "speaker": "ai", "text": "Fantastic. Do you go hiking?", "pt": "Demais. Faz trilha?" },
+        { "speaker": "user", "target": "Yes, I go hiking every Sunday.", "pt_hint": "GO hiking." },
+        { "speaker": "ai", "text": "Perfect. Let me sign you up for three clubs.", "pt": "Perfeito. Vou te inscrever em três clubes." },
+        { "speaker": "user", "target": "Thank you. I am excited to start.", "pt_hint": "'Obrigado. Estou animado.'" },
+        { "speaker": "ai", "text": "Welcome aboard!", "pt": "Bem-vindo a bordo!" }
+      ]
+    },
+    "this-that-these-those": {
+      "title": "At the shopping mall",
+      "character": "Salesperson",
+      "pt_summary": "This / that / these / those.",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome. Can I help you find something?", "pt": "Bem-vindo. Posso ajudar?" },
+        { "speaker": "user", "target": "Yes. How much is this shirt?", "pt_hint": "THIS — aqui perto." },
+        { "speaker": "ai", "text": "That shirt is forty dollars.", "pt": "Essa camisa custa quarenta dólares." },
+        { "speaker": "user", "target": "And those pants over there?", "pt_hint": "THOSE — longe, plural." },
+        { "speaker": "ai", "text": "Those pants are on sale for thirty.", "pt": "Aquelas calças estão em promoção, trinta." },
+        { "speaker": "user", "target": "I will try these pants, please.", "pt_hint": "THESE — aqui perto, plural." },
+        { "speaker": "ai", "text": "Sure. The fitting room is that way.", "pt": "Claro. O provador é por ali." },
+        { "speaker": "user", "target": "These pants fit perfectly.", "pt_hint": "'Essas calças serviram bem.'" },
+        { "speaker": "ai", "text": "Wonderful. Anything else?", "pt": "Maravilha. Mais algo?" },
+        { "speaker": "user", "target": "Yes, I will take this shirt too.", "pt_hint": "'Vou levar essa camisa também.'" },
+        { "speaker": "ai", "text": "Great. That will be seventy dollars.", "pt": "Ótimo. Vai dar setenta dólares." }
+      ]
+    },
+    "beach-party-verbs": {
+      "title": "A beach party invitation",
+      "character": "Bia",
+      "pt_summary": "Verbos de ação em festa — dance, play, swim, eat, drink.",
+      "turns": [
+        { "speaker": "ai", "text": "Hi! We are having a beach party tonight.", "pt": "Oi! Vamos ter uma festa na praia hoje à noite." },
+        { "speaker": "user", "target": "That sounds amazing. What time?", "pt_hint": "'Parece demais. Que horas?'" },
+        { "speaker": "ai", "text": "At seven. Can you come?", "pt": "Às sete. Pode vir?" },
+        { "speaker": "user", "target": "Yes, I can come. Should I bring something?", "pt_hint": "'Posso sim. Devo levar algo?'" },
+        { "speaker": "ai", "text": "Bring food to share if you want.", "pt": "Traz comida pra compartilhar se quiser." },
+        { "speaker": "user", "target": "I will bring drinks and snacks.", "pt_hint": "'Vou levar bebidas e salgados.'" },
+        { "speaker": "ai", "text": "Great. We are going to dance and swim.", "pt": "Ótimo. Vamos dançar e nadar." },
+        { "speaker": "user", "target": "Cool. Do you play music there?", "pt_hint": "'Legal. Toca música lá?'" },
+        { "speaker": "ai", "text": "Yes, I play the guitar and we all sing.", "pt": "Sim, toco violão e todo mundo canta." },
+        { "speaker": "user", "target": "I cannot wait. See you at seven.", "pt_hint": "'Mal posso esperar. Até as sete.'" },
+        { "speaker": "ai", "text": "See you tonight!", "pt": "Até hoje à noite!" }
+      ]
+    },
+    "bias-first-wave": {
+      "title": "Catching the first wave",
+      "character": "Bia",
+      "pt_summary": "Primeira aula de surf com a Bia.",
+      "turns": [
+        { "speaker": "ai", "text": "Hi! Ready to catch your first wave?", "pt": "Oi! Pronto pra pegar a primeira onda?" },
+        { "speaker": "user", "target": "Yes, but I am a little scared.", "pt_hint": "'Tô um pouco com medo.'" },
+        { "speaker": "ai", "text": "Do not worry. Watch me first.", "pt": "Relaxa. Me observa primeiro." },
+        { "speaker": "user", "target": "OK. What should I do?", "pt_hint": "'OK. O que eu faço?'" },
+        { "speaker": "ai", "text": "Lie on the board and paddle with your arms.", "pt": "Deita na prancha e rema com os braços." },
+        { "speaker": "user", "target": "I am paddling now.", "pt_hint": "'Estou remando.'" },
+        { "speaker": "ai", "text": "Good. When the wave comes, stand up fast.", "pt": "Bom. Quando a onda vier, levanta rápido." },
+        { "speaker": "user", "target": "I am standing. I am surfing!", "pt_hint": "'Tô em pé. Tô surfando!'" },
+        { "speaker": "ai", "text": "Awesome! You caught your first wave!", "pt": "Demais! Pegou sua primeira onda!" },
+        { "speaker": "user", "target": "I am so happy. Thank you, Bia.", "pt_hint": "'Tô muito feliz. Valeu.'" },
+        { "speaker": "ai", "text": "Let's catch another one!", "pt": "Vamos pegar outra!" }
+      ]
+    },
+    "both-of-us": {
+      "title": "Planning a trip with a friend",
+      "character": "Friend",
+      "pt_summary": "Both, neither, either em planejamento.",
+      "turns": [
+        { "speaker": "ai", "text": "Hey. We should plan our trip.", "pt": "Ei. Devíamos planejar nossa viagem." },
+        { "speaker": "user", "target": "Yes. Both of us are free in July.", "pt_hint": "BOTH of us — nós dois." },
+        { "speaker": "ai", "text": "Nice. Do you prefer beach or mountains?", "pt": "Legal. Prefere praia ou montanha?" },
+        { "speaker": "user", "target": "Both are good for me.", "pt_hint": "BOTH — os dois." },
+        { "speaker": "ai", "text": "Me too. Neither is too expensive.", "pt": "Eu também. Nenhum é caro demais." },
+        { "speaker": "user", "target": "How about we do both places?", "pt_hint": "'Que tal os dois lugares?'" },
+        { "speaker": "ai", "text": "Great idea. Beach first or mountains first?", "pt": "Ótima ideia. Praia ou montanha primeiro?" },
+        { "speaker": "user", "target": "Either is fine with me.", "pt_hint": "EITHER — qualquer um." },
+        { "speaker": "ai", "text": "Let's do beach first, then mountains.", "pt": "Vamos de praia, depois montanha." },
+        { "speaker": "user", "target": "Perfect. I am booking both hotels tonight.", "pt_hint": "'Reservo os dois hotéis hoje.'" },
+        { "speaker": "ai", "text": "Awesome. This is going to be amazing.", "pt": "Show. Vai ser incrível." }
+      ]
+    },
+    "dona-lucia-shopping": {
+      "title": "Grocery shopping with Dona Lúcia",
+      "character": "Dona Lúcia",
+      "pt_summary": "Compras no mercado — some, any, much, many.",
+      "turns": [
+        { "speaker": "ai", "text": "Would you help me with some shopping, dear?", "pt": "Me ajuda com umas compras, querido?" },
+        { "speaker": "user", "target": "Of course. What do you need?", "pt_hint": "'Claro. O que precisa?'" },
+        { "speaker": "ai", "text": "I need some bread and a little milk.", "pt": "Preciso de pão e um pouco de leite." },
+        { "speaker": "user", "target": "How much milk do you need?", "pt_hint": "HOW MUCH — incontáveis." },
+        { "speaker": "ai", "text": "Two liters, please.", "pt": "Dois litros." },
+        { "speaker": "user", "target": "And how many apples?", "pt_hint": "HOW MANY — contáveis." },
+        { "speaker": "ai", "text": "Six red apples, please.", "pt": "Seis maçãs vermelhas." },
+        { "speaker": "user", "target": "Do you have any cheese at home?", "pt_hint": "ANY em pergunta." },
+        { "speaker": "ai", "text": "No, I do not have any. Please buy some.", "pt": "Não, não tenho. Compra um." },
+        { "speaker": "user", "target": "OK. I will buy everything.", "pt_hint": "'Vou comprar tudo.'" },
+        { "speaker": "ai", "text": "Thank you so much, dear.", "pt": "Muito obrigada, querido." }
+      ]
+    },
+    "mother-brother-another": {
+      "title": "Family reunion (TH sound)",
+      "character": "Bia",
+      "pt_summary": "TH sonoro em mother, brother, another, other, together.",
+      "turns": [
+        { "speaker": "ai", "text": "Here we are with my whole family.", "pt": "Aqui estou com minha família inteira." },
+        { "speaker": "user", "target": "Who is your mother?", "pt_hint": "MOTHER — TH sonoro." },
+        { "speaker": "ai", "text": "My mother is the woman with the red dress.", "pt": "Minha mãe é a mulher de vestido vermelho." },
+        { "speaker": "user", "target": "And who is your brother?", "pt_hint": "BROTHER — TH sonoro." },
+        { "speaker": "ai", "text": "My brother is the tall boy on the left.", "pt": "Meu irmão é o menino alto à esquerda." },
+        { "speaker": "user", "target": "Is there another sister?", "pt_hint": "ANOTHER." },
+        { "speaker": "ai", "text": "Yes, another sister — she is away at college.", "pt": "Sim, outra irmã — está na faculdade." },
+        { "speaker": "user", "target": "You and your brother look alike.", "pt_hint": "'Você e seu irmão se parecem.'" },
+        { "speaker": "ai", "text": "People say that all the time.", "pt": "Todo mundo fala isso." },
+        { "speaker": "user", "target": "Can we take a photo together?", "pt_hint": "TOGETHER." },
+        { "speaker": "ai", "text": "Sure! Everyone, gather together.", "pt": "Claro! Pessoal, vamos todos juntos." }
+      ]
+    },
+    "rafas-morning": {
+      "title": "Rafa's morning routine",
+      "character": "Rafa",
+      "pt_summary": "Rotina matinal — present simple + frequency adverbs.",
+      "turns": [
+        { "speaker": "ai", "text": "Hi! Come see how I start my day.", "pt": "Oi! Vem ver como começo meu dia." },
+        { "speaker": "user", "target": "What time do you wake up?", "pt_hint": "'Que horas acorda?'" },
+        { "speaker": "ai", "text": "I always wake up at five thirty.", "pt": "Sempre acordo às cinco e meia." },
+        { "speaker": "user", "target": "Wow, that is early. What do you do first?", "pt_hint": "'Uau. O que faz primeiro?'" },
+        { "speaker": "ai", "text": "I usually drink a coffee and check the weather.", "pt": "Geralmente tomo um café e vejo o tempo." },
+        { "speaker": "user", "target": "Do you eat breakfast at home?", "pt_hint": "'Toma café da manhã em casa?'" },
+        { "speaker": "ai", "text": "No, I never eat at home. I eat at the truck.", "pt": "Não, nunca como em casa. Como no food truck." },
+        { "speaker": "user", "target": "What do you usually eat?", "pt_hint": "'O que geralmente come?'" },
+        { "speaker": "ai", "text": "Eggs with toast and fresh orange juice.", "pt": "Ovos com torrada e suco de laranja." },
+        { "speaker": "user", "target": "That sounds healthy and delicious.", "pt_hint": "'Parece saudável e gostoso.'" },
+        { "speaker": "ai", "text": "It is. Now I am ready for the day.", "pt": "É sim. Agora tô pronto pro dia." }
+      ]
+    },
+    "th-playlist": {
+      "title": "TH pronunciation session",
+      "character": "Zara",
+      "pt_summary": "Drill de pronúncia TH surdo e sonoro.",
+      "turns": [
+        { "speaker": "ai", "text": "Today we practice the TH sound. Ready?", "pt": "Hoje treinamos o som TH. Pronto?" },
+        { "speaker": "user", "target": "Yes, I am ready.", "pt_hint": "'Tô pronto.'" },
+        { "speaker": "ai", "text": "Repeat — Think, thank, thirty, Thursday.", "pt": "Repete — Think, thank, thirty, Thursday." },
+        { "speaker": "user", "target": "Think, thank, thirty, Thursday.", "pt_hint": "Think, thank, thirty, Thursday." },
+        { "speaker": "ai", "text": "Good. Now the voiced TH — this, that, there.", "pt": "Bom. Agora TH sonoro." },
+        { "speaker": "user", "target": "This, that, there.", "pt_hint": "This, that, there." },
+        { "speaker": "ai", "text": "Now a full sentence — I think this is great.", "pt": "Agora uma frase — I think this is great." },
+        { "speaker": "user", "target": "I think this is great.", "pt_hint": "I think this is great." },
+        { "speaker": "ai", "text": "Excellent. Another one — Thirty thirsty thunderbirds.", "pt": "Excelente. Mais uma — Thirty thirsty thunderbirds." },
+        { "speaker": "user", "target": "Thirty thirsty thunderbirds.", "pt_hint": "Trava-língua de TH." },
+        { "speaker": "ai", "text": "Perfect. You are getting better!", "pt": "Perfeito. Você tá melhorando!" }
+      ]
+    },
+    "thinking-through-thunder": {
+      "title": "The storm conversation",
+      "character": "Mr. Kumar",
+      "pt_summary": "TH + clima — thunder, three, thousand, thanks.",
+      "turns": [
+        { "speaker": "ai", "text": "Did you hear that thunder?", "pt": "Ouviu o trovão?" },
+        { "speaker": "user", "target": "Yes, I thought it was an earthquake.", "pt_hint": "THOUGHT — TH surdo." },
+        { "speaker": "ai", "text": "It has been thundering for three hours.", "pt": "Tá trovejando há três horas." },
+        { "speaker": "user", "target": "I think the storm is getting worse.", "pt_hint": "'Acho que tá piorando.'" },
+        { "speaker": "ai", "text": "Thousands of people lost power.", "pt": "Milhares perderam energia." },
+        { "speaker": "user", "target": "That is terrible. Do we have flashlights?", "pt_hint": "'Isso é terrível. Temos lanternas?'" },
+        { "speaker": "ai", "text": "Yes, there are three on the shelf.", "pt": "Sim, três na prateleira." },
+        { "speaker": "user", "target": "Thanks. I will get them.", "pt_hint": "THANKS. 'Vou pegar.'" },
+        { "speaker": "ai", "text": "Good thinking. Stay away from the windows.", "pt": "Boa. Fica longe das janelas." },
+        { "speaker": "user", "target": "I will. Thank you for thinking ahead.", "pt_hint": "'Obrigado por pensar adiante.'" },
+        { "speaker": "ai", "text": "We will get through this together.", "pt": "Vamos passar por isso juntos." }
+      ]
+    },
+    "thursdays-three-things": {
+      "title": "The Thursday ritual",
+      "character": "Mr. Kumar",
+      "pt_summary": "TH + números — three things every Thursday.",
+      "turns": [
+        { "speaker": "ai", "text": "Every Thursday I do three things.", "pt": "Toda quinta faço três coisas." },
+        { "speaker": "user", "target": "What is the first thing?", "pt_hint": "'Qual a primeira?'" },
+        { "speaker": "ai", "text": "First, I call my mother in India.", "pt": "Primeiro, ligo pra minha mãe na Índia." },
+        { "speaker": "user", "target": "And the second thing?", "pt_hint": "'E a segunda?'" },
+        { "speaker": "ai", "text": "Second, I eat Thai food for dinner.", "pt": "Segundo, como comida tailandesa no jantar." },
+        { "speaker": "user", "target": "What is the third thing?", "pt_hint": "'Qual a terceira?'" },
+        { "speaker": "ai", "text": "Third, I thank three people for something.", "pt": "Terceiro, agradeço três pessoas por algo." },
+        { "speaker": "user", "target": "That is a beautiful ritual.", "pt_hint": "'Isso é um lindo ritual.'" },
+        { "speaker": "ai", "text": "It keeps me thoughtful.", "pt": "Me mantém atento." },
+        { "speaker": "user", "target": "I will try three things this Thursday.", "pt_hint": "'Vou tentar três coisas nesta quinta.'" },
+        { "speaker": "ai", "text": "Wonderful. Tell me next week.", "pt": "Maravilha. Me conta semana que vem." }
+      ]
+    },
+    "tropical-bites-menu": {
+      "title": "Exploring the menu",
+      "character": "Rafa",
+      "pt_summary": "Vocabulário de cardápio — burger, taco, salad, smoothie.",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome back! Want to see the new menu?", "pt": "Voltou! Quer ver o cardápio novo?" },
+        { "speaker": "user", "target": "Yes, please. What do you recommend?", "pt_hint": "'Por favor. O que recomenda?'" },
+        { "speaker": "ai", "text": "The fish tacos are excellent today.", "pt": "Os tacos de peixe estão ótimos hoje." },
+        { "speaker": "user", "target": "Do you have vegetarian options?", "pt_hint": "'Tem opção vegetariana?'" },
+        { "speaker": "ai", "text": "Yes. Try our avocado burger and green salad.", "pt": "Sim. O burger de abacate e a salada verde." },
+        { "speaker": "user", "target": "I will have the avocado burger, please.", "pt_hint": "'Vou querer o burger de abacate.'" },
+        { "speaker": "ai", "text": "Great choice. Any drink?", "pt": "Boa escolha. Bebida?" },
+        { "speaker": "user", "target": "Yes, a mango smoothie, please.", "pt_hint": "'Um smoothie de manga.'" },
+        { "speaker": "ai", "text": "Excellent. That comes to fourteen dollars.", "pt": "Excelente. Dá quatorze dólares." },
+        { "speaker": "user", "target": "Here you are. Keep the change.", "pt_hint": "'Aqui está. Fica com o troco.'" },
+        { "speaker": "ai", "text": "Thanks a lot. Your food will be ready soon.", "pt": "Muito obrigado. Sai rapidinho." }
+      ]
+    },
+    "adverbs-manner": {
+      "title": "The tennis coach",
+      "character": "Coach",
+      "pt_summary": "Advérbios de modo — quickly, slowly, carefully, well.",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome to your first tennis lesson.", "pt": "Bem-vindo à primeira aula de tênis." },
+        { "speaker": "user", "target": "Thank you. I want to learn quickly.", "pt_hint": "QUICKLY — depressa." },
+        { "speaker": "ai", "text": "Hit the ball carefully, not hard.", "pt": "Bate na bola com cuidado, não com força." },
+        { "speaker": "user", "target": "OK. I am trying to hit it carefully.", "pt_hint": "'Tô tentando com cuidado.'" },
+        { "speaker": "ai", "text": "Move slowly and keep your eyes on the ball.", "pt": "Mova devagar e mantenha o olho na bola." },
+        { "speaker": "user", "target": "I am moving slowly.", "pt_hint": "'Tô me movendo devagar.'" },
+        { "speaker": "ai", "text": "You are playing well for your first day.", "pt": "Você tá jogando bem pro primeiro dia." },
+        { "speaker": "user", "target": "Thanks. I practice regularly at home.", "pt_hint": "REGULARLY." },
+        { "speaker": "ai", "text": "Keep going. Breathe deeply.", "pt": "Continua. Respira fundo." },
+        { "speaker": "user", "target": "I am breathing deeply.", "pt_hint": "'Tô respirando fundo.'" },
+        { "speaker": "ai", "text": "Great job. See you next Monday.", "pt": "Ótimo trabalho. Até segunda." }
+      ]
+    },
+    "zero-conditional": {
+      "title": "The kitchen experiment",
+      "character": "Chef Rafa",
+      "pt_summary": "Zero conditional — fatos sempre verdadeiros.",
+      "turns": [
+        { "speaker": "ai", "text": "If you heat butter, what happens?", "pt": "Se você aquece manteiga, o que acontece?" },
+        { "speaker": "user", "target": "If you heat butter, it melts.", "pt_hint": "IF + present → present." },
+        { "speaker": "ai", "text": "Exactly. If you freeze water, what happens?", "pt": "Exato. Se congela água?" },
+        { "speaker": "user", "target": "If you freeze water, it becomes ice.", "pt_hint": "'Vira gelo.'" },
+        { "speaker": "ai", "text": "Good. If you mix red and yellow?", "pt": "Bom. Se mistura vermelho e amarelo?" },
+        { "speaker": "user", "target": "If you mix red and yellow, you get orange.", "pt_hint": "'Fica laranja.'" },
+        { "speaker": "ai", "text": "What happens if you don't sleep?", "pt": "O que acontece se não dorme?" },
+        { "speaker": "user", "target": "If I don't sleep, I feel tired.", "pt_hint": "'Se não durmo, fico cansado.'" },
+        { "speaker": "ai", "text": "Last one — if it rains, what do you do?", "pt": "Última — se chove, o que faz?" },
+        { "speaker": "user", "target": "If it rains, I stay at home.", "pt_hint": "'Fico em casa.'" },
+        { "speaker": "ai", "text": "Perfect. You mastered the zero conditional.", "pt": "Perfeito. Dominou a zero conditional." }
+      ]
+    },
+    "too-enough": {
+      "title": "At the restaurant (complaining politely)",
+      "character": "Waiter",
+      "pt_summary": "TOO + adj, ADJ + ENOUGH.",
+      "turns": [
+        { "speaker": "ai", "text": "How is your food so far?", "pt": "Como tá sua comida?" },
+        { "speaker": "user", "target": "The soup is too salty.", "pt_hint": "TOO + adjetivo." },
+        { "speaker": "ai", "text": "I am sorry. Let me get you another one.", "pt": "Me desculpe. Trago outra." },
+        { "speaker": "user", "target": "Thank you. Also, my tea is not hot enough.", "pt_hint": "ADJ + ENOUGH." },
+        { "speaker": "ai", "text": "I will heat it up. Is the chair comfortable?", "pt": "Vou esquentar. A cadeira está confortável?" },
+        { "speaker": "user", "target": "No, it is too small.", "pt_hint": "'Muito pequena.'" },
+        { "speaker": "ai", "text": "Let me move you to a bigger table.", "pt": "Vou te colocar numa mesa maior." },
+        { "speaker": "user", "target": "That would be wonderful. Thank you.", "pt_hint": "'Seria ótimo. Obrigado.'" },
+        { "speaker": "ai", "text": "Is the music too loud?", "pt": "A música tá alta demais?" },
+        { "speaker": "user", "target": "Yes, a little. It is hard to talk.", "pt_hint": "'Um pouco. Difícil conversar.'" },
+        { "speaker": "ai", "text": "I will ask them to turn it down.", "pt": "Vou pedir pra abaixar." }
+      ]
+    },
+    "reflexive-pronouns": {
+      "title": "Yoga with yourself",
+      "character": "Yoga teacher",
+      "pt_summary": "Pronomes reflexivos — myself, yourself, himself, ourselves.",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome. Please introduce yourself to the class.", "pt": "Bem-vindo. Se apresente para a turma." },
+        { "speaker": "user", "target": "My name is Leo. I taught myself yoga online.", "pt_hint": "MYSELF." },
+        { "speaker": "ai", "text": "Nice. Find a spot for yourself.", "pt": "Legal. Ache um lugar pra você." },
+        { "speaker": "user", "target": "I found a good spot by myself.", "pt_hint": "'Achei um bom lugar sozinho.'" },
+        { "speaker": "ai", "text": "Now breathe and focus on yourself.", "pt": "Agora respire e foque em você." },
+        { "speaker": "user", "target": "I am focusing on myself.", "pt_hint": "'Tô focando em mim.'" },
+        { "speaker": "ai", "text": "Be kind to yourself during this practice.", "pt": "Seja gentil consigo durante a prática." },
+        { "speaker": "user", "target": "I will be kind to myself.", "pt_hint": "'Vou ser gentil comigo.'" },
+        { "speaker": "ai", "text": "At the end, we thank ourselves for showing up.", "pt": "No fim, agradecemos a nós mesmos por ter vindo." },
+        { "speaker": "user", "target": "Thank you. I feel great about myself.", "pt_hint": "'Tô me sentindo ótimo.'" },
+        { "speaker": "ai", "text": "Namaste. See you next week.", "pt": "Namastê. Até semana que vem." }
+      ]
+    },
+    "the-storm-wipeout": {
+      "title": "The wipeout story",
+      "character": "Bia",
+      "pt_summary": "Past continuous — o que estava acontecendo quando a onda veio.",
+      "turns": [
+        { "speaker": "ai", "text": "You should have seen what happened yesterday.", "pt": "Tinha que ter visto o que rolou ontem." },
+        { "speaker": "user", "target": "What were you doing?", "pt_hint": "'O que você tava fazendo?'" },
+        { "speaker": "ai", "text": "I was surfing when a huge wave came.", "pt": "Estava surfando quando veio uma onda enorme." },
+        { "speaker": "user", "target": "Were you wearing a wetsuit?", "pt_hint": "'Tava de roupa de mergulho?'" },
+        { "speaker": "ai", "text": "Yes, I was. It saved me from the cold.", "pt": "Estava. Me salvou do frio." },
+        { "speaker": "user", "target": "How were your friends reacting?", "pt_hint": "'Como seus amigos reagiram?'" },
+        { "speaker": "ai", "text": "They were shouting and laughing at the same time.", "pt": "Gritavam e riam ao mesmo tempo." },
+        { "speaker": "user", "target": "Were you scared?", "pt_hint": "'Ficou com medo?'" },
+        { "speaker": "ai", "text": "A little, but I was laughing too.", "pt": "Um pouco, mas tava rindo também." },
+        { "speaker": "user", "target": "I was watching from the beach.", "pt_hint": "'Eu estava vendo da praia.'" },
+        { "speaker": "ai", "text": "Then you saw my best wipeout ever!", "pt": "Então viu meu melhor wipeout!" }
+      ]
+    },
+    "maya-advises-rafa": {
+      "title": "Maya's business advice",
+      "character": "Maya",
+      "pt_summary": "Modais de conselho — should, shouldn't, could.",
+      "turns": [
+        { "speaker": "ai", "text": "Rafa, I think you should raise your prices.", "pt": "Rafa, acho que devia aumentar os preços." },
+        { "speaker": "user", "target": "Should I really? My customers like them.", "pt_hint": "'Devo mesmo?'" },
+        { "speaker": "ai", "text": "You could raise them ten percent only.", "pt": "Podia aumentar só dez por cento." },
+        { "speaker": "user", "target": "That is a good idea. What else?", "pt_hint": "'Boa ideia. Mais o quê?'" },
+        { "speaker": "ai", "text": "You shouldn't work seven days a week.", "pt": "Não devia trabalhar sete dias." },
+        { "speaker": "user", "target": "You are right. I should take one day off.", "pt_hint": "'Devia folgar um dia.'" },
+        { "speaker": "ai", "text": "You could also hire someone to help.", "pt": "Podia contratar alguém pra ajudar." },
+        { "speaker": "user", "target": "Who should I hire first?", "pt_hint": "'Quem devo contratar?'" },
+        { "speaker": "ai", "text": "You should hire a cook, not a cashier.", "pt": "Devia contratar um cozinheiro, não um caixa." },
+        { "speaker": "user", "target": "Thanks, Maya. You are so smart.", "pt_hint": "'Valeu, Maya.'" },
+        { "speaker": "ai", "text": "I am only twelve, but I read a lot.", "pt": "Tenho só doze, mas leio muito." }
+      ]
+    },
+    "lost-tourist": {
+      "title": "Helping a lost tourist",
+      "character": "Tourist",
+      "pt_summary": "Dar direções em inglês.",
+      "turns": [
+        { "speaker": "ai", "text": "Excuse me, I am lost. Can you help me?", "pt": "Com licença, estou perdido. Pode ajudar?" },
+        { "speaker": "user", "target": "Of course. Where do you want to go?", "pt_hint": "'Claro. Pra onde quer ir?'" },
+        { "speaker": "ai", "text": "I am looking for the bus station.", "pt": "Tô procurando a rodoviária." },
+        { "speaker": "user", "target": "Go straight for two blocks.", "pt_hint": "'Siga reto por duas quadras.'" },
+        { "speaker": "ai", "text": "OK, two blocks. Then what?", "pt": "OK, duas quadras. Depois?" },
+        { "speaker": "user", "target": "Turn left at the supermarket.", "pt_hint": "'Vire à esquerda no supermercado.'" },
+        { "speaker": "ai", "text": "Is it close from there?", "pt": "É perto dali?" },
+        { "speaker": "user", "target": "Yes, it is just two minutes away.", "pt_hint": "'Fica a dois minutos.'" },
+        { "speaker": "ai", "text": "Thank you so much. You saved my day.", "pt": "Muito obrigado. Salvou meu dia." },
+        { "speaker": "user", "target": "You are welcome. Enjoy your trip.", "pt_hint": "'De nada. Boa viagem.'" },
+        { "speaker": "ai", "text": "Have a wonderful day!", "pt": "Tenha um ótimo dia!" }
+      ]
+    },
+    "describing-people": {
+      "title": "The police sketch",
+      "character": "Police officer",
+      "pt_summary": "Descrevendo aparência — tall, short, thin, curly hair.",
+      "turns": [
+        { "speaker": "ai", "text": "Please describe the man you saw.", "pt": "Por favor, descreva o homem que viu." },
+        { "speaker": "user", "target": "He was tall and thin.", "pt_hint": "'Era alto e magro.'" },
+        { "speaker": "ai", "text": "What about his hair?", "pt": "E o cabelo?" },
+        { "speaker": "user", "target": "He had short brown curly hair.", "pt_hint": "'Cabelo curto, castanho e cacheado.'" },
+        { "speaker": "ai", "text": "What was he wearing?", "pt": "O que estava vestindo?" },
+        { "speaker": "user", "target": "He was wearing a black jacket and blue jeans.", "pt_hint": "'Jaqueta preta e jeans azul.'" },
+        { "speaker": "ai", "text": "Did he have any marks or tattoos?", "pt": "Tinha marcas ou tatuagens?" },
+        { "speaker": "user", "target": "Yes, a small tattoo on his left arm.", "pt_hint": "'Tatuagem pequena no braço esquerdo.'" },
+        { "speaker": "ai", "text": "How old did he look?", "pt": "Qual idade parecia ter?" },
+        { "speaker": "user", "target": "About thirty years old.", "pt_hint": "'Uns trinta anos.'" },
+        { "speaker": "ai", "text": "Thank you. You were very helpful.", "pt": "Obrigado. Foi muito útil." }
+      ]
+    },
+    "frequency-kumar": {
+      "title": "Mr. Kumar's routine",
+      "character": "Mr. Kumar",
+      "pt_summary": "Advérbios de frequência — always, usually, often, sometimes, never.",
+      "turns": [
+        { "speaker": "ai", "text": "How often do you study English?", "pt": "Com que frequência estuda inglês?" },
+        { "speaker": "user", "target": "I always study every evening.", "pt_hint": "ALWAYS." },
+        { "speaker": "ai", "text": "Do you ever practice with movies?", "pt": "Você treina com filmes?" },
+        { "speaker": "user", "target": "Yes, I often watch movies in English.", "pt_hint": "OFTEN." },
+        { "speaker": "ai", "text": "Do you sometimes feel tired?", "pt": "Às vezes se sente cansado?" },
+        { "speaker": "user", "target": "Yes, sometimes, but I never give up.", "pt_hint": "NEVER give up." },
+        { "speaker": "ai", "text": "How often do you speak English out loud?", "pt": "Com que frequência fala em voz alta?" },
+        { "speaker": "user", "target": "I usually speak out loud every day.", "pt_hint": "USUALLY." },
+        { "speaker": "ai", "text": "Do you ever travel abroad?", "pt": "Você viaja pro exterior?" },
+        { "speaker": "user", "target": "I rarely travel, but I want to travel more.", "pt_hint": "RARELY." },
+        { "speaker": "ai", "text": "Keep practicing. You are improving!", "pt": "Continue praticando. Tá melhorando!" }
+      ]
+    },
+    "making-plans-bia": {
+      "title": "Making plans with Bia",
+      "character": "Bia",
+      "pt_summary": "Sugestões e combinações — Let's, How about, What if.",
+      "turns": [
+        { "speaker": "ai", "text": "What should we do on Saturday?", "pt": "O que vamos fazer no sábado?" },
+        { "speaker": "user", "target": "How about going to the beach?", "pt_hint": "HOW ABOUT + -ing." },
+        { "speaker": "ai", "text": "Love it. What time?", "pt": "Amei. Que horas?" },
+        { "speaker": "user", "target": "Let's meet at nine in the morning.", "pt_hint": "LET'S + base." },
+        { "speaker": "ai", "text": "Should we bring lunch?", "pt": "Levamos almoço?" },
+        { "speaker": "user", "target": "Yes, let's bring sandwiches and fruit.", "pt_hint": "'Sanduíche e fruta.'" },
+        { "speaker": "ai", "text": "What if it rains?", "pt": "E se chover?" },
+        { "speaker": "user", "target": "Then we can watch a movie instead.", "pt_hint": "'Podemos ver um filme.'" },
+        { "speaker": "ai", "text": "Good plan. Should I invite Rafa?", "pt": "Bom plano. Convido o Rafa?" },
+        { "speaker": "user", "target": "Yes, let's invite everyone.", "pt_hint": "'Vamos convidar todo mundo.'" },
+        { "speaker": "ai", "text": "Awesome. See you Saturday!", "pt": "Demais. Até sábado!" }
+      ]
+    },
+    "weather-seasons": {
+      "title": "Weather small talk",
+      "character": "Neighbor",
+      "pt_summary": "Vocabulário de clima e estações.",
+      "turns": [
+        { "speaker": "ai", "text": "Nice weather we are having, isn't it?", "pt": "Tempo bom né?" },
+        { "speaker": "user", "target": "Yes, it is warm and sunny.", "pt_hint": "'Sim, quente e ensolarado.'" },
+        { "speaker": "ai", "text": "Do you prefer summer or winter?", "pt": "Prefere verão ou inverno?" },
+        { "speaker": "user", "target": "I prefer summer. I love the heat.", "pt_hint": "'Prefiro verão.'" },
+        { "speaker": "ai", "text": "I like winter. The cold is refreshing.", "pt": "Gosto do inverno. O frio refresca." },
+        { "speaker": "user", "target": "Is it going to rain tomorrow?", "pt_hint": "'Vai chover amanhã?'" },
+        { "speaker": "ai", "text": "Yes, the forecast says heavy rain.", "pt": "Sim, a previsão diz chuva forte." },
+        { "speaker": "user", "target": "I should take an umbrella.", "pt_hint": "'Devo levar guarda-chuva.'" },
+        { "speaker": "ai", "text": "Good idea. Next week it will be cold.", "pt": "Boa ideia. Semana que vem vai esfriar." },
+        { "speaker": "user", "target": "Great. I need to wear my warm coat.", "pt_hint": "'Preciso do casaco quente.'" },
+        { "speaker": "ai", "text": "Stay warm and dry!", "pt": "Se mantenha aquecido e seco!" }
+      ]
+    },
+    "body-health": {
+      "title": "Doctor's visit",
+      "character": "Doctor",
+      "pt_summary": "Partes do corpo e sintomas.",
+      "turns": [
+        { "speaker": "ai", "text": "Hello. What seems to be the problem?", "pt": "Olá. Qual o problema?" },
+        { "speaker": "user", "target": "I have a bad headache and a sore throat.", "pt_hint": "'Dor de cabeça e garganta.'" },
+        { "speaker": "ai", "text": "How long have you felt this way?", "pt": "Há quanto tempo assim?" },
+        { "speaker": "user", "target": "For three days.", "pt_hint": "'Há três dias.'" },
+        { "speaker": "ai", "text": "Do you have a fever?", "pt": "Tem febre?" },
+        { "speaker": "user", "target": "Yes, I have a small fever.", "pt_hint": "'Sim, uma febrezinha.'" },
+        { "speaker": "ai", "text": "Does your stomach hurt too?", "pt": "A barriga dói também?" },
+        { "speaker": "user", "target": "No, my stomach feels fine.", "pt_hint": "'A barriga tá boa.'" },
+        { "speaker": "ai", "text": "I will give you medicine for three days.", "pt": "Vou receitar remédio por três dias." },
+        { "speaker": "user", "target": "Thank you, doctor. When should I return?", "pt_hint": "'Quando devo voltar?'" },
+        { "speaker": "ai", "text": "Come back if you do not feel better.", "pt": "Volte se não melhorar." }
+      ]
+    },
+    "mine-yours-hers": {
+      "title": "At the lost and found",
+      "character": "Clerk",
+      "pt_summary": "Pronomes possessivos — mine, yours, hers, his, ours, theirs.",
+      "turns": [
+        { "speaker": "ai", "text": "Hi. Did you lose something?", "pt": "Oi. Perdeu algo?" },
+        { "speaker": "user", "target": "Yes, I lost my phone. It is black.", "pt_hint": "'Perdi meu celular.'" },
+        { "speaker": "ai", "text": "Is this phone yours?", "pt": "Esse celular é seu?" },
+        { "speaker": "user", "target": "Yes, that one is mine!", "pt_hint": "MINE." },
+        { "speaker": "ai", "text": "Great. Are these keys also yours?", "pt": "Ótimo. Essas chaves são suas?" },
+        { "speaker": "user", "target": "No, those are hers. My friend is here.", "pt_hint": "HERS." },
+        { "speaker": "ai", "text": "Is this wallet his?", "pt": "Essa carteira é dele?" },
+        { "speaker": "user", "target": "No, the wallet is ours — we share it.", "pt_hint": "OURS." },
+        { "speaker": "ai", "text": "And this backpack, is it theirs?", "pt": "Essa mochila é deles?" },
+        { "speaker": "user", "target": "Yes, that backpack is theirs.", "pt_hint": "THEIRS." },
+        { "speaker": "ai", "text": "Perfect. Everything is returned.", "pt": "Perfeito. Tudo devolvido." }
+      ]
+    },
+    "so-me-too": {
+      "title": "Finding common ground",
+      "character": "Classmate",
+      "pt_summary": "Concordância — so do I, me too, neither do I, me neither.",
+      "turns": [
+        { "speaker": "ai", "text": "I love surfing at Praia do Sol.", "pt": "Adoro surfar em Praia do Sol." },
+        { "speaker": "user", "target": "So do I. I love it too.", "pt_hint": "SO DO I." },
+        { "speaker": "ai", "text": "I don't like cold water.", "pt": "Não gosto de água fria." },
+        { "speaker": "user", "target": "Neither do I.", "pt_hint": "NEITHER DO I." },
+        { "speaker": "ai", "text": "I am learning English this year.", "pt": "Estou aprendendo inglês esse ano." },
+        { "speaker": "user", "target": "Me too. I started in January.", "pt_hint": "ME TOO." },
+        { "speaker": "ai", "text": "I don't have time to study every day.", "pt": "Não tenho tempo de estudar todo dia." },
+        { "speaker": "user", "target": "Me neither. But I try.", "pt_hint": "ME NEITHER." },
+        { "speaker": "ai", "text": "I can swim very well.", "pt": "Sei nadar muito bem." },
+        { "speaker": "user", "target": "So can I. I swim every morning.", "pt_hint": "SO CAN I." },
+        { "speaker": "ai", "text": "We have a lot in common!", "pt": "Temos muito em comum!" }
+      ]
+    },
+    "bias-surfboards": {
+      "title": "Surfboard shopping",
+      "character": "Surf shop clerk",
+      "pt_summary": "Comparativos e superlativos — bigger, smaller, best, fastest.",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome. Looking for a new surfboard?", "pt": "Bem-vinda. Procurando prancha nova?" },
+        { "speaker": "user", "target": "Yes. What is the best board for beginners?", "pt_hint": "'Qual a melhor pra iniciantes?'" },
+        { "speaker": "ai", "text": "This foam board is the safest and cheapest.", "pt": "Essa prancha de espuma é a mais segura e barata." },
+        { "speaker": "user", "target": "Is it faster than the other one?", "pt_hint": "'É mais rápida que a outra?'" },
+        { "speaker": "ai", "text": "No, the fiberglass one is faster but harder.", "pt": "Não, a de fibra é mais rápida mas mais difícil." },
+        { "speaker": "user", "target": "Which board is the most popular?", "pt_hint": "'Qual é a mais popular?'" },
+        { "speaker": "ai", "text": "This yellow one is our best seller.", "pt": "Essa amarela é nossa mais vendida." },
+        { "speaker": "user", "target": "How much is the cheaper option?", "pt_hint": "'Quanto é a opção mais barata?'" },
+        { "speaker": "ai", "text": "Two hundred dollars for the foam board.", "pt": "Duzentos dólares a de espuma." },
+        { "speaker": "user", "target": "I will take the best one for beginners.", "pt_hint": "'Levo a melhor pra iniciantes.'" },
+        { "speaker": "ai", "text": "Great choice. Enjoy your first waves!", "pt": "Ótima escolha. Aproveite as primeiras ondas!" }
+      ]
+    },
+    "rafa-been-there": {
+      "title": "Rafa's past travels",
+      "character": "Rafa",
+      "pt_summary": "Present perfect — Have you ever been to...?",
+      "turns": [
+        { "speaker": "ai", "text": "Have you ever been to Mexico?", "pt": "Já foi ao México?" },
+        { "speaker": "user", "target": "Yes, I have been there twice.", "pt_hint": "HAVE BEEN." },
+        { "speaker": "ai", "text": "Have you tried real Mexican tacos?", "pt": "Já comeu taco mexicano de verdade?" },
+        { "speaker": "user", "target": "Yes, I have tried many kinds.", "pt_hint": "'Comi vários tipos.'" },
+        { "speaker": "ai", "text": "I have been to Argentina but not to Mexico.", "pt": "Fui pra Argentina mas não México." },
+        { "speaker": "user", "target": "Have you ever eaten in Buenos Aires?", "pt_hint": "'Já comeu em Buenos Aires?'" },
+        { "speaker": "ai", "text": "Yes, I have eaten the best steak there.", "pt": "Já comi o melhor bife lá." },
+        { "speaker": "user", "target": "Have you ever seen the ocean in winter?", "pt_hint": "'Já viu o mar no inverno?'" },
+        { "speaker": "ai", "text": "Yes, I have. It was amazing.", "pt": "Já sim. Foi incrível." },
+        { "speaker": "user", "target": "I have never seen snow in my life.", "pt_hint": "'Nunca vi neve.'" },
+        { "speaker": "ai", "text": "You should visit Argentina with me!", "pt": "Tem que vir pra Argentina comigo!" }
+      ]
+    },
+    "just-yet-already": {
+      "title": "Monday morning check-in",
+      "character": "Colleague",
+      "pt_summary": "Advérbios do Present Perfect — just, yet, already.",
+      "turns": [
+        { "speaker": "ai", "text": "Hey. Have you had coffee yet?", "pt": "Ei. Já tomou café?" },
+        { "speaker": "user", "target": "Yes, I have just had one.", "pt_hint": "JUST — acabou de." },
+        { "speaker": "ai", "text": "Have you checked your email yet?", "pt": "Já viu o email?" },
+        { "speaker": "user", "target": "No, I have not checked it yet.", "pt_hint": "YET — ainda não." },
+        { "speaker": "ai", "text": "The boss has already sent the report.", "pt": "O chefe já mandou o relatório." },
+        { "speaker": "user", "target": "Oh, I have not seen it yet.", "pt_hint": "'Ainda não vi.'" },
+        { "speaker": "ai", "text": "Have you met the new teacher?", "pt": "Já conheceu o professor novo?" },
+        { "speaker": "user", "target": "Yes, I have already met her.", "pt_hint": "ALREADY." },
+        { "speaker": "ai", "text": "Has she started teaching yet?", "pt": "Ela já começou a ensinar?" },
+        { "speaker": "user", "target": "Yes, she has just started today.", "pt_hint": "'Ela acabou de começar.'" },
+        { "speaker": "ai", "text": "Great. Let's get to work.", "pt": "Ótimo. Vamos trabalhar." }
+      ]
+    },
+    "jocas-obligations": {
+      "title": "Joca's new job rules",
+      "character": "Joca",
+      "pt_summary": "Must / have to / mustn't / don't have to.",
+      "turns": [
+        { "speaker": "ai", "text": "My new job has many rules.", "pt": "Meu trabalho novo tem muitas regras." },
+        { "speaker": "user", "target": "What rules do you have to follow?", "pt_hint": "HAVE TO." },
+        { "speaker": "ai", "text": "I must arrive at nine every day.", "pt": "Tenho que chegar às nove." },
+        { "speaker": "user", "target": "Do you have to wear a suit?", "pt_hint": "'Tem que usar terno?'" },
+        { "speaker": "ai", "text": "No, I don't have to, but I must look professional.", "pt": "Não preciso, mas tenho que parecer profissional." },
+        { "speaker": "user", "target": "Do you have to work on weekends?", "pt_hint": "'Trabalha nos fins de semana?'" },
+        { "speaker": "ai", "text": "Sometimes I have to, but not often.", "pt": "Às vezes, mas não sempre." },
+        { "speaker": "user", "target": "You mustn't be late, right?", "pt_hint": "MUSTN'T." },
+        { "speaker": "ai", "text": "Right. I mustn't be late under any circumstance.", "pt": "Isso. Não posso me atrasar." },
+        { "speaker": "user", "target": "That is a lot of responsibility.", "pt_hint": "'Muita responsabilidade.'" },
+        { "speaker": "ai", "text": "It is, but I love the challenge.", "pt": "É, mas adoro o desafio." }
+      ]
+    },
+    "airport-travel": {
+      "title": "At the check-in counter",
+      "character": "Airline agent",
+      "pt_summary": "Check-in em aeroporto — bags, window/aisle, boarding pass.",
+      "turns": [
+        { "speaker": "ai", "text": "Good morning. Where are you flying today?", "pt": "Bom dia. Pra onde voa hoje?" },
+        { "speaker": "user", "target": "I am flying to Orlando.", "pt_hint": "'Para Orlando.'" },
+        { "speaker": "ai", "text": "May I see your passport, please?", "pt": "Posso ver seu passaporte?" },
+        { "speaker": "user", "target": "Yes, here it is.", "pt_hint": "'Sim, aqui está.'" },
+        { "speaker": "ai", "text": "How many bags are you checking in?", "pt": "Quantas malas vai despachar?" },
+        { "speaker": "user", "target": "Two bags and one carry-on.", "pt_hint": "'Duas malas e uma de mão.'" },
+        { "speaker": "ai", "text": "Window or aisle seat?", "pt": "Janela ou corredor?" },
+        { "speaker": "user", "target": "Window, please.", "pt_hint": "'Janela.'" },
+        { "speaker": "ai", "text": "Here is your boarding pass. Gate twelve.", "pt": "Aqui está seu cartão de embarque. Portão doze." },
+        { "speaker": "user", "target": "Thank you. What time is boarding?", "pt_hint": "'Que horas é o embarque?'" },
+        { "speaker": "ai", "text": "Boarding starts at ten forty-five.", "pt": "O embarque começa às dez e quarenta e cinco." }
+      ]
+    },
+    "hotel-checkin": {
+      "title": "Hotel check-in",
+      "character": "Hotel receptionist",
+      "pt_summary": "Check-in em hotel.",
+      "turns": [
+        { "speaker": "ai", "text": "Good evening. Do you have a reservation?", "pt": "Boa noite. Tem reserva?" },
+        { "speaker": "user", "target": "Yes, under the name Leo Silva.", "pt_hint": "'Em nome de Leo Silva.'" },
+        { "speaker": "ai", "text": "A double room for three nights, correct?", "pt": "Quarto duplo por três noites, correto?" },
+        { "speaker": "user", "target": "That is right.", "pt_hint": "'Isso mesmo.'" },
+        { "speaker": "ai", "text": "May I see a credit card for the deposit?", "pt": "Posso ver o cartão para o depósito?" },
+        { "speaker": "user", "target": "Sure, here is my card.", "pt_hint": "'Claro, aqui está.'" },
+        { "speaker": "ai", "text": "Breakfast is from seven to ten.", "pt": "Café da manhã das sete às dez." },
+        { "speaker": "user", "target": "Is there Wi-Fi in the room?", "pt_hint": "'Tem Wi-Fi no quarto?'" },
+        { "speaker": "ai", "text": "Yes, the password is on your key card.", "pt": "Sim, a senha tá no cartão-chave." },
+        { "speaker": "user", "target": "Thank you. What floor am I on?", "pt_hint": "'Em qual andar estou?'" },
+        { "speaker": "ai", "text": "You are on the seventh floor. Enjoy your stay.", "pt": "Sétimo andar. Boa estadia." }
+      ]
+    },
+    "tag-questions": {
+      "title": "Confirming details",
+      "character": "Colleague",
+      "pt_summary": "Tag questions — isn't it, don't you, aren't they.",
+      "turns": [
+        { "speaker": "ai", "text": "The weather is nice today, isn't it?", "pt": "O tempo tá bom, né?" },
+        { "speaker": "user", "target": "Yes, it is really beautiful.", "pt_hint": "'Sim, lindo.'" },
+        { "speaker": "ai", "text": "You work at Amazing School, don't you?", "pt": "Você trabalha na Amazing School, né?" },
+        { "speaker": "user", "target": "Yes, I do. I am a teacher there.", "pt_hint": "'Sim, sou professor lá.'" },
+        { "speaker": "ai", "text": "Mr. Kumar is very kind, isn't he?", "pt": "O Mr. Kumar é muito gentil, né?" },
+        { "speaker": "user", "target": "Yes, he is the nicest boss.", "pt_hint": "'É o melhor chefe.'" },
+        { "speaker": "ai", "text": "The students are studying hard, aren't they?", "pt": "Os alunos estão estudando muito, né?" },
+        { "speaker": "user", "target": "Yes, they are really dedicated.", "pt_hint": "'Sim, são dedicados.'" },
+        { "speaker": "ai", "text": "You don't have class on Fridays, do you?", "pt": "Você não dá aula na sexta, né?" },
+        { "speaker": "user", "target": "No, I don't. Fridays are my day off.", "pt_hint": "'Não. Sexta é folga.'" },
+        { "speaker": "ai", "text": "Lucky you!", "pt": "Que sorte!" }
+      ]
+    },
+    "somebody-nothing": {
+      "title": "Missing person report",
+      "character": "Detective",
+      "pt_summary": "Compound indefinite pronouns — somebody, anyone, nothing, everywhere.",
+      "turns": [
+        { "speaker": "ai", "text": "Did you see anybody suspicious last night?", "pt": "Viu alguém suspeito ontem à noite?" },
+        { "speaker": "user", "target": "Yes, somebody was standing near the gate.", "pt_hint": "SOMEBODY." },
+        { "speaker": "ai", "text": "Did they say anything?", "pt": "Disseram algo?" },
+        { "speaker": "user", "target": "No, they said nothing at all.", "pt_hint": "NOTHING." },
+        { "speaker": "ai", "text": "Did you find anything unusual?", "pt": "Encontrou algo estranho?" },
+        { "speaker": "user", "target": "Yes, I found something near the door.", "pt_hint": "SOMETHING." },
+        { "speaker": "ai", "text": "Was there anyone with you?", "pt": "Tinha alguém com você?" },
+        { "speaker": "user", "target": "No, there was nobody else.", "pt_hint": "NOBODY." },
+        { "speaker": "ai", "text": "We will search everywhere.", "pt": "Vamos procurar em todo lugar." },
+        { "speaker": "user", "target": "I hope you find something useful.", "pt_hint": "'Espero que achem algo útil.'" },
+        { "speaker": "ai", "text": "Thank you for your help.", "pt": "Obrigado pela ajuda." }
+      ]
+    },
+    "phone-email-basics": {
+      "title": "Making a business call",
+      "character": "Receptionist",
+      "pt_summary": "Frases básicas de telefone e email.",
+      "turns": [
+        { "speaker": "ai", "text": "Hello, Amazing School. How can I help you?", "pt": "Alô, Amazing School. Como posso ajudar?" },
+        { "speaker": "user", "target": "Hi, may I speak to Mr. Kumar, please?", "pt_hint": "'Posso falar com o Mr. Kumar?'" },
+        { "speaker": "ai", "text": "Who is calling, please?", "pt": "Quem fala?" },
+        { "speaker": "user", "target": "This is Leo Silva, his student.", "pt_hint": "'É Leo Silva, aluno dele.'" },
+        { "speaker": "ai", "text": "Hold on, please. I will put you through.", "pt": "Aguarde, vou transferir." },
+        { "speaker": "user", "target": "Thank you. I will wait.", "pt_hint": "'Obrigado. Vou esperar.'" },
+        { "speaker": "ai", "text": "He is in a meeting. Can I take a message?", "pt": "Ele está em reunião. Posso anotar?" },
+        { "speaker": "user", "target": "Please tell him to call me back.", "pt_hint": "'Peça pra ele me ligar de volta.'" },
+        { "speaker": "ai", "text": "Could I have your phone number?", "pt": "Pode me dar seu telefone?" },
+        { "speaker": "user", "target": "It is nine one five five five one two three four.", "pt_hint": "Soletre os dígitos." },
+        { "speaker": "ai", "text": "Thank you. I will pass the message.", "pt": "Obrigado. Vou passar o recado." }
+      ]
+    },
+    "for-since-ago": {
+      "title": "Life timeline",
+      "character": "Interviewer",
+      "pt_summary": "For / since / ago com present perfect e past simple.",
+      "turns": [
+        { "speaker": "ai", "text": "How long have you lived in this city?", "pt": "Há quanto tempo mora aqui?" },
+        { "speaker": "user", "target": "I have lived here for ten years.", "pt_hint": "FOR + período." },
+        { "speaker": "ai", "text": "When did you move here?", "pt": "Quando se mudou?" },
+        { "speaker": "user", "target": "I moved here ten years ago.", "pt_hint": "AGO no passado." },
+        { "speaker": "ai", "text": "How long have you been married?", "pt": "Há quanto tempo casado?" },
+        { "speaker": "user", "target": "I have been married since 2020.", "pt_hint": "SINCE + data." },
+        { "speaker": "ai", "text": "How long have you worked here?", "pt": "Há quanto tempo trabalha aqui?" },
+        { "speaker": "user", "target": "I have worked here for five years.", "pt_hint": "FOR." },
+        { "speaker": "ai", "text": "When did you start?", "pt": "Quando começou?" },
+        { "speaker": "user", "target": "I started five years ago.", "pt_hint": "AGO." },
+        { "speaker": "ai", "text": "Impressive timeline.", "pt": "Trajetória impressionante." }
+      ]
+    },
+    "gerunds-infinitives": {
+      "title": "Life goals interview",
+      "character": "Coach",
+      "pt_summary": "Gerúndio vs infinitivo — enjoy doing, decide to do, want to.",
+      "turns": [
+        { "speaker": "ai", "text": "What do you enjoy doing?", "pt": "Do que gosta de fazer?" },
+        { "speaker": "user", "target": "I enjoy learning new languages.", "pt_hint": "ENJOY + -ing." },
+        { "speaker": "ai", "text": "What do you want to achieve this year?", "pt": "O que quer alcançar esse ano?" },
+        { "speaker": "user", "target": "I want to travel to Europe.", "pt_hint": "WANT TO + base." },
+        { "speaker": "ai", "text": "Have you decided to start anything new?", "pt": "Decidiu começar algo novo?" },
+        { "speaker": "user", "target": "Yes, I decided to start yoga.", "pt_hint": "DECIDE TO + base." },
+        { "speaker": "ai", "text": "Do you avoid speaking English in public?", "pt": "Você evita falar inglês em público?" },
+        { "speaker": "user", "target": "Yes, I avoid speaking because I am shy.", "pt_hint": "AVOID + -ing." },
+        { "speaker": "ai", "text": "Try practicing more with friends.", "pt": "Tenta praticar com amigos." },
+        { "speaker": "user", "target": "Good advice. I will keep trying.", "pt_hint": "KEEP + -ing." },
+        { "speaker": "ai", "text": "You will grow if you keep going.", "pt": "Vai crescer se continuar." }
+      ]
+    },
+    "linking-words": {
+      "title": "Essay feedback",
+      "character": "Zara",
+      "pt_summary": "Conectivos — and, but, because, so, however.",
+      "turns": [
+        { "speaker": "ai", "text": "Your essay is good, but too short.", "pt": "Seu texto é bom, mas curto." },
+        { "speaker": "user", "target": "I am sorry, I did not have much time.", "pt_hint": "'Desculpa, não tive muito tempo.'" },
+        { "speaker": "ai", "text": "Use more linking words, such as 'however'.", "pt": "Use mais conectivos, como 'however'." },
+        { "speaker": "user", "target": "I like your idea, however I find it hard.", "pt_hint": "HOWEVER." },
+        { "speaker": "ai", "text": "Good. Also use 'because' for reasons.", "pt": "Bom. Use 'because' pra razões." },
+        { "speaker": "user", "target": "I study English because I love it.", "pt_hint": "BECAUSE." },
+        { "speaker": "ai", "text": "Now use 'so' for a result.", "pt": "Agora 'so' pra consequência." },
+        { "speaker": "user", "target": "I practice every day, so I am improving.", "pt_hint": "SO." },
+        { "speaker": "ai", "text": "Perfect. One more — 'although'.", "pt": "Perfeito. Mais um — 'although'." },
+        { "speaker": "user", "target": "Although I am tired, I still study.", "pt_hint": "ALTHOUGH." },
+        { "speaker": "ai", "text": "Excellent. Your writing is getting stronger.", "pt": "Excelente. Seu texto tá melhorando." }
+      ]
+    },
+    "ordering-restaurant": {
+      "title": "Dinner at a restaurant",
+      "character": "Waiter",
+      "pt_summary": "Pedindo no restaurante.",
+      "turns": [
+        { "speaker": "ai", "text": "Good evening. A table for how many?", "pt": "Boa noite. Mesa pra quantos?" },
+        { "speaker": "user", "target": "For two, please.", "pt_hint": "'Pra dois.'" },
+        { "speaker": "ai", "text": "Here is the menu. Any drinks to start?", "pt": "Aqui o cardápio. Bebida pra começar?" },
+        { "speaker": "user", "target": "Two glasses of water, please.", "pt_hint": "'Dois copos de água.'" },
+        { "speaker": "ai", "text": "Are you ready to order?", "pt": "Prontos pra pedir?" },
+        { "speaker": "user", "target": "Yes, I will have the fish and salad.", "pt_hint": "'Peixe e salada.'" },
+        { "speaker": "ai", "text": "Excellent choice. And your friend?", "pt": "Ótima escolha. E sua amiga?" },
+        { "speaker": "user", "target": "She will have the pasta with chicken.", "pt_hint": "'Massa com frango.'" },
+        { "speaker": "ai", "text": "Any dessert tonight?", "pt": "Sobremesa?" },
+        { "speaker": "user", "target": "Yes, one chocolate cake to share.", "pt_hint": "'Bolo de chocolate pra dividir.'" },
+        { "speaker": "ai", "text": "Perfect. I will bring your drinks now.", "pt": "Perfeito. Trago as bebidas." }
+      ]
+    },
+    "shopping-prices": {
+      "title": "Shopping at the market",
+      "character": "Vendor",
+      "pt_summary": "Barganhando preços.",
+      "turns": [
+        { "speaker": "ai", "text": "Hello! Fresh mangoes today. Want some?", "pt": "Olá! Manga fresca hoje. Quer?" },
+        { "speaker": "user", "target": "How much is one mango?", "pt_hint": "'Quanto é uma manga?'" },
+        { "speaker": "ai", "text": "Three dollars each.", "pt": "Três dólares cada." },
+        { "speaker": "user", "target": "That is a bit expensive. Any discount?", "pt_hint": "'Tá caro. Tem desconto?'" },
+        { "speaker": "ai", "text": "If you buy four, they are ten dollars total.", "pt": "Se levar quatro, dez dólares." },
+        { "speaker": "user", "target": "OK, I will take four mangoes.", "pt_hint": "'OK, levo quatro.'" },
+        { "speaker": "ai", "text": "Great. Anything else?", "pt": "Ótimo. Mais algo?" },
+        { "speaker": "user", "target": "How much for the bananas?", "pt_hint": "'Quanto a banana?'" },
+        { "speaker": "ai", "text": "Two dollars for a bunch.", "pt": "Dois dólares o cacho." },
+        { "speaker": "user", "target": "I will take one bunch too.", "pt_hint": "'Levo um cacho.'" },
+        { "speaker": "ai", "text": "Twelve dollars total. Thank you!", "pt": "Doze dólares no total. Obrigado!" }
+      ]
+    },
+    "clothes-sizes": {
+      "title": "At the clothing store",
+      "character": "Salesperson",
+      "pt_summary": "Tamanhos e provadores — small, medium, large, fitting room.",
+      "turns": [
+        { "speaker": "ai", "text": "Welcome. Are you looking for something specific?", "pt": "Bem-vindo. Procura algo específico?" },
+        { "speaker": "user", "target": "Yes, a blue shirt in medium, please.", "pt_hint": "'Camisa azul, tamanho M.'" },
+        { "speaker": "ai", "text": "Here is a medium. Try it on.", "pt": "Aqui o M. Experimente." },
+        { "speaker": "user", "target": "Where is the fitting room?", "pt_hint": "'Onde é o provador?'" },
+        { "speaker": "ai", "text": "Right behind you, on the left.", "pt": "Atrás de você, à esquerda." },
+        { "speaker": "user", "target": "This shirt is too small.", "pt_hint": "'Essa tá pequena demais.'" },
+        { "speaker": "ai", "text": "Would you like to try a large?", "pt": "Quer provar um G?" },
+        { "speaker": "user", "target": "Yes, please bring me a large.", "pt_hint": "'Sim, tamanho G.'" },
+        { "speaker": "ai", "text": "Here you go. Does it fit better?", "pt": "Aqui está. Serviu melhor?" },
+        { "speaker": "user", "target": "Yes, this one fits perfectly.", "pt_hint": "'Essa serviu bem.'" },
+        { "speaker": "ai", "text": "Wonderful. I will ring it up.", "pt": "Maravilha. Vou passar no caixa." }
+      ]
+    },
+    "greetings": {
+      "title": "Greetings drill",
+      "character": "Mr. Kumar",
+      "pt_summary": "Formas de cumprimentar em inglês.",
+      "turns": [
+        { "speaker": "ai", "text": "Good morning! How are you?", "pt": "Bom dia! Como vai?" },
+        { "speaker": "user", "target": "Good morning. I am fine, thanks.", "pt_hint": "'Bom dia. Bem, obrigado.'" },
+        { "speaker": "ai", "text": "Hi there. What's up?", "pt": "Oi. E aí?" },
+        { "speaker": "user", "target": "Not much. How about you?", "pt_hint": "'Nada demais. E você?'" },
+        { "speaker": "ai", "text": "I am doing great. Nice to see you.", "pt": "Bem. Prazer em te ver." },
+        { "speaker": "user", "target": "Nice to see you too.", "pt_hint": "'Prazer em te ver também.'" },
+        { "speaker": "ai", "text": "How is your family?", "pt": "Como tá a família?" },
+        { "speaker": "user", "target": "They are all well, thank you.", "pt_hint": "'Todos bem, obrigado.'" },
+        { "speaker": "ai", "text": "See you later then.", "pt": "Até mais então." },
+        { "speaker": "user", "target": "Goodbye. Have a nice day.", "pt_hint": "'Tchau. Tenha um bom dia.'" },
+        { "speaker": "ai", "text": "You too. Take care.", "pt": "Você também. Se cuida." }
+      ]
+    },
+    "alphabet-spelling": {
+      "title": "Spelling drill",
+      "character": "Zara",
+      "pt_summary": "Soletrando palavras comuns.",
+      "turns": [
+        { "speaker": "ai", "text": "Let's practice spelling. Spell 'school'.", "pt": "Vamos soletrar. Soletra 'school'." },
+        { "speaker": "user", "target": "S. C. H. O. O. L.", "pt_hint": "S-C-H-O-O-L." },
+        { "speaker": "ai", "text": "Great. Now spell 'English'.", "pt": "Ótimo. Agora 'English'." },
+        { "speaker": "user", "target": "E. N. G. L. I. S. H.", "pt_hint": "E-N-G-L-I-S-H." },
+        { "speaker": "ai", "text": "Perfect. Spell 'teacher'.", "pt": "Perfeito. Soletra 'teacher'." },
+        { "speaker": "user", "target": "T. E. A. C. H. E. R.", "pt_hint": "T-E-A-C-H-E-R." },
+        { "speaker": "ai", "text": "Can you spell your name?", "pt": "Sabe soletrar seu nome?" },
+        { "speaker": "user", "target": "L. E. O. Leo.", "pt_hint": "L-E-O." },
+        { "speaker": "ai", "text": "Now spell 'Brazil'.", "pt": "Agora 'Brazil'." },
+        { "speaker": "user", "target": "B. R. A. Z. I. L.", "pt_hint": "B-R-A-Z-I-L." },
+        { "speaker": "ai", "text": "Excellent spelling today.", "pt": "Excelente hoje." }
+      ]
+    },
+    "numbers-1-100": {
+      "title": "Numbers drill",
+      "character": "Shopkeeper",
+      "pt_summary": "Números de 1 a 100 em contexto.",
+      "turns": [
+        { "speaker": "ai", "text": "How old are you?", "pt": "Quantos anos?" },
+        { "speaker": "user", "target": "I am twenty-eight years old.", "pt_hint": "28 anos." },
+        { "speaker": "ai", "text": "The bill is forty-five dollars.", "pt": "A conta é quarenta e cinco." },
+        { "speaker": "user", "target": "Here is fifty dollars.", "pt_hint": "'Aqui cinquenta.'" },
+        { "speaker": "ai", "text": "Your change is five dollars.", "pt": "Troco cinco." },
+        { "speaker": "user", "target": "Thank you. What is your phone number?", "pt_hint": "'Qual seu telefone?'" },
+        { "speaker": "ai", "text": "It is seven two three nine eight one.", "pt": "723981." },
+        { "speaker": "user", "target": "Let me repeat — seven two three nine eight one.", "pt_hint": "Repete os dígitos." },
+        { "speaker": "ai", "text": "Correct. How many apples do you want?", "pt": "Certo. Quantas maçãs?" },
+        { "speaker": "user", "target": "I want seventeen apples, please.", "pt_hint": "17." },
+        { "speaker": "ai", "text": "Seventeen apples coming up!", "pt": "Saindo 17 maçãs!" }
+      ]
+    },
+    "pronouns-to-be": {
+      "title": "To be drill",
+      "character": "Zara",
+      "pt_summary": "I am, you are, he is, she is, we are, they are.",
+      "turns": [
+        { "speaker": "ai", "text": "Hi. What is your name?", "pt": "Oi. Qual seu nome?" },
+        { "speaker": "user", "target": "I am Leo. I am a student.", "pt_hint": "I AM." },
+        { "speaker": "ai", "text": "Is Leo from Brazil?", "pt": "O Leo é do Brasil?" },
+        { "speaker": "user", "target": "Yes, he is from São Paulo.", "pt_hint": "HE IS." },
+        { "speaker": "ai", "text": "Where is your sister?", "pt": "Onde tá sua irmã?" },
+        { "speaker": "user", "target": "She is at school.", "pt_hint": "SHE IS." },
+        { "speaker": "ai", "text": "Are your parents teachers?", "pt": "Seus pais são professores?" },
+        { "speaker": "user", "target": "Yes, they are teachers.", "pt_hint": "THEY ARE." },
+        { "speaker": "ai", "text": "Are you both happy?", "pt": "Vocês estão felizes?" },
+        { "speaker": "user", "target": "Yes, we are very happy.", "pt_hint": "WE ARE." },
+        { "speaker": "ai", "text": "Wonderful. See you next class.", "pt": "Maravilha. Até a próxima." }
+      ]
+    },
+    "family-members": {
+      "title": "Family members drill",
+      "character": "Bia",
+      "pt_summary": "Membros da família.",
+      "turns": [
+        { "speaker": "ai", "text": "Tell me about your family.", "pt": "Me fala da sua família." },
+        { "speaker": "user", "target": "I have one brother and one sister.", "pt_hint": "'Um irmão e uma irmã.'" },
+        { "speaker": "ai", "text": "What is your father's name?", "pt": "Qual nome do seu pai?" },
+        { "speaker": "user", "target": "His name is Carlos.", "pt_hint": "'Carlos.'" },
+        { "speaker": "ai", "text": "Is your mother a doctor?", "pt": "Sua mãe é médica?" },
+        { "speaker": "user", "target": "No, my mother is a teacher.", "pt_hint": "'Professora.'" },
+        { "speaker": "ai", "text": "Do you have grandparents?", "pt": "Tem avós?" },
+        { "speaker": "user", "target": "Yes, my grandmother lives with us.", "pt_hint": "'Vó mora conosco.'" },
+        { "speaker": "ai", "text": "How old is your grandmother?", "pt": "Quantos anos tem a vó?" },
+        { "speaker": "user", "target": "She is seventy years old.", "pt_hint": "70." },
+        { "speaker": "ai", "text": "Lovely family.", "pt": "Linda família." }
+      ]
+    },
+    "colors-adjectives": {
+      "title": "Colors drill",
+      "character": "Artist",
+      "pt_summary": "Cores e adjetivos.",
+      "turns": [
+        { "speaker": "ai", "text": "What color is the sky today?", "pt": "Qual cor do céu?" },
+        { "speaker": "user", "target": "The sky is blue and bright.", "pt_hint": "Blue, bright." },
+        { "speaker": "ai", "text": "And the grass?", "pt": "E a grama?" },
+        { "speaker": "user", "target": "The grass is green and soft.", "pt_hint": "Green, soft." },
+        { "speaker": "ai", "text": "Describe your shirt.", "pt": "Descreva sua camisa." },
+        { "speaker": "user", "target": "My shirt is white and clean.", "pt_hint": "White, clean." },
+        { "speaker": "ai", "text": "What about your shoes?", "pt": "E seus sapatos?" },
+        { "speaker": "user", "target": "My shoes are black and old.", "pt_hint": "Black, old." },
+        { "speaker": "ai", "text": "Your favorite color?", "pt": "Cor favorita?" },
+        { "speaker": "user", "target": "My favorite color is red.", "pt_hint": "Red." },
+        { "speaker": "ai", "text": "Red is a strong color.", "pt": "Vermelho é forte." }
+      ]
+    },
+    "classroom-objects": {
+      "title": "Classroom objects drill",
+      "character": "Teacher",
+      "pt_summary": "Objetos da sala de aula.",
+      "turns": [
+        { "speaker": "ai", "text": "What is on the desk?", "pt": "O que tá na mesa?" },
+        { "speaker": "user", "target": "There is a book and a pencil.", "pt_hint": "Book, pencil." },
+        { "speaker": "ai", "text": "Where is your notebook?", "pt": "Onde tá seu caderno?" },
+        { "speaker": "user", "target": "My notebook is in my bag.", "pt_hint": "Bag." },
+        { "speaker": "ai", "text": "How many chairs are in the room?", "pt": "Quantas cadeiras?" },
+        { "speaker": "user", "target": "There are twenty chairs.", "pt_hint": "20." },
+        { "speaker": "ai", "text": "Is the board clean?", "pt": "O quadro tá limpo?" },
+        { "speaker": "user", "target": "Yes, the board is clean.", "pt_hint": "Clean." },
+        { "speaker": "ai", "text": "Do you have an eraser?", "pt": "Tem borracha?" },
+        { "speaker": "user", "target": "Yes, I have a new eraser.", "pt_hint": "Eraser." },
+        { "speaker": "ai", "text": "Let's start the lesson.", "pt": "Vamos começar." }
+      ]
+    },
+    "days-months-time": {
+      "title": "Days, months and time drill",
+      "character": "Assistant",
+      "pt_summary": "Dias, meses e horas.",
+      "turns": [
+        { "speaker": "ai", "text": "What day is today?", "pt": "Que dia é hoje?" },
+        { "speaker": "user", "target": "Today is Wednesday.", "pt_hint": "Wednesday." },
+        { "speaker": "ai", "text": "What month is it?", "pt": "Que mês?" },
+        { "speaker": "user", "target": "It is April.", "pt_hint": "April." },
+        { "speaker": "ai", "text": "What time is it now?", "pt": "Que horas?" },
+        { "speaker": "user", "target": "It is half past three.", "pt_hint": "Três e meia." },
+        { "speaker": "ai", "text": "When is your birthday?", "pt": "Quando é seu aniversário?" },
+        { "speaker": "user", "target": "My birthday is in June.", "pt_hint": "Em junho." },
+        { "speaker": "ai", "text": "What is your favorite day?", "pt": "Dia favorito?" },
+        { "speaker": "user", "target": "My favorite day is Saturday.", "pt_hint": "Saturday." },
+        { "speaker": "ai", "text": "Mine is Friday.", "pt": "O meu é sexta." }
+      ]
+    },
+    "present-simple": {
+      "title": "Present simple drill",
+      "character": "Interviewer",
+      "pt_summary": "Present simple em perguntas do dia a dia.",
+      "turns": [
+        { "speaker": "ai", "text": "What do you do every morning?", "pt": "O que faz toda manhã?" },
+        { "speaker": "user", "target": "I wake up and drink coffee.", "pt_hint": "'Acordo e tomo café.'" },
+        { "speaker": "ai", "text": "Where do you work?", "pt": "Onde trabalha?" },
+        { "speaker": "user", "target": "I work at a tech company.", "pt_hint": "'Empresa de tech.'" },
+        { "speaker": "ai", "text": "Does your brother live with you?", "pt": "Seu irmão mora com você?" },
+        { "speaker": "user", "target": "No, he lives in another city.", "pt_hint": "'Ele mora em outra cidade.'" },
+        { "speaker": "ai", "text": "How often do you travel?", "pt": "Com que frequência viaja?" },
+        { "speaker": "user", "target": "I travel twice a year.", "pt_hint": "'Duas vezes por ano.'" },
+        { "speaker": "ai", "text": "What do you do on weekends?", "pt": "O que faz no fim de semana?" },
+        { "speaker": "user", "target": "I play tennis and read books.", "pt_hint": "'Jogo tênis e leio.'" },
+        { "speaker": "ai", "text": "Sounds like a balanced life.", "pt": "Parece uma vida equilibrada." }
+      ]
+    },
+    "past-simple": {
+      "title": "Past simple drill",
+      "character": "Friend",
+      "pt_summary": "Past simple em contação de eventos recentes.",
+      "turns": [
+        { "speaker": "ai", "text": "What did you do yesterday?", "pt": "O que fez ontem?" },
+        { "speaker": "user", "target": "I went to the beach with friends.", "pt_hint": "WENT (irregular)." },
+        { "speaker": "ai", "text": "Did you have fun?", "pt": "Se divertiu?" },
+        { "speaker": "user", "target": "Yes, we had an amazing time.", "pt_hint": "HAD." },
+        { "speaker": "ai", "text": "What did you eat?", "pt": "O que comeu?" },
+        { "speaker": "user", "target": "We ate tacos at Rafa's truck.", "pt_hint": "ATE." },
+        { "speaker": "ai", "text": "When did you come home?", "pt": "Que horas voltou?" },
+        { "speaker": "user", "target": "I came home at midnight.", "pt_hint": "CAME." },
+        { "speaker": "ai", "text": "Did you sleep well after?", "pt": "Dormiu bem?" },
+        { "speaker": "user", "target": "Yes, I slept like a baby.", "pt_hint": "SLEPT." },
+        { "speaker": "ai", "text": "Sounds like a perfect day.", "pt": "Parece um dia perfeito." }
+      ]
+    },
+    "present-continuous": {
+      "title": "Present continuous drill",
+      "character": "Mom",
+      "pt_summary": "Present continuous — ações acontecendo agora.",
+      "turns": [
+        { "speaker": "ai", "text": "What are you doing right now?", "pt": "O que tá fazendo agora?" },
+        { "speaker": "user", "target": "I am studying English.", "pt_hint": "I AM + -ing." },
+        { "speaker": "ai", "text": "Is your brother helping you?", "pt": "Seu irmão tá ajudando?" },
+        { "speaker": "user", "target": "No, he is playing a game.", "pt_hint": "HE IS." },
+        { "speaker": "ai", "text": "What is your sister doing?", "pt": "O que sua irmã faz?" },
+        { "speaker": "user", "target": "She is reading a book.", "pt_hint": "SHE IS." },
+        { "speaker": "ai", "text": "Are your parents cooking?", "pt": "Seus pais tão cozinhando?" },
+        { "speaker": "user", "target": "Yes, they are cooking dinner.", "pt_hint": "THEY ARE." },
+        { "speaker": "ai", "text": "What is Cosmo doing?", "pt": "O que o Cosmo tá fazendo?" },
+        { "speaker": "user", "target": "Cosmo is sleeping on the sofa.", "pt_hint": "IS SLEEPING." },
+        { "speaker": "ai", "text": "Everyone is busy. Nice.", "pt": "Todo mundo ocupado. Legal." }
+      ]
+    },
+    "past-continuous": {
+      "title": "Past continuous drill",
+      "character": "Detective",
+      "pt_summary": "Past continuous — o que estava acontecendo.",
+      "turns": [
+        { "speaker": "ai", "text": "What were you doing at eight?", "pt": "O que tava fazendo às oito?" },
+        { "speaker": "user", "target": "I was having dinner at home.", "pt_hint": "WAS + -ing." },
+        { "speaker": "ai", "text": "Was anyone with you?", "pt": "Tinha alguém com você?" },
+        { "speaker": "user", "target": "Yes, my family was eating too.", "pt_hint": "WAS EATING." },
+        { "speaker": "ai", "text": "What was your brother doing?", "pt": "O que seu irmão fazia?" },
+        { "speaker": "user", "target": "He was watching TV.", "pt_hint": "HE WAS WATCHING." },
+        { "speaker": "ai", "text": "Were your neighbors home?", "pt": "Os vizinhos estavam?" },
+        { "speaker": "user", "target": "Yes, they were playing music.", "pt_hint": "THEY WERE." },
+        { "speaker": "ai", "text": "Did you hear anything unusual?", "pt": "Ouviu algo estranho?" },
+        { "speaker": "user", "target": "No, nothing strange was happening.", "pt_hint": "WAS HAPPENING." },
+        { "speaker": "ai", "text": "OK. Thank you for your time.", "pt": "OK. Obrigado." }
+      ]
+    },
+    "present-perfect": {
+      "title": "Present perfect drill",
+      "character": "Interviewer",
+      "pt_summary": "Present perfect — experiências de vida.",
+      "turns": [
+        { "speaker": "ai", "text": "Have you ever been abroad?", "pt": "Já foi pro exterior?" },
+        { "speaker": "user", "target": "Yes, I have been to Argentina.", "pt_hint": "HAVE BEEN." },
+        { "speaker": "ai", "text": "Have you tried sushi?", "pt": "Já experimentou sushi?" },
+        { "speaker": "user", "target": "Yes, I have tried it many times.", "pt_hint": "HAVE TRIED." },
+        { "speaker": "ai", "text": "Have you seen the new movie?", "pt": "Viu o filme novo?" },
+        { "speaker": "user", "target": "No, I have not seen it yet.", "pt_hint": "YET." },
+        { "speaker": "ai", "text": "Have you met the new teacher?", "pt": "Conheceu o professor novo?" },
+        { "speaker": "user", "target": "Yes, I have already met her.", "pt_hint": "ALREADY." },
+        { "speaker": "ai", "text": "How long have you lived here?", "pt": "Há quanto tempo mora aqui?" },
+        { "speaker": "user", "target": "I have lived here for five years.", "pt_hint": "FOR." },
+        { "speaker": "ai", "text": "Great answers. Thank you.", "pt": "Boas respostas. Obrigado." }
+      ]
+    },
+    "jocas-interview-prep": {
+      "title": "Joca's interview prep",
+      "character": "Joca",
+      "pt_summary": "Preparação de entrevista — strengths, weaknesses, goals.",
+      "turns": [
+        { "speaker": "ai", "text": "I have a big interview tomorrow. Can you help?", "pt": "Tenho entrevista amanhã. Me ajuda?" },
+        { "speaker": "user", "target": "Sure. Let's practice together.", "pt_hint": "'Claro. Vamos treinar.'" },
+        { "speaker": "ai", "text": "What are my strengths?", "pt": "Quais meus pontos fortes?" },
+        { "speaker": "user", "target": "You are creative and you learn quickly.", "pt_hint": "'Criativo e aprende rápido.'" },
+        { "speaker": "ai", "text": "What about my weaknesses?", "pt": "E meus pontos fracos?" },
+        { "speaker": "user", "target": "Sometimes you speak too fast.", "pt_hint": "'Às vezes fala rápido demais.'" },
+        { "speaker": "ai", "text": "Why do I want this job?", "pt": "Por que eu quero esse emprego?" },
+        { "speaker": "user", "target": "Because you want to grow your career.", "pt_hint": "'Porque quer crescer na carreira.'" },
+        { "speaker": "ai", "text": "What is my five-year goal?", "pt": "Qual minha meta de cinco anos?" },
+        { "speaker": "user", "target": "You want to become a team leader.", "pt_hint": "'Virar líder de time.'" },
+        { "speaker": "ai", "text": "Thanks. I feel more confident now.", "pt": "Valeu. Tô mais confiante." }
+      ]
+    }
+  }
+}

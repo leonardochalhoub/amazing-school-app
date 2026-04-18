@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 20,
+  "estimated_minutes": 24,
   "summary_pt_br": "Três verbos que viram hobbies em inglês: PLAY para esportes de bola / jogos / instrumentos. DO para atividades físicas sem bola (yoga, karate). GO + -ING para atividades (go swimming, go running). Regra simples, fácil de errar.",
   "scenes": [
     {
@@ -92,6 +92,69 @@
         "explanation": "Five common chunks. Use them whole.",
         "hint_pt_br": "Cinco blocos. Decore juntos."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "The hobby club sign-up",
+      "character": "Club leader",
+      "pt_summary": "Play / do / go para hobbies.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome to the hobby club. What do you enjoy?",
+          "pt": "Bem-vindo ao clube. Do que gosta?"
+        },
+        {
+          "speaker": "user",
+          "target": "I play tennis and I go swimming.",
+          "pt_hint": "PLAY + tennis, GO + swimming."
+        },
+        {
+          "speaker": "ai",
+          "text": "Nice combination. Do you play any instruments?",
+          "pt": "Boa combinação. Toca algum instrumento?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I play the guitar a little.",
+          "pt_hint": "PLAY the + instrument."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you do yoga?",
+          "pt": "Faz yoga?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, but I do martial arts.",
+          "pt_hint": "DO martial arts."
+        },
+        {
+          "speaker": "ai",
+          "text": "Fantastic. Do you go hiking?",
+          "pt": "Demais. Faz trilha?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I go hiking every Sunday.",
+          "pt_hint": "GO hiking."
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. Let me sign you up for three clubs.",
+          "pt": "Perfeito. Vou te inscrever em três clubes."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. I am excited to start.",
+          "pt_hint": "'Obrigado. Estou animado.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Welcome aboard!",
+          "pt": "Bem-vindo a bordo!"
+        }
+      ]
     },
     {
       "kind": "reading",

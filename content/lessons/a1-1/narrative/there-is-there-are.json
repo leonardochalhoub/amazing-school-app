@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 19,
+  "estimated_minutes": 23,
   "summary_pt_br": "Como o inglês diz 'TEM' (no sentido de existir): THERE IS (singular), THERE ARE (plural). NUNCA 'there has' ou 'have' — armadilha clássica brasileira.",
   "scenes": [
     {
@@ -76,6 +76,69 @@
         "explanation": "Question: IS THERE…? Invert 'there is' to 'is there'.",
         "hint_pt_br": "Pergunta: Is there…?"
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Describing a room",
+      "character": "Realtor",
+      "pt_summary": "There is / There are — descrevendo um apartamento.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome. Let me show you the apartment.",
+          "pt": "Bem-vindo. Deixa eu te mostrar o apartamento."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. Is there a kitchen?",
+          "pt_hint": "'Tem uma cozinha?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, there is a big kitchen right here.",
+          "pt": "Sim, há uma grande cozinha bem aqui."
+        },
+        {
+          "speaker": "user",
+          "target": "Are there two bedrooms?",
+          "pt_hint": "'Há dois quartos?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, there are two bedrooms and one bathroom.",
+          "pt": "Sim, há dois quartos e um banheiro."
+        },
+        {
+          "speaker": "user",
+          "target": "Is there a balcony?",
+          "pt_hint": "'Tem varanda?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, there is a lovely balcony with a view.",
+          "pt": "Sim, há uma varanda linda com vista."
+        },
+        {
+          "speaker": "user",
+          "target": "Are there any shops nearby?",
+          "pt_hint": "'Tem lojas por perto?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, there are many. The supermarket is next door.",
+          "pt": "Sim, muitas. O supermercado é ao lado."
+        },
+        {
+          "speaker": "user",
+          "target": "I love it. How much is the rent?",
+          "pt_hint": "'Adorei. Quanto é o aluguel?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "It is one thousand dollars per month.",
+          "pt": "Mil dólares por mês."
+        }
+      ]
     },
     {
       "kind": "reading",

@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "FOR (duração — há X tempo), SINCE (ponto de início — desde X), AGO (X atrás). Regras: FOR + duração (for 2 years), SINCE + ponto (since Monday), AGO depois de expressão de tempo (two years ago). Cuidado: AGO nunca com present perfect.",
   "scenes": [
     {
@@ -103,6 +103,97 @@
         "explanation": "Three signals, three meanings.",
         "hint_pt_br": "Três sinais, três sentidos."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-for-since-ago-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I have ___ here for ten years.\"",
+        "correct": "lived",
+        "explanation": "The full phrase is: \"I have lived here for ten years.\"",
+        "hint_pt_br": "FOR + período."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-for-since-ago-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. (AGO no passado.)",
+        "options": [
+          "I am not sure.",
+          "I moved here ten years ago.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"I moved here ten years ago.\"",
+        "hint_pt_br": "AGO no passado."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Life timeline",
+      "character": "Interviewer",
+      "pt_summary": "For / since / ago com present perfect e past simple.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "How long have you lived in this city?",
+          "pt": "Há quanto tempo mora aqui?"
+        },
+        {
+          "speaker": "user",
+          "target": "I have lived here for ten years.",
+          "pt_hint": "FOR + período."
+        },
+        {
+          "speaker": "ai",
+          "text": "When did you move here?",
+          "pt": "Quando se mudou?"
+        },
+        {
+          "speaker": "user",
+          "target": "I moved here ten years ago.",
+          "pt_hint": "AGO no passado."
+        },
+        {
+          "speaker": "ai",
+          "text": "How long have you been married?",
+          "pt": "Há quanto tempo casado?"
+        },
+        {
+          "speaker": "user",
+          "target": "I have been married since 2020.",
+          "pt_hint": "SINCE + data."
+        },
+        {
+          "speaker": "ai",
+          "text": "How long have you worked here?",
+          "pt": "Há quanto tempo trabalha aqui?"
+        },
+        {
+          "speaker": "user",
+          "target": "I have worked here for five years.",
+          "pt_hint": "FOR."
+        },
+        {
+          "speaker": "ai",
+          "text": "When did you start?",
+          "pt": "Quando começou?"
+        },
+        {
+          "speaker": "user",
+          "target": "I started five years ago.",
+          "pt_hint": "AGO."
+        },
+        {
+          "speaker": "ai",
+          "text": "Impressive timeline.",
+          "pt": "Trajetória impressionante."
+        }
+      ]
     },
     {
       "kind": "reading",

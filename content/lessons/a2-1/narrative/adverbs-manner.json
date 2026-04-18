@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 20,
+  "estimated_minutes": 24,
   "summary_pt_br": "Advérbios de modo: -LY em adjetivos (slow → slowly, careful → carefully). Irregulares: good → WELL (nunca 'goodly'). Advérbios que não mudam: fast, hard, late, early. Posição: depois do verbo + objeto.",
   "scenes": [
     {
@@ -86,6 +86,97 @@
         "explanation": "FAST is both adjective AND adverb. No -LY.",
         "hint_pt_br": "Fast não muda. 'Fastly' não existe."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-adverbs-manner-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Thank you. I want to learn ___.\"",
+        "correct": "quickly",
+        "explanation": "The full phrase is: \"Thank you. I want to learn quickly.\"",
+        "hint_pt_br": "QUICKLY — depressa."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-adverbs-manner-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Tô tentando com cuidado.')",
+        "options": [
+          "I am not sure.",
+          "OK. I am trying to hit it carefully.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"OK. I am trying to hit it carefully.\"",
+        "hint_pt_br": "'Tô tentando com cuidado.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "The tennis coach",
+      "character": "Coach",
+      "pt_summary": "Advérbios de modo — quickly, slowly, carefully, well.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome to your first tennis lesson.",
+          "pt": "Bem-vindo à primeira aula de tênis."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. I want to learn quickly.",
+          "pt_hint": "QUICKLY — depressa."
+        },
+        {
+          "speaker": "ai",
+          "text": "Hit the ball carefully, not hard.",
+          "pt": "Bate na bola com cuidado, não com força."
+        },
+        {
+          "speaker": "user",
+          "target": "OK. I am trying to hit it carefully.",
+          "pt_hint": "'Tô tentando com cuidado.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Move slowly and keep your eyes on the ball.",
+          "pt": "Mova devagar e mantenha o olho na bola."
+        },
+        {
+          "speaker": "user",
+          "target": "I am moving slowly.",
+          "pt_hint": "'Tô me movendo devagar.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "You are playing well for your first day.",
+          "pt": "Você tá jogando bem pro primeiro dia."
+        },
+        {
+          "speaker": "user",
+          "target": "Thanks. I practice regularly at home.",
+          "pt_hint": "REGULARLY."
+        },
+        {
+          "speaker": "ai",
+          "text": "Keep going. Breathe deeply.",
+          "pt": "Continua. Respira fundo."
+        },
+        {
+          "speaker": "user",
+          "target": "I am breathing deeply.",
+          "pt_hint": "'Tô respirando fundo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Great job. See you next Monday.",
+          "pt": "Ótimo trabalho. Até segunda."
+        }
+      ]
     },
     {
       "kind": "reading",

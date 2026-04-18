@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 24,
+  "estimated_minutes": 28,
   "summary_pt_br": "JUST / YET / ALREADY são os três sinais que marcam a conexão com o momento presente, típicos do Present Perfect. Diferença crucial: Past Simple tem um tempo específico ('yesterday', 'last week'); Present Perfect se conecta com AGORA.",
   "scenes": [
     {
@@ -133,6 +133,97 @@
         "explanation": "Five signals. Master where each one sits in the sentence.",
         "hint_pt_br": "Cinco sinais. Posição importa."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-just-yet-already-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Yes, I ___ just had one.\"",
+        "correct": "have",
+        "explanation": "The full phrase is: \"Yes, I have just had one.\"",
+        "hint_pt_br": "JUST — acabou de."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-just-yet-already-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. (YET — ainda não.)",
+        "options": [
+          "I am not sure.",
+          "No, I have not checked it yet.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"No, I have not checked it yet.\"",
+        "hint_pt_br": "YET — ainda não."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Monday morning check-in",
+      "character": "Colleague",
+      "pt_summary": "Advérbios do Present Perfect — just, yet, already.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hey. Have you had coffee yet?",
+          "pt": "Ei. Já tomou café?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I have just had one.",
+          "pt_hint": "JUST — acabou de."
+        },
+        {
+          "speaker": "ai",
+          "text": "Have you checked your email yet?",
+          "pt": "Já viu o email?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, I have not checked it yet.",
+          "pt_hint": "YET — ainda não."
+        },
+        {
+          "speaker": "ai",
+          "text": "The boss has already sent the report.",
+          "pt": "O chefe já mandou o relatório."
+        },
+        {
+          "speaker": "user",
+          "target": "Oh, I have not seen it yet.",
+          "pt_hint": "'Ainda não vi.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Have you met the new teacher?",
+          "pt": "Já conheceu o professor novo?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I have already met her.",
+          "pt_hint": "ALREADY."
+        },
+        {
+          "speaker": "ai",
+          "text": "Has she started teaching yet?",
+          "pt": "Ela já começou a ensinar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, she has just started today.",
+          "pt_hint": "'Ela acabou de começar.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. Let's get to work.",
+          "pt": "Ótimo. Vamos trabalhar."
+        }
+      ]
     },
     {
       "kind": "reading",

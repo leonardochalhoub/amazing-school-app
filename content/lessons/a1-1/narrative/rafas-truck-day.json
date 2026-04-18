@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 45,
-  "estimated_minutes": 24,
+  "estimated_minutes": 28,
   "summary_pt_br": "A rotina do Rafa das 5h à meia-noite. Aprenda o Present Simple com foco no -s do he/she/it, e nas contrações don't / doesn't nas negativas.",
   "scenes": [
     {
@@ -218,6 +218,69 @@
         "explanation": "Present Simple forms in one table. Learn them together and the -s trap disappears.",
         "hint_pt_br": "Aprenda as cinco formas juntas — afirmativa, negativa, interrogativa."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "A day in the food truck",
+      "character": "Rafa",
+      "pt_summary": "Rotina diária no trabalho — verbos no presente simples.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi! Want to see how my day goes?",
+          "pt": "Oi! Quer ver como é meu dia?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I do. What time do you start?",
+          "pt_hint": "'A que horas você começa?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I wake up at five and open the truck at seven.",
+          "pt": "Acordo às cinco e abro o food truck às sete."
+        },
+        {
+          "speaker": "user",
+          "target": "That is very early. Do you eat breakfast first?",
+          "pt_hint": "'Você toma café primeiro?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, I always have coffee and bread.",
+          "pt": "Sim, sempre tomo café e pão."
+        },
+        {
+          "speaker": "user",
+          "target": "How many customers do you have every day?",
+          "pt_hint": "'Quantos clientes por dia?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "About one hundred. We close at eight in the evening.",
+          "pt": "Uns cem. Fechamos às oito da noite."
+        },
+        {
+          "speaker": "user",
+          "target": "Do you work on weekends too?",
+          "pt_hint": "'Trabalha nos fins de semana?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, but I take Mondays off.",
+          "pt": "Sim, mas folgo às segundas."
+        },
+        {
+          "speaker": "user",
+          "target": "You work really hard. I admire you.",
+          "pt_hint": "'Você trabalha muito. Te admiro.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you. Come by anytime!",
+          "pt": "Obrigado. Passa quando quiser!"
+        }
+      ]
     },
     {
       "kind": "reading",

@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 40,
-  "estimated_minutes": 23,
+  "estimated_minutes": 27,
   "summary_pt_br": "Dias, meses e horas usando a agenda de surf da Bia. Aprenda ON/IN/AT para tempo, a regra da letra maiúscula (dias e meses SEMPRE com inicial maiúscula em inglês) e como perguntar a hora.",
   "scenes": [
     {
@@ -213,6 +213,69 @@
         "explanation": "Both 'half past seven' and 'seven thirty' are natural English for 7:30. Native speakers use both.",
         "hint_pt_br": "7:30 pode ser 'half past seven' OU 'seven thirty' — os dois são naturais."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Bia's weekly schedule",
+      "character": "Bia",
+      "pt_summary": "Dias da semana e present simple — o que a Bia faz em cada dia.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi! Want to know what I do every week?",
+          "pt": "Oi! Quer saber o que faço toda semana?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes. What do you do on Monday?",
+          "pt_hint": "'O que faz na segunda?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "On Monday I go to school and study math.",
+          "pt": "Na segunda vou pra escola e estudo matemática."
+        },
+        {
+          "speaker": "user",
+          "target": "And on Tuesday?",
+          "pt_hint": "'E na terça?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "On Tuesday I have surf practice after school.",
+          "pt": "Na terça tenho treino de surf depois da escola."
+        },
+        {
+          "speaker": "user",
+          "target": "What about Wednesday?",
+          "pt_hint": "'E na quarta?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Wednesday is my English class with Mr. Kumar.",
+          "pt": "Quarta é minha aula de inglês com o Mr. Kumar."
+        },
+        {
+          "speaker": "user",
+          "target": "Do you rest on the weekend?",
+          "pt_hint": "'Descansa no fim de semana?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "On Saturday I surf, and on Sunday I sleep a lot.",
+          "pt": "No sábado surfo, no domingo durmo bastante."
+        },
+        {
+          "speaker": "user",
+          "target": "Your week sounds busy but fun.",
+          "pt_hint": "'Sua semana parece corrida mas divertida.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "It is. See you on Wednesday!",
+          "pt": "É sim. Até quarta!"
+        }
+      ]
     },
     {
       "kind": "reading",

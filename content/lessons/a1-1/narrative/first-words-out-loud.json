@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 50,
-  "estimated_minutes": 19,
+  "estimated_minutes": 23,
   "summary_pt_br": "Primeira aula de pronúncia. O estudante grava a frase no navegador, a IA (Groq Whisper) transcreve e compara com o alvo, dando uma nota de 0 a 100. Cinco frases essenciais do dia a dia.",
   "scenes": [
     {
@@ -56,6 +56,69 @@
       "character_id": "kumar",
       "text_en": "Five phrases. Five scores. If you got 70+ on any of them — that's a pass.\nIf you scored lower, don't worry. Practice the TH and the R, and come back.",
       "text_pt": "Cinco frases. Cinco notas. 70 ou mais = passou.\nSe pegou menos, sem estresse. Pratica o TH e o R, e volta."
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Pronunciation diagnostic",
+      "character": "Zara",
+      "pt_summary": "Diagnóstico de pronúncia — frases curtas e diagnósticas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi! I want to hear your English. Ready?",
+          "pt": "Oi! Quero ouvir seu inglês. Pronto?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I am ready to start.",
+          "pt_hint": "'Sim, estou pronto pra começar.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. Repeat after me — Hello, how are you?",
+          "pt": "Ótimo. Repete depois de mim — Hello, how are you?"
+        },
+        {
+          "speaker": "user",
+          "target": "Hello, how are you?",
+          "pt_hint": "Hello, how are you?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Nice. Now — Thank you very much.",
+          "pt": "Bom. Agora — Thank you very much."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you very much.",
+          "pt_hint": "Thank you very much."
+        },
+        {
+          "speaker": "ai",
+          "text": "Good. Try — I am a student from Brazil.",
+          "pt": "Tenta — I am a student from Brazil."
+        },
+        {
+          "speaker": "user",
+          "target": "I am a student from Brazil.",
+          "pt_hint": "I am a student from Brazil."
+        },
+        {
+          "speaker": "ai",
+          "text": "Excellent. One more — Nice to meet you.",
+          "pt": "Excelente. Mais uma — Nice to meet you."
+        },
+        {
+          "speaker": "user",
+          "target": "Nice to meet you.",
+          "pt_hint": "Nice to meet you."
+        },
+        {
+          "speaker": "ai",
+          "text": "You did great. Let's keep practicing!",
+          "pt": "Foi ótimo. Vamos continuar praticando!"
+        }
+      ]
     },
     {
       "kind": "reading",

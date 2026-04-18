@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 20,
+  "estimated_minutes": 24,
   "summary_pt_br": "Verbos de preferência + forma -ING: love, like, enjoy, don't mind, hate. Exemplo: 'I love SURFING' (não 'I love surf'). 'I hate WAKING UP early'.",
   "scenes": [
     {
@@ -96,6 +96,69 @@
         "explanation": "Five preference verbs. All take -ING.",
         "hint_pt_br": "Cinco verbos. Todos com -ing depois."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "What do you like doing?",
+      "character": "New friend",
+      "pt_summary": "Like / love / hate + -ing.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hey. What do you like doing in your free time?",
+          "pt": "Ei. O que gosta de fazer no tempo livre?"
+        },
+        {
+          "speaker": "user",
+          "target": "I love reading books and watching movies.",
+          "pt_hint": "'Adoro ler e ver filmes.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Cool. Do you like cooking?",
+          "pt": "Massa. Gosta de cozinhar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I like cooking Italian food.",
+          "pt_hint": "'Gosto de cozinhar comida italiana.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you hate anything?",
+          "pt": "Odeia alguma coisa?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I hate waking up early.",
+          "pt_hint": "'Odeio acordar cedo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Same here. What about sports?",
+          "pt": "Concordo. E esportes?"
+        },
+        {
+          "speaker": "user",
+          "target": "I love swimming but I do not like running.",
+          "pt_hint": "'Adoro nadar mas não gosto de correr.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Let's go swimming this Saturday!",
+          "pt": "Vamos nadar no sábado!"
+        },
+        {
+          "speaker": "user",
+          "target": "Great idea. I love that plan.",
+          "pt_hint": "'Ótima ideia. Adorei o plano.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. See you on Saturday!",
+          "pt": "Perfeito. Até sábado!"
+        }
+      ]
     },
     {
       "kind": "reading",

@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 23,
+  "estimated_minutes": 27,
   "summary_pt_br": "Direções em inglês: go straight, turn left/right, take the second street, cross, between, opposite, on the corner. Preposições de movimento (to, into, through, across, along).",
   "scenes": [
     {
@@ -172,6 +172,97 @@
           "character_id": "bia",
           "en": "Usually on foot. It's only 10 minutes.",
           "pt": "Geralmente a pé. Dá uns 10 minutos."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-lost-tourist-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Of ___. Where do you want to go?\"",
+        "correct": "course",
+        "explanation": "The full phrase is: \"Of course. Where do you want to go?\"",
+        "hint_pt_br": "'Claro. Pra onde quer ir?'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-lost-tourist-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Siga reto por duas quadras.')",
+        "options": [
+          "Go straight for two blocks.",
+          "I am not sure.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 0,
+        "explanation": "The correct response is: \"Go straight for two blocks.\"",
+        "hint_pt_br": "'Siga reto por duas quadras.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Helping a lost tourist",
+      "character": "Tourist",
+      "pt_summary": "Dar direções em inglês.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Excuse me, I am lost. Can you help me?",
+          "pt": "Com licença, estou perdido. Pode ajudar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Of course. Where do you want to go?",
+          "pt_hint": "'Claro. Pra onde quer ir?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I am looking for the bus station.",
+          "pt": "Tô procurando a rodoviária."
+        },
+        {
+          "speaker": "user",
+          "target": "Go straight for two blocks.",
+          "pt_hint": "'Siga reto por duas quadras.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "OK, two blocks. Then what?",
+          "pt": "OK, duas quadras. Depois?"
+        },
+        {
+          "speaker": "user",
+          "target": "Turn left at the supermarket.",
+          "pt_hint": "'Vire à esquerda no supermercado.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Is it close from there?",
+          "pt": "É perto dali?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, it is just two minutes away.",
+          "pt_hint": "'Fica a dois minutos.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you so much. You saved my day.",
+          "pt": "Muito obrigado. Salvou meu dia."
+        },
+        {
+          "speaker": "user",
+          "target": "You are welcome. Enjoy your trip.",
+          "pt_hint": "'De nada. Boa viagem.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Have a wonderful day!",
+          "pt": "Tenha um ótimo dia!"
         }
       ]
     },

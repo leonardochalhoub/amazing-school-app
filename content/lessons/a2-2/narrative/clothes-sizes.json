@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 40,
-  "estimated_minutes": 21,
+  "estimated_minutes": 25,
   "summary_pt_br": "Roupas + tamanhos + provador. FIT (caber — tamanho) vs SUIT (combinar — estilo). 'These jeans FIT me' (caibo neles). 'This color SUITS you' (essa cor te combina).",
   "scenes": [
     {
@@ -130,6 +130,97 @@
         "explanation": "TRY ON = try on clothes.",
         "hint_pt_br": "'Try on' = experimentar roupa."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-clothes-sizes-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Yes, a blue shirt in ___, please.\"",
+        "correct": "medium",
+        "explanation": "The full phrase is: \"Yes, a blue shirt in medium, please.\"",
+        "hint_pt_br": "'Camisa azul, tamanho M.'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-clothes-sizes-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Onde é o provador?')",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "Where is the fitting room?",
+          "Yes, of course."
+        ],
+        "correct": 2,
+        "explanation": "The correct response is: \"Where is the fitting room?\"",
+        "hint_pt_br": "'Onde é o provador?'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "At the clothing store",
+      "character": "Salesperson",
+      "pt_summary": "Tamanhos e provadores — small, medium, large, fitting room.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome. Are you looking for something specific?",
+          "pt": "Bem-vindo. Procura algo específico?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, a blue shirt in medium, please.",
+          "pt_hint": "'Camisa azul, tamanho M.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Here is a medium. Try it on.",
+          "pt": "Aqui o M. Experimente."
+        },
+        {
+          "speaker": "user",
+          "target": "Where is the fitting room?",
+          "pt_hint": "'Onde é o provador?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Right behind you, on the left.",
+          "pt": "Atrás de você, à esquerda."
+        },
+        {
+          "speaker": "user",
+          "target": "This shirt is too small.",
+          "pt_hint": "'Essa tá pequena demais.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Would you like to try a large?",
+          "pt": "Quer provar um G?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, please bring me a large.",
+          "pt_hint": "'Sim, tamanho G.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Here you go. Does it fit better?",
+          "pt": "Aqui está. Serviu melhor?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, this one fits perfectly.",
+          "pt_hint": "'Essa serviu bem.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Wonderful. I will ring it up.",
+          "pt": "Maravilha. Vou passar no caixa."
+        }
+      ]
     },
     {
       "kind": "reading",

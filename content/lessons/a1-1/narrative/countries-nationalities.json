@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 20,
+  "estimated_minutes": 24,
   "summary_pt_br": "Países e nacionalidades em inglês. Em inglês ambos SEMPRE começam com MAIÚSCULA (Brazil, Brazilian). Frase típica: 'I'M FROM Brazil' ou 'I'M Brazilian'.",
   "scenes": [
     {
@@ -134,6 +134,69 @@
         "explanation": "Five pairs. Notice the endings: -ian, -ch, -ese, -an.",
         "hint_pt_br": "Cinco pares. Terminações variam."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "At the international festival",
+      "character": "Host",
+      "pt_summary": "Países e nacionalidades — Brazilian/American/Japanese/French/Italian.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome to the international festival. Where are you from?",
+          "pt": "Bem-vindo ao festival internacional. De onde você é?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am from Brazil. I am Brazilian.",
+          "pt_hint": "País + nacionalidade."
+        },
+        {
+          "speaker": "ai",
+          "text": "Wonderful. What languages do you speak?",
+          "pt": "Maravilha. Que línguas fala?"
+        },
+        {
+          "speaker": "user",
+          "target": "I speak Portuguese and a little English.",
+          "pt_hint": "'Falo português e um pouco de inglês.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Have you met our Japanese guests?",
+          "pt": "Já conheceu nossos convidados japoneses?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, I have not. Where are they from in Japan?",
+          "pt_hint": "'De onde são no Japão?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "They are from Tokyo. And our French guests are from Paris.",
+          "pt": "São de Tóquio. Nossos convidados franceses são de Paris."
+        },
+        {
+          "speaker": "user",
+          "target": "That is amazing. Is that Italian food over there?",
+          "pt_hint": "'Aquilo é comida italiana?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, and it is delicious. Please try some.",
+          "pt": "Sim, e está deliciosa. Prove um pouco."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. I love Italian food.",
+          "pt_hint": "'Adoro comida italiana.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Enjoy the festival!",
+          "pt": "Aproveite o festival!"
+        }
+      ]
     },
     {
       "kind": "reading",

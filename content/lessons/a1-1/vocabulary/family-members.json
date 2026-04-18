@@ -6,17 +6,29 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 10,
+  "estimated_minutes": 14,
   "summary_pt_br": "Membros da família em inglês e os possessivos (my, your, his, her).",
   "exercises": [
     {
       "id": "fam-001",
       "type": "matching",
       "pairs": [
-        ["mãe", "mother / mom"],
-        ["pai", "father / dad"],
-        ["irmão", "brother"],
-        ["irmã", "sister"]
+        [
+          "mãe",
+          "mother / mom"
+        ],
+        [
+          "pai",
+          "father / dad"
+        ],
+        [
+          "irmão",
+          "brother"
+        ],
+        [
+          "irmã",
+          "sister"
+        ]
       ],
       "explanation": "'Mother' and 'father' are neutral. 'Mom' / 'dad' (or 'mum' in UK English) are affectionate, like 'mãe' / 'pai' in Brazilian Portuguese.",
       "hint_pt_br": "'Mom' e 'dad' têm o mesmo tom de 'mãe' e 'pai' — informais e carinhosos."
@@ -25,7 +37,12 @@
       "id": "fam-002",
       "type": "multiple_choice",
       "question": "My father's brother is my…",
-      "options": ["nephew", "cousin", "uncle", "grandfather"],
+      "options": [
+        "nephew",
+        "cousin",
+        "uncle",
+        "grandfather"
+      ],
       "correct": 2,
       "explanation": "Father's brother OR mother's brother = UNCLE. His wife = aunt.",
       "hint_pt_br": "Tio = uncle. Tia = aunt."
@@ -34,7 +51,12 @@
       "id": "fam-003",
       "type": "multiple_choice",
       "question": "Your grandmother's daughter (who isn't your mother) is your…",
-      "options": ["cousin", "niece", "aunt", "sister"],
+      "options": [
+        "cousin",
+        "niece",
+        "aunt",
+        "sister"
+      ],
       "correct": 2,
       "explanation": "Your grandmother has daughters — one is your mother, the others are your AUNTS.",
       "hint_pt_br": "Filha da sua avó que não é sua mãe = sua tia (aunt)."
@@ -43,10 +65,22 @@
       "id": "fam-004",
       "type": "matching",
       "pairs": [
-        ["my", "I"],
-        ["your", "you"],
-        ["his", "he"],
-        ["her", "she"]
+        [
+          "my",
+          "I"
+        ],
+        [
+          "your",
+          "you"
+        ],
+        [
+          "his",
+          "he"
+        ],
+        [
+          "her",
+          "she"
+        ]
       ],
       "explanation": "Possessive adjectives match the owner, not what's owned. 'Maria is his sister' (Maria is the sister of HIM — a male).",
       "hint_pt_br": "'His' = dele (dono masculino). 'Her' = dela (dona feminina). O sexo é do DONO, não do objeto."
@@ -71,7 +105,12 @@
       "id": "fam-007",
       "type": "multiple_choice",
       "question": "What's the plural of 'child'?",
-      "options": ["childs", "childes", "children", "childrens"],
+      "options": [
+        "childs",
+        "childes",
+        "children",
+        "childrens"
+      ],
       "correct": 2,
       "explanation": "CHILD → CHILDREN is an irregular plural. 'Two children', never 'two childs'.",
       "hint_pt_br": "Plural irregular: child → children. Nunca 'childs'."
@@ -89,6 +128,220 @@
       "correct": 1,
       "explanation": "PARENTS = mother + father only. 'Relatives' (parentes) is the broader word.",
       "hint_pt_br": "Atenção! 'Parents' em inglês = APENAS pai e mãe. 'Parentes' (família ampla) = 'relatives'."
+    }
+  ],
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Family Members",
+      "subtitle_en": "Mother, father, siblings, cousins — talk about the people closest to you."
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "fam-001",
+        "type": "matching",
+        "pairs": [
+          [
+            "mãe",
+            "mother / mom"
+          ],
+          [
+            "pai",
+            "father / dad"
+          ],
+          [
+            "irmão",
+            "brother"
+          ],
+          [
+            "irmã",
+            "sister"
+          ]
+        ],
+        "explanation": "'Mother' and 'father' are neutral. 'Mom' / 'dad' (or 'mum' in UK English) are affectionate, like 'mãe' / 'pai' in Brazilian Portuguese.",
+        "hint_pt_br": "'Mom' e 'dad' têm o mesmo tom de 'mãe' e 'pai' — informais e carinhosos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "fam-002",
+        "type": "multiple_choice",
+        "question": "My father's brother is my…",
+        "options": [
+          "nephew",
+          "cousin",
+          "uncle",
+          "grandfather"
+        ],
+        "correct": 2,
+        "explanation": "Father's brother OR mother's brother = UNCLE. His wife = aunt.",
+        "hint_pt_br": "Tio = uncle. Tia = aunt."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "fam-003",
+        "type": "multiple_choice",
+        "question": "Your grandmother's daughter (who isn't your mother) is your…",
+        "options": [
+          "cousin",
+          "niece",
+          "aunt",
+          "sister"
+        ],
+        "correct": 2,
+        "explanation": "Your grandmother has daughters — one is your mother, the others are your AUNTS.",
+        "hint_pt_br": "Filha da sua avó que não é sua mãe = sua tia (aunt)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "fam-004",
+        "type": "matching",
+        "pairs": [
+          [
+            "my",
+            "I"
+          ],
+          [
+            "your",
+            "you"
+          ],
+          [
+            "his",
+            "he"
+          ],
+          [
+            "her",
+            "she"
+          ]
+        ],
+        "explanation": "Possessive adjectives match the owner, not what's owned. 'Maria is his sister' (Maria is the sister of HIM — a male).",
+        "hint_pt_br": "'His' = dele (dono masculino). 'Her' = dela (dona feminina). O sexo é do DONO, não do objeto."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "fam-005",
+        "type": "fill_blank",
+        "question": "Complete: 'Paul is tall. ___ sister is short.'",
+        "correct": "His",
+        "explanation": "Paul is male → we use HIS. 'His sister' = the sister of Paul (a male).",
+        "hint_pt_br": "Paul é homem → 'His sister' (a irmã dele)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "fam-006",
+        "type": "fill_blank",
+        "question": "Complete: 'Anna is a teacher. ___ students love her.'",
+        "correct": "Her",
+        "explanation": "Anna is female → HER students.",
+        "hint_pt_br": "Anna é mulher → 'Her students' (os alunos DELA)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "fam-007",
+        "type": "multiple_choice",
+        "question": "What's the plural of 'child'?",
+        "options": [
+          "childs",
+          "childes",
+          "children",
+          "childrens"
+        ],
+        "correct": 2,
+        "explanation": "CHILD → CHILDREN is an irregular plural. 'Two children', never 'two childs'.",
+        "hint_pt_br": "Plural irregular: child → children. Nunca 'childs'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "fam-008",
+        "type": "multiple_choice",
+        "question": "'My parents' means…",
+        "options": [
+          "My relatives",
+          "My mother and father",
+          "My brothers and sisters",
+          "My grandparents"
+        ],
+        "correct": 1,
+        "explanation": "PARENTS = mother + father only. 'Relatives' (parentes) is the broader word.",
+        "hint_pt_br": "Atenção! 'Parents' em inglês = APENAS pai e mãe. 'Parentes' (família ampla) = 'relatives'."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Family members drill",
+      "character": "Bia",
+      "pt_summary": "Membros da família.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Tell me about your family.",
+          "pt": "Me fala da sua família."
+        },
+        {
+          "speaker": "user",
+          "target": "I have one brother and one sister.",
+          "pt_hint": "'Um irmão e uma irmã.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "What is your father's name?",
+          "pt": "Qual nome do seu pai?"
+        },
+        {
+          "speaker": "user",
+          "target": "His name is Carlos.",
+          "pt_hint": "'Carlos.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Is your mother a doctor?",
+          "pt": "Sua mãe é médica?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, my mother is a teacher.",
+          "pt_hint": "'Professora.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you have grandparents?",
+          "pt": "Tem avós?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, my grandmother lives with us.",
+          "pt_hint": "'Vó mora conosco.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "How old is your grandmother?",
+          "pt": "Quantos anos tem a vó?"
+        },
+        {
+          "speaker": "user",
+          "target": "She is seventy years old.",
+          "pt_hint": "70."
+        },
+        {
+          "speaker": "ai",
+          "text": "Lovely family.",
+          "pt": "Linda família."
+        }
+      ]
     }
   ]
 }

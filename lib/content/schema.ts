@@ -3,6 +3,21 @@ import { z } from "zod";
 export const SKILLS = ["grammar", "vocabulary", "reading", "listening", "narrative"] as const;
 export const SKILL_SET = new Set<string>(SKILLS);
 
+/**
+ * UI-only skills. Real lessons are tagged with one of SKILLS as their
+ * `category`, but in the filter dropdown we also expose virtual skills
+ * that match on SCENE content rather than category:
+ *   - "speaking" matches lessons with a `pronunciation` scene.
+ *   - "dialog"   matches lessons with a `dialog_pronunciation` scene.
+ */
+export const UI_SKILLS = [
+  ...SKILLS,
+  "speaking",
+  "dialog",
+] as const;
+export type UISkill = (typeof UI_SKILLS)[number];
+export const UI_SKILL_SET = new Set<string>(UI_SKILLS);
+
 export const CEFR_LEVELS = ["a1.1", "a1.2", "a2.1", "a2.2", "b1.1", "b1.2", "b2.1", "b2.2", "c1.1", "c1.2"] as const;
 export const CEFR_SET = new Set<string>(CEFR_LEVELS);
 

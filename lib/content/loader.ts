@@ -11,6 +11,8 @@ export type LessonMeta = {
   xp_reward: number;
   estimated_minutes: number;
   exercise_count: number;
+  has_speaking_scene?: boolean;
+  has_dialog_scene?: boolean;
 };
 
 export type Exercise = {

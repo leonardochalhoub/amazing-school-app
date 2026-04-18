@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 23,
+  "estimated_minutes": 27,
   "summary_pt_br": "Verbos seguidos de GERÚNDIO (-ING): enjoy, avoid, finish, keep, mind, suggest, practice. Verbos seguidos de INFINITIVO (TO + base): want, hope, decide, promise, plan, need, learn. Alguns aceitam os dois com sentido quase igual (start, begin, love, like, hate).",
   "scenes": [
     {
@@ -102,6 +102,97 @@
         "explanation": "Five verbs, three categories. Memorize as chunks.",
         "hint_pt_br": "Cinco verbos, três categorias."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-gerunds-infinitives-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I enjoy learning new ___.\"",
+        "correct": "languages",
+        "explanation": "The full phrase is: \"I enjoy learning new languages.\"",
+        "hint_pt_br": "ENJOY + -ing."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-gerunds-infinitives-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. (WANT TO + base.)",
+        "options": [
+          "I am not sure.",
+          "I want to travel to Europe.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"I want to travel to Europe.\"",
+        "hint_pt_br": "WANT TO + base."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Life goals interview",
+      "character": "Coach",
+      "pt_summary": "Gerúndio vs infinitivo — enjoy doing, decide to do, want to.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What do you enjoy doing?",
+          "pt": "Do que gosta de fazer?"
+        },
+        {
+          "speaker": "user",
+          "target": "I enjoy learning new languages.",
+          "pt_hint": "ENJOY + -ing."
+        },
+        {
+          "speaker": "ai",
+          "text": "What do you want to achieve this year?",
+          "pt": "O que quer alcançar esse ano?"
+        },
+        {
+          "speaker": "user",
+          "target": "I want to travel to Europe.",
+          "pt_hint": "WANT TO + base."
+        },
+        {
+          "speaker": "ai",
+          "text": "Have you decided to start anything new?",
+          "pt": "Decidiu começar algo novo?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I decided to start yoga.",
+          "pt_hint": "DECIDE TO + base."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you avoid speaking English in public?",
+          "pt": "Você evita falar inglês em público?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I avoid speaking because I am shy.",
+          "pt_hint": "AVOID + -ing."
+        },
+        {
+          "speaker": "ai",
+          "text": "Try practicing more with friends.",
+          "pt": "Tenta praticar com amigos."
+        },
+        {
+          "speaker": "user",
+          "target": "Good advice. I will keep trying.",
+          "pt_hint": "KEEP + -ing."
+        },
+        {
+          "speaker": "ai",
+          "text": "You will grow if you keep going.",
+          "pt": "Vai crescer se continuar."
+        }
+      ]
     },
     {
       "kind": "reading",

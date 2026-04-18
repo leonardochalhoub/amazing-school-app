@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 21,
+  "estimated_minutes": 25,
   "summary_pt_br": "A Bia mostra a foto da família à turma. Aprenda os membros da família e os possessivos (my/your/his/her) — incluindo a armadilha do 'parents' (apenas pai e mãe, não parentes em geral).",
   "scenes": [
     {
@@ -177,6 +177,69 @@
       "character_id": "lucia",
       "text_en": "Dona Lúcia smiled at the photo and sighed.\n'My husband is gone, but my love never died.\nHIS letters are mine. HIS words are still here.\nFamily,' she said, 'stays always near.'",
       "text_pt": "Dona Lúcia olhou a foto e suspirou suave.\n'Meu marido se foi, mas o amor não se cala.\nAS cartas DELE são minhas. AS palavras, presentes.\nFamília,' disse ela, 'fica sempre com a gente.'"
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Showing family photos",
+      "character": "Bia",
+      "pt_summary": "Vocabulário de família — mother, father, brother, sister.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hey, look at this photo. This is my family.",
+          "pt": "Ei, olha essa foto. Essa é minha família."
+        },
+        {
+          "speaker": "user",
+          "target": "Who is the man on the left?",
+          "pt_hint": "'Quem é o homem à esquerda?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "That is my father. He is a lawyer.",
+          "pt": "É meu pai. Ele é advogado."
+        },
+        {
+          "speaker": "user",
+          "target": "And the woman in the middle?",
+          "pt_hint": "'E a mulher no meio?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "That is my mother. She is a doctor.",
+          "pt": "É minha mãe. Ela é médica."
+        },
+        {
+          "speaker": "user",
+          "target": "You have a big family. How many siblings?",
+          "pt_hint": "'Quantos irmãos?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Two — one brother and one sister.",
+          "pt": "Dois — um irmão e uma irmã."
+        },
+        {
+          "speaker": "user",
+          "target": "How old is your sister?",
+          "pt_hint": "'Quantos anos tem sua irmã?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "She is twelve. She loves to swim.",
+          "pt": "Ela tem doze. Adora nadar."
+        },
+        {
+          "speaker": "user",
+          "target": "Your family looks wonderful.",
+          "pt_hint": "'Sua família parece maravilhosa.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you so much!",
+          "pt": "Muito obrigada!"
+        }
+      ]
     },
     {
       "kind": "reading",

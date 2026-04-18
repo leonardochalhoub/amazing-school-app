@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 21,
+  "estimated_minutes": 25,
   "summary_pt_br": "Maya transforma o alfabeto em um desfile de coisas da Praia do Sol. Cada letra tem som, imagem e rima — com foco nas que mais confundem brasileiros (G, H, J, W, Y).",
   "scenes": [
     {
@@ -165,6 +165,69 @@
         "explanation": "Letter-by-letter OR 'double L' for repeated letters — both sound natural.",
         "hint_pt_br": "Pode soletrar letra por letra OU usar 'double' para letras repetidas. Os dois são naturais."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Spelling your name",
+      "character": "Mr. Kumar",
+      "pt_summary": "Soletrando nomes em inglês — atenção nas letras difíceis G/J, E/I, V/W, Y.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hello. Please tell me your full name.",
+          "pt": "Olá. Por favor, diga seu nome completo."
+        },
+        {
+          "speaker": "user",
+          "target": "My name is Maria Silva.",
+          "pt_hint": "Meu nome é Maria Silva."
+        },
+        {
+          "speaker": "ai",
+          "text": "Could you spell your first name, please?",
+          "pt": "Pode soletrar seu primeiro nome, por favor?"
+        },
+        {
+          "speaker": "user",
+          "target": "M. A. R. I. A. Maria.",
+          "pt_hint": "Soletre: M-A-R-I-A."
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you. And your last name?",
+          "pt": "Obrigado. E seu sobrenome?"
+        },
+        {
+          "speaker": "user",
+          "target": "S. I. L. V. A. Silva.",
+          "pt_hint": "Soletre: S-I-L-V-A."
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. Could you also spell 'Brazil' for me?",
+          "pt": "Ótimo. Pode soletrar 'Brazil' também?"
+        },
+        {
+          "speaker": "user",
+          "target": "B. R. A. Z. I. L. Brazil.",
+          "pt_hint": "B-R-A-Z-I-L."
+        },
+        {
+          "speaker": "ai",
+          "text": "Excellent pronunciation.",
+          "pt": "Pronúncia excelente."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you very much.",
+          "pt_hint": "Muito obrigado."
+        },
+        {
+          "speaker": "ai",
+          "text": "You are welcome. See you next class.",
+          "pt": "De nada. Até a próxima aula."
+        }
+      ]
     },
     {
       "kind": "reading",

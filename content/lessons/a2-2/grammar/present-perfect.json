@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 35,
-  "estimated_minutes": 15,
+  "estimated_minutes": 19,
   "summary_pt_br": "Present perfect — have/has + particípio passado, conectando passado e presente.",
   "sources": [
     {
@@ -20,7 +20,12 @@
       "id": "pp-001",
       "type": "multiple_choice",
       "question": "I ___ to Rio three times.",
-      "options": ["went", "have been", "go", "am going"],
+      "options": [
+        "went",
+        "have been",
+        "go",
+        "am going"
+      ],
       "correct": 1,
       "explanation": "Experiences: have + past participle. 'Been' is the participle of 'be'.",
       "hint_pt_br": "Para experiências de vida, use 'have/has' + particípio passado."
@@ -37,13 +42,200 @@
       "id": "pp-003",
       "type": "matching",
       "pairs": [
-        ["I have lived here for 5 years", "Eu moro aqui há 5 anos"],
-        ["She has worked here since 2020", "Ela trabalha aqui desde 2020"],
-        ["They have never visited London", "Eles nunca visitaram Londres"],
-        ["We have already eaten", "Nós já comemos"]
+        [
+          "I have lived here for 5 years",
+          "Eu moro aqui há 5 anos"
+        ],
+        [
+          "She has worked here since 2020",
+          "Ela trabalha aqui desde 2020"
+        ],
+        [
+          "They have never visited London",
+          "Eles nunca visitaram Londres"
+        ],
+        [
+          "We have already eaten",
+          "Nós já comemos"
+        ]
       ],
       "explanation": "Note: in Portuguese these are often present-tense; in English we use present perfect.",
       "hint_pt_br": "No português muitas vezes é presente; no inglês usamos present perfect."
+    },
+    {
+      "id": "autobal-present-perfect-1-fb",
+      "type": "fill_blank",
+      "question": "Complete: \"Yes, I have been to ___.\"",
+      "correct": "Argentina",
+      "explanation": "The full phrase is: \"Yes, I have been to Argentina.\"",
+      "hint_pt_br": "HAVE BEEN."
+    },
+    {
+      "id": "autobal-present-perfect-2-mc",
+      "type": "multiple_choice",
+      "question": "Pick the best response. (HAVE TRIED.)",
+      "options": [
+        "I am not sure.",
+        "That is a great idea.",
+        "Yes, I have tried it many times.",
+        "Yes, of course."
+      ],
+      "correct": 2,
+      "explanation": "The correct response is: \"Yes, I have tried it many times.\"",
+      "hint_pt_br": "HAVE TRIED."
+    }
+  ],
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Present Perfect",
+      "subtitle_en": "Connect the past to the present with have/has + past participle"
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pp-001",
+        "type": "multiple_choice",
+        "question": "I ___ to Rio three times.",
+        "options": [
+          "went",
+          "have been",
+          "go",
+          "am going"
+        ],
+        "correct": 1,
+        "explanation": "Experiences: have + past participle. 'Been' is the participle of 'be'.",
+        "hint_pt_br": "Para experiências de vida, use 'have/has' + particípio passado."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pp-002",
+        "type": "fill_blank",
+        "question": "She ___ (just/finish) her homework.",
+        "correct": "has just finished",
+        "explanation": "Recent completion — 'just' sits between 'has' and the participle.",
+        "hint_pt_br": "'Just' fica entre 'has' e o particípio para ações recém-terminadas."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pp-003",
+        "type": "matching",
+        "pairs": [
+          [
+            "I have lived here for 5 years",
+            "Eu moro aqui há 5 anos"
+          ],
+          [
+            "She has worked here since 2020",
+            "Ela trabalha aqui desde 2020"
+          ],
+          [
+            "They have never visited London",
+            "Eles nunca visitaram Londres"
+          ],
+          [
+            "We have already eaten",
+            "Nós já comemos"
+          ]
+        ],
+        "explanation": "Note: in Portuguese these are often present-tense; in English we use present perfect.",
+        "hint_pt_br": "No português muitas vezes é presente; no inglês usamos present perfect."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-present-perfect-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Yes, I have been to ___.\"",
+        "correct": "Argentina",
+        "explanation": "The full phrase is: \"Yes, I have been to Argentina.\"",
+        "hint_pt_br": "HAVE BEEN."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-present-perfect-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. (HAVE TRIED.)",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "Yes, I have tried it many times.",
+          "Yes, of course."
+        ],
+        "correct": 2,
+        "explanation": "The correct response is: \"Yes, I have tried it many times.\"",
+        "hint_pt_br": "HAVE TRIED."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Present perfect drill",
+      "character": "Interviewer",
+      "pt_summary": "Present perfect — experiências de vida.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Have you ever been abroad?",
+          "pt": "Já foi pro exterior?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I have been to Argentina.",
+          "pt_hint": "HAVE BEEN."
+        },
+        {
+          "speaker": "ai",
+          "text": "Have you tried sushi?",
+          "pt": "Já experimentou sushi?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I have tried it many times.",
+          "pt_hint": "HAVE TRIED."
+        },
+        {
+          "speaker": "ai",
+          "text": "Have you seen the new movie?",
+          "pt": "Viu o filme novo?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, I have not seen it yet.",
+          "pt_hint": "YET."
+        },
+        {
+          "speaker": "ai",
+          "text": "Have you met the new teacher?",
+          "pt": "Conheceu o professor novo?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I have already met her.",
+          "pt_hint": "ALREADY."
+        },
+        {
+          "speaker": "ai",
+          "text": "How long have you lived here?",
+          "pt": "Há quanto tempo mora aqui?"
+        },
+        {
+          "speaker": "user",
+          "target": "I have lived here for five years.",
+          "pt_hint": "FOR."
+        },
+        {
+          "speaker": "ai",
+          "text": "Great answers. Thank you.",
+          "pt": "Boas respostas. Obrigado."
+        }
+      ]
     }
   ]
 }

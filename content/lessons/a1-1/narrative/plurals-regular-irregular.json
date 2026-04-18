@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 19,
+  "estimated_minutes": 23,
   "summary_pt_br": "Plurais regulares (apenas -s / -es). Plurais irregulares essenciais: child→children, man→men, woman→women, person→people, foot→feet, tooth→teeth, mouse→mice. Decorar é o único caminho.",
   "scenes": [
     {
@@ -92,6 +92,69 @@
         "explanation": "Five essential irregulars. Drill them daily.",
         "hint_pt_br": "Cinco irregulares essenciais."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "At the fruit market",
+      "character": "Seller",
+      "pt_summary": "Plurais regulares e irregulares — fruit/fruits, child/children, foot/feet.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hello. Would you like some fresh fruits?",
+          "pt": "Olá. Quer frutas frescas?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes. I want three apples and two oranges.",
+          "pt_hint": "Plural regular — apples, oranges."
+        },
+        {
+          "speaker": "ai",
+          "text": "Of course. Do you need any vegetables?",
+          "pt": "Claro. Precisa de vegetais?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, four tomatoes and six potatoes.",
+          "pt_hint": "Tomatoes, potatoes (+ES)."
+        },
+        {
+          "speaker": "ai",
+          "text": "Are the apples for your children?",
+          "pt": "As maçãs são para seus filhos?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, for my three children.",
+          "pt_hint": "CHILD → CHILDREN."
+        },
+        {
+          "speaker": "ai",
+          "text": "Lovely. Anything else?",
+          "pt": "Lindo. Mais alguma coisa?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I need two loaves of bread.",
+          "pt_hint": "LOAF → LOAVES."
+        },
+        {
+          "speaker": "ai",
+          "text": "Here you go. That is twenty dollars.",
+          "pt": "Aqui está. São vinte dólares."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. Have a nice day.",
+          "pt_hint": "Obrigado. Bom dia."
+        },
+        {
+          "speaker": "ai",
+          "text": "You too. Come back tomorrow!",
+          "pt": "Você também. Volte amanhã!"
+        }
+      ]
     },
     {
       "kind": "reading",

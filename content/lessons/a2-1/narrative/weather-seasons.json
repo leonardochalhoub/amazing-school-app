@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 21,
+  "estimated_minutes": 25,
   "summary_pt_br": "Vocabulário de clima e estações. Regra-chave: em inglês usa-se IT + BE para clima ('It's raining' / 'It's hot'), nunca 'the weather is raining'.",
   "scenes": [
     {
@@ -144,6 +144,97 @@
         "explanation": "Five essential weather words.",
         "hint_pt_br": "Cinco palavras essenciais de clima."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-weather-seasons-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Yes, it is warm and ___.\"",
+        "correct": "sunny",
+        "explanation": "The full phrase is: \"Yes, it is warm and sunny.\"",
+        "hint_pt_br": "'Sim, quente e ensolarado.'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-weather-seasons-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Prefiro verão.')",
+        "options": [
+          "I am not sure.",
+          "I prefer summer. I love the heat.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"I prefer summer. I love the heat.\"",
+        "hint_pt_br": "'Prefiro verão.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Weather small talk",
+      "character": "Neighbor",
+      "pt_summary": "Vocabulário de clima e estações.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Nice weather we are having, isn't it?",
+          "pt": "Tempo bom né?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, it is warm and sunny.",
+          "pt_hint": "'Sim, quente e ensolarado.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you prefer summer or winter?",
+          "pt": "Prefere verão ou inverno?"
+        },
+        {
+          "speaker": "user",
+          "target": "I prefer summer. I love the heat.",
+          "pt_hint": "'Prefiro verão.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I like winter. The cold is refreshing.",
+          "pt": "Gosto do inverno. O frio refresca."
+        },
+        {
+          "speaker": "user",
+          "target": "Is it going to rain tomorrow?",
+          "pt_hint": "'Vai chover amanhã?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, the forecast says heavy rain.",
+          "pt": "Sim, a previsão diz chuva forte."
+        },
+        {
+          "speaker": "user",
+          "target": "I should take an umbrella.",
+          "pt_hint": "'Devo levar guarda-chuva.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Good idea. Next week it will be cold.",
+          "pt": "Boa ideia. Semana que vem vai esfriar."
+        },
+        {
+          "speaker": "user",
+          "target": "Great. I need to wear my warm coat.",
+          "pt_hint": "'Preciso do casaco quente.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Stay warm and dry!",
+          "pt": "Se mantenha aquecido e seco!"
+        }
+      ]
     },
     {
       "kind": "reading",

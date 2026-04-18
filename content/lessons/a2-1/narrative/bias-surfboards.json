@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 23,
+  "estimated_minutes": 27,
   "summary_pt_br": "Comparativos (-er / more) e superlativos (-est / most) visitando a loja de pranchas. Regras de quando adicionar -er/-est e quando usar MORE/MOST. Irregulares: good/better/best, bad/worse/worst.",
   "scenes": [
     {
@@ -174,6 +174,97 @@
         "explanation": "Maya is YOUNGER. So she is NOT as old as Bia. Negative with 'as...as'.",
         "hint_pt_br": "Maya é mais nova. Então 'not as old as' — negação do 'tão...quanto'."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-bias-surfboards-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Yes. What is the best board for ___?\"",
+        "correct": "beginners",
+        "explanation": "The full phrase is: \"Yes. What is the best board for beginners?\"",
+        "hint_pt_br": "'Qual a melhor pra iniciantes?'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-bias-surfboards-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('É mais rápida que a outra?')",
+        "options": [
+          "I am not sure.",
+          "Is it faster than the other one?",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"Is it faster than the other one?\"",
+        "hint_pt_br": "'É mais rápida que a outra?'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Surfboard shopping",
+      "character": "Surf shop clerk",
+      "pt_summary": "Comparativos e superlativos — bigger, smaller, best, fastest.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome. Looking for a new surfboard?",
+          "pt": "Bem-vinda. Procurando prancha nova?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes. What is the best board for beginners?",
+          "pt_hint": "'Qual a melhor pra iniciantes?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "This foam board is the safest and cheapest.",
+          "pt": "Essa prancha de espuma é a mais segura e barata."
+        },
+        {
+          "speaker": "user",
+          "target": "Is it faster than the other one?",
+          "pt_hint": "'É mais rápida que a outra?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "No, the fiberglass one is faster but harder.",
+          "pt": "Não, a de fibra é mais rápida mas mais difícil."
+        },
+        {
+          "speaker": "user",
+          "target": "Which board is the most popular?",
+          "pt_hint": "'Qual é a mais popular?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "This yellow one is our best seller.",
+          "pt": "Essa amarela é nossa mais vendida."
+        },
+        {
+          "speaker": "user",
+          "target": "How much is the cheaper option?",
+          "pt_hint": "'Quanto é a opção mais barata?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Two hundred dollars for the foam board.",
+          "pt": "Duzentos dólares a de espuma."
+        },
+        {
+          "speaker": "user",
+          "target": "I will take the best one for beginners.",
+          "pt_hint": "'Levo a melhor pra iniciantes.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Great choice. Enjoy your first waves!",
+          "pt": "Ótima escolha. Aproveite as primeiras ondas!"
+        }
+      ]
     },
     {
       "kind": "reading",

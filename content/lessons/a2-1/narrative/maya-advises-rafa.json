@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "Modais essenciais: can (conseguir/poder), should (deveria), must (tem que), might (talvez). Sempre vêm seguidos do verbo NA FORMA BASE (sem 'to').",
   "scenes": [
     {
@@ -140,6 +140,97 @@
         "explanation": "Match each modal to its function. Context changes everything.",
         "hint_pt_br": "Cada modal tem uma função principal. Memorize os pares."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-maya-advises-rafa-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Should I really? My ___ like them.\"",
+        "correct": "customers",
+        "explanation": "The full phrase is: \"Should I really? My customers like them.\"",
+        "hint_pt_br": "'Devo mesmo?'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-maya-advises-rafa-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Boa ideia. Mais o quê?')",
+        "options": [
+          "I am not sure.",
+          "That is a good idea. What else?",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"That is a good idea. What else?\"",
+        "hint_pt_br": "'Boa ideia. Mais o quê?'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Maya's business advice",
+      "character": "Maya",
+      "pt_summary": "Modais de conselho — should, shouldn't, could.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Rafa, I think you should raise your prices.",
+          "pt": "Rafa, acho que devia aumentar os preços."
+        },
+        {
+          "speaker": "user",
+          "target": "Should I really? My customers like them.",
+          "pt_hint": "'Devo mesmo?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "You could raise them ten percent only.",
+          "pt": "Podia aumentar só dez por cento."
+        },
+        {
+          "speaker": "user",
+          "target": "That is a good idea. What else?",
+          "pt_hint": "'Boa ideia. Mais o quê?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "You shouldn't work seven days a week.",
+          "pt": "Não devia trabalhar sete dias."
+        },
+        {
+          "speaker": "user",
+          "target": "You are right. I should take one day off.",
+          "pt_hint": "'Devia folgar um dia.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "You could also hire someone to help.",
+          "pt": "Podia contratar alguém pra ajudar."
+        },
+        {
+          "speaker": "user",
+          "target": "Who should I hire first?",
+          "pt_hint": "'Quem devo contratar?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "You should hire a cook, not a cashier.",
+          "pt": "Devia contratar um cozinheiro, não um caixa."
+        },
+        {
+          "speaker": "user",
+          "target": "Thanks, Maya. You are so smart.",
+          "pt_hint": "'Valeu, Maya.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "I am only twelve, but I read a lot.",
+          "pt": "Tenho só doze, mas leio muito."
+        }
+      ]
     },
     {
       "kind": "reading",

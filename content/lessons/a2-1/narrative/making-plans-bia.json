@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "Fazer sugestões e convites em inglês: Let's + verbo base, Why don't we + verbo, How about + verbo-ing, Would you like to + verbo, Shall we + verbo base. Aceitar/recusar: Sure! / That sounds great / I'd love to but...",
   "scenes": [
     {
@@ -138,6 +138,97 @@
           "character_id": "bia",
           "en": "Let's meet at 6.",
           "pt": "Vamos às 6."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-making-plans-bia-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"How ___ going to the beach?\"",
+        "correct": "about",
+        "explanation": "The full phrase is: \"How about going to the beach?\"",
+        "hint_pt_br": "HOW ABOUT + -ing."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-making-plans-bia-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. (LET'S + base.)",
+        "options": [
+          "I am not sure.",
+          "Let's meet at nine in the morning.",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"Let's meet at nine in the morning.\"",
+        "hint_pt_br": "LET'S + base."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Making plans with Bia",
+      "character": "Bia",
+      "pt_summary": "Sugestões e combinações — Let's, How about, What if.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What should we do on Saturday?",
+          "pt": "O que vamos fazer no sábado?"
+        },
+        {
+          "speaker": "user",
+          "target": "How about going to the beach?",
+          "pt_hint": "HOW ABOUT + -ing."
+        },
+        {
+          "speaker": "ai",
+          "text": "Love it. What time?",
+          "pt": "Amei. Que horas?"
+        },
+        {
+          "speaker": "user",
+          "target": "Let's meet at nine in the morning.",
+          "pt_hint": "LET'S + base."
+        },
+        {
+          "speaker": "ai",
+          "text": "Should we bring lunch?",
+          "pt": "Levamos almoço?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, let's bring sandwiches and fruit.",
+          "pt_hint": "'Sanduíche e fruta.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "What if it rains?",
+          "pt": "E se chover?"
+        },
+        {
+          "speaker": "user",
+          "target": "Then we can watch a movie instead.",
+          "pt_hint": "'Podemos ver um filme.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Good plan. Should I invite Rafa?",
+          "pt": "Bom plano. Convido o Rafa?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, let's invite everyone.",
+          "pt_hint": "'Vamos convidar todo mundo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Awesome. See you Saturday!",
+          "pt": "Demais. Até sábado!"
         }
       ]
     },

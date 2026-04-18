@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 40,
-  "estimated_minutes": 21,
+  "estimated_minutes": 25,
   "summary_pt_br": "Perguntas sobre preço: HOW MUCH para dinheiro/incontável, HOW MANY para contável. 'How much is this?' / 'How many do you want?' Vocabulário: discount, on sale, receipt, cash, card.",
   "scenes": [
     {
@@ -122,6 +122,97 @@
         "explanation": "Five shopping basics.",
         "hint_pt_br": "Cinco básicos."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-shopping-prices-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"How much is one ___?\"",
+        "correct": "mango",
+        "explanation": "The full phrase is: \"How much is one mango?\"",
+        "hint_pt_br": "'Quanto é uma manga?'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-shopping-prices-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Tá caro. Tem desconto?')",
+        "options": [
+          "I am not sure.",
+          "That is a bit expensive. Any discount?",
+          "That is a great idea.",
+          "Yes, of course."
+        ],
+        "correct": 1,
+        "explanation": "The correct response is: \"That is a bit expensive. Any discount?\"",
+        "hint_pt_br": "'Tá caro. Tem desconto?'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Shopping at the market",
+      "character": "Vendor",
+      "pt_summary": "Barganhando preços.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hello! Fresh mangoes today. Want some?",
+          "pt": "Olá! Manga fresca hoje. Quer?"
+        },
+        {
+          "speaker": "user",
+          "target": "How much is one mango?",
+          "pt_hint": "'Quanto é uma manga?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Three dollars each.",
+          "pt": "Três dólares cada."
+        },
+        {
+          "speaker": "user",
+          "target": "That is a bit expensive. Any discount?",
+          "pt_hint": "'Tá caro. Tem desconto?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "If you buy four, they are ten dollars total.",
+          "pt": "Se levar quatro, dez dólares."
+        },
+        {
+          "speaker": "user",
+          "target": "OK, I will take four mangoes.",
+          "pt_hint": "'OK, levo quatro.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. Anything else?",
+          "pt": "Ótimo. Mais algo?"
+        },
+        {
+          "speaker": "user",
+          "target": "How much for the bananas?",
+          "pt_hint": "'Quanto a banana?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Two dollars for a bunch.",
+          "pt": "Dois dólares o cacho."
+        },
+        {
+          "speaker": "user",
+          "target": "I will take one bunch too.",
+          "pt_hint": "'Levo um cacho.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Twelve dollars total. Thank you!",
+          "pt": "Doze dólares no total. Obrigado!"
+        }
+      ]
     },
     {
       "kind": "reading",

@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 23,
+  "estimated_minutes": 27,
   "summary_pt_br": "WILL (decisões na hora, previsões) x GOING TO (planos já feitos, evidências visíveis). Joca se prepara para uma entrevista de trabalho remota numa startup dos EUA.",
   "scenes": [
     {
@@ -171,6 +171,97 @@
         "explanation": "Four contexts, two forms. Learn the trigger, not the verb.",
         "hint_pt_br": "Quatro contextos, duas formas. Pense no gatilho, não no verbo."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-jocas-interview-prep-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Sure. Let's ___ together.\"",
+        "correct": "practice",
+        "explanation": "The full phrase is: \"Sure. Let's practice together.\"",
+        "hint_pt_br": "'Claro. Vamos treinar.'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-jocas-interview-prep-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Criativo e aprende rápido.')",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "Yes, of course.",
+          "You are creative and you learn quickly."
+        ],
+        "correct": 3,
+        "explanation": "The correct response is: \"You are creative and you learn quickly.\"",
+        "hint_pt_br": "'Criativo e aprende rápido.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Joca's interview prep",
+      "character": "Joca",
+      "pt_summary": "Preparação de entrevista — strengths, weaknesses, goals.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "I have a big interview tomorrow. Can you help?",
+          "pt": "Tenho entrevista amanhã. Me ajuda?"
+        },
+        {
+          "speaker": "user",
+          "target": "Sure. Let's practice together.",
+          "pt_hint": "'Claro. Vamos treinar.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "What are my strengths?",
+          "pt": "Quais meus pontos fortes?"
+        },
+        {
+          "speaker": "user",
+          "target": "You are creative and you learn quickly.",
+          "pt_hint": "'Criativo e aprende rápido.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "What about my weaknesses?",
+          "pt": "E meus pontos fracos?"
+        },
+        {
+          "speaker": "user",
+          "target": "Sometimes you speak too fast.",
+          "pt_hint": "'Às vezes fala rápido demais.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Why do I want this job?",
+          "pt": "Por que eu quero esse emprego?"
+        },
+        {
+          "speaker": "user",
+          "target": "Because you want to grow your career.",
+          "pt_hint": "'Porque quer crescer na carreira.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "What is my five-year goal?",
+          "pt": "Qual minha meta de cinco anos?"
+        },
+        {
+          "speaker": "user",
+          "target": "You want to become a team leader.",
+          "pt_hint": "'Virar líder de time.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Thanks. I feel more confident now.",
+          "pt": "Valeu. Tô mais confiante."
+        }
+      ]
     },
     {
       "kind": "reading",

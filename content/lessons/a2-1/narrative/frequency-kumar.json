@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 21,
+  "estimated_minutes": 25,
   "summary_pt_br": "Advérbios de frequência: always / usually / often / sometimes / rarely / never. Regra da posição: vão ANTES do verbo principal, mas DEPOIS do verbo 'to be' ('She is always late', mas 'She always arrives late').",
   "scenes": [
     {
@@ -130,6 +130,97 @@
         "explanation": "Frequency on a scale. Memorize the spectrum.",
         "hint_pt_br": "Escala de frequência."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-frequency-kumar-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I always study every ___.\"",
+        "correct": "evening",
+        "explanation": "The full phrase is: \"I always study every evening.\"",
+        "hint_pt_br": "ALWAYS."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-frequency-kumar-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. (OFTEN.)",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "Yes, I often watch movies in English.",
+          "Yes, of course."
+        ],
+        "correct": 2,
+        "explanation": "The correct response is: \"Yes, I often watch movies in English.\"",
+        "hint_pt_br": "OFTEN."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Mr. Kumar's routine",
+      "character": "Mr. Kumar",
+      "pt_summary": "Advérbios de frequência — always, usually, often, sometimes, never.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "How often do you study English?",
+          "pt": "Com que frequência estuda inglês?"
+        },
+        {
+          "speaker": "user",
+          "target": "I always study every evening.",
+          "pt_hint": "ALWAYS."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you ever practice with movies?",
+          "pt": "Você treina com filmes?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I often watch movies in English.",
+          "pt_hint": "OFTEN."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you sometimes feel tired?",
+          "pt": "Às vezes se sente cansado?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, sometimes, but I never give up.",
+          "pt_hint": "NEVER give up."
+        },
+        {
+          "speaker": "ai",
+          "text": "How often do you speak English out loud?",
+          "pt": "Com que frequência fala em voz alta?"
+        },
+        {
+          "speaker": "user",
+          "target": "I usually speak out loud every day.",
+          "pt_hint": "USUALLY."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you ever travel abroad?",
+          "pt": "Você viaja pro exterior?"
+        },
+        {
+          "speaker": "user",
+          "target": "I rarely travel, but I want to travel more.",
+          "pt_hint": "RARELY."
+        },
+        {
+          "speaker": "ai",
+          "text": "Keep practicing. You are improving!",
+          "pt": "Continue praticando. Tá melhorando!"
+        }
+      ]
     },
     {
       "kind": "reading",

@@ -12,7 +12,14 @@ import { getTeacherOverview } from "@/lib/actions/teacher-dashboard";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { BulkAssignList } from "@/components/teacher/bulk-assign-list";
 import { LessonRow } from "@/components/teacher/lesson-row";
-import { CEFR_BANDS, CEFR_BAND_SET, SKILLS, cefrBandOf } from "@/lib/content/schema";
+import {
+  CEFR_BANDS,
+  CEFR_BAND_SET,
+  SKILLS,
+  UI_SKILLS,
+  UI_SKILL_SET,
+  cefrBandOf,
+} from "@/lib/content/schema";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { LessonDraftMeta } from "@/lib/actions/lesson-drafts";
@@ -59,11 +66,19 @@ export default async function TeacherLessonsPage({
   const cefrBand = CEFR_BAND_SET.has(params.cefr ?? "")
     ? (params.cefr as (typeof CEFR_BANDS)[number])
     : undefined;
+  const skillParam = UI_SKILL_SET.has(params.skill ?? "")
+    ? (params.skill as (typeof UI_SKILLS)[number])
+    : undefined;
+  // Only push `category` to the DB query when the skill is a real lesson
+  // category (grammar/vocabulary/reading/listening/narrative). Virtual
+  // skills (speaking, dialog) are applied post-fetch via scene flags.
+  const categoryForQuery = (SKILLS as readonly string[]).includes(skillParam ?? "")
+    ? (skillParam as (typeof SKILLS)[number])
+    : undefined;
   const filters = {
     cefrBand,
-    category: (SKILLS as readonly string[]).includes(params.skill ?? "")
-      ? (params.skill as (typeof SKILLS)[number])
-      : undefined,
+    category: categoryForQuery,
+    skill: skillParam,
     status: (["draft", "published", "all"] as const).includes(
       (params.status ?? "all") as "draft" | "published" | "all"
     )
@@ -92,15 +107,23 @@ export default async function TeacherLessonsPage({
       getTeacherOverview(),
     ]);
 
-  const curatedLessons = curatedAll.filter((l) =>
-    filters.cefrBand ? cefrBandOf(l.cefr_level) === filters.cefrBand : true,
-  );
+  const curatedLessons = curatedAll.filter((l) => {
+    if (filters.cefrBand && cefrBandOf(l.cefr_level) !== filters.cefrBand) {
+      return false;
+    }
+    // Virtual skills — curated drafts haven't adopted scene-based content
+    // yet, so drop them on speaking/dialog filters.
+    if (filters.skill === "speaking" || filters.skill === "dialog") return false;
+    return true;
+  });
 
   // Static "library" content shipped in content/lessons/*.json — the 45+
   // authored narrative + drill lessons. Apply the same filters.
   const libraryLessons = getAllLessons().filter((l) => {
     if (filters.cefrBand && cefrBandOf(l.cefr_level) !== filters.cefrBand) return false;
     if (filters.category && l.category !== filters.category) return false;
+    if (filters.skill === "speaking" && !l.has_speaking_scene) return false;
+    if (filters.skill === "dialog" && !l.has_dialog_scene) return false;
     // Library content is always considered "published".
     if (filters.status === "draft") return false;
     return true;
@@ -110,6 +133,9 @@ export default async function TeacherLessonsPage({
   const filteredMine = myLessons.filter((l) => {
     if (filters.cefrBand && cefrBandOf(l.cefr_level ?? "") !== filters.cefrBand) return false;
     if (filters.category && l.category !== filters.category) return false;
+    // Virtual skills don't apply to teacher-authored lessons until they
+    // opt in by including such scenes — skip on "speaking"/"dialog".
+    if (filters.skill === "speaking" || filters.skill === "dialog") return false;
     if (filters.status === "draft" && l.published) return false;
     if (filters.status === "published" && !l.published) return false;
     return true;
@@ -249,14 +275,14 @@ export default async function TeacherLessonsPage({
             />
           ))}
         </FilterGroup>
-        <FilterGroup label="Skill" name="skill" active={filters.category}>
-          <FilterPill href={urlWithout("skill")} label="All" active={!filters.category} />
-          {SKILLS.map((s) => (
+        <FilterGroup label="Skill" name="skill" active={filters.skill}>
+          <FilterPill href={urlWithout("skill")} label="All" active={!filters.skill} />
+          {UI_SKILLS.map((s) => (
             <FilterPill
               key={s}
               href={urlWith("skill", s)}
               label={s[0].toUpperCase() + s.slice(1)}
-              active={filters.category === s}
+              active={filters.skill === s}
             />
           ))}
         </FilterGroup>

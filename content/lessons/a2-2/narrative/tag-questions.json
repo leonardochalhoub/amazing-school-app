@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 23,
+  "estimated_minutes": 27,
   "summary_pt_br": "Question tags em inglês: a perguntinha no fim da frase ('isn't it?', 'don't you?', 'aren't they?'). Regra: afirmação pede tag NEGATIVA, negação pede tag POSITIVA. Auxiliar espelha o verbo principal.",
   "scenes": [
     {
@@ -133,6 +133,97 @@
         "explanation": "Five tag patterns. Notice the polarity flip every time.",
         "hint_pt_br": "Cinco tags. Sempre inverte a polaridade."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-tag-questions-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Yes, it is really ___.\"",
+        "correct": "beautiful",
+        "explanation": "The full phrase is: \"Yes, it is really beautiful.\"",
+        "hint_pt_br": "'Sim, lindo.'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-tag-questions-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Sim, sou professor lá.')",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "Yes, I do. I am a teacher there.",
+          "Yes, of course."
+        ],
+        "correct": 2,
+        "explanation": "The correct response is: \"Yes, I do. I am a teacher there.\"",
+        "hint_pt_br": "'Sim, sou professor lá.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Confirming details",
+      "character": "Colleague",
+      "pt_summary": "Tag questions — isn't it, don't you, aren't they.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "The weather is nice today, isn't it?",
+          "pt": "O tempo tá bom, né?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, it is really beautiful.",
+          "pt_hint": "'Sim, lindo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "You work at Amazing School, don't you?",
+          "pt": "Você trabalha na Amazing School, né?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I do. I am a teacher there.",
+          "pt_hint": "'Sim, sou professor lá.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Mr. Kumar is very kind, isn't he?",
+          "pt": "O Mr. Kumar é muito gentil, né?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, he is the nicest boss.",
+          "pt_hint": "'É o melhor chefe.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "The students are studying hard, aren't they?",
+          "pt": "Os alunos estão estudando muito, né?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, they are really dedicated.",
+          "pt_hint": "'Sim, são dedicados.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "You don't have class on Fridays, do you?",
+          "pt": "Você não dá aula na sexta, né?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, I don't. Fridays are my day off.",
+          "pt_hint": "'Não. Sexta é folga.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Lucky you!",
+          "pt": "Que sorte!"
+        }
+      ]
     },
     {
       "kind": "reading",

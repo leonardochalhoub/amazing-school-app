@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 22,
+  "estimated_minutes": 26,
   "summary_pt_br": "Fazer reserva + check-in em hotel. Frases-chave: I have a reservation / under the name of / double/single room / breakfast included / checkout time. Conversa básica com o recepcionista.",
   "scenes": [
     {
@@ -141,6 +141,97 @@
         "explanation": "Five hotel words.",
         "hint_pt_br": "Cinco palavras de hotel."
       }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-hotel-checkin-1-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Yes, ___ the name Leo Silva.\"",
+        "correct": "under",
+        "explanation": "The full phrase is: \"Yes, under the name Leo Silva.\"",
+        "hint_pt_br": "'Em nome de Leo Silva.'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "autobal-hotel-checkin-2-mc",
+        "type": "multiple_choice",
+        "question": "Pick the best response. ('Isso mesmo.')",
+        "options": [
+          "I am not sure.",
+          "That is a great idea.",
+          "That is right.",
+          "Yes, of course."
+        ],
+        "correct": 2,
+        "explanation": "The correct response is: \"That is right.\"",
+        "hint_pt_br": "'Isso mesmo.'"
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Hotel check-in",
+      "character": "Hotel receptionist",
+      "pt_summary": "Check-in em hotel.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Good evening. Do you have a reservation?",
+          "pt": "Boa noite. Tem reserva?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, under the name Leo Silva.",
+          "pt_hint": "'Em nome de Leo Silva.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "A double room for three nights, correct?",
+          "pt": "Quarto duplo por três noites, correto?"
+        },
+        {
+          "speaker": "user",
+          "target": "That is right.",
+          "pt_hint": "'Isso mesmo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "May I see a credit card for the deposit?",
+          "pt": "Posso ver o cartão para o depósito?"
+        },
+        {
+          "speaker": "user",
+          "target": "Sure, here is my card.",
+          "pt_hint": "'Claro, aqui está.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Breakfast is from seven to ten.",
+          "pt": "Café da manhã das sete às dez."
+        },
+        {
+          "speaker": "user",
+          "target": "Is there Wi-Fi in the room?",
+          "pt_hint": "'Tem Wi-Fi no quarto?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, the password is on your key card.",
+          "pt": "Sim, a senha tá no cartão-chave."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. What floor am I on?",
+          "pt_hint": "'Em qual andar estou?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "You are on the seventh floor. Enjoy your stay.",
+          "pt": "Sétimo andar. Boa estadia."
+        }
+      ]
     },
     {
       "kind": "reading",

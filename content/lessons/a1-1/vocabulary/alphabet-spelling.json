@@ -6,14 +6,19 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 12,
+  "estimated_minutes": 16,
   "summary_pt_br": "O alfabeto inglês tem 26 letras. Soletrar em inglês é essencial para dar nomes, endereços e números de telefone.",
   "exercises": [
     {
       "id": "alph-001",
       "type": "multiple_choice",
       "question": "Which letter sounds like 'jay'?",
-      "options": ["G", "J", "Y", "K"],
+      "options": [
+        "G",
+        "J",
+        "Y",
+        "K"
+      ],
       "correct": 1,
       "explanation": "The letter J is pronounced /dʒeɪ/ — like 'jay'.",
       "hint_pt_br": "J em inglês soa parecido com 'djei'."
@@ -22,7 +27,12 @@
       "id": "alph-002",
       "type": "multiple_choice",
       "question": "Which letter sounds like 'double-you'?",
-      "options": ["V", "U", "W", "Y"],
+      "options": [
+        "V",
+        "U",
+        "W",
+        "Y"
+      ],
       "correct": 2,
       "explanation": "The letter W is literally called 'double U' /ˈdʌb.əl juː/.",
       "hint_pt_br": "W literalmente significa 'U duplo' em inglês."
@@ -31,11 +41,26 @@
       "id": "alph-003",
       "type": "matching",
       "pairs": [
-        ["A", "/eɪ/"],
-        ["E", "/iː/"],
-        ["I", "/aɪ/"],
-        ["O", "/oʊ/"],
-        ["U", "/juː/"]
+        [
+          "A",
+          "/eɪ/"
+        ],
+        [
+          "E",
+          "/iː/"
+        ],
+        [
+          "I",
+          "/aɪ/"
+        ],
+        [
+          "O",
+          "/oʊ/"
+        ],
+        [
+          "U",
+          "/juː/"
+        ]
       ],
       "explanation": "The five vowels and their names in English. Memorize these first — they appear in every spelling.",
       "hint_pt_br": "Os cinco sons das vogais em inglês — diferentes do português."
@@ -74,10 +99,22 @@
       "id": "alph-007",
       "type": "matching",
       "pairs": [
-        ["C", "/siː/"],
-        ["G", "/dʒiː/"],
-        ["H", "/eɪtʃ/"],
-        ["Z", "/ziː/"]
+        [
+          "C",
+          "/siː/"
+        ],
+        [
+          "G",
+          "/dʒiː/"
+        ],
+        [
+          "H",
+          "/eɪtʃ/"
+        ],
+        [
+          "Z",
+          "/ziː/"
+        ]
       ],
       "explanation": "These four letters trip up Portuguese speakers the most. Practice them out loud.",
       "hint_pt_br": "Essas quatro letras são as que mais confundem brasileiros."
@@ -95,6 +132,224 @@
       "correct": 2,
       "explanation": "Native speakers often shortcut 'FF' as 'double F'. Both are understood.",
       "hint_pt_br": "Ambas as formas funcionam — 'double F / double E' é natural e comum."
+    }
+  ],
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Alphabet & Spelling",
+      "subtitle_en": "Master the English alphabet and learn to spell your name and basic words."
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "alph-001",
+        "type": "multiple_choice",
+        "question": "Which letter sounds like 'jay'?",
+        "options": [
+          "G",
+          "J",
+          "Y",
+          "K"
+        ],
+        "correct": 1,
+        "explanation": "The letter J is pronounced /dʒeɪ/ — like 'jay'.",
+        "hint_pt_br": "J em inglês soa parecido com 'djei'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "alph-002",
+        "type": "multiple_choice",
+        "question": "Which letter sounds like 'double-you'?",
+        "options": [
+          "V",
+          "U",
+          "W",
+          "Y"
+        ],
+        "correct": 2,
+        "explanation": "The letter W is literally called 'double U' /ˈdʌb.əl juː/.",
+        "hint_pt_br": "W literalmente significa 'U duplo' em inglês."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "alph-003",
+        "type": "matching",
+        "pairs": [
+          [
+            "A",
+            "/eɪ/"
+          ],
+          [
+            "E",
+            "/iː/"
+          ],
+          [
+            "I",
+            "/aɪ/"
+          ],
+          [
+            "O",
+            "/oʊ/"
+          ],
+          [
+            "U",
+            "/juː/"
+          ]
+        ],
+        "explanation": "The five vowels and their names in English. Memorize these first — they appear in every spelling.",
+        "hint_pt_br": "Os cinco sons das vogais em inglês — diferentes do português."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "alph-004",
+        "type": "fill_blank",
+        "question": "To spell 'HELLO': aitch, E, double ___, O.",
+        "correct": "L",
+        "explanation": "'Double L' is how we read two of the same letter in a row.",
+        "hint_pt_br": "Em inglês, duas letras iguais seguidas são lidas como 'double'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "alph-005",
+        "type": "multiple_choice",
+        "question": "Someone says 'How do you spell your name?' They want to know…",
+        "options": [
+          "Your age",
+          "Each letter of your name",
+          "Your address",
+          "Your phone number"
+        ],
+        "correct": 1,
+        "explanation": "'Spell' means to say the letters one by one — 'M-A-R-I-A'.",
+        "hint_pt_br": "'Spell' = soletrar letra por letra."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "alph-006",
+        "type": "fill_blank",
+        "question": "Complete the order: A, B, C, D, E, F, ___, H",
+        "correct": "G",
+        "explanation": "G comes between F and H.",
+        "hint_pt_br": "G vem entre F e H."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "alph-007",
+        "type": "matching",
+        "pairs": [
+          [
+            "C",
+            "/siː/"
+          ],
+          [
+            "G",
+            "/dʒiː/"
+          ],
+          [
+            "H",
+            "/eɪtʃ/"
+          ],
+          [
+            "Z",
+            "/ziː/"
+          ]
+        ],
+        "explanation": "These four letters trip up Portuguese speakers the most. Practice them out loud.",
+        "hint_pt_br": "Essas quatro letras são as que mais confundem brasileiros."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "alph-008",
+        "type": "multiple_choice",
+        "question": "How is 'COFFEE' spelled out loud?",
+        "options": [
+          "C-O-F-F-E-E",
+          "C-O-double F-double E",
+          "Both are correct",
+          "Neither"
+        ],
+        "correct": 2,
+        "explanation": "Native speakers often shortcut 'FF' as 'double F'. Both are understood.",
+        "hint_pt_br": "Ambas as formas funcionam — 'double F / double E' é natural e comum."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Spelling drill",
+      "character": "Zara",
+      "pt_summary": "Soletrando palavras comuns.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Let's practice spelling. Spell 'school'.",
+          "pt": "Vamos soletrar. Soletra 'school'."
+        },
+        {
+          "speaker": "user",
+          "target": "S. C. H. O. O. L.",
+          "pt_hint": "S-C-H-O-O-L."
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. Now spell 'English'.",
+          "pt": "Ótimo. Agora 'English'."
+        },
+        {
+          "speaker": "user",
+          "target": "E. N. G. L. I. S. H.",
+          "pt_hint": "E-N-G-L-I-S-H."
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. Spell 'teacher'.",
+          "pt": "Perfeito. Soletra 'teacher'."
+        },
+        {
+          "speaker": "user",
+          "target": "T. E. A. C. H. E. R.",
+          "pt_hint": "T-E-A-C-H-E-R."
+        },
+        {
+          "speaker": "ai",
+          "text": "Can you spell your name?",
+          "pt": "Sabe soletrar seu nome?"
+        },
+        {
+          "speaker": "user",
+          "target": "L. E. O. Leo.",
+          "pt_hint": "L-E-O."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now spell 'Brazil'.",
+          "pt": "Agora 'Brazil'."
+        },
+        {
+          "speaker": "user",
+          "target": "B. R. A. Z. I. L.",
+          "pt_hint": "B-R-A-Z-I-L."
+        },
+        {
+          "speaker": "ai",
+          "text": "Excellent spelling today.",
+          "pt": "Excelente hoje."
+        }
+      ]
     }
   ]
 }

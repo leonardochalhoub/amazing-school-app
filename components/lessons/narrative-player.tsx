@@ -7,6 +7,7 @@ import { ArrowRight, BookOpen, Sparkles, CheckCircle2 } from "lucide-react";
 import { SceneIllustration } from "./scene-illustration";
 import { RecordExercise } from "./record-exercise";
 import { SpeakButton } from "./speak-button";
+import { SpeakingLabDialogRunner } from "@/components/speaking-lab/dialog-runner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -277,6 +278,31 @@ function SceneRenderer({
             // Any attempt counts — we advance on button click after scoring.
           }}
         />
+        <AdvanceButton
+          onClick={onAdvance}
+          isLast={isLast}
+          submitting={submitting}
+        />
+      </div>
+    );
+  }
+
+  if (scene.kind === "dialog_pronunciation") {
+    const dialog = {
+      id: "lesson-dialog",
+      band: "",
+      title: scene.title,
+      pt_summary: scene.pt_summary,
+      character: scene.character,
+      turns: scene.turns,
+    };
+    return (
+      <div className="space-y-3">
+        <div className="flex items-center gap-2 rounded-lg bg-violet-500/10 px-3 py-2 text-violet-700 dark:text-violet-400">
+          <Sparkles className="h-5 w-5" />
+          <h3 className="text-base font-semibold">🎙️ {scene.title}</h3>
+        </div>
+        <SpeakingLabDialogRunner all={[dialog]} />
         <AdvanceButton
           onClick={onAdvance}
           isLast={isLast}

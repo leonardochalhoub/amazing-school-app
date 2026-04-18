@@ -82,11 +82,11 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
   const teacherNav: { href: string; label: string }[] = [
     { href: "/teacher/lessons", label: labels.lessons },
     { href: "/teacher/music", label: labels.music },
+    { href: "/speaking-lab", label: labels.speakingLab },
     {
       href: "/teacher/bank",
       label: locale === "pt-BR" ? "Banco" : "Bank",
     },
-    { href: "/speaking-lab", label: labels.speakingLab },
     { href: "/teacher/chat", label: labels.aiTutor },
     { href: "/teacher/finance", label: locale === "pt-BR" ? "Financeiro" : "Finance" },
     { href: "/teacher/admin", label: "Admin" },

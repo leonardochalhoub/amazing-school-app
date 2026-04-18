@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 30,
-  "estimated_minutes": 20,
+  "estimated_minutes": 24,
   "summary_pt_br": "Seis palavras-chave de pergunta: WHAT/WHERE/WHEN/WHO/WHY/HOW. Regra: wh- + AUXILIAR + SUJEITO + verbo. 'Where DO YOU live?' (não 'where you live?').",
   "scenes": [
     {
@@ -61,6 +61,69 @@
         "explanation": "With BE, the verb comes right after the wh-word.",
         "hint_pt_br": "'What is…?' — verbo BE direto."
       }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "The reporter interview",
+      "character": "Reporter",
+      "pt_summary": "Question words — Who / What / Where / When / Why / How.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi. I am a reporter. Can I ask you some questions?",
+          "pt": "Oi. Sou repórter. Posso te fazer perguntas?"
+        },
+        {
+          "speaker": "user",
+          "target": "Sure. What do you want to know?",
+          "pt_hint": "'O que você quer saber?'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Where do you live?",
+          "pt": "Onde você mora?"
+        },
+        {
+          "speaker": "user",
+          "target": "I live in São Paulo.",
+          "pt_hint": "'Moro em São Paulo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "When did you move there?",
+          "pt": "Quando você se mudou pra lá?"
+        },
+        {
+          "speaker": "user",
+          "target": "I moved there two years ago.",
+          "pt_hint": "'Me mudei dois anos atrás.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Why did you choose São Paulo?",
+          "pt": "Por que escolheu São Paulo?"
+        },
+        {
+          "speaker": "user",
+          "target": "Because I got a new job there.",
+          "pt_hint": "'Porque consegui um emprego novo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you feel about the city?",
+          "pt": "Como se sente na cidade?"
+        },
+        {
+          "speaker": "user",
+          "target": "I feel great. I love it.",
+          "pt_hint": "'Me sinto ótimo. Adoro.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you for your time.",
+          "pt": "Obrigado pelo seu tempo."
+        }
+      ]
     },
     {
       "kind": "reading",

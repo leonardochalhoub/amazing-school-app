@@ -6,19 +6,37 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 10,
+  "estimated_minutes": 14,
   "summary_pt_br": "Cores e adjetivos básicos. Em inglês, o adjetivo vem ANTES do substantivo: 'a red car', nunca 'a car red'.",
   "exercises": [
     {
       "id": "col-001",
       "type": "matching",
       "pairs": [
-        ["azul", "blue"],
-        ["vermelho", "red"],
-        ["amarelo", "yellow"],
-        ["verde", "green"],
-        ["preto", "black"],
-        ["branco", "white"]
+        [
+          "azul",
+          "blue"
+        ],
+        [
+          "vermelho",
+          "red"
+        ],
+        [
+          "amarelo",
+          "yellow"
+        ],
+        [
+          "verde",
+          "green"
+        ],
+        [
+          "preto",
+          "black"
+        ],
+        [
+          "branco",
+          "white"
+        ]
       ],
       "explanation": "The six 'starter' colors — cover ~80% of everyday descriptions.",
       "hint_pt_br": "As seis cores mais úteis para começar."
@@ -41,12 +59,30 @@
       "id": "col-003",
       "type": "matching",
       "pairs": [
-        ["big", "grande"],
-        ["small", "pequeno"],
-        ["new", "novo"],
-        ["old", "velho / antigo"],
-        ["good", "bom"],
-        ["bad", "ruim"]
+        [
+          "big",
+          "grande"
+        ],
+        [
+          "small",
+          "pequeno"
+        ],
+        [
+          "new",
+          "novo"
+        ],
+        [
+          "old",
+          "velho / antigo"
+        ],
+        [
+          "good",
+          "bom"
+        ],
+        [
+          "bad",
+          "ruim"
+        ]
       ],
       "explanation": "Six adjective pairs that teachers describe as 'the survival kit' — you can describe almost anything with these.",
       "hint_pt_br": "O 'kit de sobrevivência' dos adjetivos — você descreve quase tudo com esses."
@@ -63,7 +99,10 @@
       "id": "col-005",
       "type": "multiple_choice",
       "question": "Adjectives in English change for plurals — true or false?",
-      "options": ["True", "False"],
+      "options": [
+        "True",
+        "False"
+      ],
       "correct": 1,
       "explanation": "FALSE. English adjectives never change: 'a red car' → 'two red cars' (not 'reds cars'). Only the noun gets pluralized.",
       "hint_pt_br": "Adjetivos em inglês NUNCA mudam. 'Red car' → 'red cars'. Só o substantivo flexiona."
@@ -89,6 +128,217 @@
       "correct": 1,
       "explanation": "English has a preferred adjective order: opinion/size come BEFORE origin/nationality. 'A big French car' sounds right; 'a French big car' sounds foreign.",
       "hint_pt_br": "Ordem preferida: tamanho/opinião antes de origem/nacionalidade. 'Big French car', não 'French big car'."
+    }
+  ],
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Colors & Basic Adjectives",
+      "subtitle_en": "Describe things with colors and essential adjectives."
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "col-001",
+        "type": "matching",
+        "pairs": [
+          [
+            "azul",
+            "blue"
+          ],
+          [
+            "vermelho",
+            "red"
+          ],
+          [
+            "amarelo",
+            "yellow"
+          ],
+          [
+            "verde",
+            "green"
+          ],
+          [
+            "preto",
+            "black"
+          ],
+          [
+            "branco",
+            "white"
+          ]
+        ],
+        "explanation": "The six 'starter' colors — cover ~80% of everyday descriptions.",
+        "hint_pt_br": "As seis cores mais úteis para começar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "col-002",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I have a car red",
+          "I have a red car",
+          "I have red a car",
+          "I have a car of red"
+        ],
+        "correct": 1,
+        "explanation": "English word order: article → adjective → noun. 'A red car' — never 'a car red' (that's Portuguese order).",
+        "hint_pt_br": "Em inglês o adjetivo vem ANTES do substantivo. 'Carro vermelho' → 'red car'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "col-003",
+        "type": "matching",
+        "pairs": [
+          [
+            "big",
+            "grande"
+          ],
+          [
+            "small",
+            "pequeno"
+          ],
+          [
+            "new",
+            "novo"
+          ],
+          [
+            "old",
+            "velho / antigo"
+          ],
+          [
+            "good",
+            "bom"
+          ],
+          [
+            "bad",
+            "ruim"
+          ]
+        ],
+        "explanation": "Six adjective pairs that teachers describe as 'the survival kit' — you can describe almost anything with these.",
+        "hint_pt_br": "O 'kit de sobrevivência' dos adjetivos — você descreve quase tudo com esses."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "col-004",
+        "type": "fill_blank",
+        "question": "Complete: 'This coffee is very ___' (opposite of cold).",
+        "correct": "hot",
+        "explanation": "HOT = quente. Note: for spicy food, English uses 'spicy' or 'hot'. For temperature, it's 'hot'.",
+        "hint_pt_br": "'Hot' = quente (temperatura). Também usado para comida picante."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "col-005",
+        "type": "multiple_choice",
+        "question": "Adjectives in English change for plurals — true or false?",
+        "options": [
+          "True",
+          "False"
+        ],
+        "correct": 1,
+        "explanation": "FALSE. English adjectives never change: 'a red car' → 'two red cars' (not 'reds cars'). Only the noun gets pluralized.",
+        "hint_pt_br": "Adjetivos em inglês NUNCA mudam. 'Red car' → 'red cars'. Só o substantivo flexiona."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "col-006",
+        "type": "fill_blank",
+        "question": "Complete: 'My house is old, but my car is ___.'",
+        "correct": "new",
+        "explanation": "OLD ↔ NEW. A very common opposite pair.",
+        "hint_pt_br": "Old (velho) ↔ New (novo)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "col-007",
+        "type": "multiple_choice",
+        "question": "Two or more adjectives together — which order?",
+        "options": [
+          "a French big car",
+          "a big French car",
+          "a car big French",
+          "a big car French"
+        ],
+        "correct": 1,
+        "explanation": "English has a preferred adjective order: opinion/size come BEFORE origin/nationality. 'A big French car' sounds right; 'a French big car' sounds foreign.",
+        "hint_pt_br": "Ordem preferida: tamanho/opinião antes de origem/nacionalidade. 'Big French car', não 'French big car'."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Colors drill",
+      "character": "Artist",
+      "pt_summary": "Cores e adjetivos.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What color is the sky today?",
+          "pt": "Qual cor do céu?"
+        },
+        {
+          "speaker": "user",
+          "target": "The sky is blue and bright.",
+          "pt_hint": "Blue, bright."
+        },
+        {
+          "speaker": "ai",
+          "text": "And the grass?",
+          "pt": "E a grama?"
+        },
+        {
+          "speaker": "user",
+          "target": "The grass is green and soft.",
+          "pt_hint": "Green, soft."
+        },
+        {
+          "speaker": "ai",
+          "text": "Describe your shirt.",
+          "pt": "Descreva sua camisa."
+        },
+        {
+          "speaker": "user",
+          "target": "My shirt is white and clean.",
+          "pt_hint": "White, clean."
+        },
+        {
+          "speaker": "ai",
+          "text": "What about your shoes?",
+          "pt": "E seus sapatos?"
+        },
+        {
+          "speaker": "user",
+          "target": "My shoes are black and old.",
+          "pt_hint": "Black, old."
+        },
+        {
+          "speaker": "ai",
+          "text": "Your favorite color?",
+          "pt": "Cor favorita?"
+        },
+        {
+          "speaker": "user",
+          "target": "My favorite color is red.",
+          "pt_hint": "Red."
+        },
+        {
+          "speaker": "ai",
+          "text": "Red is a strong color.",
+          "pt": "Vermelho é forte."
+        }
+      ]
     }
   ]
 }
