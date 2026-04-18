@@ -545,6 +545,15 @@ function PromptEditor({
         <textarea
           value={prompt.lines.join("\n")}
           onChange={(e) =>
+            // Keep whitespace + blank lines verbatim while the user is
+            // typing. Do not trim or filter here — that kills Enter and
+            // trailing spaces. Cleanup happens on blur (below).
+            onChange({
+              ...prompt,
+              lines: e.target.value.split("\n"),
+            })
+          }
+          onBlur={(e) =>
             onChange({
               ...prompt,
               lines: e.target.value
