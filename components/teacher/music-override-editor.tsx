@@ -52,9 +52,10 @@ export function MusicOverrideEditor({
 }: Props) {
   const router = useRouter();
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const promptsEndRef = useRef<HTMLDivElement>(null);
   const [startAt, setStartAt] = useState<number | null>(null);
   const [prompts, setPrompts] = useState<SingAlongPrompt[]>(
-    initialSingAlong.prompts
+    Array.isArray(initialSingAlong?.prompts) ? initialSingAlong.prompts : []
   );
   const [exercises, setExercises] = useState<MusicExercise[]>(initialExercises);
   const [pending, startTransition] = useTransition();
@@ -88,18 +89,24 @@ export function MusicOverrideEditor({
     setDirty(true);
   }
   function addPrompt() {
-    if (prompts.length >= 4) return;
-    setPrompts((prev) => [
-      ...prev,
-      {
-        label_en: "Sing this part",
-        label_pt: "Cante esta parte",
-        lines: [""],
-        start_seconds: 0,
-        style: "chorus",
-      },
-    ]);
+    setPrompts((prev) => {
+      if (prev.length >= 4) return prev;
+      return [
+        ...prev,
+        {
+          label_en: "Sing this part",
+          label_pt: "Cante esta parte",
+          lines: [""],
+          start_seconds: 0,
+          style: "chorus",
+        },
+      ];
+    });
     setDirty(true);
+    // Scroll the newly added prompt into view so the click feels responsive.
+    requestAnimationFrame(() => {
+      promptsEndRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
   }
 
   function addExercise(type: MusicExercise["type"]) {
@@ -248,7 +255,7 @@ export function MusicOverrideEditor({
         <div className="space-y-6">
           <Card>
             <CardContent className="p-0">
-              <div className="aspect-video w-full overflow-hidden rounded-t-xl bg-black">
+              <div className="mx-auto aspect-video w-full max-w-[560px] overflow-hidden rounded-t-xl bg-black">
                 <iframe
                   ref={iframeRef}
                   key={startAt ?? "initial"}
@@ -281,6 +288,7 @@ export function MusicOverrideEditor({
                 </span>
               </h2>
               <Button
+                type="button"
                 size="sm"
                 variant="outline"
                 onClick={addPrompt}
@@ -289,6 +297,7 @@ export function MusicOverrideEditor({
               >
                 <Plus className="h-4 w-4" />
                 Add prompt
+                {prompts.length >= 4 ? " (max 4)" : ""}
               </Button>
             </div>
             {prompts.length === 0 ? (
@@ -312,6 +321,7 @@ export function MusicOverrideEditor({
                 ))}
               </ul>
             )}
+            <div ref={promptsEndRef} />
           </section>
 
           <section className="space-y-3">
