@@ -50,3 +50,6 @@ next-env.d.ts
 /scripts/content/data/validated/
 /scripts/content/data/manifests/
 !/scripts/content/data/.gitkeep
+
+# MCP server config — holds Supabase access token, never commit.
+.mcp.json
