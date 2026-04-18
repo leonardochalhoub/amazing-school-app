@@ -171,15 +171,21 @@ export default async function TeacherLibraryLessonPage({
 
           <ol className="space-y-3">
             {scenes.map((scene, i) => (
-              <li key={i} className="rounded-xl border bg-card p-4">
-                <div className="flex items-start gap-3">
-                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-muted text-[11px] font-semibold">
+              <li key={i}>
+                <Link
+                  href={`/student/lessons/${slug}?scene=${i}`}
+                  className="group flex items-start gap-3 rounded-xl border bg-card p-4 transition-colors hover:border-primary/40 hover:bg-accent/40"
+                >
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-muted text-[11px] font-semibold group-hover:bg-primary group-hover:text-primary-foreground">
                     {i + 1}
                   </div>
                   <div className="min-w-0 flex-1">
                     <ScenePreview scene={scene} chars={chars} />
                   </div>
-                </div>
+                  <span className="shrink-0 self-center text-[10px] font-medium text-muted-foreground group-hover:text-foreground">
+                    Open →
+                  </span>
+                </Link>
               </li>
             ))}
           </ol>
@@ -306,5 +312,109 @@ function ScenePreview({
       </>
     );
   }
-  return null;
+  if (scene.kind === "pronunciation") {
+    return (
+      <>
+        <p className="text-[10px] font-semibold uppercase tracking-wider text-rose-600">
+          Pronunciation · record &amp; score
+        </p>
+        <p className="mt-0.5 text-sm font-medium line-clamp-2">
+          {scene.target_en}
+        </p>
+        {scene.target_pt ? (
+          <p className="mt-0.5 text-[11px] italic text-muted-foreground">
+            🇧🇷 {scene.target_pt}
+          </p>
+        ) : null}
+      </>
+    );
+  }
+  if (scene.kind === "dialog_pronunciation") {
+    const userTurns = scene.turns.filter((t) => t.speaker === "user").length;
+    const aiTurns = scene.turns.length - userTurns;
+    return (
+      <>
+        <p className="text-[10px] font-semibold uppercase tracking-wider text-violet-600">
+          Dialog drill · {scene.turns.length} turns ({aiTurns} AI / {userTurns} you)
+        </p>
+        <p className="mt-0.5 text-sm font-medium">
+          {scene.title}
+          {scene.character ? ` — with ${scene.character}` : ""}
+        </p>
+        {scene.pt_summary ? (
+          <p className="mt-0.5 text-[11px] italic text-muted-foreground line-clamp-2">
+            🇧🇷 {scene.pt_summary}
+          </p>
+        ) : null}
+      </>
+    );
+  }
+  if (scene.kind === "reading") {
+    return (
+      <>
+        <p className="text-[10px] font-semibold uppercase tracking-wider text-blue-600">
+          Reading
+        </p>
+        <p className="mt-0.5 text-sm font-medium">
+          {scene.title ?? "Recap reading"}
+        </p>
+        <p className="mt-0.5 text-[11px] text-muted-foreground line-clamp-2">
+          {scene.passage_en}
+        </p>
+      </>
+    );
+  }
+  if (scene.kind === "listening") {
+    return (
+      <>
+        <p className="text-[10px] font-semibold uppercase tracking-wider text-cyan-600">
+          Listening · short clip
+        </p>
+        <p className="mt-0.5 text-sm font-medium">
+          {scene.title ?? "Listen"}
+        </p>
+        <p className="mt-0.5 text-[11px] text-muted-foreground line-clamp-2">
+          {scene.audio_text_en}
+        </p>
+      </>
+    );
+  }
+  if (scene.kind === "listening_story") {
+    return (
+      <>
+        <p className="text-[10px] font-semibold uppercase tracking-wider text-indigo-600">
+          Listening story · {scene.paragraphs.length} paragraphs · write response
+        </p>
+        <p className="mt-0.5 text-sm font-medium">{scene.title}</p>
+        <p className="mt-0.5 text-[11px] italic text-muted-foreground line-clamp-2">
+          {scene.prompt_en}
+        </p>
+      </>
+    );
+  }
+  if (scene.kind === "further_reading") {
+    return (
+      <>
+        <p className="text-[10px] font-semibold uppercase tracking-wider text-amber-600">
+          Further reading · {scene.sources.length} links
+        </p>
+        <p className="mt-0.5 text-sm font-medium">
+          {scene.title ?? "Go deeper"}
+        </p>
+        <p className="mt-0.5 text-[11px] text-muted-foreground line-clamp-2">
+          {scene.sources.map((s) => s.label).join(" · ")}
+        </p>
+      </>
+    );
+  }
+  return (
+    <>
+      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+        {(scene as { kind: string }).kind}
+      </p>
+      <p className="mt-0.5 text-xs italic text-muted-foreground">
+        (no preview available)
+      </p>
+    </>
+  );
 }

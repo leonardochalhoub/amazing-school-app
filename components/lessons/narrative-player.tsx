@@ -22,11 +22,12 @@ import type {
 interface Props {
   lesson: NarrativeLesson;
   characters: Record<string, Character>;
+  initialIndex?: number;
 }
 
-export function NarrativePlayer({ lesson, characters }: Props) {
+export function NarrativePlayer({ lesson, characters, initialIndex = 0 }: Props) {
   const router = useRouter();
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(initialIndex);
   const [submitting, setSubmitting] = useState(false);
   const scene = lesson.scenes[index];
   const isLast = index === lesson.scenes.length - 1;

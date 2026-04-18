@@ -13,6 +13,8 @@ export type LessonMeta = {
   exercise_count: number;
   has_speaking_scene?: boolean;
   has_dialog_scene?: boolean;
+  has_listening_scene?: boolean;
+  has_reading_scene?: boolean;
 };
 
 export type Exercise = {

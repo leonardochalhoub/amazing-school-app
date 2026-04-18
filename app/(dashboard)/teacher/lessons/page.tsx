@@ -69,12 +69,23 @@ export default async function TeacherLessonsPage({
   const skillParam = UI_SKILL_SET.has(params.skill ?? "")
     ? (params.skill as (typeof UI_SKILLS)[number])
     : undefined;
-  // Only push `category` to the DB query when the skill is a real lesson
-  // category (grammar/vocabulary/reading/listening/narrative). Virtual
-  // skills (speaking, dialog) are applied post-fetch via scene flags.
-  const categoryForQuery = (SKILLS as readonly string[]).includes(skillParam ?? "")
-    ? (skillParam as (typeof SKILLS)[number])
-    : undefined;
+  // Most skills map 1:1 to a lesson `category` and can be pushed to the
+  // DB query. Four of them — speaking/dialog/listening/reading — are
+  // also satisfied by scene content, so we apply those post-fetch via
+  // the has_*_scene flags to catch narrative lessons that carry these
+  // skills via scenes even when their primary category is different.
+  const HYBRID_SCENE_SKILLS: readonly (typeof UI_SKILLS)[number][] = [
+    "speaking",
+    "dialog",
+    "listening",
+    "reading",
+  ];
+  const categoryForQuery =
+    skillParam &&
+    (SKILLS as readonly string[]).includes(skillParam) &&
+    !HYBRID_SCENE_SKILLS.includes(skillParam)
+      ? (skillParam as (typeof SKILLS)[number])
+      : undefined;
   const filters = {
     cefrBand,
     category: categoryForQuery,
@@ -111,9 +122,12 @@ export default async function TeacherLessonsPage({
     if (filters.cefrBand && cefrBandOf(l.cefr_level) !== filters.cefrBand) {
       return false;
     }
-    // Virtual skills — curated drafts haven't adopted scene-based content
-    // yet, so drop them on speaking/dialog filters.
+    // Virtual / hybrid-scene skills — curated drafts haven't adopted
+    // scene-based content yet, so drop them on these filters unless the
+    // draft's plain category happens to match (listening/reading).
     if (filters.skill === "speaking" || filters.skill === "dialog") return false;
+    if (filters.skill === "listening" && l.category !== "listening") return false;
+    if (filters.skill === "reading" && l.category !== "reading") return false;
     return true;
   });
 
@@ -122,8 +136,26 @@ export default async function TeacherLessonsPage({
   const libraryLessons = getAllLessons().filter((l) => {
     if (filters.cefrBand && cefrBandOf(l.cefr_level) !== filters.cefrBand) return false;
     if (filters.category && l.category !== filters.category) return false;
+    // Hybrid-scene skills: match if the scene exists OR the category is
+    // literally that skill. This way Listening catches both the older
+    // category="listening" drills AND any narrative lesson carrying a
+    // listening_story scene.
     if (filters.skill === "speaking" && !l.has_speaking_scene) return false;
     if (filters.skill === "dialog" && !l.has_dialog_scene) return false;
+    if (
+      filters.skill === "listening" &&
+      !l.has_listening_scene &&
+      l.category !== "listening"
+    ) {
+      return false;
+    }
+    if (
+      filters.skill === "reading" &&
+      !l.has_reading_scene &&
+      l.category !== "reading"
+    ) {
+      return false;
+    }
     // Library content is always considered "published".
     if (filters.status === "draft") return false;
     return true;
@@ -133,9 +165,12 @@ export default async function TeacherLessonsPage({
   const filteredMine = myLessons.filter((l) => {
     if (filters.cefrBand && cefrBandOf(l.cefr_level ?? "") !== filters.cefrBand) return false;
     if (filters.category && l.category !== filters.category) return false;
-    // Virtual skills don't apply to teacher-authored lessons until they
-    // opt in by including such scenes — skip on "speaking"/"dialog".
+    // Virtual/hybrid skills don't apply to teacher-authored lessons
+    // until they opt in by including such scenes. Listening/reading can
+    // still match on the literal category.
     if (filters.skill === "speaking" || filters.skill === "dialog") return false;
+    if (filters.skill === "listening" && l.category !== "listening") return false;
+    if (filters.skill === "reading" && l.category !== "reading") return false;
     if (filters.status === "draft" && l.published) return false;
     if (filters.status === "published" && !l.published) return false;
     return true;

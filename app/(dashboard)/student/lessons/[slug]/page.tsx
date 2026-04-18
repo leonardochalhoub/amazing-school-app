@@ -7,10 +7,13 @@ import type { NarrativeLesson } from "@/lib/content/scenes";
 
 export default async function LessonPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ scene?: string }>;
 }) {
   const { slug } = await params;
+  const { scene: sceneParam } = await searchParams;
   const lesson =
     (await getLesson(slug)) ?? (await getPublishedLessonDraft(slug));
 
@@ -29,13 +32,22 @@ export default async function LessonPage({
     const charMap = Object.fromEntries(
       getCharacters().map((c) => [c.id, c])
     );
+    const parsed = Number.parseInt(sceneParam ?? "", 10);
+    const initialIndex =
+      Number.isFinite(parsed) && parsed >= 0 && parsed < asNarrative.scenes.length
+        ? parsed
+        : 0;
     return (
       <div className="space-y-4">
         <div>
           <h1 className="text-xl font-bold">{lesson.title}</h1>
           <p className="text-muted-foreground text-sm">{lesson.description}</p>
         </div>
-        <NarrativePlayer lesson={asNarrative} characters={charMap} />
+        <NarrativePlayer
+          lesson={asNarrative}
+          characters={charMap}
+          initialIndex={initialIndex}
+        />
       </div>
     );
   }

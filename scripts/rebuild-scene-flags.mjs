@@ -29,6 +29,12 @@ for (const row of index) {
       row.has_dialog_scene = scenes.some(
         (s) => s.kind === "dialog_pronunciation",
       );
+      row.has_listening_scene = scenes.some(
+        (s) => s.kind === "listening" || s.kind === "listening_story",
+      );
+      row.has_reading_scene = scenes.some(
+        (s) => s.kind === "reading" || s.kind === "further_reading",
+      );
       if (row.has_speaking_scene) speakingHits++;
       if (row.has_dialog_scene) dialogHits++;
       loaded = true;
