@@ -381,13 +381,16 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
 
   const classroomIds = classroomRows.map((c) => c.id as string);
   const memberCounts = new Map<string, number>();
+  const uniqueAuthStudentIds = new Set<string>();
   if (classroomIds.length > 0) {
     const { data: members } = await admin
       .from("classroom_members")
       .select("classroom_id, student_id")
       .in("classroom_id", classroomIds);
-    // Only count rows that actually belong to students — filter out the
-    // teacher themselves and any non-student (admin, owner, etc).
+    // Build the set of IDs that really are students (exclude the teacher
+    // themselves and any non-student role such as owner/admin). Then
+    // count per-classroom memberships AND the distinct student identity
+    // count for the global KPI.
     const rawStudentIds = Array.from(
       new Set(
         (members ?? [])
@@ -405,11 +408,18 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
         if ((r.role as string) === "student") studentRoleIds.add(r.id as string);
       }
     }
+    // Dedupe (classroom_id, student_id) pairs first so a duplicate
+    // classroom_members row can't double-count inside one classroom.
+    const seenPairs = new Set<string>();
     for (const m of members ?? []) {
       const sid = m.student_id as string;
       if (!studentRoleIds.has(sid)) continue;
       const cid = m.classroom_id as string;
+      const key = `${cid}::${sid}`;
+      if (seenPairs.has(key)) continue;
+      seenPairs.add(key);
       memberCounts.set(cid, (memberCounts.get(cid) ?? 0) + 1);
+      uniqueAuthStudentIds.add(sid);
     }
   }
 
@@ -453,9 +463,10 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
     gender: (r as { gender: "female" | "male" | null }).gender ?? null,
   }));
 
-  const totalStudents =
-    classrooms.reduce((s, c) => s + c.studentCount, 0) +
-    roster.filter((r) => !r.classroomId).length;
+  // Dedup across classrooms: a single auth student in two classrooms is
+  // ONE student, not two. Roster students don't have cross-classroom
+  // identity, so their row count is their student count.
+  const totalStudents = uniqueAuthStudentIds.size + roster.length;
 
   let lessonsAssigned = 0;
   let lessonsCompleted = 0;
