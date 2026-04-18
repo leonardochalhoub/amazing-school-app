@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { LessonMeta } from "@/lib/content/loader";
-import { CEFR_LEVELS, SKILLS } from "@/lib/content/schema";
+import { CEFR_BANDS, SKILLS, cefrBandOf } from "@/lib/content/schema";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -31,7 +31,7 @@ export function LessonPicker({
   const filtered = useMemo(() => {
     return lessons
       .filter((l) => !exclude.has(l.slug))
-      .filter((l) => cefr === "all" || l.cefr_level === cefr)
+      .filter((l) => cefr === "all" || cefrBandOf(l.cefr_level) === cefr)
       .filter((l) => skill === "all" || l.category === skill)
       .filter((l) =>
         q.trim() === ""
@@ -50,9 +50,9 @@ export function LessonPicker({
           onChange={(e) => setCefr(e.target.value)}
         >
           <option value="all">All CEFR</option>
-          {CEFR_LEVELS.map((l) => (
-            <option key={l} value={l}>
-              {l.toUpperCase()}
+          {CEFR_BANDS.map((b) => (
+            <option key={b} value={b}>
+              {b.toUpperCase()}
             </option>
           ))}
         </select>

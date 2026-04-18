@@ -46,6 +46,7 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
           leaderboard: "Ranking",
           profile: "Perfil",
           classrooms: "Turmas",
+          speakingLab: "Lab de Fala",
           signedInAs: "Conectado como",
           signOut: "Sair",
           teacher: "Professor",
@@ -59,6 +60,7 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
           leaderboard: "Leaderboard",
           profile: "Profile",
           classrooms: "Classrooms",
+          speakingLab: "Speaking Lab",
           signedInAs: "Signed in as",
           signOut: "Sign out",
           teacher: "Teacher",
@@ -72,6 +74,7 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
   const studentNav = [
     { href: "/student", label: labels.dashboard },
     { href: "/student/music", label: labels.music },
+    { href: "/speaking-lab", label: labels.speakingLab },
     { href: "/student/chat", label: labels.aiTutor },
     { href: "/student/profile", label: labels.profile },
   ];
@@ -83,6 +86,7 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
       href: "/teacher/bank",
       label: locale === "pt-BR" ? "Banco" : "Bank",
     },
+    { href: "/speaking-lab", label: labels.speakingLab },
     { href: "/teacher/chat", label: labels.aiTutor },
     { href: "/teacher/finance", label: locale === "pt-BR" ? "Financeiro" : "Finance" },
     { href: "/teacher/admin", label: "Admin" },
@@ -95,10 +99,6 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
     teacherNav.push({
       href: "/owner/management",
       label: locale === "pt-BR" ? "Gestão" : "Management",
-    });
-    teacherNav.push({
-      href: "/owner/lab",
-      label: "Lab",
     });
   }
 

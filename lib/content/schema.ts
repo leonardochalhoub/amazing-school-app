@@ -6,6 +6,29 @@ export const SKILL_SET = new Set<string>(SKILLS);
 export const CEFR_LEVELS = ["a1.1", "a1.2", "a2.1", "a2.2", "b1.1", "b1.2", "b2.1", "b2.2", "c1.1", "c1.2"] as const;
 export const CEFR_SET = new Set<string>(CEFR_LEVELS);
 
+/**
+ * CEFR bands are the coarse grouping used in UI filters — a student's full
+ * year of "Basic" covers the A1 band (both A1.1 and A1.2 semesters), and the
+ * filter shows one chip per band. Sub-levels remain in the data model so
+ * content authors can still distinguish the two semesters of a band.
+ */
+export const CEFR_BANDS = ["a1", "a2", "b1", "b2", "c1", "c2"] as const;
+export type CefrBand = (typeof CEFR_BANDS)[number];
+export const CEFR_BAND_SET = new Set<string>(CEFR_BANDS);
+export const CEFR_BAND_LABEL: Record<CefrBand, string> = {
+  a1: "A1 · Basic 1",
+  a2: "A2 · Basic 2",
+  b1: "B1 · Intermediate 1",
+  b2: "B2 · Intermediate 2",
+  c1: "C1 · Advanced 1",
+  c2: "C2 · Advanced 2",
+};
+
+export function cefrBandOf(level: string): CefrBand | undefined {
+  const prefix = level.toLowerCase().split(".")[0];
+  return (CEFR_BAND_SET.has(prefix) ? prefix : undefined) as CefrBand | undefined;
+}
+
 export type Skill = (typeof SKILLS)[number];
 export type CefrLevel = (typeof CEFR_LEVELS)[number];
 

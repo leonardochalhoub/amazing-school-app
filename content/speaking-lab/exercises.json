@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "description": "50 pronunciation drills for the Speaking Lab. One is chosen at random each time a user opens the lab. Mix of greetings, numbers, everyday phrases, tongue twisters, tricky phonemes (TH/R/L/V/W), and character-driven lines.",
+  "exercises": [
+    { "id": "sl-001", "band": "a1", "focus": "greetings", "target": "Good morning. How are you today?", "pt_hint": "Bom dia. Como você está hoje?" },
+    { "id": "sl-002", "band": "a1", "focus": "greetings", "target": "Hello! My name is Bia and I am from Brazil.", "pt_hint": "Olá! Meu nome é Bia e eu sou do Brasil." },
+    { "id": "sl-003", "band": "a1", "focus": "small-talk", "target": "Nice to meet you. See you tomorrow.", "pt_hint": "Prazer em conhecer. Até amanhã." },
+    { "id": "sl-004", "band": "a1", "focus": "numbers", "target": "One, two, three, four, five, six, seven, eight, nine, ten.", "pt_hint": "Um, dois, três... até dez." },
+    { "id": "sl-005", "band": "a1", "focus": "numbers", "target": "Thirteen, thirty, fourteen, forty, fifteen, fifty.", "pt_hint": "Cuidado: -teen vs -ty." },
+    { "id": "sl-006", "band": "a1", "focus": "days", "target": "Monday, Tuesday, Wednesday, Thursday, Friday.", "pt_hint": "Dias da semana — atenção em Wednesday." },
+    { "id": "sl-007", "band": "a1", "focus": "family", "target": "This is my mother. This is my brother.", "pt_hint": "Esta é minha mãe. Este é meu irmão." },
+    { "id": "sl-008", "band": "a1", "focus": "food", "target": "I would like a hamburger and a glass of water, please.", "pt_hint": "Eu gostaria de um hambúrguer e um copo de água, por favor." },
+    { "id": "sl-009", "band": "a1", "focus": "directions", "target": "Excuse me, where is the bus station?", "pt_hint": "Com licença, onde é a rodoviária?" },
+    { "id": "sl-010", "band": "a1", "focus": "feelings", "target": "I am happy because today is a good day.", "pt_hint": "Estou feliz porque hoje é um bom dia." },
+
+    { "id": "sl-011", "band": "a1", "focus": "TH-sound", "target": "Think, thank, thirty, thirsty, Thursday.", "pt_hint": "TH surdo: língua entre os dentes, sem voz." },
+    { "id": "sl-012", "band": "a1", "focus": "TH-sound", "target": "This, that, these, those, there, they.", "pt_hint": "TH sonoro: língua entre os dentes, com voz." },
+    { "id": "sl-013", "band": "a1", "focus": "TH-twister", "target": "I think three things are thirsty on Thursday.", "pt_hint": "Aquecimento do TH surdo repetido." },
+    { "id": "sl-014", "band": "a1", "focus": "R-sound", "target": "Rafa runs a red food truck on the road.", "pt_hint": "R americano: língua pra trás, sem vibrar como em português." },
+    { "id": "sl-015", "band": "a1", "focus": "V-vs-W", "target": "Very well, we want a warm wave.", "pt_hint": "V morde o lábio. W é só boca arredondada." },
+
+    { "id": "sl-016", "band": "a2", "focus": "past-simple", "target": "Yesterday I walked to the beach and watched the sunset.", "pt_hint": "Verbos regulares no passado: -ed pronunciado /t/." },
+    { "id": "sl-017", "band": "a2", "focus": "past-simple", "target": "She wanted to dance but she decided to rest.", "pt_hint": "Verbos terminados em T/D pedem /ɪd/: wanted, decided." },
+    { "id": "sl-018", "band": "a2", "focus": "comparison", "target": "My brother is taller than me, but I am faster than him.", "pt_hint": "Comparativos: -er + than." },
+    { "id": "sl-019", "band": "a2", "focus": "routine", "target": "I usually wake up at seven and drink a cup of coffee.", "pt_hint": "Rotina — present simple com advérbios de frequência." },
+    { "id": "sl-020", "band": "a2", "focus": "present-continuous", "target": "Right now, Cosmo is sleeping under the table.", "pt_hint": "Ação em andamento: be + -ing." },
+    { "id": "sl-021", "band": "a2", "focus": "phrasal-verbs", "target": "Please pick up the phone and call me back.", "pt_hint": "Pick up = atender. Call back = ligar de volta." },
+    { "id": "sl-022", "band": "a2", "focus": "question-words", "target": "Where did you go last weekend, and who did you see?", "pt_hint": "Perguntas no passado com DID." },
+    { "id": "sl-023", "band": "a2", "focus": "weather", "target": "It was raining all day, but now the sun is shining.", "pt_hint": "Tempo — past continuous contrastado com present continuous." },
+    { "id": "sl-024", "band": "a2", "focus": "restaurant", "target": "Could I have the bill, please? And a glass of water.", "pt_hint": "Pedindo a conta no restaurante." },
+    { "id": "sl-025", "band": "a2", "focus": "travel", "target": "The flight to London leaves at half past six in the morning.", "pt_hint": "Horário com half past." },
+
+    { "id": "sl-026", "band": "a2", "focus": "TH-twister", "target": "Thirty-three thirsty thunderbirds thought through Thursday.", "pt_hint": "Trava-língua clássico de TH." },
+    { "id": "sl-027", "band": "a2", "focus": "R-vs-L", "target": "Really rare red roses rarely rot.", "pt_hint": "R em início de palavra." },
+    { "id": "sl-028", "band": "a2", "focus": "ED-endings", "target": "She watched, she listened, she laughed, she decided.", "pt_hint": "/t/, /d/, /t/, /ɪd/ — quatro endings em ordem." },
+    { "id": "sl-029", "band": "a2", "focus": "linking", "target": "Turn it off. Pick it up. Put it on.", "pt_hint": "Separação obrigatória com pronome no phrasal verb." },
+    { "id": "sl-030", "band": "a2", "focus": "contractions", "target": "I've been waiting. They're coming. We shouldn't have left.", "pt_hint": "Contrações — foco em fluência." },
+
+    { "id": "sl-031", "band": "b1", "focus": "present-perfect", "target": "I have lived in Praia do Sol for fifteen years.", "pt_hint": "Present perfect com FOR — ação que continua no presente." },
+    { "id": "sl-032", "band": "b1", "focus": "opinion", "target": "Honestly, I think we should reconsider the entire plan.", "pt_hint": "Dando opinião com HONESTLY + SHOULD." },
+    { "id": "sl-033", "band": "b1", "focus": "second-conditional", "target": "If I had a million dollars, I would travel around the world.", "pt_hint": "Second conditional — hipotético presente/futuro." },
+    { "id": "sl-034", "band": "b1", "focus": "reporting", "target": "She told me that she had already finished the report.", "pt_hint": "Reported speech com past perfect." },
+    { "id": "sl-035", "band": "b1", "focus": "phrasal-verbs", "target": "I cannot put up with this noise any longer.", "pt_hint": "Put up with = tolerar." },
+    { "id": "sl-036", "band": "b1", "focus": "meeting", "target": "I am afraid I do not quite agree with that approach.", "pt_hint": "Discordância diplomática em reunião." },
+    { "id": "sl-037", "band": "b1", "focus": "storytelling", "target": "When I arrived, the plane had already left the runway.", "pt_hint": "Past perfect + past simple." },
+    { "id": "sl-038", "band": "b1", "focus": "description", "target": "The man who stole my bike yesterday was wearing a blue hoodie.", "pt_hint": "Oração adjetiva restritiva." },
+
+    { "id": "sl-039", "band": "b1", "focus": "tongue-twister", "target": "She sells seashells by the seashore.", "pt_hint": "Clássico da pronúncia do S/SH." },
+    { "id": "sl-040", "band": "b1", "focus": "tongue-twister", "target": "Peter Piper picked a peck of pickled peppers.", "pt_hint": "Explosão do P — controle do sopro." },
+
+    { "id": "sl-041", "band": "b2", "focus": "passive", "target": "The new library is being built on the other side of the river.", "pt_hint": "Passive continuous presente." },
+    { "id": "sl-042", "band": "b2", "focus": "mixed-conditional", "target": "If I had studied harder, I would be fluent in English now.", "pt_hint": "Mixed conditional — passado -> presente." },
+    { "id": "sl-043", "band": "b2", "focus": "inversion", "target": "Not only did she finish early, but she also got the highest score.", "pt_hint": "Inversão dramática com NOT ONLY." },
+    { "id": "sl-044", "band": "b2", "focus": "formal-speech", "target": "Ladies and gentlemen, thank you for joining us this evening.", "pt_hint": "Abertura formal de evento." },
+    { "id": "sl-045", "band": "b2", "focus": "idioms", "target": "At the end of the day, it is the thought that counts.", "pt_hint": "Idiom de fechamento." },
+
+    { "id": "sl-046", "band": "a2", "focus": "character-bia", "target": "My name is Bia and I love surfing at Praia do Sol.", "pt_hint": "Frase da Bia — surfista de 16 anos." },
+    { "id": "sl-047", "band": "a2", "focus": "character-rafa", "target": "Welcome to Tropical Bites. What can I get you?", "pt_hint": "Frase do Rafa — food truck." },
+    { "id": "sl-048", "band": "b1", "focus": "character-kumar", "target": "Practice is the key. Listen, read aloud, and write your own examples.", "pt_hint": "Frase do Mr. Kumar — filosofia da escola." },
+    { "id": "sl-049", "band": "a1", "focus": "character-cosmo", "target": "Cosmo is a good dog. Cosmo likes the beach and a tasty bone.", "pt_hint": "Frase sobre o Cosmo." },
+    { "id": "sl-050", "band": "b1", "focus": "closing", "target": "Thank you for listening. Every small step adds up.", "pt_hint": "Fechamento motivacional." }
+  ]
+}

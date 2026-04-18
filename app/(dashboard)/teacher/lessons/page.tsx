@@ -12,7 +12,7 @@ import { getTeacherOverview } from "@/lib/actions/teacher-dashboard";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { BulkAssignList } from "@/components/teacher/bulk-assign-list";
 import { LessonRow } from "@/components/teacher/lesson-row";
-import { CEFR_LEVELS, SKILLS } from "@/lib/content/schema";
+import { CEFR_BANDS, CEFR_BAND_SET, SKILLS, cefrBandOf } from "@/lib/content/schema";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { LessonDraftMeta } from "@/lib/actions/lesson-drafts";
@@ -56,10 +56,11 @@ export default async function TeacherLessonsPage({
   if (profile?.role !== "teacher") redirect("/student");
 
   const params = await searchParams;
+  const cefrBand = CEFR_BAND_SET.has(params.cefr ?? "")
+    ? (params.cefr as (typeof CEFR_BANDS)[number])
+    : undefined;
   const filters = {
-    cefrLevel: (CEFR_LEVELS as readonly string[]).includes(params.cefr ?? "")
-      ? (params.cefr as (typeof CEFR_LEVELS)[number])
-      : undefined,
+    cefrBand,
     category: (SKILLS as readonly string[]).includes(params.skill ?? "")
       ? (params.skill as (typeof SKILLS)[number])
       : undefined,
@@ -76,19 +77,29 @@ export default async function TeacherLessonsPage({
     ? (params.source as Source)
     : "all";
 
-  const [curatedLessons, myLessons, bankItems, assignable, overview] =
+  const [curatedAll, myLessons, bankItems, assignable, overview] =
     await Promise.all([
-      listLessonDrafts(filters),
+      // Don't push cefr to the DB query — we want band-prefix matching, which
+      // we do in memory after fetching.
+      listLessonDrafts({
+        category: filters.category,
+        status: filters.status,
+        courseId: filters.courseId,
+      }),
       listMyTeacherLessons(),
       listMyBank(),
       getAssignableLessons(),
       getTeacherOverview(),
     ]);
 
+  const curatedLessons = curatedAll.filter((l) =>
+    filters.cefrBand ? cefrBandOf(l.cefr_level) === filters.cefrBand : true,
+  );
+
   // Static "library" content shipped in content/lessons/*.json — the 45+
   // authored narrative + drill lessons. Apply the same filters.
   const libraryLessons = getAllLessons().filter((l) => {
-    if (filters.cefrLevel && l.cefr_level !== filters.cefrLevel) return false;
+    if (filters.cefrBand && cefrBandOf(l.cefr_level) !== filters.cefrBand) return false;
     if (filters.category && l.category !== filters.category) return false;
     // Library content is always considered "published".
     if (filters.status === "draft") return false;
@@ -97,7 +108,7 @@ export default async function TeacherLessonsPage({
 
   // Apply CEFR / skill / status filters to teacher-authored lessons too.
   const filteredMine = myLessons.filter((l) => {
-    if (filters.cefrLevel && l.cefr_level !== filters.cefrLevel) return false;
+    if (filters.cefrBand && cefrBandOf(l.cefr_level ?? "") !== filters.cefrBand) return false;
     if (filters.category && l.category !== filters.category) return false;
     if (filters.status === "draft" && l.published) return false;
     if (filters.status === "published" && !l.published) return false;
@@ -227,14 +238,14 @@ export default async function TeacherLessonsPage({
             />
           ))}
         </FilterGroup>
-        <FilterGroup label="CEFR" name="cefr" active={filters.cefrLevel}>
-          <FilterPill href={urlWithout("cefr")} label="All" active={!filters.cefrLevel} />
-          {CEFR_LEVELS.map((l) => (
+        <FilterGroup label="CEFR" name="cefr" active={filters.cefrBand}>
+          <FilterPill href={urlWithout("cefr")} label="All" active={!filters.cefrBand} />
+          {CEFR_BANDS.map((b) => (
             <FilterPill
-              key={l}
-              href={urlWith("cefr", l)}
-              label={l.toUpperCase()}
-              active={filters.cefrLevel === l}
+              key={b}
+              href={urlWith("cefr", b)}
+              label={b.toUpperCase()}
+              active={filters.cefrBand === b}
             />
           ))}
         </FilterGroup>
@@ -262,7 +273,7 @@ export default async function TeacherLessonsPage({
       </nav>
 
       {source === "bank" ? (
-        <BankItemsList items={bankItems} filters={filters} />
+        <BankItemsList items={bankItems} filters={{ cefrBand: filters.cefrBand }} />
       ) : unified.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-border bg-card/40 p-12 text-center">
           <Sparkles className="mx-auto h-10 w-10 text-muted-foreground" />
@@ -373,10 +384,10 @@ function BankItemsList({
   filters,
 }: {
   items: Awaited<ReturnType<typeof listMyBank>>;
-  filters: { cefrLevel?: string; category?: string };
+  filters: { cefrBand?: string };
 }) {
   const filtered = items.filter((i) => {
-    if (filters.cefrLevel && i.cefr_level !== filters.cefrLevel) return false;
+    if (filters.cefrBand && cefrBandOf(i.cefr_level ?? "") !== filters.cefrBand) return false;
     return true;
   });
   if (filtered.length === 0) {

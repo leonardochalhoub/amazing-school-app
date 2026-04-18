@@ -18,6 +18,7 @@ import {
   setBankItemPublic,
 } from "@/lib/actions/exercise-bank";
 import type { BankItemRow } from "@/lib/actions/teacher-lessons-types";
+import { CEFR_BANDS, cefrBandOf } from "@/lib/content/schema";
 
 type Tab = "mine" | "public";
 
@@ -34,12 +35,15 @@ export function BankBrowser({ mine, publicItems }: Props) {
 
   const list = tab === "mine" ? mine : publicItems;
   const filtered = cefrFilter
-    ? list.filter((i) => i.cefr_level === cefrFilter)
+    ? list.filter((i) => cefrBandOf(i.cefr_level ?? "") === cefrFilter)
     : list;
 
-  const cefrOptions = Array.from(
-    new Set(list.map((i) => i.cefr_level).filter((x): x is string => !!x))
-  ).sort();
+  const bandsInList = new Set(
+    list
+      .map((i) => cefrBandOf(i.cefr_level ?? ""))
+      .filter((x): x is (typeof CEFR_BANDS)[number] => !!x),
+  );
+  const cefrOptions = CEFR_BANDS.filter((b) => bandsInList.has(b));
 
   function togglePublic(item: BankItemRow) {
     startTransition(async () => {

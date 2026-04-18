@@ -23,6 +23,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { bulkAssignManyLessons } from "@/lib/actions/assignments";
+import { CEFR_BAND_LABEL, cefrBandOf, type CefrBand } from "@/lib/content/schema";
 
 export interface BulkRow {
   slug: string;
@@ -66,12 +67,30 @@ export function BulkAssignList({ rows, classrooms, students }: Props) {
   const assignable = rows.filter((r) => r.published !== false);
   const assignableSet = new Set(assignable.map((r) => r.slug));
 
-  // Group by CEFR level for the per-section headings.
-  const byCefr = new Map<string, BulkRow[]>();
+  // Group by CEFR BAND (A1, A2, B1, …) — each band holds the full year
+  // of content (both semester-1 and semester-2 sub-levels).
+  const BAND_ORDER: (CefrBand | "other")[] = [
+    "a1",
+    "a2",
+    "b1",
+    "b2",
+    "c1",
+    "c2",
+    "other",
+  ];
+  const byBand = new Map<CefrBand | "other", BulkRow[]>();
   for (const r of rows) {
-    const list = byCefr.get(r.cefr_level) ?? [];
+    const band = cefrBandOf(r.cefr_level) ?? "other";
+    const list = byBand.get(band) ?? [];
     list.push(r);
-    byCefr.set(r.cefr_level, list);
+    byBand.set(band, list);
+  }
+  // Within a band, sort sub-levels (a1.1 before a1.2) then by title.
+  for (const list of byBand.values()) {
+    list.sort((a, b) => {
+      const levelCmp = a.cefr_level.localeCompare(b.cefr_level);
+      return levelCmp !== 0 ? levelCmp : a.title.localeCompare(b.title);
+    });
   }
 
   function toggle(slug: string) {
@@ -153,10 +172,16 @@ export function BulkAssignList({ rows, classrooms, students }: Props) {
       </div>
 
       <div className="space-y-8">
-        {Array.from(byCefr.entries()).map(([level, group]) => (
-          <section key={level} className="space-y-2">
+        {BAND_ORDER.filter((b) => byBand.has(b)).map((band) => {
+          const group = byBand.get(band)!;
+          const heading =
+            band === "other"
+              ? "Other"
+              : CEFR_BAND_LABEL[band];
+          return (
+          <section key={band} className="space-y-2">
             <h2 className="text-lg font-bold tracking-tight">
-              {level.toUpperCase()}
+              {heading}
               <span className="ml-2 text-sm font-normal text-muted-foreground tabular-nums">
                 {group.length} lesson{group.length === 1 ? "" : "s"}
               </span>
@@ -238,7 +263,8 @@ export function BulkAssignList({ rows, classrooms, students }: Props) {
               })}
             </div>
           </section>
-        ))}
+          );
+        })}
       </div>
 
       {selected.size > 0 && (
