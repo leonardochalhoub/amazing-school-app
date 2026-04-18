@@ -22,6 +22,9 @@ import {
 } from "@/components/teacher/classroom-card";
 import { RosterCard } from "@/components/teacher/roster-card";
 import { AddStudentButton } from "@/components/teacher/add-student-button";
+import { ScheduleClassButton } from "@/components/teacher/schedule-class-button";
+import { ClassLogPanel } from "@/components/teacher/class-log-panel";
+import { listAllTeacherHistory } from "@/lib/actions/student-history";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { BirthdayAlert } from "@/components/teacher/birthday-alert";
 import { DismissibleHero } from "@/components/teacher/dismissible-hero";
@@ -49,10 +52,12 @@ export default async function TeacherDashboard() {
     { classrooms, roster, kpis, recentAssignments },
     publishedLessons,
     upcomingBirthdays,
+    classLog,
   ] = await Promise.all([
     getTeacherOverview(),
     getAssignableLessons(),
     getUpcomingBirthdays(14),
+    listAllTeacherHistory(50),
   ]);
   const musics = listMusic();
 
@@ -97,6 +102,16 @@ export default async function TeacherDashboard() {
 
       {/* Birthday alert — only renders when there are upcoming birthdays */}
       <BirthdayAlert birthdays={upcomingBirthdays} />
+
+      {/* Quick actions — primary entry point for scheduling future classes */}
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <ScheduleClassButton
+          students={studentOptions}
+          classrooms={classroomOptions}
+        />
+      </div>
+
+      <ClassLogPanel entries={classLog} />
 
       {/* KPI STRIP — below hero */}
       <section

@@ -265,7 +265,11 @@ function SceneRenderer({
     return (
       <div className="space-y-3">
         {framingChar ? <CharacterTag char={framingChar} label="Your turn" /> : null}
-        <ExerciseInline exercise={scene.exercise} onSolved={onAdvance} />
+        <ExerciseInline
+          key={scene.exercise.id}
+          exercise={scene.exercise}
+          onSolved={onAdvance}
+        />
       </div>
     );
   }
@@ -364,8 +368,9 @@ function SceneRenderer({
         </div>
         {scene.check ? (
           <ExerciseInline
+            key={`reading-check-${sceneIndex}`}
             exercise={{
-              id: "reading-check",
+              id: `reading-check-${sceneIndex}`,
               type: "multiple_choice",
               question: scene.check.question,
               options: scene.check.options,
@@ -405,8 +410,9 @@ function SceneRenderer({
         </div>
         {scene.check ? (
           <ExerciseInline
+            key={`listen-check-${sceneIndex}`}
             exercise={{
-              id: "listen-check",
+              id: `listen-check-${sceneIndex}`,
               type: "multiple_choice",
               question: scene.check.question,
               options: scene.check.options,

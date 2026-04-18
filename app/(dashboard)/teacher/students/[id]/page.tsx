@@ -15,6 +15,8 @@ import { getMusic, fromAssignmentSlug, listMusic } from "@/lib/content/music";
 import { RosterAvatarUploader } from "@/components/teacher/roster-avatar-uploader";
 import { RosterEditForm } from "@/components/teacher/roster-edit-form";
 import { DiaryPanel } from "@/components/teacher/diary-panel";
+import { StudentHistoryPanel } from "@/components/teacher/student-history-panel";
+import { listStudentHistory } from "@/lib/actions/student-history";
 import {
   AssignedLessonsList,
   type AssignedLessonMeta,
@@ -49,11 +51,12 @@ export default async function RosterStudentDetailPage({
     name: c.name as string,
   }));
 
-  const [signedUrl, diary, rawAssignments, publishedLessons] = await Promise.all([
+  const [signedUrl, diary, rawAssignments, publishedLessons, history] = await Promise.all([
     student.has_avatar ? getRosterAvatarSignedUrl(id) : Promise.resolve(null),
     listDiaryForStudent(id),
     getAssignmentsForRosterStudent(id),
     getAssignableLessons(),
+    listStudentHistory({ rosterStudentId: id }),
   ]);
 
   const lessonDraftBySlug = new Map(publishedLessons.map((l) => [l.slug, l]));
@@ -187,6 +190,16 @@ export default async function RosterStudentDetailPage({
           <Card>
             <CardContent className="py-5">
               <DiaryPanel rosterStudentId={id} entries={diary} />
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="py-5">
+              <StudentHistoryPanel
+                rosterStudentId={id}
+                classroomId={student.classroom_id}
+                entries={history}
+              />
             </CardContent>
           </Card>
         </div>
