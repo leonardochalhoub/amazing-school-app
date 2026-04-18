@@ -1,0 +1,283 @@
+{
+  "slug": "argumentation-graduate",
+  "title": "Graduate-Level Argumentation",
+  "description": "Steel-manning, charitable interpretation, load-bearing claims, productive disagreement.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Argumentação avançada: steel-man, interpretação caridosa, afirmações-chave, discordar produtivamente.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Graduate-Level Argumentation",
+      "subtitle_en": "Steel-manning, charitable interpretation, load-bearing claims, productive disagreement.",
+      "subtitle_pt": "Argumentação avançada: steel-man, interpretação caridosa, afirmações-chave, discordar produtivamente."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Steel-manning, charitable interpretation, load-bearing claims, productive disagreement. Focus: graduate-level argumentation. Steel-manning means arguing the strongest version of their view.",
+      "text_pt": "Argumentação avançada: steel-man, interpretação caridosa, afirmações-chave, discordar produtivamente. Foco: graduate-level argumentation. Steel-man é argumentar a versão mais forte do outro."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Graduate-Level Argumentation",
+      "body_en": "Graduate argument: STEEL-MAN your opponent. Identify LOAD-BEARING claims (which would collapse if false). Accept CHARITABLE interpretations. Disagree productively by naming the crux.",
+      "body_pt": "Argumentação avançada: steel-man, interpretação caridosa, afirmações-chave, discordar produtivamente.",
+      "examples": [
+        {
+          "en": "Steel-manning means arguing the strongest version of their view.",
+          "pt": "Steel-man é argumentar a versão mais forte do outro."
+        },
+        {
+          "en": "Identify the load-bearing claim before you attack.",
+          "pt": "Identifique a afirmação estrutural antes de atacar."
+        },
+        {
+          "en": "The crux is where we actually disagree.",
+          "pt": "O ponto é onde realmente discordamos."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Graduate-Level Argumentation",
+      "items": [
+        {
+          "term": "crux",
+          "pt": "ponto central"
+        },
+        {
+          "term": "steel-man",
+          "pt": "steel-man"
+        },
+        {
+          "term": "charitable",
+          "pt": "caridoso"
+        },
+        {
+          "term": "concede",
+          "pt": "conceder"
+        },
+        {
+          "term": "refute",
+          "pt": "refutar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-argumentation-graduate-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"___ means arguing the strongest version of their view.\"",
+        "correct": "Steel-manning",
+        "explanation": "Full sentence: \"Steel-manning means arguing the strongest version of their view.\"",
+        "hint_pt_br": "Steel-man é argumentar a versão mais forte do outro."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-argumentation-graduate-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Identify the load-bearing claim before you attack.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"Identify the load-bearing claim before you attack.\"",
+        "hint_pt_br": "Identifique a afirmação estrutural antes de atacar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-argumentation-graduate-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "crux",
+            "ponto central"
+          ],
+          [
+            "steel-man",
+            "steel-man"
+          ],
+          [
+            "charitable",
+            "caridoso"
+          ],
+          [
+            "concede",
+            "conceder"
+          ],
+          [
+            "refute",
+            "refutar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Graduate-Level Argumentation — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre graduate-level argumentation. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Steel-man an argument you disagree with."
+        },
+        {
+          "speaker": "user",
+          "target": "Their strongest version deserves respect.",
+          "pt_hint": "Versão forte merece respeito."
+        },
+        {
+          "speaker": "ai",
+          "text": "Name the load-bearing claim."
+        },
+        {
+          "speaker": "user",
+          "target": "The one that, if false, collapses the whole.",
+          "pt_hint": "Se cai, tudo cai."
+        },
+        {
+          "speaker": "ai",
+          "text": "Offer a charitable interpretation."
+        },
+        {
+          "speaker": "user",
+          "target": "Assume best intent, weakest phrasing.",
+          "pt_hint": "Melhor intenção."
+        },
+        {
+          "speaker": "ai",
+          "text": "Find the crux of disagreement."
+        },
+        {
+          "speaker": "user",
+          "target": "Name the exact premise you reject.",
+          "pt_hint": "Nomeie a premissa."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you concede gracefully?"
+        },
+        {
+          "speaker": "user",
+          "target": "Say what they got right first.",
+          "pt_hint": "Diga o acerto primeiro."
+        },
+        {
+          "speaker": "ai",
+          "text": "Graduate argument is discipline plus courage."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "argumentation-graduate-listening-story",
+      "title": "The dissertation defense prep",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize four moves of graduate argumentation. Use at least three terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In preparation for her thesis defense, Kumar coached his student through the hardest conversation of her life."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Steel-man every possible objection — argue the strongest version your committee could possibly raise."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "Then I identify which of my own claims are load-bearing — if one falls, the whole chapter falls?"
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Exactly. Protect those three. Concede everything peripheral generously, even before anyone attacks it."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "And when I disagree, I name the crux out loud — the exact premise I reject, not their conclusion."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "A defended thesis, Kumar knew, is won or lost in the quiet discipline of knowing which claims you can afford to lose."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Graduate-Level Argumentation\". Steel-manning, charitable interpretation, load-bearing claims, productive disagreement. Steel-manning means arguing the strongest version of their view. Identify the load-bearing claim before you attack. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Graduate-Level Argumentation\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Graduate-Level Argumentation",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Graduate-Level Argumentation\".",
+        "hint_pt_br": "Ela fala o título: \"Graduate-Level Argumentation\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "investigative-journalism",
+  "title": "Investigative Journalism",
+  "description": "Sources, documents, the long timeline, the public-interest test.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Jornalismo investigativo: fontes humanas, documentos, linha do tempo, dados, fact-check, interesse público.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Investigative Journalism",
+      "subtitle_en": "Sources, documents, the long timeline, the public-interest test.",
+      "subtitle_pt": "Jornalismo investigativo: fontes humanas, documentos, linha do tempo, dados, fact-check, interesse público."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Sources, documents, the long timeline, the public-interest test. Focus: investigative journalism. Three independent sources corroborate the allegation.",
+      "text_pt": "Jornalismo investigativo: fontes humanas, documentos, linha do tempo, dados, fact-check, interesse público. Foco: investigative journalism. Três fontes independentes corroboram a alegação."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Investigative Journalism",
+      "body_en": "Five tools: HUMAN SOURCES (on/off record). DOCUMENTS (primary evidence). TIMELINES (the arc). DATA (aggregate patterns). FACT-CHECK every claim. Public-interest test for publication.",
+      "body_pt": "Jornalismo investigativo: fontes humanas, documentos, linha do tempo, dados, fact-check, interesse público.",
+      "examples": [
+        {
+          "en": "Three independent sources corroborate the allegation.",
+          "pt": "Três fontes independentes corroboram a alegação."
+        },
+        {
+          "en": "The documents date the decision to March 2021.",
+          "pt": "Os documentos datam a decisão a março de 2021."
+        },
+        {
+          "en": "The public-interest test passes — the story runs Tuesday.",
+          "pt": "O teste de interesse público passa — matéria sai terça."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Investigative Journalism",
+      "items": [
+        {
+          "term": "source",
+          "pt": "fonte"
+        },
+        {
+          "term": "document",
+          "pt": "documento"
+        },
+        {
+          "term": "corroborate",
+          "pt": "corroborar"
+        },
+        {
+          "term": "timeline",
+          "pt": "linha do tempo"
+        },
+        {
+          "term": "public interest",
+          "pt": "interesse público"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-investigative-journalism-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Three ___ sources corroborate the allegation.\"",
+        "correct": "independent",
+        "explanation": "Full sentence: \"Three independent sources corroborate the allegation.\"",
+        "hint_pt_br": "Três fontes independentes corroboram a alegação."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-investigative-journalism-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "The documents date the decision to March 2021."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"The documents date the decision to March 2021.\"",
+        "hint_pt_br": "Os documentos datam a decisão a março de 2021."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-investigative-journalism-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "source",
+            "fonte"
+          ],
+          [
+            "document",
+            "documento"
+          ],
+          [
+            "corroborate",
+            "corroborar"
+          ],
+          [
+            "timeline",
+            "linha do tempo"
+          ],
+          [
+            "public interest",
+            "interesse público"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Investigative Journalism — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre investigative journalism. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar, you have one source. What now?"
+        },
+        {
+          "speaker": "user",
+          "target": "Find two more, independently.",
+          "pt_hint": "Mais duas independentes."
+        },
+        {
+          "speaker": "ai",
+          "text": "Documents beat testimony when?"
+        },
+        {
+          "speaker": "user",
+          "target": "When dated and verifiable.",
+          "pt_hint": "Quando datados."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why build a timeline?"
+        },
+        {
+          "speaker": "user",
+          "target": "Cause and effect need arrows in time.",
+          "pt_hint": "Causa precisa tempo."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the public-interest test?"
+        },
+        {
+          "speaker": "user",
+          "target": "Does the public gain more than harm?",
+          "pt_hint": "Ganho maior que dano."
+        },
+        {
+          "speaker": "ai",
+          "text": "Final check before publication?"
+        },
+        {
+          "speaker": "user",
+          "target": "Fact-check every claim one last time.",
+          "pt_hint": "Checa tudo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Investigative journalism is patience with a deadline."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "investigative-journalism-listening-story",
+      "title": "The investigation",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe five tools used. Use at least three journalism terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the newsroom at midnight, a team of three reporters checked their work against a story that could topple a minister."
+        },
+        {
+          "speaker": "Editor",
+          "voice": "female1",
+          "en": "Three independent human sources corroborate the allegation, and none of them have coordinated their testimony."
+        },
+        {
+          "speaker": "Reporter",
+          "voice": "male1",
+          "en": "The documents we obtained date the disputed decision to March 2021 — exactly as our second source described it."
+        },
+        {
+          "speaker": "Editor",
+          "voice": "female1",
+          "en": "The timeline shows the minister signed the memo six days before the public press conference he later denied attending."
+        },
+        {
+          "speaker": "Reporter",
+          "voice": "female2",
+          "en": "The public-interest test passes clearly — the story runs in tomorrow's edition with proper legal review."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Investigative journalism, Kumar believed, is patience with a deadline — the slowest craft in the fastest industry."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Investigative Journalism\". Sources, documents, the long timeline, the public-interest test. Three independent sources corroborate the allegation. The documents date the decision to March 2021. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Investigative Journalism\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Investigative Journalism",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Investigative Journalism\".",
+        "hint_pt_br": "Ela fala o título: \"Investigative Journalism\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "metalinguistic-awareness",
+  "title": "Metalinguistic Awareness",
+  "description": "Noticing your own language — the conscious turn that separates proficient from native-like.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Consciência metalinguística: notar próprios erros, hábitos, registro, desalinhamento. Reescrever em tempo real.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Metalinguistic Awareness",
+      "subtitle_en": "Noticing your own language — the conscious turn that separates proficient from native-like.",
+      "subtitle_pt": "Consciência metalinguística: notar próprios erros, hábitos, registro, desalinhamento. Reescrever em tempo real."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Noticing your own language — the conscious turn that separates proficient from native-like. Focus: metalinguistic awareness. I caught myself saying 'I have 25 years' yesterday — translation error.",
+      "text_pt": "Consciência metalinguística: notar próprios erros, hábitos, registro, desalinhamento. Reescrever em tempo real. Foco: metalinguistic awareness. Me peguei dizendo 'I have 25 years' — erro de tradução."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Metalinguistic Awareness",
+      "body_en": "Metalinguistic moves: notice your errors, notice your habits, notice register, notice register mismatch. The proficient speaker rewrites their own speech in real time.",
+      "body_pt": "Consciência metalinguística: notar próprios erros, hábitos, registro, desalinhamento. Reescrever em tempo real.",
+      "examples": [
+        {
+          "en": "I caught myself saying 'I have 25 years' yesterday — translation error.",
+          "pt": "Me peguei dizendo 'I have 25 years' — erro de tradução."
+        },
+        {
+          "en": "My register drifts informal under stress — that's a pattern.",
+          "pt": "Meu registro vaza informal sob estresse — é um padrão."
+        },
+        {
+          "en": "Noticing this is already half the fix.",
+          "pt": "Notar já é metade da solução."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Metalinguistic Awareness",
+      "items": [
+        {
+          "term": "metalinguistic",
+          "pt": "metalinguístico"
+        },
+        {
+          "term": "awareness",
+          "pt": "consciência"
+        },
+        {
+          "term": "pattern",
+          "pt": "padrão"
+        },
+        {
+          "term": "drift",
+          "pt": "deriva"
+        },
+        {
+          "term": "self-correct",
+          "pt": "autocorreção"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-metalinguistic-awareness-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I caught myself saying 'I have 25 years' yesterday — ___ error.\"",
+        "correct": "translation",
+        "explanation": "Full sentence: \"I caught myself saying 'I have 25 years' yesterday — translation error.\"",
+        "hint_pt_br": "Me peguei dizendo 'I have 25 years' — erro de tradução."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-metalinguistic-awareness-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "My register drifts informal under stress — that's a pattern.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"My register drifts informal under stress — that's a pattern.\"",
+        "hint_pt_br": "Meu registro vaza informal sob estresse — é um padrão."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-metalinguistic-awareness-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "metalinguistic",
+            "metalinguístico"
+          ],
+          [
+            "awareness",
+            "consciência"
+          ],
+          [
+            "pattern",
+            "padrão"
+          ],
+          [
+            "drift",
+            "deriva"
+          ],
+          [
+            "self-correct",
+            "autocorreção"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Metalinguistic Awareness — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre metalinguistic awareness. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara, what do you notice in your own English now?"
+        },
+        {
+          "speaker": "user",
+          "target": "I still over-apologize under pressure.",
+          "pt_hint": "Peço desculpa demais."
+        },
+        {
+          "speaker": "ai",
+          "text": "What error repeats across months?"
+        },
+        {
+          "speaker": "user",
+          "target": "Prepositions with 'depend' — depend of vs on.",
+          "pt_hint": "'Depend of' vs 'on'."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you self-correct live?"
+        },
+        {
+          "speaker": "user",
+          "target": "Pause, rephrase, move on.",
+          "pt_hint": "Pauso, reformulo, sigo."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's hardest to notice?"
+        },
+        {
+          "speaker": "user",
+          "target": "My register drifting when I'm tired.",
+          "pt_hint": "Registro vaza cansada."
+        },
+        {
+          "speaker": "ai",
+          "text": "Any final trick?"
+        },
+        {
+          "speaker": "user",
+          "target": "Record yourself weekly — twice.",
+          "pt_hint": "Grave-se toda semana."
+        },
+        {
+          "speaker": "ai",
+          "text": "Proficient means noticing. Fluent means not needing to."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "metalinguistic-awareness-listening-story",
+      "title": "The advanced workshop",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe three metalinguistic moves. Use at least three awareness terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At her final workshop of the year, Zara asked six advanced students to notice — live — what their own English was doing."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Metalinguistic awareness is the conscious turn where you begin to edit your own speech as you speak it."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male1",
+          "en": "I caught myself saying 'I have twenty-five years' last week — a direct translation error, unconsciously."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female2",
+          "en": "My register drifts informal under stress — I notice it on video, never in the moment it happens."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Noticing, Zara said, is already half the fix — fluency is what remains when noticing stops being necessary."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Metalinguistic awareness, at C2, is the quiet beginning of what native speakers call an unguarded tongue."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Metalinguistic Awareness\". Noticing your own language — the conscious turn that separates proficient from native-like. I caught myself saying 'I have 25 years' yesterday — translation error. My register drifts informal under stress — that's a pattern. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Metalinguistic Awareness\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Metalinguistic Awareness",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Metalinguistic Awareness\".",
+        "hint_pt_br": "Ela fala o título: \"Metalinguistic Awareness\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

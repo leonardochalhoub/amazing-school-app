@@ -1,0 +1,283 @@
+{
+  "slug": "novel-voice",
+  "title": "Finding a Novel's Voice",
+  "description": "First draft voice work: point of view, tense, distance, music.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Voz do romance: 1ª/3ª pessoa, presente/passado, próximo/distante, musical/plano. Teste em 500 palavras.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Finding a Novel's Voice",
+      "subtitle_en": "First draft voice work: point of view, tense, distance, music.",
+      "subtitle_pt": "Voz do romance: 1ª/3ª pessoa, presente/passado, próximo/distante, musical/plano. Teste em 500 palavras."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "First draft voice work: point of view, tense, distance, music. Focus: finding a novel's voice. First person in present tense feels like a confession.",
+      "text_pt": "Voz do romance: 1ª/3ª pessoa, presente/passado, próximo/distante, musical/plano. Teste em 500 palavras. Foco: finding a novel's voice. Primeira pessoa no presente parece confissão."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Finding a Novel's Voice",
+      "body_en": "Voice decisions: FIRST vs THIRD person. PRESENT vs PAST tense. CLOSE vs DISTANT narrator. MUSICAL vs FLAT prose. Test each pairing in 500 words before committing.",
+      "body_pt": "Voz do romance: 1ª/3ª pessoa, presente/passado, próximo/distante, musical/plano. Teste em 500 palavras.",
+      "examples": [
+        {
+          "en": "First person in present tense feels like a confession.",
+          "pt": "Primeira pessoa no presente parece confissão."
+        },
+        {
+          "en": "Third-person close distance reads like intimate biography.",
+          "pt": "Terceira próxima parece biografia íntima."
+        },
+        {
+          "en": "Musical prose demands sentences that breathe.",
+          "pt": "Prosa musical pede frases que respiram."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Finding a Novel's Voice",
+      "items": [
+        {
+          "term": "voice",
+          "pt": "voz"
+        },
+        {
+          "term": "POV",
+          "pt": "POV"
+        },
+        {
+          "term": "distance",
+          "pt": "distância"
+        },
+        {
+          "term": "cadence",
+          "pt": "cadência"
+        },
+        {
+          "term": "intimacy",
+          "pt": "intimidade"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-novel-voice-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"First person in present tense feels like a ___.\"",
+        "correct": "confession",
+        "explanation": "Full sentence: \"First person in present tense feels like a confession.\"",
+        "hint_pt_br": "Primeira pessoa no presente parece confissão."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-novel-voice-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "Third-person close distance reads like intimate biography."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"Third-person close distance reads like intimate biography.\"",
+        "hint_pt_br": "Terceira próxima parece biografia íntima."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-novel-voice-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "voice",
+            "voz"
+          ],
+          [
+            "POV",
+            "POV"
+          ],
+          [
+            "distance",
+            "distância"
+          ],
+          [
+            "cadence",
+            "cadência"
+          ],
+          [
+            "intimacy",
+            "intimidade"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Finding a Novel's Voice — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre finding a novel's voice. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Lúcia, you've drafted 500 words in first person present."
+        },
+        {
+          "speaker": "user",
+          "target": "It reads like a confession.",
+          "pt_hint": "Parece confissão."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now try third close past."
+        },
+        {
+          "speaker": "user",
+          "target": "More patient, less urgent.",
+          "pt_hint": "Mais paciente."
+        },
+        {
+          "speaker": "ai",
+          "text": "Which serves the novel's theme?"
+        },
+        {
+          "speaker": "user",
+          "target": "Confession suits the first half.",
+          "pt_hint": "Confissão no início."
+        },
+        {
+          "speaker": "ai",
+          "text": "Can voice shift mid-novel?"
+        },
+        {
+          "speaker": "user",
+          "target": "Rarely — readers notice instantly.",
+          "pt_hint": "Raro, leitor nota."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you test cadence?"
+        },
+        {
+          "speaker": "user",
+          "target": "Read aloud until the rhythm holds.",
+          "pt_hint": "Leio até o ritmo firmar."
+        },
+        {
+          "speaker": "ai",
+          "text": "Voice is the novel you must not lose."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "novel-voice-listening-story",
+      "title": "The first draft",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four voice decisions. Use at least three narrative terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At her kitchen table, Dona Lúcia reread the first 500 words of a novel she had drafted four different ways."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "First person in present tense feels like a confession — urgent, trapped in the protagonist's head completely."
+        },
+        {
+          "speaker": "Writer friend",
+          "voice": "male1",
+          "en": "Third-person close distance reads more patient — almost like an intimate biography of a fictional friend."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "I'll commit to first person past for the first half, then shift to third close for the retrospective coda."
+        },
+        {
+          "speaker": "Writer friend",
+          "voice": "male1",
+          "en": "Reading aloud until the rhythm holds — that test catches voice problems your eyes alone will always miss."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Voice, Lúcia believed, is the novel you must not lose — every other mistake can be fixed on revision."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Finding a Novel's Voice\". First draft voice work: point of view, tense, distance, music. First person in present tense feels like a confession. Third-person close distance reads like intimate biography. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Finding a Novel's Voice\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Finding a Novel's Voice",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Finding a Novel's Voice\".",
+        "hint_pt_br": "Ela fala o título: \"Finding a Novel's Voice\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

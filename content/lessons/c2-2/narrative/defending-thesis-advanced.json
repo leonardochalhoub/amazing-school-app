@@ -1,0 +1,288 @@
+{
+  "slug": "defending-thesis-advanced",
+  "title": "Defending a Thesis — Advanced",
+  "description": "When the committee is hostile: naming the disagreement, conceding core, protecting methodology.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Defesa hostil: nomeie o conflito, conceda o verdadeiro, proteja o estrutural, convide diálogo.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Defending a Thesis — Advanced",
+      "subtitle_en": "When the committee is hostile: naming the disagreement, conceding core, protecting methodology.",
+      "subtitle_pt": "Defesa hostil: nomeie o conflito, conceda o verdadeiro, proteja o estrutural, convide diálogo."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "When the committee is hostile: naming the disagreement, conceding core, protecting methodology. Focus: defending a thesis — advanced. I hear that we disagree about the causal claim, not the data.",
+      "text_pt": "Defesa hostil: nomeie o conflito, conceda o verdadeiro, proteja o estrutural, convide diálogo. Foco: defending a thesis — advanced. Percebo que discordamos da causa, não dos dados."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Defending a Thesis — Advanced",
+      "body_en": "Hostile defense moves: NAME the disagreement ('I hear we disagree about X.'). CONCEDE what's true. PROTECT what's load-bearing. CLOSE by inviting continued dialogue.",
+      "body_pt": "Defesa hostil: nomeie o conflito, conceda o verdadeiro, proteja o estrutural, convide diálogo.",
+      "examples": [
+        {
+          "en": "I hear that we disagree about the causal claim, not the data.",
+          "pt": "Percebo que discordamos da causa, não dos dados."
+        },
+        {
+          "en": "I concede that a larger sample would strengthen the finding.",
+          "pt": "Concedo que amostra maior fortaleceria o achado."
+        },
+        {
+          "en": "But the central methodology remains defensible on its own terms.",
+          "pt": "Mas a metodologia central permanece defensável."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Defending a Thesis — Advanced",
+      "items": [
+        {
+          "term": "hostile",
+          "pt": "hostil"
+        },
+        {
+          "term": "concede",
+          "pt": "conceder"
+        },
+        {
+          "term": "methodology",
+          "pt": "metodologia"
+        },
+        {
+          "term": "load-bearing",
+          "pt": "estrutural"
+        },
+        {
+          "term": "dialogue",
+          "pt": "diálogo"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-defending-thesis-advanced-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I hear that we ___ about the causal claim, not the data.\"",
+        "correct": "disagree",
+        "explanation": "Full sentence: \"I hear that we disagree about the causal claim, not the data.\"",
+        "hint_pt_br": "Percebo que discordamos da causa, não dos dados."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-defending-thesis-advanced-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I concede that a larger sample would strengthen the finding.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"I concede that a larger sample would strengthen the finding.\"",
+        "hint_pt_br": "Concedo que amostra maior fortaleceria o achado."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-defending-thesis-advanced-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "hostile",
+            "hostil"
+          ],
+          [
+            "concede",
+            "conceder"
+          ],
+          [
+            "methodology",
+            "metodologia"
+          ],
+          [
+            "load-bearing",
+            "estrutural"
+          ],
+          [
+            "dialogue",
+            "diálogo"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Defending a Thesis — Advanced — dialog",
+      "character": "Maya",
+      "pt_summary": "Diálogo sobre defending a thesis — advanced. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Maya, a professor rejects your premise."
+        },
+        {
+          "speaker": "user",
+          "target": "I hear we disagree about the premise.",
+          "pt_hint": "Discordamos da premissa."
+        },
+        {
+          "speaker": "ai",
+          "text": "Concede what's fair."
+        },
+        {
+          "speaker": "user",
+          "target": "A larger sample would strengthen it.",
+          "pt_hint": "Amostra maior melhoraria."
+        },
+        {
+          "speaker": "ai",
+          "text": "What do you protect?"
+        },
+        {
+          "speaker": "user",
+          "target": "The core methodology remains defensible.",
+          "pt_hint": "Metodologia defensável."
+        },
+        {
+          "speaker": "ai",
+          "text": "A second attack on interpretation."
+        },
+        {
+          "speaker": "user",
+          "target": "Interpretation is debatable, but data is solid.",
+          "pt_hint": "Interpretação discutível."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you close?"
+        },
+        {
+          "speaker": "user",
+          "target": "I welcome further dialogue after the defense.",
+          "pt_hint": "Bem-vinda a dialogar."
+        },
+        {
+          "speaker": "ai",
+          "text": "A defended thesis survives by conceding well."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "defending-thesis-advanced-listening-story",
+      "title": "The hostile defense",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four moves under pressure. Use at least three defense terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the defense chamber, Maya faced a committee member who had written three papers opposing her central claim."
+        },
+        {
+          "speaker": "Professor",
+          "voice": "male1",
+          "en": "Your causal claim simply does not follow from the data you present in chapter four — how do you respond?"
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "I hear that we disagree about the causal claim, not about the data itself — and that distinction matters."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "I concede that a larger sample would strengthen the finding, and I name that limitation in chapter six."
+        },
+        {
+          "speaker": "Professor",
+          "voice": "male1",
+          "en": "Fair. But you still defend the methodology?"
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "The central methodology remains defensible on its own terms, and I welcome further dialogue after today."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Surviving a hostile defense, Maya learned, is the disciplined art of conceding exactly what you can afford to lose."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Defending a Thesis — Advanced\". When the committee is hostile: naming the disagreement, conceding core, protecting methodology. I hear that we disagree about the causal claim, not the data. I concede that a larger sample would strengthen the finding. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Defending a Thesis — Advanced\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Defending a Thesis — Advanced",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Defending a Thesis — Advanced\".",
+        "hint_pt_br": "Ela fala o título: \"Defending a Thesis — Advanced\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "manifesto-writing",
+  "title": "Manifesto Writing",
+  "description": "Short, sharp, arguable: what manifestos do that essays can't.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Manifesto: menos de 1000 palavras, lista ok, afirmações discutíveis, sentenças declarativas, chamado à ação.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Manifesto Writing",
+      "subtitle_en": "Short, sharp, arguable: what manifestos do that essays can't.",
+      "subtitle_pt": "Manifesto: menos de 1000 palavras, lista ok, afirmações discutíveis, sentenças declarativas, chamado à ação."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Short, sharp, arguable: what manifestos do that essays can't. Focus: manifesto writing. A manifesto makes an argument, not an essay.",
+      "text_pt": "Manifesto: menos de 1000 palavras, lista ok, afirmações discutíveis, sentenças declarativas, chamado à ação. Foco: manifesto writing. Manifesto faz argumento, não ensaio."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Manifesto Writing",
+      "body_en": "Manifesto rules: UNDER 1000 words. LIST form welcome. Arguable claims, not neutral observations. Declarative sentences. A call to action at the end.",
+      "body_pt": "Manifesto: menos de 1000 palavras, lista ok, afirmações discutíveis, sentenças declarativas, chamado à ação.",
+      "examples": [
+        {
+          "en": "A manifesto makes an argument, not an essay.",
+          "pt": "Manifesto faz argumento, não ensaio."
+        },
+        {
+          "en": "Declarative sentences beat qualified ones.",
+          "pt": "Sentenças declarativas ganham das qualificadas."
+        },
+        {
+          "en": "Every manifesto ends in a call to action.",
+          "pt": "Todo manifesto termina em chamado à ação."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Manifesto Writing",
+      "items": [
+        {
+          "term": "manifesto",
+          "pt": "manifesto"
+        },
+        {
+          "term": "declarative",
+          "pt": "declarativa"
+        },
+        {
+          "term": "call to action",
+          "pt": "chamado à ação"
+        },
+        {
+          "term": "principle",
+          "pt": "princípio"
+        },
+        {
+          "term": "movement",
+          "pt": "movimento"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-manifesto-writing-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"A ___ makes an argument, not an essay.\"",
+        "correct": "manifesto",
+        "explanation": "Full sentence: \"A manifesto makes an argument, not an essay.\"",
+        "hint_pt_br": "Manifesto faz argumento, não ensaio."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-manifesto-writing-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Declarative sentences beat qualified ones.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Declarative sentences beat qualified ones.\"",
+        "hint_pt_br": "Sentenças declarativas ganham das qualificadas."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-manifesto-writing-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "manifesto",
+            "manifesto"
+          ],
+          [
+            "declarative",
+            "declarativa"
+          ],
+          [
+            "call to action",
+            "chamado à ação"
+          ],
+          [
+            "principle",
+            "princípio"
+          ],
+          [
+            "movement",
+            "movimento"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Manifesto Writing — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre manifesto writing. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, open a manifesto in one sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "Small teams deserve enterprise tools.",
+          "pt_hint": "Times pequenos merecem."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now list three principles."
+        },
+        {
+          "speaker": "user",
+          "target": "Transparency, speed, kindness.",
+          "pt_hint": "Transparência, velocidade, gentileza."
+        },
+        {
+          "speaker": "ai",
+          "text": "Which tense dominates?"
+        },
+        {
+          "speaker": "user",
+          "target": "Present declarative, never passive.",
+          "pt_hint": "Presente declarativo."
+        },
+        {
+          "speaker": "ai",
+          "text": "How long is the whole piece?"
+        },
+        {
+          "speaker": "user",
+          "target": "Under a thousand words always.",
+          "pt_hint": "Menos de mil palavras."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with a call."
+        },
+        {
+          "speaker": "user",
+          "target": "Build with us, or watch us win.",
+          "pt_hint": "Construa ou veja vencermos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Manifestos are arguments that refuse neutrality."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "manifesto-writing-listening-story",
+      "title": "The founding manifesto",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four manifesto moves. Use at least three manifesto terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "The night before the company's relaunch, Joca drafted the shortest important document of his career."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Small teams deserve enterprise tools — that is the one sentence that survived every round of revision tonight."
+        },
+        {
+          "speaker": "Co-founder",
+          "voice": "female1",
+          "en": "Three principles — transparency, speed, kindness — written as declarative sentences, never as polite suggestions."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "The whole manifesto stays under a thousand words, because reading it should feel like swallowing an espresso."
+        },
+        {
+          "speaker": "Co-founder",
+          "voice": "female1",
+          "en": "And the final line — 'build with us, or watch us win' — is a call to action and a line in the sand."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Manifestos, Joca believed, are arguments that refuse neutrality — and that refusal is what separates movements from meetings."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Manifesto Writing\". Short, sharp, arguable: what manifestos do that essays can't. A manifesto makes an argument, not an essay. Declarative sentences beat qualified ones. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Manifesto Writing\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Manifesto Writing",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Manifesto Writing\".",
+        "hint_pt_br": "Ela fala o título: \"Manifesto Writing\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

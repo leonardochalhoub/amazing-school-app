@@ -1,0 +1,283 @@
+{
+  "slug": "peer-review-writing",
+  "title": "Peer Review Writing",
+  "description": "How to review an academic manuscript: strengths, major concerns, minor concerns, recommendation.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Peer review: resumo, preocupações maiores, menores, recomendação. Específico e gentil.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Peer Review Writing",
+      "subtitle_en": "How to review an academic manuscript: strengths, major concerns, minor concerns, recommendation.",
+      "subtitle_pt": "Peer review: resumo, preocupações maiores, menores, recomendação. Específico e gentil."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "How to review an academic manuscript: strengths, major concerns, minor concerns, recommendation. Focus: peer review writing. The manuscript addresses an important and timely question.",
+      "text_pt": "Peer review: resumo, preocupações maiores, menores, recomendação. Específico e gentil. Foco: peer review writing. O manuscrito aborda uma questão importante e atual."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Peer Review Writing",
+      "body_en": "Structure: SUMMARY (one paragraph). MAJOR CONCERNS (fundamental issues). MINOR CONCERNS (details). RECOMMENDATION (accept/revise/reject). Be specific, be kind.",
+      "body_pt": "Peer review: resumo, preocupações maiores, menores, recomendação. Específico e gentil.",
+      "examples": [
+        {
+          "en": "The manuscript addresses an important and timely question.",
+          "pt": "O manuscrito aborda uma questão importante e atual."
+        },
+        {
+          "en": "My major concern is the sample size of twelve.",
+          "pt": "Minha principal preocupação é o tamanho amostral de doze."
+        },
+        {
+          "en": "I recommend major revisions before resubmission.",
+          "pt": "Recomendo revisões maiores antes de reenvio."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Peer Review Writing",
+      "items": [
+        {
+          "term": "manuscript",
+          "pt": "manuscrito"
+        },
+        {
+          "term": "concern",
+          "pt": "preocupação"
+        },
+        {
+          "term": "revision",
+          "pt": "revisão"
+        },
+        {
+          "term": "rigor",
+          "pt": "rigor"
+        },
+        {
+          "term": "reproducibility",
+          "pt": "reprodutibilidade"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-peer-review-writing-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The ___ addresses an important and timely question.\"",
+        "correct": "manuscript",
+        "explanation": "Full sentence: \"The manuscript addresses an important and timely question.\"",
+        "hint_pt_br": "O manuscrito aborda uma questão importante e atual."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-peer-review-writing-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "My major concern is the sample size of twelve.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"My major concern is the sample size of twelve.\"",
+        "hint_pt_br": "Minha principal preocupação é o tamanho amostral de doze."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-peer-review-writing-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "manuscript",
+            "manuscrito"
+          ],
+          [
+            "concern",
+            "preocupação"
+          ],
+          [
+            "revision",
+            "revisão"
+          ],
+          [
+            "rigor",
+            "rigor"
+          ],
+          [
+            "reproducibility",
+            "reprodutibilidade"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Peer Review Writing — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre peer review writing. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar, open your review with a summary."
+        },
+        {
+          "speaker": "user",
+          "target": "The manuscript addresses a timely question.",
+          "pt_hint": "Questão atual."
+        },
+        {
+          "speaker": "ai",
+          "text": "State your major concern."
+        },
+        {
+          "speaker": "user",
+          "target": "Sample size is too small to generalize.",
+          "pt_hint": "Amostra pequena."
+        },
+        {
+          "speaker": "ai",
+          "text": "And one minor concern?"
+        },
+        {
+          "speaker": "user",
+          "target": "Figure 3 lacks error bars.",
+          "pt_hint": "Falta barra de erro."
+        },
+        {
+          "speaker": "ai",
+          "text": "Make your recommendation."
+        },
+        {
+          "speaker": "user",
+          "target": "Major revisions before resubmission.",
+          "pt_hint": "Revisões maiores."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with encouragement."
+        },
+        {
+          "speaker": "user",
+          "target": "The core idea is worth pursuing carefully.",
+          "pt_hint": "Vale a pena."
+        },
+        {
+          "speaker": "ai",
+          "text": "Good reviews improve science without discouraging scientists."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "peer-review-writing-listening-story",
+      "title": "The review session",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the review structure. Use at least three review terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On Saturday morning, Kumar walked three doctoral students through how to write their first academic peer review."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Open with a fair summary — one paragraph that proves you read and understood the manuscript completely."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "And my major concern about sample size — should that come before or after the minor concerns?"
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Major concerns always come first. Minor concerns are details the authors can address in a single revision round."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "My recommendation is major revisions — should I still close with something encouraging about the core idea?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Good peer review, Kumar taught, improves science without discouraging the scientist — the hardest balance in academia."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Peer Review Writing\". How to review an academic manuscript: strengths, major concerns, minor concerns, recommendation. The manuscript addresses an important and timely question. My major concern is the sample size of twelve. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Peer Review Writing\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Peer Review Writing",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Peer Review Writing\".",
+        "hint_pt_br": "Ela fala o título: \"Peer Review Writing\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

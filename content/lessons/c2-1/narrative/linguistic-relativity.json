@@ -1,0 +1,283 @@
+{
+  "slug": "linguistic-relativity",
+  "title": "Linguistic Relativity",
+  "description": "Whorf-Sapir hypothesis: does your language shape your thought?",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Hipótese de Whorf-Sapir: a língua molda o pensamento? Versão forte desacreditada; versão fraca tem evidência.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Linguistic Relativity",
+      "subtitle_en": "Whorf-Sapir hypothesis: does your language shape your thought?",
+      "subtitle_pt": "Hipótese de Whorf-Sapir: a língua molda o pensamento? Versão forte desacreditada; versão fraca tem evidência."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Whorf-Sapir hypothesis: does your language shape your thought? Focus: linguistic relativity. Languages with more color terms help speakers distinguish shades faster.",
+      "text_pt": "Hipótese de Whorf-Sapir: a língua molda o pensamento? Versão forte desacreditada; versão fraca tem evidência. Foco: linguistic relativity. Línguas com mais cores distinguem tons mais rápido."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Linguistic Relativity",
+      "body_en": "STRONG WHORF: language determines thought (largely discredited). WEAK WHORF: language influences habitual attention. Evidence: color perception, spatial orientation, grammatical gender affect memory.",
+      "body_pt": "Hipótese de Whorf-Sapir: a língua molda o pensamento? Versão forte desacreditada; versão fraca tem evidência.",
+      "examples": [
+        {
+          "en": "Languages with more color terms help speakers distinguish shades faster.",
+          "pt": "Línguas com mais cores distinguem tons mais rápido."
+        },
+        {
+          "en": "Whether a noun is masculine or feminine affects how speakers describe it.",
+          "pt": "Gênero gramatical afeta como descrevemos objetos."
+        },
+        {
+          "en": "The weak Whorfian view is widely accepted today.",
+          "pt": "A versão fraca é amplamente aceita hoje."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Linguistic Relativity",
+      "items": [
+        {
+          "term": "relativity",
+          "pt": "relatividade"
+        },
+        {
+          "term": "Whorfian",
+          "pt": "whorfiano"
+        },
+        {
+          "term": "perception",
+          "pt": "percepção"
+        },
+        {
+          "term": "universal",
+          "pt": "universal"
+        },
+        {
+          "term": "cognition",
+          "pt": "cognição"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-linguistic-relativity-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Languages with more color terms help speakers ___ shades faster.\"",
+        "correct": "distinguish",
+        "explanation": "Full sentence: \"Languages with more color terms help speakers distinguish shades faster.\"",
+        "hint_pt_br": "Línguas com mais cores distinguem tons mais rápido."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-linguistic-relativity-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "Whether a noun is masculine or feminine affects how speakers describe it."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"Whether a noun is masculine or feminine affects how speakers describe it.\"",
+        "hint_pt_br": "Gênero gramatical afeta como descrevemos objetos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-linguistic-relativity-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "relativity",
+            "relatividade"
+          ],
+          [
+            "Whorfian",
+            "whorfiano"
+          ],
+          [
+            "perception",
+            "percepção"
+          ],
+          [
+            "universal",
+            "universal"
+          ],
+          [
+            "cognition",
+            "cognição"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Linguistic Relativity — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre linguistic relativity. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What's strong Whorfianism?"
+        },
+        {
+          "speaker": "user",
+          "target": "Language determines what you can think.",
+          "pt_hint": "Língua determina pensamento."
+        },
+        {
+          "speaker": "ai",
+          "text": "And the weak version?"
+        },
+        {
+          "speaker": "user",
+          "target": "Language influences habitual attention.",
+          "pt_hint": "Influencia atenção."
+        },
+        {
+          "speaker": "ai",
+          "text": "Give an evidence example."
+        },
+        {
+          "speaker": "user",
+          "target": "Color perception varies with vocabulary.",
+          "pt_hint": "Cor varia com vocabulário."
+        },
+        {
+          "speaker": "ai",
+          "text": "Does grammatical gender shape thought?"
+        },
+        {
+          "speaker": "user",
+          "target": "Slightly — it biases descriptions.",
+          "pt_hint": "Levemente, enviesa."
+        },
+        {
+          "speaker": "ai",
+          "text": "Can speakers translate any thought?"
+        },
+        {
+          "speaker": "user",
+          "target": "Almost always — with enough effort.",
+          "pt_hint": "Quase sempre, com esforço."
+        },
+        {
+          "speaker": "ai",
+          "text": "Language is a lens, not a cage."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "linguistic-relativity-listening-story",
+      "title": "The psycholinguistics talk",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize strong vs weak Whorfianism. Use at least three linguistic terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the psycholinguistics conference, Kumar listened to a talk that opened with one provocative question."
+        },
+        {
+          "speaker": "Speaker",
+          "voice": "female1",
+          "en": "Does the language you speak shape what you can actually think — or only what you find easy to notice?"
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Strong Whorfianism — the idea that language determines thought — has been largely discredited for decades now."
+        },
+        {
+          "speaker": "Speaker",
+          "voice": "female1",
+          "en": "But the weak version survives. Languages with more color terms help speakers distinguish subtle shades faster."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Grammatical gender biases descriptions. Speakers describe 'bridge' differently depending on whether it's feminine or masculine."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Linguistic relativity, Kumar believed, is a quiet reminder that every language you learn redraws the edges of your world."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Linguistic Relativity\". Whorf-Sapir hypothesis: does your language shape your thought? Languages with more color terms help speakers distinguish shades faster. Whether a noun is masculine or feminine affects how speakers describe it. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Linguistic Relativity\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Linguistic Relativity",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Linguistic Relativity\".",
+        "hint_pt_br": "Ela fala o título: \"Linguistic Relativity\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

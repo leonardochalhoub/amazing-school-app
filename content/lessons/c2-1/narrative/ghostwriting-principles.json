@@ -1,0 +1,283 @@
+{
+  "slug": "ghostwriting-principles",
+  "title": "Ghostwriting Principles",
+  "description": "Writing in someone else's voice: interviewing, capturing cadence, disappearing on the page.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Ghostwriting: tornar-se invisível. Entrevistar, capturar cadência, revisar na voz do outro.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Ghostwriting Principles",
+      "subtitle_en": "Writing in someone else's voice: interviewing, capturing cadence, disappearing on the page.",
+      "subtitle_pt": "Ghostwriting: tornar-se invisível. Entrevistar, capturar cadência, revisar na voz do outro."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Writing in someone else's voice: interviewing, capturing cadence, disappearing on the page. Focus: ghostwriting principles. A good ghost writes better than the author would on their worst day.",
+      "text_pt": "Ghostwriting: tornar-se invisível. Entrevistar, capturar cadência, revisar na voz do outro. Foco: ghostwriting principles. Um bom ghost escreve melhor que o autor no pior dia."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Ghostwriting Principles",
+      "body_en": "Ghost's job: become invisible. Interview deeply. Record cadence patterns (favorite phrases, rhythm). Draft. Read aloud in their voice. Revise toward their tone, not yours.",
+      "body_pt": "Ghostwriting: tornar-se invisível. Entrevistar, capturar cadência, revisar na voz do outro.",
+      "examples": [
+        {
+          "en": "A good ghost writes better than the author would on their worst day.",
+          "pt": "Um bom ghost escreve melhor que o autor no pior dia."
+        },
+        {
+          "en": "Cadence is the author's invisible fingerprint.",
+          "pt": "Cadência é a digital invisível do autor."
+        },
+        {
+          "en": "Read the draft aloud in their voice, not yours.",
+          "pt": "Leia em voz alta na voz dele, não na sua."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Ghostwriting Principles",
+      "items": [
+        {
+          "term": "ghostwrite",
+          "pt": "ghostwriting"
+        },
+        {
+          "term": "cadence",
+          "pt": "cadência"
+        },
+        {
+          "term": "voice",
+          "pt": "voz"
+        },
+        {
+          "term": "interview",
+          "pt": "entrevista"
+        },
+        {
+          "term": "attribution",
+          "pt": "atribuição"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-ghostwriting-principles-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"A good ghost ___ better than the author would on their worst day.\"",
+        "correct": "writes",
+        "explanation": "Full sentence: \"A good ghost writes better than the author would on their worst day.\"",
+        "hint_pt_br": "Um bom ghost escreve melhor que o autor no pior dia."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-ghostwriting-principles-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Cadence is the author's invisible fingerprint.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Cadence is the author's invisible fingerprint.\"",
+        "hint_pt_br": "Cadência é a digital invisível do autor."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-ghostwriting-principles-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "ghostwrite",
+            "ghostwriting"
+          ],
+          [
+            "cadence",
+            "cadência"
+          ],
+          [
+            "voice",
+            "voz"
+          ],
+          [
+            "interview",
+            "entrevista"
+          ],
+          [
+            "attribution",
+            "atribuição"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Ghostwriting Principles — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre ghostwriting principles. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, capture the author's cadence first."
+        },
+        {
+          "speaker": "user",
+          "target": "I record three hours before drafting.",
+          "pt_hint": "Gravo 3 horas."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you find their favorite phrases?"
+        },
+        {
+          "speaker": "user",
+          "target": "Transcribe, then highlight repeats.",
+          "pt_hint": "Transcrevo e marco."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the hardest part?"
+        },
+        {
+          "speaker": "user",
+          "target": "Killing my own voice on the page.",
+          "pt_hint": "Matar minha voz."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you test fidelity?"
+        },
+        {
+          "speaker": "user",
+          "target": "Read aloud in their voice.",
+          "pt_hint": "Leio na voz deles."
+        },
+        {
+          "speaker": "ai",
+          "text": "Best sign the piece worked?"
+        },
+        {
+          "speaker": "user",
+          "target": "They say 'that's exactly how I think'.",
+          "pt_hint": "'É assim que penso'."
+        },
+        {
+          "speaker": "ai",
+          "text": "Ghostwriting is love dressed as disappearance."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "ghostwriting-principles-listening-story",
+      "title": "The memoir project",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe the ghostwriter's four steps. Use at least three ghostwriting terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In his home studio, Joca met a former CEO whose memoir he would spend eight months writing."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "A good ghostwriter writes better than the author would write on their very worst day alone."
+        },
+        {
+          "speaker": "CEO",
+          "voice": "female1",
+          "en": "But the result has to sound like me — not like a professional writer pretending to be me cleverly."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "I record three hours of interviews before I even draft a single sentence of the first chapter."
+        },
+        {
+          "speaker": "CEO",
+          "voice": "female1",
+          "en": "My friends will tell me it sounds like me — that's the test that matters, honestly."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Ghostwriting, Joca believed, is the quiet art of loving a voice enough to vanish inside it completely for months."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Ghostwriting Principles\". Writing in someone else's voice: interviewing, capturing cadence, disappearing on the page. A good ghost writes better than the author would on their worst day. Cadence is the author's invisible fingerprint. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Ghostwriting Principles\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Ghostwriting Principles",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Ghostwriting Principles\".",
+        "hint_pt_br": "Ela fala o título: \"Ghostwriting Principles\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

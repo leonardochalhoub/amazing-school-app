@@ -1,0 +1,283 @@
+{
+  "slug": "long-form-essay",
+  "title": "Long-form Essay Writing",
+  "description": "Voice, structure over 5000 words, the recursive revision — the essayist's craft.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Ensaio longo: voz (lente, não estilo), estrutura (trançada, linear, circular), revisão recursiva.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Long-form Essay Writing",
+      "subtitle_en": "Voice, structure over 5000 words, the recursive revision — the essayist's craft.",
+      "subtitle_pt": "Ensaio longo: voz (lente, não estilo), estrutura (trançada, linear, circular), revisão recursiva."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Voice, structure over 5000 words, the recursive revision — the essayist's craft. Focus: long-form essay writing. Voice is a lens, not a style — it decides what you see.",
+      "text_pt": "Ensaio longo: voz (lente, não estilo), estrutura (trançada, linear, circular), revisão recursiva. Foco: long-form essay writing. Voz é lente, não estilo — decide o que você vê."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Long-form Essay Writing",
+      "body_en": "Long-form craft: find your VOICE (lens, not style). Use STRUCTURE (braided, linear, circular). REVISE recursively — each pass with a different question. Kill your darlings.",
+      "body_pt": "Ensaio longo: voz (lente, não estilo), estrutura (trançada, linear, circular), revisão recursiva.",
+      "examples": [
+        {
+          "en": "Voice is a lens, not a style — it decides what you see.",
+          "pt": "Voz é lente, não estilo — decide o que você vê."
+        },
+        {
+          "en": "Braided structures weave three threads across one essay.",
+          "pt": "Estrutura trançada tece três fios num ensaio."
+        },
+        {
+          "en": "Each revision pass asks a different question of the draft.",
+          "pt": "Cada revisão faz outra pergunta ao texto."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Long-form Essay Writing",
+      "items": [
+        {
+          "term": "voice",
+          "pt": "voz"
+        },
+        {
+          "term": "braid",
+          "pt": "trança"
+        },
+        {
+          "term": "revision",
+          "pt": "revisão"
+        },
+        {
+          "term": "darling",
+          "pt": "trecho querido"
+        },
+        {
+          "term": "recursive",
+          "pt": "recursivo"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-long-form-essay-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Voice is a lens, not a style — it ___ what you see.\"",
+        "correct": "decides",
+        "explanation": "Full sentence: \"Voice is a lens, not a style — it decides what you see.\"",
+        "hint_pt_br": "Voz é lente, não estilo — decide o que você vê."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-long-form-essay-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Braided structures weave three threads across one essay.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Braided structures weave three threads across one essay.\"",
+        "hint_pt_br": "Estrutura trançada tece três fios num ensaio."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-long-form-essay-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "voice",
+            "voz"
+          ],
+          [
+            "braid",
+            "trança"
+          ],
+          [
+            "revision",
+            "revisão"
+          ],
+          [
+            "darling",
+            "trecho querido"
+          ],
+          [
+            "recursive",
+            "recursivo"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Long-form Essay Writing — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre long-form essay writing. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara, define voice in one sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "The lens that decides what you notice.",
+          "pt_hint": "Lente do que nota."
+        },
+        {
+          "speaker": "ai",
+          "text": "Name three long-form structures."
+        },
+        {
+          "speaker": "user",
+          "target": "Braided, linear, circular.",
+          "pt_hint": "Trançada, linear, circular."
+        },
+        {
+          "speaker": "ai",
+          "text": "How many revision passes do you do?"
+        },
+        {
+          "speaker": "user",
+          "target": "At least five, each asking different questions.",
+          "pt_hint": "Pelo menos cinco."
+        },
+        {
+          "speaker": "ai",
+          "text": "'Kill your darlings' means?"
+        },
+        {
+          "speaker": "user",
+          "target": "Cut the lines you love but don't serve.",
+          "pt_hint": "Corta o que não serve."
+        },
+        {
+          "speaker": "ai",
+          "text": "When do you stop revising?"
+        },
+        {
+          "speaker": "user",
+          "target": "When changes become taste, not truth.",
+          "pt_hint": "Vira gosto."
+        },
+        {
+          "speaker": "ai",
+          "text": "Long-form essays reward readers who read twice."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "long-form-essay-listening-story",
+      "title": "The essay workshop",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe three craft moves. Use at least three long-form terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At Zara's Saturday essay workshop, six writers gathered to discuss an 8,000-word piece that had taken its author an entire year."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Voice is a lens, not a style — it decides what the writer sees, not how the sentences happen to sound."
+        },
+        {
+          "speaker": "Writer",
+          "voice": "male1",
+          "en": "I braided three threads — my grandmother's migration, the city's transformation, and my own return to that apartment."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Your first revision pass asked 'what is this really about?' — the second asked where the reader gets lost."
+        },
+        {
+          "speaker": "Writer",
+          "voice": "female2",
+          "en": "Killing my darlings cost me fifteen sentences I loved — the essay is better without every one of them."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Long-form essays, Zara repeated, reward readers who are willing to read them twice — and writers who revise them five times."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Long-form Essay Writing\". Voice, structure over 5000 words, the recursive revision — the essayist's craft. Voice is a lens, not a style — it decides what you see. Braided structures weave three threads across one essay. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Long-form Essay Writing\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Long-form Essay Writing",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Long-form Essay Writing\".",
+        "hint_pt_br": "Ela fala o título: \"Long-form Essay Writing\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

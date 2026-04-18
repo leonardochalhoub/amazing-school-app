@@ -1,0 +1,283 @@
+{
+  "slug": "chairing-debates",
+  "title": "Chairing Debates",
+  "description": "Moderating fairly: time control, steel-manning both sides, interrupting the dominant voice.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Moderando debate: 'Vamos ouvir o outro lado', 'No interesse do tempo', 'Pra garantir que ouvimos X'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chairing Debates",
+      "subtitle_en": "Moderating fairly: time control, steel-manning both sides, interrupting the dominant voice.",
+      "subtitle_pt": "Moderando debate: 'Vamos ouvir o outro lado', 'No interesse do tempo', 'Pra garantir que ouvimos X'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Moderating fairly: time control, steel-manning both sides, interrupting the dominant voice. Focus: chairing debates. Let's hear from the other side of the argument now.",
+      "text_pt": "Moderando debate: 'Vamos ouvir o outro lado', 'No interesse do tempo', 'Pra garantir que ouvimos X'. Foco: chairing debates. Vamos ouvir o outro lado do argumento agora."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Chairing Debates",
+      "body_en": "Moves: 'Let's hear from the other side.' 'In the interest of time...' 'I want to make sure we hear X's point.' 'Can you land that thought in one sentence?'",
+      "body_pt": "Moderando debate: 'Vamos ouvir o outro lado', 'No interesse do tempo', 'Pra garantir que ouvimos X'.",
+      "examples": [
+        {
+          "en": "Let's hear from the other side of the argument now.",
+          "pt": "Vamos ouvir o outro lado do argumento agora."
+        },
+        {
+          "en": "In the interest of time, can you land that in one sentence?",
+          "pt": "Pelo tempo, pode fechar em uma frase?"
+        },
+        {
+          "en": "I want to make sure we hear from our quieter voices.",
+          "pt": "Quero garantir que ouvimos as vozes mais quietas."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Chairing Debates",
+      "items": [
+        {
+          "term": "moderate",
+          "pt": "moderar"
+        },
+        {
+          "term": "interrupt",
+          "pt": "interromper"
+        },
+        {
+          "term": "balance",
+          "pt": "equilibrar"
+        },
+        {
+          "term": "steer",
+          "pt": "conduzir"
+        },
+        {
+          "term": "recap",
+          "pt": "recapitular"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-chairing-debates-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Let's hear from the other side of the ___ now.\"",
+        "correct": "argument",
+        "explanation": "Full sentence: \"Let's hear from the other side of the argument now.\"",
+        "hint_pt_br": "Vamos ouvir o outro lado do argumento agora."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-chairing-debates-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "In the interest of time, can you land that in one sentence?",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"In the interest of time, can you land that in one sentence?\"",
+        "hint_pt_br": "Pelo tempo, pode fechar em uma frase?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-chairing-debates-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "moderate",
+            "moderar"
+          ],
+          [
+            "interrupt",
+            "interromper"
+          ],
+          [
+            "balance",
+            "equilibrar"
+          ],
+          [
+            "steer",
+            "conduzir"
+          ],
+          [
+            "recap",
+            "recapitular"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Chairing Debates — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre chairing debates. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara, one panelist is dominating. Intervene."
+        },
+        {
+          "speaker": "user",
+          "target": "Let's hear from the other side now.",
+          "pt_hint": "Vamos ouvir o outro lado."
+        },
+        {
+          "speaker": "ai",
+          "text": "A guest rambles for two minutes."
+        },
+        {
+          "speaker": "user",
+          "target": "In the interest of time, land it briefly?",
+          "pt_hint": "No tempo, conclua."
+        },
+        {
+          "speaker": "ai",
+          "text": "Draw out a quieter voice."
+        },
+        {
+          "speaker": "user",
+          "target": "I want to hear your thoughts on this.",
+          "pt_hint": "Quero ouvir você."
+        },
+        {
+          "speaker": "ai",
+          "text": "Redirect off-topic debate."
+        },
+        {
+          "speaker": "user",
+          "target": "Let's return to the original question.",
+          "pt_hint": "Voltemos à pergunta."
+        },
+        {
+          "speaker": "ai",
+          "text": "Recap the debate at the end."
+        },
+        {
+          "speaker": "user",
+          "target": "Here are the three cruxes we surfaced.",
+          "pt_hint": "Três pontos centrais."
+        },
+        {
+          "speaker": "ai",
+          "text": "Chairing is the quietest form of leadership."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "chairing-debates-listening-story",
+      "title": "The moderated panel",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe Zara's four chairing moves. Use at least three moderation phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the annual conference, Zara chaired a panel where three strong personalities threatened to talk over each other constantly."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Let's hear from the other side of the argument now — we've spent eight minutes on one perspective."
+        },
+        {
+          "speaker": "Panelist",
+          "voice": "male1",
+          "en": "But the core point I was making about causation versus correlation deserves a full hearing before we pivot."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "In the interest of time, can you land that thought in one sentence so others can respond in turn?"
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Before we close, I want to make sure we hear from our quieter voices on the third question specifically."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Chairing well, Zara believed, is the quietest form of leadership — invisible when it works, obvious when it fails."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Chairing Debates\". Moderating fairly: time control, steel-manning both sides, interrupting the dominant voice. Let's hear from the other side of the argument now. In the interest of time, can you land that in one sentence? Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Chairing Debates\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Chairing Debates",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Chairing Debates\".",
+        "hint_pt_br": "Ela fala o título: \"Chairing Debates\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

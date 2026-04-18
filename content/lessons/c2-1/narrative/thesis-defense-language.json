@@ -1,0 +1,283 @@
+{
+  "slug": "thesis-defense-language",
+  "title": "Thesis Defense Language",
+  "description": "Opening, handling hostile questions, protecting the core argument gracefully.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Defesa de tese: abertura, perguntas hostis, proteger o núcleo, conceder com graça.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Thesis Defense Language",
+      "subtitle_en": "Opening, handling hostile questions, protecting the core argument gracefully.",
+      "subtitle_pt": "Defesa de tese: abertura, perguntas hostis, proteger o núcleo, conceder com graça."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Opening, handling hostile questions, protecting the core argument gracefully. Focus: thesis defense language. Thank you, committee. I'll summarize my argument in five minutes.",
+      "text_pt": "Defesa de tese: abertura, perguntas hostis, proteger o núcleo, conceder com graça. Foco: thesis defense language. Obrigada, banca. Resumo em cinco minutos."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Thesis Defense Language",
+      "body_en": "Opening: 'Thank you, committee.' Hostile Q: 'That's an excellent point. Let me address it in two parts.' Deflection: 'That falls outside the scope of this thesis.' Concession: 'I take your point fully.'",
+      "body_pt": "Defesa de tese: abertura, perguntas hostis, proteger o núcleo, conceder com graça.",
+      "examples": [
+        {
+          "en": "Thank you, committee. I'll summarize my argument in five minutes.",
+          "pt": "Obrigada, banca. Resumo em cinco minutos."
+        },
+        {
+          "en": "That's an excellent point. Let me address it in two parts.",
+          "pt": "Ótimo ponto. Permita-me em duas partes."
+        },
+        {
+          "en": "That question falls outside the scope of this thesis.",
+          "pt": "Essa questão está fora do escopo desta tese."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Thesis Defense Language",
+      "items": [
+        {
+          "term": "defense",
+          "pt": "defesa"
+        },
+        {
+          "term": "committee",
+          "pt": "banca"
+        },
+        {
+          "term": "scope",
+          "pt": "escopo"
+        },
+        {
+          "term": "address",
+          "pt": "abordar"
+        },
+        {
+          "term": "uphold",
+          "pt": "sustentar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-thesis-defense-language-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Thank you, ___. I'll summarize my argument in five minutes.\"",
+        "correct": "committee",
+        "explanation": "Full sentence: \"Thank you, committee. I'll summarize my argument in five minutes.\"",
+        "hint_pt_br": "Obrigada, banca. Resumo em cinco minutos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-thesis-defense-language-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "That's an excellent point. Let me address it in two parts."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"That's an excellent point. Let me address it in two parts.\"",
+        "hint_pt_br": "Ótimo ponto. Permita-me em duas partes."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-thesis-defense-language-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "defense",
+            "defesa"
+          ],
+          [
+            "committee",
+            "banca"
+          ],
+          [
+            "scope",
+            "escopo"
+          ],
+          [
+            "address",
+            "abordar"
+          ],
+          [
+            "uphold",
+            "sustentar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Thesis Defense Language — dialog",
+      "character": "Maya",
+      "pt_summary": "Diálogo sobre thesis defense language. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Maya, open your defense."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you, committee. I'll summarize in five.",
+          "pt_hint": "Obrigada, em cinco."
+        },
+        {
+          "speaker": "ai",
+          "text": "A professor challenges your methodology."
+        },
+        {
+          "speaker": "user",
+          "target": "Excellent point. Let me address in two parts.",
+          "pt_hint": "Em duas partes."
+        },
+        {
+          "speaker": "ai",
+          "text": "A question strays outside scope."
+        },
+        {
+          "speaker": "user",
+          "target": "That falls outside the scope of this thesis.",
+          "pt_hint": "Fora do escopo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Concede a minor weakness."
+        },
+        {
+          "speaker": "user",
+          "target": "I take your point fully on that detail.",
+          "pt_hint": "Concordo nesse ponto."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close the defense."
+        },
+        {
+          "speaker": "user",
+          "target": "I welcome further discussion. Thank you.",
+          "pt_hint": "Obrigada."
+        },
+        {
+          "speaker": "ai",
+          "text": "Poise in a defense is half the defense itself."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "thesis-defense-language-listening-story",
+      "title": "The defense",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four moves Maya makes. Use at least three defense phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the defense chamber, Maya stood before three professors and summarized five years of research in five minutes."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "Thank you, committee. My thesis argues that water temperature correlates with coral growth within defined ranges."
+        },
+        {
+          "speaker": "Professor",
+          "voice": "male1",
+          "en": "Your sample size is twelve — how do you defend generalizability from such a limited dataset?"
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "That's an excellent point. Let me address it in two parts — statistical power and external validity."
+        },
+        {
+          "speaker": "Professor",
+          "voice": "female2",
+          "en": "Fair. Now, one question about the broader climate implications — that may fall outside the scope, correct?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Defending a thesis, Maya realized, is mostly about poise — the quiet ability to protect the ideas you love."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Thesis Defense Language\". Opening, handling hostile questions, protecting the core argument gracefully. Thank you, committee. I'll summarize my argument in five minutes. That's an excellent point. Let me address it in two parts. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Thesis Defense Language\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Thesis Defense Language",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Thesis Defense Language\".",
+        "hint_pt_br": "Ela fala o título: \"Thesis Defense Language\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "postmodern-discourse",
+  "title": "Postmodern Discourse",
+  "description": "Irony, metafiction, fragmentation, grand-narrative skepticism.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Discurso pós-moderno: ironia, metaficção, fragmentação, ceticismo com grandes narrativas.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Postmodern Discourse",
+      "subtitle_en": "Irony, metafiction, fragmentation, grand-narrative skepticism.",
+      "subtitle_pt": "Discurso pós-moderno: ironia, metaficção, fragmentação, ceticismo com grandes narrativas."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Irony, metafiction, fragmentation, grand-narrative skepticism. Focus: postmodern discourse. Metafiction lets the novel remember that it is a novel.",
+      "text_pt": "Discurso pós-moderno: ironia, metaficção, fragmentação, ceticismo com grandes narrativas. Foco: postmodern discourse. Metaficção faz o romance lembrar que é romance."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Postmodern Discourse",
+      "body_en": "Postmodern traits: IRONY everywhere. METAFICTION (story aware of itself). FRAGMENTATION (no unified arc). SKEPTICISM of grand narratives (progress, truth, nation).",
+      "body_pt": "Discurso pós-moderno: ironia, metaficção, fragmentação, ceticismo com grandes narrativas.",
+      "examples": [
+        {
+          "en": "Metafiction lets the novel remember that it is a novel.",
+          "pt": "Metaficção faz o romance lembrar que é romance."
+        },
+        {
+          "en": "Fragmentation resists the neat arc we were trained to expect.",
+          "pt": "Fragmentação resiste ao arco ordenado esperado."
+        },
+        {
+          "en": "Postmodernism distrusts grand narratives of progress.",
+          "pt": "O pós-moderno desconfia de grandes narrativas de progresso."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Postmodern Discourse",
+      "items": [
+        {
+          "term": "metafiction",
+          "pt": "metaficção"
+        },
+        {
+          "term": "irony",
+          "pt": "ironia"
+        },
+        {
+          "term": "fragment",
+          "pt": "fragmento"
+        },
+        {
+          "term": "narrative",
+          "pt": "narrativa"
+        },
+        {
+          "term": "skepticism",
+          "pt": "ceticismo"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-postmodern-discourse-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"___ lets the novel remember that it is a novel.\"",
+        "correct": "Metafiction",
+        "explanation": "Full sentence: \"Metafiction lets the novel remember that it is a novel.\"",
+        "hint_pt_br": "Metaficção faz o romance lembrar que é romance."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-postmodern-discourse-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Fragmentation resists the neat arc we were trained to expect.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Fragmentation resists the neat arc we were trained to expect.\"",
+        "hint_pt_br": "Fragmentação resiste ao arco ordenado esperado."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-postmodern-discourse-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "metafiction",
+            "metaficção"
+          ],
+          [
+            "irony",
+            "ironia"
+          ],
+          [
+            "fragment",
+            "fragmento"
+          ],
+          [
+            "narrative",
+            "narrativa"
+          ],
+          [
+            "skepticism",
+            "ceticismo"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Postmodern Discourse — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre postmodern discourse. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara, define metafiction simply."
+        },
+        {
+          "speaker": "user",
+          "target": "A story that knows it is one.",
+          "pt_hint": "História que se sabe história."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why is irony so central?"
+        },
+        {
+          "speaker": "user",
+          "target": "It refuses naive belief.",
+          "pt_hint": "Rejeita a crença ingênua."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's wrong with grand narratives?"
+        },
+        {
+          "speaker": "user",
+          "target": "They simplify what resists simplification.",
+          "pt_hint": "Simplificam o complexo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is fragmentation just disorder?"
+        },
+        {
+          "speaker": "user",
+          "target": "No — it's honesty about memory.",
+          "pt_hint": "Honestidade com memória."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is postmodernism over?"
+        },
+        {
+          "speaker": "user",
+          "target": "We inherit its doubts, if not its style.",
+          "pt_hint": "Herdamos as dúvidas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Postmodern discourse is doubt dressed as literature."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "postmodern-discourse-listening-story",
+      "title": "The seminar on irony",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe three postmodern traits. Use at least three postmodern terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the postmodern discourse seminar, Zara traced the intellectual lineage of irony from Kierkegaard to contemporary fiction."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Metafiction lets the novel remember, mid-sentence, that it is a novel — not a window onto a pretended real."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male1",
+          "en": "And fragmentation resists the neat three-act arc we were trained to expect from every story since childhood."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Postmodernism distrusts grand narratives of progress, nation, truth — the single stories that flatten complicated lives."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female2",
+          "en": "So irony becomes a survival tool — the refusal of naive belief in the stories we were handed."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Postmodern discourse, Zara said, is doubt that finally learned how to laugh at itself without losing its footing."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Postmodern Discourse\". Irony, metafiction, fragmentation, grand-narrative skepticism. Metafiction lets the novel remember that it is a novel. Fragmentation resists the neat arc we were trained to expect. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Postmodern Discourse\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Postmodern Discourse",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Postmodern Discourse\".",
+        "hint_pt_br": "Ela fala o título: \"Postmodern Discourse\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

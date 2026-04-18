@@ -1,0 +1,283 @@
+{
+  "slug": "mastering-implicature",
+  "title": "Mastering Implicature",
+  "description": "What a speaker means beyond what they say — Gricean maxims and conversational implicature.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Implicatura: o que o falante quer dizer além do que diz. Máximas de Grice: quantidade, qualidade, relação, maneira.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Mastering Implicature",
+      "subtitle_en": "What a speaker means beyond what they say — Gricean maxims and conversational implicature.",
+      "subtitle_pt": "Implicatura: o que o falante quer dizer além do que diz. Máximas de Grice: quantidade, qualidade, relação, maneira."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "What a speaker means beyond what they say — Gricean maxims and conversational implicature. Focus: mastering implicature. 'Some students passed' implicates not all passed.",
+      "text_pt": "Implicatura: o que o falante quer dizer além do que diz. Máximas de Grice: quantidade, qualidade, relação, maneira. Foco: mastering implicature. 'Alguns alunos passaram' implica que nem todos."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Mastering Implicature",
+      "body_en": "Grice's four maxims: QUANTITY (right amount), QUALITY (truth), RELATION (relevance), MANNER (clarity). Violating any one triggers implicature — the hidden meaning.",
+      "body_pt": "Implicatura: o que o falante quer dizer além do que diz. Máximas de Grice: quantidade, qualidade, relação, maneira.",
+      "examples": [
+        {
+          "en": "'Some students passed' implicates not all passed.",
+          "pt": "'Alguns alunos passaram' implica que nem todos."
+        },
+        {
+          "en": "Saying 'it's getting late' often means 'let's go'.",
+          "pt": "'Está ficando tarde' costuma significar 'vamos'."
+        },
+        {
+          "en": "A flat 'fine' can mean anything but fine.",
+          "pt": "Um 'tudo bem' seco pode significar tudo menos bem."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Mastering Implicature",
+      "items": [
+        {
+          "term": "implicature",
+          "pt": "implicatura"
+        },
+        {
+          "term": "maxim",
+          "pt": "máxima"
+        },
+        {
+          "term": "inference",
+          "pt": "inferência"
+        },
+        {
+          "term": "pragmatic",
+          "pt": "pragmático"
+        },
+        {
+          "term": "presupposition",
+          "pt": "pressuposição"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-mastering-implicature-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"'Some students passed' ___ not all passed.\"",
+        "correct": "implicates",
+        "explanation": "Full sentence: \"'Some students passed' implicates not all passed.\"",
+        "hint_pt_br": "'Alguns alunos passaram' implica que nem todos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-mastering-implicature-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Saying 'it's getting late' often means 'let's go'.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Saying 'it's getting late' often means 'let's go'.\"",
+        "hint_pt_br": "'Está ficando tarde' costuma significar 'vamos'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-mastering-implicature-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "implicature",
+            "implicatura"
+          ],
+          [
+            "maxim",
+            "máxima"
+          ],
+          [
+            "inference",
+            "inferência"
+          ],
+          [
+            "pragmatic",
+            "pragmático"
+          ],
+          [
+            "presupposition",
+            "pressuposição"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Mastering Implicature — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre mastering implicature. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Give me an implicature from 'some passed'."
+        },
+        {
+          "speaker": "user",
+          "target": "It suggests not everyone passed.",
+          "pt_hint": "Nem todos passaram."
+        },
+        {
+          "speaker": "ai",
+          "text": "What maxim does sarcasm violate?"
+        },
+        {
+          "speaker": "user",
+          "target": "Quality — you say what you don't believe.",
+          "pt_hint": "Qualidade."
+        },
+        {
+          "speaker": "ai",
+          "text": "And 'let's change the subject' implicates?"
+        },
+        {
+          "speaker": "user",
+          "target": "That the current topic is sensitive.",
+          "pt_hint": "Tema sensível."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why is pragmatics at C2 level?"
+        },
+        {
+          "speaker": "user",
+          "target": "Because rules of meaning exceed grammar.",
+          "pt_hint": "Regras excedem gramática."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do learners spot implicature in real speech?"
+        },
+        {
+          "speaker": "user",
+          "target": "By tracking tone and context together.",
+          "pt_hint": "Tom e contexto."
+        },
+        {
+          "speaker": "ai",
+          "text": "Implicature is the grammar of what's unsaid."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "mastering-implicature-listening-story",
+      "title": "The linguistics seminar",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize two Gricean maxims and one real-life implicature. Use at least three linguistic terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the linguistics seminar, Zara listened to a professor explain why 'some' almost never means 'all'."
+        },
+        {
+          "speaker": "Professor",
+          "voice": "female1",
+          "en": "Grice's maxim of quantity tells us to say just enough — no more, no less than the situation requires."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male1",
+          "en": "So when my mother says 'it's getting late', she is implicating that my friends should go home."
+        },
+        {
+          "speaker": "Professor",
+          "voice": "female1",
+          "en": "Exactly. The literal proposition is a time observation — the pragmatic force is a polite expulsion."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female2",
+          "en": "C2 learners, in my experience, stop translating words and start tracking speaker intent across context."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Implicature, the professor concluded, is where grammar ends and social life begins speaking in riddles."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Mastering Implicature\". What a speaker means beyond what they say — Gricean maxims and conversational implicature. 'Some students passed' implicates not all passed. Saying 'it's getting late' often means 'let's go'. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Mastering Implicature\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Mastering Implicature",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Mastering Implicature\".",
+        "hint_pt_br": "Ela fala o título: \"Mastering Implicature\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

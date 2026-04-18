@@ -1,0 +1,283 @@
+{
+  "slug": "stage-writing",
+  "title": "Stage Writing Basics",
+  "description": "Dialogue-driven, actor-friendly text: subtext, beats, stage directions, silence.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Texto teatral: diálogo conduz, subtexto embaixo, beats, rubricas mínimas, silêncio é fala.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Stage Writing Basics",
+      "subtitle_en": "Dialogue-driven, actor-friendly text: subtext, beats, stage directions, silence.",
+      "subtitle_pt": "Texto teatral: diálogo conduz, subtexto embaixo, beats, rubricas mínimas, silêncio é fala."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "Dialogue-driven, actor-friendly text: subtext, beats, stage directions, silence. Focus: stage writing basics. She says 'I'm fine' — the subtext is 'I'm furious'.",
+      "text_pt": "Texto teatral: diálogo conduz, subtexto embaixo, beats, rubricas mínimas, silêncio é fala. Foco: stage writing basics. Ela diz 'tudo bem' — subtexto é 'furiosa'."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Stage Writing Basics",
+      "body_en": "Stage craft: DIALOGUE must drive action. SUBTEXT lives underneath. BEATS separate moments. STAGE DIRECTIONS minimal but precise. SILENCE is a line.",
+      "body_pt": "Texto teatral: diálogo conduz, subtexto embaixo, beats, rubricas mínimas, silêncio é fala.",
+      "examples": [
+        {
+          "en": "She says 'I'm fine' — the subtext is 'I'm furious'.",
+          "pt": "Ela diz 'tudo bem' — subtexto é 'furiosa'."
+        },
+        {
+          "en": "A beat tells the actor where to breathe.",
+          "pt": "Um beat diz onde o ator respira."
+        },
+        {
+          "en": "Silence, in stage directions, is a line.",
+          "pt": "Silêncio, na rubrica, é uma fala."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Stage Writing Basics",
+      "items": [
+        {
+          "term": "dialogue",
+          "pt": "diálogo"
+        },
+        {
+          "term": "subtext",
+          "pt": "subtexto"
+        },
+        {
+          "term": "beat",
+          "pt": "beat"
+        },
+        {
+          "term": "stage direction",
+          "pt": "rubrica"
+        },
+        {
+          "term": "silence",
+          "pt": "silêncio"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-stage-writing-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"She says 'I'm fine' — the subtext is 'I'm furious'.\"",
+        "correct": "furious'",
+        "explanation": "Full sentence: \"She says 'I'm fine' — the subtext is 'I'm furious'.\"",
+        "hint_pt_br": "Ela diz 'tudo bem' — subtexto é 'furiosa'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-stage-writing-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "A beat tells the actor where to breathe.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"A beat tells the actor where to breathe.\"",
+        "hint_pt_br": "Um beat diz onde o ator respira."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-stage-writing-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "dialogue",
+            "diálogo"
+          ],
+          [
+            "subtext",
+            "subtexto"
+          ],
+          [
+            "beat",
+            "beat"
+          ],
+          [
+            "stage direction",
+            "rubrica"
+          ],
+          [
+            "silence",
+            "silêncio"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Stage Writing Basics — dialog",
+      "character": "Rafa",
+      "pt_summary": "Diálogo sobre stage writing basics. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Rafa, what's subtext in one sentence?"
+        },
+        {
+          "speaker": "user",
+          "target": "What characters mean below what they say.",
+          "pt_hint": "O que querem dizer."
+        },
+        {
+          "speaker": "ai",
+          "text": "Give me a stage beat."
+        },
+        {
+          "speaker": "user",
+          "target": "(Beat. She looks away.)",
+          "pt_hint": "(Beat. Olha pro lado.)"
+        },
+        {
+          "speaker": "ai",
+          "text": "How minimal are stage directions?"
+        },
+        {
+          "speaker": "user",
+          "target": "As few as possible, precise every time.",
+          "pt_hint": "O mínimo possível."
+        },
+        {
+          "speaker": "ai",
+          "text": "Can silence carry a scene?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes — it's often the loudest line.",
+          "pt_hint": "Geralmente é a mais alta."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you test the script?"
+        },
+        {
+          "speaker": "user",
+          "target": "Read with actors in a room.",
+          "pt_hint": "Leia com atores."
+        },
+        {
+          "speaker": "ai",
+          "text": "Stage writing is written for ears, not eyes."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "stage-writing-listening-story",
+      "title": "The table read",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four stage-writing elements. Use at least three stage terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the table read, six actors sat around a script that had been rewritten nine times in three months."
+        },
+        {
+          "speaker": "Director",
+          "voice": "female1",
+          "en": "She says 'I'm fine' — but the subtext the audience must feel is 'I'm furious and about to leave'."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "A beat here lets the actor breathe, and a beat there tells the audience to breathe with her."
+        },
+        {
+          "speaker": "Actor",
+          "voice": "male2",
+          "en": "Stage directions are almost absent — precise when they appear, silent otherwise, trusting the actor."
+        },
+        {
+          "speaker": "Director",
+          "voice": "female1",
+          "en": "The silence before she answers — that line is louder than everything she says afterwards combined."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Stage writing, Rafa believed, is the one form of prose written for the ear rather than ever for the eye."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Stage Writing Basics\". Dialogue-driven, actor-friendly text: subtext, beats, stage directions, silence. She says 'I'm fine' — the subtext is 'I'm furious'. A beat tells the actor where to breathe. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Stage Writing Basics\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Stage Writing Basics",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Stage Writing Basics\".",
+        "hint_pt_br": "Ela fala o título: \"Stage Writing Basics\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "medical-english-advanced",
+  "title": "Medical English — Clinical Register",
+  "description": "Differential diagnosis, patient history, informed consent, clinical handover.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Inglês clínico: 'The patient presents with', 'differential diagnosis', 'informed consent', 'plan'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Medical English — Clinical Register",
+      "subtitle_en": "Differential diagnosis, patient history, informed consent, clinical handover.",
+      "subtitle_pt": "Inglês clínico: 'The patient presents with', 'differential diagnosis', 'informed consent', 'plan'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Differential diagnosis, patient history, informed consent, clinical handover. Focus: medical english — clinical register. The patient presents with acute chest pain.",
+      "text_pt": "Inglês clínico: 'The patient presents with', 'differential diagnosis', 'informed consent', 'plan'. Foco: medical english — clinical register. O paciente apresenta dor torácica aguda."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Medical English — Clinical Register",
+      "body_en": "Key patterns: 'The patient presents with...', 'Differential diagnosis includes...', 'Informed consent was obtained.', 'Plan: admit for observation.'",
+      "body_pt": "Inglês clínico: 'The patient presents with', 'differential diagnosis', 'informed consent', 'plan'.",
+      "examples": [
+        {
+          "en": "The patient presents with acute chest pain.",
+          "pt": "O paciente apresenta dor torácica aguda."
+        },
+        {
+          "en": "Differential diagnosis includes MI and pulmonary embolism.",
+          "pt": "Diagnóstico diferencial inclui IAM e embolia pulmonar."
+        },
+        {
+          "en": "Informed consent was obtained prior to the procedure.",
+          "pt": "Consentimento informado obtido antes do procedimento."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Medical English — Clinical Register",
+      "items": [
+        {
+          "term": "differential",
+          "pt": "diferencial"
+        },
+        {
+          "term": "consent",
+          "pt": "consentimento"
+        },
+        {
+          "term": "handover",
+          "pt": "passagem de plantão"
+        },
+        {
+          "term": "acute",
+          "pt": "agudo"
+        },
+        {
+          "term": "chronic",
+          "pt": "crônico"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-medical-english-advanced-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The patient ___ with acute chest pain.\"",
+        "correct": "presents",
+        "explanation": "Full sentence: \"The patient presents with acute chest pain.\"",
+        "hint_pt_br": "O paciente apresenta dor torácica aguda."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-medical-english-advanced-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Differential diagnosis includes MI and pulmonary embolism.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Differential diagnosis includes MI and pulmonary embolism.\"",
+        "hint_pt_br": "Diagnóstico diferencial inclui IAM e embolia pulmonar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-medical-english-advanced-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "differential",
+            "diferencial"
+          ],
+          [
+            "consent",
+            "consentimento"
+          ],
+          [
+            "handover",
+            "passagem de plantão"
+          ],
+          [
+            "acute",
+            "agudo"
+          ],
+          [
+            "chronic",
+            "crônico"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Medical English — Clinical Register — dialog",
+      "character": "Maya",
+      "pt_summary": "Diálogo sobre medical english — clinical register. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Maya, present this patient in clinical English."
+        },
+        {
+          "speaker": "user",
+          "target": "The patient presents with acute chest pain.",
+          "pt_hint": "Dor torácica aguda."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's your differential?"
+        },
+        {
+          "speaker": "user",
+          "target": "MI, pulmonary embolism, and anxiety.",
+          "pt_hint": "IAM, embolia, ansiedade."
+        },
+        {
+          "speaker": "ai",
+          "text": "Was consent obtained?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, documented and signed.",
+          "pt_hint": "Documentado e assinado."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's your immediate plan?"
+        },
+        {
+          "speaker": "user",
+          "target": "Admit for observation and troponin labs.",
+          "pt_hint": "Internação e troponina."
+        },
+        {
+          "speaker": "ai",
+          "text": "Handover summary in one sentence?"
+        },
+        {
+          "speaker": "user",
+          "target": "Stable, pending labs, monitored on telemetry.",
+          "pt_hint": "Estável, aguardando."
+        },
+        {
+          "speaker": "ai",
+          "text": "Medical English demands clarity under pressure."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "medical-english-advanced-listening-story",
+      "title": "The teaching round",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Present a patient case. Use at least three clinical phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On early morning rounds, Maya shadowed a senior physician who presented each patient in crisp clinical English."
+        },
+        {
+          "speaker": "Doctor",
+          "voice": "female1",
+          "en": "The patient presents with acute chest pain and shortness of breath over the last three hours."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female2",
+          "en": "Differential diagnosis includes myocardial infarction, pulmonary embolism, and musculoskeletal pain."
+        },
+        {
+          "speaker": "Doctor",
+          "voice": "female1",
+          "en": "Informed consent was obtained for the cardiac catheterization scheduled at noon today."
+        },
+        {
+          "speaker": "Doctor",
+          "voice": "female1",
+          "en": "Plan: admit for observation, serial troponins, and cardiology consult within the hour."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Clinical English, Maya learned, is a dialect of absolute precision forged across millions of hospital handovers."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Medical English — Clinical Register\". Differential diagnosis, patient history, informed consent, clinical handover. The patient presents with acute chest pain. Differential diagnosis includes MI and pulmonary embolism. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Medical English — Clinical Register\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Medical English — Clinical Register",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Medical English — Clinical Register\".",
+        "hint_pt_br": "Ela fala o título: \"Medical English — Clinical Register\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

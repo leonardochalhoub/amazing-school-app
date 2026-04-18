@@ -1,0 +1,283 @@
+{
+  "slug": "mayas-research-project",
+  "title": "Maya's Doctoral Research",
+  "description": "A narrative lesson spanning hypothesis, method, setback, revision, defense.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Arco da pesquisa: hipótese, método, fracasso, pivô, resultado, defesa. Linguagem muda em cada fase.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Maya's Doctoral Research",
+      "subtitle_en": "A narrative lesson spanning hypothesis, method, setback, revision, defense.",
+      "subtitle_pt": "Arco da pesquisa: hipótese, método, fracasso, pivô, resultado, defesa. Linguagem muda em cada fase."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "A narrative lesson spanning hypothesis, method, setback, revision, defense. Focus: maya's doctoral research. Five years ago I hypothesized coral-temperature correlation.",
+      "text_pt": "Arco da pesquisa: hipótese, método, fracasso, pivô, resultado, defesa. Linguagem muda em cada fase. Foco: maya's doctoral research. Há 5 anos hipotetizei correlação coral-temperatura."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Maya's Doctoral Research",
+      "body_en": "Narrative arc of research: initial hypothesis, methodology, a failed experiment, methodological pivot, validated result, defended thesis. Language of each stage differs.",
+      "body_pt": "Arco da pesquisa: hipótese, método, fracasso, pivô, resultado, defesa. Linguagem muda em cada fase.",
+      "examples": [
+        {
+          "en": "Five years ago I hypothesized coral-temperature correlation.",
+          "pt": "Há 5 anos hipotetizei correlação coral-temperatura."
+        },
+        {
+          "en": "Two years in, the method failed entirely.",
+          "pt": "Dois anos depois, o método falhou."
+        },
+        {
+          "en": "We pivoted the approach and ran a second experiment.",
+          "pt": "Mudamos a abordagem e fizemos outro experimento."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Maya's Doctoral Research",
+      "items": [
+        {
+          "term": "hypothesis",
+          "pt": "hipótese"
+        },
+        {
+          "term": "methodology",
+          "pt": "metodologia"
+        },
+        {
+          "term": "pivot",
+          "pt": "pivotar"
+        },
+        {
+          "term": "finding",
+          "pt": "achado"
+        },
+        {
+          "term": "defense",
+          "pt": "defesa"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-mayas-research-project-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Five years ago I hypothesized ___ correlation.\"",
+        "correct": "coral-temperature",
+        "explanation": "Full sentence: \"Five years ago I hypothesized coral-temperature correlation.\"",
+        "hint_pt_br": "Há 5 anos hipotetizei correlação coral-temperatura."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-mayas-research-project-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "Two years in, the method failed entirely."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"Two years in, the method failed entirely.\"",
+        "hint_pt_br": "Dois anos depois, o método falhou."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-mayas-research-project-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "hypothesis",
+            "hipótese"
+          ],
+          [
+            "methodology",
+            "metodologia"
+          ],
+          [
+            "pivot",
+            "pivotar"
+          ],
+          [
+            "finding",
+            "achado"
+          ],
+          [
+            "defense",
+            "defesa"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Maya's Doctoral Research — dialog",
+      "character": "Maya",
+      "pt_summary": "Diálogo sobre maya's doctoral research. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Maya, tell us the beginning of your research."
+        },
+        {
+          "speaker": "user",
+          "target": "I hypothesized water temperature drives coral growth.",
+          "pt_hint": "Hipótese: temperatura."
+        },
+        {
+          "speaker": "ai",
+          "text": "What went wrong in year two?"
+        },
+        {
+          "speaker": "user",
+          "target": "The measurement method failed at scale.",
+          "pt_hint": "Método falhou."
+        },
+        {
+          "speaker": "ai",
+          "text": "How did you pivot?"
+        },
+        {
+          "speaker": "user",
+          "target": "Changed sensors and reduced sample range.",
+          "pt_hint": "Sensores e amostra."
+        },
+        {
+          "speaker": "ai",
+          "text": "What was the validated finding?"
+        },
+        {
+          "speaker": "user",
+          "target": "A weak positive correlation within three degrees.",
+          "pt_hint": "Correlação fraca positiva."
+        },
+        {
+          "speaker": "ai",
+          "text": "How did the defense go?"
+        },
+        {
+          "speaker": "user",
+          "target": "I conceded what was true and protected the core.",
+          "pt_hint": "Concedi e protegi."
+        },
+        {
+          "speaker": "ai",
+          "text": "Real research is the long disciplined form of curiosity."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "mayas-research-project-listening-story",
+      "title": "The full arc",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe Maya's five-stage journey. Use at least three research terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the celebratory dinner after her defense, Maya described the full arc of five years of doctoral research."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "Five years ago I hypothesized that water temperature drives coral growth within a narrow biological range."
+        },
+        {
+          "speaker": "Advisor",
+          "voice": "male1",
+          "en": "Two years in, the measurement methodology failed at scale — for six months, we had almost no usable data."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "We pivoted — new sensors, narrower sample range, different statistical model entirely — and it worked on the third run."
+        },
+        {
+          "speaker": "Advisor",
+          "voice": "male1",
+          "en": "At the defense today, you conceded what was true and protected the central methodology with discipline and grace."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Real research, Maya finally understood at dinner, is the long and disciplined form of curiosity that most people never finish."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Maya's Doctoral Research\". A narrative lesson spanning hypothesis, method, setback, revision, defense. Five years ago I hypothesized coral-temperature correlation. Two years in, the method failed entirely. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Maya's Doctoral Research\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Maya's Doctoral Research",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Maya's Doctoral Research\".",
+        "hint_pt_br": "Ela fala o título: \"Maya's Doctoral Research\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

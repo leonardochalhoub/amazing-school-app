@@ -1,0 +1,283 @@
+{
+  "slug": "poetry-interpretation-deep",
+  "title": "Deep Poetry Interpretation",
+  "description": "Close reading: sound, image, silence, form. Letting the poem ask the question.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Leitura atenta: som, imagem, silêncio, forma. Deixe o poema fazer a pergunta.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Deep Poetry Interpretation",
+      "subtitle_en": "Close reading: sound, image, silence, form. Letting the poem ask the question.",
+      "subtitle_pt": "Leitura atenta: som, imagem, silêncio, forma. Deixe o poema fazer a pergunta."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Close reading: sound, image, silence, form. Letting the poem ask the question. Focus: deep poetry interpretation. The poem's silence in stanza three carries the whole meaning.",
+      "text_pt": "Leitura atenta: som, imagem, silêncio, forma. Deixe o poema fazer a pergunta. Foco: deep poetry interpretation. O silêncio da terceira estrofe carrega todo o sentido."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Deep Poetry Interpretation",
+      "body_en": "Close reading: (1) sound — rhyme, meter, alliteration. (2) image — concrete vs abstract. (3) silence — what's omitted. (4) form — shape signals meaning.",
+      "body_pt": "Leitura atenta: som, imagem, silêncio, forma. Deixe o poema fazer a pergunta.",
+      "examples": [
+        {
+          "en": "The poem's silence in stanza three carries the whole meaning.",
+          "pt": "O silêncio da terceira estrofe carrega todo o sentido."
+        },
+        {
+          "en": "Alliteration in the first line sets an uneasy tone.",
+          "pt": "A aliteração da primeira linha marca o tom."
+        },
+        {
+          "en": "The form — broken couplets — signals grief without saying it.",
+          "pt": "A forma — dísticos quebrados — sinaliza luto sem dizer."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Deep Poetry Interpretation",
+      "items": [
+        {
+          "term": "close reading",
+          "pt": "leitura atenta"
+        },
+        {
+          "term": "couplet",
+          "pt": "dístico"
+        },
+        {
+          "term": "volta",
+          "pt": "virada"
+        },
+        {
+          "term": "imagery",
+          "pt": "imagens"
+        },
+        {
+          "term": "silence",
+          "pt": "silêncio"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-poetry-interpretation-deep-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The poem's ___ in stanza three carries the whole meaning.\"",
+        "correct": "silence",
+        "explanation": "Full sentence: \"The poem's silence in stanza three carries the whole meaning.\"",
+        "hint_pt_br": "O silêncio da terceira estrofe carrega todo o sentido."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-poetry-interpretation-deep-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Alliteration in the first line sets an uneasy tone.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Alliteration in the first line sets an uneasy tone.\"",
+        "hint_pt_br": "A aliteração da primeira linha marca o tom."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-poetry-interpretation-deep-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "close reading",
+            "leitura atenta"
+          ],
+          [
+            "couplet",
+            "dístico"
+          ],
+          [
+            "volta",
+            "virada"
+          ],
+          [
+            "imagery",
+            "imagens"
+          ],
+          [
+            "silence",
+            "silêncio"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Deep Poetry Interpretation — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre deep poetry interpretation. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Lúcia, where do you start a close reading?"
+        },
+        {
+          "speaker": "user",
+          "target": "Sound. I read aloud twice first.",
+          "pt_hint": "Som. Leio em voz alta."
+        },
+        {
+          "speaker": "ai",
+          "text": "Then images?"
+        },
+        {
+          "speaker": "user",
+          "target": "Concrete before abstract, always.",
+          "pt_hint": "Concreto antes do abstrato."
+        },
+        {
+          "speaker": "ai",
+          "text": "What about silence?"
+        },
+        {
+          "speaker": "user",
+          "target": "I note what's missing — often the heart.",
+          "pt_hint": "O que falta é o coração."
+        },
+        {
+          "speaker": "ai",
+          "text": "How does form matter?"
+        },
+        {
+          "speaker": "user",
+          "target": "A broken sonnet says what it omits.",
+          "pt_hint": "Forma diz o não dito."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the volta?"
+        },
+        {
+          "speaker": "user",
+          "target": "The turn — where the poem changes mind.",
+          "pt_hint": "A virada."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close reading is listening for what the poem refuses to say."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "poetry-interpretation-deep-listening-story",
+      "title": "A Sunday in the library",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Analyze the poem's sound, image, silence, and form. Use at least three close-reading terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On a quiet Sunday afternoon, Dona Lúcia opened a poetry collection that she had been rereading for forty years."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "The alliteration in the first line — 'soft sighs silence Sunday' — sets a mood before meaning arrives."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female2",
+          "en": "The image shifts from concrete to abstract exactly at the volta in line nine, and I almost missed it entirely."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Notice what the poem refuses to say in stanza three — the silence carries more weight than any word would."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male1",
+          "en": "And the broken couplet form itself signals the grief that the speaker can't quite articulate aloud anywhere."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Deep reading, Lúcia taught, is the art of listening to what a poem chooses not to say out loud."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Deep Poetry Interpretation\". Close reading: sound, image, silence, form. Letting the poem ask the question. The poem's silence in stanza three carries the whole meaning. Alliteration in the first line sets an uneasy tone. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Deep Poetry Interpretation\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Deep Poetry Interpretation",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Deep Poetry Interpretation\".",
+        "hint_pt_br": "Ela fala o título: \"Deep Poetry Interpretation\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

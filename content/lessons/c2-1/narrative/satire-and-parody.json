@@ -1,0 +1,283 @@
+{
+  "slug": "satire-and-parody",
+  "title": "Satire and Parody",
+  "description": "Reading and writing satire: exaggeration, inversion, deadpan, target selection.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Sátira exagera defeitos. Paródia imita estilo. Ferramentas: inversão, tom sério, especificidade, contenção.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Satire and Parody",
+      "subtitle_en": "Reading and writing satire: exaggeration, inversion, deadpan, target selection.",
+      "subtitle_pt": "Sátira exagera defeitos. Paródia imita estilo. Ferramentas: inversão, tom sério, especificidade, contenção."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "Reading and writing satire: exaggeration, inversion, deadpan, target selection. Focus: satire and parody. Satire works by exaggerating what is already true.",
+      "text_pt": "Sátira exagera defeitos. Paródia imita estilo. Ferramentas: inversão, tom sério, especificidade, contenção. Foco: satire and parody. Sátira funciona exagerando o que já é verdade."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Satire and Parody",
+      "body_en": "Satire exaggerates a flaw to expose it. Parody imitates a style to mock it. Key tools: INVERSION (flip roles), DEADPAN (serious tone), SPECIFICITY (real targets), RESTRAINT (less is more).",
+      "body_pt": "Sátira exagera defeitos. Paródia imita estilo. Ferramentas: inversão, tom sério, especificidade, contenção.",
+      "examples": [
+        {
+          "en": "Satire works by exaggerating what is already true.",
+          "pt": "Sátira funciona exagerando o que já é verdade."
+        },
+        {
+          "en": "The best parody loves its target a little.",
+          "pt": "A melhor paródia ama o alvo um pouco."
+        },
+        {
+          "en": "Deadpan delivery doubles the punch.",
+          "pt": "Tom sério dobra o impacto."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Satire and Parody",
+      "items": [
+        {
+          "term": "satire",
+          "pt": "sátira"
+        },
+        {
+          "term": "parody",
+          "pt": "paródia"
+        },
+        {
+          "term": "deadpan",
+          "pt": "tom seco"
+        },
+        {
+          "term": "inversion",
+          "pt": "inversão"
+        },
+        {
+          "term": "target",
+          "pt": "alvo"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-satire-and-parody-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Satire works by ___ what is already true.\"",
+        "correct": "exaggerating",
+        "explanation": "Full sentence: \"Satire works by exaggerating what is already true.\"",
+        "hint_pt_br": "Sátira funciona exagerando o que já é verdade."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-satire-and-parody-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "The best parody loves its target a little."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"The best parody loves its target a little.\"",
+        "hint_pt_br": "A melhor paródia ama o alvo um pouco."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-satire-and-parody-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "satire",
+            "sátira"
+          ],
+          [
+            "parody",
+            "paródia"
+          ],
+          [
+            "deadpan",
+            "tom seco"
+          ],
+          [
+            "inversion",
+            "inversão"
+          ],
+          [
+            "target",
+            "alvo"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Satire and Parody — dialog",
+      "character": "Rafa",
+      "pt_summary": "Diálogo sobre satire and parody. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Write a one-line satirical exaggeration."
+        },
+        {
+          "speaker": "user",
+          "target": "Our new AI writes better apologies than humans.",
+          "pt_hint": "IA escreve desculpas melhores."
+        },
+        {
+          "speaker": "ai",
+          "text": "Use inversion in a quick joke."
+        },
+        {
+          "speaker": "user",
+          "target": "The smartest person in the room stayed quiet.",
+          "pt_hint": "Mais inteligente ficou quieto."
+        },
+        {
+          "speaker": "ai",
+          "text": "Try deadpan — say something absurd flatly."
+        },
+        {
+          "speaker": "user",
+          "target": "I only drink water from bottled clouds.",
+          "pt_hint": "Só bebo água de nuvens engarrafadas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Pick a worthy satirical target."
+        },
+        {
+          "speaker": "user",
+          "target": "Productivity podcasts that stress you out.",
+          "pt_hint": "Podcasts de produtividade."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with restraint — less is more."
+        },
+        {
+          "speaker": "user",
+          "target": "Genius is knowing which jokes to delete.",
+          "pt_hint": "Saber quais piadas cortar."
+        },
+        {
+          "speaker": "ai",
+          "text": "Satire is empathy with a scalpel."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "satire-and-parody-listening-story",
+      "title": "The satire workshop",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the four tools of satire. Use at least three satirical terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the comedy writing workshop, Rafa and a friend debated what separates great satire from ordinary mockery."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "Satire works by exaggerating what is already true — never by inventing something false about the target."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female1",
+          "en": "Parody, on the other hand, imitates a style so precisely that the reader laughs at recognition alone."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "Deadpan delivery doubles the punch because the audience has to do half the work themselves to get the joke."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female1",
+          "en": "The best satirists love their targets a little — cruelty without affection rarely lasts past its first reading."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Satire at its sharpest, Rafa concluded, is never entertainment — it is the quietest form of moral clarity."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Satire and Parody\". Reading and writing satire: exaggeration, inversion, deadpan, target selection. Satire works by exaggerating what is already true. The best parody loves its target a little. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Satire and Parody\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Satire and Parody",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Satire and Parody\".",
+        "hint_pt_br": "Ela fala o título: \"Satire and Parody\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

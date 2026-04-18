@@ -1,0 +1,283 @@
+{
+  "slug": "philosophy-of-language",
+  "title": "Philosophy of Language",
+  "description": "Reference, meaning, speech acts — Frege, Wittgenstein, Austin in one accessible hour.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Filosofia da linguagem: sentido vs referência, jogos de linguagem, atos de fala. A linguagem age no mundo.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Philosophy of Language",
+      "subtitle_en": "Reference, meaning, speech acts — Frege, Wittgenstein, Austin in one accessible hour.",
+      "subtitle_pt": "Filosofia da linguagem: sentido vs referência, jogos de linguagem, atos de fala. A linguagem age no mundo."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Reference, meaning, speech acts — Frege, Wittgenstein, Austin in one accessible hour. Focus: philosophy of language. Sense is how we refer; reference is what we refer to.",
+      "text_pt": "Filosofia da linguagem: sentido vs referência, jogos de linguagem, atos de fala. A linguagem age no mundo. Foco: philosophy of language. Sentido é como referimos; referência é o que referimos."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Philosophy of Language",
+      "body_en": "Key ideas: SENSE vs REFERENCE (Frege). LANGUAGE GAMES (Wittgenstein). SPEECH ACTS — locutionary/illocutionary/perlocutionary (Austin). Language acts on the world, not just describes it.",
+      "body_pt": "Filosofia da linguagem: sentido vs referência, jogos de linguagem, atos de fala. A linguagem age no mundo.",
+      "examples": [
+        {
+          "en": "Sense is how we refer; reference is what we refer to.",
+          "pt": "Sentido é como referimos; referência é o que referimos."
+        },
+        {
+          "en": "Meaning arises from use, not definition.",
+          "pt": "Significado emerge do uso, não da definição."
+        },
+        {
+          "en": "'I promise' is not describing — it's performing.",
+          "pt": "'Prometo' não descreve — realiza."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Philosophy of Language",
+      "items": [
+        {
+          "term": "reference",
+          "pt": "referência"
+        },
+        {
+          "term": "sense",
+          "pt": "sentido"
+        },
+        {
+          "term": "illocutionary",
+          "pt": "ilocucionário"
+        },
+        {
+          "term": "performative",
+          "pt": "performativo"
+        },
+        {
+          "term": "game",
+          "pt": "jogo"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-philosophy-of-language-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Sense is how we refer; ___ is what we refer to.\"",
+        "correct": "reference",
+        "explanation": "Full sentence: \"Sense is how we refer; reference is what we refer to.\"",
+        "hint_pt_br": "Sentido é como referimos; referência é o que referimos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-philosophy-of-language-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Meaning arises from use, not definition.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"Meaning arises from use, not definition.\"",
+        "hint_pt_br": "Significado emerge do uso, não da definição."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-philosophy-of-language-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "reference",
+            "referência"
+          ],
+          [
+            "sense",
+            "sentido"
+          ],
+          [
+            "illocutionary",
+            "ilocucionário"
+          ],
+          [
+            "performative",
+            "performativo"
+          ],
+          [
+            "game",
+            "jogo"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Philosophy of Language — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre philosophy of language. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What's sense vs reference?"
+        },
+        {
+          "speaker": "user",
+          "target": "Morning star and evening star refer to Venus.",
+          "pt_hint": "Ambas = Vênus."
+        },
+        {
+          "speaker": "ai",
+          "text": "But have different senses?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes — different ways of referring.",
+          "pt_hint": "Modos diferentes."
+        },
+        {
+          "speaker": "ai",
+          "text": "Wittgenstein's language games?"
+        },
+        {
+          "speaker": "user",
+          "target": "Meaning is how words get used in life.",
+          "pt_hint": "Uso na vida."
+        },
+        {
+          "speaker": "ai",
+          "text": "Give a performative utterance."
+        },
+        {
+          "speaker": "user",
+          "target": "'I promise' is an act, not a description.",
+          "pt_hint": "Ato, não descrição."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the illocutionary force?"
+        },
+        {
+          "speaker": "user",
+          "target": "What the speaker does by saying it.",
+          "pt_hint": "O que o falante faz."
+        },
+        {
+          "speaker": "ai",
+          "text": "Language is action dressed as description."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "philosophy-of-language-listening-story",
+      "title": "The philosophy seminar",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize three philosophers' key ideas. Use at least three philosophical terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the small philosophy seminar, Kumar guided students through a century of debates about meaning."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Frege separated sense from reference — morning star and evening star both refer to Venus but mean differently."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "Wittgenstein argued that meaning emerges from use — language games we learn by living, not by defining."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Austin showed us that saying 'I promise' is not describing a promise — it is performing one through the words themselves."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "So illocutionary force is what we do with an utterance, beyond what it literally says about the world."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Philosophy of language, Kumar believed, teaches you to feel the weight every sentence carries into the next moment."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Philosophy of Language\". Reference, meaning, speech acts — Frege, Wittgenstein, Austin in one accessible hour. Sense is how we refer; reference is what we refer to. Meaning arises from use, not definition. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Philosophy of Language\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Philosophy of Language",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Philosophy of Language\".",
+        "hint_pt_br": "Ela fala o título: \"Philosophy of Language\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

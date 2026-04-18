@@ -1,0 +1,283 @@
+{
+  "slug": "financial-markets-advanced",
+  "title": "Financial Markets — Analyst Register",
+  "description": "Earnings calls, guidance, macro overlays, risk framing.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Inglês financeiro: guidance, headwinds, tailwinds, macro overlay, risk factors.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Financial Markets — Analyst Register",
+      "subtitle_en": "Earnings calls, guidance, macro overlays, risk framing.",
+      "subtitle_pt": "Inglês financeiro: guidance, headwinds, tailwinds, macro overlay, risk factors."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Earnings calls, guidance, macro overlays, risk framing. Focus: financial markets — analyst register. Our guidance for Q4 remains unchanged despite macro headwinds.",
+      "text_pt": "Inglês financeiro: guidance, headwinds, tailwinds, macro overlay, risk factors. Foco: financial markets — analyst register. Nosso guidance para Q4 segue inalterado apesar dos ventos contrários."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Financial Markets — Analyst Register",
+      "body_en": "Key phrases: 'Guidance for FY24...', 'Headwinds include...', 'Tailwinds from...', 'Macro overlay suggests...', 'Risk factors remain...'",
+      "body_pt": "Inglês financeiro: guidance, headwinds, tailwinds, macro overlay, risk factors.",
+      "examples": [
+        {
+          "en": "Our guidance for Q4 remains unchanged despite macro headwinds.",
+          "pt": "Nosso guidance para Q4 segue inalterado apesar dos ventos contrários."
+        },
+        {
+          "en": "Tailwinds from the strong dollar supported margins.",
+          "pt": "Ventos favoráveis do dólar forte sustentaram as margens."
+        },
+        {
+          "en": "Risk factors remain elevated across emerging markets.",
+          "pt": "Fatores de risco permanecem elevados nos mercados emergentes."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Financial Markets — Analyst Register",
+      "items": [
+        {
+          "term": "guidance",
+          "pt": "projeção"
+        },
+        {
+          "term": "headwinds",
+          "pt": "ventos contrários"
+        },
+        {
+          "term": "tailwinds",
+          "pt": "ventos favoráveis"
+        },
+        {
+          "term": "overlay",
+          "pt": "camada"
+        },
+        {
+          "term": "exposure",
+          "pt": "exposição"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-financial-markets-advanced-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Our guidance for Q4 remains ___ despite macro headwinds.\"",
+        "correct": "unchanged",
+        "explanation": "Full sentence: \"Our guidance for Q4 remains unchanged despite macro headwinds.\"",
+        "hint_pt_br": "Nosso guidance para Q4 segue inalterado apesar dos ventos contrários."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-financial-markets-advanced-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Tailwinds from the strong dollar supported margins.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Tailwinds from the strong dollar supported margins.\"",
+        "hint_pt_br": "Ventos favoráveis do dólar forte sustentaram as margens."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-financial-markets-advanced-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "guidance",
+            "projeção"
+          ],
+          [
+            "headwinds",
+            "ventos contrários"
+          ],
+          [
+            "tailwinds",
+            "ventos favoráveis"
+          ],
+          [
+            "overlay",
+            "camada"
+          ],
+          [
+            "exposure",
+            "exposição"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Financial Markets — Analyst Register — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre financial markets — analyst register. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, summarize today's earnings call in analyst register."
+        },
+        {
+          "speaker": "user",
+          "target": "Guidance held despite revenue headwinds.",
+          "pt_hint": "Guidance manteve."
+        },
+        {
+          "speaker": "ai",
+          "text": "What tailwinds supported margins?"
+        },
+        {
+          "speaker": "user",
+          "target": "Dollar strength and lower shipping costs.",
+          "pt_hint": "Dólar e logística."
+        },
+        {
+          "speaker": "ai",
+          "text": "Any notable risk factors?"
+        },
+        {
+          "speaker": "user",
+          "target": "Regulatory exposure in Europe.",
+          "pt_hint": "Regulação na Europa."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's your macro overlay?"
+        },
+        {
+          "speaker": "user",
+          "target": "Rates stay high through Q3 at least.",
+          "pt_hint": "Juros altos até Q3."
+        },
+        {
+          "speaker": "ai",
+          "text": "Would you upgrade or downgrade the stock?"
+        },
+        {
+          "speaker": "user",
+          "target": "Hold, pending next guidance update.",
+          "pt_hint": "Hold, aguardando."
+        },
+        {
+          "speaker": "ai",
+          "text": "Analyst register: conviction without exaggeration."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "financial-markets-advanced-listening-story",
+      "title": "The earnings call",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the CFO's key points. Use at least three financial terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On the quarterly earnings call, Joca listened as the CFO navigated questions from thirty analysts across three time zones."
+        },
+        {
+          "speaker": "CFO",
+          "voice": "female1",
+          "en": "Our guidance for the full year remains unchanged despite meaningful macro headwinds across our major markets."
+        },
+        {
+          "speaker": "Analyst",
+          "voice": "male1",
+          "en": "Could you elaborate on the tailwinds that helped offset currency exposure in the Latin American segment?"
+        },
+        {
+          "speaker": "CFO",
+          "voice": "female1",
+          "en": "Dollar strength and improved shipping costs supported gross margins by approximately eighty basis points this quarter."
+        },
+        {
+          "speaker": "Analyst",
+          "voice": "female2",
+          "en": "Risk factors — particularly regulatory exposure in the European Union — remain elevated heading into next year."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Financial English, Joca noted, is an entire register compressed into three hours of carefully rehearsed conviction."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Financial Markets — Analyst Register\". Earnings calls, guidance, macro overlays, risk framing. Our guidance for Q4 remains unchanged despite macro headwinds. Tailwinds from the strong dollar supported margins. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Financial Markets — Analyst Register\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Financial Markets — Analyst Register",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Financial Markets — Analyst Register\".",
+        "hint_pt_br": "Ela fala o título: \"Financial Markets — Analyst Register\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

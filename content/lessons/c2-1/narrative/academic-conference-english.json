@@ -1,0 +1,283 @@
+{
+  "slug": "academic-conference-english",
+  "title": "Academic Conference English",
+  "description": "Poster sessions, chairing panels, asking good questions, networking over coffee.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Conferência acadêmica: elogiar específico, perguntar por método, continuar no café, trocar cartão.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Academic Conference English",
+      "subtitle_en": "Poster sessions, chairing panels, asking good questions, networking over coffee.",
+      "subtitle_pt": "Conferência acadêmica: elogiar específico, perguntar por método, continuar no café, trocar cartão."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Poster sessions, chairing panels, asking good questions, networking over coffee. Focus: academic conference english. I found your argument about bias particularly compelling.",
+      "text_pt": "Conferência acadêmica: elogiar específico, perguntar por método, continuar no café, trocar cartão. Foco: academic conference english. Achei seu argumento sobre viés particularmente convincente."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Academic Conference English",
+      "body_en": "Useful phrases: 'I found your argument about X particularly compelling.', 'Could you say more about the methodology?', 'I'd love to continue this over coffee.', 'Here's my card.'",
+      "body_pt": "Conferência acadêmica: elogiar específico, perguntar por método, continuar no café, trocar cartão.",
+      "examples": [
+        {
+          "en": "I found your argument about bias particularly compelling.",
+          "pt": "Achei seu argumento sobre viés particularmente convincente."
+        },
+        {
+          "en": "Could you say more about your methodology?",
+          "pt": "Poderia falar mais sobre sua metodologia?"
+        },
+        {
+          "en": "I'd love to continue this over coffee later.",
+          "pt": "Adoraria continuar no café depois."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Academic Conference English",
+      "items": [
+        {
+          "term": "poster",
+          "pt": "pôster"
+        },
+        {
+          "term": "panel",
+          "pt": "painel"
+        },
+        {
+          "term": "moderator",
+          "pt": "moderador"
+        },
+        {
+          "term": "abstract",
+          "pt": "abstract"
+        },
+        {
+          "term": "networking",
+          "pt": "networking"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-conference-english-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I found your argument about bias ___ compelling.\"",
+        "correct": "particularly",
+        "explanation": "Full sentence: \"I found your argument about bias particularly compelling.\"",
+        "hint_pt_br": "Achei seu argumento sobre viés particularmente convincente."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-conference-english-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Could you say more about your methodology?",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Could you say more about your methodology?\"",
+        "hint_pt_br": "Poderia falar mais sobre sua metodologia?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-conference-english-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "poster",
+            "pôster"
+          ],
+          [
+            "panel",
+            "painel"
+          ],
+          [
+            "moderator",
+            "moderador"
+          ],
+          [
+            "abstract",
+            "abstract"
+          ],
+          [
+            "networking",
+            "networking"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Academic Conference English — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre academic conference english. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar, approach a speaker after their talk."
+        },
+        {
+          "speaker": "user",
+          "target": "I found your argument on bias compelling.",
+          "pt_hint": "Argumento convincente."
+        },
+        {
+          "speaker": "ai",
+          "text": "Ask a method question."
+        },
+        {
+          "speaker": "user",
+          "target": "Could you say more about your sampling?",
+          "pt_hint": "Sobre a amostragem?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Offer to continue the conversation."
+        },
+        {
+          "speaker": "user",
+          "target": "Would you like to grab coffee later?",
+          "pt_hint": "Café depois?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Exchange contact info."
+        },
+        {
+          "speaker": "user",
+          "target": "Here's my card. Send me your paper?",
+          "pt_hint": "Meu cartão."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close politely."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you — it was a pleasure.",
+          "pt_hint": "Obrigado, prazer."
+        },
+        {
+          "speaker": "ai",
+          "text": "Conference English is networking at academic pace."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "academic-conference-english-listening-story",
+      "title": "The coffee break",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe three networking moves. Use at least three conference phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the coffee break between sessions, Kumar watched a young scholar navigate the conference with remarkable composure."
+        },
+        {
+          "speaker": "Scholar",
+          "voice": "female1",
+          "en": "I found your argument about bias in large language models particularly compelling this morning."
+        },
+        {
+          "speaker": "Speaker",
+          "voice": "male1",
+          "en": "Thank you — that section took me almost a year to structure clearly without losing the nuance."
+        },
+        {
+          "speaker": "Scholar",
+          "voice": "female1",
+          "en": "Could you say more about your methodology for the human evaluation phase of the study?"
+        },
+        {
+          "speaker": "Speaker",
+          "voice": "male1",
+          "en": "Let's continue this over coffee. Here's my card — I'd love to read any follow-up you write on it."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Academic English, Kumar believed, reaches its final form in unscripted conversations between two curious strangers."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Academic Conference English\". Poster sessions, chairing panels, asking good questions, networking over coffee. I found your argument about bias particularly compelling. Could you say more about your methodology? Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Academic Conference English\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Academic Conference English",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Academic Conference English\".",
+        "hint_pt_br": "Ela fala o título: \"Academic Conference English\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

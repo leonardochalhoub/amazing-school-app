@@ -1,0 +1,283 @@
+{
+  "slug": "understatement-advanced",
+  "title": "Understatement — Expert British Register",
+  "description": "Litotes, double negatives, dry qualifiers — British speech's most reserved tools.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Subjetivação britânica: 'not bad' = excelente, 'slight issue' = desastre, 'rather interesting' = fortíssima opinião.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Understatement — Expert British Register",
+      "subtitle_en": "Litotes, double negatives, dry qualifiers — British speech's most reserved tools.",
+      "subtitle_pt": "Subjetivação britânica: 'not bad' = excelente, 'slight issue' = desastre, 'rather interesting' = fortíssima opinião."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Litotes, double negatives, dry qualifiers — British speech's most reserved tools. Focus: understatement — expert british register. That wasn't half bad, actually.",
+      "text_pt": "Subjetivação britânica: 'not bad' = excelente, 'slight issue' = desastre, 'rather interesting' = fortíssima opinião. Foco: understatement — expert british register. Não foi nada mau, na verdade. (= foi excelente)"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Understatement — Expert British Register",
+      "body_en": "'Not bad' = excellent. 'A slight issue' = catastrophe. 'Rather interesting' = strongly opinionated. Understatement flatters the listener by assuming they'll infer correctly.",
+      "body_pt": "Subjetivação britânica: 'not bad' = excelente, 'slight issue' = desastre, 'rather interesting' = fortíssima opinião.",
+      "examples": [
+        {
+          "en": "That wasn't half bad, actually.",
+          "pt": "Não foi nada mau, na verdade. (= foi excelente)"
+        },
+        {
+          "en": "We have a slight issue with the bridge collapsing.",
+          "pt": "Temos um pequeno problema com a ponte caindo."
+        },
+        {
+          "en": "He's not entirely wrong on that point.",
+          "pt": "Ele não está totalmente errado. (= tem razão)"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Understatement — Expert British Register",
+      "items": [
+        {
+          "term": "understatement",
+          "pt": "subestimação"
+        },
+        {
+          "term": "litotes",
+          "pt": "litotes"
+        },
+        {
+          "term": "wry",
+          "pt": "irônico"
+        },
+        {
+          "term": "reserved",
+          "pt": "reservado"
+        },
+        {
+          "term": "dry",
+          "pt": "seco"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-understatement-advanced-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"That wasn't half bad, ___.\"",
+        "correct": "actually",
+        "explanation": "Full sentence: \"That wasn't half bad, actually.\"",
+        "hint_pt_br": "Não foi nada mau, na verdade. (= foi excelente)"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-understatement-advanced-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "We have a slight issue with the bridge collapsing."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"We have a slight issue with the bridge collapsing.\"",
+        "hint_pt_br": "Temos um pequeno problema com a ponte caindo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-understatement-advanced-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "understatement",
+            "subestimação"
+          ],
+          [
+            "litotes",
+            "litotes"
+          ],
+          [
+            "wry",
+            "irônico"
+          ],
+          [
+            "reserved",
+            "reservado"
+          ],
+          [
+            "dry",
+            "seco"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Understatement — Expert British Register — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre understatement — expert british register. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Praise a brilliant performance in British understatement."
+        },
+        {
+          "speaker": "user",
+          "target": "Not bad. Not bad at all.",
+          "pt_hint": "Nada mau."
+        },
+        {
+          "speaker": "ai",
+          "text": "Describe a disaster the British way."
+        },
+        {
+          "speaker": "user",
+          "target": "A slight inconvenience, really.",
+          "pt_hint": "Uma leve inconveniência."
+        },
+        {
+          "speaker": "ai",
+          "text": "Tell me you strongly disagree."
+        },
+        {
+          "speaker": "user",
+          "target": "I'm not entirely convinced.",
+          "pt_hint": "Não estou totalmente convencido."
+        },
+        {
+          "speaker": "ai",
+          "text": "Describe ecstasy with reserve."
+        },
+        {
+          "speaker": "user",
+          "target": "Rather pleasant, on balance.",
+          "pt_hint": "Bem agradável."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with a dry qualifier."
+        },
+        {
+          "speaker": "user",
+          "target": "It has its moments.",
+          "pt_hint": "Tem seus momentos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Understatement is confidence that refuses to perform."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "understatement-advanced-listening-story",
+      "title": "A British dinner",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four instances of understatement. Use at least three understatement phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At a quiet London dinner, an old friend summarized Zara's entire career in two almost-invisible sentences."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "male1",
+          "en": "Twenty years in Brazil — not bad, really. Not bad at all, all things considered."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "That's the highest praise he's ever given anyone, translated out of British understatement into plain English."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "male1",
+          "en": "We had a slight issue with the weather today — only three of us fainted on the bus platform."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "You'd describe a burning building as 'a touch warm' just to avoid sounding overdramatic at dinner."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Understatement, Zara remembered, was the one part of her native register no second language could ever quite replace."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Understatement — Expert British Register\". Litotes, double negatives, dry qualifiers — British speech's most reserved tools. That wasn't half bad, actually. We have a slight issue with the bridge collapsing. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Understatement — Expert British Register\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Understatement — Expert British Register",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Understatement — Expert British Register\".",
+        "hint_pt_br": "Ela fala o título: \"Understatement — Expert British Register\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

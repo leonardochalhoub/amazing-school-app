@@ -1,0 +1,283 @@
+{
+  "slug": "code-switching-multilingual",
+  "title": "Code-switching — Multilingual Fluency",
+  "description": "Switching between languages mid-sentence: when it builds intimacy vs when it signals exclusion.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Code-switching constrói pertencimento mas pode excluir. Combine audiência, preserve vocabulário, traduza.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Code-switching — Multilingual Fluency",
+      "subtitle_en": "Switching between languages mid-sentence: when it builds intimacy vs when it signals exclusion.",
+      "subtitle_pt": "Code-switching constrói pertencimento mas pode excluir. Combine audiência, preserve vocabulário, traduza."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Switching between languages mid-sentence: when it builds intimacy vs when it signals exclusion. Focus: code-switching — multilingual fluency. Brazilians living abroad often code-switch unconsciously.",
+      "text_pt": "Code-switching constrói pertencimento mas pode excluir. Combine audiência, preserve vocabulário, traduza. Foco: code-switching — multilingual fluency. Brasileiros no exterior fazem code-switch sem notar."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Code-switching — Multilingual Fluency",
+      "body_en": "Code-switching builds belonging within a group, but can exclude outsiders. Rules: match audience, preserve key vocabulary in its natural language, translate when anyone present won't follow.",
+      "body_pt": "Code-switching constrói pertencimento mas pode excluir. Combine audiência, preserve vocabulário, traduza.",
+      "examples": [
+        {
+          "en": "Brazilians living abroad often code-switch unconsciously.",
+          "pt": "Brasileiros no exterior fazem code-switch sem notar."
+        },
+        {
+          "en": "Switching to Portuguese for 'saudade' is untranslatable necessity.",
+          "pt": "Mudar pra português pra 'saudade' é inevitável."
+        },
+        {
+          "en": "Code-switching mid-sentence can exclude outsiders from the conversation.",
+          "pt": "Code-switch pode excluir quem não fala ambas."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Code-switching — Multilingual Fluency",
+      "items": [
+        {
+          "term": "code-switch",
+          "pt": "code-switch"
+        },
+        {
+          "term": "bilingual",
+          "pt": "bilíngue"
+        },
+        {
+          "term": "untranslatable",
+          "pt": "intraduzível"
+        },
+        {
+          "term": "exclusion",
+          "pt": "exclusão"
+        },
+        {
+          "term": "intimacy",
+          "pt": "intimidade"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-code-switching-multilingual-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Brazilians living abroad often code-switch ___.\"",
+        "correct": "unconsciously",
+        "explanation": "Full sentence: \"Brazilians living abroad often code-switch unconsciously.\"",
+        "hint_pt_br": "Brasileiros no exterior fazem code-switch sem notar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-code-switching-multilingual-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Switching to Portuguese for 'saudade' is untranslatable necessity.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Switching to Portuguese for 'saudade' is untranslatable necessity.\"",
+        "hint_pt_br": "Mudar pra português pra 'saudade' é inevitável."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-code-switching-multilingual-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "code-switch",
+            "code-switch"
+          ],
+          [
+            "bilingual",
+            "bilíngue"
+          ],
+          [
+            "untranslatable",
+            "intraduzível"
+          ],
+          [
+            "exclusion",
+            "exclusão"
+          ],
+          [
+            "intimacy",
+            "intimidade"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Code-switching — Multilingual Fluency — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre code-switching — multilingual fluency. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara, when do you code-switch?"
+        },
+        {
+          "speaker": "user",
+          "target": "When saudade doesn't translate cleanly.",
+          "pt_hint": "Quando saudade não traduz."
+        },
+        {
+          "speaker": "ai",
+          "text": "Does it exclude others?"
+        },
+        {
+          "speaker": "user",
+          "target": "Sometimes — we translate when needed.",
+          "pt_hint": "Às vezes, traduzimos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why does it feel intimate?"
+        },
+        {
+          "speaker": "user",
+          "target": "Shared vocabulary signals shared world.",
+          "pt_hint": "Vocabulário compartilhado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Any rule for switching in meetings?"
+        },
+        {
+          "speaker": "user",
+          "target": "Match the least fluent person in the room.",
+          "pt_hint": "Menor fluência na sala."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is bilingual thought different from monolingual?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes — concepts live across both languages.",
+          "pt_hint": "Conceitos em duas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Code-switching is fluency with a second heart."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "code-switching-multilingual-listening-story",
+      "title": "The bilingual dinner",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe three code-switching rules and one example. Use at least three bilingual terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the bilingual dinner, Zara observed three fluent speakers navigate between Portuguese and English without ever pausing."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Brazilians living abroad often code-switch unconsciously — the word 'saudade' is simply untranslatable at dinner."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "male1",
+          "en": "But when a monolingual guest arrives, we stay in one language out of simple hospitality, not performance."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Switching mid-sentence can exclude outsiders — fluent bilinguals have to choose inclusion deliberately every time."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female2",
+          "en": "Bilingual thought is different — whole concepts live across both languages, and some emotions only speak Portuguese."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Code-switching, Zara believed, is the deepest form of fluency — the ability to belong to two worlds at once."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Code-switching — Multilingual Fluency\". Switching between languages mid-sentence: when it builds intimacy vs when it signals exclusion. Brazilians living abroad often code-switch unconsciously. Switching to Portuguese for 'saudade' is untranslatable necessity. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Code-switching — Multilingual Fluency\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Code-switching — Multilingual Fluency",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Code-switching — Multilingual Fluency\".",
+        "hint_pt_br": "Ela fala o título: \"Code-switching — Multilingual Fluency\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

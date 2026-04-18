@@ -1,0 +1,283 @@
+{
+  "slug": "legal-english-advanced",
+  "title": "Legal English — Contract Drafting",
+  "description": "Drafting principles: precision over brevity, defined terms, severability, force majeure.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Redação jurídica: defina termos, consistência, severabilidade, força maior, sem ambiguidade.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Legal English — Contract Drafting",
+      "subtitle_en": "Drafting principles: precision over brevity, defined terms, severability, force majeure.",
+      "subtitle_pt": "Redação jurídica: defina termos, consistência, severabilidade, força maior, sem ambiguidade."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Drafting principles: precision over brevity, defined terms, severability, force majeure. Focus: legal english — contract drafting. Both Parties acknowledge and agree to the foregoing Terms.",
+      "text_pt": "Redação jurídica: defina termos, consistência, severabilidade, força maior, sem ambiguidade. Foco: legal english — contract drafting. As Partes reconhecem e concordam com os Termos anteriores."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Legal English — Contract Drafting",
+      "body_en": "Rules: DEFINE every key term. Use DEFINED TERMS consistently. Include SEVERABILITY (if one clause fails, the rest survive). Include FORCE MAJEURE (unforeseeable events). Avoid ambiguity.",
+      "body_pt": "Redação jurídica: defina termos, consistência, severabilidade, força maior, sem ambiguidade.",
+      "examples": [
+        {
+          "en": "Both Parties acknowledge and agree to the foregoing Terms.",
+          "pt": "As Partes reconhecem e concordam com os Termos anteriores."
+        },
+        {
+          "en": "If any provision is invalid, the remainder shall remain in force.",
+          "pt": "Se alguma cláusula for inválida, o restante permanece."
+        },
+        {
+          "en": "Neither Party shall be liable for delay caused by Force Majeure.",
+          "pt": "Nenhuma Parte será responsável por atraso por Força Maior."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Legal English — Contract Drafting",
+      "items": [
+        {
+          "term": "provision",
+          "pt": "cláusula"
+        },
+        {
+          "term": "severability",
+          "pt": "severabilidade"
+        },
+        {
+          "term": "foregoing",
+          "pt": "anterior"
+        },
+        {
+          "term": "force majeure",
+          "pt": "força maior"
+        },
+        {
+          "term": "indemnify",
+          "pt": "indenizar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-legal-english-advanced-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Both Parties ___ and agree to the foregoing Terms.\"",
+        "correct": "acknowledge",
+        "explanation": "Full sentence: \"Both Parties acknowledge and agree to the foregoing Terms.\"",
+        "hint_pt_br": "As Partes reconhecem e concordam com os Termos anteriores."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-legal-english-advanced-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "If any provision is invalid, the remainder shall remain in force.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"If any provision is invalid, the remainder shall remain in force.\"",
+        "hint_pt_br": "Se alguma cláusula for inválida, o restante permanece."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-legal-english-advanced-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "provision",
+            "cláusula"
+          ],
+          [
+            "severability",
+            "severabilidade"
+          ],
+          [
+            "foregoing",
+            "anterior"
+          ],
+          [
+            "force majeure",
+            "força maior"
+          ],
+          [
+            "indemnify",
+            "indenizar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Legal English — Contract Drafting — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre legal english — contract drafting. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, draft the opening of a services contract."
+        },
+        {
+          "speaker": "user",
+          "target": "This Agreement is entered into on this date.",
+          "pt_hint": "Contrato feito nesta data."
+        },
+        {
+          "speaker": "ai",
+          "text": "Define the parties precisely."
+        },
+        {
+          "speaker": "user",
+          "target": "Between Company A (Client) and Company B (Vendor).",
+          "pt_hint": "Entre A e B."
+        },
+        {
+          "speaker": "ai",
+          "text": "Include severability clearly."
+        },
+        {
+          "speaker": "user",
+          "target": "If any provision fails, the remainder survives.",
+          "pt_hint": "Se falhar, resto sobrevive."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now force majeure."
+        },
+        {
+          "speaker": "user",
+          "target": "Neither Party is liable for acts beyond control.",
+          "pt_hint": "Atos fora de controle."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with governing law."
+        },
+        {
+          "speaker": "user",
+          "target": "Governed by the laws of Brazil, São Paulo courts.",
+          "pt_hint": "Lei brasileira, foro SP."
+        },
+        {
+          "speaker": "ai",
+          "text": "Legal English: say exactly what you mean, forever."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "legal-english-advanced-listening-story",
+      "title": "Reviewing the draft",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the four drafting principles covered. Use at least three legal terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the conference room at midnight, Joca and his lawyer reviewed a contract line by painful line."
+        },
+        {
+          "speaker": "Lawyer",
+          "voice": "female1",
+          "en": "Every key term must be defined once and then used consistently — ambiguity is the enemy of enforceability."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Severability protects us if one clause is struck down — the remainder of the contract survives intact."
+        },
+        {
+          "speaker": "Lawyer",
+          "voice": "female1",
+          "en": "Force majeure covers the unforeseeable: wars, pandemics, natural disasters that halt performance temporarily."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "And we specify governing law up front, so any future dispute has a clear jurisdiction from day one."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Legal English, Joca realized, is less about language than about removing every possible future argument."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Legal English — Contract Drafting\". Drafting principles: precision over brevity, defined terms, severability, force majeure. Both Parties acknowledge and agree to the foregoing Terms. If any provision is invalid, the remainder shall remain in force. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Legal English — Contract Drafting\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Legal English — Contract Drafting",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Legal English — Contract Drafting\".",
+        "hint_pt_br": "Ela fala o título: \"Legal English — Contract Drafting\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

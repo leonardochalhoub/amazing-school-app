@@ -1,0 +1,283 @@
+{
+  "slug": "satirical-writing",
+  "title": "Writing Satire",
+  "description": "Crafting satire that punches up, not down: restraint, specificity, empathy with anger.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Sátira boa: sobe (não desce), específica, contida, empática. Poucas piadas, corte fundo.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Writing Satire",
+      "subtitle_en": "Crafting satire that punches up, not down: restraint, specificity, empathy with anger.",
+      "subtitle_pt": "Sátira boa: sobe (não desce), específica, contida, empática. Poucas piadas, corte fundo."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "Crafting satire that punches up, not down: restraint, specificity, empathy with anger. Focus: writing satire. Satire should punch up, never down.",
+      "text_pt": "Sátira boa: sobe (não desce), específica, contida, empática. Poucas piadas, corte fundo. Foco: writing satire. A sátira sobe, nunca desce."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Writing Satire",
+      "body_en": "Rules: PUNCH UP (power, never victim). SPECIFICITY (the real target, named). RESTRAINT (fewer jokes, deeper cut). EMPATHY (love your subject enough to see them).",
+      "body_pt": "Sátira boa: sobe (não desce), específica, contida, empática. Poucas piadas, corte fundo.",
+      "examples": [
+        {
+          "en": "Satire should punch up, never down.",
+          "pt": "A sátira sobe, nunca desce."
+        },
+        {
+          "en": "Restraint makes the remaining joke unforgettable.",
+          "pt": "Contenção torna a piada restante inesquecível."
+        },
+        {
+          "en": "Specific targets land harder than generic ones.",
+          "pt": "Alvos específicos pegam mais forte que genéricos."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Writing Satire",
+      "items": [
+        {
+          "term": "satire",
+          "pt": "sátira"
+        },
+        {
+          "term": "punch up",
+          "pt": "subir"
+        },
+        {
+          "term": "restraint",
+          "pt": "contenção"
+        },
+        {
+          "term": "specificity",
+          "pt": "especificidade"
+        },
+        {
+          "term": "empathy",
+          "pt": "empatia"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-satirical-writing-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"___ should punch up, never down.\"",
+        "correct": "Satire",
+        "explanation": "Full sentence: \"Satire should punch up, never down.\"",
+        "hint_pt_br": "A sátira sobe, nunca desce."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-satirical-writing-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Restraint makes the remaining joke unforgettable.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Restraint makes the remaining joke unforgettable.\"",
+        "hint_pt_br": "Contenção torna a piada restante inesquecível."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-satirical-writing-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "satire",
+            "sátira"
+          ],
+          [
+            "punch up",
+            "subir"
+          ],
+          [
+            "restraint",
+            "contenção"
+          ],
+          [
+            "specificity",
+            "especificidade"
+          ],
+          [
+            "empathy",
+            "empatia"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Writing Satire — dialog",
+      "character": "Rafa",
+      "pt_summary": "Diálogo sobre writing satire. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Rafa, first rule of satire?"
+        },
+        {
+          "speaker": "user",
+          "target": "Punch up, never punch down.",
+          "pt_hint": "Sobe, nunca desce."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why restraint?"
+        },
+        {
+          "speaker": "user",
+          "target": "Fewer jokes, deeper cut.",
+          "pt_hint": "Menos piadas, corte fundo."
+        },
+        {
+          "speaker": "ai",
+          "text": "How specific should targets be?"
+        },
+        {
+          "speaker": "user",
+          "target": "Named if possible, recognizable always.",
+          "pt_hint": "Nomeados se possível."
+        },
+        {
+          "speaker": "ai",
+          "text": "Role of empathy in satire?"
+        },
+        {
+          "speaker": "user",
+          "target": "You must love the target a little.",
+          "pt_hint": "Tem que amar um pouco."
+        },
+        {
+          "speaker": "ai",
+          "text": "When is satire irresponsible?"
+        },
+        {
+          "speaker": "user",
+          "target": "When it mocks the powerless.",
+          "pt_hint": "Quando zomba do fraco."
+        },
+        {
+          "speaker": "ai",
+          "text": "Great satire protects the reader from becoming cruel."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "satirical-writing-listening-story",
+      "title": "The satire workshop",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four rules. Use at least three satire terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the late-night comedy writing room, Rafa and two writers argued about whether a single joke would survive the morning."
+        },
+        {
+          "speaker": "Writer",
+          "voice": "female1",
+          "en": "Satire should punch up — at power, at systems — and never at the powerless who are already suffering."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "Restraint makes the remaining joke unforgettable — every joke you cut strengthens the one you keep standing."
+        },
+        {
+          "speaker": "Writer",
+          "voice": "male2",
+          "en": "Specificity beats generic. Name the executive, name the absurd policy, name the year it happened to you."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "Empathy matters — you must love the target a little, or the satire curdles into cruelty the audience can smell."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Good satire, Rafa believed, protects the reader from becoming cruel — the writer bears that responsibility first."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Writing Satire\". Crafting satire that punches up, not down: restraint, specificity, empathy with anger. Satire should punch up, never down. Restraint makes the remaining joke unforgettable. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Writing Satire\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Writing Satire",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Writing Satire\".",
+        "hint_pt_br": "Ela fala o título: \"Writing Satire\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "policy-analysis",
+  "title": "Policy Analysis",
+  "description": "Frame, evaluate, trade off, recommend — a policy memo in four movements.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Análise de política: enquadrar problema, avaliar opções, trade-offs, recomendar com humildade.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Policy Analysis",
+      "subtitle_en": "Frame, evaluate, trade off, recommend — a policy memo in four movements.",
+      "subtitle_pt": "Análise de política: enquadrar problema, avaliar opções, trade-offs, recomendar com humildade."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Frame, evaluate, trade off, recommend — a policy memo in four movements. Focus: policy analysis. We frame the housing crisis as a supply-side constraint.",
+      "text_pt": "Análise de política: enquadrar problema, avaliar opções, trade-offs, recomendar com humildade. Foco: policy analysis. Enquadramos a crise habitacional como restrição de oferta."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Policy Analysis",
+      "body_en": "Memo structure: FRAME the problem precisely. EVALUATE options by criteria (cost, equity, feasibility). TRADE OFF honestly. RECOMMEND with humility about uncertainty.",
+      "body_pt": "Análise de política: enquadrar problema, avaliar opções, trade-offs, recomendar com humildade.",
+      "examples": [
+        {
+          "en": "We frame the housing crisis as a supply-side constraint.",
+          "pt": "Enquadramos a crise habitacional como restrição de oferta."
+        },
+        {
+          "en": "Option B scores highest on equity but lowest on speed.",
+          "pt": "Opção B lidera em equidade mas não em velocidade."
+        },
+        {
+          "en": "We recommend Option C, conditional on pilot results.",
+          "pt": "Recomendamos C, condicionado a resultados de piloto."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Policy Analysis",
+      "items": [
+        {
+          "term": "frame",
+          "pt": "enquadrar"
+        },
+        {
+          "term": "trade-off",
+          "pt": "trade-off"
+        },
+        {
+          "term": "equity",
+          "pt": "equidade"
+        },
+        {
+          "term": "pilot",
+          "pt": "piloto"
+        },
+        {
+          "term": "recommendation",
+          "pt": "recomendação"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-policy-analysis-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"We frame the housing crisis as a ___ constraint.\"",
+        "correct": "supply-side",
+        "explanation": "Full sentence: \"We frame the housing crisis as a supply-side constraint.\"",
+        "hint_pt_br": "Enquadramos a crise habitacional como restrição de oferta."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-policy-analysis-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Option B scores highest on equity but lowest on speed.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"Option B scores highest on equity but lowest on speed.\"",
+        "hint_pt_br": "Opção B lidera em equidade mas não em velocidade."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-policy-analysis-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "frame",
+            "enquadrar"
+          ],
+          [
+            "trade-off",
+            "trade-off"
+          ],
+          [
+            "equity",
+            "equidade"
+          ],
+          [
+            "pilot",
+            "piloto"
+          ],
+          [
+            "recommendation",
+            "recomendação"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Policy Analysis — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre policy analysis. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar, frame the housing crisis in one sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "It's a supply-side constraint, not demand.",
+          "pt_hint": "Restrição de oferta."
+        },
+        {
+          "speaker": "ai",
+          "text": "By which criteria do you evaluate options?"
+        },
+        {
+          "speaker": "user",
+          "target": "Cost, equity, feasibility, speed.",
+          "pt_hint": "Custo, equidade, viabilidade, velocidade."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the honest trade-off in Option B?"
+        },
+        {
+          "speaker": "user",
+          "target": "High equity, low speed.",
+          "pt_hint": "Alta equidade, baixa velocidade."
+        },
+        {
+          "speaker": "ai",
+          "text": "Final recommendation?"
+        },
+        {
+          "speaker": "user",
+          "target": "Option C, conditional on a six-month pilot.",
+          "pt_hint": "Opção C condicionada."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you handle uncertainty?"
+        },
+        {
+          "speaker": "user",
+          "target": "Name it, then propose monitoring.",
+          "pt_hint": "Nomeie e monitore."
+        },
+        {
+          "speaker": "ai",
+          "text": "Policy writing is humility dressed as conviction."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "policy-analysis-listening-story",
+      "title": "The policy memo review",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize four moves of policy analysis. Use at least three policy terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the policy seminar, Kumar reviewed a draft memo from a student who would later join the ministry of housing."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Frame the housing crisis precisely — is it a supply-side constraint or a demand-side distortion in this region?"
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "I evaluated four options against cost, equity, feasibility, and speed — option B led on equity alone."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Your trade-off section is honest — option B is slowest, and the memo doesn't hide that awkward reality."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "My recommendation is option C, conditional on a six-month pilot with monitoring and clear sunset clauses."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Policy writing, Kumar taught, is the humility of uncertainty dressed carefully in the conviction required for decisions."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Policy Analysis\". Frame, evaluate, trade off, recommend — a policy memo in four movements. We frame the housing crisis as a supply-side constraint. Option B scores highest on equity but lowest on speed. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Policy Analysis\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Policy Analysis",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Policy Analysis\".",
+        "hint_pt_br": "Ela fala o título: \"Policy Analysis\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

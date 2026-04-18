@@ -1,0 +1,283 @@
+{
+  "slug": "biographical-writing",
+  "title": "Biographical Writing",
+  "description": "Writing another person's life: voice, scope, primary sources, ethical limits.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Biografia: escopo, fontes primárias, preservar voz, limites éticos (privado vs público).",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Biographical Writing",
+      "subtitle_en": "Writing another person's life: voice, scope, primary sources, ethical limits.",
+      "subtitle_pt": "Biografia: escopo, fontes primárias, preservar voz, limites éticos (privado vs público)."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Writing another person's life: voice, scope, primary sources, ethical limits. Focus: biographical writing. Scope is the first decision — which years will you cover?",
+      "text_pt": "Biografia: escopo, fontes primárias, preservar voz, limites éticos (privado vs público). Foco: biographical writing. Escopo é a primeira decisão — quais anos?"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Biographical Writing",
+      "body_en": "Bio craft: decide SCOPE (life, decade, moment). Use PRIMARY sources when possible. Preserve the subject's VOICE. Handle ethical limits (private vs public) explicitly.",
+      "body_pt": "Biografia: escopo, fontes primárias, preservar voz, limites éticos (privado vs público).",
+      "examples": [
+        {
+          "en": "Scope is the first decision — which years will you cover?",
+          "pt": "Escopo é a primeira decisão — quais anos?"
+        },
+        {
+          "en": "Primary sources beat secondary accounts every time.",
+          "pt": "Fontes primárias ganham das secundárias sempre."
+        },
+        {
+          "en": "Ethical lines separate private from public life.",
+          "pt": "Limites éticos separam vida privada e pública."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Biographical Writing",
+      "items": [
+        {
+          "term": "scope",
+          "pt": "escopo"
+        },
+        {
+          "term": "primary source",
+          "pt": "fonte primária"
+        },
+        {
+          "term": "voice",
+          "pt": "voz"
+        },
+        {
+          "term": "portrait",
+          "pt": "retrato"
+        },
+        {
+          "term": "ethical",
+          "pt": "ético"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-biographical-writing-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Scope is the first ___ — which years will you cover?\"",
+        "correct": "decision",
+        "explanation": "Full sentence: \"Scope is the first decision — which years will you cover?\"",
+        "hint_pt_br": "Escopo é a primeira decisão — quais anos?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-biographical-writing-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Primary sources beat secondary accounts every time.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Primary sources beat secondary accounts every time.\"",
+        "hint_pt_br": "Fontes primárias ganham das secundárias sempre."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-biographical-writing-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "scope",
+            "escopo"
+          ],
+          [
+            "primary source",
+            "fonte primária"
+          ],
+          [
+            "voice",
+            "voz"
+          ],
+          [
+            "portrait",
+            "retrato"
+          ],
+          [
+            "ethical",
+            "ético"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Biographical Writing — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre biographical writing. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Lúcia, what's your first decision when writing a life?"
+        },
+        {
+          "speaker": "user",
+          "target": "Scope — which years do we cover?",
+          "pt_hint": "Escopo, quais anos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Primary sources or secondary?"
+        },
+        {
+          "speaker": "user",
+          "target": "Primary whenever they exist.",
+          "pt_hint": "Primárias se existem."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you preserve the subject's voice?"
+        },
+        {
+          "speaker": "user",
+          "target": "Read letters, diaries, emails repeatedly.",
+          "pt_hint": "Cartas, diários, emails."
+        },
+        {
+          "speaker": "ai",
+          "text": "Ethical limit in your current biography?"
+        },
+        {
+          "speaker": "user",
+          "target": "Mental health struggles she never publicized.",
+          "pt_hint": "Saúde mental privada."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you decide what to include?"
+        },
+        {
+          "speaker": "user",
+          "target": "Consent of family, respect for dignity.",
+          "pt_hint": "Consentimento e dignidade."
+        },
+        {
+          "speaker": "ai",
+          "text": "Biography is the slowest form of love."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "biographical-writing-listening-story",
+      "title": "The biographer's library",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four craft decisions. Use at least three biographical terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In her crowded home library, Dona Lúcia spread three boxes of letters across the table and prepared to spend the decade with them."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Scope is the first decision — I am writing the decade between her arrival in Brazil and her first novel."
+        },
+        {
+          "speaker": "Assistant",
+          "voice": "female2",
+          "en": "You insist on primary sources — her letters, her diaries, her own handwriting — whenever they exist."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Preserving her voice means reading four thousand pages of her writing until my sentences catch her rhythm."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Ethical lines matter — her mental health struggles were never public, so I consulted her family before including them."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Biography, Lúcia often said, is the slowest form of love — ten years of listening to someone who cannot answer back."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Biographical Writing\". Writing another person's life: voice, scope, primary sources, ethical limits. Scope is the first decision — which years will you cover? Primary sources beat secondary accounts every time. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Biographical Writing\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Biographical Writing",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Biographical Writing\".",
+        "hint_pt_br": "Ela fala o título: \"Biographical Writing\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "rhetorical-fallacies-deep",
+  "title": "Rhetorical Fallacies — Deep Dive",
+  "description": "Beyond ad hominem: equivocation, slippery slope, motte-and-bailey, no true Scotsman.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Falácias avançadas: equivocação, slippery slope, motte-and-bailey, no true Scotsman.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Rhetorical Fallacies — Deep Dive",
+      "subtitle_en": "Beyond ad hominem: equivocation, slippery slope, motte-and-bailey, no true Scotsman.",
+      "subtitle_pt": "Falácias avançadas: equivocação, slippery slope, motte-and-bailey, no true Scotsman."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Beyond ad hominem: equivocation, slippery slope, motte-and-bailey, no true Scotsman. Focus: rhetorical fallacies — deep dive. Equivocation hides behind a word changing meaning mid-argument.",
+      "text_pt": "Falácias avançadas: equivocação, slippery slope, motte-and-bailey, no true Scotsman. Foco: rhetorical fallacies — deep dive. Equivocação esconde uma palavra mudando de sentido."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Rhetorical Fallacies — Deep Dive",
+      "body_en": "Deeper fallacies: EQUIVOCATION (word shifts meaning mid-argument). SLIPPERY SLOPE (A leads inevitably to Z). MOTTE-AND-BAILEY (retreat to safe claim when challenged). NO TRUE SCOTSMAN (redefining to exclude counterexamples).",
+      "body_pt": "Falácias avançadas: equivocação, slippery slope, motte-and-bailey, no true Scotsman.",
+      "examples": [
+        {
+          "en": "Equivocation hides behind a word changing meaning mid-argument.",
+          "pt": "Equivocação esconde uma palavra mudando de sentido."
+        },
+        {
+          "en": "Slippery slope claims disaster without evidence.",
+          "pt": "Slippery slope afirma desastre sem evidência."
+        },
+        {
+          "en": "No true Scotsman redefines to exclude counterexamples.",
+          "pt": "No true Scotsman redefine para excluir exceções."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Rhetorical Fallacies — Deep Dive",
+      "items": [
+        {
+          "term": "equivocation",
+          "pt": "equivocação"
+        },
+        {
+          "term": "slippery slope",
+          "pt": "slippery slope"
+        },
+        {
+          "term": "motte-and-bailey",
+          "pt": "motte-and-bailey"
+        },
+        {
+          "term": "Scotsman",
+          "pt": "Scotsman"
+        },
+        {
+          "term": "refute",
+          "pt": "refutar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-rhetorical-fallacies-deep-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"___ hides behind a word changing meaning mid-argument.\"",
+        "correct": "Equivocation",
+        "explanation": "Full sentence: \"Equivocation hides behind a word changing meaning mid-argument.\"",
+        "hint_pt_br": "Equivocação esconde uma palavra mudando de sentido."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-rhetorical-fallacies-deep-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Slippery slope claims disaster without evidence.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Slippery slope claims disaster without evidence.\"",
+        "hint_pt_br": "Slippery slope afirma desastre sem evidência."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-rhetorical-fallacies-deep-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "equivocation",
+            "equivocação"
+          ],
+          [
+            "slippery slope",
+            "slippery slope"
+          ],
+          [
+            "motte-and-bailey",
+            "motte-and-bailey"
+          ],
+          [
+            "Scotsman",
+            "Scotsman"
+          ],
+          [
+            "refute",
+            "refutar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Rhetorical Fallacies — Deep Dive — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre rhetorical fallacies — deep dive. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Spot equivocation: 'Laws restrict freedom, so freedom requires lawlessness.'"
+        },
+        {
+          "speaker": "user",
+          "target": "'Freedom' shifts meaning mid-sentence.",
+          "pt_hint": "Liberdade muda.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Spot slippery slope."
+        },
+        {
+          "speaker": "user",
+          "target": "'Let them marry and civilization ends.'",
+          "pt_hint": "Fim da civilização."
+        },
+        {
+          "speaker": "ai",
+          "text": "Motte-and-bailey example?"
+        },
+        {
+          "speaker": "user",
+          "target": "Bold claim, then hide behind a tamer one.",
+          "pt_hint": "Afirma grande, recua."
+        },
+        {
+          "speaker": "ai",
+          "text": "No true Scotsman — what's it do?"
+        },
+        {
+          "speaker": "user",
+          "target": "Redefines group to exclude the bad example.",
+          "pt_hint": "Redefine grupo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why matter at C2 level?"
+        },
+        {
+          "speaker": "user",
+          "target": "To read bad faith before being persuaded.",
+          "pt_hint": "Ler má-fé."
+        },
+        {
+          "speaker": "ai",
+          "text": "Spotting fallacies is intellectual self-defense."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "rhetorical-fallacies-deep-listening-story",
+      "title": "The debate training",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize four advanced fallacies. Use at least three fallacy names.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At Saturday's debate training, Zara played recordings of real political interviews to teach fallacy detection."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Equivocation hides inside a single word — watch what happens to 'freedom' across this three-sentence argument."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male1",
+          "en": "And slippery slope claims that A will lead inevitably to Z without evidence for any step along the way."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Motte-and-bailey is devastating — a bold claim retreats into a cautious one the moment anyone challenges it seriously."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female2",
+          "en": "No true Scotsman redefines a group to exclude every counterexample that a careful critic actually presents."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Rhetorical self-defense, Zara taught, is the grammar of reading the world without letting the world rewrite you."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Rhetorical Fallacies — Deep Dive\". Beyond ad hominem: equivocation, slippery slope, motte-and-bailey, no true Scotsman. Equivocation hides behind a word changing meaning mid-argument. Slippery slope claims disaster without evidence. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Rhetorical Fallacies — Deep Dive\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Rhetorical Fallacies — Deep Dive",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Rhetorical Fallacies — Deep Dive\".",
+        "hint_pt_br": "Ela fala o título: \"Rhetorical Fallacies — Deep Dive\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "crisis-communication",
+  "title": "Crisis Communication",
+  "description": "Acknowledge, commit, update, learn — the four moves of credible crisis response.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Crise: reconhecer, comprometer, atualizar, aprender. Sem voz passiva que esconde responsabilidade.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Crisis Communication",
+      "subtitle_en": "Acknowledge, commit, update, learn — the four moves of credible crisis response.",
+      "subtitle_pt": "Crise: reconhecer, comprometer, atualizar, aprender. Sem voz passiva que esconde responsabilidade."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Acknowledge, commit, update, learn — the four moves of credible crisis response. Focus: crisis communication. We acknowledge the error and its impact on our customers.",
+      "text_pt": "Crise: reconhecer, comprometer, atualizar, aprender. Sem voz passiva que esconde responsabilidade. Foco: crisis communication. Reconhecemos o erro e seu impacto nos clientes."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Crisis Communication",
+      "body_en": "Four moves: ACKNOWLEDGE without minimizing. COMMIT to specific action with timeline. UPDATE frequently. LEARN publicly. Avoid passive voice that hides agency.",
+      "body_pt": "Crise: reconhecer, comprometer, atualizar, aprender. Sem voz passiva que esconde responsabilidade.",
+      "examples": [
+        {
+          "en": "We acknowledge the error and its impact on our customers.",
+          "pt": "Reconhecemos o erro e seu impacto nos clientes."
+        },
+        {
+          "en": "By Friday, every affected account will receive a personal message.",
+          "pt": "Até sexta, toda conta afetada receberá mensagem pessoal."
+        },
+        {
+          "en": "We will publish a full post-mortem within seven days.",
+          "pt": "Publicaremos post-mortem em 7 dias."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Crisis Communication",
+      "items": [
+        {
+          "term": "crisis",
+          "pt": "crise"
+        },
+        {
+          "term": "acknowledge",
+          "pt": "reconhecer"
+        },
+        {
+          "term": "accountability",
+          "pt": "responsabilização"
+        },
+        {
+          "term": "transparency",
+          "pt": "transparência"
+        },
+        {
+          "term": "post-mortem",
+          "pt": "post-mortem"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-crisis-communication-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"We ___ the error and its impact on our customers.\"",
+        "correct": "acknowledge",
+        "explanation": "Full sentence: \"We acknowledge the error and its impact on our customers.\"",
+        "hint_pt_br": "Reconhecemos o erro e seu impacto nos clientes."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-crisis-communication-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "By Friday, every affected account will receive a personal message.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"By Friday, every affected account will receive a personal message.\"",
+        "hint_pt_br": "Até sexta, toda conta afetada receberá mensagem pessoal."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-crisis-communication-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "crisis",
+            "crise"
+          ],
+          [
+            "acknowledge",
+            "reconhecer"
+          ],
+          [
+            "accountability",
+            "responsabilização"
+          ],
+          [
+            "transparency",
+            "transparência"
+          ],
+          [
+            "post-mortem",
+            "post-mortem"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Crisis Communication — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre crisis communication. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, a data breach just happened. Open the statement."
+        },
+        {
+          "speaker": "user",
+          "target": "We acknowledge the breach and its impact.",
+          "pt_hint": "Reconhecemos a violação."
+        },
+        {
+          "speaker": "ai",
+          "text": "What specific commitment do you make?"
+        },
+        {
+          "speaker": "user",
+          "target": "Every affected user gets a personal message by Friday.",
+          "pt_hint": "Toda pessoa afetada."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you update stakeholders?"
+        },
+        {
+          "speaker": "user",
+          "target": "Daily updates on a public status page.",
+          "pt_hint": "Atualização diária."
+        },
+        {
+          "speaker": "ai",
+          "text": "What about the root cause?"
+        },
+        {
+          "speaker": "user",
+          "target": "Public post-mortem within seven days.",
+          "pt_hint": "Post-mortem em 7 dias."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with learning."
+        },
+        {
+          "speaker": "user",
+          "target": "Two new controls will prevent recurrence.",
+          "pt_hint": "Dois controles novos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Crisis well-handled builds more trust than smooth quarters."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "crisis-communication-listening-story",
+      "title": "The 9 AM statement",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe the four crisis moves. Use at least three crisis-communication terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At nine in the morning after a serious breach, Joca gathered his team to draft the most important statement of his career."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "We acknowledge the data breach and its direct impact on eleven thousand customer accounts this weekend."
+        },
+        {
+          "speaker": "Lawyer",
+          "voice": "female1",
+          "en": "Avoid passive voice — 'an error occurred' hides accountability and readers notice every single time."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "By Friday, every affected account will receive a personal message with the exact data that was exposed."
+        },
+        {
+          "speaker": "Communications",
+          "voice": "male2",
+          "en": "Daily updates on a public status page, and a full post-mortem within seven business days minimum."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Crisis handled well, Joca had learned, builds deeper trust than any quarter of smooth quarterly updates ever could."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Crisis Communication\". Acknowledge, commit, update, learn — the four moves of credible crisis response. We acknowledge the error and its impact on our customers. By Friday, every affected account will receive a personal message. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Crisis Communication\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Crisis Communication",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Crisis Communication\".",
+        "hint_pt_br": "Ela fala o título: \"Crisis Communication\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

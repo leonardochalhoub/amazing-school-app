@@ -1,0 +1,283 @@
+{
+  "slug": "speechwriting-historic",
+  "title": "Historic Speechwriting",
+  "description": "Anatomy of landmark speeches: Lincoln, King, Churchill, Mandela.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Discursos históricos: começo pequeno, universal, refrão, passado comum, visão. Frases curtas.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Historic Speechwriting",
+      "subtitle_en": "Anatomy of landmark speeches: Lincoln, King, Churchill, Mandela.",
+      "subtitle_pt": "Discursos históricos: começo pequeno, universal, refrão, passado comum, visão. Frases curtas."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Anatomy of landmark speeches: Lincoln, King, Churchill, Mandela. Focus: historic speechwriting. Four score and seven years ago — a refrain that anchors a country.",
+      "text_pt": "Discursos históricos: começo pequeno, universal, refrão, passado comum, visão. Frases curtas. Foco: historic speechwriting. Quatro vintenas e sete anos atrás — refrão que ancora um país."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Historic Speechwriting",
+      "body_en": "Patterns: OPEN small, BUILD to universal, REPEAT key phrase, CITE common past, CLOSE with vision. Short sentences. Concrete nouns. Silence between lines.",
+      "body_pt": "Discursos históricos: começo pequeno, universal, refrão, passado comum, visão. Frases curtas.",
+      "examples": [
+        {
+          "en": "Four score and seven years ago — a refrain that anchors a country.",
+          "pt": "Quatro vintenas e sete anos atrás — refrão que ancora um país."
+        },
+        {
+          "en": "'I have a dream' repeated eight times in one speech.",
+          "pt": "'I have a dream' repetido oito vezes."
+        },
+        {
+          "en": "Mandela opened with 'I have cherished' — already choosing forgiveness.",
+          "pt": "Mandela abriu com 'I have cherished' — já escolhendo perdão."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Historic Speechwriting",
+      "items": [
+        {
+          "term": "refrain",
+          "pt": "refrão"
+        },
+        {
+          "term": "anaphora",
+          "pt": "anáfora"
+        },
+        {
+          "term": "cadence",
+          "pt": "cadência"
+        },
+        {
+          "term": "peroration",
+          "pt": "peroração"
+        },
+        {
+          "term": "call",
+          "pt": "chamado"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-speechwriting-historic-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Four score and seven years ago — a ___ that anchors a country.\"",
+        "correct": "refrain",
+        "explanation": "Full sentence: \"Four score and seven years ago — a refrain that anchors a country.\"",
+        "hint_pt_br": "Quatro vintenas e sete anos atrás — refrão que ancora um país."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-speechwriting-historic-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "'I have a dream' repeated eight times in one speech.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"'I have a dream' repeated eight times in one speech.\"",
+        "hint_pt_br": "'I have a dream' repetido oito vezes."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-speechwriting-historic-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "refrain",
+            "refrão"
+          ],
+          [
+            "anaphora",
+            "anáfora"
+          ],
+          [
+            "cadence",
+            "cadência"
+          ],
+          [
+            "peroration",
+            "peroração"
+          ],
+          [
+            "call",
+            "chamado"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Historic Speechwriting — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre historic speechwriting. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar, what's common to every great speech?"
+        },
+        {
+          "speaker": "user",
+          "target": "A refrain repeated five or more times.",
+          "pt_hint": "Refrão 5+ vezes."
+        },
+        {
+          "speaker": "ai",
+          "text": "What opens Lincoln's Gettysburg address?"
+        },
+        {
+          "speaker": "user",
+          "target": "Four score and seven years ago.",
+          "pt_hint": "Quatro vintenas."
+        },
+        {
+          "speaker": "ai",
+          "text": "What closes King's dream speech?"
+        },
+        {
+          "speaker": "user",
+          "target": "Free at last, free at last.",
+          "pt_hint": "Livre, enfim."
+        },
+        {
+          "speaker": "ai",
+          "text": "Mandela's opening word?"
+        },
+        {
+          "speaker": "user",
+          "target": "'I have cherished' — chose reconciliation.",
+          "pt_hint": "'Cherished', reconciliação."
+        },
+        {
+          "speaker": "ai",
+          "text": "Churchill's secret?"
+        },
+        {
+          "speaker": "user",
+          "target": "Short Anglo-Saxon words, long sentences.",
+          "pt_hint": "Palavras curtas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Great speeches rhyme with history, not each other."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "speechwriting-historic-listening-story",
+      "title": "The speech class",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Analyze four techniques from a landmark speech. Use at least three speech-writing terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In Kumar's advanced writing class, students studied four landmark speeches side by side on the whiteboard."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Lincoln's 'four score and seven years ago' is a refrain that anchors the entire speech to shared national memory."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "King repeated 'I have a dream' eight times — each repetition raised the emotional stakes another full degree."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Mandela opened his trial speech with 'I have cherished' — already choosing forgiveness as his rhetorical foundation."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "Churchill used short Anglo-Saxon words in long, rhythmic sentences that felt inevitable as ocean waves."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Historic speeches, Kumar concluded, rhyme with their era — and with the slow architecture of every speech before them."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Historic Speechwriting\". Anatomy of landmark speeches: Lincoln, King, Churchill, Mandela. Four score and seven years ago — a refrain that anchors a country. 'I have a dream' repeated eight times in one speech. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Historic Speechwriting\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Historic Speechwriting",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Historic Speechwriting\".",
+        "hint_pt_br": "Ela fala o título: \"Historic Speechwriting\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

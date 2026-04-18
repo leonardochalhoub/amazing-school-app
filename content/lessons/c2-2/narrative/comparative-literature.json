@@ -1,0 +1,283 @@
+{
+  "slug": "comparative-literature",
+  "title": "Comparative Literature",
+  "description": "Reading across cultures and eras: tradition, influence, world-literature perspective.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Literatura comparada: tradição, influência, world literature, tradução (= interpretação).",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Comparative Literature",
+      "subtitle_en": "Reading across cultures and eras: tradition, influence, world-literature perspective.",
+      "subtitle_pt": "Literatura comparada: tradição, influência, world literature, tradução (= interpretação)."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Reading across cultures and eras: tradition, influence, world-literature perspective. Focus: comparative literature. Borges and Calvino share a playfulness that crosses languages.",
+      "text_pt": "Literatura comparada: tradição, influência, world literature, tradução (= interpretação). Foco: comparative literature. Borges e Calvino compartilham leveza que atravessa línguas."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Comparative Literature",
+      "body_en": "Key ideas: TRADITION (what a work inherits), INFLUENCE (direct lineage), WORLD LITERATURE (works that travel beyond origin), TRANSLATION (always an interpretation).",
+      "body_pt": "Literatura comparada: tradição, influência, world literature, tradução (= interpretação).",
+      "examples": [
+        {
+          "en": "Borges and Calvino share a playfulness that crosses languages.",
+          "pt": "Borges e Calvino compartilham leveza que atravessa línguas."
+        },
+        {
+          "en": "World literature names works that cross their original contexts.",
+          "pt": "World literature = obras que cruzam seus contextos."
+        },
+        {
+          "en": "Every translation is an interpretation wearing editorial modesty.",
+          "pt": "Toda tradução é interpretação com modéstia editorial."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Comparative Literature",
+      "items": [
+        {
+          "term": "tradition",
+          "pt": "tradição"
+        },
+        {
+          "term": "influence",
+          "pt": "influência"
+        },
+        {
+          "term": "canon",
+          "pt": "cânone"
+        },
+        {
+          "term": "translation",
+          "pt": "tradução"
+        },
+        {
+          "term": "comparative",
+          "pt": "comparado"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-comparative-literature-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Borges and Calvino share a ___ that crosses languages.\"",
+        "correct": "playfulness",
+        "explanation": "Full sentence: \"Borges and Calvino share a playfulness that crosses languages.\"",
+        "hint_pt_br": "Borges e Calvino compartilham leveza que atravessa línguas."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-comparative-literature-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "World literature names works that cross their original contexts."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"World literature names works that cross their original contexts.\"",
+        "hint_pt_br": "World literature = obras que cruzam seus contextos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-comparative-literature-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "tradition",
+            "tradição"
+          ],
+          [
+            "influence",
+            "influência"
+          ],
+          [
+            "canon",
+            "cânone"
+          ],
+          [
+            "translation",
+            "tradução"
+          ],
+          [
+            "comparative",
+            "comparado"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Comparative Literature — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre comparative literature. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar, what is world literature?"
+        },
+        {
+          "speaker": "user",
+          "target": "Works that travel beyond origin.",
+          "pt_hint": "Viajam além da origem."
+        },
+        {
+          "speaker": "ai",
+          "text": "Name two writers that share tradition across languages."
+        },
+        {
+          "speaker": "user",
+          "target": "Borges and Calvino.",
+          "pt_hint": "Borges e Calvino."
+        },
+        {
+          "speaker": "ai",
+          "text": "What does translation sacrifice?"
+        },
+        {
+          "speaker": "user",
+          "target": "Sound and idiom always, sense sometimes.",
+          "pt_hint": "Som e idioma sempre."
+        },
+        {
+          "speaker": "ai",
+          "text": "Can you read influence without reading the predecessor?"
+        },
+        {
+          "speaker": "user",
+          "target": "Partially — context thins without context.",
+          "pt_hint": "Parcialmente."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the canon's purpose?"
+        },
+        {
+          "speaker": "user",
+          "target": "A shared vocabulary across centuries.",
+          "pt_hint": "Vocabulário comum."
+        },
+        {
+          "speaker": "ai",
+          "text": "Literature is the longest conversation humans have kept alive."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "comparative-literature-listening-story",
+      "title": "The comparative seminar",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize two ideas from comparative literature. Use at least three terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the comparative literature seminar, Kumar walked students through Borges, Calvino, and the line that connects them."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "World literature names works that travel beyond their original context without losing their essential force."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "Borges and Calvino share a playfulness with form that survives every translation into every new language."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Every translation is an interpretation wearing editorial modesty — a second author quietly beside the first."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "And canon is less a ranking than a shared vocabulary that lets readers across centuries talk to each other."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Literature, Kumar believed, is the longest continuous conversation humans have ever managed to keep alive in writing."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Comparative Literature\". Reading across cultures and eras: tradition, influence, world-literature perspective. Borges and Calvino share a playfulness that crosses languages. World literature names works that cross their original contexts. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Comparative Literature\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Comparative Literature",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Comparative Literature\".",
+        "hint_pt_br": "Ela fala o título: \"Comparative Literature\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "editing-expert",
+  "title": "Editing at Expert Level",
+  "description": "Line editing vs structural editing: what to cut, what to expand, when to stop.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.1",
+  "xp_reward": 85,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Edição: estrutural, de linha, copy desk. Sempre nessa ordem.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Editing at Expert Level",
+      "subtitle_en": "Line editing vs structural editing: what to cut, what to expand, when to stop.",
+      "subtitle_pt": "Edição: estrutural, de linha, copy desk. Sempre nessa ordem."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Line editing vs structural editing: what to cut, what to expand, when to stop. Focus: editing at expert level. Structural editing comes before line editing.",
+      "text_pt": "Edição: estrutural, de linha, copy desk. Sempre nessa ordem. Foco: editing at expert level. Edição estrutural vem antes da de linha."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Editing at Expert Level",
+      "body_en": "STRUCTURAL: order, pacing, argument shape. LINE: word-by-word, rhythm, clarity. COPY: grammar, punctuation. Edit in that order. Never all at once.",
+      "body_pt": "Edição: estrutural, de linha, copy desk. Sempre nessa ordem.",
+      "examples": [
+        {
+          "en": "Structural editing comes before line editing.",
+          "pt": "Edição estrutural vem antes da de linha."
+        },
+        {
+          "en": "Cut any sentence that would survive without you.",
+          "pt": "Corte toda frase que sobreviveria sem você."
+        },
+        {
+          "en": "Knowing when to stop editing is half the job.",
+          "pt": "Saber quando parar é metade do trabalho."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Editing at Expert Level",
+      "items": [
+        {
+          "term": "structural",
+          "pt": "estrutural"
+        },
+        {
+          "term": "line-edit",
+          "pt": "edição de linha"
+        },
+        {
+          "term": "copy-edit",
+          "pt": "copy-edit"
+        },
+        {
+          "term": "cut",
+          "pt": "cortar"
+        },
+        {
+          "term": "revise",
+          "pt": "revisar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-editing-expert-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"___ editing comes before line editing.\"",
+        "correct": "Structural",
+        "explanation": "Full sentence: \"Structural editing comes before line editing.\"",
+        "hint_pt_br": "Edição estrutural vem antes da de linha."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-editing-expert-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Cut any sentence that would survive without you.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Cut any sentence that would survive without you.\"",
+        "hint_pt_br": "Corte toda frase que sobreviveria sem você."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-editing-expert-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "structural",
+            "estrutural"
+          ],
+          [
+            "line-edit",
+            "edição de linha"
+          ],
+          [
+            "copy-edit",
+            "copy-edit"
+          ],
+          [
+            "cut",
+            "cortar"
+          ],
+          [
+            "revise",
+            "revisar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Editing at Expert Level — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre editing at expert level. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar, what's the first editing pass?"
+        },
+        {
+          "speaker": "user",
+          "target": "Structural — order and pacing.",
+          "pt_hint": "Estrutural, ordem e ritmo."
+        },
+        {
+          "speaker": "ai",
+          "text": "What comes next?"
+        },
+        {
+          "speaker": "user",
+          "target": "Line editing, word by word.",
+          "pt_hint": "Linha por linha."
+        },
+        {
+          "speaker": "ai",
+          "text": "And last?"
+        },
+        {
+          "speaker": "user",
+          "target": "Copy-editing for grammar and punctuation.",
+          "pt_hint": "Gramática e pontuação."
+        },
+        {
+          "speaker": "ai",
+          "text": "Best advice for cutting?"
+        },
+        {
+          "speaker": "user",
+          "target": "Cut any sentence that survives without you.",
+          "pt_hint": "Corte o dispensável."
+        },
+        {
+          "speaker": "ai",
+          "text": "When do you stop?"
+        },
+        {
+          "speaker": "user",
+          "target": "When the next edit would only change preference.",
+          "pt_hint": "Quando vira gosto."
+        },
+        {
+          "speaker": "ai",
+          "text": "Editing is the writer's deepest act of respect for the reader."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "editing-expert-listening-story",
+      "title": "The editor's desk",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the three editing passes. Use at least three editing terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At Saturday's editing workshop, Kumar passed around a short essay that had been through his red pen four times."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Structural editing comes first — we change the order of paragraphs before we touch a single word in them."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "Then line editing is word by word, looking at rhythm and clarity sentence by sentence, paragraph by paragraph."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Copy-editing is last — grammar, punctuation, spelling. Never do copy work during structural or line passes."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "Your advice to cut any sentence that survives without you — that cut eighty words from my first draft alone."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Editing, Kumar insisted, is how writers prove to readers they have taken reading as seriously as writing itself."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Editing at Expert Level\". Line editing vs structural editing: what to cut, what to expand, when to stop. Structural editing comes before line editing. Cut any sentence that would survive without you. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Editing at Expert Level\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Editing at Expert Level",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Editing at Expert Level\".",
+        "hint_pt_br": "Ela fala o título: \"Editing at Expert Level\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "expert-interviews",
+  "title": "Interviewing Experts",
+  "description": "Preparing deeply, asking the crux question, listening for what the expert almost said.",
+  "category": "narrative",
+  "level": "C2",
+  "cefr_level": "c2.2",
+  "xp_reward": 90,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Entrevistar especialistas: leia 3 melhores textos, pergunta do núcleo, escute a frase que quase saiu.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Interviewing Experts",
+      "subtitle_en": "Preparing deeply, asking the crux question, listening for what the expert almost said.",
+      "subtitle_pt": "Entrevistar especialistas: leia 3 melhores textos, pergunta do núcleo, escute a frase que quase saiu."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Preparing deeply, asking the crux question, listening for what the expert almost said. Focus: interviewing experts. The crux question is the one they rarely answer directly.",
+      "text_pt": "Entrevistar especialistas: leia 3 melhores textos, pergunta do núcleo, escute a frase que quase saiu. Foco: interviewing experts. A pergunta-chave é a que raramente respondem."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Interviewing Experts",
+      "body_en": "Method: READ their three best pieces first. ASK the crux question (what they rarely answer). LISTEN for the sentence that almost came out. Follow it. Hold silence.",
+      "body_pt": "Entrevistar especialistas: leia 3 melhores textos, pergunta do núcleo, escute a frase que quase saiu.",
+      "examples": [
+        {
+          "en": "The crux question is the one they rarely answer directly.",
+          "pt": "A pergunta-chave é a que raramente respondem."
+        },
+        {
+          "en": "Silence after an expert's answer often produces the real answer.",
+          "pt": "Silêncio depois da resposta traz a resposta real."
+        },
+        {
+          "en": "Follow the sentence that almost came out of their mouth.",
+          "pt": "Siga a frase que quase saiu."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Interviewing Experts",
+      "items": [
+        {
+          "term": "expert",
+          "pt": "especialista"
+        },
+        {
+          "term": "crux",
+          "pt": "núcleo"
+        },
+        {
+          "term": "prepare",
+          "pt": "preparar"
+        },
+        {
+          "term": "probe",
+          "pt": "investigar"
+        },
+        {
+          "term": "listen",
+          "pt": "ouvir"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-expert-interviews-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The crux ___ is the one they rarely answer directly.\"",
+        "correct": "question",
+        "explanation": "Full sentence: \"The crux question is the one they rarely answer directly.\"",
+        "hint_pt_br": "A pergunta-chave é a que raramente respondem."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-expert-interviews-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Silence after an expert's answer often produces the real answer.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Silence after an expert's answer often produces the real answer.\"",
+        "hint_pt_br": "Silêncio depois da resposta traz a resposta real."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-expert-interviews-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "expert",
+            "especialista"
+          ],
+          [
+            "crux",
+            "núcleo"
+          ],
+          [
+            "prepare",
+            "preparar"
+          ],
+          [
+            "probe",
+            "investigar"
+          ],
+          [
+            "listen",
+            "ouvir"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Interviewing Experts — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre interviewing experts. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar, how do you prepare to interview an expert?"
+        },
+        {
+          "speaker": "user",
+          "target": "I read their three best pieces first.",
+          "pt_hint": "Leio 3 melhores."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the crux question?"
+        },
+        {
+          "speaker": "user",
+          "target": "The one they rarely answer directly.",
+          "pt_hint": "Raramente respondem."
+        },
+        {
+          "speaker": "ai",
+          "text": "What do you do after an answer?"
+        },
+        {
+          "speaker": "user",
+          "target": "Hold silence for three seconds.",
+          "pt_hint": "Aguento silêncio 3s."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why silence?"
+        },
+        {
+          "speaker": "user",
+          "target": "It produces the real answer.",
+          "pt_hint": "Traz a real."
+        },
+        {
+          "speaker": "ai",
+          "text": "What do you follow?"
+        },
+        {
+          "speaker": "user",
+          "target": "The sentence that almost came out.",
+          "pt_hint": "A frase que quase saiu."
+        },
+        {
+          "speaker": "ai",
+          "text": "Expert interviewing is listening in reverse."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "expert-interviews-listening-story",
+      "title": "The expert interview",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four interviewing moves. Use at least three interview terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Before the interview, Kumar read every piece the expert had ever written — three times, with three different pens."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "The crux question is the one she rarely answers directly in print — I ask it second, not first."
+        },
+        {
+          "speaker": "Assistant",
+          "voice": "female1",
+          "en": "After each answer, you hold silence for three full seconds — and she keeps talking, unprompted, most of the time."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "I listen for the sentence that almost came out — and I follow that thread, however long it takes to unravel."
+        },
+        {
+          "speaker": "Assistant",
+          "voice": "female1",
+          "en": "You once said interviewing experts is listening in reverse — you hear what they didn't say, first."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Expert interviewing, Kumar believed, is the art of making someone who knows more than you speak past their own caution."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Interviewing Experts\". Preparing deeply, asking the crux question, listening for what the expert almost said. The crux question is the one they rarely answer directly. Silence after an expert's answer often produces the real answer. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Interviewing Experts\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Interviewing Experts",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Interviewing Experts\".",
+        "hint_pt_br": "Ela fala o título: \"Interviewing Experts\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Aeon Essays",
+          "url": "https://aeon.co/essays",
+          "pt_hint": "Ensaios longos de filosofia, ciência e cultura."
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "pt_hint": "Clássicos da literatura em domínio público."
+        },
+        {
+          "label": "London Review of Books",
+          "url": "https://www.lrb.co.uk/",
+          "pt_hint": "Crítica literária e ensaios — prosa densa, C2+."
+        }
+      ]
+    }
+  ]
+}
