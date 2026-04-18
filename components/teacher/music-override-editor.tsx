@@ -215,7 +215,7 @@ export function MusicOverrideEditor({
   }
 
   return (
-    <div className="space-y-6">
+    <div className="w-full max-w-full space-y-6 overflow-x-hidden">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold tracking-tight">
@@ -251,11 +251,11 @@ export function MusicOverrideEditor({
         </div>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_420px]">
-        <div className="space-y-6">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
+        <div className="min-w-0 space-y-6">
           <Card>
             <CardContent className="p-0">
-              <div className="mx-auto aspect-video w-full max-w-[560px] overflow-hidden rounded-t-xl bg-black">
+              <div className="mx-auto aspect-video w-full max-w-[480px] overflow-hidden rounded-t-xl bg-black">
                 <iframe
                   ref={iframeRef}
                   key={startAt ?? "initial"}
@@ -404,7 +404,7 @@ export function MusicOverrideEditor({
           </section>
         </div>
 
-        <aside className="space-y-3">
+        <aside className="min-w-0 space-y-3">
           <Card>
             <CardContent className="space-y-2 p-4 text-xs">
               <p className="font-semibold">How this works</p>
@@ -489,7 +489,7 @@ function PromptEditor({
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+      <div className="grid min-w-0 grid-cols-1 gap-3 md:grid-cols-2">
         <div className="space-y-1.5">
           <Label>Label (EN)</Label>
           <Input
@@ -505,7 +505,7 @@ function PromptEditor({
           />
         </div>
       </div>
-      <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-[120px_120px]">
+      <div className="mt-3 grid min-w-0 grid-cols-1 gap-3 md:grid-cols-[120px_120px]">
         <div className="space-y-1.5">
           <Label>Start (seconds)</Label>
           <Input
@@ -662,7 +662,7 @@ function ExerciseSummary({
       ) : null}
       {editable && exercise.type === "listen_and_fill" ? (
         <div className="mt-3 space-y-2">
-          <div className="grid grid-cols-1 gap-2 md:grid-cols-[1fr_auto_1fr]">
+          <div className="grid min-w-0 grid-cols-1 gap-2 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
             <Input
               value={exercise.excerpt_before}
               onChange={(e) =>
