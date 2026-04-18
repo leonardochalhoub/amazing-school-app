@@ -1,0 +1,283 @@
+{
+  "slug": "social-media-etiquette",
+  "title": "Social Media Etiquette",
+  "description": "Polite and effective communication online: tone, clarity, and respect.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.2",
+  "xp_reward": 60,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Etiqueta online: não responda com raiva, leia antes de compartilhar, credite fontes, evite caixa alta.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Social Media Etiquette",
+      "subtitle_en": "Polite and effective communication online: tone, clarity, and respect.",
+      "subtitle_pt": "Etiqueta online: não responda com raiva, leia antes de compartilhar, credite fontes, evite caixa alta."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Polite and effective communication online: tone, clarity, and respect. Today's focus: social media etiquette. Never reply to a rude comment when you're angry.",
+      "text_pt": "Etiqueta online: não responda com raiva, leia antes de compartilhar, credite fontes, evite caixa alta. Foco de hoje: social media etiquette. Nunca responda com raiva a um comentário rude."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Social Media Etiquette",
+      "body_en": "Key ideas: Don't reply when angry. Read before you share. Credit original sources. Don't overpost. Avoid all-caps (it reads as shouting). Use emojis sparingly in professional contexts.",
+      "body_pt": "Etiqueta online: não responda com raiva, leia antes de compartilhar, credite fontes, evite caixa alta.",
+      "examples": [
+        {
+          "en": "Never reply to a rude comment when you're angry.",
+          "pt": "Nunca responda com raiva a um comentário rude."
+        },
+        {
+          "en": "Always credit the original source of what you share.",
+          "pt": "Sempre credite a fonte original do que compartilha."
+        },
+        {
+          "en": "Avoid using all capital letters — it reads as shouting.",
+          "pt": "Evite caixa alta — parece que tá gritando."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Social Media Etiquette",
+      "items": [
+        {
+          "term": "comment",
+          "pt": "comentário"
+        },
+        {
+          "term": "share",
+          "pt": "compartilhar"
+        },
+        {
+          "term": "credit",
+          "pt": "creditar"
+        },
+        {
+          "term": "harass",
+          "pt": "assediar"
+        },
+        {
+          "term": "block",
+          "pt": "bloquear"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-social-media-etiquette-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Never reply to a rude ___ when you're angry.\"",
+        "correct": "comment",
+        "explanation": "Full sentence: \"Never reply to a rude comment when you're angry.\"",
+        "hint_pt_br": "Nunca responda com raiva a um comentário rude."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-social-media-etiquette-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Always credit the original source of what you share.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "The correct sentence is: \"Always credit the original source of what you share.\"",
+        "hint_pt_br": "Sempre credite a fonte original do que compartilha."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-social-media-etiquette-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "comment",
+            "comentário"
+          ],
+          [
+            "share",
+            "compartilhar"
+          ],
+          [
+            "credit",
+            "creditar"
+          ],
+          [
+            "harass",
+            "assediar"
+          ],
+          [
+            "block",
+            "bloquear"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Social Media Etiquette — dialog",
+      "character": "Maya",
+      "pt_summary": "Diálogo sobre social media etiquette. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Maya, your online post got a lot of mean comments today."
+        },
+        {
+          "speaker": "user",
+          "target": "I read them but I'm not replying yet.",
+          "pt_hint": "Li, mas não respondi."
+        },
+        {
+          "speaker": "ai",
+          "text": "Smart. What will you do?"
+        },
+        {
+          "speaker": "user",
+          "target": "I'll wait until tomorrow to respond calmly.",
+          "pt_hint": "Espero até amanhã."
+        },
+        {
+          "speaker": "ai",
+          "text": "Will you delete the angry comments?"
+        },
+        {
+          "speaker": "user",
+          "target": "Only the ones that harass other users.",
+          "pt_hint": "Só os que assediam."
+        },
+        {
+          "speaker": "ai",
+          "text": "Should you block the repeat offenders?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, blocking is kinder than arguing.",
+          "pt_hint": "Bloqueio é melhor que brigar."
+        },
+        {
+          "speaker": "ai",
+          "text": "What did you learn from this experience?"
+        },
+        {
+          "speaker": "user",
+          "target": "Read first, react never, post rarely.",
+          "pt_hint": "Leia primeiro, nunca reaja."
+        },
+        {
+          "speaker": "ai",
+          "text": "You are wise beyond your years, Maya."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "social-media-etiquette-listening-story",
+      "title": "Maya's online drama",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe what happened and how Maya handled it. Include three principles of online etiquette.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Maya's viral post had attracted hundreds of comments — some kind, many cruel, all loud."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "I read them all twice before deciding not to reply in anger."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female2",
+          "en": "Couldn't you just delete the account and move on with your day?"
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "Deleting would teach me nothing. Blocking the worst ones is enough."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Silence is often louder than the cleverest reply you could ever post online."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Twelve hours later, Maya had not posted a word — and the storm was already passing."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Social Media Etiquette\". Polite and effective communication online: tone, clarity, and respect. Never reply to a rude comment when you're angry. Always credit the original source of what you share. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Social Media Etiquette\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Social Media Etiquette",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Social Media Etiquette\".",
+        "hint_pt_br": "Ela fala o título: \"Social Media Etiquette\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

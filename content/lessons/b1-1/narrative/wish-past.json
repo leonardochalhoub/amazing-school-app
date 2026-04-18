@@ -1,0 +1,283 @@
+{
+  "slug": "wish-past",
+  "title": "I Wish + Past — Regret and Longing",
+  "description": "I WISH followed by a past tense expresses regret about the present or past.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.1",
+  "xp_reward": 55,
+  "estimated_minutes": 54,
+  "summary_pt_br": "I WISH + past = arrependimento do presente. I WISH + past perfect = arrependimento do passado.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "I Wish + Past — Regret and Longing",
+      "subtitle_en": "I WISH followed by a past tense expresses regret about the present or past.",
+      "subtitle_pt": "I WISH + past = arrependimento do presente. I WISH + past perfect = arrependimento do passado."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "I WISH followed by a past tense expresses regret about the present or past. Today's focus: i wish + past — regret and longing. I wish I spoke Italian fluently.",
+      "text_pt": "I WISH + past = arrependimento do presente. I WISH + past perfect = arrependimento do passado. Foco de hoje: i wish + past — regret and longing. Queria falar italiano fluente."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "I Wish + Past — Regret and Longing",
+      "body_en": "I WISH + past simple = regret about NOW. 'I wish I KNEW French.' I WISH + past perfect = regret about the PAST. 'I wish I HAD STUDIED harder.'",
+      "body_pt": "I WISH + past = arrependimento do presente. I WISH + past perfect = arrependimento do passado.",
+      "examples": [
+        {
+          "en": "I wish I spoke Italian fluently.",
+          "pt": "Queria falar italiano fluente."
+        },
+        {
+          "en": "She wishes she had studied abroad when she was younger.",
+          "pt": "Ela queria ter estudado fora quando era jovem."
+        },
+        {
+          "en": "We wish we lived closer to the ocean.",
+          "pt": "Queríamos morar mais perto do mar."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — I Wish + Past — Regret and Longing",
+      "items": [
+        {
+          "term": "regret",
+          "pt": "arrepender-se"
+        },
+        {
+          "term": "long for",
+          "pt": "ansiar por"
+        },
+        {
+          "term": "opportunity",
+          "pt": "oportunidade"
+        },
+        {
+          "term": "miss",
+          "pt": "sentir falta"
+        },
+        {
+          "term": "chance",
+          "pt": "chance"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-wish-past-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I wish I spoke Italian ___.\"",
+        "correct": "fluently",
+        "explanation": "Full sentence: \"I wish I spoke Italian fluently.\"",
+        "hint_pt_br": "Queria falar italiano fluente."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-wish-past-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "She wishes she had studied abroad when she was younger.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "The correct sentence is: \"She wishes she had studied abroad when she was younger.\"",
+        "hint_pt_br": "Ela queria ter estudado fora quando era jovem."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-wish-past-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "regret",
+            "arrepender-se"
+          ],
+          [
+            "long for",
+            "ansiar por"
+          ],
+          [
+            "opportunity",
+            "oportunidade"
+          ],
+          [
+            "miss",
+            "sentir falta"
+          ],
+          [
+            "chance",
+            "chance"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "I Wish + Past — Regret and Longing — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre i wish + past — regret and longing. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "If you could change one thing about your life, what would it be?"
+        },
+        {
+          "speaker": "user",
+          "target": "I wish I had learned English when I was young.",
+          "pt_hint": "Queria ter aprendido jovem."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why didn't you learn it back then?"
+        },
+        {
+          "speaker": "user",
+          "target": "I wish I had said yes to that exchange program.",
+          "pt_hint": "Queria ter aceitado o intercâmbio."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is there something you wish were different today?"
+        },
+        {
+          "speaker": "user",
+          "target": "I wish I lived closer to my grandchildren.",
+          "pt_hint": "Queria morar mais perto dos netos."
+        },
+        {
+          "speaker": "ai",
+          "text": "You could still move, couldn't you?"
+        },
+        {
+          "speaker": "user",
+          "target": "I wish I had the energy to pack and travel.",
+          "pt_hint": "Queria ter energia pra mudar."
+        },
+        {
+          "speaker": "ai",
+          "text": "It's never too late to try, you know."
+        },
+        {
+          "speaker": "user",
+          "target": "I wish I believed that more often.",
+          "pt_hint": "Queria acreditar mais nisso."
+        },
+        {
+          "speaker": "ai",
+          "text": "Start small. One word, one letter, one call."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "wish-past-listening-story",
+      "title": "The letters she never sent",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe what Dona Lúcia regrets and what she longs for now. Use at least two I WISH sentences.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Dona Lúcia opened an old wooden box that she hadn't touched for many years."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "I wish I had sent these letters when I had the chance."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female2",
+          "en": "Why didn't you send them, grandma?"
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "I wish I were braver. I was afraid of what he would answer."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Now I wish I lived in a time when letters traveled across the ocean."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Some regrets fade over time — others stay quietly, like old letters in a wooden box."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"I Wish + Past — Regret and Longing\". I WISH followed by a past tense expresses regret about the present or past. I wish I spoke Italian fluently. She wishes she had studied abroad when she was younger. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"I Wish + Past — Regret and Longing\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "I Wish + Past — Regret and Longing",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"I Wish + Past — Regret and Longing\".",
+        "hint_pt_br": "Ela fala o título: \"I Wish + Past — Regret and Longing\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

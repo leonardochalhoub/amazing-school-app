@@ -1,0 +1,283 @@
+{
+  "slug": "modal-perfect-regret",
+  "title": "Modal Perfect — Past Regret and Criticism",
+  "description": "SHOULD / COULD / WOULD + HAVE + past participle comment on completed past actions.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.1",
+  "xp_reward": 65,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Modais perfect: SHOULD HAVE (arrependimento), COULD HAVE (possibilidade), WOULD HAVE (hipotético).",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Modal Perfect — Past Regret and Criticism",
+      "subtitle_en": "SHOULD / COULD / WOULD + HAVE + past participle comment on completed past actions.",
+      "subtitle_pt": "Modais perfect: SHOULD HAVE (arrependimento), COULD HAVE (possibilidade), WOULD HAVE (hipotético)."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "SHOULD / COULD / WOULD + HAVE + past participle comment on completed past actions. Today's focus: modal perfect — past regret and criticism. I should have listened to my mentor's advice.",
+      "text_pt": "Modais perfect: SHOULD HAVE (arrependimento), COULD HAVE (possibilidade), WOULD HAVE (hipotético). Foco de hoje: modal perfect — past regret and criticism. Eu devia ter escutado o conselho do meu mentor."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Modal Perfect — Past Regret and Criticism",
+      "body_en": "SHOULD HAVE = regret/criticism. COULD HAVE = unrealized possibility. WOULD HAVE = hypothetical. MUST HAVE = strong guess. MIGHT HAVE = weak guess. 'I should have listened.'",
+      "body_pt": "Modais perfect: SHOULD HAVE (arrependimento), COULD HAVE (possibilidade), WOULD HAVE (hipotético).",
+      "examples": [
+        {
+          "en": "I should have listened to my mentor's advice.",
+          "pt": "Eu devia ter escutado o conselho do meu mentor."
+        },
+        {
+          "en": "We could have finished the project yesterday.",
+          "pt": "Poderíamos ter terminado o projeto ontem."
+        },
+        {
+          "en": "She must have left early because her car is gone.",
+          "pt": "Ela deve ter saído cedo porque o carro sumiu."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Modal Perfect — Past Regret and Criticism",
+      "items": [
+        {
+          "term": "retrospective",
+          "pt": "retrospectivo"
+        },
+        {
+          "term": "criticize",
+          "pt": "criticar"
+        },
+        {
+          "term": "anticipate",
+          "pt": "antecipar"
+        },
+        {
+          "term": "hindsight",
+          "pt": "visão retrospectiva"
+        },
+        {
+          "term": "mistake",
+          "pt": "erro"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-modal-perfect-regret-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I should have ___ to my mentor's advice.\"",
+        "correct": "listened",
+        "explanation": "Full sentence: \"I should have listened to my mentor's advice.\"",
+        "hint_pt_br": "Eu devia ter escutado o conselho do meu mentor."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-modal-perfect-regret-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "We could have finished the project yesterday."
+        ],
+        "correct": 3,
+        "explanation": "The correct sentence is: \"We could have finished the project yesterday.\"",
+        "hint_pt_br": "Poderíamos ter terminado o projeto ontem."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-modal-perfect-regret-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "retrospective",
+            "retrospectivo"
+          ],
+          [
+            "criticize",
+            "criticar"
+          ],
+          [
+            "anticipate",
+            "antecipar"
+          ],
+          [
+            "hindsight",
+            "visão retrospectiva"
+          ],
+          [
+            "mistake",
+            "erro"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Modal Perfect — Past Regret and Criticism — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre modal perfect — past regret and criticism. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, how was yesterday's product launch?"
+        },
+        {
+          "speaker": "user",
+          "target": "We should have tested more before going live.",
+          "pt_hint": "Devíamos ter testado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Did anything actually break during the launch?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, and we could have prevented all of it.",
+          "pt_hint": "Teríamos evitado tudo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Who gave you the warning you ignored?"
+        },
+        {
+          "speaker": "user",
+          "target": "My lead engineer must have warned me twice.",
+          "pt_hint": "Meu líder avisou."
+        },
+        {
+          "speaker": "ai",
+          "text": "What should you have done differently?"
+        },
+        {
+          "speaker": "user",
+          "target": "I should have delayed by one week.",
+          "pt_hint": "Devia ter adiado uma semana."
+        },
+        {
+          "speaker": "ai",
+          "text": "Can you recover by next month?"
+        },
+        {
+          "speaker": "user",
+          "target": "If we had planned better, we would have.",
+          "pt_hint": "Se tivéssemos planejado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Hindsight teaches what foresight never did."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "modal-perfect-regret-listening-story",
+      "title": "The launch that failed",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe what Joca regrets and what he should have done differently. Use at least three modal perfects.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "The Monday after the launch, the team gathered for a retrospective that none of them wanted to attend."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "We should have delayed the launch by at least seven days, in hindsight."
+        },
+        {
+          "speaker": "Engineer",
+          "voice": "female1",
+          "en": "I could have been clearer about the risks I flagged in the Friday meeting."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "You must have felt ignored, and I'm sorry I didn't listen properly."
+        },
+        {
+          "speaker": "Engineer",
+          "voice": "female1",
+          "en": "If we had tested the edge cases, we would have caught the bug in staging."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "The launch had failed — but the retrospective, handled well, turned failure into fuel."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Modal Perfect — Past Regret and Criticism\". SHOULD / COULD / WOULD + HAVE + past participle comment on completed past actions. I should have listened to my mentor's advice. We could have finished the project yesterday. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Modal Perfect — Past Regret and Criticism\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Modal Perfect — Past Regret and Criticism",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Modal Perfect — Past Regret and Criticism\".",
+        "hint_pt_br": "Ela fala o título: \"Modal Perfect — Past Regret and Criticism\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

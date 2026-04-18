@@ -1,0 +1,283 @@
+{
+  "slug": "past-perfect-continuous",
+  "title": "Past Perfect Continuous",
+  "description": "HAD BEEN + -ing describes an action in progress before another moment in the past.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.2",
+  "xp_reward": 60,
+  "estimated_minutes": 54,
+  "summary_pt_br": "HAD BEEN + -ing: ação contínua anterior a outro momento passado. 'She had been surfing when the storm came.'",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Past Perfect Continuous",
+      "subtitle_en": "HAD BEEN + -ing describes an action in progress before another moment in the past.",
+      "subtitle_pt": "HAD BEEN + -ing: ação contínua anterior a outro momento passado. 'She had been surfing when the storm came.'"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "HAD BEEN + -ing describes an action in progress before another moment in the past. Today's focus: past perfect continuous. She had been training for months when the injury happened.",
+      "text_pt": "HAD BEEN + -ing: ação contínua anterior a outro momento passado. 'She had been surfing when the storm came.' Foco de hoje: past perfect continuous. Ela estava treinando há meses quando se lesionou."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Past Perfect Continuous",
+      "body_en": "Form: HAD BEEN + -ing. Use to emphasize duration of an action that was ongoing before something else happened. 'She had been surfing for two hours when the storm arrived.'",
+      "body_pt": "HAD BEEN + -ing: ação contínua anterior a outro momento passado. 'She had been surfing when the storm came.'",
+      "examples": [
+        {
+          "en": "She had been training for months when the injury happened.",
+          "pt": "Ela estava treinando há meses quando se lesionou."
+        },
+        {
+          "en": "They had been waiting for two hours before the bus arrived.",
+          "pt": "Estavam esperando há 2 horas quando o ônibus chegou."
+        },
+        {
+          "en": "We had been working all night when the email finally came.",
+          "pt": "Trabalhávamos a noite toda quando o email chegou."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Past Perfect Continuous",
+      "items": [
+        {
+          "term": "injury",
+          "pt": "lesão"
+        },
+        {
+          "term": "exhausted",
+          "pt": "exausto"
+        },
+        {
+          "term": "persist",
+          "pt": "persistir"
+        },
+        {
+          "term": "endure",
+          "pt": "suportar"
+        },
+        {
+          "term": "setback",
+          "pt": "revés"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-past-perfect-continuous-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"She had been ___ for months when the injury happened.\"",
+        "correct": "training",
+        "explanation": "Full sentence: \"She had been training for months when the injury happened.\"",
+        "hint_pt_br": "Ela estava treinando há meses quando se lesionou."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-past-perfect-continuous-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "They had been waiting for two hours before the bus arrived."
+        ],
+        "correct": 3,
+        "explanation": "The correct sentence is: \"They had been waiting for two hours before the bus arrived.\"",
+        "hint_pt_br": "Estavam esperando há 2 horas quando o ônibus chegou."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-past-perfect-continuous-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "injury",
+            "lesão"
+          ],
+          [
+            "exhausted",
+            "exausto"
+          ],
+          [
+            "persist",
+            "persistir"
+          ],
+          [
+            "endure",
+            "suportar"
+          ],
+          [
+            "setback",
+            "revés"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Past Perfect Continuous — dialog",
+      "character": "Bia",
+      "pt_summary": "Diálogo sobre past perfect continuous. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Bia, what happened before the accident at the competition?"
+        },
+        {
+          "speaker": "user",
+          "target": "I had been surfing for three hours non-stop.",
+          "pt_hint": "Surfava há 3 horas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Had you been feeling tired or dizzy?"
+        },
+        {
+          "speaker": "user",
+          "target": "I had been feeling strong until the last wave.",
+          "pt_hint": "Forte até a última onda."
+        },
+        {
+          "speaker": "ai",
+          "text": "Had anyone warned you about the weather?"
+        },
+        {
+          "speaker": "user",
+          "target": "The coach had been watching the sky closely.",
+          "pt_hint": "Coach observava."
+        },
+        {
+          "speaker": "ai",
+          "text": "What had you been preparing for all year?"
+        },
+        {
+          "speaker": "user",
+          "target": "I had been training for this exact competition.",
+          "pt_hint": "Esse campeonato."
+        },
+        {
+          "speaker": "ai",
+          "text": "How did you feel right after the fall?"
+        },
+        {
+          "speaker": "user",
+          "target": "I had been crying silently before my mom came.",
+          "pt_hint": "Chorei em silêncio."
+        },
+        {
+          "speaker": "ai",
+          "text": "Setbacks teach us more than easy wins ever will."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "past-perfect-continuous-listening-story",
+      "title": "The wave that broke the year",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe what Bia had been doing before the fall and what happened right after. Use past perfect continuous.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "The competition had been running smoothly when a sudden shift in the swell changed everything."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "I had been surfing for three hours and feeling invincible all morning."
+        },
+        {
+          "speaker": "Coach",
+          "voice": "male1",
+          "en": "She had been riding the biggest waves of her life just minutes before the fall."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "I had been ignoring the pain in my shoulder for two weeks before the contest."
+        },
+        {
+          "speaker": "Doctor",
+          "voice": "female2",
+          "en": "You had been pushing your body harder than your recovery could keep up with."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Three months of rest would become the start of a stronger, more patient athlete."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Past Perfect Continuous\". HAD BEEN + -ing describes an action in progress before another moment in the past. She had been training for months when the injury happened. They had been waiting for two hours before the bus arrived. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Past Perfect Continuous\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Past Perfect Continuous",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Past Perfect Continuous\".",
+        "hint_pt_br": "Ela fala o título: \"Past Perfect Continuous\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

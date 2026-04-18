@@ -1,0 +1,283 @@
+{
+  "slug": "phrasal-verbs-travel",
+  "title": "Phrasal Verbs — Travel",
+  "description": "Phrasal verbs are everywhere in travel English — check in, take off, get around, look out.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.1",
+  "xp_reward": 55,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Phrasal verbs de viagem: check in, check out, take off, get around, look out for, pick up, set off.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Phrasal Verbs — Travel",
+      "subtitle_en": "Phrasal verbs are everywhere in travel English — check in, take off, get around, look out.",
+      "subtitle_pt": "Phrasal verbs de viagem: check in, check out, take off, get around, look out for, pick up, set off."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Phrasal verbs are everywhere in travel English — check in, take off, get around, look out. Today's focus: phrasal verbs — travel. We check in at the hotel at three o'clock.",
+      "text_pt": "Phrasal verbs de viagem: check in, check out, take off, get around, look out for, pick up, set off. Foco de hoje: phrasal verbs — travel. Fazemos o check-in no hotel às três."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Phrasal Verbs — Travel",
+      "body_en": "Common travel phrasal verbs: CHECK IN (hotel/airport), CHECK OUT (leave hotel), TAKE OFF (airplane departs), GET AROUND (move in a city), LOOK OUT FOR (be careful of), PICK UP (collect someone), SET OFF (start a journey).",
+      "body_pt": "Phrasal verbs de viagem: check in, check out, take off, get around, look out for, pick up, set off.",
+      "examples": [
+        {
+          "en": "We check in at the hotel at three o'clock.",
+          "pt": "Fazemos o check-in no hotel às três."
+        },
+        {
+          "en": "The plane takes off in twenty minutes.",
+          "pt": "O avião decola em vinte minutos."
+        },
+        {
+          "en": "In Amsterdam, we got around by bicycle.",
+          "pt": "Em Amsterdã, a gente se virava de bicicleta."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Phrasal Verbs — Travel",
+      "items": [
+        {
+          "term": "check in",
+          "pt": "fazer check-in"
+        },
+        {
+          "term": "take off",
+          "pt": "decolar"
+        },
+        {
+          "term": "get around",
+          "pt": "se locomover"
+        },
+        {
+          "term": "set off",
+          "pt": "partir"
+        },
+        {
+          "term": "pick up",
+          "pt": "buscar (alguém)"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-phrasal-verbs-travel-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"We check in at the hotel at three ___.\"",
+        "correct": "o'clock",
+        "explanation": "Full sentence: \"We check in at the hotel at three o'clock.\"",
+        "hint_pt_br": "Fazemos o check-in no hotel às três."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-phrasal-verbs-travel-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "The plane takes off in twenty minutes."
+        ],
+        "correct": 3,
+        "explanation": "The correct sentence is: \"The plane takes off in twenty minutes.\"",
+        "hint_pt_br": "O avião decola em vinte minutos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-phrasal-verbs-travel-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "check in",
+            "fazer check-in"
+          ],
+          [
+            "take off",
+            "decolar"
+          ],
+          [
+            "get around",
+            "se locomover"
+          ],
+          [
+            "set off",
+            "partir"
+          ],
+          [
+            "pick up",
+            "buscar (alguém)"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Phrasal Verbs — Travel — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre phrasal verbs — travel. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "So, you're finally traveling to Portugal. When do you set off?"
+        },
+        {
+          "speaker": "user",
+          "target": "I set off on Thursday at six in the morning.",
+          "pt_hint": "Parto quinta às seis."
+        },
+        {
+          "speaker": "ai",
+          "text": "What time does your flight take off?"
+        },
+        {
+          "speaker": "user",
+          "target": "It takes off at eight fifteen from the main terminal.",
+          "pt_hint": "Decola 8:15."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is someone picking you up in Lisbon?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, my cousin is picking me up at the airport.",
+          "pt_hint": "Meu primo me busca."
+        },
+        {
+          "speaker": "ai",
+          "text": "How are you planning to get around the city?"
+        },
+        {
+          "speaker": "user",
+          "target": "I will get around by metro and walking.",
+          "pt_hint": "Metrô e a pé."
+        },
+        {
+          "speaker": "ai",
+          "text": "What time will you check in at the hotel?"
+        },
+        {
+          "speaker": "user",
+          "target": "I check in at three in the afternoon.",
+          "pt_hint": "Check-in às três."
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. Have a wonderful trip and look out for pickpockets."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "phrasal-verbs-travel-listening-story",
+      "title": "Zara's first day in Lisbon",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Write what Zara does from the airport to the hotel. Use at least three travel phrasal verbs.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Zara's plane took off from London just after dawn and landed in Lisbon three hours later."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "I picked up my luggage quickly and looked out for my cousin at the exit."
+        },
+        {
+          "speaker": "Cousin",
+          "voice": "female2",
+          "en": "Welcome! I'll drive you to the hotel so you can check in and rest."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Can we set off early tomorrow? I want to get around the old quarter on foot."
+        },
+        {
+          "speaker": "Cousin",
+          "voice": "female2",
+          "en": "Absolutely. We'll check out of the hotel after breakfast and start exploring."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Travel, as Zara liked to say, is a short course in every phrasal verb you will ever need."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Phrasal Verbs — Travel\". Phrasal verbs are everywhere in travel English — check in, take off, get around, look out. We check in at the hotel at three o'clock. The plane takes off in twenty minutes. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Phrasal Verbs — Travel\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Phrasal Verbs — Travel",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Phrasal Verbs — Travel\".",
+        "hint_pt_br": "Ela fala o título: \"Phrasal Verbs — Travel\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

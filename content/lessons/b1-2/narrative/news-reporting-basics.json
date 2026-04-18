@@ -1,0 +1,283 @@
+{
+  "slug": "news-reporting-basics",
+  "title": "News Reporting Basics",
+  "description": "Headline style, the five Ws (who, what, when, where, why), and objective vocabulary.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.2",
+  "xp_reward": 60,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Jornalismo usa voz passiva, verbos de reportar, e adjetivos objetivos. Manchetes cortam artigos.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "News Reporting Basics",
+      "subtitle_en": "Headline style, the five Ws (who, what, when, where, why), and objective vocabulary.",
+      "subtitle_pt": "Jornalismo usa voz passiva, verbos de reportar, e adjetivos objetivos. Manchetes cortam artigos."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Headline style, the five Ws (who, what, when, where, why), and objective vocabulary. Today's focus: news reporting basics. The mayor announced a new public transport plan yesterday.",
+      "text_pt": "Jornalismo usa voz passiva, verbos de reportar, e adjetivos objetivos. Manchetes cortam artigos. Foco de hoje: news reporting basics. O prefeito anunciou um novo plano de transporte ontem."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "News Reporting Basics",
+      "body_en": "News uses passive voice often, reporting verbs (say/claim/announce/deny), and objective adjectives. Headlines drop articles: 'Minister resigns after scandal'.",
+      "body_pt": "Jornalismo usa voz passiva, verbos de reportar, e adjetivos objetivos. Manchetes cortam artigos.",
+      "examples": [
+        {
+          "en": "The mayor announced a new public transport plan yesterday.",
+          "pt": "O prefeito anunciou um novo plano de transporte ontem."
+        },
+        {
+          "en": "Officials say the investigation will continue next week.",
+          "pt": "Autoridades dizem que a investigação segue."
+        },
+        {
+          "en": "A new law has been passed to reduce plastic use.",
+          "pt": "Foi aprovada uma lei pra reduzir plástico."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — News Reporting Basics",
+      "items": [
+        {
+          "term": "announce",
+          "pt": "anunciar"
+        },
+        {
+          "term": "reporter",
+          "pt": "repórter"
+        },
+        {
+          "term": "headline",
+          "pt": "manchete"
+        },
+        {
+          "term": "investigation",
+          "pt": "investigação"
+        },
+        {
+          "term": "official",
+          "pt": "autoridade"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-news-reporting-basics-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The mayor ___ a new public transport plan yesterday.\"",
+        "correct": "announced",
+        "explanation": "Full sentence: \"The mayor announced a new public transport plan yesterday.\"",
+        "hint_pt_br": "O prefeito anunciou um novo plano de transporte ontem."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-news-reporting-basics-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Officials say the investigation will continue next week.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "The correct sentence is: \"Officials say the investigation will continue next week.\"",
+        "hint_pt_br": "Autoridades dizem que a investigação segue."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-news-reporting-basics-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "announce",
+            "anunciar"
+          ],
+          [
+            "reporter",
+            "repórter"
+          ],
+          [
+            "headline",
+            "manchete"
+          ],
+          [
+            "investigation",
+            "investigação"
+          ],
+          [
+            "official",
+            "autoridade"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "News Reporting Basics — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre news reporting basics. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Let's practice writing a news headline together."
+        },
+        {
+          "speaker": "user",
+          "target": "Mayor announces new bus line this morning.",
+          "pt_hint": "Prefeito anuncia."
+        },
+        {
+          "speaker": "ai",
+          "text": "Good. Drop the articles. Try again, shorter."
+        },
+        {
+          "speaker": "user",
+          "target": "Mayor launches new bus line citywide.",
+          "pt_hint": "Lança linha nova."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now write the opening sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "The mayor announced a new bus line on Monday.",
+          "pt_hint": "Prefeito anunciou."
+        },
+        {
+          "speaker": "ai",
+          "text": "Where did the announcement happen?"
+        },
+        {
+          "speaker": "user",
+          "target": "At a press conference at city hall.",
+          "pt_hint": "Coletiva na prefeitura."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why is this story important to readers?"
+        },
+        {
+          "speaker": "user",
+          "target": "It cuts commute times for thousands of workers.",
+          "pt_hint": "Reduz tempo de trajeto."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now you have a complete news lead."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "news-reporting-basics-listening-story",
+      "title": "The front-page lead",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Summarize the news story in three sentences using reporting vocabulary.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the small newsroom of Praia do Sol, Kumar helped his students write their first real news lead."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "A new public transport plan was announced by the mayor at a press conference this morning."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "Officials said the plan will cut commute times by nearly thirty percent."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Always tell your readers who, what, when, where, and why in the first two sentences."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "And use reporting verbs like ANNOUNCED, CLAIMED, or DENIED to keep your story objective."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "By the end of class, the students had written their first real piece of journalism."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"News Reporting Basics\". Headline style, the five Ws (who, what, when, where, why), and objective vocabulary. The mayor announced a new public transport plan yesterday. Officials say the investigation will continue next week. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"News Reporting Basics\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "News Reporting Basics",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"News Reporting Basics\".",
+        "hint_pt_br": "Ela fala o título: \"News Reporting Basics\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

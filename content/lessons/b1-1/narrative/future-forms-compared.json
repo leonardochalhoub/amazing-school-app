@@ -1,0 +1,283 @@
+{
+  "slug": "future-forms-compared",
+  "title": "Future Forms — Compared",
+  "description": "WILL, GOING TO, PRESENT CONTINUOUS, and PRESENT SIMPLE each describe a different kind of future.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.1",
+  "xp_reward": 55,
+  "estimated_minutes": 54,
+  "summary_pt_br": "WILL (decisão na hora), GOING TO (plano), PRESENT CONT (compromisso fixo), PRESENT SIMPLE (horário).",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Future Forms — Compared",
+      "subtitle_en": "WILL, GOING TO, PRESENT CONTINUOUS, and PRESENT SIMPLE each describe a different kind of future.",
+      "subtitle_pt": "WILL (decisão na hora), GOING TO (plano), PRESENT CONT (compromisso fixo), PRESENT SIMPLE (horário)."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "WILL, GOING TO, PRESENT CONTINUOUS, and PRESENT SIMPLE each describe a different kind of future. Today's focus: future forms — compared. I'll help you with that bag — it looks heavy.",
+      "text_pt": "WILL (decisão na hora), GOING TO (plano), PRESENT CONT (compromisso fixo), PRESENT SIMPLE (horário). Foco de hoje: future forms — compared. Eu te ajudo com essa mala — parece pesada."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Future Forms — Compared",
+      "body_en": "WILL = spontaneous decision, prediction, promise. GOING TO = plan already made, evidence-based prediction. PRESENT CONTINUOUS = fixed arrangement. PRESENT SIMPLE = schedule (timetable).",
+      "body_pt": "WILL (decisão na hora), GOING TO (plano), PRESENT CONT (compromisso fixo), PRESENT SIMPLE (horário).",
+      "examples": [
+        {
+          "en": "I'll help you with that bag — it looks heavy.",
+          "pt": "Eu te ajudo com essa mala — parece pesada."
+        },
+        {
+          "en": "We're going to launch the app next quarter.",
+          "pt": "Vamos lançar o app no próximo trimestre."
+        },
+        {
+          "en": "The train leaves at six fifteen tomorrow.",
+          "pt": "O trem parte às 6:15 amanhã."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Future Forms — Compared",
+      "items": [
+        {
+          "term": "launch",
+          "pt": "lançar"
+        },
+        {
+          "term": "schedule",
+          "pt": "cronograma"
+        },
+        {
+          "term": "decision",
+          "pt": "decisão"
+        },
+        {
+          "term": "arrangement",
+          "pt": "combinado"
+        },
+        {
+          "term": "prediction",
+          "pt": "previsão"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-future-forms-compared-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I'll help you with that bag — it ___ heavy.\"",
+        "correct": "looks",
+        "explanation": "Full sentence: \"I'll help you with that bag — it looks heavy.\"",
+        "hint_pt_br": "Eu te ajudo com essa mala — parece pesada."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-future-forms-compared-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "We're going to launch the app next quarter."
+        ],
+        "correct": 3,
+        "explanation": "The correct sentence is: \"We're going to launch the app next quarter.\"",
+        "hint_pt_br": "Vamos lançar o app no próximo trimestre."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-future-forms-compared-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "launch",
+            "lançar"
+          ],
+          [
+            "schedule",
+            "cronograma"
+          ],
+          [
+            "decision",
+            "decisão"
+          ],
+          [
+            "arrangement",
+            "combinado"
+          ],
+          [
+            "prediction",
+            "previsão"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Future Forms — Compared — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre future forms — compared. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, what are your plans for the product launch?"
+        },
+        {
+          "speaker": "user",
+          "target": "We are launching the beta in September.",
+          "pt_hint": "Beta em setembro."
+        },
+        {
+          "speaker": "ai",
+          "text": "Are you doing any demos before that?"
+        },
+        {
+          "speaker": "user",
+          "target": "We are meeting three investors next Monday.",
+          "pt_hint": "3 investidores segunda."
+        },
+        {
+          "speaker": "ai",
+          "text": "What will you do if the demos go badly?"
+        },
+        {
+          "speaker": "user",
+          "target": "I will adjust the roadmap and try again.",
+          "pt_hint": "Ajusto e tento de novo."
+        },
+        {
+          "speaker": "ai",
+          "text": "When does the conference start?"
+        },
+        {
+          "speaker": "user",
+          "target": "It starts on October third at nine in the morning.",
+          "pt_hint": "3 out, 9h."
+        },
+        {
+          "speaker": "ai",
+          "text": "Are you going to attend in person?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I am going to fly out on Sunday.",
+          "pt_hint": "Vou domingo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Good luck. I will be watching the livestream for sure."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "future-forms-compared-listening-story",
+      "title": "Joca's launch plan",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Write Joca's plans using at least three different future forms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the startup office, Joca was going over the launch roadmap with his small team of engineers."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "We are launching the beta on September fifteenth, no matter what happens."
+        },
+        {
+          "speaker": "Engineer",
+          "voice": "female1",
+          "en": "If the servers can't handle the load, we will scale up that same night."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "The demo at the conference starts at nine, so we have to be ready by eight."
+        },
+        {
+          "speaker": "Designer",
+          "voice": "male2",
+          "en": "I'll finish the new onboarding screens before Friday, I promise."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Plans, promises, and schedules — the vocabulary of every startup about to change the world."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Future Forms — Compared\". WILL, GOING TO, PRESENT CONTINUOUS, and PRESENT SIMPLE each describe a different kind of future. I'll help you with that bag — it looks heavy. We're going to launch the app next quarter. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Future Forms — Compared\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Future Forms — Compared",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Future Forms — Compared\".",
+        "hint_pt_br": "Ela fala o título: \"Future Forms — Compared\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

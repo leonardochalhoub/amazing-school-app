@@ -1,0 +1,283 @@
+{
+  "slug": "negotiating-prices",
+  "title": "Negotiating Prices",
+  "description": "Language for haggling and price negotiation: soft openers, counter-offers, polite pushback.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.2",
+  "xp_reward": 60,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Frases de negociação: 'Is that the best price?', 'Would you consider...?', 'A bit above my budget'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Negotiating Prices",
+      "subtitle_en": "Language for haggling and price negotiation: soft openers, counter-offers, polite pushback.",
+      "subtitle_pt": "Frases de negociação: 'Is that the best price?', 'Would you consider...?', 'A bit above my budget'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "Language for haggling and price negotiation: soft openers, counter-offers, polite pushback. Today's focus: negotiating prices. Is this the best price you can offer me?",
+      "text_pt": "Frases de negociação: 'Is that the best price?', 'Would you consider...?', 'A bit above my budget'. Foco de hoje: negotiating prices. Esse é o melhor preço que você me faz?"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Negotiating Prices",
+      "body_en": "Key phrases: 'Is this the best you can do?', 'Would you consider X?', 'That's a bit above my budget.', 'What if we agreed on Y?'. Soft modals (could, would, might) smooth negotiations.",
+      "body_pt": "Frases de negociação: 'Is that the best price?', 'Would you consider...?', 'A bit above my budget'.",
+      "examples": [
+        {
+          "en": "Is this the best price you can offer me?",
+          "pt": "Esse é o melhor preço que você me faz?"
+        },
+        {
+          "en": "Would you consider a small discount for cash?",
+          "pt": "Aceita um desconto à vista?"
+        },
+        {
+          "en": "That is a bit above my budget, honestly.",
+          "pt": "Sinceramente, está um pouco acima do meu orçamento."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Negotiating Prices",
+      "items": [
+        {
+          "term": "discount",
+          "pt": "desconto"
+        },
+        {
+          "term": "bargain",
+          "pt": "pechincha"
+        },
+        {
+          "term": "negotiate",
+          "pt": "negociar"
+        },
+        {
+          "term": "budget",
+          "pt": "orçamento"
+        },
+        {
+          "term": "counter-offer",
+          "pt": "contraproposta"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-negotiating-prices-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Is this the best ___ you can offer me?\"",
+        "correct": "price",
+        "explanation": "Full sentence: \"Is this the best price you can offer me?\"",
+        "hint_pt_br": "Esse é o melhor preço que você me faz?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-negotiating-prices-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "Would you consider a small discount for cash?"
+        ],
+        "correct": 3,
+        "explanation": "The correct sentence is: \"Would you consider a small discount for cash?\"",
+        "hint_pt_br": "Aceita um desconto à vista?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-negotiating-prices-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "discount",
+            "desconto"
+          ],
+          [
+            "bargain",
+            "pechincha"
+          ],
+          [
+            "negotiate",
+            "negociar"
+          ],
+          [
+            "budget",
+            "orçamento"
+          ],
+          [
+            "counter-offer",
+            "contraproposta"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Negotiating Prices — dialog",
+      "character": "Rafa",
+      "pt_summary": "Diálogo sobre negotiating prices. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome. How can I help you today?"
+        },
+        {
+          "speaker": "user",
+          "target": "I'm interested in the big fridge. How much is it?",
+          "pt_hint": "Quanto é a geladeira grande?"
+        },
+        {
+          "speaker": "ai",
+          "text": "It's two thousand dollars, with a one-year warranty."
+        },
+        {
+          "speaker": "user",
+          "target": "Is this the best price you can offer?",
+          "pt_hint": "Esse é o melhor preço?"
+        },
+        {
+          "speaker": "ai",
+          "text": "If you pay in cash, I can go down to eighteen hundred."
+        },
+        {
+          "speaker": "user",
+          "target": "That is still a bit above my budget.",
+          "pt_hint": "Acima do meu orçamento."
+        },
+        {
+          "speaker": "ai",
+          "text": "What did you have in mind?"
+        },
+        {
+          "speaker": "user",
+          "target": "Would you consider fifteen hundred with delivery?",
+          "pt_hint": "1500 com entrega?"
+        },
+        {
+          "speaker": "ai",
+          "text": "I can do sixteen hundred, and delivery is included."
+        },
+        {
+          "speaker": "user",
+          "target": "We have a deal. Thank you.",
+          "pt_hint": "Fechado, obrigado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Pleasure doing business. I'll deliver tomorrow morning."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "negotiating-prices-listening-story",
+      "title": "A deal at the appliance store",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe how the negotiation went step by step. Use at least three negotiation phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At a small appliance store, a calm negotiation unfolded over a used commercial fridge."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "Is this the best price you can offer me today?"
+        },
+        {
+          "speaker": "Seller",
+          "voice": "female1",
+          "en": "In cash, I can go down to eighteen hundred with a one-year warranty."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "That is still a bit above my budget for the new food truck."
+        },
+        {
+          "speaker": "Seller",
+          "voice": "female1",
+          "en": "Would you consider sixteen hundred including home delivery?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Two respectful counter-offers later, both parties walked away feeling they had won."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Negotiating Prices\". Language for haggling and price negotiation: soft openers, counter-offers, polite pushback. Is this the best price you can offer me? Would you consider a small discount for cash? Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Negotiating Prices\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Negotiating Prices",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Negotiating Prices\".",
+        "hint_pt_br": "Ela fala o título: \"Negotiating Prices\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

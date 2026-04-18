@@ -1,0 +1,283 @@
+{
+  "slug": "medical-pharmacy",
+  "title": "At the Pharmacy",
+  "description": "Describing symptoms and asking for over-the-counter medicine at a pharmacy.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.2",
+  "xp_reward": 60,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Farmácia em inglês: headache, sore throat, cough. 'Preciso de receita?', 'De quanto em quanto tempo?', 'Tem efeito colateral?'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "At the Pharmacy",
+      "subtitle_en": "Describing symptoms and asking for over-the-counter medicine at a pharmacy.",
+      "subtitle_pt": "Farmácia em inglês: headache, sore throat, cough. 'Preciso de receita?', 'De quanto em quanto tempo?', 'Tem efeito colateral?'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Describing symptoms and asking for over-the-counter medicine at a pharmacy. Today's focus: at the pharmacy. I have a terrible headache and a mild fever.",
+      "text_pt": "Farmácia em inglês: headache, sore throat, cough. 'Preciso de receita?', 'De quanto em quanto tempo?', 'Tem efeito colateral?'. Foco de hoje: at the pharmacy. Estou com dor de cabeça forte e febrezinha."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "At the Pharmacy",
+      "body_en": "Key phrases: 'I have a headache / sore throat / cough.', 'Do I need a prescription?', 'How often should I take it?', 'Does it have side effects?'",
+      "body_pt": "Farmácia em inglês: headache, sore throat, cough. 'Preciso de receita?', 'De quanto em quanto tempo?', 'Tem efeito colateral?'.",
+      "examples": [
+        {
+          "en": "I have a terrible headache and a mild fever.",
+          "pt": "Estou com dor de cabeça forte e febrezinha."
+        },
+        {
+          "en": "Do I need a prescription for this medicine?",
+          "pt": "Preciso de receita pra esse remédio?"
+        },
+        {
+          "en": "How often should I take the tablets?",
+          "pt": "De quanto em quanto tempo tomo os comprimidos?"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — At the Pharmacy",
+      "items": [
+        {
+          "term": "prescription",
+          "pt": "receita"
+        },
+        {
+          "term": "dose",
+          "pt": "dose"
+        },
+        {
+          "term": "side effect",
+          "pt": "efeito colateral"
+        },
+        {
+          "term": "painkiller",
+          "pt": "analgésico"
+        },
+        {
+          "term": "antibiotic",
+          "pt": "antibiótico"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-medical-pharmacy-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I have a ___ headache and a mild fever.\"",
+        "correct": "terrible",
+        "explanation": "Full sentence: \"I have a terrible headache and a mild fever.\"",
+        "hint_pt_br": "Estou com dor de cabeça forte e febrezinha."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-medical-pharmacy-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Do I need a prescription for this medicine?",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "The correct sentence is: \"Do I need a prescription for this medicine?\"",
+        "hint_pt_br": "Preciso de receita pra esse remédio?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-medical-pharmacy-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "prescription",
+            "receita"
+          ],
+          [
+            "dose",
+            "dose"
+          ],
+          [
+            "side effect",
+            "efeito colateral"
+          ],
+          [
+            "painkiller",
+            "analgésico"
+          ],
+          [
+            "antibiotic",
+            "antibiótico"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "At the Pharmacy — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre at the pharmacy. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Good afternoon. How can I help you today?"
+        },
+        {
+          "speaker": "user",
+          "target": "I have a bad sore throat and some fever.",
+          "pt_hint": "Dor de garganta e febre."
+        },
+        {
+          "speaker": "ai",
+          "text": "How long have you had these symptoms?"
+        },
+        {
+          "speaker": "user",
+          "target": "Since yesterday evening.",
+          "pt_hint": "Desde ontem à noite."
+        },
+        {
+          "speaker": "ai",
+          "text": "I can recommend an over-the-counter painkiller."
+        },
+        {
+          "speaker": "user",
+          "target": "Do I need a prescription for anything stronger?",
+          "pt_hint": "Precisa de receita pra algo mais forte?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, antibiotics require a doctor's note."
+        },
+        {
+          "speaker": "user",
+          "target": "How often should I take these tablets?",
+          "pt_hint": "De quanto em quanto tempo?"
+        },
+        {
+          "speaker": "ai",
+          "text": "One every eight hours with food, please."
+        },
+        {
+          "speaker": "user",
+          "target": "Are there any serious side effects?",
+          "pt_hint": "Tem efeito colateral forte?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Mild drowsiness in some people, nothing serious."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "medical-pharmacy-listening-story",
+      "title": "Dona Lúcia at the pharmacy",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe Dona Lúcia's symptoms and the pharmacist's advice. Use at least three medical phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Dona Lúcia walked slowly into the pharmacy, carrying a shopping bag and a worried face."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "I have a terrible headache and a sore throat that won't go away."
+        },
+        {
+          "speaker": "Pharmacist",
+          "voice": "male1",
+          "en": "How long have you had these symptoms, and have you taken any medicine?"
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Only some tea for three days. I usually avoid pills at my age."
+        },
+        {
+          "speaker": "Pharmacist",
+          "voice": "male1",
+          "en": "Take this painkiller every eight hours with food, and rest as much as you can."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Three days of rest and a friendly pharmacist — sometimes the simplest prescription works best."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"At the Pharmacy\". Describing symptoms and asking for over-the-counter medicine at a pharmacy. I have a terrible headache and a mild fever. Do I need a prescription for this medicine? Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"At the Pharmacy\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "At the Pharmacy",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"At the Pharmacy\".",
+        "hint_pt_br": "Ela fala o título: \"At the Pharmacy\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

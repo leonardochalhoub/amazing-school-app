@@ -1,0 +1,283 @@
+{
+  "slug": "cultural-differences",
+  "title": "Cultural Differences UK vs Brazil",
+  "description": "Comparing cultures without stereotypes: food, greetings, work-life, humor.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.2",
+  "xp_reward": 60,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Comparações culturais: 'In Britain tend to...', 'Unlike in Brazil...', 'What surprised me was...'",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Cultural Differences UK vs Brazil",
+      "subtitle_en": "Comparing cultures without stereotypes: food, greetings, work-life, humor.",
+      "subtitle_pt": "Comparações culturais: 'In Britain tend to...', 'Unlike in Brazil...', 'What surprised me was...'"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Comparing cultures without stereotypes: food, greetings, work-life, humor. Today's focus: cultural differences uk vs brazil. In Britain, people tend to queue politely for everything.",
+      "text_pt": "Comparações culturais: 'In Britain tend to...', 'Unlike in Brazil...', 'What surprised me was...' Foco de hoje: cultural differences uk vs brazil. No Reino Unido, as pessoas fazem fila educadamente."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Cultural Differences UK vs Brazil",
+      "body_en": "Comparative structures: 'In Britain, people TEND TO...', 'Unlike in Brazil, where...', 'One key difference is...', 'What surprised me most was...'",
+      "body_pt": "Comparações culturais: 'In Britain tend to...', 'Unlike in Brazil...', 'What surprised me was...'",
+      "examples": [
+        {
+          "en": "In Britain, people tend to queue politely for everything.",
+          "pt": "No Reino Unido, as pessoas fazem fila educadamente."
+        },
+        {
+          "en": "Unlike in Brazil, it rains almost every week in London.",
+          "pt": "Diferente do Brasil, chove quase toda semana em Londres."
+        },
+        {
+          "en": "What surprised me most was how quiet restaurants are here.",
+          "pt": "O que mais me surpreendeu foi quão silenciosos são os restaurantes aqui."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Cultural Differences UK vs Brazil",
+      "items": [
+        {
+          "term": "queue",
+          "pt": "fila"
+        },
+        {
+          "term": "custom",
+          "pt": "costume"
+        },
+        {
+          "term": "polite",
+          "pt": "educado"
+        },
+        {
+          "term": "reserved",
+          "pt": "reservado"
+        },
+        {
+          "term": "informal",
+          "pt": "informal"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-cultural-differences-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"In Britain, people tend to queue politely for ___.\"",
+        "correct": "everything",
+        "explanation": "Full sentence: \"In Britain, people tend to queue politely for everything.\"",
+        "hint_pt_br": "No Reino Unido, as pessoas fazem fila educadamente."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-cultural-differences-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "Unlike in Brazil, it rains almost every week in London."
+        ],
+        "correct": 3,
+        "explanation": "The correct sentence is: \"Unlike in Brazil, it rains almost every week in London.\"",
+        "hint_pt_br": "Diferente do Brasil, chove quase toda semana em Londres."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-cultural-differences-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "queue",
+            "fila"
+          ],
+          [
+            "custom",
+            "costume"
+          ],
+          [
+            "polite",
+            "educado"
+          ],
+          [
+            "reserved",
+            "reservado"
+          ],
+          [
+            "informal",
+            "informal"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Cultural Differences UK vs Brazil — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre cultural differences uk vs brazil. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara, what was the biggest culture shock when you moved?"
+        },
+        {
+          "speaker": "user",
+          "target": "Brazilians hug strangers, which felt overwhelming.",
+          "pt_hint": "Abraços de estranhos."
+        },
+        {
+          "speaker": "ai",
+          "text": "What do you miss from the UK?"
+        },
+        {
+          "speaker": "user",
+          "target": "I miss the quiet reserved conversations on buses.",
+          "pt_hint": "Conversas silenciosas."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's better about life here?"
+        },
+        {
+          "speaker": "user",
+          "target": "The warmth and openness of daily interactions.",
+          "pt_hint": "O calor humano."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do food cultures compare?"
+        },
+        {
+          "speaker": "user",
+          "target": "Brazilian food has more soul, British food more history.",
+          "pt_hint": "Mais alma vs história."
+        },
+        {
+          "speaker": "ai",
+          "text": "What about British humor?"
+        },
+        {
+          "speaker": "user",
+          "target": "It's dry and sarcastic, often confusing here.",
+          "pt_hint": "Seco e sarcástico."
+        },
+        {
+          "speaker": "ai",
+          "text": "Two cultures, both home in different ways."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "cultural-differences-listening-story",
+      "title": "A cup of tea between worlds",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe three cultural differences Zara has noticed, and how she has adapted to each.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On a quiet Sunday afternoon, Zara sat with her mother over video call, sharing small observations."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "In Britain, people tend to apologize even when nothing is wrong."
+        },
+        {
+          "speaker": "Mother",
+          "voice": "female2",
+          "en": "Here people ask how you are, but in Brazil they hug you before they hear the answer."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Unlike in London, my Brazilian neighbors bring food when they hear you had a bad day."
+        },
+        {
+          "speaker": "Mother",
+          "voice": "female2",
+          "en": "Cultures are neither better nor worse — they simply teach different kinds of kindness."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Between two time zones and two languages, Zara had learned to hold both worlds at once."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Cultural Differences UK vs Brazil\". Comparing cultures without stereotypes: food, greetings, work-life, humor. In Britain, people tend to queue politely for everything. Unlike in Brazil, it rains almost every week in London. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Cultural Differences UK vs Brazil\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Cultural Differences UK vs Brazil",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Cultural Differences UK vs Brazil\".",
+        "hint_pt_br": "Ela fala o título: \"Cultural Differences UK vs Brazil\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "make-do-take-collocations",
+  "title": "Collocations with MAKE, DO, TAKE",
+  "description": "MAKE, DO, and TAKE combine with specific nouns in fixed ways — you have to memorize them.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.1",
+  "xp_reward": 55,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Colocações fixas: MAKE a decision, DO homework, TAKE a break. Precisa decorar em bloco.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Collocations with MAKE, DO, TAKE",
+      "subtitle_en": "MAKE, DO, and TAKE combine with specific nouns in fixed ways — you have to memorize them.",
+      "subtitle_pt": "Colocações fixas: MAKE a decision, DO homework, TAKE a break. Precisa decorar em bloco."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "MAKE, DO, and TAKE combine with specific nouns in fixed ways — you have to memorize them. Today's focus: collocations with make, do, take. I need to make a decision about the new job offer.",
+      "text_pt": "Colocações fixas: MAKE a decision, DO homework, TAKE a break. Precisa decorar em bloco. Foco de hoje: collocations with make, do, take. Preciso tomar uma decisão sobre a oferta."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Collocations with MAKE, DO, TAKE",
+      "body_en": "MAKE a decision / a mistake / progress / money. DO your homework / the dishes / research / business. TAKE a break / a shower / a picture / your time.",
+      "body_pt": "Colocações fixas: MAKE a decision, DO homework, TAKE a break. Precisa decorar em bloco.",
+      "examples": [
+        {
+          "en": "I need to make a decision about the new job offer.",
+          "pt": "Preciso tomar uma decisão sobre a oferta."
+        },
+        {
+          "en": "Please do me a favor and close the window.",
+          "pt": "Me faz um favor e fecha a janela."
+        },
+        {
+          "en": "Let's take a break before the next exercise.",
+          "pt": "Vamos dar uma pausa antes do próximo exercício."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Collocations with MAKE, DO, TAKE",
+      "items": [
+        {
+          "term": "decision",
+          "pt": "decisão"
+        },
+        {
+          "term": "favor",
+          "pt": "favor"
+        },
+        {
+          "term": "break",
+          "pt": "pausa"
+        },
+        {
+          "term": "progress",
+          "pt": "progresso"
+        },
+        {
+          "term": "effort",
+          "pt": "esforço"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-make-do-take-collocations-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I need to make a ___ about the new job offer.\"",
+        "correct": "decision",
+        "explanation": "Full sentence: \"I need to make a decision about the new job offer.\"",
+        "hint_pt_br": "Preciso tomar uma decisão sobre a oferta."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-make-do-take-collocations-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please do me a favor and close the window.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "The correct sentence is: \"Please do me a favor and close the window.\"",
+        "hint_pt_br": "Me faz um favor e fecha a janela."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-make-do-take-collocations-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "decision",
+            "decisão"
+          ],
+          [
+            "favor",
+            "favor"
+          ],
+          [
+            "break",
+            "pausa"
+          ],
+          [
+            "progress",
+            "progresso"
+          ],
+          [
+            "effort",
+            "esforço"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Collocations with MAKE, DO, TAKE — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre collocations with make, do, take. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "You look stressed today. What's on your mind?"
+        },
+        {
+          "speaker": "user",
+          "target": "I need to make a decision about moving abroad.",
+          "pt_hint": "Decidir se mudo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Have you been doing research on the countries?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, but I want to take my time with it.",
+          "pt_hint": "Quero com calma."
+        },
+        {
+          "speaker": "ai",
+          "text": "Remember to take good care of yourself while you decide."
+        },
+        {
+          "speaker": "user",
+          "target": "I will take a break from social media this week.",
+          "pt_hint": "Pausa das redes."
+        },
+        {
+          "speaker": "ai",
+          "text": "Smart. And try not to make the same mistake twice."
+        },
+        {
+          "speaker": "user",
+          "target": "I will do my best to weigh all the options.",
+          "pt_hint": "Dou meu melhor."
+        },
+        {
+          "speaker": "ai",
+          "text": "Would it help to make a list of pros and cons?"
+        },
+        {
+          "speaker": "user",
+          "target": "Good idea. I will do it this evening.",
+          "pt_hint": "Faço hoje à noite."
+        },
+        {
+          "speaker": "ai",
+          "text": "One decision at a time. You've got this."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "make-do-take-collocations-listening-story",
+      "title": "Kumar's advice session",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Write what Kumar suggested and what the student decided. Use at least three MAKE/DO/TAKE collocations.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In his small office at Amazing School, Kumar always had time for a student with a difficult choice."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Take your time. Big decisions are not made in a single afternoon."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "I don't want to make a mistake that I will regret for years."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Do some research, make a list, and take a walk before you decide."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "You always make me feel calmer about hard choices."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "They both left the office with the same quiet smile — the mark of good advice shared."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Collocations with MAKE, DO, TAKE\". MAKE, DO, and TAKE combine with specific nouns in fixed ways — you have to memorize them. I need to make a decision about the new job offer. Please do me a favor and close the window. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Collocations with MAKE, DO, TAKE\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Collocations with MAKE, DO, TAKE",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Collocations with MAKE, DO, TAKE\".",
+        "hint_pt_br": "Ela fala o título: \"Collocations with MAKE, DO, TAKE\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

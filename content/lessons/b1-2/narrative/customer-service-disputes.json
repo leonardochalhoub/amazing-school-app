@@ -1,0 +1,283 @@
+{
+  "slug": "customer-service-disputes",
+  "title": "Customer Service Disputes",
+  "description": "Handling complaints professionally: listening, apologizing, offering a solution.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.2",
+  "xp_reward": 60,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Atendimento: 'I understand your frustration', 'I'm sorry', 'Let me see', 'Would a refund work?'",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Customer Service Disputes",
+      "subtitle_en": "Handling complaints professionally: listening, apologizing, offering a solution.",
+      "subtitle_pt": "Atendimento: 'I understand your frustration', 'I'm sorry', 'Let me see', 'Would a refund work?'"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "Handling complaints professionally: listening, apologizing, offering a solution. Today's focus: customer service disputes. I am so sorry this happened on your visit.",
+      "text_pt": "Atendimento: 'I understand your frustration', 'I'm sorry', 'Let me see', 'Would a refund work?' Foco de hoje: customer service disputes. Me desculpa por isso ter acontecido."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Customer Service Disputes",
+      "body_en": "Key phrases: 'I understand your frustration.', 'I'm sorry this happened.', 'Let me see what I can do.', 'Would a refund work for you?'",
+      "body_pt": "Atendimento: 'I understand your frustration', 'I'm sorry', 'Let me see', 'Would a refund work?'",
+      "examples": [
+        {
+          "en": "I am so sorry this happened on your visit.",
+          "pt": "Me desculpa por isso ter acontecido."
+        },
+        {
+          "en": "Let me see what I can do to make it right.",
+          "pt": "Deixa eu ver como resolver."
+        },
+        {
+          "en": "Would a full refund work for you?",
+          "pt": "Um reembolso total resolve?"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Customer Service Disputes",
+      "items": [
+        {
+          "term": "refund",
+          "pt": "reembolso"
+        },
+        {
+          "term": "complaint",
+          "pt": "reclamação"
+        },
+        {
+          "term": "resolve",
+          "pt": "resolver"
+        },
+        {
+          "term": "apologize",
+          "pt": "pedir desculpas"
+        },
+        {
+          "term": "compensate",
+          "pt": "compensar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-customer-service-disputes-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I am so sorry this ___ on your visit.\"",
+        "correct": "happened",
+        "explanation": "Full sentence: \"I am so sorry this happened on your visit.\"",
+        "hint_pt_br": "Me desculpa por isso ter acontecido."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-customer-service-disputes-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Let me see what I can do to make it right.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "The correct sentence is: \"Let me see what I can do to make it right.\"",
+        "hint_pt_br": "Deixa eu ver como resolver."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-customer-service-disputes-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "refund",
+            "reembolso"
+          ],
+          [
+            "complaint",
+            "reclamação"
+          ],
+          [
+            "resolve",
+            "resolver"
+          ],
+          [
+            "apologize",
+            "pedir desculpas"
+          ],
+          [
+            "compensate",
+            "compensar"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Customer Service Disputes — dialog",
+      "character": "Rafa",
+      "pt_summary": "Diálogo sobre customer service disputes. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "My food was cold and the order took too long!"
+        },
+        {
+          "speaker": "user",
+          "target": "I am so sorry this happened today.",
+          "pt_hint": "Me desculpa muito."
+        },
+        {
+          "speaker": "ai",
+          "text": "I've never had such bad service here!"
+        },
+        {
+          "speaker": "user",
+          "target": "I completely understand your frustration.",
+          "pt_hint": "Entendo sua frustração."
+        },
+        {
+          "speaker": "ai",
+          "text": "I want my money back and an explanation!"
+        },
+        {
+          "speaker": "user",
+          "target": "Let me see what I can do right now.",
+          "pt_hint": "Deixa eu resolver."
+        },
+        {
+          "speaker": "ai",
+          "text": "And the waiter was rude when I complained."
+        },
+        {
+          "speaker": "user",
+          "target": "I will speak with him personally, I promise.",
+          "pt_hint": "Falo com ele pessoalmente."
+        },
+        {
+          "speaker": "ai",
+          "text": "Will you compensate me somehow?"
+        },
+        {
+          "speaker": "user",
+          "target": "A full refund plus a voucher for next time.",
+          "pt_hint": "Reembolso e voucher."
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you. That actually changes how I feel."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "customer-service-disputes-listening-story",
+      "title": "A difficult Tuesday lunch",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe the complaint and how Rafa handled it step by step. Use at least three customer service phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "A regular lunchtime at Tropical Bites turned tense when a loyal customer received cold food."
+        },
+        {
+          "speaker": "Customer",
+          "voice": "female1",
+          "en": "This is the third time something has gone wrong this month. I'm exhausted."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "I am genuinely sorry this happened. Your time matters as much as your meal."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "Let me offer a full refund and a voucher for your next visit, on me."
+        },
+        {
+          "speaker": "Customer",
+          "voice": "female1",
+          "en": "You just turned a terrible experience into a reason to come back."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Good customer service, Rafa believed, lives in how you handle the worst moments — never the best ones."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Customer Service Disputes\". Handling complaints professionally: listening, apologizing, offering a solution. I am so sorry this happened on your visit. Let me see what I can do to make it right. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Customer Service Disputes\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Customer Service Disputes",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Customer Service Disputes\".",
+        "hint_pt_br": "Ela fala o título: \"Customer Service Disputes\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "linking-words-contrast",
+  "title": "Linking Words — Contrast",
+  "description": "HOWEVER, ALTHOUGH, DESPITE, and IN SPITE OF express contrast in different ways.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.1",
+  "xp_reward": 55,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Conectivos de contraste: HOWEVER (porém), ALTHOUGH (embora + frase), DESPITE/IN SPITE OF (apesar de + substantivo).",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Linking Words — Contrast",
+      "subtitle_en": "HOWEVER, ALTHOUGH, DESPITE, and IN SPITE OF express contrast in different ways.",
+      "subtitle_pt": "Conectivos de contraste: HOWEVER (porém), ALTHOUGH (embora + frase), DESPITE/IN SPITE OF (apesar de + substantivo)."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "HOWEVER, ALTHOUGH, DESPITE, and IN SPITE OF express contrast in different ways. Today's focus: linking words — contrast. The exam was difficult. However, most students passed.",
+      "text_pt": "Conectivos de contraste: HOWEVER (porém), ALTHOUGH (embora + frase), DESPITE/IN SPITE OF (apesar de + substantivo). Foco de hoje: linking words — contrast. A prova foi difícil. Porém, a maioria passou."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Linking Words — Contrast",
+      "body_en": "HOWEVER + comma starts a new sentence of contrast. ALTHOUGH / THOUGH + full clause. DESPITE / IN SPITE OF + noun or -ing. 'Despite the rain, we went out.' = 'Although it was raining, we went out.'",
+      "body_pt": "Conectivos de contraste: HOWEVER (porém), ALTHOUGH (embora + frase), DESPITE/IN SPITE OF (apesar de + substantivo).",
+      "examples": [
+        {
+          "en": "The exam was difficult. However, most students passed.",
+          "pt": "A prova foi difícil. Porém, a maioria passou."
+        },
+        {
+          "en": "Although he was tired, he finished the project.",
+          "pt": "Embora cansado, ele terminou o projeto."
+        },
+        {
+          "en": "Despite the rain, the beach was crowded.",
+          "pt": "Apesar da chuva, a praia estava cheia."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Linking Words — Contrast",
+      "items": [
+        {
+          "term": "however",
+          "pt": "porém"
+        },
+        {
+          "term": "although",
+          "pt": "embora"
+        },
+        {
+          "term": "despite",
+          "pt": "apesar de"
+        },
+        {
+          "term": "contrast",
+          "pt": "contraste"
+        },
+        {
+          "term": "argue",
+          "pt": "argumentar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-linking-words-contrast-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The exam was ___. However, most students passed.\"",
+        "correct": "difficult",
+        "explanation": "Full sentence: \"The exam was difficult. However, most students passed.\"",
+        "hint_pt_br": "A prova foi difícil. Porém, a maioria passou."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-linking-words-contrast-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Although he was tired, he finished the project.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "The correct sentence is: \"Although he was tired, he finished the project.\"",
+        "hint_pt_br": "Embora cansado, ele terminou o projeto."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-linking-words-contrast-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "however",
+            "porém"
+          ],
+          [
+            "although",
+            "embora"
+          ],
+          [
+            "despite",
+            "apesar de"
+          ],
+          [
+            "contrast",
+            "contraste"
+          ],
+          [
+            "argue",
+            "argumentar"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Linking Words — Contrast — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre linking words — contrast. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "You wrote a strong essay. However, you could use more linking words."
+        },
+        {
+          "speaker": "user",
+          "target": "Can you give me one example to improve it?",
+          "pt_hint": "Um exemplo?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Instead of 'but I disagree', try 'however, I disagree'."
+        },
+        {
+          "speaker": "user",
+          "target": "Although the idea sounds easy, I always forget.",
+          "pt_hint": "Embora pareça fácil."
+        },
+        {
+          "speaker": "ai",
+          "text": "Practice until it feels natural. Write the same point three ways."
+        },
+        {
+          "speaker": "user",
+          "target": "Despite my nerves, I will keep practicing.",
+          "pt_hint": "Apesar do nervoso."
+        },
+        {
+          "speaker": "ai",
+          "text": "Good. Now show me another contrast in your draft."
+        },
+        {
+          "speaker": "user",
+          "target": "In spite of the rain, we finished the race.",
+          "pt_hint": "Apesar da chuva."
+        },
+        {
+          "speaker": "ai",
+          "text": "Excellent. Now add a 'however' sentence to your conclusion."
+        },
+        {
+          "speaker": "user",
+          "target": "The plan worked. However, we lost time.",
+          "pt_hint": "Porém perdemos tempo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. Your writing just leveled up."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "linking-words-contrast-listening-story",
+      "title": "Zara's writing workshop",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Summarize Zara's advice. Include at least one HOWEVER and one ALTHOUGH sentence.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the small classroom, Zara opened the essay drafts and began a quiet workshop with her students."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Although your arguments are strong, your essays lack smooth transitions between ideas."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male1",
+          "en": "Can you show us how to add contrast without sounding repetitive?"
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Try HOWEVER at the start of a sentence, or DESPITE followed by a noun."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female2",
+          "en": "Despite the difficulty, I think I finally understand these connectors."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Good writing, Zara often said, is simply thinking clearly — then linking those thoughts with care."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Linking Words — Contrast\". HOWEVER, ALTHOUGH, DESPITE, and IN SPITE OF express contrast in different ways. The exam was difficult. However, most students passed. Although he was tired, he finished the project. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Linking Words — Contrast\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Linking Words — Contrast",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Linking Words — Contrast\".",
+        "hint_pt_br": "Ela fala o título: \"Linking Words — Contrast\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

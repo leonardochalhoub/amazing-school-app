@@ -1,0 +1,288 @@
+{
+  "slug": "reported-speech-questions",
+  "title": "Reported Speech — Questions",
+  "description": "Reporting questions drops the inverted word order and uses IF / WHETHER for yes/no questions.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.1",
+  "xp_reward": 55,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Perguntas reportadas: sem inversão e com IF/WHETHER. 'Do you work?' → She asked if I worked.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Reported Speech — Questions",
+      "subtitle_en": "Reporting questions drops the inverted word order and uses IF / WHETHER for yes/no questions.",
+      "subtitle_pt": "Perguntas reportadas: sem inversão e com IF/WHETHER. 'Do you work?' → She asked if I worked."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Reporting questions drops the inverted word order and uses IF / WHETHER for yes/no questions. Today's focus: reported speech — questions. She asked if I worked at the school.",
+      "text_pt": "Perguntas reportadas: sem inversão e com IF/WHETHER. 'Do you work?' → She asked if I worked. Foco de hoje: reported speech — questions. Ela perguntou se eu trabalhava na escola."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Reported Speech — Questions",
+      "body_en": "'Do you work here?' → She asked IF I worked there. Wh-questions keep the question word: 'Where do you live?' → He asked where I lived. No inversion, no question mark.",
+      "body_pt": "Perguntas reportadas: sem inversão e com IF/WHETHER. 'Do you work?' → She asked if I worked.",
+      "examples": [
+        {
+          "en": "She asked if I worked at the school.",
+          "pt": "Ela perguntou se eu trabalhava na escola."
+        },
+        {
+          "en": "He wanted to know where I lived.",
+          "pt": "Ele queria saber onde eu morava."
+        },
+        {
+          "en": "They asked whether the meeting had started.",
+          "pt": "Eles perguntaram se a reunião tinha começado."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Reported Speech — Questions",
+      "items": [
+        {
+          "term": "ask",
+          "pt": "perguntar"
+        },
+        {
+          "term": "wonder",
+          "pt": "querer saber"
+        },
+        {
+          "term": "inquire",
+          "pt": "indagar"
+        },
+        {
+          "term": "whether",
+          "pt": "se (alternativa)"
+        },
+        {
+          "term": "reply",
+          "pt": "responder"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-reported-speech-questions-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"She asked if I ___ at the school.\"",
+        "correct": "worked",
+        "explanation": "Full sentence: \"She asked if I worked at the school.\"",
+        "hint_pt_br": "Ela perguntou se eu trabalhava na escola."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-reported-speech-questions-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "He wanted to know where I lived.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "The correct sentence is: \"He wanted to know where I lived.\"",
+        "hint_pt_br": "Ele queria saber onde eu morava."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-reported-speech-questions-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "ask",
+            "perguntar"
+          ],
+          [
+            "wonder",
+            "querer saber"
+          ],
+          [
+            "inquire",
+            "indagar"
+          ],
+          [
+            "whether",
+            "se (alternativa)"
+          ],
+          [
+            "reply",
+            "responder"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Reported Speech — Questions — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre reported speech — questions. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "The recruiter asked me a lot of questions in yesterday's interview."
+        },
+        {
+          "speaker": "user",
+          "target": "What did she ask first?",
+          "pt_hint": "O que ela perguntou primeiro?"
+        },
+        {
+          "speaker": "ai",
+          "text": "She asked where I had studied computer science."
+        },
+        {
+          "speaker": "user",
+          "target": "Did she ask about your previous job?",
+          "pt_hint": "Perguntou do emprego anterior?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes. She wanted to know why I had left the last company."
+        },
+        {
+          "speaker": "user",
+          "target": "What did you tell her?",
+          "pt_hint": "O que você disse?"
+        },
+        {
+          "speaker": "ai",
+          "text": "I said I wanted more responsibility and bigger challenges."
+        },
+        {
+          "speaker": "user",
+          "target": "Did she ask when you could start?",
+          "pt_hint": "Perguntou quando você podia começar?"
+        },
+        {
+          "speaker": "ai",
+          "text": "She asked whether I could start within two weeks."
+        },
+        {
+          "speaker": "user",
+          "target": "And what did you answer?",
+          "pt_hint": "E o que você respondeu?"
+        },
+        {
+          "speaker": "ai",
+          "text": "I told her I could start next Monday if needed."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "reported-speech-questions-listening-story",
+      "title": "The job interview debrief",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Write the questions the recruiter asked and how Joca answered them. Use at least three reported questions.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "After the interview, Joca met his friend Zara at the café to talk about how it went."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "So, how did the interview go? What did she ask you?"
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "She asked where I had studied and why I had left my last job."
+        },
+        {
+          "speaker": "Recruiter",
+          "voice": "female2",
+          "en": "Could you tell me about a time when you solved a difficult problem?"
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "I told her about the time I fixed a production bug during a holiday."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "That sounds great. Did she mention when you would hear back?"
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "She said the team would call me within five business days."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Reported Speech — Questions\". Reporting questions drops the inverted word order and uses IF / WHETHER for yes/no questions. She asked if I worked at the school. He wanted to know where I lived. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Reported Speech — Questions\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Reported Speech — Questions",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Reported Speech — Questions\".",
+        "hint_pt_br": "Ela fala o título: \"Reported Speech — Questions\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

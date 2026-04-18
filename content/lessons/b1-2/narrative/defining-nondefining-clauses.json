@@ -1,0 +1,283 @@
+{
+  "slug": "defining-nondefining-clauses",
+  "title": "Defining vs Non-Defining Relative Clauses",
+  "description": "Non-defining clauses add extra info between commas; defining clauses identify without commas.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.2",
+  "xp_reward": 60,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Restritiva (sem vírgula, essencial) vs não-restritiva (com vírgula, informação extra). THAT só na restritiva.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Defining vs Non-Defining Relative Clauses",
+      "subtitle_en": "Non-defining clauses add extra info between commas; defining clauses identify without commas.",
+      "subtitle_pt": "Restritiva (sem vírgula, essencial) vs não-restritiva (com vírgula, informação extra). THAT só na restritiva."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Non-defining clauses add extra info between commas; defining clauses identify without commas. Today's focus: defining vs non-defining relative clauses. My sister, who lives in Lisbon, is visiting us next week.",
+      "text_pt": "Restritiva (sem vírgula, essencial) vs não-restritiva (com vírgula, informação extra). THAT só na restritiva. Foco de hoje: defining vs non-defining relative clauses. Minha irmã, que mora em Lisboa, vem visitar."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Defining vs Non-Defining Relative Clauses",
+      "body_en": "DEFINING (no commas, essential): 'The student WHO won is Brazilian.' NON-DEFINING (commas, extra info): 'Maria, WHO won the prize, is Brazilian.' NEVER use THAT in non-defining clauses.",
+      "body_pt": "Restritiva (sem vírgula, essencial) vs não-restritiva (com vírgula, informação extra). THAT só na restritiva.",
+      "examples": [
+        {
+          "en": "My sister, who lives in Lisbon, is visiting us next week.",
+          "pt": "Minha irmã, que mora em Lisboa, vem visitar."
+        },
+        {
+          "en": "The book that I am reading is about philosophy.",
+          "pt": "O livro que estou lendo é sobre filosofia."
+        },
+        {
+          "en": "Brasília, which was built in the sixties, is a planned city.",
+          "pt": "Brasília, que foi construída nos anos 60, é cidade planejada."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Defining vs Non-Defining Relative Clauses",
+      "items": [
+        {
+          "term": "essential",
+          "pt": "essencial"
+        },
+        {
+          "term": "additional",
+          "pt": "adicional"
+        },
+        {
+          "term": "specify",
+          "pt": "especificar"
+        },
+        {
+          "term": "insert",
+          "pt": "inserir"
+        },
+        {
+          "term": "parenthetical",
+          "pt": "parentético"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-defining-nondefining-clauses-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"My sister, who lives in Lisbon, is ___ us next week.\"",
+        "correct": "visiting",
+        "explanation": "Full sentence: \"My sister, who lives in Lisbon, is visiting us next week.\"",
+        "hint_pt_br": "Minha irmã, que mora em Lisboa, vem visitar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-defining-nondefining-clauses-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "The book that I am reading is about philosophy."
+        ],
+        "correct": 3,
+        "explanation": "The correct sentence is: \"The book that I am reading is about philosophy.\"",
+        "hint_pt_br": "O livro que estou lendo é sobre filosofia."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-defining-nondefining-clauses-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "essential",
+            "essencial"
+          ],
+          [
+            "additional",
+            "adicional"
+          ],
+          [
+            "specify",
+            "especificar"
+          ],
+          [
+            "insert",
+            "inserir"
+          ],
+          [
+            "parenthetical",
+            "parentético"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Defining vs Non-Defining Relative Clauses — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre defining vs non-defining relative clauses. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Let's review two sentences. Tell me which needs commas."
+        },
+        {
+          "speaker": "user",
+          "target": "My brother who lives abroad is coming home.",
+          "pt_hint": "Meu irmão...vem pra casa."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you have more than one brother?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, only one brother who I love dearly.",
+          "pt_hint": "Só um irmão."
+        },
+        {
+          "speaker": "ai",
+          "text": "Then it's non-defining — use commas around that clause."
+        },
+        {
+          "speaker": "user",
+          "target": "The book that I read last week was amazing.",
+          "pt_hint": "O livro que li."
+        },
+        {
+          "speaker": "ai",
+          "text": "You have many books. Which one specifically?"
+        },
+        {
+          "speaker": "user",
+          "target": "The one that I borrowed from you last week.",
+          "pt_hint": "O que peguei emprestado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Then it's defining — no commas, THAT is fine."
+        },
+        {
+          "speaker": "user",
+          "target": "My mother, who bakes bread, is visiting Sunday.",
+          "pt_hint": "Minha mãe."
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect non-defining clause. Extra info, commas, no THAT."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "defining-nondefining-clauses-listening-story",
+      "title": "A grammar workshop",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Write two rules from Kumar's lesson and give one example of each. Use both types of relative clauses.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Kumar spread the student essays on his desk and began marking them with a calm red pen."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "The clause that tells you WHICH person is essential — no commas around it."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "So 'my friend who lives in Rio' is defining because I have many friends?"
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Exactly. But 'my mother, who loves music' is non-defining — everyone has one mother."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "And we never use THAT in non-defining clauses, right?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Small rules, used daily, separate writers who communicate from writers who impress."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Defining vs Non-Defining Relative Clauses\". Non-defining clauses add extra info between commas; defining clauses identify without commas. My sister, who lives in Lisbon, is visiting us next week. The book that I am reading is about philosophy. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Defining vs Non-Defining Relative Clauses\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Defining vs Non-Defining Relative Clauses",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Defining vs Non-Defining Relative Clauses\".",
+        "hint_pt_br": "Ela fala o título: \"Defining vs Non-Defining Relative Clauses\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

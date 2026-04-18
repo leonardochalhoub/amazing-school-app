@@ -1,0 +1,283 @@
+{
+  "slug": "describing-life-changes",
+  "title": "Describing Life Changes",
+  "description": "Vocabulary and structures for big life events: moving, starting a business, changing careers.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.2",
+  "xp_reward": 60,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Mudanças de vida: 'Decidi largar', 'Dei o salto', 'Melhor decisão', 'Olhando para trás'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Describing Life Changes",
+      "subtitle_en": "Vocabulary and structures for big life events: moving, starting a business, changing careers.",
+      "subtitle_pt": "Mudanças de vida: 'Decidi largar', 'Dei o salto', 'Melhor decisão', 'Olhando para trás'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "Vocabulary and structures for big life events: moving, starting a business, changing careers. Today's focus: describing life changes. I quit my corporate job to start the food truck.",
+      "text_pt": "Mudanças de vida: 'Decidi largar', 'Dei o salto', 'Melhor decisão', 'Olhando para trás'. Foco de hoje: describing life changes. Larguei o emprego corporativo pra abrir o food truck."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Describing Life Changes",
+      "body_en": "Key phrases: 'I decided to quit my job.', 'I took the leap and started...', 'It was the best decision I ever made.', 'Looking back, I...'",
+      "body_pt": "Mudanças de vida: 'Decidi largar', 'Dei o salto', 'Melhor decisão', 'Olhando para trás'.",
+      "examples": [
+        {
+          "en": "I quit my corporate job to start the food truck.",
+          "pt": "Larguei o emprego corporativo pra abrir o food truck."
+        },
+        {
+          "en": "It was the best decision I've ever made.",
+          "pt": "Foi a melhor decisão que já tomei."
+        },
+        {
+          "en": "Looking back, I wish I had started sooner.",
+          "pt": "Olhando pra trás, queria ter começado antes."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Describing Life Changes",
+      "items": [
+        {
+          "term": "quit",
+          "pt": "largar"
+        },
+        {
+          "term": "take the leap",
+          "pt": "dar o salto"
+        },
+        {
+          "term": "career",
+          "pt": "carreira"
+        },
+        {
+          "term": "regret",
+          "pt": "arrependimento"
+        },
+        {
+          "term": "milestone",
+          "pt": "marco"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-describing-life-changes-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I quit my ___ job to start the food truck.\"",
+        "correct": "corporate",
+        "explanation": "Full sentence: \"I quit my corporate job to start the food truck.\"",
+        "hint_pt_br": "Larguei o emprego corporativo pra abrir o food truck."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-describing-life-changes-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "It was the best decision I've ever made.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "The correct sentence is: \"It was the best decision I've ever made.\"",
+        "hint_pt_br": "Foi a melhor decisão que já tomei."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-describing-life-changes-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "quit",
+            "largar"
+          ],
+          [
+            "take the leap",
+            "dar o salto"
+          ],
+          [
+            "career",
+            "carreira"
+          ],
+          [
+            "regret",
+            "arrependimento"
+          ],
+          [
+            "milestone",
+            "marco"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Describing Life Changes — dialog",
+      "character": "Rafa",
+      "pt_summary": "Diálogo sobre describing life changes. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Rafa, why did you leave the bank to sell tacos?"
+        },
+        {
+          "speaker": "user",
+          "target": "I quit because the work drained my soul.",
+          "pt_hint": "O trabalho sugava minha alma."
+        },
+        {
+          "speaker": "ai",
+          "text": "What finally pushed you to take the leap?"
+        },
+        {
+          "speaker": "user",
+          "target": "My daughter asked me why I looked so sad every night.",
+          "pt_hint": "Minha filha perguntou."
+        },
+        {
+          "speaker": "ai",
+          "text": "Was it scary to start your own business?"
+        },
+        {
+          "speaker": "user",
+          "target": "Terrifying, but also completely freeing.",
+          "pt_hint": "Apavorante e libertador."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the biggest milestone so far?"
+        },
+        {
+          "speaker": "user",
+          "target": "Hiring my first full-time employee last year.",
+          "pt_hint": "Contratar o primeiro funcionário."
+        },
+        {
+          "speaker": "ai",
+          "text": "Any regrets about leaving corporate life?"
+        },
+        {
+          "speaker": "user",
+          "target": "Only that I didn't quit five years earlier.",
+          "pt_hint": "Só não ter largado antes."
+        },
+        {
+          "speaker": "ai",
+          "text": "Your life now matches your values. That's rare."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "describing-life-changes-listening-story",
+      "title": "The day Rafa quit",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Tell the story of Rafa's career change. Use at least three life-change phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Five years ago, Rafa sat in a glass office tower filling out yet another spreadsheet he didn't care about."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "I quit my corporate job after my daughter asked why I came home so sad every single day."
+        },
+        {
+          "speaker": "Wife",
+          "voice": "female1",
+          "en": "He took the leap with just three months of savings and a head full of taco recipes."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "Looking back, I wish I had done it five years earlier when I was still in my twenties."
+        },
+        {
+          "speaker": "Daughter",
+          "voice": "female2",
+          "en": "Dad is way more fun now. He even sings while he cooks on Saturday mornings."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Big life changes, Rafa often said, are mostly small daily decisions stacked on top of each other."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Describing Life Changes\". Vocabulary and structures for big life events: moving, starting a business, changing careers. I quit my corporate job to start the food truck. It was the best decision I've ever made. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Describing Life Changes\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Describing Life Changes",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Describing Life Changes\".",
+        "hint_pt_br": "Ela fala o título: \"Describing Life Changes\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

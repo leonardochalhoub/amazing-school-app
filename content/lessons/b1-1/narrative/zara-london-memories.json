@@ -1,0 +1,283 @@
+{
+  "slug": "zara-london-memories",
+  "title": "Zara's London Memories",
+  "description": "A narrative lesson about culture shock and homesickness, with past tenses and reported speech.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.1",
+  "xp_reward": 55,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Misturando past simple, continuous, perfect e reported speech para contar uma história em camadas.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Zara's London Memories",
+      "subtitle_en": "A narrative lesson about culture shock and homesickness, with past tenses and reported speech.",
+      "subtitle_pt": "Misturando past simple, continuous, perfect e reported speech para contar uma história em camadas."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "A narrative lesson about culture shock and homesickness, with past tenses and reported speech. Today's focus: zara's london memories. When I moved to Brazil, I had never tasted a real mango before.",
+      "text_pt": "Misturando past simple, continuous, perfect e reported speech para contar uma história em camadas. Foco de hoje: zara's london memories. Quando me mudei pro Brasil, nunca tinha provado uma manga de verdade."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Zara's London Memories",
+      "body_en": "Mixing past simple, past continuous, past perfect, and reported speech to tell a layered story.",
+      "body_pt": "Misturando past simple, continuous, perfect e reported speech para contar uma história em camadas.",
+      "examples": [
+        {
+          "en": "When I moved to Brazil, I had never tasted a real mango before.",
+          "pt": "Quando me mudei pro Brasil, nunca tinha provado uma manga de verdade."
+        },
+        {
+          "en": "My grandmother used to tell me that London was the center of the world.",
+          "pt": "Minha avó dizia que Londres era o centro do mundo."
+        },
+        {
+          "en": "She said Brazil would change me — and she was right.",
+          "pt": "Ela disse que o Brasil me mudaria — e estava certa."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Zara's London Memories",
+      "items": [
+        {
+          "term": "homesick",
+          "pt": "com saudade de casa"
+        },
+        {
+          "term": "adjust",
+          "pt": "se adaptar"
+        },
+        {
+          "term": "expat",
+          "pt": "expatriado"
+        },
+        {
+          "term": "gray",
+          "pt": "cinza"
+        },
+        {
+          "term": "overwhelming",
+          "pt": "avassalador"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-zara-london-memories-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"When I moved to ___, I had never tasted a real mango before.\"",
+        "correct": "Brazil",
+        "explanation": "Full sentence: \"When I moved to Brazil, I had never tasted a real mango before.\"",
+        "hint_pt_br": "Quando me mudei pro Brasil, nunca tinha provado uma manga de verdade."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-zara-london-memories-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "My grandmother used to tell me that London was the center of the world.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "The correct sentence is: \"My grandmother used to tell me that London was the center of the world.\"",
+        "hint_pt_br": "Minha avó dizia que Londres era o centro do mundo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-zara-london-memories-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "homesick",
+            "com saudade de casa"
+          ],
+          [
+            "adjust",
+            "se adaptar"
+          ],
+          [
+            "expat",
+            "expatriado"
+          ],
+          [
+            "gray",
+            "cinza"
+          ],
+          [
+            "overwhelming",
+            "avassalador"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Zara's London Memories — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre zara's london memories. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara, what surprised you most when you arrived in Brazil?"
+        },
+        {
+          "speaker": "user",
+          "target": "The sunlight was so strong it hurt my eyes.",
+          "pt_hint": "O sol machucava os olhos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Did London feel gray after you moved?"
+        },
+        {
+          "speaker": "user",
+          "target": "I missed the gray and the rain for months.",
+          "pt_hint": "Senti falta do cinza."
+        },
+        {
+          "speaker": "ai",
+          "text": "What was the hardest part of adjusting?"
+        },
+        {
+          "speaker": "user",
+          "target": "The volume of conversations overwhelmed me.",
+          "pt_hint": "O volume das conversas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Did your grandmother ever visit you here?"
+        },
+        {
+          "speaker": "user",
+          "target": "She said she would come, but she never did.",
+          "pt_hint": "Disse que viria, mas não veio."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you still feel homesick sometimes?"
+        },
+        {
+          "speaker": "user",
+          "target": "Only when it rains at the wrong time of year.",
+          "pt_hint": "Só na chuva errada."
+        },
+        {
+          "speaker": "ai",
+          "text": "Brazil is your home now. But London will always be your roots."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "zara-london-memories-listening-story",
+      "title": "Zara remembers London",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Write what Zara missed and what she loves now. Use past tenses and reported speech.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On a rainy Tuesday afternoon, Zara sat by the window remembering her first months in Brazil."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "When I arrived, I had never felt heat like this before. It was almost frightening."
+        },
+        {
+          "speaker": "Grandmother",
+          "voice": "female2",
+          "en": "I told her that London was the center of the world. She needed to prove me wrong."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "My grandmother used to write me letters by hand every single week without fail."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "She said Brazil would change me forever, and that was the only prediction she got right."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Two countries, one heart — the kind of map that only the homesick learn to read."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Zara's London Memories\". A narrative lesson about culture shock and homesickness, with past tenses and reported speech. When I moved to Brazil, I had never tasted a real mango before. My grandmother used to tell me that London was the center of the world. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Zara's London Memories\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Zara's London Memories",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Zara's London Memories\".",
+        "hint_pt_br": "Ela fala o título: \"Zara's London Memories\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

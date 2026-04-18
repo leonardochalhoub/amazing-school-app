@@ -1,0 +1,283 @@
+{
+  "slug": "present-perfect-continuous",
+  "title": "Present Perfect Continuous",
+  "description": "HAVE BEEN + -ing stresses the duration or ongoing nature of an action up to now.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.1",
+  "xp_reward": 55,
+  "estimated_minutes": 54,
+  "summary_pt_br": "HAVE BEEN + -ing: ação contínua que começou no passado e vai até agora. 'I've been surfing for 3 hours.'",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Present Perfect Continuous",
+      "subtitle_en": "HAVE BEEN + -ing stresses the duration or ongoing nature of an action up to now.",
+      "subtitle_pt": "HAVE BEEN + -ing: ação contínua que começou no passado e vai até agora. 'I've been surfing for 3 hours.'"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "HAVE BEEN + -ing stresses the duration or ongoing nature of an action up to now. Today's focus: present perfect continuous. I have been training every morning for two months.",
+      "text_pt": "HAVE BEEN + -ing: ação contínua que começou no passado e vai até agora. 'I've been surfing for 3 hours.' Foco de hoje: present perfect continuous. Estou treinando toda manhã há dois meses."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Present Perfect Continuous",
+      "body_en": "Form: HAVE/HAS + BEEN + -ing. Use for actions that started in the past and are still happening, or just stopped with visible results. 'I have been surfing for three hours — I'm exhausted.'",
+      "body_pt": "HAVE BEEN + -ing: ação contínua que começou no passado e vai até agora. 'I've been surfing for 3 hours.'",
+      "examples": [
+        {
+          "en": "I have been training every morning for two months.",
+          "pt": "Estou treinando toda manhã há dois meses."
+        },
+        {
+          "en": "She has been learning English since she was ten.",
+          "pt": "Ela estuda inglês desde os dez anos."
+        },
+        {
+          "en": "How long have you been waiting for me here?",
+          "pt": "Há quanto tempo você está me esperando aqui?"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Present Perfect Continuous",
+      "items": [
+        {
+          "term": "train",
+          "pt": "treinar"
+        },
+        {
+          "term": "practice",
+          "pt": "praticar"
+        },
+        {
+          "term": "improve",
+          "pt": "melhorar"
+        },
+        {
+          "term": "endure",
+          "pt": "aguentar"
+        },
+        {
+          "term": "stamina",
+          "pt": "resistência"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-present-perfect-continuous-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I have been ___ every morning for two months.\"",
+        "correct": "training",
+        "explanation": "Full sentence: \"I have been training every morning for two months.\"",
+        "hint_pt_br": "Estou treinando toda manhã há dois meses."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-present-perfect-continuous-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "She has been learning English since she was ten.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "The correct sentence is: \"She has been learning English since she was ten.\"",
+        "hint_pt_br": "Ela estuda inglês desde os dez anos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-present-perfect-continuous-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "train",
+            "treinar"
+          ],
+          [
+            "practice",
+            "praticar"
+          ],
+          [
+            "improve",
+            "melhorar"
+          ],
+          [
+            "endure",
+            "aguentar"
+          ],
+          [
+            "stamina",
+            "resistência"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Present Perfect Continuous — dialog",
+      "character": "Bia",
+      "pt_summary": "Diálogo sobre present perfect continuous. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "You look exhausted today. What have you been doing?"
+        },
+        {
+          "speaker": "user",
+          "target": "I have been surfing since six in the morning.",
+          "pt_hint": "Surfando desde as seis."
+        },
+        {
+          "speaker": "ai",
+          "text": "Six in the morning? How long have you been training for this competition?"
+        },
+        {
+          "speaker": "user",
+          "target": "I have been training every day for three months.",
+          "pt_hint": "Treino todo dia há 3 meses."
+        },
+        {
+          "speaker": "ai",
+          "text": "That is impressive. Have you been working with a coach?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I have been taking lessons twice a week.",
+          "pt_hint": "Duas aulas por semana."
+        },
+        {
+          "speaker": "ai",
+          "text": "I can see the improvement. Your balance looks much stronger now."
+        },
+        {
+          "speaker": "user",
+          "target": "I have been practicing pop-ups on the sand every morning.",
+          "pt_hint": "Treino pop-ups na areia."
+        },
+        {
+          "speaker": "ai",
+          "text": "Have you been eating well and resting enough?"
+        },
+        {
+          "speaker": "user",
+          "target": "I have been sleeping eight hours and eating clean food.",
+          "pt_hint": "Durmo 8h, como limpo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Keep it up. You are going to win that competition."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "present-perfect-continuous-listening-story",
+      "title": "Bia's competition prep",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Write about Bia's training routine and how she has been preparing. Include how long she has been doing each activity.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At Praia do Sol, the sun rose early while most of the town was still sleeping."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "I have been training every morning for the last three months without missing a single day."
+        },
+        {
+          "speaker": "Coach",
+          "voice": "male1",
+          "en": "Her dedication has been paying off. Her wave count has been improving week by week."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "I have been studying videos of professional surfers every night before bed."
+        },
+        {
+          "speaker": "Mom",
+          "voice": "female2",
+          "en": "She has been eating so healthy that I barely recognize my own daughter."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "The regional competition was only two weeks away, and Bia was finally feeling ready."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Present Perfect Continuous\". HAVE BEEN + -ing stresses the duration or ongoing nature of an action up to now. I have been training every morning for two months. She has been learning English since she was ten. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Present Perfect Continuous\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Present Perfect Continuous",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Present Perfect Continuous\".",
+        "hint_pt_br": "Ela fala o título: \"Present Perfect Continuous\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

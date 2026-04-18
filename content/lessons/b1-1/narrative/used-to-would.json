@@ -1,0 +1,283 @@
+{
+  "slug": "used-to-would",
+  "title": "Used To / Would — Past Habits",
+  "description": "USED TO and WOULD describe past habits that don't happen anymore.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.1",
+  "xp_reward": 55,
+  "estimated_minutes": 54,
+  "summary_pt_br": "USED TO = hábito passado que não existe mais. WOULD = ação repetida no passado. Para estado, só USED TO.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Used To / Would — Past Habits",
+      "subtitle_en": "USED TO and WOULD describe past habits that don't happen anymore.",
+      "subtitle_pt": "USED TO = hábito passado que não existe mais. WOULD = ação repetida no passado. Para estado, só USED TO."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "USED TO and WOULD describe past habits that don't happen anymore. Today's focus: used to / would — past habits. I used to live in a small town by the sea.",
+      "text_pt": "USED TO = hábito passado que não existe mais. WOULD = ação repetida no passado. Para estado, só USED TO. Foco de hoje: used to / would — past habits. Eu morava numa cidadezinha à beira-mar."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Used To / Would — Past Habits",
+      "body_en": "USED TO + base verb = past habit or state no longer true. WOULD + base verb = past habitual action (not for states — say USED TO BE, not WOULD BE). 'I used to live in Rio. Every Sunday we would walk on the beach.'",
+      "body_pt": "USED TO = hábito passado que não existe mais. WOULD = ação repetida no passado. Para estado, só USED TO.",
+      "examples": [
+        {
+          "en": "I used to live in a small town by the sea.",
+          "pt": "Eu morava numa cidadezinha à beira-mar."
+        },
+        {
+          "en": "We would go dancing every Saturday night.",
+          "pt": "A gente ia dançar todo sábado à noite."
+        },
+        {
+          "en": "She used to love classical music when she was young.",
+          "pt": "Ela adorava música clássica quando era jovem."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Used To / Would — Past Habits",
+      "items": [
+        {
+          "term": "habit",
+          "pt": "hábito"
+        },
+        {
+          "term": "routine",
+          "pt": "rotina"
+        },
+        {
+          "term": "reminisce",
+          "pt": "relembrar"
+        },
+        {
+          "term": "nostalgia",
+          "pt": "nostalgia"
+        },
+        {
+          "term": "childhood",
+          "pt": "infância"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-used-to-would-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I used to live in a ___ town by the sea.\"",
+        "correct": "small",
+        "explanation": "Full sentence: \"I used to live in a small town by the sea.\"",
+        "hint_pt_br": "Eu morava numa cidadezinha à beira-mar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-used-to-would-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "We would go dancing every Saturday night."
+        ],
+        "correct": 3,
+        "explanation": "The correct sentence is: \"We would go dancing every Saturday night.\"",
+        "hint_pt_br": "A gente ia dançar todo sábado à noite."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-used-to-would-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "habit",
+            "hábito"
+          ],
+          [
+            "routine",
+            "rotina"
+          ],
+          [
+            "reminisce",
+            "relembrar"
+          ],
+          [
+            "nostalgia",
+            "nostalgia"
+          ],
+          [
+            "childhood",
+            "infância"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Used To / Would — Past Habits — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre used to / would — past habits. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Tell me about your life when you were twenty years old."
+        },
+        {
+          "speaker": "user",
+          "target": "I used to live in a small town in the mountains.",
+          "pt_hint": "Morava numa cidadezinha."
+        },
+        {
+          "speaker": "ai",
+          "text": "That sounds lovely. What would you do on weekends?"
+        },
+        {
+          "speaker": "user",
+          "target": "We would walk to the river and swim all afternoon.",
+          "pt_hint": "Íamos ao rio."
+        },
+        {
+          "speaker": "ai",
+          "text": "Did you use to have many friends back then?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I used to know everyone in town by name.",
+          "pt_hint": "Todo mundo pelo nome."
+        },
+        {
+          "speaker": "ai",
+          "text": "What kind of music did you use to listen to?"
+        },
+        {
+          "speaker": "user",
+          "target": "I would dance to samba every Saturday night.",
+          "pt_hint": "Samba todo sábado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you still visit that town sometimes?"
+        },
+        {
+          "speaker": "user",
+          "target": "I used to go every summer, but not anymore.",
+          "pt_hint": "Ia todo verão."
+        },
+        {
+          "speaker": "ai",
+          "text": "Memories like those keep us alive. Thank you for sharing."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "used-to-would-listening-story",
+      "title": "Dona Lúcia's childhood",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Write what Dona Lúcia used to do as a young woman. Include at least two USED TO and one WOULD.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On the porch of her small house, Dona Lúcia sat with her grandchildren and opened the door to the past."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "When I was your age, we used to live in a village with no electricity at all."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female2",
+          "en": "Really, grandma? What would you do at night without any lights?"
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Every evening we would gather around the radio to listen to stories and news."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "I used to read until my eyes hurt, by the weak light of a single lamp."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "The children listened silently, imagining a world their phones would never show them."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Used To / Would — Past Habits\". USED TO and WOULD describe past habits that don't happen anymore. I used to live in a small town by the sea. We would go dancing every Saturday night. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Used To / Would — Past Habits\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Used To / Would — Past Habits",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Used To / Would — Past Habits\".",
+        "hint_pt_br": "Ela fala o título: \"Used To / Would — Past Habits\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

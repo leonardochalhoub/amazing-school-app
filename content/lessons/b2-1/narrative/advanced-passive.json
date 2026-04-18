@@ -1,0 +1,283 @@
+{
+  "slug": "advanced-passive",
+  "title": "Advanced Passive — Reports and Abstracts",
+  "description": "Reporting structures with IT IS SAID / BELIEVED / THOUGHT, and double passive constructions.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.1",
+  "xp_reward": 65,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Passivas impessoais: 'It is said that...' / 'He is said to be...'. Acadêmico, jornalístico, formal.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Advanced Passive — Reports and Abstracts",
+      "subtitle_en": "Reporting structures with IT IS SAID / BELIEVED / THOUGHT, and double passive constructions.",
+      "subtitle_pt": "Passivas impessoais: 'It is said that...' / 'He is said to be...'. Acadêmico, jornalístico, formal."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Reporting structures with IT IS SAID / BELIEVED / THOUGHT, and double passive constructions. Today's focus: advanced passive — reports and abstracts. It is believed that the artifact is over a thousand years old.",
+      "text_pt": "Passivas impessoais: 'It is said that...' / 'He is said to be...'. Acadêmico, jornalístico, formal. Foco de hoje: advanced passive — reports and abstracts. Acredita-se que o artefato tem mais de mil anos."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Advanced Passive — Reports and Abstracts",
+      "body_en": "IT + BE + past participle + THAT... : 'It is believed that cats have nine lives.' Or: 'Cats are believed to have nine lives.' Used in academic, news, and formal writing.",
+      "body_pt": "Passivas impessoais: 'It is said that...' / 'He is said to be...'. Acadêmico, jornalístico, formal.",
+      "examples": [
+        {
+          "en": "It is believed that the artifact is over a thousand years old.",
+          "pt": "Acredita-se que o artefato tem mais de mil anos."
+        },
+        {
+          "en": "The CEO is said to be considering a merger.",
+          "pt": "Diz-se que o CEO está considerando uma fusão."
+        },
+        {
+          "en": "The study is expected to be published next year.",
+          "pt": "Espera-se que o estudo seja publicado ano que vem."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Advanced Passive — Reports and Abstracts",
+      "items": [
+        {
+          "term": "impersonal",
+          "pt": "impessoal"
+        },
+        {
+          "term": "abstract",
+          "pt": "abstrato"
+        },
+        {
+          "term": "alleged",
+          "pt": "alegado"
+        },
+        {
+          "term": "formal",
+          "pt": "formal"
+        },
+        {
+          "term": "structure",
+          "pt": "estrutura"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-advanced-passive-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"It is ___ that the artifact is over a thousand years old.\"",
+        "correct": "believed",
+        "explanation": "Full sentence: \"It is believed that the artifact is over a thousand years old.\"",
+        "hint_pt_br": "Acredita-se que o artefato tem mais de mil anos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-advanced-passive-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "The CEO is said to be considering a merger."
+        ],
+        "correct": 3,
+        "explanation": "The correct sentence is: \"The CEO is said to be considering a merger.\"",
+        "hint_pt_br": "Diz-se que o CEO está considerando uma fusão."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-advanced-passive-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "impersonal",
+            "impessoal"
+          ],
+          [
+            "abstract",
+            "abstrato"
+          ],
+          [
+            "alleged",
+            "alegado"
+          ],
+          [
+            "formal",
+            "formal"
+          ],
+          [
+            "structure",
+            "estrutura"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Advanced Passive — Reports and Abstracts — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre advanced passive — reports and abstracts. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Let's practice impersonal reporting. 'People say the mayor will resign.'"
+        },
+        {
+          "speaker": "user",
+          "target": "The mayor is said to be resigning.",
+          "pt_hint": "Diz-se que renuncia."
+        },
+        {
+          "speaker": "ai",
+          "text": "Try another. 'Experts think AI will change education.'"
+        },
+        {
+          "speaker": "user",
+          "target": "AI is thought to be changing education.",
+          "pt_hint": "A IA muda a educação."
+        },
+        {
+          "speaker": "ai",
+          "text": "Use IT structure. 'We believe the policy is unfair.'"
+        },
+        {
+          "speaker": "user",
+          "target": "It is believed that the policy is unfair.",
+          "pt_hint": "Acredita-se injusta."
+        },
+        {
+          "speaker": "ai",
+          "text": "What about past reporting? 'People knew he was sick.'"
+        },
+        {
+          "speaker": "user",
+          "target": "He was known to be sick at the time.",
+          "pt_hint": "Sabia-se doente."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now a news-style sentence, please."
+        },
+        {
+          "speaker": "user",
+          "target": "The suspect is alleged to have fled abroad.",
+          "pt_hint": "Alega-se fuga."
+        },
+        {
+          "speaker": "ai",
+          "text": "Impersonal passives turn opinion into register."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "advanced-passive-listening-story",
+      "title": "Kumar's writing seminar",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Summarize three rules Kumar shared. Use at least two impersonal passive constructions.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In Kumar's Saturday writing seminar, students learned how passives shape the voice of serious writing."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "It is believed that sentences feel more formal when the speaker disappears behind the words."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "So news writers use these to avoid sounding personal or emotional?"
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Exactly. The mayor is said to be considering resignation — no one person owns that claim."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "These structures are known to be common in academic papers too, right?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Register in English, Kumar taught, is not about length — it's about who you let speak through your sentence."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Advanced Passive — Reports and Abstracts\". Reporting structures with IT IS SAID / BELIEVED / THOUGHT, and double passive constructions. It is believed that the artifact is over a thousand years old. The CEO is said to be considering a merger. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Advanced Passive — Reports and Abstracts\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Advanced Passive — Reports and Abstracts",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Advanced Passive — Reports and Abstracts\".",
+        "hint_pt_br": "Ela fala o título: \"Advanced Passive — Reports and Abstracts\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análise de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda — ouça, leia, repita."
+        },
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "travel-emergencies",
+  "title": "Travel Emergencies",
+  "description": "Language for problems abroad: lost passport, delayed flights, missed connections, medical issues.",
+  "category": "narrative",
+  "level": "B1",
+  "cefr_level": "b1.2",
+  "xp_reward": 60,
+  "estimated_minutes": 54,
+  "summary_pt_br": "Frases de emergência em viagem: perdi passaporte, voo atrasou, preciso de embaixada, médico que fale inglês.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Travel Emergencies",
+      "subtitle_en": "Language for problems abroad: lost passport, delayed flights, missed connections, medical issues.",
+      "subtitle_pt": "Frases de emergência em viagem: perdi passaporte, voo atrasou, preciso de embaixada, médico que fale inglês."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Language for problems abroad: lost passport, delayed flights, missed connections, medical issues. Today's focus: travel emergencies. I've lost my passport. What should I do?",
+      "text_pt": "Frases de emergência em viagem: perdi passaporte, voo atrasou, preciso de embaixada, médico que fale inglês. Foco de hoje: travel emergencies. Perdi o passaporte. O que eu faço?"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Travel Emergencies",
+      "body_en": "Key phrases: 'I've lost my passport.', 'My flight was delayed.', 'I need to contact the embassy.', 'Is there an English-speaking doctor nearby?'. Present perfect is common for travel crises ('I have lost...').",
+      "body_pt": "Frases de emergência em viagem: perdi passaporte, voo atrasou, preciso de embaixada, médico que fale inglês.",
+      "examples": [
+        {
+          "en": "I've lost my passport. What should I do?",
+          "pt": "Perdi o passaporte. O que eu faço?"
+        },
+        {
+          "en": "My flight has been delayed by four hours.",
+          "pt": "Meu voo atrasou quatro horas."
+        },
+        {
+          "en": "Could you tell me where the nearest pharmacy is?",
+          "pt": "Pode me dizer onde é a farmácia mais próxima?"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Travel Emergencies",
+      "items": [
+        {
+          "term": "passport",
+          "pt": "passaporte"
+        },
+        {
+          "term": "embassy",
+          "pt": "embaixada"
+        },
+        {
+          "term": "delay",
+          "pt": "atraso"
+        },
+        {
+          "term": "emergency",
+          "pt": "emergência"
+        },
+        {
+          "term": "assistance",
+          "pt": "assistência"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-travel-emergencies-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I've lost my ___. What should I do?\"",
+        "correct": "passport",
+        "explanation": "Full sentence: \"I've lost my passport. What should I do?\"",
+        "hint_pt_br": "Perdi o passaporte. O que eu faço?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-travel-emergencies-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "My flight has been delayed by four hours.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "The correct sentence is: \"My flight has been delayed by four hours.\"",
+        "hint_pt_br": "Meu voo atrasou quatro horas."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-travel-emergencies-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "passport",
+            "passaporte"
+          ],
+          [
+            "embassy",
+            "embaixada"
+          ],
+          [
+            "delay",
+            "atraso"
+          ],
+          [
+            "emergency",
+            "emergência"
+          ],
+          [
+            "assistance",
+            "assistência"
+          ]
+        ],
+        "explanation": "Five key terms from the lesson. Match each English word to its Portuguese meaning.",
+        "hint_pt_br": "Ligue cada palavra à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Travel Emergencies — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre travel emergencies. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Airport information, how can I help you?"
+        },
+        {
+          "speaker": "user",
+          "target": "I've lost my passport somewhere in the terminal.",
+          "pt_hint": "Perdi o passaporte."
+        },
+        {
+          "speaker": "ai",
+          "text": "Did you check the security checkpoint?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I've already checked three times.",
+          "pt_hint": "Já procurei 3 vezes."
+        },
+        {
+          "speaker": "ai",
+          "text": "You need to contact your country's embassy."
+        },
+        {
+          "speaker": "user",
+          "target": "How do I reach the British embassy from here?",
+          "pt_hint": "Como ligo pra embaixada?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Use the emergency phone near gate twenty."
+        },
+        {
+          "speaker": "user",
+          "target": "My flight has been delayed by six hours.",
+          "pt_hint": "Voo atrasado 6h."
+        },
+        {
+          "speaker": "ai",
+          "text": "Are you feeling unwell? Do you need a doctor?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, just exhausted and stressed.",
+          "pt_hint": "Só exausta e estressada."
+        },
+        {
+          "speaker": "ai",
+          "text": "Help is on the way. Stay calm and breathe."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "travel-emergencies-listening-story",
+      "title": "A bad day at the airport",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, detalhes e sua opinião. O professor vai ler e comentar.",
+      "prompt_en": "Describe Zara's emergency step by step. What went wrong and how did she solve it?",
+      "prompt_pt": "Escreva em inglês o que ouviu. Resumo curto com quem falou, o que disseram e sua opinião.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On a long layover in Frankfurt, Zara discovered that her passport was missing from her bag."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "I've lost my passport somewhere between security and gate twenty-two."
+        },
+        {
+          "speaker": "Agent",
+          "voice": "female2",
+          "en": "Don't panic. We'll page security and contact the British consulate immediately."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "My connecting flight has been delayed by four hours already."
+        },
+        {
+          "speaker": "Agent",
+          "voice": "female2",
+          "en": "That actually works in your favor. There's time to replace the document today."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Four hours, three phone calls, and one emergency passport later, the journey continued."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Travel Emergencies\". Language for problems abroad: lost passport, delayed flights, missed connections, medical issues. I've lost my passport. What should I do? My flight has been delayed by four hours. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "Prática: ouvir, ler em voz alta, escrever exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Travel Emergencies\". I liked it because it was clear and useful. See you next time!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule from last year",
+          "Travel Emergencies",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Travel Emergencies\".",
+        "hint_pt_br": "Ela fala o título: \"Travel Emergencies\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para continuar praticando. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast curto com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias e áudios em inglês adaptado."
+        }
+      ]
+    }
+  ]
+}

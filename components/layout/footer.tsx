@@ -107,7 +107,7 @@ export function Footer() {
             {t.license}
           </p>
           <p className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-300">
-            v0.1.0 · {locale === "pt-BR" ? "prévia de testes" : "testing preview"}
+            v0.4.0 · {locale === "pt-BR" ? "prévia de testes" : "testing preview"}
           </p>
         </div>
 
