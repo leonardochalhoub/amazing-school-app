@@ -1,0 +1,43 @@
+{
+  "slug": "airport-travel",
+  "title": "Rafa at the Airport",
+  "description": "Airport and travel vocabulary. Boarding pass, luggage, security, delayed, cancelled. Plus the essentials of check-in English.",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.2",
+  "xp_reward": 45,
+  "estimated_minutes": 13,
+  "summary_pt_br": "Vocabulário de aeroporto + viagem: check-in, boarding pass, luggage, gate, delayed, cancelled. Diálogos típicos no balcão. Armadilha: 'luggage' é INCONTÁVEL — diga 'two pieces of luggage', nunca 'two luggages'.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 48 — At the Airport", "subtitle_en": "Rafa heads to Orlando", "subtitle_pt": "Rafa indo pra Orlando" },
+    { "kind": "narrative", "scene_emoji": "🎒", "character_id": "rafa", "text_en": "Rafa checked in two hours early.\nHe had one CARRY-ON bag and one LUGGAGE.\nHis flight was DELAYED by thirty minutes.\nThe GATE changed twice. He ran. He made it.\nThe BOARDING PASS on his phone beeped at security.", "text_pt": "O Rafa fez o check-in duas horas antes.\nLevou uma bagagem DE MÃO e uma DESPACHADA.\nO voo ATRASOU trinta minutos.\nO PORTÃO mudou duas vezes. Correu. Conseguiu.\nO CARTÃO DE EMBARQUE no celular apitou na segurança." },
+    { "kind": "vocab_intro", "title": "Airport words", "items": [
+      { "term": "check-in desk", "pt": "balcão de check-in" },
+      { "term": "boarding pass", "pt": "cartão de embarque" },
+      { "term": "gate", "pt": "portão" },
+      { "term": "luggage / baggage (uncountable!)", "pt": "bagagem (incontável!)" },
+      { "term": "carry-on / hand luggage", "pt": "bagagem de mão" },
+      { "term": "security check", "pt": "raio-X / segurança" },
+      { "term": "delayed / cancelled / on time", "pt": "atrasado / cancelado / no horário" }
+    ]},
+    { "kind": "grammar_note", "title": "Luggage is uncountable", "body_en": "In English, LUGGAGE and BAGGAGE are uncountable. Never 'two luggages'. Say 'two pieces of luggage' or 'two bags'. Same rule: INFORMATION, ADVICE, MONEY — all uncountable. Brazilians often try to pluralize — don't.", "body_pt": "LUGGAGE / BAGGAGE são INCONTÁVEIS em inglês. NUNCA 'two luggages'. Diga 'two pieces of luggage' ou 'two bags'. Mesma regra para information, advice, money. Não pluralize.", "examples": [
+      { "en": "I have a lot of luggage. NOT 'a lot of luggages'.", "pt": "Tenho bastante bagagem." },
+      { "en": "Can I have some information?", "pt": "Posso ter alguma informação?" }
+    ]},
+    { "kind": "dialogue", "location_en": "Check-in desk", "location_pt": "No balcão", "turns": [
+      { "character_id": "zara", "en": "Can I see your passport, please?", "pt": "Pode me mostrar o passaporte?" },
+      { "character_id": "rafa", "en": "Here you go. Window seat, please.", "pt": "Aqui. Janela, por favor." },
+      { "character_id": "zara", "en": "Any luggage to check?", "pt": "Alguma bagagem pra despachar?" },
+      { "character_id": "rafa", "en": "Just one bag. My carry-on stays with me.", "pt": "Só uma mala. A de mão fica comigo." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "air-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["I have two luggages", "I have two luggage", "I have two pieces of luggage", "I have a luggages"], "correct": 2, "explanation": "'Luggage' is uncountable. 'Two pieces of luggage' or 'two bags' — never 'two luggages'.", "hint_pt_br": "Luggage é incontável. 'Two pieces of luggage'." }},
+    { "kind": "exercise", "exercise": { "id": "air-s02", "type": "fill_blank", "question": "Complete: 'My flight is ___ by two hours.' (not on time)", "correct": "delayed", "explanation": "DELAYED = atrasado (voo).", "hint_pt_br": "'Delayed' = atrasado (voo/trem)." }},
+    { "kind": "exercise", "exercise": { "id": "air-s03", "type": "matching", "pairs": [
+      ["boarding pass", "cartão de embarque"],
+      ["gate", "portão"],
+      ["luggage", "bagagem (incontável)"],
+      ["delayed", "atrasado"],
+      ["carry-on", "bagagem de mão"]
+    ], "explanation": "Five core airport words.", "hint_pt_br": "Cinco palavras essenciais." }}
+  ]
+}

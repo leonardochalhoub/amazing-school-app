@@ -1,0 +1,39 @@
+{
+  "slug": "hotel-checkin",
+  "title": "Hotel Check-In",
+  "description": "Making a reservation and checking into a hotel. Key phrases: I have a reservation / under the name of / a non-smoking room / breakfast included.",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.2",
+  "xp_reward": 45,
+  "estimated_minutes": 13,
+  "summary_pt_br": "Fazer reserva + check-in em hotel. Frases-chave: I have a reservation / under the name of / double/single room / breakfast included / checkout time. Conversa básica com o recepcionista.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 49 — The Hotel", "subtitle_en": "A reservation under Moura", "subtitle_pt": "Uma reserva em nome de Moura" },
+    { "kind": "narrative", "character_id": "rafa", "text_en": "Rafa walked into the Orlando hotel lobby, tired but excited.\n'I HAVE A RESERVATION under the name MOURA,' he told the clerk.\n'THREE NIGHTS, a SINGLE ROOM, NON-SMOKING.'\nThe clerk nodded. 'Breakfast is INCLUDED. Check-out is at 11.'", "text_pt": "Rafa entrou no saguão do hotel em Orlando, cansado mas animado.\n'Tenho RESERVA em nome de MOURA,' disse ao recepcionista.\n'TRÊS NOITES, QUARTO DE SOLTEIRO, NÃO-FUMANTE.'\nO recepcionista acenou. 'Café da manhã INCLUÍDO. Check-out às 11h.'" },
+    { "kind": "vocab_intro", "title": "Hotel vocabulary", "items": [
+      { "term": "reservation / booking", "pt": "reserva" },
+      { "term": "single / double room", "pt": "quarto de solteiro / casal" },
+      { "term": "non-smoking", "pt": "não-fumante" },
+      { "term": "check-in / check-out", "pt": "entrada / saída" },
+      { "term": "key / key card", "pt": "chave / cartão-chave" },
+      { "term": "lobby / reception", "pt": "saguão / recepção" },
+      { "term": "breakfast included", "pt": "café da manhã incluso" }
+    ]},
+    { "kind": "dialogue", "location_en": "Hotel reception", "location_pt": "Recepção", "turns": [
+      { "character_id": "rafa", "en": "Good evening, I have a reservation under the name Moura.", "pt": "Boa noite, tenho uma reserva em nome de Moura." },
+      { "character_id": "zara", "en": "Let me check. Yes — three nights, single room. Non-smoking?", "pt": "Deixa eu verificar. Sim — três noites, solteiro. Não-fumante?" },
+      { "character_id": "rafa", "en": "Yes, please. Is breakfast included?", "pt": "Sim, por favor. Café da manhã está incluso?" },
+      { "character_id": "zara", "en": "It is, from 7 to 10. Here's your key card. Room 412.", "pt": "Sim, das 7 às 10. Aqui está seu cartão. Quarto 412." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "hotel-s01", "type": "fill_blank", "question": "Complete: 'I have a reservation ___ the name of Moura.'", "correct": "under", "explanation": "UNDER THE NAME OF — fixed expression for reservations.", "hint_pt_br": "'Under the name of' = em nome de." }},
+    { "kind": "exercise", "exercise": { "id": "hotel-s02", "type": "multiple_choice", "question": "'Breakfast ___ included in the price.'", "options": ["is", "has", "does", "goes"], "correct": 0, "explanation": "IS included — passive voice, breakfast is the subject.", "hint_pt_br": "'Is included' = está incluído (voz passiva)." }},
+    { "kind": "exercise", "exercise": { "id": "hotel-s03", "type": "matching", "pairs": [
+      ["reservation", "reserva"],
+      ["check-out", "saída"],
+      ["non-smoking", "não-fumante"],
+      ["key card", "cartão-chave"],
+      ["lobby", "saguão"]
+    ], "explanation": "Five hotel words.", "hint_pt_br": "Cinco palavras de hotel." }}
+  ]
+}

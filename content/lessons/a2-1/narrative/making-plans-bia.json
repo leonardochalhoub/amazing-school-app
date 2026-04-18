@@ -1,0 +1,39 @@
+{
+  "slug": "making-plans-bia",
+  "title": "Making Plans at the Rooftop",
+  "description": "Suggestions and invitations: Let's… / Why don't we… / How about… / Would you like to… / Shall we…",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.1",
+  "xp_reward": 45,
+  "estimated_minutes": 13,
+  "summary_pt_br": "Fazer sugestões e convites em inglês: Let's + verbo base, Why don't we + verbo, How about + verbo-ing, Would you like to + verbo, Shall we + verbo base. Aceitar/recusar: Sure! / That sounds great / I'd love to but...",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 43 — Plan-Making", "subtitle_en": "Suggestions and invitations", "subtitle_pt": "Sugestões e convites" },
+    { "kind": "narrative", "character_id": "bia", "text_en": "'LET'S meet at 5,' Bia said.\n'WHY DON'T WE go to the beach?'\n'HOW ABOUT bringing snacks?'\n'WOULD YOU LIKE TO come, Joca?'\n'SHALL WE invite Maya too?'\nFive ways to say the same thing. Pick one and go.", "text_pt": "'Vamos nos encontrar às 5,' disse a Bia.\n'Por que a gente não vai pra praia?'\n'Que tal levar lanches?'\n'Você gostaria de ir, Joca?'\n'Vamos convidar a Maya também?'\nCinco jeitos de dizer a mesma coisa." },
+    { "kind": "grammar_note", "title": "Five ways to suggest — what follows each", "body_en": "LET'S + BASE verb. 'Let's GO.' WHY DON'T WE + BASE verb. 'Why don't we LEAVE?' HOW ABOUT + -ING. 'How about LEAVING?' WOULD YOU LIKE TO + BASE verb. 'Would you like to COME?' SHALL WE + BASE verb (British). 'Shall we DANCE?' The trap: 'How about' needs -ING, not base.", "body_pt": "Estruturas: Let's + verbo base. Why don't we + verbo base. How about + verbo-ing (atenção!). Would you like to + verbo base. Shall we + verbo base. A pegadinha: 'How about' pede -ING, os outros pedem forma base.", "examples": [
+      { "en": "Let's go / How about going / Would you like to go?", "pt": "Três formas, uma intenção." }
+    ]},
+    { "kind": "vocab_intro", "title": "Accepting + declining", "items": [
+      { "term": "Sure! / Definitely! / Sounds good.", "pt": "Claro! / Com certeza! / Parece bom." },
+      { "term": "I'd love to!", "pt": "Adoraria!" },
+      { "term": "I'd love to, but I can't.", "pt": "Gostaria, mas não posso." },
+      { "term": "Maybe another time.", "pt": "Fica pra próxima." },
+      { "term": "Sorry, I'm busy.", "pt": "Desculpa, tô ocupado(a)." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "plan-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["How about go?", "How about to go?", "How about going?", "How about gone?"], "correct": 2, "explanation": "HOW ABOUT + -ING. The trap.", "hint_pt_br": "'How about' sempre com verbo em -ING." }},
+    { "kind": "exercise", "exercise": { "id": "plan-s02", "type": "fill_blank", "question": "Complete: 'Would you like ___ come to dinner?'", "correct": "to", "explanation": "WOULD YOU LIKE + TO + base verb.", "hint_pt_br": "'Would you like to' + verbo base." }},
+    { "kind": "exercise", "exercise": { "id": "plan-s03", "type": "matching", "pairs": [
+      ["Let's go", "Vamos"],
+      ["Why don't we go?", "Por que a gente não vai?"],
+      ["How about going?", "Que tal ir?"],
+      ["Would you like to go?", "Gostaria de ir?"],
+      ["Shall we go?", "Vamos? (formal/UK)"]
+    ], "explanation": "Five ways. Same meaning, different register.", "hint_pt_br": "Cinco formas. Mesmo sentido, registros diferentes." }},
+    { "kind": "dialogue", "location_en": "Rooftop", "location_pt": "No terraço", "turns": [
+      { "character_id": "bia", "en": "How about watching the sunset?", "pt": "Que tal ver o pôr do sol?" },
+      { "character_id": "joca", "en": "I'd love to. What time?", "pt": "Adoraria. Que horas?" },
+      { "character_id": "bia", "en": "Let's meet at 6.", "pt": "Vamos às 6." }
+    ]}
+  ]
+}

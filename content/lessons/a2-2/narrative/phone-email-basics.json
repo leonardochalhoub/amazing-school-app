@@ -1,0 +1,43 @@
+{
+  "slug": "phone-email-basics",
+  "title": "Phone and Email Basics",
+  "description": "The fixed phrases that make phone calls and emails feel effortless. Opening, holding, transferring, signing off.",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.2",
+  "xp_reward": 50,
+  "estimated_minutes": 14,
+  "summary_pt_br": "Fórmulas fixas para telefone e e-mail em inglês. Telefone: Hello, this is X. May I speak to...? I'll put you through. E-mail: Dear / Hi, I'm writing to... / Looking forward to hearing from you / Best regards.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 52 — Phone + Email", "subtitle_en": "Fixed formulas", "subtitle_pt": "Fórmulas fixas" },
+    { "kind": "narrative", "character_id": "joca", "text_en": "Joca's phone rang. 'HELLO, THIS IS JOCA.'\n'HI Joca, it's Sarah from Stripe. MAY I SPEAK TO the manager?'\n'SURE, HOLD ON. I'll PUT YOU THROUGH.'\nLater, Joca opened his email: 'DEAR Sarah, I'M WRITING TO confirm…'\n'LOOKING FORWARD TO your reply. BEST REGARDS, Joca.'", "text_pt": "O celular do Joca tocou. 'OI, AQUI É O JOCA.'\n'Oi Joca, aqui é a Sarah do Stripe. POSSO FALAR COM o gestor?'\n'CLARO, UM MOMENTO. Vou TRANSFERIR.'\nDepois, Joca abriu o e-mail: 'PREZADA Sarah, ESTOU ESCREVENDO para confirmar…'\n'NA EXPECTATIVA da sua resposta. ATENCIOSAMENTE, Joca.'" },
+    { "kind": "vocab_intro", "title": "Phone formulas", "items": [
+      { "term": "Hello, this is [name]", "pt": "Oi, aqui é [nome]" },
+      { "term": "May I speak to…?", "pt": "Posso falar com…?" },
+      { "term": "Hold on, please", "pt": "Um momento, por favor" },
+      { "term": "I'll put you through", "pt": "Vou te transferir" },
+      { "term": "Can I take a message?", "pt": "Posso anotar um recado?" },
+      { "term": "You've got the wrong number", "pt": "Você ligou errado" }
+    ]},
+    { "kind": "vocab_intro", "title": "Email formulas", "items": [
+      { "term": "Dear / Hi [name]", "pt": "Prezado(a) / Oi [nome]" },
+      { "term": "I'm writing to…", "pt": "Estou escrevendo para…" },
+      { "term": "I hope this email finds you well", "pt": "Espero que esteja bem" },
+      { "term": "Looking forward to hearing from you", "pt": "No aguardo" },
+      { "term": "Best regards / Kind regards", "pt": "Atenciosamente" },
+      { "term": "Cheers (casual)", "pt": "Abraços (casual)" }
+    ]},
+    { "kind": "grammar_note", "title": "Phone-English identities", "body_en": "In Portuguese you say 'É o Joca'. In English NEVER 'I am Joca' on the phone. Use 'THIS IS JOCA.' To ask the person: 'WHO'S CALLING?' not 'who are you?'. Every single phone call uses these fixed forms — memorize them as blocks.", "body_pt": "Em português você diz 'É o Joca'. Em inglês NUNCA 'I am Joca' no telefone. Use 'THIS IS JOCA'. Para perguntar quem: 'WHO'S CALLING?' não 'who are you?'. Decore como blocos.", "examples": [
+      { "en": "Hello, this is Bia — who's calling?", "pt": "Alô, aqui é a Bia — quem está falando?" }
+    ]},
+    { "kind": "exercise", "framing_character_id": "joca", "exercise": { "id": "phone-s01", "type": "multiple_choice", "question": "You answer the phone. Which is correct?", "options": ["I am Joca", "Is Joca", "This is Joca", "I'm being Joca"], "correct": 2, "explanation": "THIS IS [NAME] — the fixed phone identity phrase.", "hint_pt_br": "'This is + nome' no telefone." }},
+    { "kind": "exercise", "exercise": { "id": "phone-s02", "type": "fill_blank", "question": "Complete an email: 'I'm writing ___ confirm our meeting.'", "correct": "to", "explanation": "'I'm writing TO + base verb.'", "hint_pt_br": "'I'm writing to' + verbo base." }},
+    { "kind": "exercise", "exercise": { "id": "phone-s03", "type": "matching", "pairs": [
+      ["Hold on", "um momento"],
+      ["Put you through", "transferir"],
+      ["Looking forward to hearing", "no aguardo"],
+      ["Best regards", "atenciosamente"],
+      ["Who's calling?", "quem é?"]
+    ], "explanation": "Five blocks to memorize whole.", "hint_pt_br": "Cinco blocos inteiros para decorar." }}
+  ]
+}

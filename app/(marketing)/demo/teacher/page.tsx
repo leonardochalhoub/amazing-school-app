@@ -81,7 +81,7 @@ export default function DemoTeacherPage() {
                 href="/demo/music"
                 className="rounded-full px-3 py-1.5 text-muted-foreground hover:text-foreground"
               >
-                Musics
+                Songs
               </Link>
             </div>
           </nav>

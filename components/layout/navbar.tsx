@@ -54,7 +54,7 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
       : {
           dashboard: "Dashboard",
           lessons: "Lessons",
-          music: "Musics",
+          music: "Songs",
           aiTutor: "AI Tutor",
           leaderboard: "Leaderboard",
           profile: "Profile",

@@ -44,7 +44,7 @@ export default function DemoLessonsCatalogPage() {
                 {isPt ? "Lições" : "Lessons"}
               </span>
               <Link href="/demo/music" className="rounded-full px-3 py-1.5 text-muted-foreground hover:text-foreground">
-                {isPt ? "Músicas" : "Musics"}
+                {isPt ? "Músicas" : "Songs"}
               </Link>
             </div>
           </nav>

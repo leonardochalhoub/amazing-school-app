@@ -52,7 +52,7 @@ export default function DemoMusicCatalogPage() {
                 {isPt ? "Lições" : "Lessons"}
               </Link>
               <span className="rounded-full bg-foreground px-3 py-1.5 text-background">
-                {isPt ? "Músicas" : "Musics"}
+                {isPt ? "Músicas" : "Songs"}
               </span>
             </div>
           </nav>
@@ -68,10 +68,10 @@ export default function DemoMusicCatalogPage() {
           <header className="flex flex-col gap-1">
             <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               <Music2 className="h-3.5 w-3.5" />
-              <span>{isPt ? "Catálogo de músicas" : "Musics catalog"}</span>
+              <span>{isPt ? "Catálogo de músicas" : "Songs catalog"}</span>
             </div>
             <h1 className="text-3xl font-semibold tracking-tight">
-              {isPt ? "Músicas" : "Musics"}
+              {isPt ? "Músicas" : "Songs"}
             </h1>
             <p className="text-sm text-muted-foreground">
               {songs.length}{" "}

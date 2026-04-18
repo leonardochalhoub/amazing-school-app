@@ -1,0 +1,30 @@
+{
+  "slug": "so-me-too",
+  "title": "So Do I, Me Too, Neither Do I",
+  "description": "Agreement expressions. When to say 'So do I / Me too / Neither do I / Me neither' and what they really mean.",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.1",
+  "xp_reward": 45,
+  "estimated_minutes": 13,
+  "summary_pt_br": "Como concordar em inglês. Afirmativa: So + auxiliar + sujeito ('So do I', 'So am I'). Me too (informal). Negativa: Neither + auxiliar + sujeito ('Neither do I'). Me neither (informal). Nunca 'Me too' em frase negativa.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 47 — Me Too", "subtitle_en": "Agreement expressions", "subtitle_pt": "Expressões de concordância" },
+    { "kind": "narrative", "character_id": "bia", "text_en": "'I love tacos,' said Rafa.\n'SO DO I,' said Bia. 'ME TOO,' said Maya. Same meaning.\n'I don't like lukewarm coffee,' said Joca.\n'NEITHER DO I,' said Zara. 'ME NEITHER,' said Rafa. Same again.\nBut if you mix them up, you sound funny.", "text_pt": "'Eu amo taco,' disse o Rafa.\n'EU TAMBÉM' (formal: SO DO I / informal: ME TOO), disseram Bia e Maya.\n'Não gosto de café morno,' disse o Joca.\n'NEM EU' (formal: NEITHER DO I / informal: ME NEITHER), disseram Zara e Rafa.\nMisturar = soar estranho." },
+    { "kind": "grammar_note", "title": "Formula — match the auxiliary", "body_en": "SO / NEITHER + auxiliary + subject. The auxiliary matches the original verb: 'I am' → So AM I / Neither AM I. 'I have' → So HAVE I. 'I eat' → So DO I. 'I went' → So DID I. 'I will' → So WILL I. TRAP: NEVER say 'Me too' after a negative ('I don't eat meat. Me too' = WRONG; say 'Me neither').", "body_pt": "Formula: SO/NEITHER + auxiliar + sujeito. Auxiliar bate com o verbo original: 'I am' → So am I. 'I eat' → So do I. 'I will' → So will I. PEGADINHA: Nunca 'Me too' depois de negativa. 'I don't like it → Me neither' (certo) ou 'Neither do I' (certo). 'Me too' aí é errado.", "examples": [
+      { "en": "I'm hungry → So am I.", "pt": "Eu também (sou)." },
+      { "en": "I play guitar → So do I.", "pt": "Eu também (toco)." },
+      { "en": "I can't swim → Neither can I.", "pt": "Nem eu." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "agree-s01", "type": "multiple_choice", "question": "'I love pizza.' → 'Me ___.'", "options": ["neither", "too", "also", "either"], "correct": 1, "explanation": "Positive agreement informal = ME TOO.", "hint_pt_br": "Afirmativa informal: Me too." }},
+    { "kind": "exercise", "exercise": { "id": "agree-s02", "type": "multiple_choice", "question": "'I can't swim.' → '___.' (agree)", "options": ["Me too", "So do I", "Neither can I", "So can I"], "correct": 2, "explanation": "Negative agreement formal = NEITHER + matching auxiliary. 'Can't' → 'Neither CAN I'.", "hint_pt_br": "Negativa: Neither + auxiliar. 'Can't' → 'Neither can I'." }},
+    { "kind": "exercise", "exercise": { "id": "agree-s03", "type": "fill_blank", "question": "'I am tired.' → 'So ___ I.' (match the auxiliary)", "correct": "am", "explanation": "I am → So AM I.", "hint_pt_br": "Espelhe o auxiliar. 'am' → 'So am I'." }},
+    { "kind": "exercise", "exercise": { "id": "agree-s04", "type": "matching", "pairs": [
+      ["I love it → So do I", "Afirmativa"],
+      ["I don't like it → Neither do I", "Negativa"],
+      ["I am happy → So am I", "Com 'to be'"],
+      ["I can sing → So can I", "Com modal"],
+      ["I went → So did I", "Com passado"]
+    ], "explanation": "Five patterns. The auxiliary always mirrors the original.", "hint_pt_br": "Cinco padrões. Auxiliar sempre espelha." }}
+  ]
+}
