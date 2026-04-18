@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 40,
-  "estimated_minutes": 28,
+  "estimated_minutes": 33,
   "summary_pt_br": "A primeira aula da Bia na Amazing School. Aprenda cumprimentos conhecendo a Bia, o Rafa, o Mr. Kumar e o Cosmo.",
   "scenes": [
     {
@@ -260,6 +260,56 @@
           "speaker": "ai",
           "text": "Goodbye, Leo. See you tomorrow.",
           "pt": "Tchau, Leo. Até amanhã."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "greetings-story-listening-story",
+      "title": "Listening story — First Day at Amazing School",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Mr. Kumar and a student. Bia walks into Amazing School for the first time. Learn greetings through the eyes of a 16-year-old surfer meeting her new classmates. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "Good morning! Welcome to Amazing School."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Good morning. My name is Leo."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "Nice to meet you, Leo. How are you today?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I am fine, thank you. And you?"
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "I am very well. Where are you from?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I am from Brazil."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Mr. Kumar. Think about what you heard and how the conversation felt."
         }
       ]
     },

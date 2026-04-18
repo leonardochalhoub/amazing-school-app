@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 26,
+  "estimated_minutes": 31,
   "summary_pt_br": "FOR (duração — há X tempo), SINCE (ponto de início — desde X), AGO (X atrás). Regras: FOR + duração (for 2 years), SINCE + ponto (since Monday), AGO depois de expressão de tempo (two years ago). Cuidado: AGO nunca com present perfect.",
   "scenes": [
     {
@@ -192,6 +192,56 @@
           "speaker": "ai",
           "text": "Impressive timeline.",
           "pt": "Trajetória impressionante."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "for-since-ago-listening-story",
+      "title": "Listening story — For, Since, Ago",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Interviewer and a student. Three time signals that always confuse. FOR + duration. SINCE + starting point. AGO after past time. 'For 2 years / Since 2022 / 2 years ago.' Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Interviewer",
+          "voice": "female1",
+          "en": "How long have you lived in this city?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I have lived here for ten years."
+        },
+        {
+          "speaker": "Interviewer",
+          "voice": "female1",
+          "en": "When did you move here?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I moved here ten years ago."
+        },
+        {
+          "speaker": "Interviewer",
+          "voice": "female1",
+          "en": "How long have you been married?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I have been married since 2020."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Interviewer. Think about what you heard and how the conversation felt."
         }
       ]
     },

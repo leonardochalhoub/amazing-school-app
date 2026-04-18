@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 26,
+  "estimated_minutes": 31,
   "summary_pt_br": "Fazer sugestões e convites em inglês: Let's + verbo base, Why don't we + verbo, How about + verbo-ing, Would you like to + verbo, Shall we + verbo base. Aceitar/recusar: Sure! / That sounds great / I'd love to but...",
   "scenes": [
     {
@@ -229,6 +229,56 @@
           "speaker": "ai",
           "text": "Awesome. See you Saturday!",
           "pt": "Demais. Até sábado!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "making-plans-bia-listening-story",
+      "title": "Listening story — Making Plans at the Rooftop",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Bia and a student. Suggestions and invitations: Let's… / Why don't we… / How about… / Would you like to… / Shall we… Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "What should we do on Saturday?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "How about going to the beach?"
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Love it. What time?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Let's meet at nine in the morning."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Should we bring lunch?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, let's bring sandwiches and fruit."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Bia. Think about what you heard and how the conversation felt."
         }
       ]
     },

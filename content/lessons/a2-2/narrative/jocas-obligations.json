@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 28,
+  "estimated_minutes": 33,
   "summary_pt_br": "HAVE TO (obrigação externa, alguém impôs) x MUST (obrigação interna ou forte) x DON'T HAVE TO (não precisa) x MUSTN'T (proibido). Armadilha: 'don't have to' NÃO significa 'mustn't'.",
   "scenes": [
     {
@@ -223,6 +223,56 @@
           "speaker": "ai",
           "text": "It is, but I love the challenge.",
           "pt": "É, mas adoro o desafio."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "jocas-obligations-listening-story",
+      "title": "Listening story — Joca's Obligations — Have To, Must, Don't Have To",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Joca and a student. The three obligations nobody explains clearly: HAVE TO (external rule), MUST (internal/strong), DON'T HAVE TO (no need). And when to use each. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "female1",
+          "en": "My new job has many rules."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "What rules do you have to follow?"
+        },
+        {
+          "speaker": "Joca",
+          "voice": "female1",
+          "en": "I must arrive at nine every day."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Do you have to wear a suit?"
+        },
+        {
+          "speaker": "Joca",
+          "voice": "female1",
+          "en": "No, I don't have to, but I must look professional."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Do you have to work on weekends?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Joca. Think about what you heard and how the conversation felt."
         }
       ]
     },

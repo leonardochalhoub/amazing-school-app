@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 14,
+  "estimated_minutes": 19,
   "summary_pt_br": "Passado simples — verbos regulares (ed) e irregulares mais comuns do inglês.",
   "sources": [
     {
@@ -234,6 +234,56 @@
           "speaker": "ai",
           "text": "Sounds like a perfect day.",
           "pt": "Parece um dia perfeito."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "past-simple-listening-story",
+      "title": "Listening story — Past Simple Tense",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Friend and a student. Learn regular and irregular verbs in the past simple Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female1",
+          "en": "What did you do yesterday?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I went to the beach with friends."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female1",
+          "en": "Did you have fun?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, we had an amazing time."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female1",
+          "en": "What did you eat?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "We ate tacos at Rafa's truck."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Friend. Think about what you heard and how the conversation felt."
         }
       ]
     }

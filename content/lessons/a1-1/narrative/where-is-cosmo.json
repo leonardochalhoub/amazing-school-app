@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 25,
+  "estimated_minutes": 30,
   "summary_pt_br": "O Cosmo se escondeu na sala. A turma tem que usar preposições de lugar (on, in, under, next to, behind) para achá-lo. Aprenda os objetos da sala e as preposições em contexto.",
   "scenes": [
     {
@@ -267,6 +267,56 @@
           "speaker": "ai",
           "text": "Thank you for helping me.",
           "pt": "Obrigado por ajudar."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "where-is-cosmo-listening-story",
+      "title": "Listening story — Where Is Cosmo?",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Mr. Kumar and a student. Cosmo has hidden somewhere in the classroom. Use ON, IN, UNDER, NEXT TO, and BEHIND to find him. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "Oh no! I cannot find Cosmo. Have you seen him?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "No, I have not. Is he in the house?"
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "I looked in the living room. He is not there."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Is he under the table?"
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "No, he is not under the table either."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Maybe he is behind the sofa."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Mr. Kumar. Think about what you heard and how the conversation felt."
         }
       ]
     },

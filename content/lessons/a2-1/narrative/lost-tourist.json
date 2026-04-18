@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 27,
+  "estimated_minutes": 32,
   "summary_pt_br": "Direções em inglês: go straight, turn left/right, take the second street, cross, between, opposite, on the corner. Preposições de movimento (to, into, through, across, along).",
   "scenes": [
     {
@@ -263,6 +263,56 @@
           "speaker": "ai",
           "text": "Have a wonderful day!",
           "pt": "Tenha um ótimo dia!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "lost-tourist-listening-story",
+      "title": "Listening story — The Lost Tourist",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Tourist and a student. Directions, transport, and prepositions of movement. A lost tourist finds Amazing School thanks to Bia. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Tourist",
+          "voice": "female1",
+          "en": "Excuse me, I am lost. Can you help me?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Of course. Where do you want to go?"
+        },
+        {
+          "speaker": "Tourist",
+          "voice": "female1",
+          "en": "I am looking for the bus station."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Go straight for two blocks."
+        },
+        {
+          "speaker": "Tourist",
+          "voice": "female1",
+          "en": "OK, two blocks. Then what?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Turn left at the supermarket."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Tourist. Think about what you heard and how the conversation felt."
         }
       ]
     },

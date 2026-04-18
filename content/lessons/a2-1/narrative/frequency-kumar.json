@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 25,
+  "estimated_minutes": 30,
   "summary_pt_br": "Advérbios de frequência: always / usually / often / sometimes / rarely / never. Regra da posição: vão ANTES do verbo principal, mas DEPOIS do verbo 'to be' ('She is always late', mas 'She always arrives late').",
   "scenes": [
     {
@@ -219,6 +219,56 @@
           "speaker": "ai",
           "text": "Keep practicing. You are improving!",
           "pt": "Continue praticando. Tá melhorando!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "frequency-kumar-listening-story",
+      "title": "Listening story — Mr. Kumar's Habits",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Mr. Kumar and a student. Frequency adverbs (always, usually, often, sometimes, rarely, never) and where they go in a sentence. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "How often do you study English?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I always study every evening."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "Do you ever practice with movies?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I often watch movies in English."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "Do you sometimes feel tired?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, sometimes, but I never give up."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Mr. Kumar. Think about what you heard and how the conversation felt."
         }
       ]
     },

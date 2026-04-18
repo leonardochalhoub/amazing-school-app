@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 30,
-  "estimated_minutes": 23,
+  "estimated_minutes": 28,
   "summary_pt_br": "Profissões em inglês + armadilha cultural: 'What do you do?' NÃO é 'o que você está fazendo?' — é 'qual é seu trabalho?'. Resposta: 'I'm a teacher' / 'I work as a chef'.",
   "scenes": [
     {
@@ -152,6 +152,56 @@
           "speaker": "ai",
           "text": "We have a culinary program. Let me tell you more.",
           "pt": "Temos programa culinário. Deixa eu te contar."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "jobs-professions-listening-story",
+      "title": "Listening story — What Do You Do?",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Interviewer and a student. Jobs and professions. The question 'What do you do?' really means 'What's your job?'. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Interviewer",
+          "voice": "female1",
+          "en": "Welcome. What do you do for a living?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I am a software engineer."
+        },
+        {
+          "speaker": "Interviewer",
+          "voice": "female1",
+          "en": "Great. How long have you worked as one?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "For five years."
+        },
+        {
+          "speaker": "Interviewer",
+          "voice": "female1",
+          "en": "What do your parents do?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "My father is a doctor and my mother is a teacher."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Interviewer. Think about what you heard and how the conversation felt."
         }
       ]
     },

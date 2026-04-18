@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 30,
-  "estimated_minutes": 16,
+  "estimated_minutes": 21,
   "summary_pt_br": "Dias, meses, horas. Em inglês, dias e meses SEMPRE começam com letra maiúscula, mesmo no meio de uma frase.",
   "exercises": [
     {
@@ -379,6 +379,56 @@
           "speaker": "ai",
           "text": "Mine is Friday.",
           "pt": "O meu é sexta."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "days-months-time-listening-story",
+      "title": "Listening story — Days, Months & Telling Time",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Assistant and a student. Days of the week, months of the year, and how to say what time it is. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Assistant",
+          "voice": "female1",
+          "en": "What day is today?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Today is Wednesday."
+        },
+        {
+          "speaker": "Assistant",
+          "voice": "female1",
+          "en": "What month is it?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "It is April."
+        },
+        {
+          "speaker": "Assistant",
+          "voice": "female1",
+          "en": "What time is it now?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "It is half past three."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Assistant. Think about what you heard and how the conversation felt."
         }
       ]
     }

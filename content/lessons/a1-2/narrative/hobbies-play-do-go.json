@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 24,
+  "estimated_minutes": 29,
   "summary_pt_br": "Três verbos que viram hobbies em inglês: PLAY para esportes de bola / jogos / instrumentos. DO para atividades físicas sem bola (yoga, karate). GO + -ING para atividades (go swimming, go running). Regra simples, fácil de errar.",
   "scenes": [
     {
@@ -153,6 +153,56 @@
           "speaker": "ai",
           "text": "Welcome aboard!",
           "pt": "Bem-vindo a bordo!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "hobbies-play-do-go-listening-story",
+      "title": "Listening story — Play, Do, Go — Hobby Rules",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Club leader and a student. Why we PLAY tennis but DO yoga but GO swimming. Three verbs, three categories. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Club leader",
+          "voice": "female1",
+          "en": "Welcome to the hobby club. What do you enjoy?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I play tennis and I go swimming."
+        },
+        {
+          "speaker": "Club leader",
+          "voice": "female1",
+          "en": "Nice combination. Do you play any instruments?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I play the guitar a little."
+        },
+        {
+          "speaker": "Club leader",
+          "voice": "female1",
+          "en": "Do you do yoga?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "No, but I do martial arts."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Club leader. Think about what you heard and how the conversation felt."
         }
       ]
     },

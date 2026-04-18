@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 40,
-  "estimated_minutes": 26,
+  "estimated_minutes": 31,
   "summary_pt_br": "Comidas e bebidas + fórmulas educadas para pedir: I'd like... / Could I have... / Can I get... A diferença entre soar rude e soar educado na hora de pedir em restaurantes.",
   "scenes": [
     {
@@ -252,6 +252,56 @@
           "speaker": "ai",
           "text": "Thanks a lot. Your food will be ready soon.",
           "pt": "Muito obrigado. Sai rapidinho."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "tropical-bites-menu-listening-story",
+      "title": "Listening story — Ordering at Tropical Bites",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Rafa and a student. Food & drink vocabulary + the polite way to order. I'D LIKE, COULD I HAVE, CAN I GET — the difference between rude and right. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "Welcome back! Want to see the new menu?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, please. What do you recommend?"
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "The fish tacos are excellent today."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Do you have vegetarian options?"
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "Yes. Try our avocado burger and green salad."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I will have the avocado burger, please."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Rafa. Think about what you heard and how the conversation felt."
         }
       ]
     },

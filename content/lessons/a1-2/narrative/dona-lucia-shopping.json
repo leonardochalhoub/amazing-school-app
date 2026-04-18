@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 40,
-  "estimated_minutes": 27,
+  "estimated_minutes": 32,
   "summary_pt_br": "Quantificadores em inglês: SOME (afirmativas), ANY (negativas/perguntas), MUCH (incontáveis), MANY (contáveis), A LOT OF (ambos). Armadilha clássica: contável ≠ incontável (information, advice, money são INCONTÁVEIS em inglês).",
   "scenes": [
     {
@@ -238,6 +238,56 @@
           "speaker": "ai",
           "text": "Thank you so much, dear.",
           "pt": "Muito obrigada, querido."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "dona-lucia-shopping-listening-story",
+      "title": "Listening story — Dona Lúcia's Shopping List",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Dona Lúcia and a student. SOME / ANY / MUCH / MANY / A LOT OF. The quantifiers that trip Brazilians up — through Dona Lúcia's trip to the market. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Dona Lúcia",
+          "voice": "female1",
+          "en": "Would you help me with some shopping, dear?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Of course. What do you need?"
+        },
+        {
+          "speaker": "Dona Lúcia",
+          "voice": "female1",
+          "en": "I need some bread and a little milk."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "How much milk do you need?"
+        },
+        {
+          "speaker": "Dona Lúcia",
+          "voice": "female1",
+          "en": "Two liters, please."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "And how many apples?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Dona Lúcia. Think about what you heard and how the conversation felt."
         }
       ]
     },

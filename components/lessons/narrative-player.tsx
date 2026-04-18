@@ -8,6 +8,7 @@ import { SceneIllustration } from "./scene-illustration";
 import { RecordExercise } from "./record-exercise";
 import { SpeakButton } from "./speak-button";
 import { SpeakingLabDialogRunner } from "@/components/speaking-lab/dialog-runner";
+import { ListeningStoryPlayer } from "./listening-story";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -84,6 +85,8 @@ export function NarrativePlayer({ lesson, characters }: Props) {
         <CardContent className="space-y-4 p-6">
           <SceneRenderer
             scene={scene}
+            sceneIndex={index}
+            lessonSlug={lesson.slug}
             characters={characters}
             onAdvance={next}
             submitting={submitting}
@@ -97,12 +100,16 @@ export function NarrativePlayer({ lesson, characters }: Props) {
 
 function SceneRenderer({
   scene,
+  sceneIndex,
+  lessonSlug,
   characters,
   onAdvance,
   submitting,
   isLast,
 }: {
   scene: LessonScene;
+  sceneIndex: number;
+  lessonSlug: string;
   characters: Record<string, Character>;
   onAdvance: () => void;
   submitting: boolean;
@@ -303,6 +310,26 @@ function SceneRenderer({
           <h3 className="text-base font-semibold">🎙️ {scene.title}</h3>
         </div>
         <SpeakingLabDialogRunner all={[dialog]} />
+        <AdvanceButton
+          onClick={onAdvance}
+          isLast={isLast}
+          submitting={submitting}
+        />
+      </div>
+    );
+  }
+
+  if (scene.kind === "listening_story") {
+    return (
+      <div className="space-y-3">
+        <ListeningStoryPlayer
+          lessonSlug={lessonSlug}
+          sceneId={scene.scene_id ?? `listening-${sceneIndex}`}
+          title={scene.title}
+          promptEn={scene.prompt_en}
+          promptPt={scene.prompt_pt}
+          paragraphs={scene.paragraphs}
+        />
         <AdvanceButton
           onClick={onAdvance}
           isLast={isLast}

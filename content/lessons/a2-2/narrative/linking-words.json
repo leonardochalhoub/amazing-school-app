@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 26,
+  "estimated_minutes": 31,
   "summary_pt_br": "Conectivos básicos: BECAUSE (porque — razão), SO (então — resultado), BUT (mas — contraste), ALTHOUGH (embora — concessão). Regra: BECAUSE + oração, BECAUSE OF + substantivo.",
   "scenes": [
     {
@@ -185,6 +185,56 @@
           "speaker": "ai",
           "text": "Excellent. Your writing is getting stronger.",
           "pt": "Excelente. Seu texto tá melhorando."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "linking-words-listening-story",
+      "title": "Listening story — Because, So, But, Although",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Zara and a student. The connectors that turn boring sentences into paragraphs. BECAUSE (reason), SO (result), BUT (contrast), ALTHOUGH (concession). Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Your essay is good, but too short."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I am sorry, I did not have much time."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Use more linking words, such as 'however'."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I like your idea, however I find it hard."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Good. Also use 'because' for reasons."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I study English because I love it."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Zara. Think about what you heard and how the conversation felt."
         }
       ]
     },

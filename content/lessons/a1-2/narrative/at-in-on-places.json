@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 25,
+  "estimated_minutes": 30,
   "summary_pt_br": "Preposições de lugar: IN (dentro, espaço fechado — in the kitchen, in Brazil), ON (sobre superfície — on the table, on the wall, on the street), AT (ponto específico, endereço — at the door, at school, at 10 Main Street).",
   "scenes": [
     {
@@ -147,6 +147,56 @@
           "speaker": "ai",
           "text": "I am almost there!",
           "pt": "Tô quase chegando!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "at-in-on-places-listening-story",
+      "title": "Listening story — At, In, On — Places",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Friend and a student. IN for enclosed spaces. ON for surfaces. AT for specific points or addresses. The three prepositions that never stop showing up. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female1",
+          "en": "Hey, where are you right now?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I am at the café on Main Street."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female1",
+          "en": "Nice. Are you inside or on the terrace?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I am on the terrace, at a small table."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female1",
+          "en": "Great. I am in a taxi on my way."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "How long until you arrive?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Friend. Think about what you heard and how the conversation felt."
         }
       ]
     },

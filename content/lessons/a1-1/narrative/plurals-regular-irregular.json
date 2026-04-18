@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 23,
+  "estimated_minutes": 28,
   "summary_pt_br": "Plurais regulares (apenas -s / -es). Plurais irregulares essenciais: child→children, man→men, woman→women, person→people, foot→feet, tooth→teeth, mouse→mice. Decorar é o único caminho.",
   "scenes": [
     {
@@ -153,6 +153,56 @@
           "speaker": "ai",
           "text": "You too. Come back tomorrow!",
           "pt": "Você também. Volte amanhã!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "plurals-regular-irregular-listening-story",
+      "title": "Listening story — One Child, Two Children",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Seller and a student. Regular plurals (add -s / -es) and the handful of irregulars that never stop showing up. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Seller",
+          "voice": "female1",
+          "en": "Hello. Would you like some fresh fruits?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes. I want three apples and two oranges."
+        },
+        {
+          "speaker": "Seller",
+          "voice": "female1",
+          "en": "Of course. Do you need any vegetables?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, four tomatoes and six potatoes."
+        },
+        {
+          "speaker": "Seller",
+          "voice": "female1",
+          "en": "Are the apples for your children?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, for my three children."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Seller. Think about what you heard and how the conversation felt."
         }
       ]
     },

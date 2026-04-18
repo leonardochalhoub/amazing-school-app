@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 28,
+  "estimated_minutes": 33,
   "summary_pt_br": "JUST / YET / ALREADY são os três sinais que marcam a conexão com o momento presente, típicos do Present Perfect. Diferença crucial: Past Simple tem um tempo específico ('yesterday', 'last week'); Present Perfect se conecta com AGORA.",
   "scenes": [
     {
@@ -222,6 +222,56 @@
           "speaker": "ai",
           "text": "Great. Let's get to work.",
           "pt": "Ótimo. Vamos trabalhar."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "just-yet-already-listening-story",
+      "title": "Listening story — Just, Yet, Already — Present Perfect vs Past Simple",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Colleague and a student. JUST (minutes ago), YET (still expected), ALREADY (sooner than expected). The trio that confuses Brazilians most. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "female1",
+          "en": "Hey. Have you had coffee yet?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I have just had one."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "female1",
+          "en": "Have you checked your email yet?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "No, I have not checked it yet."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "female1",
+          "en": "The boss has already sent the report."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Oh, I have not seen it yet."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Colleague. Think about what you heard and how the conversation felt."
         }
       ]
     },

@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 25,
+  "estimated_minutes": 30,
   "summary_pt_br": "Vocabulário de clima e estações. Regra-chave: em inglês usa-se IT + BE para clima ('It's raining' / 'It's hot'), nunca 'the weather is raining'.",
   "scenes": [
     {
@@ -233,6 +233,56 @@
           "speaker": "ai",
           "text": "Stay warm and dry!",
           "pt": "Se mantenha aquecido e seco!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "weather-seasons-listening-story",
+      "title": "Listening story — The Weather in Praia do Sol",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Neighbor and a student. Weather vocabulary + the four seasons. Rains, storms, humid, windy. Plus IT'S construction for weather. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Neighbor",
+          "voice": "female1",
+          "en": "Nice weather we are having, isn't it?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, it is warm and sunny."
+        },
+        {
+          "speaker": "Neighbor",
+          "voice": "female1",
+          "en": "Do you prefer summer or winter?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I prefer summer. I love the heat."
+        },
+        {
+          "speaker": "Neighbor",
+          "voice": "female1",
+          "en": "I like winter. The cold is refreshing."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Is it going to rain tomorrow?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Neighbor. Think about what you heard and how the conversation felt."
         }
       ]
     },

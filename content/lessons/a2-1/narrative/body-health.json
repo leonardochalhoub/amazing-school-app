@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 26,
+  "estimated_minutes": 31,
   "summary_pt_br": "Partes do corpo + sintomas + no caixa da farmácia. Armadilha: em inglês você 'TEM dor de cabeça' (I HAVE a headache), não 'sou com dor'. Expressão comum: 'My X hurts'.",
   "scenes": [
     {
@@ -241,6 +241,56 @@
           "speaker": "ai",
           "text": "Come back if you do not feel better.",
           "pt": "Volte se não melhorar."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "body-health-listening-story",
+      "title": "Listening story — At the Pharmacy — Body and Health",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Doctor and a student. Body parts, common symptoms, and how to say 'my head hurts' without panic. Plus advice phrases. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Doctor",
+          "voice": "female1",
+          "en": "Hello. What seems to be the problem?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I have a bad headache and a sore throat."
+        },
+        {
+          "speaker": "Doctor",
+          "voice": "female1",
+          "en": "How long have you felt this way?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "For three days."
+        },
+        {
+          "speaker": "Doctor",
+          "voice": "female1",
+          "en": "Do you have a fever?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I have a small fever."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Doctor. Think about what you heard and how the conversation felt."
         }
       ]
     },

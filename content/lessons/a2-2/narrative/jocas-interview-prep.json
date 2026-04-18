@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 27,
+  "estimated_minutes": 32,
   "summary_pt_br": "WILL (decisões na hora, previsões) x GOING TO (planos já feitos, evidências visíveis). Joca se prepara para uma entrevista de trabalho remota numa startup dos EUA.",
   "scenes": [
     {
@@ -260,6 +260,56 @@
           "speaker": "ai",
           "text": "Thanks. I feel more confident now.",
           "pt": "Valeu. Tô mais confiante."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "jocas-interview-prep-listening-story",
+      "title": "Listening story — Joca Prepares for the Interview",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Joca and a student. Future tenses: WILL vs GOING TO. Joca has an interview at a US startup and the class predicts, plans, and promises. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "female1",
+          "en": "I have a big interview tomorrow. Can you help?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Sure. Let's practice together."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "female1",
+          "en": "What are my strengths?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "You are creative and you learn quickly."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "female1",
+          "en": "What about my weaknesses?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Sometimes you speak too fast."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Joca. Think about what you heard and how the conversation felt."
         }
       ]
     },

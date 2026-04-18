@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 25,
+  "estimated_minutes": 30,
   "summary_pt_br": "O Rafa pinta o cardápio do Tropical Bites em todas as cores. Aprenda as cores e a regra do adjetivo antes do substantivo ('red car', não 'car red').",
   "scenes": [
     {
@@ -273,6 +273,56 @@
           "speaker": "ai",
           "text": "Thank you. Your order will be ready in five minutes.",
           "pt": "Obrigado. Seu pedido fica pronto em cinco minutos."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "rafas-menu-listening-story",
+      "title": "Listening story — Rafa's Colorful Menu",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Rafa and a student. Rafa paints the menu of Tropical Bites in every color. Learn colors and the English adjective rule: the adjective goes BEFORE the noun. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "Welcome to Tropical Bites. What can I get you?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Hi. I would like two chicken tacos."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "Spicy or mild?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Mild, please. I cannot eat spicy food."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "No problem. Would you like a drink?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, one orange juice, please."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Rafa. Think about what you heard and how the conversation felt."
         }
       ]
     },

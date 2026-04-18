@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 26,
+  "estimated_minutes": 31,
   "summary_pt_br": "Pronomes indefinidos em inglês: SOMEBODY/ANYBODY/NOBODY/EVERYBODY para pessoas, e combinações com -thing / -where. Regra: some- em afirmativas, any- em negativas/perguntas, no- para negação com verbo afirmativo.",
   "scenes": [
     {
@@ -232,6 +232,56 @@
           "speaker": "ai",
           "text": "Thank you for your help.",
           "pt": "Obrigado pela ajuda."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "somebody-nothing-listening-story",
+      "title": "Listening story — Somebody, Nothing, Anywhere",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Detective and a student. Indefinite pronouns: somebody / anybody / nobody / everybody — paired with -thing, -where. The rules about affirmative, negative, and questions. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Detective",
+          "voice": "female1",
+          "en": "Did you see anybody suspicious last night?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, somebody was standing near the gate."
+        },
+        {
+          "speaker": "Detective",
+          "voice": "female1",
+          "en": "Did they say anything?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "No, they said nothing at all."
+        },
+        {
+          "speaker": "Detective",
+          "voice": "female1",
+          "en": "Did you find anything unusual?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I found something near the door."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Detective. Think about what you heard and how the conversation felt."
         }
       ]
     },

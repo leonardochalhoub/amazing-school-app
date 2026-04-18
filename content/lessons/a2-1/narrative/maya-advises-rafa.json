@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 26,
+  "estimated_minutes": 31,
   "summary_pt_br": "Modais essenciais: can (conseguir/poder), should (deveria), must (tem que), might (talvez). Sempre vêm seguidos do verbo NA FORMA BASE (sem 'to').",
   "scenes": [
     {
@@ -229,6 +229,56 @@
           "speaker": "ai",
           "text": "I am only twelve, but I read a lot.",
           "pt": "Tenho só doze, mas leio muito."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "maya-advises-rafa-listening-story",
+      "title": "Listening story — Maya Advises Rafa — Can, Should, Must",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Maya and a student. Core modals: CAN (ability), SHOULD (advice), MUST (obligation), MIGHT (possibility). Maya tells Rafa how to expand to Orlando. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "Rafa, I think you should raise your prices."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Should I really? My customers like them."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "You could raise them ten percent only."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "That is a good idea. What else?"
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "You shouldn't work seven days a week."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "You are right. I should take one day off."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Maya. Think about what you heard and how the conversation felt."
         }
       ]
     },

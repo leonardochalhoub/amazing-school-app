@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 24,
+  "estimated_minutes": 29,
   "summary_pt_br": "Zero conditional para VERDADES GERAIS, leis da natureza, regras. Estrutura: IF + present simple, present simple. 'If you heat water, it boils.' Pode trocar IF por WHEN — mesmo sentido. Diferente do first conditional (que fala de futuro).",
   "scenes": [
     {
@@ -154,6 +154,56 @@
           "speaker": "ai",
           "text": "Perfect. You mastered the zero conditional.",
           "pt": "Perfeito. Dominou a zero conditional."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "zero-conditional-listening-story",
+      "title": "Listening story — When Water Boils — Zero Conditional",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Chef Rafa and a student. Zero conditional for general truths and rules. IF + present, + present. 'If you heat water, it boils.' Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Chef Rafa",
+          "voice": "female1",
+          "en": "If you heat butter, what happens?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "If you heat butter, it melts."
+        },
+        {
+          "speaker": "Chef Rafa",
+          "voice": "female1",
+          "en": "Exactly. If you freeze water, what happens?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "If you freeze water, it becomes ice."
+        },
+        {
+          "speaker": "Chef Rafa",
+          "voice": "female1",
+          "en": "Good. If you mix red and yellow?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "If you mix red and yellow, you get orange."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Chef Rafa. Think about what you heard and how the conversation felt."
         }
       ]
     },

@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 27,
+  "estimated_minutes": 32,
   "summary_pt_br": "Verbos seguidos de GERÚNDIO (-ING): enjoy, avoid, finish, keep, mind, suggest, practice. Verbos seguidos de INFINITIVO (TO + base): want, hope, decide, promise, plan, need, learn. Alguns aceitam os dois com sentido quase igual (start, begin, love, like, hate).",
   "scenes": [
     {
@@ -191,6 +191,56 @@
           "speaker": "ai",
           "text": "You will grow if you keep going.",
           "pt": "Vai crescer se continuar."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "gerunds-infinitives-listening-story",
+      "title": "Listening story — Enjoy Reading vs Want to Read",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Coach and a student. Some verbs take -ING (gerund). Others take TO + base (infinitive). The groups you just have to learn. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Coach",
+          "voice": "female1",
+          "en": "What do you enjoy doing?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I enjoy learning new languages."
+        },
+        {
+          "speaker": "Coach",
+          "voice": "female1",
+          "en": "What do you want to achieve this year?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I want to travel to Europe."
+        },
+        {
+          "speaker": "Coach",
+          "voice": "female1",
+          "en": "Have you decided to start anything new?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I decided to start yoga."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Coach. Think about what you heard and how the conversation felt."
         }
       ]
     },

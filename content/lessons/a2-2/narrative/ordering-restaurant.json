@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 26,
+  "estimated_minutes": 31,
   "summary_pt_br": "Pedir uma refeição completa em restaurante: starter, main, dessert. Pedir substituições, avisar alergias, pedir a conta. Formas educadas: 'Could I have...', 'Without...', 'I'm allergic to...'.",
   "scenes": [
     {
@@ -220,6 +220,56 @@
           "speaker": "ai",
           "text": "Perfect. I will bring your drinks now.",
           "pt": "Perfeito. Trago as bebidas."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "ordering-restaurant-listening-story",
+      "title": "Listening story — A Full Meal — Restaurant English",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Waiter and a student. Ordering a real meal: starter, main, dessert. Substitutions, allergies, paying the bill. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Waiter",
+          "voice": "female1",
+          "en": "Good evening. A table for how many?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "For two, please."
+        },
+        {
+          "speaker": "Waiter",
+          "voice": "female1",
+          "en": "Here is the menu. Any drinks to start?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Two glasses of water, please."
+        },
+        {
+          "speaker": "Waiter",
+          "voice": "female1",
+          "en": "Are you ready to order?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I will have the fish and salad."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Waiter. Think about what you heard and how the conversation felt."
         }
       ]
     },

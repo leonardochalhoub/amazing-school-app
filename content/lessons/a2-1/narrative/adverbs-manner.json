@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 24,
+  "estimated_minutes": 29,
   "summary_pt_br": "Advérbios de modo: -LY em adjetivos (slow → slowly, careful → carefully). Irregulares: good → WELL (nunca 'goodly'). Advérbios que não mudam: fast, hard, late, early. Posição: depois do verbo + objeto.",
   "scenes": [
     {
@@ -175,6 +175,56 @@
           "speaker": "ai",
           "text": "Great job. See you next Monday.",
           "pt": "Ótimo trabalho. Até segunda."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "adverbs-manner-listening-story",
+      "title": "Listening story — Slowly, Well, Fast — Adverbs of Manner",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Coach and a student. How to describe HOW you do something. -LY endings, irregulars (good → well, fast stays fast). Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Coach",
+          "voice": "female1",
+          "en": "Welcome to your first tennis lesson."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Thank you. I want to learn quickly."
+        },
+        {
+          "speaker": "Coach",
+          "voice": "female1",
+          "en": "Hit the ball carefully, not hard."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "OK. I am trying to hit it carefully."
+        },
+        {
+          "speaker": "Coach",
+          "voice": "female1",
+          "en": "Move slowly and keep your eyes on the ball."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I am moving slowly."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Coach. Think about what you heard and how the conversation felt."
         }
       ]
     },

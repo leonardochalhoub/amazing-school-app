@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 24,
+  "estimated_minutes": 29,
   "summary_pt_br": "TOO (excessivo) vs ENOUGH (suficiente). Posição: TOO + adjetivo ('too hot'), adjetivo + ENOUGH ('hot enough'). Negativa: not hot enough = não quente o suficiente. TOO não é 'muito' — é 'demais'.",
   "scenes": [
     {
@@ -175,6 +175,56 @@
           "speaker": "ai",
           "text": "I will ask them to turn it down.",
           "pt": "Vou pedir pra abaixar."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "too-enough-listening-story",
+      "title": "Listening story — Too Hot, Not Hot Enough",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Waiter and a student. TOO + adjective = excessively. Adjective + ENOUGH = sufficient. Two tiny words that change the whole meaning. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Waiter",
+          "voice": "female1",
+          "en": "How is your food so far?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "The soup is too salty."
+        },
+        {
+          "speaker": "Waiter",
+          "voice": "female1",
+          "en": "I am sorry. Let me get you another one."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Thank you. Also, my tea is not hot enough."
+        },
+        {
+          "speaker": "Waiter",
+          "voice": "female1",
+          "en": "I will heat it up. Is the chair comfortable?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "No, it is too small."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Waiter. Think about what you heard and how the conversation felt."
         }
       ]
     },

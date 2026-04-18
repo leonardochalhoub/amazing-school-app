@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 40,
-  "estimated_minutes": 26,
+  "estimated_minutes": 31,
   "summary_pt_br": "A rotina matinal do Rafa em Present Simple. Reforço do -s em he/she/it, verbos irregulares do cotidiano (have, go, do), e a diferença entre DO e MAKE.",
   "scenes": [
     {
@@ -227,6 +227,56 @@
           "speaker": "ai",
           "text": "It is. Now I am ready for the day.",
           "pt": "É sim. Agora tô pronto pro dia."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "rafas-morning-listening-story",
+      "title": "Listening story — Rafa's Morning — Every Single Day",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Rafa and a student. Present Simple in action through Rafa's daily routine. He WAKES, he SHAVES, he DRIVES. The -s that only lives on HE/SHE/IT. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "Hi! Come see how I start my day."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "What time do you wake up?"
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "I always wake up at five thirty."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Wow, that is early. What do you do first?"
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "I usually drink a coffee and check the weather."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Do you eat breakfast at home?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Rafa. Think about what you heard and how the conversation felt."
         }
       ]
     },

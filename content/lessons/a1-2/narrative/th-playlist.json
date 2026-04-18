@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 50,
-  "estimated_minutes": 29,
+  "estimated_minutes": 34,
   "summary_pt_br": "Uma playlist de 5 músicas focadas em palavras com TH, para consolidar o que foi aprendido. Inclui análise de linhas específicas de Three Little Birds, Thinking Out Loud, Mother, With or Without You e This Is Me.",
   "scenes": [
     {
@@ -224,6 +224,56 @@
           "speaker": "ai",
           "text": "Perfect. You are getting better!",
           "pt": "Perfeito. Você tá melhorando!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "th-playlist-listening-story",
+      "title": "Listening story — Bia's TH Playlist",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Zara and a student. A 5-song playlist built entirely around TH words. Put them together, sing along, and feel the tongue-between-teeth become automatic. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Today we practice the TH sound. Ready?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I am ready."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Repeat — Think, thank, thirty, Thursday."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Think, thank, thirty, Thursday."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Good. Now the voiced TH — this, that, there."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "This, that, there."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Zara. Think about what you heard and how the conversation felt."
         }
       ]
     },

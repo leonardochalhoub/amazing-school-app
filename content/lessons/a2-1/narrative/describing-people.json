@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 26,
+  "estimated_minutes": 31,
   "summary_pt_br": "Adjetivos de aparência e personalidade. Armadilha: -ED é o que EU sinto (I am bored — entediado), -ING é o que CAUSA o sentimento (The movie is boring — chato). Trocar muda tudo.",
   "scenes": [
     {
@@ -241,6 +241,56 @@
           "speaker": "ai",
           "text": "Thank you. You were very helpful.",
           "pt": "Obrigado. Foi muito útil."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "describing-people-listening-story",
+      "title": "Listening story — Describing the People of Praia do Sol",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Police officer and a student. Appearance + personality adjectives. Tall, short, kind, lazy — and the -ED / -ING adjective trap (bored vs boring). Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Police officer",
+          "voice": "female1",
+          "en": "Please describe the man you saw."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "He was tall and thin."
+        },
+        {
+          "speaker": "Police officer",
+          "voice": "female1",
+          "en": "What about his hair?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "He had short brown curly hair."
+        },
+        {
+          "speaker": "Police officer",
+          "voice": "female1",
+          "en": "What was he wearing?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "He was wearing a black jacket and blue jeans."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Police officer. Think about what you heard and how the conversation felt."
         }
       ]
     },

@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 45,
-  "estimated_minutes": 28,
+  "estimated_minutes": 33,
   "summary_pt_br": "A rotina do Rafa das 5h à meia-noite. Aprenda o Present Simple com foco no -s do he/she/it, e nas contrações don't / doesn't nas negativas.",
   "scenes": [
     {
@@ -279,6 +279,56 @@
           "speaker": "ai",
           "text": "Thank you. Come by anytime!",
           "pt": "Obrigado. Passa quando quiser!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "rafas-truck-day-listening-story",
+      "title": "Listening story — A Day in Rafa's Truck",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Rafa and a student. Rafa's daily routine from 5 a.m. to midnight. Learn the Present Simple tense — and the tricky -s that only lives on HE/SHE/IT. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "Hi! Want to see how my day goes?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I do. What time do you start?"
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "I wake up at five and open the truck at seven."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "That is very early. Do you eat breakfast first?"
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "Yes, I always have coffee and bread."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "How many customers do you have every day?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Rafa. Think about what you heard and how the conversation felt."
         }
       ]
     },

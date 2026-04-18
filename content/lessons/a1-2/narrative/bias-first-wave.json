@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 45,
-  "estimated_minutes": 28,
+  "estimated_minutes": 33,
   "summary_pt_br": "Past Simple contando a história da Bia pegando a primeira onda. Verbos regulares (-ed) e os irregulares essenciais: go/went, come/came, have/had, see/saw, take/took.",
   "scenes": [
     {
@@ -269,6 +269,56 @@
           "speaker": "ai",
           "text": "Let's catch another one!",
           "pt": "Vamos pegar outra!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "bias-first-wave-listening-story",
+      "title": "Listening story — Bia's First Wave",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Bia and a student. Past Simple for events that happened. Bia tells the class about the wave that changed her life — irregular verbs and all. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Hi! Ready to catch your first wave?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, but I am a little scared."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Do not worry. Watch me first."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "OK. What should I do?"
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Lie on the board and paddle with your arms."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I am paddling now."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Bia. Think about what you heard and how the conversation felt."
         }
       ]
     },

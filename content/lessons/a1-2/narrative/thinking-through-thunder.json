@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 45,
-  "estimated_minutes": 28,
+  "estimated_minutes": 33,
   "summary_pt_br": "Pares mínimos que revelam as armadilhas de TH para brasileiros: THINK x TINK x FINK, THREE x TREE x FREE, BATH x BAT. Usando Thunder (Imagine Dragons) e Thunderstruck (AC/DC) como referência.",
   "scenes": [
     {
@@ -245,6 +245,56 @@
           "speaker": "ai",
           "text": "We will get through this together.",
           "pt": "Vamos passar por isso juntos."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "thinking-through-thunder-listening-story",
+      "title": "Listening story — Thinking Through the Thunder",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Mr. Kumar and a student. Minimal pairs: THINK / TINK / FINK — TREE / THREE / FREE. Joca the programmer debugs while a storm rolls in, and pop songs give us the drills. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "Did you hear that thunder?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I thought it was an earthquake."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "It has been thundering for three hours."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I think the storm is getting worse."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "Thousands of people lost power."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "That is terrible. Do we have flashlights?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Mr. Kumar. Think about what you heard and how the conversation felt."
         }
       ]
     },

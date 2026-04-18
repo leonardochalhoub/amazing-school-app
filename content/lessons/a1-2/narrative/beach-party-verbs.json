@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 25,
+  "estimated_minutes": 30,
   "summary_pt_br": "Dez verbos fundamentais do cotidiano em inglês, treinados num cenário de festa na praia. Presente simples com he/she/it -s revisitado.",
   "scenes": [
     {
@@ -237,6 +237,56 @@
           "speaker": "ai",
           "text": "See you tonight!",
           "pt": "Até hoje à noite!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "beach-party-verbs-listening-story",
+      "title": "Listening story — Beach Party — Common Verbs",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Bia and a student. Ten verbs you'll use every day — EAT, DRINK, SLEEP, WALK, READ, WATCH, SWIM, DANCE, LAUGH, RUN — through a Saturday at the beach. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Hi! We are having a beach party tonight."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "That sounds amazing. What time?"
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "At seven. Can you come?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I can come. Should I bring something?"
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Bring food to share if you want."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I will bring drinks and snacks."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Bia. Think about what you heard and how the conversation felt."
         }
       ]
     },

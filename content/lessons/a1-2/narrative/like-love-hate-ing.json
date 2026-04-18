@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 24,
+  "estimated_minutes": 29,
   "summary_pt_br": "Verbos de preferência + forma -ING: love, like, enjoy, don't mind, hate. Exemplo: 'I love SURFING' (não 'I love surf'). 'I hate WAKING UP early'.",
   "scenes": [
     {
@@ -157,6 +157,56 @@
           "speaker": "ai",
           "text": "Perfect. See you on Saturday!",
           "pt": "Perfeito. Até sábado!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "like-love-hate-ing-listening-story",
+      "title": "Listening story — I Love Surfing, I Hate Waking Up",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet New friend and a student. Verbs of preference (like, love, hate, enjoy, don't mind) + verb-ING. Not 'I love surf' — 'I love surfing'. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "New friend",
+          "voice": "female1",
+          "en": "Hey. What do you like doing in your free time?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I love reading books and watching movies."
+        },
+        {
+          "speaker": "New friend",
+          "voice": "female1",
+          "en": "Cool. Do you like cooking?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I like cooking Italian food."
+        },
+        {
+          "speaker": "New friend",
+          "voice": "female1",
+          "en": "Do you hate anything?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I hate waking up early."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with New friend. Think about what you heard and how the conversation felt."
         }
       ]
     },

@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 40,
-  "estimated_minutes": 25,
+  "estimated_minutes": 30,
   "summary_pt_br": "Roupas + tamanhos + provador. FIT (caber — tamanho) vs SUIT (combinar — estilo). 'These jeans FIT me' (caibo neles). 'This color SUITS you' (essa cor te combina).",
   "scenes": [
     {
@@ -219,6 +219,56 @@
           "speaker": "ai",
           "text": "Wonderful. I will ring it up.",
           "pt": "Maravilha. Vou passar no caixa."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "clothes-sizes-listening-story",
+      "title": "Listening story — Does This Fit?",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Salesperson and a student. Clothing vocabulary + sizes + fitting rooms. Plus the difference between FIT (size) and SUIT (look good). Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Salesperson",
+          "voice": "female1",
+          "en": "Welcome. Are you looking for something specific?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, a blue shirt in medium, please."
+        },
+        {
+          "speaker": "Salesperson",
+          "voice": "female1",
+          "en": "Here is a medium. Try it on."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Where is the fitting room?"
+        },
+        {
+          "speaker": "Salesperson",
+          "voice": "female1",
+          "en": "Right behind you, on the left."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "This shirt is too small."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Salesperson. Think about what you heard and how the conversation felt."
         }
       ]
     },

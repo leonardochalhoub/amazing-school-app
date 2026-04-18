@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 14,
+  "estimated_minutes": 19,
   "summary_pt_br": "Números de 1 a 100 em inglês. As 'teens' (13–19) e os múltiplos de 10 são as duas regras mais importantes.",
   "exercises": [
     {
@@ -293,6 +293,56 @@
           "speaker": "ai",
           "text": "Seventeen apples coming up!",
           "pt": "Saindo 17 maçãs!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "numbers-1-100-listening-story",
+      "title": "Listening story — Numbers 1–100",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Shopkeeper and a student. Count, give your age, and say phone numbers in English. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Shopkeeper",
+          "voice": "female1",
+          "en": "How old are you?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I am twenty-eight years old."
+        },
+        {
+          "speaker": "Shopkeeper",
+          "voice": "female1",
+          "en": "The bill is forty-five dollars."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Here is fifty dollars."
+        },
+        {
+          "speaker": "Shopkeeper",
+          "voice": "female1",
+          "en": "Your change is five dollars."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Thank you. What is your phone number?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Shopkeeper. Think about what you heard and how the conversation felt."
         }
       ]
     }

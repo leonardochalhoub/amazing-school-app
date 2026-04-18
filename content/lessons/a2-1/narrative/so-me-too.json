@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 26,
+  "estimated_minutes": 31,
   "summary_pt_br": "Como concordar em inglês. Afirmativa: So + auxiliar + sujeito ('So do I', 'So am I'). Me too (informal). Negativa: Neither + auxiliar + sujeito ('Neither do I'). Me neither (informal). Nunca 'Me too' em frase negativa.",
   "scenes": [
     {
@@ -206,6 +206,56 @@
           "speaker": "ai",
           "text": "We have a lot in common!",
           "pt": "Temos muito em comum!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "so-me-too-listening-story",
+      "title": "Listening story — So Do I, Me Too, Neither Do I",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Classmate and a student. Agreement expressions. When to say 'So do I / Me too / Neither do I / Me neither' and what they really mean. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Classmate",
+          "voice": "female1",
+          "en": "I love surfing at Praia do Sol."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "So do I. I love it too."
+        },
+        {
+          "speaker": "Classmate",
+          "voice": "female1",
+          "en": "I don't like cold water."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Neither do I."
+        },
+        {
+          "speaker": "Classmate",
+          "voice": "female1",
+          "en": "I am learning English this year."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Me too. I started in January."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Classmate. Think about what you heard and how the conversation felt."
         }
       ]
     },

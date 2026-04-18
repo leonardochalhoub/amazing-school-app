@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 14,
+  "estimated_minutes": 19,
   "summary_pt_br": "Membros da família em inglês e os possessivos (my, your, his, her).",
   "exercises": [
     {
@@ -340,6 +340,56 @@
           "speaker": "ai",
           "text": "Lovely family.",
           "pt": "Linda família."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "family-members-listening-story",
+      "title": "Listening story — Family Members",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Bia and a student. Mother, father, siblings, cousins — talk about the people closest to you. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Tell me about your family."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I have one brother and one sister."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "What is your father's name?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "His name is Carlos."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Is your mother a doctor?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "No, my mother is a teacher."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Bia. Think about what you heard and how the conversation felt."
         }
       ]
     }

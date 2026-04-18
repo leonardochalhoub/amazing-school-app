@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 25,
+  "estimated_minutes": 30,
   "summary_pt_br": "Maya transforma o alfabeto em um desfile de coisas da Praia do Sol. Cada letra tem som, imagem e rima — com foco nas que mais confundem brasileiros (G, H, J, W, Y).",
   "scenes": [
     {
@@ -226,6 +226,56 @@
           "speaker": "ai",
           "text": "You are welcome. See you next class.",
           "pt": "De nada. Até a próxima aula."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "alphabet-parade-listening-story",
+      "title": "Listening story — Maya's Alphabet Parade",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Mr. Kumar and a student. Maya turns the English alphabet into a parade of things you'd see in Praia do Sol. Each letter gets a picture, a sound, and a rhyme. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "Hello. Please tell me your full name."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "My name is Maria Silva."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "Could you spell your first name, please?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "M. A. R. I. A. Maria."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "Thank you. And your last name?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "S. I. L. V. A. Silva."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Mr. Kumar. Think about what you heard and how the conversation felt."
         }
       ]
     },

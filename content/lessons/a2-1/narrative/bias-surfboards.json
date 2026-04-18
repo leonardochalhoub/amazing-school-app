@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 27,
+  "estimated_minutes": 32,
   "summary_pt_br": "Comparativos (-er / more) e superlativos (-est / most) visitando a loja de pranchas. Regras de quando adicionar -er/-est e quando usar MORE/MOST. Irregulares: good/better/best, bad/worse/worst.",
   "scenes": [
     {
@@ -263,6 +263,56 @@
           "speaker": "ai",
           "text": "Great choice. Enjoy your first waves!",
           "pt": "Ótima escolha. Aproveite as primeiras ondas!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "bias-surfboards-listening-story",
+      "title": "Listening story — Which Surfboard Is Better?",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Surf shop clerk and a student. Comparatives and superlatives through Bia's surfboard shop visit. BIGGER, SMALLER, THE BEST — plus the tricky 'more + adjective' rule. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Surf shop clerk",
+          "voice": "female1",
+          "en": "Welcome. Looking for a new surfboard?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes. What is the best board for beginners?"
+        },
+        {
+          "speaker": "Surf shop clerk",
+          "voice": "female1",
+          "en": "This foam board is the safest and cheapest."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Is it faster than the other one?"
+        },
+        {
+          "speaker": "Surf shop clerk",
+          "voice": "female1",
+          "en": "No, the fiberglass one is faster but harder."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Which board is the most popular?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Surf shop clerk. Think about what you heard and how the conversation felt."
         }
       ]
     },

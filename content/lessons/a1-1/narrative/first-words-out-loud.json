@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 50,
-  "estimated_minutes": 23,
+  "estimated_minutes": 28,
   "summary_pt_br": "Primeira aula de pronúncia. O estudante grava a frase no navegador, a IA (Groq Whisper) transcreve e compara com o alvo, dando uma nota de 0 a 100. Cinco frases essenciais do dia a dia.",
   "scenes": [
     {
@@ -117,6 +117,56 @@
           "speaker": "ai",
           "text": "You did great. Let's keep practicing!",
           "pt": "Foi ótimo. Vamos continuar praticando!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "first-words-out-loud-listening-story",
+      "title": "Listening story — First Words Out Loud",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Zara and a student. Your first pronunciation lesson. Record each phrase and the AI will score your pronunciation 0–100. Don't be shy — Cosmo is listening. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Hi! I want to hear your English. Ready?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I am ready to start."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Great. Repeat after me — Hello, how are you?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Hello, how are you?"
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Nice. Now — Thank you very much."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Thank you very much."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Zara. Think about what you heard and how the conversation felt."
         }
       ]
     },

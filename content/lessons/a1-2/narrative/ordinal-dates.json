@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 30,
-  "estimated_minutes": 24,
+  "estimated_minutes": 29,
   "summary_pt_br": "Números ordinais em inglês: 1st first, 2nd second, 3rd third, 4th fourth, 5th fifth, 9th ninth, 12th twelfth. Para datas: 'the + ordinal + of + month' (UK) ou 'month + ordinal' (US).",
   "scenes": [
     {
@@ -166,6 +166,56 @@
           "speaker": "ai",
           "text": "Awesome. See you on the twenty-first!",
           "pt": "Show. Até dia 21!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "ordinal-dates-listening-story",
+      "title": "Listening story — The First, the Second, the Third",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Bia and a student. Ordinal numbers (1st, 2nd, 3rd…). How to say a date in English. And the weird ones — first, second, third, fifth, ninth, twelfth. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Hi! My birthday is coming up. Guess when?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Is it in June?"
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Yes! Can you guess the date?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Is it on the fifteenth of June?"
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Close. It is on the twenty-first of June."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "That is the first day of winter."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Bia. Think about what you heard and how the conversation felt."
         }
       ]
     },

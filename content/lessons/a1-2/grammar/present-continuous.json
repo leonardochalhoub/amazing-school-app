@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 25,
-  "estimated_minutes": 14,
+  "estimated_minutes": 19,
   "summary_pt_br": "Presente contínuo — para ações acontecendo agora: am/is/are + verbo-ing.",
   "sources": [
     {
@@ -215,6 +215,56 @@
           "speaker": "ai",
           "text": "Everyone is busy. Nice.",
           "pt": "Todo mundo ocupado. Legal."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "present-continuous-listening-story",
+      "title": "Listening story — Present Continuous",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Mom and a student. Describe actions happening now using 'to be' + verb-ing Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Mom",
+          "voice": "female1",
+          "en": "What are you doing right now?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I am studying English."
+        },
+        {
+          "speaker": "Mom",
+          "voice": "female1",
+          "en": "Is your brother helping you?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "No, he is playing a game."
+        },
+        {
+          "speaker": "Mom",
+          "voice": "female1",
+          "en": "What is your sister doing?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "She is reading a book."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Mom. Think about what you heard and how the conversation felt."
         }
       ]
     }

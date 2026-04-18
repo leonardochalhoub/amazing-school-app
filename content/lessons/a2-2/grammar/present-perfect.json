@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 35,
-  "estimated_minutes": 19,
+  "estimated_minutes": 24,
   "summary_pt_br": "Present perfect — have/has + particípio passado, conectando passado e presente.",
   "sources": [
     {
@@ -234,6 +234,56 @@
           "speaker": "ai",
           "text": "Great answers. Thank you.",
           "pt": "Boas respostas. Obrigado."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "present-perfect-listening-story",
+      "title": "Listening story — Present Perfect",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Interviewer and a student. Connect the past to the present with have/has + past participle Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Interviewer",
+          "voice": "female1",
+          "en": "Have you ever been abroad?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I have been to Argentina."
+        },
+        {
+          "speaker": "Interviewer",
+          "voice": "female1",
+          "en": "Have you tried sushi?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I have tried it many times."
+        },
+        {
+          "speaker": "Interviewer",
+          "voice": "female1",
+          "en": "Have you seen the new movie?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "No, I have not seen it yet."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Interviewer. Think about what you heard and how the conversation felt."
         }
       ]
     }

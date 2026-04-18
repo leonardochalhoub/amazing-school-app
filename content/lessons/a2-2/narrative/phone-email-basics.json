@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 27,
+  "estimated_minutes": 32,
   "summary_pt_br": "Fórmulas fixas para telefone e e-mail em inglês. Telefone: Hello, this is X. May I speak to...? I'll put you through. E-mail: Dear / Hi, I'm writing to... / Looking forward to hearing from you / Best regards.",
   "scenes": [
     {
@@ -241,6 +241,56 @@
           "speaker": "ai",
           "text": "Thank you. I will pass the message.",
           "pt": "Obrigado. Vou passar o recado."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "phone-email-basics-listening-story",
+      "title": "Listening story — Phone and Email Basics",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Receptionist and a student. The fixed phrases that make phone calls and emails feel effortless. Opening, holding, transferring, signing off. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Receptionist",
+          "voice": "female1",
+          "en": "Hello, Amazing School. How can I help you?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Hi, may I speak to Mr. Kumar, please?"
+        },
+        {
+          "speaker": "Receptionist",
+          "voice": "female1",
+          "en": "Who is calling, please?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "This is Leo Silva, his student."
+        },
+        {
+          "speaker": "Receptionist",
+          "voice": "female1",
+          "en": "Hold on, please. I will put you through."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Thank you. I will wait."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Receptionist. Think about what you heard and how the conversation felt."
         }
       ]
     },

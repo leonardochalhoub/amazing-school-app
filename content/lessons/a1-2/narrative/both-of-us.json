@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 45,
-  "estimated_minutes": 27,
+  "estimated_minutes": 32,
   "summary_pt_br": "O TH no FIM das palavras (o mais esquecido): BOTH, WITH, FIFTH, MONTH, EARTH, SOUTH. Treinado com With or Without You (U2), Both Sides Now (Joni Mitchell) e What a Wonderful World (Louis Armstrong).",
   "scenes": [
     {
@@ -254,6 +254,56 @@
           "speaker": "ai",
           "text": "Awesome. This is going to be amazing.",
           "pt": "Show. Vai ser incrível."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "both-of-us-listening-story",
+      "title": "Listening story — Both of Us — The TH at the End",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Friend and a student. Final-position TH: BOTH, WITH, FIFTH, MONTH, EARTH, SOUTH. Bia DJs on the rooftop and every song brings a new TH to notice. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female1",
+          "en": "Hey. We should plan our trip."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes. Both of us are free in July."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female1",
+          "en": "Nice. Do you prefer beach or mountains?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Both are good for me."
+        },
+        {
+          "speaker": "Friend",
+          "voice": "female1",
+          "en": "Me too. Neither is too expensive."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "How about we do both places?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Friend. Think about what you heard and how the conversation felt."
         }
       ]
     },

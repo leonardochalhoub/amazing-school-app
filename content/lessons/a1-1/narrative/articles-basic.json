@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 30,
-  "estimated_minutes": 24,
+  "estimated_minutes": 29,
   "summary_pt_br": "Artigos em inglês: A antes de consoante, AN antes de vogal, THE quando os dois falantes sabem qual. Diferente do português, português quase sempre usa 'o/a', inglês deixa muitos substantivos SEM artigo (plurais genéricos, incontáveis).",
   "scenes": [
     {
@@ -143,6 +143,56 @@
           "speaker": "ai",
           "text": "Have a wonderful morning.",
           "pt": "Tenha uma ótima manhã."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "articles-basic-listening-story",
+      "title": "Listening story — A, An, The",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Baker and a student. The three tiniest words in English that trip everyone up. A before consonants, AN before vowels, THE when both speakers know which one. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Baker",
+          "voice": "female1",
+          "en": "Good morning. What can I get you today?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I would like a coffee and an apple, please."
+        },
+        {
+          "speaker": "Baker",
+          "voice": "female1",
+          "en": "Would you like the big coffee or the small one?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "The big coffee, please."
+        },
+        {
+          "speaker": "Baker",
+          "voice": "female1",
+          "en": "Anything else?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, an orange juice, please."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Baker. Think about what you heard and how the conversation felt."
         }
       ]
     },

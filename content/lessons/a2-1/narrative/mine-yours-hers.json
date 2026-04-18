@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 25,
+  "estimated_minutes": 30,
   "summary_pt_br": "Adjetivos possessivos (my/your/his) vêm ANTES de um substantivo: 'This is MY book'. Pronomes possessivos (mine/yours/his) FICAM SOZINHOS: 'This book is MINE'. Troca: 'is my' → 'is mine'.",
   "scenes": [
     {
@@ -232,6 +232,56 @@
           "speaker": "ai",
           "text": "Perfect. Everything is returned.",
           "pt": "Perfeito. Tudo devolvido."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "mine-yours-hers-listening-story",
+      "title": "Listening story — Mine, Yours, His — Possessive Pronouns",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Clerk and a student. The difference between possessive ADJECTIVES (my, your, his) and possessive PRONOUNS (mine, yours, his). Using the right one saves you from 'that's my' mistakes. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Clerk",
+          "voice": "female1",
+          "en": "Hi. Did you lose something?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I lost my phone. It is black."
+        },
+        {
+          "speaker": "Clerk",
+          "voice": "female1",
+          "en": "Is this phone yours?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, that one is mine!"
+        },
+        {
+          "speaker": "Clerk",
+          "voice": "female1",
+          "en": "Great. Are these keys also yours?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "No, those are hers. My friend is here."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Clerk. Think about what you heard and how the conversation felt."
         }
       ]
     },

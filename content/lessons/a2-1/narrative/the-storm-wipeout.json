@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 27,
+  "estimated_minutes": 32,
   "summary_pt_br": "Past Continuous para ações em progresso no passado, e Past Simple para a ação que interrompe. Fórmula: 'While I WAS WALKING, it STARTED to rain'.",
   "scenes": [
     {
@@ -188,6 +188,56 @@
           "speaker": "ai",
           "text": "Then you saw my best wipeout ever!",
           "pt": "Então viu meu melhor wipeout!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "the-storm-wipeout-listening-story",
+      "title": "Listening story — The Storm and the Wipeout",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Bia and a student. Past Continuous (was/were + -ing) for interrupted actions. Bia WAS SURFING when the storm HIT. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "You should have seen what happened yesterday."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "What were you doing?"
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "I was surfing when a huge wave came."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Were you wearing a wetsuit?"
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Yes, I was. It saved me from the cold."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "How were your friends reacting?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Bia. Think about what you heard and how the conversation felt."
         }
       ]
     },

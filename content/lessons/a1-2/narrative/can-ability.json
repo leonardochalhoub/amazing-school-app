@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 24,
+  "estimated_minutes": 29,
   "summary_pt_br": "CAN para habilidade e pedidos. Estrutura: CAN + verbo base. Pergunta: Can you swim? Resposta curta: Yes I can / No I can't. Pedidos educados: 'Can you help me?', 'Can I have...?'",
   "scenes": [
     {
@@ -139,6 +139,56 @@
           "speaker": "ai",
           "text": "That is fine. Welcome to the team!",
           "pt": "Tudo bem. Bem-vindo ao time!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "can-ability-listening-story",
+      "title": "Listening story — Can You? Yes, I Can",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Recruiter and a student. CAN for ability (I can swim) and requests (Can you help me?). Short answers: Yes, I can / No, I can't. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Recruiter",
+          "voice": "female1",
+          "en": "Hello. Can you tell me your skills?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes. I can speak English and Portuguese."
+        },
+        {
+          "speaker": "Recruiter",
+          "voice": "female1",
+          "en": "Impressive. Can you write code?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I can write in Python and JavaScript."
+        },
+        {
+          "speaker": "Recruiter",
+          "voice": "female1",
+          "en": "Can you work under pressure?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I can stay calm during deadlines."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Recruiter. Think about what you heard and how the conversation felt."
         }
       ]
     },

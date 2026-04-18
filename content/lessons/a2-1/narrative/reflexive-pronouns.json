@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 24,
+  "estimated_minutes": 29,
   "summary_pt_br": "Pronomes reflexivos em inglês: myself, yourself, himself, herself, itself, ourselves, yourselves, themselves. Uso: quando sujeito e objeto são a mesma pessoa ('I hurt myself'). Expressão 'BY + reflexivo' = sozinho ('I went by myself').",
   "scenes": [
     {
@@ -185,6 +185,56 @@
           "speaker": "ai",
           "text": "Namaste. See you next week.",
           "pt": "Namastê. Até semana que vem."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "reflexive-pronouns-listening-story",
+      "title": "Listening story — Myself, Yourself, By Himself",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Yoga teacher and a student. Reflexive pronouns: myself, yourself, himself, herself, itself, ourselves, yourselves, themselves. Plus BY + reflexive = alone. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Yoga teacher",
+          "voice": "female1",
+          "en": "Welcome. Please introduce yourself to the class."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "My name is Leo. I taught myself yoga online."
+        },
+        {
+          "speaker": "Yoga teacher",
+          "voice": "female1",
+          "en": "Nice. Find a spot for yourself."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I found a good spot by myself."
+        },
+        {
+          "speaker": "Yoga teacher",
+          "voice": "female1",
+          "en": "Now breathe and focus on yourself."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "I am focusing on myself."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Yoga teacher. Think about what you heard and how the conversation felt."
         }
       ]
     },

@@ -52,7 +52,33 @@ export type LessonScene =
   | DialogPronunciationScene
   | ReadingScene
   | ListeningScene
+  | ListeningStoryScene
   | FurtherReadingScene;
+
+/**
+ * A longer listening scene — a 4-10 paragraph story or situation played
+ * paragraph by paragraph via browser TTS. Different speakers get
+ * different voices. After listening the student writes a free-form
+ * interpretation that is saved to the `listening_responses` table
+ * for teacher review.
+ */
+export interface ListeningStoryScene {
+  kind: "listening_story";
+  title: string;
+  pt_summary?: string;
+  prompt_en: string;
+  prompt_pt?: string;
+  paragraphs: {
+    /** Display name shown above the paragraph. */
+    speaker?: string;
+    /** Voice flavor — picks a TTS voice. */
+    voice?: "narrator" | "male1" | "male2" | "female1" | "female2";
+    en: string;
+    pt?: string;
+  }[];
+  /** A stable id within the lesson so the teacher can dedupe responses. */
+  scene_id?: string;
+}
 
 /**
  * Interactive dialog drill: the AI speaks ≥5 lines via TTS, student

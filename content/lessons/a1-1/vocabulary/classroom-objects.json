@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 14,
+  "estimated_minutes": 19,
   "summary_pt_br": "Objetos da sala de aula e preposições de lugar (on, in, under, next to). O inglês usa preposições específicas que nem sempre batem com o português.",
   "exercises": [
     {
@@ -356,6 +356,56 @@
           "speaker": "ai",
           "text": "Let's start the lesson.",
           "pt": "Vamos começar."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "classroom-objects-listening-story",
+      "title": "Listening story — Classroom Objects & Prepositions of Place",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Teacher and a student. Things around you in a classroom, and where they are — on, in, under, next to. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Teacher",
+          "voice": "female1",
+          "en": "What is on the desk?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "There is a book and a pencil."
+        },
+        {
+          "speaker": "Teacher",
+          "voice": "female1",
+          "en": "Where is your notebook?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "My notebook is in my bag."
+        },
+        {
+          "speaker": "Teacher",
+          "voice": "female1",
+          "en": "How many chairs are in the room?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "There are twenty chairs."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Teacher. Think about what you heard and how the conversation felt."
         }
       ]
     }

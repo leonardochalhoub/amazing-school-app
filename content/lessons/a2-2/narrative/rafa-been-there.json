@@ -6,7 +6,7 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 28,
+  "estimated_minutes": 33,
   "summary_pt_br": "Present Perfect (have/has + particípio) para experiências de vida. Key words: EVER (já, em perguntas), NEVER (nunca), BEEN (esteve em), GONE (foi e não voltou).",
   "scenes": [
     {
@@ -226,6 +226,56 @@
           "speaker": "ai",
           "text": "You should visit Argentina with me!",
           "pt": "Tem que vir pra Argentina comigo!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "rafa-been-there-listening-story",
+      "title": "Listening story — Rafa's Been There",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Rafa and a student. Present Perfect with EVER / NEVER / BEEN. Rafa tells the class every country he's been to — and which one he's never visited. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "Have you ever been to Mexico?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I have been there twice."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "Have you tried real Mexican tacos?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I have tried many kinds."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "I have been to Argentina but not to Mexico."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Have you ever eaten in Buenos Aires?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Rafa. Think about what you heard and how the conversation felt."
         }
       ]
     },

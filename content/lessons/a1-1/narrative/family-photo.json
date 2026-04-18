@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 25,
+  "estimated_minutes": 30,
   "summary_pt_br": "A Bia mostra a foto da família à turma. Aprenda os membros da família e os possessivos (my/your/his/her) — incluindo a armadilha do 'parents' (apenas pai e mãe, não parentes em geral).",
   "scenes": [
     {
@@ -238,6 +238,56 @@
           "speaker": "ai",
           "text": "Thank you so much!",
           "pt": "Muito obrigada!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "family-photo-listening-story",
+      "title": "Listening story — The Photo in Bia's Phone",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Bia and a student. Bia shows the class a family photo. Meet her mother, father, brother, and grandmother — and the possessive adjectives along the way. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Hey, look at this photo. This is my family."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Who is the man on the left?"
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "That is my father. He is a lawyer."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "And the woman in the middle?"
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "That is my mother. She is a doctor."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "You have a big family. How many siblings?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Bia. Think about what you heard and how the conversation felt."
         }
       ]
     },

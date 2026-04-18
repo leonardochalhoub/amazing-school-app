@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 12,
+  "estimated_minutes": 17,
   "summary_pt_br": "Cumprimentos e apresentações em inglês — formais e informais.",
   "sources": [
     {
@@ -266,6 +266,56 @@
           "speaker": "ai",
           "text": "You too. Take care.",
           "pt": "Você também. Se cuida."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "greetings-listening-story",
+      "title": "Listening story — Greetings & Introductions",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Mr. Kumar and a student. Learn common greetings and how to introduce yourself in English Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "Good morning! How are you?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Good morning. I am fine, thanks."
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "Hi there. What's up?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Not much. How about you?"
+        },
+        {
+          "speaker": "Mr. Kumar",
+          "voice": "female1",
+          "en": "I am doing great. Nice to see you."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Nice to see you too."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Mr. Kumar. Think about what you heard and how the conversation felt."
         }
       ]
     }

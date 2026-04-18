@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 23,
+  "estimated_minutes": 28,
   "summary_pt_br": "Como o inglês diz 'TEM' (no sentido de existir): THERE IS (singular), THERE ARE (plural). NUNCA 'there has' ou 'have' — armadilha clássica brasileira.",
   "scenes": [
     {
@@ -137,6 +137,56 @@
           "speaker": "ai",
           "text": "It is one thousand dollars per month.",
           "pt": "Mil dólares por mês."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "there-is-there-are-listening-story",
+      "title": "Listening story — There Is, There Are",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Realtor and a student. How English says 'tem' / 'há'. THERE IS for singular, THERE ARE for plural. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Realtor",
+          "voice": "female1",
+          "en": "Welcome. Let me show you the apartment."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Thank you. Is there a kitchen?"
+        },
+        {
+          "speaker": "Realtor",
+          "voice": "female1",
+          "en": "Yes, there is a big kitchen right here."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Are there two bedrooms?"
+        },
+        {
+          "speaker": "Realtor",
+          "voice": "female1",
+          "en": "Yes, there are two bedrooms and one bathroom."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Is there a balcony?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Realtor. Think about what you heard and how the conversation felt."
         }
       ]
     },

@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 23,
+  "estimated_minutes": 28,
   "summary_pt_br": "Imperativo em inglês é apenas o VERBO BASE (sem sujeito). 'Stop!', 'Come here', 'Sit down'. Negativa: DON'T + verbo. 'Don't run'. Pedir educadamente: 'Please + imperativo' ou 'Could you + verbo'.",
   "scenes": [
     {
@@ -122,6 +122,56 @@
           "speaker": "ai",
           "text": "Perfect. Serve it hot. Enjoy!",
           "pt": "Perfeito. Sirva quente. Aproveite!"
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "imperatives-listening-story",
+      "title": "Listening story — Stop! Look! Listen!",
+      "pt_summary": "Ouça a situação com atenção. Depois, escreva em inglês o que você entendeu — resumo, detalhes, seus pensamentos. O professor vai ler e comentar.",
+      "prompt_en": "Write in English what you heard. A short summary is fine. Mention who spoke, what they said, and what you think about the situation.",
+      "prompt_pt": "Escreva em inglês o que você ouviu. Pode ser um resumo curto. Diga quem falou, o que disseram e o que você achou.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In this story, we meet Rafa and a student. Imperatives — commands, instructions, recipes. Just the bare verb. Add DON'T for negatives. Listen carefully and think about what each person says."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "Welcome to my kitchen. Are you ready to cook?"
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Yes, I am ready. Tell me what to do."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "First, wash your hands and open the fridge."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "OK. What should I take out?"
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "female1",
+          "en": "Take out two eggs and some cheese."
+        },
+        {
+          "speaker": "The student",
+          "voice": "male1",
+          "en": "Here they are. What's next?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "That is the end of our short scene with Rafa. Think about what you heard and how the conversation felt."
         }
       ]
     },
