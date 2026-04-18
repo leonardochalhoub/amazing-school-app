@@ -1,0 +1,283 @@
+{
+  "slug": "unreal-past-conditionals",
+  "title": "Unreal Past — Advanced Conditionals",
+  "description": "Mixed and inverted conditionals — removing IF and leading with HAD / WERE / SHOULD.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Conditional invertida (sem IF): 'Had I known...', 'Were she here...', 'Should you need...'. Formal e elegante.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Unreal Past — Advanced Conditionals",
+      "subtitle_en": "Mixed and inverted conditionals — removing IF and leading with HAD / WERE / SHOULD.",
+      "subtitle_pt": "Conditional invertida (sem IF): 'Had I known...', 'Were she here...', 'Should you need...'. Formal e elegante."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Mixed and inverted conditionals — removing IF and leading with HAD / WERE / SHOULD. Focus: unreal past — advanced conditionals. Had I known the truth, I would have stayed.",
+      "text_pt": "Conditional invertida (sem IF): 'Had I known...', 'Were she here...', 'Should you need...'. Formal e elegante. Foco: unreal past — advanced conditionals. Se eu soubesse a verdade, teria ficado."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Unreal Past — Advanced Conditionals",
+      "body_en": "Inverted: 'HAD I known, I would have acted.' = 'If I had known.' 'WERE she here, she would agree.' 'SHOULD you need help, call me.' More formal, stylistically elegant.",
+      "body_pt": "Conditional invertida (sem IF): 'Had I known...', 'Were she here...', 'Should you need...'. Formal e elegante.",
+      "examples": [
+        {
+          "en": "Had I known the truth, I would have stayed.",
+          "pt": "Se eu soubesse a verdade, teria ficado."
+        },
+        {
+          "en": "Were she here, the conversation would be livelier.",
+          "pt": "Se ela estivesse aqui, a conversa seria mais animada."
+        },
+        {
+          "en": "Should you need anything, please reach out.",
+          "pt": "Se precisar de algo, entre em contato."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Unreal Past — Advanced Conditionals",
+      "items": [
+        {
+          "term": "inversion",
+          "pt": "inversão"
+        },
+        {
+          "term": "formal",
+          "pt": "formal"
+        },
+        {
+          "term": "stylistic",
+          "pt": "estilístico"
+        },
+        {
+          "term": "concise",
+          "pt": "conciso"
+        },
+        {
+          "term": "elegant",
+          "pt": "elegante"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-unreal-past-conditionals-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Had I known the truth, I would have ___.\"",
+        "correct": "stayed",
+        "explanation": "Full sentence: \"Had I known the truth, I would have stayed.\"",
+        "hint_pt_br": "Se eu soubesse a verdade, teria ficado."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-unreal-past-conditionals-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "Were she here, the conversation would be livelier."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"Were she here, the conversation would be livelier.\"",
+        "hint_pt_br": "Se ela estivesse aqui, a conversa seria mais animada."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-unreal-past-conditionals-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "inversion",
+            "inversão"
+          ],
+          [
+            "formal",
+            "formal"
+          ],
+          [
+            "stylistic",
+            "estilístico"
+          ],
+          [
+            "concise",
+            "conciso"
+          ],
+          [
+            "elegant",
+            "elegante"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Unreal Past — Advanced Conditionals — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre unreal past — advanced conditionals. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Invert: 'If I had known, I would have come earlier.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Had I known, I would have come earlier.",
+          "pt_hint": "Se soubesse."
+        },
+        {
+          "speaker": "ai",
+          "text": "'If she were here, she would help us.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Were she here, she would help us.",
+          "pt_hint": "Se ela estivesse."
+        },
+        {
+          "speaker": "ai",
+          "text": "'If you need anything, let me know.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Should you need anything, let me know.",
+          "pt_hint": "Se precisar."
+        },
+        {
+          "speaker": "ai",
+          "text": "Mixed conditional. 'If I had studied, I'd be a lawyer.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Had I studied, I would be a lawyer now.",
+          "pt_hint": "Se tivesse estudado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Use inversion in a condolence note."
+        },
+        {
+          "speaker": "user",
+          "target": "Had we known, we would have been there.",
+          "pt_hint": "Teríamos ido."
+        },
+        {
+          "speaker": "ai",
+          "text": "Inversion gives conditionals a literary weight."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "unreal-past-conditionals-listening-story",
+      "title": "A letter of regret",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize Lúcia's regrets. Use at least two inverted conditionals.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At ninety, Dona Lúcia sat down to write a letter she had postponed for more than half a century."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Had I been braver at twenty, I would have crossed the ocean with you that summer."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Were we young again, I believe we would both choose each other without hesitation."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Should these words ever reach you, please know that I carry no bitterness toward the years."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "She sealed the letter slowly, as if each fold added a decade back to the one she had lost."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Unreal past, in grammar and in life, is the tense we reserve for our deepest sincerities."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Unreal Past — Advanced Conditionals\". Mixed and inverted conditionals — removing IF and leading with HAD / WERE / SHOULD. Had I known the truth, I would have stayed. Were she here, the conversation would be livelier. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Unreal Past — Advanced Conditionals\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Unreal Past — Advanced Conditionals",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Unreal Past — Advanced Conditionals\".",
+        "hint_pt_br": "Ela fala o título: \"Unreal Past — Advanced Conditionals\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

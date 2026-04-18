@@ -1,0 +1,283 @@
+{
+  "slug": "nuanced-opinions",
+  "title": "Nuanced Opinions",
+  "description": "Expressing complex opinions that acknowledge counterpoints: on balance, arguably, from a different angle.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Opiniões matizadas: on balance, arguably, from a different angle. Mostra que considerou alternativas.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Nuanced Opinions",
+      "subtitle_en": "Expressing complex opinions that acknowledge counterpoints: on balance, arguably, from a different angle.",
+      "subtitle_pt": "Opiniões matizadas: on balance, arguably, from a different angle. Mostra que considerou alternativas."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Expressing complex opinions that acknowledge counterpoints: on balance, arguably, from a different angle. Focus: nuanced opinions. On balance, I would favor the revised proposal.",
+      "text_pt": "Opiniões matizadas: on balance, arguably, from a different angle. Mostra que considerou alternativas. Foco: nuanced opinions. No cômputo geral, eu prefiro a proposta revisada."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Nuanced Opinions",
+      "body_en": "Structures: ON BALANCE / ARGUABLY / FROM A DIFFERENT ANGLE / THERE IS A CASE TO BE MADE FOR. Show you've considered alternatives before committing.",
+      "body_pt": "Opiniões matizadas: on balance, arguably, from a different angle. Mostra que considerou alternativas.",
+      "examples": [
+        {
+          "en": "On balance, I would favor the revised proposal.",
+          "pt": "No cômputo geral, eu prefiro a proposta revisada."
+        },
+        {
+          "en": "Arguably, social media has done more harm than good.",
+          "pt": "Pode-se argumentar que a rede social fez mais mal que bem."
+        },
+        {
+          "en": "There is a case to be made for both approaches.",
+          "pt": "Há argumentos a favor das duas abordagens."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Nuanced Opinions",
+      "items": [
+        {
+          "term": "nuance",
+          "pt": "nuance"
+        },
+        {
+          "term": "qualify",
+          "pt": "qualificar"
+        },
+        {
+          "term": "arguably",
+          "pt": "discutivelmente"
+        },
+        {
+          "term": "balance",
+          "pt": "equilíbrio"
+        },
+        {
+          "term": "perspective",
+          "pt": "perspectiva"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-nuanced-opinions-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"On balance, I would favor the revised ___.\"",
+        "correct": "proposal",
+        "explanation": "Full sentence: \"On balance, I would favor the revised proposal.\"",
+        "hint_pt_br": "No cômputo geral, eu prefiro a proposta revisada."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-nuanced-opinions-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Arguably, social media has done more harm than good.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Arguably, social media has done more harm than good.\"",
+        "hint_pt_br": "Pode-se argumentar que a rede social fez mais mal que bem."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-nuanced-opinions-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "nuance",
+            "nuance"
+          ],
+          [
+            "qualify",
+            "qualificar"
+          ],
+          [
+            "arguably",
+            "discutivelmente"
+          ],
+          [
+            "balance",
+            "equilíbrio"
+          ],
+          [
+            "perspective",
+            "perspectiva"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Nuanced Opinions — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre nuanced opinions. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Give a nuanced opinion on remote work."
+        },
+        {
+          "speaker": "user",
+          "target": "On balance, I favor it but not universally.",
+          "pt_hint": "Favorável, com ressalvas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Use 'arguably' with social media."
+        },
+        {
+          "speaker": "user",
+          "target": "Arguably, social media has done real damage.",
+          "pt_hint": "Fez estrago real."
+        },
+        {
+          "speaker": "ai",
+          "text": "Present two sides of AI regulation."
+        },
+        {
+          "speaker": "user",
+          "target": "There is a case for both caution and speed.",
+          "pt_hint": "Caso pros dois lados."
+        },
+        {
+          "speaker": "ai",
+          "text": "'From a different angle' on education."
+        },
+        {
+          "speaker": "user",
+          "target": "From a different angle, schools work fine.",
+          "pt_hint": "De outro ângulo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with a qualified personal take."
+        },
+        {
+          "speaker": "user",
+          "target": "My view, however tentative, is pro-reform.",
+          "pt_hint": "Ainda que tentativa."
+        },
+        {
+          "speaker": "ai",
+          "text": "Nuance is the language of grown-up opinion."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "nuanced-opinions-listening-story",
+      "title": "The dinner debate",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe the nuanced views exchanged. Use at least three opinion markers.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Over Sunday dinner, three generations debated whether technology had improved family life."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "On balance, I would say it has done more good than harm — but I acknowledge the costs clearly."
+        },
+        {
+          "speaker": "Uncle",
+          "voice": "male1",
+          "en": "Arguably, children spend less time present with adults than any previous generation in history."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "From a different angle, distant relatives stay close in ways we couldn't imagine twenty years ago."
+        },
+        {
+          "speaker": "Aunt",
+          "voice": "female2",
+          "en": "There is a case to be made for both continuity and disruption in how families use technology today."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Nuance, the family discovered across many Sundays, is what keeps disagreement from curdling into resentment."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Nuanced Opinions\". Expressing complex opinions that acknowledge counterpoints: on balance, arguably, from a different angle. On balance, I would favor the revised proposal. Arguably, social media has done more harm than good. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Nuanced Opinions\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Nuanced Opinions",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Nuanced Opinions\".",
+        "hint_pt_br": "Ela fala o título: \"Nuanced Opinions\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

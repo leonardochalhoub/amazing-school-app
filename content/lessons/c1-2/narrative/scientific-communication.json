@@ -1,0 +1,283 @@
+{
+  "slug": "scientific-communication",
+  "title": "Scientific Communication",
+  "description": "Explaining complex findings to non-experts without distortion.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Comunicação científica: analogia, quantificar incerteza, evitar jargão ou defini-lo, voz ativa pra conclusões.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Scientific Communication",
+      "subtitle_en": "Explaining complex findings to non-experts without distortion.",
+      "subtitle_pt": "Comunicação científica: analogia, quantificar incerteza, evitar jargão ou defini-lo, voz ativa pra conclusões."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Explaining complex findings to non-experts without distortion. Focus: scientific communication. Think of the immune system as a very fast library.",
+      "text_pt": "Comunicação científica: analogia, quantificar incerteza, evitar jargão ou defini-lo, voz ativa pra conclusões. Foco: scientific communication. Pense no sistema imunológico como uma biblioteca veloz."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Scientific Communication",
+      "body_en": "Key moves: use analogy, quantify uncertainty, avoid jargon OR define it, use active voice for conclusions, passive for methods.",
+      "body_pt": "Comunicação científica: analogia, quantificar incerteza, evitar jargão ou defini-lo, voz ativa pra conclusões.",
+      "examples": [
+        {
+          "en": "Think of the immune system as a very fast library.",
+          "pt": "Pense no sistema imunológico como uma biblioteca veloz."
+        },
+        {
+          "en": "The finding has a 95% confidence interval.",
+          "pt": "O achado tem intervalo de confiança de 95%."
+        },
+        {
+          "en": "We observed correlation, not causation, in this sample.",
+          "pt": "Observamos correlação, não causa, nesta amostra."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Scientific Communication",
+      "items": [
+        {
+          "term": "analogy",
+          "pt": "analogia"
+        },
+        {
+          "term": "uncertainty",
+          "pt": "incerteza"
+        },
+        {
+          "term": "jargon",
+          "pt": "jargão"
+        },
+        {
+          "term": "laypeople",
+          "pt": "leigos"
+        },
+        {
+          "term": "confidence",
+          "pt": "confiança"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-scientific-communication-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Think of the immune system as a very fast ___.\"",
+        "correct": "library",
+        "explanation": "Full sentence: \"Think of the immune system as a very fast library.\"",
+        "hint_pt_br": "Pense no sistema imunológico como uma biblioteca veloz."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-scientific-communication-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "The finding has a 95% confidence interval."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"The finding has a 95% confidence interval.\"",
+        "hint_pt_br": "O achado tem intervalo de confiança de 95%."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-scientific-communication-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "analogy",
+            "analogia"
+          ],
+          [
+            "uncertainty",
+            "incerteza"
+          ],
+          [
+            "jargon",
+            "jargão"
+          ],
+          [
+            "laypeople",
+            "leigos"
+          ],
+          [
+            "confidence",
+            "confiança"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Scientific Communication — dialog",
+      "character": "Maya",
+      "pt_summary": "Diálogo sobre scientific communication. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Explain a virus to a curious 12-year-old."
+        },
+        {
+          "speaker": "user",
+          "target": "It's a code that tricks cells into copying it.",
+          "pt_hint": "Código que engana."
+        },
+        {
+          "speaker": "ai",
+          "text": "Quantify uncertainty in your finding."
+        },
+        {
+          "speaker": "user",
+          "target": "We have 95% confidence within this range.",
+          "pt_hint": "95% confiança."
+        },
+        {
+          "speaker": "ai",
+          "text": "Avoid jargon. Rephrase 'statistically significant'."
+        },
+        {
+          "speaker": "user",
+          "target": "The pattern is unlikely to be random.",
+          "pt_hint": "Improvável ser acaso."
+        },
+        {
+          "speaker": "ai",
+          "text": "Differentiate correlation from causation."
+        },
+        {
+          "speaker": "user",
+          "target": "Things move together — one doesn't cause the other.",
+          "pt_hint": "Andam juntos, sem causa."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with what you don't yet know."
+        },
+        {
+          "speaker": "user",
+          "target": "We don't know yet if this extends to other populations.",
+          "pt_hint": "Não sabemos ainda."
+        },
+        {
+          "speaker": "ai",
+          "text": "Good science communication is humility, not hype."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "scientific-communication-listening-story",
+      "title": "The science fair",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Explain a research finding clearly for non-experts. Use at least two communication techniques.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the school science fair, Maya explained her research to curious parents who had no formal background in biology."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "Think of the immune system as a very fast library that learns every threat by reading and remembering it."
+        },
+        {
+          "speaker": "Parent",
+          "voice": "male1",
+          "en": "And the statistical finding of yours — what does ninety-five percent confidence actually mean in practice?"
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female1",
+          "en": "It means the pattern we observed is very unlikely to be random, though we still can't claim causation."
+        },
+        {
+          "speaker": "Parent",
+          "voice": "female2",
+          "en": "I finally understand why scientists say 'we don't yet know' even when the public wants certainty immediately."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Communicating science, Maya had learned, was the slow art of being honest without sounding evasive to the audience."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Scientific Communication\". Explaining complex findings to non-experts without distortion. Think of the immune system as a very fast library. The finding has a 95% confidence interval. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Scientific Communication\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Scientific Communication",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Scientific Communication\".",
+        "hint_pt_br": "Ela fala o título: \"Scientific Communication\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

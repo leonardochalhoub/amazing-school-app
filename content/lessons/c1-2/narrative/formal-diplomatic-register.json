@@ -1,0 +1,283 @@
+{
+  "slug": "formal-diplomatic-register",
+  "title": "Formal Diplomatic Register",
+  "description": "Language of treaties, official statements, and careful public communication.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Linguagem diplomática: 'We take note', 'We remain concerned', 'We call upon', 'We reaffirm'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Formal Diplomatic Register",
+      "subtitle_en": "Language of treaties, official statements, and careful public communication.",
+      "subtitle_pt": "Linguagem diplomática: 'We take note', 'We remain concerned', 'We call upon', 'We reaffirm'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Language of treaties, official statements, and careful public communication. Focus: formal diplomatic register. We take note of the recent developments in the region.",
+      "text_pt": "Linguagem diplomática: 'We take note', 'We remain concerned', 'We call upon', 'We reaffirm'. Foco: formal diplomatic register. Tomamos nota dos desenvolvimentos recentes."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Formal Diplomatic Register",
+      "body_en": "Diplomatic phrases: 'We take note of...', 'We remain concerned about...', 'We call upon...', 'We reaffirm our commitment to...'. Passive voice and nominalization dominate.",
+      "body_pt": "Linguagem diplomática: 'We take note', 'We remain concerned', 'We call upon', 'We reaffirm'.",
+      "examples": [
+        {
+          "en": "We take note of the recent developments in the region.",
+          "pt": "Tomamos nota dos desenvolvimentos recentes."
+        },
+        {
+          "en": "We call upon all parties to return to dialogue.",
+          "pt": "Conclamamos as partes a voltarem ao diálogo."
+        },
+        {
+          "en": "We reaffirm our commitment to shared security.",
+          "pt": "Reafirmamos nosso compromisso com a segurança comum."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Formal Diplomatic Register",
+      "items": [
+        {
+          "term": "diplomacy",
+          "pt": "diplomacia"
+        },
+        {
+          "term": "treaty",
+          "pt": "tratado"
+        },
+        {
+          "term": "sovereign",
+          "pt": "soberano"
+        },
+        {
+          "term": "communiqué",
+          "pt": "comunicado"
+        },
+        {
+          "term": "protocol",
+          "pt": "protocolo"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-formal-diplomatic-register-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"We take note of the recent ___ in the region.\"",
+        "correct": "developments",
+        "explanation": "Full sentence: \"We take note of the recent developments in the region.\"",
+        "hint_pt_br": "Tomamos nota dos desenvolvimentos recentes."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-formal-diplomatic-register-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "We call upon all parties to return to dialogue."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"We call upon all parties to return to dialogue.\"",
+        "hint_pt_br": "Conclamamos as partes a voltarem ao diálogo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-formal-diplomatic-register-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "diplomacy",
+            "diplomacia"
+          ],
+          [
+            "treaty",
+            "tratado"
+          ],
+          [
+            "sovereign",
+            "soberano"
+          ],
+          [
+            "communiqué",
+            "comunicado"
+          ],
+          [
+            "protocol",
+            "protocolo"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Formal Diplomatic Register — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre formal diplomatic register. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Draft a diplomatic opening sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "We take note of recent developments abroad.",
+          "pt_hint": "Tomamos nota."
+        },
+        {
+          "speaker": "ai",
+          "text": "Express measured concern."
+        },
+        {
+          "speaker": "user",
+          "target": "We remain deeply concerned about the situation.",
+          "pt_hint": "Preocupados."
+        },
+        {
+          "speaker": "ai",
+          "text": "Call for action without being confrontational."
+        },
+        {
+          "speaker": "user",
+          "target": "We call upon all parties to return to dialogue.",
+          "pt_hint": "Conclamamos ao diálogo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Reaffirm a principle."
+        },
+        {
+          "speaker": "user",
+          "target": "We reaffirm our commitment to peace and rule of law.",
+          "pt_hint": "Reafirmamos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with measured hope."
+        },
+        {
+          "speaker": "user",
+          "target": "We stand ready to support constructive outcomes.",
+          "pt_hint": "Preparados pra apoiar."
+        },
+        {
+          "speaker": "ai",
+          "text": "Diplomatic register: everything important, nothing combustible."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "formal-diplomatic-register-listening-story",
+      "title": "The official statement",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the statement's four moves. Use at least three diplomatic phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the embassy's morning briefing, the cultural attaché shared the text of a carefully balanced statement."
+        },
+        {
+          "speaker": "Attaché",
+          "voice": "female1",
+          "en": "We take note of recent developments and remain deeply concerned about the humanitarian implications involved."
+        },
+        {
+          "speaker": "Attaché",
+          "voice": "female1",
+          "en": "We call upon all parties to return to dialogue without preconditions and in good faith."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female2",
+          "en": "Every verb here is softened by two layers of formality — measured, but never indifferent."
+        },
+        {
+          "speaker": "Attaché",
+          "voice": "female1",
+          "en": "We reaffirm our commitment to multilateral cooperation and the principles enshrined in international law."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Diplomatic English, Zara noted, carries every sharp truth in a velvet envelope — never blunt, never silent."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Formal Diplomatic Register\". Language of treaties, official statements, and careful public communication. We take note of the recent developments in the region. We call upon all parties to return to dialogue. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Formal Diplomatic Register\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Formal Diplomatic Register",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Formal Diplomatic Register\".",
+        "hint_pt_br": "Ela fala o título: \"Formal Diplomatic Register\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

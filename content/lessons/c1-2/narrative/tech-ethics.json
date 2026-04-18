@@ -1,0 +1,283 @@
+{
+  "slug": "tech-ethics",
+  "title": "Technology Ethics",
+  "description": "AI bias, data privacy, algorithmic transparency, consent, duty of care.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Ética tecnológica: viés algorítmico, privacidade, consentimento, transparência, dever de cuidado.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Technology Ethics",
+      "subtitle_en": "AI bias, data privacy, algorithmic transparency, consent, duty of care.",
+      "subtitle_pt": "Ética tecnológica: viés algorítmico, privacidade, consentimento, transparência, dever de cuidado."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "AI bias, data privacy, algorithmic transparency, consent, duty of care. Focus: technology ethics. Algorithmic bias disproportionately harms marginalized groups.",
+      "text_pt": "Ética tecnológica: viés algorítmico, privacidade, consentimento, transparência, dever de cuidado. Foco: technology ethics. O viés algorítmico prejudica desproporcionalmente grupos marginalizados."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Technology Ethics",
+      "body_en": "Key terms: ALGORITHMIC BIAS, DATA PRIVACY, INFORMED CONSENT, TRANSPARENCY, DUTY OF CARE. Frame arguments with harm, benefit, and consent axes.",
+      "body_pt": "Ética tecnológica: viés algorítmico, privacidade, consentimento, transparência, dever de cuidado.",
+      "examples": [
+        {
+          "en": "Algorithmic bias disproportionately harms marginalized groups.",
+          "pt": "O viés algorítmico prejudica desproporcionalmente grupos marginalizados."
+        },
+        {
+          "en": "Informed consent must precede any data collection.",
+          "pt": "Consentimento informado deve preceder qualquer coleta."
+        },
+        {
+          "en": "Transparency builds trust faster than any marketing budget.",
+          "pt": "Transparência gera confiança mais rápido que qualquer marketing."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Technology Ethics",
+      "items": [
+        {
+          "term": "bias",
+          "pt": "viés"
+        },
+        {
+          "term": "transparency",
+          "pt": "transparência"
+        },
+        {
+          "term": "consent",
+          "pt": "consentimento"
+        },
+        {
+          "term": "accountability",
+          "pt": "responsabilização"
+        },
+        {
+          "term": "mitigate",
+          "pt": "mitigar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-tech-ethics-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Algorithmic bias ___ harms marginalized groups.\"",
+        "correct": "disproportionately",
+        "explanation": "Full sentence: \"Algorithmic bias disproportionately harms marginalized groups.\"",
+        "hint_pt_br": "O viés algorítmico prejudica desproporcionalmente grupos marginalizados."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-tech-ethics-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Informed consent must precede any data collection.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"Informed consent must precede any data collection.\"",
+        "hint_pt_br": "Consentimento informado deve preceder qualquer coleta."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-tech-ethics-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "bias",
+            "viés"
+          ],
+          [
+            "transparency",
+            "transparência"
+          ],
+          [
+            "consent",
+            "consentimento"
+          ],
+          [
+            "accountability",
+            "responsabilização"
+          ],
+          [
+            "mitigate",
+            "mitigar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Technology Ethics — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre technology ethics. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, what's tech ethics' most urgent issue today?"
+        },
+        {
+          "speaker": "user",
+          "target": "Algorithmic bias in consequential systems.",
+          "pt_hint": "Viés em sistemas críticos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Give a concrete example."
+        },
+        {
+          "speaker": "user",
+          "target": "Hiring algorithms filtering by zip code.",
+          "pt_hint": "Algoritmos por CEP."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you address it?"
+        },
+        {
+          "speaker": "user",
+          "target": "Audits, diverse training data, transparent models.",
+          "pt_hint": "Auditoria, dados diversos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Where does consent fit in?"
+        },
+        {
+          "speaker": "user",
+          "target": "Users must know what data is collected, and why.",
+          "pt_hint": "Saber o que coleta."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is self-regulation enough?"
+        },
+        {
+          "speaker": "user",
+          "target": "No — duty of care must be codified legally.",
+          "pt_hint": "Lei. Nunca só auto-regulação."
+        },
+        {
+          "speaker": "ai",
+          "text": "Tech ethics is where philosophy meets engineering."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "tech-ethics-listening-story",
+      "title": "The AI panel",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the ethical concerns raised. Use at least three tech ethics terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the tech ethics panel, Joca and two colleagues debated the responsibilities of the companies deploying AI."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Algorithmic bias in consequential systems disproportionately harms communities already under-resourced."
+        },
+        {
+          "speaker": "Panelist",
+          "voice": "female1",
+          "en": "Informed consent cannot be a ten-page terms-of-service document that no user ever actually reads."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Transparency about training data builds trust far faster than any marketing campaign ever could."
+        },
+        {
+          "speaker": "Panelist",
+          "voice": "male2",
+          "en": "Self-regulation has failed in every industry where duty of care mattered — tech will not be the exception."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Technology ethics, Joca believed, is the adult conversation the industry has avoided for far too long."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Technology Ethics\". AI bias, data privacy, algorithmic transparency, consent, duty of care. Algorithmic bias disproportionately harms marginalized groups. Informed consent must precede any data collection. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Technology Ethics\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Technology Ethics",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Technology Ethics\".",
+        "hint_pt_br": "Ela fala o título: \"Technology Ethics\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

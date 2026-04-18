@@ -1,0 +1,283 @@
+{
+  "slug": "register-shifts-writing",
+  "title": "Register Shifts in Writing",
+  "description": "Switching smoothly between formal, semi-formal, and casual without losing the reader.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Mudanças de registro: vocabulário, tamanho da frase, pontuação, contrações. Usado com estratégia cria ênfase.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Register Shifts in Writing",
+      "subtitle_en": "Switching smoothly between formal, semi-formal, and casual without losing the reader.",
+      "subtitle_pt": "Mudanças de registro: vocabulário, tamanho da frase, pontuação, contrações. Usado com estratégia cria ênfase."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Switching smoothly between formal, semi-formal, and casual without losing the reader. Focus: register shifts in writing. The committee's decision was both unprecedented and long overdue.",
+      "text_pt": "Mudanças de registro: vocabulário, tamanho da frase, pontuação, contrações. Usado com estratégia cria ênfase. Foco: register shifts in writing. A decisão do comitê foi sem precedentes e há muito atrasada."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Register Shifts in Writing",
+      "body_en": "Signal shifts through vocabulary (Latinate → Germanic), sentence length, punctuation (em dashes vs commas), and contractions. Used strategically, shifts create emphasis.",
+      "body_pt": "Mudanças de registro: vocabulário, tamanho da frase, pontuação, contrações. Usado com estratégia cria ênfase.",
+      "examples": [
+        {
+          "en": "The committee's decision was both unprecedented and long overdue.",
+          "pt": "A decisão do comitê foi sem precedentes e há muito atrasada."
+        },
+        {
+          "en": "Honestly? It was about time.",
+          "pt": "Sinceramente? Já estava na hora."
+        },
+        {
+          "en": "Their report — if we can call it that — lacked rigor.",
+          "pt": "O relatório — se podemos chamá-lo assim — carecia de rigor."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Register Shifts in Writing",
+      "items": [
+        {
+          "term": "register",
+          "pt": "registro"
+        },
+        {
+          "term": "shift",
+          "pt": "mudança"
+        },
+        {
+          "term": "Germanic",
+          "pt": "germânico"
+        },
+        {
+          "term": "Latinate",
+          "pt": "de origem latina"
+        },
+        {
+          "term": "cadence",
+          "pt": "cadência"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-register-shifts-writing-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The committee's decision was both ___ and long overdue.\"",
+        "correct": "unprecedented",
+        "explanation": "Full sentence: \"The committee's decision was both unprecedented and long overdue.\"",
+        "hint_pt_br": "A decisão do comitê foi sem precedentes e há muito atrasada."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-register-shifts-writing-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Honestly? It was about time.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Honestly? It was about time.\"",
+        "hint_pt_br": "Sinceramente? Já estava na hora."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-register-shifts-writing-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "register",
+            "registro"
+          ],
+          [
+            "shift",
+            "mudança"
+          ],
+          [
+            "Germanic",
+            "germânico"
+          ],
+          [
+            "Latinate",
+            "de origem latina"
+          ],
+          [
+            "cadence",
+            "cadência"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Register Shifts in Writing — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre register shifts in writing. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Write one sentence in formal register."
+        },
+        {
+          "speaker": "user",
+          "target": "The proposal was unprecedented and overdue.",
+          "pt_hint": "Sem precedentes."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now shift casual for emphasis."
+        },
+        {
+          "speaker": "user",
+          "target": "Honestly? It was about time.",
+          "pt_hint": "Já era hora."
+        },
+        {
+          "speaker": "ai",
+          "text": "Use an em dash to break register."
+        },
+        {
+          "speaker": "user",
+          "target": "Their report — if we can call it that — lacked rigor.",
+          "pt_hint": "Se podemos chamar assim."
+        },
+        {
+          "speaker": "ai",
+          "text": "Mix Latinate and Germanic in a single sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "Her argument was elegant, but it didn't stick.",
+          "pt_hint": "Elegante, mas não colou."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with a crisp informal line."
+        },
+        {
+          "speaker": "user",
+          "target": "Long story short: we got lucky.",
+          "pt_hint": "Resumindo: deu sorte."
+        },
+        {
+          "speaker": "ai",
+          "text": "Register shifts are punctuation for mood."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "register-shifts-writing-listening-story",
+      "title": "The editorial meeting",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize Zara's editing choices. Include at least two register shifts.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the magazine's editorial meeting, Zara explained why certain sentences needed to break their own rules."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "The committee's decision was both unprecedented and long overdue — notice the formal opening."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Honestly? It was about time. That abrupt register shift is exactly what the paragraph needed."
+        },
+        {
+          "speaker": "Editor",
+          "voice": "male1",
+          "en": "Em dashes signal an interruption in tone, as if the writer leans closer to the reader mid-sentence."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Long story short: register is not chosen once. It is negotiated across every paragraph."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Good style, the editors agreed, is the art of breaking the right rule at exactly the right moment."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Register Shifts in Writing\". Switching smoothly between formal, semi-formal, and casual without losing the reader. The committee's decision was both unprecedented and long overdue. Honestly? It was about time. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Register Shifts in Writing\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Register Shifts in Writing",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Register Shifts in Writing\".",
+        "hint_pt_br": "Ela fala o título: \"Register Shifts in Writing\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

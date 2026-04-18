@@ -1,0 +1,283 @@
+{
+  "slug": "film-analysis",
+  "title": "Film Analysis",
+  "description": "Vocabulary of cinema: mise-en-scène, cinematography, pacing, subtext, character arc.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Análise de filme: mise-en-scène, cinematografia, ritmo, subtexto, arco do personagem.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Film Analysis",
+      "subtitle_en": "Vocabulary of cinema: mise-en-scène, cinematography, pacing, subtext, character arc.",
+      "subtitle_pt": "Análise de filme: mise-en-scène, cinematografia, ritmo, subtexto, arco do personagem."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Vocabulary of cinema: mise-en-scène, cinematography, pacing, subtext, character arc. Focus: film analysis. The film's mise-en-scène reveals the character's isolation.",
+      "text_pt": "Análise de filme: mise-en-scène, cinematografia, ritmo, subtexto, arco do personagem. Foco: film analysis. A mise-en-scène revela o isolamento do personagem."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Film Analysis",
+      "body_en": "Core terms: MISE-EN-SCÈNE (everything in the frame). CINEMATOGRAPHY (how the camera sees). PACING (how time feels). SUBTEXT (unsaid meaning). CHARACTER ARC (internal change).",
+      "body_pt": "Análise de filme: mise-en-scène, cinematografia, ritmo, subtexto, arco do personagem.",
+      "examples": [
+        {
+          "en": "The film's mise-en-scène reveals the character's isolation.",
+          "pt": "A mise-en-scène revela o isolamento do personagem."
+        },
+        {
+          "en": "Subtle cinematography shifts underline the protagonist's change.",
+          "pt": "Mudanças sutis na cinematografia marcam a mudança do protagonista."
+        },
+        {
+          "en": "The pacing slows deliberately in the final act.",
+          "pt": "O ritmo desacelera propositalmente no ato final."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Film Analysis",
+      "items": [
+        {
+          "term": "mise-en-scène",
+          "pt": "mise-en-scène"
+        },
+        {
+          "term": "cinematography",
+          "pt": "cinematografia"
+        },
+        {
+          "term": "pacing",
+          "pt": "ritmo"
+        },
+        {
+          "term": "subtext",
+          "pt": "subtexto"
+        },
+        {
+          "term": "arc",
+          "pt": "arco"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-film-analysis-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The film's mise-en-scène reveals the ___ isolation.\"",
+        "correct": "character's",
+        "explanation": "Full sentence: \"The film's mise-en-scène reveals the character's isolation.\"",
+        "hint_pt_br": "A mise-en-scène revela o isolamento do personagem."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-film-analysis-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Subtle cinematography shifts underline the protagonist's change.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Subtle cinematography shifts underline the protagonist's change.\"",
+        "hint_pt_br": "Mudanças sutis na cinematografia marcam a mudança do protagonista."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-film-analysis-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "mise-en-scène",
+            "mise-en-scène"
+          ],
+          [
+            "cinematography",
+            "cinematografia"
+          ],
+          [
+            "pacing",
+            "ritmo"
+          ],
+          [
+            "subtext",
+            "subtexto"
+          ],
+          [
+            "arc",
+            "arco"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Film Analysis — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre film analysis. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What made the film's opening so powerful?"
+        },
+        {
+          "speaker": "user",
+          "target": "The mise-en-scène alone told her whole story.",
+          "pt_hint": "Mise-en-scène contou tudo."
+        },
+        {
+          "speaker": "ai",
+          "text": "How did the cinematography shift?"
+        },
+        {
+          "speaker": "user",
+          "target": "It moved from cold tones to warm ones slowly.",
+          "pt_hint": "Frio pra quente."
+        },
+        {
+          "speaker": "ai",
+          "text": "What about the pacing in the second act?"
+        },
+        {
+          "speaker": "user",
+          "target": "It accelerates, matching her anxiety.",
+          "pt_hint": "Acelera, imita ansiedade."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the strongest subtext?"
+        },
+        {
+          "speaker": "user",
+          "target": "Her silence screams louder than her words.",
+          "pt_hint": "Silêncio grita."
+        },
+        {
+          "speaker": "ai",
+          "text": "Describe the character arc briefly."
+        },
+        {
+          "speaker": "user",
+          "target": "She moves from fear to quiet conviction.",
+          "pt_hint": "Medo pra convicção."
+        },
+        {
+          "speaker": "ai",
+          "text": "Cinema is literature that uses silence as punctuation."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "film-analysis-listening-story",
+      "title": "The film club",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Analyze the film's style. Use at least three cinema terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In Dona Lúcia's living room, the film club gathered to debate the week's screening with careful vocabulary."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "The opening sequence's mise-en-scène told us everything about her loneliness before a single line of dialogue."
+        },
+        {
+          "speaker": "Member",
+          "voice": "male1",
+          "en": "The cinematography shifted from cold blues to warm ambers exactly as her conviction strengthened on screen."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Pacing slowed deliberately in the final act, giving the audience time to arrive at her silent decision."
+        },
+        {
+          "speaker": "Member",
+          "voice": "female2",
+          "en": "The subtext of her silence carried more weight than any monologue could have accomplished in that scene."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Good films, Lúcia would say, trust their viewers. Great films educate them in the trust itself."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Film Analysis\". Vocabulary of cinema: mise-en-scène, cinematography, pacing, subtext, character arc. The film's mise-en-scène reveals the character's isolation. Subtle cinematography shifts underline the protagonist's change. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Film Analysis\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Film Analysis",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Film Analysis\".",
+        "hint_pt_br": "Ela fala o título: \"Film Analysis\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

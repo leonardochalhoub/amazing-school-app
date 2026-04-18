@@ -1,0 +1,283 @@
+{
+  "slug": "cohesive-devices-advanced",
+  "title": "Advanced Cohesive Devices",
+  "description": "Sophisticated connectors: notwithstanding, insofar as, given that, albeit, thereby.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Conectivos sofisticados: notwithstanding, insofar as, given that, albeit, thereby.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Advanced Cohesive Devices",
+      "subtitle_en": "Sophisticated connectors: notwithstanding, insofar as, given that, albeit, thereby.",
+      "subtitle_pt": "Conectivos sofisticados: notwithstanding, insofar as, given that, albeit, thereby."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Sophisticated connectors: notwithstanding, insofar as, given that, albeit, thereby. Focus: advanced cohesive devices. Notwithstanding the delays, the project succeeded.",
+      "text_pt": "Conectivos sofisticados: notwithstanding, insofar as, given that, albeit, thereby. Foco: advanced cohesive devices. A despeito dos atrasos, o projeto foi bem-sucedido."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Advanced Cohesive Devices",
+      "body_en": "NOTWITHSTANDING + noun (despite). INSOFAR AS + clause (to the extent that). GIVEN THAT (since). ALBEIT (although, especially mid-sentence). THEREBY (in doing so).",
+      "body_pt": "Conectivos sofisticados: notwithstanding, insofar as, given that, albeit, thereby.",
+      "examples": [
+        {
+          "en": "Notwithstanding the delays, the project succeeded.",
+          "pt": "A despeito dos atrasos, o projeto foi bem-sucedido."
+        },
+        {
+          "en": "Given that budgets are tight, we must prioritize.",
+          "pt": "Dado que os orçamentos são apertados, precisamos priorizar."
+        },
+        {
+          "en": "Her speech was brilliant, albeit somewhat long.",
+          "pt": "O discurso dela foi brilhante, embora um tanto longo."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Advanced Cohesive Devices",
+      "items": [
+        {
+          "term": "notwithstanding",
+          "pt": "a despeito de"
+        },
+        {
+          "term": "insofar as",
+          "pt": "na medida em que"
+        },
+        {
+          "term": "albeit",
+          "pt": "embora"
+        },
+        {
+          "term": "thereby",
+          "pt": "desse modo"
+        },
+        {
+          "term": "whereby",
+          "pt": "pelo qual"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-cohesive-devices-advanced-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"___ the delays, the project succeeded.\"",
+        "correct": "Notwithstanding",
+        "explanation": "Full sentence: \"Notwithstanding the delays, the project succeeded.\"",
+        "hint_pt_br": "A despeito dos atrasos, o projeto foi bem-sucedido."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-cohesive-devices-advanced-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Given that budgets are tight, we must prioritize.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Given that budgets are tight, we must prioritize.\"",
+        "hint_pt_br": "Dado que os orçamentos são apertados, precisamos priorizar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-cohesive-devices-advanced-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "notwithstanding",
+            "a despeito de"
+          ],
+          [
+            "insofar as",
+            "na medida em que"
+          ],
+          [
+            "albeit",
+            "embora"
+          ],
+          [
+            "thereby",
+            "desse modo"
+          ],
+          [
+            "whereby",
+            "pelo qual"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Advanced Cohesive Devices — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre advanced cohesive devices. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Replace 'although' with 'albeit' in your own sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "His argument was convincing, albeit dated.",
+          "pt_hint": "Embora datado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now use 'notwithstanding'."
+        },
+        {
+          "speaker": "user",
+          "target": "Notwithstanding the rain, the rally continued.",
+          "pt_hint": "Apesar da chuva."
+        },
+        {
+          "speaker": "ai",
+          "text": "'Given that' in a business email."
+        },
+        {
+          "speaker": "user",
+          "target": "Given that Q3 is approaching, we must decide.",
+          "pt_hint": "Dado que Q3."
+        },
+        {
+          "speaker": "ai",
+          "text": "Use 'thereby' to link cause to effect."
+        },
+        {
+          "speaker": "user",
+          "target": "We reduced overhead, thereby lifting margins.",
+          "pt_hint": "Assim elevando."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with 'insofar as'."
+        },
+        {
+          "speaker": "user",
+          "target": "Insofar as resources allow, we'll expand.",
+          "pt_hint": "Na medida dos recursos."
+        },
+        {
+          "speaker": "ai",
+          "text": "These connectors turn prose into argumentation."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "cohesive-devices-advanced-listening-story",
+      "title": "The strategy memo",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the memo using at least three advanced connectors.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On Monday morning, Kumar reviewed a strategy memo written by a former student turned executive."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Notwithstanding the budget constraints outlined earlier, the proposal remains both ambitious and realistic."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "Given that our market share has plateaued, a bold pivot is exactly what the quarter requires."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Insofar as the data supports it, I would recommend approving the first phase without further delay."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "We reduced redundant reporting by thirty percent, thereby freeing our analysts for deeper work."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Cohesive devices at C1, Kumar believed, are the invisible architecture that holds serious writing upright."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Advanced Cohesive Devices\". Sophisticated connectors: notwithstanding, insofar as, given that, albeit, thereby. Notwithstanding the delays, the project succeeded. Given that budgets are tight, we must prioritize. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Advanced Cohesive Devices\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Advanced Cohesive Devices",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Advanced Cohesive Devices\".",
+        "hint_pt_br": "Ela fala o título: \"Advanced Cohesive Devices\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

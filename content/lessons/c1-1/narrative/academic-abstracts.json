@@ -1,0 +1,283 @@
+{
+  "slug": "academic-abstracts",
+  "title": "Writing Academic Abstracts",
+  "description": "150-word abstract: context, gap, method, results, implications.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Abstract em 5 movimentos (150 palavras): contexto, lacuna, método, resultados, implicações.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Writing Academic Abstracts",
+      "subtitle_en": "150-word abstract: context, gap, method, results, implications.",
+      "subtitle_pt": "Abstract em 5 movimentos (150 palavras): contexto, lacuna, método, resultados, implicações."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "150-word abstract: context, gap, method, results, implications. Focus: writing academic abstracts. Prior studies have examined X but overlooked Y.",
+      "text_pt": "Abstract em 5 movimentos (150 palavras): contexto, lacuna, método, resultados, implicações. Foco: writing academic abstracts. Estudos anteriores examinaram X mas negligenciaram Y."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Writing Academic Abstracts",
+      "body_en": "Five moves in ~150 words: 1) Set context. 2) State the gap. 3) Describe method. 4) Summarize results. 5) State implications. Passive voice, hedged claims.",
+      "body_pt": "Abstract em 5 movimentos (150 palavras): contexto, lacuna, método, resultados, implicações.",
+      "examples": [
+        {
+          "en": "Prior studies have examined X but overlooked Y.",
+          "pt": "Estudos anteriores examinaram X mas negligenciaram Y."
+        },
+        {
+          "en": "This paper addresses that gap by analyzing 200 cases.",
+          "pt": "Este artigo preenche essa lacuna analisando 200 casos."
+        },
+        {
+          "en": "Findings suggest implications for both policy and practice.",
+          "pt": "Os achados sugerem implicações para política e prática."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Writing Academic Abstracts",
+      "items": [
+        {
+          "term": "gap",
+          "pt": "lacuna"
+        },
+        {
+          "term": "methodology",
+          "pt": "metodologia"
+        },
+        {
+          "term": "findings",
+          "pt": "achados"
+        },
+        {
+          "term": "implication",
+          "pt": "implicação"
+        },
+        {
+          "term": "contribution",
+          "pt": "contribuição"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-abstracts-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Prior studies have examined X but ___ Y.\"",
+        "correct": "overlooked",
+        "explanation": "Full sentence: \"Prior studies have examined X but overlooked Y.\"",
+        "hint_pt_br": "Estudos anteriores examinaram X mas negligenciaram Y."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-abstracts-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "This paper addresses that gap by analyzing 200 cases."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"This paper addresses that gap by analyzing 200 cases.\"",
+        "hint_pt_br": "Este artigo preenche essa lacuna analisando 200 casos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-academic-abstracts-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "gap",
+            "lacuna"
+          ],
+          [
+            "methodology",
+            "metodologia"
+          ],
+          [
+            "findings",
+            "achados"
+          ],
+          [
+            "implication",
+            "implicação"
+          ],
+          [
+            "contribution",
+            "contribuição"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Writing Academic Abstracts — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre writing academic abstracts. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Open your abstract with context."
+        },
+        {
+          "speaker": "user",
+          "target": "Remote work has grown rapidly since 2020.",
+          "pt_hint": "Cresceu desde 2020."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now state the gap."
+        },
+        {
+          "speaker": "user",
+          "target": "Few studies isolate long-term productivity effects.",
+          "pt_hint": "Poucos estudos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Describe your method briefly."
+        },
+        {
+          "speaker": "user",
+          "target": "We analyzed 300 teams across three years.",
+          "pt_hint": "300 times, 3 anos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Summarize your results."
+        },
+        {
+          "speaker": "user",
+          "target": "Remote teams outperformed hybrids on deep work.",
+          "pt_hint": "Superaram em foco."
+        },
+        {
+          "speaker": "ai",
+          "text": "State the implications."
+        },
+        {
+          "speaker": "user",
+          "target": "Findings inform policy for distributed organizations.",
+          "pt_hint": "Informam política."
+        },
+        {
+          "speaker": "ai",
+          "text": "Five moves, 150 words, infinite rejections avoided."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "academic-abstracts-listening-story",
+      "title": "The journal submission",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the abstract's five moves. Use academic phrasing.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Kumar read his doctoral student's latest abstract aloud, pausing at each of its five structural moves."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Prior studies have examined remote work but overlooked its long-term effects on deep knowledge work."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "This paper addresses that gap by analyzing three hundred teams over a three-year observational window."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Findings suggest that fully remote teams outperform hybrid arrangements specifically on extended focus tasks."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "The implications inform hiring policy and remote-work infrastructure design at medium-sized tech firms."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "A strong abstract, Kumar always taught, promises nothing it cannot deliver — and delivers everything it promises."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Writing Academic Abstracts\". 150-word abstract: context, gap, method, results, implications. Prior studies have examined X but overlooked Y. This paper addresses that gap by analyzing 200 cases. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Writing Academic Abstracts\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Writing Academic Abstracts",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Writing Academic Abstracts\".",
+        "hint_pt_br": "Ela fala o título: \"Writing Academic Abstracts\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "journalism-ethics",
+  "title": "Journalism Ethics",
+  "description": "Verification, attribution, conflict of interest, off-the-record, correction standards.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Ética jornalística: verificar, atribuir, conflito de interesse, off the record, correções.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Journalism Ethics",
+      "subtitle_en": "Verification, attribution, conflict of interest, off-the-record, correction standards.",
+      "subtitle_pt": "Ética jornalística: verificar, atribuir, conflito de interesse, off the record, correções."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Verification, attribution, conflict of interest, off-the-record, correction standards. Focus: journalism ethics. Every claim should be independently verified before publication.",
+      "text_pt": "Ética jornalística: verificar, atribuir, conflito de interesse, off the record, correções. Foco: journalism ethics. Toda afirmação deve ser verificada independentemente."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Journalism Ethics",
+      "body_en": "Key principles: VERIFY before publish. ATTRIBUTE every claim. Disclose CONFLICTS OF INTEREST. Distinguish OFF-THE-RECORD from ON-THE-RECORD. Issue CORRECTIONS promptly.",
+      "body_pt": "Ética jornalística: verificar, atribuir, conflito de interesse, off the record, correções.",
+      "examples": [
+        {
+          "en": "Every claim should be independently verified before publication.",
+          "pt": "Toda afirmação deve ser verificada independentemente."
+        },
+        {
+          "en": "Anonymous sources require at least two corroborators.",
+          "pt": "Fontes anônimas exigem pelo menos dois corroboradores."
+        },
+        {
+          "en": "Corrections should be as visible as the original error.",
+          "pt": "Correções devem ser tão visíveis quanto o erro original."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Journalism Ethics",
+      "items": [
+        {
+          "term": "verify",
+          "pt": "verificar"
+        },
+        {
+          "term": "attribution",
+          "pt": "atribuição"
+        },
+        {
+          "term": "correction",
+          "pt": "correção"
+        },
+        {
+          "term": "anonymous",
+          "pt": "anônimo"
+        },
+        {
+          "term": "retract",
+          "pt": "retratar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-journalism-ethics-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Every claim should be ___ verified before publication.\"",
+        "correct": "independently",
+        "explanation": "Full sentence: \"Every claim should be independently verified before publication.\"",
+        "hint_pt_br": "Toda afirmação deve ser verificada independentemente."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-journalism-ethics-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Anonymous sources require at least two corroborators.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Anonymous sources require at least two corroborators.\"",
+        "hint_pt_br": "Fontes anônimas exigem pelo menos dois corroboradores."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-journalism-ethics-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "verify",
+            "verificar"
+          ],
+          [
+            "attribution",
+            "atribuição"
+          ],
+          [
+            "correction",
+            "correção"
+          ],
+          [
+            "anonymous",
+            "anônimo"
+          ],
+          [
+            "retract",
+            "retratar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Journalism Ethics — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre journalism ethics. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "You have a scoop but only one source. What now?"
+        },
+        {
+          "speaker": "user",
+          "target": "Find a second, independent corroborator.",
+          "pt_hint": "Segundo corroborador."
+        },
+        {
+          "speaker": "ai",
+          "text": "The source wants to stay anonymous."
+        },
+        {
+          "speaker": "user",
+          "target": "Document why, and verify with a second source.",
+          "pt_hint": "Documentar e verificar."
+        },
+        {
+          "speaker": "ai",
+          "text": "You made a factual error last week."
+        },
+        {
+          "speaker": "user",
+          "target": "Issue a correction as prominent as the error.",
+          "pt_hint": "Correção visível."
+        },
+        {
+          "speaker": "ai",
+          "text": "A company you once worked for is involved."
+        },
+        {
+          "speaker": "user",
+          "target": "Disclose it or hand off the story.",
+          "pt_hint": "Declarar ou passar."
+        },
+        {
+          "speaker": "ai",
+          "text": "An editor asks you to soften a quote."
+        },
+        {
+          "speaker": "user",
+          "target": "Decline — accuracy beats comfort.",
+          "pt_hint": "Recusar. Precisão vence."
+        },
+        {
+          "speaker": "ai",
+          "text": "Ethics is journalism's only real competitive advantage."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "journalism-ethics-listening-story",
+      "title": "The newsroom standards meeting",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the five principles discussed. Use at least three journalism terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Every Thursday morning, the newsroom gathered to review the principles that had been tested that week."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Every factual claim should be independently verified before the story leaves this building, no exceptions."
+        },
+        {
+          "speaker": "Editor",
+          "voice": "female1",
+          "en": "Anonymous sources may be necessary, but they require at least two independent corroborators to appear in print."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "A correction, when warranted, must be as prominent and visible as the original reporting error itself."
+        },
+        {
+          "speaker": "Editor",
+          "voice": "male2",
+          "en": "Conflicts of interest — including prior employment — must be disclosed before the story is assigned."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Ethics, Kumar told young reporters, was the single quality no algorithm could ever replace in journalism."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Journalism Ethics\". Verification, attribution, conflict of interest, off-the-record, correction standards. Every claim should be independently verified before publication. Anonymous sources require at least two corroborators. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Journalism Ethics\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Journalism Ethics",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Journalism Ethics\".",
+        "hint_pt_br": "Ela fala o título: \"Journalism Ethics\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

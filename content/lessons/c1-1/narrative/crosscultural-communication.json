@@ -1,0 +1,283 @@
+{
+  "slug": "crosscultural-communication",
+  "title": "Cross-Cultural Communication",
+  "description": "Navigating high-context vs low-context cultures, directness, silence, and face-saving.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Culturas alto-contexto (implícito) vs baixo-contexto (explícito). Salvar a face evita constrangimento.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Cross-Cultural Communication",
+      "subtitle_en": "Navigating high-context vs low-context cultures, directness, silence, and face-saving.",
+      "subtitle_pt": "Culturas alto-contexto (implícito) vs baixo-contexto (explícito). Salvar a face evita constrangimento."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Navigating high-context vs low-context cultures, directness, silence, and face-saving. Focus: cross-cultural communication. In Japan, silence often signals careful consideration.",
+      "text_pt": "Culturas alto-contexto (implícito) vs baixo-contexto (explícito). Salvar a face evita constrangimento. Foco: cross-cultural communication. No Japão, o silêncio sinaliza consideração cuidadosa."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Cross-Cultural Communication",
+      "body_en": "High-context (implicit, Japan, Brazil): read between lines. Low-context (explicit, US, Germany): say it directly. Face-saving language prevents embarrassment: 'Let me think on that.'",
+      "body_pt": "Culturas alto-contexto (implícito) vs baixo-contexto (explícito). Salvar a face evita constrangimento.",
+      "examples": [
+        {
+          "en": "In Japan, silence often signals careful consideration.",
+          "pt": "No Japão, o silêncio sinaliza consideração cuidadosa."
+        },
+        {
+          "en": "Germans tend to be direct without intending rudeness.",
+          "pt": "Alemães tendem a ser diretos sem querer ser rudes."
+        },
+        {
+          "en": "'Let me think on that' is a polite way to disagree.",
+          "pt": "'Deixe-me pensar' é uma forma educada de discordar."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Cross-Cultural Communication",
+      "items": [
+        {
+          "term": "high-context",
+          "pt": "alto contexto"
+        },
+        {
+          "term": "face-saving",
+          "pt": "salvar a face"
+        },
+        {
+          "term": "implicit",
+          "pt": "implícito"
+        },
+        {
+          "term": "explicit",
+          "pt": "explícito"
+        },
+        {
+          "term": "directness",
+          "pt": "franqueza"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-crosscultural-communication-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"In Japan, silence often signals careful ___.\"",
+        "correct": "consideration",
+        "explanation": "Full sentence: \"In Japan, silence often signals careful consideration.\"",
+        "hint_pt_br": "No Japão, o silêncio sinaliza consideração cuidadosa."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-crosscultural-communication-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Germans tend to be direct without intending rudeness.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Germans tend to be direct without intending rudeness.\"",
+        "hint_pt_br": "Alemães tendem a ser diretos sem querer ser rudes."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-crosscultural-communication-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "high-context",
+            "alto contexto"
+          ],
+          [
+            "face-saving",
+            "salvar a face"
+          ],
+          [
+            "implicit",
+            "implícito"
+          ],
+          [
+            "explicit",
+            "explícito"
+          ],
+          [
+            "directness",
+            "franqueza"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Cross-Cultural Communication — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre cross-cultural communication. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "You work with Germans and Japanese. What's different?"
+        },
+        {
+          "speaker": "user",
+          "target": "Germans are direct; Japanese read context.",
+          "pt_hint": "Alemães diretos, japoneses contexto."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you disagree in high-context cultures?"
+        },
+        {
+          "speaker": "user",
+          "target": "Soft language — 'Let me think on that.'",
+          "pt_hint": "'Deixe-me pensar.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "And with Americans?"
+        },
+        {
+          "speaker": "user",
+          "target": "Clear disagreement, respectfully stated.",
+          "pt_hint": "Discordância clara."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's face-saving language?"
+        },
+        {
+          "speaker": "user",
+          "target": "Phrases that let someone retreat with dignity.",
+          "pt_hint": "Sair com dignidade."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you bridge two teams?"
+        },
+        {
+          "speaker": "user",
+          "target": "Translate tone, not just words.",
+          "pt_hint": "Traduzir tom."
+        },
+        {
+          "speaker": "ai",
+          "text": "Culture is half grammar, half body language."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "crosscultural-communication-listening-story",
+      "title": "The international standup",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe three cultural differences Zara has navigated. Use at least two culture-specific phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On a weekly call spanning three continents, Zara facilitated conversations between very different cultures."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "In Japan, silence often signals careful consideration — not disinterest or disagreement with what's been said."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "male1",
+          "en": "Germans, in my experience, value directness so much that softening can actually feel suspicious to them."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "'Let me think on that' lets a Japanese colleague decline without breaking the social harmony of the room."
+        },
+        {
+          "speaker": "Colleague",
+          "voice": "female2",
+          "en": "And Americans will often say 'interesting' when they mean politely that they disagree completely."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Cross-cultural fluency, Zara discovered, was never about vocabulary — it was about listening for the sentence beneath the sentence."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Cross-Cultural Communication\". Navigating high-context vs low-context cultures, directness, silence, and face-saving. In Japan, silence often signals careful consideration. Germans tend to be direct without intending rudeness. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Cross-Cultural Communication\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Cross-Cultural Communication",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Cross-Cultural Communication\".",
+        "hint_pt_br": "Ela fala o título: \"Cross-Cultural Communication\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

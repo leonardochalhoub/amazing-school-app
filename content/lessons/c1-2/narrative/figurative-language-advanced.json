@@ -1,0 +1,283 @@
+{
+  "slug": "figurative-language-advanced",
+  "title": "Figurative Language — Advanced",
+  "description": "Metonymy, synecdoche, chiasmus, hyperbole, litotes — the tools of memorable prose.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Recursos avançados: metonímia (associação), sinédoque (parte pelo todo), quiasmo (ABBA), hipérbole, litotes.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Figurative Language — Advanced",
+      "subtitle_en": "Metonymy, synecdoche, chiasmus, hyperbole, litotes — the tools of memorable prose.",
+      "subtitle_pt": "Recursos avançados: metonímia (associação), sinédoque (parte pelo todo), quiasmo (ABBA), hipérbole, litotes."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Metonymy, synecdoche, chiasmus, hyperbole, litotes — the tools of memorable prose. Focus: figurative language — advanced. The Crown denied all involvement in the matter.",
+      "text_pt": "Recursos avançados: metonímia (associação), sinédoque (parte pelo todo), quiasmo (ABBA), hipérbole, litotes. Foco: figurative language — advanced. A Coroa negou envolvimento."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Figurative Language — Advanced",
+      "body_en": "METONYMY = substitute by association (Crown = king). SYNECDOCHE = part for whole (wheels = car). CHIASMUS = ABBA reversal (ask not what... what you). HYPERBOLE = exaggeration. LITOTES = understatement.",
+      "body_pt": "Recursos avançados: metonímia (associação), sinédoque (parte pelo todo), quiasmo (ABBA), hipérbole, litotes.",
+      "examples": [
+        {
+          "en": "The Crown denied all involvement in the matter.",
+          "pt": "A Coroa negou envolvimento."
+        },
+        {
+          "en": "Ask not what your country can do for you, but what you can do for your country.",
+          "pt": "Não pergunte... mas o que você pode fazer."
+        },
+        {
+          "en": "He's no genius, which means he's rather clever actually.",
+          "pt": "Ele não é gênio — ou seja, é bem esperto (litotes)."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Figurative Language — Advanced",
+      "items": [
+        {
+          "term": "metonymy",
+          "pt": "metonímia"
+        },
+        {
+          "term": "synecdoche",
+          "pt": "sinédoque"
+        },
+        {
+          "term": "chiasmus",
+          "pt": "quiasmo"
+        },
+        {
+          "term": "hyperbole",
+          "pt": "hipérbole"
+        },
+        {
+          "term": "litotes",
+          "pt": "litotes"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-figurative-language-advanced-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The Crown denied all ___ in the matter.\"",
+        "correct": "involvement",
+        "explanation": "Full sentence: \"The Crown denied all involvement in the matter.\"",
+        "hint_pt_br": "A Coroa negou envolvimento."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-figurative-language-advanced-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Ask not what your country can do for you, but what you can do for your country.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Ask not what your country can do for you, but what you can do for your country.\"",
+        "hint_pt_br": "Não pergunte... mas o que você pode fazer."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-figurative-language-advanced-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "metonymy",
+            "metonímia"
+          ],
+          [
+            "synecdoche",
+            "sinédoque"
+          ],
+          [
+            "chiasmus",
+            "quiasmo"
+          ],
+          [
+            "hyperbole",
+            "hipérbole"
+          ],
+          [
+            "litotes",
+            "litotes"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Figurative Language — Advanced — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre figurative language — advanced. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Give one metonymy in a sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "The White House denied involvement.",
+          "pt_hint": "Casa Branca negou."
+        },
+        {
+          "speaker": "ai",
+          "text": "Synecdoche?"
+        },
+        {
+          "speaker": "user",
+          "target": "Twenty hands worked the harvest.",
+          "pt_hint": "Vinte mãos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Construct a chiasmus."
+        },
+        {
+          "speaker": "user",
+          "target": "Ask not what knowledge offers — offer what knowledge asks.",
+          "pt_hint": "ABBA."
+        },
+        {
+          "speaker": "ai",
+          "text": "A hyperbole from daily speech."
+        },
+        {
+          "speaker": "user",
+          "target": "I could eat a horse right now.",
+          "pt_hint": "Comeria um cavalo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Litotes, understated."
+        },
+        {
+          "speaker": "user",
+          "target": "Not a bad performance at all.",
+          "pt_hint": "Nada mau."
+        },
+        {
+          "speaker": "ai",
+          "text": "Figurative language separates memorable from forgettable."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "figurative-language-advanced-listening-story",
+      "title": "The rhetoric workshop",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Identify the figurative devices used. Include at least three terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the rhetoric workshop, Zara projected four famous sentences and asked the class to name the device."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "The Crown denied involvement — the word 'crown' substitutes for the monarchy through metonymy."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male1",
+          "en": "And 'twenty hands worked the field' uses synecdoche, letting one body part represent entire workers."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Chiasmus is that elegant reversal — ask not what your country can do for you, but what you can do."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female2",
+          "en": "Understatement, or litotes, can actually feel stronger than the direct claim — 'not bad' often means excellent."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Rhetorical devices, Zara reminded the class, are the invisible scaffolding beneath every sentence you'll ever remember."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Figurative Language — Advanced\". Metonymy, synecdoche, chiasmus, hyperbole, litotes — the tools of memorable prose. The Crown denied all involvement in the matter. Ask not what your country can do for you, but what you can do for your country. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Figurative Language — Advanced\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Figurative Language — Advanced",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Figurative Language — Advanced\".",
+        "hint_pt_br": "Ela fala o título: \"Figurative Language — Advanced\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

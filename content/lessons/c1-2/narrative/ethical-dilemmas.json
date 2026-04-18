@@ -1,0 +1,283 @@
+{
+  "slug": "ethical-dilemmas",
+  "title": "Ethical Dilemmas",
+  "description": "Analyzing trolley problems, competing duties, moral trade-offs.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Dilemas éticos: deveres, stakeholders, consequências, princípios. Teste por utilitarismo, deontologia, virtude.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Ethical Dilemmas",
+      "subtitle_en": "Analyzing trolley problems, competing duties, moral trade-offs.",
+      "subtitle_pt": "Dilemas éticos: deveres, stakeholders, consequências, princípios. Teste por utilitarismo, deontologia, virtude."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Analyzing trolley problems, competing duties, moral trade-offs. Focus: ethical dilemmas. Saving five at the cost of one challenges every framework.",
+      "text_pt": "Dilemas éticos: deveres, stakeholders, consequências, princípios. Teste por utilitarismo, deontologia, virtude. Foco: ethical dilemmas. Salvar cinco ao custo de um desafia todo framework."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Ethical Dilemmas",
+      "body_en": "Frame: identify duties, stakeholders, consequences, principles. Test against utilitarian, deontological, virtue lenses. Be honest about residual discomfort.",
+      "body_pt": "Dilemas éticos: deveres, stakeholders, consequências, princípios. Teste por utilitarismo, deontologia, virtude.",
+      "examples": [
+        {
+          "en": "Saving five at the cost of one challenges every framework.",
+          "pt": "Salvar cinco ao custo de um desafia todo framework."
+        },
+        {
+          "en": "Competing duties reveal what we actually value.",
+          "pt": "Deveres conflitantes revelam o que valorizamos."
+        },
+        {
+          "en": "Honest ethics embraces the residual discomfort.",
+          "pt": "A ética honesta abraça o desconforto residual."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Ethical Dilemmas",
+      "items": [
+        {
+          "term": "dilemma",
+          "pt": "dilema"
+        },
+        {
+          "term": "trade-off",
+          "pt": "trade-off"
+        },
+        {
+          "term": "principle",
+          "pt": "princípio"
+        },
+        {
+          "term": "residual",
+          "pt": "residual"
+        },
+        {
+          "term": "moral",
+          "pt": "moral"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-ethical-dilemmas-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Saving five at the cost of one ___ every framework.\"",
+        "correct": "challenges",
+        "explanation": "Full sentence: \"Saving five at the cost of one challenges every framework.\"",
+        "hint_pt_br": "Salvar cinco ao custo de um desafia todo framework."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-ethical-dilemmas-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Competing duties reveal what we actually value.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Competing duties reveal what we actually value.\"",
+        "hint_pt_br": "Deveres conflitantes revelam o que valorizamos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-ethical-dilemmas-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "dilemma",
+            "dilema"
+          ],
+          [
+            "trade-off",
+            "trade-off"
+          ],
+          [
+            "principle",
+            "princípio"
+          ],
+          [
+            "residual",
+            "residual"
+          ],
+          [
+            "moral",
+            "moral"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Ethical Dilemmas — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre ethical dilemmas. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Pose a classic trolley problem."
+        },
+        {
+          "speaker": "user",
+          "target": "Divert a trolley to save five, killing one?",
+          "pt_hint": "Desviar matando um?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Utilitarian answer?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes — the greater number matters.",
+          "pt_hint": "Sim, número maior."
+        },
+        {
+          "speaker": "ai",
+          "text": "Kantian answer?"
+        },
+        {
+          "speaker": "user",
+          "target": "No — you use the one as means.",
+          "pt_hint": "Usa como meio."
+        },
+        {
+          "speaker": "ai",
+          "text": "What does virtue ethics ask?"
+        },
+        {
+          "speaker": "user",
+          "target": "What a wise and compassionate person would do.",
+          "pt_hint": "Sábio e compassivo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is there a right answer?"
+        },
+        {
+          "speaker": "user",
+          "target": "Rarely — honest ethics accepts the discomfort.",
+          "pt_hint": "Aceita o desconforto."
+        },
+        {
+          "speaker": "ai",
+          "text": "Dilemmas clarify values better than theories."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "ethical-dilemmas-listening-story",
+      "title": "The ethics seminar",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the dilemma through three ethical lenses. Use at least three terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the ethics seminar, Kumar offered students a moral dilemma that would stay with them for weeks."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Saving five at the cost of one — this trade-off challenges every framework we've studied this semester."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "A utilitarian would say yes without hesitation — the greater number always matters in that calculus."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "But Kant would say no — using the one as a means alone violates the categorical imperative."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Virtue ethics reframes: what kind of person do you become by making either of these two decisions?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Honest ethics, Kumar taught, accepts residual discomfort — the clear answer is often the suspicious one."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Ethical Dilemmas\". Analyzing trolley problems, competing duties, moral trade-offs. Saving five at the cost of one challenges every framework. Competing duties reveal what we actually value. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Ethical Dilemmas\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Ethical Dilemmas",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Ethical Dilemmas\".",
+        "hint_pt_br": "Ela fala o título: \"Ethical Dilemmas\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "political-vocabulary",
+  "title": "Political Vocabulary",
+  "description": "Civic and political terms: polarization, populism, constitutional norms, checks and balances.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Vocabulário político: polarização, populismo, autoritarismo, erosão democrática, normas, freios e contrapesos.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Political Vocabulary",
+      "subtitle_en": "Civic and political terms: polarization, populism, constitutional norms, checks and balances.",
+      "subtitle_pt": "Vocabulário político: polarização, populismo, autoritarismo, erosão democrática, normas, freios e contrapesos."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Civic and political terms: polarization, populism, constitutional norms, checks and balances. Focus: political vocabulary. Polarization corrodes the civic norms democracies depend on.",
+      "text_pt": "Vocabulário político: polarização, populismo, autoritarismo, erosão democrática, normas, freios e contrapesos. Foco: political vocabulary. A polarização corrói as normas cívicas."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Political Vocabulary",
+      "body_en": "Terms: POLARIZATION, POPULISM, AUTHORITARIANISM, DEMOCRATIC BACKSLIDING, NORMS, CHECKS AND BALANCES, CIVIC PARTICIPATION, GERRYMANDERING.",
+      "body_pt": "Vocabulário político: polarização, populismo, autoritarismo, erosão democrática, normas, freios e contrapesos.",
+      "examples": [
+        {
+          "en": "Polarization corrodes the civic norms democracies depend on.",
+          "pt": "A polarização corrói as normas cívicas."
+        },
+        {
+          "en": "Checks and balances are not self-executing; citizens enforce them.",
+          "pt": "Freios e contrapesos não se autoaplicam — cidadãos os aplicam."
+        },
+        {
+          "en": "Democratic backsliding often begins with normalized rule-breaking.",
+          "pt": "A erosão democrática começa com a normalização de quebra de regras."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Political Vocabulary",
+      "items": [
+        {
+          "term": "polarization",
+          "pt": "polarização"
+        },
+        {
+          "term": "populism",
+          "pt": "populismo"
+        },
+        {
+          "term": "norms",
+          "pt": "normas"
+        },
+        {
+          "term": "backsliding",
+          "pt": "erosão"
+        },
+        {
+          "term": "civic",
+          "pt": "cívico"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-political-vocabulary-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"___ corrodes the civic norms democracies depend on.\"",
+        "correct": "Polarization",
+        "explanation": "Full sentence: \"Polarization corrodes the civic norms democracies depend on.\"",
+        "hint_pt_br": "A polarização corrói as normas cívicas."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-political-vocabulary-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Checks and balances are not self-executing; citizens enforce them.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Checks and balances are not self-executing; citizens enforce them.\"",
+        "hint_pt_br": "Freios e contrapesos não se autoaplicam — cidadãos os aplicam."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-political-vocabulary-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "polarization",
+            "polarização"
+          ],
+          [
+            "populism",
+            "populismo"
+          ],
+          [
+            "norms",
+            "normas"
+          ],
+          [
+            "backsliding",
+            "erosão"
+          ],
+          [
+            "civic",
+            "cívico"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Political Vocabulary — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre political vocabulary. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Define polarization in one sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "When opposing sides stop sharing basic facts.",
+          "pt_hint": "Sem fatos comuns."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's populism?"
+        },
+        {
+          "speaker": "user",
+          "target": "Appealing to 'the people' against 'elites'.",
+          "pt_hint": "Povo contra elites."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why do norms matter more than laws sometimes?"
+        },
+        {
+          "speaker": "user",
+          "target": "Laws depend on norms being honored first.",
+          "pt_hint": "Leis dependem de normas."
+        },
+        {
+          "speaker": "ai",
+          "text": "How does democratic backsliding start?"
+        },
+        {
+          "speaker": "user",
+          "target": "Small norm violations get normalized.",
+          "pt_hint": "Pequenas violações."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the citizen's role?"
+        },
+        {
+          "speaker": "user",
+          "target": "Enforcing norms through civic participation.",
+          "pt_hint": "Exigir, participar."
+        },
+        {
+          "speaker": "ai",
+          "text": "Political English is the grammar of civic literacy."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "political-vocabulary-listening-story",
+      "title": "The civics lecture",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize three political concepts. Use at least three political terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the public lecture series, Kumar presented the vocabulary that citizens most urgently need to understand today."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Polarization corrodes the civic norms that democracies silently depend on to function across every election cycle."
+        },
+        {
+          "speaker": "Audience",
+          "voice": "female1",
+          "en": "And populism uses the language of 'the people' to delegitimize the very institutions that protect the people."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Democratic backsliding frequently begins with small, normalized rule-breaking — not with sudden coups or revolutions."
+        },
+        {
+          "speaker": "Audience",
+          "voice": "male2",
+          "en": "Checks and balances are never self-executing — they rely on citizens demanding that norms be honored actively."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Political literacy, Kumar argued, is the quiet prerequisite of any functioning democracy — and the first casualty of silence."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Political Vocabulary\". Civic and political terms: polarization, populism, constitutional norms, checks and balances. Polarization corrodes the civic norms democracies depend on. Checks and balances are not self-executing; citizens enforce them. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Political Vocabulary\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Political Vocabulary",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Political Vocabulary\".",
+        "hint_pt_br": "Ela fala o título: \"Political Vocabulary\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

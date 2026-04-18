@@ -1,0 +1,283 @@
+{
+  "slug": "persuasive-writing-advanced",
+  "title": "Persuasive Writing — Advanced",
+  "description": "Ethos, pathos, logos plus modern data-driven persuasion.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Tríade de Aristóteles: ethos (credibilidade), pathos (emoção), logos (lógica). Moderno: dados, história, consequências.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Persuasive Writing — Advanced",
+      "subtitle_en": "Ethos, pathos, logos plus modern data-driven persuasion.",
+      "subtitle_pt": "Tríade de Aristóteles: ethos (credibilidade), pathos (emoção), logos (lógica). Moderno: dados, história, consequências."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Ethos, pathos, logos plus modern data-driven persuasion. Focus: persuasive writing — advanced. My ten years in the industry give weight to this argument.",
+      "text_pt": "Tríade de Aristóteles: ethos (credibilidade), pathos (emoção), logos (lógica). Moderno: dados, história, consequências. Foco: persuasive writing — advanced. Meus dez anos no setor dão peso a este argumento."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Persuasive Writing — Advanced",
+      "body_en": "Aristotle's triad: ETHOS (credibility), PATHOS (emotion), LOGOS (logic). Modern writing adds DATA (concrete numbers), STORY (relatable humans), STAKES (consequences).",
+      "body_pt": "Tríade de Aristóteles: ethos (credibilidade), pathos (emoção), logos (lógica). Moderno: dados, história, consequências.",
+      "examples": [
+        {
+          "en": "My ten years in the industry give weight to this argument.",
+          "pt": "Meus dez anos no setor dão peso a este argumento."
+        },
+        {
+          "en": "Every child in that town lost a parent to preventable disease.",
+          "pt": "Cada criança daquela cidade perdeu um pai por doença evitável."
+        },
+        {
+          "en": "The evidence is overwhelming and the consequences clear.",
+          "pt": "A evidência é esmagadora e as consequências claras."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Persuasive Writing — Advanced",
+      "items": [
+        {
+          "term": "ethos",
+          "pt": "ethos"
+        },
+        {
+          "term": "pathos",
+          "pt": "pathos"
+        },
+        {
+          "term": "logos",
+          "pt": "logos"
+        },
+        {
+          "term": "stakes",
+          "pt": "em jogo"
+        },
+        {
+          "term": "credibility",
+          "pt": "credibilidade"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-persuasive-writing-advanced-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"My ten years in the ___ give weight to this argument.\"",
+        "correct": "industry",
+        "explanation": "Full sentence: \"My ten years in the industry give weight to this argument.\"",
+        "hint_pt_br": "Meus dez anos no setor dão peso a este argumento."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-persuasive-writing-advanced-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Every child in that town lost a parent to preventable disease.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Every child in that town lost a parent to preventable disease.\"",
+        "hint_pt_br": "Cada criança daquela cidade perdeu um pai por doença evitável."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-persuasive-writing-advanced-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "ethos",
+            "ethos"
+          ],
+          [
+            "pathos",
+            "pathos"
+          ],
+          [
+            "logos",
+            "logos"
+          ],
+          [
+            "stakes",
+            "em jogo"
+          ],
+          [
+            "credibility",
+            "credibilidade"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Persuasive Writing — Advanced — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre persuasive writing — advanced. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Open with ethos about this policy."
+        },
+        {
+          "speaker": "user",
+          "target": "As a ten-year practitioner, I've seen this fail.",
+          "pt_hint": "10 anos de experiência."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now bring in pathos."
+        },
+        {
+          "speaker": "user",
+          "target": "Every family I met lost a year of income.",
+          "pt_hint": "Cada família perdeu."
+        },
+        {
+          "speaker": "ai",
+          "text": "Use logos next."
+        },
+        {
+          "speaker": "user",
+          "target": "Three studies show a 34% reduction in outcomes.",
+          "pt_hint": "3 estudos, 34%."
+        },
+        {
+          "speaker": "ai",
+          "text": "Add a concrete story."
+        },
+        {
+          "speaker": "user",
+          "target": "Meet Maria — she lost her son to this gap.",
+          "pt_hint": "Maria perdeu um filho."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with the stakes."
+        },
+        {
+          "speaker": "user",
+          "target": "Without action, ten thousand more will follow.",
+          "pt_hint": "Sem ação, mais 10 mil."
+        },
+        {
+          "speaker": "ai",
+          "text": "Persuasion blends head, heart, and number."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "persuasive-writing-advanced-listening-story",
+      "title": "The op-ed draft",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Identify ethos, pathos, logos in the op-ed. Use all three terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Joca reviewed an op-ed draft with his mentor, line by line, looking for rhetorical balance."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "As a ten-year practitioner, I've watched this exact policy fail in two different administrations — that's ethos."
+        },
+        {
+          "speaker": "Mentor",
+          "voice": "female1",
+          "en": "Pathos follows next. You describe one family by name, and the reader finally sees the invisible statistic."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "And logos delivers the data — three peer-reviewed studies showing a thirty-four percent failure rate consistently."
+        },
+        {
+          "speaker": "Mentor",
+          "voice": "female1",
+          "en": "Your closing stakes are sharp — without action, ten thousand more families face this exact situation."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Persuasion, Joca's mentor said, is credibility for the mind, story for the heart, and data for the record."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Persuasive Writing — Advanced\". Ethos, pathos, logos plus modern data-driven persuasion. My ten years in the industry give weight to this argument. Every child in that town lost a parent to preventable disease. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Persuasive Writing — Advanced\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Persuasive Writing — Advanced",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Persuasive Writing — Advanced\".",
+        "hint_pt_br": "Ela fala o título: \"Persuasive Writing — Advanced\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

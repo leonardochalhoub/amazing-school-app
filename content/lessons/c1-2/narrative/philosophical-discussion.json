@@ -1,0 +1,283 @@
+{
+  "slug": "philosophical-discussion",
+  "title": "Philosophical Discussion",
+  "description": "Vocabulary and frameworks for discussing ethics, meaning, identity, and free will.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Frameworks filosóficos: utilitarismo (maior bem), deontologia (dever), ética de virtude (caráter).",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Philosophical Discussion",
+      "subtitle_en": "Vocabulary and frameworks for discussing ethics, meaning, identity, and free will.",
+      "subtitle_pt": "Frameworks filosóficos: utilitarismo (maior bem), deontologia (dever), ética de virtude (caráter)."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Vocabulary and frameworks for discussing ethics, meaning, identity, and free will. Focus: philosophical discussion. From a utilitarian perspective, the action maximizes welfare.",
+      "text_pt": "Frameworks filosóficos: utilitarismo (maior bem), deontologia (dever), ética de virtude (caráter). Foco: philosophical discussion. Do ponto de vista utilitarista, a ação maximiza o bem-estar."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Philosophical Discussion",
+      "body_en": "Frameworks: UTILITARIAN (greatest good). DEONTOLOGICAL (duty-based). VIRTUE ETHICS (character). Hedged language: 'It might be argued', 'From a utilitarian perspective', 'Kant would respond that...'",
+      "body_pt": "Frameworks filosóficos: utilitarismo (maior bem), deontologia (dever), ética de virtude (caráter).",
+      "examples": [
+        {
+          "en": "From a utilitarian perspective, the action maximizes welfare.",
+          "pt": "Do ponto de vista utilitarista, a ação maximiza o bem-estar."
+        },
+        {
+          "en": "A Kantian would argue that lying violates moral duty.",
+          "pt": "Um kantiano argumentaria que mentir viola o dever moral."
+        },
+        {
+          "en": "Virtue ethics asks not what to do, but who to be.",
+          "pt": "A ética das virtudes pergunta não o que fazer, mas quem ser."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Philosophical Discussion",
+      "items": [
+        {
+          "term": "utilitarian",
+          "pt": "utilitarista"
+        },
+        {
+          "term": "deontological",
+          "pt": "deontológico"
+        },
+        {
+          "term": "virtue",
+          "pt": "virtude"
+        },
+        {
+          "term": "dilemma",
+          "pt": "dilema"
+        },
+        {
+          "term": "autonomy",
+          "pt": "autonomia"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-philosophical-discussion-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"From a ___ perspective, the action maximizes welfare.\"",
+        "correct": "utilitarian",
+        "explanation": "Full sentence: \"From a utilitarian perspective, the action maximizes welfare.\"",
+        "hint_pt_br": "Do ponto de vista utilitarista, a ação maximiza o bem-estar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-philosophical-discussion-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "A Kantian would argue that lying violates moral duty.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"A Kantian would argue that lying violates moral duty.\"",
+        "hint_pt_br": "Um kantiano argumentaria que mentir viola o dever moral."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-philosophical-discussion-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "utilitarian",
+            "utilitarista"
+          ],
+          [
+            "deontological",
+            "deontológico"
+          ],
+          [
+            "virtue",
+            "virtude"
+          ],
+          [
+            "dilemma",
+            "dilema"
+          ],
+          [
+            "autonomy",
+            "autonomia"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Philosophical Discussion — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre philosophical discussion. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Present a classic utilitarian argument."
+        },
+        {
+          "speaker": "user",
+          "target": "We maximize the greatest good for the greatest number.",
+          "pt_hint": "Maior bem."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now the Kantian counterpoint."
+        },
+        {
+          "speaker": "user",
+          "target": "A Kantian rejects using people as means.",
+          "pt_hint": "Usar como meio."
+        },
+        {
+          "speaker": "ai",
+          "text": "How does virtue ethics reframe the question?"
+        },
+        {
+          "speaker": "user",
+          "target": "It asks what a wise person would do.",
+          "pt_hint": "Pessoa sábia faria."
+        },
+        {
+          "speaker": "ai",
+          "text": "Present a moral dilemma."
+        },
+        {
+          "speaker": "user",
+          "target": "Lying to save a friend tests every framework.",
+          "pt_hint": "Mentir pra salvar."
+        },
+        {
+          "speaker": "ai",
+          "text": "Which view do you find most convincing?"
+        },
+        {
+          "speaker": "user",
+          "target": "Virtue ethics, because character precedes action.",
+          "pt_hint": "Caráter antes da ação."
+        },
+        {
+          "speaker": "ai",
+          "text": "Philosophy in English is the grammar of thinking slowly."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "philosophical-discussion-listening-story",
+      "title": "The ethics seminar",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the three frameworks discussed. Use at least three philosophical terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the small seminar room, Kumar opened the week's question: when is it ethical to lie?"
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "From a utilitarian perspective, a lie that maximizes welfare could be ethically justified without contradiction."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "A Kantian would respond that duty-based ethics forbid lying regardless of the consequences we expect."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "Virtue ethics reframes the question entirely — it asks who you become by telling that particular lie."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "No framework answers every dilemma, but each illuminates a different aspect of our moral autonomy."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Philosophy, Kumar repeated, is the rare subject where not answering is sometimes the most honest answer available."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Philosophical Discussion\". Vocabulary and frameworks for discussing ethics, meaning, identity, and free will. From a utilitarian perspective, the action maximizes welfare. A Kantian would argue that lying violates moral duty. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Philosophical Discussion\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Philosophical Discussion",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Philosophical Discussion\".",
+        "hint_pt_br": "Ela fala o título: \"Philosophical Discussion\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

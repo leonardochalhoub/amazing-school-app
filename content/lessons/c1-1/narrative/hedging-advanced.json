@@ -1,0 +1,283 @@
+{
+  "slug": "hedging-advanced",
+  "title": "Hedging — Expressing Uncertainty",
+  "description": "Softening claims with modal verbs, approximators, and epistemic phrases.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Hedging: suavizar afirmações. MAY/MIGHT, TEND TO, APPEAR TO, ROUGHLY, ARGUABLY.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Hedging — Expressing Uncertainty",
+      "subtitle_en": "Softening claims with modal verbs, approximators, and epistemic phrases.",
+      "subtitle_pt": "Hedging: suavizar afirmações. MAY/MIGHT, TEND TO, APPEAR TO, ROUGHLY, ARGUABLY."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Softening claims with modal verbs, approximators, and epistemic phrases. Focus: hedging — expressing uncertainty. The results appear to support the hypothesis.",
+      "text_pt": "Hedging: suavizar afirmações. MAY/MIGHT, TEND TO, APPEAR TO, ROUGHLY, ARGUABLY. Foco: hedging — expressing uncertainty. Os resultados parecem sustentar a hipótese."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Hedging — Expressing Uncertainty",
+      "body_en": "Hedging tools: MAY / MIGHT / TEND TO / APPEAR TO / SEEM TO / IT COULD BE ARGUED / ROUGHLY / SOMEWHAT / ARGUABLY. Essential in academic and diplomatic writing.",
+      "body_pt": "Hedging: suavizar afirmações. MAY/MIGHT, TEND TO, APPEAR TO, ROUGHLY, ARGUABLY.",
+      "examples": [
+        {
+          "en": "The results appear to support the hypothesis.",
+          "pt": "Os resultados parecem sustentar a hipótese."
+        },
+        {
+          "en": "It could be argued that the policy is premature.",
+          "pt": "Pode-se argumentar que a política é prematura."
+        },
+        {
+          "en": "Outcomes tend to vary across demographic groups.",
+          "pt": "Os resultados tendem a variar entre grupos demográficos."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Hedging — Expressing Uncertainty",
+      "items": [
+        {
+          "term": "hedge",
+          "pt": "suavizar"
+        },
+        {
+          "term": "approximate",
+          "pt": "aproximar"
+        },
+        {
+          "term": "tentative",
+          "pt": "tentativo"
+        },
+        {
+          "term": "qualify",
+          "pt": "qualificar"
+        },
+        {
+          "term": "epistemic",
+          "pt": "epistêmico"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-hedging-advanced-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The results appear to support the ___.\"",
+        "correct": "hypothesis",
+        "explanation": "Full sentence: \"The results appear to support the hypothesis.\"",
+        "hint_pt_br": "Os resultados parecem sustentar a hipótese."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-hedging-advanced-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "It could be argued that the policy is premature.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"It could be argued that the policy is premature.\"",
+        "hint_pt_br": "Pode-se argumentar que a política é prematura."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-hedging-advanced-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "hedge",
+            "suavizar"
+          ],
+          [
+            "approximate",
+            "aproximar"
+          ],
+          [
+            "tentative",
+            "tentativo"
+          ],
+          [
+            "qualify",
+            "qualificar"
+          ],
+          [
+            "epistemic",
+            "epistêmico"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Hedging — Expressing Uncertainty — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre hedging — expressing uncertainty. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Soften: 'The data proves our hypothesis.'"
+        },
+        {
+          "speaker": "user",
+          "target": "The data appears to support our hypothesis.",
+          "pt_hint": "Parece sustentar."
+        },
+        {
+          "speaker": "ai",
+          "text": "'This policy will fail.'"
+        },
+        {
+          "speaker": "user",
+          "target": "It could be argued that this policy may fail.",
+          "pt_hint": "Pode-se argumentar."
+        },
+        {
+          "speaker": "ai",
+          "text": "'Everyone hates Mondays.'"
+        },
+        {
+          "speaker": "user",
+          "target": "People tend to prefer other days.",
+          "pt_hint": "Tendem a preferir."
+        },
+        {
+          "speaker": "ai",
+          "text": "'Climate change causes every storm.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Climate change arguably intensifies storms.",
+          "pt_hint": "Intensifica, discutivelmente."
+        },
+        {
+          "speaker": "ai",
+          "text": "Write a hedged thesis statement."
+        },
+        {
+          "speaker": "user",
+          "target": "The evidence suggests a modest correlation.",
+          "pt_hint": "Sugere correlação modesta."
+        },
+        {
+          "speaker": "ai",
+          "text": "Hedging isn't weakness — it's intellectual honesty."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "hedging-advanced-listening-story",
+      "title": "The cautious researcher",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the research claims. Use at least three hedging phrases.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the academic symposium, a postdoctoral researcher presented findings with careful epistemic restraint."
+        },
+        {
+          "speaker": "Researcher",
+          "voice": "female1",
+          "en": "The data appears to support a modest correlation, though causation remains unestablished at this stage."
+        },
+        {
+          "speaker": "Reviewer",
+          "voice": "male1",
+          "en": "It could be argued that the sample size limits the strength of your conclusions considerably."
+        },
+        {
+          "speaker": "Researcher",
+          "voice": "female1",
+          "en": "Outcomes tend to vary across regions, which arguably calls for a longer follow-up period."
+        },
+        {
+          "speaker": "Reviewer",
+          "voice": "female2",
+          "en": "Hedging, at this level, is not timidity — it is the mark of a researcher respecting her own data."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Uncertainty, written well, is more credible than any overclaim could ever hope to be."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Hedging — Expressing Uncertainty\". Softening claims with modal verbs, approximators, and epistemic phrases. The results appear to support the hypothesis. It could be argued that the policy is premature. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Hedging — Expressing Uncertainty\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Hedging — Expressing Uncertainty",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Hedging — Expressing Uncertainty\".",
+        "hint_pt_br": "Ela fala o título: \"Hedging — Expressing Uncertainty\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

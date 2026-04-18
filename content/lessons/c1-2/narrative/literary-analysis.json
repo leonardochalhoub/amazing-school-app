@@ -1,0 +1,283 @@
+{
+  "slug": "literary-analysis",
+  "title": "Literary Analysis",
+  "description": "Theme, voice, point of view, symbolism, narrative structure.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Análise literária: tema, voz, ponto de vista, simbolismo, estrutura narrativa.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Literary Analysis",
+      "subtitle_en": "Theme, voice, point of view, symbolism, narrative structure.",
+      "subtitle_pt": "Análise literária: tema, voz, ponto de vista, simbolismo, estrutura narrativa."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Theme, voice, point of view, symbolism, narrative structure. Focus: literary analysis. The novel's central theme is the cost of silence.",
+      "text_pt": "Análise literária: tema, voz, ponto de vista, simbolismo, estrutura narrativa. Foco: literary analysis. O tema central do romance é o custo do silêncio."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Literary Analysis",
+      "body_en": "Central moves: identify THEME, analyze VOICE (first/third), trace POV shifts, decode SYMBOLISM, map NARRATIVE STRUCTURE (linear/fragmented/cyclical).",
+      "body_pt": "Análise literária: tema, voz, ponto de vista, simbolismo, estrutura narrativa.",
+      "examples": [
+        {
+          "en": "The novel's central theme is the cost of silence.",
+          "pt": "O tema central do romance é o custo do silêncio."
+        },
+        {
+          "en": "First-person voice creates an intimacy the plot later betrays.",
+          "pt": "A primeira pessoa cria uma intimidade que a trama depois trai."
+        },
+        {
+          "en": "The recurring rain functions as a symbol of unspoken grief.",
+          "pt": "A chuva recorrente funciona como símbolo de luto não dito."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Literary Analysis",
+      "items": [
+        {
+          "term": "theme",
+          "pt": "tema"
+        },
+        {
+          "term": "voice",
+          "pt": "voz"
+        },
+        {
+          "term": "symbolism",
+          "pt": "simbolismo"
+        },
+        {
+          "term": "protagonist",
+          "pt": "protagonista"
+        },
+        {
+          "term": "foreshadow",
+          "pt": "prenunciar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-literary-analysis-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The ___ central theme is the cost of silence.\"",
+        "correct": "novel's",
+        "explanation": "Full sentence: \"The novel's central theme is the cost of silence.\"",
+        "hint_pt_br": "O tema central do romance é o custo do silêncio."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-literary-analysis-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "First-person voice creates an intimacy the plot later betrays.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"First-person voice creates an intimacy the plot later betrays.\"",
+        "hint_pt_br": "A primeira pessoa cria uma intimidade que a trama depois trai."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-literary-analysis-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "theme",
+            "tema"
+          ],
+          [
+            "voice",
+            "voz"
+          ],
+          [
+            "symbolism",
+            "simbolismo"
+          ],
+          [
+            "protagonist",
+            "protagonista"
+          ],
+          [
+            "foreshadow",
+            "prenunciar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Literary Analysis — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre literary analysis. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Open your analysis with the central theme."
+        },
+        {
+          "speaker": "user",
+          "target": "The novel explores the cost of inherited silence.",
+          "pt_hint": "Silêncio herdado."
+        },
+        {
+          "speaker": "ai",
+          "text": "What voice does the author choose?"
+        },
+        {
+          "speaker": "user",
+          "target": "First-person, unreliable, deeply introspective.",
+          "pt_hint": "Primeira pessoa."
+        },
+        {
+          "speaker": "ai",
+          "text": "Give an example of symbolism."
+        },
+        {
+          "speaker": "user",
+          "target": "Rain recurs whenever truth approaches.",
+          "pt_hint": "Chuva = verdade."
+        },
+        {
+          "speaker": "ai",
+          "text": "What about structure?"
+        },
+        {
+          "speaker": "user",
+          "target": "The narrative moves in fragments, not chronologically.",
+          "pt_hint": "Fragmentada."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with a thesis about meaning."
+        },
+        {
+          "speaker": "user",
+          "target": "Form and theme mirror each other perfectly.",
+          "pt_hint": "Forma espelha tema."
+        },
+        {
+          "speaker": "ai",
+          "text": "Literary analysis rewards patient, re-reading eyes."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "literary-analysis-listening-story",
+      "title": "The literature circle",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Analyze the novel. Use at least three literary terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In Dona Lúcia's living room, the monthly literature circle gathered around an ambitious new novel."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "The novel's central theme is the cost of silence inherited across three generations of one family."
+        },
+        {
+          "speaker": "Member",
+          "voice": "male1",
+          "en": "The first-person voice is intimate and unreliable — it creates trust the plot then deliberately betrays."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "The recurring rain serves as a symbol for grief the characters never speak aloud to one another."
+        },
+        {
+          "speaker": "Member",
+          "voice": "female2",
+          "en": "Its fragmented structure mirrors the memory itself — circular, non-linear, almost anti-narrative in design."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Literary analysis, Lúcia taught patiently, is not about finding answers — it's about asking better questions of the text."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Literary Analysis\". Theme, voice, point of view, symbolism, narrative structure. The novel's central theme is the cost of silence. First-person voice creates an intimacy the plot later betrays. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Literary Analysis\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Literary Analysis",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Literary Analysis\".",
+        "hint_pt_br": "Ela fala o título: \"Literary Analysis\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "critical-thinking-essays",
+  "title": "Critical Thinking in Essays",
+  "description": "Spotting logical fallacies, steelmanning, intellectual humility, evaluating evidence.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Pensamento crítico: steelman (versão forte do oponente), falácias, avaliar evidência.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Critical Thinking in Essays",
+      "subtitle_en": "Spotting logical fallacies, steelmanning, intellectual humility, evaluating evidence.",
+      "subtitle_pt": "Pensamento crítico: steelman (versão forte do oponente), falácias, avaliar evidência."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Spotting logical fallacies, steelmanning, intellectual humility, evaluating evidence. Focus: critical thinking in essays. Steelman your opponent before refuting them.",
+      "text_pt": "Pensamento crítico: steelman (versão forte do oponente), falácias, avaliar evidência. Foco: critical thinking in essays. Steelman seu oponente antes de refutar."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Critical Thinking in Essays",
+      "body_en": "Key moves: STEELMAN (present opponent's strongest case). Spot fallacies (ad hominem, straw man, false dichotomy). Evaluate evidence by source, method, consistency.",
+      "body_pt": "Pensamento crítico: steelman (versão forte do oponente), falácias, avaliar evidência.",
+      "examples": [
+        {
+          "en": "Steelman your opponent before refuting them.",
+          "pt": "Steelman seu oponente antes de refutar."
+        },
+        {
+          "en": "Attacking the person, not the argument, is ad hominem.",
+          "pt": "Atacar a pessoa, não o argumento, é ad hominem."
+        },
+        {
+          "en": "Strong evidence survives skeptical replication.",
+          "pt": "A evidência forte sobrevive à replicação cética."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Critical Thinking in Essays",
+      "items": [
+        {
+          "term": "fallacy",
+          "pt": "falácia"
+        },
+        {
+          "term": "steelman",
+          "pt": "steelman"
+        },
+        {
+          "term": "refute",
+          "pt": "refutar"
+        },
+        {
+          "term": "premise",
+          "pt": "premissa"
+        },
+        {
+          "term": "rigor",
+          "pt": "rigor"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-critical-thinking-essays-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"___ your opponent before refuting them.\"",
+        "correct": "Steelman",
+        "explanation": "Full sentence: \"Steelman your opponent before refuting them.\"",
+        "hint_pt_br": "Steelman seu oponente antes de refutar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-critical-thinking-essays-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Attacking the person, not the argument, is ad hominem.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Attacking the person, not the argument, is ad hominem.\"",
+        "hint_pt_br": "Atacar a pessoa, não o argumento, é ad hominem."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-critical-thinking-essays-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "fallacy",
+            "falácia"
+          ],
+          [
+            "steelman",
+            "steelman"
+          ],
+          [
+            "refute",
+            "refutar"
+          ],
+          [
+            "premise",
+            "premissa"
+          ],
+          [
+            "rigor",
+            "rigor"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Critical Thinking in Essays — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre critical thinking in essays. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Give an ad hominem example, then steelman it."
+        },
+        {
+          "speaker": "user",
+          "target": "'He's biased so ignore him' — ad hominem.",
+          "pt_hint": "Viesado, ignore."
+        },
+        {
+          "speaker": "ai",
+          "text": "Steelman the opposing view."
+        },
+        {
+          "speaker": "user",
+          "target": "His data shows a real, uncomfortable pattern.",
+          "pt_hint": "Dados reais."
+        },
+        {
+          "speaker": "ai",
+          "text": "Spot a straw man."
+        },
+        {
+          "speaker": "user",
+          "target": "Distorting the view to make it easier.",
+          "pt_hint": "Distorcer pra refutar."
+        },
+        {
+          "speaker": "ai",
+          "text": "What makes evidence strong?"
+        },
+        {
+          "speaker": "user",
+          "target": "Method, source, and independent replication.",
+          "pt_hint": "Método, fonte, replicação."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with intellectual humility."
+        },
+        {
+          "speaker": "user",
+          "target": "I may be wrong — that's where science starts.",
+          "pt_hint": "Posso estar errado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Critical thinking is character, not cleverness."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "critical-thinking-essays-listening-story",
+      "title": "The debate class",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize three critical thinking moves. Use at least two fallacy names.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the debate club, Kumar walked students through the difference between winning an argument and finding the truth."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Steelman your opponent first — present their strongest possible case before you begin to refute it."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "So attacking the person instead of the argument would be ad hominem, and I should avoid it entirely?"
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Yes. And a straw man distorts your opponent's view into something easier, but less honest, to defeat."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "Strong evidence, then, is evidence that survives replication by people who hope it's wrong?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Critical thinking, Kumar insisted, is the mark of a grown mind — it disciplines curiosity with humility."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Critical Thinking in Essays\". Spotting logical fallacies, steelmanning, intellectual humility, evaluating evidence. Steelman your opponent before refuting them. Attacking the person, not the argument, is ad hominem. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Critical Thinking in Essays\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Critical Thinking in Essays",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Critical Thinking in Essays\".",
+        "hint_pt_br": "Ela fala o título: \"Critical Thinking in Essays\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

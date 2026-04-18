@@ -1,0 +1,283 @@
+{
+  "slug": "psychology-vocabulary",
+  "title": "Psychology Vocabulary",
+  "description": "Cognitive biases, defense mechanisms, attachment styles, self-efficacy.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Psicologia: viés cognitivo, viés de confirmação, apego (seguro/ansioso/evitativo), autoeficácia.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Psychology Vocabulary",
+      "subtitle_en": "Cognitive biases, defense mechanisms, attachment styles, self-efficacy.",
+      "subtitle_pt": "Psicologia: viés cognitivo, viés de confirmação, apego (seguro/ansioso/evitativo), autoeficácia."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Cognitive biases, defense mechanisms, attachment styles, self-efficacy. Focus: psychology vocabulary. Confirmation bias makes us see only what we expect.",
+      "text_pt": "Psicologia: viés cognitivo, viés de confirmação, apego (seguro/ansioso/evitativo), autoeficácia. Foco: psychology vocabulary. O viés de confirmação nos faz ver só o que esperamos."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Psychology Vocabulary",
+      "body_en": "Core terms: COGNITIVE BIAS, CONFIRMATION BIAS, ATTACHMENT (secure/anxious/avoidant), SELF-EFFICACY, DEFENSE MECHANISM, EMOTIONAL REGULATION.",
+      "body_pt": "Psicologia: viés cognitivo, viés de confirmação, apego (seguro/ansioso/evitativo), autoeficácia.",
+      "examples": [
+        {
+          "en": "Confirmation bias makes us see only what we expect.",
+          "pt": "O viés de confirmação nos faz ver só o que esperamos."
+        },
+        {
+          "en": "Self-efficacy predicts persistence more than talent does.",
+          "pt": "A autoeficácia prediz persistência mais do que o talento."
+        },
+        {
+          "en": "Emotional regulation is learned, not inherited.",
+          "pt": "A regulação emocional é aprendida, não herdada."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Psychology Vocabulary",
+      "items": [
+        {
+          "term": "cognitive",
+          "pt": "cognitivo"
+        },
+        {
+          "term": "attachment",
+          "pt": "apego"
+        },
+        {
+          "term": "efficacy",
+          "pt": "eficácia"
+        },
+        {
+          "term": "regulation",
+          "pt": "regulação"
+        },
+        {
+          "term": "resilience",
+          "pt": "resiliência"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-psychology-vocabulary-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"___ bias makes us see only what we expect.\"",
+        "correct": "Confirmation",
+        "explanation": "Full sentence: \"Confirmation bias makes us see only what we expect.\"",
+        "hint_pt_br": "O viés de confirmação nos faz ver só o que esperamos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-psychology-vocabulary-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Self-efficacy predicts persistence more than talent does.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Self-efficacy predicts persistence more than talent does.\"",
+        "hint_pt_br": "A autoeficácia prediz persistência mais do que o talento."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-psychology-vocabulary-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "cognitive",
+            "cognitivo"
+          ],
+          [
+            "attachment",
+            "apego"
+          ],
+          [
+            "efficacy",
+            "eficácia"
+          ],
+          [
+            "regulation",
+            "regulação"
+          ],
+          [
+            "resilience",
+            "resiliência"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Psychology Vocabulary — dialog",
+      "character": "Maya",
+      "pt_summary": "Diálogo sobre psychology vocabulary. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Maya, define confirmation bias."
+        },
+        {
+          "speaker": "user",
+          "target": "Noticing only what confirms your belief.",
+          "pt_hint": "Só o que confirma."
+        },
+        {
+          "speaker": "ai",
+          "text": "Give an example from daily life."
+        },
+        {
+          "speaker": "user",
+          "target": "Clicking only headlines that match your view.",
+          "pt_hint": "Clicar só semelhantes."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's self-efficacy?"
+        },
+        {
+          "speaker": "user",
+          "target": "Belief in your ability to accomplish a task.",
+          "pt_hint": "Crença na capacidade."
+        },
+        {
+          "speaker": "ai",
+          "text": "And attachment styles?"
+        },
+        {
+          "speaker": "user",
+          "target": "Secure, anxious, and avoidant patterns.",
+          "pt_hint": "Seguro, ansioso, evitativo."
+        },
+        {
+          "speaker": "ai",
+          "text": "How does regulation differ from suppression?"
+        },
+        {
+          "speaker": "user",
+          "target": "Regulation feels; suppression hides.",
+          "pt_hint": "Regula sente, suprime esconde."
+        },
+        {
+          "speaker": "ai",
+          "text": "Psychology is vocabulary for seeing yourself clearly."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "psychology-vocabulary-listening-story",
+      "title": "The psychology lecture",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize three concepts discussed. Use at least three psychology terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the university open lecture, Maya attended a talk on cognitive biases and emotional regulation in daily life."
+        },
+        {
+          "speaker": "Lecturer",
+          "voice": "female1",
+          "en": "Confirmation bias causes us to notice only the evidence that already supports our existing beliefs."
+        },
+        {
+          "speaker": "Lecturer",
+          "voice": "female1",
+          "en": "Self-efficacy — the belief that effort translates into outcome — predicts persistence more reliably than measured talent."
+        },
+        {
+          "speaker": "Maya",
+          "voice": "female2",
+          "en": "Does attachment style from childhood still predict adult relationship patterns, or can it be rewritten?"
+        },
+        {
+          "speaker": "Lecturer",
+          "voice": "female1",
+          "en": "Emotional regulation is a learned skill — attachment is a template that practice can slowly revise."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Psychology, Maya wrote in her notebook, is the rare subject where knowing the vocabulary changes the experience itself."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Psychology Vocabulary\". Cognitive biases, defense mechanisms, attachment styles, self-efficacy. Confirmation bias makes us see only what we expect. Self-efficacy predicts persistence more than talent does. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Psychology Vocabulary\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Psychology Vocabulary",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Psychology Vocabulary\".",
+        "hint_pt_br": "Ela fala o título: \"Psychology Vocabulary\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "subjunctive-mood",
+  "title": "The Subjunctive Mood",
+  "description": "Base form after formal verbs like INSIST, RECOMMEND, DEMAND, SUGGEST, PROPOSE.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Subjuntivo: depois de SUGGEST/DEMAND/INSIST + THAT + sujeito + verbo base. 'I suggest he BE careful.'",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "The Subjunctive Mood",
+      "subtitle_en": "Base form after formal verbs like INSIST, RECOMMEND, DEMAND, SUGGEST, PROPOSE.",
+      "subtitle_pt": "Subjuntivo: depois de SUGGEST/DEMAND/INSIST + THAT + sujeito + verbo base. 'I suggest he BE careful.'"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Base form after formal verbs like INSIST, RECOMMEND, DEMAND, SUGGEST, PROPOSE. Focus: the subjunctive mood. The committee recommended that the policy be revised.",
+      "text_pt": "Subjuntivo: depois de SUGGEST/DEMAND/INSIST + THAT + sujeito + verbo base. 'I suggest he BE careful.' Foco: the subjunctive mood. O comitê recomendou que a política fosse revisada."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "The Subjunctive Mood",
+      "body_en": "After formal verbs of request/demand/suggestion + THAT + subject + BASE VERB: 'I suggest that he BE more careful.' Never 'is'. Also in fixed expressions: 'God save the queen', 'Long live...'",
+      "body_pt": "Subjuntivo: depois de SUGGEST/DEMAND/INSIST + THAT + sujeito + verbo base. 'I suggest he BE careful.'",
+      "examples": [
+        {
+          "en": "The committee recommended that the policy be revised.",
+          "pt": "O comitê recomendou que a política fosse revisada."
+        },
+        {
+          "en": "I insist that she attend the meeting tomorrow.",
+          "pt": "Insisto que ela compareça à reunião."
+        },
+        {
+          "en": "It is essential that every voice be heard.",
+          "pt": "É essencial que toda voz seja ouvida."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — The Subjunctive Mood",
+      "items": [
+        {
+          "term": "insist",
+          "pt": "insistir"
+        },
+        {
+          "term": "recommend",
+          "pt": "recomendar"
+        },
+        {
+          "term": "demand",
+          "pt": "exigir"
+        },
+        {
+          "term": "subjunctive",
+          "pt": "subjuntivo"
+        },
+        {
+          "term": "mandatory",
+          "pt": "obrigatório"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-subjunctive-mood-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The committee ___ that the policy be revised.\"",
+        "correct": "recommended",
+        "explanation": "Full sentence: \"The committee recommended that the policy be revised.\"",
+        "hint_pt_br": "O comitê recomendou que a política fosse revisada."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-subjunctive-mood-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "I insist that she attend the meeting tomorrow.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"I insist that she attend the meeting tomorrow.\"",
+        "hint_pt_br": "Insisto que ela compareça à reunião."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-subjunctive-mood-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "insist",
+            "insistir"
+          ],
+          [
+            "recommend",
+            "recomendar"
+          ],
+          [
+            "demand",
+            "exigir"
+          ],
+          [
+            "subjunctive",
+            "subjuntivo"
+          ],
+          [
+            "mandatory",
+            "obrigatório"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "The Subjunctive Mood — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre the subjunctive mood. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Use the subjunctive: 'Someone must be careful.'"
+        },
+        {
+          "speaker": "user",
+          "target": "I suggest that he be careful.",
+          "pt_hint": "Seja cuidadoso."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now: 'The boss wants the report done today.'"
+        },
+        {
+          "speaker": "user",
+          "target": "The boss demanded that the report be done today.",
+          "pt_hint": "Seja entregue."
+        },
+        {
+          "speaker": "ai",
+          "text": "Formal: 'The committee proposes new rules.'"
+        },
+        {
+          "speaker": "user",
+          "target": "The committee proposes that new rules be adopted.",
+          "pt_hint": "Sejam adotadas."
+        },
+        {
+          "speaker": "ai",
+          "text": "With 'essential': 'Voices should be heard.'"
+        },
+        {
+          "speaker": "user",
+          "target": "It is essential that every voice be heard.",
+          "pt_hint": "Seja ouvida."
+        },
+        {
+          "speaker": "ai",
+          "text": "Any subjunctive in your everyday speech?"
+        },
+        {
+          "speaker": "user",
+          "target": "Rarely — it sounds formal and academic.",
+          "pt_hint": "Raro no dia a dia."
+        },
+        {
+          "speaker": "ai",
+          "text": "But indispensable in contracts and resolutions."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "subjunctive-mood-listening-story",
+      "title": "The board meeting",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe the resolutions proposed. Use at least two subjunctive constructions.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the quarterly board meeting, the chairwoman read three formal resolutions into the record."
+        },
+        {
+          "speaker": "Chair",
+          "voice": "female1",
+          "en": "The board recommends that the current policy be revised before the end of the fiscal year."
+        },
+        {
+          "speaker": "Director",
+          "voice": "male1",
+          "en": "I insist that every department head attend the next strategy session in person."
+        },
+        {
+          "speaker": "Chair",
+          "voice": "female1",
+          "en": "It is essential that this decision be taken unanimously, not by a simple majority."
+        },
+        {
+          "speaker": "Legal",
+          "voice": "female2",
+          "en": "Motion carried. Let the record show that the resolution was adopted without objection."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Subjunctive mood in formal speech, Kumar later noted, survives precisely because no casual register can replace it."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"The Subjunctive Mood\". Base form after formal verbs like INSIST, RECOMMEND, DEMAND, SUGGEST, PROPOSE. The committee recommended that the policy be revised. I insist that she attend the meeting tomorrow. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"The Subjunctive Mood\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "The Subjunctive Mood",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"The Subjunctive Mood\".",
+        "hint_pt_br": "Ela fala o título: \"The Subjunctive Mood\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

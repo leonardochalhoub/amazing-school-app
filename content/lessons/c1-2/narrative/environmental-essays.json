@@ -1,0 +1,283 @@
+{
+  "slug": "environmental-essays",
+  "title": "Writing Environmental Essays",
+  "description": "Structuring essays about climate, biodiversity, ocean health.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Ensaio ambiental: enquadrar crise, evidência, stakeholders, ação. Voz passiva para autoridade.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Writing Environmental Essays",
+      "subtitle_en": "Structuring essays about climate, biodiversity, ocean health.",
+      "subtitle_pt": "Ensaio ambiental: enquadrar crise, evidência, stakeholders, ação. Voz passiva para autoridade."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "Structuring essays about climate, biodiversity, ocean health. Focus: writing environmental essays. Coral reefs are being bleached at unprecedented rates.",
+      "text_pt": "Ensaio ambiental: enquadrar crise, evidência, stakeholders, ação. Voz passiva para autoridade. Foco: writing environmental essays. Recifes de coral estão sendo branqueados em ritmo sem precedentes."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Writing Environmental Essays",
+      "body_en": "Environmental essay structure: frame the crisis, present evidence, introduce stakeholders, propose action. Use passive voice for impersonal authority.",
+      "body_pt": "Ensaio ambiental: enquadrar crise, evidência, stakeholders, ação. Voz passiva para autoridade.",
+      "examples": [
+        {
+          "en": "Coral reefs are being bleached at unprecedented rates.",
+          "pt": "Recifes de coral estão sendo branqueados em ritmo sem precedentes."
+        },
+        {
+          "en": "Policy change must be informed by scientific consensus.",
+          "pt": "Mudanças políticas devem ser informadas pelo consenso científico."
+        },
+        {
+          "en": "Local communities bear the earliest costs of climate shifts.",
+          "pt": "Comunidades locais arcam com os primeiros custos."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Writing Environmental Essays",
+      "items": [
+        {
+          "term": "biodiversity",
+          "pt": "biodiversidade"
+        },
+        {
+          "term": "stakeholder",
+          "pt": "parte interessada"
+        },
+        {
+          "term": "consensus",
+          "pt": "consenso"
+        },
+        {
+          "term": "mitigate",
+          "pt": "mitigar"
+        },
+        {
+          "term": "ecosystem",
+          "pt": "ecossistema"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-environmental-essays-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Coral reefs are being bleached at ___ rates.\"",
+        "correct": "unprecedented",
+        "explanation": "Full sentence: \"Coral reefs are being bleached at unprecedented rates.\"",
+        "hint_pt_br": "Recifes de coral estão sendo branqueados em ritmo sem precedentes."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-environmental-essays-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Policy change must be informed by scientific consensus.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Policy change must be informed by scientific consensus.\"",
+        "hint_pt_br": "Mudanças políticas devem ser informadas pelo consenso científico."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-environmental-essays-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "biodiversity",
+            "biodiversidade"
+          ],
+          [
+            "stakeholder",
+            "parte interessada"
+          ],
+          [
+            "consensus",
+            "consenso"
+          ],
+          [
+            "mitigate",
+            "mitigar"
+          ],
+          [
+            "ecosystem",
+            "ecossistema"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Writing Environmental Essays — dialog",
+      "character": "Bia",
+      "pt_summary": "Diálogo sobre writing environmental essays. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Bia, frame your essay's crisis in one sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "Our reefs are bleaching faster than science predicted.",
+          "pt_hint": "Branqueando rápido."
+        },
+        {
+          "speaker": "ai",
+          "text": "What evidence opens the argument?"
+        },
+        {
+          "speaker": "user",
+          "target": "Three peer-reviewed studies from 2023.",
+          "pt_hint": "3 estudos 2023."
+        },
+        {
+          "speaker": "ai",
+          "text": "Who are the stakeholders?"
+        },
+        {
+          "speaker": "user",
+          "target": "Fishing communities, tourism, and marine scientists.",
+          "pt_hint": "Pesca, turismo, ciência."
+        },
+        {
+          "speaker": "ai",
+          "text": "What action do you propose?"
+        },
+        {
+          "speaker": "user",
+          "target": "Regional marine protected areas expanded by 30%.",
+          "pt_hint": "Áreas protegidas +30%."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with a personal stake."
+        },
+        {
+          "speaker": "user",
+          "target": "My generation inherits this choice, for good or worse.",
+          "pt_hint": "Minha geração herda."
+        },
+        {
+          "speaker": "ai",
+          "text": "Environmental essays need data and conviction."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "environmental-essays-listening-story",
+      "title": "The ocean essay",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize Bia's essay structure. Use at least three environmental terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At a student environmental summit, Bia presented the draft of an essay she would submit to a national competition."
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Coral reefs are being bleached at unprecedented rates, and consensus among marine scientists is alarming."
+        },
+        {
+          "speaker": "Judge",
+          "voice": "female2",
+          "en": "Your evidence is strong. Who are the stakeholders you believe the policy must center?"
+        },
+        {
+          "speaker": "Bia",
+          "voice": "female1",
+          "en": "Fishing communities, local tourism, and indigenous populations bear the earliest and sharpest costs."
+        },
+        {
+          "speaker": "Judge",
+          "voice": "male1",
+          "en": "Your proposed mitigation — expanded marine protected areas — is concrete and politically viable."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Environmental writing, Bia believed, was never about despair — it was about handing readers the levers they already had."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Writing Environmental Essays\". Structuring essays about climate, biodiversity, ocean health. Coral reefs are being bleached at unprecedented rates. Policy change must be informed by scientific consensus. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Writing Environmental Essays\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Writing Environmental Essays",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Writing Environmental Essays\".",
+        "hint_pt_br": "Ela fala o título: \"Writing Environmental Essays\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "sociology-vocabulary",
+  "title": "Sociology Vocabulary",
+  "description": "Key terms: inequality, stratification, institution, socialization, capital (social/cultural).",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Sociologia: desigualdade, estratificação, instituição, socialização, capital social/cultural.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Sociology Vocabulary",
+      "subtitle_en": "Key terms: inequality, stratification, institution, socialization, capital (social/cultural).",
+      "subtitle_pt": "Sociologia: desigualdade, estratificação, instituição, socialização, capital social/cultural."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Key terms: inequality, stratification, institution, socialization, capital (social/cultural). Focus: sociology vocabulary. Social capital is often inherited more than it is earned.",
+      "text_pt": "Sociologia: desigualdade, estratificação, instituição, socialização, capital social/cultural. Foco: sociology vocabulary. Capital social é mais herdado do que conquistado."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Sociology Vocabulary",
+      "body_en": "Core concepts: INEQUALITY, STRATIFICATION, INSTITUTION, SOCIALIZATION, SOCIAL CAPITAL, CULTURAL CAPITAL, STIGMA, MARGINALIZATION.",
+      "body_pt": "Sociologia: desigualdade, estratificação, instituição, socialização, capital social/cultural.",
+      "examples": [
+        {
+          "en": "Social capital is often inherited more than it is earned.",
+          "pt": "Capital social é mais herdado do que conquistado."
+        },
+        {
+          "en": "Institutions shape behavior long before individuals notice.",
+          "pt": "Instituições moldam comportamento antes de percebermos."
+        },
+        {
+          "en": "Stigma operates through silence as much as through words.",
+          "pt": "Estigma opera pelo silêncio tanto quanto pelas palavras."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Sociology Vocabulary",
+      "items": [
+        {
+          "term": "stratification",
+          "pt": "estratificação"
+        },
+        {
+          "term": "capital",
+          "pt": "capital"
+        },
+        {
+          "term": "institution",
+          "pt": "instituição"
+        },
+        {
+          "term": "stigma",
+          "pt": "estigma"
+        },
+        {
+          "term": "marginalization",
+          "pt": "marginalização"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-sociology-vocabulary-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Social capital is often ___ more than it is earned.\"",
+        "correct": "inherited",
+        "explanation": "Full sentence: \"Social capital is often inherited more than it is earned.\"",
+        "hint_pt_br": "Capital social é mais herdado do que conquistado."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-sociology-vocabulary-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Institutions shape behavior long before individuals notice.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"Institutions shape behavior long before individuals notice.\"",
+        "hint_pt_br": "Instituições moldam comportamento antes de percebermos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-sociology-vocabulary-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "stratification",
+            "estratificação"
+          ],
+          [
+            "capital",
+            "capital"
+          ],
+          [
+            "institution",
+            "instituição"
+          ],
+          [
+            "stigma",
+            "estigma"
+          ],
+          [
+            "marginalization",
+            "marginalização"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Sociology Vocabulary — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre sociology vocabulary. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Define social capital in one sentence."
+        },
+        {
+          "speaker": "user",
+          "target": "The networks and trust that open doors.",
+          "pt_hint": "Redes e confiança."
+        },
+        {
+          "speaker": "ai",
+          "text": "How is it different from cultural capital?"
+        },
+        {
+          "speaker": "user",
+          "target": "Cultural capital is taste, knowledge, credentials.",
+          "pt_hint": "Gosto e credenciais."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the effect of stigma on opportunity?"
+        },
+        {
+          "speaker": "user",
+          "target": "It narrows access even when laws don't.",
+          "pt_hint": "Restringe mesmo sem lei."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do institutions perpetuate inequality?"
+        },
+        {
+          "speaker": "user",
+          "target": "Through rules, defaults, and gatekeeping.",
+          "pt_hint": "Regras e portões."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's one lever for change?"
+        },
+        {
+          "speaker": "user",
+          "target": "Redesigning defaults at institutional scale.",
+          "pt_hint": "Mudar os padrões."
+        },
+        {
+          "speaker": "ai",
+          "text": "Sociology is invisible until it's pointed out."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "sociology-vocabulary-listening-story",
+      "title": "The sociology seminar",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize three concepts discussed. Use at least three sociological terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the afternoon seminar, Kumar guided graduate students through the week's readings on inequality and institutions."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Social capital is often inherited more than it is earned, and that distinction changes every policy debate."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "So cultural capital — credentials, tastes, fluencies — reinforces the same stratification across generations?"
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Exactly. And stigma operates through silence as much as through explicit exclusion in most institutions."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "Redesigning institutional defaults might be the single highest-leverage intervention we could possibly make."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Sociology, Kumar insisted, becomes visible only when someone names the water the fish has always been swimming in."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Sociology Vocabulary\". Key terms: inequality, stratification, institution, socialization, capital (social/cultural). Social capital is often inherited more than it is earned. Institutions shape behavior long before individuals notice. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Sociology Vocabulary\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Sociology Vocabulary",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Sociology Vocabulary\".",
+        "hint_pt_br": "Ela fala o título: \"Sociology Vocabulary\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "idioms-business",
+  "title": "Business Idioms Advanced",
+  "description": "Idioms used in boardrooms: move the needle, raise the bar, low-hanging fruit, in the weeds.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Idiomas executivos: move the needle, raise the bar, low-hanging fruit, in the weeds, boil the ocean.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Business Idioms Advanced",
+      "subtitle_en": "Idioms used in boardrooms: move the needle, raise the bar, low-hanging fruit, in the weeds.",
+      "subtitle_pt": "Idiomas executivos: move the needle, raise the bar, low-hanging fruit, in the weeds, boil the ocean."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Idioms used in boardrooms: move the needle, raise the bar, low-hanging fruit, in the weeds. Focus: business idioms advanced. This feature won't really move the needle on revenue.",
+      "text_pt": "Idiomas executivos: move the needle, raise the bar, low-hanging fruit, in the weeds, boil the ocean. Foco: business idioms advanced. Essa feature não vai mudar o jogo na receita."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Business Idioms Advanced",
+      "body_en": "MOVE THE NEEDLE = make real impact. RAISE THE BAR = improve standard. LOW-HANGING FRUIT = easy wins. IN THE WEEDS = stuck in details. BOIL THE OCEAN = try to solve everything at once.",
+      "body_pt": "Idiomas executivos: move the needle, raise the bar, low-hanging fruit, in the weeds, boil the ocean.",
+      "examples": [
+        {
+          "en": "This feature won't really move the needle on revenue.",
+          "pt": "Essa feature não vai mudar o jogo na receita."
+        },
+        {
+          "en": "Let's start with the low-hanging fruit first.",
+          "pt": "Vamos começar pelas vitórias fáceis."
+        },
+        {
+          "en": "We're too in the weeds to see the bigger picture.",
+          "pt": "Estamos presos nos detalhes."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Business Idioms Advanced",
+      "items": [
+        {
+          "term": "move the needle",
+          "pt": "mudar o jogo"
+        },
+        {
+          "term": "raise the bar",
+          "pt": "elevar o nível"
+        },
+        {
+          "term": "low-hanging fruit",
+          "pt": "vitória fácil"
+        },
+        {
+          "term": "in the weeds",
+          "pt": "preso em detalhes"
+        },
+        {
+          "term": "boil the ocean",
+          "pt": "tentar tudo de uma vez"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-idioms-business-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"This ___ won't really move the needle on revenue.\"",
+        "correct": "feature",
+        "explanation": "Full sentence: \"This feature won't really move the needle on revenue.\"",
+        "hint_pt_br": "Essa feature não vai mudar o jogo na receita."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-idioms-business-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Let's start with the low-hanging fruit first.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"Let's start with the low-hanging fruit first.\"",
+        "hint_pt_br": "Vamos começar pelas vitórias fáceis."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-idioms-business-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "move the needle",
+            "mudar o jogo"
+          ],
+          [
+            "raise the bar",
+            "elevar o nível"
+          ],
+          [
+            "low-hanging fruit",
+            "vitória fácil"
+          ],
+          [
+            "in the weeds",
+            "preso em detalhes"
+          ],
+          [
+            "boil the ocean",
+            "tentar tudo de uma vez"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Business Idioms Advanced — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre business idioms advanced. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, why pause the big project?"
+        },
+        {
+          "speaker": "user",
+          "target": "It won't move the needle this quarter.",
+          "pt_hint": "Não mexe o ponteiro."
+        },
+        {
+          "speaker": "ai",
+          "text": "What should we do instead?"
+        },
+        {
+          "speaker": "user",
+          "target": "Pick the low-hanging fruit first.",
+          "pt_hint": "Vitórias fáceis."
+        },
+        {
+          "speaker": "ai",
+          "text": "Are we too in the weeds right now?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, we're losing the bigger picture.",
+          "pt_hint": "Perdendo o todo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Are we trying to boil the ocean?"
+        },
+        {
+          "speaker": "user",
+          "target": "A little — we need to narrow focus.",
+          "pt_hint": "Precisa focar."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do we raise the bar long-term?"
+        },
+        {
+          "speaker": "user",
+          "target": "Fewer priorities, better execution.",
+          "pt_hint": "Menos, melhor."
+        },
+        {
+          "speaker": "ai",
+          "text": "Idioms save meetings three minutes at a time."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "idioms-business-listening-story",
+      "title": "The Monday stand-up",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize Joca's strategic advice. Use at least three business idioms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the Monday stand-up, Joca listened to an hour of plans and then spoke with surprising clarity."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "None of these features will move the needle on revenue over the next two quarters, honestly."
+        },
+        {
+          "speaker": "Teammate",
+          "voice": "female1",
+          "en": "What do you suggest we prioritize — the ambitious projects or the quick wins?"
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Let's pick the low-hanging fruit first, ship it fast, and raise the bar from there."
+        },
+        {
+          "speaker": "Teammate",
+          "voice": "female1",
+          "en": "We've been in the weeds for months. I think pulling back for strategy would help everyone."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Business idioms, Joca believed, are efficient precisely because they short-circuit long explanations."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Business Idioms Advanced\". Idioms used in boardrooms: move the needle, raise the bar, low-hanging fruit, in the weeds. This feature won't really move the needle on revenue. Let's start with the low-hanging fruit first. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Business Idioms Advanced\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Business Idioms Advanced",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Business Idioms Advanced\".",
+        "hint_pt_br": "Ela fala o título: \"Business Idioms Advanced\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

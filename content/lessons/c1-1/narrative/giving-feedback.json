@@ -1,0 +1,283 @@
+{
+  "slug": "giving-feedback",
+  "title": "Giving Feedback Professionally",
+  "description": "Structured feedback using SBI (Situation-Behavior-Impact) and diplomatic softeners.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Feedback estruturado: Situação-Comportamento-Impacto (SBI). 'Ontem... quando você... senti...'",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Giving Feedback Professionally",
+      "subtitle_en": "Structured feedback using SBI (Situation-Behavior-Impact) and diplomatic softeners.",
+      "subtitle_pt": "Feedback estruturado: Situação-Comportamento-Impacto (SBI). 'Ontem... quando você... senti...'"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Structured feedback using SBI (Situation-Behavior-Impact) and diplomatic softeners. Focus: giving feedback professionally. In yesterday's call, when you spoke over the client, it made him pause.",
+      "text_pt": "Feedback estruturado: Situação-Comportamento-Impacto (SBI). 'Ontem... quando você... senti...' Foco: giving feedback professionally. Na ligação de ontem, quando você sobrepôs o cliente, ele pausou."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Giving Feedback Professionally",
+      "body_en": "SBI: 'In yesterday's meeting (situation), when you interrupted (behavior), it made the team feel unheard (impact).' Pair with 'I noticed...' and 'I'd love to explore...'",
+      "body_pt": "Feedback estruturado: Situação-Comportamento-Impacto (SBI). 'Ontem... quando você... senti...'",
+      "examples": [
+        {
+          "en": "In yesterday's call, when you spoke over the client, it made him pause.",
+          "pt": "Na ligação de ontem, quando você sobrepôs o cliente, ele pausou."
+        },
+        {
+          "en": "I'd love to explore how we can handle objections differently.",
+          "pt": "Adoraria explorar como lidar com objeções diferente."
+        },
+        {
+          "en": "I noticed you've been quiet in standups lately.",
+          "pt": "Percebi que você tem ficado quieto nos standups."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Giving Feedback Professionally",
+      "items": [
+        {
+          "term": "situation",
+          "pt": "situação"
+        },
+        {
+          "term": "behavior",
+          "pt": "comportamento"
+        },
+        {
+          "term": "impact",
+          "pt": "impacto"
+        },
+        {
+          "term": "diplomatic",
+          "pt": "diplomático"
+        },
+        {
+          "term": "reframe",
+          "pt": "reformular"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-giving-feedback-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"In ___ call, when you spoke over the client, it made him pause.\"",
+        "correct": "yesterday's",
+        "explanation": "Full sentence: \"In yesterday's call, when you spoke over the client, it made him pause.\"",
+        "hint_pt_br": "Na ligação de ontem, quando você sobrepôs o cliente, ele pausou."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-giving-feedback-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "I'd love to explore how we can handle objections differently.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"I'd love to explore how we can handle objections differently.\"",
+        "hint_pt_br": "Adoraria explorar como lidar com objeções diferente."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-giving-feedback-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "situation",
+            "situação"
+          ],
+          [
+            "behavior",
+            "comportamento"
+          ],
+          [
+            "impact",
+            "impacto"
+          ],
+          [
+            "diplomatic",
+            "diplomático"
+          ],
+          [
+            "reframe",
+            "reformular"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Giving Feedback Professionally — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre giving feedback professionally. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "I need to give hard feedback. Help me."
+        },
+        {
+          "speaker": "user",
+          "target": "Start with the situation, not the person.",
+          "pt_hint": "Comece pela situação."
+        },
+        {
+          "speaker": "ai",
+          "text": "In Monday's meeting, what happened?"
+        },
+        {
+          "speaker": "user",
+          "target": "When you interrupted twice, the client paused.",
+          "pt_hint": "Cliente pausou."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do I describe the impact?"
+        },
+        {
+          "speaker": "user",
+          "target": "It affected how confident the client felt.",
+          "pt_hint": "Confiança afetada."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do I invite improvement?"
+        },
+        {
+          "speaker": "user",
+          "target": "I'd love to explore how to handle this.",
+          "pt_hint": "Adoraria explorar."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close warmly without retreating from the truth."
+        },
+        {
+          "speaker": "user",
+          "target": "I'm sharing this because I believe in you.",
+          "pt_hint": "Acredito em você."
+        },
+        {
+          "speaker": "ai",
+          "text": "Feedback, done well, is a form of respect."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "giving-feedback-listening-story",
+      "title": "The one-on-one",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe the feedback structure. Use at least two SBI elements.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the glass meeting room, Zara delivered feedback that her teammate would remember for years."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "In yesterday's call with the client, when you spoke over him twice, it made him visibly hesitate."
+        },
+        {
+          "speaker": "Teammate",
+          "voice": "male1",
+          "en": "I didn't realize I had done that. I was nervous and pushing too hard, honestly."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "I'd love to explore together how we can handle objections without rushing next time."
+        },
+        {
+          "speaker": "Teammate",
+          "voice": "male1",
+          "en": "Thank you for telling me directly — I would rather hear this from you than guess later."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Feedback, Zara often said, is a door you open slowly — never a hammer you swing quickly."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Giving Feedback Professionally\". Structured feedback using SBI (Situation-Behavior-Impact) and diplomatic softeners. In yesterday's call, when you spoke over the client, it made him pause. I'd love to explore how we can handle objections differently. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Giving Feedback Professionally\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Giving Feedback Professionally",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Giving Feedback Professionally\".",
+        "hint_pt_br": "Ela fala o título: \"Giving Feedback Professionally\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

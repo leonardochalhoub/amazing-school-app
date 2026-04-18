@@ -1,0 +1,283 @@
+{
+  "slug": "music-criticism",
+  "title": "Music Criticism",
+  "description": "Vocabulary for reviewing albums: production, arrangement, tonality, lyrical depth, sonic palette.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.2",
+  "xp_reward": 80,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Crítica musical: produção, arranjo, tonalidade, profundidade lírica, paleta sonora, hook.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Music Criticism",
+      "subtitle_en": "Vocabulary for reviewing albums: production, arrangement, tonality, lyrical depth, sonic palette.",
+      "subtitle_pt": "Crítica musical: produção, arranjo, tonalidade, profundidade lírica, paleta sonora, hook."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "Vocabulary for reviewing albums: production, arrangement, tonality, lyrical depth, sonic palette. Focus: music criticism. The album's production feels deliberately lo-fi.",
+      "text_pt": "Crítica musical: produção, arranjo, tonalidade, profundidade lírica, paleta sonora, hook. Foco: music criticism. A produção do álbum é propositalmente lo-fi."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Music Criticism",
+      "body_en": "Key terms: PRODUCTION (overall sound), ARRANGEMENT (instruments/parts), TONALITY (mood/key), LYRICAL DEPTH (meaning), SONIC PALETTE (timbres), HOOK (memorable melody).",
+      "body_pt": "Crítica musical: produção, arranjo, tonalidade, profundidade lírica, paleta sonora, hook.",
+      "examples": [
+        {
+          "en": "The album's production feels deliberately lo-fi.",
+          "pt": "A produção do álbum é propositalmente lo-fi."
+        },
+        {
+          "en": "Arrangements shift from sparse to cacophonous.",
+          "pt": "Os arranjos mudam de escassos a caóticos."
+        },
+        {
+          "en": "Lyrical depth rewards multiple listens.",
+          "pt": "A profundidade lírica recompensa múltiplas audições."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Music Criticism",
+      "items": [
+        {
+          "term": "production",
+          "pt": "produção"
+        },
+        {
+          "term": "arrangement",
+          "pt": "arranjo"
+        },
+        {
+          "term": "tonality",
+          "pt": "tonalidade"
+        },
+        {
+          "term": "palette",
+          "pt": "paleta"
+        },
+        {
+          "term": "hook",
+          "pt": "refrão grudento"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-music-criticism-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The album's production feels ___ lo-fi.\"",
+        "correct": "deliberately",
+        "explanation": "Full sentence: \"The album's production feels deliberately lo-fi.\"",
+        "hint_pt_br": "A produção do álbum é propositalmente lo-fi."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-music-criticism-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Arrangements shift from sparse to cacophonous.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Arrangements shift from sparse to cacophonous.\"",
+        "hint_pt_br": "Os arranjos mudam de escassos a caóticos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-music-criticism-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "production",
+            "produção"
+          ],
+          [
+            "arrangement",
+            "arranjo"
+          ],
+          [
+            "tonality",
+            "tonalidade"
+          ],
+          [
+            "palette",
+            "paleta"
+          ],
+          [
+            "hook",
+            "refrão grudento"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Music Criticism — dialog",
+      "character": "Rafa",
+      "pt_summary": "Diálogo sobre music criticism. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Describe the album's production in one phrase."
+        },
+        {
+          "speaker": "user",
+          "target": "Deliberately lo-fi and intimate.",
+          "pt_hint": "Lo-fi e íntimo."
+        },
+        {
+          "speaker": "ai",
+          "text": "How are the arrangements?"
+        },
+        {
+          "speaker": "user",
+          "target": "They shift from minimal to dense dramatically.",
+          "pt_hint": "Mínimo a denso."
+        },
+        {
+          "speaker": "ai",
+          "text": "Comment on the tonality."
+        },
+        {
+          "speaker": "user",
+          "target": "Melancholic major keys — hopeful but heavy.",
+          "pt_hint": "Maior melancólico."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the sonic palette?"
+        },
+        {
+          "speaker": "user",
+          "target": "Acoustic guitar, analog synths, brushed drums.",
+          "pt_hint": "Violão, synth analógico."
+        },
+        {
+          "speaker": "ai",
+          "text": "Best track, and why?"
+        },
+        {
+          "speaker": "user",
+          "target": "Track four — the hook refuses to leave you.",
+          "pt_hint": "Faixa 4, hook grudento."
+        },
+        {
+          "speaker": "ai",
+          "text": "Music criticism is describing the indescribable."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "music-criticism-listening-story",
+      "title": "The album review",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Review the album using at least three music terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the small magazine office, Rafa wrote a review of an album that had quietly become a phenomenon."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "The album's production feels deliberately lo-fi, intimate, and almost confessional from the very first track."
+        },
+        {
+          "speaker": "Editor",
+          "voice": "female1",
+          "en": "Arrangements shift from sparse acoustic moments to dense walls of sound with surprising emotional logic."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "The sonic palette — acoustic guitar, analog synths, and brushed drums — rewards multiple attentive listens."
+        },
+        {
+          "speaker": "Editor",
+          "voice": "female1",
+          "en": "Track four has a hook that refuses to leave the listener for days after the album has ended."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Music criticism, Rafa often said, is the humble act of describing what no vocabulary was ever truly built to capture."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Music Criticism\". Vocabulary for reviewing albums: production, arrangement, tonality, lyrical depth, sonic palette. The album's production feels deliberately lo-fi. Arrangements shift from sparse to cacophonous. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Music Criticism\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Music Criticism",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Music Criticism\".",
+        "hint_pt_br": "Ela fala o título: \"Music Criticism\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "slug": "inversion-negative-adverbs",
+  "title": "Inversion After Negative Adverbs",
+  "description": "Formal emphasis by inverting subject-verb after negative or restrictive adverbs.",
+  "category": "narrative",
+  "level": "C1",
+  "cefr_level": "c1.1",
+  "xp_reward": 75,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Inversão formal após advérbios negativos/restritivos. 'Never HAD I seen...' em vez de 'I had never seen'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Inversion After Negative Adverbs",
+      "subtitle_en": "Formal emphasis by inverting subject-verb after negative or restrictive adverbs.",
+      "subtitle_pt": "Inversão formal após advérbios negativos/restritivos. 'Never HAD I seen...' em vez de 'I had never seen'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Formal emphasis by inverting subject-verb after negative or restrictive adverbs. Focus: inversion after negative adverbs. Never had I encountered such dedication before.",
+      "text_pt": "Inversão formal após advérbios negativos/restritivos. 'Never HAD I seen...' em vez de 'I had never seen'. Foco: inversion after negative adverbs. Nunca tinha encontrado tamanha dedicação."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Inversion After Negative Adverbs",
+      "body_en": "Put the auxiliary before the subject after: Never, Rarely, Seldom, Hardly, Not only, Little, No sooner, Only then, Under no circumstances. 'Never HAD I seen such a view.'",
+      "body_pt": "Inversão formal após advérbios negativos/restritivos. 'Never HAD I seen...' em vez de 'I had never seen'.",
+      "examples": [
+        {
+          "en": "Never had I encountered such dedication before.",
+          "pt": "Nunca tinha encontrado tamanha dedicação."
+        },
+        {
+          "en": "Not only is she brilliant, but she's also kind.",
+          "pt": "Ela não só é brilhante como também gentil."
+        },
+        {
+          "en": "Under no circumstances should the file be shared.",
+          "pt": "Em hipótese alguma o arquivo deve ser compartilhado."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Inversion After Negative Adverbs",
+      "items": [
+        {
+          "term": "seldom",
+          "pt": "raramente"
+        },
+        {
+          "term": "hardly",
+          "pt": "dificilmente"
+        },
+        {
+          "term": "no sooner",
+          "pt": "mal"
+        },
+        {
+          "term": "rarely",
+          "pt": "raramente"
+        },
+        {
+          "term": "scarcely",
+          "pt": "mal"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-inversion-negative-adverbs-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Never had I ___ such dedication before.\"",
+        "correct": "encountered",
+        "explanation": "Full sentence: \"Never had I encountered such dedication before.\"",
+        "hint_pt_br": "Nunca tinha encontrado tamanha dedicação."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-inversion-negative-adverbs-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Not only is she brilliant, but she's also kind.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"Not only is she brilliant, but she's also kind.\"",
+        "hint_pt_br": "Ela não só é brilhante como também gentil."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-inversion-negative-adverbs-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "seldom",
+            "raramente"
+          ],
+          [
+            "hardly",
+            "dificilmente"
+          ],
+          [
+            "no sooner",
+            "mal"
+          ],
+          [
+            "rarely",
+            "raramente"
+          ],
+          [
+            "scarcely",
+            "mal"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Inversion After Negative Adverbs — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre inversion after negative adverbs. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "How would you emphasize: 'I had never seen such art.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Never had I seen such art.",
+          "pt_hint": "Inversão."
+        },
+        {
+          "speaker": "ai",
+          "text": "Now: 'She is both brilliant and humble.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Not only is she brilliant, but also humble.",
+          "pt_hint": "Not only."
+        },
+        {
+          "speaker": "ai",
+          "text": "Formalize: 'The file must not be shared at all.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Under no circumstances should the file be shared.",
+          "pt_hint": "Hipótese alguma."
+        },
+        {
+          "speaker": "ai",
+          "text": "Try: 'The meeting ended and a fight broke out.'"
+        },
+        {
+          "speaker": "user",
+          "target": "No sooner had the meeting ended than a fight broke out.",
+          "pt_hint": "No sooner."
+        },
+        {
+          "speaker": "ai",
+          "text": "Use 'Little did I know' about a surprise."
+        },
+        {
+          "speaker": "user",
+          "target": "Little did I know he was my future boss.",
+          "pt_hint": "Mal sabia eu."
+        },
+        {
+          "speaker": "ai",
+          "text": "Inversion is formal English wearing its best suit."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "inversion-negative-adverbs-listening-story",
+      "title": "A formal address",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the speech's rhetorical moves. Use at least two inversions.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the graduation ceremony, the keynote speaker opened with a sentence that silenced the entire auditorium."
+        },
+        {
+          "speaker": "Speaker",
+          "voice": "female1",
+          "en": "Never before had this institution graduated a class quite so determined to reshape the world."
+        },
+        {
+          "speaker": "Speaker",
+          "voice": "female1",
+          "en": "Not only have you mastered the textbook, but you have also mastered the discipline of asking better questions."
+        },
+        {
+          "speaker": "Dean",
+          "voice": "male1",
+          "en": "Under no circumstances should any of you forget the professors who believed in you first."
+        },
+        {
+          "speaker": "Speaker",
+          "voice": "female1",
+          "en": "Rarely does a generation inherit such challenge and opportunity in the same breath."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Inversion in ceremonial English, the dean often said, is simply emphasis wearing its most formal shoes."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Inversion After Negative Adverbs\". Formal emphasis by inverting subject-verb after negative or restrictive adverbs. Never had I encountered such dedication before. Not only is she brilliant, but she's also kind. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Inversion After Negative Adverbs\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Inversion After Negative Adverbs",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Inversion After Negative Adverbs\".",
+        "hint_pt_br": "Ela fala o título: \"Inversion After Negative Adverbs\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "The Economist · Learning English",
+          "url": "https://www.economist.com/",
+          "pt_hint": "Jornalismo econômico e político sofisticado — nível C1+."
+        },
+        {
+          "label": "TED Talks (advanced)",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras profundas com transcrição integral."
+        },
+        {
+          "label": "The New Yorker · essays",
+          "url": "https://www.newyorker.com/magazine",
+          "pt_hint": "Ensaios literários e jornalísticos — prosa rica."
+        }
+      ]
+    }
+  ]
+}
