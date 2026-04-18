@@ -1,0 +1,48 @@
+{
+  "slug": "inversion-dramatic",
+  "title": "Never Have I Surfed a Wave Like This",
+  "description": "Inversion for dramatic emphasis: Never have I..., Rarely do we..., Not only did she..., Only then did he realize... The formal flip that feels literary — and still works in speeches and dramatic moments.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 65,
+  "estimated_minutes": 17,
+  "summary_pt_br": "Inversão para ênfase dramática — quando o inglês coloca o verbo antes do sujeito para enfatizar. Gatilhos: Never, Rarely, Seldom, Hardly, Not only, Only then, Under no circumstances. A estrutura: gatilho + AUXILIAR + SUJEITO + verbo principal. 'Never HAVE I seen...' (não 'never I have seen'). Muito comum em discursos, literatura, contexto formal.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 30 — The Inversion", "subtitle_en": "When the verb leaps before the subject", "subtitle_pt": "Quando o verbo pula na frente do sujeito" },
+    { "kind": "narrative", "character_id": "bia", "text_en": "The wave was twenty feet. Bia paddled. She dropped.\n'NEVER HAVE I SURFED a wave like this,' she said afterward.\n'NOT ONLY DID I drop in, but I rode it to the beach.\nRARELY DOES the ocean give you a gift like that.'", "text_pt": "A onda tinha seis metros. A Bia remou. Dropou.\n'NUNCA SURFEI uma onda assim,' ela disse depois.\n'NÃO SÓ droppei, COMO andei nela até a praia.\nRARAMENTE o oceano dá um presente desses.'" },
+    { "kind": "grammar_note", "title": "Inversion — the formula", "body_en": "Pattern: NEGATIVE/RESTRICTIVE TRIGGER + AUXILIARY + SUBJECT + MAIN VERB. 'Never HAVE I seen' (not 'Never I have seen'). Triggers: Never, Rarely, Seldom, Hardly ever, Not only, Only then/after/when, Under no circumstances, Little did I know. It's formal but alive — speeches, literature, dramatic moments, and native fluency.", "body_pt": "Padrão: GATILHO (negativo/restritivo) + AUXILIAR + SUJEITO + verbo principal. 'Never HAVE I seen' (não 'never I have seen'). É formal mas vivo — discursos, literatura, momentos dramáticos. Dominar impressiona em provas de proficiência (TOEFL, IELTS, CAE).", "examples": [
+      { "en": "Never have I felt so proud.", "pt": "Nunca me senti tão orgulhosa." },
+      { "en": "Not only did she pass — she got top marks.", "pt": "Ela não só passou — tirou nota máxima." },
+      { "en": "Only after the storm did we understand.", "pt": "Só depois da tempestade entendemos." }
+    ]},
+    { "kind": "vocab_intro", "title": "Inversion triggers", "items": [
+      { "term": "Never / Seldom / Rarely / Hardly ever", "pt": "nunca / raramente" },
+      { "term": "Not only... (but also)", "pt": "não só... (como também)" },
+      { "term": "Only then / Only after / Only when", "pt": "só então / só depois / só quando" },
+      { "term": "Under no circumstances", "pt": "sob nenhuma circunstância" },
+      { "term": "Little did I know", "pt": "mal sabia eu" },
+      { "term": "No sooner... than", "pt": "mal... quando (ação imediata)" }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "inv-s01", "type": "multiple_choice", "question": "Which is correct inversion?", "options": [
+        "Never I have seen such a wave",
+        "Never have I seen such a wave",
+        "Never I saw such a wave",
+        "I have never saw such a wave"
+      ], "correct": 1, "explanation": "Trigger (Never) + auxiliary (have) + subject (I) + main verb (seen). Classic inversion.", "hint_pt_br": "Gatilho + auxiliar + sujeito + verbo. 'Never HAVE I seen'." }},
+    { "kind": "exercise", "exercise": { "id": "inv-s02", "type": "fill_blank", "question": "Complete (inversion): 'Not only ___ she pass — she got the highest score.'", "correct": "did", "explanation": "With 'not only' + past simple main verb, use DID as the auxiliary. 'Not only DID she pass'.", "hint_pt_br": "Past simple pede DO/DOES/DID como auxiliar. 'Not only DID she pass'." }},
+    { "kind": "exercise", "exercise": { "id": "inv-s03", "type": "multiple_choice", "question": "'___ I known he was there, I would have said hello.'", "options": ["Had", "Did", "Have", "If"], "correct": 0, "explanation": "This is conditional inversion: 'Had I known' replaces 'If I had known' in formal style.", "hint_pt_br": "Inversão condicional: 'Had I known' = 'If I had known'. Formalíssimo." }},
+    { "kind": "dialogue", "location_en": "After the wave, rooftop", "location_pt": "Depois da onda, no terraço", "turns": [
+      { "character_id": "kumar", "en": "Little did I know I'd see you surf something like that.", "pt": "Mal sabia eu que veria você surfar algo assim." },
+      { "character_id": "bia", "en": "Under no circumstances would I have believed it myself.", "pt": "Sob nenhuma circunstância eu teria acreditado." },
+      { "character_id": "kumar", "en": "Rarely does fear surrender so gracefully.", "pt": "Raramente o medo se rende com tanta graça." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "inv-s04", "type": "matching", "pairs": [
+      ["Never have I...", "Nunca (em experiência)"],
+      ["Not only did she... but also", "Não só... como também"],
+      ["Only then did I realize", "Só então percebi"],
+      ["Little did I know", "Mal sabia eu"],
+      ["Had I known", "Se eu soubesse (formal)"]
+    ], "explanation": "Five inversion openers. Learn them whole. They're your 'wow' sentences for essays and speeches.", "hint_pt_br": "Cinco aberturas com inversão. Memorize como blocos. São as frases 'uau' das redações e discursos." }}
+  ]
+}

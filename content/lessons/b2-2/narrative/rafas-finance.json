@@ -1,0 +1,59 @@
+{
+  "slug": "rafas-finance",
+  "title": "Rafa's Orlando Plan — Financial English",
+  "description": "Business and financial vocabulary for opening a restaurant in the US. Rafa sits with a US accountant and drowns in margin, runway, cash flow, and ROI.",
+  "category": "narrative",
+  "level": "B2",
+  "cefr_level": "b2.2",
+  "xp_reward": 65,
+  "estimated_minutes": 18,
+  "summary_pt_br": "Inglês financeiro/empresarial para o Rafa abrir o Tropical Bites em Orlando. Vocabulário essencial: revenue, margin, cash flow, runway, burn rate, equity, investor, LLC, break-even. Expressões comuns em reuniões: ballpark, run the numbers, bootstrap, in the red/black.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 31 — Finance, the Language", "subtitle_en": "Rafa meets an American accountant", "subtitle_pt": "Rafa conhece um contador americano" },
+    { "kind": "narrative", "character_id": "rafa", "text_en": "Rafa Zoomed in with an accountant in Florida.\n'Let's run the NUMBERS,' the accountant said.\n'Your REVENUE looks decent. But what's your MARGIN?\nCASH FLOW? RUNWAY? Are you going to BOOTSTRAP, or do you have an INVESTOR?'\nRafa scribbled every word.\nBy the end, he had a notebook full of English and a ten-year plan.", "text_pt": "O Rafa entrou numa Zoom com um contador da Flórida.\n'Vamos rodar os NÚMEROS,' o contador disse.\n'RECEITA razoável. Mas e a MARGEM?\nFLUXO DE CAIXA? PISTA? Vai FAZER SOZINHO ou tem um INVESTIDOR?'\nO Rafa anotava cada palavra.\nNo fim, tinha um caderno cheio de inglês e um plano de dez anos." },
+    { "kind": "vocab_intro", "title": "Core financial terms", "items": [
+      { "term": "revenue", "pt": "receita (dinheiro que entra)" },
+      { "term": "profit", "pt": "lucro (receita − custos)" },
+      { "term": "margin", "pt": "margem (% de lucro)" },
+      { "term": "cash flow", "pt": "fluxo de caixa (dinheiro entrando e saindo)" },
+      { "term": "runway", "pt": "pista (tempo até o dinheiro acabar)" },
+      { "term": "burn rate", "pt": "ritmo de queima de caixa por mês" },
+      { "term": "break-even", "pt": "ponto de equilíbrio (nem lucro nem prejuízo)" }
+    ]},
+    { "kind": "vocab_intro", "title": "Common finance expressions", "items": [
+      { "term": "in the black / in the red", "pt": "no positivo / no vermelho" },
+      { "term": "run the numbers", "pt": "rodar os números, fazer as contas" },
+      { "term": "ballpark figure", "pt": "estimativa grosseira" },
+      { "term": "bootstrap", "pt": "empreender sem investidor, com dinheiro próprio" },
+      { "term": "equity", "pt": "participação societária" },
+      { "term": "LLC (Limited Liability Company)", "pt": "tipo de empresa nos EUA, similar a LTDA" }
+    ]},
+    { "kind": "grammar_note", "title": "Formal hedging — softening in business", "body_en": "Financial conversations avoid absolutes. Use hedges: 'TENDS to be around 20%', 'ROUGHLY SPEAKING', 'A BALLPARK figure would be $500k', 'I'D ESTIMATE...'. This protects you from being wrong and signals professional caution.", "body_pt": "Conversas financeiras evitam absolutos. Hedges (amortecedores): 'tends to be', 'roughly speaking', 'a ballpark figure', 'I'd estimate'. Protege de erro e mostra cautela profissional.", "examples": [
+      { "en": "Our margin tends to be around 25%.", "pt": "Nossa margem costuma ser em torno de 25%." },
+      { "en": "Roughly speaking, we break even at 200 tacos a day.", "pt": "Grosso modo, batemos o break-even com 200 tacos/dia." },
+      { "en": "A ballpark figure would be $40k in startup costs.", "pt": "Uma estimativa seria uns US$40k de custo inicial." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "fin-s01", "type": "multiple_choice", "question": "'We're ___ — we're spending more than we earn.' Which idiom?", "options": ["in the black", "in the red", "in the green", "in the blue"], "correct": 1, "explanation": "IN THE RED = losing money. IN THE BLACK = profitable. Finance color-codes: red for negative.", "hint_pt_br": "IN THE RED = no prejuízo. IN THE BLACK = no lucro." }},
+    { "kind": "exercise", "exercise": { "id": "fin-s02", "type": "fill_blank", "question": "Complete: 'What's our ___ ___? We need 18 months to survive.' (pista, tempo até o caixa acabar)", "correct": "runway", "explanation": "RUNWAY = how long your cash lasts at current burn rate. Airport metaphor: how much runway before takeoff (or crash).", "hint_pt_br": "RUNWAY = tempo até o caixa acabar. Metáfora de aeroporto." }},
+    { "kind": "exercise", "exercise": { "id": "fin-s03", "type": "matching", "pairs": [
+      ["revenue", "receita"],
+      ["profit", "lucro"],
+      ["margin", "margem"],
+      ["cash flow", "fluxo de caixa"],
+      ["equity", "participação societária"],
+      ["break-even", "ponto de equilíbrio"]
+    ], "explanation": "Six essential nouns. If you can't use them in a sentence, you can't talk business in English.", "hint_pt_br": "Seis substantivos fundamentais. Se não souber usar em frase, não dá pra conversar negócios em inglês." }},
+    { "kind": "dialogue", "location_en": "Zoom, final minutes of the meeting", "location_pt": "Zoom, minutos finais da reunião", "turns": [
+      { "character_id": "rafa", "en": "So roughly speaking, what's my break-even?", "pt": "Grosso modo, qual é meu break-even?" },
+      { "character_id": "zara", "en": "Based on your numbers? 220 tacos a day. That's the ballpark.", "pt": "Pelos seus números? 220 tacos por dia. É a estimativa." },
+      { "character_id": "rafa", "en": "And if I bootstrap, how long is my runway?", "pt": "E se eu fizer sem investidor, qual é minha pista?" },
+      { "character_id": "zara", "en": "About 14 months. After that, you need revenue — or an investor.", "pt": "Uns 14 meses. Depois, precisa de receita — ou de um investidor." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "fin-s04", "type": "multiple_choice", "question": "'We're bootstrapping the business.' What does that mean?", "options": [
+        "We're putting on boots",
+        "We're funding it ourselves, no investors",
+        "We're going public on the stock market",
+        "We're closing the company"
+      ], "correct": 1, "explanation": "BOOTSTRAP = build the business with your own money, no outside investment. From 'pull yourself up by your bootstraps'.", "hint_pt_br": "BOOTSTRAP = fazer com dinheiro próprio, sem investidor. Vem de 'se virar sozinho'." }}
+  ]
+}
