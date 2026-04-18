@@ -1,0 +1,48 @@
+{
+  "slug": "lost-tourist",
+  "title": "The Lost Tourist",
+  "description": "Directions, transport, and prepositions of movement. A lost tourist finds Amazing School thanks to Bia.",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.1",
+  "xp_reward": 45,
+  "estimated_minutes": 14,
+  "summary_pt_br": "Direções em inglês: go straight, turn left/right, take the second street, cross, between, opposite, on the corner. Preposições de movimento (to, into, through, across, along).",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 37 — The Lost Tourist", "subtitle_en": "Left, right, and straight ahead", "subtitle_pt": "Esquerda, direita e em frente" },
+    { "kind": "narrative", "scene_emoji": "🏫", "character_id": "bia", "text_en": "A tourist stopped Bia on the boardwalk.\n'Excuse me — how do I GET TO Amazing School?'\n'GO STRAIGHT for two blocks,' Bia said,\n'TURN LEFT at the ice-cream shop, CROSS the small square,\nand the school is ON THE CORNER, OPPOSITE the surf shop.'", "text_pt": "Um turista parou a Bia no calçadão.\n'Com licença — como chego à Amazing School?'\n'SIGA RETO por dois quarteirões,' disse a Bia,\n'VIRE À ESQUERDA na sorveteria, ATRAVESSE a pracinha,\ne a escola está NA ESQUINA, EM FRENTE à loja de surf.'" },
+    { "kind": "vocab_intro", "title": "Direction phrases", "items": [
+      { "term": "go straight", "pt": "siga em frente" },
+      { "term": "turn left / right", "pt": "vire à esquerda / direita" },
+      { "term": "take the second street", "pt": "pegue a segunda rua" },
+      { "term": "cross the square", "pt": "atravesse a praça" },
+      { "term": "on the corner", "pt": "na esquina" },
+      { "term": "opposite", "pt": "em frente a" },
+      { "term": "between X and Y", "pt": "entre X e Y" },
+      { "term": "next to", "pt": "ao lado de" }
+    ]},
+    { "kind": "vocab_intro", "title": "Transport", "items": [
+      { "term": "by bus / by car / by bike / by plane", "pt": "de ônibus / de carro / de bicicleta / de avião" },
+      { "term": "on foot", "pt": "a pé (cuidado: 'on foot', não 'by foot')" },
+      { "term": "get on / get off", "pt": "entrar / sair (ônibus, avião, trem)" },
+      { "term": "get in / get out of", "pt": "entrar / sair (carro, táxi)" }
+    ]},
+    { "kind": "grammar_note", "title": "By foot? No — ON foot.", "body_en": "For most transport: BY + vehicle (by car, by bus, by plane). Exception: ON FOOT for walking. Brazilians often say 'by foot' — wrong. Also: you GET ON/OFF a bus but GET IN/OUT OF a car. The rule: bigger vehicles you can stand up in → on/off.", "body_pt": "Transporte: BY + veículo (by car, by bus). EXCEÇÃO: ON FOOT (a pé). Erro clássico: 'by foot' — não existe. E: get ON/OFF ônibus/trem (grandes), get IN/OUT OF carro/táxi (pequenos).", "examples": [
+      { "en": "I go to school on foot. She goes by bus.", "pt": "Eu vou a pé. Ela vai de ônibus." },
+      { "en": "Get in the car. Get on the bus.", "pt": "Entre no carro. Suba no ônibus." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "dir-s01", "type": "fill_blank", "question": "Complete: 'I come to school ___ foot every day.'", "correct": "on", "explanation": "ON FOOT — fixed expression, always with ON.", "hint_pt_br": "'On foot' — expressão fixa." }},
+    { "kind": "exercise", "exercise": { "id": "dir-s02", "type": "multiple_choice", "question": "'The bakery is ___ the pharmacy and the bank.'", "options": ["opposite", "between", "next to", "behind"], "correct": 1, "explanation": "BETWEEN for two specific landmarks on each side.", "hint_pt_br": "BETWEEN = entre dois pontos específicos." }},
+    { "kind": "exercise", "exercise": { "id": "dir-s03", "type": "matching", "pairs": [
+      ["by bus", "de ônibus"],
+      ["on foot", "a pé"],
+      ["get on", "subir (ônibus/trem)"],
+      ["get out of", "sair (carro/táxi)"],
+      ["on the corner", "na esquina"]
+    ], "explanation": "Five expressions. Memorize as chunks.", "hint_pt_br": "Cinco blocos para decorar inteiros." }},
+    { "kind": "dialogue", "location_en": "Walking to school", "location_pt": "Andando para a escola", "turns": [
+      { "character_id": "maya", "en": "Do you come by bike or by bus?", "pt": "Você vem de bike ou de ônibus?" },
+      { "character_id": "bia", "en": "Usually on foot. It's only 10 minutes.", "pt": "Geralmente a pé. Dá uns 10 minutos." }
+    ]}
+  ]
+}

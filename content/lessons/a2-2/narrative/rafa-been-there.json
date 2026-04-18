@@ -1,0 +1,36 @@
+{
+  "slug": "rafa-been-there",
+  "title": "Rafa's Been There",
+  "description": "Present Perfect with EVER / NEVER / BEEN. Rafa tells the class every country he's been to — and which one he's never visited.",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.2",
+  "xp_reward": 50,
+  "estimated_minutes": 15,
+  "summary_pt_br": "Present Perfect (have/has + particípio) para experiências de vida. Key words: EVER (já, em perguntas), NEVER (nunca), BEEN (esteve em), GONE (foi e não voltou).",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 40 — Rafa's Been There", "subtitle_en": "Life experience in Present Perfect", "subtitle_pt": "Experiência de vida em Present Perfect" },
+    { "kind": "narrative", "character_id": "rafa", "text_en": "'I HAVE BEEN to twelve countries,' Rafa said.\n'I HAVE EATEN tacos in Mexico, pizza in Naples, sushi in Tokyo.\nI HAVE NEVER BEEN to Orlando — but I'm GOING.\nI HAVE NEVER SEEN a bigger ambition than my own.'", "text_pt": "'Já ESTIVE em doze países,' disse o Rafa.\n'Já COMI taco no México, pizza em Nápoles, sushi em Tóquio.\nNUNCA ESTIVE em Orlando — mas vou.\nNunca VI ambição maior que a minha.'" },
+    { "kind": "grammar_note", "title": "Present Perfect for life experience", "body_en": "Structure: HAVE / HAS + past participle. Use for experiences up to now, without a specific time. Signal words: EVER ('Have you EVER…?'), NEVER ('I have NEVER…'). With places, use BEEN (go-and-come-back) not GONE (went and hasn't come back). 'She HAS BEEN to Paris' (she visited). 'She HAS GONE to Paris' (she's there now).", "body_pt": "Estrutura: have/has + particípio. Experiência até agora, sem tempo específico. EVER = já (em pergunta), NEVER = nunca. BEEN = foi e voltou. GONE = foi e não voltou. 'Has been to Paris' (visitou). 'Has gone to Paris' (ainda lá).", "examples": [
+      { "en": "Have you ever eaten sushi?", "pt": "Você já comeu sushi?" },
+      { "en": "I have never seen snow.", "pt": "Nunca vi neve." },
+      { "en": "Maya has been to Hawaii. (she came back)", "pt": "Maya já esteve no Havaí." },
+      { "en": "Maya has gone to Hawaii. (she's there now)", "pt": "Maya foi para o Havaí (ainda está lá)." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "pp-s01", "type": "fill_blank", "question": "Complete: '___ you ever ___ (try) Brazilian feijoada?'", "correct": "Have / tried", "explanation": "Yes/no question in present perfect: HAVE you ever + past participle (tried).", "hint_pt_br": "Have + sujeito + ever + particípio (tried)." }},
+    { "kind": "exercise", "exercise": { "id": "pp-s02", "type": "multiple_choice", "question": "Maya is in Rio right now. Which is correct?", "options": ["She has been to Rio", "She has gone to Rio", "She went to Rio", "Both A and B depending on meaning"], "correct": 1, "explanation": "She's THERE now → GONE. BEEN means she visited and returned.", "hint_pt_br": "Está lá agora = gone. Já visitou e voltou = been." }},
+    { "kind": "exercise", "exercise": { "id": "pp-s03", "type": "fill_blank", "question": "Complete: 'I have ___ (never) eaten escargot.'", "correct": "never", "explanation": "NEVER in affirmative structure with present perfect.", "hint_pt_br": "NEVER no lugar do 'not' em present perfect." }},
+    { "kind": "dialogue", "location_en": "Rooftop, after class", "location_pt": "Terraço, depois da aula", "turns": [
+      { "character_id": "bia", "en": "Have you ever been to Hawaii?", "pt": "Você já esteve no Havaí?" },
+      { "character_id": "rafa", "en": "No, I haven't. Have you?", "pt": "Não, nunca fui. E você?" },
+      { "character_id": "bia", "en": "Not yet. But I will. One day.", "pt": "Ainda não. Mas vou. Um dia." }
+    ]},
+    { "kind": "exercise", "exercise": { "id": "pp-s04", "type": "matching", "pairs": [
+      ["have been", "já esteve (e voltou)"],
+      ["have gone", "foi (ainda lá)"],
+      ["ever", "já (em pergunta)"],
+      ["never", "nunca"],
+      ["yet", "ainda (neg./pergunta)"]
+    ], "explanation": "Five key signals for Present Perfect. Learn them together.", "hint_pt_br": "Cinco sinais-chave do Present Perfect." }}
+  ]
+}

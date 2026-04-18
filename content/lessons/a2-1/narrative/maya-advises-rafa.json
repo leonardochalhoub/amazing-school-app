@@ -1,0 +1,36 @@
+{
+  "slug": "maya-advises-rafa",
+  "title": "Maya Advises Rafa — Can, Should, Must",
+  "description": "Core modals: CAN (ability), SHOULD (advice), MUST (obligation), MIGHT (possibility). Maya tells Rafa how to expand to Orlando.",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.1",
+  "xp_reward": 45,
+  "estimated_minutes": 13,
+  "summary_pt_br": "Modais essenciais: can (conseguir/poder), should (deveria), must (tem que), might (talvez). Sempre vêm seguidos do verbo NA FORMA BASE (sem 'to').",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 36 — The Advice Session", "subtitle_en": "Modals: the little words that change everything", "subtitle_pt": "Modais: as palavrinhas que mudam tudo" },
+    { "kind": "narrative", "character_id": "maya", "text_en": "Rafa asked Maya: 'What CAN I do? What SHOULD I do? What MUST I do?'\nMaya grinned. 'Three modals. Three answers.\nYou CAN open a food truck — the ability is yours.\nYou SHOULD visit Orlando first — it's wise.\nYou MUST get a permit — you have no choice.'", "text_pt": "Rafa perguntou pra Maya: 'O que POSSO fazer? O que DEVO fazer? O que TENHO que fazer?'\nMaya sorriu. 'Três modais. Três respostas.\nVocê PODE abrir um food truck — a capacidade é sua.\nVocê DEVERIA visitar Orlando antes — é sábio.\nVocê TEM QUE tirar uma licença — não tem opção.'" },
+    { "kind": "grammar_note", "title": "Modal verbs — always + base verb", "body_en": "Modals (can, should, must, might, could, would, may) are followed by the BASE form of the verb. No 'to', no -s, no -ed. 'She can swim' (not 'she cans' or 'she can to swim'). Negative: can + not = can't, should + not = shouldn't, must + not = mustn't. Question: invert subject — 'Can you swim?' 'Should I leave?'", "body_pt": "Modais (can, should, must, might, could, would, may) sempre vêm com o verbo na forma BASE. Sem 'to', sem -s. 'She can swim' (não 'she cans'). Negativa: can't, shouldn't, mustn't. Pergunta: inverte o sujeito.", "examples": [
+      { "en": "I can cook. She can cook. They can cook. (no -s)", "pt": "O modal nunca muda com he/she/it." },
+      { "en": "You should try it. You shouldn't wait.", "pt": "Positivo e negativo." }
+    ]},
+    { "kind": "vocab_intro", "title": "The five core modals", "items": [
+      { "term": "can", "pt": "poder / conseguir (habilidade)" },
+      { "term": "should", "pt": "deveria (conselho)" },
+      { "term": "must / have to", "pt": "tem que (obrigação)" },
+      { "term": "might / may", "pt": "talvez (possibilidade)" },
+      { "term": "could", "pt": "poderia (passado de can / pedido educado)" }
+    ]},
+    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "mod-s01", "type": "multiple_choice", "question": "You need to give strong advice. Which?", "options": ["You can eat less sugar", "You should eat less sugar", "You might eat less sugar", "You could eat less sugar"], "correct": 1, "explanation": "SHOULD = recommendation / advice. Strong but not forced.", "hint_pt_br": "Should = conselho forte." }},
+    { "kind": "exercise", "exercise": { "id": "mod-s02", "type": "multiple_choice", "question": "Law: stopping at a red light. Which?", "options": ["drivers can stop", "drivers should stop", "drivers must stop", "drivers might stop"], "correct": 2, "explanation": "MUST = no choice, legal or strong obligation.", "hint_pt_br": "Must = obrigação (lei, regra)." }},
+    { "kind": "exercise", "exercise": { "id": "mod-s03", "type": "fill_blank", "question": "Softer advice: 'You ___ want to check the weather.' (polite possibility)", "correct": "might", "explanation": "MIGHT = tentative suggestion without committing.", "hint_pt_br": "Might = talvez. Sugestão tentativa." }},
+    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "mod-s04", "type": "matching", "pairs": [
+      ["can", "habilidade"],
+      ["should", "conselho"],
+      ["must", "obrigação"],
+      ["might", "possibilidade"],
+      ["could", "possibilidade / pedido"]
+    ], "explanation": "Match each modal to its function. Context changes everything.", "hint_pt_br": "Cada modal tem uma função principal. Memorize os pares." }}
+  ]
+}
