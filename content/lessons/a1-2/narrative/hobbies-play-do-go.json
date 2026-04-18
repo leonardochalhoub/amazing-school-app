@@ -1,0 +1,27 @@
+{
+  "slug": "hobbies-play-do-go",
+  "title": "Play, Do, Go — Hobby Rules",
+  "description": "Why we PLAY tennis but DO yoga but GO swimming. Three verbs, three categories.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 35,
+  "estimated_minutes": 11,
+  "summary_pt_br": "Três verbos que viram hobbies em inglês: PLAY para esportes de bola / jogos / instrumentos. DO para atividades físicas sem bola (yoga, karate). GO + -ING para atividades (go swimming, go running). Regra simples, fácil de errar.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 61 — Play, Do, Go", "subtitle_en": "Three verbs for hobbies", "subtitle_pt": "Três verbos para hobbies" },
+    { "kind": "narrative", "character_id": "maya", "text_en": "'I PLAY the piano. I PLAY tennis. I PLAY video games.\nI DO yoga. I DO karate. I DO my homework.\nI GO SWIMMING. I GO RUNNING. I GO SHOPPING.'\nThree verbs, three categories. Memorize.", "text_pt": "'TOCO piano. JOGO tênis. JOGO videogame.\nFAÇO yoga. FAÇO karatê. FAÇO a lição.\nVOU NADAR. VOU CORRER. VOU ÀS COMPRAS.'\nTrês verbos, três categorias. Decorar." },
+    { "kind": "grammar_note", "title": "The three patterns", "body_en": "PLAY + ball sports / games / instruments (tennis, chess, guitar). DO + physical activity without ball / duty (yoga, karate, homework). GO + -ING for motion/activities (swimming, shopping, running). 'I go swim' is WRONG — always 'I go swimming'.", "body_pt": "PLAY = bola/jogos/instrumentos. DO = atividade física sem bola, tarefa. GO + -ING = atividades. 'I go swim' é ERRADO. Sempre 'go swimming'.", "examples": [
+      { "en": "I play tennis. I do yoga. I go running.", "pt": "Três padrões." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "hob-s01", "type": "multiple_choice", "question": "'I ___ yoga every morning.'", "options": ["play", "do", "go", "make"], "correct": 1, "explanation": "Yoga = DO.", "hint_pt_br": "Yoga, karatê → DO." }},
+    { "kind": "exercise", "exercise": { "id": "hob-s02", "type": "fill_blank", "question": "Complete: 'Let's go ___ (swim) tomorrow.'", "correct": "swimming", "explanation": "GO + -ING.", "hint_pt_br": "Go + -ing." }},
+    { "kind": "exercise", "exercise": { "id": "hob-s03", "type": "matching", "pairs": [
+      ["play tennis", "jogar tênis"],
+      ["do karate", "fazer karatê"],
+      ["go swimming", "ir nadar"],
+      ["play guitar", "tocar violão"],
+      ["do homework", "fazer a lição"]
+    ], "explanation": "Five common chunks. Use them whole.", "hint_pt_br": "Cinco blocos. Decore juntos." }}
+  ]
+}

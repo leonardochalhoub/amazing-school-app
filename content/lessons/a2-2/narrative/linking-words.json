@@ -1,0 +1,28 @@
+{
+  "slug": "linking-words",
+  "title": "Because, So, But, Although",
+  "description": "The connectors that turn boring sentences into paragraphs. BECAUSE (reason), SO (result), BUT (contrast), ALTHOUGH (concession).",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.2",
+  "xp_reward": 45,
+  "estimated_minutes": 13,
+  "summary_pt_br": "Conectivos básicos: BECAUSE (porque — razão), SO (então — resultado), BUT (mas — contraste), ALTHOUGH (embora — concessão). Regra: BECAUSE + oração, BECAUSE OF + substantivo.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 68 — Linking Words", "subtitle_en": "Because, so, but, although", "subtitle_pt": "Porque, então, mas, embora" },
+    { "kind": "narrative", "character_id": "zara", "text_en": "'I stayed home BECAUSE it was raining.' (reason)\n'It was raining, SO I stayed home.' (result)\n'I wanted to go, BUT it was raining.' (contrast)\n'ALTHOUGH it was raining, I went out.' (concession)\nFour words. Four meanings. Careful with placement.", "text_pt": "'Fiquei em casa PORQUE estava chovendo.' (razão)\n'Estava chovendo, ENTÃO fiquei em casa.' (resultado)\n'Eu queria sair, MAS estava chovendo.' (contraste)\n'EMBORA estivesse chovendo, saí.' (concessão)\nQuatro palavras. Quatro sentidos." },
+    { "kind": "grammar_note", "title": "Because vs Because of", "body_en": "BECAUSE + full clause (subject + verb). 'Because I was tired.' BECAUSE OF + noun. 'Because of the rain.' Common mistake: 'Because of I was tired' — WRONG. Use 'because' with a clause or 'because of' with a noun, never mixed.", "body_pt": "BECAUSE + oração (sujeito + verbo). BECAUSE OF + substantivo. 'Because I was tired' / 'Because of the rain'. Nunca misture.", "examples": [
+      { "en": "Because of the rain, I stayed.", "pt": "Substantivo." },
+      { "en": "Because it was raining, I stayed.", "pt": "Oração." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "link-s01", "type": "multiple_choice", "question": "'I was tired, ___ I went to bed.' (result)", "options": ["because", "so", "but", "although"], "correct": 1, "explanation": "Result → SO.", "hint_pt_br": "Resultado = SO." }},
+    { "kind": "exercise", "exercise": { "id": "link-s02", "type": "fill_blank", "question": "Complete: 'I stayed home ___ ___ the rain.' (because of + noun)", "correct": "because of", "explanation": "BECAUSE OF + noun.", "hint_pt_br": "'Because of' + substantivo." }},
+    { "kind": "exercise", "exercise": { "id": "link-s03", "type": "matching", "pairs": [
+      ["because", "razão"],
+      ["so", "resultado"],
+      ["but", "contraste"],
+      ["although", "concessão"],
+      ["because of", "+ substantivo"]
+    ], "explanation": "Five connectors. Each has a distinct role.", "hint_pt_br": "Cinco conectivos com papéis distintos." }}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "plurals-regular-irregular",
+  "title": "One Child, Two Children",
+  "description": "Regular plurals (add -s / -es) and the handful of irregulars that never stop showing up.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 25,
+  "estimated_minutes": 10,
+  "summary_pt_br": "Plurais regulares (apenas -s / -es). Plurais irregulares essenciais: child→children, man→men, woman→women, person→people, foot→feet, tooth→teeth, mouse→mice. Decorar é o único caminho.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 55 — Plurals", "subtitle_en": "One tooth, two teeth", "subtitle_pt": "Um dente, dois dentes" },
+    { "kind": "narrative", "character_id": "maya", "text_en": "Most plurals are easy: one CAT, two CATS. One BOX, two BOXES.\nBut some words break the rules.\nOne CHILD → two CHILDREN. One MAN → two MEN. One FOOT → two FEET.\nOne TOOTH → two TEETH. One PERSON → five PEOPLE. One MOUSE → three MICE.", "text_pt": "A maioria é fácil: one cat → two cats. One box → two boxes.\nMas alguns fogem da regra.\nCriança → crianças (children). Homem → homens (men). Pé → pés (feet).\nDente → dentes (teeth). Pessoa → pessoas (people). Rato → ratos (mice)." },
+    { "kind": "grammar_note", "title": "Regular plural patterns", "body_en": "Just add -S: cat → cats. -CH/-SH/-S/-X/-O often add -ES: box → boxes, watch → watches, tomato → tomatoes. -Y after consonant → -IES: baby → babies, city → cities. Words ending -F/-FE often → -VES: knife → knives, wolf → wolves.", "body_pt": "Regras: +S (cat→cats). +ES depois de -ch/-sh/-s/-x/-o (box→boxes). Y depois de consoante → IES (baby→babies). F/FE → VES (knife→knives).", "examples": [
+      { "en": "dog → dogs, bus → buses, baby → babies, knife → knives", "pt": "Quatro padrões regulares." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "plur-s01", "type": "fill_blank", "question": "One child, two ___.", "correct": "children", "explanation": "Irregular — memorize.", "hint_pt_br": "Irregular. Decorar." }},
+    { "kind": "exercise", "exercise": { "id": "plur-s02", "type": "multiple_choice", "question": "Plural of 'person'?", "options": ["persons", "people", "peoples", "persone"], "correct": 1, "explanation": "Plural of PERSON = PEOPLE. 'Persons' is rare and formal.", "hint_pt_br": "Person → people (irregular)." }},
+    { "kind": "exercise", "exercise": { "id": "plur-s03", "type": "matching", "pairs": [
+      ["man", "men"],
+      ["woman", "women"],
+      ["foot", "feet"],
+      ["tooth", "teeth"],
+      ["mouse", "mice"]
+    ], "explanation": "Five essential irregulars. Drill them daily.", "hint_pt_br": "Cinco irregulares essenciais." }}
+  ]
+}

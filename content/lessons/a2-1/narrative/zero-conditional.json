@@ -1,0 +1,26 @@
+{
+  "slug": "zero-conditional",
+  "title": "When Water Boils — Zero Conditional",
+  "description": "Zero conditional for general truths and rules. IF + present, + present. 'If you heat water, it boils.'",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.1",
+  "xp_reward": 40,
+  "estimated_minutes": 11,
+  "summary_pt_br": "Zero conditional para VERDADES GERAIS, leis da natureza, regras. Estrutura: IF + present simple, present simple. 'If you heat water, it boils.' Pode trocar IF por WHEN — mesmo sentido. Diferente do first conditional (que fala de futuro).",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 63 — Zero Conditional", "subtitle_en": "Timeless truths", "subtitle_pt": "Verdades atemporais" },
+    { "kind": "narrative", "character_id": "rafa", "text_en": "'IF you heat water, it BOILS.'\n'IF you don't water plants, they DIE.'\n'WHEN the sun sets, the beach empties.'\nRules. Science. Habits. Zero conditional. Timeless.", "text_pt": "'SE você aquece a água, ela FERVE.'\n'SE você não rega as plantas, elas MORREM.'\n'QUANDO o sol se põe, a praia esvazia.'\nRegras. Ciência. Hábitos. Zero conditional. Atemporal." },
+    { "kind": "grammar_note", "title": "Zero vs First conditional", "body_en": "Zero: IF + present → present. For always-true rules. 'If you freeze water, it becomes ice.' First: IF + present → WILL + base. For specific future. 'If you study, you'll pass.' You can swap IF for WHEN in zero conditional — 'When you heat water, it boils' means the same.", "body_pt": "Zero: IF + presente → presente. Verdade sempre. First: IF + presente → WILL + verbo base. Futuro específico. Em zero, IF e WHEN são intercambiáveis.", "examples": [
+      { "en": "If you mix blue and yellow, you get green. (zero — always)", "pt": "Verdade sempre." },
+      { "en": "If it rains tomorrow, I'll stay home. (first — future)", "pt": "Futuro específico." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "zero-s01", "type": "fill_blank", "question": "Complete: 'If you ___ (not / sleep), you feel tired.'", "correct": "don't sleep", "explanation": "Zero conditional: IF + present simple. Negative: don't + base.", "hint_pt_br": "Zero: if + presente. 'Don't sleep'." }},
+    { "kind": "exercise", "exercise": { "id": "zero-s02", "type": "multiple_choice", "question": "Which is zero conditional?", "options": [
+        "If I study, I will pass",
+        "If you boil water, it turns to steam",
+        "If I were you, I would leave",
+        "If I had time, I would travel"
+      ], "correct": 1, "explanation": "Zero = always-true + present→present.", "hint_pt_br": "Zero: sempre verdadeiro. Presente + presente." }}
+  ]
+}

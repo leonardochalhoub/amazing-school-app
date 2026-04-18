@@ -47,7 +47,19 @@ export type LessonScene =
   | ExerciseScene
   | GrammarNoteScene
   | VocabIntroScene
-  | ChapterTitleScene;
+  | ChapterTitleScene
+  | PronunciationScene;
+
+/**
+ * Audio pronunciation exercise: student records themselves saying the
+ * target phrase, Groq Whisper transcribes, similarity score is shown.
+ */
+export interface PronunciationScene {
+  kind: "pronunciation";
+  target_en: string;
+  target_pt?: string;
+  framing_character_id?: string;
+}
 
 export interface ChapterTitleScene {
   kind: "chapter_title";

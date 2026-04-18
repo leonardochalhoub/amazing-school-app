@@ -1,0 +1,28 @@
+{
+  "slug": "like-love-hate-ing",
+  "title": "I Love Surfing, I Hate Waking Up",
+  "description": "Verbs of preference (like, love, hate, enjoy, don't mind) + verb-ING. Not 'I love surf' — 'I love surfing'.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 35,
+  "estimated_minutes": 11,
+  "summary_pt_br": "Verbos de preferência + forma -ING: love, like, enjoy, don't mind, hate. Exemplo: 'I love SURFING' (não 'I love surf'). 'I hate WAKING UP early'.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 59 — Preferences", "subtitle_en": "Like + -ing", "subtitle_pt": "Gostar + -ing" },
+    { "kind": "narrative", "character_id": "bia", "text_en": "'I LOVE SURFING,' said Bia.\n'I LIKE READING,' said Joca.\n'I ENJOY COOKING,' said Rafa.\n'I DON'T MIND WAKING UP early,' said Maya.\n'I HATE WAITING,' said Zara.", "text_pt": "'ADORO surfar,' disse a Bia.\n'GOSTO de ler,' disse o Joca.\n'CURTO cozinhar,' disse o Rafa.\n'Não me importo de acordar cedo,' disse a Maya.\n'ODEIO esperar,' disse a Zara." },
+    { "kind": "grammar_note", "title": "LIKE + -ING, not bare verb", "body_en": "After LIKE, LOVE, HATE, ENJOY, DON'T MIND — use verb-ING. 'I like READING' (not 'I like read'). Exception: 'I like TO read' is also correct but -ING is more common. 'I would like' is different — that takes TO + base: 'I would like TO read'.", "body_pt": "Depois de LIKE / LOVE / HATE / ENJOY / DON'T MIND → verbo-ING. 'I love surfing'. Cuidado: 'I would like' pede TO + verbo base ('I would like TO surf').", "examples": [
+      { "en": "I love cooking. (-ing)", "pt": "Adoro cozinhar." },
+      { "en": "I would love to cook. (to + base)", "pt": "Adoraria cozinhar." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "like-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["I love surf", "I love surfing", "I love to surfing", "I love surfs"], "correct": 1, "explanation": "LOVE + -ING.", "hint_pt_br": "Love + -ing. 'Surfing'." }},
+    { "kind": "exercise", "exercise": { "id": "like-s02", "type": "fill_blank", "question": "Complete: 'She enjoys ___ (read) books.'", "correct": "reading", "explanation": "ENJOY + -ING.", "hint_pt_br": "Enjoy + -ing." }},
+    { "kind": "exercise", "exercise": { "id": "like-s03", "type": "matching", "pairs": [
+      ["love", "adorar"],
+      ["like", "gostar"],
+      ["enjoy", "curtir"],
+      ["don't mind", "não se importar"],
+      ["hate", "odiar"]
+    ], "explanation": "Five preference verbs. All take -ING.", "hint_pt_br": "Cinco verbos. Todos com -ing depois." }}
+  ]
+}

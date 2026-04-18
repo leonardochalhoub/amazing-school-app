@@ -1,0 +1,38 @@
+{
+  "slug": "countries-nationalities",
+  "title": "Countries and Nationalities",
+  "description": "Brazil → Brazilian. The US → American. Japan → Japanese. Country ↔ nationality pairs you need every day.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 25,
+  "estimated_minutes": 11,
+  "summary_pt_br": "Países e nacionalidades em inglês. Em inglês ambos SEMPRE começam com MAIÚSCULA (Brazil, Brazilian). Frase típica: 'I'M FROM Brazil' ou 'I'M Brazilian'.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 56 — Where You're From", "subtitle_en": "Countries and nationalities", "subtitle_pt": "Países e nacionalidades" },
+    { "kind": "narrative", "character_id": "kumar", "text_en": "Mr. Kumar pointed at a world map.\n'I was born in India. I'm Indian-American.\nBia is BRAZILIAN. Zara is BRITISH. Joca is BRAZILIAN too.\nMy wife is JAPANESE. My nephew is MEXICAN. The school? INTERNATIONAL.'", "text_pt": "Mr. Kumar apontou pra um mapa-múndi.\n'Nasci na Índia. Sou indo-americano.\nBia é BRASILEIRA. Zara é BRITÂNICA. Joca é BRASILEIRO.\nMinha esposa é JAPONESA. Meu sobrinho é MEXICANO. A escola? INTERNACIONAL.'" },
+    { "kind": "vocab_intro", "title": "Country → Nationality", "items": [
+      { "term": "Brazil → Brazilian", "pt": "brasileiro(a)" },
+      { "term": "The United States → American", "pt": "americano(a)" },
+      { "term": "The United Kingdom → British", "pt": "britânico(a)" },
+      { "term": "Japan → Japanese", "pt": "japonês(esa)" },
+      { "term": "Germany → German", "pt": "alemão(ã)" },
+      { "term": "France → French", "pt": "francês(esa)" },
+      { "term": "Italy → Italian", "pt": "italiano(a)" },
+      { "term": "Mexico → Mexican", "pt": "mexicano(a)" }
+    ]},
+    { "kind": "grammar_note", "title": "Two ways to answer 'Where are you from?'", "body_en": "'I'm FROM Brazil.' (country with from). 'I'm BRAZILIAN.' (nationality, no 'from'). Both correct. Never 'I'm from Brazilian' (mixing country with nationality). Capital letters ALWAYS — it's a rule.", "body_pt": "Duas formas de responder 'De onde você é?': 'I'm FROM Brazil' ou 'I'm BRAZILIAN'. Nunca misture: 'I'm from Brazilian' está errado. Sempre MAIÚSCULAS.", "examples": [
+      { "en": "I'm from Brazil. / I'm Brazilian.", "pt": "Duas formas corretas." },
+      { "en": "She is from Japan. / She is Japanese.", "pt": "Duas formas corretas." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "ctry-s01", "type": "fill_blank", "question": "Complete: 'I'm ___ Brazil.' (I'm from where)", "correct": "from", "explanation": "FROM + country.", "hint_pt_br": "'I'm from' + país." }},
+    { "kind": "exercise", "exercise": { "id": "ctry-s02", "type": "multiple_choice", "question": "Which is correct?", "options": ["I'm from brazilian", "I'm brazilian", "I'm Brazilian", "I'm from Brazilian"], "correct": 2, "explanation": "Nationality capitalized, no 'from'. 'I'm Brazilian'.", "hint_pt_br": "Nacionalidade: maiúscula, sem 'from'." }},
+    { "kind": "exercise", "exercise": { "id": "ctry-s03", "type": "matching", "pairs": [
+      ["Brazil", "Brazilian"],
+      ["France", "French"],
+      ["Japan", "Japanese"],
+      ["Germany", "German"],
+      ["Italy", "Italian"]
+    ], "explanation": "Five pairs. Notice the endings: -ian, -ch, -ese, -an.", "hint_pt_br": "Cinco pares. Terminações variam." }}
+  ]
+}

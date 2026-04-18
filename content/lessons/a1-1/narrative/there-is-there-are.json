@@ -1,0 +1,22 @@
+{
+  "slug": "there-is-there-are",
+  "title": "There Is, There Are",
+  "description": "How English says 'tem' / 'há'. THERE IS for singular, THERE ARE for plural.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 25,
+  "estimated_minutes": 10,
+  "summary_pt_br": "Como o inglês diz 'TEM' (no sentido de existir): THERE IS (singular), THERE ARE (plural). NUNCA 'there has' ou 'have' — armadilha clássica brasileira.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 54 — There Is, There Are", "subtitle_en": "How English says 'tem'", "subtitle_pt": "Como o inglês diz 'tem'" },
+    { "kind": "narrative", "character_id": "maya", "text_en": "Maya counted. 'THERE IS a dog on the sofa.\nTHERE ARE two cats in the kitchen.\nTHERE IS coffee in the pot.\nTHERE ARE many books in this room.'", "text_pt": "Maya contou. 'TEM um cachorro no sofá (singular).\nTEM dois gatos na cozinha (plural).\nTEM café no bule (incontável, singular).\nTEM muitos livros neste quarto (plural).'" },
+    { "kind": "grammar_note", "title": "Rule + the big trap", "body_en": "THERE IS + singular / uncountable. THERE ARE + plural. Short: There's (is) / There're is rare. Negative: There isn't / There aren't. Question: Is there…? Are there…? TRAP: Brazilians often say 'Have' ('Have a dog here'). WRONG. Always 'There is/are'.", "body_pt": "THERE IS + singular ou incontável. THERE ARE + plural. Pegadinha: brasileiros dizem 'Have a dog' — ERRADO. Sempre 'There is/are'.", "examples": [
+      { "en": "There IS milk in the fridge.", "pt": "Tem leite na geladeira." },
+      { "en": "There ARE students outside.", "pt": "Tem alunos lá fora." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "tis-s01", "type": "fill_blank", "question": "Complete: '___ ___ three chairs in the room.' (tem três)", "correct": "There are", "explanation": "Plural → THERE ARE.", "hint_pt_br": "Plural pede 'There are'." }},
+    { "kind": "exercise", "exercise": { "id": "tis-s02", "type": "multiple_choice", "question": "Which is correct?", "options": ["Have a dog here", "There have a dog", "There is a dog here", "It has a dog"], "correct": 2, "explanation": "English uses THERE IS for existence. Never 'have' in this sense.", "hint_pt_br": "Existir = there is/are. Nunca 'have'." }},
+    { "kind": "exercise", "exercise": { "id": "tis-s03", "type": "fill_blank", "question": "Complete: 'Is ___ a bathroom here?' (pergunta)", "correct": "there", "explanation": "Question: IS THERE…? Invert 'there is' to 'is there'.", "hint_pt_br": "Pergunta: Is there…?" }}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "slug": "adverbs-manner",
+  "title": "Slowly, Well, Fast — Adverbs of Manner",
+  "description": "How to describe HOW you do something. -LY endings, irregulars (good → well, fast stays fast).",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.1",
+  "xp_reward": 40,
+  "estimated_minutes": 11,
+  "summary_pt_br": "Advérbios de modo: -LY em adjetivos (slow → slowly, careful → carefully). Irregulares: good → WELL (nunca 'goodly'). Advérbios que não mudam: fast, hard, late, early. Posição: depois do verbo + objeto.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 62 — How Did You Do It?", "subtitle_en": "Adverbs of manner", "subtitle_pt": "Advérbios de modo" },
+    { "kind": "narrative", "character_id": "zara", "text_en": "'She sings BEAUTIFULLY. She speaks SLOWLY.\nHe drives FAST. He learned the piece WELL.\nShe works HARD. The class started LATE.'\nHOW → usually add -LY. Some stay the same. 'Well' is the one odd child.", "text_pt": "'Ela canta lindamente. Fala devagar.\nEle dirige rápido. Aprendeu a peça bem.\nEla trabalha duro. A aula começou tarde.'\nCOMO → geralmente -LY. Alguns não mudam. 'Well' é o filho esquisito." },
+    { "kind": "grammar_note", "title": "Rules", "body_en": "1) Adjective + LY → adverb. slow → slowly, careful → carefully, quick → quickly. 2) IRREGULAR: GOOD → WELL. 'She sings well' (not 'goodly'). 3) UNCHANGED: fast, hard, late, early, high, low. 'He runs fast' (not 'fastly'). 4) ADJECTIVES ending in -ly (friendly, lovely) have NO adverb form — use 'in a friendly way'.", "body_pt": "Regra: adjetivo + LY. Irregular: good → well. Sem mudança: fast, hard, late, early. Adjetivo -ly: sem forma adverbial (use 'in a friendly way').", "examples": [
+      { "en": "She drives slowly.", "pt": "Ela dirige devagar." },
+      { "en": "He speaks English well.", "pt": "Ele fala inglês bem." },
+      { "en": "I work hard.", "pt": "Trabalho duro." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "adv-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["She sings goodly", "She sings good", "She sings well", "She sings goodily"], "correct": 2, "explanation": "GOOD → WELL. Never 'goodly'.", "hint_pt_br": "Good (adjetivo) → Well (advérbio)." }},
+    { "kind": "exercise", "exercise": { "id": "adv-s02", "type": "fill_blank", "question": "Complete: 'He speaks very ___.' (slow, as adverb)", "correct": "slowly", "explanation": "SLOW → SLOWLY.", "hint_pt_br": "Slow + ly = slowly." }},
+    { "kind": "exercise", "exercise": { "id": "adv-s03", "type": "multiple_choice", "question": "'He runs ___.' (fast)", "options": ["fastly", "fastily", "fast", "more fast"], "correct": 2, "explanation": "FAST is both adjective AND adverb. No -LY.", "hint_pt_br": "Fast não muda. 'Fastly' não existe." }}
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "ordering-restaurant",
+  "title": "A Full Meal — Restaurant English",
+  "description": "Ordering a real meal: starter, main, dessert. Substitutions, allergies, paying the bill.",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.2",
+  "xp_reward": 45,
+  "estimated_minutes": 13,
+  "summary_pt_br": "Pedir uma refeição completa em restaurante: starter, main, dessert. Pedir substituições, avisar alergias, pedir a conta. Formas educadas: 'Could I have...', 'Without...', 'I'm allergic to...'.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 69 — A Full Meal", "subtitle_en": "Restaurant English", "subtitle_pt": "Inglês de restaurante" },
+    { "kind": "dialogue", "location_en": "A restaurant in Orlando", "location_pt": "Restaurante em Orlando", "turns": [
+      { "character_id": "zara", "en": "Are you ready to order?", "pt": "Prontos para pedir?" },
+      { "character_id": "rafa", "en": "Yes — I'll have the soup as a starter, and the fish as a main.", "pt": "Sim — sopa de entrada e peixe como prato principal." },
+      { "character_id": "zara", "en": "Anything to drink?", "pt": "Algo pra beber?" },
+      { "character_id": "rafa", "en": "A sparkling water, please. No ice.", "pt": "Uma água com gás, sem gelo." },
+      { "character_id": "rafa", "en": "Oh — I'm allergic to nuts. Could you check with the chef?", "pt": "Ah — sou alérgico a nozes. Pode checar com o chef?" }
+    ]},
+    { "kind": "vocab_intro", "title": "Menu vocabulary", "items": [
+      { "term": "starter / appetizer", "pt": "entrada" },
+      { "term": "main course", "pt": "prato principal" },
+      { "term": "side dish", "pt": "acompanhamento" },
+      { "term": "dessert", "pt": "sobremesa" },
+      { "term": "bill / check", "pt": "conta (UK / US)" },
+      { "term": "tip", "pt": "gorjeta" }
+    ]},
+    { "kind": "vocab_intro", "title": "Useful phrases", "items": [
+      { "term": "I'll have the…", "pt": "Vou querer o…" },
+      { "term": "Could I have it without…?", "pt": "Pode vir sem…?" },
+      { "term": "I'm allergic to…", "pt": "Sou alérgico(a) a…" },
+      { "term": "Could I get the bill, please?", "pt": "Pode trazer a conta?" },
+      { "term": "Is service included?", "pt": "A taxa de serviço está incluída?" }
+    ]},
+    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "rest-s01", "type": "multiple_choice", "question": "You want the bill. Which?", "options": [
+        "Give me the paper",
+        "Could I get the bill, please?",
+        "The bill now",
+        "Pay, please"
+      ], "correct": 1, "explanation": "'Could I get the bill, please?' — polite standard.", "hint_pt_br": "Forma educada: 'Could I get the bill, please?'" }},
+    { "kind": "exercise", "exercise": { "id": "rest-s02", "type": "fill_blank", "question": "Complete: 'I'm ___ to peanuts.'", "correct": "allergic", "explanation": "ALLERGIC TO — fixed expression.", "hint_pt_br": "'Allergic TO' — expressão fixa." }}
+  ]
+}

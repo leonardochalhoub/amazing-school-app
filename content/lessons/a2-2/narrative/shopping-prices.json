@@ -1,0 +1,38 @@
+{
+  "slug": "shopping-prices",
+  "title": "How Much Is It?",
+  "description": "Asking prices, discounts, paying. How MUCH for money, how MANY for items.",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.2",
+  "xp_reward": 40,
+  "estimated_minutes": 12,
+  "summary_pt_br": "Perguntas sobre preço: HOW MUCH para dinheiro/incontável, HOW MANY para contável. 'How much is this?' / 'How many do you want?' Vocabulário: discount, on sale, receipt, cash, card.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 70 — How Much?", "subtitle_en": "Shopping", "subtitle_pt": "Compras" },
+    { "kind": "dialogue", "location_en": "At the register", "location_pt": "No caixa", "turns": [
+      { "character_id": "bia", "en": "How much is this T-shirt?", "pt": "Quanto custa essa camiseta?" },
+      { "character_id": "rafa", "en": "It's 25 dollars. It's on sale — 30% off.", "pt": "25 dólares. Tá em promoção — 30% de desconto." },
+      { "character_id": "bia", "en": "Can I pay by card?", "pt": "Posso pagar no cartão?" },
+      { "character_id": "rafa", "en": "Sure. Need a receipt?", "pt": "Claro. Quer a nota?" }
+    ]},
+    { "kind": "grammar_note", "title": "How much vs How many", "body_en": "HOW MUCH + uncountable / money. 'How much is it?' 'How much milk?' HOW MANY + countable plural. 'How many shirts?' 'How many people?' For money, always HOW MUCH (money is uncountable).", "body_pt": "HOW MUCH + incontável/dinheiro. HOW MANY + contável plural. Dinheiro é SEMPRE how much.", "examples": [
+      { "en": "How much is it? / How many apples?", "pt": "Two forms." }
+    ]},
+    { "kind": "vocab_intro", "title": "Shopping vocabulary", "items": [
+      { "term": "discount / on sale", "pt": "desconto / em promoção" },
+      { "term": "receipt", "pt": "nota fiscal / recibo" },
+      { "term": "cash / card", "pt": "dinheiro / cartão" },
+      { "term": "change", "pt": "troco" },
+      { "term": "size / color / fit", "pt": "tamanho / cor / caimento" }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "shop-s01", "type": "fill_blank", "question": "Complete: 'How ___ are these shoes?'", "correct": "much", "explanation": "How much + price (money).", "hint_pt_br": "Preço/dinheiro → how much." }},
+    { "kind": "exercise", "exercise": { "id": "shop-s02", "type": "matching", "pairs": [
+      ["receipt", "nota fiscal"],
+      ["on sale", "em promoção"],
+      ["discount", "desconto"],
+      ["cash", "dinheiro"],
+      ["change", "troco"]
+    ], "explanation": "Five shopping basics.", "hint_pt_br": "Cinco básicos." }}
+  ]
+}

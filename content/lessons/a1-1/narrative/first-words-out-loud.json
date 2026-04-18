@@ -1,0 +1,21 @@
+{
+  "slug": "first-words-out-loud",
+  "title": "First Words Out Loud",
+  "description": "Your first pronunciation lesson. Record each phrase and the AI will score your pronunciation 0–100. Don't be shy — Cosmo is listening.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 50,
+  "estimated_minutes": 10,
+  "summary_pt_br": "Primeira aula de pronúncia. O estudante grava a frase no navegador, a IA (Groq Whisper) transcreve e compara com o alvo, dando uma nota de 0 a 100. Cinco frases essenciais do dia a dia.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 57 — Say It Out Loud", "subtitle_en": "Your first pronunciation scores", "subtitle_pt": "Suas primeiras notas de pronúncia" },
+    { "kind": "narrative", "character_id": "kumar", "text_en": "Mr. Kumar smiled at the microphone.\n'Hit RECORD. Say the phrase clearly. The AI will listen and give you a score.\nDon't be shy — you can try again as many times as you want.'", "text_pt": "Mr. Kumar sorriu pro microfone.\n'Aperte RECORD. Diga a frase com clareza. A IA vai ouvir e dar uma nota.\nSem vergonha — pode tentar de novo quantas vezes quiser.'" },
+    { "kind": "pronunciation", "framing_character_id": "bia", "target_en": "Good morning.", "target_pt": "Bom dia." },
+    { "kind": "pronunciation", "framing_character_id": "bia", "target_en": "My name is Bia.", "target_pt": "Meu nome é Bia." },
+    { "kind": "pronunciation", "framing_character_id": "rafa", "target_en": "Nice to meet you.", "target_pt": "Prazer em conhecer." },
+    { "kind": "pronunciation", "framing_character_id": "maya", "target_en": "Thank you very much.", "target_pt": "Muito obrigado." },
+    { "kind": "pronunciation", "framing_character_id": "lucia", "target_en": "See you tomorrow.", "target_pt": "Até amanhã." },
+    { "kind": "narrative", "character_id": "kumar", "text_en": "Five phrases. Five scores. If you got 70+ on any of them — that's a pass.\nIf you scored lower, don't worry. Practice the TH and the R, and come back.", "text_pt": "Cinco frases. Cinco notas. 70 ou mais = passou.\nSe pegou menos, sem estresse. Pratica o TH e o R, e volta." }
+  ]
+}

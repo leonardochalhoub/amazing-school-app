@@ -1,0 +1,21 @@
+{
+  "slug": "can-ability",
+  "title": "Can You? Yes, I Can",
+  "description": "CAN for ability (I can swim) and requests (Can you help me?). Short answers: Yes, I can / No, I can't.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 35,
+  "estimated_minutes": 11,
+  "summary_pt_br": "CAN para habilidade e pedidos. Estrutura: CAN + verbo base. Pergunta: Can you swim? Resposta curta: Yes I can / No I can't. Pedidos educados: 'Can you help me?', 'Can I have...?'",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 58 — Can You?", "subtitle_en": "Ability + requests", "subtitle_pt": "Habilidade + pedidos" },
+    { "kind": "narrative", "character_id": "bia", "text_en": "'Can you SURF?' Bia asked Joca.\n'I can't surf,' he said. 'But I CAN CODE. Can you code?'\n'I can't code. But I CAN COOK rice.' Rafa grinned: 'I CAN do both.'", "text_pt": "'Você sabe SURFAR?' Bia perguntou pro Joca.\n'Não sei surfar,' ele disse. 'Mas sei PROGRAMAR. Você programa?'\n'Eu não sei. Mas sei COZINHAR arroz.' Rafa riu: 'Eu sei os dois.'" },
+    { "kind": "grammar_note", "title": "CAN + base verb", "body_en": "CAN is a modal — never changes form, never takes TO. 'I can swim.' NOT 'I can to swim' or 'I cans swim'. Negative: CAN'T (or CANNOT). Short answer: Yes, I can / No, I can't.", "body_pt": "CAN é modal — não muda e nunca vai com TO. 'I can swim' (não 'I can to swim'). Negativa: can't / cannot. Resposta curta: Yes I can / No I can't.", "examples": [
+      { "en": "Can you help me? → Yes, I can. / No, I can't.", "pt": "Pergunta + resposta curta." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "can-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["I can to swim", "I can swim", "I cans swim", "I can swimming"], "correct": 1, "explanation": "CAN + BASE verb. No 'to', no -ing, no -s.", "hint_pt_br": "'Can' + verbo base. Nada mais." }},
+    { "kind": "exercise", "exercise": { "id": "can-s02", "type": "fill_blank", "question": "Complete: '___ you help me with this?'", "correct": "Can", "explanation": "Request: 'Can you…?'", "hint_pt_br": "'Can you help me?' = pedido educado." }},
+    { "kind": "exercise", "exercise": { "id": "can-s03", "type": "multiple_choice", "question": "Answer: 'Can you dance?' — No.", "options": ["No, I don't", "No, I can't", "No, I cannot dance", "Both B and C"], "correct": 3, "explanation": "Short: 'No, I can't.' Or full: 'No, I cannot dance.'", "hint_pt_br": "Short: 'No, I can't'. Full: 'No, I cannot dance'." }}
+  ]
+}

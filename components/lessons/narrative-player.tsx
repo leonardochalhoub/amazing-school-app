@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { ArrowRight, BookOpen, Sparkles, CheckCircle2 } from "lucide-react";
 import { SceneIllustration } from "./scene-illustration";
+import { RecordExercise } from "./record-exercise";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -249,6 +250,31 @@ function SceneRenderer({
       <div className="space-y-3">
         {framingChar ? <CharacterTag char={framingChar} label="Your turn" /> : null}
         <ExerciseInline exercise={scene.exercise} onSolved={onAdvance} />
+      </div>
+    );
+  }
+
+  if (scene.kind === "pronunciation") {
+    const framingChar = scene.framing_character_id
+      ? characters[scene.framing_character_id]
+      : null;
+    return (
+      <div className="space-y-3">
+        {framingChar ? (
+          <CharacterTag char={framingChar} label="Say it out loud" />
+        ) : null}
+        <RecordExercise
+          target={scene.target_en}
+          targetPt={scene.target_pt}
+          onScored={() => {
+            // Any attempt counts — we advance on button click after scoring.
+          }}
+        />
+        <AdvanceButton
+          onClick={onAdvance}
+          isLast={isLast}
+          submitting={submitting}
+        />
       </div>
     );
   }

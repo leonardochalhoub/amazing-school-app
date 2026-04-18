@@ -1,0 +1,28 @@
+{
+  "slug": "reflexive-pronouns",
+  "title": "Myself, Yourself, By Himself",
+  "description": "Reflexive pronouns: myself, yourself, himself, herself, itself, ourselves, yourselves, themselves. Plus BY + reflexive = alone.",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.1",
+  "xp_reward": 40,
+  "estimated_minutes": 11,
+  "summary_pt_br": "Pronomes reflexivos em inglês: myself, yourself, himself, herself, itself, ourselves, yourselves, themselves. Uso: quando sujeito e objeto são a mesma pessoa ('I hurt myself'). Expressão 'BY + reflexivo' = sozinho ('I went by myself').",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 65 — Myself", "subtitle_en": "Reflexive pronouns", "subtitle_pt": "Pronomes reflexivos" },
+    { "kind": "narrative", "character_id": "bia", "text_en": "'I cut MYSELF surfing,' Bia said.\n'Did you go to the hospital BY YOURSELF?'\n'Yes, by myself. Rafa was busy.'\nMaya chimed in: 'I taught MYSELF English from movies.'", "text_pt": "'Me cortei surfando,' disse a Bia.\n'Você foi ao hospital SOZINHA?'\n'Sim, sozinha. O Rafa tava ocupado.'\nMaya entrou: 'Eu APRENDI inglês sozinha assistindo filme.'" },
+    { "kind": "grammar_note", "title": "Two uses", "body_en": "1) When subject = object. 'I hurt MYSELF.' 'She taught HERSELF to surf.' 2) BY + reflexive = alone. 'I went by myself.' (I went alone.) Forms: myself, yourself, himself, herself, itself, ourselves, yourselves, themselves. Two plural -s endings only.", "body_pt": "1) Sujeito = objeto. 'I hurt myself.' 2) BY + reflexivo = sozinho. Formas: myself, yourself, himself, herself, itself, ourselves, yourselves, themselves.", "examples": [
+      { "en": "I taught myself. / He hurt himself. / They enjoyed themselves.", "pt": "Sujeito = objeto." },
+      { "en": "She lives by herself.", "pt": "Mora sozinha." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "ref-s01", "type": "fill_blank", "question": "Complete: 'I cooked dinner ___.' (alone / by + reflexive)", "correct": "by myself", "explanation": "BY + MYSELF = alone.", "hint_pt_br": "'By myself' = sozinho(a)." }},
+    { "kind": "exercise", "exercise": { "id": "ref-s02", "type": "multiple_choice", "question": "'He hurt ___ playing soccer.'", "options": ["him", "himself", "hisself", "his"], "correct": 1, "explanation": "Subject + object same person → HIMSELF.", "hint_pt_br": "Reflexivo: himself." }},
+    { "kind": "exercise", "exercise": { "id": "ref-s03", "type": "matching", "pairs": [
+      ["I", "myself"],
+      ["you", "yourself"],
+      ["he", "himself"],
+      ["she", "herself"],
+      ["they", "themselves"]
+    ], "explanation": "Five pairs. 'Hisself' and 'theirselves' don't exist.", "hint_pt_br": "Cinco pares. 'Hisself' e 'theirselves' não existem." }}
+  ]
+}

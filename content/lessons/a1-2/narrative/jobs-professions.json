@@ -1,0 +1,28 @@
+{
+  "slug": "jobs-professions",
+  "title": "What Do You Do?",
+  "description": "Jobs and professions. The question 'What do you do?' really means 'What's your job?'.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 30,
+  "estimated_minutes": 10,
+  "summary_pt_br": "Profissões em inglês + armadilha cultural: 'What do you do?' NÃO é 'o que você está fazendo?' — é 'qual é seu trabalho?'. Resposta: 'I'm a teacher' / 'I work as a chef'.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 60 — What Do You Do?", "subtitle_en": "Jobs and professions", "subtitle_pt": "Profissões" },
+    { "kind": "narrative", "character_id": "kumar", "text_en": "'WHAT DO YOU DO?' Mr. Kumar asked.\n'I'M A SURFER — well, not professionally,' said Bia.\n'I'M A FOOD-TRUCK OWNER,' said Rafa.\n'I'M A PROGRAMMER,' said Joca.\n'I'M A TEACHER,' said Zara. 'Like you.'", "text_pt": "'O QUE VOCÊ FAZ?' Mr. Kumar perguntou.\n'SOU SURFISTA — bem, não profissional,' disse a Bia.\n'SOU DONO DE FOOD TRUCK,' disse o Rafa.\n'SOU PROGRAMADOR,' disse o Joca.\n'SOU PROFESSORA,' disse a Zara. 'Como você.'" },
+    { "kind": "grammar_note", "title": "'What do you do?' — cultural trap", "body_en": "'What do you do?' is NOT 'what are you doing right now?' It means 'What's your JOB?' Answer: 'I'm a + JOB' (always 'a' / 'an'). 'I'm an engineer.' 'I'm a teacher.' To talk about where: 'I work AT [place]' or 'I work FOR [company]'.", "body_pt": "'What do you do?' = qual sua profissão. NÃO é 'o que está fazendo'. Resposta: 'I'm a/an + profissão'. 'I'm a teacher'. 'I work at Google' (onde). 'I work for Google' (empresa).", "examples": [
+      { "en": "I'm a doctor. / I work at a hospital.", "pt": "Profissão / onde." }
+    ]},
+    { "kind": "vocab_intro", "title": "Common jobs", "items": [
+      { "term": "teacher / student", "pt": "professor / estudante" },
+      { "term": "doctor / nurse", "pt": "médico / enfermeiro" },
+      { "term": "engineer / programmer", "pt": "engenheiro / programador" },
+      { "term": "chef / waiter", "pt": "chef / garçom" },
+      { "term": "driver / pilot", "pt": "motorista / piloto" },
+      { "term": "artist / writer", "pt": "artista / escritor" }
+    ]},
+    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "job-s01", "type": "multiple_choice", "question": "'What do you do?' best answer:", "options": ["I'm running", "I'm doing nothing", "I'm a cook", "I make tacos now"], "correct": 2, "explanation": "Job question → 'I'm a + profession'.", "hint_pt_br": "'What do you do' pede profissão: 'I'm a cook'." }},
+    { "kind": "exercise", "exercise": { "id": "job-s02", "type": "fill_blank", "question": "Complete: 'I'm ___ engineer.' (article before vowel)", "correct": "an", "explanation": "AN before vowel sound (engineer).", "hint_pt_br": "Vogal → an." }}
+  ]
+}

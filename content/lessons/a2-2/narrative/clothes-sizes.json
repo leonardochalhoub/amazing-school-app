@@ -1,0 +1,38 @@
+{
+  "slug": "clothes-sizes",
+  "title": "Does This Fit?",
+  "description": "Clothing vocabulary + sizes + fitting rooms. Plus the difference between FIT (size) and SUIT (look good).",
+  "category": "narrative",
+  "level": "A2",
+  "cefr_level": "a2.2",
+  "xp_reward": 40,
+  "estimated_minutes": 12,
+  "summary_pt_br": "Roupas + tamanhos + provador. FIT (caber — tamanho) vs SUIT (combinar — estilo). 'These jeans FIT me' (caibo neles). 'This color SUITS you' (essa cor te combina).",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 71 — Fitting Room", "subtitle_en": "Clothes and sizes", "subtitle_pt": "Roupas e tamanhos" },
+    { "kind": "dialogue", "location_en": "In a shop", "location_pt": "Numa loja", "turns": [
+      { "character_id": "bia", "en": "Do you have this in a medium?", "pt": "Tem esse em M?" },
+      { "character_id": "rafa", "en": "Yes. The fitting rooms are over there.", "pt": "Sim. Os provadores são ali." },
+      { "character_id": "bia", "en": "These jeans don't fit. They're too tight.", "pt": "Essa calça não cabe. Tá apertada." },
+      { "character_id": "rafa", "en": "The blue shirt really suits you, though.", "pt": "Mas a camisa azul fica ótima em você." }
+    ]},
+    { "kind": "grammar_note", "title": "FIT vs SUIT", "body_en": "FIT = the right SIZE. 'These pants fit me.' (they're my size). SUIT = looks good / matches YOU. 'That color suits you.' (looks nice on you). Brazilians mix these — don't.", "body_pt": "FIT = CABE (tamanho). SUIT = FICA BEM (aparência). 'These pants fit' (cabem). 'This color suits you' (combina com você).", "examples": [
+      { "en": "Small size fits. Red color suits.", "pt": "Tamanho = fit. Estilo = suit." }
+    ]},
+    { "kind": "vocab_intro", "title": "Clothing", "items": [
+      { "term": "shirt / t-shirt / dress", "pt": "camisa / camiseta / vestido" },
+      { "term": "pants / jeans / shorts", "pt": "calça / jeans / bermuda" },
+      { "term": "jacket / coat / sweater", "pt": "jaqueta / casaco / blusa" },
+      { "term": "shoes / sneakers / boots", "pt": "sapatos / tênis / botas" },
+      { "term": "socks / belt / hat", "pt": "meias / cinto / chapéu" }
+    ]},
+    { "kind": "vocab_intro", "title": "Sizes + descriptions", "items": [
+      { "term": "tight / loose", "pt": "apertado / largo" },
+      { "term": "size (S/M/L/XL)", "pt": "tamanho" },
+      { "term": "fitting room", "pt": "provador" },
+      { "term": "try on", "pt": "provar (roupa)" }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "cloth-s01", "type": "multiple_choice", "question": "'That shirt really ___ you.' (looks good on you)", "options": ["fits", "suits", "wears", "dresses"], "correct": 1, "explanation": "SUITS = looks good on.", "hint_pt_br": "Fica bem = suits." }},
+    { "kind": "exercise", "exercise": { "id": "cloth-s02", "type": "fill_blank", "question": "Complete: 'Can I ___ ___ these jeans?' (experimentar)", "correct": "try on", "explanation": "TRY ON = try on clothes.", "hint_pt_br": "'Try on' = experimentar roupa." }}
+  ]
+}
