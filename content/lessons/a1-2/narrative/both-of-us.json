@@ -1,0 +1,124 @@
+{
+  "slug": "both-of-us",
+  "title": "Both of Us — The TH at the End",
+  "description": "Final-position TH: BOTH, WITH, FIFTH, MONTH, EARTH, SOUTH. Bia DJs on the rooftop and every song brings a new TH to notice.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 45,
+  "estimated_minutes": 14,
+  "summary_pt_br": "O TH no FIM das palavras (o mais esquecido): BOTH, WITH, FIFTH, MONTH, EARTH, SOUTH. Treinado com With or Without You (U2), Both Sides Now (Joni Mitchell) e What a Wonderful World (Louis Armstrong).",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 14 — Both of Us",
+      "subtitle_en": "TH at the end — don't drop it",
+      "subtitle_pt": "TH no final — não engole!"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "Bia set up speakers on the rooftop deck.\n'Today's song lesson? A TH tech-check.\nBOTH of us will sing. WITH our best,\nWe'll hit the FIFTH, the MONTH, the rest.'",
+      "text_pt": "A Bia instalou caixas no terraço da escola.\n'Aula musical de hoje? TH na viola.\nBOTH de nós vamos cantar. WITH o nosso melhor,\nAcertando FIFTH, MONTH, e todo o teor.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Final-TH is the hardest — don't drop it",
+      "body_en": "Brazilians often drop or soften the TH at the end of words because Portuguese rarely ends words in that position. Don't. 'Both' has THREE sounds: /b/ + /oʊ/ + /θ/. The /θ/ at the end is small but essential. Give it a clear blow of air.",
+      "body_pt": "Brasileiros tendem a engolir o TH no fim das palavras porque o português quase não tem som assim nessa posição. Não engole. 'Both' tem TRÊS sons: /b/ + /oʊ/ + /θ/. O /θ/ final é pequeno, mas crítico. Solte o arzinho com clareza.",
+      "examples": [
+        { "en": "BOTH /boʊθ/ — don't say 'boss' or 'bot'", "pt": "ambos" },
+        { "en": "WITH /wɪð/ — ends with /ð/, voiced", "pt": "com (preposição)" },
+        { "en": "MONTH /mʌnθ/ — /n/ + /θ/, two fast sounds", "pt": "mês" }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Final-TH words to master",
+      "items": [
+        { "term": "both /boʊθ/", "pt": "ambos", "example_en": "Both of us." },
+        { "term": "with /wɪð/", "pt": "com", "example_en": "Coffee with milk." },
+        { "term": "fifth /fɪfθ/", "pt": "quinto", "example_en": "The fifth lesson." },
+        { "term": "month /mʌnθ/", "pt": "mês", "example_en": "Next month." },
+        { "term": "earth /ɜːrθ/", "pt": "Terra", "example_en": "Planet Earth." },
+        { "term": "south /saʊθ/", "pt": "sul", "example_en": "South of here." }
+      ]
+    },
+    {
+      "kind": "narrative",
+      "scene_emoji": "🎵",
+      "text_en": "U2 sings: 'I can't live WITH or WITHOUT you.'\nJoni Mitchell sang: 'I've looked at clouds from BOTH sides now.'\nAnd Louis Armstrong: 'I see trees of green, red roses too,\nI see them bloom for me and for you… what a wonderful WORLD.'",
+      "text_pt": "U2 canta: 'I can't live WITH or WITHOUT you' (Não consigo viver COM nem SEM você).\nJoni Mitchell cantou: 'I've looked at clouds from BOTH sides now' (Já olhei para as nuvens por AMBOS os lados).\nE Louis Armstrong: 'I see trees of green… what a wonderful WORLD' — até 'world' tem um eco de TH (na verdade é só 'd', mas 'wonder' tem /ð/)."
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "th5-s01",
+        "type": "fill_blank",
+        "question": "Complete the U2 line: 'I can't live ___ or without you.'",
+        "correct": "with",
+        "explanation": "WITH /wɪð/ — voiced TH at the end. Even Bono drops it sometimes in fast singing, but say it clearly in speech.",
+        "hint_pt_br": "WITH /wɪð/ — /ð/ vibrado no final. Mesmo o Bono abafa em músicas rápidas, mas na fala é pra sair."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "th5-s02",
+        "type": "multiple_choice",
+        "question": "'I want ___ options.' (= os dois)",
+        "options": ["both", "bot", "boss", "boat"],
+        "correct": 0,
+        "explanation": "BOTH /boʊθ/ ends with /θ/. 'Bot' (robô) and 'boss' (chefe) mean something else.",
+        "hint_pt_br": "BOTH termina com /θ/. 'Bot' é robô; 'boss' é chefe. Conferir o final é crítico."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Rooftop jam session",
+      "location_pt": "No terraço, jam session",
+      "turns": [
+        { "character_id": "bia", "en": "This song is from the fifth month of the year.", "pt": "Essa música é do quinto mês do ano." },
+        { "character_id": "maya", "en": "May? That's month number FIVE.", "pt": "Maio? É o mês número CINCO." },
+        { "character_id": "bia", "en": "Right — the FIFTH month. Not the fift. The FIFTH.", "pt": "Exato — o QUINTO mês. Não 'fift'. É FIFTH." },
+        { "character_id": "maya", "en": "FIFTH. I got it. Three sounds at the end: /f-θ/.", "pt": "FIFTH. Peguei. Três sons no final: /f-θ/." }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "th5-s03",
+        "type": "matching",
+        "pairs": [
+          ["both", "ambos"],
+          ["with", "com"],
+          ["month", "mês"],
+          ["earth", "Terra"],
+          ["south", "sul"]
+        ],
+        "explanation": "Five final-TH words. Chain them: 'Both of us went south from Earth one month — with a dog.'",
+        "hint_pt_br": "Cinco palavrinhas com TH no final. Frase de treino: 'Both of us went south from Earth one month — with a dog.'"
+      }
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "joca",
+      "exercise": {
+        "id": "th5-s04",
+        "type": "multiple_choice",
+        "question": "Which of these words ends with the VOICED /ð/?",
+        "options": ["both", "with", "month", "south"],
+        "correct": 1,
+        "explanation": "WITH ends with /ð/ (voiced — hum). The others (both, month, south) end with /θ/ (voiceless — just air). This is the one word that breaks the pattern.",
+        "hint_pt_br": "WITH é diferente: termina com /ð/ vibrado. Os outros (both, month, south) terminam em /θ/ mudo."
+      }
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Mr. Kumar clapped his hands. 'BOTH sounds, WITH and without voice.\nThe MONTH we spent on TH was worth it, no choice.\nYou can feel it on EARTH. You can feel it in the SOUTH.\nYou can feel it in every English-speaking mouth.'",
+      "text_pt": "Mr. Kumar bateu palmas. 'AMBOS os sons, COM e sem voz.\nO MÊS que gastamos com TH valeu, sem mais algoz.\nVocês sentem na TERRA. Sentem no SUL.\nSentem em toda boca que fala inglês — sem mais álcool.'"
+    }
+  ]
+}

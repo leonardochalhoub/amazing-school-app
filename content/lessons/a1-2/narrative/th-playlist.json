@@ -1,0 +1,150 @@
+{
+  "slug": "th-playlist",
+  "title": "Bia's TH Playlist",
+  "description": "A 5-song playlist built entirely around TH words. Put them together, sing along, and feel the tongue-between-teeth become automatic.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 50,
+  "estimated_minutes": 16,
+  "summary_pt_br": "Uma playlist de 5 músicas focadas em palavras com TH, para consolidar o que foi aprendido. Inclui análise de linhas específicas de Three Little Birds, Thinking Out Loud, Mother, With or Without You e This Is Me.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 15 — The TH Playlist",
+      "subtitle_en": "Five songs. Thirty TH sounds. One smart tongue.",
+      "subtitle_pt": "Cinco músicas. Trinta sons de TH. Uma língua esperta."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "Bia queued up five songs on the rooftop speakers.\n'Playlist time,' she said. 'Ears, focus. No cheaters.\nEach song has TH — count them, catch them, sing.\nSoft /θ/ and strong /ð/ — let's hear what they bring.'",
+      "text_pt": "A Bia colocou cinco músicas na playlist do terraço.\n'Hora da playlist,' disse. 'Ouvidos, sem abraço.\nCada música tem TH — conta, pega, canta junto.\nO /θ/ leve e o /ð/ forte — aí tá o assunto.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Quick TH review",
+      "body_en": "Two TH sounds: /θ/ VOICELESS (just air — think, three, thanks, both, month) and /ð/ VOICED (air + throat hum — this, that, mother, brother, with, they). Same tongue position (between teeth), different throat. Check every TH word: is there a HUM?",
+      "body_pt": "Dois TH: /θ/ MUDO (só ar — think, three, thanks, both, month) e /ð/ VIBRADO (ar + zumbido na garganta — this, that, mother, brother, with, they). Mesma língua, garganta diferente. Pergunta: tem zum-zum? É /ð/. Não tem? É /θ/.",
+      "examples": [
+        { "en": "/θ/: think, three, thank, thin, path, bath, both, month, south", "pt": "sempre só ar" },
+        { "en": "/ð/: this, that, the, they, them, mother, brother, together, with", "pt": "ar + voz" }
+      ]
+    },
+    {
+      "kind": "narrative",
+      "scene_emoji": "🎧",
+      "text_en": "Song 1 — Bob Marley, 'Three Little Birds'.\n'Don't worry 'bout a THING — every little THING gonna be all right.'\nTwenty-two TH sounds in three minutes. All /θ/. All thick and clear.\nBia counted. Bia sang. Bia felt the air come near.",
+      "text_pt": "Música 1 — Bob Marley, 'Three Little Birds'.\n'Don't worry 'bout a THING — every little THING gonna be all right.'\n(Não se preocupa com NADA — cada coisinha vai dar certo.)\nVinte e duas ocorrências de TH em três minutos. Tudo /θ/. Treino fera."
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "thp-s01",
+        "type": "fill_blank",
+        "question": "Complete Bob Marley: 'Don't worry 'bout a ___.'",
+        "correct": "thing",
+        "explanation": "THING /θɪŋ/ — /θ/ is the voiceless TH. Marley repeats it 11+ times in the chorus. Perfect drill.",
+        "hint_pt_br": "THING com /θ/. Marley repete umas 11 vezes no refrão — use isso."
+      }
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "Song 2 — Ed Sheeran, 'Thinking Out Loud'.\n'I'm THINKING 'bout how people fall in love in mysterious ways.'\nRafa hummed along. His /θ/ was close. Not perfect. Not bad.\n'I'm getting there,' he said. 'Slower than I thought I had.'",
+      "text_pt": "Música 2 — Ed Sheeran, 'Thinking Out Loud'.\n'I'm THINKING 'bout how people fall in love in mysterious ways.'\n(Eu tô pensando em como as pessoas se apaixonam de jeitos misteriosos.)\nO Rafa cantarolou junto. /θ/ dele quase lá. Não perfeito. Mas avançou."
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "thp-s02",
+        "type": "multiple_choice",
+        "question": "In Ed Sheeran's line above, is THINKING /θ/ or /ð/?",
+        "options": [
+          "/θ/ — voiceless, just air",
+          "/ð/ — voiced, with hum",
+          "It's actually /t/",
+          "It's silent"
+        ],
+        "correct": 0,
+        "explanation": "THINKING starts with /θ/ — voiceless TH. Touch your throat: no hum on the first sound.",
+        "hint_pt_br": "THINKING começa com /θ/ — sem voz, só ar. Se não sentir vibrar a garganta, é /θ/."
+      }
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Song 3 — Pink Floyd, 'Mother'.\n'MOTHER, do you think THEY'll drop the bomb?\nMOTHER, do you think THEY'll like this song?'\nDona Lúcia smiled. 'MOTHER has /ð/. THEY has /ð/. Same hum.\nThree voiced TH in one line. Hear that gentle drum?'",
+      "text_pt": "Música 3 — Pink Floyd, 'Mother'.\n'MOTHER, do you think THEY'll drop the bomb?\nMOTHER, do you think THEY'll like this song?'\n(Mãe, você acha que eles vão jogar a bomba? Mãe, você acha que eles vão gostar dessa música?)\nDona Lúcia sorriu. 'MOTHER tem /ð/. THEY tem /ð/. Mesmo zumzum.'"
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "lucia",
+      "exercise": {
+        "id": "thp-s03",
+        "type": "matching",
+        "pairs": [
+          ["mother", "/ð/"],
+          ["they", "/ð/"],
+          ["think", "/θ/"],
+          ["thing", "/θ/"]
+        ],
+        "explanation": "Two /ð/ (voiced) and two /θ/ (voiceless). Put your hand on your throat while saying each.",
+        "hint_pt_br": "Dois vibrados, dois mudos. Mão na garganta para sentir a diferença."
+      }
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Song 4 — U2, 'With or Without You'.\n'I can't live / WITH or WITHOUT you.'\nMaya counted: 'WITH has /ð/ at the END. That's rare. That's hard.\nBono sometimes softens it. You — don't. Stand guard.'",
+      "text_pt": "Música 4 — U2, 'With or Without You'.\n'I can't live / WITH or WITHOUT you.' (Não consigo viver COM ou SEM você.)\nMaya contou: 'WITH tem /ð/ NO FINAL. É raro. É difícil.\nO Bono às vezes engole. Você, não. Vigia firme.'"
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "thp-s04",
+        "type": "fill_blank",
+        "question": "Complete U2: 'I can't live ___ or without you.'",
+        "correct": "with",
+        "explanation": "WITH /wɪð/ — /ð/ at the end, voiced. Practice: put 'with' at the end of every sentence today.",
+        "hint_pt_br": "WITH com /ð/ no final. Hoje: termine toda frase com 'with something' pra treinar."
+      }
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Song 5 — Keala Settle, 'This Is Me' (The Greatest Showman).\n'THIS is brave! THIS is bruised! THIS is who I'm meant to be. THIS IS ME.'\nMr. Kumar nodded slow. 'Four THIS in one chorus. Four /ð/ strong and free.\nThat's the last song. Close the class with a bow. And SING.'",
+      "text_pt": "Música 5 — Keala Settle, 'This Is Me' (O Rei do Show).\n'THIS is brave! THIS is bruised! THIS is who I'm meant to be. THIS IS ME.'\n(Isto é coragem. Isto é machucado. Isto é quem sou pra ser. Isto sou eu.)\nMr. Kumar acenou. 'Quatro THIS num refrão. Quatro /ð/ soltos. Fim da aula.'"
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "thp-s05",
+        "type": "multiple_choice",
+        "question": "Which song had the most /θ/ sounds per line?",
+        "options": [
+          "Three Little Birds (Marley) — 22 THING/THREE/THANK",
+          "Mother (Pink Floyd) — 3 per line but voiced /ð/",
+          "With or Without You — 1 final /ð/",
+          "This Is Me — 4 /ð/ per chorus"
+        ],
+        "correct": 0,
+        "explanation": "Marley's 'Three Little Birds' is the /θ/ champion — 'thing' shows up 20+ times. Still the best drill.",
+        "hint_pt_br": "'Three Little Birds' é o campeão de /θ/ — 'thing' umas 20+ vezes no refrão. Melhor treino."
+      }
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "thp-s06",
+        "type": "fill_blank",
+        "question": "One more for the road. Complete: 'I ___ I can.' (Bob the Builder catchphrase — 'Eu acho que consigo')",
+        "correct": "think",
+        "explanation": "THINK with /θ/. Full sentence: 'I think I can.' Repeat three times — each with a clear TH.",
+        "hint_pt_br": "THINK com /θ/. 'I think I can.' Repita três vezes, cada uma com TH limpo."
+      }
+    }
+  ]
+}

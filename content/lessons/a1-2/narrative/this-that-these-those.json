@@ -1,0 +1,137 @@
+{
+  "slug": "this-that-these-those",
+  "title": "This, That, These, Those",
+  "description": "The /ð/ sound (voiced TH) in the four demonstratives. Rafa points at his menu and Maya catches every 'dis' that should be 'this'.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 40,
+  "estimated_minutes": 13,
+  "summary_pt_br": "O som /ð/ (TH vibrado, COM voz) nos demonstrativos THIS / THAT / THESE / THOSE. A diferença entre 'dis' (errado) e 'this' (correto) — com dica de vibração na garganta.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 11 — This, That, These, Those",
+      "subtitle_en": "The voiced TH — the one with a hum",
+      "subtitle_pt": "O TH vibrado — o que faz a garganta zumbir"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "Rafa pointed. 'Dis is a taco. Dat is a drink.'\nMaya winced and gave him a wink.\n'Not DIS and DAT. It's THIS and THAT.\nPut your hand on your throat. Feel it HUM like that.'",
+      "text_pt": "O Rafa apontou. 'Dis is a taco. Dat is a drink.'\nMaya estremeceu e piscou num clique.\n'Não é DIS nem DAT. É THIS e THAT.\nBote a mão no pescoço. Sinta o ZUM-ZUM, tá?'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "The /ð/ sound — voiced TH",
+      "body_en": "Same tongue position as /θ/ (tongue between teeth), BUT this time you USE your voice. Put your hand on your throat — you should feel it vibrate. /ð/ is the sound in THIS, THAT, THESE, THOSE, THE, THEY, MOTHER, BROTHER, WITH, BATHE.",
+      "body_pt": "Mesma posição de língua que o /θ/ (entre os dentes), MAS agora COM voz. Bote a mão no pescoço — tem que vibrar. /ð/ aparece em THIS, THAT, THESE, THOSE, THE, THEY, MOTHER, BROTHER, WITH, BATHE.",
+      "examples": [
+        { "en": "this (not 'dis', not 'zis')", "pt": "isto / este" },
+        { "en": "the (not 'de', not 'ze')", "pt": "o / a" },
+        { "en": "they (not 'dey')", "pt": "eles / elas" }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "The four demonstratives",
+      "items": [
+        { "term": "THIS /ðɪs/", "pt": "este / esta (perto, singular)", "example_en": "This taco is hot." },
+        { "term": "THAT /ðæt/", "pt": "aquele / aquela (longe, singular)", "example_en": "That juice is cold." },
+        { "term": "THESE /ðiːz/", "pt": "estes / estas (perto, plural)", "example_en": "These peppers are red." },
+        { "term": "THOSE /ðoʊz/", "pt": "aqueles / aquelas (longe, plural)", "example_en": "Those surfers are fast." }
+      ]
+    },
+    {
+      "kind": "narrative",
+      "text_en": "THIS is close. THAT is far.\nTHESE are many, near where you are.\nTHOSE are many, out of reach.\nFour little words. That's what we teach.",
+      "text_pt": "THIS é perto. THAT é longe.\nTHESE é muito perto — coisa até que te emponha.\nTHOSE é muito longe, fora do alcance.\nQuatro palavrinhas. É tudo neste trance."
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "rafa",
+      "exercise": {
+        "id": "th2-s01",
+        "type": "multiple_choice",
+        "question": "Rafa points at ONE taco in his hand. Which word?",
+        "options": ["this", "that", "these", "those"],
+        "correct": 0,
+        "explanation": "ONE + CLOSE = THIS. He's holding it in his own hand — singular, near.",
+        "hint_pt_br": "UM + PERTO = THIS."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "th2-s02",
+        "type": "multiple_choice",
+        "question": "Bia points at SURFBOARDS on the FAR side of the beach. Which word?",
+        "options": ["this", "that", "these", "those"],
+        "correct": 3,
+        "explanation": "MANY + FAR = THOSE. Multiple surfboards, far away.",
+        "hint_pt_br": "MUITOS + LONGE = THOSE."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "The food truck counter",
+      "location_pt": "No balcão do food truck",
+      "turns": [
+        { "character_id": "bia", "en": "What is THIS?", "pt": "O que é ISTO?" },
+        { "character_id": "rafa", "en": "THIS is green salsa. Hot!", "pt": "ISTO é salsa verde. Apimentada!" },
+        { "character_id": "bia", "en": "And what are THOSE?", "pt": "E o que são AQUELES?" },
+        { "character_id": "rafa", "en": "THOSE are corn tortillas, over there.", "pt": "AQUELES são tortilhas de milho, lá longe." }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "th2-s03",
+        "type": "fill_blank",
+        "question": "Complete the song line: '___ is me.' (from The Greatest Showman)",
+        "correct": "This",
+        "explanation": "'This Is Me' — one of the most famous TH-voiced lines in modern pop. Practice the HUM.",
+        "hint_pt_br": "'This Is Me' — uma das linhas mais famosas com /ð/ no pop recente."
+      }
+    },
+    {
+      "kind": "narrative",
+      "scene_emoji": "🎶",
+      "text_en": "Listen for /ð/ in songs today.\nIt hides in THE and THEY and THEY SAY.\nEvery time you hear a gentle HUM,\nThat's the voiced TH — feel it on your thumb!",
+      "text_pt": "Escute o /ð/ nas músicas, tô falando sério.\nEle se esconde em THE, em THEY, em mistério.\nSempre que ouvir um zumbidinho leve,\nÉ o TH vibrado — sente o dedo que se atreve!"
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "th2-s04",
+        "type": "matching",
+        "pairs": [
+          ["THIS", "ISTO (perto, singular)"],
+          ["THAT", "AQUILO (longe, singular)"],
+          ["THESE", "ESTES (perto, plural)"],
+          ["THOSE", "AQUELES (longe, plural)"]
+        ],
+        "explanation": "A 2x2 grid: near/far × singular/plural. Once you see it, you never forget it.",
+        "hint_pt_br": "Grade 2x2: perto/longe × singular/plural. Memorize a grade, resolve a vida."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "th2-s05",
+        "type": "multiple_choice",
+        "question": "Which THREE have /ð/ (voiced TH)?",
+        "options": [
+          "think / thing / thanks",
+          "this / that / they",
+          "three / thirty / thousand",
+          "both / bath / month"
+        ],
+        "correct": 1,
+        "explanation": "THIS / THAT / THEY all start with the VOICED /ð/ (you feel vibration). The other groups are /θ/ (just air, no voice).",
+        "hint_pt_br": "THIS / THAT / THEY começam com /ð/ — vibra. Os outros grupos são /θ/ — só ar."
+      }
+    }
+  ]
+}

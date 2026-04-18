@@ -1,0 +1,133 @@
+{
+  "slug": "thursdays-three-things",
+  "title": "Thursday's Three Things",
+  "description": "The /θ/ sound (THIN, THREE, THANK). Why Brazilians say 'tree' for 'three' — and how to fix it with your tongue between your teeth.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 45,
+  "estimated_minutes": 15,
+  "summary_pt_br": "O som /θ/ (th mudo) em THIN, THREE, THANK. A dica da língua entre os dentes, treinada com a música Three Little Birds do Bob Marley e Thinking Out Loud do Ed Sheeran.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 10 — Thursday's Three Things",
+      "subtitle_en": "The sound that Brazilians love to hate",
+      "subtitle_pt": "O som que os brasileiros adoram odiar"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "Bia said 'TREE birds in a TREE!'\nMr. Kumar laughed: 'Not TREE — say THREE.\nTouch your teeth with your tongue, very light.\nBlow a tiny bit of air. Don't bite!'",
+      "text_pt": "A Bia falou: 'TREE passarinhos numa TREE!'\nMr. Kumar riu: 'Não é TREE — é THREE.\nEncoste a ponta da língua nos dentes, bem leve.\nSopre um pouquinho de ar. Sem morder de greve!'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "How to make the TH sound (the voiceless one)",
+      "body_en": "Stick the tip of your tongue LIGHTLY between your top and bottom teeth. Now blow air through — no voice, just air. You should feel cold air on your tongue. That's /θ/ — the sound in THIN, THREE, THANK, THURSDAY.",
+      "body_pt": "Coloque a pontinha da língua entre os dentes de cima e os de baixo — só a ponta, de leve. Agora sopre ar (sem voz, sem 't', sem 'f'). Você vai sentir o ar frio passando pela língua. Esse é o /θ/ de THIN, THREE, THANK, THURSDAY.",
+      "examples": [
+        { "en": "thin (not 'tin', not 'fin')", "pt": "fino" },
+        { "en": "three (not 'tree', not 'free')", "pt": "três" },
+        { "en": "thanks (not 'tanks', not 'franks')", "pt": "obrigado" }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Thursday's TH words",
+      "items": [
+        { "term": "three /θriː/", "pt": "três", "example_en": "Three little birds." },
+        { "term": "thing /θɪŋ/", "pt": "coisa", "example_en": "A small thing." },
+        { "term": "think /θɪŋk/", "pt": "pensar", "example_en": "I think so." },
+        { "term": "thanks /θæŋks/", "pt": "obrigado(a)", "example_en": "Thanks a lot." },
+        { "term": "Thursday /ˈθɜːrz.deɪ/", "pt": "quinta-feira", "example_en": "See you on Thursday." }
+      ]
+    },
+    {
+      "kind": "narrative",
+      "scene_emoji": "🎵",
+      "text_en": "Bob Marley sang it, soft and free:\n'Don't worry 'bout a THING,\n'cause every little THING gonna be all right.'\nThree little birds. THREE. Not TREE.",
+      "text_pt": "Bob Marley cantou com leveza e fé:\n'Don't worry 'bout a THING (não se preocupe com NADA),\n'cause every little THING gonna be all right (cada coisinha vai dar certo).'\nThree little birds. THREE. Não TREE."
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "th1-s01",
+        "type": "multiple_choice",
+        "question": "'I ___ you for the taco.' (agradecer)",
+        "options": ["tank", "thank", "sank", "frank"],
+        "correct": 1,
+        "explanation": "THANK /θæŋk/ with the voiceless TH — tongue between the teeth, just air. Not 'tank' (military vehicle!) and not 'sank' (past of sink).",
+        "hint_pt_br": "THANK começa com o som /θ/ — língua entre os dentes, sopro de ar."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Ed Sheeran playing on Rafa's Bluetooth speaker",
+      "location_pt": "Ed Sheeran tocando na caixa do Rafa",
+      "turns": [
+        {
+          "character_id": "rafa",
+          "en": "Hey Bia, what's Ed Sheeran thinking out loud?",
+          "pt": "Oi Bia, o que o Ed Sheeran tá pensando em voz alta?"
+        },
+        {
+          "character_id": "bia",
+          "en": "He's THINKING about love. Not TINKING. THINKING.",
+          "pt": "Ele tá PENSANDO no amor. Não 'tinkando'. THINKING."
+        },
+        {
+          "character_id": "rafa",
+          "en": "I'm THINKING about tacos. Three tacos, thank you.",
+          "pt": "Eu tô PENSANDO em tacos. Três tacos, por favor."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "th1-s02",
+        "type": "fill_blank",
+        "question": "Complete the song line: 'Don't worry 'bout a ___.' (Bob Marley — Three Little Birds)",
+        "correct": "thing",
+        "explanation": "The chorus repeats 'thing' eleven times. Practice it — you hear perfect /θ/ with a soft voice.",
+        "hint_pt_br": "THING com o /θ/. Bob Marley repete umas onze vezes — ótimo treino."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "th1-s03",
+        "type": "multiple_choice",
+        "question": "Which of these DOES NOT have the /θ/ sound?",
+        "options": ["think", "thing", "this", "thank"],
+        "correct": 2,
+        "explanation": "THIS has /ð/ — the VOICED TH (with vocal vibration). Think/thing/thank all have /θ/ (voiceless). We'll learn /ð/ next lesson.",
+        "hint_pt_br": "THIS é /ð/ — TH VIBRADO (com voz). Os outros três são /θ/ (só ar). Próxima aula detalha isso."
+      }
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "th1-s04",
+        "type": "matching",
+        "pairs": [
+          ["3", "three"],
+          ["30", "thirty"],
+          ["1000", "thousand"],
+          ["quinta-feira", "Thursday"]
+        ],
+        "explanation": "Four words, all starting with /θ/. Stack them: 'Three thousand people on Thursday.' Practice it aloud.",
+        "hint_pt_br": "Quatro palavrinhas com /θ/. Pratique a frase 'Three thousand people on Thursday' em voz alta."
+      }
+    },
+    {
+      "kind": "narrative",
+      "character_id": "cosmo",
+      "text_en": "Cosmo tried to bark a TH.\nHe blew. He barked. He did his best.\nWoof /θ/ woof — the dog said it true.\n'Thanks, Cosmo,' Mr. Kumar said. 'That'll do.'",
+      "text_pt": "Cosmo tentou latir um TH.\nSoprou. Latiu. Fez o possível, puxa!\n'Woof /θ/ woof' — o cão acertou, que coisa.\n'Thanks, Cosmo,' disse Mr. Kumar. 'Já serviu.'"
+    }
+  ]
+}

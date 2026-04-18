@@ -1,0 +1,127 @@
+{
+  "slug": "thinking-through-thunder",
+  "title": "Thinking Through the Thunder",
+  "description": "Minimal pairs: THINK / TINK / FINK — TREE / THREE / FREE. Joca the programmer debugs while a storm rolls in, and pop songs give us the drills.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 45,
+  "estimated_minutes": 15,
+  "summary_pt_br": "Pares mínimos que revelam as armadilhas de TH para brasileiros: THINK x TINK x FINK, THREE x TREE x FREE, BATH x BAT. Usando Thunder (Imagine Dragons) e Thunderstruck (AC/DC) como referência.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 13 — Thinking Through the Thunder",
+      "subtitle_en": "Minimal pairs, maximum focus",
+      "subtitle_pt": "Pares mínimos, foco máximo"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Joca stared at his screen. A bug, a loop, a glitch.\n'I THINK,' he said. 'I THINK. Not TINK. Not FINK. Which?'\nA THUNDER crashed. The windows shook.\nJoca smiled. 'A perfect /θ/ for a coder's book.'",
+      "text_pt": "Joca olhava pra tela. Bug, loop, glitch na mira.\n'I THINK,' ele disse. 'I THINK. Não TINK. Não FINK. Lira?'\nUm TROVÃO estourou. As janelas tremeram.\nJoca sorriu. 'Um /θ/ perfeito pra quem programa.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "The three ways Brazilians get TH wrong",
+      "body_en": "When you say /t/ instead of /θ/, 'think' becomes 'tink' (doesn't mean anything). When you say /f/, 'three' becomes 'free' (totally different word!). When you say /s/, 'thanks' becomes 'sanks' (not English). Only the tongue-between-teeth sound is correct.",
+      "body_pt": "Três erros comuns: trocar /θ/ por /t/ ('tink' em vez de 'think'), por /f/ ('free' em vez de 'three', e aí vira OUTRA palavra), ou por /s/ ('sanks' em vez de 'thanks'). Só a língua entre os dentes é a forma certa.",
+      "examples": [
+        { "en": "THINK (correct) vs TINK (wrong — no word) vs FINK (slang for snitch!)", "pt": "THINK certo; TINK não existe; FINK é gíria pra dedo-duro" },
+        { "en": "THREE (3) vs TREE (árvore) vs FREE (grátis/livre)", "pt": "Confundir essas três muda o sentido totalmente" }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Minimal pairs to drill",
+      "items": [
+        { "term": "THREE vs TREE", "pt": "três vs árvore — UM é ar entre os dentes, o outro é 't' seco" },
+        { "term": "THINK vs TINK vs FINK", "pt": "pensar vs (inexistente) vs (dedo-duro, gíria)" },
+        { "term": "THIN vs TIN vs FIN", "pt": "fino vs lata vs barbatana" },
+        { "term": "BATH vs BAT", "pt": "banho vs morcego/taco" },
+        { "term": "PATH vs PAT", "pt": "caminho vs tapinha" }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "joca",
+      "exercise": {
+        "id": "th4-s01",
+        "type": "multiple_choice",
+        "question": "You hear a song say 'I can't stop ___ of you.' Which word fits?",
+        "options": ["tinking", "thinking", "finking", "sinking"],
+        "correct": 1,
+        "explanation": "THINKING /ˈθɪŋkɪŋ/ — 'I can't stop thinking of you' is one of the most common English song lines of all time.",
+        "hint_pt_br": "THINKING com /θ/. 'I can't stop thinking of you' é uma das linhas mais famosas da música em inglês."
+      }
+    },
+    {
+      "kind": "narrative",
+      "scene_emoji": "🎧",
+      "text_en": "Imagine Dragons sings: 'THUNDER! Feel the THUNDER!'\nAC/DC roared: 'THUNDERSTRUCK!'\nAnd Bia hums: 'I can't stop THINKING of the ocean'.\nThree songs, one sound — the voiceless TH is the luck.",
+      "text_pt": "Imagine Dragons canta: 'THUNDER! Feel the THUNDER!' (Trovão! Sinta o trovão!)\nAC/DC ruge: 'THUNDERSTRUCK!' (Atingido pelo trovão!)\nE a Bia cantarola: 'I can't stop THINKING of the ocean' (não paro de pensar no oceano).\nTrês músicas, um só som — o /θ/ é a sorte, a devoção."
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "th4-s02",
+        "type": "fill_blank",
+        "question": "Complete the Imagine Dragons line: 'Feel the ___!' (loud storm noise)",
+        "correct": "thunder",
+        "explanation": "THUNDER /ˈθʌn.dɚ/ — the /θ/ is crisp in this song. Play it loud and mimic.",
+        "hint_pt_br": "THUNDER com /θ/. Coloca essa música bem alta e imita o som."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "The café, during the storm",
+      "location_pt": "No café, durante a tempestade",
+      "turns": [
+        { "character_id": "bia", "en": "THREE coffees, please.", "pt": "Três cafés, por favor." },
+        { "character_id": "rafa", "en": "TREE coffees? You want me to climb a tree?", "pt": "TREE cafés? Quer que eu suba numa árvore?" },
+        { "character_id": "bia", "en": "THREE. With my tongue between my teeth.", "pt": "THREE. Com a língua entre os dentes." },
+        { "character_id": "rafa", "en": "THREE it is. Thanks for the drill.", "pt": "THREE, então. Obrigado pelo treino." }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "th4-s03",
+        "type": "matching",
+        "pairs": [
+          ["three", "três"],
+          ["tree", "árvore"],
+          ["free", "grátis / livre"],
+          ["thin", "fino"],
+          ["tin", "lata"]
+        ],
+        "explanation": "Five words in three minimal pairs. Mispronouncing /θ/ changes meaning — 'three' (3) is NOT 'tree' (árvore) is NOT 'free' (grátis).",
+        "hint_pt_br": "Falar errado MUDA o sentido: three ≠ tree ≠ free. Treine os três bem separados."
+      }
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "th4-s04",
+        "type": "multiple_choice",
+        "question": "'I'm going to take a ___ after the beach.' (shower/bath)",
+        "options": ["bat", "bath", "bad", "bet"],
+        "correct": 1,
+        "explanation": "BATH /bæθ/ ends with /θ/. 'Bat' is the animal/baseball-stick.",
+        "hint_pt_br": "BATH termina com /θ/. 'Bat' é morcego ou taco de beisebol — outra palavra."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "th4-s05",
+        "type": "fill_blank",
+        "question": "Complete: 'The ___ leads to the ocean.' (caminho, trail)",
+        "correct": "path",
+        "explanation": "PATH /pæθ/ — ends with /θ/. 'Pat' (tapinha) is different.",
+        "hint_pt_br": "PATH (caminho) termina com /θ/. 'Pat' (tapinha) é /t/ puro."
+      }
+    }
+  ]
+}
