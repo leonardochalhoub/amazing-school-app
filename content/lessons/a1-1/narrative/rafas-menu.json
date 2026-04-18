@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 12,
+  "estimated_minutes": 21,
   "summary_pt_br": "O Rafa pinta o cardápio do Tropical Bites em todas as cores. Aprenda as cores e a regra do adjetivo antes do substantivo ('red car', não 'car red').",
   "scenes": [
     {
@@ -25,12 +25,36 @@
       "kind": "vocab_intro",
       "title": "The starter six colors",
       "items": [
-        { "term": "red", "pt": "vermelho", "example_en": "a red apple" },
-        { "term": "yellow", "pt": "amarelo", "example_en": "a yellow mango" },
-        { "term": "green", "pt": "verde", "example_en": "green limes" },
-        { "term": "blue", "pt": "azul", "example_en": "the blue sky" },
-        { "term": "white", "pt": "branco", "example_en": "white rice" },
-        { "term": "black", "pt": "preto", "example_en": "black coffee" }
+        {
+          "term": "red",
+          "pt": "vermelho",
+          "example_en": "a red apple"
+        },
+        {
+          "term": "yellow",
+          "pt": "amarelo",
+          "example_en": "a yellow mango"
+        },
+        {
+          "term": "green",
+          "pt": "verde",
+          "example_en": "green limes"
+        },
+        {
+          "term": "blue",
+          "pt": "azul",
+          "example_en": "the blue sky"
+        },
+        {
+          "term": "white",
+          "pt": "branco",
+          "example_en": "white rice"
+        },
+        {
+          "term": "black",
+          "pt": "preto",
+          "example_en": "black coffee"
+        }
       ]
     },
     {
@@ -39,8 +63,14 @@
       "body_en": "In English, description goes first, thing goes second. 'A red car', NEVER 'a car red'. And adjectives don't change for plurals: 'one red car' → 'two red cars' (the adjective stays the same).",
       "body_pt": "Em inglês o adjetivo vem ANTES do substantivo. 'Red car' (carro vermelho) — nunca 'car red'. E adjetivos NÃO flexionam: 'red car' → 'red cars' (o adjetivo não vai para o plural).",
       "examples": [
-        { "en": "A yellow mango, two yellow mangoes", "pt": "Uma manga amarela, duas mangas amarelas" },
-        { "en": "A green lime, ten green limes", "pt": "Um limão verde, dez limões verdes" }
+        {
+          "en": "A yellow mango, two yellow mangoes",
+          "pt": "Uma manga amarela, duas mangas amarelas"
+        },
+        {
+          "en": "A green lime, ten green limes",
+          "pt": "Um limão verde, dez limões verdes"
+        }
       ]
     },
     {
@@ -67,12 +97,30 @@
         "id": "menu-s02",
         "type": "matching",
         "pairs": [
-          ["red", "vermelho"],
-          ["yellow", "amarelo"],
-          ["green", "verde"],
-          ["blue", "azul"],
-          ["white", "branco"],
-          ["black", "preto"]
+          [
+            "red",
+            "vermelho"
+          ],
+          [
+            "yellow",
+            "amarelo"
+          ],
+          [
+            "green",
+            "verde"
+          ],
+          [
+            "blue",
+            "azul"
+          ],
+          [
+            "white",
+            "branco"
+          ],
+          [
+            "black",
+            "preto"
+          ]
         ],
         "explanation": "Six starter colors. Say them with a thing: 'red pepper', 'blue wave', 'white sand'.",
         "hint_pt_br": "Sempre pratique COM um substantivo: 'red pepper' em vez de 'red' solto."
@@ -82,12 +130,30 @@
       "kind": "vocab_intro",
       "title": "Six adjectives — the survival kit",
       "items": [
-        { "term": "big / small", "pt": "grande / pequeno" },
-        { "term": "new / old", "pt": "novo / velho" },
-        { "term": "good / bad", "pt": "bom / ruim" },
-        { "term": "hot / cold", "pt": "quente / frio" },
-        { "term": "hungry / full", "pt": "com fome / cheio" },
-        { "term": "cheap / expensive", "pt": "barato / caro" }
+        {
+          "term": "big / small",
+          "pt": "grande / pequeno"
+        },
+        {
+          "term": "new / old",
+          "pt": "novo / velho"
+        },
+        {
+          "term": "good / bad",
+          "pt": "bom / ruim"
+        },
+        {
+          "term": "hot / cold",
+          "pt": "quente / frio"
+        },
+        {
+          "term": "hungry / full",
+          "pt": "com fome / cheio"
+        },
+        {
+          "term": "cheap / expensive",
+          "pt": "barato / caro"
+        }
       ]
     },
     {
@@ -95,9 +161,21 @@
       "location_en": "The food truck window",
       "location_pt": "Na janela do food truck",
       "turns": [
-        { "character_id": "bia", "en": "How much is a green lime taco?", "pt": "Quanto custa o taco de limão verde?" },
-        { "character_id": "rafa", "en": "Ten reais. A good, cheap, tasty taco.", "pt": "Dez reais. Um taco bom, barato e gostoso." },
-        { "character_id": "bia", "en": "Two, please. And one yellow juice.", "pt": "Dois, por favor. E um suco amarelo." }
+        {
+          "character_id": "bia",
+          "en": "How much is a green lime taco?",
+          "pt": "Quanto custa o taco de limão verde?"
+        },
+        {
+          "character_id": "rafa",
+          "en": "Ten reais. A good, cheap, tasty taco.",
+          "pt": "Dez reais. Um taco bom, barato e gostoso."
+        },
+        {
+          "character_id": "bia",
+          "en": "Two, please. And one yellow juice.",
+          "pt": "Dois, por favor. E um suco amarelo."
+        }
       ]
     },
     {
@@ -134,6 +212,62 @@
       "character_id": "cosmo",
       "text_en": "Cosmo barked twice. He stole a hot, small, tasty piece of bread.\nRafa shouted, 'COSMO! Bad dog!'\n(But Cosmo wagged his tail instead.)",
       "text_pt": "Cosmo latiu duas vezes. Roubou um pedaço de pão quente, pequeno e saboroso.\nO Rafa gritou: 'COSMO! Cão malcriado!'\n(Mas o Cosmo abanou o rabo, animado.)"
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Rafa's Colorful Menu\". Rafa paints the menu of Tropical Bites in every color. Learn colors and the English adjective rule: the adjective goes BEFORE the noun. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Rafa's Colorful Menu\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Rafa's Colorful Menu",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Rafa's Colorful Menu'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Rafa's Colorful Menu\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        },
+        {
+          "label": "BBC Learning English · Beginners",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-beginner",
+          "pt_hint": "Curso gratuito da BBC, nível iniciante."
+        },
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        }
+      ]
     }
   ]
 }

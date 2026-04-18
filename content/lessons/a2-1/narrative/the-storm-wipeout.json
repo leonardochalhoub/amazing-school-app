@@ -6,22 +6,155 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 14,
+  "estimated_minutes": 23,
   "summary_pt_br": "Past Continuous para ações em progresso no passado, e Past Simple para a ação que interrompe. Fórmula: 'While I WAS WALKING, it STARTED to rain'.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 35 — The Wipeout", "subtitle_en": "Two pasts, one story", "subtitle_pt": "Dois passados, uma história" },
-    { "kind": "narrative", "scene_emoji": "🌊", "character_id": "bia", "text_en": "I WAS PADDLING out when I SAW the dark sky.\nI WAS THINKING about turning back — and the wind HIT hard.\nI WAS DROPPING into a wave when lightning FLASHED.\nI FELL. I SWAM. My dad CAME running. The storm WON.", "text_pt": "Eu estava REMANDO quando vi o céu escuro.\nEstava PENSANDO em voltar — e o vento bateu forte.\nEstava DROPANDO uma onda quando o raio brilhou.\nCaí. Nadei. Meu pai veio correndo. A tempestade venceu." },
-    { "kind": "grammar_note", "title": "Past Continuous — the background action", "body_en": "Structure: WAS/WERE + verb-ing. Use it for actions IN PROGRESS at a past moment. Often paired with Past Simple for the interrupting event. 'I was studying when the phone rang.' Background = past continuous; interruption = past simple.", "body_pt": "Estrutura: was/were + verbo-ing. Ação em ANDAMENTO no passado, frequentemente interrompida por outra (Past Simple). 'I was studying when the phone rang.' Fundo = continuous; interrupção = simple.", "examples": [
-      { "en": "While I was walking home, I met Maya.", "pt": "Enquanto eu caminhava, encontrei a Maya." },
-      { "en": "He was cooking when the power went out.", "pt": "Ele estava cozinhando quando a luz caiu." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "storm-s01", "type": "fill_blank", "question": "Complete: 'I ___ ___ (paddle) when the storm hit.'", "correct": "was paddling", "explanation": "Past Continuous: was + paddling. Background action interrupted by 'hit'.", "hint_pt_br": "Was + verbo-ing. 'Was paddling'." }},
-    { "kind": "exercise", "exercise": { "id": "storm-s02", "type": "multiple_choice", "question": "Which is correct?", "options": ["While I watched TV, the phone rang", "While I was watching TV, the phone rang", "While I was watching TV, the phone was ringing", "Both B and C are possible"], "correct": 3, "explanation": "B is textbook. C is also possible when both actions overlap continuously.", "hint_pt_br": "B é o padrão. C funciona se as duas ações se sobrepõem continuamente." }},
-    { "kind": "dialogue", "location_en": "After the wipeout", "location_pt": "Depois do wipeout", "turns": [
-      { "character_id": "rafa", "en": "What were you doing out there?!", "pt": "O que você tava fazendo lá fora?!" },
-      { "character_id": "bia", "en": "I was trying to catch one last wave.", "pt": "Eu tava tentando pegar uma última onda." },
-      { "character_id": "rafa", "en": "When I arrived, you were climbing out of the water.", "pt": "Quando cheguei, você tava saindo da água." }
-    ]},
-    { "kind": "exercise", "exercise": { "id": "storm-s03", "type": "fill_blank", "question": "Complete: 'They ___ ___ (eat) dinner when we arrived.'", "correct": "were eating", "explanation": "Plural subject + past continuous = WERE + -ing.", "hint_pt_br": "Plural: were + -ing." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 35 — The Wipeout",
+      "subtitle_en": "Two pasts, one story",
+      "subtitle_pt": "Dois passados, uma história"
+    },
+    {
+      "kind": "narrative",
+      "scene_emoji": "🌊",
+      "character_id": "bia",
+      "text_en": "I WAS PADDLING out when I SAW the dark sky.\nI WAS THINKING about turning back — and the wind HIT hard.\nI WAS DROPPING into a wave when lightning FLASHED.\nI FELL. I SWAM. My dad CAME running. The storm WON.",
+      "text_pt": "Eu estava REMANDO quando vi o céu escuro.\nEstava PENSANDO em voltar — e o vento bateu forte.\nEstava DROPANDO uma onda quando o raio brilhou.\nCaí. Nadei. Meu pai veio correndo. A tempestade venceu."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Past Continuous — the background action",
+      "body_en": "Structure: WAS/WERE + verb-ing. Use it for actions IN PROGRESS at a past moment. Often paired with Past Simple for the interrupting event. 'I was studying when the phone rang.' Background = past continuous; interruption = past simple.",
+      "body_pt": "Estrutura: was/were + verbo-ing. Ação em ANDAMENTO no passado, frequentemente interrompida por outra (Past Simple). 'I was studying when the phone rang.' Fundo = continuous; interrupção = simple.",
+      "examples": [
+        {
+          "en": "While I was walking home, I met Maya.",
+          "pt": "Enquanto eu caminhava, encontrei a Maya."
+        },
+        {
+          "en": "He was cooking when the power went out.",
+          "pt": "Ele estava cozinhando quando a luz caiu."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "storm-s01",
+        "type": "fill_blank",
+        "question": "Complete: 'I ___ ___ (paddle) when the storm hit.'",
+        "correct": "was paddling",
+        "explanation": "Past Continuous: was + paddling. Background action interrupted by 'hit'.",
+        "hint_pt_br": "Was + verbo-ing. 'Was paddling'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "storm-s02",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "While I watched TV, the phone rang",
+          "While I was watching TV, the phone rang",
+          "While I was watching TV, the phone was ringing",
+          "Both B and C are possible"
+        ],
+        "correct": 3,
+        "explanation": "B is textbook. C is also possible when both actions overlap continuously.",
+        "hint_pt_br": "B é o padrão. C funciona se as duas ações se sobrepõem continuamente."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "After the wipeout",
+      "location_pt": "Depois do wipeout",
+      "turns": [
+        {
+          "character_id": "rafa",
+          "en": "What were you doing out there?!",
+          "pt": "O que você tava fazendo lá fora?!"
+        },
+        {
+          "character_id": "bia",
+          "en": "I was trying to catch one last wave.",
+          "pt": "Eu tava tentando pegar uma última onda."
+        },
+        {
+          "character_id": "rafa",
+          "en": "When I arrived, you were climbing out of the water.",
+          "pt": "Quando cheguei, você tava saindo da água."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "storm-s03",
+        "type": "fill_blank",
+        "question": "Complete: 'They ___ ___ (eat) dinner when we arrived.'",
+        "correct": "were eating",
+        "explanation": "Plural subject + past continuous = WERE + -ing.",
+        "hint_pt_br": "Plural: were + -ing."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"The Storm and the Wipeout\". Past Continuous (was/were + -ing) for interrupted actions. Bia WAS SURFING when the storm HIT. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"The Storm and the Wipeout\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "The Storm and the Wipeout",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'The Storm and the Wipeout'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"The Storm and the Wipeout\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        },
+        {
+          "label": "ThoughtCo · English for Learners",
+          "url": "https://www.thoughtco.com/english-as-a-second-language-4133121",
+          "pt_hint": "Artigos explicativos organizados por nível."
+        },
+        {
+          "label": "VOA Learning English · Everyday Grammar",
+          "url": "https://learningenglish.voanews.com/z/3808",
+          "pt_hint": "Vídeos curtos sobre gramática do dia a dia."
+        }
+      ]
+    }
   ]
 }

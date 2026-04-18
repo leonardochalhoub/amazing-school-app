@@ -6,36 +6,200 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 12,
+  "estimated_minutes": 21,
   "summary_pt_br": "Vocabulário de clima e estações. Regra-chave: em inglês usa-se IT + BE para clima ('It's raining' / 'It's hot'), nunca 'the weather is raining'.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 44 — The Weather", "subtitle_en": "It's hot. It's raining. It's beautiful.", "subtitle_pt": "Tá calor. Tá chovendo. Tá lindo." },
-    { "kind": "narrative", "character_id": "bia", "text_en": "In Praia do Sol the weather changes fast.\nIN SUMMER it's HOT and HUMID. We SWEAT.\nIN AUTUMN it's WINDY and COOL. The waves get big.\nIN WINTER it RAINS almost every day. Cosmo HATES the rain.\nIN SPRING it's SUNNY but mild. Perfect for surfing.", "text_pt": "Em Praia do Sol o clima muda rápido.\nNO VERÃO faz CALOR e é ÚMIDO. A gente SUA.\nNO OUTONO é VENTOSO e FRESCO. As ondas crescem.\nNO INVERNO CHOVE quase todo dia. O Cosmo ODEIA chuva.\nNA PRIMAVERA é ENSOLARADO mas ameno. Perfeito pra surf." },
-    { "kind": "grammar_note", "title": "Weather uses IT + BE", "body_en": "English says 'IT IS raining' / 'IT WAS cold'. Never 'the weather is raining' or 'the day is hot'. The subject 'it' has no translation — it's there because English needs a subject. Same for time: 'It's 3 o'clock.'", "body_pt": "Em inglês, clima usa 'IT + be': It's raining, It's hot. 'It' não tem tradução — só existe porque o inglês exige um sujeito. Igual para horas: 'It's 3 o'clock'.", "examples": [
-      { "en": "It's raining. It's cold. It was sunny yesterday.", "pt": "Está chovendo. Tá frio. Estava ensolarado ontem." },
-      { "en": "It will be windy tomorrow.", "pt": "Vai ventar amanhã." }
-    ]},
-    { "kind": "vocab_intro", "title": "Weather", "items": [
-      { "term": "sunny / cloudy / rainy", "pt": "ensolarado / nublado / chuvoso" },
-      { "term": "windy / stormy / foggy", "pt": "ventoso / tempestuoso / com neblina" },
-      { "term": "hot / warm / cool / cold / freezing", "pt": "quente / morno / fresco / frio / congelante" },
-      { "term": "humid / dry", "pt": "úmido / seco" },
-      { "term": "snow / thunder / lightning", "pt": "neve / trovão / raio" }
-    ]},
-    { "kind": "vocab_intro", "title": "Seasons", "items": [
-      { "term": "spring", "pt": "primavera" },
-      { "term": "summer", "pt": "verão" },
-      { "term": "autumn / fall (US)", "pt": "outono" },
-      { "term": "winter", "pt": "inverno" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "wx-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["The day is hot", "It is hot", "Today is hot day", "Is hot today"], "correct": 1, "explanation": "IT + BE for weather. 'It is hot'.", "hint_pt_br": "Sempre 'it + be' para clima." }},
-    { "kind": "exercise", "exercise": { "id": "wx-s02", "type": "fill_blank", "question": "Complete: 'Yesterday ___ ___ (rain) all day.'", "correct": "was raining", "explanation": "Past continuous with IT for ongoing weather.", "hint_pt_br": "'Was raining' (passado contínuo)." }},
-    { "kind": "exercise", "exercise": { "id": "wx-s03", "type": "matching", "pairs": [
-      ["sunny", "ensolarado"],
-      ["rainy", "chuvoso"],
-      ["windy", "ventoso"],
-      ["humid", "úmido"],
-      ["freezing", "congelante"]
-    ], "explanation": "Five essential weather words.", "hint_pt_br": "Cinco palavras essenciais de clima." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 44 — The Weather",
+      "subtitle_en": "It's hot. It's raining. It's beautiful.",
+      "subtitle_pt": "Tá calor. Tá chovendo. Tá lindo."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "In Praia do Sol the weather changes fast.\nIN SUMMER it's HOT and HUMID. We SWEAT.\nIN AUTUMN it's WINDY and COOL. The waves get big.\nIN WINTER it RAINS almost every day. Cosmo HATES the rain.\nIN SPRING it's SUNNY but mild. Perfect for surfing.",
+      "text_pt": "Em Praia do Sol o clima muda rápido.\nNO VERÃO faz CALOR e é ÚMIDO. A gente SUA.\nNO OUTONO é VENTOSO e FRESCO. As ondas crescem.\nNO INVERNO CHOVE quase todo dia. O Cosmo ODEIA chuva.\nNA PRIMAVERA é ENSOLARADO mas ameno. Perfeito pra surf."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Weather uses IT + BE",
+      "body_en": "English says 'IT IS raining' / 'IT WAS cold'. Never 'the weather is raining' or 'the day is hot'. The subject 'it' has no translation — it's there because English needs a subject. Same for time: 'It's 3 o'clock.'",
+      "body_pt": "Em inglês, clima usa 'IT + be': It's raining, It's hot. 'It' não tem tradução — só existe porque o inglês exige um sujeito. Igual para horas: 'It's 3 o'clock'.",
+      "examples": [
+        {
+          "en": "It's raining. It's cold. It was sunny yesterday.",
+          "pt": "Está chovendo. Tá frio. Estava ensolarado ontem."
+        },
+        {
+          "en": "It will be windy tomorrow.",
+          "pt": "Vai ventar amanhã."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Weather",
+      "items": [
+        {
+          "term": "sunny / cloudy / rainy",
+          "pt": "ensolarado / nublado / chuvoso"
+        },
+        {
+          "term": "windy / stormy / foggy",
+          "pt": "ventoso / tempestuoso / com neblina"
+        },
+        {
+          "term": "hot / warm / cool / cold / freezing",
+          "pt": "quente / morno / fresco / frio / congelante"
+        },
+        {
+          "term": "humid / dry",
+          "pt": "úmido / seco"
+        },
+        {
+          "term": "snow / thunder / lightning",
+          "pt": "neve / trovão / raio"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Seasons",
+      "items": [
+        {
+          "term": "spring",
+          "pt": "primavera"
+        },
+        {
+          "term": "summer",
+          "pt": "verão"
+        },
+        {
+          "term": "autumn / fall (US)",
+          "pt": "outono"
+        },
+        {
+          "term": "winter",
+          "pt": "inverno"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "wx-s01",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "The day is hot",
+          "It is hot",
+          "Today is hot day",
+          "Is hot today"
+        ],
+        "correct": 1,
+        "explanation": "IT + BE for weather. 'It is hot'.",
+        "hint_pt_br": "Sempre 'it + be' para clima."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "wx-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'Yesterday ___ ___ (rain) all day.'",
+        "correct": "was raining",
+        "explanation": "Past continuous with IT for ongoing weather.",
+        "hint_pt_br": "'Was raining' (passado contínuo)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "wx-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "sunny",
+            "ensolarado"
+          ],
+          [
+            "rainy",
+            "chuvoso"
+          ],
+          [
+            "windy",
+            "ventoso"
+          ],
+          [
+            "humid",
+            "úmido"
+          ],
+          [
+            "freezing",
+            "congelante"
+          ]
+        ],
+        "explanation": "Five essential weather words.",
+        "hint_pt_br": "Cinco palavras essenciais de clima."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"The Weather in Praia do Sol\". Weather vocabulary + the four seasons. Rains, storms, humid, windy. Plus IT'S construction for weather. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"The Weather in Praia do Sol\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "The Weather in Praia do Sol",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'The Weather in Praia do Sol'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"The Weather in Praia do Sol\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "ThoughtCo · English for Learners",
+          "url": "https://www.thoughtco.com/english-as-a-second-language-4133121",
+          "pt_hint": "Artigos explicativos organizados por nível."
+        },
+        {
+          "label": "VOA Learning English · Everyday Grammar",
+          "url": "https://learningenglish.voanews.com/z/3808",
+          "pt_hint": "Vídeos curtos sobre gramática do dia a dia."
+        },
+        {
+          "label": "BBC Learning English · Lower Intermediate",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate",
+          "pt_hint": "Curso BBC para nível pré-intermediário."
+        }
+      ]
+    }
   ]
 }

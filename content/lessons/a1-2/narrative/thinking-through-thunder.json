@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 45,
-  "estimated_minutes": 15,
+  "estimated_minutes": 24,
   "summary_pt_br": "Pares mínimos que revelam as armadilhas de TH para brasileiros: THINK x TINK x FINK, THREE x TREE x FREE, BATH x BAT. Usando Thunder (Imagine Dragons) e Thunderstruck (AC/DC) como referência.",
   "scenes": [
     {
@@ -27,19 +27,40 @@
       "body_en": "When you say /t/ instead of /θ/, 'think' becomes 'tink' (doesn't mean anything). When you say /f/, 'three' becomes 'free' (totally different word!). When you say /s/, 'thanks' becomes 'sanks' (not English). Only the tongue-between-teeth sound is correct.",
       "body_pt": "Três erros comuns: trocar /θ/ por /t/ ('tink' em vez de 'think'), por /f/ ('free' em vez de 'three', e aí vira OUTRA palavra), ou por /s/ ('sanks' em vez de 'thanks'). Só a língua entre os dentes é a forma certa.",
       "examples": [
-        { "en": "THINK (correct) vs TINK (wrong — no word) vs FINK (slang for snitch!)", "pt": "THINK certo; TINK não existe; FINK é gíria pra dedo-duro" },
-        { "en": "THREE (3) vs TREE (árvore) vs FREE (grátis/livre)", "pt": "Confundir essas três muda o sentido totalmente" }
+        {
+          "en": "THINK (correct) vs TINK (wrong — no word) vs FINK (slang for snitch!)",
+          "pt": "THINK certo; TINK não existe; FINK é gíria pra dedo-duro"
+        },
+        {
+          "en": "THREE (3) vs TREE (árvore) vs FREE (grátis/livre)",
+          "pt": "Confundir essas três muda o sentido totalmente"
+        }
       ]
     },
     {
       "kind": "vocab_intro",
       "title": "Minimal pairs to drill",
       "items": [
-        { "term": "THREE vs TREE", "pt": "três vs árvore — UM é ar entre os dentes, o outro é 't' seco" },
-        { "term": "THINK vs TINK vs FINK", "pt": "pensar vs (inexistente) vs (dedo-duro, gíria)" },
-        { "term": "THIN vs TIN vs FIN", "pt": "fino vs lata vs barbatana" },
-        { "term": "BATH vs BAT", "pt": "banho vs morcego/taco" },
-        { "term": "PATH vs PAT", "pt": "caminho vs tapinha" }
+        {
+          "term": "THREE vs TREE",
+          "pt": "três vs árvore — UM é ar entre os dentes, o outro é 't' seco"
+        },
+        {
+          "term": "THINK vs TINK vs FINK",
+          "pt": "pensar vs (inexistente) vs (dedo-duro, gíria)"
+        },
+        {
+          "term": "THIN vs TIN vs FIN",
+          "pt": "fino vs lata vs barbatana"
+        },
+        {
+          "term": "BATH vs BAT",
+          "pt": "banho vs morcego/taco"
+        },
+        {
+          "term": "PATH vs PAT",
+          "pt": "caminho vs tapinha"
+        }
       ]
     },
     {
@@ -49,7 +70,12 @@
         "id": "th4-s01",
         "type": "multiple_choice",
         "question": "You hear a song say 'I can't stop ___ of you.' Which word fits?",
-        "options": ["tinking", "thinking", "finking", "sinking"],
+        "options": [
+          "tinking",
+          "thinking",
+          "finking",
+          "sinking"
+        ],
         "correct": 1,
         "explanation": "THINKING /ˈθɪŋkɪŋ/ — 'I can't stop thinking of you' is one of the most common English song lines of all time.",
         "hint_pt_br": "THINKING com /θ/. 'I can't stop thinking of you' é uma das linhas mais famosas da música em inglês."
@@ -77,10 +103,26 @@
       "location_en": "The café, during the storm",
       "location_pt": "No café, durante a tempestade",
       "turns": [
-        { "character_id": "bia", "en": "THREE coffees, please.", "pt": "Três cafés, por favor." },
-        { "character_id": "rafa", "en": "TREE coffees? You want me to climb a tree?", "pt": "TREE cafés? Quer que eu suba numa árvore?" },
-        { "character_id": "bia", "en": "THREE. With my tongue between my teeth.", "pt": "THREE. Com a língua entre os dentes." },
-        { "character_id": "rafa", "en": "THREE it is. Thanks for the drill.", "pt": "THREE, então. Obrigado pelo treino." }
+        {
+          "character_id": "bia",
+          "en": "THREE coffees, please.",
+          "pt": "Três cafés, por favor."
+        },
+        {
+          "character_id": "rafa",
+          "en": "TREE coffees? You want me to climb a tree?",
+          "pt": "TREE cafés? Quer que eu suba numa árvore?"
+        },
+        {
+          "character_id": "bia",
+          "en": "THREE. With my tongue between my teeth.",
+          "pt": "THREE. Com a língua entre os dentes."
+        },
+        {
+          "character_id": "rafa",
+          "en": "THREE it is. Thanks for the drill.",
+          "pt": "THREE, então. Obrigado pelo treino."
+        }
       ]
     },
     {
@@ -89,11 +131,26 @@
         "id": "th4-s03",
         "type": "matching",
         "pairs": [
-          ["three", "três"],
-          ["tree", "árvore"],
-          ["free", "grátis / livre"],
-          ["thin", "fino"],
-          ["tin", "lata"]
+          [
+            "three",
+            "três"
+          ],
+          [
+            "tree",
+            "árvore"
+          ],
+          [
+            "free",
+            "grátis / livre"
+          ],
+          [
+            "thin",
+            "fino"
+          ],
+          [
+            "tin",
+            "lata"
+          ]
         ],
         "explanation": "Five words in three minimal pairs. Mispronouncing /θ/ changes meaning — 'three' (3) is NOT 'tree' (árvore) is NOT 'free' (grátis).",
         "hint_pt_br": "Falar errado MUDA o sentido: three ≠ tree ≠ free. Treine os três bem separados."
@@ -106,7 +163,12 @@
         "id": "th4-s04",
         "type": "multiple_choice",
         "question": "'I'm going to take a ___ after the beach.' (shower/bath)",
-        "options": ["bat", "bath", "bad", "bet"],
+        "options": [
+          "bat",
+          "bath",
+          "bad",
+          "bet"
+        ],
         "correct": 1,
         "explanation": "BATH /bæθ/ ends with /θ/. 'Bat' is the animal/baseball-stick.",
         "hint_pt_br": "BATH termina com /θ/. 'Bat' é morcego ou taco de beisebol — outra palavra."
@@ -122,6 +184,62 @@
         "explanation": "PATH /pæθ/ — ends with /θ/. 'Pat' (tapinha) is different.",
         "hint_pt_br": "PATH (caminho) termina com /θ/. 'Pat' (tapinha) é /t/ puro."
       }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Thinking Through the Thunder\". Minimal pairs: THINK / TINK / FINK — TREE / THREE / FREE. Joca the programmer debugs while a storm rolls in, and pop songs give us the drills. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Thinking Through the Thunder\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Thinking Through the Thunder",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Thinking Through the Thunder'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Thinking Through the Thunder\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC Learning English · Beginners",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-beginner",
+          "pt_hint": "Curso gratuito da BBC, nível iniciante."
+        },
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        }
+      ]
     }
   ]
 }

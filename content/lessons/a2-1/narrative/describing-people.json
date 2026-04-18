@@ -6,38 +6,208 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 13,
+  "estimated_minutes": 22,
   "summary_pt_br": "Adjetivos de aparência e personalidade. Armadilha: -ED é o que EU sinto (I am bored — entediado), -ING é o que CAUSA o sentimento (The movie is boring — chato). Trocar muda tudo.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 38 — The People", "subtitle_en": "Appearance + personality", "subtitle_pt": "Aparência + personalidade" },
-    { "kind": "narrative", "character_id": "bia", "text_en": "Bia sketched her friends in her notebook.\n'Mr. Kumar is TALL and KIND. His hair is GREY.\nRafa is MEDIUM-HEIGHT, FUNNY, a bit LOUD.\nJoca is SKINNY, QUIET, almost SHY. His eyes are BROWN.\nDona Lúcia is SHORT, GENTLE, and her smile is WARM.'", "text_pt": "A Bia desenhou os amigos no caderno.\n'Mr. Kumar é ALTO e GENTIL. O cabelo é GRISALHO.\nRafa é de ALTURA MÉDIA, ENGRAÇADO, um pouco BARULHENTO.\nJoca é MAGRO, QUIETO, quase TÍMIDO. Olhos CASTANHOS.\nDona Lúcia é BAIXINHA, DOCE, com um sorriso AQUECIDO.'" },
-    { "kind": "vocab_intro", "title": "Appearance", "items": [
-      { "term": "tall / short / medium-height", "pt": "alto / baixo / de altura média" },
-      { "term": "skinny / slim / overweight", "pt": "muito magro / esbelto / acima do peso" },
-      { "term": "blond / brown / black / grey hair", "pt": "cabelo loiro / castanho / preto / grisalho" },
-      { "term": "straight / curly / wavy", "pt": "liso / cacheado / ondulado" },
-      { "term": "blue / green / brown eyes", "pt": "olhos azuis / verdes / castanhos" }
-    ]},
-    { "kind": "vocab_intro", "title": "Personality", "items": [
-      { "term": "kind / mean", "pt": "gentil / mal" },
-      { "term": "shy / outgoing", "pt": "tímido / extrovertido" },
-      { "term": "funny / serious", "pt": "engraçado / sério" },
-      { "term": "lazy / hardworking", "pt": "preguiçoso / trabalhador" },
-      { "term": "generous / selfish", "pt": "generoso / egoísta" }
-    ]},
-    { "kind": "grammar_note", "title": "-ED vs -ING adjectives — the classic trap", "body_en": "-ED describes how YOU feel. -ING describes what CAUSES the feeling. 'I am BORED' (I feel it). 'The class is BORING' (it causes it). Saying 'I am boring' means YOU are boring to others — probably not what you meant!", "body_pt": "-ED = o que você sente. -ING = o que CAUSA. 'I am bored' = estou entediado. 'I am boring' = EU sou chato (insultando você mesmo!). Não troque — muda totalmente o sentido.", "examples": [
-      { "en": "I'm excited. (me) — The trip is exciting. (cause)", "pt": "Estou animado / A viagem é empolgante." },
-      { "en": "She's tired. — The job is tiring.", "pt": "Ela está cansada / O trabalho é cansativo." },
-      { "en": "He's surprised. — The news was surprising.", "pt": "Ele ficou surpreso / A notícia foi surpreendente." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "desc-s01", "type": "multiple_choice", "question": "Maya failed to read her book. Which is correct?", "options": ["The book was bored", "The book was boring", "Maya was boring", "The book is a bored"], "correct": 1, "explanation": "The book CAUSES boredom → -ING (boring). Maya FEELS bored (-ED).", "hint_pt_br": "Livro causa tédio → boring. Maya sente tédio → bored. Não confunda!" }},
-    { "kind": "exercise", "exercise": { "id": "desc-s02", "type": "fill_blank", "question": "Complete: 'I'm ___ (interest) in English.'", "correct": "interested", "explanation": "INTERESTED = you feel it. INTERESTING = the subject causes it.", "hint_pt_br": "Sentimento pessoal = interested. 'English is interesting' = o inglês é interessante." }},
-    { "kind": "exercise", "exercise": { "id": "desc-s03", "type": "matching", "pairs": [
-      ["tall", "alto"],
-      ["skinny", "muito magro"],
-      ["curly hair", "cabelo cacheado"],
-      ["shy", "tímido"],
-      ["generous", "generoso"]
-    ], "explanation": "Five descriptors for people. Use them in sentences about characters you know.", "hint_pt_br": "Cinco descritores. Pratique usando com pessoas que você conhece." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 38 — The People",
+      "subtitle_en": "Appearance + personality",
+      "subtitle_pt": "Aparência + personalidade"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "Bia sketched her friends in her notebook.\n'Mr. Kumar is TALL and KIND. His hair is GREY.\nRafa is MEDIUM-HEIGHT, FUNNY, a bit LOUD.\nJoca is SKINNY, QUIET, almost SHY. His eyes are BROWN.\nDona Lúcia is SHORT, GENTLE, and her smile is WARM.'",
+      "text_pt": "A Bia desenhou os amigos no caderno.\n'Mr. Kumar é ALTO e GENTIL. O cabelo é GRISALHO.\nRafa é de ALTURA MÉDIA, ENGRAÇADO, um pouco BARULHENTO.\nJoca é MAGRO, QUIETO, quase TÍMIDO. Olhos CASTANHOS.\nDona Lúcia é BAIXINHA, DOCE, com um sorriso AQUECIDO.'"
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Appearance",
+      "items": [
+        {
+          "term": "tall / short / medium-height",
+          "pt": "alto / baixo / de altura média"
+        },
+        {
+          "term": "skinny / slim / overweight",
+          "pt": "muito magro / esbelto / acima do peso"
+        },
+        {
+          "term": "blond / brown / black / grey hair",
+          "pt": "cabelo loiro / castanho / preto / grisalho"
+        },
+        {
+          "term": "straight / curly / wavy",
+          "pt": "liso / cacheado / ondulado"
+        },
+        {
+          "term": "blue / green / brown eyes",
+          "pt": "olhos azuis / verdes / castanhos"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Personality",
+      "items": [
+        {
+          "term": "kind / mean",
+          "pt": "gentil / mal"
+        },
+        {
+          "term": "shy / outgoing",
+          "pt": "tímido / extrovertido"
+        },
+        {
+          "term": "funny / serious",
+          "pt": "engraçado / sério"
+        },
+        {
+          "term": "lazy / hardworking",
+          "pt": "preguiçoso / trabalhador"
+        },
+        {
+          "term": "generous / selfish",
+          "pt": "generoso / egoísta"
+        }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "-ED vs -ING adjectives — the classic trap",
+      "body_en": "-ED describes how YOU feel. -ING describes what CAUSES the feeling. 'I am BORED' (I feel it). 'The class is BORING' (it causes it). Saying 'I am boring' means YOU are boring to others — probably not what you meant!",
+      "body_pt": "-ED = o que você sente. -ING = o que CAUSA. 'I am bored' = estou entediado. 'I am boring' = EU sou chato (insultando você mesmo!). Não troque — muda totalmente o sentido.",
+      "examples": [
+        {
+          "en": "I'm excited. (me) — The trip is exciting. (cause)",
+          "pt": "Estou animado / A viagem é empolgante."
+        },
+        {
+          "en": "She's tired. — The job is tiring.",
+          "pt": "Ela está cansada / O trabalho é cansativo."
+        },
+        {
+          "en": "He's surprised. — The news was surprising.",
+          "pt": "Ele ficou surpreso / A notícia foi surpreendente."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "desc-s01",
+        "type": "multiple_choice",
+        "question": "Maya failed to read her book. Which is correct?",
+        "options": [
+          "The book was bored",
+          "The book was boring",
+          "Maya was boring",
+          "The book is a bored"
+        ],
+        "correct": 1,
+        "explanation": "The book CAUSES boredom → -ING (boring). Maya FEELS bored (-ED).",
+        "hint_pt_br": "Livro causa tédio → boring. Maya sente tédio → bored. Não confunda!"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "desc-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'I'm ___ (interest) in English.'",
+        "correct": "interested",
+        "explanation": "INTERESTED = you feel it. INTERESTING = the subject causes it.",
+        "hint_pt_br": "Sentimento pessoal = interested. 'English is interesting' = o inglês é interessante."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "desc-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "tall",
+            "alto"
+          ],
+          [
+            "skinny",
+            "muito magro"
+          ],
+          [
+            "curly hair",
+            "cabelo cacheado"
+          ],
+          [
+            "shy",
+            "tímido"
+          ],
+          [
+            "generous",
+            "generoso"
+          ]
+        ],
+        "explanation": "Five descriptors for people. Use them in sentences about characters you know.",
+        "hint_pt_br": "Cinco descritores. Pratique usando com pessoas que você conhece."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Describing the People of Praia do Sol\". Appearance + personality adjectives. Tall, short, kind, lazy — and the -ED / -ING adjective trap (bored vs boring). Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Describing the People of Praia do Sol\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Describing the People of Praia do Sol",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Describing the People of Praia do Sol'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Describing the People of Praia do Sol\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC Learning English · Lower Intermediate",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate",
+          "pt_hint": "Curso BBC para nível pré-intermediário."
+        },
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        },
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        }
+      ]
+    }
   ]
 }

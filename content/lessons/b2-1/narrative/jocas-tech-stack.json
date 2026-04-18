@@ -6,51 +6,256 @@
   "level": "B2",
   "cefr_level": "b2.1",
   "xp_reward": 60,
-  "estimated_minutes": 16,
+  "estimated_minutes": 25,
   "summary_pt_br": "Vocabulário de tech + IA em inglês profissional: deploy, ship, scale, rollback, PR, code review, standup, onboarding, retro, OKRs. Focado em brasileiros indo para trabalhos remotos em startups dos EUA. Inclui expressões cotidianas do Slack corporativo.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 29 — Joca's First Sprint", "subtitle_en": "Tech English, real-world version", "subtitle_pt": "Inglês de tech, versão do mundo real" },
-    { "kind": "narrative", "character_id": "joca", "text_en": "Joca opened Slack. The channel was alive.\n'Morning team — let's CIRCLE BACK on the feature we SHIPPED yesterday.'\n'My PR is in review. Quick EYES from anyone?'\n'Standup in 5.'\n'We need to ROLL BACK that deploy — it SPIKED error rates.'\nJoca took notes. Six new idioms before breakfast.", "text_pt": "O Joca abriu o Slack. O canal estava fervendo.\n'Bom dia, time — vamos REVISITAR a feature que FOI LANÇADA ontem.'\n'Meu PR está em revisão. Alguém dá um OLHAR RÁPIDO?'\n'Standup em 5.'\n'Temos que REVERTER aquele deploy — disparou a taxa de erro.'\nJoca anotou tudo. Seis expressões novas antes do café." },
-    { "kind": "vocab_intro", "title": "Startup verbs", "items": [
-      { "term": "deploy / ship", "pt": "publicar / subir em produção" },
-      { "term": "roll back", "pt": "reverter (um deploy)" },
-      { "term": "scale (up / down / out)", "pt": "escalar (vertical/horizontal)" },
-      { "term": "onboard (a user, a dev)", "pt": "integrar (novo usuário ou funcionário)" },
-      { "term": "churn", "pt": "perda de clientes / rotatividade" },
-      { "term": "iterate", "pt": "iterar, refinar" }
-    ]},
-    { "kind": "vocab_intro", "title": "Startup nouns", "items": [
-      { "term": "PR (pull request)", "pt": "proposta de código para revisão" },
-      { "term": "standup", "pt": "reunião diária de 15 min do time" },
-      { "term": "retro(spective)", "pt": "reunião de 'o que funcionou / o que não'" },
-      { "term": "OKR / KPI", "pt": "metas e indicadores" },
-      { "term": "runway", "pt": "tempo até o dinheiro acabar" },
-      { "term": "MVP", "pt": "produto mínimo viável" }
-    ]},
-    { "kind": "grammar_note", "title": "Phrasal verbs that rule tech Slack", "body_en": "CIRCLE BACK = return to a topic later. PING someone = send a quick message. LOOP IN = include in the conversation. KICK OFF = start formally. WRAP UP = finish. TOUCH BASE = align briefly. These five appear in almost every remote-work conversation.", "body_pt": "Cinco phrasal verbs onipresentes no Slack: circle back (voltar ao tema), ping (avisar rapidinho), loop in (incluir alguém na conversa), kick off (começar oficialmente), wrap up (finalizar).", "examples": [
-      { "en": "I'll loop Zara in on this thread.", "pt": "Vou incluir a Zara nessa conversa." },
-      { "en": "Can we kick off the call?", "pt": "A gente pode começar a call?" },
-      { "en": "Ping me when you're free.", "pt": "Me avisa quando estiver livre." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "joca", "exercise": { "id": "tech-s01", "type": "multiple_choice", "question": "'We need to ___ the deploy — the site is down.' Which?", "options": ["ship", "roll back", "onboard", "iterate"], "correct": 1, "explanation": "ROLL BACK = revert to the previous version. Critical phrase in a production incident.", "hint_pt_br": "ROLL BACK = reverter. Jargão obrigatório em incidentes de produção." }},
-    { "kind": "exercise", "exercise": { "id": "tech-s02", "type": "fill_blank", "question": "Complete: 'Could you ___ me ___ on the billing thread?' (incluir)", "correct": "loop in", "explanation": "LOOP someone IN = include them in the conversation. 'Loop me in on X'.", "hint_pt_br": "'Loop me in' = me inclui nessa conversa. Uso diário em Slack." }},
-    { "kind": "exercise", "exercise": { "id": "tech-s03", "type": "matching", "pairs": [
-      ["PR", "pull request (proposta de código)"],
-      ["standup", "reunião diária rápida"],
-      ["retro", "retrospectiva"],
-      ["runway", "tempo até o dinheiro acabar"],
-      ["MVP", "produto mínimo viável"]
-    ], "explanation": "Five nouns that appear every day. Learn them as full phrases: 'the PR is blocked', 'we did a retro'.", "hint_pt_br": "Cinco substantivos diários. Aprenda em frases, não isolados." }},
-    { "kind": "dialogue", "location_en": "Slack, a typical Monday", "location_pt": "Slack, uma segunda típica", "turns": [
-      { "character_id": "joca", "en": "Quick heads-up: we're rolling back the 3pm deploy. Error rate spiked.", "pt": "Aviso rápido: estamos revertendo o deploy das 15h. Taxa de erro subiu." },
-      { "character_id": "zara", "en": "Loop me in on the retro. I'd like to take a look at the root cause.", "pt": "Me inclui na retro. Quero ver a causa raiz." },
-      { "character_id": "joca", "en": "Will do. I'll kick off the incident doc.", "pt": "Tá combinado. Vou começar o documento de incidente." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "tech-s04", "type": "multiple_choice", "question": "Your manager says 'Do you have bandwidth for this?' What do they mean?", "options": [
-        "Is your internet fast?",
-        "Do you have time/capacity to take it on?",
-        "Can you stream video?",
-        "Will you join the call?"
-      ], "correct": 1, "explanation": "BANDWIDTH = time and energy to take on more work. A euphemism to avoid sounding pushy.", "hint_pt_br": "BANDWIDTH = capacidade/tempo. Nada a ver com internet, tudo a ver com carga de trabalho." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 29 — Joca's First Sprint",
+      "subtitle_en": "Tech English, real-world version",
+      "subtitle_pt": "Inglês de tech, versão do mundo real"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Joca opened Slack. The channel was alive.\n'Morning team — let's CIRCLE BACK on the feature we SHIPPED yesterday.'\n'My PR is in review. Quick EYES from anyone?'\n'Standup in 5.'\n'We need to ROLL BACK that deploy — it SPIKED error rates.'\nJoca took notes. Six new idioms before breakfast.",
+      "text_pt": "O Joca abriu o Slack. O canal estava fervendo.\n'Bom dia, time — vamos REVISITAR a feature que FOI LANÇADA ontem.'\n'Meu PR está em revisão. Alguém dá um OLHAR RÁPIDO?'\n'Standup em 5.'\n'Temos que REVERTER aquele deploy — disparou a taxa de erro.'\nJoca anotou tudo. Seis expressões novas antes do café."
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Startup verbs",
+      "items": [
+        {
+          "term": "deploy / ship",
+          "pt": "publicar / subir em produção"
+        },
+        {
+          "term": "roll back",
+          "pt": "reverter (um deploy)"
+        },
+        {
+          "term": "scale (up / down / out)",
+          "pt": "escalar (vertical/horizontal)"
+        },
+        {
+          "term": "onboard (a user, a dev)",
+          "pt": "integrar (novo usuário ou funcionário)"
+        },
+        {
+          "term": "churn",
+          "pt": "perda de clientes / rotatividade"
+        },
+        {
+          "term": "iterate",
+          "pt": "iterar, refinar"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Startup nouns",
+      "items": [
+        {
+          "term": "PR (pull request)",
+          "pt": "proposta de código para revisão"
+        },
+        {
+          "term": "standup",
+          "pt": "reunião diária de 15 min do time"
+        },
+        {
+          "term": "retro(spective)",
+          "pt": "reunião de 'o que funcionou / o que não'"
+        },
+        {
+          "term": "OKR / KPI",
+          "pt": "metas e indicadores"
+        },
+        {
+          "term": "runway",
+          "pt": "tempo até o dinheiro acabar"
+        },
+        {
+          "term": "MVP",
+          "pt": "produto mínimo viável"
+        }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Phrasal verbs that rule tech Slack",
+      "body_en": "CIRCLE BACK = return to a topic later. PING someone = send a quick message. LOOP IN = include in the conversation. KICK OFF = start formally. WRAP UP = finish. TOUCH BASE = align briefly. These five appear in almost every remote-work conversation.",
+      "body_pt": "Cinco phrasal verbs onipresentes no Slack: circle back (voltar ao tema), ping (avisar rapidinho), loop in (incluir alguém na conversa), kick off (começar oficialmente), wrap up (finalizar).",
+      "examples": [
+        {
+          "en": "I'll loop Zara in on this thread.",
+          "pt": "Vou incluir a Zara nessa conversa."
+        },
+        {
+          "en": "Can we kick off the call?",
+          "pt": "A gente pode começar a call?"
+        },
+        {
+          "en": "Ping me when you're free.",
+          "pt": "Me avisa quando estiver livre."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "joca",
+      "exercise": {
+        "id": "tech-s01",
+        "type": "multiple_choice",
+        "question": "'We need to ___ the deploy — the site is down.' Which?",
+        "options": [
+          "ship",
+          "roll back",
+          "onboard",
+          "iterate"
+        ],
+        "correct": 1,
+        "explanation": "ROLL BACK = revert to the previous version. Critical phrase in a production incident.",
+        "hint_pt_br": "ROLL BACK = reverter. Jargão obrigatório em incidentes de produção."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tech-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'Could you ___ me ___ on the billing thread?' (incluir)",
+        "correct": "loop in",
+        "explanation": "LOOP someone IN = include them in the conversation. 'Loop me in on X'.",
+        "hint_pt_br": "'Loop me in' = me inclui nessa conversa. Uso diário em Slack."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tech-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "PR",
+            "pull request (proposta de código)"
+          ],
+          [
+            "standup",
+            "reunião diária rápida"
+          ],
+          [
+            "retro",
+            "retrospectiva"
+          ],
+          [
+            "runway",
+            "tempo até o dinheiro acabar"
+          ],
+          [
+            "MVP",
+            "produto mínimo viável"
+          ]
+        ],
+        "explanation": "Five nouns that appear every day. Learn them as full phrases: 'the PR is blocked', 'we did a retro'.",
+        "hint_pt_br": "Cinco substantivos diários. Aprenda em frases, não isolados."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Slack, a typical Monday",
+      "location_pt": "Slack, uma segunda típica",
+      "turns": [
+        {
+          "character_id": "joca",
+          "en": "Quick heads-up: we're rolling back the 3pm deploy. Error rate spiked.",
+          "pt": "Aviso rápido: estamos revertendo o deploy das 15h. Taxa de erro subiu."
+        },
+        {
+          "character_id": "zara",
+          "en": "Loop me in on the retro. I'd like to take a look at the root cause.",
+          "pt": "Me inclui na retro. Quero ver a causa raiz."
+        },
+        {
+          "character_id": "joca",
+          "en": "Will do. I'll kick off the incident doc.",
+          "pt": "Tá combinado. Vou começar o documento de incidente."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "zara",
+      "exercise": {
+        "id": "tech-s04",
+        "type": "multiple_choice",
+        "question": "Your manager says 'Do you have bandwidth for this?' What do they mean?",
+        "options": [
+          "Is your internet fast?",
+          "Do you have time/capacity to take it on?",
+          "Can you stream video?",
+          "Will you join the call?"
+        ],
+        "correct": 1,
+        "explanation": "BANDWIDTH = time and energy to take on more work. A euphemism to avoid sounding pushy.",
+        "hint_pt_br": "BANDWIDTH = capacidade/tempo. Nada a ver com internet, tudo a ver com carga de trabalho."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Joca's Tech Stack\". Tech and AI vocabulary for real jobs: deploy, ship, scale, API, PR, onboarding, standup. The English every Brazilian dev needs for a US remote job. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Joca's Tech Stack\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Joca's Tech Stack",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Joca's Tech Stack'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Joca's Tech Stack\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Cambridge Dictionary · thesaurus",
+          "url": "https://dictionary.cambridge.org/thesaurus/",
+          "pt_hint": "Sinônimos com exemplos — essencial em B2+."
+        },
+        {
+          "label": "Grammarly Blog",
+          "url": "https://www.grammarly.com/blog/",
+          "pt_hint": "Explicações aprofundadas de gramática e estilo."
+        },
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análises de notícias reais da BBC."
+        }
+      ]
+    }
   ]
 }

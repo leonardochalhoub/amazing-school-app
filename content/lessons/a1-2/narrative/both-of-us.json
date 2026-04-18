@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 45,
-  "estimated_minutes": 14,
+  "estimated_minutes": 23,
   "summary_pt_br": "O TH no FIM das palavras (o mais esquecido): BOTH, WITH, FIFTH, MONTH, EARTH, SOUTH. Treinado com With or Without You (U2), Both Sides Now (Joni Mitchell) e What a Wonderful World (Louis Armstrong).",
   "scenes": [
     {
@@ -27,21 +27,54 @@
       "body_en": "Brazilians often drop or soften the TH at the end of words because Portuguese rarely ends words in that position. Don't. 'Both' has THREE sounds: /b/ + /oʊ/ + /θ/. The /θ/ at the end is small but essential. Give it a clear blow of air.",
       "body_pt": "Brasileiros tendem a engolir o TH no fim das palavras porque o português quase não tem som assim nessa posição. Não engole. 'Both' tem TRÊS sons: /b/ + /oʊ/ + /θ/. O /θ/ final é pequeno, mas crítico. Solte o arzinho com clareza.",
       "examples": [
-        { "en": "BOTH /boʊθ/ — don't say 'boss' or 'bot'", "pt": "ambos" },
-        { "en": "WITH /wɪð/ — ends with /ð/, voiced", "pt": "com (preposição)" },
-        { "en": "MONTH /mʌnθ/ — /n/ + /θ/, two fast sounds", "pt": "mês" }
+        {
+          "en": "BOTH /boʊθ/ — don't say 'boss' or 'bot'",
+          "pt": "ambos"
+        },
+        {
+          "en": "WITH /wɪð/ — ends with /ð/, voiced",
+          "pt": "com (preposição)"
+        },
+        {
+          "en": "MONTH /mʌnθ/ — /n/ + /θ/, two fast sounds",
+          "pt": "mês"
+        }
       ]
     },
     {
       "kind": "vocab_intro",
       "title": "Final-TH words to master",
       "items": [
-        { "term": "both /boʊθ/", "pt": "ambos", "example_en": "Both of us." },
-        { "term": "with /wɪð/", "pt": "com", "example_en": "Coffee with milk." },
-        { "term": "fifth /fɪfθ/", "pt": "quinto", "example_en": "The fifth lesson." },
-        { "term": "month /mʌnθ/", "pt": "mês", "example_en": "Next month." },
-        { "term": "earth /ɜːrθ/", "pt": "Terra", "example_en": "Planet Earth." },
-        { "term": "south /saʊθ/", "pt": "sul", "example_en": "South of here." }
+        {
+          "term": "both /boʊθ/",
+          "pt": "ambos",
+          "example_en": "Both of us."
+        },
+        {
+          "term": "with /wɪð/",
+          "pt": "com",
+          "example_en": "Coffee with milk."
+        },
+        {
+          "term": "fifth /fɪfθ/",
+          "pt": "quinto",
+          "example_en": "The fifth lesson."
+        },
+        {
+          "term": "month /mʌnθ/",
+          "pt": "mês",
+          "example_en": "Next month."
+        },
+        {
+          "term": "earth /ɜːrθ/",
+          "pt": "Terra",
+          "example_en": "Planet Earth."
+        },
+        {
+          "term": "south /saʊθ/",
+          "pt": "sul",
+          "example_en": "South of here."
+        }
       ]
     },
     {
@@ -68,7 +101,12 @@
         "id": "th5-s02",
         "type": "multiple_choice",
         "question": "'I want ___ options.' (= os dois)",
-        "options": ["both", "bot", "boss", "boat"],
+        "options": [
+          "both",
+          "bot",
+          "boss",
+          "boat"
+        ],
         "correct": 0,
         "explanation": "BOTH /boʊθ/ ends with /θ/. 'Bot' (robô) and 'boss' (chefe) mean something else.",
         "hint_pt_br": "BOTH termina com /θ/. 'Bot' é robô; 'boss' é chefe. Conferir o final é crítico."
@@ -79,10 +117,26 @@
       "location_en": "Rooftop jam session",
       "location_pt": "No terraço, jam session",
       "turns": [
-        { "character_id": "bia", "en": "This song is from the fifth month of the year.", "pt": "Essa música é do quinto mês do ano." },
-        { "character_id": "maya", "en": "May? That's month number FIVE.", "pt": "Maio? É o mês número CINCO." },
-        { "character_id": "bia", "en": "Right — the FIFTH month. Not the fift. The FIFTH.", "pt": "Exato — o QUINTO mês. Não 'fift'. É FIFTH." },
-        { "character_id": "maya", "en": "FIFTH. I got it. Three sounds at the end: /f-θ/.", "pt": "FIFTH. Peguei. Três sons no final: /f-θ/." }
+        {
+          "character_id": "bia",
+          "en": "This song is from the fifth month of the year.",
+          "pt": "Essa música é do quinto mês do ano."
+        },
+        {
+          "character_id": "maya",
+          "en": "May? That's month number FIVE.",
+          "pt": "Maio? É o mês número CINCO."
+        },
+        {
+          "character_id": "bia",
+          "en": "Right — the FIFTH month. Not the fift. The FIFTH.",
+          "pt": "Exato — o QUINTO mês. Não 'fift'. É FIFTH."
+        },
+        {
+          "character_id": "maya",
+          "en": "FIFTH. I got it. Three sounds at the end: /f-θ/.",
+          "pt": "FIFTH. Peguei. Três sons no final: /f-θ/."
+        }
       ]
     },
     {
@@ -91,11 +145,26 @@
         "id": "th5-s03",
         "type": "matching",
         "pairs": [
-          ["both", "ambos"],
-          ["with", "com"],
-          ["month", "mês"],
-          ["earth", "Terra"],
-          ["south", "sul"]
+          [
+            "both",
+            "ambos"
+          ],
+          [
+            "with",
+            "com"
+          ],
+          [
+            "month",
+            "mês"
+          ],
+          [
+            "earth",
+            "Terra"
+          ],
+          [
+            "south",
+            "sul"
+          ]
         ],
         "explanation": "Five final-TH words. Chain them: 'Both of us went south from Earth one month — with a dog.'",
         "hint_pt_br": "Cinco palavrinhas com TH no final. Frase de treino: 'Both of us went south from Earth one month — with a dog.'"
@@ -108,7 +177,12 @@
         "id": "th5-s04",
         "type": "multiple_choice",
         "question": "Which of these words ends with the VOICED /ð/?",
-        "options": ["both", "with", "month", "south"],
+        "options": [
+          "both",
+          "with",
+          "month",
+          "south"
+        ],
         "correct": 1,
         "explanation": "WITH ends with /ð/ (voiced — hum). The others (both, month, south) end with /θ/ (voiceless — just air). This is the one word that breaks the pattern.",
         "hint_pt_br": "WITH é diferente: termina com /ð/ vibrado. Os outros (both, month, south) terminam em /θ/ mudo."
@@ -119,6 +193,62 @@
       "character_id": "kumar",
       "text_en": "Mr. Kumar clapped his hands. 'BOTH sounds, WITH and without voice.\nThe MONTH we spent on TH was worth it, no choice.\nYou can feel it on EARTH. You can feel it in the SOUTH.\nYou can feel it in every English-speaking mouth.'",
       "text_pt": "Mr. Kumar bateu palmas. 'AMBOS os sons, COM e sem voz.\nO MÊS que gastamos com TH valeu, sem mais algoz.\nVocês sentem na TERRA. Sentem no SUL.\nSentem em toda boca que fala inglês — sem mais álcool.'"
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Both of Us — The TH at the End\". Final-position TH: BOTH, WITH, FIFTH, MONTH, EARTH, SOUTH. Bia DJs on the rooftop and every song brings a new TH to notice. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Both of Us — The TH at the End\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Both of Us — The TH at the End",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Both of Us — The TH at the End'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Both of Us — The TH at the End\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        },
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        },
+        {
+          "label": "BBC Learning English · Beginners",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-beginner",
+          "pt_hint": "Curso gratuito da BBC, nível iniciante."
+        }
+      ]
     }
   ]
 }

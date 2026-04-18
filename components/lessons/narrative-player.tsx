@@ -286,6 +286,128 @@ function SceneRenderer({
     );
   }
 
+  if (scene.kind === "reading") {
+    return (
+      <div className="space-y-4">
+        <div className="flex items-center gap-2 rounded-lg bg-blue-500/10 px-3 py-2 text-blue-700 dark:text-blue-400">
+          <BookOpen className="h-5 w-5" />
+          <h3 className="text-base font-semibold">
+            📖 {scene.title ?? "Read"}
+          </h3>
+        </div>
+        <div className="rounded-xl border bg-card p-4">
+          <div className="flex items-start gap-2">
+            <SpeakButton text={scene.passage_en} />
+            <p className="whitespace-pre-line text-base leading-relaxed flex-1">
+              {scene.passage_en}
+            </p>
+          </div>
+          {scene.passage_pt ? (
+            <p className="mt-3 border-t pt-3 text-xs italic text-muted-foreground whitespace-pre-line">
+              {scene.passage_pt}
+            </p>
+          ) : null}
+        </div>
+        {scene.check ? (
+          <ExerciseInline
+            exercise={{
+              id: "reading-check",
+              type: "multiple_choice",
+              question: scene.check.question,
+              options: scene.check.options,
+              correct: scene.check.correct,
+              explanation: scene.check.explanation,
+              hint_pt_br: scene.check.hint_pt_br,
+            }}
+            onSolved={onAdvance}
+          />
+        ) : (
+          <AdvanceButton onClick={onAdvance} isLast={isLast} submitting={submitting} />
+        )}
+      </div>
+    );
+  }
+
+  if (scene.kind === "listening") {
+    return (
+      <div className="space-y-4">
+        <div className="flex items-center gap-2 rounded-lg bg-violet-500/10 px-3 py-2 text-violet-700 dark:text-violet-400">
+          <Sparkles className="h-5 w-5" />
+          <h3 className="text-base font-semibold">
+            🎧 {scene.title ?? "Listen"}
+          </h3>
+        </div>
+        <div className="rounded-xl border border-dashed border-violet-500/30 bg-violet-500/5 p-4 text-center">
+          <p className="text-xs text-muted-foreground mb-3">
+            Click play. Listen carefully. You can replay as many times as you
+            want.
+          </p>
+          <SpeakButton text={scene.audio_text_en} className="h-12 w-12 text-lg" />
+          {scene.audio_text_pt ? (
+            <p className="mt-3 text-xs italic text-muted-foreground">
+              (PT reference — don't peek first time: {scene.audio_text_pt})
+            </p>
+          ) : null}
+        </div>
+        {scene.check ? (
+          <ExerciseInline
+            exercise={{
+              id: "listen-check",
+              type: "multiple_choice",
+              question: scene.check.question,
+              options: scene.check.options,
+              correct: scene.check.correct,
+              explanation: scene.check.explanation,
+              hint_pt_br: scene.check.hint_pt_br,
+            }}
+            onSolved={onAdvance}
+          />
+        ) : (
+          <AdvanceButton onClick={onAdvance} isLast={isLast} submitting={submitting} />
+        )}
+      </div>
+    );
+  }
+
+  if (scene.kind === "further_reading") {
+    return (
+      <div className="space-y-3">
+        <div className="flex items-center gap-2 rounded-lg bg-amber-500/10 px-3 py-2 text-amber-700 dark:text-amber-400">
+          <BookOpen className="h-5 w-5" />
+          <h3 className="text-base font-semibold">
+            🌐 {scene.title ?? "Go deeper"}
+          </h3>
+        </div>
+        {scene.body_pt ? (
+          <p className="text-sm italic text-muted-foreground">{scene.body_pt}</p>
+        ) : null}
+        <ul className="space-y-2">
+          {scene.sources.map((s, i) => (
+            <li key={i}>
+              <a
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-lg border border-amber-500/20 bg-amber-500/5 p-3 transition-colors hover:border-amber-500/40"
+              >
+                <p className="text-sm font-semibold text-amber-700 dark:text-amber-400">
+                  {s.label} →
+                </p>
+                <p className="text-xs text-muted-foreground">{s.url}</p>
+                {s.pt_hint ? (
+                  <p className="mt-1 text-[11px] italic text-muted-foreground">
+                    {s.pt_hint}
+                  </p>
+                ) : null}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <AdvanceButton onClick={onAdvance} isLast={isLast} submitting={submitting} />
+      </div>
+    );
+  }
+
   return null;
 }
 

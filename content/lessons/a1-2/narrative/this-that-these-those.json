@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 40,
-  "estimated_minutes": 13,
+  "estimated_minutes": 22,
   "summary_pt_br": "O som /ð/ (TH vibrado, COM voz) nos demonstrativos THIS / THAT / THESE / THOSE. A diferença entre 'dis' (errado) e 'this' (correto) — com dica de vibração na garganta.",
   "scenes": [
     {
@@ -27,19 +27,44 @@
       "body_en": "Same tongue position as /θ/ (tongue between teeth), BUT this time you USE your voice. Put your hand on your throat — you should feel it vibrate. /ð/ is the sound in THIS, THAT, THESE, THOSE, THE, THEY, MOTHER, BROTHER, WITH, BATHE.",
       "body_pt": "Mesma posição de língua que o /θ/ (entre os dentes), MAS agora COM voz. Bote a mão no pescoço — tem que vibrar. /ð/ aparece em THIS, THAT, THESE, THOSE, THE, THEY, MOTHER, BROTHER, WITH, BATHE.",
       "examples": [
-        { "en": "this (not 'dis', not 'zis')", "pt": "isto / este" },
-        { "en": "the (not 'de', not 'ze')", "pt": "o / a" },
-        { "en": "they (not 'dey')", "pt": "eles / elas" }
+        {
+          "en": "this (not 'dis', not 'zis')",
+          "pt": "isto / este"
+        },
+        {
+          "en": "the (not 'de', not 'ze')",
+          "pt": "o / a"
+        },
+        {
+          "en": "they (not 'dey')",
+          "pt": "eles / elas"
+        }
       ]
     },
     {
       "kind": "vocab_intro",
       "title": "The four demonstratives",
       "items": [
-        { "term": "THIS /ðɪs/", "pt": "este / esta (perto, singular)", "example_en": "This taco is hot." },
-        { "term": "THAT /ðæt/", "pt": "aquele / aquela (longe, singular)", "example_en": "That juice is cold." },
-        { "term": "THESE /ðiːz/", "pt": "estes / estas (perto, plural)", "example_en": "These peppers are red." },
-        { "term": "THOSE /ðoʊz/", "pt": "aqueles / aquelas (longe, plural)", "example_en": "Those surfers are fast." }
+        {
+          "term": "THIS /ðɪs/",
+          "pt": "este / esta (perto, singular)",
+          "example_en": "This taco is hot."
+        },
+        {
+          "term": "THAT /ðæt/",
+          "pt": "aquele / aquela (longe, singular)",
+          "example_en": "That juice is cold."
+        },
+        {
+          "term": "THESE /ðiːz/",
+          "pt": "estes / estas (perto, plural)",
+          "example_en": "These peppers are red."
+        },
+        {
+          "term": "THOSE /ðoʊz/",
+          "pt": "aqueles / aquelas (longe, plural)",
+          "example_en": "Those surfers are fast."
+        }
       ]
     },
     {
@@ -54,7 +79,12 @@
         "id": "th2-s01",
         "type": "multiple_choice",
         "question": "Rafa points at ONE taco in his hand. Which word?",
-        "options": ["this", "that", "these", "those"],
+        "options": [
+          "this",
+          "that",
+          "these",
+          "those"
+        ],
         "correct": 0,
         "explanation": "ONE + CLOSE = THIS. He's holding it in his own hand — singular, near.",
         "hint_pt_br": "UM + PERTO = THIS."
@@ -66,7 +96,12 @@
         "id": "th2-s02",
         "type": "multiple_choice",
         "question": "Bia points at SURFBOARDS on the FAR side of the beach. Which word?",
-        "options": ["this", "that", "these", "those"],
+        "options": [
+          "this",
+          "that",
+          "these",
+          "those"
+        ],
         "correct": 3,
         "explanation": "MANY + FAR = THOSE. Multiple surfboards, far away.",
         "hint_pt_br": "MUITOS + LONGE = THOSE."
@@ -77,10 +112,26 @@
       "location_en": "The food truck counter",
       "location_pt": "No balcão do food truck",
       "turns": [
-        { "character_id": "bia", "en": "What is THIS?", "pt": "O que é ISTO?" },
-        { "character_id": "rafa", "en": "THIS is green salsa. Hot!", "pt": "ISTO é salsa verde. Apimentada!" },
-        { "character_id": "bia", "en": "And what are THOSE?", "pt": "E o que são AQUELES?" },
-        { "character_id": "rafa", "en": "THOSE are corn tortillas, over there.", "pt": "AQUELES são tortilhas de milho, lá longe." }
+        {
+          "character_id": "bia",
+          "en": "What is THIS?",
+          "pt": "O que é ISTO?"
+        },
+        {
+          "character_id": "rafa",
+          "en": "THIS is green salsa. Hot!",
+          "pt": "ISTO é salsa verde. Apimentada!"
+        },
+        {
+          "character_id": "bia",
+          "en": "And what are THOSE?",
+          "pt": "E o que são AQUELES?"
+        },
+        {
+          "character_id": "rafa",
+          "en": "THOSE are corn tortillas, over there.",
+          "pt": "AQUELES são tortilhas de milho, lá longe."
+        }
       ]
     },
     {
@@ -107,10 +158,22 @@
         "id": "th2-s04",
         "type": "matching",
         "pairs": [
-          ["THIS", "ISTO (perto, singular)"],
-          ["THAT", "AQUILO (longe, singular)"],
-          ["THESE", "ESTES (perto, plural)"],
-          ["THOSE", "AQUELES (longe, plural)"]
+          [
+            "THIS",
+            "ISTO (perto, singular)"
+          ],
+          [
+            "THAT",
+            "AQUILO (longe, singular)"
+          ],
+          [
+            "THESE",
+            "ESTES (perto, plural)"
+          ],
+          [
+            "THOSE",
+            "AQUELES (longe, plural)"
+          ]
         ],
         "explanation": "A 2x2 grid: near/far × singular/plural. Once you see it, you never forget it.",
         "hint_pt_br": "Grade 2x2: perto/longe × singular/plural. Memorize a grade, resolve a vida."
@@ -132,6 +195,62 @@
         "explanation": "THIS / THAT / THEY all start with the VOICED /ð/ (you feel vibration). The other groups are /θ/ (just air, no voice).",
         "hint_pt_br": "THIS / THAT / THEY começam com /ð/ — vibra. Os outros grupos são /θ/ — só ar."
       }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"This, That, These, Those\". The /ð/ sound (voiced TH) in the four demonstratives. Rafa points at his menu and Maya catches every 'dis' that should be 'this'. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"This, That, These, Those\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "This, That, These, Those",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'This, That, These, Those'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"This, That, These, Those\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        },
+        {
+          "label": "BBC Learning English · Beginners",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-beginner",
+          "pt_hint": "Curso gratuito da BBC, nível iniciante."
+        },
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        }
+      ]
     }
   ]
 }

@@ -6,37 +6,223 @@
   "level": "B1",
   "cefr_level": "b1.2",
   "xp_reward": 50,
-  "estimated_minutes": 15,
+  "estimated_minutes": 24,
   "summary_pt_br": "USED TO e WOULD para hábitos passados. Diferença: USED TO serve para estados e ações ('I used to live in NY'), WOULD só para ações repetidas ('I would walk to the café every morning'). Com states (live, be, have), NUNCA use WOULD.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 25 — The Bookstore on 88th Street", "subtitle_en": "What I used to do in another life", "subtitle_pt": "O que eu costumava fazer noutra vida" },
-    { "kind": "narrative", "character_id": "kumar", "text_en": "'I USED TO own a bookstore in New York,' Mr. Kumar said.\n'On rainy Mondays, I WOULD open late. I WOULD make a pot of chai.\nCustomers WOULD wander in, shake their umbrellas, ask for novels.\nI USED TO know every title on every shelf. Not anymore.'", "text_pt": "'Eu COSTUMAVA ter uma livraria em Nova York,' disse Mr. Kumar.\n'Nas segundas chuvosas, eu ABRIA tarde. PREPARAVA um bule de chai.\nOs clientes ENTRAVAM, sacudiam o guarda-chuva, pediam romances.\nEu CONHECIA cada título em cada prateleira. Não mais.'" },
-    { "kind": "grammar_note", "title": "USED TO vs WOULD — the subtle split", "body_en": "USED TO works for BOTH past states ('I used to live in NY', 'she used to be shy') AND past repeated actions ('we used to meet every Sunday'). WOULD works ONLY for past repeated actions ('we would meet every Sunday'). Never use WOULD with state verbs — 'I would live in NY' doesn't mean habit; it means hypothetical (Second Conditional!).", "body_pt": "USED TO = passado para ESTADOS + AÇÕES repetidas. WOULD = só AÇÕES repetidas. Nunca use WOULD com verbos de estado (be, have, live, know) — 'I would live in NY' NÃO é hábito, é hipotético (segunda condicional). Para 'eu morava em NY', use USED TO.", "examples": [
-      { "en": "I used to live in NYC. ✓  (state — only used to works)", "pt": "Eu morava em NY." },
-      { "en": "I would walk to Central Park every morning. ✓  (action — would works)", "pt": "Eu caminhava para o Central Park toda manhã." },
-      { "en": "I would live in NYC. ✗ (changes meaning to 'if given the chance')", "pt": "Cuidado — troca o sentido para hipotético!" }
-    ]},
-    { "kind": "vocab_intro", "title": "Past-habit signals", "items": [
-      { "term": "every Monday / every year", "pt": "toda segunda / todo ano" },
-      { "term": "whenever", "pt": "sempre que" },
-      { "term": "in those days", "pt": "naqueles tempos" },
-      { "term": "back when...", "pt": "quando...; antigamente..." },
-      { "term": "for years / for decades", "pt": "por anos / por décadas" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "kumar", "exercise": { "id": "used-s01", "type": "multiple_choice", "question": "'I ___ own a bookstore in New York.' Which is natural?", "options": ["would own", "used to own", "was owning", "had owned"], "correct": 1, "explanation": "OWN is a state verb — USED TO only. 'Would own' would be hypothetical.", "hint_pt_br": "OWN é estado, só USED TO. WOULD OWN mudaria para hipotético." }},
-    { "kind": "exercise", "exercise": { "id": "used-s02", "type": "multiple_choice", "question": "Which TWO are correct for 'nós tomávamos café todo domingo'?", "options": ["We used to have coffee every Sunday", "We would have coffee every Sunday", "Both A and B", "Neither"], "correct": 2, "explanation": "HAVE COFFEE is a repeated action — both USED TO and WOULD work. Either is natural.", "hint_pt_br": "Ação repetida: pode USED TO ou WOULD. Os dois funcionam." }},
-    { "kind": "dialogue", "location_en": "Rooftop, Mr. Kumar reminiscing", "location_pt": "Terraço, Mr. Kumar contando histórias", "turns": [
-      { "character_id": "joca", "en": "Did you use to read books there, or just sell them?", "pt": "Você lia livros lá, ou só vendia?" },
-      { "character_id": "kumar", "en": "I would read one every day. Sometimes two. I used to be obsessive.", "pt": "Eu lia um por dia. Às vezes dois. Eu era obsessivo." },
-      { "character_id": "joca", "en": "And now?", "pt": "E agora?" },
-      { "character_id": "kumar", "en": "Now I teach. But I still read. Just slower.", "pt": "Agora eu ensino. Mas ainda leio. Só mais devagar." }
-    ]},
-    { "kind": "exercise", "exercise": { "id": "used-s03", "type": "fill_blank", "question": "Complete: 'When I was a kid, I ___ ___ play in the rain every summer.'", "correct": "used to", "explanation": "Past habit, repeated action — USED TO works perfectly. WOULD would also work here.", "hint_pt_br": "USED TO ou WOULD funciona; USED TO é mais comum em fala espontânea." }},
-    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "used-s04", "type": "matching", "pairs": [
-      ["I used to live in NY", "estado passado — só USED TO"],
-      ["We would meet every Sunday", "ação repetida — WOULD ok"],
-      ["She used to be shy", "estado passado — só USED TO"],
-      ["He would drink tea at 5", "ação repetida — WOULD ok"]
-    ], "explanation": "Four examples. If it's a STATE (be, have, live, know), only USED TO. If it's an ACTION, either.", "hint_pt_br": "Estado → só USED TO. Ação → os dois." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 25 — The Bookstore on 88th Street",
+      "subtitle_en": "What I used to do in another life",
+      "subtitle_pt": "O que eu costumava fazer noutra vida"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "'I USED TO own a bookstore in New York,' Mr. Kumar said.\n'On rainy Mondays, I WOULD open late. I WOULD make a pot of chai.\nCustomers WOULD wander in, shake their umbrellas, ask for novels.\nI USED TO know every title on every shelf. Not anymore.'",
+      "text_pt": "'Eu COSTUMAVA ter uma livraria em Nova York,' disse Mr. Kumar.\n'Nas segundas chuvosas, eu ABRIA tarde. PREPARAVA um bule de chai.\nOs clientes ENTRAVAM, sacudiam o guarda-chuva, pediam romances.\nEu CONHECIA cada título em cada prateleira. Não mais.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "USED TO vs WOULD — the subtle split",
+      "body_en": "USED TO works for BOTH past states ('I used to live in NY', 'she used to be shy') AND past repeated actions ('we used to meet every Sunday'). WOULD works ONLY for past repeated actions ('we would meet every Sunday'). Never use WOULD with state verbs — 'I would live in NY' doesn't mean habit; it means hypothetical (Second Conditional!).",
+      "body_pt": "USED TO = passado para ESTADOS + AÇÕES repetidas. WOULD = só AÇÕES repetidas. Nunca use WOULD com verbos de estado (be, have, live, know) — 'I would live in NY' NÃO é hábito, é hipotético (segunda condicional). Para 'eu morava em NY', use USED TO.",
+      "examples": [
+        {
+          "en": "I used to live in NYC. ✓  (state — only used to works)",
+          "pt": "Eu morava em NY."
+        },
+        {
+          "en": "I would walk to Central Park every morning. ✓  (action — would works)",
+          "pt": "Eu caminhava para o Central Park toda manhã."
+        },
+        {
+          "en": "I would live in NYC. ✗ (changes meaning to 'if given the chance')",
+          "pt": "Cuidado — troca o sentido para hipotético!"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Past-habit signals",
+      "items": [
+        {
+          "term": "every Monday / every year",
+          "pt": "toda segunda / todo ano"
+        },
+        {
+          "term": "whenever",
+          "pt": "sempre que"
+        },
+        {
+          "term": "in those days",
+          "pt": "naqueles tempos"
+        },
+        {
+          "term": "back when...",
+          "pt": "quando...; antigamente..."
+        },
+        {
+          "term": "for years / for decades",
+          "pt": "por anos / por décadas"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "kumar",
+      "exercise": {
+        "id": "used-s01",
+        "type": "multiple_choice",
+        "question": "'I ___ own a bookstore in New York.' Which is natural?",
+        "options": [
+          "would own",
+          "used to own",
+          "was owning",
+          "had owned"
+        ],
+        "correct": 1,
+        "explanation": "OWN is a state verb — USED TO only. 'Would own' would be hypothetical.",
+        "hint_pt_br": "OWN é estado, só USED TO. WOULD OWN mudaria para hipotético."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "used-s02",
+        "type": "multiple_choice",
+        "question": "Which TWO are correct for 'nós tomávamos café todo domingo'?",
+        "options": [
+          "We used to have coffee every Sunday",
+          "We would have coffee every Sunday",
+          "Both A and B",
+          "Neither"
+        ],
+        "correct": 2,
+        "explanation": "HAVE COFFEE is a repeated action — both USED TO and WOULD work. Either is natural.",
+        "hint_pt_br": "Ação repetida: pode USED TO ou WOULD. Os dois funcionam."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Rooftop, Mr. Kumar reminiscing",
+      "location_pt": "Terraço, Mr. Kumar contando histórias",
+      "turns": [
+        {
+          "character_id": "joca",
+          "en": "Did you use to read books there, or just sell them?",
+          "pt": "Você lia livros lá, ou só vendia?"
+        },
+        {
+          "character_id": "kumar",
+          "en": "I would read one every day. Sometimes two. I used to be obsessive.",
+          "pt": "Eu lia um por dia. Às vezes dois. Eu era obsessivo."
+        },
+        {
+          "character_id": "joca",
+          "en": "And now?",
+          "pt": "E agora?"
+        },
+        {
+          "character_id": "kumar",
+          "en": "Now I teach. But I still read. Just slower.",
+          "pt": "Agora eu ensino. Mas ainda leio. Só mais devagar."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "used-s03",
+        "type": "fill_blank",
+        "question": "Complete: 'When I was a kid, I ___ ___ play in the rain every summer.'",
+        "correct": "used to",
+        "explanation": "Past habit, repeated action — USED TO works perfectly. WOULD would also work here.",
+        "hint_pt_br": "USED TO ou WOULD funciona; USED TO é mais comum em fala espontânea."
+      }
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "zara",
+      "exercise": {
+        "id": "used-s04",
+        "type": "matching",
+        "pairs": [
+          [
+            "I used to live in NY",
+            "estado passado — só USED TO"
+          ],
+          [
+            "We would meet every Sunday",
+            "ação repetida — WOULD ok"
+          ],
+          [
+            "She used to be shy",
+            "estado passado — só USED TO"
+          ],
+          [
+            "He would drink tea at 5",
+            "ação repetida — WOULD ok"
+          ]
+        ],
+        "explanation": "Four examples. If it's a STATE (be, have, live, know), only USED TO. If it's an ACTION, either.",
+        "hint_pt_br": "Estado → só USED TO. Ação → os dois."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Mr. Kumar's NYC Years\". USED TO and WOULD for past habits and repeated actions. Mr. Kumar tells how he ran a bookstore in New York — and what he used to do every rainy Monday. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Mr. Kumar's NYC Years\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Mr. Kumar's NYC Years",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Mr. Kumar's NYC Years'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Mr. Kumar's NYC Years\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Oxford Learner's Dictionary",
+          "url": "https://www.oxfordlearnersdictionaries.com/",
+          "pt_hint": "Dicionário Oxford com exemplos e áudio."
+        },
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast de 6 minutos com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        }
+      ]
+    }
   ]
 }

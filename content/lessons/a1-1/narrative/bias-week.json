@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 40,
-  "estimated_minutes": 14,
+  "estimated_minutes": 23,
   "summary_pt_br": "Dias, meses e horas usando a agenda de surf da Bia. Aprenda ON/IN/AT para tempo, a regra da letra maiúscula (dias e meses SEMPRE com inicial maiúscula em inglês) e como perguntar a hora.",
   "scenes": [
     {
@@ -25,13 +25,34 @@
       "kind": "vocab_intro",
       "title": "The seven days",
       "items": [
-        { "term": "Monday", "pt": "segunda" },
-        { "term": "Tuesday", "pt": "terça" },
-        { "term": "Wednesday", "pt": "quarta (o 'd' é mudo!)" },
-        { "term": "Thursday", "pt": "quinta" },
-        { "term": "Friday", "pt": "sexta" },
-        { "term": "Saturday", "pt": "sábado" },
-        { "term": "Sunday", "pt": "domingo" }
+        {
+          "term": "Monday",
+          "pt": "segunda"
+        },
+        {
+          "term": "Tuesday",
+          "pt": "terça"
+        },
+        {
+          "term": "Wednesday",
+          "pt": "quarta (o 'd' é mudo!)"
+        },
+        {
+          "term": "Thursday",
+          "pt": "quinta"
+        },
+        {
+          "term": "Friday",
+          "pt": "sexta"
+        },
+        {
+          "term": "Saturday",
+          "pt": "sábado"
+        },
+        {
+          "term": "Sunday",
+          "pt": "domingo"
+        }
       ]
     },
     {
@@ -40,8 +61,14 @@
       "body_en": "Days and months in English ALWAYS start with a capital letter, even mid-sentence: 'See you on Monday.' 'My birthday is in April.' This is different from Portuguese. Languages, nationalities, and names also get capitals.",
       "body_pt": "REGRA: dias, meses, idiomas e nacionalidades SEMPRE começam com letra maiúscula em inglês, mesmo no meio da frase. Diferente do português, onde é minúscula.",
       "examples": [
-        { "en": "I see you on Friday.", "pt": "Nos vemos na sexta." },
-        { "en": "My birthday is in August.", "pt": "Meu aniversário é em agosto." }
+        {
+          "en": "I see you on Friday.",
+          "pt": "Nos vemos na sexta."
+        },
+        {
+          "en": "My birthday is in August.",
+          "pt": "Meu aniversário é em agosto."
+        }
       ]
     },
     {
@@ -50,7 +77,12 @@
         "id": "week-s01",
         "type": "multiple_choice",
         "question": "Which is spelled correctly?",
-        "options": ["monday", "Monday", "MONDAY", "MonDay"],
+        "options": [
+          "monday",
+          "Monday",
+          "MONDAY",
+          "MonDay"
+        ],
         "correct": 1,
         "explanation": "First letter capital only: 'Monday'. Days always start with a capital in English.",
         "hint_pt_br": "Só a primeira letra maiúscula: 'Monday'."
@@ -60,9 +92,21 @@
       "kind": "vocab_intro",
       "title": "ON / IN / AT for time",
       "items": [
-        { "term": "ON + day", "pt": "em + dia", "example_en": "on Monday, on my birthday" },
-        { "term": "IN + month / year / season", "pt": "em + mês/ano/estação", "example_en": "in April, in 2026, in summer" },
-        { "term": "AT + clock time", "pt": "às + hora", "example_en": "at 6 a.m., at noon" }
+        {
+          "term": "ON + day",
+          "pt": "em + dia",
+          "example_en": "on Monday, on my birthday"
+        },
+        {
+          "term": "IN + month / year / season",
+          "pt": "em + mês/ano/estação",
+          "example_en": "in April, in 2026, in summer"
+        },
+        {
+          "term": "AT + clock time",
+          "pt": "às + hora",
+          "example_en": "at 6 a.m., at noon"
+        }
       ]
     },
     {
@@ -110,10 +154,26 @@
       "location_en": "Rooftop, checking the time",
       "location_pt": "No terraço, checando a hora",
       "turns": [
-        { "character_id": "rafa", "en": "What time is it?", "pt": "Que horas são?" },
-        { "character_id": "maya", "en": "It's a quarter past three.", "pt": "São três e quinze." },
-        { "character_id": "rafa", "en": "Is the food truck open?", "pt": "O food truck está aberto?" },
-        { "character_id": "maya", "en": "Yes — from noon to eight.", "pt": "Sim — do meio-dia às oito." }
+        {
+          "character_id": "rafa",
+          "en": "What time is it?",
+          "pt": "Que horas são?"
+        },
+        {
+          "character_id": "maya",
+          "en": "It's a quarter past three.",
+          "pt": "São três e quinze."
+        },
+        {
+          "character_id": "rafa",
+          "en": "Is the food truck open?",
+          "pt": "O food truck está aberto?"
+        },
+        {
+          "character_id": "maya",
+          "en": "Yes — from noon to eight.",
+          "pt": "Sim — do meio-dia às oito."
+        }
       ]
     },
     {
@@ -122,9 +182,18 @@
       "body_en": "Two ways to say time: digital ('six fifteen') OR traditional ('quarter past six'). For 6:30 → 'six thirty' OR 'half past six'. For 6:45 → 'six forty-five' OR 'quarter to seven'. Both are natural — pick whichever feels fluent.",
       "body_pt": "Duas formas: digital (six fifteen = 6:15) ou tradicional (quarter past six = 6:15). 6:30 = six thirty OU half past six. 6:45 = six forty-five OU quarter to seven.",
       "examples": [
-        { "en": "It's 3:15 → quarter past three / three fifteen", "pt": "São 3h15" },
-        { "en": "It's 9:30 → half past nine / nine thirty", "pt": "São 9h30" },
-        { "en": "It's 10:45 → quarter to eleven / ten forty-five", "pt": "São 10h45" }
+        {
+          "en": "It's 3:15 → quarter past three / three fifteen",
+          "pt": "São 3h15"
+        },
+        {
+          "en": "It's 9:30 → half past nine / nine thirty",
+          "pt": "São 9h30"
+        },
+        {
+          "en": "It's 10:45 → quarter to eleven / ten forty-five",
+          "pt": "São 10h45"
+        }
       ]
     },
     {
@@ -144,6 +213,62 @@
         "explanation": "Both 'half past seven' and 'seven thirty' are natural English for 7:30. Native speakers use both.",
         "hint_pt_br": "7:30 pode ser 'half past seven' OU 'seven thirty' — os dois são naturais."
       }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Bia's Week by the Ocean\". Days, months, and times — through Bia's surfing schedule. Learn ON/IN/AT for time, and never capitalize a day's name again. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Bia's Week by the Ocean\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Bia's Week by the Ocean",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Bia's Week by the Ocean'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Bia's Week by the Ocean\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        },
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        },
+        {
+          "label": "BBC Learning English · Beginners",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-beginner",
+          "pt_hint": "Curso gratuito da BBC, nível iniciante."
+        }
+      ]
     }
   ]
 }

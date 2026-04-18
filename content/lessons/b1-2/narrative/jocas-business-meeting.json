@@ -6,43 +6,252 @@
   "level": "B1",
   "cefr_level": "b1.2",
   "xp_reward": 55,
-  "estimated_minutes": 17,
+  "estimated_minutes": 26,
   "summary_pt_br": "Inglês profissional em reuniões: linguagem diplomática ('I'm afraid I disagree'), expressões de reunião (touch base, circle back, take this offline, bandwidth), e modais de sugestão (could, might, should).",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 23 — First Meeting, First Job", "subtitle_en": "Joca joins a US startup call", "subtitle_pt": "Joca entra numa call com uma startup dos EUA" },
-    { "kind": "narrative", "character_id": "joca", "text_en": "Joca's screen lit up. Six faces in a grid. His new team.\n'Welcome to the team, Joca. Let's TOUCH BASE on the backlog.'\nJoca nodded. Touch base? Backlog? The Americans spoke a language of their own.\n'Can you TAKE US THROUGH what you worked on last week?'", "text_pt": "A tela do Joca acendeu. Seis rostos num grid. Seu novo time.\n'Bem-vindo ao time, Joca. Vamos TOCAR A BASE no backlog.'\nJoca balançou a cabeça. Touch base? Backlog? Os americanos falavam uma língua própria.\n'Pode NOS GUIAR pelo que fez semana passada?'" },
-    { "kind": "vocab_intro", "title": "Meeting idioms every remote worker hears", "items": [
-      { "term": "touch base", "pt": "dar um alô rápido / alinhar", "example_en": "Let's touch base Monday." },
-      { "term": "circle back", "pt": "voltar ao assunto depois", "example_en": "Let's circle back on pricing." },
-      { "term": "take it offline", "pt": "tratar fora da reunião", "example_en": "We'll take it offline." },
-      { "term": "bandwidth", "pt": "disponibilidade (tempo/energia)", "example_en": "I don't have the bandwidth this week." },
-      { "term": "deep dive", "pt": "aprofundar", "example_en": "Let's do a deep dive on the metrics." },
-      { "term": "ping someone", "pt": "mandar uma mensagem rápida", "example_en": "Ping me on Slack." }
-    ]},
-    { "kind": "grammar_note", "title": "Diplomatic disagreement — never just 'NO'", "body_en": "Direct 'No' or 'I disagree' sounds rude in US business culture. Soften with: 'I'm afraid I don't quite agree...' / 'I see your point, but have you considered...' / 'That's one angle — another might be...'. The formula is usually: acknowledge the other view, then introduce yours.", "body_pt": "Discordar direto ('No' / 'I disagree') soa rude na cultura corporativa americana. Amacia: 'I'm afraid I don't quite agree...' / 'I see your point, but...' / 'That's one angle — another might be...'. Fórmula: valida a visão do outro, depois apresenta a sua.", "examples": [
-      { "en": "I'm afraid I don't quite agree with that approach.", "pt": "Eu temo que não concorde muito com essa abordagem." },
-      { "en": "That's a fair point. That said, have we considered...?", "pt": "É um bom argumento. Dito isso, já consideramos...?" },
-      { "en": "I see where you're coming from, but...", "pt": "Entendo seu ponto, mas..." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "joca", "exercise": { "id": "biz-s01", "type": "multiple_choice", "question": "You want to disagree with your manager politely. Which is BEST?", "options": ["No, that's wrong.", "I'm afraid I don't quite agree.", "I disagree totally.", "You are incorrect."], "correct": 1, "explanation": "The diplomatic opener preserves the relationship. 'I'm afraid' + softener is textbook professional English.", "hint_pt_br": "'I'm afraid I don't quite agree' é a forma diplomática padrão. 'I disagree' direto soa rude." }},
-    { "kind": "exercise", "exercise": { "id": "biz-s02", "type": "matching", "pairs": [
-      ["touch base", "alinhar rapidamente"],
-      ["circle back", "voltar depois"],
-      ["bandwidth", "disponibilidade"],
-      ["take it offline", "tratar fora da reunião"],
-      ["deep dive", "aprofundar"]
-    ], "explanation": "Five idioms. Use them, but sparingly — overuse sounds like a corporate parody.", "hint_pt_br": "Cinco expressões essenciais. Usa, mas sem exagero — demais vira caricatura." }},
-    { "kind": "grammar_note", "title": "Soft modals for suggestions", "body_en": "COULD / MIGHT / SHOULD let you suggest without commanding. 'We SHOULD launch Monday' (strong recommendation). 'We COULD launch Monday' (possibility on the table). 'We MIGHT launch Monday' (tentative, lots of doubt). Use MIGHT when you're floating an idea but don't want to own it.", "body_pt": "COULD / MIGHT / SHOULD sugerem sem soar impositivo. SHOULD = recomendação forte. COULD = possibilidade. MIGHT = ideia tentativa, sem comprometer. Use MIGHT quando joga uma ideia sem querer assumir.", "examples": [
-      { "en": "We should ship this week.", "pt": "Recomendação firme." },
-      { "en": "We could ship this week.", "pt": "Possibilidade." },
-      { "en": "We might ship this week.", "pt": "Incerto — talvez." }
-    ]},
-    { "kind": "dialogue", "location_en": "The call continues", "location_pt": "A reunião segue", "turns": [
-      { "character_id": "joca", "en": "I see your point, but we might want to test smaller first.", "pt": "Entendo, mas talvez a gente queira testar em menor escala primeiro." },
-      { "character_id": "zara", "en": "That's fair. Could we do a pilot with 5% of users?", "pt": "É justo. Poderíamos rodar um piloto com 5% dos usuários?" },
-      { "character_id": "joca", "en": "Great call. Let's circle back on the metrics tomorrow.", "pt": "Ótima ideia. Voltamos ao assunto das métricas amanhã." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "biz-s03", "type": "fill_blank", "question": "Soft suggestion: 'We ___ want to rethink the timeline.' (tentative)", "correct": "might", "explanation": "MIGHT is the most tentative — a soft float of an idea.", "hint_pt_br": "MIGHT = tentativo. Para sugerir sem se comprometer." }},
-    { "kind": "exercise", "exercise": { "id": "biz-s04", "type": "multiple_choice", "question": "Your manager asks if you can take on another project. You're slammed. Best polite reply:", "options": ["No.", "I don't have the bandwidth right now.", "I won't do it.", "Ask someone else."], "correct": 1, "explanation": "'I don't have the bandwidth' is the professional, inoffensive way to say no.", "hint_pt_br": "'I don't have the bandwidth' é a forma profissional de dizer 'agora não'." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 23 — First Meeting, First Job",
+      "subtitle_en": "Joca joins a US startup call",
+      "subtitle_pt": "Joca entra numa call com uma startup dos EUA"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Joca's screen lit up. Six faces in a grid. His new team.\n'Welcome to the team, Joca. Let's TOUCH BASE on the backlog.'\nJoca nodded. Touch base? Backlog? The Americans spoke a language of their own.\n'Can you TAKE US THROUGH what you worked on last week?'",
+      "text_pt": "A tela do Joca acendeu. Seis rostos num grid. Seu novo time.\n'Bem-vindo ao time, Joca. Vamos TOCAR A BASE no backlog.'\nJoca balançou a cabeça. Touch base? Backlog? Os americanos falavam uma língua própria.\n'Pode NOS GUIAR pelo que fez semana passada?'"
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Meeting idioms every remote worker hears",
+      "items": [
+        {
+          "term": "touch base",
+          "pt": "dar um alô rápido / alinhar",
+          "example_en": "Let's touch base Monday."
+        },
+        {
+          "term": "circle back",
+          "pt": "voltar ao assunto depois",
+          "example_en": "Let's circle back on pricing."
+        },
+        {
+          "term": "take it offline",
+          "pt": "tratar fora da reunião",
+          "example_en": "We'll take it offline."
+        },
+        {
+          "term": "bandwidth",
+          "pt": "disponibilidade (tempo/energia)",
+          "example_en": "I don't have the bandwidth this week."
+        },
+        {
+          "term": "deep dive",
+          "pt": "aprofundar",
+          "example_en": "Let's do a deep dive on the metrics."
+        },
+        {
+          "term": "ping someone",
+          "pt": "mandar uma mensagem rápida",
+          "example_en": "Ping me on Slack."
+        }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Diplomatic disagreement — never just 'NO'",
+      "body_en": "Direct 'No' or 'I disagree' sounds rude in US business culture. Soften with: 'I'm afraid I don't quite agree...' / 'I see your point, but have you considered...' / 'That's one angle — another might be...'. The formula is usually: acknowledge the other view, then introduce yours.",
+      "body_pt": "Discordar direto ('No' / 'I disagree') soa rude na cultura corporativa americana. Amacia: 'I'm afraid I don't quite agree...' / 'I see your point, but...' / 'That's one angle — another might be...'. Fórmula: valida a visão do outro, depois apresenta a sua.",
+      "examples": [
+        {
+          "en": "I'm afraid I don't quite agree with that approach.",
+          "pt": "Eu temo que não concorde muito com essa abordagem."
+        },
+        {
+          "en": "That's a fair point. That said, have we considered...?",
+          "pt": "É um bom argumento. Dito isso, já consideramos...?"
+        },
+        {
+          "en": "I see where you're coming from, but...",
+          "pt": "Entendo seu ponto, mas..."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "joca",
+      "exercise": {
+        "id": "biz-s01",
+        "type": "multiple_choice",
+        "question": "You want to disagree with your manager politely. Which is BEST?",
+        "options": [
+          "No, that's wrong.",
+          "I'm afraid I don't quite agree.",
+          "I disagree totally.",
+          "You are incorrect."
+        ],
+        "correct": 1,
+        "explanation": "The diplomatic opener preserves the relationship. 'I'm afraid' + softener is textbook professional English.",
+        "hint_pt_br": "'I'm afraid I don't quite agree' é a forma diplomática padrão. 'I disagree' direto soa rude."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "biz-s02",
+        "type": "matching",
+        "pairs": [
+          [
+            "touch base",
+            "alinhar rapidamente"
+          ],
+          [
+            "circle back",
+            "voltar depois"
+          ],
+          [
+            "bandwidth",
+            "disponibilidade"
+          ],
+          [
+            "take it offline",
+            "tratar fora da reunião"
+          ],
+          [
+            "deep dive",
+            "aprofundar"
+          ]
+        ],
+        "explanation": "Five idioms. Use them, but sparingly — overuse sounds like a corporate parody.",
+        "hint_pt_br": "Cinco expressões essenciais. Usa, mas sem exagero — demais vira caricatura."
+      }
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Soft modals for suggestions",
+      "body_en": "COULD / MIGHT / SHOULD let you suggest without commanding. 'We SHOULD launch Monday' (strong recommendation). 'We COULD launch Monday' (possibility on the table). 'We MIGHT launch Monday' (tentative, lots of doubt). Use MIGHT when you're floating an idea but don't want to own it.",
+      "body_pt": "COULD / MIGHT / SHOULD sugerem sem soar impositivo. SHOULD = recomendação forte. COULD = possibilidade. MIGHT = ideia tentativa, sem comprometer. Use MIGHT quando joga uma ideia sem querer assumir.",
+      "examples": [
+        {
+          "en": "We should ship this week.",
+          "pt": "Recomendação firme."
+        },
+        {
+          "en": "We could ship this week.",
+          "pt": "Possibilidade."
+        },
+        {
+          "en": "We might ship this week.",
+          "pt": "Incerto — talvez."
+        }
+      ]
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "The call continues",
+      "location_pt": "A reunião segue",
+      "turns": [
+        {
+          "character_id": "joca",
+          "en": "I see your point, but we might want to test smaller first.",
+          "pt": "Entendo, mas talvez a gente queira testar em menor escala primeiro."
+        },
+        {
+          "character_id": "zara",
+          "en": "That's fair. Could we do a pilot with 5% of users?",
+          "pt": "É justo. Poderíamos rodar um piloto com 5% dos usuários?"
+        },
+        {
+          "character_id": "joca",
+          "en": "Great call. Let's circle back on the metrics tomorrow.",
+          "pt": "Ótima ideia. Voltamos ao assunto das métricas amanhã."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "zara",
+      "exercise": {
+        "id": "biz-s03",
+        "type": "fill_blank",
+        "question": "Soft suggestion: 'We ___ want to rethink the timeline.' (tentative)",
+        "correct": "might",
+        "explanation": "MIGHT is the most tentative — a soft float of an idea.",
+        "hint_pt_br": "MIGHT = tentativo. Para sugerir sem se comprometer."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "biz-s04",
+        "type": "multiple_choice",
+        "question": "Your manager asks if you can take on another project. You're slammed. Best polite reply:",
+        "options": [
+          "No.",
+          "I don't have the bandwidth right now.",
+          "I won't do it.",
+          "Ask someone else."
+        ],
+        "correct": 1,
+        "explanation": "'I don't have the bandwidth' is the professional, inoffensive way to say no.",
+        "hint_pt_br": "'I don't have the bandwidth' é a forma profissional de dizer 'agora não'."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Joca's First Business Meeting\". Professional English in meetings: diplomatic disagreement, softening language, meeting idioms. Joca joins his first call at the new US startup. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Joca's First Business Meeting\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Joca's First Business Meeting",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Joca's First Business Meeting'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Joca's First Business Meeting\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Oxford Learner's Dictionary",
+          "url": "https://www.oxfordlearnersdictionaries.com/",
+          "pt_hint": "Dicionário Oxford com exemplos e áudio."
+        },
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast de 6 minutos com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        }
+      ]
+    }
   ]
 }

@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 50,
-  "estimated_minutes": 16,
+  "estimated_minutes": 25,
   "summary_pt_br": "Uma playlist de 5 músicas focadas em palavras com TH, para consolidar o que foi aprendido. Inclui análise de linhas específicas de Three Little Birds, Thinking Out Loud, Mother, With or Without You e This Is Me.",
   "scenes": [
     {
@@ -27,8 +27,14 @@
       "body_en": "Two TH sounds: /θ/ VOICELESS (just air — think, three, thanks, both, month) and /ð/ VOICED (air + throat hum — this, that, mother, brother, with, they). Same tongue position (between teeth), different throat. Check every TH word: is there a HUM?",
       "body_pt": "Dois TH: /θ/ MUDO (só ar — think, three, thanks, both, month) e /ð/ VIBRADO (ar + zumbido na garganta — this, that, mother, brother, with, they). Mesma língua, garganta diferente. Pergunta: tem zum-zum? É /ð/. Não tem? É /θ/.",
       "examples": [
-        { "en": "/θ/: think, three, thank, thin, path, bath, both, month, south", "pt": "sempre só ar" },
-        { "en": "/ð/: this, that, the, they, them, mother, brother, together, with", "pt": "ar + voz" }
+        {
+          "en": "/θ/: think, three, thank, thin, path, bath, both, month, south",
+          "pt": "sempre só ar"
+        },
+        {
+          "en": "/ð/: this, that, the, they, them, mother, brother, together, with",
+          "pt": "ar + voz"
+        }
       ]
     },
     {
@@ -85,10 +91,22 @@
         "id": "thp-s03",
         "type": "matching",
         "pairs": [
-          ["mother", "/ð/"],
-          ["they", "/ð/"],
-          ["think", "/θ/"],
-          ["thing", "/θ/"]
+          [
+            "mother",
+            "/ð/"
+          ],
+          [
+            "they",
+            "/ð/"
+          ],
+          [
+            "think",
+            "/θ/"
+          ],
+          [
+            "thing",
+            "/θ/"
+          ]
         ],
         "explanation": "Two /ð/ (voiced) and two /θ/ (voiceless). Put your hand on your throat while saying each.",
         "hint_pt_br": "Dois vibrados, dois mudos. Mão na garganta para sentir a diferença."
@@ -145,6 +163,62 @@
         "explanation": "THINK with /θ/. Full sentence: 'I think I can.' Repeat three times — each with a clear TH.",
         "hint_pt_br": "THINK com /θ/. 'I think I can.' Repita três vezes, cada uma com TH limpo."
       }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Bia's TH Playlist\". A 5-song playlist built entirely around TH words. Put them together, sing along, and feel the tongue-between-teeth become automatic. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Bia's TH Playlist\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Bia's TH Playlist",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Bia's TH Playlist'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Bia's TH Playlist\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC Learning English · Beginners",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-beginner",
+          "pt_hint": "Curso gratuito da BBC, nível iniciante."
+        },
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        }
+      ]
     }
   ]
 }

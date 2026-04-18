@@ -6,21 +6,121 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 11,
+  "estimated_minutes": 20,
   "summary_pt_br": "Zero conditional para VERDADES GERAIS, leis da natureza, regras. Estrutura: IF + present simple, present simple. 'If you heat water, it boils.' Pode trocar IF por WHEN — mesmo sentido. Diferente do first conditional (que fala de futuro).",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 63 — Zero Conditional", "subtitle_en": "Timeless truths", "subtitle_pt": "Verdades atemporais" },
-    { "kind": "narrative", "character_id": "rafa", "text_en": "'IF you heat water, it BOILS.'\n'IF you don't water plants, they DIE.'\n'WHEN the sun sets, the beach empties.'\nRules. Science. Habits. Zero conditional. Timeless.", "text_pt": "'SE você aquece a água, ela FERVE.'\n'SE você não rega as plantas, elas MORREM.'\n'QUANDO o sol se põe, a praia esvazia.'\nRegras. Ciência. Hábitos. Zero conditional. Atemporal." },
-    { "kind": "grammar_note", "title": "Zero vs First conditional", "body_en": "Zero: IF + present → present. For always-true rules. 'If you freeze water, it becomes ice.' First: IF + present → WILL + base. For specific future. 'If you study, you'll pass.' You can swap IF for WHEN in zero conditional — 'When you heat water, it boils' means the same.", "body_pt": "Zero: IF + presente → presente. Verdade sempre. First: IF + presente → WILL + verbo base. Futuro específico. Em zero, IF e WHEN são intercambiáveis.", "examples": [
-      { "en": "If you mix blue and yellow, you get green. (zero — always)", "pt": "Verdade sempre." },
-      { "en": "If it rains tomorrow, I'll stay home. (first — future)", "pt": "Futuro específico." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "zero-s01", "type": "fill_blank", "question": "Complete: 'If you ___ (not / sleep), you feel tired.'", "correct": "don't sleep", "explanation": "Zero conditional: IF + present simple. Negative: don't + base.", "hint_pt_br": "Zero: if + presente. 'Don't sleep'." }},
-    { "kind": "exercise", "exercise": { "id": "zero-s02", "type": "multiple_choice", "question": "Which is zero conditional?", "options": [
-        "If I study, I will pass",
-        "If you boil water, it turns to steam",
-        "If I were you, I would leave",
-        "If I had time, I would travel"
-      ], "correct": 1, "explanation": "Zero = always-true + present→present.", "hint_pt_br": "Zero: sempre verdadeiro. Presente + presente." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 63 — Zero Conditional",
+      "subtitle_en": "Timeless truths",
+      "subtitle_pt": "Verdades atemporais"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "'IF you heat water, it BOILS.'\n'IF you don't water plants, they DIE.'\n'WHEN the sun sets, the beach empties.'\nRules. Science. Habits. Zero conditional. Timeless.",
+      "text_pt": "'SE você aquece a água, ela FERVE.'\n'SE você não rega as plantas, elas MORREM.'\n'QUANDO o sol se põe, a praia esvazia.'\nRegras. Ciência. Hábitos. Zero conditional. Atemporal."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Zero vs First conditional",
+      "body_en": "Zero: IF + present → present. For always-true rules. 'If you freeze water, it becomes ice.' First: IF + present → WILL + base. For specific future. 'If you study, you'll pass.' You can swap IF for WHEN in zero conditional — 'When you heat water, it boils' means the same.",
+      "body_pt": "Zero: IF + presente → presente. Verdade sempre. First: IF + presente → WILL + verbo base. Futuro específico. Em zero, IF e WHEN são intercambiáveis.",
+      "examples": [
+        {
+          "en": "If you mix blue and yellow, you get green. (zero — always)",
+          "pt": "Verdade sempre."
+        },
+        {
+          "en": "If it rains tomorrow, I'll stay home. (first — future)",
+          "pt": "Futuro específico."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "rafa",
+      "exercise": {
+        "id": "zero-s01",
+        "type": "fill_blank",
+        "question": "Complete: 'If you ___ (not / sleep), you feel tired.'",
+        "correct": "don't sleep",
+        "explanation": "Zero conditional: IF + present simple. Negative: don't + base.",
+        "hint_pt_br": "Zero: if + presente. 'Don't sleep'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "zero-s02",
+        "type": "multiple_choice",
+        "question": "Which is zero conditional?",
+        "options": [
+          "If I study, I will pass",
+          "If you boil water, it turns to steam",
+          "If I were you, I would leave",
+          "If I had time, I would travel"
+        ],
+        "correct": 1,
+        "explanation": "Zero = always-true + present→present.",
+        "hint_pt_br": "Zero: sempre verdadeiro. Presente + presente."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"When Water Boils — Zero Conditional\". Zero conditional for general truths and rules. IF + present, + present. 'If you heat water, it boils.' Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"When Water Boils — Zero Conditional\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "When Water Boils — Zero Conditional",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'When Water Boils — Zero Conditional'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"When Water Boils — Zero Conditional\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        },
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        },
+        {
+          "label": "ThoughtCo · English for Learners",
+          "url": "https://www.thoughtco.com/english-as-a-second-language-4133121",
+          "pt_hint": "Artigos explicativos organizados por nível."
+        }
+      ]
+    }
   ]
 }

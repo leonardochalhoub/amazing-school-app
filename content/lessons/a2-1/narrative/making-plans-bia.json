@@ -6,34 +6,196 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 13,
+  "estimated_minutes": 22,
   "summary_pt_br": "Fazer sugestões e convites em inglês: Let's + verbo base, Why don't we + verbo, How about + verbo-ing, Would you like to + verbo, Shall we + verbo base. Aceitar/recusar: Sure! / That sounds great / I'd love to but...",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 43 — Plan-Making", "subtitle_en": "Suggestions and invitations", "subtitle_pt": "Sugestões e convites" },
-    { "kind": "narrative", "character_id": "bia", "text_en": "'LET'S meet at 5,' Bia said.\n'WHY DON'T WE go to the beach?'\n'HOW ABOUT bringing snacks?'\n'WOULD YOU LIKE TO come, Joca?'\n'SHALL WE invite Maya too?'\nFive ways to say the same thing. Pick one and go.", "text_pt": "'Vamos nos encontrar às 5,' disse a Bia.\n'Por que a gente não vai pra praia?'\n'Que tal levar lanches?'\n'Você gostaria de ir, Joca?'\n'Vamos convidar a Maya também?'\nCinco jeitos de dizer a mesma coisa." },
-    { "kind": "grammar_note", "title": "Five ways to suggest — what follows each", "body_en": "LET'S + BASE verb. 'Let's GO.' WHY DON'T WE + BASE verb. 'Why don't we LEAVE?' HOW ABOUT + -ING. 'How about LEAVING?' WOULD YOU LIKE TO + BASE verb. 'Would you like to COME?' SHALL WE + BASE verb (British). 'Shall we DANCE?' The trap: 'How about' needs -ING, not base.", "body_pt": "Estruturas: Let's + verbo base. Why don't we + verbo base. How about + verbo-ing (atenção!). Would you like to + verbo base. Shall we + verbo base. A pegadinha: 'How about' pede -ING, os outros pedem forma base.", "examples": [
-      { "en": "Let's go / How about going / Would you like to go?", "pt": "Três formas, uma intenção." }
-    ]},
-    { "kind": "vocab_intro", "title": "Accepting + declining", "items": [
-      { "term": "Sure! / Definitely! / Sounds good.", "pt": "Claro! / Com certeza! / Parece bom." },
-      { "term": "I'd love to!", "pt": "Adoraria!" },
-      { "term": "I'd love to, but I can't.", "pt": "Gostaria, mas não posso." },
-      { "term": "Maybe another time.", "pt": "Fica pra próxima." },
-      { "term": "Sorry, I'm busy.", "pt": "Desculpa, tô ocupado(a)." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "plan-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["How about go?", "How about to go?", "How about going?", "How about gone?"], "correct": 2, "explanation": "HOW ABOUT + -ING. The trap.", "hint_pt_br": "'How about' sempre com verbo em -ING." }},
-    { "kind": "exercise", "exercise": { "id": "plan-s02", "type": "fill_blank", "question": "Complete: 'Would you like ___ come to dinner?'", "correct": "to", "explanation": "WOULD YOU LIKE + TO + base verb.", "hint_pt_br": "'Would you like to' + verbo base." }},
-    { "kind": "exercise", "exercise": { "id": "plan-s03", "type": "matching", "pairs": [
-      ["Let's go", "Vamos"],
-      ["Why don't we go?", "Por que a gente não vai?"],
-      ["How about going?", "Que tal ir?"],
-      ["Would you like to go?", "Gostaria de ir?"],
-      ["Shall we go?", "Vamos? (formal/UK)"]
-    ], "explanation": "Five ways. Same meaning, different register.", "hint_pt_br": "Cinco formas. Mesmo sentido, registros diferentes." }},
-    { "kind": "dialogue", "location_en": "Rooftop", "location_pt": "No terraço", "turns": [
-      { "character_id": "bia", "en": "How about watching the sunset?", "pt": "Que tal ver o pôr do sol?" },
-      { "character_id": "joca", "en": "I'd love to. What time?", "pt": "Adoraria. Que horas?" },
-      { "character_id": "bia", "en": "Let's meet at 6.", "pt": "Vamos às 6." }
-    ]}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 43 — Plan-Making",
+      "subtitle_en": "Suggestions and invitations",
+      "subtitle_pt": "Sugestões e convites"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "'LET'S meet at 5,' Bia said.\n'WHY DON'T WE go to the beach?'\n'HOW ABOUT bringing snacks?'\n'WOULD YOU LIKE TO come, Joca?'\n'SHALL WE invite Maya too?'\nFive ways to say the same thing. Pick one and go.",
+      "text_pt": "'Vamos nos encontrar às 5,' disse a Bia.\n'Por que a gente não vai pra praia?'\n'Que tal levar lanches?'\n'Você gostaria de ir, Joca?'\n'Vamos convidar a Maya também?'\nCinco jeitos de dizer a mesma coisa."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Five ways to suggest — what follows each",
+      "body_en": "LET'S + BASE verb. 'Let's GO.' WHY DON'T WE + BASE verb. 'Why don't we LEAVE?' HOW ABOUT + -ING. 'How about LEAVING?' WOULD YOU LIKE TO + BASE verb. 'Would you like to COME?' SHALL WE + BASE verb (British). 'Shall we DANCE?' The trap: 'How about' needs -ING, not base.",
+      "body_pt": "Estruturas: Let's + verbo base. Why don't we + verbo base. How about + verbo-ing (atenção!). Would you like to + verbo base. Shall we + verbo base. A pegadinha: 'How about' pede -ING, os outros pedem forma base.",
+      "examples": [
+        {
+          "en": "Let's go / How about going / Would you like to go?",
+          "pt": "Três formas, uma intenção."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Accepting + declining",
+      "items": [
+        {
+          "term": "Sure! / Definitely! / Sounds good.",
+          "pt": "Claro! / Com certeza! / Parece bom."
+        },
+        {
+          "term": "I'd love to!",
+          "pt": "Adoraria!"
+        },
+        {
+          "term": "I'd love to, but I can't.",
+          "pt": "Gostaria, mas não posso."
+        },
+        {
+          "term": "Maybe another time.",
+          "pt": "Fica pra próxima."
+        },
+        {
+          "term": "Sorry, I'm busy.",
+          "pt": "Desculpa, tô ocupado(a)."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "plan-s01",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "How about go?",
+          "How about to go?",
+          "How about going?",
+          "How about gone?"
+        ],
+        "correct": 2,
+        "explanation": "HOW ABOUT + -ING. The trap.",
+        "hint_pt_br": "'How about' sempre com verbo em -ING."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "plan-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'Would you like ___ come to dinner?'",
+        "correct": "to",
+        "explanation": "WOULD YOU LIKE + TO + base verb.",
+        "hint_pt_br": "'Would you like to' + verbo base."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "plan-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "Let's go",
+            "Vamos"
+          ],
+          [
+            "Why don't we go?",
+            "Por que a gente não vai?"
+          ],
+          [
+            "How about going?",
+            "Que tal ir?"
+          ],
+          [
+            "Would you like to go?",
+            "Gostaria de ir?"
+          ],
+          [
+            "Shall we go?",
+            "Vamos? (formal/UK)"
+          ]
+        ],
+        "explanation": "Five ways. Same meaning, different register.",
+        "hint_pt_br": "Cinco formas. Mesmo sentido, registros diferentes."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Rooftop",
+      "location_pt": "No terraço",
+      "turns": [
+        {
+          "character_id": "bia",
+          "en": "How about watching the sunset?",
+          "pt": "Que tal ver o pôr do sol?"
+        },
+        {
+          "character_id": "joca",
+          "en": "I'd love to. What time?",
+          "pt": "Adoraria. Que horas?"
+        },
+        {
+          "character_id": "bia",
+          "en": "Let's meet at 6.",
+          "pt": "Vamos às 6."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Making Plans at the Rooftop\". Suggestions and invitations: Let's… / Why don't we… / How about… / Would you like to… / Shall we… Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Making Plans at the Rooftop\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Making Plans at the Rooftop",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Making Plans at the Rooftop'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Making Plans at the Rooftop\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        },
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        },
+        {
+          "label": "ThoughtCo · English for Learners",
+          "url": "https://www.thoughtco.com/english-as-a-second-language-4133121",
+          "pt_hint": "Artigos explicativos organizados por nível."
+        }
+      ]
+    }
   ]
 }

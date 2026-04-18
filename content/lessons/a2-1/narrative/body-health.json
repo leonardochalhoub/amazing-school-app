@@ -6,38 +6,208 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 13,
+  "estimated_minutes": 22,
   "summary_pt_br": "Partes do corpo + sintomas + no caixa da farmácia. Armadilha: em inglês você 'TEM dor de cabeça' (I HAVE a headache), não 'sou com dor'. Expressão comum: 'My X hurts'.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 45 — At the Pharmacy", "subtitle_en": "Body + symptoms + asking for help", "subtitle_pt": "Corpo + sintomas + pedir ajuda" },
-    { "kind": "narrative", "character_id": "lucia", "text_en": "Dona Lúcia walked into the pharmacy.\n'MY HEAD HURTS,' she said. 'I HAVE A HEADACHE and a SORE THROAT.\nI also FEEL TIRED and a little DIZZY.'\nThe pharmacist smiled. 'Rest, tea, and this small pill.'", "text_pt": "Dona Lúcia entrou na farmácia.\n'MINHA CABEÇA DÓI,' disse. 'Tô COM DOR DE CABEÇA e GARGANTA INFLAMADA.\nTambém me SINTO CANSADA e um pouco TONTA.'\nO farmacêutico sorriu. 'Descanso, chá e este comprimido.'" },
-    { "kind": "vocab_intro", "title": "Body parts", "items": [
-      { "term": "head / hair", "pt": "cabeça / cabelo" },
-      { "term": "eye / ear / nose / mouth", "pt": "olho / orelha / nariz / boca" },
-      { "term": "neck / shoulder / back", "pt": "pescoço / ombro / costas" },
-      { "term": "arm / hand / finger", "pt": "braço / mão / dedo" },
-      { "term": "leg / foot / knee", "pt": "perna / pé / joelho" },
-      { "term": "stomach / chest", "pt": "estômago / peito" }
-    ]},
-    { "kind": "vocab_intro", "title": "Symptoms — HAVE + symptom", "items": [
-      { "term": "have a headache", "pt": "estar com dor de cabeça" },
-      { "term": "have a sore throat", "pt": "estar com dor de garganta" },
-      { "term": "have a cough / a cold", "pt": "estar com tosse / gripe" },
-      { "term": "have a fever", "pt": "estar com febre" },
-      { "term": "feel sick / dizzy / tired", "pt": "sentir-se mal / tonto / cansado" }
-    ]},
-    { "kind": "grammar_note", "title": "English says HAVE, not BE", "body_en": "For symptoms, English uses HAVE + A + symptom. 'I HAVE a headache.' NOT 'I am with pain in the head.' Or say 'My X HURTS' — 'My tooth HURTS', 'My eyes HURT'. Plural noun → HURT (no -S).", "body_pt": "Sintomas em inglês usam HAVE. 'I have a headache' (não 'I am with headache'). Ou 'My tooth hurts' (meu dente dói). Plural: 'My eyes hurt'.", "examples": [
-      { "en": "I have a stomachache.", "pt": "Estou com dor de estômago." },
-      { "en": "My back hurts.", "pt": "Minhas costas doem." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "lucia", "exercise": { "id": "body-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["I am with headache", "I have a headache", "My head is hurt", "I am headache"], "correct": 1, "explanation": "HAVE + A + symptom. The English formula.", "hint_pt_br": "Sintomas = HAVE + A." }},
-    { "kind": "exercise", "exercise": { "id": "body-s02", "type": "fill_blank", "question": "Complete: 'My eyes ___.' (hurt — plural)", "correct": "hurt", "explanation": "Plural subject, no -S on the verb.", "hint_pt_br": "'Eyes' é plural → 'hurt' sem -s." }},
-    { "kind": "exercise", "exercise": { "id": "body-s03", "type": "matching", "pairs": [
-      ["headache", "dor de cabeça"],
-      ["sore throat", "dor de garganta"],
-      ["fever", "febre"],
-      ["cold", "gripe / resfriado"],
-      ["cough", "tosse"]
-    ], "explanation": "Five common symptoms to memorize.", "hint_pt_br": "Cinco sintomas comuns." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 45 — At the Pharmacy",
+      "subtitle_en": "Body + symptoms + asking for help",
+      "subtitle_pt": "Corpo + sintomas + pedir ajuda"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Dona Lúcia walked into the pharmacy.\n'MY HEAD HURTS,' she said. 'I HAVE A HEADACHE and a SORE THROAT.\nI also FEEL TIRED and a little DIZZY.'\nThe pharmacist smiled. 'Rest, tea, and this small pill.'",
+      "text_pt": "Dona Lúcia entrou na farmácia.\n'MINHA CABEÇA DÓI,' disse. 'Tô COM DOR DE CABEÇA e GARGANTA INFLAMADA.\nTambém me SINTO CANSADA e um pouco TONTA.'\nO farmacêutico sorriu. 'Descanso, chá e este comprimido.'"
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Body parts",
+      "items": [
+        {
+          "term": "head / hair",
+          "pt": "cabeça / cabelo"
+        },
+        {
+          "term": "eye / ear / nose / mouth",
+          "pt": "olho / orelha / nariz / boca"
+        },
+        {
+          "term": "neck / shoulder / back",
+          "pt": "pescoço / ombro / costas"
+        },
+        {
+          "term": "arm / hand / finger",
+          "pt": "braço / mão / dedo"
+        },
+        {
+          "term": "leg / foot / knee",
+          "pt": "perna / pé / joelho"
+        },
+        {
+          "term": "stomach / chest",
+          "pt": "estômago / peito"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Symptoms — HAVE + symptom",
+      "items": [
+        {
+          "term": "have a headache",
+          "pt": "estar com dor de cabeça"
+        },
+        {
+          "term": "have a sore throat",
+          "pt": "estar com dor de garganta"
+        },
+        {
+          "term": "have a cough / a cold",
+          "pt": "estar com tosse / gripe"
+        },
+        {
+          "term": "have a fever",
+          "pt": "estar com febre"
+        },
+        {
+          "term": "feel sick / dizzy / tired",
+          "pt": "sentir-se mal / tonto / cansado"
+        }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "English says HAVE, not BE",
+      "body_en": "For symptoms, English uses HAVE + A + symptom. 'I HAVE a headache.' NOT 'I am with pain in the head.' Or say 'My X HURTS' — 'My tooth HURTS', 'My eyes HURT'. Plural noun → HURT (no -S).",
+      "body_pt": "Sintomas em inglês usam HAVE. 'I have a headache' (não 'I am with headache'). Ou 'My tooth hurts' (meu dente dói). Plural: 'My eyes hurt'.",
+      "examples": [
+        {
+          "en": "I have a stomachache.",
+          "pt": "Estou com dor de estômago."
+        },
+        {
+          "en": "My back hurts.",
+          "pt": "Minhas costas doem."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "lucia",
+      "exercise": {
+        "id": "body-s01",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "I am with headache",
+          "I have a headache",
+          "My head is hurt",
+          "I am headache"
+        ],
+        "correct": 1,
+        "explanation": "HAVE + A + symptom. The English formula.",
+        "hint_pt_br": "Sintomas = HAVE + A."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "body-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'My eyes ___.' (hurt — plural)",
+        "correct": "hurt",
+        "explanation": "Plural subject, no -S on the verb.",
+        "hint_pt_br": "'Eyes' é plural → 'hurt' sem -s."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "body-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "headache",
+            "dor de cabeça"
+          ],
+          [
+            "sore throat",
+            "dor de garganta"
+          ],
+          [
+            "fever",
+            "febre"
+          ],
+          [
+            "cold",
+            "gripe / resfriado"
+          ],
+          [
+            "cough",
+            "tosse"
+          ]
+        ],
+        "explanation": "Five common symptoms to memorize.",
+        "hint_pt_br": "Cinco sintomas comuns."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"At the Pharmacy — Body and Health\". Body parts, common symptoms, and how to say 'my head hurts' without panic. Plus advice phrases. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"At the Pharmacy — Body and Health\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "At the Pharmacy — Body and Health",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'At the Pharmacy — Body and Health'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"At the Pharmacy — Body and Health\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        },
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        },
+        {
+          "label": "ThoughtCo · English for Learners",
+          "url": "https://www.thoughtco.com/english-as-a-second-language-4133121",
+          "pt_hint": "Artigos explicativos organizados por nível."
+        }
+      ]
+    }
   ]
 }

@@ -6,32 +6,199 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 13,
+  "estimated_minutes": 22,
   "summary_pt_br": "Pronomes indefinidos em inglês: SOMEBODY/ANYBODY/NOBODY/EVERYBODY para pessoas, e combinações com -thing / -where. Regra: some- em afirmativas, any- em negativas/perguntas, no- para negação com verbo afirmativo.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 51 — Is Anybody Home?", "subtitle_en": "Indefinite pronouns", "subtitle_pt": "Pronomes indefinidos" },
-    { "kind": "narrative", "character_id": "maya", "text_en": "Maya walked into the empty classroom.\n'IS ANYBODY HERE?' she called.\n'NOBODY answered.' She looked around.\n'THERE'S SOMEONE's bag. But SOMETHING is off.\nNOTHING was on the board. NO ONE was in the hallway.'\nShe checked SOMEWHERE else — and found them all on the roof.", "text_pt": "Maya entrou na sala vazia.\n'TEM ALGUÉM AQUI?' chamou.\n'NINGUÉM respondeu.' Olhou ao redor.\n'TEM A MOCHILA DE ALGUÉM. Mas ALGO tá estranho.\nNADA no quadro. NINGUÉM no corredor.'\nProcurou EM OUTRO LUGAR — e achou todos no terraço." },
-    { "kind": "grammar_note", "title": "The some/any/no/every system", "body_en": "Three roots: -ONE / -BODY (people, same meaning), -THING (things), -WHERE (places). Four prefixes: SOME (positive), ANY (questions/negatives), NO (negation with positive verb), EVERY (all). 'I see somebody' / 'Do you see anybody?' / 'I see nobody' (= I don't see anybody). TRAP: never use double negatives: 'I don't see nobody' is wrong.", "body_pt": "Sistema: ONE/BODY + THING + WHERE combinam com SOME/ANY/NO/EVERY. SOME = afirmativa. ANY = pergunta/negativa. NO = negação com verbo positivo. EVERY = todos. NUNCA use dupla negativa em inglês padrão.", "examples": [
-      { "en": "I saw somebody. / Did you see anybody? / I saw nobody.", "pt": "'I saw nobody' = 'I didn't see anybody'. Nunca misture." },
-      { "en": "Everybody was happy.", "pt": "Todos estavam felizes." }
-    ]},
-    { "kind": "vocab_intro", "title": "The 12 combinations", "items": [
-      { "term": "somebody / someone", "pt": "alguém" },
-      { "term": "anybody / anyone", "pt": "alguém (perg./neg.)" },
-      { "term": "nobody / no one", "pt": "ninguém" },
-      { "term": "everybody / everyone", "pt": "todos" },
-      { "term": "something / anything / nothing / everything", "pt": "algo / nada / tudo" },
-      { "term": "somewhere / anywhere / nowhere / everywhere", "pt": "em algum lugar / nenhum / todo lugar" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "ind-s01", "type": "multiple_choice", "question": "'Is ___ home?' (question)", "options": ["somebody", "anybody", "nobody", "everybody"], "correct": 1, "explanation": "Questions use ANY-. 'Is anybody home?'", "hint_pt_br": "Pergunta → any-." }},
-    { "kind": "exercise", "exercise": { "id": "ind-s02", "type": "fill_blank", "question": "Complete: 'I didn't see ___ there.' (ninguém)", "correct": "anybody", "explanation": "Negative verb (didn't) + ANY-. Avoid double negative.", "hint_pt_br": "Com verbo negativo: anybody, não nobody." }},
-    { "kind": "exercise", "exercise": { "id": "ind-s03", "type": "multiple_choice", "question": "'I saw ___ strange.' (positive)", "options": ["anything", "something", "nothing", "everything"], "correct": 1, "explanation": "Positive statement → SOME-.", "hint_pt_br": "Afirmativa → some-." }},
-    { "kind": "exercise", "exercise": { "id": "ind-s04", "type": "matching", "pairs": [
-      ["somebody", "alguém (afirm)"],
-      ["anybody", "alguém (perg/neg)"],
-      ["nobody", "ninguém"],
-      ["everybody", "todos"],
-      ["nothing", "nada"]
-    ], "explanation": "Five of the twelve. Learn the rest by combining.", "hint_pt_br": "Cinco das doze. O resto combina igual." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 51 — Is Anybody Home?",
+      "subtitle_en": "Indefinite pronouns",
+      "subtitle_pt": "Pronomes indefinidos"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Maya walked into the empty classroom.\n'IS ANYBODY HERE?' she called.\n'NOBODY answered.' She looked around.\n'THERE'S SOMEONE's bag. But SOMETHING is off.\nNOTHING was on the board. NO ONE was in the hallway.'\nShe checked SOMEWHERE else — and found them all on the roof.",
+      "text_pt": "Maya entrou na sala vazia.\n'TEM ALGUÉM AQUI?' chamou.\n'NINGUÉM respondeu.' Olhou ao redor.\n'TEM A MOCHILA DE ALGUÉM. Mas ALGO tá estranho.\nNADA no quadro. NINGUÉM no corredor.'\nProcurou EM OUTRO LUGAR — e achou todos no terraço."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "The some/any/no/every system",
+      "body_en": "Three roots: -ONE / -BODY (people, same meaning), -THING (things), -WHERE (places). Four prefixes: SOME (positive), ANY (questions/negatives), NO (negation with positive verb), EVERY (all). 'I see somebody' / 'Do you see anybody?' / 'I see nobody' (= I don't see anybody). TRAP: never use double negatives: 'I don't see nobody' is wrong.",
+      "body_pt": "Sistema: ONE/BODY + THING + WHERE combinam com SOME/ANY/NO/EVERY. SOME = afirmativa. ANY = pergunta/negativa. NO = negação com verbo positivo. EVERY = todos. NUNCA use dupla negativa em inglês padrão.",
+      "examples": [
+        {
+          "en": "I saw somebody. / Did you see anybody? / I saw nobody.",
+          "pt": "'I saw nobody' = 'I didn't see anybody'. Nunca misture."
+        },
+        {
+          "en": "Everybody was happy.",
+          "pt": "Todos estavam felizes."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "The 12 combinations",
+      "items": [
+        {
+          "term": "somebody / someone",
+          "pt": "alguém"
+        },
+        {
+          "term": "anybody / anyone",
+          "pt": "alguém (perg./neg.)"
+        },
+        {
+          "term": "nobody / no one",
+          "pt": "ninguém"
+        },
+        {
+          "term": "everybody / everyone",
+          "pt": "todos"
+        },
+        {
+          "term": "something / anything / nothing / everything",
+          "pt": "algo / nada / tudo"
+        },
+        {
+          "term": "somewhere / anywhere / nowhere / everywhere",
+          "pt": "em algum lugar / nenhum / todo lugar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "ind-s01",
+        "type": "multiple_choice",
+        "question": "'Is ___ home?' (question)",
+        "options": [
+          "somebody",
+          "anybody",
+          "nobody",
+          "everybody"
+        ],
+        "correct": 1,
+        "explanation": "Questions use ANY-. 'Is anybody home?'",
+        "hint_pt_br": "Pergunta → any-."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "ind-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'I didn't see ___ there.' (ninguém)",
+        "correct": "anybody",
+        "explanation": "Negative verb (didn't) + ANY-. Avoid double negative.",
+        "hint_pt_br": "Com verbo negativo: anybody, não nobody."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "ind-s03",
+        "type": "multiple_choice",
+        "question": "'I saw ___ strange.' (positive)",
+        "options": [
+          "anything",
+          "something",
+          "nothing",
+          "everything"
+        ],
+        "correct": 1,
+        "explanation": "Positive statement → SOME-.",
+        "hint_pt_br": "Afirmativa → some-."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "ind-s04",
+        "type": "matching",
+        "pairs": [
+          [
+            "somebody",
+            "alguém (afirm)"
+          ],
+          [
+            "anybody",
+            "alguém (perg/neg)"
+          ],
+          [
+            "nobody",
+            "ninguém"
+          ],
+          [
+            "everybody",
+            "todos"
+          ],
+          [
+            "nothing",
+            "nada"
+          ]
+        ],
+        "explanation": "Five of the twelve. Learn the rest by combining.",
+        "hint_pt_br": "Cinco das doze. O resto combina igual."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Somebody, Nothing, Anywhere\". Indefinite pronouns: somebody / anybody / nobody / everybody — paired with -thing, -where. The rules about affirmative, negative, and questions. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Somebody, Nothing, Anywhere\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Somebody, Nothing, Anywhere",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Somebody, Nothing, Anywhere'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Somebody, Nothing, Anywhere\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        },
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        },
+        {
+          "label": "ThoughtCo · English for Learners",
+          "url": "https://www.thoughtco.com/english-as-a-second-language-4133121",
+          "pt_hint": "Artigos explicativos organizados por nível."
+        }
+      ]
+    }
   ]
 }

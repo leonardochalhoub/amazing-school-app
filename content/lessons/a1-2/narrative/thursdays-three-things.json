@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 45,
-  "estimated_minutes": 15,
+  "estimated_minutes": 24,
   "summary_pt_br": "O som /θ/ (th mudo) em THIN, THREE, THANK. A dica da língua entre os dentes, treinada com a música Three Little Birds do Bob Marley e Thinking Out Loud do Ed Sheeran.",
   "scenes": [
     {
@@ -27,20 +27,49 @@
       "body_en": "Stick the tip of your tongue LIGHTLY between your top and bottom teeth. Now blow air through — no voice, just air. You should feel cold air on your tongue. That's /θ/ — the sound in THIN, THREE, THANK, THURSDAY.",
       "body_pt": "Coloque a pontinha da língua entre os dentes de cima e os de baixo — só a ponta, de leve. Agora sopre ar (sem voz, sem 't', sem 'f'). Você vai sentir o ar frio passando pela língua. Esse é o /θ/ de THIN, THREE, THANK, THURSDAY.",
       "examples": [
-        { "en": "thin (not 'tin', not 'fin')", "pt": "fino" },
-        { "en": "three (not 'tree', not 'free')", "pt": "três" },
-        { "en": "thanks (not 'tanks', not 'franks')", "pt": "obrigado" }
+        {
+          "en": "thin (not 'tin', not 'fin')",
+          "pt": "fino"
+        },
+        {
+          "en": "three (not 'tree', not 'free')",
+          "pt": "três"
+        },
+        {
+          "en": "thanks (not 'tanks', not 'franks')",
+          "pt": "obrigado"
+        }
       ]
     },
     {
       "kind": "vocab_intro",
       "title": "Thursday's TH words",
       "items": [
-        { "term": "three /θriː/", "pt": "três", "example_en": "Three little birds." },
-        { "term": "thing /θɪŋ/", "pt": "coisa", "example_en": "A small thing." },
-        { "term": "think /θɪŋk/", "pt": "pensar", "example_en": "I think so." },
-        { "term": "thanks /θæŋks/", "pt": "obrigado(a)", "example_en": "Thanks a lot." },
-        { "term": "Thursday /ˈθɜːrz.deɪ/", "pt": "quinta-feira", "example_en": "See you on Thursday." }
+        {
+          "term": "three /θriː/",
+          "pt": "três",
+          "example_en": "Three little birds."
+        },
+        {
+          "term": "thing /θɪŋ/",
+          "pt": "coisa",
+          "example_en": "A small thing."
+        },
+        {
+          "term": "think /θɪŋk/",
+          "pt": "pensar",
+          "example_en": "I think so."
+        },
+        {
+          "term": "thanks /θæŋks/",
+          "pt": "obrigado(a)",
+          "example_en": "Thanks a lot."
+        },
+        {
+          "term": "Thursday /ˈθɜːrz.deɪ/",
+          "pt": "quinta-feira",
+          "example_en": "See you on Thursday."
+        }
       ]
     },
     {
@@ -56,7 +85,12 @@
         "id": "th1-s01",
         "type": "multiple_choice",
         "question": "'I ___ you for the taco.' (agradecer)",
-        "options": ["tank", "thank", "sank", "frank"],
+        "options": [
+          "tank",
+          "thank",
+          "sank",
+          "frank"
+        ],
         "correct": 1,
         "explanation": "THANK /θæŋk/ with the voiceless TH — tongue between the teeth, just air. Not 'tank' (military vehicle!) and not 'sank' (past of sink).",
         "hint_pt_br": "THANK começa com o som /θ/ — língua entre os dentes, sopro de ar."
@@ -101,7 +135,12 @@
         "id": "th1-s03",
         "type": "multiple_choice",
         "question": "Which of these DOES NOT have the /θ/ sound?",
-        "options": ["think", "thing", "this", "thank"],
+        "options": [
+          "think",
+          "thing",
+          "this",
+          "thank"
+        ],
         "correct": 2,
         "explanation": "THIS has /ð/ — the VOICED TH (with vocal vibration). Think/thing/thank all have /θ/ (voiceless). We'll learn /ð/ next lesson.",
         "hint_pt_br": "THIS é /ð/ — TH VIBRADO (com voz). Os outros três são /θ/ (só ar). Próxima aula detalha isso."
@@ -114,10 +153,22 @@
         "id": "th1-s04",
         "type": "matching",
         "pairs": [
-          ["3", "three"],
-          ["30", "thirty"],
-          ["1000", "thousand"],
-          ["quinta-feira", "Thursday"]
+          [
+            "3",
+            "three"
+          ],
+          [
+            "30",
+            "thirty"
+          ],
+          [
+            "1000",
+            "thousand"
+          ],
+          [
+            "quinta-feira",
+            "Thursday"
+          ]
         ],
         "explanation": "Four words, all starting with /θ/. Stack them: 'Three thousand people on Thursday.' Practice it aloud.",
         "hint_pt_br": "Quatro palavrinhas com /θ/. Pratique a frase 'Three thousand people on Thursday' em voz alta."
@@ -128,6 +179,62 @@
       "character_id": "cosmo",
       "text_en": "Cosmo tried to bark a TH.\nHe blew. He barked. He did his best.\nWoof /θ/ woof — the dog said it true.\n'Thanks, Cosmo,' Mr. Kumar said. 'That'll do.'",
       "text_pt": "Cosmo tentou latir um TH.\nSoprou. Latiu. Fez o possível, puxa!\n'Woof /θ/ woof' — o cão acertou, que coisa.\n'Thanks, Cosmo,' disse Mr. Kumar. 'Já serviu.'"
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Thursday's Three Things\". The /θ/ sound (THIN, THREE, THANK). Why Brazilians say 'tree' for 'three' — and how to fix it with your tongue between your teeth. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Thursday's Three Things\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Thursday's Three Things",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Thursday's Three Things'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Thursday's Three Things\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        },
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        },
+        {
+          "label": "BBC Learning English · Beginners",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-beginner",
+          "pt_hint": "Curso gratuito da BBC, nível iniciante."
+        }
+      ]
     }
   ]
 }

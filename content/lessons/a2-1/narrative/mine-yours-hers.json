@@ -6,32 +6,199 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 12,
+  "estimated_minutes": 21,
   "summary_pt_br": "Adjetivos possessivos (my/your/his) vêm ANTES de um substantivo: 'This is MY book'. Pronomes possessivos (mine/yours/his) FICAM SOZINHOS: 'This book is MINE'. Troca: 'is my' → 'is mine'.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 46 — Whose Is This?", "subtitle_en": "Adjectives vs pronouns", "subtitle_pt": "Adjetivos vs pronomes" },
-    { "kind": "narrative", "character_id": "maya", "text_en": "Maya dropped a pile of things on the table.\n'That phone is MINE. This backpack is YOURS, Bia.\nThose pens are HIS, Joca's. This book is HERS, Dona Lúcia's.\nAnd THESE two notebooks are OURS — we share them.'\nMine, yours, his, hers, ours, theirs. No noun needed.", "text_pt": "A Maya jogou um monte de coisas na mesa.\n'Esse celular é MEU. Essa mochila é SUA, Bia.\nEssas canetas são DELE, do Joca. Esse livro é DELA, da Dona Lúcia.\nE ESTES dois cadernos são NOSSOS — a gente compartilha.'\nMine, yours, his, hers, ours, theirs. Sozinhos. Sem substantivo." },
-    { "kind": "grammar_note", "title": "Adjective vs pronoun — the side-by-side", "body_en": "ADJECTIVES go BEFORE a noun: my book, your car, his dog. PRONOUNS stand ALONE: mine, yours, his. 'This is MY book.' = 'This book is MINE.' Two correct ways to say the same thing — pick one structure, don't mix. TRAP: 'his' is the same in both (adjective AND pronoun). Every other one changes.", "body_pt": "Adjetivo = antes do substantivo (my book). Pronome = sozinho (mine). 'This is my book' = 'This book is mine' — duas formas, mesma ideia. PEGADINHA: 'his' é igual nos dois (his book / the book is his). Todos os outros mudam: my→mine, your→yours, her→hers, our→ours, their→theirs.", "examples": [
-      { "en": "my / mine · your / yours · her / hers", "pt": "Adjetivo / pronome" },
-      { "en": "our / ours · their / theirs · his / HIS (igual!)", "pt": "His não muda." }
-    ]},
-    { "kind": "vocab_intro", "title": "Full comparison", "items": [
-      { "term": "my / mine", "pt": "meu / meu(s)" },
-      { "term": "your / yours", "pt": "seu / seu(s)" },
-      { "term": "his / his", "pt": "dele / dele (igual!)" },
-      { "term": "her / hers", "pt": "dela / dela" },
-      { "term": "our / ours", "pt": "nosso / nosso(s)" },
-      { "term": "their / theirs", "pt": "deles / deles" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "poss-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["This book is my", "This book is mine", "This mine book", "This my book"], "correct": 1, "explanation": "'This book is MINE' — pronoun alone, no noun after.", "hint_pt_br": "Sozinho = pronome = mine." }},
-    { "kind": "exercise", "exercise": { "id": "poss-s02", "type": "fill_blank", "question": "Complete: 'That car is ___.' (it belongs to her)", "correct": "hers", "explanation": "HERS — possessive pronoun, stands alone.", "hint_pt_br": "Pronome = hers." }},
-    { "kind": "exercise", "exercise": { "id": "poss-s03", "type": "multiple_choice", "question": "Which is WRONG?", "options": ["This is his bag", "The bag is his", "This is his book", "The book is hiss"], "correct": 3, "explanation": "HIS (not 'hiss') is both adjective AND pronoun. Same spelling.", "hint_pt_br": "'His' é igual nos dois usos. Nunca 'hiss'." }},
-    { "kind": "exercise", "exercise": { "id": "poss-s04", "type": "matching", "pairs": [
-      ["my / mine", "meu / meu (sozinho)"],
-      ["your / yours", "seu / seu (sozinho)"],
-      ["her / hers", "dela / dela (sozinho)"],
-      ["our / ours", "nosso / nosso (sozinho)"],
-      ["their / theirs", "deles / deles (sozinho)"]
-    ], "explanation": "Five pairs. HIS skipped because it's identical.", "hint_pt_br": "Cinco pares. HIS é exceção: igual nos dois." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 46 — Whose Is This?",
+      "subtitle_en": "Adjectives vs pronouns",
+      "subtitle_pt": "Adjetivos vs pronomes"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Maya dropped a pile of things on the table.\n'That phone is MINE. This backpack is YOURS, Bia.\nThose pens are HIS, Joca's. This book is HERS, Dona Lúcia's.\nAnd THESE two notebooks are OURS — we share them.'\nMine, yours, his, hers, ours, theirs. No noun needed.",
+      "text_pt": "A Maya jogou um monte de coisas na mesa.\n'Esse celular é MEU. Essa mochila é SUA, Bia.\nEssas canetas são DELE, do Joca. Esse livro é DELA, da Dona Lúcia.\nE ESTES dois cadernos são NOSSOS — a gente compartilha.'\nMine, yours, his, hers, ours, theirs. Sozinhos. Sem substantivo."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Adjective vs pronoun — the side-by-side",
+      "body_en": "ADJECTIVES go BEFORE a noun: my book, your car, his dog. PRONOUNS stand ALONE: mine, yours, his. 'This is MY book.' = 'This book is MINE.' Two correct ways to say the same thing — pick one structure, don't mix. TRAP: 'his' is the same in both (adjective AND pronoun). Every other one changes.",
+      "body_pt": "Adjetivo = antes do substantivo (my book). Pronome = sozinho (mine). 'This is my book' = 'This book is mine' — duas formas, mesma ideia. PEGADINHA: 'his' é igual nos dois (his book / the book is his). Todos os outros mudam: my→mine, your→yours, her→hers, our→ours, their→theirs.",
+      "examples": [
+        {
+          "en": "my / mine · your / yours · her / hers",
+          "pt": "Adjetivo / pronome"
+        },
+        {
+          "en": "our / ours · their / theirs · his / HIS (igual!)",
+          "pt": "His não muda."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Full comparison",
+      "items": [
+        {
+          "term": "my / mine",
+          "pt": "meu / meu(s)"
+        },
+        {
+          "term": "your / yours",
+          "pt": "seu / seu(s)"
+        },
+        {
+          "term": "his / his",
+          "pt": "dele / dele (igual!)"
+        },
+        {
+          "term": "her / hers",
+          "pt": "dela / dela"
+        },
+        {
+          "term": "our / ours",
+          "pt": "nosso / nosso(s)"
+        },
+        {
+          "term": "their / theirs",
+          "pt": "deles / deles"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "poss-s01",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "This book is my",
+          "This book is mine",
+          "This mine book",
+          "This my book"
+        ],
+        "correct": 1,
+        "explanation": "'This book is MINE' — pronoun alone, no noun after.",
+        "hint_pt_br": "Sozinho = pronome = mine."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "poss-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'That car is ___.' (it belongs to her)",
+        "correct": "hers",
+        "explanation": "HERS — possessive pronoun, stands alone.",
+        "hint_pt_br": "Pronome = hers."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "poss-s03",
+        "type": "multiple_choice",
+        "question": "Which is WRONG?",
+        "options": [
+          "This is his bag",
+          "The bag is his",
+          "This is his book",
+          "The book is hiss"
+        ],
+        "correct": 3,
+        "explanation": "HIS (not 'hiss') is both adjective AND pronoun. Same spelling.",
+        "hint_pt_br": "'His' é igual nos dois usos. Nunca 'hiss'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "poss-s04",
+        "type": "matching",
+        "pairs": [
+          [
+            "my / mine",
+            "meu / meu (sozinho)"
+          ],
+          [
+            "your / yours",
+            "seu / seu (sozinho)"
+          ],
+          [
+            "her / hers",
+            "dela / dela (sozinho)"
+          ],
+          [
+            "our / ours",
+            "nosso / nosso (sozinho)"
+          ],
+          [
+            "their / theirs",
+            "deles / deles (sozinho)"
+          ]
+        ],
+        "explanation": "Five pairs. HIS skipped because it's identical.",
+        "hint_pt_br": "Cinco pares. HIS é exceção: igual nos dois."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Mine, Yours, His — Possessive Pronouns\". The difference between possessive ADJECTIVES (my, your, his) and possessive PRONOUNS (mine, yours, his). Using the right one saves you from 'that's my' mistakes. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Mine, Yours, His — Possessive Pronouns\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Mine, Yours, His — Possessive Pronouns",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Mine, Yours, His — Possessive Pronouns'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Mine, Yours, His — Possessive Pronouns\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        },
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        },
+        {
+          "label": "ThoughtCo · English for Learners",
+          "url": "https://www.thoughtco.com/english-as-a-second-language-4133121",
+          "pt_hint": "Artigos explicativos organizados por nível."
+        }
+      ]
+    }
   ]
 }

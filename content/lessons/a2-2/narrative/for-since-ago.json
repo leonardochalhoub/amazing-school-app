@@ -6,28 +6,159 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 13,
+  "estimated_minutes": 22,
   "summary_pt_br": "FOR (duração — há X tempo), SINCE (ponto de início — desde X), AGO (X atrás). Regras: FOR + duração (for 2 years), SINCE + ponto (since Monday), AGO depois de expressão de tempo (two years ago). Cuidado: AGO nunca com present perfect.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 66 — For, Since, Ago", "subtitle_en": "Three time signals", "subtitle_pt": "Três sinais de tempo" },
-    { "kind": "narrative", "character_id": "joca", "text_en": "'I've lived here FOR two years.' (duration)\n'I've lived here SINCE 2023.' (starting point)\n'I arrived two years AGO.' (counts back from now)\nFOR and SINCE go with Present Perfect. AGO with Past Simple.", "text_pt": "'Moro aqui HÁ dois anos.' (duração = for)\n'Moro aqui DESDE 2023.' (ponto de início = since)\n'Cheguei há dois anos.' (volta do agora = ago)\nFOR/SINCE com Present Perfect. AGO com Past Simple." },
-    { "kind": "grammar_note", "title": "The rules that never fail", "body_en": "FOR + duration: for 5 minutes, for 3 years, for a long time. SINCE + point in time: since Monday, since 2020, since yesterday. AGO + time expression + PAST SIMPLE: two years ago, a long time ago. CRITICAL: 'ago' NEVER with Present Perfect. 'I have arrived 2 years ago' = WRONG. Say 'I arrived 2 years ago' OR 'I have been here for 2 years'.", "body_pt": "FOR + duração (for 5 minutes). SINCE + ponto (since Monday). AGO depois de tempo, com Past Simple (two years ago). ERRO GRAVE: 'ago' NUNCA com present perfect. Use 'I arrived 2 years ago' OU 'I have been here for 2 years'.", "examples": [
-      { "en": "I've worked here for 5 years. ✓", "pt": "Duração." },
-      { "en": "I've worked here since January. ✓", "pt": "Ponto de início." },
-      { "en": "I started 5 years ago. ✓ (past simple, not PP)", "pt": "Volta do agora." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "joca", "exercise": { "id": "fsa-s01", "type": "fill_blank", "question": "Complete: 'She's lived here ___ 10 years.' (duration)", "correct": "for", "explanation": "FOR + duration.", "hint_pt_br": "Duração = FOR." }},
-    { "kind": "exercise", "exercise": { "id": "fsa-s02", "type": "fill_blank", "question": "Complete: 'I've worked here ___ 2020.' (starting point)", "correct": "since", "explanation": "SINCE + starting point.", "hint_pt_br": "Ponto de início = SINCE." }},
-    { "kind": "exercise", "exercise": { "id": "fsa-s03", "type": "multiple_choice", "question": "Which is correct?", "options": [
-        "I have moved two years ago",
-        "I moved two years ago",
-        "I am moving two years ago",
-        "I moved since two years"
-      ], "correct": 1, "explanation": "AGO + PAST SIMPLE. Never Present Perfect.", "hint_pt_br": "AGO só com Past Simple. Nunca com 'have'." }},
-    { "kind": "exercise", "exercise": { "id": "fsa-s04", "type": "matching", "pairs": [
-      ["for 3 years", "duração"],
-      ["since Monday", "ponto de início"],
-      ["3 years ago", "distância do agora"]
-    ], "explanation": "Three signals, three meanings.", "hint_pt_br": "Três sinais, três sentidos." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 66 — For, Since, Ago",
+      "subtitle_en": "Three time signals",
+      "subtitle_pt": "Três sinais de tempo"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "'I've lived here FOR two years.' (duration)\n'I've lived here SINCE 2023.' (starting point)\n'I arrived two years AGO.' (counts back from now)\nFOR and SINCE go with Present Perfect. AGO with Past Simple.",
+      "text_pt": "'Moro aqui HÁ dois anos.' (duração = for)\n'Moro aqui DESDE 2023.' (ponto de início = since)\n'Cheguei há dois anos.' (volta do agora = ago)\nFOR/SINCE com Present Perfect. AGO com Past Simple."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "The rules that never fail",
+      "body_en": "FOR + duration: for 5 minutes, for 3 years, for a long time. SINCE + point in time: since Monday, since 2020, since yesterday. AGO + time expression + PAST SIMPLE: two years ago, a long time ago. CRITICAL: 'ago' NEVER with Present Perfect. 'I have arrived 2 years ago' = WRONG. Say 'I arrived 2 years ago' OR 'I have been here for 2 years'.",
+      "body_pt": "FOR + duração (for 5 minutes). SINCE + ponto (since Monday). AGO depois de tempo, com Past Simple (two years ago). ERRO GRAVE: 'ago' NUNCA com present perfect. Use 'I arrived 2 years ago' OU 'I have been here for 2 years'.",
+      "examples": [
+        {
+          "en": "I've worked here for 5 years. ✓",
+          "pt": "Duração."
+        },
+        {
+          "en": "I've worked here since January. ✓",
+          "pt": "Ponto de início."
+        },
+        {
+          "en": "I started 5 years ago. ✓ (past simple, not PP)",
+          "pt": "Volta do agora."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "joca",
+      "exercise": {
+        "id": "fsa-s01",
+        "type": "fill_blank",
+        "question": "Complete: 'She's lived here ___ 10 years.' (duration)",
+        "correct": "for",
+        "explanation": "FOR + duration.",
+        "hint_pt_br": "Duração = FOR."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "fsa-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'I've worked here ___ 2020.' (starting point)",
+        "correct": "since",
+        "explanation": "SINCE + starting point.",
+        "hint_pt_br": "Ponto de início = SINCE."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "fsa-s03",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "I have moved two years ago",
+          "I moved two years ago",
+          "I am moving two years ago",
+          "I moved since two years"
+        ],
+        "correct": 1,
+        "explanation": "AGO + PAST SIMPLE. Never Present Perfect.",
+        "hint_pt_br": "AGO só com Past Simple. Nunca com 'have'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "fsa-s04",
+        "type": "matching",
+        "pairs": [
+          [
+            "for 3 years",
+            "duração"
+          ],
+          [
+            "since Monday",
+            "ponto de início"
+          ],
+          [
+            "3 years ago",
+            "distância do agora"
+          ]
+        ],
+        "explanation": "Three signals, three meanings.",
+        "hint_pt_br": "Três sinais, três sentidos."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"For, Since, Ago\". Three time signals that always confuse. FOR + duration. SINCE + starting point. AGO after past time. 'For 2 years / Since 2022 / 2 years ago.' Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"For, Since, Ago\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "For, Since, Ago",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'For, Since, Ago'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"For, Since, Ago\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        },
+        {
+          "label": "ThoughtCo · English for Learners",
+          "url": "https://www.thoughtco.com/english-as-a-second-language-4133121",
+          "pt_hint": "Artigos explicativos organizados por nível."
+        },
+        {
+          "label": "VOA Learning English · Everyday Grammar",
+          "url": "https://learningenglish.voanews.com/z/3808",
+          "pt_hint": "Vídeos curtos sobre gramática do dia a dia."
+        }
+      ]
+    }
   ]
 }

@@ -6,23 +6,158 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 14,
+  "estimated_minutes": 23,
   "summary_pt_br": "Verbos seguidos de GERÚNDIO (-ING): enjoy, avoid, finish, keep, mind, suggest, practice. Verbos seguidos de INFINITIVO (TO + base): want, hope, decide, promise, plan, need, learn. Alguns aceitam os dois com sentido quase igual (start, begin, love, like, hate).",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 67 — -Ing or To?", "subtitle_en": "Two groups of verbs", "subtitle_pt": "Dois grupos de verbos" },
-    { "kind": "narrative", "character_id": "joca", "text_en": "'I ENJOY CODING.' (gerund)\n'I WANT TO CODE.' (infinitive)\n'She SUGGESTED TAKING a break.' (gerund)\n'She DECIDED TO TAKE a break.' (infinitive)\nThe verb BEFORE decides the form AFTER.", "text_pt": "'Eu CURTO PROGRAMAR.' (gerúndio com enjoy)\n'Eu QUERO PROGRAMAR.' (infinitivo com want)\n'Ela SUGERIU FAZER uma pausa.' (gerúndio)\n'Ela DECIDIU FAZER uma pausa.' (infinitivo)\nO verbo ANTES decide a forma DEPOIS." },
-    { "kind": "grammar_note", "title": "The two lists", "body_en": "GERUND (-ING): enjoy, avoid, finish, keep, mind, suggest, practice, consider, miss, admit. 'I enjoy READING.' INFINITIVE (TO + base): want, hope, decide, promise, plan, need, learn, try, offer, agree. 'I want TO READ.' BOTH: start, begin, continue, love, like, hate, prefer. 'I love reading = I love to read.'", "body_pt": "GERÚNDIO (-ING): enjoy, avoid, finish, keep, mind, suggest, practice, consider. INFINITIVO (TO + base): want, hope, decide, promise, plan, need, learn. Os dois funcionam: start, begin, continue, love, like, hate.", "examples": [
-      { "en": "I enjoy swimming.", "pt": "Curto nadar (enjoy → -ing)." },
-      { "en": "I want to swim.", "pt": "Quero nadar (want → to)." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "joca", "exercise": { "id": "gi-s01", "type": "multiple_choice", "question": "'She enjoys ___ books.'", "options": ["to read", "reading", "read", "reads"], "correct": 1, "explanation": "ENJOY + -ING.", "hint_pt_br": "Enjoy pede -ing." }},
-    { "kind": "exercise", "exercise": { "id": "gi-s02", "type": "multiple_choice", "question": "'We decided ___ early.'", "options": ["to leave", "leaving", "leave", "left"], "correct": 0, "explanation": "DECIDE + TO + base.", "hint_pt_br": "Decide pede to + verbo." }},
-    { "kind": "exercise", "exercise": { "id": "gi-s03", "type": "matching", "pairs": [
-      ["enjoy", "-ing"],
-      ["avoid", "-ing"],
-      ["want", "to + base"],
-      ["plan", "to + base"],
-      ["love", "-ing OR to"]
-    ], "explanation": "Five verbs, three categories. Memorize as chunks.", "hint_pt_br": "Cinco verbos, três categorias." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 67 — -Ing or To?",
+      "subtitle_en": "Two groups of verbs",
+      "subtitle_pt": "Dois grupos de verbos"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "'I ENJOY CODING.' (gerund)\n'I WANT TO CODE.' (infinitive)\n'She SUGGESTED TAKING a break.' (gerund)\n'She DECIDED TO TAKE a break.' (infinitive)\nThe verb BEFORE decides the form AFTER.",
+      "text_pt": "'Eu CURTO PROGRAMAR.' (gerúndio com enjoy)\n'Eu QUERO PROGRAMAR.' (infinitivo com want)\n'Ela SUGERIU FAZER uma pausa.' (gerúndio)\n'Ela DECIDIU FAZER uma pausa.' (infinitivo)\nO verbo ANTES decide a forma DEPOIS."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "The two lists",
+      "body_en": "GERUND (-ING): enjoy, avoid, finish, keep, mind, suggest, practice, consider, miss, admit. 'I enjoy READING.' INFINITIVE (TO + base): want, hope, decide, promise, plan, need, learn, try, offer, agree. 'I want TO READ.' BOTH: start, begin, continue, love, like, hate, prefer. 'I love reading = I love to read.'",
+      "body_pt": "GERÚNDIO (-ING): enjoy, avoid, finish, keep, mind, suggest, practice, consider. INFINITIVO (TO + base): want, hope, decide, promise, plan, need, learn. Os dois funcionam: start, begin, continue, love, like, hate.",
+      "examples": [
+        {
+          "en": "I enjoy swimming.",
+          "pt": "Curto nadar (enjoy → -ing)."
+        },
+        {
+          "en": "I want to swim.",
+          "pt": "Quero nadar (want → to)."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "joca",
+      "exercise": {
+        "id": "gi-s01",
+        "type": "multiple_choice",
+        "question": "'She enjoys ___ books.'",
+        "options": [
+          "to read",
+          "reading",
+          "read",
+          "reads"
+        ],
+        "correct": 1,
+        "explanation": "ENJOY + -ING.",
+        "hint_pt_br": "Enjoy pede -ing."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gi-s02",
+        "type": "multiple_choice",
+        "question": "'We decided ___ early.'",
+        "options": [
+          "to leave",
+          "leaving",
+          "leave",
+          "left"
+        ],
+        "correct": 0,
+        "explanation": "DECIDE + TO + base.",
+        "hint_pt_br": "Decide pede to + verbo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gi-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "enjoy",
+            "-ing"
+          ],
+          [
+            "avoid",
+            "-ing"
+          ],
+          [
+            "want",
+            "to + base"
+          ],
+          [
+            "plan",
+            "to + base"
+          ],
+          [
+            "love",
+            "-ing OR to"
+          ]
+        ],
+        "explanation": "Five verbs, three categories. Memorize as chunks.",
+        "hint_pt_br": "Cinco verbos, três categorias."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Enjoy Reading vs Want to Read\". Some verbs take -ING (gerund). Others take TO + base (infinitive). The groups you just have to learn. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Enjoy Reading vs Want to Read\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Enjoy Reading vs Want to Read",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Enjoy Reading vs Want to Read'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Enjoy Reading vs Want to Read\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC Learning English · Lower Intermediate",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate",
+          "pt_hint": "Curso BBC para nível pré-intermediário."
+        },
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        },
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        }
+      ]
+    }
   ]
 }

@@ -6,17 +6,138 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 30,
-  "estimated_minutes": 11,
+  "estimated_minutes": 20,
   "summary_pt_br": "Artigos em inglês: A antes de consoante, AN antes de vogal, THE quando os dois falantes sabem qual. Diferente do português, português quase sempre usa 'o/a', inglês deixa muitos substantivos SEM artigo (plurais genéricos, incontáveis).",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 53 — A, An, The", "subtitle_en": "Three tiny words", "subtitle_pt": "Três palavrinhas" },
-    { "kind": "narrative", "character_id": "bia", "text_en": "Bia pointed: 'A board. AN apple. THE ocean.'\nMr. Kumar smiled. 'A before a consonant SOUND. AN before a vowel SOUND.\nTHE when WE BOTH know which one — THE ocean we can see from here.'", "text_pt": "A Bia apontou: 'A board. AN apple. THE ocean.'\nMr. Kumar sorriu. 'A antes de som de consoante. AN antes de som de vogal.\nTHE quando OS DOIS sabem qual — THE ocean que a gente vê daqui.'" },
-    { "kind": "grammar_note", "title": "The three rules", "body_en": "A + consonant sound: a dog, a book, a university (SOUND, not letter — 'university' starts with /j/). AN + vowel sound: an apple, an egg, an hour (silent H). THE when both speakers know the specific one: 'THE sun' (only one), 'THE book on the table' (specific). NO ARTICLE with plural general nouns: 'I like DOGS' (not 'I like the dogs').", "body_pt": "A + som de consoante. AN + som de vogal. THE quando ambos sabem qual. SEM ARTIGO em plurais genéricos ('I like dogs' — gosto de cachorros em geral).", "examples": [
-      { "en": "a car / an elephant / an hour (silent h) / a university (y-sound)", "pt": "Foca no SOM, não na letra." },
-      { "en": "THE sun / THE Internet / THE same thing", "pt": "Únicos = sempre THE." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "art-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["a apple", "an apple", "the apple", "apple"], "correct": 1, "explanation": "'Apple' starts with vowel sound → AN.", "hint_pt_br": "Vogal → AN." }},
-    { "kind": "exercise", "exercise": { "id": "art-s02", "type": "multiple_choice", "question": "Which is correct?", "options": ["a hour", "an hour", "the hour", "hour"], "correct": 1, "explanation": "'Hour' — silent H, starts with vowel SOUND /aʊ/ → AN.", "hint_pt_br": "Hour tem H mudo → AN." }},
-    { "kind": "exercise", "exercise": { "id": "art-s03", "type": "fill_blank", "question": "Complete: 'I like ___ coffee in the morning.' (general, no article)", "correct": "", "explanation": "General preference, uncountable → no article. 'I like coffee.'", "hint_pt_br": "Gosto geral + incontável = sem artigo." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 53 — A, An, The",
+      "subtitle_en": "Three tiny words",
+      "subtitle_pt": "Três palavrinhas"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "Bia pointed: 'A board. AN apple. THE ocean.'\nMr. Kumar smiled. 'A before a consonant SOUND. AN before a vowel SOUND.\nTHE when WE BOTH know which one — THE ocean we can see from here.'",
+      "text_pt": "A Bia apontou: 'A board. AN apple. THE ocean.'\nMr. Kumar sorriu. 'A antes de som de consoante. AN antes de som de vogal.\nTHE quando OS DOIS sabem qual — THE ocean que a gente vê daqui.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "The three rules",
+      "body_en": "A + consonant sound: a dog, a book, a university (SOUND, not letter — 'university' starts with /j/). AN + vowel sound: an apple, an egg, an hour (silent H). THE when both speakers know the specific one: 'THE sun' (only one), 'THE book on the table' (specific). NO ARTICLE with plural general nouns: 'I like DOGS' (not 'I like the dogs').",
+      "body_pt": "A + som de consoante. AN + som de vogal. THE quando ambos sabem qual. SEM ARTIGO em plurais genéricos ('I like dogs' — gosto de cachorros em geral).",
+      "examples": [
+        {
+          "en": "a car / an elephant / an hour (silent h) / a university (y-sound)",
+          "pt": "Foca no SOM, não na letra."
+        },
+        {
+          "en": "THE sun / THE Internet / THE same thing",
+          "pt": "Únicos = sempre THE."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "art-s01",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "a apple",
+          "an apple",
+          "the apple",
+          "apple"
+        ],
+        "correct": 1,
+        "explanation": "'Apple' starts with vowel sound → AN.",
+        "hint_pt_br": "Vogal → AN."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "art-s02",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "a hour",
+          "an hour",
+          "the hour",
+          "hour"
+        ],
+        "correct": 1,
+        "explanation": "'Hour' — silent H, starts with vowel SOUND /aʊ/ → AN.",
+        "hint_pt_br": "Hour tem H mudo → AN."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "art-s03",
+        "type": "fill_blank",
+        "question": "Complete: 'I like ___ coffee in the morning.' (general, no article)",
+        "correct": "",
+        "explanation": "General preference, uncountable → no article. 'I like coffee.'",
+        "hint_pt_br": "Gosto geral + incontável = sem artigo."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"A, An, The\". The three tiniest words in English that trip everyone up. A before consonants, AN before vowels, THE when both speakers know which one. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"A, An, The\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "A, An, The",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'A, An, The'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"A, An, The\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        },
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        },
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        }
+      ]
+    }
   ]
 }

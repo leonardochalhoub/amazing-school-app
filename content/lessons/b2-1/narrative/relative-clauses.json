@@ -6,42 +6,228 @@
   "level": "B2",
   "cefr_level": "b2.1",
   "xp_reward": 60,
-  "estimated_minutes": 16,
+  "estimated_minutes": 25,
   "summary_pt_br": "Orações relativas: WHO (pessoas), WHICH (coisas), THAT (ambos, só em restritivas), WHOSE (posse), WHERE (lugar). Restritivas SEM vírgula (essenciais); não-restritivas COM vírgula (extras). A diferença muda o sentido: 'My brother who lives in NY' x 'My brother, who lives in NY' — a segunda sugere que só tenho UM irmão.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 28 — The Comma That Mattered", "subtitle_en": "Relative clauses, defining vs non-defining", "subtitle_pt": "Restritivas vs explicativas" },
-    { "kind": "narrative", "character_id": "zara", "text_en": "Zara wrote two nearly identical sentences:\n   'My brother WHO lives in London is a chef.'\n   'My brother, WHO LIVES IN LONDON, is a chef.'\n'Same words. Different meaning,' she said.\n'Without commas: I have MORE than one brother — this is the London one.\nWith commas: I have ONE brother, and by the way, he lives in London.'", "text_pt": "A Zara escreveu duas frases quase iguais:\n   'My brother WHO lives in London is a chef.'\n   'My brother, WHO LIVES IN LONDON, is a chef.'\n'Mesmas palavras. Sentidos diferentes,' ela disse.\n'Sem vírgula: tenho MAIS de um irmão — esse é o de Londres.\nCom vírgula: tenho UM irmão e, aliás, ele mora em Londres.'" },
-    { "kind": "grammar_note", "title": "Defining vs non-defining — the comma rule", "body_en": "DEFINING (no commas) = the clause NARROWS which noun. Essential info. 'The teacher WHO teaches B1 is Zara.' Can use THAT instead of who/which. NON-DEFINING (with commas) = adds extra info, not essential. 'Zara, WHO teaches B1, is from Manchester.' Cannot use THAT here — only who/which/whose.", "body_pt": "RESTRITIVA (sem vírgula) = restringe o substantivo; info essencial. Pode trocar who/which por THAT. NÃO-RESTRITIVA (entre vírgulas) = info extra; NÃO pode usar THAT, só who/which/whose. A vírgula literalmente muda o sentido.", "examples": [
-      { "en": "The surfer who won the contest is Bia. (defining)", "pt": "A surfista específica — identifica qual." },
-      { "en": "Bia, who is 16, won the contest. (non-defining)", "pt": "Info extra sobre a Bia." }
-    ]},
-    { "kind": "vocab_intro", "title": "Relative pronouns", "items": [
-      { "term": "who", "pt": "pessoas (sujeito/objeto)", "example_en": "the teacher who teaches B1" },
-      { "term": "which", "pt": "coisas/animais", "example_en": "the board which I bought" },
-      { "term": "that", "pt": "pessoas ou coisas (SÓ restritiva)", "example_en": "the book that I read" },
-      { "term": "whose", "pt": "posse (de quem)", "example_en": "the student whose bag is red" },
-      { "term": "where", "pt": "lugar", "example_en": "the café where we met" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "rel-s01", "type": "multiple_choice", "question": "'Rafa, ___ truck is yellow, sells tacos.' Which relative pronoun?", "options": ["who", "which", "whose", "where"], "correct": 2, "explanation": "WHOSE = possession. The truck belongs to Rafa — so 'Rafa, whose truck is yellow'.", "hint_pt_br": "WHOSE = posse. 'O caminhão DELE é amarelo' → Rafa, whose truck…" }},
-    { "kind": "exercise", "exercise": { "id": "rel-s02", "type": "fill_blank", "question": "Complete: 'This is the café ___ Mr. Kumar works.' (lugar)", "correct": "where", "explanation": "WHERE for places. 'The café where he works'.", "hint_pt_br": "WHERE para lugar." }},
-    { "kind": "exercise", "exercise": { "id": "rel-s03", "type": "multiple_choice", "question": "Which sentence is NON-DEFINING (extra info)?", "options": [
-        "The book that I lent you was expensive",
-        "The student who speaks five languages is Maya",
-        "My mother, who lives in Rio, called yesterday",
-        "The song which we heard was by Ed Sheeran"
-      ], "correct": 2, "explanation": "Option C has commas = non-defining = extra info. (The implication: she has only one mother.)", "hint_pt_br": "Não-restritiva tem vírgulas e dá info extra. Geralmente implica 'só tenho um X'." }},
-    { "kind": "dialogue", "location_en": "Zara's office, editing a student's essay", "location_pt": "Sala da Zara, editando a redação de um aluno", "turns": [
-      { "character_id": "maya", "en": "Can I say 'the dog that bit Cosmo' or 'the dog which bit Cosmo'?", "pt": "Posso dizer 'the dog that bit Cosmo' ou 'the dog which bit Cosmo'?" },
-      { "character_id": "zara", "en": "Both in defining. THAT is a bit more natural in speech.", "pt": "Os dois em restritivas. THAT é mais natural na fala." },
-      { "character_id": "maya", "en": "And 'the dog, that bit Cosmo'?", "pt": "E 'the dog, that bit Cosmo'?" },
-      { "character_id": "zara", "en": "No — with a comma, use WHICH. Never THAT in non-defining.", "pt": "Não — com vírgula, use WHICH. Nunca THAT em não-restritiva." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "rel-s04", "type": "matching", "pairs": [
-      ["who", "pessoas"],
-      ["which", "coisas (pode em ambas)"],
-      ["that", "pessoas ou coisas (só restritiva)"],
-      ["whose", "posse"],
-      ["where", "lugar"]
-    ], "explanation": "Five pronouns, five jobs. Remember: THAT doesn't survive the comma.", "hint_pt_br": "THAT não resiste à vírgula. Em não-restritiva use only who/which/whose." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 28 — The Comma That Mattered",
+      "subtitle_en": "Relative clauses, defining vs non-defining",
+      "subtitle_pt": "Restritivas vs explicativas"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Zara wrote two nearly identical sentences:\n   'My brother WHO lives in London is a chef.'\n   'My brother, WHO LIVES IN LONDON, is a chef.'\n'Same words. Different meaning,' she said.\n'Without commas: I have MORE than one brother — this is the London one.\nWith commas: I have ONE brother, and by the way, he lives in London.'",
+      "text_pt": "A Zara escreveu duas frases quase iguais:\n   'My brother WHO lives in London is a chef.'\n   'My brother, WHO LIVES IN LONDON, is a chef.'\n'Mesmas palavras. Sentidos diferentes,' ela disse.\n'Sem vírgula: tenho MAIS de um irmão — esse é o de Londres.\nCom vírgula: tenho UM irmão e, aliás, ele mora em Londres.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Defining vs non-defining — the comma rule",
+      "body_en": "DEFINING (no commas) = the clause NARROWS which noun. Essential info. 'The teacher WHO teaches B1 is Zara.' Can use THAT instead of who/which. NON-DEFINING (with commas) = adds extra info, not essential. 'Zara, WHO teaches B1, is from Manchester.' Cannot use THAT here — only who/which/whose.",
+      "body_pt": "RESTRITIVA (sem vírgula) = restringe o substantivo; info essencial. Pode trocar who/which por THAT. NÃO-RESTRITIVA (entre vírgulas) = info extra; NÃO pode usar THAT, só who/which/whose. A vírgula literalmente muda o sentido.",
+      "examples": [
+        {
+          "en": "The surfer who won the contest is Bia. (defining)",
+          "pt": "A surfista específica — identifica qual."
+        },
+        {
+          "en": "Bia, who is 16, won the contest. (non-defining)",
+          "pt": "Info extra sobre a Bia."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Relative pronouns",
+      "items": [
+        {
+          "term": "who",
+          "pt": "pessoas (sujeito/objeto)",
+          "example_en": "the teacher who teaches B1"
+        },
+        {
+          "term": "which",
+          "pt": "coisas/animais",
+          "example_en": "the board which I bought"
+        },
+        {
+          "term": "that",
+          "pt": "pessoas ou coisas (SÓ restritiva)",
+          "example_en": "the book that I read"
+        },
+        {
+          "term": "whose",
+          "pt": "posse (de quem)",
+          "example_en": "the student whose bag is red"
+        },
+        {
+          "term": "where",
+          "pt": "lugar",
+          "example_en": "the café where we met"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "zara",
+      "exercise": {
+        "id": "rel-s01",
+        "type": "multiple_choice",
+        "question": "'Rafa, ___ truck is yellow, sells tacos.' Which relative pronoun?",
+        "options": [
+          "who",
+          "which",
+          "whose",
+          "where"
+        ],
+        "correct": 2,
+        "explanation": "WHOSE = possession. The truck belongs to Rafa — so 'Rafa, whose truck is yellow'.",
+        "hint_pt_br": "WHOSE = posse. 'O caminhão DELE é amarelo' → Rafa, whose truck…"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "rel-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'This is the café ___ Mr. Kumar works.' (lugar)",
+        "correct": "where",
+        "explanation": "WHERE for places. 'The café where he works'.",
+        "hint_pt_br": "WHERE para lugar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "rel-s03",
+        "type": "multiple_choice",
+        "question": "Which sentence is NON-DEFINING (extra info)?",
+        "options": [
+          "The book that I lent you was expensive",
+          "The student who speaks five languages is Maya",
+          "My mother, who lives in Rio, called yesterday",
+          "The song which we heard was by Ed Sheeran"
+        ],
+        "correct": 2,
+        "explanation": "Option C has commas = non-defining = extra info. (The implication: she has only one mother.)",
+        "hint_pt_br": "Não-restritiva tem vírgulas e dá info extra. Geralmente implica 'só tenho um X'."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Zara's office, editing a student's essay",
+      "location_pt": "Sala da Zara, editando a redação de um aluno",
+      "turns": [
+        {
+          "character_id": "maya",
+          "en": "Can I say 'the dog that bit Cosmo' or 'the dog which bit Cosmo'?",
+          "pt": "Posso dizer 'the dog that bit Cosmo' ou 'the dog which bit Cosmo'?"
+        },
+        {
+          "character_id": "zara",
+          "en": "Both in defining. THAT is a bit more natural in speech.",
+          "pt": "Os dois em restritivas. THAT é mais natural na fala."
+        },
+        {
+          "character_id": "maya",
+          "en": "And 'the dog, that bit Cosmo'?",
+          "pt": "E 'the dog, that bit Cosmo'?"
+        },
+        {
+          "character_id": "zara",
+          "en": "No — with a comma, use WHICH. Never THAT in non-defining.",
+          "pt": "Não — com vírgula, use WHICH. Nunca THAT em não-restritiva."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "rel-s04",
+        "type": "matching",
+        "pairs": [
+          [
+            "who",
+            "pessoas"
+          ],
+          [
+            "which",
+            "coisas (pode em ambas)"
+          ],
+          [
+            "that",
+            "pessoas ou coisas (só restritiva)"
+          ],
+          [
+            "whose",
+            "posse"
+          ],
+          [
+            "where",
+            "lugar"
+          ]
+        ],
+        "explanation": "Five pronouns, five jobs. Remember: THAT doesn't survive the comma.",
+        "hint_pt_br": "THAT não resiste à vírgula. Em não-restritiva use only who/which/whose."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"The Teacher Who Changed Everything\". Relative clauses (who / which / that / whose / where). Defining vs non-defining — when commas matter, and why the missing comma can change a life. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"The Teacher Who Changed Everything\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "The Teacher Who Changed Everything",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'The Teacher Who Changed Everything'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"The Teacher Who Changed Everything\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Grammarly Blog",
+          "url": "https://www.grammarly.com/blog/",
+          "pt_hint": "Explicações aprofundadas de gramática e estilo."
+        },
+        {
+          "label": "BBC News · Learning English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/news-review",
+          "pt_hint": "Análises de notícias reais da BBC."
+        },
+        {
+          "label": "TED Talks with subtitles",
+          "url": "https://www.ted.com/talks?language=en",
+          "pt_hint": "Palestras reais com legenda EN/PT — ouça, leia, repita."
+        }
+      ]
+    }
   ]
 }

@@ -6,30 +6,189 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 14,
+  "estimated_minutes": 23,
   "summary_pt_br": "Question tags em inglês: a perguntinha no fim da frase ('isn't it?', 'don't you?', 'aren't they?'). Regra: afirmação pede tag NEGATIVA, negação pede tag POSITIVA. Auxiliar espelha o verbo principal.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 50 — Isn't It?", "subtitle_en": "Tag questions", "subtitle_pt": "Perguntas-cauda" },
-    { "kind": "narrative", "character_id": "zara", "text_en": "Zara tilted her head. 'The coffee is cold, ISN'T IT?'\n'You enjoy surfing, DON'T YOU?'\n'They haven't arrived, HAVE THEY?'\n'You aren't tired, ARE YOU?'\nFour sentences, four tags. Flip the polarity, match the auxiliary.", "text_pt": "Zara inclinou a cabeça. 'O café está frio, NÃO ESTÁ?'\n'Você gosta de surf, NÃO GOSTA?'\n'Eles não chegaram, CHEGARAM?'\n'Você não está cansado, ESTÁ?'\nQuatro frases, quatro tags. Inverte a polaridade, espelha o auxiliar." },
-    { "kind": "grammar_note", "title": "Two rules for tag questions", "body_en": "RULE 1 — Flip the polarity: positive statement → NEGATIVE tag. Negative statement → POSITIVE tag. 'She's happy, ISN'T she?' / 'She isn't happy, IS she?' RULE 2 — Match the auxiliary. 'She IS' → 'isn't she?'. 'They HAVE gone' → 'haven't they?'. 'You LIKE it' (no auxiliary) → use DO: 'don't you?'.", "body_pt": "Duas regras: (1) Inverter polaridade — afirmativa pede tag negativa, e vice-versa. (2) Espelhar o auxiliar do verbo principal. Se não tem auxiliar, use do/does/did.", "examples": [
-      { "en": "You speak English, don't you?", "pt": "Você fala inglês, não fala?" },
-      { "en": "She hasn't called, has she?", "pt": "Ela não ligou, ligou?" },
-      { "en": "We should leave, shouldn't we?", "pt": "A gente deveria ir, não deveria?" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "tag-s01", "type": "fill_blank", "question": "Complete: 'Maya is smart, ___ she?'", "correct": "isn't", "explanation": "Positive → negative tag. 'is' → 'isn't she'.", "hint_pt_br": "Afirmativa pede tag negativa. is → isn't she." }},
-    { "kind": "exercise", "exercise": { "id": "tag-s02", "type": "multiple_choice", "question": "'They don't eat meat, ___?'", "options": ["do they", "don't they", "do them", "they do"], "correct": 0, "explanation": "Negative → positive tag. 'don't' → 'do they?'", "hint_pt_br": "Negativa pede tag positiva. don't → do they." }},
-    { "kind": "exercise", "exercise": { "id": "tag-s03", "type": "fill_blank", "question": "Complete: 'You've been to Rio, ___ you?' (present perfect)", "correct": "haven't", "explanation": "'ve been = have been → tag uses HAVE. Positive → negative = haven't you.", "hint_pt_br": "Present perfect com 'have' → 'haven't you?'" }},
-    { "kind": "dialogue", "location_en": "Coffee shop", "location_pt": "Cafeteria", "turns": [
-      { "character_id": "bia", "en": "You like cappuccino, don't you?", "pt": "Você gosta de cappuccino, não gosta?" },
-      { "character_id": "rafa", "en": "I do. You don't drink coffee, do you?", "pt": "Gosto. Você não toma café, toma?" },
-      { "character_id": "bia", "en": "I don't. Too much caffeine.", "pt": "Não tomo. Muita cafeína." }
-    ]},
-    { "kind": "exercise", "exercise": { "id": "tag-s04", "type": "matching", "pairs": [
-      ["You are happy", "aren't you?"],
-      ["You can't swim", "can you?"],
-      ["She has left", "hasn't she?"],
-      ["They don't know", "do they?"],
-      ["We will go", "won't we?"]
-    ], "explanation": "Five tag patterns. Notice the polarity flip every time.", "hint_pt_br": "Cinco tags. Sempre inverte a polaridade." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 50 — Isn't It?",
+      "subtitle_en": "Tag questions",
+      "subtitle_pt": "Perguntas-cauda"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Zara tilted her head. 'The coffee is cold, ISN'T IT?'\n'You enjoy surfing, DON'T YOU?'\n'They haven't arrived, HAVE THEY?'\n'You aren't tired, ARE YOU?'\nFour sentences, four tags. Flip the polarity, match the auxiliary.",
+      "text_pt": "Zara inclinou a cabeça. 'O café está frio, NÃO ESTÁ?'\n'Você gosta de surf, NÃO GOSTA?'\n'Eles não chegaram, CHEGARAM?'\n'Você não está cansado, ESTÁ?'\nQuatro frases, quatro tags. Inverte a polaridade, espelha o auxiliar."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Two rules for tag questions",
+      "body_en": "RULE 1 — Flip the polarity: positive statement → NEGATIVE tag. Negative statement → POSITIVE tag. 'She's happy, ISN'T she?' / 'She isn't happy, IS she?' RULE 2 — Match the auxiliary. 'She IS' → 'isn't she?'. 'They HAVE gone' → 'haven't they?'. 'You LIKE it' (no auxiliary) → use DO: 'don't you?'.",
+      "body_pt": "Duas regras: (1) Inverter polaridade — afirmativa pede tag negativa, e vice-versa. (2) Espelhar o auxiliar do verbo principal. Se não tem auxiliar, use do/does/did.",
+      "examples": [
+        {
+          "en": "You speak English, don't you?",
+          "pt": "Você fala inglês, não fala?"
+        },
+        {
+          "en": "She hasn't called, has she?",
+          "pt": "Ela não ligou, ligou?"
+        },
+        {
+          "en": "We should leave, shouldn't we?",
+          "pt": "A gente deveria ir, não deveria?"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "zara",
+      "exercise": {
+        "id": "tag-s01",
+        "type": "fill_blank",
+        "question": "Complete: 'Maya is smart, ___ she?'",
+        "correct": "isn't",
+        "explanation": "Positive → negative tag. 'is' → 'isn't she'.",
+        "hint_pt_br": "Afirmativa pede tag negativa. is → isn't she."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tag-s02",
+        "type": "multiple_choice",
+        "question": "'They don't eat meat, ___?'",
+        "options": [
+          "do they",
+          "don't they",
+          "do them",
+          "they do"
+        ],
+        "correct": 0,
+        "explanation": "Negative → positive tag. 'don't' → 'do they?'",
+        "hint_pt_br": "Negativa pede tag positiva. don't → do they."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tag-s03",
+        "type": "fill_blank",
+        "question": "Complete: 'You've been to Rio, ___ you?' (present perfect)",
+        "correct": "haven't",
+        "explanation": "'ve been = have been → tag uses HAVE. Positive → negative = haven't you.",
+        "hint_pt_br": "Present perfect com 'have' → 'haven't you?'"
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Coffee shop",
+      "location_pt": "Cafeteria",
+      "turns": [
+        {
+          "character_id": "bia",
+          "en": "You like cappuccino, don't you?",
+          "pt": "Você gosta de cappuccino, não gosta?"
+        },
+        {
+          "character_id": "rafa",
+          "en": "I do. You don't drink coffee, do you?",
+          "pt": "Gosto. Você não toma café, toma?"
+        },
+        {
+          "character_id": "bia",
+          "en": "I don't. Too much caffeine.",
+          "pt": "Não tomo. Muita cafeína."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tag-s04",
+        "type": "matching",
+        "pairs": [
+          [
+            "You are happy",
+            "aren't you?"
+          ],
+          [
+            "You can't swim",
+            "can you?"
+          ],
+          [
+            "She has left",
+            "hasn't she?"
+          ],
+          [
+            "They don't know",
+            "do they?"
+          ],
+          [
+            "We will go",
+            "won't we?"
+          ]
+        ],
+        "explanation": "Five tag patterns. Notice the polarity flip every time.",
+        "hint_pt_br": "Cinco tags. Sempre inverte a polaridade."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Isn't It, Don't You? — Tag Questions\". Tag questions: the little checkers at the end of a sentence. 'It's hot, isn't it?' 'You like sushi, don't you?' Rules and rhythm. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Isn't It, Don't You? — Tag Questions\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Isn't It, Don't You? — Tag Questions",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Isn't It, Don't You? — Tag Questions'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Isn't It, Don't You? — Tag Questions\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "VOA Learning English · Everyday Grammar",
+          "url": "https://learningenglish.voanews.com/z/3808",
+          "pt_hint": "Vídeos curtos sobre gramática do dia a dia."
+        },
+        {
+          "label": "BBC Learning English · Lower Intermediate",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate",
+          "pt_hint": "Curso BBC para nível pré-intermediário."
+        },
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        }
+      ]
+    }
   ]
 }

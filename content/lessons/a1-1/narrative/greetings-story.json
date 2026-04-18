@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 40,
-  "estimated_minutes": 15,
+  "estimated_minutes": 24,
   "summary_pt_br": "A primeira aula da Bia na Amazing School. Aprenda cumprimentos conhecendo a Bia, o Rafa, o Mr. Kumar e o Cosmo.",
   "scenes": [
     {
@@ -121,8 +121,14 @@
       "body_en": "English has two registers. Formal: 'Good morning. How are you?' Informal: 'Hey! What's up?' Use formal with teachers, strangers, and elders. Use informal with friends your age.",
       "body_pt": "O inglês tem dois registros. Formal: 'Good morning. How are you?' Informal: 'Hey! What's up?' Use o formal com professores, estranhos e pessoas mais velhas. Informal com amigos da sua idade.",
       "examples": [
-        { "en": "Good morning, Dona Lúcia.", "pt": "(formal, para uma senhora)" },
-        { "en": "Hey, Rafa!", "pt": "(informal, para um amigo)" }
+        {
+          "en": "Good morning, Dona Lúcia.",
+          "pt": "(formal, para uma senhora)"
+        },
+        {
+          "en": "Hey, Rafa!",
+          "pt": "(informal, para um amigo)"
+        }
       ]
     },
     {
@@ -131,10 +137,22 @@
         "id": "grst-002",
         "type": "matching",
         "pairs": [
-          ["Hi!", "Oi!"],
-          ["Hello, how are you?", "Olá, como você está?"],
-          ["Nice to meet you", "Prazer em conhecê-lo(a)"],
-          ["See you later", "Até mais"]
+          [
+            "Hi!",
+            "Oi!"
+          ],
+          [
+            "Hello, how are you?",
+            "Olá, como você está?"
+          ],
+          [
+            "Nice to meet you",
+            "Prazer em conhecê-lo(a)"
+          ],
+          [
+            "See you later",
+            "Até mais"
+          ]
         ],
         "explanation": "Four expressions that cover ~80% of everyday greetings.",
         "hint_pt_br": "Essas quatro cobrem a maioria das situações do dia a dia."
@@ -181,6 +199,62 @@
       "character_id": "kumar",
       "text_en": "Mr. Kumar smiles. 'That's our first scene,' he says. 'Tomorrow we'll practice asking names — and Cosmo will be there too.'",
       "text_pt": "Mr. Kumar sorri. 'Foi nossa primeira cena,' ele diz. 'Amanhã vamos praticar como perguntar o nome — e o Cosmo vai estar lá também.'"
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"First Day at Amazing School\". Bia walks into Amazing School for the first time. Learn greetings through the eyes of a 16-year-old surfer meeting her new classmates. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"First Day at Amazing School\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "First Day at Amazing School",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'First Day at Amazing School'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"First Day at Amazing School\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        },
+        {
+          "label": "BBC Learning English · Beginners",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-beginner",
+          "pt_hint": "Curso gratuito da BBC, nível iniciante."
+        },
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        }
+      ]
     }
   ]
 }

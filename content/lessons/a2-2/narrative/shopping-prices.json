@@ -6,33 +6,178 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 40,
-  "estimated_minutes": 12,
+  "estimated_minutes": 21,
   "summary_pt_br": "Perguntas sobre preço: HOW MUCH para dinheiro/incontável, HOW MANY para contável. 'How much is this?' / 'How many do you want?' Vocabulário: discount, on sale, receipt, cash, card.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 70 — How Much?", "subtitle_en": "Shopping", "subtitle_pt": "Compras" },
-    { "kind": "dialogue", "location_en": "At the register", "location_pt": "No caixa", "turns": [
-      { "character_id": "bia", "en": "How much is this T-shirt?", "pt": "Quanto custa essa camiseta?" },
-      { "character_id": "rafa", "en": "It's 25 dollars. It's on sale — 30% off.", "pt": "25 dólares. Tá em promoção — 30% de desconto." },
-      { "character_id": "bia", "en": "Can I pay by card?", "pt": "Posso pagar no cartão?" },
-      { "character_id": "rafa", "en": "Sure. Need a receipt?", "pt": "Claro. Quer a nota?" }
-    ]},
-    { "kind": "grammar_note", "title": "How much vs How many", "body_en": "HOW MUCH + uncountable / money. 'How much is it?' 'How much milk?' HOW MANY + countable plural. 'How many shirts?' 'How many people?' For money, always HOW MUCH (money is uncountable).", "body_pt": "HOW MUCH + incontável/dinheiro. HOW MANY + contável plural. Dinheiro é SEMPRE how much.", "examples": [
-      { "en": "How much is it? / How many apples?", "pt": "Two forms." }
-    ]},
-    { "kind": "vocab_intro", "title": "Shopping vocabulary", "items": [
-      { "term": "discount / on sale", "pt": "desconto / em promoção" },
-      { "term": "receipt", "pt": "nota fiscal / recibo" },
-      { "term": "cash / card", "pt": "dinheiro / cartão" },
-      { "term": "change", "pt": "troco" },
-      { "term": "size / color / fit", "pt": "tamanho / cor / caimento" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "shop-s01", "type": "fill_blank", "question": "Complete: 'How ___ are these shoes?'", "correct": "much", "explanation": "How much + price (money).", "hint_pt_br": "Preço/dinheiro → how much." }},
-    { "kind": "exercise", "exercise": { "id": "shop-s02", "type": "matching", "pairs": [
-      ["receipt", "nota fiscal"],
-      ["on sale", "em promoção"],
-      ["discount", "desconto"],
-      ["cash", "dinheiro"],
-      ["change", "troco"]
-    ], "explanation": "Five shopping basics.", "hint_pt_br": "Cinco básicos." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 70 — How Much?",
+      "subtitle_en": "Shopping",
+      "subtitle_pt": "Compras"
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "At the register",
+      "location_pt": "No caixa",
+      "turns": [
+        {
+          "character_id": "bia",
+          "en": "How much is this T-shirt?",
+          "pt": "Quanto custa essa camiseta?"
+        },
+        {
+          "character_id": "rafa",
+          "en": "It's 25 dollars. It's on sale — 30% off.",
+          "pt": "25 dólares. Tá em promoção — 30% de desconto."
+        },
+        {
+          "character_id": "bia",
+          "en": "Can I pay by card?",
+          "pt": "Posso pagar no cartão?"
+        },
+        {
+          "character_id": "rafa",
+          "en": "Sure. Need a receipt?",
+          "pt": "Claro. Quer a nota?"
+        }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "How much vs How many",
+      "body_en": "HOW MUCH + uncountable / money. 'How much is it?' 'How much milk?' HOW MANY + countable plural. 'How many shirts?' 'How many people?' For money, always HOW MUCH (money is uncountable).",
+      "body_pt": "HOW MUCH + incontável/dinheiro. HOW MANY + contável plural. Dinheiro é SEMPRE how much.",
+      "examples": [
+        {
+          "en": "How much is it? / How many apples?",
+          "pt": "Two forms."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Shopping vocabulary",
+      "items": [
+        {
+          "term": "discount / on sale",
+          "pt": "desconto / em promoção"
+        },
+        {
+          "term": "receipt",
+          "pt": "nota fiscal / recibo"
+        },
+        {
+          "term": "cash / card",
+          "pt": "dinheiro / cartão"
+        },
+        {
+          "term": "change",
+          "pt": "troco"
+        },
+        {
+          "term": "size / color / fit",
+          "pt": "tamanho / cor / caimento"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "shop-s01",
+        "type": "fill_blank",
+        "question": "Complete: 'How ___ are these shoes?'",
+        "correct": "much",
+        "explanation": "How much + price (money).",
+        "hint_pt_br": "Preço/dinheiro → how much."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "shop-s02",
+        "type": "matching",
+        "pairs": [
+          [
+            "receipt",
+            "nota fiscal"
+          ],
+          [
+            "on sale",
+            "em promoção"
+          ],
+          [
+            "discount",
+            "desconto"
+          ],
+          [
+            "cash",
+            "dinheiro"
+          ],
+          [
+            "change",
+            "troco"
+          ]
+        ],
+        "explanation": "Five shopping basics.",
+        "hint_pt_br": "Cinco básicos."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"How Much Is It?\". Asking prices, discounts, paying. How MUCH for money, how MANY for items. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"How Much Is It?\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "How Much Is It?",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'How Much Is It?'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"How Much Is It?\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "VOA Learning English · Everyday Grammar",
+          "url": "https://learningenglish.voanews.com/z/3808",
+          "pt_hint": "Vídeos curtos sobre gramática do dia a dia."
+        },
+        {
+          "label": "BBC Learning English · Lower Intermediate",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate",
+          "pt_hint": "Curso BBC para nível pré-intermediário."
+        },
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        }
+      ]
+    }
   ]
 }

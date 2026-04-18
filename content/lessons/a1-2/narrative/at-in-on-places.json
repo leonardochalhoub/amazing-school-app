@@ -6,22 +6,142 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 12,
+  "estimated_minutes": 21,
   "summary_pt_br": "Preposições de lugar: IN (dentro, espaço fechado — in the kitchen, in Brazil), ON (sobre superfície — on the table, on the wall, on the street), AT (ponto específico, endereço — at the door, at school, at 10 Main Street).",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 76 — At, In, On (Places)", "subtitle_en": "Three little prepositions", "subtitle_pt": "Três preposições" },
-    { "kind": "narrative", "character_id": "bia", "text_en": "'I live IN Brazil, IN a small house, ON Avenida do Mar.\nI study AT Amazing School. I meet friends AT the café.\nThe book is ON the table. The cat is IN the box.'", "text_pt": "'Moro NO Brasil, NUMA casa pequena, NA Avenida do Mar.\nEstudo NA Amazing School. Encontro amigos NO café.\nO livro está NA mesa. O gato está NA caixa.'" },
-    { "kind": "grammar_note", "title": "The IN / ON / AT logic", "body_en": "IN = enclosed space / country / city. 'in the kitchen, in Brazil, in Rio'. ON = surface / street name / floor. 'on the table, on Main Street, on the 3rd floor'. AT = specific point / address / event. 'at the door, at 10 Main St, at the party, at school/work/home'. TRAP: 'at school' (specific), 'in the school' (inside the building). Both exist.", "body_pt": "IN: dentro, país, cidade (in Brazil, in the kitchen). ON: superfície, nome de rua, andar (on the table, on Avenida do Mar). AT: ponto específico, endereço, evento (at the door, at 10 Main St, at school). 'At school' vs 'in the school' — ambos existem, sentidos diferentes.", "examples": [
-      { "en": "The cat is in the box, on the table, at home.", "pt": "Três níveis de especificidade." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "aip-s01", "type": "fill_blank", "question": "Complete: 'I live ___ Brazil.'", "correct": "in", "explanation": "IN + country.", "hint_pt_br": "País → in." }},
-    { "kind": "exercise", "exercise": { "id": "aip-s02", "type": "fill_blank", "question": "Complete: 'The book is ___ the table.'", "correct": "on", "explanation": "ON + surface.", "hint_pt_br": "Superfície → on." }},
-    { "kind": "exercise", "exercise": { "id": "aip-s03", "type": "matching", "pairs": [
-      ["in Brazil", "país"],
-      ["on the table", "superfície"],
-      ["at the door", "ponto específico"],
-      ["at home", "endereço/lugar geral"],
-      ["in the kitchen", "dentro de"]
-    ], "explanation": "Five patterns. Learn by context.", "hint_pt_br": "Cinco padrões pelo contexto." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 76 — At, In, On (Places)",
+      "subtitle_en": "Three little prepositions",
+      "subtitle_pt": "Três preposições"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "'I live IN Brazil, IN a small house, ON Avenida do Mar.\nI study AT Amazing School. I meet friends AT the café.\nThe book is ON the table. The cat is IN the box.'",
+      "text_pt": "'Moro NO Brasil, NUMA casa pequena, NA Avenida do Mar.\nEstudo NA Amazing School. Encontro amigos NO café.\nO livro está NA mesa. O gato está NA caixa.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "The IN / ON / AT logic",
+      "body_en": "IN = enclosed space / country / city. 'in the kitchen, in Brazil, in Rio'. ON = surface / street name / floor. 'on the table, on Main Street, on the 3rd floor'. AT = specific point / address / event. 'at the door, at 10 Main St, at the party, at school/work/home'. TRAP: 'at school' (specific), 'in the school' (inside the building). Both exist.",
+      "body_pt": "IN: dentro, país, cidade (in Brazil, in the kitchen). ON: superfície, nome de rua, andar (on the table, on Avenida do Mar). AT: ponto específico, endereço, evento (at the door, at 10 Main St, at school). 'At school' vs 'in the school' — ambos existem, sentidos diferentes.",
+      "examples": [
+        {
+          "en": "The cat is in the box, on the table, at home.",
+          "pt": "Três níveis de especificidade."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "aip-s01",
+        "type": "fill_blank",
+        "question": "Complete: 'I live ___ Brazil.'",
+        "correct": "in",
+        "explanation": "IN + country.",
+        "hint_pt_br": "País → in."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "aip-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'The book is ___ the table.'",
+        "correct": "on",
+        "explanation": "ON + surface.",
+        "hint_pt_br": "Superfície → on."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "aip-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "in Brazil",
+            "país"
+          ],
+          [
+            "on the table",
+            "superfície"
+          ],
+          [
+            "at the door",
+            "ponto específico"
+          ],
+          [
+            "at home",
+            "endereço/lugar geral"
+          ],
+          [
+            "in the kitchen",
+            "dentro de"
+          ]
+        ],
+        "explanation": "Five patterns. Learn by context.",
+        "hint_pt_br": "Cinco padrões pelo contexto."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"At, In, On — Places\". IN for enclosed spaces. ON for surfaces. AT for specific points or addresses. The three prepositions that never stop showing up. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"At, In, On — Places\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "At, In, On — Places",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'At, In, On — Places'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"At, In, On — Places\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        },
+        {
+          "label": "BBC Learning English · Beginners",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-beginner",
+          "pt_hint": "Curso gratuito da BBC, nível iniciante."
+        },
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        }
+      ]
+    }
   ]
 }

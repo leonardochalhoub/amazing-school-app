@@ -6,34 +6,189 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 15,
+  "estimated_minutes": 24,
   "summary_pt_br": "JUST / YET / ALREADY são os três sinais que marcam a conexão com o momento presente, típicos do Present Perfect. Diferença crucial: Past Simple tem um tempo específico ('yesterday', 'last week'); Present Perfect se conecta com AGORA.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 41 — Just, Yet, Already", "subtitle_en": "The three tiny words", "subtitle_pt": "As três palavrinhas" },
-    { "kind": "narrative", "character_id": "maya", "text_en": "Maya burst in.\n'I HAVE JUST FINISHED the homework!'\nMr. Kumar smiled. 'The rest of you — HAVE you FINISHED YET?'\nJoca: 'I HAVE ALREADY FINISHED. Twenty minutes ago.'\nRafa: 'I HAVEN'T STARTED YET. Sorry.'", "text_pt": "A Maya entrou correndo.\n'Acabei de terminar a lição!'\nMr. Kumar sorriu. 'O resto — vocês já terminaram?'\nJoca: 'Eu já terminei. Vinte minutos atrás.'\nRafa: 'Ainda não comecei. Desculpa.'" },
-    { "kind": "grammar_note", "title": "Just / Yet / Already — where they live", "body_en": "JUST = a moment ago (positive). Usually between have/has and past participle. 'I have JUST arrived.' ALREADY = earlier than expected (positive). Same position. 'She has ALREADY left.' YET = up to now (negative/question). At the END of the sentence. 'Have you finished YET?' 'I haven't eaten YET.'", "body_pt": "JUST = acabou de (positiva). Entre have/has e particípio. ALREADY = já (positiva, mais cedo que esperado). Mesma posição. YET = ainda (pergunta/negativa). No FIM da frase. 'Haven't finished YET'.", "examples": [
-      { "en": "I have just seen Maya.", "pt": "Acabei de ver a Maya." },
-      { "en": "She has already gone home.", "pt": "Ela já foi embora." },
-      { "en": "Have they arrived yet?", "pt": "Eles já chegaram?" }
-    ]},
-    { "kind": "grammar_note", "title": "Present Perfect vs Past Simple — the TIME rule", "body_en": "If the sentence has a SPECIFIC past time (yesterday, last week, in 2020, at 3 p.m.), use Past Simple. 'I ATE breakfast at 7.' If NO specific time (and it connects to now), use Present Perfect. 'I HAVE EATEN breakfast.' Brazilians mix these — the rule is about the TIME SIGNAL, not the meaning.", "body_pt": "Com tempo ESPECÍFICO (yesterday, last week, in 2020): use Past Simple. Sem tempo específico (ligado ao agora): Present Perfect. O erro clássico brasileiro é misturar — a regra é sobre o MARCADOR DE TEMPO, não o sentido.", "examples": [
-      { "en": "I saw her yesterday. (specific → past simple)", "pt": "Vi ela ontem." },
-      { "en": "I have seen her three times. (no specific → present perfect)", "pt": "Já a vi três vezes." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "jya-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["Have you yet eaten?", "Have you eaten yet?", "Yet have you eaten?", "You have eaten yet?"], "correct": 1, "explanation": "YET goes at the END of questions and negatives.", "hint_pt_br": "YET no fim da frase, sempre." }},
-    { "kind": "exercise", "exercise": { "id": "jya-s02", "type": "fill_blank", "question": "Complete: 'She has ___ arrived — literally two minutes ago.'", "correct": "just", "explanation": "JUST = very recently. Between 'has' and the participle.", "hint_pt_br": "'Just' = acabou de. Vem entre 'has' e o particípio." }},
-    { "kind": "exercise", "exercise": { "id": "jya-s03", "type": "multiple_choice", "question": "Which uses the WRONG tense?", "options": [
-        "I saw her yesterday",
-        "I have seen her yesterday",
-        "I have seen her three times",
-        "I saw her three times last year"
-      ], "correct": 1, "explanation": "'Yesterday' is a specific past time → Past Simple (saw), NOT Present Perfect.", "hint_pt_br": "'Yesterday' é tempo específico → Past Simple. Nunca 'have seen yesterday'." }},
-    { "kind": "exercise", "exercise": { "id": "jya-s04", "type": "matching", "pairs": [
-      ["just", "acabou de"],
-      ["yet", "ainda (neg./perg.)"],
-      ["already", "já (surpresa)"],
-      ["ever", "já (experiência)"],
-      ["never", "nunca"]
-    ], "explanation": "Five signals. Master where each one sits in the sentence.", "hint_pt_br": "Cinco sinais. Posição importa." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 41 — Just, Yet, Already",
+      "subtitle_en": "The three tiny words",
+      "subtitle_pt": "As três palavrinhas"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Maya burst in.\n'I HAVE JUST FINISHED the homework!'\nMr. Kumar smiled. 'The rest of you — HAVE you FINISHED YET?'\nJoca: 'I HAVE ALREADY FINISHED. Twenty minutes ago.'\nRafa: 'I HAVEN'T STARTED YET. Sorry.'",
+      "text_pt": "A Maya entrou correndo.\n'Acabei de terminar a lição!'\nMr. Kumar sorriu. 'O resto — vocês já terminaram?'\nJoca: 'Eu já terminei. Vinte minutos atrás.'\nRafa: 'Ainda não comecei. Desculpa.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Just / Yet / Already — where they live",
+      "body_en": "JUST = a moment ago (positive). Usually between have/has and past participle. 'I have JUST arrived.' ALREADY = earlier than expected (positive). Same position. 'She has ALREADY left.' YET = up to now (negative/question). At the END of the sentence. 'Have you finished YET?' 'I haven't eaten YET.'",
+      "body_pt": "JUST = acabou de (positiva). Entre have/has e particípio. ALREADY = já (positiva, mais cedo que esperado). Mesma posição. YET = ainda (pergunta/negativa). No FIM da frase. 'Haven't finished YET'.",
+      "examples": [
+        {
+          "en": "I have just seen Maya.",
+          "pt": "Acabei de ver a Maya."
+        },
+        {
+          "en": "She has already gone home.",
+          "pt": "Ela já foi embora."
+        },
+        {
+          "en": "Have they arrived yet?",
+          "pt": "Eles já chegaram?"
+        }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Present Perfect vs Past Simple — the TIME rule",
+      "body_en": "If the sentence has a SPECIFIC past time (yesterday, last week, in 2020, at 3 p.m.), use Past Simple. 'I ATE breakfast at 7.' If NO specific time (and it connects to now), use Present Perfect. 'I HAVE EATEN breakfast.' Brazilians mix these — the rule is about the TIME SIGNAL, not the meaning.",
+      "body_pt": "Com tempo ESPECÍFICO (yesterday, last week, in 2020): use Past Simple. Sem tempo específico (ligado ao agora): Present Perfect. O erro clássico brasileiro é misturar — a regra é sobre o MARCADOR DE TEMPO, não o sentido.",
+      "examples": [
+        {
+          "en": "I saw her yesterday. (specific → past simple)",
+          "pt": "Vi ela ontem."
+        },
+        {
+          "en": "I have seen her three times. (no specific → present perfect)",
+          "pt": "Já a vi três vezes."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "jya-s01",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "Have you yet eaten?",
+          "Have you eaten yet?",
+          "Yet have you eaten?",
+          "You have eaten yet?"
+        ],
+        "correct": 1,
+        "explanation": "YET goes at the END of questions and negatives.",
+        "hint_pt_br": "YET no fim da frase, sempre."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "jya-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'She has ___ arrived — literally two minutes ago.'",
+        "correct": "just",
+        "explanation": "JUST = very recently. Between 'has' and the participle.",
+        "hint_pt_br": "'Just' = acabou de. Vem entre 'has' e o particípio."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "jya-s03",
+        "type": "multiple_choice",
+        "question": "Which uses the WRONG tense?",
+        "options": [
+          "I saw her yesterday",
+          "I have seen her yesterday",
+          "I have seen her three times",
+          "I saw her three times last year"
+        ],
+        "correct": 1,
+        "explanation": "'Yesterday' is a specific past time → Past Simple (saw), NOT Present Perfect.",
+        "hint_pt_br": "'Yesterday' é tempo específico → Past Simple. Nunca 'have seen yesterday'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "jya-s04",
+        "type": "matching",
+        "pairs": [
+          [
+            "just",
+            "acabou de"
+          ],
+          [
+            "yet",
+            "ainda (neg./perg.)"
+          ],
+          [
+            "already",
+            "já (surpresa)"
+          ],
+          [
+            "ever",
+            "já (experiência)"
+          ],
+          [
+            "never",
+            "nunca"
+          ]
+        ],
+        "explanation": "Five signals. Master where each one sits in the sentence.",
+        "hint_pt_br": "Cinco sinais. Posição importa."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Just, Yet, Already — Present Perfect vs Past Simple\". JUST (minutes ago), YET (still expected), ALREADY (sooner than expected). The trio that confuses Brazilians most. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Just, Yet, Already — Present Perfect vs Past Simple\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Just, Yet, Already — Present Perfect vs Past Simple",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Just, Yet, Already — Present Perfect vs Past Simple'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Just, Yet, Already — Present Perfect vs Past Simple\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "VOA Learning English · Everyday Grammar",
+          "url": "https://learningenglish.voanews.com/z/3808",
+          "pt_hint": "Vídeos curtos sobre gramática do dia a dia."
+        },
+        {
+          "label": "BBC Learning English · Lower Intermediate",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate",
+          "pt_hint": "Curso BBC para nível pré-intermediário."
+        },
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        }
+      ]
+    }
   ]
 }

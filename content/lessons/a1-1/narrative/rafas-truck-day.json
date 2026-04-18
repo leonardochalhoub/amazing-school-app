@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 45,
-  "estimated_minutes": 15,
+  "estimated_minutes": 24,
   "summary_pt_br": "A rotina do Rafa das 5h à meia-noite. Aprenda o Present Simple com foco no -s do he/she/it, e nas contrações don't / doesn't nas negativas.",
   "scenes": [
     {
@@ -27,21 +27,54 @@
       "body_en": "Use Present Simple for things that are TRUE IN GENERAL or HAPPEN REGULARLY. The catch: with he/she/it, add -s to the verb. 'I work, you work, WE work' — but 'he workS, she workS, it workS'. That little -s is the #1 mistake learners make.",
       "body_pt": "Present Simple para hábitos e verdades gerais. A pegadinha: com he/she/it, adicione -s ao verbo. I work, you work → mas he workS. Esse -s é o erro mais comum de quem aprende.",
       "examples": [
-        { "en": "I drive the truck. → He drives the truck.", "pt": "Eu dirijo. → Ele dirige." },
-        { "en": "We wake at six. → She wakes at six.", "pt": "Nós acordamos. → Ela acorda." },
-        { "en": "They eat tacos. → Cosmo eats tacos.", "pt": "Eles comem. → O Cosmo come." }
+        {
+          "en": "I drive the truck. → He drives the truck.",
+          "pt": "Eu dirijo. → Ele dirige."
+        },
+        {
+          "en": "We wake at six. → She wakes at six.",
+          "pt": "Nós acordamos. → Ela acorda."
+        },
+        {
+          "en": "They eat tacos. → Cosmo eats tacos.",
+          "pt": "Eles comem. → O Cosmo come."
+        }
       ]
     },
     {
       "kind": "vocab_intro",
       "title": "Daily-routine verbs",
       "items": [
-        { "term": "wake up", "pt": "acordar", "example_en": "I wake up at six." },
-        { "term": "eat", "pt": "comer", "example_en": "She eats breakfast." },
-        { "term": "work", "pt": "trabalhar", "example_en": "He works in a truck." },
-        { "term": "drive", "pt": "dirigir", "example_en": "I drive to the beach." },
-        { "term": "sleep", "pt": "dormir", "example_en": "Cosmo sleeps a lot." },
-        { "term": "watch", "pt": "assistir", "example_en": "We watch movies." }
+        {
+          "term": "wake up",
+          "pt": "acordar",
+          "example_en": "I wake up at six."
+        },
+        {
+          "term": "eat",
+          "pt": "comer",
+          "example_en": "She eats breakfast."
+        },
+        {
+          "term": "work",
+          "pt": "trabalhar",
+          "example_en": "He works in a truck."
+        },
+        {
+          "term": "drive",
+          "pt": "dirigir",
+          "example_en": "I drive to the beach."
+        },
+        {
+          "term": "sleep",
+          "pt": "dormir",
+          "example_en": "Cosmo sleeps a lot."
+        },
+        {
+          "term": "watch",
+          "pt": "assistir",
+          "example_en": "We watch movies."
+        }
       ]
     },
     {
@@ -73,8 +106,14 @@
       "body_en": "To make the Present Simple negative, use DON'T (I/you/we/they) or DOESN'T (he/she/it). The magic: DOESN'T already carries the -s for you — so the main verb goes BACK to its base form. 'He doesn't WORK' (not 'doesn't works').",
       "body_pt": "Para negar: DON'T (I/you/we/they) ou DOESN'T (he/she/it). E atenção: quando usa DOESN'T, o verbo principal volta para a forma-base (sem -s). 'He doesn't work', não 'doesn't works'.",
       "examples": [
-        { "en": "I don't eat meat.", "pt": "Eu não como carne." },
-        { "en": "Cosmo doesn't bark at Bia.", "pt": "O Cosmo não late para a Bia." }
+        {
+          "en": "I don't eat meat.",
+          "pt": "Eu não como carne."
+        },
+        {
+          "en": "Cosmo doesn't bark at Bia.",
+          "pt": "O Cosmo não late para a Bia."
+        }
       ]
     },
     {
@@ -100,8 +139,14 @@
       "body_en": "For yes/no questions in Present Simple, start with DO (I/you/we/they) or DOES (he/she/it). Again, the verb goes back to its base form. 'Do you work?' — 'Does she work?' (not 'works').",
       "body_pt": "Perguntas: começa com DO ou DOES. Igual à negativa: o verbo principal volta para a forma-base. 'Does she work?' — não 'works'.",
       "examples": [
-        { "en": "Do you surf?", "pt": "Você surfa?" },
-        { "en": "Does Cosmo bark a lot?", "pt": "O Cosmo late muito?" }
+        {
+          "en": "Do you surf?",
+          "pt": "Você surfa?"
+        },
+        {
+          "en": "Does Cosmo bark a lot?",
+          "pt": "O Cosmo late muito?"
+        }
       ]
     },
     {
@@ -120,10 +165,26 @@
       "location_en": "The food truck, 8 p.m.",
       "location_pt": "No food truck, 20h",
       "turns": [
-        { "character_id": "bia", "en": "Do you work every day?", "pt": "Você trabalha todo dia?" },
-        { "character_id": "rafa", "en": "No, I don't work on Sundays. I rest.", "pt": "Não, eu não trabalho aos domingos. Eu descanso." },
-        { "character_id": "bia", "en": "Does Cosmo help you?", "pt": "O Cosmo te ajuda?" },
-        { "character_id": "rafa", "en": "Cosmo doesn't help. He EATS.", "pt": "O Cosmo não ajuda. Ele COME." }
+        {
+          "character_id": "bia",
+          "en": "Do you work every day?",
+          "pt": "Você trabalha todo dia?"
+        },
+        {
+          "character_id": "rafa",
+          "en": "No, I don't work on Sundays. I rest.",
+          "pt": "Não, eu não trabalho aos domingos. Eu descanso."
+        },
+        {
+          "character_id": "bia",
+          "en": "Does Cosmo help you?",
+          "pt": "O Cosmo te ajuda?"
+        },
+        {
+          "character_id": "rafa",
+          "en": "Cosmo doesn't help. He EATS.",
+          "pt": "O Cosmo não ajuda. Ele COME."
+        }
       ]
     },
     {
@@ -133,15 +194,86 @@
         "id": "day-s05",
         "type": "matching",
         "pairs": [
-          ["I work", "Eu trabalho"],
-          ["He works", "Ele trabalha"],
-          ["I don't work", "Eu não trabalho"],
-          ["He doesn't work", "Ele não trabalha"],
-          ["Do you work?", "Você trabalha?"]
+          [
+            "I work",
+            "Eu trabalho"
+          ],
+          [
+            "He works",
+            "Ele trabalha"
+          ],
+          [
+            "I don't work",
+            "Eu não trabalho"
+          ],
+          [
+            "He doesn't work",
+            "Ele não trabalha"
+          ],
+          [
+            "Do you work?",
+            "Você trabalha?"
+          ]
         ],
         "explanation": "Present Simple forms in one table. Learn them together and the -s trap disappears.",
         "hint_pt_br": "Aprenda as cinco formas juntas — afirmativa, negativa, interrogativa."
       }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"A Day in Rafa's Truck\". Rafa's daily routine from 5 a.m. to midnight. Learn the Present Simple tense — and the tricky -s that only lives on HE/SHE/IT. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"A Day in Rafa's Truck\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "A Day in Rafa's Truck",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'A Day in Rafa's Truck'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"A Day in Rafa's Truck\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        },
+        {
+          "label": "BBC Learning English · Beginners",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-beginner",
+          "pt_hint": "Curso gratuito da BBC, nível iniciante."
+        },
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        }
+      ]
     }
   ]
 }

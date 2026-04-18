@@ -6,17 +6,132 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 10,
+  "estimated_minutes": 19,
   "summary_pt_br": "Como o inglês diz 'TEM' (no sentido de existir): THERE IS (singular), THERE ARE (plural). NUNCA 'there has' ou 'have' — armadilha clássica brasileira.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 54 — There Is, There Are", "subtitle_en": "How English says 'tem'", "subtitle_pt": "Como o inglês diz 'tem'" },
-    { "kind": "narrative", "character_id": "maya", "text_en": "Maya counted. 'THERE IS a dog on the sofa.\nTHERE ARE two cats in the kitchen.\nTHERE IS coffee in the pot.\nTHERE ARE many books in this room.'", "text_pt": "Maya contou. 'TEM um cachorro no sofá (singular).\nTEM dois gatos na cozinha (plural).\nTEM café no bule (incontável, singular).\nTEM muitos livros neste quarto (plural).'" },
-    { "kind": "grammar_note", "title": "Rule + the big trap", "body_en": "THERE IS + singular / uncountable. THERE ARE + plural. Short: There's (is) / There're is rare. Negative: There isn't / There aren't. Question: Is there…? Are there…? TRAP: Brazilians often say 'Have' ('Have a dog here'). WRONG. Always 'There is/are'.", "body_pt": "THERE IS + singular ou incontável. THERE ARE + plural. Pegadinha: brasileiros dizem 'Have a dog' — ERRADO. Sempre 'There is/are'.", "examples": [
-      { "en": "There IS milk in the fridge.", "pt": "Tem leite na geladeira." },
-      { "en": "There ARE students outside.", "pt": "Tem alunos lá fora." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "tis-s01", "type": "fill_blank", "question": "Complete: '___ ___ three chairs in the room.' (tem três)", "correct": "There are", "explanation": "Plural → THERE ARE.", "hint_pt_br": "Plural pede 'There are'." }},
-    { "kind": "exercise", "exercise": { "id": "tis-s02", "type": "multiple_choice", "question": "Which is correct?", "options": ["Have a dog here", "There have a dog", "There is a dog here", "It has a dog"], "correct": 2, "explanation": "English uses THERE IS for existence. Never 'have' in this sense.", "hint_pt_br": "Existir = there is/are. Nunca 'have'." }},
-    { "kind": "exercise", "exercise": { "id": "tis-s03", "type": "fill_blank", "question": "Complete: 'Is ___ a bathroom here?' (pergunta)", "correct": "there", "explanation": "Question: IS THERE…? Invert 'there is' to 'is there'.", "hint_pt_br": "Pergunta: Is there…?" }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 54 — There Is, There Are",
+      "subtitle_en": "How English says 'tem'",
+      "subtitle_pt": "Como o inglês diz 'tem'"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Maya counted. 'THERE IS a dog on the sofa.\nTHERE ARE two cats in the kitchen.\nTHERE IS coffee in the pot.\nTHERE ARE many books in this room.'",
+      "text_pt": "Maya contou. 'TEM um cachorro no sofá (singular).\nTEM dois gatos na cozinha (plural).\nTEM café no bule (incontável, singular).\nTEM muitos livros neste quarto (plural).'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Rule + the big trap",
+      "body_en": "THERE IS + singular / uncountable. THERE ARE + plural. Short: There's (is) / There're is rare. Negative: There isn't / There aren't. Question: Is there…? Are there…? TRAP: Brazilians often say 'Have' ('Have a dog here'). WRONG. Always 'There is/are'.",
+      "body_pt": "THERE IS + singular ou incontável. THERE ARE + plural. Pegadinha: brasileiros dizem 'Have a dog' — ERRADO. Sempre 'There is/are'.",
+      "examples": [
+        {
+          "en": "There IS milk in the fridge.",
+          "pt": "Tem leite na geladeira."
+        },
+        {
+          "en": "There ARE students outside.",
+          "pt": "Tem alunos lá fora."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "tis-s01",
+        "type": "fill_blank",
+        "question": "Complete: '___ ___ three chairs in the room.' (tem três)",
+        "correct": "There are",
+        "explanation": "Plural → THERE ARE.",
+        "hint_pt_br": "Plural pede 'There are'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tis-s02",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "Have a dog here",
+          "There have a dog",
+          "There is a dog here",
+          "It has a dog"
+        ],
+        "correct": 2,
+        "explanation": "English uses THERE IS for existence. Never 'have' in this sense.",
+        "hint_pt_br": "Existir = there is/are. Nunca 'have'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tis-s03",
+        "type": "fill_blank",
+        "question": "Complete: 'Is ___ a bathroom here?' (pergunta)",
+        "correct": "there",
+        "explanation": "Question: IS THERE…? Invert 'there is' to 'is there'.",
+        "hint_pt_br": "Pergunta: Is there…?"
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"There Is, There Are\". How English says 'tem' / 'há'. THERE IS for singular, THERE ARE for plural. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"There Is, There Are\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "There Is, There Are",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'There Is, There Are'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"There Is, There Are\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        },
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        }
+      ]
+    }
   ]
 }

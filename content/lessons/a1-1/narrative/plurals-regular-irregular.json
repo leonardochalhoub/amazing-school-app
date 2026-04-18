@@ -6,22 +6,148 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 10,
+  "estimated_minutes": 19,
   "summary_pt_br": "Plurais regulares (apenas -s / -es). Plurais irregulares essenciais: child→children, man→men, woman→women, person→people, foot→feet, tooth→teeth, mouse→mice. Decorar é o único caminho.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 55 — Plurals", "subtitle_en": "One tooth, two teeth", "subtitle_pt": "Um dente, dois dentes" },
-    { "kind": "narrative", "character_id": "maya", "text_en": "Most plurals are easy: one CAT, two CATS. One BOX, two BOXES.\nBut some words break the rules.\nOne CHILD → two CHILDREN. One MAN → two MEN. One FOOT → two FEET.\nOne TOOTH → two TEETH. One PERSON → five PEOPLE. One MOUSE → three MICE.", "text_pt": "A maioria é fácil: one cat → two cats. One box → two boxes.\nMas alguns fogem da regra.\nCriança → crianças (children). Homem → homens (men). Pé → pés (feet).\nDente → dentes (teeth). Pessoa → pessoas (people). Rato → ratos (mice)." },
-    { "kind": "grammar_note", "title": "Regular plural patterns", "body_en": "Just add -S: cat → cats. -CH/-SH/-S/-X/-O often add -ES: box → boxes, watch → watches, tomato → tomatoes. -Y after consonant → -IES: baby → babies, city → cities. Words ending -F/-FE often → -VES: knife → knives, wolf → wolves.", "body_pt": "Regras: +S (cat→cats). +ES depois de -ch/-sh/-s/-x/-o (box→boxes). Y depois de consoante → IES (baby→babies). F/FE → VES (knife→knives).", "examples": [
-      { "en": "dog → dogs, bus → buses, baby → babies, knife → knives", "pt": "Quatro padrões regulares." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "plur-s01", "type": "fill_blank", "question": "One child, two ___.", "correct": "children", "explanation": "Irregular — memorize.", "hint_pt_br": "Irregular. Decorar." }},
-    { "kind": "exercise", "exercise": { "id": "plur-s02", "type": "multiple_choice", "question": "Plural of 'person'?", "options": ["persons", "people", "peoples", "persone"], "correct": 1, "explanation": "Plural of PERSON = PEOPLE. 'Persons' is rare and formal.", "hint_pt_br": "Person → people (irregular)." }},
-    { "kind": "exercise", "exercise": { "id": "plur-s03", "type": "matching", "pairs": [
-      ["man", "men"],
-      ["woman", "women"],
-      ["foot", "feet"],
-      ["tooth", "teeth"],
-      ["mouse", "mice"]
-    ], "explanation": "Five essential irregulars. Drill them daily.", "hint_pt_br": "Cinco irregulares essenciais." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 55 — Plurals",
+      "subtitle_en": "One tooth, two teeth",
+      "subtitle_pt": "Um dente, dois dentes"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Most plurals are easy: one CAT, two CATS. One BOX, two BOXES.\nBut some words break the rules.\nOne CHILD → two CHILDREN. One MAN → two MEN. One FOOT → two FEET.\nOne TOOTH → two TEETH. One PERSON → five PEOPLE. One MOUSE → three MICE.",
+      "text_pt": "A maioria é fácil: one cat → two cats. One box → two boxes.\nMas alguns fogem da regra.\nCriança → crianças (children). Homem → homens (men). Pé → pés (feet).\nDente → dentes (teeth). Pessoa → pessoas (people). Rato → ratos (mice)."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Regular plural patterns",
+      "body_en": "Just add -S: cat → cats. -CH/-SH/-S/-X/-O often add -ES: box → boxes, watch → watches, tomato → tomatoes. -Y after consonant → -IES: baby → babies, city → cities. Words ending -F/-FE often → -VES: knife → knives, wolf → wolves.",
+      "body_pt": "Regras: +S (cat→cats). +ES depois de -ch/-sh/-s/-x/-o (box→boxes). Y depois de consoante → IES (baby→babies). F/FE → VES (knife→knives).",
+      "examples": [
+        {
+          "en": "dog → dogs, bus → buses, baby → babies, knife → knives",
+          "pt": "Quatro padrões regulares."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "plur-s01",
+        "type": "fill_blank",
+        "question": "One child, two ___.",
+        "correct": "children",
+        "explanation": "Irregular — memorize.",
+        "hint_pt_br": "Irregular. Decorar."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "plur-s02",
+        "type": "multiple_choice",
+        "question": "Plural of 'person'?",
+        "options": [
+          "persons",
+          "people",
+          "peoples",
+          "persone"
+        ],
+        "correct": 1,
+        "explanation": "Plural of PERSON = PEOPLE. 'Persons' is rare and formal.",
+        "hint_pt_br": "Person → people (irregular)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "plur-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "man",
+            "men"
+          ],
+          [
+            "woman",
+            "women"
+          ],
+          [
+            "foot",
+            "feet"
+          ],
+          [
+            "tooth",
+            "teeth"
+          ],
+          [
+            "mouse",
+            "mice"
+          ]
+        ],
+        "explanation": "Five essential irregulars. Drill them daily.",
+        "hint_pt_br": "Cinco irregulares essenciais."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"One Child, Two Children\". Regular plurals (add -s / -es) and the handful of irregulars that never stop showing up. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"One Child, Two Children\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "One Child, Two Children",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'One Child, Two Children'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"One Child, Two Children\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        },
+        {
+          "label": "BBC Learning English · Beginners",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-beginner",
+          "pt_hint": "Curso gratuito da BBC, nível iniciante."
+        },
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        }
+      ]
+    }
   ]
 }

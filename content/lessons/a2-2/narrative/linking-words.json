@@ -6,23 +6,152 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 45,
-  "estimated_minutes": 13,
+  "estimated_minutes": 22,
   "summary_pt_br": "Conectivos básicos: BECAUSE (porque — razão), SO (então — resultado), BUT (mas — contraste), ALTHOUGH (embora — concessão). Regra: BECAUSE + oração, BECAUSE OF + substantivo.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 68 — Linking Words", "subtitle_en": "Because, so, but, although", "subtitle_pt": "Porque, então, mas, embora" },
-    { "kind": "narrative", "character_id": "zara", "text_en": "'I stayed home BECAUSE it was raining.' (reason)\n'It was raining, SO I stayed home.' (result)\n'I wanted to go, BUT it was raining.' (contrast)\n'ALTHOUGH it was raining, I went out.' (concession)\nFour words. Four meanings. Careful with placement.", "text_pt": "'Fiquei em casa PORQUE estava chovendo.' (razão)\n'Estava chovendo, ENTÃO fiquei em casa.' (resultado)\n'Eu queria sair, MAS estava chovendo.' (contraste)\n'EMBORA estivesse chovendo, saí.' (concessão)\nQuatro palavras. Quatro sentidos." },
-    { "kind": "grammar_note", "title": "Because vs Because of", "body_en": "BECAUSE + full clause (subject + verb). 'Because I was tired.' BECAUSE OF + noun. 'Because of the rain.' Common mistake: 'Because of I was tired' — WRONG. Use 'because' with a clause or 'because of' with a noun, never mixed.", "body_pt": "BECAUSE + oração (sujeito + verbo). BECAUSE OF + substantivo. 'Because I was tired' / 'Because of the rain'. Nunca misture.", "examples": [
-      { "en": "Because of the rain, I stayed.", "pt": "Substantivo." },
-      { "en": "Because it was raining, I stayed.", "pt": "Oração." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "link-s01", "type": "multiple_choice", "question": "'I was tired, ___ I went to bed.' (result)", "options": ["because", "so", "but", "although"], "correct": 1, "explanation": "Result → SO.", "hint_pt_br": "Resultado = SO." }},
-    { "kind": "exercise", "exercise": { "id": "link-s02", "type": "fill_blank", "question": "Complete: 'I stayed home ___ ___ the rain.' (because of + noun)", "correct": "because of", "explanation": "BECAUSE OF + noun.", "hint_pt_br": "'Because of' + substantivo." }},
-    { "kind": "exercise", "exercise": { "id": "link-s03", "type": "matching", "pairs": [
-      ["because", "razão"],
-      ["so", "resultado"],
-      ["but", "contraste"],
-      ["although", "concessão"],
-      ["because of", "+ substantivo"]
-    ], "explanation": "Five connectors. Each has a distinct role.", "hint_pt_br": "Cinco conectivos com papéis distintos." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 68 — Linking Words",
+      "subtitle_en": "Because, so, but, although",
+      "subtitle_pt": "Porque, então, mas, embora"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "'I stayed home BECAUSE it was raining.' (reason)\n'It was raining, SO I stayed home.' (result)\n'I wanted to go, BUT it was raining.' (contrast)\n'ALTHOUGH it was raining, I went out.' (concession)\nFour words. Four meanings. Careful with placement.",
+      "text_pt": "'Fiquei em casa PORQUE estava chovendo.' (razão)\n'Estava chovendo, ENTÃO fiquei em casa.' (resultado)\n'Eu queria sair, MAS estava chovendo.' (contraste)\n'EMBORA estivesse chovendo, saí.' (concessão)\nQuatro palavras. Quatro sentidos."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Because vs Because of",
+      "body_en": "BECAUSE + full clause (subject + verb). 'Because I was tired.' BECAUSE OF + noun. 'Because of the rain.' Common mistake: 'Because of I was tired' — WRONG. Use 'because' with a clause or 'because of' with a noun, never mixed.",
+      "body_pt": "BECAUSE + oração (sujeito + verbo). BECAUSE OF + substantivo. 'Because I was tired' / 'Because of the rain'. Nunca misture.",
+      "examples": [
+        {
+          "en": "Because of the rain, I stayed.",
+          "pt": "Substantivo."
+        },
+        {
+          "en": "Because it was raining, I stayed.",
+          "pt": "Oração."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "zara",
+      "exercise": {
+        "id": "link-s01",
+        "type": "multiple_choice",
+        "question": "'I was tired, ___ I went to bed.' (result)",
+        "options": [
+          "because",
+          "so",
+          "but",
+          "although"
+        ],
+        "correct": 1,
+        "explanation": "Result → SO.",
+        "hint_pt_br": "Resultado = SO."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "link-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'I stayed home ___ ___ the rain.' (because of + noun)",
+        "correct": "because of",
+        "explanation": "BECAUSE OF + noun.",
+        "hint_pt_br": "'Because of' + substantivo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "link-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "because",
+            "razão"
+          ],
+          [
+            "so",
+            "resultado"
+          ],
+          [
+            "but",
+            "contraste"
+          ],
+          [
+            "although",
+            "concessão"
+          ],
+          [
+            "because of",
+            "+ substantivo"
+          ]
+        ],
+        "explanation": "Five connectors. Each has a distinct role.",
+        "hint_pt_br": "Cinco conectivos com papéis distintos."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Because, So, But, Although\". The connectors that turn boring sentences into paragraphs. BECAUSE (reason), SO (result), BUT (contrast), ALTHOUGH (concession). Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Because, So, But, Although\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Because, So, But, Although",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Because, So, But, Although'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Because, So, But, Although\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC Learning English · Lower Intermediate",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate",
+          "pt_hint": "Curso BBC para nível pré-intermediário."
+        },
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        },
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        }
+      ]
+    }
   ]
 }

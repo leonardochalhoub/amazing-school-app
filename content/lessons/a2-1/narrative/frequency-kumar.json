@@ -6,32 +6,186 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 12,
+  "estimated_minutes": 21,
   "summary_pt_br": "Advérbios de frequência: always / usually / often / sometimes / rarely / never. Regra da posição: vão ANTES do verbo principal, mas DEPOIS do verbo 'to be' ('She is always late', mas 'She always arrives late').",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 39 — Always, Never, and In Between", "subtitle_en": "Frequency adverbs", "subtitle_pt": "Advérbios de frequência" },
-    { "kind": "narrative", "character_id": "kumar", "text_en": "Mr. Kumar is predictable.\nHe ALWAYS drinks chai at 7 a.m.\nHe USUALLY opens the school at 8.\nHe OFTEN tells a story before class.\nHe SOMETIMES plays jazz on the rooftop speakers.\nHe RARELY stays late.\nHe NEVER skips his evening walk.", "text_pt": "Mr. Kumar é previsível.\nSEMPRE toma chai às 7h.\nGERALMENTE abre a escola às 8.\nFREQUENTEMENTE conta uma história antes da aula.\nÀS VEZES toca jazz nas caixas do terraço.\nRARAMENTE fica até tarde.\nNUNCA pula a caminhada da noite." },
-    { "kind": "grammar_note", "title": "Position of frequency adverbs", "body_en": "Rule: BEFORE the main verb, AFTER the verb 'to be'. 'She ALWAYS arrives late.' (main verb = arrives) 'She is ALWAYS late.' (to be). Common mistake: 'I always am tired' — should be 'I am always tired'.", "body_pt": "Regra: ANTES do verbo principal, DEPOIS do verbo 'to be'. 'She ALWAYS arrives late' (verbo principal). 'She is ALWAYS late' (to be). Erro comum: 'I always am tired' → deve ser 'I am always tired'.", "examples": [
-      { "en": "I always wake up at 6. (main verb)", "pt": "Sempre ANTES do verbo comum." },
-      { "en": "I am always happy. (to be)", "pt": "Sempre DEPOIS do 'to be'." },
-      { "en": "I don't usually eat breakfast. (between auxiliary and main)", "pt": "Entre auxiliar e verbo principal." }
-    ]},
-    { "kind": "vocab_intro", "title": "Six frequency adverbs", "items": [
-      { "term": "always (100%)", "pt": "sempre" },
-      { "term": "usually (90%)", "pt": "geralmente" },
-      { "term": "often (70%)", "pt": "frequentemente" },
-      { "term": "sometimes (50%)", "pt": "às vezes" },
-      { "term": "rarely / seldom (10%)", "pt": "raramente" },
-      { "term": "never (0%)", "pt": "nunca" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "kumar", "exercise": { "id": "freq-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["I always am happy", "I am always happy", "Always I am happy", "Happy I always am"], "correct": 1, "explanation": "After 'to be' (am/is/are). 'I AM always happy'.", "hint_pt_br": "Depois do 'to be'." }},
-    { "kind": "exercise", "exercise": { "id": "freq-s02", "type": "fill_blank", "question": "Complete: 'She ___ goes to bed before 10.' (always, main verb)", "correct": "always", "explanation": "Before the main verb 'goes'. 'She always goes...'", "hint_pt_br": "Antes do verbo principal." }},
-    { "kind": "exercise", "exercise": { "id": "freq-s03", "type": "matching", "pairs": [
-      ["always", "100%"],
-      ["usually", "90%"],
-      ["sometimes", "50%"],
-      ["rarely", "10%"],
-      ["never", "0%"]
-    ], "explanation": "Frequency on a scale. Memorize the spectrum.", "hint_pt_br": "Escala de frequência." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 39 — Always, Never, and In Between",
+      "subtitle_en": "Frequency adverbs",
+      "subtitle_pt": "Advérbios de frequência"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Mr. Kumar is predictable.\nHe ALWAYS drinks chai at 7 a.m.\nHe USUALLY opens the school at 8.\nHe OFTEN tells a story before class.\nHe SOMETIMES plays jazz on the rooftop speakers.\nHe RARELY stays late.\nHe NEVER skips his evening walk.",
+      "text_pt": "Mr. Kumar é previsível.\nSEMPRE toma chai às 7h.\nGERALMENTE abre a escola às 8.\nFREQUENTEMENTE conta uma história antes da aula.\nÀS VEZES toca jazz nas caixas do terraço.\nRARAMENTE fica até tarde.\nNUNCA pula a caminhada da noite."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Position of frequency adverbs",
+      "body_en": "Rule: BEFORE the main verb, AFTER the verb 'to be'. 'She ALWAYS arrives late.' (main verb = arrives) 'She is ALWAYS late.' (to be). Common mistake: 'I always am tired' — should be 'I am always tired'.",
+      "body_pt": "Regra: ANTES do verbo principal, DEPOIS do verbo 'to be'. 'She ALWAYS arrives late' (verbo principal). 'She is ALWAYS late' (to be). Erro comum: 'I always am tired' → deve ser 'I am always tired'.",
+      "examples": [
+        {
+          "en": "I always wake up at 6. (main verb)",
+          "pt": "Sempre ANTES do verbo comum."
+        },
+        {
+          "en": "I am always happy. (to be)",
+          "pt": "Sempre DEPOIS do 'to be'."
+        },
+        {
+          "en": "I don't usually eat breakfast. (between auxiliary and main)",
+          "pt": "Entre auxiliar e verbo principal."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Six frequency adverbs",
+      "items": [
+        {
+          "term": "always (100%)",
+          "pt": "sempre"
+        },
+        {
+          "term": "usually (90%)",
+          "pt": "geralmente"
+        },
+        {
+          "term": "often (70%)",
+          "pt": "frequentemente"
+        },
+        {
+          "term": "sometimes (50%)",
+          "pt": "às vezes"
+        },
+        {
+          "term": "rarely / seldom (10%)",
+          "pt": "raramente"
+        },
+        {
+          "term": "never (0%)",
+          "pt": "nunca"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "kumar",
+      "exercise": {
+        "id": "freq-s01",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "I always am happy",
+          "I am always happy",
+          "Always I am happy",
+          "Happy I always am"
+        ],
+        "correct": 1,
+        "explanation": "After 'to be' (am/is/are). 'I AM always happy'.",
+        "hint_pt_br": "Depois do 'to be'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "freq-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'She ___ goes to bed before 10.' (always, main verb)",
+        "correct": "always",
+        "explanation": "Before the main verb 'goes'. 'She always goes...'",
+        "hint_pt_br": "Antes do verbo principal."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "freq-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "always",
+            "100%"
+          ],
+          [
+            "usually",
+            "90%"
+          ],
+          [
+            "sometimes",
+            "50%"
+          ],
+          [
+            "rarely",
+            "10%"
+          ],
+          [
+            "never",
+            "0%"
+          ]
+        ],
+        "explanation": "Frequency on a scale. Memorize the spectrum.",
+        "hint_pt_br": "Escala de frequência."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Mr. Kumar's Habits\". Frequency adverbs (always, usually, often, sometimes, rarely, never) and where they go in a sentence. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Mr. Kumar's Habits\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Mr. Kumar's Habits",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Mr. Kumar's Habits'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Mr. Kumar's Habits\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        },
+        {
+          "label": "ThoughtCo · English for Learners",
+          "url": "https://www.thoughtco.com/english-as-a-second-language-4133121",
+          "pt_hint": "Artigos explicativos organizados por nível."
+        },
+        {
+          "label": "VOA Learning English · Everyday Grammar",
+          "url": "https://learningenglish.voanews.com/z/3808",
+          "pt_hint": "Vídeos curtos sobre gramática do dia a dia."
+        }
+      ]
+    }
   ]
 }

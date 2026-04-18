@@ -6,29 +6,190 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 50,
-  "estimated_minutes": 15,
+  "estimated_minutes": 24,
   "summary_pt_br": "HAVE TO (obrigação externa, alguém impôs) x MUST (obrigação interna ou forte) x DON'T HAVE TO (não precisa) x MUSTN'T (proibido). Armadilha: 'don't have to' NÃO significa 'mustn't'.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 42 — The Remote Job Rules", "subtitle_en": "Have to, must, don't have to", "subtitle_pt": "Tenho que, preciso, não preciso" },
-    { "kind": "narrative", "character_id": "joca", "text_en": "Joca listed his new job rules.\n'I HAVE TO be online at 9 — they require it.\nI MUST finish my sprint by Friday — a personal promise.\nI DON'T HAVE TO wear a shirt with buttons — it's remote.\nI MUSTN'T share company code — that's in the contract.'", "text_pt": "Joca listou as regras do novo emprego.\n'Tenho que estar online às 9 — a empresa exige.\nEu preciso terminar o sprint na sexta — promessa pessoal.\nNão preciso usar camisa social — é remoto.\nNão posso compartilhar código da empresa — contrato.'" },
-    { "kind": "grammar_note", "title": "Obligation toolkit", "body_en": "HAVE TO = external obligation (rule, law, boss). 'I have to wear a helmet.' MUST = internal or strong obligation (feels pressing). 'I must finish this.' DON'T HAVE TO = not necessary, optional. 'You don't have to come.' MUSTN'T = forbidden. 'You mustn't smoke here.' TRAP: 'don't have to' is NOT the same as 'mustn't'.", "body_pt": "HAVE TO = obrigação externa (regra, chefe). MUST = interna ou forte. DON'T HAVE TO = não precisa (opcional). MUSTN'T = proibido. ATENÇÃO: 'don't have to' NÃO é 'mustn't'. 'You don't have to come' = você não PRECISA vir. 'You mustn't come' = você NÃO PODE vir.", "examples": [
-      { "en": "You have to wear a mask in the hospital. (rule)", "pt": "Tem que usar máscara." },
-      { "en": "You don't have to wear a tie. (optional)", "pt": "Não precisa usar gravata." },
-      { "en": "You mustn't run by the pool. (forbidden)", "pt": "Não pode correr perto da piscina." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "joca", "exercise": { "id": "obl-s01", "type": "multiple_choice", "question": "Your boss requires you at 9am. Which?", "options": ["I must be there at 9", "I have to be there at 9", "I mustn't be there at 9", "I don't have to be there at 9"], "correct": 1, "explanation": "External rule → HAVE TO. 'Must' works too but slightly less natural for a rule imposed by someone else.", "hint_pt_br": "Regra externa = have to. Must também serve, mas have to é mais natural para regras dos outros." }},
-    { "kind": "exercise", "exercise": { "id": "obl-s02", "type": "multiple_choice", "question": "The school uniform is OPTIONAL. Which tells students?", "options": ["You mustn't wear the uniform", "You don't have to wear the uniform", "You must wear the uniform", "You have to wear the uniform"], "correct": 1, "explanation": "Optional = 'don't have to'. 'Mustn't wear' would mean forbidden.", "hint_pt_br": "Opcional = 'don't have to'. Cuidado para não usar 'mustn't' (proibido)." }},
-    { "kind": "exercise", "exercise": { "id": "obl-s03", "type": "fill_blank", "question": "Complete: 'Smoking is forbidden here. You ___ smoke.'", "correct": "mustn't", "explanation": "Forbidden = MUSTN'T.", "hint_pt_br": "Proibido = mustn't." }},
-    { "kind": "dialogue", "location_en": "Zoom call with Zara", "location_pt": "Zoom com a Zara", "turns": [
-      { "character_id": "zara", "en": "You don't have to answer right now.", "pt": "Você não precisa responder agora." },
-      { "character_id": "joca", "en": "But I must reply today. It's urgent.", "pt": "Mas eu preciso responder hoje. É urgente." }
-    ]},
-    { "kind": "exercise", "exercise": { "id": "obl-s04", "type": "matching", "pairs": [
-      ["have to", "regra externa"],
-      ["must", "interna / forte"],
-      ["don't have to", "não precisa"],
-      ["mustn't", "proibido"],
-      ["should", "conselho, não obrigação"]
-    ], "explanation": "Five levels of obligation. Pick the exact one you mean.", "hint_pt_br": "Cinco níveis. Escolha o preciso." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 42 — The Remote Job Rules",
+      "subtitle_en": "Have to, must, don't have to",
+      "subtitle_pt": "Tenho que, preciso, não preciso"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Joca listed his new job rules.\n'I HAVE TO be online at 9 — they require it.\nI MUST finish my sprint by Friday — a personal promise.\nI DON'T HAVE TO wear a shirt with buttons — it's remote.\nI MUSTN'T share company code — that's in the contract.'",
+      "text_pt": "Joca listou as regras do novo emprego.\n'Tenho que estar online às 9 — a empresa exige.\nEu preciso terminar o sprint na sexta — promessa pessoal.\nNão preciso usar camisa social — é remoto.\nNão posso compartilhar código da empresa — contrato.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Obligation toolkit",
+      "body_en": "HAVE TO = external obligation (rule, law, boss). 'I have to wear a helmet.' MUST = internal or strong obligation (feels pressing). 'I must finish this.' DON'T HAVE TO = not necessary, optional. 'You don't have to come.' MUSTN'T = forbidden. 'You mustn't smoke here.' TRAP: 'don't have to' is NOT the same as 'mustn't'.",
+      "body_pt": "HAVE TO = obrigação externa (regra, chefe). MUST = interna ou forte. DON'T HAVE TO = não precisa (opcional). MUSTN'T = proibido. ATENÇÃO: 'don't have to' NÃO é 'mustn't'. 'You don't have to come' = você não PRECISA vir. 'You mustn't come' = você NÃO PODE vir.",
+      "examples": [
+        {
+          "en": "You have to wear a mask in the hospital. (rule)",
+          "pt": "Tem que usar máscara."
+        },
+        {
+          "en": "You don't have to wear a tie. (optional)",
+          "pt": "Não precisa usar gravata."
+        },
+        {
+          "en": "You mustn't run by the pool. (forbidden)",
+          "pt": "Não pode correr perto da piscina."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "joca",
+      "exercise": {
+        "id": "obl-s01",
+        "type": "multiple_choice",
+        "question": "Your boss requires you at 9am. Which?",
+        "options": [
+          "I must be there at 9",
+          "I have to be there at 9",
+          "I mustn't be there at 9",
+          "I don't have to be there at 9"
+        ],
+        "correct": 1,
+        "explanation": "External rule → HAVE TO. 'Must' works too but slightly less natural for a rule imposed by someone else.",
+        "hint_pt_br": "Regra externa = have to. Must também serve, mas have to é mais natural para regras dos outros."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "obl-s02",
+        "type": "multiple_choice",
+        "question": "The school uniform is OPTIONAL. Which tells students?",
+        "options": [
+          "You mustn't wear the uniform",
+          "You don't have to wear the uniform",
+          "You must wear the uniform",
+          "You have to wear the uniform"
+        ],
+        "correct": 1,
+        "explanation": "Optional = 'don't have to'. 'Mustn't wear' would mean forbidden.",
+        "hint_pt_br": "Opcional = 'don't have to'. Cuidado para não usar 'mustn't' (proibido)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "obl-s03",
+        "type": "fill_blank",
+        "question": "Complete: 'Smoking is forbidden here. You ___ smoke.'",
+        "correct": "mustn't",
+        "explanation": "Forbidden = MUSTN'T.",
+        "hint_pt_br": "Proibido = mustn't."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Zoom call with Zara",
+      "location_pt": "Zoom com a Zara",
+      "turns": [
+        {
+          "character_id": "zara",
+          "en": "You don't have to answer right now.",
+          "pt": "Você não precisa responder agora."
+        },
+        {
+          "character_id": "joca",
+          "en": "But I must reply today. It's urgent.",
+          "pt": "Mas eu preciso responder hoje. É urgente."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "obl-s04",
+        "type": "matching",
+        "pairs": [
+          [
+            "have to",
+            "regra externa"
+          ],
+          [
+            "must",
+            "interna / forte"
+          ],
+          [
+            "don't have to",
+            "não precisa"
+          ],
+          [
+            "mustn't",
+            "proibido"
+          ],
+          [
+            "should",
+            "conselho, não obrigação"
+          ]
+        ],
+        "explanation": "Five levels of obligation. Pick the exact one you mean.",
+        "hint_pt_br": "Cinco níveis. Escolha o preciso."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Joca's Obligations — Have To, Must, Don't Have To\". The three obligations nobody explains clearly: HAVE TO (external rule), MUST (internal/strong), DON'T HAVE TO (no need). And when to use each. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Joca's Obligations — Have To, Must, Don't Have To\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Joca's Obligations — Have To, Must, Don't Have To",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Joca's Obligations — Have To, Must, Don't Have To'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Joca's Obligations — Have To, Must, Don't Have To\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC Learning English · Lower Intermediate",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate",
+          "pt_hint": "Curso BBC para nível pré-intermediário."
+        },
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        },
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        }
+      ]
+    }
   ]
 }

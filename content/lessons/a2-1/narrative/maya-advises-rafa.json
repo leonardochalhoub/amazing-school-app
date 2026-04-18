@@ -6,31 +6,196 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 45,
-  "estimated_minutes": 13,
+  "estimated_minutes": 22,
   "summary_pt_br": "Modais essenciais: can (conseguir/poder), should (deveria), must (tem que), might (talvez). Sempre vêm seguidos do verbo NA FORMA BASE (sem 'to').",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 36 — The Advice Session", "subtitle_en": "Modals: the little words that change everything", "subtitle_pt": "Modais: as palavrinhas que mudam tudo" },
-    { "kind": "narrative", "character_id": "maya", "text_en": "Rafa asked Maya: 'What CAN I do? What SHOULD I do? What MUST I do?'\nMaya grinned. 'Three modals. Three answers.\nYou CAN open a food truck — the ability is yours.\nYou SHOULD visit Orlando first — it's wise.\nYou MUST get a permit — you have no choice.'", "text_pt": "Rafa perguntou pra Maya: 'O que POSSO fazer? O que DEVO fazer? O que TENHO que fazer?'\nMaya sorriu. 'Três modais. Três respostas.\nVocê PODE abrir um food truck — a capacidade é sua.\nVocê DEVERIA visitar Orlando antes — é sábio.\nVocê TEM QUE tirar uma licença — não tem opção.'" },
-    { "kind": "grammar_note", "title": "Modal verbs — always + base verb", "body_en": "Modals (can, should, must, might, could, would, may) are followed by the BASE form of the verb. No 'to', no -s, no -ed. 'She can swim' (not 'she cans' or 'she can to swim'). Negative: can + not = can't, should + not = shouldn't, must + not = mustn't. Question: invert subject — 'Can you swim?' 'Should I leave?'", "body_pt": "Modais (can, should, must, might, could, would, may) sempre vêm com o verbo na forma BASE. Sem 'to', sem -s. 'She can swim' (não 'she cans'). Negativa: can't, shouldn't, mustn't. Pergunta: inverte o sujeito.", "examples": [
-      { "en": "I can cook. She can cook. They can cook. (no -s)", "pt": "O modal nunca muda com he/she/it." },
-      { "en": "You should try it. You shouldn't wait.", "pt": "Positivo e negativo." }
-    ]},
-    { "kind": "vocab_intro", "title": "The five core modals", "items": [
-      { "term": "can", "pt": "poder / conseguir (habilidade)" },
-      { "term": "should", "pt": "deveria (conselho)" },
-      { "term": "must / have to", "pt": "tem que (obrigação)" },
-      { "term": "might / may", "pt": "talvez (possibilidade)" },
-      { "term": "could", "pt": "poderia (passado de can / pedido educado)" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "mod-s01", "type": "multiple_choice", "question": "You need to give strong advice. Which?", "options": ["You can eat less sugar", "You should eat less sugar", "You might eat less sugar", "You could eat less sugar"], "correct": 1, "explanation": "SHOULD = recommendation / advice. Strong but not forced.", "hint_pt_br": "Should = conselho forte." }},
-    { "kind": "exercise", "exercise": { "id": "mod-s02", "type": "multiple_choice", "question": "Law: stopping at a red light. Which?", "options": ["drivers can stop", "drivers should stop", "drivers must stop", "drivers might stop"], "correct": 2, "explanation": "MUST = no choice, legal or strong obligation.", "hint_pt_br": "Must = obrigação (lei, regra)." }},
-    { "kind": "exercise", "exercise": { "id": "mod-s03", "type": "fill_blank", "question": "Softer advice: 'You ___ want to check the weather.' (polite possibility)", "correct": "might", "explanation": "MIGHT = tentative suggestion without committing.", "hint_pt_br": "Might = talvez. Sugestão tentativa." }},
-    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "mod-s04", "type": "matching", "pairs": [
-      ["can", "habilidade"],
-      ["should", "conselho"],
-      ["must", "obrigação"],
-      ["might", "possibilidade"],
-      ["could", "possibilidade / pedido"]
-    ], "explanation": "Match each modal to its function. Context changes everything.", "hint_pt_br": "Cada modal tem uma função principal. Memorize os pares." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 36 — The Advice Session",
+      "subtitle_en": "Modals: the little words that change everything",
+      "subtitle_pt": "Modais: as palavrinhas que mudam tudo"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Rafa asked Maya: 'What CAN I do? What SHOULD I do? What MUST I do?'\nMaya grinned. 'Three modals. Three answers.\nYou CAN open a food truck — the ability is yours.\nYou SHOULD visit Orlando first — it's wise.\nYou MUST get a permit — you have no choice.'",
+      "text_pt": "Rafa perguntou pra Maya: 'O que POSSO fazer? O que DEVO fazer? O que TENHO que fazer?'\nMaya sorriu. 'Três modais. Três respostas.\nVocê PODE abrir um food truck — a capacidade é sua.\nVocê DEVERIA visitar Orlando antes — é sábio.\nVocê TEM QUE tirar uma licença — não tem opção.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Modal verbs — always + base verb",
+      "body_en": "Modals (can, should, must, might, could, would, may) are followed by the BASE form of the verb. No 'to', no -s, no -ed. 'She can swim' (not 'she cans' or 'she can to swim'). Negative: can + not = can't, should + not = shouldn't, must + not = mustn't. Question: invert subject — 'Can you swim?' 'Should I leave?'",
+      "body_pt": "Modais (can, should, must, might, could, would, may) sempre vêm com o verbo na forma BASE. Sem 'to', sem -s. 'She can swim' (não 'she cans'). Negativa: can't, shouldn't, mustn't. Pergunta: inverte o sujeito.",
+      "examples": [
+        {
+          "en": "I can cook. She can cook. They can cook. (no -s)",
+          "pt": "O modal nunca muda com he/she/it."
+        },
+        {
+          "en": "You should try it. You shouldn't wait.",
+          "pt": "Positivo e negativo."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "The five core modals",
+      "items": [
+        {
+          "term": "can",
+          "pt": "poder / conseguir (habilidade)"
+        },
+        {
+          "term": "should",
+          "pt": "deveria (conselho)"
+        },
+        {
+          "term": "must / have to",
+          "pt": "tem que (obrigação)"
+        },
+        {
+          "term": "might / may",
+          "pt": "talvez (possibilidade)"
+        },
+        {
+          "term": "could",
+          "pt": "poderia (passado de can / pedido educado)"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "mod-s01",
+        "type": "multiple_choice",
+        "question": "You need to give strong advice. Which?",
+        "options": [
+          "You can eat less sugar",
+          "You should eat less sugar",
+          "You might eat less sugar",
+          "You could eat less sugar"
+        ],
+        "correct": 1,
+        "explanation": "SHOULD = recommendation / advice. Strong but not forced.",
+        "hint_pt_br": "Should = conselho forte."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "mod-s02",
+        "type": "multiple_choice",
+        "question": "Law: stopping at a red light. Which?",
+        "options": [
+          "drivers can stop",
+          "drivers should stop",
+          "drivers must stop",
+          "drivers might stop"
+        ],
+        "correct": 2,
+        "explanation": "MUST = no choice, legal or strong obligation.",
+        "hint_pt_br": "Must = obrigação (lei, regra)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "mod-s03",
+        "type": "fill_blank",
+        "question": "Softer advice: 'You ___ want to check the weather.' (polite possibility)",
+        "correct": "might",
+        "explanation": "MIGHT = tentative suggestion without committing.",
+        "hint_pt_br": "Might = talvez. Sugestão tentativa."
+      }
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "rafa",
+      "exercise": {
+        "id": "mod-s04",
+        "type": "matching",
+        "pairs": [
+          [
+            "can",
+            "habilidade"
+          ],
+          [
+            "should",
+            "conselho"
+          ],
+          [
+            "must",
+            "obrigação"
+          ],
+          [
+            "might",
+            "possibilidade"
+          ],
+          [
+            "could",
+            "possibilidade / pedido"
+          ]
+        ],
+        "explanation": "Match each modal to its function. Context changes everything.",
+        "hint_pt_br": "Cada modal tem uma função principal. Memorize os pares."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Maya Advises Rafa — Can, Should, Must\". Core modals: CAN (ability), SHOULD (advice), MUST (obligation), MIGHT (possibility). Maya tells Rafa how to expand to Orlando. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Maya Advises Rafa — Can, Should, Must\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Maya Advises Rafa — Can, Should, Must",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Maya Advises Rafa — Can, Should, Must'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Maya Advises Rafa — Can, Should, Must\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "VOA Learning English · Everyday Grammar",
+          "url": "https://learningenglish.voanews.com/z/3808",
+          "pt_hint": "Vídeos curtos sobre gramática do dia a dia."
+        },
+        {
+          "label": "BBC Learning English · Lower Intermediate",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate",
+          "pt_hint": "Curso BBC para nível pré-intermediário."
+        },
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        }
+      ]
+    }
   ]
 }

@@ -6,39 +6,225 @@
   "level": "B1",
   "cefr_level": "b1.1",
   "xp_reward": 50,
-  "estimated_minutes": 15,
+  "estimated_minutes": 24,
   "summary_pt_br": "Past Perfect (HAD + particípio passado) para ações anteriores a outra ação passada. Exemplo: 'When I arrived, he HAD ALREADY LEFT' (quando cheguei, ele já tinha ido).",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 24 — The Letter from 1972", "subtitle_en": "A Past Perfect story", "subtitle_pt": "Uma história em Past Perfect" },
-    { "kind": "narrative", "character_id": "lucia", "text_en": "Dona Lúcia opened a letter she HAD KEPT for fifty years.\n'By the time I read this the first time,' she said,\n'my husband HAD ALREADY LEFT for London. I HAD CRIED for three nights.\nHe HAD WRITTEN it on a Tuesday. I READ it on a Friday.'", "text_pt": "Dona Lúcia abriu uma carta que HAVIA GUARDADO por cinquenta anos.\n'Quando li isso pela primeira vez,' ela disse,\n'meu marido JÁ TINHA IDO para Londres. Eu TINHA CHORADO por três noites.\nEle TINHA ESCRITO numa terça. Eu LI numa sexta.'" },
-    { "kind": "grammar_note", "title": "Past Perfect — the 'past of the past'", "body_en": "Past Perfect = HAD + past participle. Use it when TWO past events happened, and you need to mark which one happened FIRST. 'When I arrived (past), he HAD LEFT (earlier past).' With time markers: already, just, yet, by the time, before, after.", "body_pt": "Past Perfect = HAD + particípio passado. Para marcar a ordem entre dois eventos no passado — o que aconteceu ANTES usa Past Perfect. Marcadores: already, just, by the time, before, after.", "examples": [
-      { "en": "When she arrived, the movie had already started.", "pt": "Quando ela chegou, o filme já tinha começado." },
-      { "en": "I had never seen a wave that big before.", "pt": "Eu nunca tinha visto uma onda tão grande antes." },
-      { "en": "He told me he had finished the project.", "pt": "Ele me disse que tinha terminado o projeto." }
-    ]},
-    { "kind": "vocab_intro", "title": "Past participles (the -en / -ed after HAD)", "items": [
-      { "term": "gone (go)", "pt": "tinha ido" },
-      { "term": "seen (see)", "pt": "tinha visto" },
-      { "term": "written (write)", "pt": "tinha escrito" },
-      { "term": "taken (take)", "pt": "tinha pegado" },
-      { "term": "given (give)", "pt": "tinha dado" },
-      { "term": "eaten (eat)", "pt": "tinha comido" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "lucia", "exercise": { "id": "pp-s01", "type": "fill_blank", "question": "Complete: 'When I got to the airport, the plane ___ already ___.' (leave)", "correct": "had left", "explanation": "Past Perfect = HAD + past participle. 'Had already left' marks the earlier event.", "hint_pt_br": "HAD + particípio. 'Had already left' = já tinha partido." }},
-    { "kind": "exercise", "exercise": { "id": "pp-s02", "type": "multiple_choice", "question": "Which sentence uses Past Perfect correctly?", "options": ["When I arrived, he had leave", "When I arrived, he had left", "When I arrived, he leaved", "When I had arrived, he had left"], "correct": 1, "explanation": "HAD + past participle (LEFT). Option D is grammatically possible but not natural — we use Past Perfect only for the EARLIER action.", "hint_pt_br": "Só o evento anterior usa Past Perfect. O posterior fica no Past Simple." }},
-    { "kind": "dialogue", "location_en": "Dona Lúcia's kitchen, evening", "location_pt": "Cozinha da Dona Lúcia, noite", "turns": [
-      { "character_id": "bia", "en": "Had you always wanted to read his letters?", "pt": "Você sempre quis ler as cartas dele?" },
-      { "character_id": "lucia", "en": "No. I had locked them away for years. I was afraid.", "pt": "Não. Tinha trancado elas por anos. Tinha medo." },
-      { "character_id": "bia", "en": "What had he written about?", "pt": "Sobre o que ele tinha escrito?" },
-      { "character_id": "lucia", "en": "Everything he had seen in London. Things he had learned. Things he had missed.", "pt": "Tudo o que ele tinha visto em Londres. Coisas que tinha aprendido. Coisas de que sentia falta." }
-    ]},
-    { "kind": "exercise", "exercise": { "id": "pp-s03", "type": "matching", "pairs": [
-      ["had gone", "tinha ido"],
-      ["had seen", "tinha visto"],
-      ["had written", "tinha escrito"],
-      ["had eaten", "tinha comido"],
-      ["had taken", "tinha pegado"]
-    ], "explanation": "Five essential past participles. These are the same forms used with Present Perfect (have/has) — just change to HAD.", "hint_pt_br": "Os particípios são iguais ao Present Perfect — mudam só o auxiliar (have/has → had)." }},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "pp-s04", "type": "fill_blank", "question": "Complete: 'By the time I woke up, Rafa ___ (make) fifty tacos already.'", "correct": "had made", "explanation": "Two past events, order mattering: Rafa's tacos came first → Past Perfect (had made).", "hint_pt_br": "'By the time' pede Past Perfect para a ação anterior." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 24 — The Letter from 1972",
+      "subtitle_en": "A Past Perfect story",
+      "subtitle_pt": "Uma história em Past Perfect"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Dona Lúcia opened a letter she HAD KEPT for fifty years.\n'By the time I read this the first time,' she said,\n'my husband HAD ALREADY LEFT for London. I HAD CRIED for three nights.\nHe HAD WRITTEN it on a Tuesday. I READ it on a Friday.'",
+      "text_pt": "Dona Lúcia abriu uma carta que HAVIA GUARDADO por cinquenta anos.\n'Quando li isso pela primeira vez,' ela disse,\n'meu marido JÁ TINHA IDO para Londres. Eu TINHA CHORADO por três noites.\nEle TINHA ESCRITO numa terça. Eu LI numa sexta.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Past Perfect — the 'past of the past'",
+      "body_en": "Past Perfect = HAD + past participle. Use it when TWO past events happened, and you need to mark which one happened FIRST. 'When I arrived (past), he HAD LEFT (earlier past).' With time markers: already, just, yet, by the time, before, after.",
+      "body_pt": "Past Perfect = HAD + particípio passado. Para marcar a ordem entre dois eventos no passado — o que aconteceu ANTES usa Past Perfect. Marcadores: already, just, by the time, before, after.",
+      "examples": [
+        {
+          "en": "When she arrived, the movie had already started.",
+          "pt": "Quando ela chegou, o filme já tinha começado."
+        },
+        {
+          "en": "I had never seen a wave that big before.",
+          "pt": "Eu nunca tinha visto uma onda tão grande antes."
+        },
+        {
+          "en": "He told me he had finished the project.",
+          "pt": "Ele me disse que tinha terminado o projeto."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Past participles (the -en / -ed after HAD)",
+      "items": [
+        {
+          "term": "gone (go)",
+          "pt": "tinha ido"
+        },
+        {
+          "term": "seen (see)",
+          "pt": "tinha visto"
+        },
+        {
+          "term": "written (write)",
+          "pt": "tinha escrito"
+        },
+        {
+          "term": "taken (take)",
+          "pt": "tinha pegado"
+        },
+        {
+          "term": "given (give)",
+          "pt": "tinha dado"
+        },
+        {
+          "term": "eaten (eat)",
+          "pt": "tinha comido"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "lucia",
+      "exercise": {
+        "id": "pp-s01",
+        "type": "fill_blank",
+        "question": "Complete: 'When I got to the airport, the plane ___ already ___.' (leave)",
+        "correct": "had left",
+        "explanation": "Past Perfect = HAD + past participle. 'Had already left' marks the earlier event.",
+        "hint_pt_br": "HAD + particípio. 'Had already left' = já tinha partido."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pp-s02",
+        "type": "multiple_choice",
+        "question": "Which sentence uses Past Perfect correctly?",
+        "options": [
+          "When I arrived, he had leave",
+          "When I arrived, he had left",
+          "When I arrived, he leaved",
+          "When I had arrived, he had left"
+        ],
+        "correct": 1,
+        "explanation": "HAD + past participle (LEFT). Option D is grammatically possible but not natural — we use Past Perfect only for the EARLIER action.",
+        "hint_pt_br": "Só o evento anterior usa Past Perfect. O posterior fica no Past Simple."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Dona Lúcia's kitchen, evening",
+      "location_pt": "Cozinha da Dona Lúcia, noite",
+      "turns": [
+        {
+          "character_id": "bia",
+          "en": "Had you always wanted to read his letters?",
+          "pt": "Você sempre quis ler as cartas dele?"
+        },
+        {
+          "character_id": "lucia",
+          "en": "No. I had locked them away for years. I was afraid.",
+          "pt": "Não. Tinha trancado elas por anos. Tinha medo."
+        },
+        {
+          "character_id": "bia",
+          "en": "What had he written about?",
+          "pt": "Sobre o que ele tinha escrito?"
+        },
+        {
+          "character_id": "lucia",
+          "en": "Everything he had seen in London. Things he had learned. Things he had missed.",
+          "pt": "Tudo o que ele tinha visto em Londres. Coisas que tinha aprendido. Coisas de que sentia falta."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pp-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "had gone",
+            "tinha ido"
+          ],
+          [
+            "had seen",
+            "tinha visto"
+          ],
+          [
+            "had written",
+            "tinha escrito"
+          ],
+          [
+            "had eaten",
+            "tinha comido"
+          ],
+          [
+            "had taken",
+            "tinha pegado"
+          ]
+        ],
+        "explanation": "Five essential past participles. These are the same forms used with Present Perfect (have/has) — just change to HAD.",
+        "hint_pt_br": "Os particípios são iguais ao Present Perfect — mudam só o auxiliar (have/has → had)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "pp-s04",
+        "type": "fill_blank",
+        "question": "Complete: 'By the time I woke up, Rafa ___ (make) fifty tacos already.'",
+        "correct": "had made",
+        "explanation": "Two past events, order mattering: Rafa's tacos came first → Past Perfect (had made).",
+        "hint_pt_br": "'By the time' pede Past Perfect para a ação anterior."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Dona Lúcia's Flashback\". Past Perfect (had + past participle) for events that happened BEFORE another past event. Dona Lúcia reads a letter and revisits a day she almost forgot. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Dona Lúcia's Flashback\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Dona Lúcia's Flashback",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Dona Lúcia's Flashback'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Dona Lúcia's Flashback\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Oxford Learner's Dictionary",
+          "url": "https://www.oxfordlearnersdictionaries.com/",
+          "pt_hint": "Dicionário Oxford com exemplos e áudio."
+        },
+        {
+          "label": "BBC 6 Minute English",
+          "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+          "pt_hint": "Podcast de 6 minutos com transcrição — nível B1."
+        },
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        }
+      ]
+    }
   ]
 }

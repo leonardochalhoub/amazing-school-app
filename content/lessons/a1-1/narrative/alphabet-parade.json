@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 12,
+  "estimated_minutes": 21,
   "summary_pt_br": "Maya transforma o alfabeto em um desfile de coisas da Praia do Sol. Cada letra tem som, imagem e rima — com foco nas que mais confundem brasileiros (G, H, J, W, Y).",
   "scenes": [
     {
@@ -25,11 +25,31 @@
       "kind": "vocab_intro",
       "title": "The five vowel sounds",
       "items": [
-        { "term": "A /eɪ/", "pt": "som de 'ei'", "example_en": "A as in Avenida" },
-        { "term": "E /iː/", "pt": "som de 'ii'", "example_en": "E as in English" },
-        { "term": "I /aɪ/", "pt": "som de 'ai'", "example_en": "I as in ice cream" },
-        { "term": "O /oʊ/", "pt": "som de 'ou'", "example_en": "O as in ocean" },
-        { "term": "U /juː/", "pt": "som de 'iu'", "example_en": "U as in Kumar" }
+        {
+          "term": "A /eɪ/",
+          "pt": "som de 'ei'",
+          "example_en": "A as in Avenida"
+        },
+        {
+          "term": "E /iː/",
+          "pt": "som de 'ii'",
+          "example_en": "E as in English"
+        },
+        {
+          "term": "I /aɪ/",
+          "pt": "som de 'ai'",
+          "example_en": "I as in ice cream"
+        },
+        {
+          "term": "O /oʊ/",
+          "pt": "som de 'ou'",
+          "example_en": "O as in ocean"
+        },
+        {
+          "term": "U /juː/",
+          "pt": "som de 'iu'",
+          "example_en": "U as in Kumar"
+        }
       ]
     },
     {
@@ -44,8 +64,14 @@
       "body_en": "These four are the most confusing: G /dʒiː/ sounds like 'jee'. J /dʒeɪ/ sounds like 'jay'. H /eɪtʃ/ starts with an 'ei' sound — never 'ah'. W /ˈdʌb.əl juː/ is called 'double U'. Y /waɪ/ sounds like the question 'why'.",
       "body_pt": "G = /djii/. J = /djei/. H começa com som de 'ei' (não 'agá'). W = 'dábol iu'. Y = 'uai' (igual ao 'why' de 'por quê'). Pratique essas cinco em voz alta.",
       "examples": [
-        { "en": "G-I-R-L = girl", "pt": "menina — começa com 'djii'" },
-        { "en": "W-A-V-E = wave", "pt": "onda — começa com 'dábol iu'" }
+        {
+          "en": "G-I-R-L = girl",
+          "pt": "menina — começa com 'djii'"
+        },
+        {
+          "en": "W-A-V-E = wave",
+          "pt": "onda — começa com 'dábol iu'"
+        }
       ]
     },
     {
@@ -55,7 +81,12 @@
         "id": "alp-001",
         "type": "multiple_choice",
         "question": "Maya asks: which letter sounds like 'why'?",
-        "options": ["W", "Y", "I", "U"],
+        "options": [
+          "W",
+          "Y",
+          "I",
+          "U"
+        ],
         "correct": 1,
         "explanation": "The letter Y is /waɪ/ — same sound as the word 'why'.",
         "hint_pt_br": "Y se pronuncia 'uai', igualzinho à pergunta 'why'."
@@ -90,10 +121,22 @@
         "id": "alp-003",
         "type": "matching",
         "pairs": [
-          ["A", "/eɪ/"],
-          ["E", "/iː/"],
-          ["I", "/aɪ/"],
-          ["Y", "/waɪ/"]
+          [
+            "A",
+            "/eɪ/"
+          ],
+          [
+            "E",
+            "/iː/"
+          ],
+          [
+            "I",
+            "/aɪ/"
+          ],
+          [
+            "Y",
+            "/waɪ/"
+          ]
         ],
         "explanation": "The four vowel-ish letters that Brazilians most often mispronounce. Say them out loud.",
         "hint_pt_br": "A = 'ei', E = 'ii', I = 'ai', Y = 'uai'. Repita em voz alta."
@@ -122,6 +165,62 @@
         "explanation": "Letter-by-letter OR 'double L' for repeated letters — both sound natural.",
         "hint_pt_br": "Pode soletrar letra por letra OU usar 'double' para letras repetidas. Os dois são naturais."
       }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Maya's Alphabet Parade\". Maya turns the English alphabet into a parade of things you'd see in Praia do Sol. Each letter gets a picture, a sound, and a rhyme. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Maya's Alphabet Parade\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Maya's Alphabet Parade",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Maya's Alphabet Parade'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Maya's Alphabet Parade\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        },
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        },
+        {
+          "label": "BBC Learning English · Beginners",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-beginner",
+          "pt_hint": "Curso gratuito da BBC, nível iniciante."
+        }
+      ]
     }
   ]
 }

@@ -6,18 +6,142 @@
   "level": "A2",
   "cefr_level": "a2.1",
   "xp_reward": 40,
-  "estimated_minutes": 11,
+  "estimated_minutes": 20,
   "summary_pt_br": "TOO (excessivo) vs ENOUGH (suficiente). Posição: TOO + adjetivo ('too hot'), adjetivo + ENOUGH ('hot enough'). Negativa: not hot enough = não quente o suficiente. TOO não é 'muito' — é 'demais'.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 64 — Too and Enough", "subtitle_en": "Excess and sufficiency", "subtitle_pt": "Excesso e suficiência" },
-    { "kind": "narrative", "character_id": "rafa", "text_en": "'The coffee is TOO HOT,' said Bia.\n'The coffee is not HOT ENOUGH,' said Zara.\n'Rafa's tacos are TOO SPICY for Maya.'\n'Joca isn't TALL ENOUGH to reach the shelf.'\nTOO = excessive. ENOUGH = sufficient. Opposites.", "text_pt": "'O café está QUENTE DEMAIS,' disse a Bia.\n'O café não está QUENTE O SUFICIENTE,' disse a Zara.\n'Os tacos do Rafa são APIMENTADOS DEMAIS pra Maya.'\n'O Joca não é ALTO O SUFICIENTE pra alcançar a prateleira.'\nTOO = demais. ENOUGH = suficiente. Opostos." },
-    { "kind": "grammar_note", "title": "The position trap", "body_en": "TOO comes BEFORE the adjective: 'too hot'. ENOUGH comes AFTER the adjective: 'hot enough'. Not before. 'Enough hot' is WRONG. With nouns, ENOUGH goes before: 'enough money'. Never confuse TOO with VERY — 'too' is negative (excessive), 'very' is just intense.", "body_pt": "TOO antes do adjetivo. ENOUGH depois do adjetivo. Com substantivo, ENOUGH vem antes ('enough money'). TOO ≠ VERY — 'too' é DEMAIS (negativo), 'very' é muito.", "examples": [
-      { "en": "too expensive (adj)", "pt": "caro demais" },
-      { "en": "tall enough (adj)", "pt": "alto o suficiente" },
-      { "en": "enough time (noun)", "pt": "tempo suficiente" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "te-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["He is enough tall", "He is tall enough", "He is too tall enough", "Enough he is tall"], "correct": 1, "explanation": "ENOUGH after the adjective.", "hint_pt_br": "Adjetivo + ENOUGH." }},
-    { "kind": "exercise", "exercise": { "id": "te-s02", "type": "fill_blank", "question": "Complete: 'The coffee is ___ ___ for me.' (excessively hot)", "correct": "too hot", "explanation": "TOO + adjective = excess.", "hint_pt_br": "Too + adjetivo = demais." }},
-    { "kind": "exercise", "exercise": { "id": "te-s03", "type": "multiple_choice", "question": "'She has ___ time for hobbies.' (suficiente)", "options": ["too", "enough", "very", "too much"], "correct": 1, "explanation": "ENOUGH before a noun = sufficient.", "hint_pt_br": "Enough + substantivo." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 64 — Too and Enough",
+      "subtitle_en": "Excess and sufficiency",
+      "subtitle_pt": "Excesso e suficiência"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "'The coffee is TOO HOT,' said Bia.\n'The coffee is not HOT ENOUGH,' said Zara.\n'Rafa's tacos are TOO SPICY for Maya.'\n'Joca isn't TALL ENOUGH to reach the shelf.'\nTOO = excessive. ENOUGH = sufficient. Opposites.",
+      "text_pt": "'O café está QUENTE DEMAIS,' disse a Bia.\n'O café não está QUENTE O SUFICIENTE,' disse a Zara.\n'Os tacos do Rafa são APIMENTADOS DEMAIS pra Maya.'\n'O Joca não é ALTO O SUFICIENTE pra alcançar a prateleira.'\nTOO = demais. ENOUGH = suficiente. Opostos."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "The position trap",
+      "body_en": "TOO comes BEFORE the adjective: 'too hot'. ENOUGH comes AFTER the adjective: 'hot enough'. Not before. 'Enough hot' is WRONG. With nouns, ENOUGH goes before: 'enough money'. Never confuse TOO with VERY — 'too' is negative (excessive), 'very' is just intense.",
+      "body_pt": "TOO antes do adjetivo. ENOUGH depois do adjetivo. Com substantivo, ENOUGH vem antes ('enough money'). TOO ≠ VERY — 'too' é DEMAIS (negativo), 'very' é muito.",
+      "examples": [
+        {
+          "en": "too expensive (adj)",
+          "pt": "caro demais"
+        },
+        {
+          "en": "tall enough (adj)",
+          "pt": "alto o suficiente"
+        },
+        {
+          "en": "enough time (noun)",
+          "pt": "tempo suficiente"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "te-s01",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "He is enough tall",
+          "He is tall enough",
+          "He is too tall enough",
+          "Enough he is tall"
+        ],
+        "correct": 1,
+        "explanation": "ENOUGH after the adjective.",
+        "hint_pt_br": "Adjetivo + ENOUGH."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "te-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'The coffee is ___ ___ for me.' (excessively hot)",
+        "correct": "too hot",
+        "explanation": "TOO + adjective = excess.",
+        "hint_pt_br": "Too + adjetivo = demais."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "te-s03",
+        "type": "multiple_choice",
+        "question": "'She has ___ time for hobbies.' (suficiente)",
+        "options": [
+          "too",
+          "enough",
+          "very",
+          "too much"
+        ],
+        "correct": 1,
+        "explanation": "ENOUGH before a noun = sufficient.",
+        "hint_pt_br": "Enough + substantivo."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Too Hot, Not Hot Enough\". TOO + adjective = excessively. Adjective + ENOUGH = sufficient. Two tiny words that change the whole meaning. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Too Hot, Not Hot Enough\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Too Hot, Not Hot Enough",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Too Hot, Not Hot Enough'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Too Hot, Not Hot Enough\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC Learning English · Lower Intermediate",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate",
+          "pt_hint": "Curso BBC para nível pré-intermediário."
+        },
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        },
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        }
+      ]
+    }
   ]
 }

@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 40,
-  "estimated_minutes": 13,
+  "estimated_minutes": 22,
   "summary_pt_br": "O /ð/ no meio das palavras: MOTHER, FATHER, BROTHER, ANOTHER, TOGETHER, WEATHER, RATHER. Praticado com a carta da Dona Lúcia e trechos de músicas do Pink Floyd e Paul Simon.",
   "scenes": [
     {
@@ -27,21 +27,48 @@
       "body_en": "When TH is between vowels — MOTHER, FATHER, BROTHER, ANOTHER, TOGETHER, WEATHER, RATHER — it's almost always the VOICED /ð/. Same tongue-between-teeth position, same throat vibration.",
       "body_pt": "Quando o TH está NO MEIO, entre vogais, quase sempre é o /ð/ vibrado: MOTHER, FATHER, BROTHER, ANOTHER, TOGETHER, WEATHER. Mesma língua entre os dentes, mesma vibração.",
       "examples": [
-        { "en": "mother /ˈmʌð.ɚ/", "pt": "mãe" },
-        { "en": "brother /ˈbrʌð.ɚ/", "pt": "irmão" },
-        { "en": "together /təˈɡɛð.ɚ/", "pt": "juntos" }
+        {
+          "en": "mother /ˈmʌð.ɚ/",
+          "pt": "mãe"
+        },
+        {
+          "en": "brother /ˈbrʌð.ɚ/",
+          "pt": "irmão"
+        },
+        {
+          "en": "together /təˈɡɛð.ɚ/",
+          "pt": "juntos"
+        }
       ]
     },
     {
       "kind": "vocab_intro",
       "title": "Six family-and-feeling TH words",
       "items": [
-        { "term": "mother", "pt": "mãe" },
-        { "term": "father", "pt": "pai" },
-        { "term": "brother", "pt": "irmão" },
-        { "term": "another", "pt": "outro(a)" },
-        { "term": "together", "pt": "juntos" },
-        { "term": "weather", "pt": "tempo (clima)" }
+        {
+          "term": "mother",
+          "pt": "mãe"
+        },
+        {
+          "term": "father",
+          "pt": "pai"
+        },
+        {
+          "term": "brother",
+          "pt": "irmão"
+        },
+        {
+          "term": "another",
+          "pt": "outro(a)"
+        },
+        {
+          "term": "together",
+          "pt": "juntos"
+        },
+        {
+          "term": "weather",
+          "pt": "tempo (clima)"
+        }
       ]
     },
     {
@@ -68,7 +95,12 @@
         "id": "th3-s02",
         "type": "multiple_choice",
         "question": "Which of these is pronounced with /ð/ (voiced TH)?",
-        "options": ["thing", "thanks", "brother", "three"],
+        "options": [
+          "thing",
+          "thanks",
+          "brother",
+          "three"
+        ],
         "correct": 2,
         "explanation": "BROTHER has /ð/ — between two vowels, voiced. The others are all /θ/ (voiceless).",
         "hint_pt_br": "BROTHER é /ð/. Os outros três (thing, thanks, three) são /θ/."
@@ -79,10 +111,26 @@
       "location_en": "Dona Lúcia's table, the letter open",
       "location_pt": "Na mesa da Dona Lúcia, a carta aberta",
       "turns": [
-        { "character_id": "bia", "en": "Is that your mother?", "pt": "Essa é sua mãe?" },
-        { "character_id": "lucia", "en": "No — that is my mother-in-law. My husband's mother.", "pt": "Não — essa é minha sogra. A mãe do meu marido." },
-        { "character_id": "bia", "en": "And who is the other person?", "pt": "E a outra pessoa?" },
-        { "character_id": "lucia", "en": "That is my brother. My brother and I — together always.", "pt": "Esse é meu irmão. Meu irmão e eu — sempre juntos." }
+        {
+          "character_id": "bia",
+          "en": "Is that your mother?",
+          "pt": "Essa é sua mãe?"
+        },
+        {
+          "character_id": "lucia",
+          "en": "No — that is my mother-in-law. My husband's mother.",
+          "pt": "Não — essa é minha sogra. A mãe do meu marido."
+        },
+        {
+          "character_id": "bia",
+          "en": "And who is the other person?",
+          "pt": "E a outra pessoa?"
+        },
+        {
+          "character_id": "lucia",
+          "en": "That is my brother. My brother and I — together always.",
+          "pt": "Esse é meu irmão. Meu irmão e eu — sempre juntos."
+        }
       ]
     },
     {
@@ -103,11 +151,26 @@
         "id": "th3-s04",
         "type": "matching",
         "pairs": [
-          ["mother", "mãe"],
-          ["father", "pai"],
-          ["brother", "irmão"],
-          ["another", "outro"],
-          ["together", "juntos"]
+          [
+            "mother",
+            "mãe"
+          ],
+          [
+            "father",
+            "pai"
+          ],
+          [
+            "brother",
+            "irmão"
+          ],
+          [
+            "another",
+            "outro"
+          ],
+          [
+            "together",
+            "juntos"
+          ]
         ],
         "explanation": "Five words that share the middle /ð/. Say them in a chain: 'My mother, father, brother — together — want another.'",
         "hint_pt_br": "Cinco palavras com /ð/ no meio. Frase de treino: 'My mother, father, brother — together — want another.'"
@@ -118,6 +181,62 @@
       "scene_emoji": "💌",
       "text_en": "Dona Lúcia folded the letter. She smiled.\n'Two sounds,' she said. 'One with air, one with hum.\nThey filled my husband's English — so they'll fill mine too.\nI'll write him back. It's something I can do.'",
       "text_pt": "Dona Lúcia dobrou a carta. Sorriu.\n'Dois sons,' ela disse. 'Um de ar, outro de zunido.\nEnchiam o inglês do meu marido — e vão encher o meu também.\nVou responder a ele. É algo que eu posso, meu bem.'"
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Mother, Brother, Another\". The /ð/ sound in the MIDDLE of words. Dona Lúcia reads a letter. Every 'mother' and 'another' is a chance to practice. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Mother, Brother, Another\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Mother, Brother, Another",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Mother, Brother, Another'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Mother, Brother, Another\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        },
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        }
+      ]
     }
   ]
 }

@@ -6,36 +6,228 @@
   "level": "B1",
   "cefr_level": "b1.1",
   "xp_reward": 50,
-  "estimated_minutes": 16,
+  "estimated_minutes": 25,
   "summary_pt_br": "Introdução da Zara, professora britânica de Manchester. Grammar focus: Reported Speech (discurso indireto) — mudança de tempo verbal, de pronomes, e os verbos de reporte (said, told, asked, claimed).",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 20 — Zara Arrives", "subtitle_en": "A British voice in Praia do Sol", "subtitle_pt": "Uma voz britânica em Praia do Sol" },
-    { "kind": "narrative", "character_id": "zara", "text_en": "Zara Whitfield, 35, from Manchester, walked into the rooftop classroom carrying a hot tea and a wry smile.\n'Hello, I'm Zara,' she said. 'I'll be teaching here for six months. I hope you'll put up with my accent.'", "text_pt": "Zara Whitfield, 35 anos, de Manchester, entrou na sala do terraço com um chá quente e um sorriso irônico.\n'Oi, sou a Zara,' ela disse. 'Vou dar aula aqui por seis meses. Espero que aguentem meu sotaque.'" },
-    { "kind": "narrative", "character_id": "maya", "text_en": "Later, Maya rushed up to Bia. 'Zara SAID she was from Manchester! She TOLD me her favourite word was BRILLIANT! And Joca ASKED if she was single — she REPLIED that she wasn't interested in dating students.'", "text_pt": "Mais tarde, Maya correu pra Bia. 'A Zara DISSE que era de Manchester! Me CONTOU que a palavra favorita dela era BRILLIANT! E o Joca PERGUNTOU se ela era solteira — ela RESPONDEU que não queria namorar alunos.'" },
-    { "kind": "grammar_note", "title": "Reported Speech — shifting the tense back", "body_en": "When we report what someone said, the tense usually moves ONE STEP into the past. 'I AM tired' → She said she WAS tired. 'I WILL help' → He said he WOULD help. 'I CAN swim' → She said she COULD swim. Pronouns shift too: 'I'→'she', 'my'→'her', 'here'→'there', 'today'→'that day'.", "body_pt": "No discurso indireto, o tempo verbal 'anda um passo atrás'. Present → Past. Will → Would. Can → Could. Pronomes e marcadores de tempo/lugar também mudam: I→she/he, here→there, today→that day.", "examples": [
-      { "en": "'I am happy.' → She said she was happy.", "pt": "Present → Past" },
-      { "en": "'I will go.' → He said he would go.", "pt": "Will → Would" },
-      { "en": "'I can swim.' → She said she could swim.", "pt": "Can → Could" }
-    ]},
-    { "kind": "vocab_intro", "title": "Reporting verbs", "items": [
-      { "term": "say", "pt": "dizer (sem dizer a quem)", "example_en": "She said she was tired." },
-      { "term": "tell", "pt": "contar (para alguém)", "example_en": "She told me she was tired." },
-      { "term": "ask", "pt": "perguntar", "example_en": "He asked if I was free." },
-      { "term": "claim", "pt": "alegar / afirmar", "example_en": "He claimed he had finished." },
-      { "term": "reply", "pt": "responder", "example_en": "She replied that it wasn't true." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "zar-s01", "type": "fill_blank", "question": "Direct: 'I am British.' → Reported: She said she ___ British.", "correct": "was", "explanation": "Present (AM) → Past (WAS). Plus 'I'→'she'.", "hint_pt_br": "AM → WAS no discurso indireto." }},
-    { "kind": "exercise", "exercise": { "id": "zar-s02", "type": "fill_blank", "question": "Direct: 'I will stay six months.' → She said she ___ stay six months.", "correct": "would", "explanation": "WILL → WOULD.", "hint_pt_br": "Will → would." }},
-    { "kind": "exercise", "exercise": { "id": "zar-s03", "type": "multiple_choice", "question": "Direct: 'I live in Manchester.' Which reported version is correct?", "options": ["She says she lives in Manchester", "She said she lived in Manchester", "She said she lives in Manchester", "She said she is living in Manchester"], "correct": 1, "explanation": "With 'said' (past), shift the reported verb back: LIVE → LIVED.", "hint_pt_br": "Com 'said' no passado, o verbo reportado também vai pro passado: live → lived." }},
-    { "kind": "dialogue", "location_en": "Teachers' lounge, hot gossip", "location_pt": "Sala dos professores, fofoca quente", "turns": [
-      { "character_id": "kumar", "en": "So Joca asked if she was single?", "pt": "Então o Joca perguntou se ela era solteira?" },
-      { "character_id": "maya", "en": "Yes! And Zara told him she wasn't interested in dating students.", "pt": "Sim! E a Zara disse que não queria namorar alunos." },
-      { "character_id": "kumar", "en": "She replied quickly. That's a good sign.", "pt": "Ela respondeu rápido. Bom sinal." }
-    ]},
-    { "kind": "grammar_note", "title": "Questions in reported speech", "body_en": "For yes/no questions, use IF or WHETHER and change word order back to statement order. 'Are you tired?' → She asked IF I WAS tired (NOT 'if was I tired'). For wh-questions, keep the wh-word: 'Where do you live?' → She asked where I LIVED.", "body_pt": "Perguntas sim/não viram com IF/WHETHER. A ordem da pergunta vira a ordem da afirmação ('if I was tired', não 'if was I tired'). Wh- mantém a palavra: 'where I lived'.", "examples": [
-      { "en": "'Do you speak English?' → He asked if I spoke English.", "pt": "Inverte para ordem direta." },
-      { "en": "'Where are you from?' → She asked where I was from.", "pt": "Wh- + sujeito + verbo." }
-    ]},
-    { "kind": "exercise", "exercise": { "id": "zar-s04", "type": "multiple_choice", "question": "Direct: 'Are you happy?' → Reported: She asked ___.", "options": ["if was I happy", "if I am happy", "if I was happy", "was I happy"], "correct": 2, "explanation": "IF + I + past verb (WAS). Never 'if was I'.", "hint_pt_br": "IF + sujeito + verbo no passado. 'If I was happy'." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 20 — Zara Arrives",
+      "subtitle_en": "A British voice in Praia do Sol",
+      "subtitle_pt": "Uma voz britânica em Praia do Sol"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Zara Whitfield, 35, from Manchester, walked into the rooftop classroom carrying a hot tea and a wry smile.\n'Hello, I'm Zara,' she said. 'I'll be teaching here for six months. I hope you'll put up with my accent.'",
+      "text_pt": "Zara Whitfield, 35 anos, de Manchester, entrou na sala do terraço com um chá quente e um sorriso irônico.\n'Oi, sou a Zara,' ela disse. 'Vou dar aula aqui por seis meses. Espero que aguentem meu sotaque.'"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Later, Maya rushed up to Bia. 'Zara SAID she was from Manchester! She TOLD me her favourite word was BRILLIANT! And Joca ASKED if she was single — she REPLIED that she wasn't interested in dating students.'",
+      "text_pt": "Mais tarde, Maya correu pra Bia. 'A Zara DISSE que era de Manchester! Me CONTOU que a palavra favorita dela era BRILLIANT! E o Joca PERGUNTOU se ela era solteira — ela RESPONDEU que não queria namorar alunos.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Reported Speech — shifting the tense back",
+      "body_en": "When we report what someone said, the tense usually moves ONE STEP into the past. 'I AM tired' → She said she WAS tired. 'I WILL help' → He said he WOULD help. 'I CAN swim' → She said she COULD swim. Pronouns shift too: 'I'→'she', 'my'→'her', 'here'→'there', 'today'→'that day'.",
+      "body_pt": "No discurso indireto, o tempo verbal 'anda um passo atrás'. Present → Past. Will → Would. Can → Could. Pronomes e marcadores de tempo/lugar também mudam: I→she/he, here→there, today→that day.",
+      "examples": [
+        {
+          "en": "'I am happy.' → She said she was happy.",
+          "pt": "Present → Past"
+        },
+        {
+          "en": "'I will go.' → He said he would go.",
+          "pt": "Will → Would"
+        },
+        {
+          "en": "'I can swim.' → She said she could swim.",
+          "pt": "Can → Could"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Reporting verbs",
+      "items": [
+        {
+          "term": "say",
+          "pt": "dizer (sem dizer a quem)",
+          "example_en": "She said she was tired."
+        },
+        {
+          "term": "tell",
+          "pt": "contar (para alguém)",
+          "example_en": "She told me she was tired."
+        },
+        {
+          "term": "ask",
+          "pt": "perguntar",
+          "example_en": "He asked if I was free."
+        },
+        {
+          "term": "claim",
+          "pt": "alegar / afirmar",
+          "example_en": "He claimed he had finished."
+        },
+        {
+          "term": "reply",
+          "pt": "responder",
+          "example_en": "She replied that it wasn't true."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "zar-s01",
+        "type": "fill_blank",
+        "question": "Direct: 'I am British.' → Reported: She said she ___ British.",
+        "correct": "was",
+        "explanation": "Present (AM) → Past (WAS). Plus 'I'→'she'.",
+        "hint_pt_br": "AM → WAS no discurso indireto."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "zar-s02",
+        "type": "fill_blank",
+        "question": "Direct: 'I will stay six months.' → She said she ___ stay six months.",
+        "correct": "would",
+        "explanation": "WILL → WOULD.",
+        "hint_pt_br": "Will → would."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "zar-s03",
+        "type": "multiple_choice",
+        "question": "Direct: 'I live in Manchester.' Which reported version is correct?",
+        "options": [
+          "She says she lives in Manchester",
+          "She said she lived in Manchester",
+          "She said she lives in Manchester",
+          "She said she is living in Manchester"
+        ],
+        "correct": 1,
+        "explanation": "With 'said' (past), shift the reported verb back: LIVE → LIVED.",
+        "hint_pt_br": "Com 'said' no passado, o verbo reportado também vai pro passado: live → lived."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Teachers' lounge, hot gossip",
+      "location_pt": "Sala dos professores, fofoca quente",
+      "turns": [
+        {
+          "character_id": "kumar",
+          "en": "So Joca asked if she was single?",
+          "pt": "Então o Joca perguntou se ela era solteira?"
+        },
+        {
+          "character_id": "maya",
+          "en": "Yes! And Zara told him she wasn't interested in dating students.",
+          "pt": "Sim! E a Zara disse que não queria namorar alunos."
+        },
+        {
+          "character_id": "kumar",
+          "en": "She replied quickly. That's a good sign.",
+          "pt": "Ela respondeu rápido. Bom sinal."
+        }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Questions in reported speech",
+      "body_en": "For yes/no questions, use IF or WHETHER and change word order back to statement order. 'Are you tired?' → She asked IF I WAS tired (NOT 'if was I tired'). For wh-questions, keep the wh-word: 'Where do you live?' → She asked where I LIVED.",
+      "body_pt": "Perguntas sim/não viram com IF/WHETHER. A ordem da pergunta vira a ordem da afirmação ('if I was tired', não 'if was I tired'). Wh- mantém a palavra: 'where I lived'.",
+      "examples": [
+        {
+          "en": "'Do you speak English?' → He asked if I spoke English.",
+          "pt": "Inverte para ordem direta."
+        },
+        {
+          "en": "'Where are you from?' → She asked where I was from.",
+          "pt": "Wh- + sujeito + verbo."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "zar-s04",
+        "type": "multiple_choice",
+        "question": "Direct: 'Are you happy?' → Reported: She asked ___.",
+        "options": [
+          "if was I happy",
+          "if I am happy",
+          "if I was happy",
+          "was I happy"
+        ],
+        "correct": 2,
+        "explanation": "IF + I + past verb (WAS). Never 'if was I'.",
+        "hint_pt_br": "IF + sujeito + verbo no passado. 'If I was happy'."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Zara Arrives from Manchester\". A new teacher from the UK lands in Praia do Sol. Reported speech (direct vs indirect) through the gossip that follows her arrival. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Zara Arrives from Manchester\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Zara Arrives from Manchester",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Zara Arrives from Manchester'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Zara Arrives from Manchester\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "Engoo Daily News",
+          "url": "https://engoo.com/app/daily-news",
+          "pt_hint": "Notícias diárias graduadas por nível."
+        },
+        {
+          "label": "Oxford Learner's Dictionary",
+          "url": "https://www.oxfordlearnersdictionaries.com/",
+          "pt_hint": "Dicionário Oxford com exemplos e áudio."
+        }
+      ]
+    }
   ]
 }

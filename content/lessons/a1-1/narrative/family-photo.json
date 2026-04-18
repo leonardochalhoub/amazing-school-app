@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 12,
+  "estimated_minutes": 21,
   "summary_pt_br": "A Bia mostra a foto da família à turma. Aprenda os membros da família e os possessivos (my/your/his/her) — incluindo a armadilha do 'parents' (apenas pai e mãe, não parentes em geral).",
   "scenes": [
     {
@@ -25,12 +25,30 @@
       "kind": "vocab_intro",
       "title": "The inner circle",
       "items": [
-        { "term": "mother / mom", "pt": "mãe" },
-        { "term": "father / dad", "pt": "pai" },
-        { "term": "brother", "pt": "irmão" },
-        { "term": "sister", "pt": "irmã" },
-        { "term": "grandmother / grandma", "pt": "avó" },
-        { "term": "grandfather / grandpa", "pt": "avô" }
+        {
+          "term": "mother / mom",
+          "pt": "mãe"
+        },
+        {
+          "term": "father / dad",
+          "pt": "pai"
+        },
+        {
+          "term": "brother",
+          "pt": "irmão"
+        },
+        {
+          "term": "sister",
+          "pt": "irmã"
+        },
+        {
+          "term": "grandmother / grandma",
+          "pt": "avó"
+        },
+        {
+          "term": "grandfather / grandpa",
+          "pt": "avô"
+        }
       ]
     },
     {
@@ -45,8 +63,14 @@
       "body_en": "The word for 'dele' or 'dela' depends on WHO owns, not WHAT is owned. Paul's sister = HIS sister (Paul is male). Anna's brother = HER brother (Anna is female). In Portuguese 'sua' covers both — in English you must pick.",
       "body_pt": "Em inglês, o possessivo concorda com o DONO, não com o objeto. Paul é homem → HIS sister (a irmã DELE). Anna é mulher → HER brother (o irmão DELA). Em português 'sua' cobre tudo — em inglês você escolhe.",
       "examples": [
-        { "en": "Rafa is tall. His truck is red.", "pt": "O Rafa é alto. A caminhonete DELE é vermelha." },
-        { "en": "Maya is smart. Her pencil is sharp.", "pt": "A Maya é esperta. O lápis DELA é apontado." }
+        {
+          "en": "Rafa is tall. His truck is red.",
+          "pt": "O Rafa é alto. A caminhonete DELE é vermelha."
+        },
+        {
+          "en": "Maya is smart. Her pencil is sharp.",
+          "pt": "A Maya é esperta. O lápis DELA é apontado."
+        }
       ]
     },
     {
@@ -67,11 +91,26 @@
         "id": "fam-s02",
         "type": "matching",
         "pairs": [
-          ["tio", "uncle"],
-          ["tia", "aunt"],
-          ["primo / prima", "cousin"],
-          ["sobrinho", "nephew"],
-          ["sobrinha", "niece"]
+          [
+            "tio",
+            "uncle"
+          ],
+          [
+            "tia",
+            "aunt"
+          ],
+          [
+            "primo / prima",
+            "cousin"
+          ],
+          [
+            "sobrinho",
+            "nephew"
+          ],
+          [
+            "sobrinha",
+            "niece"
+          ]
         ],
         "explanation": "'Cousin' works for both boys and girls — English doesn't mark the gender there.",
         "hint_pt_br": "'Cousin' serve para primo E prima. Já 'nephew' (sobrinho) e 'niece' (sobrinha) são separados."
@@ -82,10 +121,26 @@
       "location_en": "Class break, passing the phone",
       "location_pt": "Intervalo da aula, passando o celular",
       "turns": [
-        { "character_id": "rafa", "en": "Is this your brother?", "pt": "Esse é o seu irmão?" },
-        { "character_id": "bia", "en": "Yes, HE is my brother. HE is two years old.", "pt": "Sim, ELE é meu irmão. ELE tem dois anos." },
-        { "character_id": "rafa", "en": "And who is the lady in blue?", "pt": "E quem é a senhora de azul?" },
-        { "character_id": "bia", "en": "SHE is my grandma. HER hair is white.", "pt": "ELA é minha avó. O cabelo DELA é branco." }
+        {
+          "character_id": "rafa",
+          "en": "Is this your brother?",
+          "pt": "Esse é o seu irmão?"
+        },
+        {
+          "character_id": "bia",
+          "en": "Yes, HE is my brother. HE is two years old.",
+          "pt": "Sim, ELE é meu irmão. ELE tem dois anos."
+        },
+        {
+          "character_id": "rafa",
+          "en": "And who is the lady in blue?",
+          "pt": "E quem é a senhora de azul?"
+        },
+        {
+          "character_id": "bia",
+          "en": "SHE is my grandma. HER hair is white.",
+          "pt": "ELA é minha avó. O cabelo DELA é branco."
+        }
       ]
     },
     {
@@ -122,6 +177,62 @@
       "character_id": "lucia",
       "text_en": "Dona Lúcia smiled at the photo and sighed.\n'My husband is gone, but my love never died.\nHIS letters are mine. HIS words are still here.\nFamily,' she said, 'stays always near.'",
       "text_pt": "Dona Lúcia olhou a foto e suspirou suave.\n'Meu marido se foi, mas o amor não se cala.\nAS cartas DELE são minhas. AS palavras, presentes.\nFamília,' disse ela, 'fica sempre com a gente.'"
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"The Photo in Bia's Phone\". Bia shows the class a family photo. Meet her mother, father, brother, and grandmother — and the possessive adjectives along the way. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"The Photo in Bia's Phone\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "The Photo in Bia's Phone",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'The Photo in Bia's Phone'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"The Photo in Bia's Phone\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        },
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        }
+      ]
     }
   ]
 }

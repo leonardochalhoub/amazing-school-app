@@ -48,7 +48,56 @@ export type LessonScene =
   | GrammarNoteScene
   | VocabIntroScene
   | ChapterTitleScene
-  | PronunciationScene;
+  | PronunciationScene
+  | ReadingScene
+  | ListeningScene
+  | FurtherReadingScene;
+
+/**
+ * Paragraph-length reading passage with optional comprehension question.
+ */
+export interface ReadingScene {
+  kind: "reading";
+  title?: string;
+  passage_en: string;
+  passage_pt?: string;
+  check?: {
+    question: string;
+    options: string[];
+    correct: number;
+    explanation?: string;
+    hint_pt_br?: string;
+  };
+}
+
+/**
+ * TTS-driven listening task: browser speechSynthesis reads the passage,
+ * then the student answers a comprehension question.
+ */
+export interface ListeningScene {
+  kind: "listening";
+  title?: string;
+  audio_text_en: string;
+  audio_text_pt?: string;
+  check?: {
+    question: string;
+    options: string[];
+    correct: number;
+    explanation?: string;
+    hint_pt_br?: string;
+  };
+}
+
+/**
+ * Curated external free resource links — BBC Learning English, VOA,
+ * British Council, Cambridge Dictionary. Students can go deeper offline.
+ */
+export interface FurtherReadingScene {
+  kind: "further_reading";
+  title?: string;
+  body_pt?: string;
+  sources: { label: string; url: string; pt_hint?: string }[];
+}
 
 /**
  * Audio pronunciation exercise: student records themselves saying the

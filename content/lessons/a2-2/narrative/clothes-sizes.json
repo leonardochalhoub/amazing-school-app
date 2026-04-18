@@ -6,33 +6,186 @@
   "level": "A2",
   "cefr_level": "a2.2",
   "xp_reward": 40,
-  "estimated_minutes": 12,
+  "estimated_minutes": 21,
   "summary_pt_br": "Roupas + tamanhos + provador. FIT (caber — tamanho) vs SUIT (combinar — estilo). 'These jeans FIT me' (caibo neles). 'This color SUITS you' (essa cor te combina).",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 71 — Fitting Room", "subtitle_en": "Clothes and sizes", "subtitle_pt": "Roupas e tamanhos" },
-    { "kind": "dialogue", "location_en": "In a shop", "location_pt": "Numa loja", "turns": [
-      { "character_id": "bia", "en": "Do you have this in a medium?", "pt": "Tem esse em M?" },
-      { "character_id": "rafa", "en": "Yes. The fitting rooms are over there.", "pt": "Sim. Os provadores são ali." },
-      { "character_id": "bia", "en": "These jeans don't fit. They're too tight.", "pt": "Essa calça não cabe. Tá apertada." },
-      { "character_id": "rafa", "en": "The blue shirt really suits you, though.", "pt": "Mas a camisa azul fica ótima em você." }
-    ]},
-    { "kind": "grammar_note", "title": "FIT vs SUIT", "body_en": "FIT = the right SIZE. 'These pants fit me.' (they're my size). SUIT = looks good / matches YOU. 'That color suits you.' (looks nice on you). Brazilians mix these — don't.", "body_pt": "FIT = CABE (tamanho). SUIT = FICA BEM (aparência). 'These pants fit' (cabem). 'This color suits you' (combina com você).", "examples": [
-      { "en": "Small size fits. Red color suits.", "pt": "Tamanho = fit. Estilo = suit." }
-    ]},
-    { "kind": "vocab_intro", "title": "Clothing", "items": [
-      { "term": "shirt / t-shirt / dress", "pt": "camisa / camiseta / vestido" },
-      { "term": "pants / jeans / shorts", "pt": "calça / jeans / bermuda" },
-      { "term": "jacket / coat / sweater", "pt": "jaqueta / casaco / blusa" },
-      { "term": "shoes / sneakers / boots", "pt": "sapatos / tênis / botas" },
-      { "term": "socks / belt / hat", "pt": "meias / cinto / chapéu" }
-    ]},
-    { "kind": "vocab_intro", "title": "Sizes + descriptions", "items": [
-      { "term": "tight / loose", "pt": "apertado / largo" },
-      { "term": "size (S/M/L/XL)", "pt": "tamanho" },
-      { "term": "fitting room", "pt": "provador" },
-      { "term": "try on", "pt": "provar (roupa)" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "cloth-s01", "type": "multiple_choice", "question": "'That shirt really ___ you.' (looks good on you)", "options": ["fits", "suits", "wears", "dresses"], "correct": 1, "explanation": "SUITS = looks good on.", "hint_pt_br": "Fica bem = suits." }},
-    { "kind": "exercise", "exercise": { "id": "cloth-s02", "type": "fill_blank", "question": "Complete: 'Can I ___ ___ these jeans?' (experimentar)", "correct": "try on", "explanation": "TRY ON = try on clothes.", "hint_pt_br": "'Try on' = experimentar roupa." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 71 — Fitting Room",
+      "subtitle_en": "Clothes and sizes",
+      "subtitle_pt": "Roupas e tamanhos"
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "In a shop",
+      "location_pt": "Numa loja",
+      "turns": [
+        {
+          "character_id": "bia",
+          "en": "Do you have this in a medium?",
+          "pt": "Tem esse em M?"
+        },
+        {
+          "character_id": "rafa",
+          "en": "Yes. The fitting rooms are over there.",
+          "pt": "Sim. Os provadores são ali."
+        },
+        {
+          "character_id": "bia",
+          "en": "These jeans don't fit. They're too tight.",
+          "pt": "Essa calça não cabe. Tá apertada."
+        },
+        {
+          "character_id": "rafa",
+          "en": "The blue shirt really suits you, though.",
+          "pt": "Mas a camisa azul fica ótima em você."
+        }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "FIT vs SUIT",
+      "body_en": "FIT = the right SIZE. 'These pants fit me.' (they're my size). SUIT = looks good / matches YOU. 'That color suits you.' (looks nice on you). Brazilians mix these — don't.",
+      "body_pt": "FIT = CABE (tamanho). SUIT = FICA BEM (aparência). 'These pants fit' (cabem). 'This color suits you' (combina com você).",
+      "examples": [
+        {
+          "en": "Small size fits. Red color suits.",
+          "pt": "Tamanho = fit. Estilo = suit."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Clothing",
+      "items": [
+        {
+          "term": "shirt / t-shirt / dress",
+          "pt": "camisa / camiseta / vestido"
+        },
+        {
+          "term": "pants / jeans / shorts",
+          "pt": "calça / jeans / bermuda"
+        },
+        {
+          "term": "jacket / coat / sweater",
+          "pt": "jaqueta / casaco / blusa"
+        },
+        {
+          "term": "shoes / sneakers / boots",
+          "pt": "sapatos / tênis / botas"
+        },
+        {
+          "term": "socks / belt / hat",
+          "pt": "meias / cinto / chapéu"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Sizes + descriptions",
+      "items": [
+        {
+          "term": "tight / loose",
+          "pt": "apertado / largo"
+        },
+        {
+          "term": "size (S/M/L/XL)",
+          "pt": "tamanho"
+        },
+        {
+          "term": "fitting room",
+          "pt": "provador"
+        },
+        {
+          "term": "try on",
+          "pt": "provar (roupa)"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "cloth-s01",
+        "type": "multiple_choice",
+        "question": "'That shirt really ___ you.' (looks good on you)",
+        "options": [
+          "fits",
+          "suits",
+          "wears",
+          "dresses"
+        ],
+        "correct": 1,
+        "explanation": "SUITS = looks good on.",
+        "hint_pt_br": "Fica bem = suits."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cloth-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'Can I ___ ___ these jeans?' (experimentar)",
+        "correct": "try on",
+        "explanation": "TRY ON = try on clothes.",
+        "hint_pt_br": "'Try on' = experimentar roupa."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Does This Fit?\". Clothing vocabulary + sizes + fitting rooms. Plus the difference between FIT (size) and SUIT (look good). Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Does This Fit?\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Does This Fit?",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Does This Fit?'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Does This Fit?\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "BBC Learning English · Lower Intermediate",
+          "url": "https://www.bbc.co.uk/learningenglish/english/course/lower-intermediate",
+          "pt_hint": "Curso BBC para nível pré-intermediário."
+        },
+        {
+          "label": "Perfect English Grammar",
+          "url": "https://www.perfect-english-grammar.com/",
+          "pt_hint": "Regras de gramática + exercícios interativos gratuitos."
+        },
+        {
+          "label": "British Council · A2",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/a2-reading",
+          "pt_hint": "Leituras A2 com exercícios de compreensão."
+        }
+      ]
+    }
   ]
 }

@@ -6,23 +6,152 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 11,
+  "estimated_minutes": 20,
   "summary_pt_br": "Verbos de preferência + forma -ING: love, like, enjoy, don't mind, hate. Exemplo: 'I love SURFING' (não 'I love surf'). 'I hate WAKING UP early'.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 59 — Preferences", "subtitle_en": "Like + -ing", "subtitle_pt": "Gostar + -ing" },
-    { "kind": "narrative", "character_id": "bia", "text_en": "'I LOVE SURFING,' said Bia.\n'I LIKE READING,' said Joca.\n'I ENJOY COOKING,' said Rafa.\n'I DON'T MIND WAKING UP early,' said Maya.\n'I HATE WAITING,' said Zara.", "text_pt": "'ADORO surfar,' disse a Bia.\n'GOSTO de ler,' disse o Joca.\n'CURTO cozinhar,' disse o Rafa.\n'Não me importo de acordar cedo,' disse a Maya.\n'ODEIO esperar,' disse a Zara." },
-    { "kind": "grammar_note", "title": "LIKE + -ING, not bare verb", "body_en": "After LIKE, LOVE, HATE, ENJOY, DON'T MIND — use verb-ING. 'I like READING' (not 'I like read'). Exception: 'I like TO read' is also correct but -ING is more common. 'I would like' is different — that takes TO + base: 'I would like TO read'.", "body_pt": "Depois de LIKE / LOVE / HATE / ENJOY / DON'T MIND → verbo-ING. 'I love surfing'. Cuidado: 'I would like' pede TO + verbo base ('I would like TO surf').", "examples": [
-      { "en": "I love cooking. (-ing)", "pt": "Adoro cozinhar." },
-      { "en": "I would love to cook. (to + base)", "pt": "Adoraria cozinhar." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "like-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["I love surf", "I love surfing", "I love to surfing", "I love surfs"], "correct": 1, "explanation": "LOVE + -ING.", "hint_pt_br": "Love + -ing. 'Surfing'." }},
-    { "kind": "exercise", "exercise": { "id": "like-s02", "type": "fill_blank", "question": "Complete: 'She enjoys ___ (read) books.'", "correct": "reading", "explanation": "ENJOY + -ING.", "hint_pt_br": "Enjoy + -ing." }},
-    { "kind": "exercise", "exercise": { "id": "like-s03", "type": "matching", "pairs": [
-      ["love", "adorar"],
-      ["like", "gostar"],
-      ["enjoy", "curtir"],
-      ["don't mind", "não se importar"],
-      ["hate", "odiar"]
-    ], "explanation": "Five preference verbs. All take -ING.", "hint_pt_br": "Cinco verbos. Todos com -ing depois." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 59 — Preferences",
+      "subtitle_en": "Like + -ing",
+      "subtitle_pt": "Gostar + -ing"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "'I LOVE SURFING,' said Bia.\n'I LIKE READING,' said Joca.\n'I ENJOY COOKING,' said Rafa.\n'I DON'T MIND WAKING UP early,' said Maya.\n'I HATE WAITING,' said Zara.",
+      "text_pt": "'ADORO surfar,' disse a Bia.\n'GOSTO de ler,' disse o Joca.\n'CURTO cozinhar,' disse o Rafa.\n'Não me importo de acordar cedo,' disse a Maya.\n'ODEIO esperar,' disse a Zara."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "LIKE + -ING, not bare verb",
+      "body_en": "After LIKE, LOVE, HATE, ENJOY, DON'T MIND — use verb-ING. 'I like READING' (not 'I like read'). Exception: 'I like TO read' is also correct but -ING is more common. 'I would like' is different — that takes TO + base: 'I would like TO read'.",
+      "body_pt": "Depois de LIKE / LOVE / HATE / ENJOY / DON'T MIND → verbo-ING. 'I love surfing'. Cuidado: 'I would like' pede TO + verbo base ('I would like TO surf').",
+      "examples": [
+        {
+          "en": "I love cooking. (-ing)",
+          "pt": "Adoro cozinhar."
+        },
+        {
+          "en": "I would love to cook. (to + base)",
+          "pt": "Adoraria cozinhar."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "like-s01",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "I love surf",
+          "I love surfing",
+          "I love to surfing",
+          "I love surfs"
+        ],
+        "correct": 1,
+        "explanation": "LOVE + -ING.",
+        "hint_pt_br": "Love + -ing. 'Surfing'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "like-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'She enjoys ___ (read) books.'",
+        "correct": "reading",
+        "explanation": "ENJOY + -ING.",
+        "hint_pt_br": "Enjoy + -ing."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "like-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "love",
+            "adorar"
+          ],
+          [
+            "like",
+            "gostar"
+          ],
+          [
+            "enjoy",
+            "curtir"
+          ],
+          [
+            "don't mind",
+            "não se importar"
+          ],
+          [
+            "hate",
+            "odiar"
+          ]
+        ],
+        "explanation": "Five preference verbs. All take -ING.",
+        "hint_pt_br": "Cinco verbos. Todos com -ing depois."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"I Love Surfing, I Hate Waking Up\". Verbs of preference (like, love, hate, enjoy, don't mind) + verb-ING. Not 'I love surf' — 'I love surfing'. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"I Love Surfing, I Hate Waking Up\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "I Love Surfing, I Hate Waking Up",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'I Love Surfing, I Hate Waking Up'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"I Love Surfing, I Hate Waking Up\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        },
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        }
+      ]
+    }
   ]
 }

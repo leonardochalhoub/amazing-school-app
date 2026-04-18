@@ -6,45 +6,247 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 40,
-  "estimated_minutes": 13,
+  "estimated_minutes": 22,
   "summary_pt_br": "Comidas e bebidas + fórmulas educadas para pedir: I'd like... / Could I have... / Can I get... A diferença entre soar rude e soar educado na hora de pedir em restaurantes.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 33 — At the Window", "subtitle_en": "Food, drinks, and the magic of 'I'd like'", "subtitle_pt": "Comida, bebida e a mágica do 'I'd like'" },
-    { "kind": "narrative", "character_id": "bia", "text_en": "Bia stepped up to Rafa's window.\n'I WANT a taco!' she said, too fast.\nRafa raised an eyebrow. 'That's a demand, not an order.\nTry again. Use I'D LIKE or COULD I HAVE.'", "text_pt": "A Bia chegou na janela do Rafa.\n'I WANT a taco!' disse, rápido demais.\nO Rafa ergueu a sobrancelha. 'Isso é exigência, não pedido.\nTenta de novo. Usa I'D LIKE ou COULD I HAVE.'" },
-    { "kind": "vocab_intro", "title": "Food basics", "items": [
-      { "term": "taco", "pt": "taco" },
-      { "term": "rice / beans", "pt": "arroz / feijão" },
-      { "term": "chicken", "pt": "frango" },
-      { "term": "beef / pork / fish", "pt": "carne bovina / porco / peixe" },
-      { "term": "salad", "pt": "salada" },
-      { "term": "dessert", "pt": "sobremesa" }
-    ]},
-    { "kind": "vocab_intro", "title": "Drink basics", "items": [
-      { "term": "water", "pt": "água" },
-      { "term": "coffee / tea", "pt": "café / chá" },
-      { "term": "juice", "pt": "suco" },
-      { "term": "soda", "pt": "refrigerante" },
-      { "term": "beer / wine", "pt": "cerveja / vinho" }
-    ]},
-    { "kind": "grammar_note", "title": "Polite ordering — the three magic formulas", "body_en": "English has a spectrum of politeness. 'I want' = blunt / kids' register. 'I'D LIKE' = neutral-polite, good anywhere. 'COULD I HAVE' = slightly more polite, nice in restaurants. 'CAN I GET' = casual US café style. All four COMMUNICATE, but 'I'd like' and 'could I have' make you sound like an adult.", "body_pt": "Espectro de educação: 'I want' é para criança/ grosso. 'I'D LIKE' = neutro-educado. 'COULD I HAVE' = mais educado. 'CAN I GET' = casual (cafeteria americana). Todos funcionam, mas 'I'd like' e 'could I have' soam adultos.", "examples": [
-      { "en": "I'd like a coffee, please.", "pt": "Eu gostaria de um café, por favor." },
-      { "en": "Could I have the bill, please?", "pt": "Poderia me trazer a conta?" },
-      { "en": "Can I get two tacos?", "pt": "Me dá dois tacos? (casual)" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "rafa", "exercise": { "id": "menu-s01", "type": "multiple_choice", "question": "Which is the most polite way to order?", "options": ["Give me a taco", "I want a taco", "I'd like a taco, please", "Taco now"], "correct": 2, "explanation": "'I'd like ... please' is the textbook polite order.", "hint_pt_br": "'I'd like ... please' é a forma educada padrão." }},
-    { "kind": "exercise", "exercise": { "id": "menu-s02", "type": "fill_blank", "question": "Complete: '___ ___ have the bill, please?'", "correct": "Could I", "explanation": "COULD I HAVE = very polite request. 'Could I have the bill'.", "hint_pt_br": "'Could I' + verbo base = pedido educado." }},
-    { "kind": "exercise", "exercise": { "id": "menu-s03", "type": "matching", "pairs": [
-      ["I'd like", "educado (padrão)"],
-      ["Could I have", "ainda mais educado"],
-      ["Can I get", "casual (EUA)"],
-      ["I want", "grosso em adulto"]
-    ], "explanation": "Four levels of politeness. Adults in restaurants: use the first two.", "hint_pt_br": "Quatro níveis. Adulto em restaurante: use os dois primeiros." }},
-    { "kind": "dialogue", "location_en": "Back at the window", "location_pt": "De volta à janela", "turns": [
-      { "character_id": "bia", "en": "I'd like a taco, please — and a juice.", "pt": "Eu gostaria de um taco, por favor — e um suco." },
-      { "character_id": "rafa", "en": "What kind of juice?", "pt": "Que tipo de suco?" },
-      { "character_id": "bia", "en": "Orange, please. Could I have it cold?", "pt": "Laranja, por favor. Poderia ser gelado?" },
-      { "character_id": "rafa", "en": "Coming up.", "pt": "Já vai." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "menu-s04", "type": "fill_blank", "question": "Complete a polite question: 'Could you bring ___ some water, please?'", "correct": "me", "explanation": "'Bring me' — object pronoun. 'Could you bring ME some water' is the standard.", "hint_pt_br": "'Me' é o objeto de 'bring': 'bring me something' = traga algo para mim." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 33 — At the Window",
+      "subtitle_en": "Food, drinks, and the magic of 'I'd like'",
+      "subtitle_pt": "Comida, bebida e a mágica do 'I'd like'"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "Bia stepped up to Rafa's window.\n'I WANT a taco!' she said, too fast.\nRafa raised an eyebrow. 'That's a demand, not an order.\nTry again. Use I'D LIKE or COULD I HAVE.'",
+      "text_pt": "A Bia chegou na janela do Rafa.\n'I WANT a taco!' disse, rápido demais.\nO Rafa ergueu a sobrancelha. 'Isso é exigência, não pedido.\nTenta de novo. Usa I'D LIKE ou COULD I HAVE.'"
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Food basics",
+      "items": [
+        {
+          "term": "taco",
+          "pt": "taco"
+        },
+        {
+          "term": "rice / beans",
+          "pt": "arroz / feijão"
+        },
+        {
+          "term": "chicken",
+          "pt": "frango"
+        },
+        {
+          "term": "beef / pork / fish",
+          "pt": "carne bovina / porco / peixe"
+        },
+        {
+          "term": "salad",
+          "pt": "salada"
+        },
+        {
+          "term": "dessert",
+          "pt": "sobremesa"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Drink basics",
+      "items": [
+        {
+          "term": "water",
+          "pt": "água"
+        },
+        {
+          "term": "coffee / tea",
+          "pt": "café / chá"
+        },
+        {
+          "term": "juice",
+          "pt": "suco"
+        },
+        {
+          "term": "soda",
+          "pt": "refrigerante"
+        },
+        {
+          "term": "beer / wine",
+          "pt": "cerveja / vinho"
+        }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Polite ordering — the three magic formulas",
+      "body_en": "English has a spectrum of politeness. 'I want' = blunt / kids' register. 'I'D LIKE' = neutral-polite, good anywhere. 'COULD I HAVE' = slightly more polite, nice in restaurants. 'CAN I GET' = casual US café style. All four COMMUNICATE, but 'I'd like' and 'could I have' make you sound like an adult.",
+      "body_pt": "Espectro de educação: 'I want' é para criança/ grosso. 'I'D LIKE' = neutro-educado. 'COULD I HAVE' = mais educado. 'CAN I GET' = casual (cafeteria americana). Todos funcionam, mas 'I'd like' e 'could I have' soam adultos.",
+      "examples": [
+        {
+          "en": "I'd like a coffee, please.",
+          "pt": "Eu gostaria de um café, por favor."
+        },
+        {
+          "en": "Could I have the bill, please?",
+          "pt": "Poderia me trazer a conta?"
+        },
+        {
+          "en": "Can I get two tacos?",
+          "pt": "Me dá dois tacos? (casual)"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "rafa",
+      "exercise": {
+        "id": "menu-s01",
+        "type": "multiple_choice",
+        "question": "Which is the most polite way to order?",
+        "options": [
+          "Give me a taco",
+          "I want a taco",
+          "I'd like a taco, please",
+          "Taco now"
+        ],
+        "correct": 2,
+        "explanation": "'I'd like ... please' is the textbook polite order.",
+        "hint_pt_br": "'I'd like ... please' é a forma educada padrão."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "menu-s02",
+        "type": "fill_blank",
+        "question": "Complete: '___ ___ have the bill, please?'",
+        "correct": "Could I",
+        "explanation": "COULD I HAVE = very polite request. 'Could I have the bill'.",
+        "hint_pt_br": "'Could I' + verbo base = pedido educado."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "menu-s03",
+        "type": "matching",
+        "pairs": [
+          [
+            "I'd like",
+            "educado (padrão)"
+          ],
+          [
+            "Could I have",
+            "ainda mais educado"
+          ],
+          [
+            "Can I get",
+            "casual (EUA)"
+          ],
+          [
+            "I want",
+            "grosso em adulto"
+          ]
+        ],
+        "explanation": "Four levels of politeness. Adults in restaurants: use the first two.",
+        "hint_pt_br": "Quatro níveis. Adulto em restaurante: use os dois primeiros."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Back at the window",
+      "location_pt": "De volta à janela",
+      "turns": [
+        {
+          "character_id": "bia",
+          "en": "I'd like a taco, please — and a juice.",
+          "pt": "Eu gostaria de um taco, por favor — e um suco."
+        },
+        {
+          "character_id": "rafa",
+          "en": "What kind of juice?",
+          "pt": "Que tipo de suco?"
+        },
+        {
+          "character_id": "bia",
+          "en": "Orange, please. Could I have it cold?",
+          "pt": "Laranja, por favor. Poderia ser gelado?"
+        },
+        {
+          "character_id": "rafa",
+          "en": "Coming up.",
+          "pt": "Já vai."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "menu-s04",
+        "type": "fill_blank",
+        "question": "Complete a polite question: 'Could you bring ___ some water, please?'",
+        "correct": "me",
+        "explanation": "'Bring me' — object pronoun. 'Could you bring ME some water' is the standard.",
+        "hint_pt_br": "'Me' é o objeto de 'bring': 'bring me something' = traga algo para mim."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Ordering at Tropical Bites\". Food & drink vocabulary + the polite way to order. I'D LIKE, COULD I HAVE, CAN I GET — the difference between rude and right. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Ordering at Tropical Bites\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Ordering at Tropical Bites",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Ordering at Tropical Bites'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Ordering at Tropical Bites\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        },
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        },
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        }
+      ]
+    }
   ]
 }

@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 40,
-  "estimated_minutes": 14,
+  "estimated_minutes": 23,
   "summary_pt_br": "A Bia se confunde com o verbo TO BE. Dona Lúcia, Rafa e Mr. Kumar ajudam — em rimas e diálogos — a separar I am / you are / he is. Inclui a armadilha 'I have 16 years' (errada em inglês).",
   "scenes": [
     {
@@ -25,9 +25,21 @@
       "kind": "vocab_intro",
       "title": "The three forms of BE",
       "items": [
-        { "term": "am", "pt": "sou / estou (só com 'I')", "example_en": "I am Bia." },
-        { "term": "are", "pt": "é / está / são / estão (com you, we, they)", "example_en": "You are smart." },
-        { "term": "is", "pt": "é / está (com he, she, it)", "example_en": "She is tired." }
+        {
+          "term": "am",
+          "pt": "sou / estou (só com 'I')",
+          "example_en": "I am Bia."
+        },
+        {
+          "term": "are",
+          "pt": "é / está / são / estão (com you, we, they)",
+          "example_en": "You are smart."
+        },
+        {
+          "term": "is",
+          "pt": "é / está (com he, she, it)",
+          "example_en": "She is tired."
+        }
       ]
     },
     {
@@ -53,10 +65,26 @@
       "location_en": "The rooftop, mid-morning",
       "location_pt": "O terraço, meio da manhã",
       "turns": [
-        { "character_id": "rafa", "en": "Bia, are you hungry?", "pt": "Bia, você está com fome?" },
-        { "character_id": "bia", "en": "No, I'm not. Thank you!", "pt": "Não, não estou. Obrigada!" },
-        { "character_id": "rafa", "en": "Is Cosmo hungry?", "pt": "O Cosmo está com fome?" },
-        { "character_id": "bia", "en": "Cosmo is ALWAYS hungry.", "pt": "O Cosmo está SEMPRE com fome." }
+        {
+          "character_id": "rafa",
+          "en": "Bia, are you hungry?",
+          "pt": "Bia, você está com fome?"
+        },
+        {
+          "character_id": "bia",
+          "en": "No, I'm not. Thank you!",
+          "pt": "Não, não estou. Obrigada!"
+        },
+        {
+          "character_id": "rafa",
+          "en": "Is Cosmo hungry?",
+          "pt": "O Cosmo está com fome?"
+        },
+        {
+          "character_id": "bia",
+          "en": "Cosmo is ALWAYS hungry.",
+          "pt": "O Cosmo está SEMPRE com fome."
+        }
       ]
     },
     {
@@ -65,10 +93,22 @@
       "body_en": "Portuguese has ser (permanent), estar (temporary), and sometimes uses ter for age/hunger. English uses ONE verb — BE — for all of it: 'I am a teacher' (ser), 'I am tired' (estar), 'I am 30 years old' (idade, não ter!), 'I am hungry' (fome, não ter fome!).",
       "body_pt": "Português separa ser/estar e às vezes usa 'ter' para idade/fome. O inglês usa só BE para tudo. 'I am' cobre 'sou', 'estou', 'tenho (idade)', 'estou com (fome/sede/medo)'.",
       "examples": [
-        { "en": "I am a student.", "pt": "Sou estudante." },
-        { "en": "I am tired.", "pt": "Estou cansado." },
-        { "en": "I am 16 years old.", "pt": "Tenho 16 anos." },
-        { "en": "I am thirsty.", "pt": "Estou com sede." }
+        {
+          "en": "I am a student.",
+          "pt": "Sou estudante."
+        },
+        {
+          "en": "I am tired.",
+          "pt": "Estou cansado."
+        },
+        {
+          "en": "I am 16 years old.",
+          "pt": "Tenho 16 anos."
+        },
+        {
+          "en": "I am thirsty.",
+          "pt": "Estou com sede."
+        }
       ]
     },
     {
@@ -94,9 +134,18 @@
         "id": "tobe-s03",
         "type": "matching",
         "pairs": [
-          ["I", "am"],
-          ["you / we / they", "are"],
-          ["he / she / it", "is"]
+          [
+            "I",
+            "am"
+          ],
+          [
+            "you / we / they",
+            "are"
+          ],
+          [
+            "he / she / it",
+            "is"
+          ]
         ],
         "explanation": "Only I uses AM. He/she/it always use IS. Everyone else uses ARE.",
         "hint_pt_br": "Regra das três caixas: I=am, he/she/it=is, resto=are."
@@ -119,6 +168,62 @@
         "explanation": "YOU always takes ARE — whether talking to one person or many.",
         "hint_pt_br": "'You' sempre pede 'are', não importa se é singular ou plural."
       }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"I Am, You Are, We All Learn\". Bia confuses the verb TO BE. Dona Lúcia, Rafa, and Mr. Kumar help her untangle I am / you are / he is — in rhyme. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"I Am, You Are, We All Learn\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "I Am, You Are, We All Learn",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'I Am, You Are, We All Learn'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"I Am, You Are, We All Learn\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        },
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        },
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        }
+      ]
     }
   ]
 }

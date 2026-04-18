@@ -6,15 +6,117 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 25,
-  "estimated_minutes": 10,
+  "estimated_minutes": 19,
   "summary_pt_br": "Imperativo em inglês é apenas o VERBO BASE (sem sujeito). 'Stop!', 'Come here', 'Sit down'. Negativa: DON'T + verbo. 'Don't run'. Pedir educadamente: 'Please + imperativo' ou 'Could you + verbo'.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 73 — Imperatives", "subtitle_en": "Just the bare verb", "subtitle_pt": "Só o verbo base" },
-    { "kind": "narrative", "character_id": "kumar", "text_en": "Mr. Kumar called the class to attention.\n'SIT DOWN. OPEN your books. LOOK at page 10.\nPLEASE DON'T TALK now. DON'T RUN in the hall.'\nNo 'you'. Just the verb.", "text_pt": "Mr. Kumar chamou a turma.\n'SENTEM. ABRAM os livros. OLHEM a página 10.\nPOR FAVOR NÃO CONVERSEM agora. NÃO CORRAM no corredor.'\nSem 'you'. Só o verbo." },
-    { "kind": "grammar_note", "title": "Rules — simple but strict", "body_en": "Imperative = base verb, no subject. 'Stop.' 'Sit down.' 'Call me.' Negative: DON'T + base. 'Don't worry.' To soften: add 'PLEASE'. 'Please sit down.' Or use 'COULD YOU…?' for polite requests — that's a question, not an imperative.", "body_pt": "Imperativo = verbo base, sem 'you'. Negativa: DON'T + verbo. Para suavizar: PLEASE. Pedidos educados: 'Could you + verbo'.", "examples": [
-      { "en": "Come here. Don't worry. Please wait.", "pt": "Três usos." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "kumar", "exercise": { "id": "imp-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["You sit down", "Sit down", "To sit down", "Sits down"], "correct": 1, "explanation": "Imperative = just the base verb.", "hint_pt_br": "Imperativo = só o verbo, sem 'you'." }},
-    { "kind": "exercise", "exercise": { "id": "imp-s02", "type": "fill_blank", "question": "Complete (negative): '___ ___ late.' (não chegue atrasado)", "correct": "Don't be", "explanation": "DON'T + base verb.", "hint_pt_br": "'Don't be late'." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 73 — Imperatives",
+      "subtitle_en": "Just the bare verb",
+      "subtitle_pt": "Só o verbo base"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Mr. Kumar called the class to attention.\n'SIT DOWN. OPEN your books. LOOK at page 10.\nPLEASE DON'T TALK now. DON'T RUN in the hall.'\nNo 'you'. Just the verb.",
+      "text_pt": "Mr. Kumar chamou a turma.\n'SENTEM. ABRAM os livros. OLHEM a página 10.\nPOR FAVOR NÃO CONVERSEM agora. NÃO CORRAM no corredor.'\nSem 'you'. Só o verbo."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Rules — simple but strict",
+      "body_en": "Imperative = base verb, no subject. 'Stop.' 'Sit down.' 'Call me.' Negative: DON'T + base. 'Don't worry.' To soften: add 'PLEASE'. 'Please sit down.' Or use 'COULD YOU…?' for polite requests — that's a question, not an imperative.",
+      "body_pt": "Imperativo = verbo base, sem 'you'. Negativa: DON'T + verbo. Para suavizar: PLEASE. Pedidos educados: 'Could you + verbo'.",
+      "examples": [
+        {
+          "en": "Come here. Don't worry. Please wait.",
+          "pt": "Três usos."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "kumar",
+      "exercise": {
+        "id": "imp-s01",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "You sit down",
+          "Sit down",
+          "To sit down",
+          "Sits down"
+        ],
+        "correct": 1,
+        "explanation": "Imperative = just the base verb.",
+        "hint_pt_br": "Imperativo = só o verbo, sem 'you'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "imp-s02",
+        "type": "fill_blank",
+        "question": "Complete (negative): '___ ___ late.' (não chegue atrasado)",
+        "correct": "Don't be",
+        "explanation": "DON'T + base verb.",
+        "hint_pt_br": "'Don't be late'."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Stop! Look! Listen!\". Imperatives — commands, instructions, recipes. Just the bare verb. Add DON'T for negatives. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Stop! Look! Listen!\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Stop! Look! Listen!",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Stop! Look! Listen!'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Stop! Look! Listen!\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        },
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        },
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        }
+      ]
+    }
   ]
 }

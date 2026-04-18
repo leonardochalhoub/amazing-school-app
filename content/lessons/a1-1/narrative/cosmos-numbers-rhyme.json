@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 12,
+  "estimated_minutes": 21,
   "summary_pt_br": "Cosmo, o labrador, conta seus amigos numa rima estilo Dr. Seuss. Aprenda de 1 a 10 com ritmo, rima e muito abanar de rabo.",
   "scenes": [
     {
@@ -26,11 +26,31 @@
       "kind": "vocab_intro",
       "title": "One to five",
       "items": [
-        { "term": "one", "pt": "um", "example_en": "One dog." },
-        { "term": "two", "pt": "dois", "example_en": "Two eyes." },
-        { "term": "three", "pt": "três", "example_en": "Three cats." },
-        { "term": "four", "pt": "quatro", "example_en": "Four paws." },
-        { "term": "five", "pt": "cinco", "example_en": "Five friends." }
+        {
+          "term": "one",
+          "pt": "um",
+          "example_en": "One dog."
+        },
+        {
+          "term": "two",
+          "pt": "dois",
+          "example_en": "Two eyes."
+        },
+        {
+          "term": "three",
+          "pt": "três",
+          "example_en": "Three cats."
+        },
+        {
+          "term": "four",
+          "pt": "quatro",
+          "example_en": "Four paws."
+        },
+        {
+          "term": "five",
+          "pt": "cinco",
+          "example_en": "Five friends."
+        }
       ]
     },
     {
@@ -46,7 +66,12 @@
         "id": "cnr-001",
         "type": "multiple_choice",
         "question": "How many orange cats are in the rhyme?",
-        "options": ["two", "three", "four", "five"],
+        "options": [
+          "two",
+          "three",
+          "four",
+          "five"
+        ],
         "correct": 1,
         "explanation": "'THREE orange cats snoozing on the floor.' The rhyme uses 3.",
         "hint_pt_br": "Três gatos laranjas dormindo — THREE."
@@ -56,11 +81,31 @@
       "kind": "vocab_intro",
       "title": "Six to ten",
       "items": [
-        { "term": "six", "pt": "seis", "example_en": "Six stars." },
-        { "term": "seven", "pt": "sete", "example_en": "Seven days." },
-        { "term": "eight", "pt": "oito", "example_en": "Eight arms — like an octopus!" },
-        { "term": "nine", "pt": "nove", "example_en": "Nine lives for a cat." },
-        { "term": "ten", "pt": "dez", "example_en": "Ten fingers." }
+        {
+          "term": "six",
+          "pt": "seis",
+          "example_en": "Six stars."
+        },
+        {
+          "term": "seven",
+          "pt": "sete",
+          "example_en": "Seven days."
+        },
+        {
+          "term": "eight",
+          "pt": "oito",
+          "example_en": "Eight arms — like an octopus!"
+        },
+        {
+          "term": "nine",
+          "pt": "nove",
+          "example_en": "Nine lives for a cat."
+        },
+        {
+          "term": "ten",
+          "pt": "dez",
+          "example_en": "Ten fingers."
+        }
       ]
     },
     {
@@ -75,8 +120,14 @@
       "body_en": "English puts the number BEFORE the noun, just like Portuguese: 'three cats', 'ten fingers'. For plurals of regular nouns, add -s: cat → cats, bird → birds. Some are irregular: mouse → mice, child → children. But that's a story for another day.",
       "body_pt": "Em inglês, o número vem ANTES do substantivo: 'three cats' (três gatos). O plural regular é só adicionar -s. Irregulares (mouse → mice, child → children) ficam para depois.",
       "examples": [
-        { "en": "one surfboard → two surfboards", "pt": "uma prancha → duas pranchas" },
-        { "en": "one child → two children", "pt": "irregular!" }
+        {
+          "en": "one surfboard → two surfboards",
+          "pt": "uma prancha → duas pranchas"
+        },
+        {
+          "en": "one child → two children",
+          "pt": "irregular!"
+        }
       ]
     },
     {
@@ -97,11 +148,26 @@
         "id": "cnr-003",
         "type": "matching",
         "pairs": [
-          ["6", "six"],
-          ["7", "seven"],
-          ["8", "eight"],
-          ["9", "nine"],
-          ["10", "ten"]
+          [
+            "6",
+            "six"
+          ],
+          [
+            "7",
+            "seven"
+          ],
+          [
+            "8",
+            "eight"
+          ],
+          [
+            "9",
+            "nine"
+          ],
+          [
+            "10",
+            "ten"
+          ]
         ],
         "explanation": "Numbers 6–10, matched to their English names. EIGHT has a silent 'gh' — pronounced /eɪt/, just 'ate'.",
         "hint_pt_br": "Eight se lê /eit/ — igual a 'ate' (o verbo comer no passado)."
@@ -130,6 +196,62 @@
       "character_id": "kumar",
       "text_en": "Mr. Kumar grinned and clapped once or twice.\n'Counting with Cosmo is always quite nice.\nTomorrow,' he said, 'we'll count even more —\ntwenty, and thirty, and right up to a hundred — or four!'",
       "text_pt": "Mr. Kumar sorriu e bateu palmas ali.\n'Contar com o Cosmo é bom de seguir.\nAmanhã,' ele disse, 'vamos mais além —\nvinte, e trinta, e até cem, meu bem!'"
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Cosmo's Number Parade\". Cosmo the Labrador counts his friends in a Dr. Seuss–style rhyme. Learn 1–10 with rhythm, rhyme, and a lot of tail-wagging. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Cosmo's Number Parade\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Cosmo's Number Parade",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Cosmo's Number Parade'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Cosmo's Number Parade\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        },
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        },
+        {
+          "label": "British Council · A1",
+          "url": "https://learnenglish.britishcouncil.org/skills/speaking/a1-speaking",
+          "pt_hint": "Diálogos A1 do British Council, com áudio."
+        }
+      ]
     }
   ]
 }

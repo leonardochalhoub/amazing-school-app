@@ -6,16 +6,134 @@
   "level": "A1",
   "cefr_level": "a1.2",
   "xp_reward": 35,
-  "estimated_minutes": 11,
+  "estimated_minutes": 20,
   "summary_pt_br": "CAN para habilidade e pedidos. Estrutura: CAN + verbo base. Pergunta: Can you swim? Resposta curta: Yes I can / No I can't. Pedidos educados: 'Can you help me?', 'Can I have...?'",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 58 — Can You?", "subtitle_en": "Ability + requests", "subtitle_pt": "Habilidade + pedidos" },
-    { "kind": "narrative", "character_id": "bia", "text_en": "'Can you SURF?' Bia asked Joca.\n'I can't surf,' he said. 'But I CAN CODE. Can you code?'\n'I can't code. But I CAN COOK rice.' Rafa grinned: 'I CAN do both.'", "text_pt": "'Você sabe SURFAR?' Bia perguntou pro Joca.\n'Não sei surfar,' ele disse. 'Mas sei PROGRAMAR. Você programa?'\n'Eu não sei. Mas sei COZINHAR arroz.' Rafa riu: 'Eu sei os dois.'" },
-    { "kind": "grammar_note", "title": "CAN + base verb", "body_en": "CAN is a modal — never changes form, never takes TO. 'I can swim.' NOT 'I can to swim' or 'I cans swim'. Negative: CAN'T (or CANNOT). Short answer: Yes, I can / No, I can't.", "body_pt": "CAN é modal — não muda e nunca vai com TO. 'I can swim' (não 'I can to swim'). Negativa: can't / cannot. Resposta curta: Yes I can / No I can't.", "examples": [
-      { "en": "Can you help me? → Yes, I can. / No, I can't.", "pt": "Pergunta + resposta curta." }
-    ]},
-    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "can-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["I can to swim", "I can swim", "I cans swim", "I can swimming"], "correct": 1, "explanation": "CAN + BASE verb. No 'to', no -ing, no -s.", "hint_pt_br": "'Can' + verbo base. Nada mais." }},
-    { "kind": "exercise", "exercise": { "id": "can-s02", "type": "fill_blank", "question": "Complete: '___ you help me with this?'", "correct": "Can", "explanation": "Request: 'Can you…?'", "hint_pt_br": "'Can you help me?' = pedido educado." }},
-    { "kind": "exercise", "exercise": { "id": "can-s03", "type": "multiple_choice", "question": "Answer: 'Can you dance?' — No.", "options": ["No, I don't", "No, I can't", "No, I cannot dance", "Both B and C"], "correct": 3, "explanation": "Short: 'No, I can't.' Or full: 'No, I cannot dance.'", "hint_pt_br": "Short: 'No, I can't'. Full: 'No, I cannot dance'." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 58 — Can You?",
+      "subtitle_en": "Ability + requests",
+      "subtitle_pt": "Habilidade + pedidos"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "'Can you SURF?' Bia asked Joca.\n'I can't surf,' he said. 'But I CAN CODE. Can you code?'\n'I can't code. But I CAN COOK rice.' Rafa grinned: 'I CAN do both.'",
+      "text_pt": "'Você sabe SURFAR?' Bia perguntou pro Joca.\n'Não sei surfar,' ele disse. 'Mas sei PROGRAMAR. Você programa?'\n'Eu não sei. Mas sei COZINHAR arroz.' Rafa riu: 'Eu sei os dois.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "CAN + base verb",
+      "body_en": "CAN is a modal — never changes form, never takes TO. 'I can swim.' NOT 'I can to swim' or 'I cans swim'. Negative: CAN'T (or CANNOT). Short answer: Yes, I can / No, I can't.",
+      "body_pt": "CAN é modal — não muda e nunca vai com TO. 'I can swim' (não 'I can to swim'). Negativa: can't / cannot. Resposta curta: Yes I can / No I can't.",
+      "examples": [
+        {
+          "en": "Can you help me? → Yes, I can. / No, I can't.",
+          "pt": "Pergunta + resposta curta."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "can-s01",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "I can to swim",
+          "I can swim",
+          "I cans swim",
+          "I can swimming"
+        ],
+        "correct": 1,
+        "explanation": "CAN + BASE verb. No 'to', no -ing, no -s.",
+        "hint_pt_br": "'Can' + verbo base. Nada mais."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "can-s02",
+        "type": "fill_blank",
+        "question": "Complete: '___ you help me with this?'",
+        "correct": "Can",
+        "explanation": "Request: 'Can you…?'",
+        "hint_pt_br": "'Can you help me?' = pedido educado."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "can-s03",
+        "type": "multiple_choice",
+        "question": "Answer: 'Can you dance?' — No.",
+        "options": [
+          "No, I don't",
+          "No, I can't",
+          "No, I cannot dance",
+          "Both B and C"
+        ],
+        "correct": 3,
+        "explanation": "Short: 'No, I can't.' Or full: 'No, I cannot dance.'",
+        "hint_pt_br": "Short: 'No, I can't'. Full: 'No, I cannot dance'."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Can You? Yes, I Can\". CAN for ability (I can swim) and requests (Can you help me?). Short answers: Yes, I can / No, I can't. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Can You? Yes, I Can\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Can You? Yes, I Can",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Can You? Yes, I Can'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Can You? Yes, I Can\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        },
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        }
+      ]
+    }
   ]
 }

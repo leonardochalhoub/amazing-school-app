@@ -6,38 +6,220 @@
   "level": "B1",
   "cefr_level": "b1.2",
   "xp_reward": 50,
-  "estimated_minutes": 15,
+  "estimated_minutes": 24,
   "summary_pt_br": "Voz passiva em inglês: BE + particípio passado. Três tempos: 'is made' (presente), 'was made' (passado), 'will be made' (futuro), 'has been made' (presente perfeito). Quando usar: quem fez não importa, ou é óbvio, ou queremos dar ênfase ao objeto.",
   "scenes": [
-    { "kind": "chapter_title", "chapter": "Chapter 26 — The Headlines", "subtitle_en": "Passive voice — when the doer doesn't matter", "subtitle_pt": "Voz passiva — quando quem fez não importa" },
-    { "kind": "narrative", "character_id": "zara", "text_en": "Zara taped five headlines to the whiteboard:\n  'New surf record WAS SET in Praia do Sol.'\n  'Ten thousand coffees ARE SERVED every day downtown.'\n  'The bookstore WILL BE REOPENED by Mr. Kumar's nephew.'\n  'A rare dog HAS BEEN SPOTTED near the school.'\n  'The menu IS BEING REDESIGNED this week.'\n'Every one is passive,' she said. 'The doer is missing — or invisible.'", "text_pt": "A Zara colou cinco manchetes no quadro:\n  'Novo recorde de surfe FOI ESTABELECIDO em Praia do Sol.'\n  'Dez mil cafés SÃO SERVIDOS todo dia no centro.'\n  'A livraria SERÁ REABERTA pelo sobrinho do Mr. Kumar.'\n  'Um cão raro FOI AVISTADO perto da escola.'\n  'O cardápio ESTÁ SENDO REDESENHADO esta semana.'\n'Todas passivas,' ela disse. 'Quem faz está ausente — ou invisível.'" },
-    { "kind": "grammar_note", "title": "Passive voice — the formula across tenses", "body_en": "Formula: BE + past participle. Change BE to match the tense. Present: IS/ARE made. Past: WAS/WERE made. Present Perfect: HAS/HAVE BEEN made. Future: WILL BE made. Use passive when: (a) the doer is unknown or obvious, (b) you want to emphasize the RECIPIENT of the action, (c) news/formal writing.", "body_pt": "Fórmula: BE + particípio passado. Troca o BE pelo tempo. Presente: is/are made. Passado: was/were made. Presente perfeito: has/have been made. Futuro: will be made. Uso: quando quem faz não importa, é óbvio, ou se quer dar ênfase ao objeto da ação.", "examples": [
-      { "en": "The coffee IS MADE by Rafa every morning.", "pt": "O café é feito pelo Rafa toda manhã." },
-      { "en": "The letters WERE WRITTEN in 1972.", "pt": "As cartas foram escritas em 1972." },
-      { "en": "A new app WILL BE LAUNCHED next month.", "pt": "Um novo app será lançado no mês que vem." }
-    ]},
-    { "kind": "vocab_intro", "title": "Common passive phrases in news", "items": [
-      { "term": "was arrested", "pt": "foi preso" },
-      { "term": "has been announced", "pt": "foi anunciado" },
-      { "term": "is expected to...", "pt": "espera-se que..." },
-      { "term": "will be held", "pt": "será realizado" },
-      { "term": "was awarded", "pt": "foi premiado" }
-    ]},
-    { "kind": "exercise", "framing_character_id": "zara", "exercise": { "id": "pas-s01", "type": "fill_blank", "question": "Active: Rafa opens the truck at 6. Passive: The truck ___ ___ at 6 (by Rafa).", "correct": "is opened", "explanation": "Present passive: IS + past participle. Present tense because 'opens' is present.", "hint_pt_br": "Present → is/are + particípio. OPEN → opened." }},
-    { "kind": "exercise", "exercise": { "id": "pas-s02", "type": "fill_blank", "question": "Active: They built the school in 1995. Passive: The school ___ ___ in 1995.", "correct": "was built", "explanation": "Past passive: WAS/WERE + past participle. BUILT is irregular.", "hint_pt_br": "Past → was/were + particípio. Build → built (irregular)." }},
-    { "kind": "exercise", "exercise": { "id": "pas-s03", "type": "multiple_choice", "question": "'This app ___ by a small team in Brazil.' (active: a team develops the app — use present)", "options": ["develops", "is developed", "is developing", "has developed"], "correct": 1, "explanation": "The app RECEIVES the action → passive. Present passive: IS + developed.", "hint_pt_br": "O app é objeto da ação → passive. Is + developed." }},
-    { "kind": "dialogue", "location_en": "Classroom, deconstructing a headline", "location_pt": "Sala, analisando uma manchete", "turns": [
-      { "character_id": "joca", "en": "Why not just say 'Someone spotted a dog'?", "pt": "Por que não dizer 'Alguém viu um cachorro'?" },
-      { "character_id": "zara", "en": "Because the dog is the news. Not the person who saw it.", "pt": "Porque o cachorro é a notícia. Não a pessoa que viu." },
-      { "character_id": "joca", "en": "So passive lets you highlight what matters.", "pt": "Então a passiva destaca o que importa." },
-      { "character_id": "zara", "en": "Exactly. That's why news loves it.", "pt": "Exatamente. Por isso as notícias adoram." }
-    ]},
-    { "kind": "exercise", "exercise": { "id": "pas-s04", "type": "matching", "pairs": [
-      ["is made", "é feito (presente)"],
-      ["was made", "foi feito (passado)"],
-      ["has been made", "foi feito (perfeito)"],
-      ["will be made", "será feito (futuro)"],
-      ["is being made", "está sendo feito (contínuo)"]
-    ], "explanation": "Same particípio (made), five different BE tenses — five different meanings.", "hint_pt_br": "Mesmo particípio (made), tempos diferentes do BE = tempos diferentes da passiva." }}
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 26 — The Headlines",
+      "subtitle_en": "Passive voice — when the doer doesn't matter",
+      "subtitle_pt": "Voz passiva — quando quem fez não importa"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Zara taped five headlines to the whiteboard:\n  'New surf record WAS SET in Praia do Sol.'\n  'Ten thousand coffees ARE SERVED every day downtown.'\n  'The bookstore WILL BE REOPENED by Mr. Kumar's nephew.'\n  'A rare dog HAS BEEN SPOTTED near the school.'\n  'The menu IS BEING REDESIGNED this week.'\n'Every one is passive,' she said. 'The doer is missing — or invisible.'",
+      "text_pt": "A Zara colou cinco manchetes no quadro:\n  'Novo recorde de surfe FOI ESTABELECIDO em Praia do Sol.'\n  'Dez mil cafés SÃO SERVIDOS todo dia no centro.'\n  'A livraria SERÁ REABERTA pelo sobrinho do Mr. Kumar.'\n  'Um cão raro FOI AVISTADO perto da escola.'\n  'O cardápio ESTÁ SENDO REDESENHADO esta semana.'\n'Todas passivas,' ela disse. 'Quem faz está ausente — ou invisível.'"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Passive voice — the formula across tenses",
+      "body_en": "Formula: BE + past participle. Change BE to match the tense. Present: IS/ARE made. Past: WAS/WERE made. Present Perfect: HAS/HAVE BEEN made. Future: WILL BE made. Use passive when: (a) the doer is unknown or obvious, (b) you want to emphasize the RECIPIENT of the action, (c) news/formal writing.",
+      "body_pt": "Fórmula: BE + particípio passado. Troca o BE pelo tempo. Presente: is/are made. Passado: was/were made. Presente perfeito: has/have been made. Futuro: will be made. Uso: quando quem faz não importa, é óbvio, ou se quer dar ênfase ao objeto da ação.",
+      "examples": [
+        {
+          "en": "The coffee IS MADE by Rafa every morning.",
+          "pt": "O café é feito pelo Rafa toda manhã."
+        },
+        {
+          "en": "The letters WERE WRITTEN in 1972.",
+          "pt": "As cartas foram escritas em 1972."
+        },
+        {
+          "en": "A new app WILL BE LAUNCHED next month.",
+          "pt": "Um novo app será lançado no mês que vem."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Common passive phrases in news",
+      "items": [
+        {
+          "term": "was arrested",
+          "pt": "foi preso"
+        },
+        {
+          "term": "has been announced",
+          "pt": "foi anunciado"
+        },
+        {
+          "term": "is expected to...",
+          "pt": "espera-se que..."
+        },
+        {
+          "term": "will be held",
+          "pt": "será realizado"
+        },
+        {
+          "term": "was awarded",
+          "pt": "foi premiado"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "zara",
+      "exercise": {
+        "id": "pas-s01",
+        "type": "fill_blank",
+        "question": "Active: Rafa opens the truck at 6. Passive: The truck ___ ___ at 6 (by Rafa).",
+        "correct": "is opened",
+        "explanation": "Present passive: IS + past participle. Present tense because 'opens' is present.",
+        "hint_pt_br": "Present → is/are + particípio. OPEN → opened."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pas-s02",
+        "type": "fill_blank",
+        "question": "Active: They built the school in 1995. Passive: The school ___ ___ in 1995.",
+        "correct": "was built",
+        "explanation": "Past passive: WAS/WERE + past participle. BUILT is irregular.",
+        "hint_pt_br": "Past → was/were + particípio. Build → built (irregular)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pas-s03",
+        "type": "multiple_choice",
+        "question": "'This app ___ by a small team in Brazil.' (active: a team develops the app — use present)",
+        "options": [
+          "develops",
+          "is developed",
+          "is developing",
+          "has developed"
+        ],
+        "correct": 1,
+        "explanation": "The app RECEIVES the action → passive. Present passive: IS + developed.",
+        "hint_pt_br": "O app é objeto da ação → passive. Is + developed."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Classroom, deconstructing a headline",
+      "location_pt": "Sala, analisando uma manchete",
+      "turns": [
+        {
+          "character_id": "joca",
+          "en": "Why not just say 'Someone spotted a dog'?",
+          "pt": "Por que não dizer 'Alguém viu um cachorro'?"
+        },
+        {
+          "character_id": "zara",
+          "en": "Because the dog is the news. Not the person who saw it.",
+          "pt": "Porque o cachorro é a notícia. Não a pessoa que viu."
+        },
+        {
+          "character_id": "joca",
+          "en": "So passive lets you highlight what matters.",
+          "pt": "Então a passiva destaca o que importa."
+        },
+        {
+          "character_id": "zara",
+          "en": "Exactly. That's why news loves it.",
+          "pt": "Exatamente. Por isso as notícias adoram."
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "pas-s04",
+        "type": "matching",
+        "pairs": [
+          [
+            "is made",
+            "é feito (presente)"
+          ],
+          [
+            "was made",
+            "foi feito (passado)"
+          ],
+          [
+            "has been made",
+            "foi feito (perfeito)"
+          ],
+          [
+            "will be made",
+            "será feito (futuro)"
+          ],
+          [
+            "is being made",
+            "está sendo feito (contínuo)"
+          ]
+        ],
+        "explanation": "Same particípio (made), five different BE tenses — five different meanings.",
+        "hint_pt_br": "Mesmo particípio (made), tempos diferentes do BE = tempos diferentes da passiva."
+      }
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"The Headlines — Passive Voice\". Passive voice (is/was/been + past participle) through news headlines. When the WHO doesn't matter or isn't known. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"The Headlines — Passive Voice\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "The Headlines — Passive Voice",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'The Headlines — Passive Voice'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"The Headlines — Passive Voice\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "British Council · B1",
+          "url": "https://learnenglish.britishcouncil.org/skills/reading/b1-reading",
+          "pt_hint": "Textos B1 com compreensão."
+        },
+        {
+          "label": "Engoo Daily News",
+          "url": "https://engoo.com/app/daily-news",
+          "pt_hint": "Notícias diárias graduadas por nível."
+        },
+        {
+          "label": "Oxford Learner's Dictionary",
+          "url": "https://www.oxfordlearnersdictionaries.com/",
+          "pt_hint": "Dicionário Oxford com exemplos e áudio."
+        }
+      ]
+    }
   ]
 }

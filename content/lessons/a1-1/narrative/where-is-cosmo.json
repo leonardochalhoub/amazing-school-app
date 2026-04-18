@@ -6,7 +6,7 @@
   "level": "A1",
   "cefr_level": "a1.1",
   "xp_reward": 35,
-  "estimated_minutes": 12,
+  "estimated_minutes": 21,
   "summary_pt_br": "O Cosmo se escondeu na sala. A turma tem que usar preposições de lugar (on, in, under, next to, behind) para achá-lo. Aprenda os objetos da sala e as preposições em contexto.",
   "scenes": [
     {
@@ -25,23 +25,61 @@
       "kind": "vocab_intro",
       "title": "Classroom objects",
       "items": [
-        { "term": "desk", "pt": "carteira / mesa escolar" },
-        { "term": "chair", "pt": "cadeira" },
-        { "term": "whiteboard", "pt": "quadro / lousa" },
-        { "term": "drawer", "pt": "gaveta" },
-        { "term": "backpack", "pt": "mochila" },
-        { "term": "door", "pt": "porta" }
+        {
+          "term": "desk",
+          "pt": "carteira / mesa escolar"
+        },
+        {
+          "term": "chair",
+          "pt": "cadeira"
+        },
+        {
+          "term": "whiteboard",
+          "pt": "quadro / lousa"
+        },
+        {
+          "term": "drawer",
+          "pt": "gaveta"
+        },
+        {
+          "term": "backpack",
+          "pt": "mochila"
+        },
+        {
+          "term": "door",
+          "pt": "porta"
+        }
       ]
     },
     {
       "kind": "vocab_intro",
       "title": "Five tiny but mighty prepositions",
       "items": [
-        { "term": "on", "pt": "em cima de", "example_en": "The book is on the desk." },
-        { "term": "in", "pt": "dentro de", "example_en": "The pen is in the drawer." },
-        { "term": "under", "pt": "embaixo de", "example_en": "The dog is under the chair." },
-        { "term": "next to", "pt": "ao lado de", "example_en": "Bia sits next to Rafa." },
-        { "term": "behind", "pt": "atrás de", "example_en": "Cosmo hides behind the door." }
+        {
+          "term": "on",
+          "pt": "em cima de",
+          "example_en": "The book is on the desk."
+        },
+        {
+          "term": "in",
+          "pt": "dentro de",
+          "example_en": "The pen is in the drawer."
+        },
+        {
+          "term": "under",
+          "pt": "embaixo de",
+          "example_en": "The dog is under the chair."
+        },
+        {
+          "term": "next to",
+          "pt": "ao lado de",
+          "example_en": "Bia sits next to Rafa."
+        },
+        {
+          "term": "behind",
+          "pt": "atrás de",
+          "example_en": "Cosmo hides behind the door."
+        }
       ]
     },
     {
@@ -56,7 +94,12 @@
         "id": "cosmo-s01",
         "type": "multiple_choice",
         "question": "The ball is resting on top of the table. Which preposition?",
-        "options": ["in", "on", "under", "behind"],
+        "options": [
+          "in",
+          "on",
+          "under",
+          "behind"
+        ],
         "correct": 1,
         "explanation": "ON = touching a surface from above. On the table, on the floor, on the wall.",
         "hint_pt_br": "ON = em cima, apoiado em uma superfície."
@@ -68,7 +111,12 @@
         "id": "cosmo-s02",
         "type": "multiple_choice",
         "question": "The cat is INSIDE the box. Which preposition?",
-        "options": ["in", "on", "under", "next to"],
+        "options": [
+          "in",
+          "on",
+          "under",
+          "next to"
+        ],
         "correct": 0,
         "explanation": "IN = inside. In the box, in my pocket, in the backpack.",
         "hint_pt_br": "IN = dentro de (interior)."
@@ -90,10 +138,26 @@
       "location_en": "Finally finding Cosmo",
       "location_pt": "Finalmente achando o Cosmo",
       "turns": [
-        { "character_id": "bia", "en": "Where is the backpack?", "pt": "Cadê a mochila?" },
-        { "character_id": "maya", "en": "It's next to the chair.", "pt": "Está ao lado da cadeira." },
-        { "character_id": "rafa", "en": "And Cosmo?", "pt": "E o Cosmo?" },
-        { "character_id": "kumar", "en": "He's IN the backpack. All of him.", "pt": "Ele está DENTRO da mochila. Inteiro." }
+        {
+          "character_id": "bia",
+          "en": "Where is the backpack?",
+          "pt": "Cadê a mochila?"
+        },
+        {
+          "character_id": "maya",
+          "en": "It's next to the chair.",
+          "pt": "Está ao lado da cadeira."
+        },
+        {
+          "character_id": "rafa",
+          "en": "And Cosmo?",
+          "pt": "E o Cosmo?"
+        },
+        {
+          "character_id": "kumar",
+          "en": "He's IN the backpack. All of him.",
+          "pt": "Ele está DENTRO da mochila. Inteiro."
+        }
       ]
     },
     {
@@ -102,11 +166,26 @@
         "id": "cosmo-s04",
         "type": "matching",
         "pairs": [
-          ["em cima de", "on"],
-          ["dentro de", "in"],
-          ["embaixo de", "under"],
-          ["ao lado de", "next to"],
-          ["atrás de", "behind"]
+          [
+            "em cima de",
+            "on"
+          ],
+          [
+            "dentro de",
+            "in"
+          ],
+          [
+            "embaixo de",
+            "under"
+          ],
+          [
+            "ao lado de",
+            "next to"
+          ],
+          [
+            "atrás de",
+            "behind"
+          ]
         ],
         "explanation": "Five prepositions that cover ~90% of 'where is it?' questions.",
         "hint_pt_br": "Essas cinco preposições cobrem quase tudo."
@@ -118,8 +197,70 @@
       "body_en": "When you want to say something EXISTS or is PRESENT, English uses 'there is' (singular) or 'there are' (plural) — NOT 'have'. 'There is a dog in the backpack' = Tem um cachorro na mochila.",
       "body_pt": "'Tem' de existir é 'there is / there are' em inglês — NUNCA 'have'. 'Tem um cachorro na mochila' = 'There IS a dog in the backpack'.",
       "examples": [
-        { "en": "There is a book on the desk.", "pt": "Tem um livro na mesa." },
-        { "en": "There are two dogs in the room.", "pt": "Tem dois cachorros na sala." }
+        {
+          "en": "There is a book on the desk.",
+          "pt": "Tem um livro na mesa."
+        },
+        {
+          "en": "There are two dogs in the room.",
+          "pt": "Tem dois cachorros na sala."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the class just finished \"Where Is Cosmo?\". Cosmo has hidden somewhere in the classroom. Use ON, IN, UNDER, NEXT TO, and BEHIND to find him. Mr. Kumar reminded the students that practice is the key — listen, read aloud, write your own examples. Every small step adds up. The ocean in Praia do Sol keeps moving, and so does your English.",
+      "check": {
+        "question": "According to Mr. Kumar, what is the key to learning?",
+        "options": [
+          "Memorization",
+          "Practice",
+          "Luck",
+          "Grammar rules"
+        ],
+        "correct": 1,
+        "explanation": "Practice — listen, read aloud, write your own examples.",
+        "hint_pt_br": "A chave é a prática: ouvir, ler em voz alta, escrever seus próprios exemplos."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in class we studied \"Where Is Cosmo?\". I liked it because it was clear and short. Tomorrow we will practice again. See you then!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A grammar rule about the past",
+          "Where Is Cosmo?",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says: \"Today in class we studied 'Where Is Cosmo?'\".",
+        "hint_pt_br": "Ela fala claramente o título: \"Where Is Cosmo?\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — free resources",
+      "body_pt": "Fontes gratuitas e confiáveis para você estudar mais. Salve os links e volte sempre.",
+      "sources": [
+        {
+          "label": "Cambridge Dictionary · EN↔PT",
+          "url": "https://dictionary.cambridge.org/dictionary/english-portuguese/",
+          "pt_hint": "Dicionário Cambridge, inglês → português."
+        },
+        {
+          "label": "VOA Learning English",
+          "url": "https://learningenglish.voanews.com/",
+          "pt_hint": "Notícias em inglês lento — ótimo para ouvido iniciante."
+        },
+        {
+          "label": "English Grammar In Use (preview)",
+          "url": "https://www.cambridge.org/elt/catalogue/subject/project/item5747361/",
+          "pt_hint": "Livro clássico de gramática inglesa — disponível em amostra."
+        }
       ]
     }
   ]
