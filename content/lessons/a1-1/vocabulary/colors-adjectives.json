@@ -1,0 +1,94 @@
+{
+  "slug": "colors-adjectives",
+  "title": "Colors & Basic Adjectives",
+  "description": "Describe things with colors and essential adjectives.",
+  "category": "vocabulary",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 25,
+  "estimated_minutes": 10,
+  "summary_pt_br": "Cores e adjetivos básicos. Em inglês, o adjetivo vem ANTES do substantivo: 'a red car', nunca 'a car red'.",
+  "exercises": [
+    {
+      "id": "col-001",
+      "type": "matching",
+      "pairs": [
+        ["azul", "blue"],
+        ["vermelho", "red"],
+        ["amarelo", "yellow"],
+        ["verde", "green"],
+        ["preto", "black"],
+        ["branco", "white"]
+      ],
+      "explanation": "The six 'starter' colors — cover ~80% of everyday descriptions.",
+      "hint_pt_br": "As seis cores mais úteis para começar."
+    },
+    {
+      "id": "col-002",
+      "type": "multiple_choice",
+      "question": "Which sentence is correct?",
+      "options": [
+        "I have a car red",
+        "I have a red car",
+        "I have red a car",
+        "I have a car of red"
+      ],
+      "correct": 1,
+      "explanation": "English word order: article → adjective → noun. 'A red car' — never 'a car red' (that's Portuguese order).",
+      "hint_pt_br": "Em inglês o adjetivo vem ANTES do substantivo. 'Carro vermelho' → 'red car'."
+    },
+    {
+      "id": "col-003",
+      "type": "matching",
+      "pairs": [
+        ["big", "grande"],
+        ["small", "pequeno"],
+        ["new", "novo"],
+        ["old", "velho / antigo"],
+        ["good", "bom"],
+        ["bad", "ruim"]
+      ],
+      "explanation": "Six adjective pairs that teachers describe as 'the survival kit' — you can describe almost anything with these.",
+      "hint_pt_br": "O 'kit de sobrevivência' dos adjetivos — você descreve quase tudo com esses."
+    },
+    {
+      "id": "col-004",
+      "type": "fill_blank",
+      "question": "Complete: 'This coffee is very ___' (opposite of cold).",
+      "correct": "hot",
+      "explanation": "HOT = quente. Note: for spicy food, English uses 'spicy' or 'hot'. For temperature, it's 'hot'.",
+      "hint_pt_br": "'Hot' = quente (temperatura). Também usado para comida picante."
+    },
+    {
+      "id": "col-005",
+      "type": "multiple_choice",
+      "question": "Adjectives in English change for plurals — true or false?",
+      "options": ["True", "False"],
+      "correct": 1,
+      "explanation": "FALSE. English adjectives never change: 'a red car' → 'two red cars' (not 'reds cars'). Only the noun gets pluralized.",
+      "hint_pt_br": "Adjetivos em inglês NUNCA mudam. 'Red car' → 'red cars'. Só o substantivo flexiona."
+    },
+    {
+      "id": "col-006",
+      "type": "fill_blank",
+      "question": "Complete: 'My house is old, but my car is ___.'",
+      "correct": "new",
+      "explanation": "OLD ↔ NEW. A very common opposite pair.",
+      "hint_pt_br": "Old (velho) ↔ New (novo)."
+    },
+    {
+      "id": "col-007",
+      "type": "multiple_choice",
+      "question": "Two or more adjectives together — which order?",
+      "options": [
+        "a French big car",
+        "a big French car",
+        "a car big French",
+        "a big car French"
+      ],
+      "correct": 1,
+      "explanation": "English has a preferred adjective order: opinion/size come BEFORE origin/nationality. 'A big French car' sounds right; 'a French big car' sounds foreign.",
+      "hint_pt_br": "Ordem preferida: tamanho/opinião antes de origem/nacionalidade. 'Big French car', não 'French big car'."
+    }
+  ]
+}

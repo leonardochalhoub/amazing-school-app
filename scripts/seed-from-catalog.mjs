@@ -87,10 +87,10 @@ function extractVocabHooks(lrcLines, maxN = 5) {
   const ranked = [...tallies.entries()]
     .filter(([, c]) => c >= 2)
     .sort((a, b) => b[1] - a[1]);
-  return ranked.slice(0, maxN).map(([term, count]) => ({
+  return ranked.slice(0, maxN).map(([term]) => ({
     term,
     pt: "",
-    note: `Appears ${count} times; first heard in: "${firstLine.get(term)}"`,
+    note: "",
   }));
 }
 

@@ -331,7 +331,7 @@ function SingAlongCard({
     .filter((v) => !v.pt || v.pt.length === 0)
     .map((v) => v.term);
   const translations = useVocabTranslations(termsNeedingTranslation);
-  const usingDeepL = termsNeedingTranslation.length > 0;
+  const usingMyMemory = termsNeedingTranslation.length > 0;
   return (
     <div className="rounded-xl border border-border bg-card p-5 shadow-xs">
       <p className="text-[11px] font-semibold uppercase tracking-wider text-primary">
@@ -398,17 +398,17 @@ function SingAlongCard({
             >
               Cambridge Dictionary
             </a>
-            {usingDeepL ? (
+            {usingMyMemory ? (
               <>
                 {" · "}
                 {locale === "pt-BR" ? "Tradução: " : "Translation: "}
                 <a
-                  href="https://www.deepl.com/translator"
+                  href="https://mymemory.translated.net/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline decoration-dotted"
                 >
-                  DeepL
+                  MyMemory
                 </a>
               </>
             ) : null}

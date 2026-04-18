@@ -4,7 +4,7 @@ import { Clock, Music2 } from "lucide-react";
 import { loadMusicSong } from "@/lib/content/music-server";
 import { MusicBoard } from "@/components/student/music-board";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { cambridgeUrl } from "@/lib/content/music";
+import { VocabSidebarList } from "@/components/student/vocab-sidebar-list";
 import { BrandMark } from "@/components/layout/brand-mark";
 import { DemoBanner } from "@/components/demo/demo-banner";
 import { LocaleToggle } from "@/components/locale-toggle";
@@ -91,27 +91,7 @@ export default async function DemoMusicPage({
                   <CardTitle className="text-sm">Vocabulary</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    {song.vocab_hooks.map((v) => (
-                      <li key={v.term} className="flex flex-col">
-                        <span className="inline-flex items-center gap-1">
-                          <a
-                            href={cambridgeUrl(v.term)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-medium underline decoration-dotted underline-offset-2 hover:text-primary"
-                          >
-                            {v.term}
-                          </a>
-                          <ExternalLink className="h-3 w-3 text-muted-foreground/60" />
-                          <span className="text-muted-foreground"> · {v.pt}</span>
-                        </span>
-                        <span className="text-[11px] text-muted-foreground">
-                          {v.note}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                  <VocabSidebarList vocabHooks={song.vocab_hooks} />
                 </CardContent>
               </Card>
 

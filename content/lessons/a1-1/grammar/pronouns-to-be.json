@@ -1,0 +1,94 @@
+{
+  "slug": "pronouns-to-be",
+  "title": "Personal Pronouns + Verb To Be",
+  "description": "I / you / he / she / it / we / they — with am / is / are. The most important verb in English.",
+  "category": "grammar",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 30,
+  "estimated_minutes": 12,
+  "summary_pt_br": "O verbo TO BE é a base do inglês. I AM, YOU ARE, HE/SHE/IT IS, WE/THEY ARE. Ele também existe onde o português usa 'estar', 'ter' (idade) e 'ser'.",
+  "exercises": [
+    {
+      "id": "tobe-001",
+      "type": "matching",
+      "pairs": [
+        ["I", "am"],
+        ["you", "are"],
+        ["he / she / it", "is"],
+        ["we / they", "are"]
+      ],
+      "explanation": "Only one pronoun uses 'am' (I). Three use 'is' (he/she/it). Three use 'are' (you/we/they).",
+      "hint_pt_br": "Memorize: só 'I' usa 'am'. Só 'he', 'she', 'it' usam 'is'. Todos os outros usam 'are'."
+    },
+    {
+      "id": "tobe-002",
+      "type": "fill_blank",
+      "question": "Complete: 'She ___ my sister.'",
+      "correct": "is",
+      "explanation": "SHE → IS. Remember: he/she/it all use 'is'.",
+      "hint_pt_br": "'She' pede 'is'."
+    },
+    {
+      "id": "tobe-003",
+      "type": "fill_blank",
+      "question": "Complete: 'We ___ from Brazil.'",
+      "correct": "are",
+      "explanation": "WE → ARE. Same as you and they.",
+      "hint_pt_br": "'We' pede 'are'."
+    },
+    {
+      "id": "tobe-004",
+      "type": "multiple_choice",
+      "question": "Which is the contraction of 'I am'?",
+      "options": ["I's", "I'm", "Im", "I're"],
+      "correct": 1,
+      "explanation": "'I am' → 'I'm'. Natives almost always contract. 'Im' without the apostrophe is a spelling mistake.",
+      "hint_pt_br": "I am = I'm. A forma contraída é muito mais natural na fala."
+    },
+    {
+      "id": "tobe-005",
+      "type": "multiple_choice",
+      "question": "In English, how do you say 'I'm hungry' (fome)?",
+      "options": [
+        "I have hunger",
+        "I am hunger",
+        "I am hungry",
+        "I have hungry"
+      ],
+      "correct": 2,
+      "explanation": "English uses BE + adjective: 'I am hungry/tired/cold/thirsty'. Not 'I have hunger' (Portuguese structure).",
+      "hint_pt_br": "Em inglês usamos 'to be' + adjetivo, não 'to have' + substantivo: I AM hungry (não 'I have hunger')."
+    },
+    {
+      "id": "tobe-006",
+      "type": "fill_blank",
+      "question": "Question form: '___ you a student?'",
+      "correct": "Are",
+      "explanation": "Yes/no questions with BE start with the verb: Are you…? Is she…? Am I…?",
+      "hint_pt_br": "Para fazer pergunta com 'to be', inverta: 'You are' → 'Are you?'"
+    },
+    {
+      "id": "tobe-007",
+      "type": "multiple_choice",
+      "question": "Which negative is correct?",
+      "options": [
+        "He no is tired",
+        "He don't is tired",
+        "He isn't tired",
+        "He not is tired"
+      ],
+      "correct": 2,
+      "explanation": "Negatives with BE just add 'not' (or contract to n't): is + not = isn't, are + not = aren't, am + not = 'm not.",
+      "hint_pt_br": "Negativa do 'to be': is/are + not. 'Isn't' e 'aren't' são as contrações."
+    },
+    {
+      "id": "tobe-008",
+      "type": "fill_blank",
+      "question": "Complete: 'It ___ cold today.' (right now)",
+      "correct": "is",
+      "explanation": "IT is the pronoun for weather, time, and unnamed things. 'It is cold' / 'It's cold'.",
+      "hint_pt_br": "Em inglês, 'it' é o pronome para tempo, clima e objetos genéricos."
+    }
+  ]
+}

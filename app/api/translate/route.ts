@@ -1,25 +1,69 @@
 import { NextResponse } from "next/server";
+import { OWNER_EMAIL } from "@/lib/auth/roles";
 
 /**
- * DeepL Free translation proxy. Keeps the key server-side.
+ * Free EN→PT-BR translation proxy backed by MyMemory.
  *
- * Client posts { terms: string[] } in English; we call DeepL EN→PT-BR and
- * return { translations: Record<term, pt> }. Batched — DeepL accepts up to
- * 50 `text` params per request and the free tier caps at 500k chars/month.
+ *   https://mymemory.translated.net/doc/spec.php
  *
- * The DeepL endpoint differs by plan — free-tier keys end in ":fx" and must
- * use api-free.deepl.com, while pro keys use api.deepl.com. We branch on
- * the key suffix so either works transparently.
+ * No API key, no credit card. Anonymous quota is 5k chars/day per IP;
+ * passing a valid email (`de=`) bumps it to 50k chars/day. At ~5 chars
+ * per word that's ~10k lookups/day server-wide, plenty for vocab chips.
+ * The client hook caches results in localStorage so quota lasts longer.
+ *
+ * MyMemory takes one term per request; we fetch the batch in parallel
+ * with a small concurrency cap to avoid throttling.
  */
-export async function POST(req: Request) {
-  const key = process.env.DEEPL_API_KEY;
-  if (!key) {
-    return NextResponse.json(
-      { error: "DEEPL_API_KEY not configured" },
-      { status: 503 }
-    );
-  }
 
+const BATCH_CONCURRENCY = 6;
+const MYMEMORY_URL = "https://api.mymemory.translated.net/get";
+
+async function translateOne(term: string): Promise<string | null> {
+  const params = new URLSearchParams({
+    q: term,
+    langpair: "en|pt-BR",
+    de: OWNER_EMAIL,
+  });
+  try {
+    const res = await fetch(`${MYMEMORY_URL}?${params.toString()}`);
+    if (!res.ok) return null;
+    const json = (await res.json()) as {
+      responseStatus?: number | string;
+      responseData?: { translatedText?: string };
+    };
+    const status = Number(json.responseStatus);
+    if (status !== 200) return null;
+    const raw = json.responseData?.translatedText?.trim() ?? "";
+    if (!raw) return null;
+    // MyMemory sometimes echoes the source on unknown words. Filter that.
+    if (raw.toLowerCase() === term.toLowerCase()) return null;
+    return raw;
+  } catch {
+    return null;
+  }
+}
+
+async function runLimited<T, R>(
+  items: T[],
+  concurrency: number,
+  fn: (x: T) => Promise<R>
+): Promise<R[]> {
+  const out: R[] = new Array(items.length);
+  let cursor = 0;
+  async function worker() {
+    while (true) {
+      const idx = cursor++;
+      if (idx >= items.length) return;
+      out[idx] = await fn(items[idx]);
+    }
+  }
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, items.length) }, () => worker())
+  );
+  return out;
+}
+
+export async function POST(req: Request) {
   const body = await req.json().catch(() => ({}));
   const terms = Array.isArray(body?.terms)
     ? (body.terms as unknown[]).filter(
@@ -30,36 +74,11 @@ export async function POST(req: Request) {
     return NextResponse.json({ translations: {} });
   }
 
-  const host = key.trim().endsWith(":fx")
-    ? "https://api-free.deepl.com"
-    : "https://api.deepl.com";
-  const form = new URLSearchParams();
-  form.set("target_lang", "PT-BR");
-  form.set("source_lang", "EN");
-  for (const t of terms) form.append("text", t);
-
-  const res = await fetch(`${host}/v2/translate`, {
-    method: "POST",
-    headers: {
-      Authorization: `DeepL-Auth-Key ${key}`,
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: form.toString(),
-  });
-
-  if (!res.ok) {
-    const text = await res.text();
-    return NextResponse.json(
-      { error: `DeepL ${res.status}: ${text.slice(0, 200)}` },
-      { status: 502 }
-    );
-  }
-  const json = (await res.json()) as {
-    translations?: { text: string }[];
-  };
+  const results = await runLimited(terms, BATCH_CONCURRENCY, translateOne);
   const out: Record<string, string> = {};
-  (json.translations ?? []).forEach((t, i) => {
-    if (terms[i] !== undefined) out[terms[i]] = t.text;
+  terms.forEach((t, i) => {
+    const pt = results[i];
+    if (pt) out[t] = pt;
   });
   return NextResponse.json({ translations: out });
 }

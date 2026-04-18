@@ -5,7 +5,8 @@ import { loadMusicSong } from "@/lib/content/music-server";
 import { MusicBoard } from "@/components/student/music-board";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { listMyExerciseResponses } from "@/lib/actions/exercise-responses";
-import { toMusicSlug, cambridgeUrl } from "@/lib/content/music";
+import { toMusicSlug } from "@/lib/content/music";
+import { VocabSidebarList } from "@/components/student/vocab-sidebar-list";
 import { getOverrideForStudent } from "@/lib/actions/music-overrides";
 import type { MusicExercise, SingAlongPrompt } from "@/lib/content/music";
 import { MarkCompleteButton } from "@/components/student/mark-complete-button";
@@ -102,31 +103,7 @@ export default async function StudentMusicPage({
               <CardTitle className="text-sm">Vocabulary</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-2 text-sm">
-                {song.vocab_hooks.map((v) => (
-                  <li key={v.term} className="flex flex-col">
-                    <span className="inline-flex items-center gap-1">
-                      <a
-                        href={cambridgeUrl(v.term)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-medium underline decoration-dotted underline-offset-2 hover:text-primary"
-                        title={`Cambridge Dictionary: ${v.term}`}
-                      >
-                        {v.term}
-                      </a>
-                      <ExternalLink className="h-3 w-3 text-muted-foreground/60" />
-                      <span className="text-muted-foreground"> · {v.pt}</span>
-                    </span>
-                    <span className="text-[11px] text-muted-foreground">
-                      {v.note}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-3 text-[10px] text-muted-foreground">
-                Tap a word to look it up on Cambridge Dictionary.
-              </p>
+              <VocabSidebarList vocabHooks={song.vocab_hooks} />
             </CardContent>
           </Card>
 
