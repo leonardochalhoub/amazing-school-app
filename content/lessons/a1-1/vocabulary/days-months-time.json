@@ -1,0 +1,110 @@
+{
+  "slug": "days-months-time",
+  "title": "Days, Months & Telling Time",
+  "description": "Days of the week, months of the year, and how to say what time it is.",
+  "category": "vocabulary",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 30,
+  "estimated_minutes": 12,
+  "summary_pt_br": "Dias, meses, horas. Em inglês, dias e meses SEMPRE começam com letra maiúscula, mesmo no meio de uma frase.",
+  "exercises": [
+    {
+      "id": "dmt-001",
+      "type": "matching",
+      "pairs": [
+        ["segunda", "Monday"],
+        ["terça", "Tuesday"],
+        ["quarta", "Wednesday"],
+        ["quinta", "Thursday"],
+        ["sexta", "Friday"]
+      ],
+      "explanation": "The five weekdays. WEDNESDAY is the trickiest — the first 'd' is silent: /ˈwenz.deɪ/.",
+      "hint_pt_br": "Wednesday se lê 'wenzdei' — o primeiro 'd' é mudo."
+    },
+    {
+      "id": "dmt-002",
+      "type": "matching",
+      "pairs": [
+        ["sábado", "Saturday"],
+        ["domingo", "Sunday"],
+        ["fim de semana", "weekend"]
+      ],
+      "explanation": "The weekend. In the US, the week is often thought of as starting Sunday; in the UK and calendars, Monday.",
+      "hint_pt_br": "'Weekend' = fim de semana. Em inglês americano a semana começa no domingo, no britânico começa na segunda."
+    },
+    {
+      "id": "dmt-003",
+      "type": "multiple_choice",
+      "question": "Which is spelled correctly?",
+      "options": ["monday", "Monday", "MonDay", "MONDAY"],
+      "correct": 1,
+      "explanation": "In English, days and months are ALWAYS capitalized — even mid-sentence: 'See you on Monday.' This is different from Portuguese.",
+      "hint_pt_br": "REGRA: dias e meses em inglês sempre começam com letra MAIÚSCULA."
+    },
+    {
+      "id": "dmt-004",
+      "type": "fill_blank",
+      "question": "Complete: 'I go to the gym ___ Monday.' (on which day)",
+      "correct": "on",
+      "explanation": "ON + specific day. On Monday, on Tuesday, on my birthday.",
+      "hint_pt_br": "ON é a preposição para dias específicos: on Monday, on my birthday."
+    },
+    {
+      "id": "dmt-005",
+      "type": "fill_blank",
+      "question": "Complete: 'My birthday is ___ July.' (which month)",
+      "correct": "in",
+      "explanation": "IN + months, years, seasons, parts of the day. In July, in 2026, in the morning.",
+      "hint_pt_br": "IN + mês/ano/estação/parte do dia: in July, in 2026, in the morning."
+    },
+    {
+      "id": "dmt-006",
+      "type": "matching",
+      "pairs": [
+        ["janeiro", "January"],
+        ["fevereiro", "February"],
+        ["agosto", "August"],
+        ["dezembro", "December"]
+      ],
+      "explanation": "February is often misspelled — 'Feb-RU-ary', with a 'r' that's easy to drop.",
+      "hint_pt_br": "February tem um 'r' que muita gente esquece: 'feb-RU-ari'."
+    },
+    {
+      "id": "dmt-007",
+      "type": "multiple_choice",
+      "question": "It's 3:00 p.m. The most natural way to say the time:",
+      "options": [
+        "It is the three hours",
+        "It's three o'clock",
+        "It's three",
+        "Both B and C are common"
+      ],
+      "correct": 3,
+      "explanation": "'It's three o'clock' is traditional; 'It's three' is casual. 'O'clock' is only used with whole hours — never 'three-thirty o'clock'.",
+      "hint_pt_br": "'O'clock' só vai com horas fechadas — nunca com 'e meia' ou 'e quinze'."
+    },
+    {
+      "id": "dmt-008",
+      "type": "multiple_choice",
+      "question": "How do you say 6:15?",
+      "options": [
+        "six fifteen",
+        "quarter past six",
+        "Both are correct and common",
+        "six and fifteen"
+      ],
+      "correct": 2,
+      "explanation": "'Six fifteen' (digital style) and 'quarter past six' (traditional) are both natural. For 6:30 → 'six thirty' OR 'half past six'. For 6:45 → 'six forty-five' OR 'quarter to seven'.",
+      "hint_pt_br": "6:15 = 'six fifteen' OU 'quarter past six'. 6:30 = 'six thirty' OU 'half past six'. 6:45 = 'six forty-five' OU 'quarter to seven'."
+    },
+    {
+      "id": "dmt-009",
+      "type": "fill_blank",
+      "question": "Complete: 'What ___ is it?' (asking the time)",
+      "correct": "time",
+      "explanation": "'What time is it?' — the standard question. Note: NOT 'What hours are?' (Portuguese structure).",
+      "hint_pt_br": "'What time is it?' — não traduza 'que horas são' literalmente."
+    }
+  ]
+}
