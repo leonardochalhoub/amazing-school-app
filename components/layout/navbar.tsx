@@ -78,10 +78,6 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
 
   const teacherNav: { href: string; label: string }[] = [
     { href: "/teacher/lessons", label: labels.lessons },
-    {
-      href: "/teacher/curriculum",
-      label: locale === "pt-BR" ? "Currículo" : "Curriculum",
-    },
     { href: "/teacher/music", label: labels.music },
     {
       href: "/teacher/bank",

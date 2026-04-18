@@ -6,6 +6,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { listLessonDrafts } from "@/lib/actions/lesson-drafts";
 import { listMyTeacherLessons } from "@/lib/actions/teacher-lessons";
 import { listMyBank } from "@/lib/actions/exercise-bank";
+import { getAllLessons } from "@/lib/content/loader";
 import { LessonRow } from "@/components/teacher/lesson-row";
 import { CEFR_LEVELS, SKILLS } from "@/lib/content/schema";
 import { Badge } from "@/components/ui/badge";
@@ -13,10 +14,10 @@ import { Button } from "@/components/ui/button";
 import type { LessonDraftMeta } from "@/lib/actions/lesson-drafts";
 import type { TeacherLessonRow } from "@/lib/actions/teacher-lessons-types";
 
-type Source = "all" | "curated" | "mine" | "bank";
+type Source = "all" | "library" | "curated" | "mine" | "bank";
 
 interface UnifiedRow {
-  source: "curated" | "mine";
+  source: "library" | "curated" | "mine";
   slug: string;
   title: string;
   cefr_level: string;
@@ -66,7 +67,7 @@ export default async function TeacherLessonsPage({
     courseId: params.course,
   };
   const source: Source = (
-    ["all", "curated", "mine", "bank"] as const
+    ["all", "library", "curated", "mine", "bank"] as const
   ).includes(params.source as Source)
     ? (params.source as Source)
     : "all";
@@ -76,6 +77,16 @@ export default async function TeacherLessonsPage({
     listMyTeacherLessons(),
     listMyBank(),
   ]);
+
+  // Static "library" content shipped in content/lessons/*.json — the 45+
+  // authored narrative + drill lessons. Apply the same filters.
+  const libraryLessons = getAllLessons().filter((l) => {
+    if (filters.cefrLevel && l.cefr_level !== filters.cefrLevel) return false;
+    if (filters.category && l.category !== filters.category) return false;
+    // Library content is always considered "published".
+    if (filters.status === "draft") return false;
+    return true;
+  });
 
   // Apply CEFR / skill / status filters to teacher-authored lessons too.
   const filteredMine = myLessons.filter((l) => {
@@ -87,6 +98,21 @@ export default async function TeacherLessonsPage({
   });
 
   const unified: UnifiedRow[] = [];
+  if (source === "all" || source === "library") {
+    for (const l of libraryLessons) {
+      unified.push({
+        source: "library",
+        slug: l.slug,
+        title: l.title,
+        cefr_level: l.cefr_level,
+        category: l.category,
+        published: true,
+        updated_at: "",
+        href: `/student/lessons/${l.slug}`,
+        exerciseCount: l.exercise_count,
+      });
+    }
+  }
   if (source === "all" || source === "curated") {
     for (const l of curatedLessons as LessonDraftMeta[]) {
       unified.push({
@@ -163,6 +189,7 @@ export default async function TeacherLessonsPage({
           {(
             [
               { key: "all", label: "All" },
+              { key: "library", label: "Library" },
               { key: "curated", label: "Curated" },
               { key: "mine", label: "My lessons" },
               { key: "bank", label: "My exercises" },
@@ -249,6 +276,8 @@ export default async function TeacherLessonsPage({
                             (curatedLessons.find((c) => c.slug === l.slug) ?? null) as LessonDraftMeta
                           }
                         />
+                      ) : l.source === "library" ? (
+                        <LibraryLessonRow key={`lib-${l.slug}`} row={l} />
                       ) : (
                         <MyLessonRow key={`mine-${l.slug}`} row={l} />
                       )
@@ -260,6 +289,36 @@ export default async function TeacherLessonsPage({
         </div>
       )}
     </div>
+  );
+}
+
+function LibraryLessonRow({ row }: { row: UnifiedRow }) {
+  return (
+    <Link
+      href={row.href}
+      className="group flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-3 shadow-xs transition-colors hover:border-primary/40"
+    >
+      <div className="min-w-0 flex-1">
+        <div className="flex items-center gap-2">
+          <p className="truncate text-sm font-semibold">{row.title}</p>
+          <Badge variant="secondary" className="shrink-0 gap-1 text-[10px]">
+            {row.category === "narrative" ? (
+              <Sparkles className="h-3 w-3" />
+            ) : (
+              <BookOpen className="h-3 w-3" />
+            )}
+            {row.category === "narrative" ? "Story" : "Library"}
+          </Badge>
+        </div>
+        <p className="mt-0.5 truncate text-[11px] text-muted-foreground">
+          {row.cefr_level.toUpperCase()} · {row.category}
+          {row.exerciseCount != null ? ` · ${row.exerciseCount} exercises` : ""}
+        </p>
+      </div>
+      <Badge variant="default" className="shrink-0 text-[10px]">
+        Core
+      </Badge>
+    </Link>
   );
 }
 

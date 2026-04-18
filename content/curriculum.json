@@ -4,139 +4,61 @@
     {
       "year": 1,
       "label": "Basic",
-      "level_label": "A1 · Beginner",
+      "level_label": "A1 → A2 · Beginner → Elementary",
       "semesters": [
         {
           "semester": 1,
-          "cefr": "a1.1",
-          "target_hours": 15,
-          "theme": "Foundations — alphabet, numbers, introductions, daily life",
-          "units": [
-            {
-              "title": "Unit 1 · Meeting People",
-              "lessons": ["greetings", "alphabet-spelling", "numbers-1-100"]
-            },
-            {
-              "title": "Unit 2 · Myself and Others",
-              "lessons": ["pronouns-to-be", "family-members", "colors-adjectives"]
-            },
-            {
-              "title": "Unit 3 · My World",
-              "lessons": ["classroom-objects", "days-months-time", "present-simple"]
-            }
-          ]
+          "label": "Basic 1",
+          "cefr": "a1",
+          "cefr_sublevels": ["a1.1", "a1.2"],
+          "target_hours": 30,
+          "theme": "A1 · Foundations — alphabet, to-be, daily life, past simple, TH phoneme"
         },
         {
           "semester": 2,
-          "cefr": "a1.2",
-          "target_hours": 15,
-          "theme": "Daily routines — actions, food, simple past",
-          "units": [
-            {
-              "title": "Unit 4 · Daily Life",
-              "lessons": ["daily-routines", "common-verbs", "present-continuous"]
-            },
-            {
-              "title": "Unit 5 · Food & Eating",
-              "lessons": ["food-drinks", "at-the-restaurant", "quantities-some-any"]
-            },
-            {
-              "title": "Unit 6 · The Past",
-              "lessons": ["past-simple", "past-irregular-verbs", "telling-stories"]
-            }
-          ]
+          "label": "Basic 2",
+          "cefr": "a2",
+          "cefr_sublevels": ["a2.1", "a2.2"],
+          "target_hours": 30,
+          "theme": "A2 · Comparisons, travel, future plans, workplace basics"
         }
       ]
     },
     {
       "year": 2,
       "label": "Intermediate",
-      "level_label": "A2 · Elementary / Intermediate",
+      "level_label": "B1 → B2 · Intermediate → Upper Intermediate",
       "semesters": [
         {
           "semester": 1,
-          "cefr": "a2.1",
-          "target_hours": 10,
-          "theme": "Comparisons, travel, modals",
-          "units": [
-            {
-              "title": "Unit 7 · Comparing & Describing",
-              "lessons": ["comparatives-superlatives", "appearance-personality", "past-continuous"]
-            },
-            {
-              "title": "Unit 8 · Travel & Directions",
-              "lessons": ["transport-travel", "directions-places", "modals-can-should"]
-            }
-          ]
+          "label": "Intermediate 1",
+          "cefr": "b1",
+          "cefr_sublevels": ["b1.1", "b1.2"],
+          "target_hours": 30,
+          "theme": "B1 · Conditionals, reported speech, phrasal verbs, business meetings"
         },
         {
           "semester": 2,
-          "cefr": "a2.2",
-          "target_hours": 10,
-          "theme": "Future plans, work, phone calls",
-          "units": [
-            {
-              "title": "Unit 9 · Plans & Decisions",
-              "lessons": ["future-going-to", "future-will", "present-perfect"]
-            },
-            {
-              "title": "Unit 10 · Work & Communication",
-              "lessons": ["workplace-vocabulary", "phone-email-basics", "making-plans"]
-            }
-          ]
+          "label": "Intermediate 2",
+          "cefr": "b2",
+          "cefr_sublevels": ["b2.1", "b2.2"],
+          "target_hours": 30,
+          "theme": "B2 · Mixed conditionals, passive, inversion, tech + finance English"
         }
       ]
     },
     {
       "year": 3,
-      "label": "Advanced",
-      "level_label": "B1 · Upper Intermediate",
+      "label": "Conversational / Professional",
+      "level_label": "C1+ · For work and study abroad",
       "semesters": [
         {
           "semester": 1,
-          "cefr": "b1.1",
-          "target_hours": 10,
-          "theme": "Conditionals, reported speech, nuance",
-          "units": [
-            {
-              "title": "Unit 11 · If / Then",
-              "lessons": ["conditionals-first", "conditionals-second", "modals-nuance"]
-            },
-            {
-              "title": "Unit 12 · Reporting & Explaining",
-              "lessons": ["reported-speech", "expressing-opinions", "connectors"]
-            }
-          ]
-        },
-        {
-          "semester": 2,
-          "cefr": "b1.2",
-          "target_hours": 10,
-          "theme": "Abstract topics, debate, business",
-          "units": [
-            {
-              "title": "Unit 13 · Debating & Persuading",
-              "lessons": ["agreeing-disagreeing", "giving-advice-advanced", "phrasal-verbs-essential"]
-            },
-            {
-              "title": "Unit 14 · Work English",
-              "lessons": ["business-meetings", "writing-emails-b1", "presentation-basics"]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "year": 4,
-      "label": "Professional / Conversational",
-      "level_label": "B2+ · Conversational fluency for work",
-      "semesters": [
-        {
-          "semester": 1,
-          "cefr": "b2.1",
+          "label": "Free-form",
+          "cefr": "c1",
+          "cefr_sublevels": ["c1.1", "c1.2"],
           "target_hours": 0,
-          "theme": "Free-form — curated by the teacher based on student goals",
-          "units": []
+          "theme": "Curated by the teacher based on student goals"
         }
       ]
     }
