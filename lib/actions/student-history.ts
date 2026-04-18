@@ -284,3 +284,73 @@ export async function scheduleClass(
     meeting_link: input.meeting_link ?? null,
   });
 }
+
+export interface ScheduleClassroomClassInput {
+  classroom_id: string;
+  event_date: string;
+  event_time?: string | null;
+  meeting_link?: string | null;
+  skill_focus?: string[];
+  lesson_content?: string | null;
+}
+
+/**
+ * Schedule a class for every student in a classroom. Creates one
+ * 'Planned' history row per roster student in that classroom so each
+ * student sees the session in their own history.
+ */
+export async function scheduleClassroomClass(
+  input: ScheduleClassroomClassInput,
+): Promise<{ created: number } | { error: string }> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Not signed in" };
+  const admin = createAdminClient();
+  const { data: profile } = await admin
+    .from("profiles")
+    .select("role")
+    .eq("id", user.id)
+    .maybeSingle();
+  if (profile?.role !== "teacher") return { error: "Teachers only" };
+
+  const { data: classroom } = await admin
+    .from("classrooms")
+    .select("id, teacher_id")
+    .eq("id", input.classroom_id)
+    .eq("teacher_id", user.id)
+    .maybeSingle();
+  if (!classroom) return { error: "Classroom not found" };
+
+  const { data: rosterRows } = await admin
+    .from("roster_students")
+    .select("id")
+    .eq("classroom_id", input.classroom_id)
+    .eq("teacher_id", user.id);
+  const rosterIds = (rosterRows ?? []).map((r) => r.id as string);
+  if (rosterIds.length === 0) return { error: "No students in this classroom" };
+
+  const now = new Date().toISOString();
+  const rows = rosterIds.map((rid) => ({
+    teacher_id: user.id,
+    student_id: null,
+    roster_student_id: rid,
+    classroom_id: input.classroom_id,
+    event_date: input.event_date,
+    event_time: input.event_time || null,
+    status: "Planned",
+    lesson_content: input.lesson_content?.trim() || null,
+    skill_focus: sanitizeSkillFocus(input.skill_focus),
+    meeting_link: input.meeting_link?.trim() || null,
+    updated_at: now,
+  }));
+
+  try {
+    const { error } = await admin.from("student_history").insert(rows);
+    if (error) return { error: error.message };
+  } catch (err) {
+    return { error: err instanceof Error ? err.message : "Insert failed" };
+  }
+  return { created: rows.length };
+}

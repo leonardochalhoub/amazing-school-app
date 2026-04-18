@@ -370,7 +370,7 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
       .order("created_at", { ascending: false }),
     admin
       .from("roster_students")
-      .select("id, full_name, classroom_id, has_avatar, age_group, gender")
+      .select("id, full_name, classroom_id, has_avatar, age_group, gender, auth_user_id")
       .eq("teacher_id", user.id)
       .order("created_at", { ascending: false })
       .then((res) => (res.error ? { data: [], error: null } : res)),
@@ -382,6 +382,7 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
   const classroomIds = classroomRows.map((c) => c.id as string);
   const memberCounts = new Map<string, number>();
   const uniqueAuthStudentIds = new Set<string>();
+  const seenPairs = new Set<string>();
   if (classroomIds.length > 0) {
     const { data: members } = await admin
       .from("classroom_members")
@@ -410,7 +411,6 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
     }
     // Dedupe (classroom_id, student_id) pairs first so a duplicate
     // classroom_members row can't double-count inside one classroom.
-    const seenPairs = new Set<string>();
     for (const m of members ?? []) {
       const sid = m.student_id as string;
       if (!studentRoleIds.has(sid)) continue;
@@ -423,10 +423,23 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
     }
   }
 
+  // Per-classroom roster count, skipping roster entries whose auth_user_id
+  // is already counted in classroom_members so a claimed-invite person is
+  // not double-counted inside the classroom card.
+  const memberAuthIdsByClassroom = new Map<string, Set<string>>();
+  for (const pair of seenPairs) {
+    const [cid, sid] = pair.split("::");
+    if (!memberAuthIdsByClassroom.has(cid))
+      memberAuthIdsByClassroom.set(cid, new Set());
+    memberAuthIdsByClassroom.get(cid)!.add(sid);
+  }
   const rosterCountsByClassroom = new Map<string, number>();
   for (const r of rosterRows) {
     const cid = (r as { classroom_id: string | null }).classroom_id;
-    if (cid) rosterCountsByClassroom.set(cid, (rosterCountsByClassroom.get(cid) ?? 0) + 1);
+    if (!cid) continue;
+    const linked = (r as { auth_user_id: string | null }).auth_user_id;
+    if (linked && memberAuthIdsByClassroom.get(cid)?.has(linked)) continue;
+    rosterCountsByClassroom.set(cid, (rosterCountsByClassroom.get(cid) ?? 0) + 1);
   }
 
   const classrooms: ClassroomSummary[] = classroomRows.map((c) => ({
@@ -463,10 +476,20 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
     gender: (r as { gender: "female" | "male" | null }).gender ?? null,
   }));
 
-  // Dedup across classrooms: a single auth student in two classrooms is
-  // ONE student, not two. Roster students don't have cross-classroom
-  // identity, so their row count is their student count.
-  const totalStudents = uniqueAuthStudentIds.size + roster.length;
+  // Dedup every student identity into a single Set so a person represented
+  // in BOTH classroom_members AND roster_students (common after an invite
+  // is claimed) is counted once. Keying rule:
+  //   - each classroom_members row: auth profile id
+  //   - each roster row: auth_user_id if set (i.e. the same person), else
+  //     the roster id itself
+  const identitySet = new Set<string>();
+  for (const id of uniqueAuthStudentIds) identitySet.add(id);
+  for (const r of rosterRows) {
+    const linked = (r as { auth_user_id: string | null }).auth_user_id;
+    if (linked) identitySet.add(linked);
+    else identitySet.add(r.id as string);
+  }
+  const totalStudents = identitySet.size;
 
   let lessonsAssigned = 0;
   let lessonsCompleted = 0;
