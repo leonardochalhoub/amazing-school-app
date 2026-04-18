@@ -1,0 +1,288 @@
+{
+  "slug": "op-ed-writing",
+  "title": "Op-ed Writing",
+  "description": "800 words. One argument. A reason you specifically must write it.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.2",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Op-ed: um argumento, razão pessoal pra escrever, evidência concreta, implicação pública, 800 palavras.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Op-ed Writing",
+      "subtitle_en": "800 words. One argument. A reason you specifically must write it.",
+      "subtitle_pt": "Op-ed: um argumento, razão pessoal pra escrever, evidência concreta, implicação pública, 800 palavras."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "800 words. One argument. A reason you specifically must write it. Focus: op-ed writing. An op-ed argues one thing, not three — the pieces that try three fail all three.",
+      "text_pt": "Op-ed: um argumento, razão pessoal pra escrever, evidência concreta, implicação pública, 800 palavras. Foco: op-ed writing. Op-ed argumenta um, não três."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Op-ed Writing",
+      "body_en": "Op-ed rules: ONE argument (not three). REASON you specifically must write it. CONCRETE evidence, not abstraction. PUBLIC implication. Edit down to 800 words.",
+      "body_pt": "Op-ed: um argumento, razão pessoal pra escrever, evidência concreta, implicação pública, 800 palavras.",
+      "examples": [
+        {
+          "en": "An op-ed argues one thing, not three — the pieces that try three fail all three.",
+          "pt": "Op-ed argumenta um, não três."
+        },
+        {
+          "en": "Why you specifically must write this — that's the ethical weight.",
+          "pt": "Por que você tem que escrever — esse é o peso ético."
+        },
+        {
+          "en": "Edit down to eight hundred words, however tight it hurts.",
+          "pt": "Corte pra 800 palavras, por mais que doa."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Op-ed Writing",
+      "items": [
+        {
+          "term": "op-ed",
+          "pt": "op-ed"
+        },
+        {
+          "term": "argument",
+          "pt": "argumento"
+        },
+        {
+          "term": "concrete",
+          "pt": "concreto"
+        },
+        {
+          "term": "implication",
+          "pt": "implicação"
+        },
+        {
+          "term": "edit down",
+          "pt": "enxugar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-op-ed-writing-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"An op-ed ___ one thing, not three — the pieces that try three fail all three.\"",
+        "correct": "argues",
+        "explanation": "Full sentence: \"An op-ed argues one thing, not three — the pieces that try three fail all three.\"",
+        "hint_pt_br": "Op-ed argumenta um, não três."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-op-ed-writing-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "Why you specifically must write this — that's the ethical weight."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"Why you specifically must write this — that's the ethical weight.\"",
+        "hint_pt_br": "Por que você tem que escrever — esse é o peso ético."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-op-ed-writing-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "op-ed",
+            "op-ed"
+          ],
+          [
+            "argument",
+            "argumento"
+          ],
+          [
+            "concrete",
+            "concreto"
+          ],
+          [
+            "implication",
+            "implicação"
+          ],
+          [
+            "edit down",
+            "enxugar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Op-ed Writing — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre op-ed writing. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar — op-ed draft. What's the argument?"
+        },
+        {
+          "speaker": "user",
+          "target": "One argument only.",
+          "pt_hint": "Só um argumento."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why must you specifically write it?"
+        },
+        {
+          "speaker": "user",
+          "target": "I taught in this system for thirty years.",
+          "pt_hint": "30 anos no sistema."
+        },
+        {
+          "speaker": "ai",
+          "text": "Your evidence?"
+        },
+        {
+          "speaker": "user",
+          "target": "Three concrete cases, no abstractions.",
+          "pt_hint": "Três casos concretos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Public implication?"
+        },
+        {
+          "speaker": "user",
+          "target": "Policy change for the next cohort.",
+          "pt_hint": "Mudança de política."
+        },
+        {
+          "speaker": "ai",
+          "text": "Word count?"
+        },
+        {
+          "speaker": "user",
+          "target": "Eight hundred. Not one more.",
+          "pt_hint": "800, nem um mais."
+        },
+        {
+          "speaker": "ai",
+          "text": "Op-eds that argue one thing land; the rest vanish."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "op-ed-writing-listening-story",
+      "title": "The editorial pitch",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe five op-ed rules. Use at least three op-ed terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the newspaper's Thursday op-ed meeting, Kumar submitted a piece he had rewritten for nine straight mornings."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "An op-ed argues one thing, not three — the pieces that try three fail all three, every single time."
+        },
+        {
+          "speaker": "Editor",
+          "voice": "female1",
+          "en": "Why you specifically must write this is the ethical weight — thirty years teaching in this exact system gives you standing."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Three concrete cases, no abstractions — the reader trusts specifics far more than they trust any theoretical argument alone."
+        },
+        {
+          "speaker": "Editor",
+          "voice": "female1",
+          "en": "Public implication is policy change for the next cohort — and we edit down to eight hundred words, however tight it hurts."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Op-eds that argue one thing land. Op-eds that argue three things vanish — and Kumar taught that lesson every week."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Op-ed Writing\". 800 words. One argument. A reason you specifically must write it. An op-ed argues one thing, not three — the pieces that try three fail all three. Why you specifically must write this — that's the ethical weight. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Op-ed Writing\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Op-ed Writing",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Op-ed Writing\".",
+        "hint_pt_br": "Ela fala o título: \"Op-ed Writing\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

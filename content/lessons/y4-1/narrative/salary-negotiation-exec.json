@@ -1,0 +1,288 @@
+{
+  "slug": "salary-negotiation-exec",
+  "title": "Executive Salary Negotiation",
+  "description": "Base, equity, vesting, control — negotiating senior roles without burning relationships.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.1",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Negociação executiva: âncora alta, equity separado da base, vesting (4 anos, cliff 1), controle (decisões, board).",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Executive Salary Negotiation",
+      "subtitle_en": "Base, equity, vesting, control — negotiating senior roles without burning relationships.",
+      "subtitle_pt": "Negociação executiva: âncora alta, equity separado da base, vesting (4 anos, cliff 1), controle (decisões, board)."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Base, equity, vesting, control — negotiating senior roles without burning relationships. Focus: executive salary negotiation. Market for this role ranges from X to Y — I'd anchor at the top.",
+      "text_pt": "Negociação executiva: âncora alta, equity separado da base, vesting (4 anos, cliff 1), controle (decisões, board). Foco: executive salary negotiation. Mercado pra esse cargo é X a Y — eu ancoro no topo."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Executive Salary Negotiation",
+      "body_en": "Exec negotiation: ANCHOR high, explain the range. Discuss EQUITY separately from base. Name VESTING (4y standard, 1y cliff). Define CONTROL (decisions, hiring, board seat).",
+      "body_pt": "Negociação executiva: âncora alta, equity separado da base, vesting (4 anos, cliff 1), controle (decisões, board).",
+      "examples": [
+        {
+          "en": "Market for this role ranges from X to Y — I'd anchor at the top.",
+          "pt": "Mercado pra esse cargo é X a Y — eu ancoro no topo."
+        },
+        {
+          "en": "Four-year vest, one-year cliff, accelerated on acquisition.",
+          "pt": "Vest 4 anos, cliff 1, aceleração em aquisição."
+        },
+        {
+          "en": "Let's separate base, equity, and signing into three conversations.",
+          "pt": "Vamos separar base, equity e signing em três conversas."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Executive Salary Negotiation",
+      "items": [
+        {
+          "term": "anchor",
+          "pt": "âncora"
+        },
+        {
+          "term": "vesting",
+          "pt": "vesting"
+        },
+        {
+          "term": "cliff",
+          "pt": "cliff"
+        },
+        {
+          "term": "signing",
+          "pt": "signing bonus"
+        },
+        {
+          "term": "acceleration",
+          "pt": "aceleração"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-salary-negotiation-exec-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"___ for this role ranges from X to Y — I'd anchor at the top.\"",
+        "correct": "Market",
+        "explanation": "Full sentence: \"Market for this role ranges from X to Y — I'd anchor at the top.\"",
+        "hint_pt_br": "Mercado pra esse cargo é X a Y — eu ancoro no topo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-salary-negotiation-exec-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Four-year vest, one-year cliff, accelerated on acquisition.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Four-year vest, one-year cliff, accelerated on acquisition.\"",
+        "hint_pt_br": "Vest 4 anos, cliff 1, aceleração em aquisição."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-salary-negotiation-exec-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "anchor",
+            "âncora"
+          ],
+          [
+            "vesting",
+            "vesting"
+          ],
+          [
+            "cliff",
+            "cliff"
+          ],
+          [
+            "signing",
+            "signing bonus"
+          ],
+          [
+            "acceleration",
+            "aceleração"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Executive Salary Negotiation — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre executive salary negotiation. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca — new CEO offer. Your opening move."
+        },
+        {
+          "speaker": "user",
+          "target": "Anchor at the top of market range.",
+          "pt_hint": "Ancorar no topo."
+        },
+        {
+          "speaker": "ai",
+          "text": "They push back on equity."
+        },
+        {
+          "speaker": "user",
+          "target": "Separate equity from base — different talk.",
+          "pt_hint": "Equity em separado."
+        },
+        {
+          "speaker": "ai",
+          "text": "What vesting terms?"
+        },
+        {
+          "speaker": "user",
+          "target": "Four-year vest, one-year cliff, standard.",
+          "pt_hint": "4 anos, cliff 1."
+        },
+        {
+          "speaker": "ai",
+          "text": "Acquisition clause?"
+        },
+        {
+          "speaker": "user",
+          "target": "Single-trigger acceleration on change of control.",
+          "pt_hint": "Acel. em aquisição."
+        },
+        {
+          "speaker": "ai",
+          "text": "What matters beyond money?"
+        },
+        {
+          "speaker": "user",
+          "target": "Board seat, hiring authority, final product decisions.",
+          "pt_hint": "Board, hiring, produto."
+        },
+        {
+          "speaker": "ai",
+          "text": "Executive deals are about power, not just pay."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "salary-negotiation-exec-listening-story",
+      "title": "The offer call",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four negotiation levers beyond base salary. Use at least three exec terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On Sunday evening, Joca took the offer call from the chairman who had recruited him across three continents."
+        },
+        {
+          "speaker": "Chairman",
+          "voice": "male1",
+          "en": "We can go to the top of the published market range on base salary, but equity will be a separate conversation entirely."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male2",
+          "en": "Perfect — I agree we separate base, equity, and signing into three conversations. Let's start with vesting."
+        },
+        {
+          "speaker": "Chairman",
+          "voice": "male1",
+          "en": "Four-year vest with a one-year cliff — industry standard. Single-trigger acceleration on change of control."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male2",
+          "en": "Beyond money, I need a board seat, full hiring authority, and final product decisions not overridden at the committee level."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Executive negotiations, Joca had come to understand, are about power as much as pay — and naming each lever by name."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Executive Salary Negotiation\". Base, equity, vesting, control — negotiating senior roles without burning relationships. Market for this role ranges from X to Y — I'd anchor at the top. Four-year vest, one-year cliff, accelerated on acquisition. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Executive Salary Negotiation\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Executive Salary Negotiation",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Executive Salary Negotiation\".",
+        "hint_pt_br": "Ela fala o título: \"Executive Salary Negotiation\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

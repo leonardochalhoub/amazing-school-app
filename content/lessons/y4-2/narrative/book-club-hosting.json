@@ -1,0 +1,288 @@
+{
+  "slug": "book-club-hosting",
+  "title": "Hosting a Book Club",
+  "description": "Running a monthly reading group that becomes a serious conversation.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.2",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Clube do livro: livros difíceis, três perguntas, silêncio ok, redirecione tangentes, feche com 'o que mudou'.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Hosting a Book Club",
+      "subtitle_en": "Running a monthly reading group that becomes a serious conversation.",
+      "subtitle_pt": "Clube do livro: livros difíceis, três perguntas, silêncio ok, redirecione tangentes, feche com 'o que mudou'."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Running a monthly reading group that becomes a serious conversation. Focus: hosting a book club. Pick demanding books — the group rises to the level of the reading.",
+      "text_pt": "Clube do livro: livros difíceis, três perguntas, silêncio ok, redirecione tangentes, feche com 'o que mudou'. Foco: hosting a book club. Escolha livros difíceis — o grupo sobe ao nível da leitura."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Hosting a Book Club",
+      "body_en": "Book-club hosting: pick demanding books. Prepare three questions. Let silence breathe. Redirect tangents gently. End with what changed your mind.",
+      "body_pt": "Clube do livro: livros difíceis, três perguntas, silêncio ok, redirecione tangentes, feche com 'o que mudou'.",
+      "examples": [
+        {
+          "en": "Pick demanding books — the group rises to the level of the reading.",
+          "pt": "Escolha livros difíceis — o grupo sobe ao nível da leitura."
+        },
+        {
+          "en": "Three prepared questions are enough; ten would overwhelm the room.",
+          "pt": "Três perguntas preparadas bastam; dez sufocariam."
+        },
+        {
+          "en": "End every club by asking what changed your mind this month.",
+          "pt": "Termine perguntando 'o que mudou de ideia'."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Hosting a Book Club",
+      "items": [
+        {
+          "term": "host",
+          "pt": "anfitrião"
+        },
+        {
+          "term": "tangent",
+          "pt": "tangente"
+        },
+        {
+          "term": "redirect",
+          "pt": "redirecionar"
+        },
+        {
+          "term": "demanding",
+          "pt": "exigente"
+        },
+        {
+          "term": "dialogue",
+          "pt": "diálogo"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-book-club-hosting-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Pick ___ books — the group rises to the level of the reading.\"",
+        "correct": "demanding",
+        "explanation": "Full sentence: \"Pick demanding books — the group rises to the level of the reading.\"",
+        "hint_pt_br": "Escolha livros difíceis — o grupo sobe ao nível da leitura."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-book-club-hosting-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "Three prepared questions are enough; ten would overwhelm the room."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"Three prepared questions are enough; ten would overwhelm the room.\"",
+        "hint_pt_br": "Três perguntas preparadas bastam; dez sufocariam."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-book-club-hosting-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "host",
+            "anfitrião"
+          ],
+          [
+            "tangent",
+            "tangente"
+          ],
+          [
+            "redirect",
+            "redirecionar"
+          ],
+          [
+            "demanding",
+            "exigente"
+          ],
+          [
+            "dialogue",
+            "diálogo"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Hosting a Book Club — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre hosting a book club. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara — book selection for your club."
+        },
+        {
+          "speaker": "user",
+          "target": "Demanding books only.",
+          "pt_hint": "Só livros exigentes."
+        },
+        {
+          "speaker": "ai",
+          "text": "How many prepared questions?"
+        },
+        {
+          "speaker": "user",
+          "target": "Three. Any more overwhelms.",
+          "pt_hint": "Três. Mais sufoca."
+        },
+        {
+          "speaker": "ai",
+          "text": "A member goes on a tangent."
+        },
+        {
+          "speaker": "user",
+          "target": "Redirect gently, name the main thread.",
+          "pt_hint": "Redireciono, nomeio o fio."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you close each meeting?"
+        },
+        {
+          "speaker": "user",
+          "target": "What changed your mind this month?",
+          "pt_hint": "O que mudou de ideia?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Why always that question?"
+        },
+        {
+          "speaker": "user",
+          "target": "It makes reading personal, not performative.",
+          "pt_hint": "Pessoal, não performativo."
+        },
+        {
+          "speaker": "ai",
+          "text": "A good book club rises to its hardest reading."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "book-club-hosting-listening-story",
+      "title": "The book club",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four hosting moves. Use at least three book-club terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At her monthly book club, Zara opened the evening with the book everyone had dreaded finishing."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Pick demanding books — the group always rises to the level of the reading, never falls below it."
+        },
+        {
+          "speaker": "Member",
+          "voice": "male1",
+          "en": "Three prepared questions is plenty — ten questions would overwhelm the dialogue and kill the silences that matter."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "I redirect tangents gently, by naming the main thread of the evening we had agreed to pursue together."
+        },
+        {
+          "speaker": "Member",
+          "voice": "female2",
+          "en": "And you always close with the same question — what changed your mind about the book this month?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "A book club, hosted well, rises to its hardest reading — and leaves every member slightly different than when they arrived."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Hosting a Book Club\". Running a monthly reading group that becomes a serious conversation. Pick demanding books — the group rises to the level of the reading. Three prepared questions are enough; ten would overwhelm the room. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Hosting a Book Club\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Hosting a Book Club",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Hosting a Book Club\".",
+        "hint_pt_br": "Ela fala o título: \"Hosting a Book Club\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

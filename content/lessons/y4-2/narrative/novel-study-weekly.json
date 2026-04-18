@@ -1,0 +1,288 @@
+{
+  "slug": "novel-study-weekly",
+  "title": "Novel Study — Weekly Practice",
+  "description": "Reading one full novel per week and writing about it — the adult learner's deepest habit.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.2",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Estudo de romance: leia inteiro, releia marcando, escreva 500 palavras em 48h, discuta em uma semana.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Novel Study — Weekly Practice",
+      "subtitle_en": "Reading one full novel per week and writing about it — the adult learner's deepest habit.",
+      "subtitle_pt": "Estudo de romance: leia inteiro, releia marcando, escreva 500 palavras em 48h, discuta em uma semana."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Reading one full novel per week and writing about it — the adult learner's deepest habit. Focus: novel study — weekly practice. Read the full novel before you mark a single page with notes.",
+      "text_pt": "Estudo de romance: leia inteiro, releia marcando, escreva 500 palavras em 48h, discuta em uma semana. Foco: novel study — weekly practice. Leia o romance inteiro antes de marcar qualquer página."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Novel Study — Weekly Practice",
+      "body_en": "Novel-study method: read the whole novel first (no notes). Second pass, mark voice, theme, turning point. Write 500 words in 48 hours. Discuss aloud within a week.",
+      "body_pt": "Estudo de romance: leia inteiro, releia marcando, escreva 500 palavras em 48h, discuta em uma semana.",
+      "examples": [
+        {
+          "en": "Read the full novel before you mark a single page with notes.",
+          "pt": "Leia o romance inteiro antes de marcar qualquer página."
+        },
+        {
+          "en": "On the second pass, mark voice, theme, and the turning point.",
+          "pt": "Na segunda leitura, marque voz, tema e ponto de virada."
+        },
+        {
+          "en": "Write five hundred words within forty-eight hours of finishing.",
+          "pt": "Escreva 500 palavras em 48h após terminar."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Novel Study — Weekly Practice",
+      "items": [
+        {
+          "term": "voice",
+          "pt": "voz"
+        },
+        {
+          "term": "theme",
+          "pt": "tema"
+        },
+        {
+          "term": "turning point",
+          "pt": "ponto de virada"
+        },
+        {
+          "term": "arc",
+          "pt": "arco"
+        },
+        {
+          "term": "motif",
+          "pt": "motivo"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-novel-study-weekly-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Read the full novel ___ you mark a single page with notes.\"",
+        "correct": "before",
+        "explanation": "Full sentence: \"Read the full novel before you mark a single page with notes.\"",
+        "hint_pt_br": "Leia o romance inteiro antes de marcar qualquer página."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-novel-study-weekly-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "On the second pass, mark voice, theme, and the turning point.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"On the second pass, mark voice, theme, and the turning point.\"",
+        "hint_pt_br": "Na segunda leitura, marque voz, tema e ponto de virada."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-novel-study-weekly-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "voice",
+            "voz"
+          ],
+          [
+            "theme",
+            "tema"
+          ],
+          [
+            "turning point",
+            "ponto de virada"
+          ],
+          [
+            "arc",
+            "arco"
+          ],
+          [
+            "motif",
+            "motivo"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Novel Study — Weekly Practice — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre novel study — weekly practice. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Lúcia — finished the novel. First step?"
+        },
+        {
+          "speaker": "user",
+          "target": "Second pass — mark voice and theme.",
+          "pt_hint": "Segunda leitura, voz e tema."
+        },
+        {
+          "speaker": "ai",
+          "text": "When do you write?"
+        },
+        {
+          "speaker": "user",
+          "target": "Within forty-eight hours of finishing.",
+          "pt_hint": "Em 48h do fim."
+        },
+        {
+          "speaker": "ai",
+          "text": "How long is your essay?"
+        },
+        {
+          "speaker": "user",
+          "target": "Five hundred words — tight, specific.",
+          "pt_hint": "500 palavras, denso."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is every novel worth discussing aloud?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes — within one week of reading.",
+          "pt_hint": "Sim, em uma semana."
+        },
+        {
+          "speaker": "ai",
+          "text": "What if you disliked the book?"
+        },
+        {
+          "speaker": "user",
+          "target": "The essay gets sharper. Keep reading.",
+          "pt_hint": "Texto fica melhor."
+        },
+        {
+          "speaker": "ai",
+          "text": "Reading one novel a week is the adult learner's deepest habit."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "novel-study-weekly-listening-story",
+      "title": "The reading circle",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe the four steps of the novel-study method. Use at least three literary terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the Saturday reading circle, Dona Lúcia walked five adult learners through the discipline she had practiced for sixty years."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Read the full novel first — no pen in hand, no notebook open, no stops to look up a single word."
+        },
+        {
+          "speaker": "Learner",
+          "voice": "male1",
+          "en": "And the second pass is where we mark voice and theme and the turning point, but not much else yet."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Five hundred words within forty-eight hours — tight, specific, and unafraid of dislike if that is your honest reading."
+        },
+        {
+          "speaker": "Learner",
+          "voice": "female2",
+          "en": "We discuss the novel aloud within the week — that's where the essay becomes a conversation, not a performance."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Reading one novel a week, Lúcia insisted, is the deepest habit an adult learner ever builds in a second language."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Novel Study — Weekly Practice\". Reading one full novel per week and writing about it — the adult learner's deepest habit. Read the full novel before you mark a single page with notes. On the second pass, mark voice, theme, and the turning point. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Novel Study — Weekly Practice\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Novel Study — Weekly Practice",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Novel Study — Weekly Practice\".",
+        "hint_pt_br": "Ela fala o título: \"Novel Study — Weekly Practice\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

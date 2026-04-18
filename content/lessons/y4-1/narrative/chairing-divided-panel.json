@@ -1,0 +1,288 @@
+{
+  "slug": "chairing-divided-panel",
+  "title": "Chairing a Divided Panel",
+  "description": "Four panelists who disagree, one moderator who must keep the room together.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.1",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Moderando painel dividido: nomeie, aloque tempo, conduza ao ponto central, proteja silencios, feche com pergunta.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chairing a Divided Panel",
+      "subtitle_en": "Four panelists who disagree, one moderator who must keep the room together.",
+      "subtitle_pt": "Moderando painel dividido: nomeie, aloque tempo, conduza ao ponto central, proteja silencios, feche com pergunta."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Four panelists who disagree, one moderator who must keep the room together. Focus: chairing a divided panel. I'm hearing two very different readings of the evidence — let's name that.",
+      "text_pt": "Moderando painel dividido: nomeie, aloque tempo, conduza ao ponto central, proteja silencios, feche com pergunta. Foco: chairing a divided panel. Ouço duas leituras muito diferentes — vamos nomear."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Chairing a Divided Panel",
+      "body_en": "Moves: SURFACE the disagreement (name it). ALLOCATE time (60 sec each). STEER toward the crux. PROTECT quieter voices. CLOSE with a question, not a conclusion.",
+      "body_pt": "Moderando painel dividido: nomeie, aloque tempo, conduza ao ponto central, proteja silencios, feche com pergunta.",
+      "examples": [
+        {
+          "en": "I'm hearing two very different readings of the evidence — let's name that.",
+          "pt": "Ouço duas leituras muito diferentes — vamos nomear."
+        },
+        {
+          "en": "Sixty seconds each, starting with the most recent objection.",
+          "pt": "60 segundos cada, começando pela objeção mais recente."
+        },
+        {
+          "en": "What question would we need to answer to move past this disagreement?",
+          "pt": "Que pergunta precisaríamos responder pra avançar?"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Chairing a Divided Panel",
+      "items": [
+        {
+          "term": "surface",
+          "pt": "trazer à tona"
+        },
+        {
+          "term": "allocate",
+          "pt": "alocar"
+        },
+        {
+          "term": "crux",
+          "pt": "núcleo"
+        },
+        {
+          "term": "moderator",
+          "pt": "moderador"
+        },
+        {
+          "term": "facilitate",
+          "pt": "facilitar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-chairing-divided-panel-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"I'm hearing two very ___ readings of the evidence — let's name that.\"",
+        "correct": "different",
+        "explanation": "Full sentence: \"I'm hearing two very different readings of the evidence — let's name that.\"",
+        "hint_pt_br": "Ouço duas leituras muito diferentes — vamos nomear."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-chairing-divided-panel-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Sixty seconds each, starting with the most recent objection.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Sixty seconds each, starting with the most recent objection.\"",
+        "hint_pt_br": "60 segundos cada, começando pela objeção mais recente."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-chairing-divided-panel-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "surface",
+            "trazer à tona"
+          ],
+          [
+            "allocate",
+            "alocar"
+          ],
+          [
+            "crux",
+            "núcleo"
+          ],
+          [
+            "moderator",
+            "moderador"
+          ],
+          [
+            "facilitate",
+            "facilitar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Chairing a Divided Panel — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre chairing a divided panel. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara — four panelists, two loud, two silent. Open."
+        },
+        {
+          "speaker": "user",
+          "target": "I hear two different readings. Let's name that.",
+          "pt_hint": "Duas leituras, nomeemos."
+        },
+        {
+          "speaker": "ai",
+          "text": "One panelist dominates for two minutes."
+        },
+        {
+          "speaker": "user",
+          "target": "Sixty seconds each from here.",
+          "pt_hint": "60 segundos cada."
+        },
+        {
+          "speaker": "ai",
+          "text": "Draw out the quieter voices."
+        },
+        {
+          "speaker": "user",
+          "target": "Anna, Carlos — I want your read next.",
+          "pt_hint": "Anna, Carlos — agora vocês."
+        },
+        {
+          "speaker": "ai",
+          "text": "The disagreement is still unclear."
+        },
+        {
+          "speaker": "user",
+          "target": "What question would resolve this for everyone?",
+          "pt_hint": "Que pergunta resolveria?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Close the panel."
+        },
+        {
+          "speaker": "user",
+          "target": "I leave you with one open question.",
+          "pt_hint": "Deixo com uma pergunta aberta."
+        },
+        {
+          "speaker": "ai",
+          "text": "Chairing is the quietest leadership in the room."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "chairing-divided-panel-listening-story",
+      "title": "The fractured panel",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four moderation moves. Use at least three moderation terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At the annual conference, Zara chaired a panel where four panelists had been disagreeing publicly for weeks on social media."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "I'm hearing two very different readings of the evidence tonight — let's name that honestly before we continue."
+        },
+        {
+          "speaker": "Panelist A",
+          "voice": "male1",
+          "en": "The data is clear — any other reading is either dishonest or deeply uninformed about the underlying methodology."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Sixty seconds each from here, starting with Anna and Carlos — whose voices I haven't heard enough tonight yet."
+        },
+        {
+          "speaker": "Panelist B",
+          "voice": "female2",
+          "en": "What question would we need to answer to move past this disagreement, instead of restating it at higher volume?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Chairing a divided room, Zara believed, is the quietest form of leadership — invisible when it works, obvious when it fails."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Chairing a Divided Panel\". Four panelists who disagree, one moderator who must keep the room together. I'm hearing two very different readings of the evidence — let's name that. Sixty seconds each, starting with the most recent objection. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Chairing a Divided Panel\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Chairing a Divided Panel",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Chairing a Divided Panel\".",
+        "hint_pt_br": "Ela fala o título: \"Chairing a Divided Panel\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

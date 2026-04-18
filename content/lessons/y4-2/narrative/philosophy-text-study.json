@@ -1,0 +1,288 @@
+{
+  "slug": "philosophy-text-study",
+  "title": "Philosophy Text Study",
+  "description": "Reading dense philosophical prose slowly enough to change how you think.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.2",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Leitura de filosofia: um capítulo/semana (até 20p), em voz alta, reescreva, ache a discordância, carregue uma semana.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Philosophy Text Study",
+      "subtitle_en": "Reading dense philosophical prose slowly enough to change how you think.",
+      "subtitle_pt": "Leitura de filosofia: um capítulo/semana (até 20p), em voz alta, reescreva, ache a discordância, carregue uma semana."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Reading dense philosophical prose slowly enough to change how you think. Focus: philosophy text study. Twenty pages of philosophy takes a week — that is not slow, it is right.",
+      "text_pt": "Leitura de filosofia: um capítulo/semana (até 20p), em voz alta, reescreva, ache a discordância, carregue uma semana. Foco: philosophy text study. 20 páginas de filosofia em uma semana — não é lento, é correto."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Philosophy Text Study",
+      "body_en": "Philosophy reading: one chapter per week, max twenty pages. Read aloud. Rewrite each argument in your own words. Find the single claim you disagree with. Carry it a week.",
+      "body_pt": "Leitura de filosofia: um capítulo/semana (até 20p), em voz alta, reescreva, ache a discordância, carregue uma semana.",
+      "examples": [
+        {
+          "en": "Twenty pages of philosophy takes a week — that is not slow, it is right.",
+          "pt": "20 páginas de filosofia em uma semana — não é lento, é correto."
+        },
+        {
+          "en": "Rewrite every argument in your own words, or you didn't read it.",
+          "pt": "Reescreva cada argumento, ou você não leu."
+        },
+        {
+          "en": "Find the one claim you disagree with and sit with it.",
+          "pt": "Ache a afirmação que discorda e sente-se com ela."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Philosophy Text Study",
+      "items": [
+        {
+          "term": "argument",
+          "pt": "argumento"
+        },
+        {
+          "term": "premise",
+          "pt": "premissa"
+        },
+        {
+          "term": "conclusion",
+          "pt": "conclusão"
+        },
+        {
+          "term": "dissent",
+          "pt": "dissenso"
+        },
+        {
+          "term": "dialectic",
+          "pt": "dialética"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-philosophy-text-study-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Twenty pages of ___ takes a week — that is not slow, it is right.\"",
+        "correct": "philosophy",
+        "explanation": "Full sentence: \"Twenty pages of philosophy takes a week — that is not slow, it is right.\"",
+        "hint_pt_br": "20 páginas de filosofia em uma semana — não é lento, é correto."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-philosophy-text-study-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "Rewrite every argument in your own words, or you didn't read it.",
+          "That is not quite correct."
+        ],
+        "correct": 2,
+        "explanation": "Correct: \"Rewrite every argument in your own words, or you didn't read it.\"",
+        "hint_pt_br": "Reescreva cada argumento, ou você não leu."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-philosophy-text-study-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "argument",
+            "argumento"
+          ],
+          [
+            "premise",
+            "premissa"
+          ],
+          [
+            "conclusion",
+            "conclusão"
+          ],
+          [
+            "dissent",
+            "dissenso"
+          ],
+          [
+            "dialectic",
+            "dialética"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Philosophy Text Study — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre philosophy text study. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar — 20 pages of Kant. Pace?"
+        },
+        {
+          "speaker": "user",
+          "target": "One week. Read aloud.",
+          "pt_hint": "Uma semana, em voz alta."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the writing exercise?"
+        },
+        {
+          "speaker": "user",
+          "target": "Rewrite each argument in my own words.",
+          "pt_hint": "Reescrever com minhas palavras."
+        },
+        {
+          "speaker": "ai",
+          "text": "What do you do with disagreement?"
+        },
+        {
+          "speaker": "user",
+          "target": "Find one claim I reject. Carry it a week.",
+          "pt_hint": "Carregue a objeção uma semana."
+        },
+        {
+          "speaker": "ai",
+          "text": "Is that fast enough?"
+        },
+        {
+          "speaker": "user",
+          "target": "Slow reading is correct reading.",
+          "pt_hint": "Leitura lenta é leitura correta."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why not read faster?"
+        },
+        {
+          "speaker": "user",
+          "target": "Philosophy is thought, not information.",
+          "pt_hint": "Filosofia é pensamento."
+        },
+        {
+          "speaker": "ai",
+          "text": "Reading philosophy well changes how you think."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "philosophy-text-study-listening-story",
+      "title": "The philosophy circle",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe the four-step philosophy-reading method. Use at least three philosophy terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In his small seminar of working adults, Kumar opened the week with twenty pages of Kant and a cup of black coffee."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Twenty pages of philosophy takes a week — that is not slow, it is simply the correct pace for this kind of prose."
+        },
+        {
+          "speaker": "Learner",
+          "voice": "female1",
+          "en": "And we rewrite every single argument in our own words, or we cannot claim to have actually read the passage."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Then find the one claim you disagree with — and carry it with you for the full week before you discuss it aloud."
+        },
+        {
+          "speaker": "Learner",
+          "voice": "male2",
+          "en": "Philosophy is thought, not information — and this is the one subject where speed is the enemy of understanding."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Reading philosophy well, Kumar had come to believe, is the only reliable way to slowly change how your own mind works."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Philosophy Text Study\". Reading dense philosophical prose slowly enough to change how you think. Twenty pages of philosophy takes a week — that is not slow, it is right. Rewrite every argument in your own words, or you didn't read it. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Philosophy Text Study\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Philosophy Text Study",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Philosophy Text Study\".",
+        "hint_pt_br": "Ela fala o título: \"Philosophy Text Study\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

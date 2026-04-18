@@ -1,0 +1,288 @@
+{
+  "slug": "retrospective-after-failure",
+  "title": "Running a Retrospective After Failure",
+  "description": "The meeting after the project failed — how to extract learning without personal damage.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.1",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Retrospectiva sem culpa: problema neutro, linha do tempo, fatores, duas mudanças específicas, sem apontar.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Running a Retrospective After Failure",
+      "subtitle_en": "The meeting after the project failed — how to extract learning without personal damage.",
+      "subtitle_pt": "Retrospectiva sem culpa: problema neutro, linha do tempo, fatores, duas mudanças específicas, sem apontar."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "The meeting after the project failed — how to extract learning without personal damage. Focus: running a retrospective after failure. The launch failed, and today we learn why — not who.",
+      "text_pt": "Retrospectiva sem culpa: problema neutro, linha do tempo, fatores, duas mudanças específicas, sem apontar. Foco: running a retrospective after failure. O lançamento falhou; hoje aprendemos o por quê, não quem."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Running a Retrospective After Failure",
+      "body_en": "Blameless retrospective: PROBLEM statement (neutral). TIMELINE (what happened when). CONTRIBUTING FACTORS (not one cause). CHANGES (two specific). NO finger-pointing.",
+      "body_pt": "Retrospectiva sem culpa: problema neutro, linha do tempo, fatores, duas mudanças específicas, sem apontar.",
+      "examples": [
+        {
+          "en": "The launch failed, and today we learn why — not who.",
+          "pt": "O lançamento falhou; hoje aprendemos o por quê, não quem."
+        },
+        {
+          "en": "Three contributing factors, not one root cause.",
+          "pt": "Três fatores, não uma causa raiz."
+        },
+        {
+          "en": "Two specific changes leave this room, and everything else is commentary.",
+          "pt": "Duas mudanças específicas saem daqui, o resto é comentário."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Running a Retrospective After Failure",
+      "items": [
+        {
+          "term": "retrospective",
+          "pt": "retrospectiva"
+        },
+        {
+          "term": "blameless",
+          "pt": "sem culpa"
+        },
+        {
+          "term": "root cause",
+          "pt": "causa raiz"
+        },
+        {
+          "term": "contributing",
+          "pt": "contribuinte"
+        },
+        {
+          "term": "accountability",
+          "pt": "responsabilização"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-retrospective-after-failure-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The ___ failed, and today we learn why — not who.\"",
+        "correct": "launch",
+        "explanation": "Full sentence: \"The launch failed, and today we learn why — not who.\"",
+        "hint_pt_br": "O lançamento falhou; hoje aprendemos o por quê, não quem."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-retrospective-after-failure-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "Three contributing factors, not one root cause."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"Three contributing factors, not one root cause.\"",
+        "hint_pt_br": "Três fatores, não uma causa raiz."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-retrospective-after-failure-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "retrospective",
+            "retrospectiva"
+          ],
+          [
+            "blameless",
+            "sem culpa"
+          ],
+          [
+            "root cause",
+            "causa raiz"
+          ],
+          [
+            "contributing",
+            "contribuinte"
+          ],
+          [
+            "accountability",
+            "responsabilização"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Running a Retrospective After Failure — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre running a retrospective after failure. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca — post-mortem of the failed launch. Open."
+        },
+        {
+          "speaker": "user",
+          "target": "Today we learn why, not who.",
+          "pt_hint": "Por quê, não quem."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the neutral problem statement?"
+        },
+        {
+          "speaker": "user",
+          "target": "Launch missed target adoption by 64%.",
+          "pt_hint": "Perdeu a meta em 64%."
+        },
+        {
+          "speaker": "ai",
+          "text": "Identify contributing factors."
+        },
+        {
+          "speaker": "user",
+          "target": "Three: testing, marketing, onboarding.",
+          "pt_hint": "Três: testes, marketing, onboarding."
+        },
+        {
+          "speaker": "ai",
+          "text": "Someone starts blaming a colleague."
+        },
+        {
+          "speaker": "user",
+          "target": "Let's stay on factors, not people.",
+          "pt_hint": "Fatores, não pessoas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with two changes."
+        },
+        {
+          "speaker": "user",
+          "target": "Staged rollouts and a testing gate.",
+          "pt_hint": "Rollout em fases, gate de teste."
+        },
+        {
+          "speaker": "ai",
+          "text": "Failures handled well are infrastructure, not shame."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "retrospective-after-failure-listening-story",
+      "title": "The Monday retrospective",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four retrospective moves. Use at least three post-mortem terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On the Monday after the failed product launch, Joca walked into the retrospective with a plan and no accusations."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Today we learn why this launch failed to hit its adoption target — not who is responsible for the failure."
+        },
+        {
+          "speaker": "Engineer",
+          "voice": "female1",
+          "en": "The neutral problem statement is clear — we missed our first-week adoption target by approximately sixty-four percent."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Three contributing factors, not one root cause — testing gaps, unclear marketing, and a broken onboarding sequence."
+        },
+        {
+          "speaker": "Product",
+          "voice": "male2",
+          "en": "Two specific changes leave this room today — staged rollouts by cohort, and a non-negotiable testing gate before launch."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Failures handled blamelessly, Joca had learned, become infrastructure for the next launch — not shame for this one."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Running a Retrospective After Failure\". The meeting after the project failed — how to extract learning without personal damage. The launch failed, and today we learn why — not who. Three contributing factors, not one root cause. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Running a Retrospective After Failure\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Running a Retrospective After Failure",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Running a Retrospective After Failure\".",
+        "hint_pt_br": "Ela fala o título: \"Running a Retrospective After Failure\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

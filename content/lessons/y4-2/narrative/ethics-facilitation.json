@@ -1,0 +1,288 @@
+{
+  "slug": "ethics-facilitation",
+  "title": "Ethics Facilitation",
+  "description": "Leading an ethics committee when the answer is not obvious — and no one wants to say so.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.2",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Facilitação ética: dilema neutro, separe deveres/consequências/virtudes, quem falta na sala, proteja dissenso.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Ethics Facilitation",
+      "subtitle_en": "Leading an ethics committee when the answer is not obvious — and no one wants to say so.",
+      "subtitle_pt": "Facilitação ética: dilema neutro, separe deveres/consequências/virtudes, quem falta na sala, proteja dissenso."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Leading an ethics committee when the answer is not obvious — and no one wants to say so. Focus: ethics facilitation. The dilemma, stated neutrally, lets everyone see it clearly.",
+      "text_pt": "Facilitação ética: dilema neutro, separe deveres/consequências/virtudes, quem falta na sala, proteja dissenso. Foco: ethics facilitation. O dilema, neutro, deixa todos verem claro."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Ethics Facilitation",
+      "body_en": "Facilitation rules: STATE the dilemma neutrally. SEPARATE duties, consequences, virtues. NAME who is not in the room. PROTECT dissent. CLOSE with a decision AND its uncertainties.",
+      "body_pt": "Facilitação ética: dilema neutro, separe deveres/consequências/virtudes, quem falta na sala, proteja dissenso.",
+      "examples": [
+        {
+          "en": "The dilemma, stated neutrally, lets everyone see it clearly.",
+          "pt": "O dilema, neutro, deixa todos verem claro."
+        },
+        {
+          "en": "Who is not in this room whose life this will shape?",
+          "pt": "Quem falta nesta sala e será afetado?"
+        },
+        {
+          "en": "Decision and its uncertainties — honesty lives in that pairing.",
+          "pt": "Decisão e suas incertezas — honestidade está no par."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Ethics Facilitation",
+      "items": [
+        {
+          "term": "dilemma",
+          "pt": "dilema"
+        },
+        {
+          "term": "facilitate",
+          "pt": "facilitar"
+        },
+        {
+          "term": "dissent",
+          "pt": "dissenso"
+        },
+        {
+          "term": "stakeholder",
+          "pt": "parte interessada"
+        },
+        {
+          "term": "residual",
+          "pt": "residual"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-ethics-facilitation-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The dilemma, stated ___, lets everyone see it clearly.\"",
+        "correct": "neutrally",
+        "explanation": "Full sentence: \"The dilemma, stated neutrally, lets everyone see it clearly.\"",
+        "hint_pt_br": "O dilema, neutro, deixa todos verem claro."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-ethics-facilitation-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "Who is not in this room whose life this will shape?"
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"Who is not in this room whose life this will shape?\"",
+        "hint_pt_br": "Quem falta nesta sala e será afetado?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-ethics-facilitation-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "dilemma",
+            "dilema"
+          ],
+          [
+            "facilitate",
+            "facilitar"
+          ],
+          [
+            "dissent",
+            "dissenso"
+          ],
+          [
+            "stakeholder",
+            "parte interessada"
+          ],
+          [
+            "residual",
+            "residual"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Ethics Facilitation — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre ethics facilitation. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar — an ethics committee meets. Open neutrally."
+        },
+        {
+          "speaker": "user",
+          "target": "The dilemma, stated without bias.",
+          "pt_hint": "Dilema sem viés."
+        },
+        {
+          "speaker": "ai",
+          "text": "Separate the lenses."
+        },
+        {
+          "speaker": "user",
+          "target": "Duties, consequences, virtues.",
+          "pt_hint": "Deveres, consequências, virtudes."
+        },
+        {
+          "speaker": "ai",
+          "text": "Who is missing from the room?"
+        },
+        {
+          "speaker": "user",
+          "target": "Patients, families, lower-paid staff.",
+          "pt_hint": "Pacientes, famílias, funcionários."
+        },
+        {
+          "speaker": "ai",
+          "text": "Someone dissents quietly."
+        },
+        {
+          "speaker": "user",
+          "target": "I give them space and time.",
+          "pt_hint": "Dou espaço."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close the meeting."
+        },
+        {
+          "speaker": "user",
+          "target": "Decision with its named uncertainties.",
+          "pt_hint": "Decisão com incertezas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Ethics facilitation is courage dressed as patience."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "ethics-facilitation-listening-story",
+      "title": "The ethics committee",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe five facilitation moves. Use at least three ethics terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the hospital's ethics committee, Kumar facilitated a meeting where the right answer was not obvious to anyone in the room."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "The dilemma, stated neutrally, lets everyone in this room see it clearly — without tilting the discussion in my direction."
+        },
+        {
+          "speaker": "Member",
+          "voice": "female1",
+          "en": "Let's separate duties, consequences, and virtues — the same case looks different through each philosophical lens."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Who is not in this room whose life this decision will shape? Patients, families, the lowest-paid staff members on the ward."
+        },
+        {
+          "speaker": "Member",
+          "voice": "male2",
+          "en": "I disagree with the majority view, though quietly — and I'm grateful this meeting makes space for that dissent openly."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Ethics facilitation, Kumar had learned, is courage dressed as patience — and honesty dressed as structured process."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Ethics Facilitation\". Leading an ethics committee when the answer is not obvious — and no one wants to say so. The dilemma, stated neutrally, lets everyone see it clearly. Who is not in this room whose life this will shape? Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Ethics Facilitation\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Ethics Facilitation",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Ethics Facilitation\".",
+        "hint_pt_br": "Ela fala o título: \"Ethics Facilitation\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

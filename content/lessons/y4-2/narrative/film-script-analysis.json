@@ -1,0 +1,288 @@
+{
+  "slug": "film-script-analysis",
+  "title": "Film Script Analysis",
+  "description": "Reading a screenplay alongside the finished film — what survived, what changed, why.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.2",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Análise de roteiro: leia o script, assista o filme, compare cena a cena. As diferenças ensinam mais.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Film Script Analysis",
+      "subtitle_en": "Reading a screenplay alongside the finished film — what survived, what changed, why.",
+      "subtitle_pt": "Análise de roteiro: leia o script, assista o filme, compare cena a cena. As diferenças ensinam mais."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "Reading a screenplay alongside the finished film — what survived, what changed, why. Focus: film script analysis. Read the screenplay before you watch the finished film.",
+      "text_pt": "Análise de roteiro: leia o script, assista o filme, compare cena a cena. As diferenças ensinam mais. Foco: film script analysis. Leia o roteiro antes de ver o filme pronto."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Film Script Analysis",
+      "body_en": "Script method: read the screenplay first. Watch the film. Compare scene-by-scene: what was cut, what was added, what moved. The differences teach more than either alone.",
+      "body_pt": "Análise de roteiro: leia o script, assista o filme, compare cena a cena. As diferenças ensinam mais.",
+      "examples": [
+        {
+          "en": "Read the screenplay before you watch the finished film.",
+          "pt": "Leia o roteiro antes de ver o filme pronto."
+        },
+        {
+          "en": "Every cut scene once seemed essential — ask why it didn't survive.",
+          "pt": "Toda cena cortada já pareceu essencial — por que não sobreviveu?"
+        },
+        {
+          "en": "The differences between script and film teach more than either alone.",
+          "pt": "As diferenças ensinam mais que qualquer um sozinho."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Film Script Analysis",
+      "items": [
+        {
+          "term": "screenplay",
+          "pt": "roteiro"
+        },
+        {
+          "term": "scene",
+          "pt": "cena"
+        },
+        {
+          "term": "cut",
+          "pt": "corte"
+        },
+        {
+          "term": "rewrite",
+          "pt": "reescrita"
+        },
+        {
+          "term": "pacing",
+          "pt": "ritmo"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-film-script-analysis-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Read the ___ before you watch the finished film.\"",
+        "correct": "screenplay",
+        "explanation": "Full sentence: \"Read the screenplay before you watch the finished film.\"",
+        "hint_pt_br": "Leia o roteiro antes de ver o filme pronto."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-film-script-analysis-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Every cut scene once seemed essential — ask why it didn't survive.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Every cut scene once seemed essential — ask why it didn't survive.\"",
+        "hint_pt_br": "Toda cena cortada já pareceu essencial — por que não sobreviveu?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-film-script-analysis-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "screenplay",
+            "roteiro"
+          ],
+          [
+            "scene",
+            "cena"
+          ],
+          [
+            "cut",
+            "corte"
+          ],
+          [
+            "rewrite",
+            "reescrita"
+          ],
+          [
+            "pacing",
+            "ritmo"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Film Script Analysis — dialog",
+      "character": "Rafa",
+      "pt_summary": "Diálogo sobre film script analysis. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Rafa — film script method. First step?"
+        },
+        {
+          "speaker": "user",
+          "target": "Read the screenplay before the film.",
+          "pt_hint": "Roteiro antes do filme."
+        },
+        {
+          "speaker": "ai",
+          "text": "Then?"
+        },
+        {
+          "speaker": "user",
+          "target": "Watch the film in one sitting.",
+          "pt_hint": "Assista de uma vez."
+        },
+        {
+          "speaker": "ai",
+          "text": "Third step?"
+        },
+        {
+          "speaker": "user",
+          "target": "Compare scene by scene — what changed?",
+          "pt_hint": "Cena a cena."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the most instructive cut?"
+        },
+        {
+          "speaker": "user",
+          "target": "A scene the writer loved.",
+          "pt_hint": "Cena que o autor amava."
+        },
+        {
+          "speaker": "ai",
+          "text": "What does pacing teach?"
+        },
+        {
+          "speaker": "user",
+          "target": "Cuts are about rhythm, not content.",
+          "pt_hint": "Corte é ritmo, não conteúdo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Script vs film is a master class in editing."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "film-script-analysis-listening-story",
+      "title": "The screenplay workshop",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe three comparison moves. Use at least three screenplay terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the small screenwriting club, Rafa handed each member the same screenplay and the same Blu-ray on the same Tuesday."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "Read the screenplay before you watch the finished film — the order matters far more than people believe."
+        },
+        {
+          "speaker": "Member",
+          "voice": "female1",
+          "en": "Every cut scene once seemed essential to the writer — and the question is why it didn't survive the final edit."
+        },
+        {
+          "speaker": "Rafa",
+          "voice": "male1",
+          "en": "The differences between script and film teach you more than either one could teach you read or watched alone."
+        },
+        {
+          "speaker": "Member",
+          "voice": "male2",
+          "en": "Pacing cuts are the hardest to predict — the writer loves those scenes, and the editor removes them anyway."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Script-to-film comparison, Rafa believed, is a master class in the one skill every writer needs — knowing what to cut."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Film Script Analysis\". Reading a screenplay alongside the finished film — what survived, what changed, why. Read the screenplay before you watch the finished film. Every cut scene once seemed essential — ask why it didn't survive. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Film Script Analysis\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Film Script Analysis",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Film Script Analysis\".",
+        "hint_pt_br": "Ela fala o título: \"Film Script Analysis\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

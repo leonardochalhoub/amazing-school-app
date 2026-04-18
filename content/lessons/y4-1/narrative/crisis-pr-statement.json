@@ -1,0 +1,288 @@
+{
+  "slug": "crisis-pr-statement",
+  "title": "Crisis PR Statement",
+  "description": "Drafting the statement when every minute the silence lasts makes the story worse.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.1",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Declaração de crise: 1ª frase reconhece, 2ª nomeia ação, 3ª se compromete com transparência. Sem voz passiva.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Crisis PR Statement",
+      "subtitle_en": "Drafting the statement when every minute the silence lasts makes the story worse.",
+      "subtitle_pt": "Declaração de crise: 1ª frase reconhece, 2ª nomeia ação, 3ª se compromete com transparência. Sem voz passiva."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Drafting the statement when every minute the silence lasts makes the story worse. Focus: crisis pr statement. We became aware of the incident at 3:14 AM and acted within the hour.",
+      "text_pt": "Declaração de crise: 1ª frase reconhece, 2ª nomeia ação, 3ª se compromete com transparência. Sem voz passiva. Foco: crisis pr statement. Soubemos do incidente às 3h14 e agimos em uma hora."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Crisis PR Statement",
+      "body_en": "Crisis statement rules: FIRST SENTENCE acknowledges without minimizing. SECOND SENTENCE names the concrete action. THIRD SENTENCE commits to transparency. Never use passive voice.",
+      "body_pt": "Declaração de crise: 1ª frase reconhece, 2ª nomeia ação, 3ª se compromete com transparência. Sem voz passiva.",
+      "examples": [
+        {
+          "en": "We became aware of the incident at 3:14 AM and acted within the hour.",
+          "pt": "Soubemos do incidente às 3h14 e agimos em uma hora."
+        },
+        {
+          "en": "Every affected customer will receive a personal message by Friday.",
+          "pt": "Toda pessoa afetada receberá mensagem pessoal até sexta."
+        },
+        {
+          "en": "We will publish a full post-mortem within seven days, no redactions.",
+          "pt": "Publicaremos post-mortem completo em 7 dias, sem redação."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Crisis PR Statement",
+      "items": [
+        {
+          "term": "acknowledge",
+          "pt": "reconhecer"
+        },
+        {
+          "term": "post-mortem",
+          "pt": "post-mortem"
+        },
+        {
+          "term": "transparency",
+          "pt": "transparência"
+        },
+        {
+          "term": "accountable",
+          "pt": "responsável"
+        },
+        {
+          "term": "holding statement",
+          "pt": "declaração preliminar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-crisis-pr-statement-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"We became aware of the ___ at 3:14 AM and acted within the hour.\"",
+        "correct": "incident",
+        "explanation": "Full sentence: \"We became aware of the incident at 3:14 AM and acted within the hour.\"",
+        "hint_pt_br": "Soubemos do incidente às 3h14 e agimos em uma hora."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-crisis-pr-statement-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Every affected customer will receive a personal message by Friday.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Every affected customer will receive a personal message by Friday.\"",
+        "hint_pt_br": "Toda pessoa afetada receberá mensagem pessoal até sexta."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-crisis-pr-statement-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "acknowledge",
+            "reconhecer"
+          ],
+          [
+            "post-mortem",
+            "post-mortem"
+          ],
+          [
+            "transparency",
+            "transparência"
+          ],
+          [
+            "accountable",
+            "responsável"
+          ],
+          [
+            "holding statement",
+            "declaração preliminar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Crisis PR Statement — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre crisis pr statement. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca — breach just happened. First sentence?"
+        },
+        {
+          "speaker": "user",
+          "target": "We became aware at 3:14 and acted within the hour.",
+          "pt_hint": "Ciência 3h14, ação em 1h."
+        },
+        {
+          "speaker": "ai",
+          "text": "Second sentence — the action."
+        },
+        {
+          "speaker": "user",
+          "target": "Every affected customer gets a personal message by Friday.",
+          "pt_hint": "Todos afetados, sexta."
+        },
+        {
+          "speaker": "ai",
+          "text": "Third — commitment."
+        },
+        {
+          "speaker": "user",
+          "target": "Full post-mortem within seven days, no redactions.",
+          "pt_hint": "Post-mortem em 7 dias."
+        },
+        {
+          "speaker": "ai",
+          "text": "A reporter calls in 10 minutes."
+        },
+        {
+          "speaker": "user",
+          "target": "Same three sentences, calmer tone.",
+          "pt_hint": "Mesmas 3 frases, calmo."
+        },
+        {
+          "speaker": "ai",
+          "text": "One thing you must never do?"
+        },
+        {
+          "speaker": "user",
+          "target": "Hide behind passive voice.",
+          "pt_hint": "Esconder atrás de passiva."
+        },
+        {
+          "speaker": "ai",
+          "text": "Crisis well-handled builds more trust than smooth quarters."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "crisis-pr-statement-listening-story",
+      "title": "The 4 AM draft",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four rules of the crisis statement. Use at least three crisis terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "At four in the morning, Joca and three directors sat around a kitchen table drafting a statement that would leave at six."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "We became aware of the incident at 3:14 AM and acted within the hour — that's the first sentence, unambiguously."
+        },
+        {
+          "speaker": "Director",
+          "voice": "female1",
+          "en": "Second sentence names the concrete action — every affected customer receives a personal message by Friday, without exception."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Third sentence commits to transparency — full post-mortem within seven days, published in full with no redactions."
+        },
+        {
+          "speaker": "Director",
+          "voice": "male2",
+          "en": "We delete every passive verb from the draft — 'an error occurred' is the sentence that finished careers."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Crisis statements, Joca understood, are written in the language of accountability — or they are not written at all."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Crisis PR Statement\". Drafting the statement when every minute the silence lasts makes the story worse. We became aware of the incident at 3:14 AM and acted within the hour. Every affected customer will receive a personal message by Friday. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Crisis PR Statement\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Crisis PR Statement",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Crisis PR Statement\".",
+        "hint_pt_br": "Ela fala o título: \"Crisis PR Statement\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

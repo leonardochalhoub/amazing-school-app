@@ -6,6 +6,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import * as curriculum from "./c-curriculum.mjs";
+import * as y4 from "./y4-curriculum.mjs";
 const c1_specs = [
   ...(curriculum.c1_specs ?? []),
   ...(curriculum.c1_specs_part2 ?? []),
@@ -17,6 +18,10 @@ const c2_specs = [
   ...(curriculum.c2_specs_part2 ?? []),
   ...(curriculum.c2_specs_part3 ?? []),
   ...(curriculum.c2_specs_part4 ?? []),
+];
+const y4_specs = [
+  ...(y4.y4_1_specs ?? []),
+  ...(y4.y4_2_specs ?? []),
 ];
 
 const ROOT = process.cwd();
@@ -65,7 +70,31 @@ const PROFICIENT_SOURCES = [
   },
 ];
 
+const PROFESSIONAL_SOURCES = [
+  {
+    label: "Harvard Business Review",
+    url: "https://hbr.org/",
+    pt_hint: "Leitura de negócios profunda — C2+/profissional.",
+  },
+  {
+    label: "TED Talks · Work and Leadership",
+    url: "https://www.ted.com/topics/work",
+    pt_hint: "Palestras reais de liderança, negociação e trabalho.",
+  },
+  {
+    label: "The Atlantic · Culture and Ideas",
+    url: "https://www.theatlantic.com/",
+    pt_hint: "Ensaios longos de política, cultura e pensamento.",
+  },
+  {
+    label: "Toastmasters International",
+    url: "https://www.toastmasters.org/",
+    pt_hint: "Prática estruturada de oratória com peer feedback.",
+  },
+];
+
 function sourcesFor(level) {
+  if (level.startsWith("y4")) return PROFESSIONAL_SOURCES;
   return level.startsWith("c1") ? ADVANCED_SOURCES : PROFICIENT_SOURCES;
 }
 
@@ -74,6 +103,8 @@ function xpFor(level) {
   if (level === "c1.2") return 80;
   if (level === "c2.1") return 85;
   if (level === "c2.2") return 90;
+  if (level === "y4.1") return 100;
+  if (level === "y4.2") return 100;
   return 75;
 }
 
@@ -259,7 +290,7 @@ function buildLesson(spec) {
   };
 }
 
-const allSpecs = [...c1_specs, ...c2_specs];
+const allSpecs = [...c1_specs, ...c2_specs, ...y4_specs];
 let written = 0;
 let overwritten = 0;
 

@@ -1,0 +1,288 @@
+{
+  "slug": "remote-international-team",
+  "title": "Leading a Remote International Team",
+  "description": "Six time zones, four nationalities, one coherent team — the async-first leadership playbook.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.1",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Liderança remota: escreva decisões, respeite fusos, dê contexto, confie, revise semanalmente.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Leading a Remote International Team",
+      "subtitle_en": "Six time zones, four nationalities, one coherent team — the async-first leadership playbook.",
+      "subtitle_pt": "Liderança remota: escreva decisões, respeite fusos, dê contexto, confie, revise semanalmente."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Six time zones, four nationalities, one coherent team — the async-first leadership playbook. Focus: leading a remote international team. Every decision goes in writing, or it did not happen.",
+      "text_pt": "Liderança remota: escreva decisões, respeite fusos, dê contexto, confie, revise semanalmente. Foco: leading a remote international team. Toda decisão vai por escrito, ou não aconteceu."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Leading a Remote International Team",
+      "body_en": "Async-first remote leadership: WRITE decisions (not just discuss). RESPECT time zones (no surprise syncs). STATE context fully (links, history). TRUST by default. REVIEW outcomes weekly.",
+      "body_pt": "Liderança remota: escreva decisões, respeite fusos, dê contexto, confie, revise semanalmente.",
+      "examples": [
+        {
+          "en": "Every decision goes in writing, or it did not happen.",
+          "pt": "Toda decisão vai por escrito, ou não aconteceu."
+        },
+        {
+          "en": "No surprise syncs across four time zones — write it down instead.",
+          "pt": "Sem syncs surpresa em 4 fusos — escreve."
+        },
+        {
+          "en": "Weekly review in writing, thirty minutes, Fridays.",
+          "pt": "Revisão semanal por escrito, 30 minutos, sexta."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Leading a Remote International Team",
+      "items": [
+        {
+          "term": "async",
+          "pt": "assíncrono"
+        },
+        {
+          "term": "time zone",
+          "pt": "fuso horário"
+        },
+        {
+          "term": "context",
+          "pt": "contexto"
+        },
+        {
+          "term": "autonomy",
+          "pt": "autonomia"
+        },
+        {
+          "term": "cadence",
+          "pt": "cadência"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-remote-international-team-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Every ___ goes in writing, or it did not happen.\"",
+        "correct": "decision",
+        "explanation": "Full sentence: \"Every decision goes in writing, or it did not happen.\"",
+        "hint_pt_br": "Toda decisão vai por escrito, ou não aconteceu."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-remote-international-team-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "No surprise syncs across four time zones — write it down instead.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"No surprise syncs across four time zones — write it down instead.\"",
+        "hint_pt_br": "Sem syncs surpresa em 4 fusos — escreve."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-remote-international-team-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "async",
+            "assíncrono"
+          ],
+          [
+            "time zone",
+            "fuso horário"
+          ],
+          [
+            "context",
+            "contexto"
+          ],
+          [
+            "autonomy",
+            "autonomia"
+          ],
+          [
+            "cadence",
+            "cadência"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Leading a Remote International Team — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre leading a remote international team. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara — design your remote team's first week."
+        },
+        {
+          "speaker": "user",
+          "target": "Every decision goes in writing.",
+          "pt_hint": "Decisões por escrito."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you handle time zones?"
+        },
+        {
+          "speaker": "user",
+          "target": "No surprise syncs. Async-first.",
+          "pt_hint": "Sem surpresa. Assíncrono."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's your cadence?"
+        },
+        {
+          "speaker": "user",
+          "target": "Weekly written review, thirty minutes, Fridays.",
+          "pt_hint": "Sexta, 30 min."
+        },
+        {
+          "speaker": "ai",
+          "text": "Trust how much?"
+        },
+        {
+          "speaker": "user",
+          "target": "Fully, by default. Review outcomes, not hours.",
+          "pt_hint": "Confiança total."
+        },
+        {
+          "speaker": "ai",
+          "text": "When do you override async?"
+        },
+        {
+          "speaker": "user",
+          "target": "Only when a decision affects three or more.",
+          "pt_hint": "Decisão pra 3+."
+        },
+        {
+          "speaker": "ai",
+          "text": "Async-first leadership is writing that respects time."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "remote-international-team-listening-story",
+      "title": "The distributed team",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four async-first leadership principles. Use at least three remote terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On her first Monday as head of a remote team spanning São Paulo, Nairobi, Berlin, and Seoul, Zara wrote her first memo."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Every decision goes in writing, or it did not happen — that is rule one for this team from today forward."
+        },
+        {
+          "speaker": "Engineer",
+          "voice": "male1",
+          "en": "And we respect time zones — no surprise syncs across four time zones when a written decision will suffice instead."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Context goes in full — every link, every history, every relevant thread attached before the decision is even requested."
+        },
+        {
+          "speaker": "Engineer",
+          "voice": "female2",
+          "en": "Weekly review is thirty minutes on Fridays, in writing — we measure outcomes, not hours on a video call."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Remote leadership, Zara believed, is writing that respects time — and trust that makes the writing actually worth reading."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Leading a Remote International Team\". Six time zones, four nationalities, one coherent team — the async-first leadership playbook. Every decision goes in writing, or it did not happen. No surprise syncs across four time zones — write it down instead. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Leading a Remote International Team\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Leading a Remote International Team",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Leading a Remote International Team\".",
+        "hint_pt_br": "Ela fala o título: \"Leading a Remote International Team\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

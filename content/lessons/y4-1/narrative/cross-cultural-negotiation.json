@@ -1,0 +1,288 @@
+{
+  "slug": "cross-cultural-negotiation",
+  "title": "Cross-Cultural Negotiation",
+  "description": "Reading the room across US / UK / Japan / Brazil — where silence means yes, no, or 'tell me more'.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.1",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Negociação cross-cultural: EUA direto, UK subentendido, Japão silêncio, Brasil relação primeiro. Nunca force um estilo só.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Cross-Cultural Negotiation",
+      "subtitle_en": "Reading the room across US / UK / Japan / Brazil — where silence means yes, no, or 'tell me more'.",
+      "subtitle_pt": "Negociação cross-cultural: EUA direto, UK subentendido, Japão silêncio, Brasil relação primeiro. Nunca force um estilo só."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "Reading the room across US / UK / Japan / Brazil — where silence means yes, no, or 'tell me more'. Focus: cross-cultural negotiation. In Tokyo, thirty seconds of silence means 'I'm considering carefully'.",
+      "text_pt": "Negociação cross-cultural: EUA direto, UK subentendido, Japão silêncio, Brasil relação primeiro. Nunca force um estilo só. Foco: cross-cultural negotiation. Em Tóquio, 30s de silêncio = 'considerando com cuidado'."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Cross-Cultural Negotiation",
+      "body_en": "Cross-cultural negotiation: US = direct offers, UK = understated positions, Japan = silence as consideration, Brazil = relationship before deal. Never force one style on all four.",
+      "body_pt": "Negociação cross-cultural: EUA direto, UK subentendido, Japão silêncio, Brasil relação primeiro. Nunca force um estilo só.",
+      "examples": [
+        {
+          "en": "In Tokyo, thirty seconds of silence means 'I'm considering carefully'.",
+          "pt": "Em Tóquio, 30s de silêncio = 'considerando com cuidado'."
+        },
+        {
+          "en": "In New York, asking twice signals you don't respect their time.",
+          "pt": "Em NY, perguntar duas vezes = desrespeito ao tempo."
+        },
+        {
+          "en": "In São Paulo, sign the deal after lunch, not before it.",
+          "pt": "Em SP, assine o contrato depois do almoço, não antes."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Cross-Cultural Negotiation",
+      "items": [
+        {
+          "term": "silence",
+          "pt": "silêncio"
+        },
+        {
+          "term": "direct",
+          "pt": "direto"
+        },
+        {
+          "term": "understated",
+          "pt": "subentendido"
+        },
+        {
+          "term": "relational",
+          "pt": "relacional"
+        },
+        {
+          "term": "transactional",
+          "pt": "transacional"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-cross-cultural-negotiation-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"In Tokyo, thirty seconds of silence means 'I'm ___ carefully'.\"",
+        "correct": "considering",
+        "explanation": "Full sentence: \"In Tokyo, thirty seconds of silence means 'I'm considering carefully'.\"",
+        "hint_pt_br": "Em Tóquio, 30s de silêncio = 'considerando com cuidado'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-cross-cultural-negotiation-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "In New York, asking twice signals you don't respect their time.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"In New York, asking twice signals you don't respect their time.\"",
+        "hint_pt_br": "Em NY, perguntar duas vezes = desrespeito ao tempo."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-cross-cultural-negotiation-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "silence",
+            "silêncio"
+          ],
+          [
+            "direct",
+            "direto"
+          ],
+          [
+            "understated",
+            "subentendido"
+          ],
+          [
+            "relational",
+            "relacional"
+          ],
+          [
+            "transactional",
+            "transacional"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Cross-Cultural Negotiation — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre cross-cultural negotiation. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara, your Japanese counterpart goes silent for 30 seconds."
+        },
+        {
+          "speaker": "user",
+          "target": "I wait. They are considering.",
+          "pt_hint": "Espero, estão pensando."
+        },
+        {
+          "speaker": "ai",
+          "text": "Your American counterpart waits for your counteroffer."
+        },
+        {
+          "speaker": "user",
+          "target": "I offer directly, within two sentences.",
+          "pt_hint": "Direto, duas frases."
+        },
+        {
+          "speaker": "ai",
+          "text": "British counterpart says 'I have a slight concern'."
+        },
+        {
+          "speaker": "user",
+          "target": "I translate that as 'major objection'.",
+          "pt_hint": "Traduzo: objeção maior."
+        },
+        {
+          "speaker": "ai",
+          "text": "Brazilian counterpart invites you to lunch first."
+        },
+        {
+          "speaker": "user",
+          "target": "I accept. The deal comes after the meal.",
+          "pt_hint": "O deal vem depois."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the master rule across all four?"
+        },
+        {
+          "speaker": "user",
+          "target": "Never force one style on all four.",
+          "pt_hint": "Nunca force um só estilo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Cross-cultural negotiation is empathy with a contract."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "cross-cultural-negotiation-listening-story",
+      "title": "The four-way deal",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four cross-cultural patterns. Use at least three negotiation terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In Frankfurt, Zara sat at a table with four counterparts from four different continents — each reading the room in their own key."
+        },
+        {
+          "speaker": "American",
+          "voice": "male1",
+          "en": "We'd like a counteroffer within the hour — we've done our homework and we respect each other's time above all."
+        },
+        {
+          "speaker": "Japanese",
+          "voice": "female1",
+          "en": "(Pauses thirty seconds in full silence, reading the proposal line by line without speaking once.)"
+        },
+        {
+          "speaker": "British",
+          "voice": "male2",
+          "en": "I do have a slight concern about the exclusivity clause — probably nothing serious, just worth a quiet word."
+        },
+        {
+          "speaker": "Brazilian",
+          "voice": "female2",
+          "en": "Let's eat first. The deal lives longer when the people making it have actually shared a meal together beforehand."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Cross-cultural negotiation, Zara believed, is empathy with a contract — the grammar of four languages, spoken through one table."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Cross-Cultural Negotiation\". Reading the room across US / UK / Japan / Brazil — where silence means yes, no, or 'tell me more'. In Tokyo, thirty seconds of silence means 'I'm considering carefully'. In New York, asking twice signals you don't respect their time. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Cross-Cultural Negotiation\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Cross-Cultural Negotiation",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Cross-Cultural Negotiation\".",
+        "hint_pt_br": "Ela fala o título: \"Cross-Cultural Negotiation\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

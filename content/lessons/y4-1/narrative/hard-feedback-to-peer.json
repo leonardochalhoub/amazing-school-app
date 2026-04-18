@@ -1,0 +1,288 @@
+{
+  "slug": "hard-feedback-to-peer",
+  "title": "Giving Hard Feedback to a Peer",
+  "description": "When both of you have status — how to protect the relationship and the truth.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.1",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Feedback entre pares: peça permissão, nomeie comportamento, descreva impacto, ofereça leitura, espere resposta.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Giving Hard Feedback to a Peer",
+      "subtitle_en": "When both of you have status — how to protect the relationship and the truth.",
+      "subtitle_pt": "Feedback entre pares: peça permissão, nomeie comportamento, descreva impacto, ofereça leitura, espere resposta."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "When both of you have status — how to protect the relationship and the truth. Focus: giving hard feedback to a peer. Can I share something I noticed? Only if you have bandwidth for it.",
+      "text_pt": "Feedback entre pares: peça permissão, nomeie comportamento, descreva impacto, ofereça leitura, espere resposta. Foco: giving hard feedback to a peer. Posso compartilhar algo? Só se tiver espaço."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Giving Hard Feedback to a Peer",
+      "body_en": "Peer feedback: ASK permission. NAME the specific behavior. DESCRIBE the impact. OFFER your reading. LEAVE space for their response. No advice until they ask.",
+      "body_pt": "Feedback entre pares: peça permissão, nomeie comportamento, descreva impacto, ofereça leitura, espere resposta.",
+      "examples": [
+        {
+          "en": "Can I share something I noticed? Only if you have bandwidth for it.",
+          "pt": "Posso compartilhar algo? Só se tiver espaço."
+        },
+        {
+          "en": "In Monday's meeting, when you spoke over Elena three times...",
+          "pt": "Na segunda, quando você sobrepôs a Elena três vezes..."
+        },
+        {
+          "en": "My reading is it came across as dismissive, though I may be wrong.",
+          "pt": "Minha leitura é que pareceu dispensador, posso estar errada."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Giving Hard Feedback to a Peer",
+      "items": [
+        {
+          "term": "peer",
+          "pt": "par"
+        },
+        {
+          "term": "bandwidth",
+          "pt": "espaço"
+        },
+        {
+          "term": "dismissive",
+          "pt": "dispensador"
+        },
+        {
+          "term": "invite",
+          "pt": "convidar"
+        },
+        {
+          "term": "defensiveness",
+          "pt": "defensividade"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-hard-feedback-to-peer-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Can I share ___ I noticed? Only if you have bandwidth for it.\"",
+        "correct": "something",
+        "explanation": "Full sentence: \"Can I share something I noticed? Only if you have bandwidth for it.\"",
+        "hint_pt_br": "Posso compartilhar algo? Só se tiver espaço."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-hard-feedback-to-peer-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "In Monday's meeting, when you spoke over Elena three times...",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"In Monday's meeting, when you spoke over Elena three times...\"",
+        "hint_pt_br": "Na segunda, quando você sobrepôs a Elena três vezes..."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-hard-feedback-to-peer-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "peer",
+            "par"
+          ],
+          [
+            "bandwidth",
+            "espaço"
+          ],
+          [
+            "dismissive",
+            "dispensador"
+          ],
+          [
+            "invite",
+            "convidar"
+          ],
+          [
+            "defensiveness",
+            "defensividade"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Giving Hard Feedback to a Peer — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre giving hard feedback to a peer. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara — your peer needs feedback. Open."
+        },
+        {
+          "speaker": "user",
+          "target": "Can I share something? Only if you have bandwidth.",
+          "pt_hint": "Posso compartilhar?"
+        },
+        {
+          "speaker": "ai",
+          "text": "They say yes."
+        },
+        {
+          "speaker": "user",
+          "target": "In Monday's meeting, you spoke over Elena three times.",
+          "pt_hint": "Sobrepôs a Elena 3x."
+        },
+        {
+          "speaker": "ai",
+          "text": "Describe the impact."
+        },
+        {
+          "speaker": "user",
+          "target": "My reading is it came across as dismissive.",
+          "pt_hint": "Pareceu dispensador."
+        },
+        {
+          "speaker": "ai",
+          "text": "They get defensive."
+        },
+        {
+          "speaker": "user",
+          "target": "I may be wrong — I'm sharing my reading only.",
+          "pt_hint": "Posso estar errada."
+        },
+        {
+          "speaker": "ai",
+          "text": "They ask what to do."
+        },
+        {
+          "speaker": "user",
+          "target": "What would feel right to you to try?",
+          "pt_hint": "O que seria natural?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Peer feedback lives or dies in the first sentence."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "hard-feedback-to-peer-listening-story",
+      "title": "The one-on-one",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four peer-feedback moves. Use at least three feedback terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On a quiet Thursday afternoon, Zara asked a peer for thirty minutes to share something she had been sitting with all week."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Can I share something I noticed about Monday's meeting? Only if you have the bandwidth for it right now."
+        },
+        {
+          "speaker": "Peer",
+          "voice": "male1",
+          "en": "Yes, please — I trust your read on these things more than almost anyone else on the leadership team."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "When you spoke over Elena three separate times, my reading is it came across as dismissive — though I may be wrong."
+        },
+        {
+          "speaker": "Peer",
+          "voice": "male1",
+          "en": "I didn't realize. What would feel right to try next time without overcorrecting into passivity?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Peer feedback, Zara believed, lives or dies in the first sentence — and in the pause that follows it."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Giving Hard Feedback to a Peer\". When both of you have status — how to protect the relationship and the truth. Can I share something I noticed? Only if you have bandwidth for it. In Monday's meeting, when you spoke over Elena three times... Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Giving Hard Feedback to a Peer\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Giving Hard Feedback to a Peer",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Giving Hard Feedback to a Peer\".",
+        "hint_pt_br": "Ela fala o título: \"Giving Hard Feedback to a Peer\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

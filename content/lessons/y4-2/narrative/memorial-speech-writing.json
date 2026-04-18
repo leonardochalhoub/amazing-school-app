@@ -1,0 +1,288 @@
+{
+  "slug": "memorial-speech-writing",
+  "title": "Writing a Memorial Speech",
+  "description": "Honoring a life publicly — the most demanding small piece of writing you will ever do.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.2",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Discurso memorial: uma anedota específica, uma verdade universal, uma linha engraçada, sem ler currículo, máx 7 minutos.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Writing a Memorial Speech",
+      "subtitle_en": "Honoring a life publicly — the most demanding small piece of writing you will ever do.",
+      "subtitle_pt": "Discurso memorial: uma anedota específica, uma verdade universal, uma linha engraçada, sem ler currículo, máx 7 minutos."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Honoring a life publicly — the most demanding small piece of writing you will ever do. Focus: writing a memorial speech. One specific anecdote does more than a full biography.",
+      "text_pt": "Discurso memorial: uma anedota específica, uma verdade universal, uma linha engraçada, sem ler currículo, máx 7 minutos. Foco: writing a memorial speech. Uma anedota específica faz mais que biografia inteira."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Writing a Memorial Speech",
+      "body_en": "Memorial craft: one specific anecdote. One universal truth. One line they would have laughed at. No resume-reading. Under seven minutes, always.",
+      "body_pt": "Discurso memorial: uma anedota específica, uma verdade universal, uma linha engraçada, sem ler currículo, máx 7 minutos.",
+      "examples": [
+        {
+          "en": "One specific anecdote does more than a full biography.",
+          "pt": "Uma anedota específica faz mais que biografia inteira."
+        },
+        {
+          "en": "One universal truth they helped you see.",
+          "pt": "Uma verdade universal que eles ajudaram a ver."
+        },
+        {
+          "en": "One line they would have laughed at, if they could hear it.",
+          "pt": "Uma linha que eles ririam, se pudessem ouvir."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Writing a Memorial Speech",
+      "items": [
+        {
+          "term": "anecdote",
+          "pt": "anedota"
+        },
+        {
+          "term": "eulogy",
+          "pt": "elogio fúnebre"
+        },
+        {
+          "term": "tribute",
+          "pt": "homenagem"
+        },
+        {
+          "term": "grief",
+          "pt": "luto"
+        },
+        {
+          "term": "dignity",
+          "pt": "dignidade"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-memorial-speech-writing-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"One specific anecdote does more than a full ___.\"",
+        "correct": "biography",
+        "explanation": "Full sentence: \"One specific anecdote does more than a full biography.\"",
+        "hint_pt_br": "Uma anedota específica faz mais que biografia inteira."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-memorial-speech-writing-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "One universal truth they helped you see.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"One universal truth they helped you see.\"",
+        "hint_pt_br": "Uma verdade universal que eles ajudaram a ver."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-memorial-speech-writing-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "anecdote",
+            "anedota"
+          ],
+          [
+            "eulogy",
+            "elogio fúnebre"
+          ],
+          [
+            "tribute",
+            "homenagem"
+          ],
+          [
+            "grief",
+            "luto"
+          ],
+          [
+            "dignity",
+            "dignidade"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Writing a Memorial Speech — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre writing a memorial speech. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Lúcia — a memorial speech. What opens it?"
+        },
+        {
+          "speaker": "user",
+          "target": "One specific anecdote, never a resume.",
+          "pt_hint": "Anedota, não currículo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Middle move?"
+        },
+        {
+          "speaker": "user",
+          "target": "One universal truth they showed me.",
+          "pt_hint": "Uma verdade universal."
+        },
+        {
+          "speaker": "ai",
+          "text": "Any humor?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes — a line they'd have laughed at.",
+          "pt_hint": "Uma linha que ririam."
+        },
+        {
+          "speaker": "ai",
+          "text": "How long?"
+        },
+        {
+          "speaker": "user",
+          "target": "Under seven minutes. Always.",
+          "pt_hint": "Menos de 7 minutos."
+        },
+        {
+          "speaker": "ai",
+          "text": "What do you protect above all?"
+        },
+        {
+          "speaker": "user",
+          "target": "Their dignity — even in sadness.",
+          "pt_hint": "A dignidade."
+        },
+        {
+          "speaker": "ai",
+          "text": "Memorial writing is grief made generous."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "memorial-speech-writing-listening-story",
+      "title": "The eulogy",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four craft rules for a memorial speech. Use at least three eulogy terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In her small study, Dona Lúcia drafted the memorial speech she would give for a friend of seventy years."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "One specific anecdote does more than a full biography — the morning she arrived at my door with burnt bread and champagne."
+        },
+        {
+          "speaker": "Daughter",
+          "voice": "female2",
+          "en": "And one universal truth she helped you see — that anything worth doing is probably worth doing imperfectly, even loudly."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "One line she would have laughed at, if she could hear it — only one. Humor is a kindness to the room."
+        },
+        {
+          "speaker": "Daughter",
+          "voice": "female2",
+          "en": "Under seven minutes always — you've taught me that a eulogy over ten minutes starts insulting the person being honored."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Memorial writing, Lúcia knew, is grief made generous — the most demanding small piece of writing a life ever asks of us."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Writing a Memorial Speech\". Honoring a life publicly — the most demanding small piece of writing you will ever do. One specific anecdote does more than a full biography. One universal truth they helped you see. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Writing a Memorial Speech\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Writing a Memorial Speech",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Writing a Memorial Speech\".",
+        "hint_pt_br": "Ela fala o título: \"Writing a Memorial Speech\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

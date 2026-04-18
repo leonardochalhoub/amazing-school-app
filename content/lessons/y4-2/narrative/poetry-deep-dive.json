@@ -1,0 +1,288 @@
+{
+  "slug": "poetry-deep-dive",
+  "title": "Poetry Deep Dive",
+  "description": "One poet per month — reading them until their rhythms live under your own skin.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.2",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Imersão em poesia: um poeta por mês. Ler em voz alta toda manhã, decorar três poemas, escrever na voz.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Poetry Deep Dive",
+      "subtitle_en": "One poet per month — reading them until their rhythms live under your own skin.",
+      "subtitle_pt": "Imersão em poesia: um poeta por mês. Ler em voz alta toda manhã, decorar três poemas, escrever na voz."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "One poet per month — reading them until their rhythms live under your own skin. Focus: poetry deep dive. One poet per month, read aloud every morning without exception.",
+      "text_pt": "Imersão em poesia: um poeta por mês. Ler em voz alta toda manhã, decorar três poemas, escrever na voz. Foco: poetry deep dive. Um poeta por mês, em voz alta toda manhã."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Poetry Deep Dive",
+      "body_en": "Poetry deep dive: one poet for one month. Read aloud every morning. Memorize three poems. Write in their voice. Only then move on to a new poet.",
+      "body_pt": "Imersão em poesia: um poeta por mês. Ler em voz alta toda manhã, decorar três poemas, escrever na voz.",
+      "examples": [
+        {
+          "en": "One poet per month, read aloud every morning without exception.",
+          "pt": "Um poeta por mês, em voz alta toda manhã."
+        },
+        {
+          "en": "Memorize three poems before you claim to know a poet.",
+          "pt": "Decore três poemas antes de dizer que conhece um poeta."
+        },
+        {
+          "en": "Write in their voice until your own voice remembers theirs.",
+          "pt": "Escreva na voz deles até a sua voz lembrar da deles."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Poetry Deep Dive",
+      "items": [
+        {
+          "term": "cadence",
+          "pt": "cadência"
+        },
+        {
+          "term": "memorize",
+          "pt": "decorar"
+        },
+        {
+          "term": "oeuvre",
+          "pt": "obra"
+        },
+        {
+          "term": "imitate",
+          "pt": "imitar"
+        },
+        {
+          "term": "dwell",
+          "pt": "habitar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-poetry-deep-dive-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"One poet per month, read aloud every morning without ___.\"",
+        "correct": "exception",
+        "explanation": "Full sentence: \"One poet per month, read aloud every morning without exception.\"",
+        "hint_pt_br": "Um poeta por mês, em voz alta toda manhã."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-poetry-deep-dive-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Memorize three poems before you claim to know a poet.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"Memorize three poems before you claim to know a poet.\"",
+        "hint_pt_br": "Decore três poemas antes de dizer que conhece um poeta."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-poetry-deep-dive-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "cadence",
+            "cadência"
+          ],
+          [
+            "memorize",
+            "decorar"
+          ],
+          [
+            "oeuvre",
+            "obra"
+          ],
+          [
+            "imitate",
+            "imitar"
+          ],
+          [
+            "dwell",
+            "habitar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Poetry Deep Dive — dialog",
+      "character": "Lucia",
+      "pt_summary": "Diálogo sobre poetry deep dive. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Lúcia — one poet for one month. What's the daily habit?"
+        },
+        {
+          "speaker": "user",
+          "target": "Read aloud every morning without fail.",
+          "pt_hint": "Voz alta toda manhã."
+        },
+        {
+          "speaker": "ai",
+          "text": "How many poems do you memorize?"
+        },
+        {
+          "speaker": "user",
+          "target": "Three, before I claim to know them.",
+          "pt_hint": "Três antes de dizer que conheço."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the writing exercise?"
+        },
+        {
+          "speaker": "user",
+          "target": "Write in their voice for a week.",
+          "pt_hint": "Escrever na voz deles."
+        },
+        {
+          "speaker": "ai",
+          "text": "When is the month complete?"
+        },
+        {
+          "speaker": "user",
+          "target": "When their cadence returns unbidden.",
+          "pt_hint": "Quando a cadência volta sozinha."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why only one poet at a time?"
+        },
+        {
+          "speaker": "user",
+          "target": "Depth beats breadth at this level.",
+          "pt_hint": "Profundo vence largura."
+        },
+        {
+          "speaker": "ai",
+          "text": "Poetry lived inside is poetry truly read."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "poetry-deep-dive-listening-story",
+      "title": "A month with one poet",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe the four-step deep dive. Use at least three poetry terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On the first morning of her month with Mary Oliver, Dona Lúcia read the entire collection aloud before breakfast."
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Read aloud every single morning — a poet's cadence settles into your own speech long before you notice it consciously."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female2",
+          "en": "And you memorize three poems before you let yourself claim that you actually know the poet at all?"
+        },
+        {
+          "speaker": "Lúcia",
+          "voice": "female1",
+          "en": "Yes. Then I write in their voice for a week — until my sentences breathe the same way their sentences do."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male1",
+          "en": "The month is complete only when their cadence returns to me unbidden, even when I'm not thinking about them."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Poetry lived inside, Lúcia knew, is poetry truly read — every other form of reading was simply visiting."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Poetry Deep Dive\". One poet per month — reading them until their rhythms live under your own skin. One poet per month, read aloud every morning without exception. Memorize three poems before you claim to know a poet. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Poetry Deep Dive\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Poetry Deep Dive",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Poetry Deep Dive\".",
+        "hint_pt_br": "Ela fala o título: \"Poetry Deep Dive\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

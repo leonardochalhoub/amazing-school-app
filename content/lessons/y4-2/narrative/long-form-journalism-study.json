@@ -1,0 +1,288 @@
+{
+  "slug": "long-form-journalism-study",
+  "title": "Long-form Journalism Study",
+  "description": "Reading investigations of 10,000+ words as a craft discipline.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.2",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Jornalismo longo: leia o lead 3x, marque viradas, rastreie fontes, resuma em 200, critique em 200.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Long-form Journalism Study",
+      "subtitle_en": "Reading investigations of 10,000+ words as a craft discipline.",
+      "subtitle_pt": "Jornalismo longo: leia o lead 3x, marque viradas, rastreie fontes, resuma em 200, critique em 200."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Reading investigations of 10,000+ words as a craft discipline. Focus: long-form journalism study. The lede does a decade of work in eighty words.",
+      "text_pt": "Jornalismo longo: leia o lead 3x, marque viradas, rastreie fontes, resuma em 200, critique em 200. Foco: long-form journalism study. O lead faz uma década de trabalho em 80 palavras."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Long-form Journalism Study",
+      "body_en": "Long-form method: read the lede three times. Mark each narrative turn. Track the reporter's sources. Write a 200-word summary. Then a 200-word critique.",
+      "body_pt": "Jornalismo longo: leia o lead 3x, marque viradas, rastreie fontes, resuma em 200, critique em 200.",
+      "examples": [
+        {
+          "en": "The lede does a decade of work in eighty words.",
+          "pt": "O lead faz uma década de trabalho em 80 palavras."
+        },
+        {
+          "en": "Count the sources — investigative pieces rest on twenty, not two.",
+          "pt": "Conte as fontes — investigações têm 20, não 2."
+        },
+        {
+          "en": "Summary first, then critique. Never reverse the order.",
+          "pt": "Resumo antes da crítica. Nunca inverta."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Long-form Journalism Study",
+      "items": [
+        {
+          "term": "lede",
+          "pt": "lead"
+        },
+        {
+          "term": "source",
+          "pt": "fonte"
+        },
+        {
+          "term": "investigation",
+          "pt": "investigação"
+        },
+        {
+          "term": "narrative turn",
+          "pt": "virada narrativa"
+        },
+        {
+          "term": "critique",
+          "pt": "crítica"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-long-form-journalism-study-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The lede does a ___ of work in eighty words.\"",
+        "correct": "decade",
+        "explanation": "Full sentence: \"The lede does a decade of work in eighty words.\"",
+        "hint_pt_br": "O lead faz uma década de trabalho em 80 palavras."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-long-form-journalism-study-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Count the sources — investigative pieces rest on twenty, not two.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Count the sources — investigative pieces rest on twenty, not two.\"",
+        "hint_pt_br": "Conte as fontes — investigações têm 20, não 2."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-long-form-journalism-study-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "lede",
+            "lead"
+          ],
+          [
+            "source",
+            "fonte"
+          ],
+          [
+            "investigation",
+            "investigação"
+          ],
+          [
+            "narrative turn",
+            "virada narrativa"
+          ],
+          [
+            "critique",
+            "crítica"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Long-form Journalism Study — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre long-form journalism study. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar — start a long-form read. What's first?"
+        },
+        {
+          "speaker": "user",
+          "target": "Read the lede three times in a row.",
+          "pt_hint": "Leia o lead 3x."
+        },
+        {
+          "speaker": "ai",
+          "text": "Second move?"
+        },
+        {
+          "speaker": "user",
+          "target": "Mark each narrative turn.",
+          "pt_hint": "Marque as viradas."
+        },
+        {
+          "speaker": "ai",
+          "text": "How do you track sources?"
+        },
+        {
+          "speaker": "user",
+          "target": "Highlight every named source in margin.",
+          "pt_hint": "Marque cada fonte."
+        },
+        {
+          "speaker": "ai",
+          "text": "Then summary?"
+        },
+        {
+          "speaker": "user",
+          "target": "Two hundred words, no critique yet.",
+          "pt_hint": "200 palavras, sem crítica."
+        },
+        {
+          "speaker": "ai",
+          "text": "When does critique come?"
+        },
+        {
+          "speaker": "user",
+          "target": "Only after the summary is written.",
+          "pt_hint": "Após o resumo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Long-form teaches you to read journalism as craft."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "long-form-journalism-study-listening-story",
+      "title": "The investigation",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe the five-step long-form reading method. Use at least three journalism terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In his Saturday advanced reading class, Kumar handed each student the same twelve-thousand-word investigation."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "The lede does a decade of work in eighty words — read it three times before you read anything else in the piece."
+        },
+        {
+          "speaker": "Student",
+          "voice": "female1",
+          "en": "Then mark each narrative turn in the margin — the points where the reporter shifts scene or timeline?"
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Exactly. Count the named sources as you read — investigative pieces rest on twenty sources, never two or three."
+        },
+        {
+          "speaker": "Student",
+          "voice": "male2",
+          "en": "Two-hundred-word summary first, then a two-hundred-word critique — you never reverse the order of that discipline."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Long-form journalism, Kumar insisted, teaches you to read journalism as craft rather than simply as information."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Long-form Journalism Study\". Reading investigations of 10,000+ words as a craft discipline. The lede does a decade of work in eighty words. Count the sources — investigative pieces rest on twenty, not two. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Long-form Journalism Study\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Long-form Journalism Study",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Long-form Journalism Study\".",
+        "hint_pt_br": "Ela fala o título: \"Long-form Journalism Study\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

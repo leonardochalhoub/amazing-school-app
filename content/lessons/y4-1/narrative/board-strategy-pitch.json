@@ -1,0 +1,288 @@
+{
+  "slug": "board-strategy-pitch",
+  "title": "Board Strategy Pitch",
+  "description": "Fifteen minutes to the board — what you open with, what you cut, what you defend.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.1",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Pitch pro board: tese em uma linha, três números, pedido específico, respostas curtas, fechamento sem slides.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Board Strategy Pitch",
+      "subtitle_en": "Fifteen minutes to the board — what you open with, what you cut, what you defend.",
+      "subtitle_pt": "Pitch pro board: tese em uma linha, três números, pedido específico, respostas curtas, fechamento sem slides."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "Fifteen minutes to the board — what you open with, what you cut, what you defend. Focus: board strategy pitch. The board meets tomorrow. We have one shot and twelve minutes.",
+      "text_pt": "Pitch pro board: tese em uma linha, três números, pedido específico, respostas curtas, fechamento sem slides. Foco: board strategy pitch. O board se reúne amanhã. Uma chance, doze minutos."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Board Strategy Pitch",
+      "body_en": "Board pitch shape: OPEN with one-line thesis. PROOF in three numbers. ASK with specific timeline. Q&A answered in under 45 seconds. No slides for closing two minutes.",
+      "body_pt": "Pitch pro board: tese em uma linha, três números, pedido específico, respostas curtas, fechamento sem slides.",
+      "examples": [
+        {
+          "en": "The board meets tomorrow. We have one shot and twelve minutes.",
+          "pt": "O board se reúne amanhã. Uma chance, doze minutos."
+        },
+        {
+          "en": "Our thesis: margin, not growth, is the right metric this year.",
+          "pt": "Nossa tese: margem, não crescimento, é a métrica certa."
+        },
+        {
+          "en": "If we cannot answer in 45 seconds, we haven't prepared enough.",
+          "pt": "Se não respondermos em 45s, não preparamos o bastante."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Board Strategy Pitch",
+      "items": [
+        {
+          "term": "thesis",
+          "pt": "tese"
+        },
+        {
+          "term": "ask",
+          "pt": "pedido"
+        },
+        {
+          "term": "margin",
+          "pt": "margem"
+        },
+        {
+          "term": "runway",
+          "pt": "runway"
+        },
+        {
+          "term": "conviction",
+          "pt": "convicção"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-board-strategy-pitch-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"The board meets ___. We have one shot and twelve minutes.\"",
+        "correct": "tomorrow",
+        "explanation": "Full sentence: \"The board meets tomorrow. We have one shot and twelve minutes.\"",
+        "hint_pt_br": "O board se reúne amanhã. Uma chance, doze minutos."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-board-strategy-pitch-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Our thesis: margin, not growth, is the right metric this year.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"Our thesis: margin, not growth, is the right metric this year.\"",
+        "hint_pt_br": "Nossa tese: margem, não crescimento, é a métrica certa."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-board-strategy-pitch-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "thesis",
+            "tese"
+          ],
+          [
+            "ask",
+            "pedido"
+          ],
+          [
+            "margin",
+            "margem"
+          ],
+          [
+            "runway",
+            "runway"
+          ],
+          [
+            "conviction",
+            "convicção"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Board Strategy Pitch — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre board strategy pitch. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca, your one-line thesis to the board."
+        },
+        {
+          "speaker": "user",
+          "target": "Margin, not growth, is the right metric this year.",
+          "pt_hint": "Margem, não crescimento."
+        },
+        {
+          "speaker": "ai",
+          "text": "Give me your three proof numbers."
+        },
+        {
+          "speaker": "user",
+          "target": "Revenue up 11%, margin up 7, headcount flat.",
+          "pt_hint": "Receita 11, margem 7, headcount flat."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the specific ask?"
+        },
+        {
+          "speaker": "user",
+          "target": "Twelve-month pricing freeze, board approval tomorrow.",
+          "pt_hint": "Congelamento 12m, aprovação amanhã."
+        },
+        {
+          "speaker": "ai",
+          "text": "A director challenges your margin number."
+        },
+        {
+          "speaker": "user",
+          "target": "Fair challenge. Short answer: we measure net margin.",
+          "pt_hint": "Curto: margem líquida."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close with conviction, without slides."
+        },
+        {
+          "speaker": "user",
+          "target": "We grow the business that pays us, not the one that doesn't.",
+          "pt_hint": "Crescemos o que paga."
+        },
+        {
+          "speaker": "ai",
+          "text": "Board pitches are won in the closing two minutes."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "board-strategy-pitch-listening-story",
+      "title": "The board room",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Summarize the pitch's structure. Use at least three pitch terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "In the boardroom at nine in the morning, Joca walked into the most important fifteen minutes of his CEO year."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Our thesis is simple — margin, not growth, is the right metric for this particular year in this market."
+        },
+        {
+          "speaker": "Director",
+          "voice": "female1",
+          "en": "I want to see the three numbers that convince me before you go a single slide further into the pitch."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male1",
+          "en": "Revenue up eleven percent, margin up seven, headcount flat — and all three without new capital raised this year."
+        },
+        {
+          "speaker": "Director",
+          "voice": "male2",
+          "en": "Ask us for something specific. What do you need from this board before we leave the room today?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Board pitches, Joca understood, are won in the closing two minutes — where no slides protect you, only conviction."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Board Strategy Pitch\". Fifteen minutes to the board — what you open with, what you cut, what you defend. The board meets tomorrow. We have one shot and twelve minutes. Our thesis: margin, not growth, is the right metric this year. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Board Strategy Pitch\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Board Strategy Pitch",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Board Strategy Pitch\".",
+        "hint_pt_br": "Ela fala o título: \"Board Strategy Pitch\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

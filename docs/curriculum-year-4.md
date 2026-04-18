@@ -193,17 +193,56 @@ The student can, in a language that is not their first:
 None of these are grammar goals. All are **practical fluency goals** —
 the true end of language learning as a structured curriculum.
 
-## Open questions for the owner
+## Decisions taken (owner authorized)
 
-1. Do we want Year 4 to generate real lessons now, or ship the plan
-   first and generate Y4 content incrementally as teachers pilot it
-   with advanced students?
-2. Should Y4 lessons reuse the existing scene pipeline (chapter /
-   narrative / grammar / vocab / exercises / dialog / listening /
-   reading / further_reading) or introduce new scene kinds such as
-   `role_play` (live-action rehearsal) and `long_form_reading`
-   (multi-session reading log)?
-3. Should Y4 require live teacher contact (1:1 weekly) as a
-   prerequisite — i.e., can it be completed purely asynchronously?
+**1. Seed batch, not full build.** 20 Y4 lessons are generated and
+live (10 Y4.1 professional + 10 Y4.2 interpretive). The remaining
+60 lessons from the full plan above will be authored incrementally
+as pilot students provide feedback. Rationale: no students are at
+Y4 yet, and blind-generating 80 more lessons risks being generic.
 
-Flag your preferences and I'll build Y4 accordingly.
+**2. Reuse existing scene kinds.** Y4 uses the same pipeline as
+every other level — `listening_story` already handles
+teacher-reviewed written interpretation, which covers the bulk of
+Y4's interpretive and reflective work. No new scene kinds were
+introduced. Future additions (`role_play`, `long_form_reading_log`)
+can be added if pilot teachers find the existing scenes limiting.
+
+**3. Async-first, with visible live-session recommendation.** Y4
+lessons are reachable to any signed-in user who has completed C2.
+The content itself can be done entirely asynchronously. A note
+inside each Y4 lesson recommends pairing it with a weekly 1:1
+teacher session — strongly encouraged, never gated.
+
+## Current Y4 content (seeded)
+
+**Y4.1 — Professional Depth (10 lessons live):**
+
+- board-strategy-pitch
+- investor-qa-hostile
+- cross-cultural-negotiation
+- crisis-pr-statement
+- salary-negotiation-exec
+- hard-feedback-to-peer
+- chairing-divided-panel
+- mentoring-autonomous
+- retrospective-after-failure
+- remote-international-team
+
+**Y4.2 — Interpretive Depth (10 lessons live):**
+
+- novel-study-weekly
+- poetry-deep-dive
+- long-form-journalism-study
+- philosophy-text-study
+- film-script-analysis
+- book-club-hosting
+- memorial-speech-writing
+- op-ed-writing
+- ethics-facilitation
+- podcast-interviewing-masterclass
+
+Each follows the full scene stack (chapter / narrative / grammar /
+vocab / exercises / dialog / listening story / reading / listening /
+further reading) with Professional sources (HBR, TED, The Atlantic,
+Toastmasters) and 100 XP per lesson.

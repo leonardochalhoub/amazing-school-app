@@ -1,0 +1,288 @@
+{
+  "slug": "podcast-interviewing-masterclass",
+  "title": "Podcast Interviewing Masterclass",
+  "description": "A 90-minute conversation that the listener remembers for years.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.2",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Mestria em entrevista: leia 3 melhores, 5 perguntas essenciais, não cite de volta, aguente silêncio, siga o quase-dito.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Podcast Interviewing Masterclass",
+      "subtitle_en": "A 90-minute conversation that the listener remembers for years.",
+      "subtitle_pt": "Mestria em entrevista: leia 3 melhores, 5 perguntas essenciais, não cite de volta, aguente silêncio, siga o quase-dito."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "zara",
+      "text_en": "A 90-minute conversation that the listener remembers for years. Focus: podcast interviewing masterclass. Read their three best pieces — everything else is homework.",
+      "text_pt": "Mestria em entrevista: leia 3 melhores, 5 perguntas essenciais, não cite de volta, aguente silêncio, siga o quase-dito. Foco: podcast interviewing masterclass. Leia os 3 melhores — o resto é dever."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Podcast Interviewing Masterclass",
+      "body_en": "Master interview craft: read the guest's three best pieces. Prepare five questions you'd regret not asking. Never quote them back. Hold silence. Follow the sentence that almost came out.",
+      "body_pt": "Mestria em entrevista: leia 3 melhores, 5 perguntas essenciais, não cite de volta, aguente silêncio, siga o quase-dito.",
+      "examples": [
+        {
+          "en": "Read their three best pieces — everything else is homework.",
+          "pt": "Leia os 3 melhores — o resto é dever."
+        },
+        {
+          "en": "Five questions you'd regret not asking. That's the list.",
+          "pt": "Cinco perguntas que se arrependeria de não fazer."
+        },
+        {
+          "en": "Follow the sentence that almost came out of their mouth.",
+          "pt": "Siga a frase que quase saiu."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Podcast Interviewing Masterclass",
+      "items": [
+        {
+          "term": "masterclass",
+          "pt": "masterclass"
+        },
+        {
+          "term": "probe",
+          "pt": "sondar"
+        },
+        {
+          "term": "pause",
+          "pt": "pausa"
+        },
+        {
+          "term": "follow-up",
+          "pt": "follow-up"
+        },
+        {
+          "term": "arc",
+          "pt": "arco"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-podcast-interviewing-masterclass-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"Read their three best pieces — ___ else is homework.\"",
+        "correct": "everything",
+        "explanation": "Full sentence: \"Read their three best pieces — everything else is homework.\"",
+        "hint_pt_br": "Leia os 3 melhores — o resto é dever."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-podcast-interviewing-masterclass-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "Five questions you'd regret not asking. That's the list.",
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 0,
+        "explanation": "Correct: \"Five questions you'd regret not asking. That's the list.\"",
+        "hint_pt_br": "Cinco perguntas que se arrependeria de não fazer."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-podcast-interviewing-masterclass-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "masterclass",
+            "masterclass"
+          ],
+          [
+            "probe",
+            "sondar"
+          ],
+          [
+            "pause",
+            "pausa"
+          ],
+          [
+            "follow-up",
+            "follow-up"
+          ],
+          [
+            "arc",
+            "arco"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Podcast Interviewing Masterclass — dialog",
+      "character": "Zara",
+      "pt_summary": "Diálogo sobre podcast interviewing masterclass. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Zara — masterclass interview. Preparation?"
+        },
+        {
+          "speaker": "user",
+          "target": "Read their three best pieces.",
+          "pt_hint": "Três melhores textos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Question list?"
+        },
+        {
+          "speaker": "user",
+          "target": "Five I'd regret not asking.",
+          "pt_hint": "Cinco essenciais."
+        },
+        {
+          "speaker": "ai",
+          "text": "What never to do?"
+        },
+        {
+          "speaker": "user",
+          "target": "Never quote them back at them.",
+          "pt_hint": "Nunca repetir."
+        },
+        {
+          "speaker": "ai",
+          "text": "Best listening move?"
+        },
+        {
+          "speaker": "user",
+          "target": "Hold silence three seconds longer.",
+          "pt_hint": "Silêncio mais 3s."
+        },
+        {
+          "speaker": "ai",
+          "text": "Final skill?"
+        },
+        {
+          "speaker": "user",
+          "target": "Follow the sentence that almost came out.",
+          "pt_hint": "A frase quase-dita."
+        },
+        {
+          "speaker": "ai",
+          "text": "Master interviews are listening made visible."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "podcast-interviewing-masterclass-listening-story",
+      "title": "The 90-minute conversation",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe five masterclass interview principles. Use at least three interviewing terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Before her hundredth podcast episode, Zara walked a young journalist through the craft that had taken her a decade to learn."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Read their three best pieces before the interview — everything else is homework you do before you deserve this conversation."
+        },
+        {
+          "speaker": "Journalist",
+          "voice": "male1",
+          "en": "And prepare five questions you'd regret not asking — that's the list, not twenty questions you might use if convenient."
+        },
+        {
+          "speaker": "Zara",
+          "voice": "female1",
+          "en": "Never quote them back at them — they said it the best way they could the first time, and you can't improve on that."
+        },
+        {
+          "speaker": "Journalist",
+          "voice": "female2",
+          "en": "Hold silence three seconds longer than feels comfortable — and follow the sentence that almost came out, always."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Master interviewing, Zara believed, is listening made visible — the one craft where speaking less is always doing more."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Podcast Interviewing Masterclass\". A 90-minute conversation that the listener remembers for years. Read their three best pieces — everything else is homework. Five questions you'd regret not asking. That's the list. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Podcast Interviewing Masterclass\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Podcast Interviewing Masterclass",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Podcast Interviewing Masterclass\".",
+        "hint_pt_br": "Ela fala o título: \"Podcast Interviewing Masterclass\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

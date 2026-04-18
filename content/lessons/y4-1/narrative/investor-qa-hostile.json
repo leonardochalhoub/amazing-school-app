@@ -1,0 +1,288 @@
+{
+  "slug": "investor-qa-hostile",
+  "title": "Hostile Investor Q&A",
+  "description": "When the investor is looking for a weakness, what survives scrutiny.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.1",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Q&A hostil: reconheça a premissa, separe em partes, responda a pior primeiro, ofereça dados, sem emoção.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Hostile Investor Q&A",
+      "subtitle_en": "When the investor is looking for a weakness, what survives scrutiny.",
+      "subtitle_pt": "Q&A hostil: reconheça a premissa, separe em partes, responda a pior primeiro, ofereça dados, sem emoção."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "joca",
+      "text_en": "When the investor is looking for a weakness, what survives scrutiny. Focus: hostile investor q&a. That's a fair question — let me separate it into three parts.",
+      "text_pt": "Q&A hostil: reconheça a premissa, separe em partes, responda a pior primeiro, ofereça dados, sem emoção. Foco: hostile investor q&a. Pergunta justa — vou separar em três partes."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Hostile Investor Q&A",
+      "body_en": "Hostile Q&A moves: ACKNOWLEDGE the premise. SEPARATE the question into parts. ANSWER the hardest part first. OFFER to follow up with data. Never defend emotionally.",
+      "body_pt": "Q&A hostil: reconheça a premissa, separe em partes, responda a pior primeiro, ofereça dados, sem emoção.",
+      "examples": [
+        {
+          "en": "That's a fair question — let me separate it into three parts.",
+          "pt": "Pergunta justa — vou separar em três partes."
+        },
+        {
+          "en": "The hardest part is the cash-flow one, and I'll answer that first.",
+          "pt": "A parte mais difícil é a de fluxo de caixa — respondo primeiro."
+        },
+        {
+          "en": "I can send you the detailed model by Friday.",
+          "pt": "Envio o modelo detalhado até sexta."
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Hostile Investor Q&A",
+      "items": [
+        {
+          "term": "scrutiny",
+          "pt": "escrutínio"
+        },
+        {
+          "term": "premise",
+          "pt": "premissa"
+        },
+        {
+          "term": "rebuttal",
+          "pt": "refutação"
+        },
+        {
+          "term": "composure",
+          "pt": "compostura"
+        },
+        {
+          "term": "diligence",
+          "pt": "diligência"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-investor-qa-hostile-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"That's a fair ___ — let me separate it into three parts.\"",
+        "correct": "question",
+        "explanation": "Full sentence: \"That's a fair question — let me separate it into three parts.\"",
+        "hint_pt_br": "Pergunta justa — vou separar em três partes."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-investor-qa-hostile-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "Please repeat the question.",
+          "That is not quite correct.",
+          "The hardest part is the cash-flow one, and I'll answer that first."
+        ],
+        "correct": 3,
+        "explanation": "Correct: \"The hardest part is the cash-flow one, and I'll answer that first.\"",
+        "hint_pt_br": "A parte mais difícil é a de fluxo de caixa — respondo primeiro."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-investor-qa-hostile-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "scrutiny",
+            "escrutínio"
+          ],
+          [
+            "premise",
+            "premissa"
+          ],
+          [
+            "rebuttal",
+            "refutação"
+          ],
+          [
+            "composure",
+            "compostura"
+          ],
+          [
+            "diligence",
+            "diligência"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Hostile Investor Q&A — dialog",
+      "character": "Joca",
+      "pt_summary": "Diálogo sobre hostile investor q&a. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Joca — hostile question: 'Your numbers don't add up.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Fair. Let me separate that into three parts.",
+          "pt_hint": "Em três partes."
+        },
+        {
+          "speaker": "ai",
+          "text": "Still hostile: 'I don't trust the growth claim.'"
+        },
+        {
+          "speaker": "user",
+          "target": "I can send you our cohort data by Friday.",
+          "pt_hint": "Dados de coorte sexta."
+        },
+        {
+          "speaker": "ai",
+          "text": "Another: 'You dodged the margin question.'"
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you — you're right. Here's the number.",
+          "pt_hint": "Valeu. Eis o número."
+        },
+        {
+          "speaker": "ai",
+          "text": "They push harder: 'You're one bad quarter from dying.'"
+        },
+        {
+          "speaker": "user",
+          "target": "We have fourteen months of runway. Not one quarter.",
+          "pt_hint": "14 meses."
+        },
+        {
+          "speaker": "ai",
+          "text": "Close without flinching."
+        },
+        {
+          "speaker": "user",
+          "target": "I welcome rigor. Please keep pushing.",
+          "pt_hint": "Rigor é bem-vindo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Composure under fire is the quietest form of power."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "investor-qa-hostile-listening-story",
+      "title": "The Q&A after the pitch",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four composure moves under hostile scrutiny. Use at least three business terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "After the pitch, an investor opened with what he clearly believed was the killing question of the afternoon."
+        },
+        {
+          "speaker": "Investor",
+          "voice": "male1",
+          "en": "I don't trust your growth number. Your cohort data from Q3 contradicts the claim you just made on slide four."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male2",
+          "en": "That's a fair question — let me separate it into three parts and answer the hardest one first clearly."
+        },
+        {
+          "speaker": "Investor",
+          "voice": "male1",
+          "en": "Good. Don't dodge the margin question — I've heard three founders do that today already, and the answers got worse each time."
+        },
+        {
+          "speaker": "Joca",
+          "voice": "male2",
+          "en": "Thank you — you're right, I was about to. Here's the number. I can send the detailed model by Friday."
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Composure under hostile scrutiny, Joca had learned, is the quietest and most underrated form of power in any pitch."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Hostile Investor Q&A\". When the investor is looking for a weakness, what survives scrutiny. That's a fair question — let me separate it into three parts. The hardest part is the cash-flow one, and I'll answer that first. Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Hostile Investor Q&A\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Hostile Investor Q&A",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Hostile Investor Q&A\".",
+        "hint_pt_br": "Ela fala o título: \"Hostile Investor Q&A\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}

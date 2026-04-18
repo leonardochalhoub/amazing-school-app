@@ -1,0 +1,288 @@
+{
+  "slug": "mentoring-autonomous",
+  "title": "Mentoring with Autonomy",
+  "description": "Coaching a senior who already knows the answer — listening them into their own decision.",
+  "category": "narrative",
+  "level": "Y4",
+  "cefr_level": "y4.1",
+  "xp_reward": 100,
+  "estimated_minutes": 59,
+  "summary_pt_br": "Mentoria com autonomia: pergunte, reflita, aguente silêncio, uma observação por sessão, conselho só se pedido.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Mentoring with Autonomy",
+      "subtitle_en": "Coaching a senior who already knows the answer — listening them into their own decision.",
+      "subtitle_pt": "Mentoria com autonomia: pergunte, reflita, aguente silêncio, uma observação por sessão, conselho só se pedido."
+    },
+    {
+      "kind": "narrative",
+      "character_id": "kumar",
+      "text_en": "Coaching a senior who already knows the answer — listening them into their own decision. Focus: mentoring with autonomy. What do you think the right next step is, honestly?",
+      "text_pt": "Mentoria com autonomia: pergunte, reflita, aguente silêncio, uma observação por sessão, conselho só se pedido. Foco: mentoring with autonomy. O que você acha que é o próximo passo, sinceramente?"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Mentoring with Autonomy",
+      "body_en": "Autonomy-preserving mentoring: ASK, don't tell. REFLECT what you hear. HOLD silence. Offer ONE observation per session. NEVER give advice unless explicitly asked.",
+      "body_pt": "Mentoria com autonomia: pergunte, reflita, aguente silêncio, uma observação por sessão, conselho só se pedido.",
+      "examples": [
+        {
+          "en": "What do you think the right next step is, honestly?",
+          "pt": "O que você acha que é o próximo passo, sinceramente?"
+        },
+        {
+          "en": "I hear you saying the team isn't ready — is that right?",
+          "pt": "Ouço você dizendo que o time não está pronto — é isso?"
+        },
+        {
+          "en": "Would you like my observation, or space to sit with this?",
+          "pt": "Quer minha observação ou espaço pra sentar com isso?"
+        }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Key vocabulary — Mentoring with Autonomy",
+      "items": [
+        {
+          "term": "autonomy",
+          "pt": "autonomia"
+        },
+        {
+          "term": "reflect",
+          "pt": "refletir"
+        },
+        {
+          "term": "coach",
+          "pt": "coach"
+        },
+        {
+          "term": "mentor",
+          "pt": "mentor"
+        },
+        {
+          "term": "advise",
+          "pt": "aconselhar"
+        }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-mentoring-autonomous-fb",
+        "type": "fill_blank",
+        "question": "Complete: \"What do you think the right next step is, ___?\"",
+        "correct": "honestly",
+        "explanation": "Full sentence: \"What do you think the right next step is, honestly?\"",
+        "hint_pt_br": "O que você acha que é o próximo passo, sinceramente?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-mentoring-autonomous-mc",
+        "type": "multiple_choice",
+        "question": "Which sentence is correct?",
+        "options": [
+          "I haven't heard anything about that.",
+          "I hear you saying the team isn't ready — is that right?",
+          "Please repeat the question.",
+          "That is not quite correct."
+        ],
+        "correct": 1,
+        "explanation": "Correct: \"I hear you saying the team isn't ready — is that right?\"",
+        "hint_pt_br": "Ouço você dizendo que o time não está pronto — é isso?"
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "gen-mentoring-autonomous-match",
+        "type": "matching",
+        "pairs": [
+          [
+            "autonomy",
+            "autonomia"
+          ],
+          [
+            "reflect",
+            "refletir"
+          ],
+          [
+            "coach",
+            "coach"
+          ],
+          [
+            "mentor",
+            "mentor"
+          ],
+          [
+            "advise",
+            "aconselhar"
+          ]
+        ],
+        "explanation": "Key terms from the lesson — match each to its meaning.",
+        "hint_pt_br": "Ligue cada termo à tradução."
+      }
+    },
+    {
+      "kind": "dialog_pronunciation",
+      "title": "Mentoring with Autonomy — dialog",
+      "character": "Kumar",
+      "pt_summary": "Diálogo sobre mentoring with autonomy. Pratique as frases marcadas.",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Kumar — your mentee is stuck between two options."
+        },
+        {
+          "speaker": "user",
+          "target": "What do you think the right next step is?",
+          "pt_hint": "Qual o próximo passo?"
+        },
+        {
+          "speaker": "ai",
+          "text": "They share their uncertainty."
+        },
+        {
+          "speaker": "user",
+          "target": "I hear that both options scare you.",
+          "pt_hint": "Os dois assustam."
+        },
+        {
+          "speaker": "ai",
+          "text": "You want to give advice. Don't."
+        },
+        {
+          "speaker": "user",
+          "target": "Would you like my observation, or space?",
+          "pt_hint": "Observação ou espaço?"
+        },
+        {
+          "speaker": "ai",
+          "text": "They ask for your observation."
+        },
+        {
+          "speaker": "user",
+          "target": "One observation: you've decided already.",
+          "pt_hint": "Você já decidiu."
+        },
+        {
+          "speaker": "ai",
+          "text": "They pause."
+        },
+        {
+          "speaker": "user",
+          "target": "I hold the silence.",
+          "pt_hint": "Aguento o silêncio."
+        },
+        {
+          "speaker": "ai",
+          "text": "Autonomy-preserving mentoring is patience with conviction."
+        }
+      ]
+    },
+    {
+      "kind": "listening_story",
+      "scene_id": "mentoring-autonomous-listening-story",
+      "title": "The mentoring session",
+      "pt_summary": "Ouça com atenção. Depois, escreva em inglês o que entendeu — resumo, análise, e sua opinião crítica. O professor avaliará.",
+      "prompt_en": "Describe four autonomy-preserving moves. Use at least three mentoring terms.",
+      "prompt_pt": "Escreva em inglês o que ouviu. Análise crítica com quem falou, argumentos, e sua reflexão.",
+      "paragraphs": [
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "On a Tuesday afternoon, Kumar met with a former student who had since become a senior executive at her own firm."
+        },
+        {
+          "speaker": "Mentee",
+          "voice": "female1",
+          "en": "I'm stuck between two options and I've been circling this decision for three weeks without making any progress."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "What do you think the right next step is, honestly? I'm genuinely asking — I don't have the answer for you."
+        },
+        {
+          "speaker": "Mentee",
+          "voice": "female1",
+          "en": "I think I've already decided, actually — but I've been looking for permission to trust that decision openly."
+        },
+        {
+          "speaker": "Kumar",
+          "voice": "male1",
+          "en": "Would you like my observation, or space to sit with that realization a little longer before moving on?"
+        },
+        {
+          "speaker": "Narrator",
+          "voice": "narrator",
+          "en": "Autonomy-preserving mentoring, Kumar believed, is the slow discipline of listening someone into the answer they already held."
+        }
+      ]
+    },
+    {
+      "kind": "reading",
+      "title": "Recap reading",
+      "passage_en": "At Amazing School, the advanced class just finished \"Mentoring with Autonomy\". Coaching a senior who already knows the answer — listening them into their own decision. What do you think the right next step is, honestly? I hear you saying the team isn't ready — is that right? Mr. Kumar reminded the students that at this level, reading widely and writing daily are non-negotiable.",
+      "check": {
+        "question": "According to Mr. Kumar, what is non-negotiable at this level?",
+        "options": [
+          "Grammar drills",
+          "Reading widely and writing daily",
+          "Memorizing idioms",
+          "Watching movies"
+        ],
+        "correct": 1,
+        "explanation": "At C-level, wide reading and daily writing are essential.",
+        "hint_pt_br": "Leitura ampla e escrita diária são essenciais no C."
+      }
+    },
+    {
+      "kind": "listening",
+      "title": "Listen to Bia",
+      "audio_text_en": "Hello! I'm Bia, from Praia do Sol. Today in advanced class we studied \"Mentoring with Autonomy\". It was demanding but genuinely rewarding. See you next session!",
+      "check": {
+        "question": "What did Bia study today?",
+        "options": [
+          "A basic grammar rule",
+          "Mentoring with Autonomy",
+          "Nothing — she skipped class",
+          "A song"
+        ],
+        "correct": 1,
+        "explanation": "She says the title: \"Mentoring with Autonomy\".",
+        "hint_pt_br": "Ela fala o título: \"Mentoring with Autonomy\"."
+      }
+    },
+    {
+      "kind": "further_reading",
+      "title": "Go deeper — advanced resources",
+      "body_pt": "Fontes avançadas pra aprofundar. Leitura regular é o que separa um aluno avançado de um proficiente.",
+      "sources": [
+        {
+          "label": "Harvard Business Review",
+          "url": "https://hbr.org/",
+          "pt_hint": "Leitura de negócios profunda — C2+/profissional."
+        },
+        {
+          "label": "TED Talks · Work and Leadership",
+          "url": "https://www.ted.com/topics/work",
+          "pt_hint": "Palestras reais de liderança, negociação e trabalho."
+        },
+        {
+          "label": "The Atlantic · Culture and Ideas",
+          "url": "https://www.theatlantic.com/",
+          "pt_hint": "Ensaios longos de política, cultura e pensamento."
+        },
+        {
+          "label": "Toastmasters International",
+          "url": "https://www.toastmasters.org/",
+          "pt_hint": "Prática estruturada de oratória com peer feedback."
+        }
+      ]
+    }
+  ]
+}
