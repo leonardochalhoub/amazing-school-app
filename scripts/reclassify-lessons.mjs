@@ -18,13 +18,18 @@ const INDEX_PATH = join(ROOT, "content/lessons/index.json");
 const BY_CEFR_PATH = join(ROOT, "content/lessons/by-cefr.json");
 
 // slug → new cefr_level (sub-level). Level is derived from the prefix.
+// This run is a "2 and 2" rebalance: keep 4 moves A1→A2 (2 into a2.1,
+// 2 into a2.2), revert 2 lessons back to a1.2 so nothing is lost.
 const MOVES = {
+  // keep at a2.1 (TH pronunciation drills — lean intermediate)
   "th-playlist": "a2.1",
   "thinking-through-thunder": "a2.1",
-  "mother-brother-another": "a2.1",
-  "bias-first-wave": "a2.1",
-  "rafas-morning": "a2.1",
-  "thursdays-three-things": "a2.1",
+  // promote to a2.2 (narrative paragraphs, mature tone)
+  "mother-brother-another": "a2.2",
+  "thursdays-three-things": "a2.2",
+  // revert to a1.2 (these read fine as A1 narrative)
+  "bias-first-wave": "a1.2",
+  "rafas-morning": "a1.2",
 };
 
 function levelFor(cefr) {
