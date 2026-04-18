@@ -10,6 +10,7 @@ import { getAllLessons } from "@/lib/content/loader";
 import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { getTeacherOverview } from "@/lib/actions/teacher-dashboard";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
+import { BulkAssignList } from "@/components/teacher/bulk-assign-list";
 import { LessonRow } from "@/components/teacher/lesson-row";
 import { CEFR_LEVELS, SKILLS } from "@/lib/content/schema";
 import { Badge } from "@/components/ui/badge";
@@ -259,6 +260,28 @@ export default async function TeacherLessonsPage({
 
       {source === "bank" ? (
         <BankItemsList items={bankItems} filters={filters} />
+      ) : source === "library" ? (
+        <BulkAssignList
+          rows={unified
+            .filter((l) => l.source === "library")
+            .map((l) => ({
+              slug: l.slug,
+              title: l.title,
+              cefr_level: l.cefr_level,
+              category: l.category,
+              exerciseCount: l.exerciseCount,
+              href: l.href,
+            }))}
+          classrooms={overview.classrooms.map((c) => ({
+            id: c.id,
+            name: c.name,
+          }))}
+          students={overview.roster.map((r) => ({
+            id: r.id,
+            fullName: r.fullName,
+            classroomId: r.classroomId,
+          }))}
+        />
       ) : unified.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-border bg-card/40 p-12 text-center">
           <Sparkles className="mx-auto h-10 w-10 text-muted-foreground" />

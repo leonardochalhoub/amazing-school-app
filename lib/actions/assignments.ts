@@ -93,6 +93,65 @@ export async function bulkAssignToClassroom(input: z.input<typeof BulkSchema>) {
   });
 }
 
+const BulkManySchema = z.object({
+  classroomId: UuidSchema,
+  lessonSlugs: z.array(SlugSchema).min(1).max(60),
+  studentId: UuidSchema.nullable().optional(),
+  rosterStudentId: UuidSchema.nullable().optional(),
+});
+
+/**
+ * Assigns MANY lessons to ONE target in a single round-trip. Duplicate
+ * assignments (unique violation 23505) are counted as 'skipped' rather
+ * than failing the whole batch — re-assigning a lesson that's already
+ * there shouldn't tear everything down.
+ */
+export async function bulkAssignManyLessons(
+  input: z.input<typeof BulkManySchema>
+): Promise<
+  | { success: true; assigned: number; skipped: number }
+  | { error: string }
+> {
+  const parsed = BulkManySchema.safeParse(input);
+  if (!parsed.success)
+    return { error: parsed.error.issues[0]?.message ?? "Invalid input" };
+
+  if (parsed.data.studentId && parsed.data.rosterStudentId) {
+    return { error: "Provide only one of studentId or rosterStudentId" };
+  }
+
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" };
+
+  const admin = createAdminClient();
+  const rows = parsed.data.lessonSlugs.map((slug, i) => ({
+    classroom_id: parsed.data.classroomId,
+    lesson_slug: slug,
+    student_id: parsed.data.studentId ?? null,
+    roster_student_id: parsed.data.rosterStudentId ?? null,
+    order_index: i,
+    assigned_by: user.id,
+  }));
+
+  let assigned = 0;
+  let skipped = 0;
+  // Insert one at a time so duplicates don't kill the batch.
+  for (const row of rows) {
+    const { error } = await admin.from("lesson_assignments").insert(row);
+    if (!error) assigned += 1;
+    else if (error.code === "23505") skipped += 1;
+    else return { error: error.message };
+  }
+
+  bumpPaths(
+    parsed.data.classroomId,
+    parsed.data.studentId ?? null,
+    parsed.data.rosterStudentId ?? null
+  );
+  return { success: true, assigned, skipped };
+}
+
 const UnassignSchema = z.object({ assignmentId: UuidSchema });
 
 export async function unassign(input: z.input<typeof UnassignSchema>) {
