@@ -130,12 +130,19 @@ function SceneRenderer({
 
   if (scene.kind === "narrative") {
     const char = scene.character_id ? characters[scene.character_id] : null;
+    // Every narrative scene gets an illustration. Use the scene_emoji hint
+    // when present; otherwise fall back to the character's emoji.
+    const hintEmoji = scene.scene_emoji ?? char?.emoji;
     return (
       <div className="space-y-5">
-        {scene.scene_emoji ? (
+        {hintEmoji ? (
           <SceneIllustration
-            emoji={scene.scene_emoji}
+            emoji={hintEmoji}
             color={char?.color ?? "#6366f1"}
+            promptText={scene.text_en}
+            characterHint={
+              char ? `${char.name} — ${char.one_liner_en}` : undefined
+            }
           />
         ) : null}
         {char ? <CharacterPortrait char={char} /> : null}

@@ -2,13 +2,13 @@ import { Music2 } from "lucide-react";
 import { listMusic } from "@/lib/content/music";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { getTeacherOverview } from "@/lib/actions/teacher-dashboard";
-import { listLessonDrafts } from "@/lib/actions/lesson-drafts";
+import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { MusicCatalog } from "@/components/shared/music-catalog";
 
 export default async function TeacherMusicIndex() {
   const [{ classrooms, roster }, publishedLessons] = await Promise.all([
     getTeacherOverview(),
-    listLessonDrafts({ status: "published" }),
+    getAssignableLessons(),
   ]);
   const musics = listMusic();
 

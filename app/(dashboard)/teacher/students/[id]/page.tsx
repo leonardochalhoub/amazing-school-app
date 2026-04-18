@@ -8,7 +8,7 @@ import {
   getRosterAvatarSignedUrl,
 } from "@/lib/actions/roster";
 import { getAssignmentsForRosterStudent } from "@/lib/actions/assignments";
-import { listLessonDrafts } from "@/lib/actions/lesson-drafts";
+import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { listDiaryForStudent } from "@/lib/actions/diary";
 import { findMeta as findLessonMeta } from "@/lib/content/loader";
 import { getMusic, fromAssignmentSlug, listMusic } from "@/lib/content/music";
@@ -53,7 +53,7 @@ export default async function RosterStudentDetailPage({
     student.has_avatar ? getRosterAvatarSignedUrl(id) : Promise.resolve(null),
     listDiaryForStudent(id),
     getAssignmentsForRosterStudent(id),
-    listLessonDrafts({ status: "published" }),
+    getAssignableLessons(),
   ]);
 
   const lessonDraftBySlug = new Map(publishedLessons.map((l) => [l.slug, l]));

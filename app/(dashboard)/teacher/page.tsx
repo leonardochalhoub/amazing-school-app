@@ -25,7 +25,7 @@ import { AddStudentButton } from "@/components/teacher/add-student-button";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { BirthdayAlert } from "@/components/teacher/birthday-alert";
 import { DismissibleHero } from "@/components/teacher/dismissible-hero";
-import { listLessonDrafts } from "@/lib/actions/lesson-drafts";
+import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { getUpcomingBirthdays } from "@/lib/actions/birthdays";
 import { listMusic } from "@/lib/content/music";
 import {
@@ -51,7 +51,7 @@ export default async function TeacherDashboard() {
     upcomingBirthdays,
   ] = await Promise.all([
     getTeacherOverview(),
-    listLessonDrafts({ status: "published" }),
+    getAssignableLessons(),
     getUpcomingBirthdays(14),
   ]);
   const musics = listMusic();
