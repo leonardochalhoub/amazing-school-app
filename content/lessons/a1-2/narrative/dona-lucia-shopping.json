@@ -1,0 +1,43 @@
+{
+  "slug": "dona-lucia-shopping",
+  "title": "Dona Lúcia's Shopping List",
+  "description": "SOME / ANY / MUCH / MANY / A LOT OF. The quantifiers that trip Brazilians up — through Dona Lúcia's trip to the market.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 40,
+  "estimated_minutes": 14,
+  "summary_pt_br": "Quantificadores em inglês: SOME (afirmativas), ANY (negativas/perguntas), MUCH (incontáveis), MANY (contáveis), A LOT OF (ambos). Armadilha clássica: contável ≠ incontável (information, advice, money são INCONTÁVEIS em inglês).",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 34 — At the Market", "subtitle_en": "Some, any, much, many", "subtitle_pt": "Um pouco, algum, muito, muitos" },
+    { "kind": "narrative", "character_id": "lucia", "text_en": "Dona Lúcia put on her glasses and read her list:\n'SOME milk. ANY eggs (if fresh). A LOT OF apples.\nNOT MUCH sugar. NOT MANY onions. A LITTLE cheese.'\n'The English quantifiers,' she muttered, 'are a quiet parade.'", "text_pt": "Dona Lúcia colocou os óculos e leu a lista:\n'UM POUCO DE leite. ALGUNS ovos (se frescos). MUITAS maçãs.\nNÃO MUITO açúcar. NÃO MUITAS cebolas. UM POUQUINHO DE queijo.'\n'Os quantificadores,' murmurou, 'são um desfile silencioso.'" },
+    { "kind": "grammar_note", "title": "Countable vs. uncountable — the fork in the road", "body_en": "COUNTABLE nouns can be 1, 2, 3... (apples, eggs, books). Use MANY, FEW, A FEW. UNCOUNTABLE nouns can't be counted directly (milk, water, music, advice, information). Use MUCH, LITTLE, A LITTLE. Both can use A LOT OF / LOTS OF. English surprises: 'information', 'advice', 'money', 'furniture' are all UNCOUNTABLE.", "body_pt": "Contáveis: pode contar 1, 2, 3 (maçãs, ovos). Usa many, few. Incontáveis: não dá para contar diretamente (leite, água, informação, conselho). Usa much, little. Ambos aceitam A LOT OF. Pegadinhas: information, advice, money, furniture são INCONTÁVEIS em inglês.", "examples": [
+      { "en": "How much money do you have?", "pt": "Quanto dinheiro você tem? (incontável)" },
+      { "en": "How many apples do you want?", "pt": "Quantas maçãs? (contável)" },
+      { "en": "I have a lot of work.", "pt": "Tenho muito trabalho (incontável)." }
+    ]},
+    { "kind": "vocab_intro", "title": "Quantifiers at a glance", "items": [
+      { "term": "some", "pt": "algum / um pouco (afirmativas e pedidos educados)" },
+      { "term": "any", "pt": "algum (perguntas e negativas)" },
+      { "term": "much + uncountable", "pt": "muito (em negativa/pergunta)" },
+      { "term": "many + countable", "pt": "muitos" },
+      { "term": "a lot of / lots of", "pt": "muito(s) — afirmativas, ambos" },
+      { "term": "a little / a few", "pt": "um pouco de / alguns" }
+    ]},
+    { "kind": "exercise", "framing_character_id": "lucia", "exercise": { "id": "shop-s01", "type": "fill_blank", "question": "Complete: 'Do we have ___ milk left?' (negative/question)", "correct": "any", "explanation": "ANY with questions and negatives. 'Do we have any milk?'", "hint_pt_br": "ANY para perguntas e negativas." }},
+    { "kind": "exercise", "exercise": { "id": "shop-s02", "type": "fill_blank", "question": "Complete: 'I'd like ___ bread, please.' (polite request)", "correct": "some", "explanation": "SOME in affirmatives AND polite requests (even though it's a question).", "hint_pt_br": "SOME em afirmativas e pedidos educados (mesmo sendo pergunta)." }},
+    { "kind": "exercise", "exercise": { "id": "shop-s03", "type": "multiple_choice", "question": "'How ___ apples do we need?'", "options": ["much", "many", "a lot of", "little"], "correct": 1, "explanation": "MANY with countable nouns (apples = countable). HOW MANY? Not HOW MUCH.", "hint_pt_br": "Contável → many. 'How many apples?'" }},
+    { "kind": "exercise", "exercise": { "id": "shop-s04", "type": "multiple_choice", "question": "'How ___ money do you have?'", "options": ["many", "much", "a few", "a lot"], "correct": 1, "explanation": "MONEY is uncountable in English. Use MUCH.", "hint_pt_br": "'Money' é incontável em inglês. Use MUCH." }},
+    { "kind": "dialogue", "location_en": "The market", "location_pt": "No mercado", "turns": [
+      { "character_id": "lucia", "en": "Do you have any fresh eggs today?", "pt": "Tem ovos frescos hoje?" },
+      { "character_id": "rafa", "en": "Yes, we have some. How many would you like?", "pt": "Sim, temos alguns. Quantos a senhora quer?" },
+      { "character_id": "lucia", "en": "A dozen. And a little milk, please.", "pt": "Uma dúzia. E um pouco de leite, por favor." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "shop-s05", "type": "matching", "pairs": [
+      ["some / any", "afirm / perg+neg"],
+      ["much / many", "incontável / contável"],
+      ["a lot of", "ambos"],
+      ["a little / a few", "pequena quantidade"]
+    ], "explanation": "Four pairs covering every quantity need.", "hint_pt_br": "Quatro pares cobrindo toda necessidade de quantidade." }}
+  ]
+}

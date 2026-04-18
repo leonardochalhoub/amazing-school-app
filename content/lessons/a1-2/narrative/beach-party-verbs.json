@@ -1,0 +1,46 @@
+{
+  "slug": "beach-party-verbs",
+  "title": "Beach Party — Common Verbs",
+  "description": "Ten verbs you'll use every day — EAT, DRINK, SLEEP, WALK, READ, WATCH, SWIM, DANCE, LAUGH, RUN — through a Saturday at the beach.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 35,
+  "estimated_minutes": 12,
+  "summary_pt_br": "Dez verbos fundamentais do cotidiano em inglês, treinados num cenário de festa na praia. Presente simples com he/she/it -s revisitado.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 32 — Saturday at the Beach", "subtitle_en": "Ten verbs, one party", "subtitle_pt": "Dez verbos, uma festa" },
+    { "kind": "narrative", "character_id": "bia", "text_en": "Saturday, 4 p.m. The beach is loud.\nRafa COOKS. Maya DANCES. Joca READS his laptop (he does that everywhere).\nCosmo RUNS after a ball. Mr. Kumar WATCHES, calm.\nDona Lúcia LAUGHS at a joke only she gets.\nThe sun SETS. The party RISES.", "text_pt": "Sábado, 16h. A praia está barulhenta.\nRafa COZINHA. Maya DANÇA. Joca LÊ o laptop (faz isso em todo lugar).\nCosmo CORRE atrás de uma bola. Mr. Kumar ASSISTE, calmo.\nDona Lúcia RI de uma piada que só ela entende.\nO sol SE PÕE. A festa COMEÇA." },
+    { "kind": "vocab_intro", "title": "Ten everyday verbs", "items": [
+      { "term": "eat", "pt": "comer" },
+      { "term": "drink", "pt": "beber" },
+      { "term": "sleep", "pt": "dormir" },
+      { "term": "walk", "pt": "caminhar" },
+      { "term": "read", "pt": "ler" },
+      { "term": "watch", "pt": "assistir" },
+      { "term": "swim", "pt": "nadar" },
+      { "term": "dance", "pt": "dançar" },
+      { "term": "laugh", "pt": "rir" },
+      { "term": "run", "pt": "correr" }
+    ]},
+    { "kind": "grammar_note", "title": "Third-person -s (again, but real this time)", "body_en": "With he/she/it, add -s to the verb. Most verbs just add -s: eat → eats, sleep → sleeps. Verbs ending in -y after a consonant change -y to -ies: cry → cries, study → studies. Verbs ending in -s, -sh, -ch, -x, -o add -es: watch → watches, do → does, go → goes.", "body_pt": "Com he/she/it, adiciona -s. Maioria dos verbos: só -s (eat → eats). Verbos em -y depois de consoante: -y vira -ies (cry → cries). Verbos em -s, -sh, -ch, -x, -o: -es (watch → watches, go → goes).", "examples": [
+      { "en": "She watches movies.", "pt": "Ela assiste filmes (-ch → -es)." },
+      { "en": "He studies English.", "pt": "Ele estuda inglês (-y → -ies)." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "party-s01", "type": "fill_blank", "question": "Complete: 'She ___ coffee every morning.' (drink)", "correct": "drinks", "explanation": "DRINK + S for she/he/it.", "hint_pt_br": "She → verbo + s." }},
+    { "kind": "exercise", "exercise": { "id": "party-s02", "type": "fill_blank", "question": "Complete: 'He ___ the news every night.' (watch)", "correct": "watches", "explanation": "WATCH ends in -ch → add -ES.", "hint_pt_br": "Watch termina em -ch → watches (-es)." }},
+    { "kind": "exercise", "exercise": { "id": "party-s03", "type": "multiple_choice", "question": "Which is correct?", "options": ["She study English", "She studys English", "She studies English", "She studyes English"], "correct": 2, "explanation": "STUDY → STUDIES. Y after a consonant becomes IES.", "hint_pt_br": "Y depois de consoante: vira IES. Study → studies." }},
+    { "kind": "dialogue", "location_en": "The bonfire", "location_pt": "A fogueira", "turns": [
+      { "character_id": "maya", "en": "Cosmo runs, swims, and eats — in that order.", "pt": "O Cosmo corre, nada e come — nessa ordem." },
+      { "character_id": "bia", "en": "He sleeps too. A lot.", "pt": "Ele dorme também. Muito." },
+      { "character_id": "maya", "en": "He sleeps like he runs. With his whole body.", "pt": "Ele dorme igual corre. Com o corpo todo." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "party-s04", "type": "matching", "pairs": [
+      ["eat → eats", "só -s"],
+      ["study → studies", "-y vira -ies"],
+      ["watch → watches", "-ch pede -es"],
+      ["go → goes", "-o pede -es"],
+      ["have → has", "irregular"]
+    ], "explanation": "Five third-person patterns. Almost every verb fits one of these.", "hint_pt_br": "Cinco padrões. Quase todo verbo cabe em um." }}
+  ]
+}

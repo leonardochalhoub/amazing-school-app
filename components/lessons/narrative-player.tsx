@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { ArrowRight, BookOpen, Sparkles, CheckCircle2 } from "lucide-react";
@@ -312,6 +312,28 @@ function ExerciseInline({
   const [text, setText] = useState("");
   const [matches, setMatches] = useState<Record<number, number | null>>({});
 
+  // Stable shuffle for matching-right-column — computed once per exercise id
+  // so it doesn't reshuffle on every keystroke. Computed unconditionally at
+  // the top so React hooks stay consistent between renders.
+  const matchingRights = useMemo(() => {
+    if (exercise.type !== "matching") return [];
+    return (exercise.pairs ?? []).map((p) => p[1]);
+  }, [exercise]);
+  const shuffledRights = useMemo(() => {
+    if (matchingRights.length === 0) return [];
+    let seed = 0;
+    for (const c of (exercise.id ?? "") + matchingRights.join("|")) {
+      seed = (seed * 31 + c.charCodeAt(0)) >>> 0;
+    }
+    const rng = () => ((seed = (seed * 1103515245 + 12345) >>> 0) / 0xffffffff);
+    const out = [...matchingRights];
+    for (let i = out.length - 1; i > 0; i--) {
+      const j = Math.floor(rng() * (i + 1));
+      [out[i], out[j]] = [out[j], out[i]];
+    }
+    return out;
+  }, [matchingRights, exercise.id]);
+
   function check() {
     if (exercise.type === "multiple_choice") {
       if (picked === Number(exercise.correct)) setState("correct");
@@ -397,7 +419,6 @@ function ExerciseInline({
   if (exercise.type === "matching") {
     const pairs = exercise.pairs ?? [];
     const rights = pairs.map((p) => p[1]);
-    const shuffledRights = useShuffleStable(rights);
     return (
       <div className="space-y-3">
         <p className="text-sm text-muted-foreground">
@@ -419,11 +440,17 @@ function ExerciseInline({
                   })
                 }
                 disabled={state !== "pending"}
-                className="h-9 flex-1 rounded-lg border bg-transparent px-2 text-sm"
+                className="h-9 flex-1 rounded-lg border bg-background px-2 text-sm text-foreground"
               >
-                <option value="">Choose…</option>
+                <option value="" className="bg-background text-foreground">
+                  Choose…
+                </option>
                 {shuffledRights.map((r, j) => (
-                  <option key={j} value={rights.indexOf(r)}>
+                  <option
+                    key={j}
+                    value={rights.indexOf(r)}
+                    className="bg-background text-foreground"
+                  >
                     {r}
                   </option>
                 ))}
@@ -444,24 +471,6 @@ function ExerciseInline({
   }
 
   return null;
-}
-
-function useShuffleStable<T>(arr: T[]): T[] {
-  // Stable shuffle based on JSON string seed so the same exercise shows
-  // the same order on every re-render this session.
-  const [shuffled] = useState(() => {
-    const seed = arr.join("\u0000");
-    let s = 0;
-    for (const c of seed) s = (s * 31 + c.charCodeAt(0)) >>> 0;
-    const rng = () => ((s = (s * 1103515245 + 12345) >>> 0) / 0xffffffff);
-    const out = [...arr];
-    for (let i = out.length - 1; i > 0; i--) {
-      const j = Math.floor(rng() * (i + 1));
-      [out[i], out[j]] = [out[j], out[i]];
-    }
-    return out;
-  });
-  return shuffled;
 }
 
 function ExerciseFooter({
