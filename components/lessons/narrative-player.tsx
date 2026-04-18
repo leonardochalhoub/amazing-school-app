@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { ArrowRight, BookOpen, Sparkles, CheckCircle2 } from "lucide-react";
 import { SceneIllustration } from "./scene-illustration";
 import { RecordExercise } from "./record-exercise";
+import { SpeakButton } from "./speak-button";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -147,9 +148,12 @@ function SceneRenderer({
           />
         ) : null}
         {char ? <CharacterPortrait char={char} /> : null}
-        <p className="whitespace-pre-line text-lg leading-relaxed font-medium">
-          {scene.text_en}
-        </p>
+        <div className="flex items-start gap-2">
+          <SpeakButton text={scene.text_en} />
+          <p className="whitespace-pre-line text-lg leading-relaxed font-medium flex-1">
+            {scene.text_en}
+          </p>
+        </div>
         {scene.text_pt ? (
           <p className="whitespace-pre-line text-sm leading-relaxed text-muted-foreground italic border-l-2 border-muted pl-3">
             {scene.text_pt}
@@ -194,7 +198,10 @@ function SceneRenderer({
               key={it.term}
               className="rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent p-3 transition-colors hover:border-primary/40"
             >
-              <div className="flex flex-wrap items-baseline gap-2">
+              <div className="flex flex-wrap items-center gap-2">
+                <SpeakButton
+                  text={it.example_en ?? it.term.replace(/\s\/.*$/, "")}
+                />
                 <strong className="text-lg font-bold text-foreground">
                   {it.term}
                 </strong>
@@ -352,9 +359,15 @@ function DialogueBubble({
         {char.emoji}
       </div>
       <div className="flex-1 space-y-0.5">
-        <p className="text-[11px] font-semibold" style={{ color: char.color }}>
-          {char.name}
-        </p>
+        <div className="flex items-center gap-2">
+          <p
+            className="text-[11px] font-semibold"
+            style={{ color: char.color }}
+          >
+            {char.name}
+          </p>
+          <SpeakButton text={en} />
+        </div>
         <div
           className="rounded-2xl rounded-tl-sm px-3 py-2 text-sm leading-snug"
           style={{ background: `${char.color}14` }}

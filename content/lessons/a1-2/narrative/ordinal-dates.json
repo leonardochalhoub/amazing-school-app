@@ -1,0 +1,30 @@
+{
+  "slug": "ordinal-dates",
+  "title": "The First, the Second, the Third",
+  "description": "Ordinal numbers (1st, 2nd, 3rd…). How to say a date in English. And the weird ones — first, second, third, fifth, ninth, twelfth.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 30,
+  "estimated_minutes": 11,
+  "summary_pt_br": "Números ordinais em inglês: 1st first, 2nd second, 3rd third, 4th fourth, 5th fifth, 9th ninth, 12th twelfth. Para datas: 'the + ordinal + of + month' (UK) ou 'month + ordinal' (US).",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 75 — Ordinals and Dates", "subtitle_en": "Saying dates", "subtitle_pt": "Dizendo datas" },
+    { "kind": "narrative", "character_id": "bia", "text_en": "'My birthday is on the TWENTY-FIRST of September.'\n'Today is the FIRST of May.'\n'The exam is on the TWELFTH of July.'\nUS style: 'May FIRST.' UK style: 'The FIRST of May.' Both correct.", "text_pt": "'Meu aniversário é 21 de setembro.'\n'Hoje é 1º de maio.'\n'A prova é 12 de julho.'\nEstilo EUA: 'May first.' Estilo UK: 'The first of May.' Ambos corretos." },
+    { "kind": "vocab_intro", "title": "Tricky ordinals", "items": [
+      { "term": "1st first", "pt": "primeiro" },
+      { "term": "2nd second", "pt": "segundo" },
+      { "term": "3rd third", "pt": "terceiro" },
+      { "term": "5th fifth", "pt": "quinto (não 'fiveth')" },
+      { "term": "9th ninth", "pt": "nono (não 'nineth')" },
+      { "term": "12th twelfth", "pt": "décimo segundo" },
+      { "term": "20th twentieth", "pt": "vigésimo" },
+      { "term": "21st twenty-first", "pt": "vigésimo primeiro" }
+    ]},
+    { "kind": "grammar_note", "title": "The -TH rule + exceptions", "body_en": "Most ordinals: base + TH. Four → fourth. Six → sixth. Seven → seventh. Ten → tenth. Exceptions: 1st, 2nd, 3rd are totally different. 5th = fifth (not fiveth). 9th = ninth (drop the 'e'). 12th = twelfth (not twelveth). 20th = twentieth (-y becomes -ieth).", "body_pt": "Regra: número + TH. Exceções: 1st/2nd/3rd (irregulares). 5th = fifth (não 'fiveth'). 9th = ninth (cai o 'e'). 12th = twelfth. 20th = twentieth.", "examples": [
+      { "en": "20th, 30th, 40th → twentieth, thirtieth, fortieth", "pt": "-y vira -ieth." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "ord-s01", "type": "multiple_choice", "question": "Spell 5th", "options": ["fiveth", "fifth", "fith", "fifteenth"], "correct": 1, "explanation": "FIFTH — drop the 'e', add 'th'.", "hint_pt_br": "5th = fifth (não 'fiveth')." }},
+    { "kind": "exercise", "exercise": { "id": "ord-s02", "type": "multiple_choice", "question": "Which is a correct date?", "options": ["on the one May", "on the first of May", "on the May first", "on May of first"], "correct": 1, "explanation": "UK: 'the first of May'. US: 'May first'. Either works.", "hint_pt_br": "'The first of May' (UK) ou 'May first' (EUA)." }}
+  ]
+}

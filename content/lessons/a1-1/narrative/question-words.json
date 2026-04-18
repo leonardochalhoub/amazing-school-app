@@ -1,0 +1,20 @@
+{
+  "slug": "question-words",
+  "title": "What, Where, When, Who, Why, How",
+  "description": "The six wh- words that open every question. Plus the word-order trap (subject-verb inversion).",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 30,
+  "estimated_minutes": 11,
+  "summary_pt_br": "Seis palavras-chave de pergunta: WHAT/WHERE/WHEN/WHO/WHY/HOW. Regra: wh- + AUXILIAR + SUJEITO + verbo. 'Where DO YOU live?' (não 'where you live?').",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 72 — Wh- Questions", "subtitle_en": "Six doors to a conversation", "subtitle_pt": "Seis portas de conversa" },
+    { "kind": "narrative", "character_id": "maya", "text_en": "WHAT do you like?\nWHERE do you live?\nWHEN does class start?\nWHO is that person?\nWHY are you tired?\nHOW do you feel?\nSix words. Six questions. Always the same order: WH + AUX + SUBJECT + VERB.", "text_pt": "O QUE você gosta?\nONDE você mora?\nQUANDO começa a aula?\nQUEM é aquela pessoa?\nPOR QUE você tá cansado?\nCOMO você tá?\nSeis palavras. Seis perguntas. Sempre: WH + AUXILIAR + SUJEITO + VERBO." },
+    { "kind": "grammar_note", "title": "Order + auxiliary rule", "body_en": "Wh- + AUX + subject + main verb. 'Where DO YOU live?' With BE, the auxiliary IS the verb: 'Where ARE YOU from?' Past: 'Where DID YOU go?' Never 'Where you live?' — always need the auxiliary. Exception: 'WHO' as subject keeps statement order: 'Who called you?' (who = subject).", "body_pt": "Wh- + AUX + sujeito + verbo. 'Where do you live?'. Com BE, o próprio verbo é o auxiliar: 'Where are you?'. Nunca 'Where you live?'. Exceção: WHO como sujeito mantém ordem afirmativa ('Who called?').", "examples": [
+      { "en": "What do you do? / Where are you? / When did she leave?", "pt": "Três padrões." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "maya", "exercise": { "id": "wh-s01", "type": "multiple_choice", "question": "Which is correct?", "options": ["Where you live?", "Where do you live?", "You live where?", "Where live you?"], "correct": 1, "explanation": "Wh- + DO + subject + base verb.", "hint_pt_br": "'Where do you + verbo'. Auxiliar obrigatório." }},
+    { "kind": "exercise", "exercise": { "id": "wh-s02", "type": "fill_blank", "question": "Complete: '___ ___ your name?'", "correct": "What is", "explanation": "With BE, the verb comes right after the wh-word.", "hint_pt_br": "'What is…?' — verbo BE direto." }}
+  ]
+}

@@ -96,6 +96,10 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
       href: "/owner/management",
       label: locale === "pt-BR" ? "Gestão" : "Management",
     });
+    teacherNav.push({
+      href: "/owner/lab",
+      label: "Lab",
+    });
   }
 
   const nav = role === "teacher" ? teacherNav : studentNav;

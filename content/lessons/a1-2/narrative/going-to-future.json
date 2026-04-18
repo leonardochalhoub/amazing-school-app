@@ -1,0 +1,21 @@
+{
+  "slug": "going-to-future",
+  "title": "I'm Going to Travel",
+  "description": "GOING TO for plans and intentions. The easier half of the future, and usually the right one for A1.2.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.2",
+  "xp_reward": 35,
+  "estimated_minutes": 11,
+  "summary_pt_br": "GOING TO + verbo base para planos já decididos e previsões com evidência. Estrutura: am/is/are + going to + verbo. 'I'm going to study tonight.' Super comum em conversa real.",
+  "scenes": [
+    { "kind": "chapter_title", "chapter": "Chapter 74 — Going To", "subtitle_en": "Plans and intentions", "subtitle_pt": "Planos e intenções" },
+    { "kind": "narrative", "character_id": "bia", "text_en": "'I'M GOING TO STUDY tonight,' Bia said.\n'Rafa IS GOING TO OPEN a food truck in Orlando.'\n'Joca IS GOING TO START a new job.'\n'WE ARE GOING TO HAVE a party.'\nGOING TO = already decided.", "text_pt": "'VOU ESTUDAR hoje à noite,' disse a Bia.\n'O Rafa VAI ABRIR um food truck em Orlando.'\n'O Joca VAI COMEÇAR um emprego novo.'\n'VAMOS TER uma festa.'\nGOING TO = já decidido." },
+    { "kind": "grammar_note", "title": "The formula", "body_en": "Subject + am/is/are + GOING TO + BASE verb. 'I am going to leave.' 'She is going to study.' 'They are going to travel.' Contractions: I'm / she's / we're going to. In casual speech, often 'gonna': 'I'm gonna leave.' (understood in writing but write full form).", "body_pt": "Sujeito + am/is/are + going to + verbo base. Contrações: I'm / she's / we're. Na fala: 'gonna' (informal, não escreva).", "examples": [
+      { "en": "I'm going to call him.", "pt": "Vou ligar pra ele." },
+      { "en": "They're going to eat soon.", "pt": "Vão comer logo." }
+    ]},
+    { "kind": "exercise", "framing_character_id": "bia", "exercise": { "id": "gt-s01", "type": "fill_blank", "question": "Complete: 'She ___ ___ ___ to Italy.' (going to + travel, with 'is')", "correct": "is going to travel", "explanation": "SHE + IS + GOING TO + TRAVEL.", "hint_pt_br": "'Is going to + verbo base'." }},
+    { "kind": "exercise", "exercise": { "id": "gt-s02", "type": "multiple_choice", "question": "Which is correct?", "options": ["I go to study", "I am going to study", "I am going study", "I will going to study"], "correct": 1, "explanation": "Am + going to + base verb.", "hint_pt_br": "Am + going to + verbo." }}
+  ]
+}
