@@ -66,6 +66,22 @@ export async function markLessonComplete(
   }
 
   if (!classroomId) {
+    // Teachers / owner previewing content have no classroom_members row.
+    // We succeed silently (no XP, no progress write) so the player UI
+    // completes cleanly instead of throwing a confusing error.
+    const { data: prof } = await admin
+      .from("profiles")
+      .select("role")
+      .eq("id", user.id)
+      .maybeSingle();
+    const role = (prof as { role?: string } | null)?.role ?? null;
+    if (role === "teacher") {
+      return {
+        success: true as const,
+        awardedXp: 0,
+        alreadyCompleted: false as const,
+      };
+    }
     return { error: "You're not in a classroom yet." };
   }
 

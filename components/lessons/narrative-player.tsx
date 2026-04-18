@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { ArrowRight, BookOpen, Sparkles, CheckCircle2 } from "lucide-react";
+import { SceneIllustration } from "./scene-illustration";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -106,17 +107,22 @@ function SceneRenderer({
 }) {
   if (scene.kind === "chapter_title") {
     return (
-      <div className="space-y-4 py-8 text-center">
-        <Sparkles className="mx-auto h-8 w-8 text-primary" />
-        <h2 className="text-3xl font-bold tracking-tight">{scene.chapter}</h2>
-        {scene.subtitle_en ? (
-          <p className="text-sm text-muted-foreground italic">
-            {scene.subtitle_en}
-          </p>
-        ) : null}
-        {scene.subtitle_pt ? (
-          <p className="text-xs text-muted-foreground">{scene.subtitle_pt}</p>
-        ) : null}
+      <div className="space-y-5">
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-500 via-violet-500 to-pink-500 px-6 py-10 text-center text-white shadow-xl">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.3),transparent_60%)]" />
+          <Sparkles className="relative mx-auto h-10 w-10" />
+          <h2 className="relative mt-3 text-3xl font-extrabold tracking-tight">
+            {scene.chapter}
+          </h2>
+          {scene.subtitle_en ? (
+            <p className="relative mt-2 text-sm italic opacity-90">
+              {scene.subtitle_en}
+            </p>
+          ) : null}
+          {scene.subtitle_pt ? (
+            <p className="relative text-xs opacity-75">{scene.subtitle_pt}</p>
+          ) : null}
+        </div>
         <AdvanceButton onClick={onAdvance} isLast={isLast} submitting={submitting} />
       </div>
     );
@@ -125,14 +131,19 @@ function SceneRenderer({
   if (scene.kind === "narrative") {
     const char = scene.character_id ? characters[scene.character_id] : null;
     return (
-      <div className="space-y-4">
+      <div className="space-y-5">
         {scene.scene_emoji ? (
-          <div className="text-4xl">{scene.scene_emoji}</div>
+          <SceneIllustration
+            emoji={scene.scene_emoji}
+            color={char?.color ?? "#6366f1"}
+          />
         ) : null}
-        {char ? <CharacterTag char={char} /> : null}
-        <p className="text-base leading-relaxed">{scene.text_en}</p>
+        {char ? <CharacterPortrait char={char} /> : null}
+        <p className="whitespace-pre-line text-lg leading-relaxed font-medium">
+          {scene.text_en}
+        </p>
         {scene.text_pt ? (
-          <p className="text-sm leading-relaxed text-muted-foreground italic">
+          <p className="whitespace-pre-line text-sm leading-relaxed text-muted-foreground italic border-l-2 border-muted pl-3">
             {scene.text_pt}
           </p>
         ) : null}
@@ -162,22 +173,29 @@ function SceneRenderer({
 
   if (scene.kind === "vocab_intro") {
     return (
-      <div className="space-y-3">
-        <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">
-          📖 {scene.title ?? "New vocabulary"}
-        </h3>
+      <div className="space-y-4">
+        <div className="flex items-center gap-2 rounded-lg bg-primary/10 px-3 py-2">
+          <BookOpen className="h-5 w-5 text-primary" />
+          <h3 className="text-base font-semibold text-primary">
+            {scene.title ?? "New vocabulary"}
+          </h3>
+        </div>
         <div className="grid gap-2">
           {scene.items.map((it) => (
             <div
               key={it.term}
-              className="rounded-lg border border-primary/20 bg-primary/5 p-3"
+              className="rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent p-3 transition-colors hover:border-primary/40"
             >
-              <div className="flex items-baseline gap-2">
-                <strong className="text-base">{it.term}</strong>
-                <span className="text-sm text-muted-foreground">· {it.pt}</span>
+              <div className="flex flex-wrap items-baseline gap-2">
+                <strong className="text-lg font-bold text-foreground">
+                  {it.term}
+                </strong>
+                <span className="text-sm text-muted-foreground">
+                  · {it.pt}
+                </span>
               </div>
               {it.example_en ? (
-                <p className="mt-1 text-xs italic text-muted-foreground">
+                <p className="mt-1 text-sm italic text-muted-foreground">
                   &ldquo;{it.example_en}&rdquo;
                 </p>
               ) : null}
@@ -249,6 +267,33 @@ function CharacterTag({
       <span className="text-base leading-none">{char.emoji}</span>
       <span className="truncate">{char.name}</span>
       {label ? <span className="opacity-60">· {label}</span> : null}
+    </div>
+  );
+}
+
+function CharacterPortrait({ char }: { char: Character }) {
+  return (
+    <div
+      className="flex items-center gap-3 rounded-xl border p-3"
+      style={{
+        background: `linear-gradient(135deg, ${char.color}1a, ${char.color}08)`,
+        borderColor: `${char.color}44`,
+      }}
+    >
+      <div
+        className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-3xl shadow-sm"
+        style={{ background: `${char.color}22`, color: char.color }}
+      >
+        {char.emoji}
+      </div>
+      <div className="min-w-0 flex-1">
+        <p className="font-semibold" style={{ color: char.color }}>
+          {char.name}
+        </p>
+        <p className="text-[11px] text-muted-foreground italic leading-snug">
+          {char.one_liner_en}
+        </p>
+      </div>
     </div>
   );
 }
