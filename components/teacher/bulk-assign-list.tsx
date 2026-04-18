@@ -76,6 +76,7 @@ export function BulkAssignList({ rows, classrooms, students }: Props) {
     "b2",
     "c1",
     "c2",
+    "y4",
     "other",
   ];
   const byBand = new Map<CefrBand | "other", BulkRow[]>();
