@@ -248,7 +248,30 @@ export async function getTeacherDashboardData(): Promise<TeacherDashboardData> {
     .from("classroom_members")
     .select("classroom_id, student_id, profiles(full_name, avatar_url)")
     .in("classroom_id", classroomIds);
-  const memberRows = (members as unknown as MemberRow[] | null) ?? [];
+  const rawMembers = (members as unknown as MemberRow[] | null) ?? [];
+
+  // A classroom_members row only counts as a STUDENT row if:
+  //   (a) it is not the teacher themselves (never count the owner), AND
+  //   (b) the linked profile has role = 'student'.
+  // This fixes the common case where a teacher joins their own invite
+  // link to test it and then appears inflated in the dashboard KPI.
+  const studentIds = Array.from(
+    new Set(rawMembers.map((m) => m.student_id).filter((id) => id !== user.id)),
+  );
+  const roleById = new Map<string, string>();
+  if (studentIds.length > 0) {
+    const { data: roles } = await admin
+      .from("profiles")
+      .select("id, role")
+      .in("id", studentIds);
+    for (const r of roles ?? []) {
+      roleById.set(r.id as string, (r.role as string) ?? "");
+    }
+  }
+  const memberRows = rawMembers.filter(
+    (m) =>
+      m.student_id !== user.id && roleById.get(m.student_id) === "student",
+  );
 
   const classroomSummaries: ClassroomSummary[] = rows.map((c) => ({
     id: c.id as string,
@@ -361,9 +384,30 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
   if (classroomIds.length > 0) {
     const { data: members } = await admin
       .from("classroom_members")
-      .select("classroom_id")
+      .select("classroom_id, student_id")
       .in("classroom_id", classroomIds);
+    // Only count rows that actually belong to students — filter out the
+    // teacher themselves and any non-student (admin, owner, etc).
+    const rawStudentIds = Array.from(
+      new Set(
+        (members ?? [])
+          .map((m) => m.student_id as string)
+          .filter((id) => id !== user.id),
+      ),
+    );
+    const studentRoleIds = new Set<string>();
+    if (rawStudentIds.length > 0) {
+      const { data: roles } = await admin
+        .from("profiles")
+        .select("id, role")
+        .in("id", rawStudentIds);
+      for (const r of roles ?? []) {
+        if ((r.role as string) === "student") studentRoleIds.add(r.id as string);
+      }
+    }
     for (const m of members ?? []) {
+      const sid = m.student_id as string;
+      if (!studentRoleIds.has(sid)) continue;
       const cid = m.classroom_id as string;
       memberCounts.set(cid, (memberCounts.get(cid) ?? 0) + 1);
     }
