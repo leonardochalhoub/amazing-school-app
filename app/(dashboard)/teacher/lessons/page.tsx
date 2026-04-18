@@ -115,7 +115,10 @@ export default async function TeacherLessonsPage({
         category: l.category,
         published: true,
         updated_at: "",
-        href: `/student/lessons/${l.slug}`,
+        // Library rows open the teacher PREVIEW (metadata + scene list +
+        // 'See as student' button). Students still get the player at
+        // /student/lessons/{slug}.
+        href: `/teacher/lessons/library/${l.slug}`,
         exerciseCount: l.exercise_count,
       });
     }
