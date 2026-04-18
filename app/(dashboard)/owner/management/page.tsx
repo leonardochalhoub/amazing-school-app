@@ -93,7 +93,7 @@ export default async function ManagementPage() {
         </p>
       </header>
 
-      <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
         <Kpi
           label={`Paid — ${currentMonthLabel(currentMonth)}`}
           value={BRL(revenueCentsMonth)}
@@ -120,9 +120,6 @@ export default async function ManagementPage() {
           sub="All paid invoices combined"
           icon={<Sigma className="h-4 w-4" />}
         />
-      </div>
-
-      <div className="grid gap-3 md:grid-cols-3">
         <Kpi
           label="Expected — next 6 months"
           value={BRL(expectedNext6Cents)}
@@ -147,9 +144,8 @@ export default async function ManagementPage() {
         />
       </div>
 
-      <RevenueAnalytics months={months} rows={rows} />
-
       <ManagementGrid months={months} rows={rows} />
+      <RevenueAnalytics months={months} rows={rows} />
     </div>
   );
 }

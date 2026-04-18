@@ -124,7 +124,7 @@ export function TeacherFinanceBody({ months, rows }: Props) {
         <p className="text-sm text-muted-foreground">{t.desc}</p>
       </header>
 
-      <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
         <Kpi
           label={t.kpi_paid(monthStr)}
           value={BRL(revenueCentsMonth)}
@@ -151,9 +151,6 @@ export function TeacherFinanceBody({ months, rows }: Props) {
           sub={t.sub_trailing}
           icon={<Sigma className="h-4 w-4" />}
         />
-      </div>
-
-      <div className="grid gap-3 md:grid-cols-3">
         <Kpi
           label={t.kpi_next6}
           value={BRL(expectedNext6Cents)}
@@ -178,8 +175,8 @@ export function TeacherFinanceBody({ months, rows }: Props) {
         />
       </div>
 
-      <RevenueAnalytics months={months} rows={rows} groupBy="student" />
       <ManagementGrid months={months} rows={rows} />
+      <RevenueAnalytics months={months} rows={rows} groupBy="student" />
     </div>
   );
 }

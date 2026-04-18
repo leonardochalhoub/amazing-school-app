@@ -2,8 +2,17 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getTeacherDashboardData } from "@/lib/actions/teacher-dashboard";
+import { listTeacherListeningResponses } from "@/lib/actions/listening-responses";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Flame, Trophy, BookOpen, CheckCircle2 } from "lucide-react";
+import {
+  Users,
+  Flame,
+  Trophy,
+  BookOpen,
+  CheckCircle2,
+  Headphones,
+  ArrowRight,
+} from "lucide-react";
 import Link from "next/link";
 
 export default async function TeacherAdminPage() {
@@ -23,6 +32,8 @@ export default async function TeacherAdminPage() {
 
   const data = await getTeacherDashboardData();
   const students = [...data.students].sort((a, b) => b.totalXp - a.totalXp);
+  const listeningResponses = await listTeacherListeningResponses();
+  const pendingResponses = listeningResponses.filter((r) => !r.reviewed_at);
 
   return (
     <div className="space-y-8 pb-16">
@@ -68,6 +79,50 @@ export default async function TeacherAdminPage() {
           icon={<CheckCircle2 className="h-4 w-4" />}
         />
       </div>
+
+      <section className="space-y-3">
+        <div className="flex items-center justify-between">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            Listening responses
+          </h2>
+          <Link
+            href="/teacher/listening-responses"
+            className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+          >
+            Open full review page
+            <ArrowRight className="h-3 w-3" />
+          </Link>
+        </div>
+        <Card>
+          <CardContent className="flex flex-wrap items-center justify-between gap-3 p-4">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-violet-500/10 text-violet-600">
+                <Headphones className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="font-medium">
+                  {listeningResponses.length} total response
+                  {listeningResponses.length === 1 ? "" : "s"}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  {pendingResponses.length === 0
+                    ? "All responses reviewed."
+                    : `${pendingResponses.length} pending your feedback.`}
+                </p>
+              </div>
+            </div>
+            {pendingResponses.length > 0 ? (
+              <Link
+                href="/teacher/listening-responses"
+                className="inline-flex h-9 items-center gap-1.5 rounded-md bg-primary px-3 text-xs font-medium text-primary-foreground shadow hover:bg-primary/90"
+              >
+                Review now
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            ) : null}
+          </CardContent>
+        </Card>
+      </section>
 
       <section className="space-y-3">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
