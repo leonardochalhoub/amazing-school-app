@@ -2,7 +2,10 @@ import Link from "next/link";
 import { Calendar, Clock, ExternalLink, User } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import type { HistoryStatus, StudentHistoryEntry } from "@/lib/actions/student-history";
+import type {
+  HistoryStatus,
+  StudentHistoryEntry,
+} from "@/lib/actions/student-history-types";
 
 const STATUS_COLOR: Record<HistoryStatus, string> = {
   Planned: "bg-blue-500/10 text-blue-700 dark:text-blue-400",

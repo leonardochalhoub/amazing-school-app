@@ -83,15 +83,23 @@ export async function listTeacherListeningResponses(): Promise<
   if (!members || members.length === 0) return [];
   const studentIds = Array.from(new Set(members.map((m) => m.student_id as string)));
 
-  const { data: responses } = await admin
-    .from("listening_responses")
-    .select(
-      "id, student_id, lesson_slug, scene_id, response_text, submitted_at, teacher_feedback, teacher_score, reviewed_at",
-    )
-    .in("student_id", studentIds)
-    .order("reviewed_at", { ascending: true, nullsFirst: true })
-    .order("submitted_at", { ascending: false })
-    .limit(200);
+  // Defensive: survive the table not existing yet (pre-migration 021).
+  let responses: Array<Record<string, unknown>> | null = null;
+  try {
+    const res = await admin
+      .from("listening_responses")
+      .select(
+        "id, student_id, lesson_slug, scene_id, response_text, submitted_at, teacher_feedback, teacher_score, reviewed_at",
+      )
+      .in("student_id", studentIds)
+      .order("reviewed_at", { ascending: true, nullsFirst: true })
+      .order("submitted_at", { ascending: false })
+      .limit(200);
+    if (!res.error) responses = res.data as Array<Record<string, unknown>> | null;
+  } catch {
+    responses = null;
+  }
+  if (!responses) return [];
 
   const { data: profiles } = await admin
     .from("profiles")

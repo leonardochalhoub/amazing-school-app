@@ -16,7 +16,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { scheduleClass } from "@/lib/actions/student-history";
-import { SKILL_FOCUS_OPTIONS, type SkillFocus } from "@/lib/actions/student-history";
+import {
+  SKILL_FOCUS_OPTIONS,
+  type SkillFocus,
+} from "@/lib/actions/student-history-types";
 
 interface StudentOption {
   id: string;

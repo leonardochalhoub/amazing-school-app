@@ -2,42 +2,13 @@
 
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-
-export const HISTORY_STATUSES = [
-  "Planned",
-  "Done",
-  "Absent",
-  "Rescheduled by student",
-  "Rescheduled by teacher",
-  "Make up class",
-] as const;
-export type HistoryStatus = (typeof HISTORY_STATUSES)[number];
-
-export const SKILL_FOCUS_OPTIONS = [
-  "Grammar",
-  "Speaking",
-  "Vocabulary",
-  "Listening",
-  "Reading",
-  "Writing",
-] as const;
-export type SkillFocus = (typeof SKILL_FOCUS_OPTIONS)[number];
-
-export interface StudentHistoryEntry {
-  id: string;
-  teacher_id: string;
-  student_id: string | null;
-  roster_student_id: string | null;
-  classroom_id: string | null;
-  event_date: string;
-  event_time: string | null;
-  status: HistoryStatus;
-  lesson_content: string | null;
-  skill_focus: SkillFocus[];
-  meeting_link: string | null;
-  created_at: string;
-  updated_at: string;
-}
+import {
+  HISTORY_STATUSES,
+  SKILL_FOCUS_OPTIONS,
+  type HistoryStatus,
+  type SkillFocus,
+  type StudentHistoryEntry,
+} from "./student-history-types";
 
 interface SaveHistoryInput {
   id?: string;
@@ -170,7 +141,14 @@ export async function listStudentHistory(
     query = query.eq("roster_student_id", args.rosterStudentId);
   else return [];
 
-  const { data } = await query;
+  // Defensive: survive the table not existing yet (pre-migration build).
+  let data: Array<Record<string, unknown>> | null = null;
+  try {
+    const res = await query;
+    if (!res.error) data = res.data as Array<Record<string, unknown>> | null;
+  } catch {
+    data = null;
+  }
   return (data ?? []).map((r) => ({
     id: r.id as string,
     teacher_id: r.teacher_id as string,
@@ -207,16 +185,25 @@ export async function listAllTeacherHistory(
   if (!user) return [];
 
   const admin = createAdminClient();
-  const { data } = await admin
-    .from("student_history")
-    .select(
-      "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, status, lesson_content, skill_focus, meeting_link, created_at, updated_at",
-    )
-    .eq("teacher_id", user.id)
-    .order("event_date", { ascending: false })
-    .order("event_time", { ascending: false, nullsFirst: false })
-    .limit(limit);
-  const rows = data ?? [];
+  // Defensive: if migration 023 hasn't been applied yet, the query fails
+  // and the build can't collect page data for /teacher. Swallow errors
+  // so the dashboard still renders with an empty log.
+  let rows: Array<Record<string, unknown>> = [];
+  try {
+    const { data, error } = await admin
+      .from("student_history")
+      .select(
+        "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, status, lesson_content, skill_focus, meeting_link, created_at, updated_at",
+      )
+      .eq("teacher_id", user.id)
+      .order("event_date", { ascending: false })
+      .order("event_time", { ascending: false, nullsFirst: false })
+      .limit(limit);
+    if (!error && data) rows = data as Array<Record<string, unknown>>;
+  } catch {
+    rows = [];
+  }
+  if (rows.length === 0) return [];
 
   // Resolve display names from profiles (auth students) + roster_students.
   const authIds = Array.from(

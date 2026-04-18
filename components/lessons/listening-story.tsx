@@ -286,9 +286,14 @@ export function ListeningStoryPlayer({
             disabled={saving || Boolean(savedId)}
           />
 
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <span className="text-[11px] text-muted-foreground tabular-nums">
               {words} word{words === 1 ? "" : "s"} · {response.length}/4000
+              {!savedId && response.trim().length === 0 ? (
+                <span className="ml-2 italic">
+                  (type your answer below to send)
+                </span>
+              ) : null}
             </span>
             {savedId ? (
               <span className="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-600">
@@ -297,8 +302,9 @@ export function ListeningStoryPlayer({
               </span>
             ) : (
               <Button
+                type="button"
                 onClick={save}
-                disabled={saving || response.trim().length < 5}
+                disabled={saving || response.trim().length === 0}
                 className="gap-1.5"
               >
                 {saving ? (
@@ -306,7 +312,7 @@ export function ListeningStoryPlayer({
                 ) : (
                   <Save className="h-4 w-4" />
                 )}
-                Save response
+                Send response
               </Button>
             )}
           </div>

@@ -23,12 +23,14 @@ import { Badge } from "@/components/ui/badge";
 import {
   saveHistoryEntry,
   deleteHistoryEntry,
+} from "@/lib/actions/student-history";
+import {
   HISTORY_STATUSES,
   SKILL_FOCUS_OPTIONS,
   type HistoryStatus,
   type SkillFocus,
   type StudentHistoryEntry,
-} from "@/lib/actions/student-history";
+} from "@/lib/actions/student-history-types";
 
 const STATUS_COLOR: Record<HistoryStatus, string> = {
   Planned: "bg-blue-500/10 text-blue-700 dark:text-blue-400",

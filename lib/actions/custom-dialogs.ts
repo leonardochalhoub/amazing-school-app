@@ -159,14 +159,20 @@ export async function listMyCustomDialogs(): Promise<CustomDialog[]> {
   } = await supabase.auth.getUser();
   if (!user) return [];
   const admin = createAdminClient();
-  const { data } = await admin
-    .from("custom_speaking_dialogs")
-    .select(
-      "id, teacher_id, title, character_name, band, pt_summary, turns, is_public, updated_at",
-    )
-    .eq("teacher_id", user.id)
-    .order("updated_at", { ascending: false });
-  return (data ?? []).map(mapRow);
+  // Defensive: survive the table not existing yet (pre-migration 022 build).
+  try {
+    const { data, error } = await admin
+      .from("custom_speaking_dialogs")
+      .select(
+        "id, teacher_id, title, character_name, band, pt_summary, turns, is_public, updated_at",
+      )
+      .eq("teacher_id", user.id)
+      .order("updated_at", { ascending: false });
+    if (error || !data) return [];
+    return (data as Array<Record<string, unknown>>).map(mapRow);
+  } catch {
+    return [];
+  }
 }
 
 /**
@@ -209,13 +215,18 @@ export async function listAvailableCustomDialogs(): Promise<CustomDialog[]> {
   );
   if (teacherIds.length === 0) return [];
 
-  const { data } = await admin
-    .from("custom_speaking_dialogs")
-    .select(
-      "id, teacher_id, title, character_name, band, pt_summary, turns, is_public, updated_at",
-    )
-    .in("teacher_id", teacherIds)
-    .eq("is_public", true)
-    .order("updated_at", { ascending: false });
-  return (data ?? []).map(mapRow);
+  try {
+    const { data, error } = await admin
+      .from("custom_speaking_dialogs")
+      .select(
+        "id, teacher_id, title, character_name, band, pt_summary, turns, is_public, updated_at",
+      )
+      .in("teacher_id", teacherIds)
+      .eq("is_public", true)
+      .order("updated_at", { ascending: false });
+    if (error || !data) return [];
+    return (data as Array<Record<string, unknown>>).map(mapRow);
+  } catch {
+    return [];
+  }
 }
