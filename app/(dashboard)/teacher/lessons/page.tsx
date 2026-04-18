@@ -7,6 +7,9 @@ import { listLessonDrafts } from "@/lib/actions/lesson-drafts";
 import { listMyTeacherLessons } from "@/lib/actions/teacher-lessons";
 import { listMyBank } from "@/lib/actions/exercise-bank";
 import { getAllLessons } from "@/lib/content/loader";
+import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
+import { getTeacherOverview } from "@/lib/actions/teacher-dashboard";
+import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { LessonRow } from "@/components/teacher/lesson-row";
 import { CEFR_LEVELS, SKILLS } from "@/lib/content/schema";
 import { Badge } from "@/components/ui/badge";
@@ -72,11 +75,14 @@ export default async function TeacherLessonsPage({
     ? (params.source as Source)
     : "all";
 
-  const [curatedLessons, myLessons, bankItems] = await Promise.all([
-    listLessonDrafts(filters),
-    listMyTeacherLessons(),
-    listMyBank(),
-  ]);
+  const [curatedLessons, myLessons, bankItems, assignable, overview] =
+    await Promise.all([
+      listLessonDrafts(filters),
+      listMyTeacherLessons(),
+      listMyBank(),
+      getAssignableLessons(),
+      getTeacherOverview(),
+    ]);
 
   // Static "library" content shipped in content/lessons/*.json — the 45+
   // authored narrative + drill lessons. Apply the same filters.
@@ -168,15 +174,29 @@ export default async function TeacherLessonsPage({
             assigning to students.
           </p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <Badge variant="secondary" className="text-[11px]">
             {publishedCount} published
           </Badge>
           <Badge variant="outline" className="text-[11px]">
             {draftCount} drafts
           </Badge>
+          <AssignLessonButton
+            lessons={assignable}
+            classrooms={overview.classrooms.map((c) => ({
+              id: c.id,
+              name: c.name,
+            }))}
+            students={overview.roster.map((r) => ({
+              id: r.id,
+              fullName: r.fullName,
+              classroomId: r.classroomId,
+            }))}
+            variant="primary"
+            label="Assign"
+          />
           <Link href="/teacher/lessons/new">
-            <Button size="sm" className="gap-1.5">
+            <Button size="sm" variant="outline" className="gap-1.5">
               <Plus className="h-4 w-4" />
               New lesson
             </Button>
@@ -294,13 +314,12 @@ export default async function TeacherLessonsPage({
 
 function LibraryLessonRow({ row }: { row: UnifiedRow }) {
   return (
-    <Link
-      href={row.href}
-      className="group flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-3 shadow-xs transition-colors hover:border-primary/40"
-    >
-      <div className="min-w-0 flex-1">
+    <div className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-3 shadow-xs transition-colors hover:border-primary/40">
+      <Link href={row.href} className="group min-w-0 flex-1">
         <div className="flex items-center gap-2">
-          <p className="truncate text-sm font-semibold">{row.title}</p>
+          <p className="truncate text-sm font-semibold group-hover:text-primary">
+            {row.title}
+          </p>
           <Badge variant="secondary" className="shrink-0 gap-1 text-[10px]">
             {row.category === "narrative" ? (
               <Sparkles className="h-3 w-3" />
@@ -314,11 +333,19 @@ function LibraryLessonRow({ row }: { row: UnifiedRow }) {
           {row.cefr_level.toUpperCase()} · {row.category}
           {row.exerciseCount != null ? ` · ${row.exerciseCount} exercises` : ""}
         </p>
+      </Link>
+      <div className="flex shrink-0 items-center gap-2">
+        <Badge variant="default" className="text-[10px]">
+          Core
+        </Badge>
+        <Link
+          href={`/teacher?assign=${encodeURIComponent(row.slug)}`}
+          className="rounded-md border border-primary/40 bg-primary/10 px-2 py-1 text-[10px] font-medium text-primary hover:bg-primary/20"
+        >
+          Assign
+        </Link>
       </div>
-      <Badge variant="default" className="shrink-0 text-[10px]">
-        Core
-      </Badge>
-    </Link>
+    </div>
   );
 }
 
