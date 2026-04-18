@@ -1,0 +1,127 @@
+{
+  "slug": "alphabet-parade",
+  "title": "Maya's Alphabet Parade",
+  "description": "Maya turns the English alphabet into a parade of things you'd see in Praia do Sol. Each letter gets a picture, a sound, and a rhyme.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 35,
+  "estimated_minutes": 12,
+  "summary_pt_br": "Maya transforma o alfabeto em um desfile de coisas da Praia do Sol. Cada letra tem som, imagem e rima — com foco nas que mais confundem brasileiros (G, H, J, W, Y).",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 3 — The Alphabet Parade",
+      "subtitle_en": "Maya takes the stage",
+      "subtitle_pt": "Maya no palco"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "Maya is twelve. Maya is bright.\nShe spells her name fast — she spells it RIGHT.\n'The alphabet,' Maya begins with a grin,\n'is a parade. And here's where we begin!'",
+      "text_pt": "Maya tem doze. Maya é esperta.\nSoletra o nome rápido, com certeza certa.\n'O alfabeto,' ela começa a brincar,\n'é um desfile. Vamos começar!'"
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "The five vowel sounds",
+      "items": [
+        { "term": "A /eɪ/", "pt": "som de 'ei'", "example_en": "A as in Avenida" },
+        { "term": "E /iː/", "pt": "som de 'ii'", "example_en": "E as in English" },
+        { "term": "I /aɪ/", "pt": "som de 'ai'", "example_en": "I as in ice cream" },
+        { "term": "O /oʊ/", "pt": "som de 'ou'", "example_en": "O as in ocean" },
+        { "term": "U /juː/", "pt": "som de 'iu'", "example_en": "U as in Kumar" }
+      ]
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "A is for Avenida — the street where we learn.\nB is for Bia, who waits for her turn.\nC is for Cosmo, who barks with delight.\nD is for Dad, who brings lunch at night.\nE is for Everyone. F is for Fun.\nG is for /dʒiː/ — that's 'jee', not 'gee' — oof. This one!",
+      "text_pt": "A de Avenida — a rua do saber.\nB de Bia, esperando sua vez de responder.\nC de Cosmo, latindo a correr.\nD de Dad (pai), trazendo o comer.\nE de Everyone (todos). F de Fun (diversão).\nG se fala 'djii' — atenção, irmão!"
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Letters that trip up Brazilians",
+      "body_en": "These four are the most confusing: G /dʒiː/ sounds like 'jee'. J /dʒeɪ/ sounds like 'jay'. H /eɪtʃ/ starts with an 'ei' sound — never 'ah'. W /ˈdʌb.əl juː/ is called 'double U'. Y /waɪ/ sounds like the question 'why'.",
+      "body_pt": "G = /djii/. J = /djei/. H começa com som de 'ei' (não 'agá'). W = 'dábol iu'. Y = 'uai' (igual ao 'why' de 'por quê'). Pratique essas cinco em voz alta.",
+      "examples": [
+        { "en": "G-I-R-L = girl", "pt": "menina — começa com 'djii'" },
+        { "en": "W-A-V-E = wave", "pt": "onda — começa com 'dábol iu'" }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "alp-001",
+        "type": "multiple_choice",
+        "question": "Maya asks: which letter sounds like 'why'?",
+        "options": ["W", "Y", "I", "U"],
+        "correct": 1,
+        "explanation": "The letter Y is /waɪ/ — same sound as the word 'why'.",
+        "hint_pt_br": "Y se pronuncia 'uai', igualzinho à pergunta 'why'."
+      }
+    },
+    {
+      "kind": "narrative",
+      "text_en": "H is for Hello. I is for Ice.\nJ is for Joca — he always asks twice.\nK is for Kumar, the teacher we trust.\nL is for Lunchtime (it's two — we must!).\nM is for Maya. N is for Nice.\nO is for Ocean, where Bia finds bliss.",
+      "text_pt": "H de Hello (olá). I de Ice (gelo).\nJ de Joca — pergunta umas duas vezes o cabelo.\nK de Kumar, o professor de confiança.\nL de Lunchtime — meio-dia, sem demora!\nM de Maya. N de Nice (legal).\nO de Ocean, onde a Bia se dá bem, geral."
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "alp-002",
+        "type": "fill_blank",
+        "question": "Spell COSMO: C, O, S, M, ___",
+        "correct": "O",
+        "explanation": "C-O-S-M-O. Cosmo ends with O.",
+        "hint_pt_br": "Cosmo termina com O."
+      }
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "P is for Pizza, and Q is for Queue.\nR is for Rafa — that's me, yes it's true!\nS is for Surf and for Sand and for Sea.\nT is for Tacos — the best? Made by me.",
+      "text_pt": "P de Pizza e Q de Queue (fila).\nR de Rafa — sou eu, vila!\nS de Surf, Sand, Sea (surf, areia, mar).\nT de Tacos — os melhores? Só aqui, pode olhar."
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "rafa",
+      "exercise": {
+        "id": "alp-003",
+        "type": "matching",
+        "pairs": [
+          ["A", "/eɪ/"],
+          ["E", "/iː/"],
+          ["I", "/aɪ/"],
+          ["Y", "/waɪ/"]
+        ],
+        "explanation": "The four vowel-ish letters that Brazilians most often mispronounce. Say them out loud.",
+        "hint_pt_br": "A = 'ei', E = 'ii', I = 'ai', Y = 'uai'. Repita em voz alta."
+      }
+    },
+    {
+      "kind": "narrative",
+      "character_id": "maya",
+      "text_en": "U is for Uncle. V is for View.\nW is 'double-you' — a strange letter, it's true.\nX is for X-ray, Y is for Yes.\nZ is for Zebra — and end of the press!\nThat's all twenty-six. Let's spell something small.\nC-O-S-M-O. That's Cosmo. That's ALL.",
+      "text_pt": "U de Uncle (tio). V de View (vista).\nW é 'double-you' — letra meio trapista.\nX de X-ray (raio-X), Y de Yes.\nZ de Zebra — fim da apresentação, assim pois!\nVinte e seis letras. Vamos soletrar algo com clareza?\nC-O-S-M-O. É Cosmo. Chegamos à sobremesa!"
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "alp-004",
+        "type": "multiple_choice",
+        "question": "How is 'HELLO' spelled out loud?",
+        "options": [
+          "H-E-L-L-O",
+          "aitch-E-double L-O",
+          "Both A and B are natural",
+          "Neither"
+        ],
+        "correct": 2,
+        "explanation": "Letter-by-letter OR 'double L' for repeated letters — both sound natural.",
+        "hint_pt_br": "Pode soletrar letra por letra OU usar 'double' para letras repetidas. Os dois são naturais."
+      }
+    }
+  ]
+}

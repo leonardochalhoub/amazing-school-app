@@ -1,0 +1,126 @@
+{
+  "slug": "where-is-cosmo",
+  "title": "Where Is Cosmo?",
+  "description": "Cosmo has hidden somewhere in the classroom. Use ON, IN, UNDER, NEXT TO, and BEHIND to find him.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 35,
+  "estimated_minutes": 12,
+  "summary_pt_br": "O Cosmo se escondeu na sala. A turma tem que usar preposições de lugar (on, in, under, next to, behind) para achá-lo. Aprenda os objetos da sala e as preposições em contexto.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 7 — Where Is Cosmo?",
+      "subtitle_en": "A classroom hide-and-seek",
+      "subtitle_pt": "Uma brincadeira de esconde-esconde"
+    },
+    {
+      "kind": "narrative",
+      "scene_emoji": "🐾",
+      "text_en": "The door swung shut. The dog was GONE.\n'Where is Cosmo?' called Mr. Kumar, aghast.\nMaya jumped up. Rafa grabbed his phone.\n'Let's find him,' said Bia. 'But first — look fast!'",
+      "text_pt": "A porta se fechou. O cachorro SUMIU.\n'Cadê o Cosmo?' Mr. Kumar quase morreu.\nMaya saltou. Rafa pegou o celular.\n'Vamos achá-lo,' falou Bia. 'Mas sem titubear!'"
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Classroom objects",
+      "items": [
+        { "term": "desk", "pt": "carteira / mesa escolar" },
+        { "term": "chair", "pt": "cadeira" },
+        { "term": "whiteboard", "pt": "quadro / lousa" },
+        { "term": "drawer", "pt": "gaveta" },
+        { "term": "backpack", "pt": "mochila" },
+        { "term": "door", "pt": "porta" }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Five tiny but mighty prepositions",
+      "items": [
+        { "term": "on", "pt": "em cima de", "example_en": "The book is on the desk." },
+        { "term": "in", "pt": "dentro de", "example_en": "The pen is in the drawer." },
+        { "term": "under", "pt": "embaixo de", "example_en": "The dog is under the chair." },
+        { "term": "next to", "pt": "ao lado de", "example_en": "Bia sits next to Rafa." },
+        { "term": "behind", "pt": "atrás de", "example_en": "Cosmo hides behind the door." }
+      ]
+    },
+    {
+      "kind": "narrative",
+      "text_en": "Is he ON the chair? No, no, no.\nIs he IN the drawer? No, no, NO.\nIs he UNDER the desk? Maya checked — no!\nNEXT TO the whiteboard? Nope. Uh-oh.\nBEHIND the door…? A tiny BARK.\nCosmo! The dog had made his mark.",
+      "text_pt": "Está EM CIMA da cadeira? Não, não, não.\nESTÁ DENTRO da gaveta? Não, não, NÃO.\nEMBAIXO da mesa? Maya checou — também não!\nAO LADO do quadro? Nadica. Pra leão.\nATRÁS da porta…? Um latido discreto.\nCosmo! O cachorro fechou o decreto."
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "cosmo-s01",
+        "type": "multiple_choice",
+        "question": "The ball is resting on top of the table. Which preposition?",
+        "options": ["in", "on", "under", "behind"],
+        "correct": 1,
+        "explanation": "ON = touching a surface from above. On the table, on the floor, on the wall.",
+        "hint_pt_br": "ON = em cima, apoiado em uma superfície."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cosmo-s02",
+        "type": "multiple_choice",
+        "question": "The cat is INSIDE the box. Which preposition?",
+        "options": ["in", "on", "under", "next to"],
+        "correct": 0,
+        "explanation": "IN = inside. In the box, in my pocket, in the backpack.",
+        "hint_pt_br": "IN = dentro de (interior)."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cosmo-s03",
+        "type": "fill_blank",
+        "question": "Complete: 'Cosmo is ___ the door.' (he's on the other side of it, hidden)",
+        "correct": "behind",
+        "explanation": "BEHIND = on the far side. A dog hiding out of sight is BEHIND the door.",
+        "hint_pt_br": "BEHIND = atrás de. Cosmo escondido atrás da porta."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Finally finding Cosmo",
+      "location_pt": "Finalmente achando o Cosmo",
+      "turns": [
+        { "character_id": "bia", "en": "Where is the backpack?", "pt": "Cadê a mochila?" },
+        { "character_id": "maya", "en": "It's next to the chair.", "pt": "Está ao lado da cadeira." },
+        { "character_id": "rafa", "en": "And Cosmo?", "pt": "E o Cosmo?" },
+        { "character_id": "kumar", "en": "He's IN the backpack. All of him.", "pt": "Ele está DENTRO da mochila. Inteiro." }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "cosmo-s04",
+        "type": "matching",
+        "pairs": [
+          ["em cima de", "on"],
+          ["dentro de", "in"],
+          ["embaixo de", "under"],
+          ["ao lado de", "next to"],
+          ["atrás de", "behind"]
+        ],
+        "explanation": "Five prepositions that cover ~90% of 'where is it?' questions.",
+        "hint_pt_br": "Essas cinco preposições cobrem quase tudo."
+      }
+    },
+    {
+      "kind": "grammar_note",
+      "title": "'There is / there are' for existence",
+      "body_en": "When you want to say something EXISTS or is PRESENT, English uses 'there is' (singular) or 'there are' (plural) — NOT 'have'. 'There is a dog in the backpack' = Tem um cachorro na mochila.",
+      "body_pt": "'Tem' de existir é 'there is / there are' em inglês — NUNCA 'have'. 'Tem um cachorro na mochila' = 'There IS a dog in the backpack'.",
+      "examples": [
+        { "en": "There is a book on the desk.", "pt": "Tem um livro na mesa." },
+        { "en": "There are two dogs in the room.", "pt": "Tem dois cachorros na sala." }
+      ]
+    }
+  ]
+}

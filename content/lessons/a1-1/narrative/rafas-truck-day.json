@@ -1,0 +1,147 @@
+{
+  "slug": "rafas-truck-day",
+  "title": "A Day in Rafa's Truck",
+  "description": "Rafa's daily routine from 5 a.m. to midnight. Learn the Present Simple tense — and the tricky -s that only lives on HE/SHE/IT.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 45,
+  "estimated_minutes": 15,
+  "summary_pt_br": "A rotina do Rafa das 5h à meia-noite. Aprenda o Present Simple com foco no -s do he/she/it, e nas contrações don't / doesn't nas negativas.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 9 — Rafa's Day",
+      "subtitle_en": "From 5 a.m. to midnight in the food truck",
+      "subtitle_pt": "Das 5h à meia-noite no food truck"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "Rafa wakes up at five.\nHe drinks a coffee — strong, alive.\nHe drives his truck to the sand.\nHe cuts, he cooks, he takes a stand.\nAt noon he sells, and he never stops.\nAt night he counts his tips and drops.",
+      "text_pt": "O Rafa acorda às cinco.\nToma um café — forte, crivo.\nDirige o truck até a areia.\nCorta, cozinha, sem meia.\nAo meio-dia vende, sem pausa, sem freio.\nDe noite conta as gorjetas, e dorme sereio."
+    },
+    {
+      "kind": "grammar_note",
+      "title": "The Present Simple — habits and routines",
+      "body_en": "Use Present Simple for things that are TRUE IN GENERAL or HAPPEN REGULARLY. The catch: with he/she/it, add -s to the verb. 'I work, you work, WE work' — but 'he workS, she workS, it workS'. That little -s is the #1 mistake learners make.",
+      "body_pt": "Present Simple para hábitos e verdades gerais. A pegadinha: com he/she/it, adicione -s ao verbo. I work, you work → mas he workS. Esse -s é o erro mais comum de quem aprende.",
+      "examples": [
+        { "en": "I drive the truck. → He drives the truck.", "pt": "Eu dirijo. → Ele dirige." },
+        { "en": "We wake at six. → She wakes at six.", "pt": "Nós acordamos. → Ela acorda." },
+        { "en": "They eat tacos. → Cosmo eats tacos.", "pt": "Eles comem. → O Cosmo come." }
+      ]
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Daily-routine verbs",
+      "items": [
+        { "term": "wake up", "pt": "acordar", "example_en": "I wake up at six." },
+        { "term": "eat", "pt": "comer", "example_en": "She eats breakfast." },
+        { "term": "work", "pt": "trabalhar", "example_en": "He works in a truck." },
+        { "term": "drive", "pt": "dirigir", "example_en": "I drive to the beach." },
+        { "term": "sleep", "pt": "dormir", "example_en": "Cosmo sleeps a lot." },
+        { "term": "watch", "pt": "assistir", "example_en": "We watch movies." }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "rafa",
+      "exercise": {
+        "id": "day-s01",
+        "type": "fill_blank",
+        "question": "Complete: 'He ___ coffee every morning.' (verb: drink)",
+        "correct": "drinks",
+        "explanation": "He + verb + S. 'He drinks' — with the -s at the end.",
+        "hint_pt_br": "'He' pede -s no verbo. Drink → drinks."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "day-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'I ___ in São Paulo.' (verb: live)",
+        "correct": "live",
+        "explanation": "With I/you/we/they, NO -s. 'I live' — no extra letter.",
+        "hint_pt_br": "Com 'I' o verbo fica limpo — 'I live', sem -s."
+      }
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Negatives: don't vs. doesn't",
+      "body_en": "To make the Present Simple negative, use DON'T (I/you/we/they) or DOESN'T (he/she/it). The magic: DOESN'T already carries the -s for you — so the main verb goes BACK to its base form. 'He doesn't WORK' (not 'doesn't works').",
+      "body_pt": "Para negar: DON'T (I/you/we/they) ou DOESN'T (he/she/it). E atenção: quando usa DOESN'T, o verbo principal volta para a forma-base (sem -s). 'He doesn't work', não 'doesn't works'.",
+      "examples": [
+        { "en": "I don't eat meat.", "pt": "Eu não como carne." },
+        { "en": "Cosmo doesn't bark at Bia.", "pt": "O Cosmo não late para a Bia." }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "day-s03",
+        "type": "multiple_choice",
+        "question": "Which is correct?",
+        "options": [
+          "He don't work on Sundays",
+          "He doesn't works on Sundays",
+          "He doesn't work on Sundays",
+          "He no work on Sundays"
+        ],
+        "correct": 2,
+        "explanation": "HE needs 'DOESN'T', and after 'doesn't' the verb goes back to BASE form: WORK (not works). 'He doesn't work on Sundays'.",
+        "hint_pt_br": "'He doesn't' + verbo SEM -s. 'He doesn't work' — não 'doesn't works'."
+      }
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Questions: do / does",
+      "body_en": "For yes/no questions in Present Simple, start with DO (I/you/we/they) or DOES (he/she/it). Again, the verb goes back to its base form. 'Do you work?' — 'Does she work?' (not 'works').",
+      "body_pt": "Perguntas: começa com DO ou DOES. Igual à negativa: o verbo principal volta para a forma-base. 'Does she work?' — não 'works'.",
+      "examples": [
+        { "en": "Do you surf?", "pt": "Você surfa?" },
+        { "en": "Does Cosmo bark a lot?", "pt": "O Cosmo late muito?" }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "day-s04",
+        "type": "fill_blank",
+        "question": "Complete the question: '___ she work at the school?' (Maya is asking about Mrs. Costa)",
+        "correct": "Does",
+        "explanation": "SHE + question → DOES. 'Does she work at the school?'",
+        "hint_pt_br": "Com she/he/it a pergunta começa com 'Does'."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "The food truck, 8 p.m.",
+      "location_pt": "No food truck, 20h",
+      "turns": [
+        { "character_id": "bia", "en": "Do you work every day?", "pt": "Você trabalha todo dia?" },
+        { "character_id": "rafa", "en": "No, I don't work on Sundays. I rest.", "pt": "Não, eu não trabalho aos domingos. Eu descanso." },
+        { "character_id": "bia", "en": "Does Cosmo help you?", "pt": "O Cosmo te ajuda?" },
+        { "character_id": "rafa", "en": "Cosmo doesn't help. He EATS.", "pt": "O Cosmo não ajuda. Ele COME." }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "rafa",
+      "exercise": {
+        "id": "day-s05",
+        "type": "matching",
+        "pairs": [
+          ["I work", "Eu trabalho"],
+          ["He works", "Ele trabalha"],
+          ["I don't work", "Eu não trabalho"],
+          ["He doesn't work", "Ele não trabalha"],
+          ["Do you work?", "Você trabalha?"]
+        ],
+        "explanation": "Present Simple forms in one table. Learn them together and the -s trap disappears.",
+        "hint_pt_br": "Aprenda as cinco formas juntas — afirmativa, negativa, interrogativa."
+      }
+    }
+  ]
+}

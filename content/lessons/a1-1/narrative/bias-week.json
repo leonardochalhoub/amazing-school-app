@@ -1,0 +1,149 @@
+{
+  "slug": "bias-week",
+  "title": "Bia's Week by the Ocean",
+  "description": "Days, months, and times — through Bia's surfing schedule. Learn ON/IN/AT for time, and never capitalize a day's name again.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 40,
+  "estimated_minutes": 14,
+  "summary_pt_br": "Dias, meses e horas usando a agenda de surf da Bia. Aprenda ON/IN/AT para tempo, a regra da letra maiúscula (dias e meses SEMPRE com inicial maiúscula em inglês) e como perguntar a hora.",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 8 — Bia's Week",
+      "subtitle_en": "A calendar, a clock, and a wave",
+      "subtitle_pt": "Um calendário, um relógio e uma onda"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "Bia pinned a schedule on the rooftop wall.\n'Monday at six — I surf, I don't stall.\nTuesday at noon — I study with Joca.\nWednesday for class. Thursday? Not a lot.\nFriday I run. Saturday I rest.\nSunday at the beach — the day I love best.'",
+      "text_pt": "A Bia pregou o cronograma na parede do terraço.\n'Segunda às seis — eu surfo, nem um passo atrasado.\nTerça ao meio-dia — estudo com o Joca.\nQuarta tem aula. Quinta? Pouca coisa, boca.\nSexta eu corro. Sábado eu descanso.\nDomingo na praia — o dia que eu mais amo.'"
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "The seven days",
+      "items": [
+        { "term": "Monday", "pt": "segunda" },
+        { "term": "Tuesday", "pt": "terça" },
+        { "term": "Wednesday", "pt": "quarta (o 'd' é mudo!)" },
+        { "term": "Thursday", "pt": "quinta" },
+        { "term": "Friday", "pt": "sexta" },
+        { "term": "Saturday", "pt": "sábado" },
+        { "term": "Sunday", "pt": "domingo" }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "CAPITAL letters — always",
+      "body_en": "Days and months in English ALWAYS start with a capital letter, even mid-sentence: 'See you on Monday.' 'My birthday is in April.' This is different from Portuguese. Languages, nationalities, and names also get capitals.",
+      "body_pt": "REGRA: dias, meses, idiomas e nacionalidades SEMPRE começam com letra maiúscula em inglês, mesmo no meio da frase. Diferente do português, onde é minúscula.",
+      "examples": [
+        { "en": "I see you on Friday.", "pt": "Nos vemos na sexta." },
+        { "en": "My birthday is in August.", "pt": "Meu aniversário é em agosto." }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "week-s01",
+        "type": "multiple_choice",
+        "question": "Which is spelled correctly?",
+        "options": ["monday", "Monday", "MONDAY", "MonDay"],
+        "correct": 1,
+        "explanation": "First letter capital only: 'Monday'. Days always start with a capital in English.",
+        "hint_pt_br": "Só a primeira letra maiúscula: 'Monday'."
+      }
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "ON / IN / AT for time",
+      "items": [
+        { "term": "ON + day", "pt": "em + dia", "example_en": "on Monday, on my birthday" },
+        { "term": "IN + month / year / season", "pt": "em + mês/ano/estação", "example_en": "in April, in 2026, in summer" },
+        { "term": "AT + clock time", "pt": "às + hora", "example_en": "at 6 a.m., at noon" }
+      ]
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "ON Monday, IN April, AT six in the morn'.\nThree little words — they never are worn.\nON the day, IN the month, AT the hour —\nRepeat it three times for preposition power.",
+      "text_pt": "ON na segunda, IN em abril, AT às seis da manhã.\nTrês palavrinhas que funcionam de verdade, irmã.\nON + dia, IN + mês, AT + hora exata —\nRepita três vezes para a memória ficar grata."
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "week-s02",
+        "type": "fill_blank",
+        "question": "Complete: 'I have class ___ Wednesday.' (which preposition?)",
+        "correct": "on",
+        "explanation": "ON + day of the week. On Wednesday, on Friday, on my birthday.",
+        "hint_pt_br": "ON + dia específico."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "week-s03",
+        "type": "fill_blank",
+        "question": "Complete: 'My birthday is ___ July.' (which preposition?)",
+        "correct": "in",
+        "explanation": "IN + month. In July, in 2026, in the morning.",
+        "hint_pt_br": "IN + mês/ano."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "week-s04",
+        "type": "fill_blank",
+        "question": "Complete: 'The surf class starts ___ 6 a.m.'",
+        "correct": "at",
+        "explanation": "AT + specific clock time. At 6 a.m., at noon, at 9:30.",
+        "hint_pt_br": "AT + horário específico."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "Rooftop, checking the time",
+      "location_pt": "No terraço, checando a hora",
+      "turns": [
+        { "character_id": "rafa", "en": "What time is it?", "pt": "Que horas são?" },
+        { "character_id": "maya", "en": "It's a quarter past three.", "pt": "São três e quinze." },
+        { "character_id": "rafa", "en": "Is the food truck open?", "pt": "O food truck está aberto?" },
+        { "character_id": "maya", "en": "Yes — from noon to eight.", "pt": "Sim — do meio-dia às oito." }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Reading a clock",
+      "body_en": "Two ways to say time: digital ('six fifteen') OR traditional ('quarter past six'). For 6:30 → 'six thirty' OR 'half past six'. For 6:45 → 'six forty-five' OR 'quarter to seven'. Both are natural — pick whichever feels fluent.",
+      "body_pt": "Duas formas: digital (six fifteen = 6:15) ou tradicional (quarter past six = 6:15). 6:30 = six thirty OU half past six. 6:45 = six forty-five OU quarter to seven.",
+      "examples": [
+        { "en": "It's 3:15 → quarter past three / three fifteen", "pt": "São 3h15" },
+        { "en": "It's 9:30 → half past nine / nine thirty", "pt": "São 9h30" },
+        { "en": "It's 10:45 → quarter to eleven / ten forty-five", "pt": "São 10h45" }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "maya",
+      "exercise": {
+        "id": "week-s05",
+        "type": "multiple_choice",
+        "question": "The clock shows 7:30. Which is correct?",
+        "options": [
+          "half past seven",
+          "seven thirty",
+          "Both are correct and natural",
+          "quarter past seven"
+        ],
+        "correct": 2,
+        "explanation": "Both 'half past seven' and 'seven thirty' are natural English for 7:30. Native speakers use both.",
+        "hint_pt_br": "7:30 pode ser 'half past seven' OU 'seven thirty' — os dois são naturais."
+      }
+    }
+  ]
+}

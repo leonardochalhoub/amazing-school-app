@@ -1,0 +1,124 @@
+{
+  "slug": "to-be-story",
+  "title": "I Am, You Are, We All Learn",
+  "description": "Bia confuses the verb TO BE. Dona Lúcia, Rafa, and Mr. Kumar help her untangle I am / you are / he is — in rhyme.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 40,
+  "estimated_minutes": 14,
+  "summary_pt_br": "A Bia se confunde com o verbo TO BE. Dona Lúcia, Rafa e Mr. Kumar ajudam — em rimas e diálogos — a separar I am / you are / he is. Inclui a armadilha 'I have 16 years' (errada em inglês).",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 4 — To Be or Not To Be",
+      "subtitle_en": "The most important verb in English",
+      "subtitle_pt": "O verbo mais importante do inglês"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "Bia said, 'I HAVE sixteen years today.'\nMr. Kumar smiled gently, 'That's not how we say.\nIn English, for age, we use AM — so begin:\nI AM sixteen years old. Try it again.'",
+      "text_pt": "Bia disse: 'EU TENHO dezesseis anos agora.'\nMr. Kumar sorriu: 'Assim não se fala, Bia menina.\nNo inglês, para idade, usamos AM — vem daqui:\nI AM sixteen years old. Tenta de novo, aí!'"
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "The three forms of BE",
+      "items": [
+        { "term": "am", "pt": "sou / estou (só com 'I')", "example_en": "I am Bia." },
+        { "term": "are", "pt": "é / está / são / estão (com you, we, they)", "example_en": "You are smart." },
+        { "term": "is", "pt": "é / está (com he, she, it)", "example_en": "She is tired." }
+      ]
+    },
+    {
+      "kind": "narrative",
+      "character_id": "bia",
+      "text_en": "I am a surfer. You are a friend.\nHe is my dad. She is his blend.\nIt is a dog — that's Cosmo the Lab.\nWe are a class. They are the gang.\nRemember this rhythm. Don't let it slide.\nAm, is, are — they're always inside.",
+      "text_pt": "I am surfista. You are amigo meu.\nHe is meu pai. She is o seu elo.\nIt is o cachorro — Cosmo, esse!\nWe are a turma. They are a galera.\nRepita o ritmo. Não esqueça.\nAm, is, are — estão sempre à espreita."
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "bia",
+      "exercise": {
+        "id": "tobe-s01",
+        "type": "fill_blank",
+        "question": "Complete: 'I ___ from Praia do Sol.' (Bia's line)",
+        "correct": "am",
+        "explanation": "The pronoun I always takes AM. Contraction: I'm.",
+        "hint_pt_br": "Só 'I' usa 'am'. Contração: I'm."
+      }
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "The rooftop, mid-morning",
+      "location_pt": "O terraço, meio da manhã",
+      "turns": [
+        { "character_id": "rafa", "en": "Bia, are you hungry?", "pt": "Bia, você está com fome?" },
+        { "character_id": "bia", "en": "No, I'm not. Thank you!", "pt": "Não, não estou. Obrigada!" },
+        { "character_id": "rafa", "en": "Is Cosmo hungry?", "pt": "O Cosmo está com fome?" },
+        { "character_id": "bia", "en": "Cosmo is ALWAYS hungry.", "pt": "O Cosmo está SEMPRE com fome." }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "BE does the job of 'ser', 'estar', AND 'ter' (sometimes)",
+      "body_en": "Portuguese has ser (permanent), estar (temporary), and sometimes uses ter for age/hunger. English uses ONE verb — BE — for all of it: 'I am a teacher' (ser), 'I am tired' (estar), 'I am 30 years old' (idade, não ter!), 'I am hungry' (fome, não ter fome!).",
+      "body_pt": "Português separa ser/estar e às vezes usa 'ter' para idade/fome. O inglês usa só BE para tudo. 'I am' cobre 'sou', 'estou', 'tenho (idade)', 'estou com (fome/sede/medo)'.",
+      "examples": [
+        { "en": "I am a student.", "pt": "Sou estudante." },
+        { "en": "I am tired.", "pt": "Estou cansado." },
+        { "en": "I am 16 years old.", "pt": "Tenho 16 anos." },
+        { "en": "I am thirsty.", "pt": "Estou com sede." }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tobe-s02",
+        "type": "multiple_choice",
+        "question": "Which one is correct English?",
+        "options": [
+          "I have 30 years",
+          "I am 30 years",
+          "I am 30 years old",
+          "I have 30 years old"
+        ],
+        "correct": 2,
+        "explanation": "Age uses BE + number + 'years old'. 'Years old' is not optional — 'I am 30' is OK casually, but in a textbook, use 'years old'.",
+        "hint_pt_br": "A fórmula certa: I am + número + years old. Nunca 'I have X years'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "tobe-s03",
+        "type": "matching",
+        "pairs": [
+          ["I", "am"],
+          ["you / we / they", "are"],
+          ["he / she / it", "is"]
+        ],
+        "explanation": "Only I uses AM. He/she/it always use IS. Everyone else uses ARE.",
+        "hint_pt_br": "Regra das três caixas: I=am, he/she/it=is, resto=are."
+      }
+    },
+    {
+      "kind": "narrative",
+      "character_id": "lucia",
+      "text_en": "Dona Lúcia, sixty-eight and kind,\nread a letter she'd kept signed.\n'My love, you ARE the sun,' it said.\n'Sixty years,' she whispered, 'and I am not dead.'\nLove, like BE, is simple and small —\njust three forms, and they cover it all.",
+      "text_pt": "Dona Lúcia, sessenta e oito, gentil,\nleu uma carta que guardou, num canto sutil.\n'Meu amor, você É o sol,' dizia a página assim.\n'Sessenta anos,' sussurrou, 'e ainda estou aqui.'\nO amor, como o BE, é simples e leve —\ntrês formas apenas, e tudo ele descreve."
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "lucia",
+      "exercise": {
+        "id": "tobe-s04",
+        "type": "fill_blank",
+        "question": "Complete: 'My love, you ___ the sun.' (Dona Lúcia's letter)",
+        "correct": "are",
+        "explanation": "YOU always takes ARE — whether talking to one person or many.",
+        "hint_pt_br": "'You' sempre pede 'are', não importa se é singular ou plural."
+      }
+    }
+  ]
+}

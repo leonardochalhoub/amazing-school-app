@@ -1,0 +1,139 @@
+{
+  "slug": "rafas-menu",
+  "title": "Rafa's Colorful Menu",
+  "description": "Rafa paints the menu of Tropical Bites in every color. Learn colors and the English adjective rule: the adjective goes BEFORE the noun.",
+  "category": "narrative",
+  "level": "A1",
+  "cefr_level": "a1.1",
+  "xp_reward": 35,
+  "estimated_minutes": 12,
+  "summary_pt_br": "O Rafa pinta o cardápio do Tropical Bites em todas as cores. Aprenda as cores e a regra do adjetivo antes do substantivo ('red car', não 'car red').",
+  "scenes": [
+    {
+      "kind": "chapter_title",
+      "chapter": "Chapter 6 — Tropical Bites",
+      "subtitle_en": "Rafa's food truck menu",
+      "subtitle_pt": "O cardápio do food truck do Rafa"
+    },
+    {
+      "kind": "narrative",
+      "character_id": "rafa",
+      "text_en": "Rafa wiped the board. Rafa picked up a pen.\n'Colorful menu,' he said. 'Let's start, and then…\nYELLOW mango juice, RED salsa hot.\nGREEN lime tacos — the best of the lot.\nWHITE rice and beans. BLACK coffee, too.\nBLUE skies above — but you don't EAT blue.'",
+      "text_pt": "O Rafa limpou o quadro. Pegou caneta na mão.\n'Cardápio colorido,' disse. 'Vamos começar, então…\nSuco AMARELO de manga. Salsa VERMELHA picante.\nTaco de limão VERDE — o sabor mais marcante.\nArroz BRANCO com feijão. Café PRETO, quase nu.\nCéu AZUL lá em cima — mas comer azul, não pô?'"
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "The starter six colors",
+      "items": [
+        { "term": "red", "pt": "vermelho", "example_en": "a red apple" },
+        { "term": "yellow", "pt": "amarelo", "example_en": "a yellow mango" },
+        { "term": "green", "pt": "verde", "example_en": "green limes" },
+        { "term": "blue", "pt": "azul", "example_en": "the blue sky" },
+        { "term": "white", "pt": "branco", "example_en": "white rice" },
+        { "term": "black", "pt": "preto", "example_en": "black coffee" }
+      ]
+    },
+    {
+      "kind": "grammar_note",
+      "title": "Adjective BEFORE the noun — always",
+      "body_en": "In English, description goes first, thing goes second. 'A red car', NEVER 'a car red'. And adjectives don't change for plurals: 'one red car' → 'two red cars' (the adjective stays the same).",
+      "body_pt": "Em inglês o adjetivo vem ANTES do substantivo. 'Red car' (carro vermelho) — nunca 'car red'. E adjetivos NÃO flexionam: 'red car' → 'red cars' (o adjetivo não vai para o plural).",
+      "examples": [
+        { "en": "A yellow mango, two yellow mangoes", "pt": "Uma manga amarela, duas mangas amarelas" },
+        { "en": "A green lime, ten green limes", "pt": "Um limão verde, dez limões verdes" }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "rafa",
+      "exercise": {
+        "id": "menu-s01",
+        "type": "multiple_choice",
+        "question": "Rafa writes 'salsa vermelha' on the English menu. Which is correct?",
+        "options": [
+          "a salsa red",
+          "a red salsa",
+          "a salsa of red",
+          "red a salsa"
+        ],
+        "correct": 1,
+        "explanation": "English puts the adjective BEFORE the noun: 'a red salsa'.",
+        "hint_pt_br": "Lembre: adjetivo antes do substantivo. 'Red salsa', não 'salsa red'."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "menu-s02",
+        "type": "matching",
+        "pairs": [
+          ["red", "vermelho"],
+          ["yellow", "amarelo"],
+          ["green", "verde"],
+          ["blue", "azul"],
+          ["white", "branco"],
+          ["black", "preto"]
+        ],
+        "explanation": "Six starter colors. Say them with a thing: 'red pepper', 'blue wave', 'white sand'.",
+        "hint_pt_br": "Sempre pratique COM um substantivo: 'red pepper' em vez de 'red' solto."
+      }
+    },
+    {
+      "kind": "vocab_intro",
+      "title": "Six adjectives — the survival kit",
+      "items": [
+        { "term": "big / small", "pt": "grande / pequeno" },
+        { "term": "new / old", "pt": "novo / velho" },
+        { "term": "good / bad", "pt": "bom / ruim" },
+        { "term": "hot / cold", "pt": "quente / frio" },
+        { "term": "hungry / full", "pt": "com fome / cheio" },
+        { "term": "cheap / expensive", "pt": "barato / caro" }
+      ]
+    },
+    {
+      "kind": "dialogue",
+      "location_en": "The food truck window",
+      "location_pt": "Na janela do food truck",
+      "turns": [
+        { "character_id": "bia", "en": "How much is a green lime taco?", "pt": "Quanto custa o taco de limão verde?" },
+        { "character_id": "rafa", "en": "Ten reais. A good, cheap, tasty taco.", "pt": "Dez reais. Um taco bom, barato e gostoso." },
+        { "character_id": "bia", "en": "Two, please. And one yellow juice.", "pt": "Dois, por favor. E um suco amarelo." }
+      ]
+    },
+    {
+      "kind": "exercise",
+      "framing_character_id": "rafa",
+      "exercise": {
+        "id": "menu-s03",
+        "type": "fill_blank",
+        "question": "I want TWO ___ tacos. (new → plural)",
+        "correct": "new",
+        "explanation": "The adjective NEVER pluralizes. 'Two new tacos' — not 'two news tacos'.",
+        "hint_pt_br": "Adjetivo em inglês NUNCA vira plural. Só o substantivo muda."
+      }
+    },
+    {
+      "kind": "exercise",
+      "exercise": {
+        "id": "menu-s04",
+        "type": "multiple_choice",
+        "question": "A BIG FRENCH car. Which order is natural in English?",
+        "options": [
+          "a French big car",
+          "a big French car",
+          "a car big French",
+          "French big a car"
+        ],
+        "correct": 1,
+        "explanation": "English order: size BEFORE origin/nationality. 'A big French car', not 'a French big car'.",
+        "hint_pt_br": "Ordem preferida em inglês: tamanho antes de nacionalidade. 'Big French car' soa nativo."
+      }
+    },
+    {
+      "kind": "narrative",
+      "character_id": "cosmo",
+      "text_en": "Cosmo barked twice. He stole a hot, small, tasty piece of bread.\nRafa shouted, 'COSMO! Bad dog!'\n(But Cosmo wagged his tail instead.)",
+      "text_pt": "Cosmo latiu duas vezes. Roubou um pedaço de pão quente, pequeno e saboroso.\nO Rafa gritou: 'COSMO! Cão malcriado!'\n(Mas o Cosmo abanou o rabo, animado.)"
+    }
+  ]
+}
