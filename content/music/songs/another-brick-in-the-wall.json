@@ -438,6 +438,39 @@
           "full": "cannot"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Pink Floyd one question about \"Another Brick in the Wall\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Pink Floyd sobre \"Another Brick in the Wall\", o que seria e por quê?",
+      "target_vocab": [
+        "don't",
+        "need",
+        "leave",
+        "kids"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Another Brick in the Wall\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Another Brick in the Wall\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "don't",
+        "need",
+        "leave",
+        "kids"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Another Brick in the Wall\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Another Brick in the Wall\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "don't",
+        "need",
+        "leave",
+        "kids"
+      ]
     }
   ]
 }

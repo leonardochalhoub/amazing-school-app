@@ -473,6 +473,28 @@
           "full": "does not"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Neil Young one question about \"Old Man\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Neil Young sobre \"Old Man\", o que seria e por quê?",
+      "target_vocab": [
+        "life",
+        "eyes",
+        "alone",
+        "lost"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Old Man\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Old Man\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "life",
+        "eyes",
+        "alone",
+        "lost"
+      ]
     }
   ]
 }

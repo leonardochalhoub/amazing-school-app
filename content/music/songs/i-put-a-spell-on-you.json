@@ -433,6 +433,39 @@
           "full": "I am"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Nina Simone one question about \"I Put a Spell on You\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Nina Simone sobre \"I Put a Spell on You\", o que seria e por quê?",
+      "target_vocab": [
+        "you're",
+        "mine",
+        "spell",
+        "better"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"I Put a Spell on You\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"I Put a Spell on You\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "you're",
+        "mine",
+        "spell",
+        "better"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"I Put a Spell on You\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"I Put a Spell on You\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "you're",
+        "mine",
+        "spell",
+        "better"
+      ]
     }
   ]
 }

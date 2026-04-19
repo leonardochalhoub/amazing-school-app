@@ -456,6 +456,28 @@
           "full": "that is"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"The Winner Takes It All\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"The Winner Takes It All\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "takes",
+        "winner",
+        "it's",
+        "someone"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"The Winner Takes It All\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"The Winner Takes It All\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "takes",
+        "winner",
+        "it's",
+        "someone"
+      ]
     }
   ]
 }

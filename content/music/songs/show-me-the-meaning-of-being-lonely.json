@@ -459,6 +459,28 @@
           "full": "you are"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Show Me the Meaning of Being Lonely\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Show Me the Meaning of Being Lonely\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "tell",
+        "heart",
+        "lonely",
+        "show"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Show Me the Meaning of Being Lonely\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Show Me the Meaning of Being Lonely\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "tell",
+        "heart",
+        "lonely",
+        "show"
+      ]
     }
   ]
 }

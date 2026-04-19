@@ -57,7 +57,7 @@ export default async function TeacherDashboard() {
     getTeacherOverview(),
     getAssignableLessons(),
     getUpcomingBirthdays(14),
-    listAllTeacherHistory(50),
+    listAllTeacherHistory(20),
   ]);
   const musics = listMusic();
 
@@ -110,8 +110,6 @@ export default async function TeacherDashboard() {
           classrooms={classroomOptions}
         />
       </div>
-
-      <ClassLogPanel entries={classLog} />
 
       {/* KPI STRIP — below hero */}
       <section
@@ -301,6 +299,9 @@ export default async function TeacherDashboard() {
           </ul>
         </section>
       ) : null}
+
+      {/* Class log — last thing on the page, capped at 20 newest rows */}
+      <ClassLogPanel entries={classLog} />
     </div>
   );
 }

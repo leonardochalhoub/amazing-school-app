@@ -436,6 +436,17 @@
           "full": "it is"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Foo Fighters one question about \"Times Like These\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Foo Fighters sobre \"Times Like These\", o que seria e por quê?",
+      "target_vocab": [
+        "it's",
+        "times",
+        "these",
+        "learn"
+      ]
     }
   ]
 }

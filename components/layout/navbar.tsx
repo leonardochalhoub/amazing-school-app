@@ -80,6 +80,7 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
   ];
 
   const teacherNav: { href: string; label: string }[] = [
+    { href: "/teacher", label: labels.dashboard },
     { href: "/teacher/lessons", label: labels.lessons },
     { href: "/teacher/music", label: labels.music },
     { href: "/speaking-lab", label: labels.speakingLab },

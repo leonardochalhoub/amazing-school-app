@@ -480,6 +480,17 @@
           "full": "do not"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Sign of the Times\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Sign of the Times\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "stop",
+        "crying",
+        "learn",
+        "we've"
+      ]
     }
   ]
 }

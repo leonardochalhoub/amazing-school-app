@@ -458,6 +458,28 @@
           "full": "want to"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Hero\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Hero\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "hero",
+        "breath",
+        "tonight",
+        "kiss"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Hero\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Hero\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "hero",
+        "breath",
+        "tonight",
+        "kiss"
+      ]
     }
   ]
 }

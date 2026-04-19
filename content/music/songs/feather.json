@@ -1,0 +1,474 @@
+{
+  "slug": "feather",
+  "title": "Feather",
+  "artist": "Sabrina Carpenter",
+  "year": 2023,
+  "album": "emails i can't send",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 186,
+  "youtube_id": "kLbn61Z4LDI",
+  "full_lyrics_url": "https://www.letras.mus.br/sabrina-carpenter/feather/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Feather by Sabrina Carpenter (2023) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "feather",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "feel",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "lighter",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "done",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "mind",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "(Do-do-do, do-do-do, do-do-do, do-do-do)",
+          "(Do-do, do-do-do, do-do-do, do-do-do)",
+          "Oh, not another take",
+          "Oh, it's like that, I'm your dream come true"
+        ],
+        "start_seconds": 0,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "You want me? I'm done",
+          "You miss me? No, duh",
+          "Where I'm at, I'm up where I'm at",
+          "You want me? I'm done (I'm done)"
+        ],
+        "start_seconds": 146,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "(Do-do-do,",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "do-do-do",
+      "excerpt_after": "do-do-do, do-do-do)",
+      "youtube_start": 0,
+      "youtube_end": 14
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh, it's like that, I'm your",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dream",
+      "excerpt_after": "come true",
+      "youtube_start": 7,
+      "youtube_end": 21
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'm",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "saying",
+      "excerpt_after": "no, no, no, no more",
+      "youtube_start": 27,
+      "youtube_end": 41
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You're a",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "waste",
+      "excerpt_after": "of time, ahh",
+      "youtube_start": 48,
+      "youtube_end": 62
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You fit",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "every",
+      "excerpt_after": "stereotype, send a pic",
+      "youtube_start": 58,
+      "youtube_end": 72
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Floatin' through the",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "memories",
+      "excerpt_after": "like whatever",
+      "youtube_start": 116,
+      "youtube_end": 130
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "When it's on a platter for you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm saying, no, no, no, no more",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I finally cut you off",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You fit every stereotype, send a pic",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm so sorry for your loss",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "(Do-do-do,",
+      "excerpt_after": "do-do-do, do-do-do)",
+      "options": [
+        "do-do-do",
+        "feather",
+        "mixed",
+        "platter"
+      ],
+      "answer_index": 0,
+      "youtube_start": 0,
+      "youtube_end": 12
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "More than two",
+      "excerpt_after": "in advance, hmm",
+      "options": [
+        "carin",
+        "dream",
+        "good",
+        "hours"
+      ],
+      "answer_index": 3,
+      "youtube_start": 18,
+      "youtube_end": 30
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Floatin'",
+      "excerpt_after": "the memories like whatever",
+      "options": [
+        "good",
+        "memories",
+        "signals",
+        "through"
+      ],
+      "answer_index": 3,
+      "youtube_start": 46,
+      "youtube_end": 58
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I got you",
+      "excerpt_after": "excited to never talk, I",
+      "options": [
+        "blocked",
+        "do-do",
+        "life",
+        "through"
+      ],
+      "answer_index": 0,
+      "youtube_start": 101,
+      "youtube_end": 113
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You fit every",
+      "excerpt_after": "send a pic",
+      "options": [
+        "signals",
+        "stereotype",
+        "through",
+        "tonight"
+      ],
+      "answer_index": 1,
+      "youtube_start": 128,
+      "youtube_end": 140
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "do-do-do,",
+        "Do-do-do,",
+        "do-do-do,",
+        "do-do-do"
+      ],
+      "answer": [
+        "Do-do-do,",
+        "do-do-do,",
+        "do-do-do,",
+        "do-do-do"
+      ],
+      "youtube_start": 0
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "platter",
+        "for",
+        "on",
+        "you",
+        "it's",
+        "When",
+        "a"
+      ],
+      "answer": [
+        "When",
+        "it's",
+        "on",
+        "a",
+        "platter",
+        "for",
+        "you"
+      ],
+      "youtube_start": 10
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "got",
+        "I",
+        "blocked"
+      ],
+      "answer": [
+        "I",
+        "got",
+        "you",
+        "blocked"
+      ],
+      "youtube_start": 31
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "ahh",
+        "a",
+        "waste",
+        "of",
+        "time,",
+        "You're"
+      ],
+      "answer": [
+        "You're",
+        "a",
+        "waste",
+        "of",
+        "time,",
+        "ahh"
+      ],
+      "youtube_start": 48
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "want",
+        "done",
+        "You",
+        "me?",
+        "I'm"
+      ],
+      "answer": [
+        "You",
+        "want",
+        "me?",
+        "I'm",
+        "done"
+      ],
+      "youtube_start": 146
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"feather\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"feather\" na música inteira?",
+      "word": "feather",
+      "answer": 18
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"feel\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"feel\" na música inteira?",
+      "word": "feel",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "(Do-do, do-do-do, do-do-do, do-do-do)",
+          "order": 0
+        },
+        {
+          "text": "I'm saying, no, no, no, no more",
+          "order": 1
+        },
+        {
+          "text": "You want me? I'm done",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Feather\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Feather\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "feather",
+        "feel",
+        "lighter",
+        "done"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Feather\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Feather\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "feather",
+        "feel",
+        "lighter",
+        "done"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Feather\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Feather\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "feather",
+        "feel",
+        "lighter",
+        "done"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "feather",
+        "feel",
+        "lighter",
+        "done"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Feather\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Feather\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "feather",
+        "feel",
+        "lighter",
+        "done"
+      ]
+    }
+  ]
+}

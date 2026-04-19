@@ -457,6 +457,28 @@
           "full": "it is"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"The Scientist\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"The Scientist\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "tell",
+        "start",
+        "nobody",
+        "easy"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "tell",
+        "start",
+        "nobody",
+        "easy"
+      ]
     }
   ]
 }

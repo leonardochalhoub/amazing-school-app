@@ -1,0 +1,504 @@
+{
+  "slug": "houdini",
+  "title": "Houdini",
+  "artist": "Eminem",
+  "year": 2024,
+  "album": "Houdini",
+  "genre": [
+    "hip-hop"
+  ],
+  "cefr_level": "b2.2",
+  "difficulty": "hard",
+  "tempo": "fast",
+  "duration_seconds": 227,
+  "youtube_id": "22tVWwmTie8",
+  "full_lyrics_url": "https://www.letras.mus.br/eminem/houdini/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Houdini by Eminem (2024) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "guess",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "who's",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "fuck",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "shit",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "abra",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Guess who's back? Guess who's back?",
+          "Guess who's back? Guess who's back?",
+          "Guess who's back? Guess who's back?",
+          "Guess who's back?"
+        ],
+        "start_seconds": 14,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Abra-abracadabra (and for my last trick)",
+          "I'm 'bout to reach in my bag, bruh (like)",
+          "Abra-abracadabra (and for my last trick, poof)",
+          "Just like that and I'm back, bro"
+        ],
+        "start_seconds": 59,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Uh, I was",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "listening",
+      "excerpt_after": "to the album",
+      "youtube_start": 1,
+      "youtube_end": 15
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Lyrical",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "technician",
+      "excerpt_after": "(yeah), an electrician (yeah)",
+      "youtube_start": 40,
+      "youtube_end": 54
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ate some",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "codeine",
+      "excerpt_after": "as a way of coping (mm)",
+      "youtube_start": 77,
+      "youtube_end": 91
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But it",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "feels",
+      "excerpt_after": "like I'm targeted",
+      "youtube_start": 100,
+      "youtube_end": 114
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And that's why",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "these",
+      "excerpt_after": "(what?)",
+      "youtube_start": 153,
+      "youtube_end": 167
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That even",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "myself",
+      "excerpt_after": "I'm a danger to? (Yeah)",
+      "youtube_start": 174,
+      "youtube_end": 188
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Uh, I was listening to the album",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Stallion if she would collab with me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Plus I have zero doubts",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But it feels like I'm targeted",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I've been runnin' at full speed",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Uh, I was",
+      "excerpt_after": "to the album",
+      "options": [
+        "listening",
+        "lyrical",
+        "scouts",
+        "technician"
+      ],
+      "answer_index": 0,
+      "youtube_start": 1,
+      "youtube_end": 13
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It would be",
+      "excerpt_after": "to break a feve' (yeah)",
+      "options": [
+        "aspirin",
+        "bleh",
+        "brung",
+        "vics"
+      ],
+      "answer_index": 0,
+      "youtube_start": 50,
+      "youtube_end": 62
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Plus I have",
+      "excerpt_after": "doubts",
+      "options": [
+        "brung",
+        "jerk",
+        "paul",
+        "zero"
+      ],
+      "answer_index": 3,
+      "youtube_start": 89,
+      "youtube_end": 101
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "up to that mic, cock it then",
+      "options": [
+        "friend",
+        "shirt",
+        "step",
+        "yeah"
+      ],
+      "answer_index": 2,
+      "youtube_start": 116,
+      "youtube_end": 128
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That even",
+      "excerpt_after": "I'm a danger to? (Yeah)",
+      "options": [
+        "album",
+        "myself",
+        "shadys",
+        "well"
+      ],
+      "answer_index": 1,
+      "youtube_start": 174,
+      "youtube_end": 186
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Em,",
+        "Paul",
+        "it's",
+        "Hey,"
+      ],
+      "answer": [
+        "Hey,",
+        "Em,",
+        "it's",
+        "Paul"
+      ],
+      "youtube_start": 0
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "brung",
+        "stork",
+        "what?",
+        "look",
+        "Well,",
+        "the",
+        "what"
+      ],
+      "answer": [
+        "Well,",
+        "look",
+        "what",
+        "the",
+        "stork",
+        "brung",
+        "what?"
+      ],
+      "youtube_start": 28
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "face",
+        "emoji",
+        "me",
+        "smiley",
+        "woo",
+        "Turned",
+        "into"
+      ],
+      "answer": [
+        "Turned",
+        "me",
+        "into",
+        "smiley",
+        "face",
+        "emoji",
+        "woo"
+      ],
+      "youtube_start": 81
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "runnin'",
+        "at",
+        "been",
+        "speed",
+        "full",
+        "I've"
+      ],
+      "answer": [
+        "I've",
+        "been",
+        "runnin'",
+        "at",
+        "full",
+        "speed"
+      ],
+      "youtube_start": 108
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "explain",
+        "you",
+        "to",
+        "How",
+        "what?",
+        "can",
+        "I"
+      ],
+      "answer": [
+        "How",
+        "can",
+        "I",
+        "explain",
+        "to",
+        "you",
+        "what?"
+      ],
+      "youtube_start": 172
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"guess\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"guess\" na música inteira?",
+      "word": "guess",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"who's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"who's\" na música inteira?",
+      "word": "who's",
+      "answer": 8
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Hey, Em, it's Paul",
+          "order": 0
+        },
+        {
+          "text": "Turned me into smiley face emoji (woo)",
+          "order": 1
+        },
+        {
+          "text": "In my Air Max 90s",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Uh, I was listening to the album",
+          "order": 0
+        },
+        {
+          "text": "Look what I pocketed",
+          "order": 1
+        },
+        {
+          "text": "How can I explain to you (what?)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Houdini\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Houdini\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "guess",
+        "who's",
+        "fuck",
+        "shit"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Eminem one question about \"Houdini\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Eminem sobre \"Houdini\", o que seria e por quê?",
+      "target_vocab": [
+        "guess",
+        "who's",
+        "fuck",
+        "shit"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Houdini\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Houdini\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "guess",
+        "who's",
+        "fuck",
+        "shit"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "it's",
+          "full": "it is"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "who's",
+          "full": "who is"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Houdini\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Houdini\", o que aconteceria?",
+      "target_vocab": [
+        "guess",
+        "who's",
+        "fuck",
+        "shit"
+      ]
+    }
+  ]
+}

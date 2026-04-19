@@ -444,6 +444,28 @@
           "full": "do not"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Killing Me Softly\" was released in 1996. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Killing Me Softly\" foi lançada em 1996. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "softly",
+        "song",
+        "killing",
+        "life"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Lauryn Hill one question about \"Killing Me Softly\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Lauryn Hill sobre \"Killing Me Softly\", o que seria e por quê?",
+      "target_vocab": [
+        "softly",
+        "song",
+        "killing",
+        "life"
+      ]
     }
   ]
 }

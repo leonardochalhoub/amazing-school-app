@@ -466,6 +466,28 @@
           "full": "I am"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"I'm So Excited\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"I'm So Excited\", o que aconteceria?",
+      "target_vocab": [
+        "know",
+        "want",
+        "can't",
+        "excited"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"I'm So Excited\" was released in 1982. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"I'm So Excited\" foi lançada em 1982. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "know",
+        "want",
+        "can't",
+        "excited"
+      ]
     }
   ]
 }

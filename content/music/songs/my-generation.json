@@ -407,6 +407,61 @@
           "full": "I am"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"My Generation\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"My Generation\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "generation",
+        "talkin'",
+        "bout",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"My Generation\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"My Generation\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "generation",
+        "talkin'",
+        "bout",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"My Generation\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"My Generation\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "generation",
+        "talkin'",
+        "bout",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "generation",
+        "talkin'",
+        "bout",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"My Generation\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"My Generation\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "generation",
+        "talkin'",
+        "bout",
+        "baby"
+      ]
     }
   ]
 }

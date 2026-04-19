@@ -28,6 +28,10 @@ import {
   ActivityChart,
   type ActivityBucket,
 } from "@/components/student/activity-chart";
+import { MyClassesPanel } from "@/components/student/my-classes-panel";
+import { listOwnHistory } from "@/lib/actions/student-history";
+import { ListeningFeedbackPanel } from "@/components/student/listening-feedback-panel";
+import { listStudentListeningResponses } from "@/lib/actions/listening-responses";
 
 interface ResolvedAssignment {
   assignmentId: string;
@@ -122,7 +126,6 @@ export default async function StudentHome() {
     .maybeSingle();
 
   let classroomId: string | null = null;
-  let classroomName: string | null = null;
   if (membership) {
     const c = (membership as {
       classroom_id: string;
@@ -130,7 +133,6 @@ export default async function StudentHome() {
     }).classrooms;
     const flat = Array.isArray(c) ? c[0] : c;
     classroomId = flat?.id ?? (membership as { classroom_id: string }).classroom_id;
-    classroomName = flat?.name ?? null;
   }
   if (!classroomId && rosterSelf) {
     const { data: rosterRow } = await admin
@@ -139,15 +141,7 @@ export default async function StudentHome() {
       .eq("id", (rosterSelf as { id: string }).id)
       .maybeSingle();
     const cid = (rosterRow as { classroom_id: string | null } | null)?.classroom_id ?? null;
-    if (cid) {
-      const { data: cls } = await admin
-        .from("classrooms")
-        .select("id, name")
-        .eq("id", cid)
-        .maybeSingle();
-      classroomId = cid;
-      classroomName = (cls as { name: string } | null)?.name ?? null;
-    }
+    if (cid) classroomId = cid;
   }
 
   // Avatar resolution order: user's own upload → roster avatar the teacher
@@ -231,21 +225,31 @@ export default async function StudentHome() {
   const firstName =
     profile?.full_name?.split(" ")[0] ?? user.email?.split("@")[0] ?? "there";
 
-  // Activity chart — 60 monthly buckets ending at the CURRENT month (so a
-  // completion today falls into the last bucket, not past the edge).
-  const now = new Date();
-  const rangeStart = new Date(now.getFullYear(), now.getMonth() - 59, 1);
+  // Activity chart — 60 daily buckets ending today in Brazil local time
+  // (America/Sao_Paulo, UTC-3). Vercel runs UTC, dev may run anywhere —
+  // pin the display TZ so a completion at 22:00 BRT doesn't slide to the
+  // next day's UTC bucket.
+  const DAYS = 60;
+  const BRT_OFFSET_MS = -3 * 60 * 60 * 1000;
+  const msPerDay = 24 * 60 * 60 * 1000;
+  // Convert real-time UTC to a "BRT-naive" timestamp, then truncate to the
+  // BRT calendar day. rangeStart is a UTC Date whose toISOString().slice(0,10)
+  // reads as the BRT calendar date.
+  const brtToday = new Date(
+    Math.floor((Date.now() + BRT_OFFSET_MS) / msPerDay) * msPerDay
+  );
+  const rangeStart = new Date(brtToday.getTime() - (DAYS - 1) * msPerDay);
 
   const { data: completions } = await admin
     .from("lesson_progress")
     .select("lesson_slug, completed_at")
     .eq("student_id", user.id)
     .not("completed_at", "is", null)
-    .gte("completed_at", rangeStart.toISOString());
+    .gte("completed_at", new Date(rangeStart.getTime() - BRT_OFFSET_MS).toISOString());
 
   const activityBuckets: ActivityBucket[] = [];
-  for (let i = 0; i < 60; i++) {
-    const d = new Date(rangeStart.getFullYear(), rangeStart.getMonth() + i, 1);
+  for (let i = 0; i < DAYS; i++) {
+    const d = new Date(rangeStart.getTime() + i * msPerDay);
     activityBuckets.push({
       start: d.toISOString().slice(0, 10),
       lessons: 0,
@@ -254,14 +258,17 @@ export default async function StudentHome() {
   }
   for (const c of completions ?? []) {
     const t = new Date(c.completed_at as string);
-    const idx =
-      (t.getFullYear() - rangeStart.getFullYear()) * 12 +
-      (t.getMonth() - rangeStart.getMonth());
+    const tDay =
+      Math.floor((t.getTime() + BRT_OFFSET_MS) / msPerDay) * msPerDay;
+    const idx = Math.floor((tDay - rangeStart.getTime()) / msPerDay);
     if (idx < 0 || idx >= activityBuckets.length) continue;
     const isMusic = (c.lesson_slug as string).startsWith("music:");
     if (isMusic) activityBuckets[idx].music++;
     else activityBuckets[idx].lessons++;
   }
+
+  const ownHistory = await listOwnHistory(5);
+  const listeningResponses = await listStudentListeningResponses(10);
 
   return (
     <div className="space-y-8 pb-16">
@@ -306,11 +313,8 @@ export default async function StudentHome() {
 
           <div className="flex-1 space-y-3">
             <div>
-              <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-muted-foreground">
-                {classroomName ?? "Your space"}
-              </p>
               <h1
-                className="mt-1 font-[family-name:var(--font-display)] text-3xl italic leading-tight tracking-tight md:text-4xl"
+                className="font-[family-name:var(--font-display)] text-3xl italic leading-tight tracking-tight md:text-4xl"
                 style={{ letterSpacing: "-0.01em" }}
               >
                 <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text text-transparent dark:from-indigo-400 dark:via-violet-400 dark:to-pink-400">
@@ -357,6 +361,9 @@ export default async function StudentHome() {
           </div>
         </div>
       </section>
+
+      {/* MY CLASSES =============================================== */}
+      <MyClassesPanel entries={ownHistory} />
 
       {/* TODAY CARD =============================================== */}
       {today ? (
@@ -444,10 +451,13 @@ export default async function StudentHome() {
         )}
       </section>
 
+      {/* LISTENING FEEDBACK ====================================== */}
+      <ListeningFeedbackPanel entries={listeningResponses} />
+
       {/* ACTIVITY CHART =========================================== */}
       <section className="space-y-3">
         <h2 className="text-lg font-semibold tracking-tight">Your activity</h2>
-        <ActivityChart buckets={activityBuckets} granularity="month" />
+        <ActivityChart buckets={activityBuckets} granularity="day" />
       </section>
     </div>
   );

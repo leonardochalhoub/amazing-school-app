@@ -464,6 +464,28 @@
           "full": "going to"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Beyoncé one question about \"Halo\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Beyoncé sobre \"Halo\", o que seria e por quê?",
+      "target_vocab": [
+        "halo",
+        "feel",
+        "baby",
+        "you're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Halo\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Halo\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "halo",
+        "feel",
+        "baby",
+        "you're"
+      ]
     }
   ]
 }

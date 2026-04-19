@@ -451,6 +451,28 @@
           "full": "we have"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Unwritten\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Unwritten\", o que aconteceria?",
+      "target_vocab": [
+        "else",
+        "words",
+        "feel",
+        "open"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Unwritten\" was released in 2004. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Unwritten\" foi lançada em 2004. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "else",
+        "words",
+        "feel",
+        "open"
+      ]
     }
   ]
 }

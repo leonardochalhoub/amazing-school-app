@@ -447,6 +447,28 @@
           "full": "we will"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"All I Want\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"All I Want\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "feel",
+        "want",
+        "close",
+        "speaks"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"All I Want\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"All I Want\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "feel",
+        "want",
+        "close",
+        "speaks"
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17",
+  "generated_at": "2026-04-19",
   "catalog_size_target": 30,
   "songs": [
     {
@@ -62,18 +62,6 @@
         "disco"
       ],
       "duration_seconds": 222
-    },
-    {
-      "slug": "around-the-world",
-      "title": "Around the World",
-      "artist": "Daft Punk",
-      "year": 1997,
-      "cefr_level": "a1.1",
-      "difficulty": "easy",
-      "genre": [
-        "dance"
-      ],
-      "duration_seconds": 430
     },
     {
       "slug": "one-more-time",
@@ -272,6 +260,18 @@
       "duration_seconds": 376
     },
     {
+      "slug": "all-you-need-is-love-the-beatles",
+      "title": "All You Need Is Love",
+      "artist": "The Beatles",
+      "year": 1967,
+      "cefr_level": "a1.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 228
+    },
+    {
       "slug": "all-you-need-is-love",
       "title": "All You Need Is Love",
       "artist": "The Beatles",
@@ -282,6 +282,19 @@
         "rock"
       ],
       "duration_seconds": 228
+    },
+    {
+      "slug": "here-comes-the-sun-the-beatles",
+      "title": "Here Comes the Sun",
+      "artist": "The Beatles",
+      "year": 1969,
+      "cefr_level": "a1.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock",
+        "classic-rock"
+      ],
+      "duration_seconds": 186
     },
     {
       "slug": "here-comes-the-sun",
@@ -297,6 +310,18 @@
       "duration_seconds": 185
     },
     {
+      "slug": "twist-and-shout-the-beatles",
+      "title": "Twist and Shout",
+      "artist": "The Beatles",
+      "year": 1963,
+      "cefr_level": "a1.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 152
+    },
+    {
       "slug": "twist-and-shout",
       "title": "Twist and Shout",
       "artist": "The Beatles",
@@ -307,6 +332,18 @@
         "rock"
       ],
       "duration_seconds": 152
+    },
+    {
+      "slug": "yellow-submarine-the-beatles",
+      "title": "Yellow Submarine",
+      "artist": "The Beatles",
+      "year": 1966,
+      "cefr_level": "a1.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 159
     },
     {
       "slug": "yellow-submarine",
@@ -1284,6 +1321,18 @@
       "duration_seconds": 243
     },
     {
+      "slug": "rock-and-roll-led-zeppelin",
+      "title": "Rock and Roll",
+      "artist": "Led Zeppelin",
+      "year": 1971,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 220
+    },
+    {
       "slug": "rock-and-roll",
       "title": "Rock and Roll",
       "artist": "Led Zeppelin",
@@ -1756,6 +1805,18 @@
       "duration_seconds": 148
     },
     {
+      "slug": "help-the-beatles",
+      "title": "Help!",
+      "artist": "The Beatles",
+      "year": 1965,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 139
+    },
+    {
       "slug": "help",
       "title": "Help!",
       "artist": "The Beatles",
@@ -1766,6 +1827,19 @@
         "rock"
       ],
       "duration_seconds": 139
+    },
+    {
+      "slug": "hey-jude-the-beatles",
+      "title": "Hey Jude",
+      "artist": "The Beatles",
+      "year": 1968,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock",
+        "classic-rock"
+      ],
+      "duration_seconds": 431
     },
     {
       "slug": "hey-jude",
@@ -1781,6 +1855,19 @@
       "duration_seconds": 431
     },
     {
+      "slug": "let-it-be-the-beatles",
+      "title": "Let It Be",
+      "artist": "The Beatles",
+      "year": 1970,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock",
+        "classic-rock"
+      ],
+      "duration_seconds": 232
+    },
+    {
       "slug": "let-it-be",
       "title": "Let It Be",
       "artist": "The Beatles",
@@ -1794,6 +1881,18 @@
       "duration_seconds": 243
     },
     {
+      "slug": "something-the-beatles",
+      "title": "Something",
+      "artist": "The Beatles",
+      "year": 1969,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 182
+    },
+    {
       "slug": "something",
       "title": "Something",
       "artist": "The Beatles",
@@ -1804,6 +1903,19 @@
         "rock"
       ],
       "duration_seconds": 182
+    },
+    {
+      "slug": "yesterday",
+      "title": "Yesterday",
+      "artist": "The Beatles",
+      "year": 1965,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock",
+        "classic-rock"
+      ],
+      "duration_seconds": 126
     },
     {
       "slug": "friday-im-in-love",
@@ -1951,6 +2063,18 @@
       "duration_seconds": 254
     },
     {
+      "slug": "angie-the-rolling-stones",
+      "title": "Angie",
+      "artist": "The Rolling Stones",
+      "year": 1973,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 272
+    },
+    {
       "slug": "angie",
       "title": "Angie",
       "artist": "The Rolling Stones",
@@ -1961,6 +2085,18 @@
         "rock"
       ],
       "duration_seconds": 272
+    },
+    {
+      "slug": "start-me-up-the-rolling-stones",
+      "title": "Start Me Up",
+      "artist": "The Rolling Stones",
+      "year": 1981,
+      "cefr_level": "a1.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 214
     },
     {
       "slug": "start-me-up",
@@ -2410,18 +2546,6 @@
         "pop"
       ],
       "duration_seconds": 255
-    },
-    {
-      "slug": "levels",
-      "title": "Levels",
-      "artist": "Avicii",
-      "year": 2011,
-      "cefr_level": "a2.1",
-      "difficulty": "easy",
-      "genre": [
-        "pop"
-      ],
-      "duration_seconds": 200
     },
     {
       "slug": "the-nights",
@@ -4327,6 +4451,18 @@
       "duration_seconds": 216
     },
     {
+      "slug": "black-dog-led-zeppelin",
+      "title": "Black Dog",
+      "artist": "Led Zeppelin",
+      "year": 1971,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 294
+    },
+    {
       "slug": "black-dog",
       "title": "Black Dog",
       "artist": "Led Zeppelin",
@@ -4339,6 +4475,18 @@
       "duration_seconds": 294
     },
     {
+      "slug": "going-to-california-led-zeppelin",
+      "title": "Going to California",
+      "artist": "Led Zeppelin",
+      "year": 1971,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 211
+    },
+    {
       "slug": "going-to-california",
       "title": "Going to California",
       "artist": "Led Zeppelin",
@@ -4349,6 +4497,18 @@
         "rock"
       ],
       "duration_seconds": 211
+    },
+    {
+      "slug": "whole-lotta-love-led-zeppelin",
+      "title": "Whole Lotta Love",
+      "artist": "Led Zeppelin",
+      "year": 1969,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 369
     },
     {
       "slug": "whole-lotta-love",
@@ -5845,6 +6005,30 @@
       "duration_seconds": 113
     },
     {
+      "slug": "eleanor-rigby",
+      "title": "Eleanor Rigby",
+      "artist": "The Beatles",
+      "year": 1966,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 128
+    },
+    {
+      "slug": "in-my-life-the-beatles",
+      "title": "In My Life",
+      "artist": "The Beatles",
+      "year": 1965,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 146
+    },
+    {
       "slug": "in-my-life",
       "title": "In My Life",
       "artist": "The Beatles",
@@ -5855,6 +6039,18 @@
         "rock"
       ],
       "duration_seconds": 146
+    },
+    {
+      "slug": "while-my-guitar-gently-weeps-the-beatles",
+      "title": "While My Guitar Gently Weeps",
+      "artist": "The Beatles",
+      "year": 1968,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 227
     },
     {
       "slug": "while-my-guitar-gently-weeps",
@@ -5965,6 +6161,19 @@
       "duration_seconds": 195
     },
     {
+      "slug": "i-cant-get-no-satisfaction-the-rolling-stones",
+      "title": "(I Can't Get No) Satisfaction",
+      "artist": "The Rolling Stones",
+      "year": 1965,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock",
+        "classic-rock"
+      ],
+      "duration_seconds": 369
+    },
+    {
       "slug": "i-cant-get-no-satisfaction",
       "title": "(I Can't Get No) Satisfaction",
       "artist": "The Rolling Stones",
@@ -5976,6 +6185,18 @@
         "classic-rock"
       ],
       "duration_seconds": 369
+    },
+    {
+      "slug": "paint-it-black-the-rolling-stones",
+      "title": "Paint It, Black",
+      "artist": "The Rolling Stones",
+      "year": 1966,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 204
     },
     {
       "slug": "paint-it-black",
@@ -5990,6 +6211,18 @@
       "duration_seconds": 204
     },
     {
+      "slug": "wild-horses-the-rolling-stones",
+      "title": "Wild Horses",
+      "artist": "The Rolling Stones",
+      "year": 1971,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 341
+    },
+    {
       "slug": "wild-horses",
       "title": "Wild Horses",
       "artist": "The Rolling Stones",
@@ -6000,6 +6233,18 @@
         "rock"
       ],
       "duration_seconds": 341
+    },
+    {
+      "slug": "you-cant-always-get-what-you-want-the-rolling-stones",
+      "title": "You Can't Always Get What You Want",
+      "artist": "The Rolling Stones",
+      "year": 1969,
+      "cefr_level": "a2.1",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 449
     },
     {
       "slug": "you-cant-always-get-what-you-want",
@@ -6558,6 +6803,19 @@
       "duration_seconds": 224
     },
     {
+      "slug": "texas-hold-em",
+      "title": "Texas Hold 'Em",
+      "artist": "Beyoncé",
+      "year": 2024,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "country",
+        "pop"
+      ],
+      "duration_seconds": 236
+    },
+    {
       "slug": "lovely",
       "title": "Lovely",
       "artist": "Billie Eilish",
@@ -6750,6 +7008,18 @@
         "rock"
       ],
       "duration_seconds": 186
+    },
+    {
+      "slug": "rockin-around-the-christmas-tree",
+      "title": "Rockin' Around the Christmas Tree",
+      "artist": "Brenda Lee",
+      "year": 1958,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "holiday"
+      ],
+      "duration_seconds": 122
     },
     {
       "slug": "born-in-the-usa",
@@ -7669,6 +7939,78 @@
       "duration_seconds": 206
     },
     {
+      "slug": "baby",
+      "title": "Baby",
+      "artist": "Justin Bieber",
+      "year": 2010,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 219
+    },
+    {
+      "slug": "boyfriend",
+      "title": "Boyfriend",
+      "artist": "Justin Bieber",
+      "year": 2012,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 171
+    },
+    {
+      "slug": "sorry",
+      "title": "Sorry",
+      "artist": "Justin Bieber",
+      "year": 2015,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 201
+    },
+    {
+      "slug": "stay",
+      "title": "Stay",
+      "artist": "Justin Bieber",
+      "year": 2021,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 142
+    },
+    {
+      "slug": "what-do-you-mean",
+      "title": "What Do You Mean?",
+      "artist": "Justin Bieber",
+      "year": 2015,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 206
+    },
+    {
+      "slug": "yummy",
+      "title": "Yummy",
+      "artist": "Justin Bieber",
+      "year": 2020,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 209
+    },
+    {
       "slug": "mirrors",
       "title": "Mirrors",
       "artist": "Justin Timberlake",
@@ -7775,6 +8117,18 @@
         "r&b"
       ],
       "duration_seconds": 322
+    },
+    {
+      "slug": "immigrant-song-led-zeppelin",
+      "title": "Immigrant Song",
+      "artist": "Led Zeppelin",
+      "year": 1970,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 146
     },
     {
       "slug": "immigrant-song",
@@ -7993,6 +8347,19 @@
         "rock"
       ],
       "duration_seconds": 229
+    },
+    {
+      "slug": "piece-of-your-heart",
+      "title": "Piece of Your Heart",
+      "artist": "MEDUZA",
+      "year": 2019,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "edm",
+        "house"
+      ],
+      "duration_seconds": 153
     },
     {
       "slug": "enter-sandman",
@@ -8348,18 +8715,6 @@
       "duration_seconds": 271
     },
     {
-      "slug": "holes",
-      "title": "Holes",
-      "artist": "Passenger",
-      "year": 2013,
-      "cefr_level": "a2.2",
-      "difficulty": "easy",
-      "genre": [
-        "folk"
-      ],
-      "duration_seconds": 213
-    },
-    {
       "slug": "let-her-go",
       "title": "Let Her Go",
       "artist": "Passenger",
@@ -8575,6 +8930,30 @@
         "blues"
       ],
       "duration_seconds": 150
+    },
+    {
+      "slug": "apt",
+      "title": "APT.",
+      "artist": "ROSÉ",
+      "year": 2024,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 169
+    },
+    {
+      "slug": "espresso",
+      "title": "Espresso",
+      "artist": "Sabrina Carpenter",
+      "year": 2024,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 175
     },
     {
       "slug": "a-change-is-gonna-come",
@@ -8902,6 +9281,18 @@
       "duration_seconds": 274
     },
     {
+      "slug": "come-together-the-beatles",
+      "title": "Come Together",
+      "artist": "The Beatles",
+      "year": 1969,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 260
+    },
+    {
       "slug": "come-together",
       "title": "Come Together",
       "artist": "The Beatles",
@@ -9020,6 +9411,18 @@
         "rock"
       ],
       "duration_seconds": 291
+    },
+    {
+      "slug": "gimme-shelter-the-rolling-stones",
+      "title": "Gimme Shelter",
+      "artist": "The Rolling Stones",
+      "year": 1969,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 271
     },
     {
       "slug": "gimme-shelter",
@@ -9176,6 +9579,19 @@
         "rock"
       ],
       "duration_seconds": 209
+    },
+    {
+      "slug": "the-motto",
+      "title": "The Motto",
+      "artist": "Tiësto",
+      "year": 2021,
+      "cefr_level": "a2.2",
+      "difficulty": "easy",
+      "genre": [
+        "edm",
+        "pop"
+      ],
+      "duration_seconds": 165
     },
     {
       "slug": "no-scrubs",
@@ -9502,6 +9918,54 @@
       "duration_seconds": 174
     },
     {
+      "slug": "the-boy-is-mine",
+      "title": "the boy is mine",
+      "artist": "Ariana Grande",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 174
+    },
+    {
+      "slug": "beautiful-things",
+      "title": "Beautiful Things",
+      "artist": "Benson Boone",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop-rock"
+      ],
+      "duration_seconds": 180
+    },
+    {
+      "slug": "in-the-stars",
+      "title": "In the Stars",
+      "artist": "Benson Boone",
+      "year": 2022,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop-rock"
+      ],
+      "duration_seconds": 216
+    },
+    {
+      "slug": "mystical-magical",
+      "title": "Mystical Magical",
+      "artist": "Benson Boone",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop-rock"
+      ],
+      "duration_seconds": 165.72
+    },
+    {
       "slug": "if-i-were-a-boy",
       "title": "If I Were a Boy",
       "artist": "Beyoncé",
@@ -9512,6 +9976,18 @@
         "r&b"
       ],
       "duration_seconds": 249
+    },
+    {
+      "slug": "birds-of-a-feather",
+      "title": "Birds of a Feather",
+      "artist": "Billie Eilish",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 210
     },
     {
       "slug": "everything-i-wanted",
@@ -9622,6 +10098,18 @@
       "duration_seconds": 330
     },
     {
+      "slug": "hot-to-go",
+      "title": "HOT TO GO!",
+      "artist": "Chappell Roan",
+      "year": 2023,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 185
+    },
+    {
       "slug": "viva-la-vida",
       "title": "Viva la Vida",
       "artist": "Coldplay",
@@ -9672,6 +10160,18 @@
       "duration_seconds": 560
     },
     {
+      "slug": "austin",
+      "title": "Austin",
+      "artist": "Dasha",
+      "year": 2023,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "country"
+      ],
+      "duration_seconds": 172
+    },
+    {
       "slug": "life-on-mars",
       "title": "Life on Mars?",
       "artist": "David Bowie",
@@ -9718,6 +10218,30 @@
         "metal"
       ],
       "duration_seconds": 278
+    },
+    {
+      "slug": "illusion",
+      "title": "Illusion",
+      "artist": "Dua Lipa",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 188
+    },
+    {
+      "slug": "training-season",
+      "title": "Training Season",
+      "artist": "Dua Lipa",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 209
     },
     {
       "slug": "the-killing-moon",
@@ -9794,6 +10318,18 @@
       "duration_seconds": 223
     },
     {
+      "slug": "close-to-you",
+      "title": "Close To You",
+      "artist": "Gracie Abrams",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 225.973
+    },
+    {
       "slug": "sign-of-the-times",
       "title": "Sign of the Times",
       "artist": "Harry Styles",
@@ -9867,6 +10403,142 @@
       "duration_seconds": 263
     },
     {
+      "slug": "10000-hours",
+      "title": "10,000 Hours",
+      "artist": "Justin Bieber",
+      "year": 2019,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "country",
+        "pop"
+      ],
+      "duration_seconds": 168
+    },
+    {
+      "slug": "company",
+      "title": "Company",
+      "artist": "Justin Bieber",
+      "year": 2015,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 208
+    },
+    {
+      "slug": "despacito",
+      "title": "Despacito",
+      "artist": "Justin Bieber",
+      "year": 2017,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop",
+        "latin"
+      ],
+      "duration_seconds": 230.413333
+    },
+    {
+      "slug": "ghost",
+      "title": "Ghost",
+      "artist": "Justin Bieber",
+      "year": 2021,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 153
+    },
+    {
+      "slug": "hold-on",
+      "title": "Hold On",
+      "artist": "Justin Bieber",
+      "year": 2021,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 171
+    },
+    {
+      "slug": "i-dont-care",
+      "title": "I Don't Care",
+      "artist": "Justin Bieber",
+      "year": 2019,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 219
+    },
+    {
+      "slug": "lonely",
+      "title": "Lonely",
+      "artist": "Justin Bieber",
+      "year": 2020,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 155
+    },
+    {
+      "slug": "love-yourself",
+      "title": "Love Yourself",
+      "artist": "Justin Bieber",
+      "year": 2015,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 234
+    },
+    {
+      "slug": "never-say-never",
+      "title": "Never Say Never",
+      "artist": "Justin Bieber",
+      "year": 2010,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 228
+    },
+    {
+      "slug": "peaches",
+      "title": "Peaches",
+      "artist": "Justin Bieber",
+      "year": 2021,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop",
+        "rnb"
+      ],
+      "duration_seconds": 229
+    },
+    {
+      "slug": "where-are-now",
+      "title": "Where Are Ü Now",
+      "artist": "Justin Bieber",
+      "year": 2015,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop",
+        "edm"
+      ],
+      "duration_seconds": 243
+    },
+    {
       "slug": "running-up-that-hill",
       "title": "Running Up That Hill",
       "artist": "Kate Bush",
@@ -9890,6 +10562,18 @@
         "country"
       ],
       "duration_seconds": 211
+    },
+    {
+      "slug": "die-with-a-smile",
+      "title": "Die With A Smile",
+      "artist": "Lady Gaga",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 252
     },
     {
       "slug": "born-to-die",
@@ -9941,6 +10625,18 @@
       "duration_seconds": 263
     },
     {
+      "slug": "kashmir-led-zeppelin",
+      "title": "Kashmir",
+      "artist": "Led Zeppelin",
+      "year": 1975,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 528
+    },
+    {
       "slug": "kashmir",
       "title": "Kashmir",
       "artist": "Led Zeppelin",
@@ -9951,6 +10647,19 @@
         "rock"
       ],
       "duration_seconds": 528
+    },
+    {
+      "slug": "stairway-to-heaven",
+      "title": "Stairway to Heaven",
+      "artist": "Led Zeppelin",
+      "year": 1971,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "rock",
+        "hard-rock"
+      ],
+      "duration_seconds": 483
     },
     {
       "slug": "hallelujah",
@@ -10025,6 +10734,32 @@
       "duration_seconds": 331
     },
     {
+      "slug": "headrush",
+      "title": "Headrush",
+      "artist": "MEDUZA",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "edm",
+        "house"
+      ],
+      "duration_seconds": 363
+    },
+    {
+      "slug": "tell-it-to-my-heart",
+      "title": "Tell It to My Heart",
+      "artist": "MEDUZA",
+      "year": 2021,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "edm",
+        "pop"
+      ],
+      "duration_seconds": 166
+    },
+    {
       "slug": "master-of-puppets",
       "title": "Master of Puppets",
       "artist": "Metallica",
@@ -10049,6 +10784,18 @@
       "duration_seconds": 447
     },
     {
+      "slug": "lies-lies-lies",
+      "title": "Lies Lies Lies",
+      "artist": "Morgan Wallen",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "country"
+      ],
+      "duration_seconds": 198
+    },
+    {
       "slug": "every-day-is-like-sunday",
       "title": "Every Day Is Like Sunday",
       "artist": "Morrissey",
@@ -10059,6 +10806,30 @@
         "rock"
       ],
       "duration_seconds": 213
+    },
+    {
+      "slug": "nice-to-meet-you",
+      "title": "Nice To Meet You",
+      "artist": "Myles Smith",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 176
+    },
+    {
+      "slug": "stargazing",
+      "title": "Stargazing",
+      "artist": "Myles Smith",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 173
     },
     {
       "slug": "hurt-nine-inch-nails",
@@ -10194,6 +10965,32 @@
       "duration_seconds": 414
     },
     {
+      "slug": "i-had-some-help",
+      "title": "I Had Some Help",
+      "artist": "Post Malone",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "country",
+        "pop"
+      ],
+      "duration_seconds": 178
+    },
+    {
+      "slug": "pour-me-a-drink",
+      "title": "Pour Me a Drink",
+      "artist": "Post Malone",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "country",
+        "pop"
+      ],
+      "duration_seconds": 196
+    },
+    {
       "slug": "when-doves-cry",
       "title": "When Doves Cry",
       "artist": "Prince",
@@ -10267,6 +11064,30 @@
       "duration_seconds": 229
     },
     {
+      "slug": "feather",
+      "title": "Feather",
+      "artist": "Sabrina Carpenter",
+      "year": 2023,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 186
+    },
+    {
+      "slug": "please-please-please",
+      "title": "Please Please Please",
+      "artist": "Sabrina Carpenter",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 186
+    },
+    {
       "slug": "crazy-seal",
       "title": "Crazy",
       "artist": "Seal",
@@ -10289,6 +11110,30 @@
         "pop"
       ],
       "duration_seconds": 310
+    },
+    {
+      "slug": "a-bar-song-tipsy",
+      "title": "A Bar Song (Tipsy)",
+      "artist": "Shaboozey",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "country"
+      ],
+      "duration_seconds": 171
+    },
+    {
+      "slug": "good-news",
+      "title": "Good News",
+      "artist": "Shaboozey",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "country"
+      ],
+      "duration_seconds": 200
     },
     {
       "slug": "scarborough-fair",
@@ -10388,6 +11233,42 @@
       "duration_seconds": 219
     },
     {
+      "slug": "greedy",
+      "title": "greedy",
+      "artist": "Tate McRae",
+      "year": 2023,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 132
+    },
+    {
+      "slug": "its-ok-im-ok",
+      "title": "It's ok I'm ok",
+      "artist": "Tate McRae",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 157
+    },
+    {
+      "slug": "sports-car",
+      "title": "Sports Car",
+      "artist": "Tate McRae",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 166
+    },
+    {
       "slug": "all-too-well",
       "title": "All Too Well",
       "artist": "Taylor Swift",
@@ -10425,6 +11306,32 @@
       "duration_seconds": 240
     },
     {
+      "slug": "bad-dreams",
+      "title": "Bad Dreams",
+      "artist": "Teddy Swims",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "soul",
+        "pop"
+      ],
+      "duration_seconds": 185
+    },
+    {
+      "slug": "lose-control",
+      "title": "Lose Control",
+      "artist": "Teddy Swims",
+      "year": 2023,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "soul",
+        "pop"
+      ],
+      "duration_seconds": 211
+    },
+    {
       "slug": "hunger-strike",
       "title": "Hunger Strike",
       "artist": "Temple of the Dog",
@@ -10435,6 +11342,19 @@
         "rock"
       ],
       "duration_seconds": 246
+    },
+    {
+      "slug": "a-day-in-the-life-the-beatles",
+      "title": "A Day in the Life",
+      "artist": "The Beatles",
+      "year": 1967,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "rock",
+        "psychedelic"
+      ],
+      "duration_seconds": 335
     },
     {
       "slug": "a-day-in-the-life",
@@ -10448,6 +11368,19 @@
         "psychedelic"
       ],
       "duration_seconds": 335
+    },
+    {
+      "slug": "strawberry-fields-forever-the-beatles",
+      "title": "Strawberry Fields Forever",
+      "artist": "The Beatles",
+      "year": 1967,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "rock",
+        "psychedelic"
+      ],
+      "duration_seconds": 249
     },
     {
       "slug": "strawberry-fields-forever",
@@ -10473,6 +11406,18 @@
         "rock"
       ],
       "duration_seconds": 435
+    },
+    {
+      "slug": "sympathy-for-the-devil-the-rolling-stones",
+      "title": "Sympathy for the Devil",
+      "artist": "The Rolling Stones",
+      "year": 1968,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "rock"
+      ],
+      "duration_seconds": 378
     },
     {
       "slug": "sympathy-for-the-devil",
@@ -10547,6 +11492,58 @@
       "duration_seconds": 560
     },
     {
+      "slug": "1035",
+      "title": "10:35",
+      "artist": "Tiësto",
+      "year": 2022,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "edm",
+        "pop"
+      ],
+      "duration_seconds": 172
+    },
+    {
+      "slug": "lay-low",
+      "title": "Lay Low",
+      "artist": "Tiësto",
+      "year": 2023,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "edm",
+        "pop"
+      ],
+      "duration_seconds": 153
+    },
+    {
+      "slug": "thank-you-not-so-bad",
+      "title": "Thank You (Not So Bad)",
+      "artist": "Tiësto",
+      "year": 2024,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "edm",
+        "pop"
+      ],
+      "duration_seconds": 140
+    },
+    {
+      "slug": "the-business",
+      "title": "The Business",
+      "artist": "Tiësto",
+      "year": 2020,
+      "cefr_level": "b1.1",
+      "difficulty": "medium",
+      "genre": [
+        "edm",
+        "house"
+      ],
+      "duration_seconds": 164
+    },
+    {
       "slug": "waterfalls",
       "title": "Waterfalls",
       "artist": "TLC",
@@ -10619,6 +11616,78 @@
       "duration_seconds": 249
     },
     {
+      "slug": "ordinary",
+      "title": "Ordinary",
+      "artist": "Alex Warren",
+      "year": 2025,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 187
+    },
+    {
+      "slug": "we-cant-be-friends-wait-for-your-love",
+      "title": "we can't be friends (wait for your love)",
+      "artist": "Ariana Grande",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 229
+    },
+    {
+      "slug": "yes-and",
+      "title": "yes, and?",
+      "artist": "Ariana Grande",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 215
+    },
+    {
+      "slug": "slow-it-down",
+      "title": "Slow It Down",
+      "artist": "Benson Boone",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop-rock"
+      ],
+      "duration_seconds": 162
+    },
+    {
+      "slug": "lunch",
+      "title": "Lunch",
+      "artist": "Billie Eilish",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 180
+    },
+    {
+      "slug": "wildflower",
+      "title": "Wildflower",
+      "artist": "Billie Eilish",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 261
+    },
+    {
       "slug": "parklife",
       "title": "Parklife",
       "artist": "Blur",
@@ -10656,6 +11725,42 @@
       "duration_seconds": 368
     },
     {
+      "slug": "good-luck-babe",
+      "title": "Good Luck, Babe!",
+      "artist": "Chappell Roan",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 218
+    },
+    {
+      "slug": "pink-pony-club",
+      "title": "Pink Pony Club",
+      "artist": "Chappell Roan",
+      "year": 2020,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 258
+    },
+    {
+      "slug": "end-of-beginning",
+      "title": "End of Beginning",
+      "artist": "Djo",
+      "year": 2022,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "indie-pop"
+      ],
+      "duration_seconds": 159
+    },
+    {
       "slug": "american-pie",
       "title": "American Pie",
       "artist": "Don McLean",
@@ -10668,6 +11773,18 @@
       "duration_seconds": 530
     },
     {
+      "slug": "nokia",
+      "title": "Nokia",
+      "artist": "Drake",
+      "year": 2025,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "hip-hop"
+      ],
+      "duration_seconds": 242
+    },
+    {
       "slug": "hotel-california",
       "title": "Hotel California",
       "artist": "Eagles",
@@ -10678,6 +11795,30 @@
         "rock"
       ],
       "duration_seconds": 391
+    },
+    {
+      "slug": "i-love-you-im-sorry",
+      "title": "I Love You, I'm Sorry",
+      "artist": "Gracie Abrams",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 157
+    },
+    {
+      "slug": "thats-so-true",
+      "title": "That's So True",
+      "artist": "Gracie Abrams",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 166
     },
     {
       "slug": "sweet-child-o-mine",
@@ -10705,6 +11846,18 @@
       "duration_seconds": 242
     },
     {
+      "slug": "too-sweet",
+      "title": "Too Sweet",
+      "artist": "Hozier",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "folk-rock"
+      ],
+      "duration_seconds": 251
+    },
+    {
       "slug": "the-trooper",
       "title": "The Trooper",
       "artist": "Iron Maiden",
@@ -10715,6 +11868,18 @@
         "metal"
       ],
       "duration_seconds": 253
+    },
+    {
+      "slug": "lovin-on-me",
+      "title": "Lovin On Me",
+      "artist": "Jack Harlow",
+      "year": 2023,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "hip-hop"
+      ],
+      "duration_seconds": 138
     },
     {
       "slug": "dont-stop-believin",
@@ -10729,6 +11894,31 @@
       "duration_seconds": 251
     },
     {
+      "slug": "holy",
+      "title": "Holy",
+      "artist": "Justin Bieber",
+      "year": 2020,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 212
+    },
+    {
+      "slug": "deeper-well",
+      "title": "Deeper Well",
+      "artist": "Kacey Musgraves",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "country",
+        "folk"
+      ],
+      "duration_seconds": 232
+    },
+    {
       "slug": "wuthering-heights",
       "title": "Wuthering Heights",
       "artist": "Kate Bush",
@@ -10739,6 +11929,56 @@
         "rock"
       ],
       "duration_seconds": 206
+    },
+    {
+      "slug": "messy",
+      "title": "Messy",
+      "artist": "Lola Young",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 284
+    },
+    {
+      "slug": "bad-memories",
+      "title": "Bad Memories",
+      "artist": "MEDUZA",
+      "year": 2022,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "edm",
+        "pop"
+      ],
+      "duration_seconds": 149
+    },
+    {
+      "slug": "cowgirls",
+      "title": "Cowgirls",
+      "artist": "Morgan Wallen",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "country"
+      ],
+      "duration_seconds": 182
+    },
+    {
+      "slug": "what-i-want",
+      "title": "What I Want",
+      "artist": "Morgan Wallen",
+      "year": 2025,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "country",
+        "pop"
+      ],
+      "duration_seconds": 184.581224
     },
     {
       "slug": "welcome-to-the-black-parade",
@@ -10753,6 +11993,30 @@
       "duration_seconds": 311
     },
     {
+      "slug": "dial-drunk",
+      "title": "Dial Drunk",
+      "artist": "Noah Kahan",
+      "year": 2023,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "folk"
+      ],
+      "duration_seconds": 214
+    },
+    {
+      "slug": "stick-season",
+      "title": "Stick Season",
+      "artist": "Noah Kahan",
+      "year": 2022,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "folk"
+      ],
+      "duration_seconds": 182
+    },
+    {
       "slug": "champagne-supernova",
       "title": "Champagne Supernova",
       "artist": "Oasis",
@@ -10763,6 +12027,19 @@
         "rock"
       ],
       "duration_seconds": 450
+    },
+    {
+      "slug": "obsessed",
+      "title": "obsessed",
+      "artist": "Olivia Rodrigo",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop",
+        "pop-rock"
+      ],
+      "duration_seconds": 171
     },
     {
       "slug": "i-write-sins-not-tragedies",
@@ -10814,6 +12091,66 @@
       "duration_seconds": 291
     },
     {
+      "slug": "bed-chem",
+      "title": "Bed Chem",
+      "artist": "Sabrina Carpenter",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 171.869
+    },
+    {
+      "slug": "juno",
+      "title": "Juno",
+      "artist": "Sabrina Carpenter",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 223.192
+    },
+    {
+      "slug": "manchild",
+      "title": "Manchild",
+      "artist": "Sabrina Carpenter",
+      "year": 2025,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 213
+    },
+    {
+      "slug": "taste",
+      "title": "Taste",
+      "artist": "Sabrina Carpenter",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 157
+    },
+    {
+      "slug": "saturn",
+      "title": "Saturn",
+      "artist": "SZA",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "rnb"
+      ],
+      "duration_seconds": 186
+    },
+    {
       "slug": "once-in-a-lifetime",
       "title": "Once in a Lifetime",
       "artist": "Talking Heads",
@@ -10825,6 +12162,30 @@
         "new-wave"
       ],
       "duration_seconds": 288
+    },
+    {
+      "slug": "revolving-door",
+      "title": "Revolving Door",
+      "artist": "Tate McRae",
+      "year": 2025,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 180
+    },
+    {
+      "slug": "fortnight",
+      "title": "Fortnight",
+      "artist": "Taylor Swift",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "pop"
+      ],
+      "duration_seconds": 229
     },
     {
       "slug": "bullet-with-butterfly-wings",
@@ -10849,6 +12210,152 @@
         "rock"
       ],
       "duration_seconds": 268
+    },
+    {
+      "slug": "hot-honey",
+      "title": "Hot Honey",
+      "artist": "Tiësto",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "edm",
+        "pop"
+      ],
+      "duration_seconds": 168
+    },
+    {
+      "slug": "i-remember-everything",
+      "title": "I Remember Everything",
+      "artist": "Zach Bryan",
+      "year": 2023,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "country"
+      ],
+      "duration_seconds": 227
+    },
+    {
+      "slug": "pink-skies",
+      "title": "Pink Skies",
+      "artist": "Zach Bryan",
+      "year": 2024,
+      "cefr_level": "b1.2",
+      "difficulty": "medium",
+      "genre": [
+        "country"
+      ],
+      "duration_seconds": 194.92
+    },
+    {
+      "slug": "anxiety",
+      "title": "Anxiety",
+      "artist": "Doechii",
+      "year": 2025,
+      "cefr_level": "b2.1",
+      "difficulty": "hard",
+      "genre": [
+        "hip-hop"
+      ],
+      "duration_seconds": 250
+    },
+    {
+      "slug": "like-that",
+      "title": "Like That",
+      "artist": "Future",
+      "year": 2024,
+      "cefr_level": "b2.1",
+      "difficulty": "hard",
+      "genre": [
+        "hip-hop"
+      ],
+      "duration_seconds": 268
+    },
+    {
+      "slug": "francesca",
+      "title": "Francesca",
+      "artist": "Hozier",
+      "year": 2023,
+      "cefr_level": "b2.1",
+      "difficulty": "hard",
+      "genre": [
+        "folk-rock"
+      ],
+      "duration_seconds": 270
+    },
+    {
+      "slug": "luther",
+      "title": "Luther",
+      "artist": "Kendrick Lamar",
+      "year": 2024,
+      "cefr_level": "b2.1",
+      "difficulty": "hard",
+      "genre": [
+        "hip-hop",
+        "rnb"
+      ],
+      "duration_seconds": 177
+    },
+    {
+      "slug": "not-like-us",
+      "title": "Not Like Us",
+      "artist": "Kendrick Lamar",
+      "year": 2024,
+      "cefr_level": "b2.1",
+      "difficulty": "hard",
+      "genre": [
+        "hip-hop"
+      ],
+      "duration_seconds": 274
+    },
+    {
+      "slug": "squabble-up",
+      "title": "Squabble Up",
+      "artist": "Kendrick Lamar",
+      "year": 2024,
+      "cefr_level": "b2.1",
+      "difficulty": "hard",
+      "genre": [
+        "hip-hop"
+      ],
+      "duration_seconds": 158
+    },
+    {
+      "slug": "tv-off",
+      "title": "TV Off",
+      "artist": "Kendrick Lamar",
+      "year": 2024,
+      "cefr_level": "b2.1",
+      "difficulty": "hard",
+      "genre": [
+        "hip-hop"
+      ],
+      "duration_seconds": 221
+    },
+    {
+      "slug": "sticky",
+      "title": "Sticky",
+      "artist": "Tyler, The Creator",
+      "year": 2024,
+      "cefr_level": "b2.1",
+      "difficulty": "hard",
+      "genre": [
+        "hip-hop"
+      ],
+      "duration_seconds": 256
+    },
+    {
+      "slug": "houdini",
+      "title": "Houdini",
+      "artist": "Eminem",
+      "year": 2024,
+      "cefr_level": "b2.2",
+      "difficulty": "hard",
+      "genre": [
+        "hip-hop"
+      ],
+      "duration_seconds": 227
     }
   ]
 }

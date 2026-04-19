@@ -453,6 +453,17 @@
           "full": "cannot"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Folsom Prison Blues\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Folsom Prison Blues\", o que aconteceria?",
+      "target_vocab": [
+        "train",
+        "know",
+        "prison",
+        "hear"
+      ]
     }
   ]
 }

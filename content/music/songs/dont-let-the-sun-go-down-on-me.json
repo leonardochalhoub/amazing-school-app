@@ -393,6 +393,61 @@
           "full": "I would"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "don't",
+        "life",
+        "myself",
+        "although"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Don't Let the Sun Go Down on Me\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Don't Let the Sun Go Down on Me\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "don't",
+        "life",
+        "myself",
+        "although"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "don't",
+        "life",
+        "myself",
+        "although"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Don't Let the Sun Go Down on Me\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Don't Let the Sun Go Down on Me\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "don't",
+        "life",
+        "myself",
+        "although"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Don't Let the Sun Go Down on Me\" was released in 1974. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Don't Let the Sun Go Down on Me\" foi lançada em 1974. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "don't",
+        "life",
+        "myself",
+        "although"
+      ]
     }
   ]
 }

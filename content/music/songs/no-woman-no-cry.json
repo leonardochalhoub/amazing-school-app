@@ -452,6 +452,28 @@
           "full": "I am"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"No Woman No Cry\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"No Woman No Cry\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "woman",
+        "alright",
+        "tears",
+        "she'd"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"No Woman No Cry\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"No Woman No Cry\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "woman",
+        "alright",
+        "tears",
+        "she'd"
+      ]
     }
   ]
 }

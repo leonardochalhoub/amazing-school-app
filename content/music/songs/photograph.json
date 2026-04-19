@@ -474,6 +474,17 @@
           "full": "I am"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Ed Sheeran one question about \"Photograph\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Ed Sheeran sobre \"Photograph\", o que seria e por quê?",
+      "target_vocab": [
+        "wait",
+        "home",
+        "keep",
+        "inside"
+      ]
     }
   ]
 }

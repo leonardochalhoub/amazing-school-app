@@ -1,0 +1,480 @@
+{
+  "slug": "angie-the-rolling-stones",
+  "title": "Angie",
+  "artist": "The Rolling Stones",
+  "year": 1973,
+  "album": "Honk",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 272,
+  "youtube_id": "RcZn2-bGXqQ",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Angie by The Rolling Stones (1973) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "angie",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "can't",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "ain't",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "eyes",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "those",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Angie, Angie",
+          "When will those clouds all disappear?",
+          "Angie, Angie",
+          "Where will it lead us from here?"
+        ],
+        "start_seconds": 19,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "And no money in our coats",
+          "You can't say we're satisfied",
+          "Angie, Angie",
+          "You can't say we never tried"
+        ],
+        "start_seconds": 50,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When will",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "those",
+      "excerpt_after": "clouds all disappear?",
+      "youtube_start": 25,
+      "youtube_end": 39
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And no",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "money",
+      "excerpt_after": "in our coats",
+      "youtube_start": 50,
+      "youtube_end": 64
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Angie,",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "beautiful, yeah",
+      "youtube_start": 76,
+      "youtube_end": 90
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "All the",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "dreams",
+      "excerpt_after": "we held so close",
+      "youtube_start": 102,
+      "youtube_end": 116
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh,",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "angie",
+      "excerpt_after": "don't you weep",
+      "youtube_start": 157,
+      "youtube_end": 171
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I hate that",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sadness",
+      "excerpt_after": "in your eyes",
+      "youtube_start": 165,
+      "youtube_end": 179
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You can't say we're satisfied",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Angie, you're beautiful, yeah",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I still love you",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "All the dreams we held so close",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I hate that sadness in your eyes",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "When will",
+      "excerpt_after": "clouds all disappear?",
+      "options": [
+        "alive",
+        "clouds",
+        "sadness",
+        "those"
+      ],
+      "answer_index": 3,
+      "youtube_start": 25,
+      "youtube_end": 37
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And no",
+      "excerpt_after": "in our coats",
+      "options": [
+        "cant",
+        "kisses",
+        "money",
+        "weep"
+      ],
+      "answer_index": 2,
+      "youtube_start": 50,
+      "youtube_end": 62
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But",
+      "excerpt_after": "it time we said goodbye?",
+      "options": [
+        "aint",
+        "cant",
+        "goodbye",
+        "souls"
+      ],
+      "answer_index": 0,
+      "youtube_start": 83,
+      "youtube_end": 95
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Let me",
+      "excerpt_after": "in your ear",
+      "options": [
+        "everywhere",
+        "held",
+        "lead",
+        "whisper"
+      ],
+      "answer_index": 3,
+      "youtube_start": 110,
+      "youtube_end": 122
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ain't it",
+      "excerpt_after": "we said goodbye, yeah?",
+      "options": [
+        "money",
+        "those",
+        "time",
+        "whisper"
+      ],
+      "answer_index": 2,
+      "youtube_start": 179,
+      "youtube_end": 191
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "all",
+        "will",
+        "clouds",
+        "When",
+        "those",
+        "disappear?"
+      ],
+      "answer": [
+        "When",
+        "will",
+        "those",
+        "clouds",
+        "all",
+        "disappear?"
+      ],
+      "youtube_start": 25
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "can't",
+        "we're",
+        "say",
+        "You",
+        "satisfied"
+      ],
+      "answer": [
+        "You",
+        "can't",
+        "say",
+        "we're",
+        "satisfied"
+      ],
+      "youtube_start": 55
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "love",
+        "I",
+        "still",
+        "you"
+      ],
+      "answer": [
+        "I",
+        "still",
+        "love",
+        "you"
+      ],
+      "youtube_start": 93
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Angie,",
+        "weep",
+        "don't",
+        "you",
+        "Oh,"
+      ],
+      "answer": [
+        "Oh,",
+        "Angie,",
+        "don't",
+        "you",
+        "weep"
+      ],
+      "youtube_start": 157
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you,",
+        "still",
+        "love",
+        "baby",
+        "Angie,",
+        "But,",
+        "I"
+      ],
+      "answer": [
+        "But,",
+        "Angie,",
+        "I",
+        "still",
+        "love",
+        "you,",
+        "baby"
+      ],
+      "youtube_start": 213
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"angie\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"angie\" na música inteira?",
+      "word": "angie",
+      "answer": 18
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"can't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"can't\" na música inteira?",
+      "word": "can't",
+      "answer": 4
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "When will those clouds all disappear?",
+          "order": 0
+        },
+        {
+          "text": "Remember all those nights we cried?",
+          "order": 1
+        },
+        {
+          "text": "Ain't it time we said goodbye, yeah?",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask The Rolling Stones one question about \"Angie\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para The Rolling Stones sobre \"Angie\", o que seria e por quê?",
+      "target_vocab": [
+        "angie",
+        "can't",
+        "ain't",
+        "eyes"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Angie\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Angie\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "angie",
+        "can't",
+        "ain't",
+        "eyes"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Angie\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Angie\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "angie",
+        "can't",
+        "ain't",
+        "eyes"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "we're",
+          "full": "we are"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Angie\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Angie\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "angie",
+        "can't",
+        "ain't",
+        "eyes"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Angie\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Angie\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "angie",
+        "can't",
+        "ain't",
+        "eyes"
+      ]
+    }
+  ]
+}

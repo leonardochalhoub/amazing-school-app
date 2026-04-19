@@ -422,6 +422,50 @@
           "full": "you will"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Pharrell Williams one question about \"Happy\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Pharrell Williams sobre \"Happy\", o que seria e por quê?",
+      "target_vocab": [
+        "happy",
+        "because",
+        "clap",
+        "along"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Happy\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Happy\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "happy",
+        "because",
+        "clap",
+        "along"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Happy\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Happy\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "happy",
+        "because",
+        "clap",
+        "along"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Happy\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Happy\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "happy",
+        "because",
+        "clap",
+        "along"
+      ]
     }
   ]
 }

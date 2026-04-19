@@ -487,6 +487,17 @@
           "full": "did not"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Wake Me Up\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Wake Me Up\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "know",
+        "didn't",
+        "lost",
+        "wake"
+      ]
     }
   ]
 }

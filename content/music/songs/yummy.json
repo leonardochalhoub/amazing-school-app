@@ -1,0 +1,482 @@
+{
+  "slug": "yummy",
+  "title": "Yummy",
+  "artist": "Justin Bieber",
+  "year": 2020,
+  "album": "Changes",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 209,
+  "youtube_id": "8EJ3zbKTWQ8",
+  "full_lyrics_url": "https://www.letras.mus.br/justin-bieber/yummy/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Yummy by Justin Bieber (2020) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "yummy",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "babe",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "word",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "night",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "mornin'",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Say the word, on my way",
+          "Yeah, babe, yeah, babe, yeah, babe",
+          "Any night, any day",
+          "Say the word, on my way"
+        ],
+        "start_seconds": 17,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Hundred racks, help me spend it, babe",
+          "Light a match, get litty, babe",
+          "That jet set, watch the sunset kinda, yeah, yeah",
+          "Rollin' eyes back in my head, make my toes curl, yeah, yeah"
+        ],
+        "start_seconds": 48,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "yummy-yum",
+      "excerpt_after": "that yummy-yummy",
+      "youtube_start": 8,
+      "youtube_end": 22
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Ain't on the side,",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "youre",
+      "excerpt_after": "number one",
+      "youtube_start": 38,
+      "youtube_end": 52
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Light a",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "match",
+      "excerpt_after": "get litty, babe",
+      "youtube_start": 50,
+      "youtube_end": 64
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You're",
+      "blank_hint": "word starting with \"i\"",
+      "answer": "incriminating",
+      "excerpt_after": "no disguise",
+      "youtube_start": 91,
+      "youtube_end": 105
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Light a match, get",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "litty",
+      "excerpt_after": "babe",
+      "youtube_start": 103,
+      "youtube_end": 117
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Hop in the",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lambo",
+      "excerpt_after": "I'm on my way",
+      "youtube_start": 138,
+      "youtube_end": 152
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yeah, you got that yummy-yum",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Fifty-fifty, love the way you split it",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You're incriminating, no disguise",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yeah, you got that yummy-yum Yeah, yeah",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm elated that you are my lady",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That",
+      "excerpt_after": "that yummy-yummy",
+      "options": [
+        "elated",
+        "mornin",
+        "supplies",
+        "yummy-yum"
+      ],
+      "answer_index": 3,
+      "youtube_start": 8,
+      "youtube_end": 20
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Yeah, babe,",
+      "excerpt_after": "babe, yeah, babe",
+      "options": [
+        "lost",
+        "rollin",
+        "standin",
+        "yeah"
+      ],
+      "answer_index": 3,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Hundred",
+      "excerpt_after": "help me spend it, babe",
+      "options": [
+        "aint",
+        "match",
+        "racks",
+        "split"
+      ],
+      "answer_index": 2,
+      "youtube_start": 48,
+      "youtube_end": 60
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You're",
+      "excerpt_after": "no disguise",
+      "options": [
+        "compromised",
+        "fifty-fifty",
+        "incriminating",
+        "yummy-yummy"
+      ],
+      "answer_index": 2,
+      "youtube_start": 91,
+      "youtube_end": 103
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That jet set, watch the",
+      "excerpt_after": "kinda, yeah, yeah",
+      "options": [
+        "aint",
+        "eyes",
+        "split",
+        "sunset"
+      ],
+      "answer_index": 3,
+      "youtube_start": 104,
+      "youtube_end": 116
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "yummy-yum",
+        "you",
+        "got",
+        "Yeah,",
+        "that"
+      ],
+      "answer": [
+        "Yeah,",
+        "you",
+        "got",
+        "that",
+        "yummy-yum"
+      ],
+      "youtube_start": 6
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "babe,",
+        "Yeah,",
+        "yeah,",
+        "babe",
+        "yeah,",
+        "babe,"
+      ],
+      "answer": [
+        "Yeah,",
+        "babe,",
+        "yeah,",
+        "babe,",
+        "yeah,",
+        "babe"
+      ],
+      "youtube_start": 19
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "on",
+        "number",
+        "side,",
+        "the",
+        "one",
+        "Ain't",
+        "you're"
+      ],
+      "answer": [
+        "Ain't",
+        "on",
+        "the",
+        "side,",
+        "you're",
+        "number",
+        "one"
+      ],
+      "youtube_start": 38
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "keep",
+        "on",
+        "Standin'",
+        "rise",
+        "up,",
+        "me",
+        "the"
+      ],
+      "answer": [
+        "Standin'",
+        "up,",
+        "keep",
+        "me",
+        "on",
+        "the",
+        "rise"
+      ],
+      "youtube_start": 85
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "that",
+        "Yeah,",
+        "yeah",
+        "Yeah,",
+        "got",
+        "you",
+        "yummy-yum"
+      ],
+      "answer": [
+        "Yeah,",
+        "you",
+        "got",
+        "that",
+        "yummy-yum",
+        "Yeah,",
+        "yeah"
+      ],
+      "youtube_start": 117
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"yummy\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"yummy\" na música inteira?",
+      "word": "yummy",
+      "answer": 32
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"babe\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"babe\" na música inteira?",
+      "word": "babe",
+      "answer": 32
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Yeah, you got that yummy-yum",
+          "order": 0
+        },
+        {
+          "text": "That yummy-yum, that yummy-yummy",
+          "order": 1
+        },
+        {
+          "text": "Yeah, babe, yeah, babe, yeah, babe (Yeah, babe)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Justin Bieber one question about \"Yummy\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Justin Bieber sobre \"Yummy\", o que seria e por quê?",
+      "target_vocab": [
+        "yummy",
+        "babe",
+        "word",
+        "night"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Yummy\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Yummy\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "yummy",
+        "babe",
+        "word",
+        "night"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Yummy\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Yummy\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "yummy",
+        "babe",
+        "word",
+        "night"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Yummy\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Yummy\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "yummy",
+        "babe",
+        "word",
+        "night"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Yummy\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Yummy\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "yummy",
+        "babe",
+        "word",
+        "night"
+      ]
+    }
+  ]
+}

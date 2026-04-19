@@ -1,0 +1,426 @@
+{
+  "slug": "sorry",
+  "title": "Sorry",
+  "artist": "Justin Bieber",
+  "year": 2015,
+  "album": "Purpose",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 201,
+  "youtube_id": "fRh_vgS2dFE",
+  "full_lyrics_url": "https://www.letras.mus.br/justin-bieber/sorry/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Sorry by Justin Bieber (2015) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "sorry",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "late",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "cause",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "missing",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I'm sorry, yeah",
+          "Sorry, yeah",
+          "Sorry",
+          "Yeah I know that I let you down"
+        ],
+        "start_seconds": 69,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Sorry, oh",
+          "Sorry",
+          "Yeah I know that I let you down",
+          "Is it too late to say I'm sorry now?"
+        ],
+        "start_seconds": 155,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Cause I'm",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "missing",
+      "excerpt_after": "more than just your body",
+      "youtube_start": 52,
+      "youtube_end": 66
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Is it too late to say I'm",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sorry",
+      "excerpt_after": "now?",
+      "youtube_start": 64,
+      "youtube_end": 78
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Can we both say the",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "words",
+      "excerpt_after": "and forget this?",
+      "youtube_start": 105,
+      "youtube_end": 119
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Cause I'm missing more than just your body",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Yeah I know that I let you down",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm sorry, yeah",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Is it too late now to say sorry?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Cause I just",
+      "excerpt_after": "one more shot at forgiveness",
+      "options": [
+        "chances",
+        "myself",
+        "need",
+        "piece"
+      ],
+      "answer_index": 2,
+      "youtube_start": 23,
+      "youtube_end": 35
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Yeah, is it too",
+      "excerpt_after": "now to say sorry?",
+      "options": [
+        "gotta",
+        "know",
+        "late",
+        "truth"
+      ],
+      "answer_index": 2,
+      "youtube_start": 47,
+      "youtube_end": 59
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Cause I'm",
+      "excerpt_after": "more than just your body",
+      "options": [
+        "couple",
+        "missing",
+        "second",
+        "well"
+      ],
+      "answer_index": 1,
+      "youtube_start": 52,
+      "youtube_end": 64
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Yeah I",
+      "excerpt_after": "that I let you down",
+      "options": [
+        "angry",
+        "know",
+        "late",
+        "there"
+      ],
+      "answer_index": 1,
+      "youtube_start": 61,
+      "youtube_end": 73
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Is it too late to say I'm",
+      "excerpt_after": "now?",
+      "options": [
+        "chances",
+        "dont",
+        "sorry",
+        "times"
+      ],
+      "answer_index": 2,
+      "youtube_start": 64,
+      "youtube_end": 76
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"sorry\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"sorry\" na música inteira?",
+      "word": "sorry",
+      "answer": 20
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"late\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"late\" na música inteira?",
+      "word": "late",
+      "answer": 11
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Sorry\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Sorry\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Sorry\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Sorry\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Sorry\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Sorry\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Sorry\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Sorry\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Sorry\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Sorry\", o que aconteceria?",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Sorry\" was released in 2015. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Sorry\" foi lançada em 2015. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Justin Bieber one question about \"Sorry\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Justin Bieber sobre \"Sorry\", o que seria e por quê?",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Sorry\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Sorry\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Sorry\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Sorry\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Sorry\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Sorry\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine covering \"Sorry\" in a completely different genre (reggae, bossa nova, heavy metal, samba…). Which genre would you choose and why?",
+      "prompt_pt": "Imagine regravar \"Sorry\" em um gênero totalmente diferente (reggae, bossa nova, heavy metal, samba…). Qual gênero você escolheria e por quê?",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Teach a friend one new English word from this song. Which word would it be, how would you define it, and what example sentence would you give?",
+      "prompt_pt": "Ensine uma palavra nova em inglês dessa música para um amigo. Qual palavra seria, como você definiria, e que exemplo você daria?",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which instrument or vocal moment in \"Sorry\" stands out most to you, and what emotion does it bring?",
+      "prompt_pt": "Qual instrumento ou momento vocal em \"Sorry\" mais se destaca para você, e que emoção ele traz?",
+      "target_vocab": [
+        "sorry",
+        "late",
+        "know",
+        "cause"
+      ]
+    }
+  ]
+}

@@ -473,6 +473,17 @@
           "full": "there is"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "heart",
+        "you're",
+        "know",
+        "near"
+      ]
     }
   ]
 }

@@ -462,6 +462,28 @@
           "full": "want to"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Elvis Presley one question about \"Jailhouse Rock\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Elvis Presley sobre \"Jailhouse Rock\", o que seria e por quê?",
+      "target_vocab": [
+        "rock",
+        "jailhouse",
+        "let's",
+        "everybody"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Jailhouse Rock\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Jailhouse Rock\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "rock",
+        "jailhouse",
+        "let's",
+        "everybody"
+      ]
     }
   ]
 }

@@ -1,0 +1,455 @@
+{
+  "slug": "here-comes-the-sun-the-beatles",
+  "title": "Here Comes the Sun",
+  "artist": "The Beatles",
+  "year": 1969,
+  "album": "Abbey Road (2009 Stereo Remaster)",
+  "genre": [
+    "rock",
+    "classic-rock"
+  ],
+  "cefr_level": "a1.1",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 186,
+  "youtube_id": "KQetemT1sWc",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Here Comes the Sun by The Beatles (1969) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "comes",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "it's",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "alright",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "little",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "darlin'",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "It's alright",
+          "Little darlin', it's been a long, cold, lonely winter",
+          "Little darlin', it feels like years since it's been here",
+          "Here comes the sun, doo-doo-doo-doo"
+        ],
+        "start_seconds": 22,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Sun, sun, sun, here it comes",
+          "Sun, sun, sun, here it comes",
+          "Sun, sun, sun, here it comes",
+          "Sun, sun, sun, here it comes"
+        ],
+        "start_seconds": 96,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Here",
+      "blank_hint": "word starting with \"c\"",
+      "answer": "comes",
+      "excerpt_after": "the sun, doo-doo-doo-doo",
+      "youtube_start": 15,
+      "youtube_end": 29
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Little",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "darlin",
+      "excerpt_after": "it's been a long, cold, lonely winter",
+      "youtube_start": 27,
+      "youtube_end": 41
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Little darlin', the",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "smiles",
+      "excerpt_after": "returning to their faces",
+      "youtube_start": 59,
+      "youtube_end": 73
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Little darlin', I feel that ice is",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "slowly",
+      "excerpt_after": "melting",
+      "youtube_start": 131,
+      "youtube_end": 145
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Here comes the sun, and I say",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Here comes the sun, doo-doo-doo-doo",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Little darlin', the smile's returning to their faces",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Here comes the sun",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Sun, sun, sun, here it comes",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Here",
+      "excerpt_after": "the sun, doo-doo-doo-doo",
+      "options": [
+        "comes",
+        "little",
+        "since",
+        "years"
+      ],
+      "answer_index": 0,
+      "youtube_start": 15,
+      "youtube_end": 27
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Little",
+      "excerpt_after": "it's been a long, cold, lonely winter",
+      "options": [
+        "alright",
+        "darlin",
+        "feels",
+        "returning"
+      ],
+      "answer_index": 1,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Little darlin', the",
+      "excerpt_after": "returning to their faces",
+      "options": [
+        "cold",
+        "comes",
+        "faces",
+        "smiles"
+      ],
+      "answer_index": 3,
+      "youtube_start": 59,
+      "youtube_end": 71
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Little darlin', I",
+      "excerpt_after": "that ice is slowly melting",
+      "options": [
+        "darlin",
+        "feel",
+        "long",
+        "slowly"
+      ],
+      "answer_index": 1,
+      "youtube_start": 131,
+      "youtube_end": 143
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Here",
+        "sun,",
+        "doo-doo-doo-doo",
+        "comes",
+        "the"
+      ],
+      "answer": [
+        "Here",
+        "comes",
+        "the",
+        "sun,",
+        "doo-doo-doo-doo"
+      ],
+      "youtube_start": 15
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Here",
+        "I",
+        "comes",
+        "and",
+        "the",
+        "say",
+        "sun,"
+      ],
+      "answer": [
+        "Here",
+        "comes",
+        "the",
+        "sun,",
+        "and",
+        "I",
+        "say"
+      ],
+      "youtube_start": 18
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Here",
+        "the",
+        "comes",
+        "sun"
+      ],
+      "answer": [
+        "Here",
+        "comes",
+        "the",
+        "sun"
+      ],
+      "youtube_start": 74
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "here",
+        "comes",
+        "it",
+        "Sun,",
+        "sun,",
+        "sun,"
+      ],
+      "answer": [
+        "Sun,",
+        "sun,",
+        "sun,",
+        "here",
+        "it",
+        "comes"
+      ],
+      "youtube_start": 96
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"comes\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"comes\" na música inteira?",
+      "word": "comes",
+      "answer": 15
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"it's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"it's\" na música inteira?",
+      "word": "it's",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Here comes the sun, doo-doo-doo-doo",
+          "order": 0
+        },
+        {
+          "text": "Here comes the sun",
+          "order": 1
+        },
+        {
+          "text": "Sun, sun, sun, here it comes",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Here Comes the Sun\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Here Comes the Sun\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "comes",
+        "it's",
+        "alright",
+        "little"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Here Comes the Sun\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Here Comes the Sun\", o que aconteceria?",
+      "target_vocab": [
+        "comes",
+        "it's",
+        "alright",
+        "little"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Here Comes the Sun\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Here Comes the Sun\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "comes",
+        "it's",
+        "alright",
+        "little"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "comes",
+        "it's",
+        "alright",
+        "little"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Here Comes the Sun\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Here Comes the Sun\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "comes",
+        "it's",
+        "alright",
+        "little"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Here Comes the Sun\" was released in 1969. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Here Comes the Sun\" foi lançada em 1969. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "comes",
+        "it's",
+        "alright",
+        "little"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask The Beatles one question about \"Here Comes the Sun\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para The Beatles sobre \"Here Comes the Sun\", o que seria e por quê?",
+      "target_vocab": [
+        "comes",
+        "it's",
+        "alright",
+        "little"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Here Comes the Sun\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Here Comes the Sun\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "comes",
+        "it's",
+        "alright",
+        "little"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Here Comes the Sun\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Here Comes the Sun\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "comes",
+        "it's",
+        "alright",
+        "little"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Here Comes the Sun\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Here Comes the Sun\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "comes",
+        "it's",
+        "alright",
+        "little"
+      ]
+    }
+  ]
+}

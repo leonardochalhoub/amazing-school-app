@@ -451,6 +451,28 @@
           "full": "I am"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Simon & Garfunkel one question about \"Cecilia\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Simon & Garfunkel sobre \"Cecilia\", o que seria e por quê?",
+      "target_vocab": [
+        "you're",
+        "home",
+        "cecilia",
+        "pick"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Cecilia\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Cecilia\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "you're",
+        "home",
+        "cecilia",
+        "pick"
+      ]
     }
   ]
 }

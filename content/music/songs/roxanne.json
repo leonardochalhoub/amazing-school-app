@@ -446,6 +446,39 @@
           "full": "will not"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Roxanne\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Roxanne\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "roxanne",
+        "light",
+        "don't",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "roxanne",
+        "light",
+        "don't",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Roxanne\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Roxanne\", o que aconteceria?",
+      "target_vocab": [
+        "roxanne",
+        "light",
+        "don't",
+        "it's"
+      ]
     }
   ]
 }

@@ -460,6 +460,28 @@
           "full": "he is"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Jolene\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Jolene\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "jolene",
+        "don't",
+        "please",
+        "begging"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Jolene\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Jolene\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "jolene",
+        "don't",
+        "please",
+        "begging"
+      ]
     }
   ]
 }

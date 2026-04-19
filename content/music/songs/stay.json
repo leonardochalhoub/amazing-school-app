@@ -1,0 +1,482 @@
+{
+  "slug": "stay",
+  "title": "Stay",
+  "artist": "Justin Bieber",
+  "year": 2021,
+  "album": "STAY",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 142,
+  "youtube_id": "kTJczUoc26U",
+  "full_lyrics_url": "https://www.letras.mus.br/justin-bieber/stay/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Stay by Justin Bieber (2021) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "stay",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "need",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "told",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "can't",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "Oh, ooh-woah (oh, ooh-woah, ooh-woah)",
+          "Oh, ooh-woah (oh, ooh-woah, ooh-woah)",
+          "Oh, ooh-woah (Oh, ooh-woah, ooh-woah)",
+          "Oh, I'll be f- up if you can't be right here"
+        ],
+        "start_seconds": 34,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Oh, ooh-woah (oh, ooh-woah, ooh-woah)",
+          "Oh, ooh-woah (oh, ooh-woah, ooh-woah)",
+          "Oh, ooh-woah (oh, ooh-woah, ooh-woah)",
+          "I'll be f- up if you can't be right here"
+        ],
+        "start_seconds": 90,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I get",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "drunk",
+      "excerpt_after": "wake up, I'm wasted still",
+      "youtube_start": 23,
+      "youtube_end": 37
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "realize",
+      "excerpt_after": "the time that I wasted here",
+      "youtube_start": 26,
+      "youtube_end": 40
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Oh,",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "ooh-woah",
+      "excerpt_after": "(oh, ooh-woah, ooh-woah)",
+      "youtube_start": 34,
+      "youtube_end": 48
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You're the",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "reason",
+      "excerpt_after": "I believe in love",
+      "youtube_start": 71,
+      "youtube_end": 85
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It's been",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "difficult",
+      "excerpt_after": "for me to trust (ooh)",
+      "youtube_start": 74,
+      "youtube_end": 88
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And I'm",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "afraid",
+      "excerpt_after": "that I'ma f- it up",
+      "youtube_start": 77,
+      "youtube_end": 91
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I get drunk, wake up, I'm wasted still",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I realize the time that I wasted here",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I'm afraid that I'ma f- it up",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "'Cause you ain't ever left me empty-handed",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "It's been difficult for me to trust ooh",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I get",
+      "excerpt_after": "wake up, I'm wasted still",
+      "options": [
+        "drunk",
+        "good",
+        "wasted",
+        "woah-oh"
+      ],
+      "answer_index": 0,
+      "youtube_start": 23,
+      "youtube_end": 35
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "the time that I wasted here",
+      "options": [
+        "feel",
+        "good",
+        "need",
+        "realize"
+      ],
+      "answer_index": 3,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You're the",
+      "excerpt_after": "I believe in love",
+      "options": [
+        "baby",
+        "cant",
+        "change",
+        "reason"
+      ],
+      "answer_index": 3,
+      "youtube_start": 71,
+      "youtube_end": 83
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It's been",
+      "excerpt_after": "for me to trust (ooh)",
+      "options": [
+        "difficult",
+        "stranded",
+        "without",
+        "woah-oh"
+      ],
+      "answer_index": 0,
+      "youtube_start": 74,
+      "youtube_end": 86
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Ain't no way that I can",
+      "excerpt_after": "you stranded",
+      "options": [
+        "ever",
+        "leave",
+        "wasted",
+        "woah-oh"
+      ],
+      "answer_index": 1,
+      "youtube_start": 79,
+      "youtube_end": 91
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Oh,",
+        "ooh-woah,",
+        "ooh-woah",
+        "ooh-woah",
+        "oh,"
+      ],
+      "answer": [
+        "Oh,",
+        "ooh-woah",
+        "oh,",
+        "ooh-woah,",
+        "ooh-woah"
+      ],
+      "youtube_start": 34
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "the",
+        "love",
+        "in",
+        "You're",
+        "believe",
+        "reason",
+        "I"
+      ],
+      "answer": [
+        "You're",
+        "the",
+        "reason",
+        "I",
+        "believe",
+        "in",
+        "love"
+      ],
+      "youtube_start": 71
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "left",
+        "empty-handed",
+        "'Cause",
+        "me",
+        "ain't",
+        "ever",
+        "you"
+      ],
+      "answer": [
+        "'Cause",
+        "you",
+        "ain't",
+        "ever",
+        "left",
+        "me",
+        "empty-handed"
+      ],
+      "youtube_start": 82
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"stay\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"stay\" na música inteira?",
+      "word": "stay",
+      "answer": 13
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"need\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"need\" na música inteira?",
+      "word": "need",
+      "answer": 12
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I get drunk, wake up, I'm wasted still",
+          "order": 0
+        },
+        {
+          "text": "Oh, ooh-woah (Oh, ooh-woah, ooh-woah)",
+          "order": 1
+        },
+        {
+          "text": "'Cause you ain't ever left me empty-handed",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I realize the time that I wasted here",
+          "order": 0
+        },
+        {
+          "text": "It's been difficult for me to trust (ooh)",
+          "order": 1
+        },
+        {
+          "text": "So, baby, stay",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"Stay\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"Stay\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "stay",
+        "need",
+        "told",
+        "never"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "stay",
+        "need",
+        "told",
+        "never"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Stay\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Stay\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "stay",
+        "need",
+        "told",
+        "never"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'd",
+          "full": "I would"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Stay\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Stay\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "stay",
+        "need",
+        "told",
+        "never"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "stay",
+        "need",
+        "told",
+        "never"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Stay\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Stay\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "stay",
+        "need",
+        "told",
+        "never"
+      ]
+    }
+  ]
+}

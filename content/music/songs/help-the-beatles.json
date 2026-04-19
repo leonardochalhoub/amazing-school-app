@@ -1,0 +1,476 @@
+{
+  "slug": "help-the-beatles",
+  "title": "Help!",
+  "artist": "The Beatles",
+  "year": 1965,
+  "album": "The Beatles Boxset",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 139,
+  "youtube_id": "2Q_ZzBGPdqE",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Help! by The Beatles (1965) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "help",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "please",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "need",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "younger",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "never",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "And I do appreciate you being 'round",
+          "Help me get my feet back on the ground",
+          "Won't you please, please help me?",
+          "And now my life has changed in oh so many ways"
+        ],
+        "start_seconds": 34,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing the opening verse",
+        "label_pt": "Cante a abertura",
+        "lines": [
+          "I need somebody",
+          "(Help) not just anybody",
+          "(Help) you know I need someone",
+          "(Help)"
+        ],
+        "start_seconds": 1,
+        "style": "verse"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "When I was",
+      "blank_hint": "word starting with \"y\"",
+      "answer": "younger",
+      "excerpt_after": "so much younger than today",
+      "youtube_start": 10,
+      "youtube_end": 24
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "And",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "opened",
+      "excerpt_after": "up the doors",
+      "youtube_start": 27,
+      "youtube_end": 41
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Help me if you can, I'm",
+      "blank_hint": "word starting with \"f\"",
+      "answer": "feeling",
+      "excerpt_after": "down",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Won't you",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "please",
+      "excerpt_after": "please help me?",
+      "youtube_start": 44,
+      "youtube_end": 58
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "My",
+      "blank_hint": "word starting with \"i\"",
+      "answer": "independence",
+      "excerpt_after": "seems to vanish in the haze",
+      "youtube_start": 55,
+      "youtube_end": 69
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "every",
+      "excerpt_after": "now and then I feel so insecure",
+      "youtube_start": 60,
+      "youtube_end": 74
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I need somebody",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I'm not so self-assured",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I do appreciate you being 'round",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I never needed anybody's help in any way",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And opened up the doors",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "(Help) you",
+      "excerpt_after": "I need someone",
+      "options": [
+        "know",
+        "many",
+        "please",
+        "these"
+      ],
+      "answer_index": 0,
+      "youtube_start": 4,
+      "youtube_end": 16
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And",
+      "excerpt_after": "up the doors",
+      "options": [
+        "anybody",
+        "done",
+        "feeling",
+        "opened"
+      ],
+      "answer_index": 3,
+      "youtube_start": 27,
+      "youtube_end": 39
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I do",
+      "excerpt_after": "you being 'round",
+      "options": [
+        "anybody",
+        "appreciate",
+        "changed",
+        "someone"
+      ],
+      "answer_index": 1,
+      "youtube_start": 34,
+      "youtube_end": 46
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Won't you",
+      "excerpt_after": "please help me?",
+      "options": [
+        "feeling",
+        "feet",
+        "ground",
+        "please"
+      ],
+      "answer_index": 3,
+      "youtube_start": 44,
+      "youtube_end": 56
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Won't you please, please",
+      "excerpt_after": "me?",
+      "options": [
+        "feet",
+        "gone",
+        "help",
+        "know"
+      ],
+      "answer_index": 2,
+      "youtube_start": 85,
+      "youtube_end": 97
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "just",
+        "Help",
+        "anybody",
+        "not"
+      ],
+      "answer": [
+        "Help",
+        "not",
+        "just",
+        "anybody"
+      ],
+      "youtube_start": 2
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "need",
+        "know",
+        "you",
+        "Help",
+        "someone"
+      ],
+      "answer": [
+        "Help",
+        "you",
+        "know",
+        "I",
+        "need",
+        "someone"
+      ],
+      "youtube_start": 4
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "self-assured",
+        "I'm",
+        "not",
+        "so"
+      ],
+      "answer": [
+        "I'm",
+        "not",
+        "so",
+        "self-assured"
+      ],
+      "youtube_start": 22
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "being",
+        "I",
+        "do",
+        "And",
+        "appreciate",
+        "'round"
+      ],
+      "answer": [
+        "And",
+        "I",
+        "do",
+        "appreciate",
+        "you",
+        "being",
+        "'round"
+      ],
+      "youtube_start": 34
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "help",
+        "Won't",
+        "please,",
+        "you",
+        "me?",
+        "please"
+      ],
+      "answer": [
+        "Won't",
+        "you",
+        "please,",
+        "please",
+        "help",
+        "me?"
+      ],
+      "youtube_start": 44
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"help\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"help\" na música inteira?",
+      "word": "help",
+      "answer": 17
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"please\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"please\" na música inteira?",
+      "word": "please",
+      "answer": 6
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I need somebody",
+          "order": 0
+        },
+        {
+          "text": "And I do appreciate you being 'round",
+          "order": 1
+        },
+        {
+          "text": "I never needed anybody's help in any way",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Help!\" was released in 1965. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Help!\" foi lançada em 1965. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "help",
+        "please",
+        "need",
+        "younger"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Help!\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Help!\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "help",
+        "please",
+        "need",
+        "younger"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "help",
+        "please",
+        "need",
+        "younger"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask The Beatles one question about \"Help!\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para The Beatles sobre \"Help!\", o que seria e por quê?",
+      "target_vocab": [
+        "help",
+        "please",
+        "need",
+        "younger"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Help!\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Help!\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "help",
+        "please",
+        "need",
+        "younger"
+      ]
+    }
+  ]
+}

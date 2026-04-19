@@ -461,6 +461,28 @@
           "full": "we are"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Just Dance\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Just Dance\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "dance",
+        "doot",
+        "okay",
+        "record"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Just Dance\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Just Dance\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "dance",
+        "doot",
+        "okay",
+        "record"
+      ]
     }
   ]
 }

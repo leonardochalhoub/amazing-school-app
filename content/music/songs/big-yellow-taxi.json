@@ -386,6 +386,61 @@
           "full": "it is"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Big Yellow Taxi\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Big Yellow Taxi\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "don't",
+        "paved",
+        "paradise",
+        "parking"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Big Yellow Taxi\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Big Yellow Taxi\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "don't",
+        "paved",
+        "paradise",
+        "parking"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "don't",
+        "paved",
+        "paradise",
+        "parking"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Big Yellow Taxi\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Big Yellow Taxi\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "don't",
+        "paved",
+        "paradise",
+        "parking"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "don't",
+        "paved",
+        "paradise",
+        "parking"
+      ]
     }
   ]
 }

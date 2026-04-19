@@ -373,6 +373,61 @@
           "full": "who is"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Going to California\" was released in 1971. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Going to California\" foi lançada em 1971. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "never",
+        "hard",
+        "woman",
+        "start"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Led Zeppelin one question about \"Going to California\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Led Zeppelin sobre \"Going to California\", o que seria e por quê?",
+      "target_vocab": [
+        "never",
+        "hard",
+        "woman",
+        "start"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Going to California\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Going to California\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "never",
+        "hard",
+        "woman",
+        "start"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Going to California\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Going to California\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "never",
+        "hard",
+        "woman",
+        "start"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "never",
+        "hard",
+        "woman",
+        "start"
+      ]
     }
   ]
 }

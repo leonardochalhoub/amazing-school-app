@@ -486,6 +486,17 @@
           "full": "will not"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Start Me Up\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Start Me Up\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "never",
+        "start",
+        "stop",
+        "grown"
+      ]
     }
   ]
 }

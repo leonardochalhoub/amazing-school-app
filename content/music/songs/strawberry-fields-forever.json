@@ -473,6 +473,17 @@
           "full": "cannot"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Strawberry Fields Forever\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Strawberry Fields Forever\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "strawberry",
+        "fields",
+        "nothing",
+        "forever"
+      ]
     }
   ]
 }

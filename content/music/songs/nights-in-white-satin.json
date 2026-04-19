@@ -466,6 +466,17 @@
           "full": "I am"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Nights in White Satin\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Nights in White Satin\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "never",
+        "white",
+        "i've",
+        "can't"
+      ]
     }
   ]
 }

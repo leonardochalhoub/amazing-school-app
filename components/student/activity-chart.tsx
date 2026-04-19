@@ -47,7 +47,9 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
     <div className="space-y-2 rounded-xl border border-border bg-card p-4 shadow-xs">
       <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
         <p className="font-medium text-foreground">
-          Activity · last 5 years{" "}
+          {granularity === "month"
+            ? "Activity · last 5 years"
+            : `Activity · last ${buckets.length} days`}{" "}
           <span className="ml-1 font-normal text-muted-foreground">
             ({granularity === "month" ? "per month" : "per day"})
           </span>
@@ -103,10 +105,16 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
 
         {hover ? (
           <div className="pointer-events-none absolute inset-x-0 top-0 text-center">
-            <div className="inline-block rounded-md border border-border bg-background px-2 py-1 text-[10px] shadow-sm">
-              <strong>{formatBucket(hover.start, granularity)}</strong> ·{" "}
-              {hover.lessons} lesson{hover.lessons === 1 ? "" : "s"} · {hover.music}{" "}
-              music
+            <div className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-2 py-1 text-[10px] shadow-sm">
+              <strong>{formatBucket(hover.start, granularity)}</strong>
+              <span className="inline-flex items-center gap-1">
+                <span className="inline-block h-2 w-2 rounded-sm bg-indigo-500" />
+                {hover.lessons} lesson{hover.lessons === 1 ? "" : "s"}
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <span className="inline-block h-2 w-2 rounded-sm bg-pink-500" />
+                {hover.music} music
+              </span>
             </div>
           </div>
         ) : null}
@@ -135,7 +143,12 @@ function formatBucket(start: string, granularity: "month" | "day"): string {
     return d.toLocaleDateString("en-US", {
       month: "short",
       year: "2-digit",
+      timeZone: "UTC",
     });
   }
-  return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  return d.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  });
 }

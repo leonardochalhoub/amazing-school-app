@@ -420,6 +420,39 @@
         "these",
         "mine"
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "arms",
+        "hold",
+        "these",
+        "mine"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"These Arms of Mine\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"These Arms of Mine\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "arms",
+        "hold",
+        "these",
+        "mine"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "arms",
+        "hold",
+        "these",
+        "mine"
+      ]
     }
   ]
 }

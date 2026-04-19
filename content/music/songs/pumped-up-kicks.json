@@ -463,6 +463,28 @@
           "full": "I have"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Pumped Up Kicks\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Pumped Up Kicks\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "better",
+        "other",
+        "kids",
+        "pumped"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Pumped Up Kicks\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Pumped Up Kicks\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "better",
+        "other",
+        "kids",
+        "pumped"
+      ]
     }
   ]
 }

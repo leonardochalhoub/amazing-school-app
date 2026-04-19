@@ -1,0 +1,484 @@
+{
+  "slug": "a-day-in-the-life-the-beatles",
+  "title": "A Day in the Life",
+  "artist": "The Beatles",
+  "year": 1967,
+  "album": "The Beatles Boxset",
+  "genre": [
+    "rock",
+    "psychedelic"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 335,
+  "youtube_id": "usNsCeOV4GM",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "A Day in the Life by The Beatles (1967) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "read",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "news",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "today",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "found",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "holes",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I read the news today, oh boy",
+          "About a lucky man who made the grade",
+          "And though the news was rather sad",
+          "Well I just had to laugh"
+        ],
+        "start_seconds": 14,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I'd love to turn you on"
+        ],
+        "start_seconds": 99,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I read the news",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "today",
+      "excerpt_after": "oh boy",
+      "youtube_start": 14,
+      "youtube_end": 28
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "He",
+      "blank_hint": "word starting with \"d\"",
+      "answer": "didnt",
+      "excerpt_after": "notice that the lights had changed",
+      "youtube_start": 50,
+      "youtube_end": 64
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "If he was from the",
+      "blank_hint": "word starting with \"h\"",
+      "answer": "house",
+      "excerpt_after": "of Lords",
+      "youtube_start": 67,
+      "youtube_end": 81
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Dragged a comb",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "across",
+      "excerpt_after": "my head",
+      "youtube_start": 143,
+      "youtube_end": 157
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Found my coat and",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "grabbed",
+      "excerpt_after": "my hat",
+      "youtube_start": 155,
+      "youtube_end": 169
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Somebody",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "spoke",
+      "excerpt_after": "and I went into a dream",
+      "youtube_start": 165,
+      "youtube_end": 179
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I read the news today, oh boy",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I saw the photograph",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "He didn't notice that the lights had changed",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "If he was from the House of Lords",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But I just had to look",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "the news today, oh boy",
+      "options": [
+        "read",
+        "stared",
+        "turn",
+        "woke"
+      ],
+      "answer_index": 0,
+      "youtube_start": 14,
+      "youtube_end": 26
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "A",
+      "excerpt_after": "of people stood and stared",
+      "options": [
+        "crowd",
+        "english",
+        "film",
+        "sure"
+      ],
+      "answer_index": 0,
+      "youtube_start": 56,
+      "youtube_end": 68
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The",
+      "excerpt_after": "Army had just won the war",
+      "options": [
+        "blew",
+        "english",
+        "notice",
+        "really"
+      ],
+      "answer_index": 1,
+      "youtube_start": 77,
+      "youtube_end": 89
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Found my way",
+      "excerpt_after": "and drank a cup",
+      "options": [
+        "changed",
+        "downstairs",
+        "dragged",
+        "looking"
+      ],
+      "answer_index": 1,
+      "youtube_start": 146,
+      "youtube_end": 158
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Somebody",
+      "excerpt_after": "and I went into a dream",
+      "options": [
+        "english",
+        "lucky",
+        "rather",
+        "spoke"
+      ],
+      "answer_index": 3,
+      "youtube_start": 165,
+      "youtube_end": 177
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "today,",
+        "the",
+        "news",
+        "read",
+        "boy",
+        "I",
+        "oh"
+      ],
+      "answer": [
+        "I",
+        "read",
+        "the",
+        "news",
+        "today,",
+        "oh",
+        "boy"
+      ],
+      "youtube_start": 14
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "saw",
+        "I",
+        "the",
+        "photograph"
+      ],
+      "answer": [
+        "I",
+        "saw",
+        "the",
+        "photograph"
+      ],
+      "youtube_start": 38
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "saw",
+        "today,",
+        "film",
+        "oh",
+        "a",
+        "I",
+        "boy"
+      ],
+      "answer": [
+        "I",
+        "saw",
+        "a",
+        "film",
+        "today,",
+        "oh",
+        "boy"
+      ],
+      "youtube_start": 72
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "to",
+        "love",
+        "you",
+        "I'd",
+        "on",
+        "turn"
+      ],
+      "answer": [
+        "I'd",
+        "love",
+        "to",
+        "turn",
+        "you",
+        "on"
+      ],
+      "youtube_start": 99
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "in",
+        "flat",
+        "seconds",
+        "bus",
+        "Made",
+        "the"
+      ],
+      "answer": [
+        "Made",
+        "the",
+        "bus",
+        "in",
+        "seconds",
+        "flat"
+      ],
+      "youtube_start": 158
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"read\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"read\" na música inteira?",
+      "word": "read",
+      "answer": 3
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"news\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"news\" na música inteira?",
+      "word": "news",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "I read the news today, oh boy",
+          "order": 0
+        },
+        {
+          "text": "If he was from the House of Lords",
+          "order": 1
+        },
+        {
+          "text": "And looking up I noticed I was late",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "About a lucky man who made the grade",
+          "order": 0
+        },
+        {
+          "text": "But I just had to look",
+          "order": 1
+        },
+        {
+          "text": "Found my coat and grabbed my hat",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "read",
+        "news",
+        "today",
+        "found"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "read",
+        "news",
+        "today",
+        "found"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"A Day in the Life\" was released in 1967. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"A Day in the Life\" foi lançada em 1967. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "read",
+        "news",
+        "today",
+        "found"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "didn't",
+          "full": "did not"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"A Day in the Life\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"A Day in the Life\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "read",
+        "news",
+        "today",
+        "found"
+      ]
+    }
+  ]
+}

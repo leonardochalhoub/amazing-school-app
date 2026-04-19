@@ -58,13 +58,15 @@ export default async function JoinPage({
       <p className="text-sm text-muted-foreground">
         <strong className="text-foreground">{preview.teacher.full_name}</strong>{" "}
         invited you to join{" "}
-        <strong className="text-foreground">{preview.classroom.name}</strong>.
+        <strong className="text-foreground">Amazing School</strong>. Create your
+        account below — your teacher will take it from there.
       </p>
       <JoinClient
         token={preview.token}
         prefillEmail={preview.email}
         prefillName={preview.display_name}
         currentlySignedIn={!!user}
+        currentUserEmail={user?.email ?? null}
       />
     </Shell>
   );

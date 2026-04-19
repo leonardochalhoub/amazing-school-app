@@ -1,0 +1,491 @@
+{
+  "slug": "the-motto",
+  "title": "The Motto",
+  "artist": "Tiësto",
+  "year": 2021,
+  "album": "DRIVE",
+  "genre": [
+    "edm",
+    "pop"
+  ],
+  "cefr_level": "a2.2",
+  "difficulty": "easy",
+  "tempo": "mid",
+  "duration_seconds": 165,
+  "youtube_id": "1_4ELAxKrDc",
+  "full_lyrics_url": "https://www.letras.mus.br/tiesto/the-motto/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "The Motto by Tiësto (2021) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "that's",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "motto",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "feel",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "tell",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "That's the motto (mhm)",
+          "Throw it back with no chaser, with no trouble (mhm)",
+          "Poppin' that Moët, baby, let's make some bubbles (mhm)",
+          "Puffin' on that gelato, wanna be seein' double"
+        ],
+        "start_seconds": 3,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "Tell me, did I just stutter?",
+          "That's the motto (mhm)",
+          "Drop a few bills, then pop a few champagne bottles (mhm)",
+          "Throwin' that money like you just won the lotto (mhm)"
+        ],
+        "start_seconds": 50,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "That's the",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "motto",
+      "excerpt_after": "(mhm)",
+      "youtube_start": 3,
+      "youtube_end": 17
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Puffin' on that",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gelato",
+      "excerpt_after": "wanna be seein' double",
+      "youtube_start": 14,
+      "youtube_end": 28
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We ain't",
+      "blank_hint": "word starting with \"g\"",
+      "answer": "gonna",
+      "excerpt_after": "sleep all weekend",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Hopped in the",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "range",
+      "excerpt_after": "can't feel my face",
+      "youtube_start": 78,
+      "youtube_end": 92
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Don't want no",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "bloodshot",
+      "excerpt_after": "eyes",
+      "youtube_start": 90,
+      "youtube_end": 104
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "We ain't gonna",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "sleep",
+      "excerpt_after": "all weekend",
+      "youtube_start": 103,
+      "youtube_end": 117
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Gotta do what you gotta",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Oh, you know, you know, you know",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Tell me, did I just stutter?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "We've been up all damn summer oh",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "That's the motto mhm",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That's the",
+      "excerpt_after": "(mhm)",
+      "options": [
+        "damn",
+        "friends",
+        "motto",
+        "sleep"
+      ],
+      "answer_index": 2,
+      "youtube_start": 3,
+      "youtube_end": 15
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Tell all of your",
+      "excerpt_after": "to be here",
+      "options": [
+        "friends",
+        "hopped",
+        "seein",
+        "thats"
+      ],
+      "answer_index": 0,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "We been up all",
+      "excerpt_after": "summer",
+      "options": [
+        "aint",
+        "damn",
+        "lotto",
+        "poppin"
+      ],
+      "answer_index": 1,
+      "youtube_start": 46,
+      "youtube_end": 58
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Hopped in the",
+      "excerpt_after": "can't feel my face",
+      "options": [
+        "range",
+        "seein",
+        "sleep",
+        "tell"
+      ],
+      "answer_index": 0,
+      "youtube_start": 78,
+      "youtube_end": 90
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So",
+      "excerpt_after": "my drink, let's fly",
+      "options": [
+        "baby",
+        "hold",
+        "leave",
+        "sleep"
+      ],
+      "answer_index": 1,
+      "youtube_start": 92,
+      "youtube_end": 104
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "motto",
+        "mhm",
+        "That's",
+        "the"
+      ],
+      "answer": [
+        "That's",
+        "the",
+        "motto",
+        "mhm"
+      ],
+      "youtube_start": 3
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "you",
+        "Oh,",
+        "know",
+        "know,",
+        "you",
+        "know,",
+        "you"
+      ],
+      "answer": [
+        "Oh,",
+        "you",
+        "know,",
+        "you",
+        "know,",
+        "you",
+        "know"
+      ],
+      "youtube_start": 34
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Tell",
+        "me,",
+        "stutter?",
+        "I",
+        "just",
+        "did"
+      ],
+      "answer": [
+        "Tell",
+        "me,",
+        "did",
+        "I",
+        "just",
+        "stutter?"
+      ],
+      "youtube_start": 50
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "down",
+        "The",
+        "down",
+        "window's"
+      ],
+      "answer": [
+        "The",
+        "window's",
+        "down",
+        "down"
+      ],
+      "youtube_start": 79
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "all",
+        "summer",
+        "damn",
+        "oh",
+        "We've",
+        "up",
+        "been"
+      ],
+      "answer": [
+        "We've",
+        "been",
+        "up",
+        "all",
+        "damn",
+        "summer",
+        "oh"
+      ],
+      "youtube_start": 120
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"that's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"that's\" na música inteira?",
+      "word": "that's",
+      "answer": 9
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"motto\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"motto\" na música inteira?",
+      "word": "motto",
+      "answer": 9
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "That's the motto (mhm)",
+          "order": 0
+        },
+        {
+          "text": "Makin' that bread and butter",
+          "order": 1
+        },
+        {
+          "text": "We've been up all damn summer (oh)",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Tiësto one question about \"The Motto\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Tiësto sobre \"The Motto\", o que seria e por quê?",
+      "target_vocab": [
+        "that's",
+        "motto",
+        "feel",
+        "tell"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"The Motto\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"The Motto\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "that's",
+        "motto",
+        "feel",
+        "tell"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"The Motto\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"The Motto\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "that's",
+        "motto",
+        "feel",
+        "tell"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "that's",
+          "full": "that is"
+        },
+        {
+          "short": "let's",
+          "full": "let us"
+        },
+        {
+          "short": "wanna",
+          "full": "want to"
+        },
+        {
+          "short": "gotta",
+          "full": "got to"
+        },
+        {
+          "short": "gonna",
+          "full": "going to"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"The Motto\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"The Motto\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "that's",
+        "motto",
+        "feel",
+        "tell"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"The Motto\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"The Motto\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "that's",
+        "motto",
+        "feel",
+        "tell"
+      ]
+    }
+  ]
+}

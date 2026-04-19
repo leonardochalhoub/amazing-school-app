@@ -475,6 +475,28 @@
           "full": "will not"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Wannabe\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Wannabe\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "really",
+        "want",
+        "slam",
+        "tell"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Wannabe\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Wannabe\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "really",
+        "want",
+        "slam",
+        "tell"
+      ]
     }
   ]
 }

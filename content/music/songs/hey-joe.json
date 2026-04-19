@@ -453,6 +453,28 @@
           "full": "going to"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Hey Joe\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Hey Joe\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "going",
+        "shot",
+        "messing",
+        "lady"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "going",
+        "shot",
+        "messing",
+        "lady"
+      ]
     }
   ]
 }

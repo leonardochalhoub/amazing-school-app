@@ -459,6 +459,28 @@
           "full": "they are"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"All Night Long\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"All Night Long\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "night",
+        "long",
+        "play",
+        "party"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"All Night Long\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"All Night Long\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "night",
+        "long",
+        "play",
+        "party"
+      ]
     }
   ]
 }

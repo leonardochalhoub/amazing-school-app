@@ -465,6 +465,28 @@
           "full": "you have"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Sam Smith one question about \"I'm Not the Only One\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Sam Smith sobre \"I'm Not the Only One\", o que seria e por quê?",
+      "target_vocab": [
+        "know",
+        "you've",
+        "crazy",
+        "cause"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"I'm Not the Only One\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"I'm Not the Only One\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "know",
+        "you've",
+        "crazy",
+        "cause"
+      ]
     }
   ]
 }

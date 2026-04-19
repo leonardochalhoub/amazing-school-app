@@ -458,6 +458,28 @@
           "full": "I will"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Home\" was released in 2005. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Home\" foi lançada em 2005. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "home",
+        "know",
+        "another",
+        "feel"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Michael Bublé one question about \"Home\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Michael Bublé sobre \"Home\", o que seria e por quê?",
+      "target_vocab": [
+        "home",
+        "know",
+        "another",
+        "feel"
+      ]
     }
   ]
 }

@@ -104,3 +104,14 @@ export async function signOut() {
   await supabase.auth.signOut();
   redirect("/");
 }
+
+/**
+ * Sign out without redirecting. Used by the /join page when a different
+ * user is signed in and we need to stay on that URL so the invited student
+ * can create their account.
+ */
+export async function signOutStay() {
+  const supabase = await createClient();
+  await supabase.auth.signOut();
+  return { success: true as const };
+}

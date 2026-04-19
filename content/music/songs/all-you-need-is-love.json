@@ -423,6 +423,50 @@
           "full": "you are"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask The Beatles one question about \"All You Need Is Love\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para The Beatles sobre \"All You Need Is Love\", o que seria e por quê?",
+      "target_vocab": [
+        "need",
+        "nothing",
+        "can't",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"All You Need Is Love\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"All You Need Is Love\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "need",
+        "nothing",
+        "can't",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"All You Need Is Love\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"All You Need Is Love\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "need",
+        "nothing",
+        "can't",
+        "it's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"All You Need Is Love\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"All You Need Is Love\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "need",
+        "nothing",
+        "can't",
+        "it's"
+      ]
     }
   ]
 }

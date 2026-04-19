@@ -4,10 +4,11 @@ import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { toast } from "sonner";
+import { AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { signUp } from "@/lib/actions/auth";
+import { signOutStay, signUp } from "@/lib/actions/auth";
 import { claimInvitation } from "@/lib/actions/student-invitations";
 
 interface Props {
@@ -15,6 +16,7 @@ interface Props {
   prefillEmail: string | null;
   prefillName: string | null;
   currentlySignedIn: boolean;
+  currentUserEmail: string | null;
 }
 
 export function JoinClient({
@@ -22,6 +24,7 @@ export function JoinClient({
   prefillEmail,
   prefillName,
   currentlySignedIn,
+  currentUserEmail,
 }: Props) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
@@ -31,15 +34,13 @@ export function JoinClient({
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState(prefillName ?? "");
 
-  function acceptExisting() {
+  function handleSignOutAndStay() {
     startTransition(async () => {
-      const r = await claimInvitation(token);
-      if ("error" in r && r.error) {
-        toast.error(r.error);
-        return;
-      }
-      toast.success("You're in! Welcome.");
-      router.push("/student");
+      // signOutStay clears the Supabase session but does NOT redirect, so we
+      // stay on /join?token=… and the server component can re-render the page
+      // with the signup form.
+      await signOutStay();
+      router.refresh();
     });
   }
 
@@ -80,16 +81,25 @@ export function JoinClient({
   if (currentlySignedIn) {
     return (
       <div className="space-y-3">
-        <p className="text-sm text-muted-foreground">
-          You&apos;re already signed in. Accept the invitation to join the
-          classroom.
-        </p>
+        <div className="flex items-start gap-2 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm">
+          <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />
+          <div className="space-y-1">
+            <p className="font-semibold">
+              Another account is signed in{currentUserEmail ? ` (${currentUserEmail})` : ""}.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Invitations can&apos;t be accepted by a different user. Sign out
+              first, then create your own account on this page.
+            </p>
+          </div>
+        </div>
         <Button
-          onClick={acceptExisting}
+          onClick={handleSignOutAndStay}
           disabled={pending}
+          variant="outline"
           className="w-full"
         >
-          {pending ? "Joining…" : "Accept invitation"}
+          {pending ? "Signing out…" : "Sign out and continue"}
         </Button>
       </div>
     );

@@ -474,6 +474,17 @@
           "full": "I am"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Black or White\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Black or White\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "it's",
+        "you're",
+        "black",
+        "white"
+      ]
     }
   ]
 }

@@ -455,6 +455,28 @@
           "full": "do not"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "woman",
+        "town",
+        "good",
+        "that's"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"I Got a Woman\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"I Got a Woman\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "woman",
+        "town",
+        "good",
+        "that's"
+      ]
     }
   ]
 }

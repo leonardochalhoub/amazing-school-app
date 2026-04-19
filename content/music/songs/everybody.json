@@ -471,6 +471,17 @@
           "pt": "sexual"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "everybody",
+        "original",
+        "lonely",
+        "sexual"
+      ]
     }
   ],
   "teaching_notes_md": "**Pedagogy:** The 'Am I X? Yeah.' call-response is perfect for practicing question intonation. Classroom-friendly (skip the sexual line with younger students).",

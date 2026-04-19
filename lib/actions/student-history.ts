@@ -255,6 +255,83 @@ export async function listAllTeacherHistory(
   }));
 }
 
+/**
+ * Student-side read: list history rows belonging to the logged-in student.
+ * Matches by either `student_id` (auth user) or `roster_student_id` (for
+ * students whose roster entry is linked via `roster_students.auth_user_id`).
+ * Ordered by event date/time descending so upcoming/recent surfaces first.
+ */
+export async function listOwnHistory(
+  limit = 5,
+): Promise<(StudentHistoryEntry & { teacher_name: string | null })[]> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return [];
+
+  const admin = createAdminClient();
+  const { data: rosterLink } = await admin
+    .from("roster_students")
+    .select("id")
+    .eq("auth_user_id", user.id)
+    .maybeSingle();
+  const rosterId = (rosterLink?.id as string | null) ?? null;
+
+  let rows: Array<Record<string, unknown>> = [];
+  try {
+    let query = admin
+      .from("student_history")
+      .select(
+        "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, status, lesson_content, skill_focus, meeting_link, created_at, updated_at",
+      )
+      .order("event_date", { ascending: false })
+      .order("event_time", { ascending: false, nullsFirst: false })
+      .limit(limit * 2);
+    query = rosterId
+      ? query.or(`student_id.eq.${user.id},roster_student_id.eq.${rosterId}`)
+      : query.eq("student_id", user.id);
+    const res = await query;
+    if (!res.error && res.data) rows = res.data as Array<Record<string, unknown>>;
+  } catch {
+    rows = [];
+  }
+  if (rows.length === 0) return [];
+
+  const teacherIds = Array.from(
+    new Set(rows.map((r) => r.teacher_id as string).filter(Boolean)),
+  );
+  const nameById = new Map<string, string>();
+  if (teacherIds.length > 0) {
+    const { data: profs } = await admin
+      .from("profiles")
+      .select("id, full_name")
+      .in("id", teacherIds);
+    for (const p of profs ?? []) {
+      nameById.set(p.id as string, (p.full_name as string | null) ?? "");
+    }
+  }
+
+  return rows.slice(0, limit).map((r) => ({
+    id: r.id as string,
+    teacher_id: r.teacher_id as string,
+    student_id: (r.student_id as string | null) ?? null,
+    roster_student_id: (r.roster_student_id as string | null) ?? null,
+    classroom_id: (r.classroom_id as string | null) ?? null,
+    event_date: r.event_date as string,
+    event_time: (r.event_time as string | null) ?? null,
+    status: r.status as HistoryStatus,
+    lesson_content: (r.lesson_content as string | null) ?? null,
+    skill_focus: Array.isArray(r.skill_focus)
+      ? sanitizeSkillFocus(r.skill_focus as string[])
+      : [],
+    meeting_link: (r.meeting_link as string | null) ?? null,
+    created_at: r.created_at as string,
+    updated_at: r.updated_at as string,
+    teacher_name: nameById.get(r.teacher_id as string) || null,
+  }));
+}
+
 export interface ScheduleClassInput {
   student_id?: string;
   roster_student_id?: string;

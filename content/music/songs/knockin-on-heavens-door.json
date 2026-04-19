@@ -456,6 +456,28 @@
           "full": "I am"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Knockin' on Heaven's Door\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Knockin' on Heaven's Door\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "knock",
+        "knockin'",
+        "heaven's",
+        "door"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Knockin' on Heaven's Door\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Knockin' on Heaven's Door\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "knock",
+        "knockin'",
+        "heaven's",
+        "door"
+      ]
     }
   ]
 }

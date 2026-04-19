@@ -152,8 +152,6 @@ export function MusicBoard({
     `?enablejsapi=1&rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=en&playsinline=1` +
     (origin ? `&origin=${encodeURIComponent(origin)}` : "");
 
-  const watchOnYouTube = `https://www.youtube.com/watch?v=${song.youtube_id}`;
-
   const firstListenAndFill = song.exercises.find(
     (e) => e.type === "listen_and_fill"
   ) as Extract<MusicExercise, { type: "listen_and_fill" }> | undefined;
@@ -237,19 +235,6 @@ export function MusicBoard({
                     } — a small drift is normal.`}
               </p>
               <div className="flex flex-wrap gap-3 text-xs">
-                {song.youtube_id ? (
-                  <a
-                    href={watchOnYouTube}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
-                  >
-                    {locale === "pt-BR"
-                      ? "Vídeo indisponível? Abrir no YouTube"
-                      : "Video unavailable? Open on YouTube"}
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                ) : null}
                 {song.full_lyrics_url ? (
                   <a
                     href={song.full_lyrics_url}
@@ -262,15 +247,6 @@ export function MusicBoard({
                     <ExternalLink className="h-3 w-3" />
                   </a>
                 ) : null}
-                <a
-                  href={searchUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground"
-                >
-                  {locale === "pt-BR" ? "Buscar alternativa" : "Search alternative"}
-                  <ExternalLink className="h-3 w-3" />
-                </a>
               </div>
             </div>
           </CardContent>

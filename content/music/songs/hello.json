@@ -476,6 +476,17 @@
           "full": "do not"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Hello\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Hello\", o que aconteceria?",
+      "target_vocab": [
+        "highs",
+        "lows",
+        "hello",
+        "i've"
+      ]
     }
   ]
 }

@@ -1,0 +1,488 @@
+{
+  "slug": "thank-you-not-so-bad",
+  "title": "Thank You (Not So Bad)",
+  "artist": "Tiësto",
+  "year": 2024,
+  "album": "Thank You (Not So Bad)",
+  "genre": [
+    "edm",
+    "pop"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "slow",
+  "duration_seconds": 140,
+  "youtube_id": "fQWNeIiFf_s",
+  "full_lyrics_url": "https://www.letras.mus.br/tiesto/thank-you-not-so-bad/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "Thank You (Not So Bad) by Tiësto (2024) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "it's",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "it'd",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "gray",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "picture",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "wall",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "But your picture on my wall",
+          "It reminds me that it's not so bad",
+          "It's not so bad"
+        ],
+        "start_seconds": 77,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "But your picture on my wall",
+          "It's not so bad",
+          "And even if I could, it'd all be gray",
+          "But your picture on my wall"
+        ],
+        "start_seconds": 103,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "My tea's gone cold, I'm",
+      "blank_hint": "word starting with \"w\"",
+      "answer": "wondering",
+      "excerpt_after": "why",
+      "youtube_start": 61,
+      "youtube_end": 75
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "The",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "morning",
+      "excerpt_after": "rain clouds up my window",
+      "youtube_start": 67,
+      "youtube_end": 81
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "But your",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "picture",
+      "excerpt_after": "on my wall",
+      "youtube_start": 77,
+      "youtube_end": 91
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "It",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "reminds",
+      "excerpt_after": "me that it's not so bad",
+      "youtube_start": 80,
+      "youtube_end": 94
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "My tea's gone cold, I'm wondering why",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I got out of bed at all",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "And I can't see at all",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "But your picture on my wall",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "It reminds me that it's not so bad",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "My",
+      "excerpt_after": "gone cold, I'm wondering why",
+      "options": [
+        "clouds",
+        "gone",
+        "morning",
+        "teas"
+      ],
+      "answer_index": 3,
+      "youtube_start": 61,
+      "youtube_end": 73
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "The",
+      "excerpt_after": "rain clouds up my window",
+      "options": [
+        "cant",
+        "morning",
+        "wall",
+        "wondering"
+      ],
+      "answer_index": 1,
+      "youtube_start": 67,
+      "youtube_end": 79
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "And I",
+      "excerpt_after": "see at all",
+      "options": [
+        "cant",
+        "gone",
+        "morning",
+        "rain"
+      ],
+      "answer_index": 0,
+      "youtube_start": 71,
+      "youtube_end": 83
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "But your",
+      "excerpt_after": "on my wall",
+      "options": [
+        "clouds",
+        "cold",
+        "gray",
+        "picture"
+      ],
+      "answer_index": 3,
+      "youtube_start": 77,
+      "youtube_end": 89
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "It",
+      "excerpt_after": "me that it's not so bad",
+      "options": [
+        "cant",
+        "morning",
+        "reminds",
+        "window"
+      ],
+      "answer_index": 2,
+      "youtube_start": 80,
+      "youtube_end": 92
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I'm",
+        "gone",
+        "cold,",
+        "why",
+        "wondering",
+        "tea's",
+        "My"
+      ],
+      "answer": [
+        "My",
+        "tea's",
+        "gone",
+        "cold,",
+        "I'm",
+        "wondering",
+        "why"
+      ],
+      "youtube_start": 61
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "all",
+        "got",
+        "bed",
+        "out",
+        "I",
+        "at",
+        "of"
+      ],
+      "answer": [
+        "I",
+        "got",
+        "out",
+        "of",
+        "bed",
+        "at",
+        "all"
+      ],
+      "youtube_start": 65
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "my",
+        "up",
+        "clouds",
+        "rain",
+        "morning",
+        "The",
+        "window"
+      ],
+      "answer": [
+        "The",
+        "morning",
+        "rain",
+        "clouds",
+        "up",
+        "my",
+        "window"
+      ],
+      "youtube_start": 67
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "at",
+        "see",
+        "And",
+        "can't",
+        "I",
+        "all"
+      ],
+      "answer": [
+        "And",
+        "I",
+        "can't",
+        "see",
+        "at",
+        "all"
+      ],
+      "youtube_start": 71
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "picture",
+        "on",
+        "But",
+        "your",
+        "my",
+        "wall"
+      ],
+      "answer": [
+        "But",
+        "your",
+        "picture",
+        "on",
+        "my",
+        "wall"
+      ],
+      "youtube_start": 77
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"it's\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"it's\" na música inteira?",
+      "word": "it's",
+      "answer": 5
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"it'd\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"it'd\" na música inteira?",
+      "word": "it'd",
+      "answer": 3
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "My tea's gone cold, I'm wondering why",
+          "order": 0
+        },
+        {
+          "text": "But your picture on my wall",
+          "order": 1
+        },
+        {
+          "text": "It's not so bad",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Thank You (Not So Bad)\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Thank You (Not So Bad)\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "it's",
+        "it'd",
+        "gray",
+        "picture"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Thank You (Not So Bad)\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Thank You (Not So Bad)\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "it's",
+        "it'd",
+        "gray",
+        "picture"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "it's",
+        "it'd",
+        "gray",
+        "picture"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"Thank You (Not So Bad)\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"Thank You (Not So Bad)\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "it's",
+        "it'd",
+        "gray",
+        "picture"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"Thank You (Not So Bad)\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"Thank You (Not So Bad)\", o que aconteceria?",
+      "target_vocab": [
+        "it's",
+        "it'd",
+        "gray",
+        "picture"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Thank You (Not So Bad)\" was released in 2024. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Thank You (Not So Bad)\" foi lançada em 2024. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "it's",
+        "it'd",
+        "gray",
+        "picture"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Tiësto one question about \"Thank You (Not So Bad)\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Tiësto sobre \"Thank You (Not So Bad)\", o que seria e por quê?",
+      "target_vocab": [
+        "it's",
+        "it'd",
+        "gray",
+        "picture"
+      ]
+    }
+  ]
+}

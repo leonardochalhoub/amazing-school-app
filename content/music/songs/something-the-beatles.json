@@ -1,0 +1,483 @@
+{
+  "slug": "something-the-beatles",
+  "title": "Something",
+  "artist": "The Beatles",
+  "year": 1969,
+  "album": "1",
+  "genre": [
+    "rock"
+  ],
+  "cefr_level": "a1.2",
+  "difficulty": "easy",
+  "tempo": "slow",
+  "duration_seconds": 182,
+  "youtube_id": "UelDrZ1aFeY",
+  "full_lyrics_url": "",
+  "full_lyrics_source": "LRCLIB (synced lyrics, fair-use excerpts only)",
+  "why_this_song": "Something by The Beatles (1969) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "don't",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "something",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "want",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "leave",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I don't want to leave her now",
+          "You know I believe and how",
+          "Somewhere in her smile, she knows",
+          "That I don't need no other lover"
+        ],
+        "start_seconds": 26,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Echo the hook",
+        "label_pt": "Repita o gancho",
+        "lines": [
+          "I don't know, I don't know",
+          "You stick around now it may show",
+          "I don't know, I don't know"
+        ],
+        "start_seconds": 80,
+        "style": "hook"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Attracts me like no",
+      "blank_hint": "word starting with \"o\"",
+      "answer": "other",
+      "excerpt_after": "lover",
+      "youtube_start": 13,
+      "youtube_end": 27
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I don't want to",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "leave",
+      "excerpt_after": "her now",
+      "youtube_start": 26,
+      "youtube_end": 40
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You know I",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "believe",
+      "excerpt_after": "and how",
+      "youtube_start": 30,
+      "youtube_end": 44
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Something in her",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "style",
+      "excerpt_after": "that shows me",
+      "youtube_start": 52,
+      "youtube_end": 66
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You're",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "asking",
+      "excerpt_after": "me will my love grow",
+      "youtube_start": 72,
+      "youtube_end": 86
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You",
+      "blank_hint": "word starting with \"s\"",
+      "answer": "stick",
+      "excerpt_after": "around now it may show",
+      "youtube_start": 87,
+      "youtube_end": 101
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Something in the way she moves",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I don't want to leave her now",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Somewhere in her smile, she knows",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You're asking me will my love grow",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You stick around now it may show",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Attracts me like no",
+      "excerpt_after": "lover",
+      "options": [
+        "grow",
+        "other",
+        "show",
+        "things"
+      ],
+      "answer_index": 1,
+      "youtube_start": 13,
+      "youtube_end": 25
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I",
+      "excerpt_after": "want to leave her now",
+      "options": [
+        "dont",
+        "moves",
+        "other",
+        "stick"
+      ],
+      "answer_index": 0,
+      "youtube_start": 26,
+      "youtube_end": 38
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That I don't",
+      "excerpt_after": "no other lover",
+      "options": [
+        "believe",
+        "dont",
+        "know",
+        "need"
+      ],
+      "answer_index": 3,
+      "youtube_start": 45,
+      "youtube_end": 57
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I don't",
+      "excerpt_after": "to leave her now",
+      "options": [
+        "lover",
+        "moves",
+        "smile",
+        "want"
+      ],
+      "answer_index": 3,
+      "youtube_start": 59,
+      "youtube_end": 71
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "around now it may show",
+      "options": [
+        "grow",
+        "knows",
+        "lover",
+        "stick"
+      ],
+      "answer_index": 3,
+      "youtube_start": 87,
+      "youtube_end": 99
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Something",
+        "she",
+        "way",
+        "in",
+        "moves",
+        "the"
+      ],
+      "answer": [
+        "Something",
+        "in",
+        "the",
+        "way",
+        "she",
+        "moves"
+      ],
+      "youtube_start": 8
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "Something",
+        "in",
+        "way",
+        "the",
+        "she",
+        "woos",
+        "me"
+      ],
+      "answer": [
+        "Something",
+        "in",
+        "the",
+        "way",
+        "she",
+        "woos",
+        "me"
+      ],
+      "youtube_start": 19
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "her",
+        "Somewhere",
+        "smile,",
+        "she",
+        "knows",
+        "in"
+      ],
+      "answer": [
+        "Somewhere",
+        "in",
+        "her",
+        "smile,",
+        "she",
+        "knows"
+      ],
+      "youtube_start": 37
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "shows",
+        "her",
+        "that",
+        "me",
+        "style",
+        "in",
+        "Something"
+      ],
+      "answer": [
+        "Something",
+        "in",
+        "her",
+        "style",
+        "that",
+        "shows",
+        "me"
+      ],
+      "youtube_start": 52
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "show",
+        "stick",
+        "now",
+        "may",
+        "You",
+        "around",
+        "it"
+      ],
+      "answer": [
+        "You",
+        "stick",
+        "around",
+        "now",
+        "it",
+        "may",
+        "show"
+      ],
+      "youtube_start": 87
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"don't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"don't\" na música inteira?",
+      "word": "don't",
+      "answer": 8
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"know\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"know\" na música inteira?",
+      "word": "know",
+      "answer": 7
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "Something in the way she moves",
+          "order": 0
+        },
+        {
+          "text": "That I don't need no other lover",
+          "order": 1
+        },
+        {
+          "text": "You stick around now it may show",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask The Beatles one question about \"Something\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para The Beatles sobre \"Something\", o que seria e por quê?",
+      "target_vocab": [
+        "don't",
+        "know",
+        "something",
+        "want"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Something\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Something\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "don't",
+        "know",
+        "something",
+        "want"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"Something\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"Something\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "don't",
+        "know",
+        "something",
+        "want"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Something\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Something\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "don't",
+        "know",
+        "something",
+        "want"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Something\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Something\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "don't",
+        "know",
+        "something",
+        "want"
+      ]
+    }
+  ]
+}

@@ -459,6 +459,28 @@
           "full": "we are"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Sugar, We're Goin Down\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Sugar, We're Goin Down\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "we're",
+        "going",
+        "loaded",
+        "complex"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Sugar, We're Goin Down\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Sugar, We're Goin Down\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "we're",
+        "going",
+        "loaded",
+        "complex"
+      ]
     }
   ]
 }

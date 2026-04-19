@@ -124,6 +124,51 @@ export async function listTeacherListeningResponses(): Promise<
   }));
 }
 
+/**
+ * Student-side read: list the logged-in student's own listening responses,
+ * newest first. Includes teacher feedback/score when the teacher has
+ * reviewed the submission.
+ */
+export async function listStudentListeningResponses(
+  limit = 20,
+): Promise<ListeningResponseRow[]> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return [];
+
+  const admin = createAdminClient();
+  let responses: Array<Record<string, unknown>> = [];
+  try {
+    const res = await admin
+      .from("listening_responses")
+      .select(
+        "id, student_id, lesson_slug, scene_id, response_text, submitted_at, teacher_feedback, teacher_score, reviewed_at",
+      )
+      .eq("student_id", user.id)
+      .order("submitted_at", { ascending: false })
+      .limit(limit);
+    if (!res.error && res.data) responses = res.data as Array<Record<string, unknown>>;
+  } catch {
+    responses = [];
+  }
+
+  const fullName = user.user_metadata?.full_name as string | undefined;
+  return responses.map((r) => ({
+    id: r.id as string,
+    student_id: r.student_id as string,
+    student_name: fullName ?? "You",
+    lesson_slug: r.lesson_slug as string,
+    scene_id: r.scene_id as string,
+    response_text: r.response_text as string,
+    submitted_at: r.submitted_at as string,
+    teacher_feedback: (r.teacher_feedback as string | null) ?? null,
+    teacher_score: (r.teacher_score as number | null) ?? null,
+    reviewed_at: (r.reviewed_at as string | null) ?? null,
+  }));
+}
+
 export interface ReviewArgs {
   responseId: string;
   feedback: string;

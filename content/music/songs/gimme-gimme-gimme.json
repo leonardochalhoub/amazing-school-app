@@ -458,6 +458,28 @@
           "full": "it is"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"Gimme! Gimme! Gimme!\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"Gimme! Gimme! Gimme!\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "gimme",
+        "midnight",
+        "there's",
+        "there"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "gimme",
+        "midnight",
+        "there's",
+        "there"
+      ]
     }
   ]
 }

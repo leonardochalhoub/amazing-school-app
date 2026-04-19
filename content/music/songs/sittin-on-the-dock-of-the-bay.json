@@ -460,6 +460,28 @@
           "full": "will not"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"(Sittin' On) The Dock of the Bay\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"(Sittin' On) The Dock of the Bay\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "sittin'",
+        "dock",
+        "roll",
+        "watching"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"(Sittin' On) The Dock of the Bay\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"(Sittin' On) The Dock of the Bay\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "sittin'",
+        "dock",
+        "roll",
+        "watching"
+      ]
     }
   ]
 }

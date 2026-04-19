@@ -1,0 +1,472 @@
+{
+  "slug": "greedy",
+  "title": "greedy",
+  "artist": "Tate McRae",
+  "year": 2023,
+  "album": "greedy",
+  "genre": [
+    "pop"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 132,
+  "youtube_id": "To4SWGZkEPk",
+  "full_lyrics_url": "https://www.letras.mus.br/tate-mcrae/greedy/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "greedy by Tate McRae (2023) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "want",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "myself",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "know",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "won't",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I would want myself",
+          "Baby, please believe me",
+          "I'll put you through hell just to know me, yeah-yeah",
+          "So sure of yourself"
+        ],
+        "start_seconds": 20,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "Yeah",
+          "I would want myself",
+          "Baby, please believe me",
+          "I'll put you through hell"
+        ],
+        "start_seconds": 91,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Baby,",
+      "blank_hint": "word starting with \"p\"",
+      "answer": "please",
+      "excerpt_after": "believe me",
+      "youtube_start": 22,
+      "youtube_end": 36
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Baby, please",
+      "blank_hint": "word starting with \"b\"",
+      "answer": "believe",
+      "excerpt_after": "me",
+      "youtube_start": 59,
+      "youtube_end": 73
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I said,",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lemme",
+      "excerpt_after": "check\"",
+      "youtube_start": 89,
+      "youtube_end": 103
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I'll put you",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "through",
+      "excerpt_after": "hell",
+      "youtube_start": 96,
+      "youtube_end": 110
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I would want myself",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I said, \"Lemme check\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Baby, please believe me",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Baby, don't get greedy",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "No, it won't end well",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I would",
+      "excerpt_after": "myself",
+      "options": [
+        "next",
+        "please",
+        "room",
+        "want"
+      ],
+      "answer_index": 3,
+      "youtube_start": 20,
+      "youtube_end": 32
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "So",
+      "excerpt_after": "of yourself",
+      "options": [
+        "never",
+        "real",
+        "sure",
+        "tell"
+      ],
+      "answer_index": 2,
+      "youtube_start": 29,
+      "youtube_end": 41
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "That",
+      "excerpt_after": "won't end well",
+      "options": [
+        "mouth",
+        "running",
+        "shit",
+        "someone"
+      ],
+      "answer_index": 2,
+      "youtube_start": 33,
+      "youtube_end": 45
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Baby, please",
+      "excerpt_after": "me",
+      "options": [
+        "believe",
+        "please",
+        "real",
+        "serious"
+      ],
+      "answer_index": 0,
+      "youtube_start": 59,
+      "youtube_end": 71
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "I'll put you",
+      "excerpt_after": "hell",
+      "options": [
+        "sure",
+        "sweet",
+        "through",
+        "well"
+      ],
+      "answer_index": 2,
+      "youtube_start": 96,
+      "youtube_end": 108
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "want",
+        "myself",
+        "would"
+      ],
+      "answer": [
+        "I",
+        "would",
+        "want",
+        "myself"
+      ],
+      "youtube_start": 20
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "So",
+        "yourself",
+        "sure",
+        "of"
+      ],
+      "answer": [
+        "So",
+        "sure",
+        "of",
+        "yourself"
+      ],
+      "youtube_start": 29
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "end",
+        "shit",
+        "well",
+        "That",
+        "won't"
+      ],
+      "answer": [
+        "That",
+        "shit",
+        "won't",
+        "end",
+        "well"
+      ],
+      "youtube_start": 33
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "end",
+        "That",
+        "****",
+        "won't",
+        "well"
+      ],
+      "answer": [
+        "That",
+        "****",
+        "won't",
+        "end",
+        "well"
+      ],
+      "youtube_start": 70
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "through",
+        "you",
+        "put",
+        "hell",
+        "I'll"
+      ],
+      "answer": [
+        "I'll",
+        "put",
+        "you",
+        "through",
+        "hell"
+      ],
+      "youtube_start": 96
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"want\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"want\" na música inteira?",
+      "word": "want",
+      "answer": 10
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"myself\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"myself\" na música inteira?",
+      "word": "myself",
+      "answer": 8
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"greedy\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"greedy\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "want",
+        "myself",
+        "know",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Who in your life would you dedicate \"greedy\" to, and what line captures what you want to say to them?",
+      "prompt_pt": "Para quem da sua vida você dedicaria \"greedy\", e qual verso resume o que você quer dizer para essa pessoa?",
+      "target_vocab": [
+        "want",
+        "myself",
+        "know",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "The singer makes a claim or statement in this song. Do you agree with it? Use evidence from the lyrics to support your answer.",
+      "prompt_pt": "O cantor faz uma afirmação nessa música. Você concorda? Use pelo menos um verso para defender sua resposta.",
+      "target_vocab": [
+        "want",
+        "myself",
+        "know",
+        "baby"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "i've",
+          "full": "I have"
+        },
+        {
+          "short": "can't",
+          "full": "cannot"
+        },
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'll",
+          "full": "I will"
+        },
+        {
+          "short": "won't",
+          "full": "will not"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you had to summarize \"greedy\" in one sentence to someone who has never heard it, what would you say?",
+      "prompt_pt": "Se você tivesse que resumir \"greedy\" em uma frase para alguém que nunca ouviu, o que diria?",
+      "target_vocab": [
+        "want",
+        "myself",
+        "know",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"greedy\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"greedy\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "want",
+        "myself",
+        "know",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "want",
+        "myself",
+        "know",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "What kind of person do you imagine the narrator of \"greedy\" is? Describe their age, mood, and situation using at least three details from the lyrics.",
+      "prompt_pt": "Que tipo de pessoa você imagina ser o narrador de \"greedy\"? Descreva a idade, o humor e a situação usando pelo menos três detalhes da letra.",
+      "target_vocab": [
+        "want",
+        "myself",
+        "know",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"greedy\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"greedy\", o que aconteceria?",
+      "target_vocab": [
+        "want",
+        "myself",
+        "know",
+        "baby"
+      ]
+    }
+  ]
+}

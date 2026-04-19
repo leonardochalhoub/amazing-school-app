@@ -1,0 +1,501 @@
+{
+  "slug": "i-had-some-help",
+  "title": "I Had Some Help",
+  "artist": "Post Malone",
+  "year": 2024,
+  "album": "",
+  "genre": [
+    "country",
+    "pop"
+  ],
+  "cefr_level": "b1.1",
+  "difficulty": "medium",
+  "tempo": "mid",
+  "duration_seconds": 178,
+  "youtube_id": "4QIZE708gJ4",
+  "full_lyrics_url": "https://www.letras.mus.br/post-malone/i-had-some-help/",
+  "full_lyrics_source": "Letras.mus.br (licensed)",
+  "why_this_song": "I Had Some Help by Post Malone (2024) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.",
+  "vocab_hooks": [
+    {
+      "term": "help",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "ain't",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "don't",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "baby",
+      "pt": "",
+      "note": ""
+    },
+    {
+      "term": "kinda",
+      "pt": "",
+      "note": ""
+    }
+  ],
+  "grammar_callouts": [],
+  "timing_source": "lrclib",
+  "teaching_notes_md": "## Teaching notes\n\n- Times are estimated from community-synced lyrics and may be off by 1–2 seconds.\n- Start with the sing-along prompt, then move to listen-and-fill.\n- For B1+ students, focus on the discussion questions.\n",
+  "copyright_notice": "Short fair-use lyric excerpts only (Brazilian Lei 9.610/98 art. 46 VIII). No full lyrics stored.",
+  "sing_along": {
+    "prompts": [
+      {
+        "label_en": "Sing with the chorus",
+        "label_pt": "Cante junto no refrão",
+        "lines": [
+          "I had some help",
+          "It ain't like I can make this kinda mess all by myself",
+          "Don't act like you ain't help me pull that bottle off the shelf",
+          "Been deep in every weekend if you couldn't tell"
+        ],
+        "start_seconds": 44,
+        "style": "chorus"
+      },
+      {
+        "label_en": "Sing it again — final chorus",
+        "label_pt": "Cante de novo — refrão final",
+        "lines": [
+          "I had some help",
+          "It ain't like I can make this kinda mess all by myself",
+          "Don't act like you ain't help me pull that bottle off the shelf",
+          "Been deep in every weekend if you couldn't tell"
+        ],
+        "start_seconds": 97,
+        "style": "chorus"
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "You got a",
+      "blank_hint": "word starting with \"l\"",
+      "answer": "lotta",
+      "excerpt_after": "nerve, don't you, baby?",
+      "youtube_start": 15,
+      "youtube_end": 29
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Why'd you",
+      "blank_hint": "word starting with \"t\"",
+      "answer": "throw",
+      "excerpt_after": "them stones if you",
+      "youtube_start": 31,
+      "youtube_end": 45
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Been deep in",
+      "blank_hint": "word starting with \"e\"",
+      "answer": "every",
+      "excerpt_after": "weekend if you couldn't tell",
+      "youtube_start": 53,
+      "youtube_end": 67
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "Go",
+      "blank_hint": "word starting with \"r\"",
+      "answer": "round",
+      "excerpt_after": "like you ain't guilty of somethin'",
+      "youtube_start": 72,
+      "youtube_end": 86
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "I ain't an",
+      "blank_hint": "word starting with \"a\"",
+      "answer": "angel",
+      "excerpt_after": "you ain't heaven-sent",
+      "youtube_start": 90,
+      "youtube_end": 104
+    },
+    {
+      "type": "listen_and_fill",
+      "prompt_en": "Fill the blank in this line:",
+      "prompt_pt": "Complete a lacuna neste verso:",
+      "excerpt_before": "They say, \"Teamwork",
+      "blank_hint": "word starting with \"m\"",
+      "answer": "makes",
+      "excerpt_after": "the dream work\"",
+      "youtube_start": 109,
+      "youtube_end": 123
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "You got a lotta nerve, don't you, baby?",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Like I'm the only one",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "I thought you knew",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "They say, \"Teamwork makes the dream work\"",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "translate_line",
+      "prompt_en": "Translate this line to Portuguese:",
+      "prompt_pt": "Traduza esta linha para português:",
+      "excerpt": "Go 'round like you ain't guilty of somethin'",
+      "model_answer_pt": "",
+      "teacher_note": "Auto-generated from synced lyrics — add the model translation when reviewing."
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You got a",
+      "excerpt_after": "nerve, don't you, baby?",
+      "options": [
+        "couldnt",
+        "dont",
+        "lotta",
+        "mess"
+      ],
+      "answer_index": 2,
+      "youtube_start": 15,
+      "youtube_end": 27
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Had a",
+      "excerpt_after": "hair of your own or two?",
+      "options": [
+        "bottle",
+        "knew",
+        "wild",
+        "youre"
+      ],
+      "answer_index": 2,
+      "youtube_start": 34,
+      "youtube_end": 46
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "Hell, I had some",
+      "excerpt_after": "(help)",
+      "options": [
+        "aint",
+        "baby",
+        "help",
+        "pull"
+      ],
+      "answer_index": 2,
+      "youtube_start": 59,
+      "youtube_end": 71
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "You",
+      "excerpt_after": "that you're so innocent",
+      "options": [
+        "glass",
+        "tell",
+        "tellin",
+        "think"
+      ],
+      "answer_index": 3,
+      "youtube_start": 83,
+      "youtube_end": 95
+    },
+    {
+      "type": "cloze_multi_choice",
+      "prompt_en": "Choose the missing word:",
+      "prompt_pt": "Escolha a palavra que falta:",
+      "excerpt_before": "They say, \"Teamwork",
+      "excerpt_after": "the dream work\"",
+      "options": [
+        "makes",
+        "stones",
+        "tellin",
+        "youre"
+      ],
+      "answer_index": 0,
+      "youtube_start": 109,
+      "youtube_end": 121
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "one",
+        "Like",
+        "I'm",
+        "only",
+        "the"
+      ],
+      "answer": [
+        "Like",
+        "I'm",
+        "the",
+        "only",
+        "one"
+      ],
+      "youtube_start": 27
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "I",
+        "knew",
+        "thought",
+        "you"
+      ],
+      "answer": [
+        "I",
+        "thought",
+        "you",
+        "knew"
+      ],
+      "youtube_start": 42
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "\"Teamwork",
+        "say,",
+        "the",
+        "work\"",
+        "makes",
+        "dream",
+        "They"
+      ],
+      "answer": [
+        "They",
+        "say,",
+        "\"Teamwork",
+        "makes",
+        "the",
+        "dream",
+        "work\""
+      ],
+      "youtube_start": 57
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "that",
+        "you're",
+        "think",
+        "innocent",
+        "so",
+        "You"
+      ],
+      "answer": [
+        "You",
+        "think",
+        "that",
+        "you're",
+        "so",
+        "innocent"
+      ],
+      "youtube_start": 83
+    },
+    {
+      "type": "unscramble_line",
+      "prompt_en": "Put the words in the right order:",
+      "prompt_pt": "Coloque as palavras na ordem certa:",
+      "shuffled": [
+        "an",
+        "heaven-sent",
+        "ain't",
+        "ain't",
+        "you",
+        "angel,",
+        "I"
+      ],
+      "answer": [
+        "I",
+        "ain't",
+        "an",
+        "angel,",
+        "you",
+        "ain't",
+        "heaven-sent"
+      ],
+      "youtube_start": 90
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"help\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"help\" na música inteira?",
+      "word": "help",
+      "answer": 19
+    },
+    {
+      "type": "count_word",
+      "prompt_en": "How many times do you hear the word \"ain't\" in the whole song?",
+      "prompt_pt": "Quantas vezes você ouve a palavra \"ain't\" na música inteira?",
+      "word": "ain't",
+      "answer": 10
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "Put these three lines in the order they appear in the song:",
+      "prompt_pt": "Coloque estes três versos na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You got a lotta nerve, don't you, baby?",
+          "order": 0
+        },
+        {
+          "text": "Hell, I had some help (help)",
+          "order": 1
+        },
+        {
+          "text": "Can't wash our hands of this",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "line_order",
+      "prompt_en": "And these three — put them in the order they appear in the song:",
+      "prompt_pt": "E estes três — coloque na ordem em que aparecem na música:",
+      "excerpts": [
+        {
+          "text": "You're tellin' all your friends that I'm crazy",
+          "order": 0
+        },
+        {
+          "text": "Guess it's catchin' up to you, huh",
+          "order": 1
+        },
+        {
+          "text": "I had some help",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Compare \"I Had Some Help\" with a Brazilian song you know. Do they share a theme? How do their styles differ?",
+      "prompt_pt": "Compare \"I Had Some Help\" com alguma música brasileira que você conhece. Elas compartilham algum tema? Como os estilos diferem?",
+      "target_vocab": [
+        "help",
+        "ain't",
+        "don't",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could change the ending of the story told in \"I Had Some Help\", what would happen instead?",
+      "prompt_pt": "Se você pudesse mudar o final da história contada em \"I Had Some Help\", o que aconteceria?",
+      "target_vocab": [
+        "help",
+        "ain't",
+        "don't",
+        "baby"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"I Had Some Help\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"I Had Some Help\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "help",
+        "ain't",
+        "don't",
+        "baby"
+      ]
+    },
+    {
+      "type": "spot_the_grammar",
+      "prompt_en": "Write the full form of each contraction:",
+      "prompt_pt": "Escreva a forma completa de cada contração:",
+      "expected": [
+        {
+          "short": "don't",
+          "full": "do not"
+        },
+        {
+          "short": "you're",
+          "full": "you are"
+        },
+        {
+          "short": "i'm",
+          "full": "I am"
+        },
+        {
+          "short": "couldn't",
+          "full": "could not"
+        },
+        {
+          "short": "i'd",
+          "full": "I would"
+        },
+        {
+          "short": "it's",
+          "full": "it is"
+        }
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "help",
+        "ain't",
+        "don't",
+        "baby"
+      ]
+    }
+  ]
+}

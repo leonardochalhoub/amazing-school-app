@@ -593,6 +593,48 @@ const DISCUSSION_TEMPLATES = [
     pt: (s) =>
       `Se você pudesse mudar o final da história contada em "${s.title}", o que aconteceria?`,
   },
+  {
+    en: (s) =>
+      `Which instrument or vocal moment in "${s.title}" stands out most to you, and what emotion does it bring?`,
+    pt: (s) =>
+      `Qual instrumento ou momento vocal em "${s.title}" mais se destaca para você, e que emoção ele traz?`,
+  },
+  {
+    en: (s) =>
+      `If "${s.title}" were the opening theme of a TV series, what kind of show would that be? Describe the genre, main character, and pilot episode in 2–3 sentences.`,
+    pt: (s) =>
+      `Se "${s.title}" fosse o tema de abertura de uma série, que tipo de série seria? Descreva o gênero, o protagonista e o episódio piloto em 2–3 frases.`,
+  },
+  {
+    en: (s) =>
+      `Pick one line from "${s.title}" that could stand on its own as a personal motto. Why did you choose that line?`,
+    pt: (s) =>
+      `Escolha um verso de "${s.title}" que poderia ser um lema pessoal. Por que você escolheu esse verso?`,
+  },
+  {
+    en: (s) =>
+      `Would "${s.title}" work better as a solo performance or as a duet? Who would you cast as the second voice, and why?`,
+    pt: (s) =>
+      `"${s.title}" funcionaria melhor como apresentação solo ou dueto? Quem você chamaria para a segunda voz, e por quê?`,
+  },
+  {
+    en: (s) =>
+      `How does the pace of "${s.title}" change from beginning to end? Is the ending more intense, calmer, or the same? Give one example.`,
+    pt: (s) =>
+      `Como o ritmo de "${s.title}" muda do começo ao fim? O final é mais intenso, mais calmo ou igual? Dê um exemplo.`,
+  },
+  {
+    en: (s) =>
+      `Imagine covering "${s.title}" in a completely different genre (reggae, bossa nova, heavy metal, samba…). Which genre would you choose and why?`,
+    pt: (s) =>
+      `Imagine regravar "${s.title}" em um gênero totalmente diferente (reggae, bossa nova, heavy metal, samba…). Qual gênero você escolheria e por quê?`,
+  },
+  {
+    en: (s) =>
+      `Teach a friend one new English word from this song. Which word would it be, how would you define it, and what example sentence would you give?`,
+    pt: (s) =>
+      `Ensine uma palavra nova em inglês dessa música para um amigo. Qual palavra seria, como você definiria, e que exemplo você daria?`,
+  },
 ];
 
 function slugHash(slug) {
@@ -605,8 +647,14 @@ export function generateDiscussionAll(song, max = 3) {
   const n = DISCUSSION_TEMPLATES.length;
   const start = slugHash(song.slug) % n;
   const picked = [];
-  for (let i = 0; i < max; i++) {
-    const tpl = DISCUSSION_TEMPLATES[(start + i * 3) % n];
+  const seen = new Set();
+  // Walk the full template ring (stride 1 keeps us within max=n before
+  // repeating) so callers can request up to `n` unique prompts. Earlier
+  // stride 3 collided with n=12 and could loop forever.
+  for (let i = 0; i < n && picked.length < max; i++) {
+    const tpl = DISCUSSION_TEMPLATES[(start + i) % n];
+    if (seen.has(tpl)) continue;
+    seen.add(tpl);
     picked.push({
       type: "discussion",
       prompt_en: tpl.en(song),
@@ -690,7 +738,23 @@ export function buildExerciseSet(song, lrcLines) {
   if (stg) set.push(stg);
   const wtm = generateWordToMeaning(song);
   if (wtm) set.push(wtm);
-  return set;
+  // Standing rule: every song must ship with exactly 30 exercises. Top up
+  // with extra discussion prompts (rotating through the full template pool)
+  // when the other generators produced fewer items than their cap.
+  const TARGET = 30;
+  if (set.length < TARGET) {
+    const extras = generateDiscussionAll(song, TARGET - set.length + 3);
+    const seenText = new Set(
+      set.filter((e) => e.type === "discussion").map((e) => e.prompt_en)
+    );
+    for (const ex of extras) {
+      if (set.length >= TARGET) break;
+      if (seenText.has(ex.prompt_en)) continue;
+      seenText.add(ex.prompt_en);
+      set.push(ex);
+    }
+  }
+  return set.slice(0, TARGET);
 }
 
 // ----------------------------------------------------------------------------

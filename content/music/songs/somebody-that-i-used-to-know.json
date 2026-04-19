@@ -447,6 +447,39 @@
           "full": "I would"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Gotye one question about \"Somebody That I Used to Know\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Gotye sobre \"Somebody That I Used to Know\", o que seria e por quê?",
+      "target_vocab": [
+        "somebody",
+        "used",
+        "know",
+        "you're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Somebody That I Used to Know\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Somebody That I Used to Know\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "somebody",
+        "used",
+        "know",
+        "you're"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Rewrite the chorus of \"Somebody That I Used to Know\" in your own words — keep the meaning but change the style (formal, slang, poetic, whatever you like).",
+      "prompt_pt": "Reescreva o refrão de \"Somebody That I Used to Know\" com suas palavras — mantenha o sentido mas mude o estilo (formal, gíria, poético, o que preferir).",
+      "target_vocab": [
+        "somebody",
+        "used",
+        "know",
+        "you're"
+      ]
     }
   ]
 }

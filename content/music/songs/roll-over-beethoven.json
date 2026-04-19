@@ -476,6 +476,17 @@
           "full": "do not"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Roll Over Beethoven\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Roll Over Beethoven\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "roll",
+        "beethoven",
+        "rhythm",
+        "blues"
+      ]
     }
   ]
 }

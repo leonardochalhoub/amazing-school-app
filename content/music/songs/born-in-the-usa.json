@@ -462,6 +462,39 @@
           "full": "I am"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "\"Born in the U.S.A.\" was released in 1984. Do you think the themes in the song are timeless, or do they feel dated? Give one example from the lyrics.",
+      "prompt_pt": "\"Born in the U.S.A.\" foi lançada em 1984. Você acha que os temas da música são atemporais ou já parecem datados? Dê um exemplo do que ouviu.",
+      "target_vocab": [
+        "born",
+        "refinery",
+        "gone",
+        "nowhere"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "If you could ask Bruce Springsteen one question about \"Born in the U.S.A.\", what would it be and why?",
+      "prompt_pt": "Se você pudesse perguntar uma coisa para Bruce Springsteen sobre \"Born in the U.S.A.\", o que seria e por quê?",
+      "target_vocab": [
+        "born",
+        "refinery",
+        "gone",
+        "nowhere"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Born in the U.S.A.\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Born in the U.S.A.\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "born",
+        "refinery",
+        "gone",
+        "nowhere"
+      ]
     }
   ]
 }

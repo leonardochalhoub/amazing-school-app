@@ -55,6 +55,25 @@ function slugify(title, artist) {
   return base;
 }
 
+function letrasSlug(s) {
+  return s
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function letrasUrl(artist, title) {
+  const a = letrasSlug(artist);
+  const t = letrasSlug(title);
+  if (!a || !t) return "";
+  return `https://www.letras.mus.br/${a}/${t}/`;
+}
+
 function difficultyFromCefr(cefr) {
   if (!cefr) return "easy";
   const c = cefr.toLowerCase();
@@ -140,8 +159,8 @@ async function seedWithSlug(entry, slug, { force, dry }) {
     tempo: tempoFromLrc(lrcLines, duration),
     duration_seconds: duration,
     youtube_id: "",
-    full_lyrics_url: "",
-    full_lyrics_source: "LRCLIB (synced lyrics, fair-use excerpts only)",
+    full_lyrics_url: letrasUrl(entry.artist, entry.title),
+    full_lyrics_source: "Letras.mus.br (licensed)",
     why_this_song: `${entry.title} by ${entry.artist} (${entry.year}) — selected for the English-through-music catalog. Use the sing-along prompts and exercises to drill pronunciation, vocabulary, and listening comprehension.`,
     vocab_hooks: extractVocabHooks(lrcLines),
     grammar_callouts: [],

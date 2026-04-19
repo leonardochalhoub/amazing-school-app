@@ -490,6 +490,17 @@
           "full": "we are"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Shape of You\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Shape of You\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "body",
+        "baby",
+        "follow",
+        "lead"
+      ]
     }
   ]
 }

@@ -480,6 +480,17 @@
           "full": "you are"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Which single word from this song do you think carries the most emotional weight, and why?",
+      "prompt_pt": "Qual palavra dessa música carrega mais peso emocional para você, e por quê?",
+      "target_vocab": [
+        "name",
+        "what's",
+        "meet",
+        "guess"
+      ]
     }
   ]
 }

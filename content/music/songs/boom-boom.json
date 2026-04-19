@@ -453,6 +453,28 @@
           "full": "cannot"
         }
       ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Describe the mood of \"Boom Boom\" in three adjectives. What part of the song makes you feel that way?",
+      "prompt_pt": "Descreva o clima de \"Boom Boom\" em três adjetivos. Que parte da música te faz sentir isso?",
+      "target_vocab": [
+        "talk",
+        "baby",
+        "boom",
+        "walk"
+      ]
+    },
+    {
+      "type": "discussion",
+      "prompt_en": "Imagine you are making a short film with \"Boom Boom\" as the soundtrack. What scene would you show while the chorus plays?",
+      "prompt_pt": "Imagine que você vai fazer um curta com \"Boom Boom\" como trilha sonora. Que cena você mostraria no momento do refrão?",
+      "target_vocab": [
+        "talk",
+        "baby",
+        "boom",
+        "walk"
+      ]
     }
   ]
 }
