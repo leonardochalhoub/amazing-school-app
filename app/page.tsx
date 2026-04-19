@@ -35,27 +35,31 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 md:px-6">
-          <div className="flex items-center gap-3">
-            <BrandMark className="h-11 w-11" />
+      <header className="sticky top-0 z-50 w-full overflow-x-clip border-b border-border/50 bg-background/80 backdrop-blur-md">
+        <div className="mx-auto flex h-16 w-full min-w-0 max-w-6xl items-center justify-between gap-2 px-3 md:h-20 md:gap-4 md:px-6">
+          <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2 md:gap-3">
+            <BrandMark className="h-9 w-9 md:h-11 md:w-11" />
+            {/* Wordmark hidden on very narrow screens — steals room from
+                the CTA otherwise. Reappears at sm+. */}
             <span
-              className="bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text font-[family-name:var(--font-display)] text-3xl italic leading-none text-transparent dark:from-indigo-400 dark:via-violet-400 dark:to-pink-400"
+              className="hidden truncate bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text font-[family-name:var(--font-display)] text-2xl italic leading-none text-transparent sm:inline-block dark:from-indigo-400 dark:via-violet-400 dark:to-pink-400 md:text-3xl"
               style={{ letterSpacing: "-0.01em" }}
             >
               Amazing School
             </span>
-          </div>
-          <div className="flex items-center gap-2">
+          </Link>
+          <div className="flex min-w-0 shrink-0 items-center gap-1 md:gap-2">
             <LocaleToggle />
             <ThemeToggle />
-            <Link href="/login">
+            <Link href="/login" className="hidden sm:inline-flex">
               <Button variant="ghost" size="sm">
                 {t.landing.signIn}
               </Button>
             </Link>
             <Link href="/signup">
-              <Button size="sm">{t.landing.getStarted}</Button>
+              <Button size="sm" className="whitespace-nowrap">
+                {t.landing.getStarted}
+              </Button>
             </Link>
           </div>
         </div>
