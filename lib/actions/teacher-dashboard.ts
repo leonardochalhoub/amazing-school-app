@@ -593,7 +593,8 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
       admin
         .from("lesson_assignments")
         .select("classroom_id, student_id, roster_student_id")
-        .in("classroom_id", classroomIds),
+        .in("classroom_id", classroomIds)
+        .limit(50_000),
       admin
         .from("lesson_progress")
         .select("id", { count: "exact", head: true })

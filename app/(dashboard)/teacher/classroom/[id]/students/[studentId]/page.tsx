@@ -57,12 +57,14 @@ export default async function StudentDetailPage({
       .from("xp_events")
       .select("xp_amount")
       .eq("classroom_id", id)
-      .eq("student_id", studentId),
+      .eq("student_id", studentId)
+      .limit(50_000),
     admin
       .from("lesson_progress")
       .select("lesson_slug, completed_at")
       .eq("classroom_id", id)
-      .eq("student_id", studentId),
+      .eq("student_id", studentId)
+      .limit(50_000),
   ]);
 
   const totalXp =

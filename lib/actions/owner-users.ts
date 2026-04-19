@@ -103,7 +103,8 @@ export async function listAllUsers(): Promise<UserRow[] | { error: string }> {
     const { data: xps } = await admin
       .from("xp_events")
       .select("student_id, xp_amount")
-      .in("student_id", studentIds);
+      .in("student_id", studentIds)
+      .limit(50_000);
     for (const x of (xps ?? []) as Array<{
       student_id: string;
       xp_amount: number;
@@ -117,7 +118,8 @@ export async function listAllUsers(): Promise<UserRow[] | { error: string }> {
       .from("daily_activity")
       .select("student_id, activity_date")
       .in("student_id", studentIds)
-      .order("activity_date", { ascending: false });
+      .order("activity_date", { ascending: false })
+      .limit(50_000);
     for (const a of (acts ?? []) as Array<{
       student_id: string;
       activity_date: string;

@@ -67,7 +67,8 @@ export function LeaderboardTable({
     const { data: xpEvents } = await supabase
       .from("xp_events")
       .select("student_id, xp_amount")
-      .eq("classroom_id", classroomId);
+      .eq("classroom_id", classroomId)
+      .limit(50_000);
 
     if (!members) return;
 
