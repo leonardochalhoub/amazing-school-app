@@ -59,20 +59,40 @@ export async function getClassroomStudentRows(
     .map((r) => r.id as string);
   const rosterSignedUrls = await getRosterAvatarSignedUrls(rosterIds);
 
-  const rosterStudents: StudentRow[] = rosterRows.map((r) => ({
-    classroomId,
-    studentId: r.id as string,
-    fullName: r.full_name as string,
-    totalXp: 0,
-    streak: 0,
-    assigned: 0,
-    completed: 0,
-    lastActivity: null,
-    avatarUrl: rosterSignedUrls[r.id as string] ?? null,
-    isRoster: true,
-    ageGroup: (r as { age_group: "kid" | "teen" | "adult" | null }).age_group ?? null,
-    gender: (r as { gender: "female" | "male" | null }).gender ?? null,
-  }));
+  // If a roster row is linked to an auth user who self-uploaded their
+  // photo on /student/profile, surface that avatar too.
+  const linkedAuthIdList = Array.from(linkedAuthIds);
+  const profileSignedUrls =
+    linkedAuthIdList.length > 0
+      ? await getAvatarSignedUrls(supabase, linkedAuthIdList)
+      : {};
+
+  const rosterStudents: StudentRow[] = rosterRows.map((r) => {
+    const row = r as {
+      id: string;
+      full_name: string;
+      has_avatar: boolean;
+      auth_user_id: string | null;
+      age_group: "kid" | "teen" | "adult" | null;
+      gender: "female" | "male" | null;
+    };
+    const rosterUrl = rosterSignedUrls[row.id];
+    const selfUrl = row.auth_user_id ? profileSignedUrls[row.auth_user_id] : null;
+    return {
+      classroomId,
+      studentId: row.id,
+      fullName: row.full_name,
+      totalXp: 0,
+      streak: 0,
+      assigned: 0,
+      completed: 0,
+      lastActivity: null,
+      avatarUrl: rosterUrl ?? selfUrl ?? null,
+      isRoster: true,
+      ageGroup: row.age_group,
+      gender: row.gender,
+    };
+  });
 
   return [...authStudents, ...rosterStudents];
 }
@@ -466,31 +486,57 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
       (rosterCountsByClassroom.get(c.id as string) ?? 0),
   }));
 
+  // Roster photo (set by the teacher on the student detail page) has
+  // priority, but if the student later uploaded their own photo via
+  // /student/profile — linked through roster.auth_user_id — we use
+  // that instead of falling back to a cartoon.
   const rosterWithAvatars = rosterRows.filter(
-    (r) => (r as { has_avatar: boolean }).has_avatar
+    (r) => (r as { has_avatar: boolean }).has_avatar,
   );
-  const signedUrls = await getRosterAvatarSignedUrls(
-    rosterWithAvatars.map((r) => r.id as string)
+  const rosterSignedUrls = await getRosterAvatarSignedUrls(
+    rosterWithAvatars.map((r) => r.id as string),
   );
 
+  // For every linked roster row, also try the student's own
+  // {authUserId}.webp. signUrls returns only the keys that exist, so
+  // cartoon rows stay cartoon.
+  const linkedAuthIds = rosterRows
+    .map((r) => (r as { auth_user_id: string | null }).auth_user_id)
+    .filter((id): id is string => !!id);
+  const profileSignedUrls = await getAvatarSignedUrls(supabase, linkedAuthIds);
+
   const classroomNameById = new Map(classrooms.map((c) => [c.id, c.name]));
-  const roster: RosterSummary[] = rosterRows.map((r) => ({
-    id: r.id as string,
-    fullName: r.full_name as string,
-    classroomId: (r as { classroom_id: string | null }).classroom_id,
-    classroomName: (r as { classroom_id: string | null }).classroom_id
-      ? classroomNameById.get(
-          (r as { classroom_id: string }).classroom_id
-        ) ?? null
-      : null,
-    hasAvatar: (r as { has_avatar: boolean }).has_avatar,
-    avatarUrl: signedUrls[r.id as string] ?? null,
-    ageGroup:
-      (r as { age_group: "kid" | "teen" | "adult" | null }).age_group ?? null,
-    gender: (r as { gender: "female" | "male" | null }).gender ?? null,
-    level:
-      (r as { level: RosterSummary["level"] }).level ?? null,
-  }));
+  const roster: RosterSummary[] = rosterRows.map((r) => {
+    const row = r as {
+      id: string;
+      full_name: string;
+      classroom_id: string | null;
+      has_avatar: boolean;
+      age_group: "kid" | "teen" | "adult" | null;
+      gender: "female" | "male" | null;
+      auth_user_id: string | null;
+      level: RosterSummary["level"];
+    };
+    const selfUpload = row.auth_user_id ? profileSignedUrls[row.auth_user_id] : null;
+    const rosterUpload = rosterSignedUrls[row.id];
+    // Prefer the teacher-set roster photo when present; otherwise use
+    // the student's self-uploaded one.
+    const avatarUrl = rosterUpload ?? selfUpload ?? null;
+    const hasAvatar = row.has_avatar || !!selfUpload;
+    return {
+      id: row.id,
+      fullName: row.full_name,
+      classroomId: row.classroom_id,
+      classroomName: row.classroom_id
+        ? classroomNameById.get(row.classroom_id) ?? null
+        : null,
+      hasAvatar,
+      avatarUrl,
+      ageGroup: row.age_group,
+      gender: row.gender,
+      level: row.level,
+    };
+  });
 
   // Dedup every student identity into a single Set so a person represented
   // in BOTH classroom_members AND roster_students (common after an invite
