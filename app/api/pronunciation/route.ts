@@ -158,7 +158,7 @@ export async function POST(req: Request) {
   const audioBytes = await audio.arrayBuffer();
   const audioFile = new Blob([audioBytes], { type: audio.type || "audio/webm" });
 
-  function buildForm(opts: { phonetic: boolean }): FormData {
+  function buildForm(opts: { phonetic: boolean; temperature?: number }): FormData {
     const f = new FormData();
     f.append("file", audioFile, "recording.webm");
     f.append("model", "whisper-large-v3");
