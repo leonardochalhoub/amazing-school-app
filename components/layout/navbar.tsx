@@ -190,23 +190,32 @@ export function Navbar({
 
           <DropdownMenu>
             <DropdownMenuTrigger className="group inline-flex h-9 items-center gap-1.5 rounded-full border border-border/70 bg-background/50 pl-1 pr-2 transition-colors hover:bg-accent">
-              <Avatar className="h-7 w-7 overflow-hidden">
-                {avatarUrl ? (
+              {avatarUrl ? (
+                <Avatar className="h-7 w-7 overflow-hidden">
                   <AvatarImage src={avatarUrl} alt={fullName} />
-                ) : (ageGroup || gender) ? (
-                  <div className="h-full w-full">
-                    <CartoonAvatar
-                      ageGroup={ageGroup ?? null}
-                      gender={gender ?? null}
-                      seed={userId}
-                      fullName={fullName}
-                    />
-                  </div>
-                ) : null}
-                <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-violet-500 text-[10px] font-semibold text-white">
-                  {initials}
-                </AvatarFallback>
-              </Avatar>
+                  <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-violet-500 text-[10px] font-semibold text-white">
+                    {initials}
+                  </AvatarFallback>
+                </Avatar>
+              ) : ageGroup || gender ? (
+                // Cartoon avatar is a full-SVG component — sidestep the
+                // Radix Avatar primitive entirely so its fallback-image
+                // timer doesn't render the initials on top of the SVG.
+                <div className="h-7 w-7 overflow-hidden rounded-full bg-muted">
+                  <CartoonAvatar
+                    ageGroup={ageGroup ?? null}
+                    gender={gender ?? null}
+                    seed={userId}
+                    fullName={fullName}
+                  />
+                </div>
+              ) : (
+                <Avatar className="h-7 w-7 overflow-hidden">
+                  <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-violet-500 text-[10px] font-semibold text-white">
+                    {initials}
+                  </AvatarFallback>
+                </Avatar>
+              )}
               <ChevronDown className="h-3.5 w-3.5 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-56">
