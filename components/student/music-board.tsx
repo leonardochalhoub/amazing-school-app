@@ -26,6 +26,7 @@ import { Input } from "@/components/ui/input";
 import { useI18n } from "@/lib/i18n/context";
 import {
   cambridgeUrl,
+  letrasUrl,
   type MusicExercise,
   type MusicSong,
   type SingAlongPrompt,
@@ -227,12 +228,8 @@ export function MusicBoard({
               <p className="text-[11px] text-muted-foreground">
                 ⏱{" "}
                 {locale === "pt-BR"
-                  ? `Os tempos são aproximados${
-                      song.timing_source === "manual" ? " (sem dados sincronizados para esta música)" : ""
-                    } — pode haver um pequeno atraso.`
-                  : `Timestamps are approximate${
-                      song.timing_source === "manual" ? " (no synced data for this song)" : ""
-                    } — a small drift is normal.`}
+                  ? "Os tempos podem não estar sincronizados — edite em Personalizar, no menu Músicas."
+                  : "Timestamps may not be synchronized — edit them via Personalize on the Songs menu."}
               </p>
               <div className="flex flex-wrap gap-3 text-xs">
                 {song.full_lyrics_url ? (
@@ -247,6 +244,18 @@ export function MusicBoard({
                     <ExternalLink className="h-3 w-3" />
                   </a>
                 ) : null}
+                <a
+                  href={letrasUrl(song.artist, song.title)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
+                >
+                  {locale === "pt-BR"
+                    ? "Letra + tradução"
+                    : "Lyrics + translation"}{" "}
+                  · letras.mus.br
+                  <ExternalLink className="h-3 w-3" />
+                </a>
               </div>
             </div>
           </CardContent>

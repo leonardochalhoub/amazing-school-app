@@ -151,6 +151,23 @@ export function cambridgeUrl(term: string): string {
   )}`;
 }
 
+function letrasSlug(s: string): string {
+  return s
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+/** Builds a Letras.mus.br URL from artist + title (e.g. letras.mus.br/backstreet-boys/as-long-as-you-love-me/). */
+export function letrasUrl(artist: string, title: string): string {
+  return `https://www.letras.mus.br/${letrasSlug(artist)}/${letrasSlug(title)}/`;
+}
+
 
 export function isMusicAssignmentSlug(slug: string): boolean {
   return slug.startsWith(MUSIC_SLUG_PREFIX);
