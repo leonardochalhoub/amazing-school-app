@@ -105,8 +105,7 @@ export function Navbar({
       label: locale === "pt-BR" ? "Banco" : "Bank",
     },
     { href: "/teacher/chat", label: labels.aiTutor },
-    { href: "/teacher/finance", label: locale === "pt-BR" ? "Financeiro" : "Finance" },
-    { href: "/teacher/admin", label: "Admin" },
+    { href: "/teacher/admin", label: locale === "pt-BR" ? "Gestão" : "Management" },
   ];
   if (isOwner) {
     teacherNav.push({

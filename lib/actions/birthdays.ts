@@ -34,7 +34,7 @@ export async function getUpcomingBirthdays(
   const { data, error } = await admin
     .from("roster_students")
     .select(
-      "id, full_name, preferred_name, email, birthday, age_group, gender, classroom_id, has_avatar"
+      "id, full_name, preferred_name, email, birthday, age_group, gender, classroom_id, has_avatar, auth_user_id"
     )
     .eq("teacher_id", user.id)
     .not("birthday", "is", null);
@@ -61,11 +61,31 @@ export async function getUpcomingBirthdays(
     return `${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
   };
 
-  const withAvatars = data.filter(
+  // Two avatar sources merged, same rule as elsewhere in the teacher UI:
+  //   1. roster/{rosterId}.webp  → teacher-set photo (has_avatar=true)
+  //   2. {authUserId}.webp       → student self-uploaded on /student/profile
+  // Teacher-set wins when both exist; otherwise we fall back to the
+  // student's own photo. RLS would block the SSR client from reading
+  // profile avatars whose owners aren't in classroom_members, so we sign
+  // those URLs with the admin client (the rows are already scoped by
+  // teacher_id upstream).
+  const withRosterAvatar = data.filter(
     (r) => (r as { has_avatar: boolean }).has_avatar
   );
-  const signed = await getRosterAvatarSignedUrls(
-    withAvatars.map((r) => r.id as string)
+  const rosterSigned = await getRosterAvatarSignedUrls(
+    withRosterAvatar.map((r) => r.id as string)
+  );
+  const linkedAuthIds = data
+    .map((r) => (r as { auth_user_id: string | null }).auth_user_id)
+    .filter((x): x is string => !!x);
+  const profileSigned: Record<string, string> = {};
+  await Promise.all(
+    linkedAuthIds.map(async (authId) => {
+      const { data: signed } = await admin.storage
+        .from("avatars")
+        .createSignedUrl(`${authId}.webp`, 3600);
+      if (signed?.signedUrl) profileSigned[authId] = signed.signedUrl;
+    }),
   );
 
   const upcoming: UpcomingBirthday[] = [];
@@ -99,6 +119,10 @@ export async function getUpcomingBirthdays(
       ? next.getFullYear() - birthDate.getFullYear()
       : null;
 
+    const rosterUrl = rosterSigned[row.id as string];
+    const authId = (row as { auth_user_id: string | null }).auth_user_id;
+    const selfUrl = authId ? profileSigned[authId] : undefined;
+    const avatarUrl = rosterUrl ?? selfUrl ?? null;
     upcoming.push({
       id: row.id as string,
       fullName: row.full_name as string,
@@ -106,8 +130,9 @@ export async function getUpcomingBirthdays(
       ageGroup: (row as { age_group: UpcomingBirthday["ageGroup"] }).age_group ?? null,
       gender: (row as { gender: UpcomingBirthday["gender"] }).gender ?? null,
       classroomId: (row as { classroom_id: string | null }).classroom_id,
-      hasAvatar: (row as { has_avatar: boolean }).has_avatar,
-      avatarUrl: signed[row.id as string] ?? null,
+      hasAvatar:
+        (row as { has_avatar: boolean }).has_avatar || !!selfUrl,
+      avatarUrl,
       birthday: birthdayStr,
       daysUntil: diffDays,
       nextBirthdayDate: next.toISOString().slice(0, 10),
