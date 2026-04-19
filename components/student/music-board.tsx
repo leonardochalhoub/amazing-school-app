@@ -224,21 +224,6 @@ export function MusicBoard({
                 {locale === "pt-BR"
                   ? "Clique no botão CC do player para legenda sincronizada."
                   : "Click the CC button on the player for synced captions."}
-                {song.youtube_id ? (
-                  <>
-                    {" · "}
-                    <a
-                      href={`https://www.youtube.com/watch?v=${song.youtube_id}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-primary hover:underline"
-                    >
-                      {locale === "pt-BR"
-                        ? "Abrir no YouTube"
-                        : "Watch on YouTube"}
-                    </a>
-                  </>
-                ) : null}
               </p>
               <p className="text-[11px] text-muted-foreground">
                 ⏱{" "}
