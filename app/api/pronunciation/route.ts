@@ -37,7 +37,42 @@ const CLARITY_WEIGHT = clampNum(
   Number(process.env.PRONUNCIATION_CLARITY_WEIGHT),
   0,
   1,
-  0.6,
+  0.75,
+);
+// Logprob range used to map Whisper's per-segment confidence to a 0–100
+// clarity score. Whisper's avg_logprob is negative; closer to 0 = more
+// confident. For clean, correctly-pronounced English, clean audio lands
+// around -0.1 .. -0.15. When Whisper "rescues" a mispronounced phrase
+// (e.g. audio says "tank you" but transcription reads "thank you"), the
+// logprob typically drops to -0.2 .. -0.35. A narrow range here makes
+// that drop visible in the score.
+const LOGPROB_FLOOR = clampNum(
+  Number(process.env.PRONUNCIATION_LOGPROB_FLOOR),
+  -3,
+  -0.1,
+  -0.5,
+);
+const LOGPROB_CEILING = clampNum(
+  Number(process.env.PRONUNCIATION_LOGPROB_CEILING),
+  -0.2,
+  -0.01,
+  -0.05,
+);
+// When the transcription matches the target but Whisper wasn't confident,
+// it's a strong signal of mispronunciation that Whisper glossed over.
+// Subtract a direct penalty so "tank you" vs "thank you" lands in the
+// 40-60 range instead of the mid-80s.
+const RESCUE_PENALTY_THRESHOLD = clampNum(
+  Number(process.env.PRONUNCIATION_RESCUE_CLARITY_THRESHOLD),
+  0,
+  100,
+  80,
+);
+const RESCUE_PENALTY_WEIGHT = clampNum(
+  Number(process.env.PRONUNCIATION_RESCUE_PENALTY_WEIGHT),
+  0,
+  2,
+  0.7,
 );
 const SCORE_CEILING = clampNum(
   Number(process.env.PRONUNCIATION_CEILING),
@@ -147,12 +182,18 @@ export async function POST(req: Request) {
 /**
  * Turn Whisper's per-segment stats into a 0–100 "clarity" score.
  *
- * avg_logprob is a negative number, closer to 0 = more confident.
- * -0.1 is excellent, -0.3 is solid, -0.6+ means the model was guessing.
- * no_speech_prob near 1 means Whisper thinks the audio is silence/noise.
+ * avg_logprob is a negative number, closer to 0 = more confident. For
+ * clean, correctly-pronounced English we typically see -0.1 .. -0.15.
+ * When Whisper "rescues" a mispronounced phrase (output text matches
+ * the target despite the audio being off), logprob drops to -0.2..-0.35.
+ * When the model is genuinely guessing, -0.4 and below.
+ *
+ * Mapping is tuned to a narrow band (LOGPROB_FLOOR .. LOGPROB_CEILING,
+ * default -0.5 .. -0.05) so that the drop Whisper experiences while
+ * "correcting" bad audio is visible in the score.
  */
 function clarityScore(segments: WhisperSegment[] | undefined): number {
-  if (!segments || segments.length === 0) return 60; // unknown → middling
+  if (!segments || segments.length === 0) return 50; // unknown → cautious
   let logprobSum = 0;
   let noSpeechSum = 0;
   let n = 0;
@@ -161,13 +202,13 @@ function clarityScore(segments: WhisperSegment[] | undefined): number {
     if (typeof s.no_speech_prob === "number") noSpeechSum += s.no_speech_prob;
     n += 1;
   }
-  if (n === 0) return 60;
+  if (n === 0) return 50;
   const avgLogprob = logprobSum / n;
   const avgNoSpeech = noSpeechSum / n;
 
-  // Map avg_logprob from [-1.5, -0.05] → [0, 1] then square.
-  const lp = Math.max(0, Math.min(1, (avgLogprob + 1.5) / 1.45));
-  const logprobScore = Math.pow(lp, 1.4) * 100;
+  const span = LOGPROB_CEILING - LOGPROB_FLOOR; // e.g. 0.45
+  const lp = Math.max(0, Math.min(1, (avgLogprob - LOGPROB_FLOOR) / span));
+  const logprobScore = Math.pow(lp, 1.6) * 100;
 
   // no_speech_prob directly penalizes: 0 = perfect, 0.5 = -50pts.
   const penalty = Math.min(60, Math.round(avgNoSpeech * 100));
@@ -188,12 +229,25 @@ function combineScore(
   const blended =
     shaped * (1 - CLARITY_WEIGHT) +
     (shaped * clarity) / 100 * CLARITY_WEIGHT;
+
+  // Rescue penalty — the key case: Whisper transcribes the target-ish
+  // text ("thank you") even though the speaker said it wrong ("tank you").
+  // When similarity is high BUT clarity is low, it's a strong signal
+  // Whisper used its language model to smooth over a mispronunciation.
+  // Subtract a direct penalty proportional to the clarity gap so this
+  // case lands in the 40–60 range instead of the 80s.
+  let rescuePenalty = 0;
+  if (similarity >= 90 && clarity < RESCUE_PENALTY_THRESHOLD) {
+    rescuePenalty = (RESCUE_PENALTY_THRESHOLD - clarity) * RESCUE_PENALTY_WEIGHT;
+  }
+
   // Per-word penalty — each wrong / missed target word shaves a fixed
   // amount so the user can't "average out" a fluff-filled recording.
   const mistakes = diff.words.filter((w) => w.status !== "ok").length;
-  const penalized = blended - mistakes * WORD_MISTAKE_PENALTY;
-  // Only award 100 when every target word matched AND the raw numbers
-  // say so. Otherwise cap at the ceiling (95 by default).
+  const penalized = blended - mistakes * WORD_MISTAKE_PENALTY - rescuePenalty;
+
+  // Only award the full ceiling when every target word matched AND the
+  // raw numbers say so.
   const hasAllWords = mistakes === 0;
   const ceiling =
     PERFECT_REQUIRES_ALL_WORDS && !hasAllWords ? SCORE_CEILING - 2 : SCORE_CEILING;
