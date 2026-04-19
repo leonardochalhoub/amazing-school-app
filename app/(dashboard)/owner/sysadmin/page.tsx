@@ -43,8 +43,17 @@ export default async function SysadminPage() {
       <p className="py-12 text-center text-destructive">{overview.error}</p>
     );
   }
-  const { kpis, growth, engagement, levelMix, topTeachers, topActiveStudents, contentMix, health } =
-    overview;
+  const {
+    kpis,
+    growth,
+    engagement,
+    levelMix,
+    topTeachers,
+    allTeachers,
+    topActiveStudents,
+    contentMix,
+    health,
+  } = overview;
   const logins = await listRecentLogins(100);
 
   return (
@@ -243,6 +252,60 @@ export default async function SysadminPage() {
                   </td>
                   <td className="px-4 py-2 text-right tabular-nums">
                     {t.activeStudentsLast30d}
+                  </td>
+                  <td className="px-4 py-2 text-right text-xs text-muted-foreground">
+                    {t.createdAt.slice(0, 10)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* ============================ All teachers directory ============================ */}
+      <section className="space-y-3">
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            All teachers
+          </h2>
+          <p className="text-xs text-muted-foreground">
+            {allTeachers.length} total · sorted by name · no revenue data
+          </p>
+        </div>
+        <div className="overflow-hidden rounded-xl border">
+          <table className="w-full text-sm">
+            <thead className="bg-muted/40 text-left text-xs uppercase tracking-wider text-muted-foreground">
+              <tr>
+                <th className="px-4 py-2">Teacher</th>
+                <th className="px-4 py-2">Email</th>
+                <th className="px-4 py-2 text-right">Students</th>
+                <th className="px-4 py-2 text-right">Classrooms</th>
+                <th className="px-4 py-2 text-right">Joined</th>
+              </tr>
+            </thead>
+            <tbody>
+              {allTeachers.length === 0 ? (
+                <tr>
+                  <td
+                    colSpan={5}
+                    className="px-4 py-6 text-center text-sm text-muted-foreground"
+                  >
+                    No teachers yet.
+                  </td>
+                </tr>
+              ) : null}
+              {allTeachers.map((t) => (
+                <tr key={t.id} className="border-t">
+                  <td className="px-4 py-2 font-medium">{t.name}</td>
+                  <td className="px-4 py-2 text-xs text-muted-foreground">
+                    {t.email ?? "—"}
+                  </td>
+                  <td className="px-4 py-2 text-right tabular-nums">
+                    {t.studentCount}
+                  </td>
+                  <td className="px-4 py-2 text-right tabular-nums">
+                    {t.classroomsCount}
                   </td>
                   <td className="px-4 py-2 text-right text-xs text-muted-foreground">
                     {t.createdAt.slice(0, 10)}

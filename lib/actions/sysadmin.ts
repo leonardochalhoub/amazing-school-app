@@ -48,6 +48,19 @@ export interface SysadminOverview {
     classroomsCount: number;
     createdAt: string;
   }[];
+  /**
+   * Every teacher on the platform with their headline counts. No
+   * activity window, no revenue, no chat content — just existence
+   * + capacity numbers for the sysadmin directory view.
+   */
+  allTeachers: {
+    id: string;
+    name: string;
+    email: string | null;
+    studentCount: number;
+    classroomsCount: number;
+    createdAt: string;
+  }[];
   topActiveStudents: {
     id: string;
     displayName: string; // first name only — privacy
@@ -112,6 +125,10 @@ export async function getSysadminOverview(): Promise<
     admin
       .from("profiles")
       .select("id, full_name, role, avatar_url, created_at")
+      // Sysadmin view is scoped to REAL users only — demo / staging
+      // accounts are marked with is_test=true and hidden everywhere
+      // across the dashboard.
+      .eq("is_test", false)
       .order("created_at", { ascending: false }),
     admin.from("classrooms").select("id, teacher_id, created_at"),
     admin
@@ -126,16 +143,16 @@ export async function getSysadminOverview(): Promise<
       .limit(10_000),
     admin
       .from("conversations")
-      .select("id, created_at")
+      .select("id, classroom_id, created_at")
       .gte("created_at", `${thirtyDaysAgo}T00:00:00`),
     admin
       .from("messages")
-      .select("id, created_at")
+      .select("id, conversation_id, created_at")
       .gte("created_at", `${thirtyDaysAgo}T00:00:00`)
       .limit(50_000),
     admin
       .from("xp_events")
-      .select("xp_amount, created_at")
+      .select("xp_amount, classroom_id, created_at")
       .gte("created_at", `${thirtyDaysAgo}T00:00:00`)
       .limit(50_000),
     admin
@@ -155,18 +172,18 @@ export async function getSysadminOverview(): Promise<
       .limit(20_000),
     admin
       .from("lesson_assignments")
-      .select("id, assigned_at")
+      .select("id, classroom_id, assigned_at")
       .gte("assigned_at", `${thirtyDaysAgo}T00:00:00`)
       .limit(50_000),
     admin
       .from("lesson_progress")
-      .select("id, completed_at")
+      .select("id, classroom_id, completed_at")
       .gte("completed_at", `${thirtyDaysAgo}T00:00:00`)
       .not("completed_at", "is", null)
       .limit(50_000),
     admin
       .from("student_payments")
-      .select("paid, billing_month")
+      .select("paid, billing_month, teacher_id")
       .gte("billing_month", startOfMonth),
   ]);
 
@@ -222,32 +239,77 @@ export async function getSysadminOverview(): Promise<
   const publishedLessons = drafts.filter((d) => d.status === "published").length;
   const draftLessons = drafts.filter((d) => d.status !== "published").length;
 
-  const conversationsLast30d = conversationsRes.data?.length ?? 0;
-  const aiMessagesLast30d = messagesRes.data?.length ?? 0;
-  const xpLast30d = (xpRes.data ?? []).reduce(
-    (sum, r) => sum + ((r as { xp_amount: number }).xp_amount ?? 0),
-    0,
+  // Build sets of real (non-test) user / classroom ids so every
+  // aggregation that follows can drop demo rows in memory. We already
+  // filtered `profiles` by is_test = false upstream; these sets come
+  // from those filtered lists.
+  const realUserIds = new Set<string>([
+    ...teachers.map((p) => p.id),
+    ...students.map((p) => p.id),
+  ]);
+  const realClassroomIds = new Set<string>(
+    classrooms
+      .filter((c) => teachers.some((t) => t.id === c.teacher_id))
+      .map((c) => c.id),
   );
 
-  const dailyAll = (dailyAllRes.data ?? []) as Array<{
-    student_id: string;
-    activity_date: string;
-  }>;
+  // daily_activity → keyed on student_id (auth user). Filter by real set.
+  const dailyAll = (
+    (dailyAllRes.data ?? []) as Array<{
+      student_id: string;
+      activity_date: string;
+    }>
+  ).filter((r) => realUserIds.has(r.student_id));
   const dau = new Set(
-    (dailyTodayRes.data ?? []).map((r) => (r as { student_id: string }).student_id),
+    (dailyTodayRes.data ?? [])
+      .map((r) => (r as { student_id: string }).student_id)
+      .filter((sid) => realUserIds.has(sid)),
   ).size;
   const wau = new Set(
-    (dailyWeekRes.data ?? []).map((r) => (r as { student_id: string }).student_id),
+    (dailyWeekRes.data ?? [])
+      .map((r) => (r as { student_id: string }).student_id)
+      .filter((sid) => realUserIds.has(sid)),
   ).size;
   const mau = new Set(dailyAll.map((r) => r.student_id)).size;
 
-  const lessonsAssignedLast30d = assignmentsRes.data?.length ?? 0;
-  const lessonsCompletedLast30d = progressRes.data?.length ?? 0;
+  // xp_events / lesson_progress / lesson_assignments / conversations /
+  // messages are classroom-scoped; filter by realClassroomIds.
+  const xpLast30d = (xpRes.data ?? [])
+    .filter((r) =>
+      realClassroomIds.has(
+        (r as { classroom_id?: string }).classroom_id ?? "",
+      ),
+    )
+    .reduce((sum, r) => sum + ((r as { xp_amount: number }).xp_amount ?? 0), 0);
+  const lessonsAssignedLast30d = (assignmentsRes.data ?? []).filter((r) =>
+    realClassroomIds.has((r as { classroom_id?: string }).classroom_id ?? ""),
+  ).length;
+  const lessonsCompletedLast30d = (progressRes.data ?? []).filter((r) =>
+    realClassroomIds.has((r as { classroom_id?: string }).classroom_id ?? ""),
+  ).length;
+  const realConversationIds = new Set<string>(
+    (conversationsRes.data ?? [])
+      .filter((r) =>
+        realClassroomIds.has(
+          (r as { classroom_id?: string }).classroom_id ?? "",
+        ),
+      )
+      .map((r) => (r as { id: string }).id),
+  );
+  const realConversationsCount = realConversationIds.size;
+  const aiMessagesLast30d = (messagesRes.data ?? []).filter((r) =>
+    realConversationIds.has((r as { conversation_id: string }).conversation_id),
+  ).length;
 
-  const payments = (paymentsRes.data ?? []) as Array<{
-    paid: boolean;
-    billing_month: string;
-  }>;
+  const payments = (
+    (paymentsRes.data ?? []) as Array<{
+      paid: boolean;
+      billing_month: string;
+      teacher_id?: string;
+    }>
+  ).filter((p) =>
+    !p.teacher_id ? true : teachers.some((t) => t.id === p.teacher_id),
+  );
   const paidInvoicesThisMonth = payments.filter(
     (p) => p.paid && p.billing_month === startOfMonth,
   ).length;
@@ -342,21 +404,42 @@ export async function getSysadminOverview(): Promise<
   }
   const teacherNameById = new Map(teachers.map((t) => [t.id, t.full_name]));
   const teacherCreatedAt = new Map(teachers.map((t) => [t.id, t.created_at]));
-  const topTeachers = teachers
-    .map((t) => ({
-      id: t.id,
-      name: t.full_name,
-      studentCount: studentsByTeacher.get(t.id)?.size ?? 0,
-      activeStudentsLast30d: activeStudentsByTeacher.get(t.id)?.size ?? 0,
-      classroomsCount: classroomsByTeacher.get(t.id) ?? 0,
-      createdAt: teacherCreatedAt.get(t.id) ?? t.created_at,
-    }))
+  const teacherEmailById = new Map<string, string | null>();
+  for (const u of authList?.users ?? []) {
+    teacherEmailById.set(u.id, u.email ?? null);
+  }
+  const allTeachersFull = teachers.map((t) => ({
+    id: t.id,
+    name: t.full_name,
+    email: teacherEmailById.get(t.id) ?? null,
+    studentCount: studentsByTeacher.get(t.id)?.size ?? 0,
+    activeStudentsLast30d: activeStudentsByTeacher.get(t.id)?.size ?? 0,
+    classroomsCount: classroomsByTeacher.get(t.id) ?? 0,
+    createdAt: teacherCreatedAt.get(t.id) ?? t.created_at,
+  }));
+
+  // Leaderboard (top 8 by activity) for the "Most active teachers" table.
+  const topTeachers = [...allTeachersFull]
     .sort(
       (a, b) =>
         b.activeStudentsLast30d - a.activeStudentsLast30d ||
         b.studentCount - a.studentCount,
     )
-    .slice(0, 8);
+    .slice(0, 8)
+    .map(({ email: _unused, ...row }) => {
+      void _unused;
+      return row;
+    });
+
+  // Full directory — sort alphabetically by name for easy scanning.
+  const allTeachers = [...allTeachersFull]
+    .map(({ activeStudentsLast30d: _unused, ...row }) => {
+      void _unused;
+      return row;
+    })
+    .sort((a, b) =>
+      a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
+    );
 
   // Top active students — by XP last 30 days (first name only)
   const xpByStudent = new Map<string, number>();
@@ -475,8 +558,12 @@ export async function getSysadminOverview(): Promise<
     kpis: {
       teachers: teachers.length,
       students: students.length,
-      classrooms: classrooms.length,
-      rosterEntries: roster.length,
+      classrooms: classrooms.filter((c) =>
+        teachers.some((t) => t.id === c.teacher_id),
+      ).length,
+      rosterEntries: roster.filter((r) =>
+        teachers.some((t) => t.id === r.teacher_id),
+      ).length,
       demoAccounts: demoCount,
       publishedLessons,
       draftLessons,
@@ -491,8 +578,10 @@ export async function getSysadminOverview(): Promise<
       lessonsAssignedLast30d,
       xpLast30d,
       aiMessagesLast30d,
-      conversationsLast30d,
-      activeTuitionSeats: roster.filter((r) => r.monthly_tuition_cents).length,
+      conversationsLast30d: realConversationsCount,
+      activeTuitionSeats: roster
+        .filter((r) => teachers.some((t) => t.id === r.teacher_id))
+        .filter((r) => r.monthly_tuition_cents).length,
       paidInvoicesThisMonth,
       pendingInvoicesThisMonth,
     },
@@ -500,6 +589,7 @@ export async function getSysadminOverview(): Promise<
     engagement,
     levelMix,
     topTeachers,
+    allTeachers,
     topActiveStudents,
     contentMix: { lessonsPerCefr, songsPerCefr },
     health: {
