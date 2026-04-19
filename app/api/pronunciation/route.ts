@@ -167,15 +167,14 @@ export async function POST(req: Request) {
     f.append("timestamp_granularities[]", "word");
     f.append("timestamp_granularities[]", "segment");
     if (opts.phonetic) {
-      // Phonetic probe — temperature shift + a prompt that asks for
-      // near-verbatim output. Whisper's language-model rescue is
-      // strongest at temp 0 with no prompt; pushing both dials lets
-      // actual mispronunciations surface (e.g. "tank you" stays as
-      // "tank you" instead of being cleaned to "thank you").
-      f.append("temperature", "0.4");
+      // Phonetic probe — high temperature + adversarial prompt to
+      // disarm Whisper's language-model rescue so real mispronunciations
+      // come through. We use temp 1.0 and a prompt that explicitly
+      // instructs Whisper NOT to correct, fix, or reinterpret the audio.
+      f.append("temperature", String(opts.temperature ?? 1));
       f.append(
         "prompt",
-        "This is a language-learner practice recording. Transcribe exactly what you hear, sound for sound, even when the word choice looks odd or mispronounced. Do not correct obvious typos or swap similar-sounding words.",
+        "A non-native speaker is reading an unfamiliar English sentence and often mispronounces words. Do NOT correct their pronunciation. Do NOT swap mispronounced words for similar correct ones. Do NOT fix grammar. Transcribe letter-by-letter what you actually hear, even if it produces gibberish, broken words, or non-English sounds. Your job is to EXPOSE pronunciation errors, not hide them. If a word sounds like 'tank' instead of 'thank', write 'tank'. If a word sounds like 'florent' instead of 'fluent', write 'florent'.",
       );
     } else {
       f.append("temperature", "0");
@@ -183,7 +182,7 @@ export async function POST(req: Request) {
     return f;
   }
 
-  async function callWhisper(opts: { phonetic: boolean }) {
+  async function callWhisper(opts: { phonetic: boolean; temperature?: number }) {
     const r = await fetch(
       "https://api.groq.com/openai/v1/audio/transcriptions",
       {
@@ -199,20 +198,30 @@ export async function POST(req: Request) {
     return (await r.json()) as WhisperVerboseResponse;
   }
 
-  const [primary, phonetic] = await Promise.all([
+  // Two phonetic probes at different temperatures. If BOTH agree with
+  // the primary transcription, Whisper is genuinely confident. If either
+  // differs, that's a strong signal the LM was rescuing the audio.
+  const [primary, phonetic1, phonetic2] = await Promise.all([
     callWhisper({ phonetic: false }),
-    // Phonetic probe is optional (OFF by default) — adds ~1 extra API
-    // call worth of latency + cost. Enable via env when you want
-    // stricter mispronunciation detection.
     PHONETIC_PROBE_ENABLED
-      ? callWhisper({ phonetic: true }).catch(() => null)
+      ? callWhisper({ phonetic: true, temperature: 1.0 }).catch(() => null)
+      : Promise.resolve<WhisperVerboseResponse | null>(null),
+    PHONETIC_PROBE_ENABLED
+      ? callWhisper({ phonetic: true, temperature: 0.7 }).catch(() => null)
       : Promise.resolve<WhisperVerboseResponse | null>(null),
   ]).catch((e: Error) => {
     throw e;
   });
 
   const transcription = (primary.text ?? "").trim();
-  const phoneticTranscription = (phonetic?.text ?? "").trim();
+  const phonetic1Text = (phonetic1?.text ?? "").trim();
+  const phonetic2Text = (phonetic2?.text ?? "").trim();
+  // Union both probes — any word missing from EITHER probe counts as
+  // suspicious so we don't miss mispronunciations one probe alone
+  // happened to also "rescue".
+  const phoneticTranscription = [phonetic1Text, phonetic2Text]
+    .filter(Boolean)
+    .join(" || ");
 
   const similarity = similarityScore(transcription, target); // 0–100
   const clarity = clarityScore(primary.segments); // 0–100
@@ -221,11 +230,14 @@ export async function POST(req: Request) {
   const heardWordClarity = perWordClarity(primary.words, primary.segments);
   const diff = wordDiff(transcription, target, heardWordClarity);
 
-  // Phonetic-probe divergence: if Whisper at temperature=0.4 with a
+  // Phonetic-probe divergence: if either high-temp probe with a
   // verbatim prompt hears something different from the polished
   // transcription, the speaker likely mispronounced those words.
-  const phoneticMismatches = phoneticTranscription
-    ? diffPhoneticTokens(transcription, phoneticTranscription)
+  const combinedPhonetic = [phonetic1Text, phonetic2Text]
+    .filter(Boolean)
+    .join(" ");
+  const phoneticMismatches = combinedPhonetic
+    ? diffPhoneticTokens(transcription, combinedPhonetic)
     : [];
   if (phoneticMismatches.length > 0) {
     // Promote "ok"/"unclear" entries whose heard token differs from the
@@ -405,21 +417,38 @@ function combineScore(
 // ---------------------------------------------------------------------------
 
 /**
- * Given two transcriptions of the same audio — one at temp=0 (language-
- * model rescued) and one at temp>0 with a "transcribe verbatim" prompt —
- * return the set of words that appear in the polished version but not in
- * the phonetic version. These are words Whisper's LM "fixed" from the
- * acoustic evidence, i.e. strong candidates for mispronunciation.
+ * Given the polished (temp=0) transcription and a concatenated "verbatim"
+ * phonetic transcription (may be multiple probes joined), return words
+ * that appear in polished but NOT in ANY phonetic probe. These are words
+ * every probe had to rescue via the language model — strong candidates
+ * for mispronunciation.
+ *
+ * We also allow a small edit-distance slack so that near-homophones
+ * ("thank" vs "tank" = edit 1 in 5 chars = 80%) still flag. The probe's
+ * output is often spelled slightly differently — we don't want to miss
+ * those because the letters don't match exactly.
  */
 function diffPhoneticTokens(
   polished: string,
   phonetic: string,
 ): Array<{ normal: string; polished: string }> {
   const polishedTokens = tokenize(polished);
-  const phoneticTokens = new Set(tokenize(phonetic));
+  const phoneticTokens = tokenize(phonetic);
   const out: Array<{ normal: string; polished: string }> = [];
   for (const t of polishedTokens) {
-    if (!phoneticTokens.has(t)) out.push({ normal: t, polished: t });
+    if (t.length <= 2) continue; // skip short function words ("a", "to")
+    // Require both (a) no exact match and (b) no close phonetic match
+    // in the probe output. A close match = Levenshtein / max(len) < 0.35.
+    const exact = phoneticTokens.includes(t);
+    if (exact) continue;
+    const close = phoneticTokens.some((p) => {
+      if (p.length < 2) return false;
+      const dist = levenshtein(t, p);
+      const longest = Math.max(t.length, p.length);
+      return dist / longest <= 0.35;
+    });
+    if (close) continue;
+    out.push({ normal: t, polished: t });
   }
   return out;
 }
