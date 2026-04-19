@@ -51,7 +51,16 @@ export default async function RosterStudentDetailPage({
     name: c.name as string,
   }));
 
-  const [signedUrl, diary, rawAssignments, publishedLessons, history] =
+  const selfUploadUrl = student.auth_user_id
+    ? await (async () => {
+        const { data } = await admin.storage
+          .from("avatars")
+          .createSignedUrl(`${student.auth_user_id}.webp`, 3600);
+        return data?.signedUrl ?? null;
+      })()
+    : null;
+
+  const [rosterSigned, diary, rawAssignments, publishedLessons, history] =
     await Promise.all([
       student.has_avatar ? getRosterAvatarSignedUrl(id) : Promise.resolve(null),
       listDiaryForStudent(id),
@@ -59,6 +68,9 @@ export default async function RosterStudentDetailPage({
       getAssignableLessons(),
       listStudentHistory({ rosterStudentId: id }),
     ]);
+
+  const signedUrl = rosterSigned ?? selfUploadUrl;
+  const hasAvatar = student.has_avatar || !!selfUploadUrl;
 
   const lessonDraftBySlug = new Map(publishedLessons.map((l) => [l.slug, l]));
 
@@ -188,7 +200,7 @@ export default async function RosterStudentDetailPage({
                   (student as { birthday?: string | null }).birthday ?? null
                 }
                 level={student.level}
-                hasAvatar={student.has_avatar}
+                hasAvatar={hasAvatar}
                 classrooms={classroomList}
               />
             </CardContent>

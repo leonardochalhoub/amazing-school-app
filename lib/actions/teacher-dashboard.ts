@@ -13,6 +13,24 @@ type MemberRow = {
   profiles: { full_name: string; avatar_url: string | null } | null;
 };
 
+async function signProfileAvatars(
+  admin: ReturnType<typeof createAdminClient>,
+  userIds: string[],
+): Promise<Record<string, string>> {
+  if (userIds.length === 0) return {};
+  const results = await Promise.all(
+    userIds.map(async (id) => {
+      const { data } = await admin.storage
+        .from("avatars")
+        .createSignedUrl(`${id}.webp`, 3600);
+      return [id, data?.signedUrl ?? null] as const;
+    }),
+  );
+  const out: Record<string, string> = {};
+  for (const [id, url] of results) if (url) out[id] = url;
+  return out;
+}
+
 export async function getClassroomStudentRows(
   classroomId: string
 ): Promise<StudentRow[]> {
@@ -60,12 +78,14 @@ export async function getClassroomStudentRows(
   const rosterSignedUrls = await getRosterAvatarSignedUrls(rosterIds);
 
   // If a roster row is linked to an auth user who self-uploaded their
-  // photo on /student/profile, surface that avatar too.
+  // photo on /student/profile, surface that avatar too. We sign with the
+  // admin client because the storage SELECT policy only lets a teacher
+  // read another user's {authUserId}.webp when that user is in
+  // classroom_members — roster-only students (never claimed their invite
+  // or whose classroom_id is null) fail that check even though the
+  // teacher owns them.
   const linkedAuthIdList = Array.from(linkedAuthIds);
-  const profileSignedUrls =
-    linkedAuthIdList.length > 0
-      ? await getAvatarSignedUrls(supabase, linkedAuthIdList)
-      : {};
+  const profileSignedUrls = await signProfileAvatars(admin, linkedAuthIdList);
 
   const rosterStudents: StudentRow[] = rosterRows.map((r) => {
     const row = r as {
@@ -498,12 +518,15 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
   );
 
   // For every linked roster row, also try the student's own
-  // {authUserId}.webp. signUrls returns only the keys that exist, so
-  // cartoon rows stay cartoon.
+  // {authUserId}.webp. We use the admin client because the storage
+  // SELECT policy only lets a teacher read another user's avatar when
+  // that user is in classroom_members — a roster-only student (never
+  // claimed invite, or no classroom) would fail that check even though
+  // the teacher owns the roster row.
   const linkedAuthIds = rosterRows
     .map((r) => (r as { auth_user_id: string | null }).auth_user_id)
     .filter((id): id is string => !!id);
-  const profileSignedUrls = await getAvatarSignedUrls(supabase, linkedAuthIds);
+  const profileSignedUrls = await signProfileAvatars(admin, linkedAuthIds);
 
   const classroomNameById = new Map(classrooms.map((c) => [c.id, c.name]));
   const roster: RosterSummary[] = rosterRows.map((r) => {
