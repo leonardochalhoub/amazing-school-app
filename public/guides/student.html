@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Amazing School · Student's Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  :root {
+    --font-display: 'Instrument Serif', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --font-editorial: 'Newsreader', 'Georgia', serif;
+    --font-mono: 'Fira Code', 'SF Mono', Consolas, monospace;
+
+    --bg: #0a0a12;
+    --surface: #13131c;
+    --surface2: #1b1b26;
+    --surface-elevated: #252533;
+    --border: rgba(56, 189, 248, 0.14);
+    --border-bright: rgba(56, 189, 248, 0.28);
+    --text: #eaf3ff;
+    --text-dim: #8a97b0;
+
+    --accent: #38bdf8;       /* sky-400 — brighter for students */
+    --accent-dim: rgba(56, 189, 248, 0.14);
+    --indigo: #818cf8;
+    --violet: #a78bfa;
+    --pink: #f472b6;
+    --emerald: #34d399;
+    --amber: #fbbf24;
+    --rose: #fb7185;
+
+    --code-bg: #08080f;
+    --code-text: #cbd5e1;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-body); color: var(--text); background: var(--bg); overflow: hidden; }
+
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.035;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  }
+
+  .deck { height: 100dvh; overflow-y: auto; scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+
+  .slide {
+    height: 100dvh; scroll-snap-align: start; overflow: hidden; position: relative;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: clamp(32px, 5vh, 64px) clamp(36px, 6vw, 96px);
+    isolation: isolate; opacity: 0; transform: translateY(40px) scale(0.98);
+    transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1);
+  }
+  .slide.visible { opacity: 1; transform: none; }
+  .slide .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s cubic-bezier(0.16,1,0.3,1), transform 0.5s cubic-bezier(0.16,1,0.3,1); }
+  .slide.visible .reveal { opacity: 1; transform: none; }
+  .slide.visible .reveal:nth-child(1) { transition-delay: 0.1s; }
+  .slide.visible .reveal:nth-child(2) { transition-delay: 0.2s; }
+  .slide.visible .reveal:nth-child(3) { transition-delay: 0.3s; }
+  .slide.visible .reveal:nth-child(4) { transition-delay: 0.4s; }
+  .slide.visible .reveal:nth-child(5) { transition-delay: 0.5s; }
+  .slide.visible .reveal:nth-child(6) { transition-delay: 0.6s; }
+
+  @media (prefers-reduced-motion: reduce) { .slide, .slide .reveal { opacity: 1 !important; transform: none !important; transition: none !important; } }
+
+  .deck-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--indigo), var(--accent), var(--emerald)); z-index: 100; transition: width 0.3s ease; pointer-events: none; }
+  .deck-dots { position: fixed; right: clamp(12px,2vw,24px); top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 8px; z-index: 100; padding: 8px; background: rgba(10,10,18,0.6); border-radius: 20px; backdrop-filter: blur(4px); }
+  .deck-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-dim); opacity: 0.3; border: none; padding: 0; cursor: pointer; transition: opacity 0.2s, transform 0.2s; }
+  .deck-dot:hover { opacity: 0.6; }
+  .deck-dot.active { opacity: 1; transform: scale(1.5); background: var(--accent); }
+  .deck-counter { position: fixed; bottom: clamp(12px,2vh,24px); right: clamp(12px,2vw,24px); font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); z-index: 100; }
+  .deck-hints { position: fixed; bottom: clamp(12px,2vh,24px); left: 50%; transform: translateX(-50%); font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); opacity: 0.6; z-index: 100; transition: opacity 0.5s; }
+  .deck-hints.faded { opacity: 0; pointer-events: none; }
+
+  .kicker { font-family: var(--font-mono); font-size: clamp(10px, 1.1vw, 12px); letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+  .eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 12px; }
+  h1.title { font-family: var(--font-display); font-weight: 400; line-height: 1; letter-spacing: -0.02em; font-size: clamp(48px, 9vw, 140px); }
+  h1.title em { font-style: italic; background: linear-gradient(90deg, var(--indigo), var(--accent), var(--emerald)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  h2.section { font-family: var(--font-display); font-weight: 400; line-height: 1.05; letter-spacing: -0.01em; font-size: clamp(36px, 6vw, 80px); }
+  h2.section em { font-style: italic; color: var(--accent); }
+  p.lede { font-family: var(--font-editorial); font-style: italic; font-size: clamp(20px, 2.2vw, 30px); line-height: 1.35; max-width: 900px; color: var(--text); }
+  p.body { font-size: clamp(15px, 1.4vw, 18px); line-height: 1.55; color: var(--text-dim); max-width: 760px; }
+  p.body strong { color: var(--text); font-weight: 600; }
+
+  .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(16px, 2vw, 28px); }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 1.6vw, 22px); }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 1.4vw, 18px); }
+  @media (max-width: 900px) { .grid2, .grid3, .grid4 { grid-template-columns: 1fr; } }
+
+  .card {
+    border-radius: 14px; padding: clamp(16px, 1.6vw, 24px);
+    background: linear-gradient(180deg, var(--surface), var(--surface2));
+    border: 1px solid var(--border); transition: transform .25s, border-color .25s;
+  }
+  .card:hover { border-color: var(--border-bright); transform: translateY(-2px); }
+  .card h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(20px, 2vw, 28px); line-height: 1.15; margin-bottom: 8px; }
+  .card p { font-size: clamp(13px, 1.2vw, 15px); color: var(--text-dim); line-height: 1.5; }
+  .card .num { font-family: var(--font-mono); font-size: 11px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 6px; display: inline-block; }
+
+  .pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; border: 1px solid var(--border); background: var(--accent-dim); color: var(--accent); }
+  .pill.indigo { color: var(--indigo); background: rgba(129,140,248,0.12); border-color: rgba(129,140,248,0.25); }
+  .pill.violet { color: var(--violet); background: rgba(167,139,250,0.12); border-color: rgba(167,139,250,0.25); }
+  .pill.pink { color: var(--pink); background: rgba(244,114,182,0.12); border-color: rgba(244,114,182,0.25); }
+  .pill.emerald { color: var(--emerald); background: rgba(52,211,153,0.12); border-color: rgba(52,211,153,0.25); }
+  .pill.amber { color: var(--amber); background: rgba(251,191,36,0.12); border-color: rgba(251,191,36,0.25); }
+  .pill.rose { color: var(--rose); background: rgba(251,113,133,0.12); border-color: rgba(251,113,133,0.25); }
+
+  code { font-family: var(--font-mono); font-size: 0.9em; background: var(--code-bg); color: var(--code-text); padding: 2px 7px; border-radius: 5px; border: 1px solid var(--border); }
+
+  .quote { border-left: 3px solid var(--accent); padding: 12px 0 12px 24px; font-family: var(--font-editorial); font-style: italic; font-size: clamp(22px, 2.3vw, 32px); color: var(--text); max-width: 900px; line-height: 1.35; }
+
+  .hero-meta { display: flex; gap: 20px; margin-top: 48px; font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); letter-spacing: 0.1em; }
+  .hero-meta span strong { color: var(--text); font-weight: 500; }
+
+  .stat { font-family: var(--font-display); font-size: clamp(48px, 7vw, 88px); font-weight: 400; line-height: 0.95; letter-spacing: -0.02em; }
+  .stat-label { font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); letter-spacing: 0.2em; text-transform: uppercase; margin-top: 8px; }
+
+  .tag-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+
+  .footer-note { position: absolute; bottom: clamp(16px, 2vh, 28px); left: clamp(36px, 6vw, 96px); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; color: var(--text-dim); text-transform: uppercase; }
+
+  .list-clean { list-style: none; display: flex; flex-direction: column; gap: 14px; max-width: 820px; }
+  .list-clean li { display: flex; gap: 14px; font-size: clamp(14px, 1.3vw, 17px); color: var(--text-dim); line-height: 1.5; }
+  .list-clean li::before { content: '→'; color: var(--accent); font-family: var(--font-mono); flex-shrink: 0; }
+  .list-clean li strong { color: var(--text); font-weight: 600; }
+
+  .badge-chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 16px; border-radius: 12px;
+    background: linear-gradient(135deg, var(--indigo), var(--violet), var(--pink));
+    color: #fff; font-weight: 600; font-size: 14px;
+    box-shadow: 0 0 25px -5px rgba(167,139,250,0.7);
+  }
+
+  .logo-dot { width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(135deg, var(--indigo), var(--accent), var(--emerald)); display: inline-block; box-shadow: 0 0 18px var(--accent); }
+
+  .xp-bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; margin-top: 8px; }
+  .xp-bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--violet), var(--pink)); }
+</style>
+</head>
+<body>
+
+<div class="deck-progress" id="progress"></div>
+<div class="deck-dots" id="dots"></div>
+<div class="deck-counter" id="counter">1 / 1</div>
+<div class="deck-hints" id="hints">↑ ↓ scroll · space · arrows</div>
+
+<div class="deck" id="deck">
+
+<!-- ============================================================
+     SLIDE 1 — COVER
+     ============================================================ -->
+<section class="slide" style="justify-content:center;
+    background-image:
+      radial-gradient(ellipse at 25% 30%, rgba(56,189,248,0.10) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 75%, rgba(129,140,248,0.08) 0%, transparent 45%);">
+  <div class="reveal">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:28px;">
+      <span class="logo-dot"></span>
+      <span class="kicker">Amazing School · v1.0.0</span>
+    </div>
+  </div>
+  <div class="reveal"><p class="kicker" style="margin-bottom:14px;">Student's Guide</p></div>
+  <div class="reveal">
+    <h1 class="title">Practice between<br/><em>your live classes.</em></h1>
+  </div>
+  <div class="reveal">
+    <p class="lede" style="margin-top:32px;">
+      Your teacher already teaches. This is where you keep the muscle
+      warm until the next class.
+    </p>
+  </div>
+  <div class="reveal">
+    <div class="hero-meta">
+      <span><strong>8 minutes</strong> · 10 slides</span>
+      <span>↓ scroll or press <strong>space</strong></span>
+    </div>
+  </div>
+  <div class="footer-note">Amazing School · Student's Guide · v1.0.0</div>
+</section>
+
+<!-- ============================================================
+     SLIDE 2 — WHAT THIS IS
+     ============================================================ -->
+<section class="slide"
+  style="background-image:
+    radial-gradient(ellipse at 20% 20%, rgba(56,189,248,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 80%, rgba(167,139,250,0.06) 0%, transparent 40%);">
+  <div class="reveal"><p class="kicker">Chapter 01 · What this is</p></div>
+  <div class="reveal" style="margin-top:18px;">
+    <h2 class="section">You still learn<br/><em>with your teacher.</em></h2>
+  </div>
+  <div class="reveal" style="margin-top:28px;">
+    <p class="lede">
+      This isn't an app that replaces your teacher. It's the gym your
+      teacher picks for you — structured lessons, a speaking robot
+      that corrects you at midnight, and an AI tutor to handle the
+      "quick question" moments.
+    </p>
+  </div>
+  <div class="reveal" style="margin-top:36px;">
+    <ul class="list-clean">
+      <li><strong>Your teacher sees everything</strong> you do here — so come to class already ahead.</li>
+      <li><strong>Earn XP, level up, keep your streak.</strong> The only game where winning is actually learning English.</li>
+      <li><strong>Ask questions any time.</strong> The AI never sleeps. Your teacher does.</li>
+    </ul>
+  </div>
+  <div class="footer-note">01 · What this is</div>
+</section>
+
+<!-- ============================================================
+     SLIDE 3 — YOUR DASHBOARD
+     ============================================================ -->
+<section class="slide"
+  style="background-image:
+    radial-gradient(ellipse at 70% 20%, rgba(167,139,250,0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 25% 85%, rgba(52,211,153,0.05) 0%, transparent 40%);">
+  <div class="reveal"><p class="kicker">Chapter 02 · Your dashboard</p></div>
+  <div class="reveal" style="margin-top:14px;"><h2 class="section">One screen.<br/><em>Everything assigned.</em></h2></div>
+  <div class="reveal" style="margin-top:32px;">
+    <div class="grid3" style="max-width:1200px;">
+      <div class="card">
+        <span class="num">01</span>
+        <h3>Assigned lessons</h3>
+        <p>Whatever your teacher gave you. Click the card to start. Yellow when pending, green when done.</p>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <h3>Your activity</h3>
+        <p>XP over time, days active, streak count. Watch it climb the more you show up.</p>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <h3>Upcoming classes</h3>
+        <p>Google Meet / Zoom link. One click to join when your teacher starts the session.</p>
+      </div>
+      <div class="card">
+        <span class="num">04</span>
+        <h3>Leaderboard</h3>
+        <p>You vs. your classmates. Friendly competition. Or quiet revenge.</p>
+      </div>
+      <div class="card">
+        <span class="num">05</span>
+        <h3>Badges</h3>
+        <p>Collectible, rarity tiers, glow effects. We'll talk about them in a minute.</p>
+      </div>
+      <div class="card">
+        <span class="num">06</span>
+        <h3>Profile</h3>
+        <p>Your photo + privacy info + this guide. Keep your face recent so your teacher recognises you.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-note">02 · Your dashboard</div>
+</section>
+
+<!-- ============================================================
+     SLIDE 4 — DOING A LESSON
+     ============================================================ -->
+<section class="slide"
+  style="background-image:
+    radial-gradient(ellipse at 25% 30%, rgba(56,189,248,0.10) 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 70%, rgba(167,139,250,0.07) 0%, transparent 40%);">
+  <div class="reveal"><p class="kicker">Chapter 03 · Doing a lesson</p></div>
+  <div class="reveal" style="margin-top:14px;"><h2 class="section">Seven kinds of<br/><em>exercise.</em></h2></div>
+  <div class="reveal" style="margin-top:32px;">
+    <div class="grid3" style="max-width:1200px;">
+      <div class="card"><span class="pill">Listen &amp; fill</span><h3 style="margin-top:10px;">Type the missing word</h3><p>Plays a short clip. You write what you heard.</p></div>
+      <div class="card"><span class="pill violet">Translate line</span><h3 style="margin-top:10px;">English → Portuguese</h3><p>Your teacher reviews. Save drafts freely.</p></div>
+      <div class="card"><span class="pill pink">Unscramble</span><h3 style="margin-top:10px;">Tap words in order</h3><p>Build the sentence. Reset if you get stuck.</p></div>
+      <div class="card"><span class="pill emerald">Cloze choice</span><h3 style="margin-top:10px;">Pick from options</h3><p>Multi-choice with 4 tiles. Instant feedback.</p></div>
+      <div class="card"><span class="pill amber">Count word</span><h3 style="margin-top:10px;">How many times?</h3><p>A quick number-entry exercise on a recording.</p></div>
+      <div class="card"><span class="pill rose">Line order</span><h3 style="margin-top:10px;">Number the lines</h3><p>Re-sort a shuffled scene by time of appearance.</p></div>
+    </div>
+  </div>
+  <div class="reveal" style="margin-top:28px;">
+    <p class="body"><strong>Each saved answer earns XP.</strong> Wrong answers still save — your teacher sees your attempts, not just your score.</p>
+  </div>
+  <div class="footer-note">03 · Lessons</div>
+</section>
+
+<!-- ============================================================
+     SLIDE 5 — SPEAKING LAB
+     ============================================================ -->
+<section class="slide"
+  style="background-image:
+    radial-gradient(ellipse at 80% 25%, rgba(244,114,182,0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 20% 80%, rgba(56,189,248,0.06) 0%, transparent 40%);">
+  <div class="reveal"><p class="kicker">Chapter 04 · Speaking lab</p></div>
+  <div class="reveal" style="margin-top:14px;"><h2 class="section">The robot that<br/><em>hears you.</em></h2></div>
+  <div class="reveal" style="margin-top:28px;">
+    <p class="quote">
+      "Tap the mic. Say the sentence. The robot tells you exactly which
+      word came out wrong."
+    </p>
+  </div>
+  <div class="reveal" style="margin-top:28px;">
+    <div class="grid2" style="max-width:1000px;">
+      <div class="card">
+        <h3>How the score works</h3>
+        <p>Fifteen parallel Groq Whisper models listen. They vote on
+           what you said. Each word gets a clarity band: <span class="pill emerald">clean</span>
+           <span class="pill amber">unclear</span> <span class="pill rose">suspicious</span>.</p>
+      </div>
+      <div class="card">
+        <h3>How to practice</h3>
+        <p>Press Play to hear the native line. Repeat it aloud. Press
+           Stop. Compare. Press the ↻ button and try again. 30 attempts
+           cost nothing — only your own time.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-note">04 · Speaking lab</div>
+</section>
+
+<!-- ============================================================
+     SLIDE 6 — AI TUTOR
+     ============================================================ -->
+<section class="slide"
+  style="background-image:
+    radial-gradient(ellipse at 25% 20%, rgba(167,139,250,0.10) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 80%, rgba(244,114,182,0.06) 0%, transparent 40%);">
+  <div class="reveal"><p class="kicker">Chapter 05 · AI tutor</p></div>
+  <div class="reveal" style="margin-top:14px;"><h2 class="section">Ask anything.<br/><em>Any hour.</em></h2></div>
+  <div class="reveal" style="margin-top:28px;">
+    <div class="grid2" style="max-width:1050px;">
+      <div class="card">
+        <span class="pill violet">Groq · llama-3.3-70b</span>
+        <h3 style="margin-top:12px;">Built for your level</h3>
+        <p>It already knows you're a Brazilian learning US English.
+           Corrects sentences, explains idioms, quizzes you when you
+           ask. Answers in under a second.</p>
+      </div>
+      <div class="card">
+        <span class="pill emerald">Your teacher reads it</span>
+        <h3 style="margin-top:12px;">No secret channel</h3>
+        <p>Every question you ask is logged in your teacher's view.
+           This is a feature, not a bug. Come to class already
+           sharper, not already corrected.</p>
+      </div>
+    </div>
+  </div>
+  <div class="reveal" style="margin-top:28px;">
+    <p class="body"><strong>Good prompts:</strong> <em>"Give me 3 synonyms for 'improve'
+       with example sentences"</em>. <em>"Quiz me on past simple
+       irregular verbs, 5 questions, correct me after each one"</em>.</p>
+  </div>
+  <div class="footer-note">05 · AI tutor</div>
+</section>
+
+<!-- ============================================================
+     SLIDE 7 — MUSIC LESSONS
+     ============================================================ -->
+<section class="slide"
+  style="background-image:
+    radial-gradient(ellipse at 70% 25%, rgba(244,114,182,0.10) 0%, transparent 45%),
+    radial-gradient(ellipse at 20% 85%, rgba(56,189,248,0.07) 0%, transparent 40%);">
+  <div class="reveal"><p class="kicker">Chapter 06 · Music</p></div>
+  <div class="reveal" style="margin-top:14px;"><h2 class="section">Songs as<br/><em>homework.</em></h2></div>
+  <div class="reveal" style="margin-top:28px;">
+    <p class="body" style="max-width:860px;">
+      Every song in the catalog has a YouTube embed, a Letras.mus.br
+      translation link, sing-along prompts, and <strong>30 exercises</strong>
+      built around the lyrics. Listen-fill, line-order, translate,
+      discuss.
+    </p>
+  </div>
+  <div class="reveal" style="margin-top:24px;">
+    <ul class="list-clean">
+      <li><strong>Click the CC button</strong> on the player for synced captions.</li>
+      <li><strong>Click a sing-along prompt</strong> to jump to that exact timestamp in the video.</li>
+      <li><strong>Click any vocab chip</strong> to open its Cambridge Portuguese entry.</li>
+      <li><strong>Read the translation</strong> on Letras.mus.br when the lyrics get hard.</li>
+    </ul>
+  </div>
+  <div class="footer-note">06 · Music</div>
+</section>
+
+<!-- ============================================================
+     SLIDE 8 — BADGES & LEVELS
+     ============================================================ -->
+<section class="slide" style="justify-content:flex-start; padding-top:clamp(40px,6vh,64px);
+    background-image:
+      radial-gradient(ellipse at 20% 25%, rgba(167,139,250,0.09) 0%, transparent 45%),
+      radial-gradient(ellipse at 85% 80%, rgba(251,191,36,0.06) 0%, transparent 40%);">
+  <div class="reveal"><p class="kicker">Chapter 07 · Badges &amp; levels</p></div>
+  <div class="reveal" style="margin-top:14px;"><h2 class="section">Diablo, but for<br/><em>English.</em></h2></div>
+  <div class="reveal" style="margin-top:28px;">
+    <p class="body" style="max-width:860px;">
+      Our XP curve is progressive — every level costs more than the
+      last. Level 1 → 2 is <strong>100 XP</strong>. Level 10 → 11 is
+      <strong>5,500 XP</strong>. The higher you go, the more each
+      badge shines.
+    </p>
+  </div>
+  <div class="reveal" style="margin-top:28px;">
+    <div class="grid4" style="max-width:1200px;">
+      <div class="card">
+        <div class="badge-chip">🚀 First Contact</div>
+        <p style="margin-top:12px;"><span class="pill">Common</span> The one you already have — for joining.</p>
+      </div>
+      <div class="card">
+        <div class="badge-chip" style="background: linear-gradient(135deg, var(--emerald), #22d3ee);">🎯 First Signal</div>
+        <p style="margin-top:12px;"><span class="pill emerald">Common</span> Your first completed lesson.</p>
+      </div>
+      <div class="card">
+        <div class="badge-chip" style="background: linear-gradient(135deg, var(--rose), var(--pink), #ec4899);">🔥 Ignited</div>
+        <p style="margin-top:12px;"><span class="pill rose">Rare</span> 7 days in a row. No gaps.</p>
+      </div>
+      <div class="card">
+        <div class="badge-chip" style="background: linear-gradient(135deg, var(--amber), #fb923c, #ef4444);">⚡ Unstoppable</div>
+        <p style="margin-top:12px;"><span class="pill amber">Epic</span> 30 days in a row.</p>
+      </div>
+      <div class="card">
+        <div class="badge-chip" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6, #ec4899);">🌌 Quarter Orbit</div>
+        <p style="margin-top:12px;"><span class="pill violet">Legendary</span> 90 days in a row. Few make it.</p>
+      </div>
+      <div class="card">
+        <div class="badge-chip" style="background: linear-gradient(135deg, #fde047, #f59e0b, #fb923c);">✨ Supernova</div>
+        <p style="margin-top:12px;"><span class="pill amber">Mythic</span> Level 50. The final form.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-note">07 · Badges</div>
+</section>
+
+<!-- ============================================================
+     SLIDE 9 — PRIVACY + PROFILE
+     ============================================================ -->
+<section class="slide"
+  style="background-image:
+    radial-gradient(ellipse at 30% 30%, rgba(52,211,153,0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 80%, rgba(56,189,248,0.06) 0%, transparent 40%);">
+  <div class="reveal"><p class="kicker">Chapter 08 · Privacy</p></div>
+  <div class="reveal" style="margin-top:14px;"><h2 class="section">Your data,<br/><em>your rules.</em></h2></div>
+  <div class="reveal" style="margin-top:28px;">
+    <div class="grid2" style="max-width:1100px;">
+      <div class="card">
+        <span class="pill emerald">Only your teacher sees</span>
+        <h3 style="margin-top:12px;">Your chats, your progress, your diary notes</h3>
+        <p>We never sell your data, never share it with advertisers,
+           never train AI on your conversations. Click the "How your
+           data is handled" pill on your Profile to read the full
+           disclosure — we're serious.</p>
+      </div>
+      <div class="card">
+        <span class="pill violet">You control your photo</span>
+        <h3 style="margin-top:12px;">Upload, replace, or delete</h3>
+        <p>Visible to your teacher and classmates only. If you prefer
+           a cartoon, leave it blank — we pick one that matches your
+           age and gender automatically.</p>
+      </div>
+    </div>
+  </div>
+  <div class="reveal" style="margin-top:32px;">
+    <p class="body">Want everything deleted? Send one email. We wipe it within 72 hours.</p>
+  </div>
+  <div class="footer-note">08 · Privacy</div>
+</section>
+
+<!-- ============================================================
+     SLIDE 10 — KEEP THE STREAK / CLOSING
+     ============================================================ -->
+<section class="slide" style="justify-content:center;
+    background-image:
+      radial-gradient(ellipse at 30% 30%, rgba(56,189,248,0.10) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 80%, rgba(52,211,153,0.08) 0%, transparent 45%);">
+  <div class="reveal"><p class="kicker">Chapter 09 · Last piece of advice</p></div>
+  <div class="reveal" style="margin-top:14px;">
+    <h1 class="title" style="font-size: clamp(40px, 7.5vw, 104px);">Ten minutes a day<br/><em>beats three hours on Sunday.</em></h1>
+  </div>
+  <div class="reveal" style="margin-top:32px;">
+    <p class="lede">
+      The streak counter isn't there to guilt you. It's there because
+      a brain learns a language better in short, daily bursts. Do one
+      drill before bed, one song before lunch. That's the whole trick.
+    </p>
+  </div>
+  <div class="reveal">
+    <div class="tag-row">
+      <span class="pill">v1.0.0</span>
+      <span class="pill emerald">Free forever</span>
+      <span class="pill violet">Good luck in your next class</span>
+    </div>
+  </div>
+  <div class="footer-note">End · Student's Guide</div>
+</section>
+
+</div>
+
+<script>
+class SlideEngine {
+  constructor() {
+    this.deck = document.getElementById('deck');
+    this.slides = [...document.querySelectorAll('.slide')];
+    this.dots = document.getElementById('dots');
+    this.progress = document.getElementById('progress');
+    this.counter = document.getElementById('counter');
+    this.hints = document.getElementById('hints');
+    this.total = this.slides.length;
+    this.current = 0;
+
+    this.slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'deck-dot';
+      d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      d.addEventListener('click', () => this.goTo(i));
+      this.dots.appendChild(d);
+    });
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          this.current = this.slides.indexOf(e.target);
+          this.updateChrome();
+        }
+      });
+    }, { root: this.deck, threshold: 0.5 });
+
+    this.slides.forEach(s => obs.observe(s));
+
+    document.addEventListener('keydown', e => {
+      if (['ArrowDown','ArrowRight','Space','PageDown'].includes(e.code)) { e.preventDefault(); this.next(); }
+      if (['ArrowUp','ArrowLeft','PageUp'].includes(e.code)) { e.preventDefault(); this.prev(); }
+      if (e.code === 'Home') { e.preventDefault(); this.goTo(0); }
+      if (e.code === 'End') { e.preventDefault(); this.goTo(this.total - 1); }
+    });
+
+    let touchY = 0;
+    this.deck.addEventListener('touchstart', e => { touchY = e.touches[0].clientY; }, { passive: true });
+    this.deck.addEventListener('touchend', e => {
+      const dy = touchY - e.changedTouches[0].clientY;
+      if (Math.abs(dy) > 50) dy > 0 ? this.next() : this.prev();
+    }, { passive: true });
+
+    setTimeout(() => this.hints.classList.add('faded'), 4000);
+    this.updateChrome();
+    if (this.slides[0]) this.slides[0].classList.add('visible');
+  }
+
+  goTo(i) { this.slides[i]?.scrollIntoView({ behavior: 'smooth' }); }
+  next() { this.goTo(Math.min(this.current + 1, this.total - 1)); }
+  prev() { this.goTo(Math.max(this.current - 1, 0)); }
+
+  updateChrome() {
+    const pct = ((this.current + 1) / this.total) * 100;
+    this.progress.style.width = pct + '%';
+    this.counter.textContent = (this.current + 1) + ' / ' + this.total;
+    [...this.dots.children].forEach((d, i) => d.classList.toggle('active', i === this.current));
+  }
+}
+document.addEventListener('DOMContentLoaded', () => new SlideEngine());
+</script>
+
+</body>
+</html>

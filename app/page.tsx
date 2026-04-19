@@ -68,31 +68,35 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="flex-1 flex flex-col items-center justify-center px-4 py-10 md:py-16">
-        <div className="max-w-3xl text-center space-y-8">
-          <div>
-            <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-              {locale === "pt-BR"
-                ? "Ou explore direto ↓"
-                : "Or explore right now ↓"}
-            </p>
-            <DemoAccess
-              teacherLabel={
-                locale === "pt-BR"
-                  ? "Ver como professora"
-                  : "View as a teacher"
-              }
-              studentLabel={
-                locale === "pt-BR"
-                  ? "Ver como estudante"
-                  : "View as a student"
-              }
-              teacherHint={locale === "pt-BR" ? "Demo" : "Live demo"}
-              studentHint={locale === "pt-BR" ? "Demo" : "Live demo"}
-            />
-          </div>
+      {/* Demo access pinned up high in the empty space between the header
+          and the hero, so the big title starts earlier down the page. */}
+      <div className="px-4 pt-4 md:pt-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            {locale === "pt-BR"
+              ? "Explore direto ↓"
+              : "Explore right now ↓"}
+          </p>
+          <DemoAccess
+            teacherLabel={
+              locale === "pt-BR"
+                ? "Ver como professora"
+                : "View as a teacher"
+            }
+            studentLabel={
+              locale === "pt-BR"
+                ? "Ver como estudante"
+                : "View as a student"
+            }
+            teacherHint={locale === "pt-BR" ? "Demo" : "Live demo"}
+            studentHint={locale === "pt-BR" ? "Demo" : "Live demo"}
+          />
+        </div>
+      </div>
 
+      {/* Hero */}
+      <section className="flex-1 flex flex-col items-center justify-center px-4 py-8 md:py-12">
+        <div className="max-w-3xl text-center space-y-8">
           <Badge
             variant="secondary"
             className="px-4 py-1.5 text-sm font-medium border border-border"

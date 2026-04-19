@@ -1,0 +1,32 @@
+/* Shared deck styling for the Amazing School onboarding presentations.
+   Inlined via a <style>@import</style> won't work from a static HTML on
+   first paint; each deck keeps its own copy but references this file as
+   the source of truth during edits.                                   */
+
+:root {
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-editorial: 'Newsreader', 'Georgia', serif;
+  --font-mono: 'Fira Code', 'SF Mono', Consolas, monospace;
+
+  --bg: #0a0a12;
+  --surface: #13131c;
+  --surface2: #1b1b26;
+  --surface-elevated: #252533;
+  --border: rgba(167, 139, 250, 0.12);
+  --border-bright: rgba(167, 139, 250, 0.25);
+  --text: #ecebff;
+  --text-dim: #8b8aa7;
+
+  --accent: #a78bfa;       /* violet-400 */
+  --accent-dim: rgba(167, 139, 250, 0.12);
+  --indigo: #818cf8;
+  --pink: #f472b6;
+  --emerald: #34d399;
+  --amber: #fbbf24;
+  --rose: #fb7185;
+  --sky: #38bdf8;
+
+  --code-bg: #08080f;
+  --code-text: #cbd5e1;
+}
