@@ -46,6 +46,10 @@ interface PickerItem {
   kind: "lesson" | "music";
   cefr: string;
   category: string;
+  // Music-only haystack bits — artist + year let the songs picker search
+  // by those fields without forcing them into every lesson row.
+  artist?: string;
+  year?: number;
 }
 
 export function AssignLessonButton({
@@ -80,6 +84,9 @@ export function AssignLessonButton({
         descriptionSingle: (name: string) =>
           `Escolha uma ou mais lições/músicas para ${name}. A ordem dos cliques vira a ordem de entrega.`,
         searchPlaceholder: "Buscar por título, nível ou tipo…",
+        songSearchPlaceholder: "Buscar música: título, artista ou ano…",
+        lessonsHeading: "Lições",
+        songsHeading: "Músicas",
         selectedHeading: (n: number) =>
           n === 1 ? "1 item selecionado" : `${n} itens selecionados`,
         pickAtLeastOne: "Selecione pelo menos uma lição ou música.",
@@ -115,6 +122,9 @@ export function AssignLessonButton({
         descriptionSingle: (name: string) =>
           `Pick one or more lessons / songs for ${name}. Click order becomes delivery order.`,
         searchPlaceholder: "Search by title, level, or type…",
+        songSearchPlaceholder: "Search song: title, artist, or year…",
+        lessonsHeading: "Lessons",
+        songsHeading: "Songs",
         selectedHeading: (n: number) =>
           n === 1 ? "1 item selected" : `${n} items selected`,
         pickAtLeastOne: "Pick at least one lesson or song.",
@@ -145,37 +155,53 @@ export function AssignLessonButton({
 
   const publishedLessons = lessons.filter((l) => l.published);
 
-  const items = useMemo<PickerItem[]>(() => {
-    const out: PickerItem[] = [];
-    for (const l of publishedLessons) {
-      out.push({
-        slug: l.slug,
-        title: l.title,
-        kind: "lesson",
-        cefr: l.cefr_level,
-        category: l.category,
-      });
-    }
-    for (const m of musics) {
-      out.push({
-        slug: toMusicSlug(m.slug),
-        title: `${m.artist} — ${m.title}`,
-        kind: "music",
-        cefr: m.cefr_level,
-        category: "music",
-      });
-    }
-    return out;
-  }, [publishedLessons, musics]);
+  const lessonItems = useMemo<PickerItem[]>(() => {
+    return publishedLessons.map((l) => ({
+      slug: l.slug,
+      title: l.title,
+      kind: "lesson" as const,
+      cefr: l.cefr_level,
+      category: l.category,
+    }));
+  }, [publishedLessons]);
 
-  const filteredItems = useMemo(() => {
+  const songItems = useMemo<PickerItem[]>(() => {
+    return musics.map((m) => ({
+      slug: toMusicSlug(m.slug),
+      title: m.title,
+      kind: "music" as const,
+      cefr: m.cefr_level,
+      category: "music",
+      artist: m.artist,
+      year: m.year,
+    }));
+  }, [musics]);
+
+  const items = useMemo(() => [...lessonItems, ...songItems], [
+    lessonItems,
+    songItems,
+  ]);
+
+  const [songSearch, setSongSearch] = useState("");
+
+  const filteredLessonItems = useMemo(() => {
     const q = search.trim().toLowerCase();
-    if (!q) return items;
-    return items.filter((i) => {
+    if (!q) return lessonItems;
+    return lessonItems.filter((i) => {
       const hay = `${i.title} ${i.cefr} ${i.category}`.toLowerCase();
       return hay.includes(q);
     });
-  }, [items, search]);
+  }, [lessonItems, search]);
+
+  const filteredSongItems = useMemo(() => {
+    const q = songSearch.trim().toLowerCase();
+    if (!q) return songItems;
+    return songItems.filter((i) => {
+      const hay = `${i.title} ${i.artist ?? ""} ${i.year ?? ""} ${i.cefr}`
+        .toLowerCase();
+      return hay.includes(q);
+    });
+  }, [songItems, songSearch]);
 
   const selectedItems = useMemo(() => {
     const byId = new Map(items.map((i) => [i.slug, i] as const));
@@ -187,6 +213,7 @@ export function AssignLessonButton({
   function reset() {
     setSelected([]);
     setSearch("");
+    setSongSearch("");
     setTargetType(singleStudent && !singleStudentHasClassroom ? "student" : "classroom");
     // In single-student mode, pre-fill the classroom dropdown with the
     // student's existing classroom (empty = "No classroom specified").
@@ -485,60 +512,114 @@ export function AssignLessonButton({
                 </div>
               ) : null}
 
-              {/* Picker list — multi-select by clicking items. */}
-              <div className="space-y-1.5">
-                <input
-                  type="search"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  placeholder={t.searchPlaceholder}
-                  className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
-                />
-                <div className="max-h-56 overflow-y-auto rounded-md border border-border">
-                  {filteredItems.length === 0 ? (
-                    <p className="px-3 py-4 text-center text-xs text-muted-foreground">
-                      {t.noMatches}
-                    </p>
-                  ) : (
-                    <ul>
-                      {filteredItems.map((it) => {
-                        const picked = selected.includes(it.slug);
-                        return (
-                          <li key={it.slug}>
-                            <button
-                              type="button"
-                              onClick={() => toggleItem(it.slug)}
-                              className={`flex w-full items-center gap-2 border-b border-border/60 px-3 py-1.5 text-left text-xs last:border-b-0 transition-colors ${
-                                picked
-                                  ? "bg-primary/10"
-                                  : "hover:bg-muted/50"
-                              }`}
-                            >
-                              <input
-                                type="checkbox"
-                                readOnly
-                                checked={picked}
-                                className="h-3.5 w-3.5 shrink-0 rounded border-border accent-primary"
-                              />
-                              {it.kind === "music" ? (
-                                <Music2 className="h-3 w-3 shrink-0 text-primary" />
-                              ) : (
+              {/* Lessons picker */}
+              {lessonItems.length > 0 ? (
+                <div className="space-y-1.5">
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                    {t.lessonsHeading}
+                  </p>
+                  <input
+                    type="search"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    placeholder={t.searchPlaceholder}
+                    className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
+                  />
+                  <div className="max-h-48 overflow-y-auto rounded-md border border-border">
+                    {filteredLessonItems.length === 0 ? (
+                      <p className="px-3 py-4 text-center text-xs text-muted-foreground">
+                        {t.noMatches}
+                      </p>
+                    ) : (
+                      <ul>
+                        {filteredLessonItems.map((it) => {
+                          const picked = selected.includes(it.slug);
+                          return (
+                            <li key={it.slug}>
+                              <button
+                                type="button"
+                                onClick={() => toggleItem(it.slug)}
+                                className={`flex w-full items-center gap-2 border-b border-border/60 px-3 py-1.5 text-left text-xs last:border-b-0 transition-colors ${
+                                  picked ? "bg-primary/10" : "hover:bg-muted/50"
+                                }`}
+                              >
+                                <input
+                                  type="checkbox"
+                                  readOnly
+                                  checked={picked}
+                                  className="h-3.5 w-3.5 shrink-0 rounded border-border accent-primary"
+                                />
                                 <BookOpen className="h-3 w-3 shrink-0 text-muted-foreground" />
-                              )}
-                              <span className="min-w-0 flex-1 truncate">
-                                <span className="text-muted-foreground">
-                                  {it.cefr.toUpperCase()} · {it.category}
-                                </span>{" "}
-                                · {it.title}
-                              </span>
-                            </button>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  )}
+                                <span className="min-w-0 flex-1 truncate">
+                                  <span className="text-muted-foreground">
+                                    {it.cefr.toUpperCase()} · {it.category}
+                                  </span>{" "}
+                                  · {it.title}
+                                </span>
+                              </button>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </div>
                 </div>
-              </div>
+              ) : null}
+
+              {/* Songs picker — separate list, searches by title / artist / year. */}
+              {songItems.length > 0 ? (
+                <div className="space-y-1.5">
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                    {t.songsHeading}
+                  </p>
+                  <input
+                    type="search"
+                    value={songSearch}
+                    onChange={(e) => setSongSearch(e.target.value)}
+                    placeholder={t.songSearchPlaceholder}
+                    className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
+                  />
+                  <div className="max-h-48 overflow-y-auto rounded-md border border-border">
+                    {filteredSongItems.length === 0 ? (
+                      <p className="px-3 py-4 text-center text-xs text-muted-foreground">
+                        {t.noMatches}
+                      </p>
+                    ) : (
+                      <ul>
+                        {filteredSongItems.map((it) => {
+                          const picked = selected.includes(it.slug);
+                          return (
+                            <li key={it.slug}>
+                              <button
+                                type="button"
+                                onClick={() => toggleItem(it.slug)}
+                                className={`flex w-full items-center gap-2 border-b border-border/60 px-3 py-1.5 text-left text-xs last:border-b-0 transition-colors ${
+                                  picked ? "bg-primary/10" : "hover:bg-muted/50"
+                                }`}
+                              >
+                                <input
+                                  type="checkbox"
+                                  readOnly
+                                  checked={picked}
+                                  className="h-3.5 w-3.5 shrink-0 rounded border-border accent-primary"
+                                />
+                                <Music2 className="h-3 w-3 shrink-0 text-primary" />
+                                <span className="min-w-0 flex-1 truncate">
+                                  <span className="text-muted-foreground">
+                                    {it.cefr.toUpperCase()} · {it.artist}
+                                    {it.year ? ` · ${it.year}` : ""}
+                                  </span>{" "}
+                                  · {it.title}
+                                </span>
+                              </button>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+              ) : null}
             </div>
           )}
 
