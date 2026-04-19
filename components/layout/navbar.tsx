@@ -152,9 +152,9 @@ export function Navbar({
       <div
         className={cn(
           "relative mx-auto flex w-full min-w-0 max-w-7xl items-center justify-between gap-2 px-3 md:px-6",
-          // Taller row when a school logo is centered, so the image has
-          // breathing room. Without a logo we keep the classic h-16.
-          schoolLogoPath ? "min-h-[5.5rem] py-3" : "h-16",
+          // Taller row when a school logo is centered — needs to
+          // accommodate h-16 (mobile) / h-20 (desktop) plus padding.
+          schoolLogoPath ? "min-h-[6.5rem] py-3 md:min-h-[7rem]" : "h-16",
         )}
       >
         <Link
@@ -173,15 +173,16 @@ export function Navbar({
         </Link>
 
         {/* Center: either the school logo (when set) OR the nav pills.
-            When a logo is present, pills move to their own row below. */}
+            When a logo is present, pills move to their own row below.
+            Image height is ~25% above the Amazing School lockup
+            (BrandMark h-9 + wordmark text-xl ≈ h-10 effective) so the
+            school brand reads as the dominant mark. */}
         {schoolLogoPath ? (
-          <div className="pointer-events-none absolute left-1/2 -translate-x-1/2">
-            {/* h-14 = 56px ≈ 25% taller than the h-9 BrandMark, but big
-                enough to read the artwork clearly. */}
+          <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <img
               src={schoolLogoPath}
               alt="School logo"
-              className="h-14 w-auto object-contain md:h-16"
+              className="h-16 w-auto object-contain md:h-20"
             />
           </div>
         ) : showNav ? (
