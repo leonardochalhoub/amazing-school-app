@@ -120,20 +120,43 @@ export function Navbar({
   const nav = role === "teacher" ? teacherNav : studentNav;
   const showNav = nav.length > 0;
 
+  const navPills = showNav ? (
+    <nav className="hidden justify-center md:flex">
+      <div className="flex items-center gap-1 rounded-full border border-border/70 bg-background/60 p-1 shadow-xs backdrop-blur">
+        {nav.map((link) => {
+          const isActive =
+            link.href === `/${role}`
+              ? pathname === link.href
+              : pathname.startsWith(link.href);
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                "relative rounded-full px-2.5 py-1 text-[11px] font-medium transition-colors whitespace-nowrap",
+                isActive
+                  ? "bg-foreground text-background shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              {link.label}
+            </Link>
+          );
+        })}
+      </div>
+    </nav>
+  ) : null;
+
   return (
     <header className="sticky top-0 z-50 w-full overflow-x-clip border-b border-border/70 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-      {/* White-label school logo — only rendered for whitelisted
-          accounts (Leo + Tatiana). Hidden otherwise. */}
-      {schoolLogoPath ? (
-        <div className="flex w-full justify-center border-b border-border/40 py-2">
-          <img
-            src={schoolLogoPath}
-            alt="School logo"
-            className="h-10 w-auto object-contain md:h-12"
-          />
-        </div>
-      ) : null}
-      <div className="mx-auto flex h-16 w-full min-w-0 max-w-7xl items-center justify-between gap-2 px-3 md:px-6">
+      <div
+        className={cn(
+          "relative mx-auto flex w-full min-w-0 max-w-7xl items-center justify-between gap-2 px-3 md:px-6",
+          // Taller row when a school logo is centered, so the image has
+          // breathing room. Without a logo we keep the classic h-16.
+          schoolLogoPath ? "min-h-[5.5rem] py-3" : "h-16",
+        )}
+      >
         <Link
           href={`/${role}`}
           className="group flex shrink-0 items-center gap-2.5"
@@ -149,31 +172,20 @@ export function Navbar({
           </span>
         </Link>
 
-        {showNav ? (
-          <nav className="hidden flex-1 justify-center md:flex">
-            <div className="flex items-center gap-1 rounded-full border border-border/70 bg-background/60 p-1 shadow-xs backdrop-blur">
-              {nav.map((link) => {
-                const isActive =
-                  link.href === `/${role}`
-                    ? pathname === link.href
-                    : pathname.startsWith(link.href);
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={cn(
-                      "relative rounded-full px-2.5 py-1 text-[11px] font-medium transition-colors whitespace-nowrap",
-                      isActive
-                        ? "bg-foreground text-background shadow-sm"
-                        : "text-muted-foreground hover:text-foreground"
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              })}
-            </div>
-          </nav>
+        {/* Center: either the school logo (when set) OR the nav pills.
+            When a logo is present, pills move to their own row below. */}
+        {schoolLogoPath ? (
+          <div className="pointer-events-none absolute left-1/2 -translate-x-1/2">
+            {/* h-14 = 56px ≈ 25% taller than the h-9 BrandMark, but big
+                enough to read the artwork clearly. */}
+            <img
+              src={schoolLogoPath}
+              alt="School logo"
+              className="h-14 w-auto object-contain md:h-16"
+            />
+          </div>
+        ) : showNav ? (
+          <div className="hidden flex-1 justify-center md:flex">{navPills}</div>
         ) : (
           <div className="hidden flex-1 md:block" />
         )}
@@ -267,6 +279,15 @@ export function Navbar({
           </DropdownMenu>
         </div>
       </div>
+
+      {/* When a school logo is taking up the center of the top row, the
+          nav pills get their own centered row right below so everything
+          still fits comfortably on desktop. */}
+      {schoolLogoPath && showNav ? (
+        <div className="mx-auto hidden w-full max-w-7xl min-w-0 items-center justify-center px-3 pb-2 md:flex md:px-6">
+          {navPills}
+        </div>
+      ) : null}
 
       {/* Mobile nav — wraps onto multiple rows instead of horizontal
           scroll so every item is reachable without sliding. */}
