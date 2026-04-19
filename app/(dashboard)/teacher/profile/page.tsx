@@ -19,7 +19,9 @@ export default async function TeacherProfilePage() {
   const admin = createAdminClient();
   const { data: profile } = await admin
     .from("profiles")
-    .select("full_name, avatar_url, role, school_logo_enabled")
+    .select(
+      "full_name, avatar_url, role, school_logo_enabled, school_logo_url",
+    )
     .eq("id", user.id)
     .maybeSingle();
 
@@ -30,6 +32,8 @@ export default async function TeacherProfilePage() {
   const logoEligible = isLogoEligible(user.email, profile.full_name);
   const logoEnabled =
     (profile as { school_logo_enabled?: boolean }).school_logo_enabled === true;
+  const uploadedLogoPath =
+    (profile as { school_logo_url?: string | null }).school_logo_url ?? null;
 
   return (
     <div className="space-y-6 max-w-2xl">
@@ -58,22 +62,21 @@ export default async function TeacherProfilePage() {
         </CardContent>
       </Card>
 
-      {logoEligible ? (
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-base">
-              <ImageIcon className="h-4 w-4 text-primary" />
-              School brand logo
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <SchoolLogoToggle
-              initialEnabled={logoEnabled}
-              logoSrc={SCHOOL_LOGO_SRC}
-            />
-          </CardContent>
-        </Card>
-      ) : null}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-base">
+            <ImageIcon className="h-4 w-4 text-primary" />
+            School brand logo
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <SchoolLogoToggle
+            initialEnabled={logoEnabled}
+            whitelistLogoSrc={logoEligible ? SCHOOL_LOGO_SRC : null}
+            uploadedLogoPath={uploadedLogoPath}
+          />
+        </CardContent>
+      </Card>
 
       <Card>
         <CardHeader>

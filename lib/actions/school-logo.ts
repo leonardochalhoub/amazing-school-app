@@ -1,10 +1,15 @@
 "use server";
 
+import sharp from "sharp";
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { isLogoEligible } from "@/lib/school-logo";
 
+/**
+ * Teachers can always toggle the brand logo on/off. The whitelist only
+ * affects WHICH image is shown (pre-set file for Leo + Tatiana, their
+ * own upload for everyone else).
+ */
 export async function setSchoolLogoEnabled(enabled: boolean) {
   const supabase = await createClient();
   const {
@@ -15,19 +20,105 @@ export async function setSchoolLogoEnabled(enabled: boolean) {
   const admin = createAdminClient();
   const { data: profile } = await admin
     .from("profiles")
-    .select("full_name, role")
+    .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (!profile) return { error: "Profile not found" };
-  const p = profile as { full_name: string; role: string };
-  if (p.role !== "teacher") return { error: "Teacher only" };
-  if (!isLogoEligible(user.email, p.full_name)) {
-    return { error: "Not allowed on this account" };
+  if ((profile as { role?: string } | null)?.role !== "teacher") {
+    return { error: "Teacher only" };
   }
 
   const { error } = await admin
     .from("profiles")
     .update({ school_logo_enabled: enabled })
+    .eq("id", user.id);
+  if (error) return { error: error.message };
+
+  revalidatePath("/teacher");
+  revalidatePath("/teacher/profile");
+  return { success: true as const };
+}
+
+// ---------------------------------------------------------------------------
+// Upload / remove the teacher's own school logo
+// ---------------------------------------------------------------------------
+
+const MAX_BYTES = 8 * 1024 * 1024;
+const ALLOWED = ["image/png", "image/jpeg", "image/webp", "image/svg+xml"] as const;
+
+export async function uploadSchoolLogo(formData: FormData) {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Not signed in" };
+
+  const admin = createAdminClient();
+  const { data: profile } = await admin
+    .from("profiles")
+    .select("role")
+    .eq("id", user.id)
+    .maybeSingle();
+  if ((profile as { role?: string } | null)?.role !== "teacher") {
+    return { error: "Teacher only" };
+  }
+
+  const file = formData.get("file");
+  if (!(file instanceof File)) return { error: "No file uploaded" };
+  if (file.size === 0) return { error: "Empty file" };
+  if (file.size > MAX_BYTES) return { error: "File too large (max 8 MB)" };
+  if (!ALLOWED.includes(file.type as (typeof ALLOWED)[number])) {
+    return { error: "Unsupported image type (PNG, JPEG, WebP, SVG)" };
+  }
+
+  // Normalise to a wide landscape webp capped at 1600 x 400 so navbar
+  // rendering stays fast regardless of what the teacher uploads.
+  const buf = Buffer.from(await file.arrayBuffer());
+  let webp: Buffer;
+  try {
+    webp = await sharp(buf)
+      .rotate()
+      .resize(1600, 400, { fit: "inside", withoutEnlargement: true })
+      .trim({ threshold: 8 })
+      .webp({ quality: 88 })
+      .toBuffer();
+  } catch {
+    return { error: "Image processing failed" };
+  }
+
+  const path = `${user.id}.webp`;
+  const { error: upErr } = await admin.storage
+    .from("school-logos")
+    .upload(path, webp, {
+      contentType: "image/webp",
+      upsert: true,
+      cacheControl: "60",
+    });
+  if (upErr) return { error: upErr.message };
+
+  const { error: dbErr } = await admin
+    .from("profiles")
+    .update({ school_logo_url: path, school_logo_enabled: true })
+    .eq("id", user.id);
+  if (dbErr) return { error: dbErr.message };
+
+  revalidatePath("/teacher");
+  revalidatePath("/teacher/profile");
+  return { success: true as const };
+}
+
+export async function removeSchoolLogo() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Not signed in" };
+
+  const admin = createAdminClient();
+  await admin.storage.from("school-logos").remove([`${user.id}.webp`]);
+
+  const { error } = await admin
+    .from("profiles")
+    .update({ school_logo_url: null })
     .eq("id", user.id);
   if (error) return { error: error.message };
 

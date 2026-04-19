@@ -2,7 +2,11 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
 import { isOwnerEmail } from "@/lib/auth/roles";
-import { isLogoEligible, SCHOOL_LOGO_SRC } from "@/lib/school-logo";
+import {
+  isLogoEligible,
+  schoolLogoPublicUrl,
+  SCHOOL_LOGO_SRC,
+} from "@/lib/school-logo";
 import { redirect } from "next/navigation";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -24,7 +28,7 @@ export default async function DashboardLayout({
   const admin = createAdminClient();
   const { data: profile, error } = await admin
     .from("profiles")
-    .select("full_name, role, avatar_url, school_logo_enabled")
+    .select("full_name, role, avatar_url, school_logo_enabled, school_logo_url")
     .eq("id", user.id)
     .single();
 
@@ -50,15 +54,23 @@ export default async function DashboardLayout({
 
   const isDemo = (user.email ?? "").toLowerCase().startsWith("demo.");
 
-  // White-label school logo: shown centered at the top of the nav for
-  // whitelisted teacher accounts, only when they've flipped the toggle
-  // on their Profile page. File lives at `public/T - 2.png`.
-  const schoolLogoPath = resolveSchoolLogo({
-    fullName: profile.full_name,
-    email: user.email,
-    enabled:
-      (profile as { school_logo_enabled?: boolean }).school_logo_enabled ===
-      true,
+  // White-label school logo resolution:
+  //   Teacher signed in → their own profile row
+  //   Student signed in → find their teacher via roster_students, then
+  //                       read that teacher's profile row
+  // Whitelisted teachers (Leo, Tatiana) show the bundled
+  // `/branding/school-logo.png` regardless of whether they've uploaded
+  // one. Everyone else shows their uploaded file from the public
+  // school-logos bucket. Both require school_logo_enabled = true.
+  const schoolLogoPath = await resolveSchoolLogo({
+    user,
+    profile: profile as {
+      full_name: string;
+      school_logo_enabled: boolean | null;
+      school_logo_url: string | null;
+    },
+    role,
+    admin,
   });
 
   return (
@@ -92,20 +104,83 @@ export default async function DashboardLayout({
 }
 
 // ---------------------------------------------------------------------------
-// White-label branding: the PNG lives at `public/T - 2.png`. Whitelisted
-// teachers (Leo + Tatiana) get a toggle on their Profile page; when ON,
-// this returns the image path, otherwise null.
+// White-label branding.
+//   Whitelisted teachers (Leo + Tatiana) → bundled school-logo.png.
+//   Every other teacher → their own uploaded PNG/JPG from school-logos.
+//   Students → whatever their teacher has configured.
+// The toggle (profiles.school_logo_enabled) gates the render in all
+// cases, so a teacher who hasn't flipped it sees the default brand.
 // ---------------------------------------------------------------------------
-function resolveSchoolLogo({
-  fullName,
+type ResolverInput = {
+  user: { id: string; email?: string };
+  profile: {
+    full_name: string;
+    school_logo_enabled: boolean | null;
+    school_logo_url: string | null;
+  };
+  role: Role;
+  admin: ReturnType<typeof createAdminClient>;
+};
+async function resolveSchoolLogo(
+  args: ResolverInput,
+): Promise<string | null> {
+  if (args.role === "teacher") {
+    return logoForTeacher({
+      email: args.user.email ?? null,
+      fullName: args.profile.full_name,
+      enabled: args.profile.school_logo_enabled === true,
+      uploadedPath: args.profile.school_logo_url,
+    });
+  }
+  // Student: look up their teacher via the roster link, then render
+  // whatever that teacher has configured.
+  const { data: roster } = await args.admin
+    .from("roster_students")
+    .select("teacher_id")
+    .eq("auth_user_id", args.user.id)
+    .maybeSingle();
+  const teacherId = (roster as { teacher_id?: string } | null)?.teacher_id;
+  if (!teacherId) return null;
+  const { data: teacherProfile } = await args.admin
+    .from("profiles")
+    .select("full_name, school_logo_enabled, school_logo_url")
+    .eq("id", teacherId)
+    .maybeSingle();
+  if (!teacherProfile) return null;
+  const tp = teacherProfile as {
+    full_name: string;
+    school_logo_enabled: boolean | null;
+    school_logo_url: string | null;
+  };
+  // Cross-reference email for the whitelist check. Pull it from
+  // auth.users via the admin API only when we actually need it.
+  let teacherEmail: string | null = null;
+  try {
+    const { data } = await args.admin.auth.admin.getUserById(teacherId);
+    teacherEmail = data?.user?.email ?? null;
+  } catch {
+    /* non-fatal */
+  }
+  return logoForTeacher({
+    email: teacherEmail,
+    fullName: tp.full_name,
+    enabled: tp.school_logo_enabled === true,
+    uploadedPath: tp.school_logo_url,
+  });
+}
+
+function logoForTeacher({
   email,
+  fullName,
   enabled,
+  uploadedPath,
 }: {
-  fullName: string;
   email: string | null | undefined;
+  fullName: string;
   enabled: boolean;
+  uploadedPath: string | null;
 }): string | null {
   if (!enabled) return null;
-  if (!isLogoEligible(email, fullName)) return null;
-  return SCHOOL_LOGO_SRC;
+  if (isLogoEligible(email, fullName)) return SCHOOL_LOGO_SRC;
+  return schoolLogoPublicUrl(uploadedPath);
 }

@@ -10,6 +10,20 @@
 // preserved alongside as `T - 2.png` for history.
 export const SCHOOL_LOGO_SRC = "/branding/school-logo.png";
 
+/**
+ * Resolve a school_logo_url object path stored on profiles into a fully
+ * qualified public URL. Logos live in the public `school-logos` bucket
+ * (see migration 033), so no signed URL is needed.
+ */
+export function schoolLogoPublicUrl(path: string | null): string | null {
+  if (!path) return null;
+  // Cache-bust with updated_at-ish token is unnecessary because the
+  // filename is `{userId}.webp` — upsert overwrites the same key.
+  const base = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  if (!base) return null;
+  return `${base.replace(/\/$/, "")}/storage/v1/object/public/school-logos/${path}`;
+}
+
 const WHITELISTED_EMAILS = [
   "leochalhoub@hotmail.com",
   "tatianasequeira@yahoo.com.br",
