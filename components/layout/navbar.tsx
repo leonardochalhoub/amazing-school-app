@@ -214,10 +214,11 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
         </div>
       </div>
 
-      {/* Mobile nav row */}
+      {/* Mobile nav — wraps onto multiple rows instead of horizontal
+          scroll so every item is reachable without sliding. */}
       {showNav ? (
         <div className="mx-auto max-w-7xl px-4 pb-2 md:hidden">
-          <div className="flex items-center gap-1 overflow-x-auto rounded-full border border-border/70 bg-background/60 p-1 backdrop-blur">
+          <div className="flex flex-wrap items-center justify-center gap-1 rounded-2xl border border-border/70 bg-background/60 p-1.5 backdrop-blur">
             {nav.map((link) => {
               const isActive =
                 link.href === `/${role}`

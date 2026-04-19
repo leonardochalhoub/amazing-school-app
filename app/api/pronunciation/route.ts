@@ -31,20 +31,33 @@ const STRICTNESS = clampNum(
   Number(process.env.PRONUNCIATION_STRICTNESS),
   0.5,
   6,
-  2.5,
+  3.5,
 );
 const CLARITY_WEIGHT = clampNum(
   Number(process.env.PRONUNCIATION_CLARITY_WEIGHT),
   0,
   1,
-  0.55,
+  0.6,
 );
 const SCORE_CEILING = clampNum(
   Number(process.env.PRONUNCIATION_CEILING),
   50,
   100,
-  98,
+  95,
 );
+// Per-word mistake penalty. Each missed/substituted target word shaves
+// this many points off the final score so "I have apple" vs
+// "I had apple" lands around 75 instead of 92.
+const WORD_MISTAKE_PENALTY = clampNum(
+  Number(process.env.PRONUNCIATION_WORD_PENALTY),
+  0,
+  40,
+  12,
+);
+// Require every target word to match before the score can hit 100.
+// When false, a high similarity average + great clarity is enough.
+const PERFECT_REQUIRES_ALL_WORDS =
+  (process.env.PRONUNCIATION_PERFECT_REQUIRES_ALL_WORDS ?? "true") !== "false";
 
 function clampNum(v: number, lo: number, hi: number, fallback: number): number {
   if (!Number.isFinite(v)) return fallback;
@@ -110,8 +123,9 @@ export async function POST(req: Request) {
 
   const similarity = similarityScore(transcription, target); // 0–100
   const clarity = clarityScore(json.segments); // 0–100
-  const score = combineScore(similarity, clarity);
-  const feedback = buildFeedback(score, transcription, target, clarity);
+  const diff = wordDiff(transcription, target);
+  const score = combineScore(similarity, clarity, diff);
+  const feedback = buildFeedback(score, transcription, target, clarity, diff);
 
   return NextResponse.json({
     transcription,
@@ -120,7 +134,13 @@ export async function POST(req: Request) {
     feedback,
     similarity,
     clarity,
-    raw: { strictness: STRICTNESS, clarityWeight: CLARITY_WEIGHT, ceiling: SCORE_CEILING },
+    diff,
+    raw: {
+      strictness: STRICTNESS,
+      clarityWeight: CLARITY_WEIGHT,
+      ceiling: SCORE_CEILING,
+      wordPenalty: WORD_MISTAKE_PENALTY,
+    },
   });
 }
 
@@ -154,14 +174,131 @@ function clarityScore(segments: WhisperSegment[] | undefined): number {
   return Math.max(0, Math.min(100, Math.round(logprobScore - penalty)));
 }
 
-function combineScore(similarity: number, clarity: number): number {
-  // Steep curve on similarity so 80% text match ≈ 57, 90% ≈ 77, 95% ≈ 88.
+function combineScore(
+  similarity: number,
+  clarity: number,
+  diff: WordDiff,
+): number {
+  // Steep curve on similarity so 80% text match ≈ 41, 90% ≈ 69,
+  // 95% ≈ 84 (at strictness=3.5).
   const shaped = Math.pow(similarity / 100, STRICTNESS) * 100;
   // Blend with clarity — a clean recording reading the target nets high;
   // a muffled recording that happens to transcribe to the right text
   // still gets docked.
-  const blended = shaped * (1 - CLARITY_WEIGHT) + (shaped * clarity) / 100 * CLARITY_WEIGHT;
-  return Math.max(0, Math.min(SCORE_CEILING, Math.round(blended)));
+  const blended =
+    shaped * (1 - CLARITY_WEIGHT) +
+    (shaped * clarity) / 100 * CLARITY_WEIGHT;
+  // Per-word penalty — each wrong / missed target word shaves a fixed
+  // amount so the user can't "average out" a fluff-filled recording.
+  const mistakes = diff.words.filter((w) => w.status !== "ok").length;
+  const penalized = blended - mistakes * WORD_MISTAKE_PENALTY;
+  // Only award 100 when every target word matched AND the raw numbers
+  // say so. Otherwise cap at the ceiling (95 by default).
+  const hasAllWords = mistakes === 0;
+  const ceiling =
+    PERFECT_REQUIRES_ALL_WORDS && !hasAllWords ? SCORE_CEILING - 2 : SCORE_CEILING;
+  return Math.max(0, Math.min(ceiling, Math.round(penalized)));
+}
+
+// ---------------------------------------------------------------------------
+// Word-level diff
+// ---------------------------------------------------------------------------
+
+export type WordStatus = "ok" | "missed" | "wrong" | "extra";
+
+export interface WordDiffEntry {
+  /** Token the target expected (or null for an unexpected extra word). */
+  target: string | null;
+  /** What we actually heard aligned to this slot. */
+  heard: string | null;
+  status: WordStatus;
+}
+
+export interface WordDiff {
+  words: WordDiffEntry[];
+  missed: string[];
+  wrong: Array<{ expected: string; heard: string }>;
+  extra: string[];
+}
+
+function tokenize(s: string): string[] {
+  return normalize(s).split(" ").filter(Boolean);
+}
+
+/**
+ * Align target and heard tokens via classic edit-distance backtrace and
+ * label each slot:
+ *   ok      — same word (case/accents ignored)
+ *   wrong   — target had X, speaker said Y (substitution)
+ *   missed  — target word has no counterpart in heard
+ *   extra   — heard a word that wasn't in the target
+ */
+function wordDiff(heardText: string, targetText: string): WordDiff {
+  const want = tokenize(targetText);
+  const got = tokenize(heardText);
+  const m = want.length;
+  const n = got.length;
+
+  // DP table of edit counts.
+  const dp: number[][] = Array.from({ length: m + 1 }, () =>
+    new Array(n + 1).fill(0),
+  );
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      const cost = want[i - 1] === got[j - 1] ? 0 : 1;
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + cost,
+      );
+    }
+  }
+
+  // Backtrace to build per-word ops.
+  const ops: WordDiffEntry[] = [];
+  let i = m;
+  let j = n;
+  while (i > 0 || j > 0) {
+    if (i > 0 && j > 0 && want[i - 1] === got[j - 1]) {
+      ops.unshift({ target: want[i - 1], heard: got[j - 1], status: "ok" });
+      i--;
+      j--;
+      continue;
+    }
+    const sub =
+      i > 0 && j > 0 ? dp[i - 1][j - 1] : Number.POSITIVE_INFINITY;
+    const del = i > 0 ? dp[i - 1][j] : Number.POSITIVE_INFINITY;
+    const ins = j > 0 ? dp[i][j - 1] : Number.POSITIVE_INFINITY;
+    const best = Math.min(sub, del, ins);
+    if (best === sub) {
+      ops.unshift({
+        target: want[i - 1],
+        heard: got[j - 1],
+        status: "wrong",
+      });
+      i--;
+      j--;
+    } else if (best === del) {
+      ops.unshift({
+        target: want[i - 1],
+        heard: null,
+        status: "missed",
+      });
+      i--;
+    } else {
+      ops.unshift({ target: null, heard: got[j - 1], status: "extra" });
+      j--;
+    }
+  }
+
+  const missed = ops.filter((o) => o.status === "missed").map((o) => o.target!);
+  const wrong = ops
+    .filter((o) => o.status === "wrong")
+    .map((o) => ({ expected: o.target!, heard: o.heard! }));
+  const extra = ops.filter((o) => o.status === "extra").map((o) => o.heard!);
+  return { words: ops, missed, wrong, extra };
 }
 
 function normalize(s: string): string {
@@ -210,15 +347,46 @@ function buildFeedback(
   got: string,
   want: string,
   clarity: number,
+  diff: WordDiff,
 ): string {
   const clarityNote =
     clarity < 55
-      ? ' Your recording was a bit unclear — try again in a quieter spot, closer to the mic.'
+      ? " Your recording was a bit unclear — try again in a quieter spot, closer to the mic."
       : "";
-  if (score >= 90) return `Excellent! Very close to the target.${clarityNote}`;
-  if (score >= 70)
-    return `Good attempt. We heard: "${got}". Target: "${want}".${clarityNote}`;
-  if (score >= 40)
-    return `Getting there. We heard: "${got}". Focus on the stressed words and try again.${clarityNote}`;
-  return `That didn't match. We heard: "${got}". Target: "${want}". Speak slowly and clearly.${clarityNote}`;
+
+  // Word-specific tips are more useful than the generic "try again".
+  const problemNote = buildProblemNote(diff);
+
+  if (score >= 95) return `Excellent — every word landed.${clarityNote}`;
+  if (score >= 80)
+    return `Nice work.${problemNote ? " " + problemNote : ""}${clarityNote}`;
+  if (score >= 60)
+    return `Good attempt. We heard: "${got}". Target: "${want}".${
+      problemNote ? " " + problemNote : ""
+    }${clarityNote}`;
+  if (score >= 30)
+    return `Getting there. We heard: "${got}".${
+      problemNote ? " " + problemNote : ""
+    }${clarityNote}`;
+  return `That didn't match. Target: "${want}". We heard: "${got}". Speak slowly and clearly.${clarityNote}`;
+}
+
+function buildProblemNote(diff: WordDiff): string {
+  const parts: string[] = [];
+  if (diff.wrong.length > 0) {
+    const list = diff.wrong
+      .slice(0, 4)
+      .map((w) => `"${w.expected}" (you said "${w.heard}")`)
+      .join(", ");
+    parts.push(`Work on: ${list}`);
+  }
+  if (diff.missed.length > 0) {
+    const list = diff.missed.slice(0, 4).map((w) => `"${w}"`).join(", ");
+    parts.push(`Missed: ${list}`);
+  }
+  if (diff.extra.length > 0) {
+    const list = diff.extra.slice(0, 3).map((w) => `"${w}"`).join(", ");
+    parts.push(`Extra words: ${list}`);
+  }
+  return parts.join(". ");
 }

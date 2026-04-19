@@ -33,6 +33,17 @@ function pickMime(): string {
   return "audio/webm";
 }
 
+interface WordDiffEntry {
+  target: string | null;
+  heard: string | null;
+  status: "ok" | "missed" | "wrong" | "extra";
+}
+interface WordDiff {
+  words: WordDiffEntry[];
+  missed: string[];
+  wrong: Array<{ expected: string; heard: string }>;
+  extra: string[];
+}
 interface Result {
   target: string;
   transcription: string;
@@ -40,6 +51,9 @@ interface Result {
   feedback: string;
   durationMs: number;
   audioUrl: string;
+  diff?: WordDiff;
+  similarity?: number;
+  clarity?: number;
 }
 
 interface Props {
@@ -120,12 +134,18 @@ export function SpeakingLabDrill({ all }: Props) {
         transcription: string;
         score: number;
         feedback: string;
+        diff?: WordDiff;
+        similarity?: number;
+        clarity?: number;
       };
       setResult({
         target: json.target,
         transcription: json.transcription,
         score: json.score,
         feedback: json.feedback,
+        diff: json.diff,
+        similarity: json.similarity,
+        clarity: json.clarity,
         durationMs: dur,
         audioUrl: URL.createObjectURL(blob),
       });
@@ -229,7 +249,57 @@ export function SpeakingLabDrill({ all }: Props) {
                 {(result.durationMs / 1000).toFixed(1)}s
               </span>
             </div>
-            <div className="space-y-1 text-sm">
+            <div className="space-y-2 text-sm">
+              {result.diff && result.diff.words.length > 0 ? (
+                <div className="flex flex-wrap gap-1">
+                  {result.diff.words.map((w, i) => {
+                    if (w.status === "ok") {
+                      return (
+                        <span
+                          key={i}
+                          className="rounded-md bg-emerald-500/10 px-2 py-0.5 text-emerald-700 dark:text-emerald-300"
+                        >
+                          {w.target}
+                        </span>
+                      );
+                    }
+                    if (w.status === "wrong") {
+                      return (
+                        <span
+                          key={i}
+                          title={`You said "${w.heard}"`}
+                          className="rounded-md bg-amber-500/10 px-2 py-0.5 text-amber-700 dark:text-amber-300"
+                        >
+                          {w.target}
+                          <span className="ml-1 text-[10px] text-muted-foreground">
+                            (heard: {w.heard})
+                          </span>
+                        </span>
+                      );
+                    }
+                    if (w.status === "missed") {
+                      return (
+                        <span
+                          key={i}
+                          title="Word missing in your recording"
+                          className="rounded-md bg-rose-500/10 px-2 py-0.5 text-rose-700 line-through dark:text-rose-300"
+                        >
+                          {w.target}
+                        </span>
+                      );
+                    }
+                    return (
+                      <span
+                        key={i}
+                        title="Extra word you said"
+                        className="rounded-md bg-muted px-2 py-0.5 italic text-muted-foreground"
+                      >
+                        +{w.heard}
+                      </span>
+                    );
+                  })}
+                </div>
+              ) : null}
               <p>
                 <span className="text-muted-foreground">Target: </span>
                 <strong>{result.target}</strong>
@@ -237,6 +307,14 @@ export function SpeakingLabDrill({ all }: Props) {
               <p>
                 <span className="text-muted-foreground">Heard: </span>
                 <strong>{result.transcription || "—"}</strong>
+              </p>
+              <p className="flex flex-wrap gap-x-3 text-[11px] text-muted-foreground">
+                {typeof result.similarity === "number" ? (
+                  <span>text match: {result.similarity}%</span>
+                ) : null}
+                {typeof result.clarity === "number" ? (
+                  <span>clarity: {result.clarity}%</span>
+                ) : null}
               </p>
               <p className="text-xs italic text-muted-foreground">
                 {result.feedback}
