@@ -206,20 +206,33 @@ export async function POST(req: Request) {
     return (await r.json()) as WhisperVerboseResponse;
   }
 
-  // Five parallel probes:
-  //   0. primary             — what we score against (whisper-large-v3, temp=0)
-  //   1. adversarial-temp1   — whisper-large-v3, temp=1.0, adversarial prompt
-  //   2. adversarial-temp07  — whisper-large-v3, temp=0.7, adversarial prompt
-  //   3. distil-whisper      — distil-whisper-large-v3-en, temp=0.8, adversarial
-  //   4. whisper-turbo       — whisper-large-v3-turbo, temp=0.6, adversarial
-  // A target word is flagged "suspicious" by MAJORITY VOTING: if 2 or
-  // more of the 4 probes fail to hear it, the LM must have rescued it
-  // across multiple configurations → strong mispronunciation signal.
+  // 15 parallel probes — big ensemble across 3 models × 5 temperatures
+  // gives much richer disagreement when Whisper's language model is
+  // rescuing bad audio. Groq calls are free; wall-clock latency stays
+  // the same because they all fire in parallel.
+  //
+  //   0.  primary — whisper-large-v3 @ temp=0 (scoring baseline)
+  //   1-5.  whisper-large-v3 @ temp 0.3 / 0.5 / 0.7 / 0.9 / 1.1
+  //   6-10. distil-whisper-large-v3-en @ temp 0.3 / 0.5 / 0.7 / 0.9 / 1.1
+  //   11-14. whisper-large-v3-turbo @ temp 0.3 / 0.5 / 0.7 / 0.9
   const probeConfigs = [
-    { phonetic: true, temperature: 1.0, model: "whisper-large-v3" },
+    // whisper-large-v3 — the thorough model, full temperature sweep
+    { phonetic: true, temperature: 0.3, model: "whisper-large-v3" },
+    { phonetic: true, temperature: 0.5, model: "whisper-large-v3" },
     { phonetic: true, temperature: 0.7, model: "whisper-large-v3" },
-    { phonetic: true, temperature: 0.8, model: "distil-whisper-large-v3-en" },
-    { phonetic: true, temperature: 0.6, model: "whisper-large-v3-turbo" },
+    { phonetic: true, temperature: 0.9, model: "whisper-large-v3" },
+    { phonetic: true, temperature: 1.1, model: "whisper-large-v3" },
+    // distil-whisper — smaller / different LM behavior
+    { phonetic: true, temperature: 0.3, model: "distil-whisper-large-v3-en" },
+    { phonetic: true, temperature: 0.5, model: "distil-whisper-large-v3-en" },
+    { phonetic: true, temperature: 0.7, model: "distil-whisper-large-v3-en" },
+    { phonetic: true, temperature: 0.9, model: "distil-whisper-large-v3-en" },
+    { phonetic: true, temperature: 1.1, model: "distil-whisper-large-v3-en" },
+    // whisper-turbo — third architecture for extra disagreement
+    { phonetic: true, temperature: 0.3, model: "whisper-large-v3-turbo" },
+    { phonetic: true, temperature: 0.5, model: "whisper-large-v3-turbo" },
+    { phonetic: true, temperature: 0.7, model: "whisper-large-v3-turbo" },
+    { phonetic: true, temperature: 0.9, model: "whisper-large-v3-turbo" },
   ] as const;
   const probesPromise = PHONETIC_PROBE_ENABLED
     ? Promise.all(
@@ -227,7 +240,9 @@ export async function POST(req: Request) {
           callWhisper(cfg).catch(() => null as WhisperVerboseResponse | null),
         ),
       )
-    : Promise.resolve<(WhisperVerboseResponse | null)[]>([null, null, null, null]);
+    : Promise.resolve<(WhisperVerboseResponse | null)[]>(
+        new Array(probeConfigs.length).fill(null),
+      );
   const [primary, probes] = await Promise.all([
     callWhisper({ phonetic: false }),
     probesPromise,
@@ -266,13 +281,19 @@ export async function POST(req: Request) {
   }
 
   // Majority-vote mispronunciation detection: a target word is flagged
-  // when ≥ MAJORITY_THRESHOLD probes failed to reproduce it. Any single
-  // probe occasionally "rescues" even badly-said words, but if multiple
-  // probes in different configurations all miss the same word, the LM
-  // consistently had to reconstruct it → real mispronunciation.
+  // when a configurable fraction of probes fail to reproduce it. With
+  // 14 active probes, MAJORITY_FRACTION=0.4 means ≥ 6 probes must miss
+  // → a single lucky probe can't block a real mispronunciation, but
+  // we also don't flag unless the pattern is robust across models.
+  const MAJORITY_FRACTION = clampNum(
+    Number(process.env.PRONUNCIATION_MAJORITY_FRACTION),
+    0.1,
+    1,
+    0.4,
+  );
   const MAJORITY_THRESHOLD = Math.max(
     1,
-    Math.ceil((activeProbes.length || 1) / 2),
+    Math.round((activeProbes.length || 1) * MAJORITY_FRACTION),
   );
   const phoneticMismatches =
     activeProbes.length > 0

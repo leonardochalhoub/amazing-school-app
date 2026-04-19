@@ -9,6 +9,7 @@ import type { SpeakingDrill } from "@/components/speaking-lab/drill-client";
 import type { SpeakingDialog } from "@/components/speaking-lab/dialog-runner";
 import { SpeakingLabTabs } from "@/components/speaking-lab/speaking-lab-tabs";
 import { listAvailableCustomDialogs } from "@/lib/actions/custom-dialogs";
+import { listAvailableCustomDrills } from "@/lib/actions/custom-drills";
 
 async function loadExercises(): Promise<SpeakingDrill[]> {
   const file = join(process.cwd(), "content/speaking-lab/exercises.json");
@@ -39,11 +40,26 @@ export default async function SpeakingLabPage() {
     .maybeSingle();
   const isTeacher = profile?.role === "teacher";
 
-  const [drills, builtInDialogs, customDialogs] = await Promise.all([
-    loadExercises(),
-    loadDialogs(),
-    listAvailableCustomDialogs(),
-  ]);
+  const [builtInDrills, builtInDialogs, customDialogs, customDrills] =
+    await Promise.all([
+      loadExercises(),
+      loadDialogs(),
+      listAvailableCustomDialogs(),
+      listAvailableCustomDrills(),
+    ]);
+
+  // Merge teacher-authored drills into the same pool so the random
+  // picker sees them alongside built-ins.
+  const drills: SpeakingDrill[] = [
+    ...customDrills.map((d) => ({
+      id: `custom-${d.id}`,
+      band: (d.band ?? "b1") as SpeakingDrill["band"],
+      focus: d.focus ?? "custom",
+      target: d.target,
+      pt_hint: d.pt_hint ?? "",
+    })),
+    ...builtInDrills,
+  ];
 
   // Merge teacher-authored dialogs into the shared dialog list. Custom ones
   // come first so a teacher testing their own content sees it up top.
@@ -78,13 +94,22 @@ export default async function SpeakingLabPage() {
           </p>
         </div>
         {isTeacher ? (
-          <Link
-            href="/speaking-lab/my-dialogs"
-            className="inline-flex h-9 items-center gap-1.5 rounded-md border border-primary/40 bg-primary/10 px-3 text-xs font-medium text-primary transition-colors hover:bg-primary/20"
-          >
-            <PlusCircle className="h-4 w-4" />
-            My dialogs
-          </Link>
+          <div className="flex flex-wrap items-center gap-2">
+            <Link
+              href="/speaking-lab/my-drills"
+              className="inline-flex h-9 items-center gap-1.5 rounded-md border border-primary/40 bg-primary/10 px-3 text-xs font-medium text-primary transition-colors hover:bg-primary/20"
+            >
+              <PlusCircle className="h-4 w-4" />
+              My drills
+            </Link>
+            <Link
+              href="/speaking-lab/my-dialogs"
+              className="inline-flex h-9 items-center gap-1.5 rounded-md border border-primary/40 bg-primary/10 px-3 text-xs font-medium text-primary transition-colors hover:bg-primary/20"
+            >
+              <PlusCircle className="h-4 w-4" />
+              My dialogs
+            </Link>
+          </div>
         ) : null}
       </header>
 

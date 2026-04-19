@@ -66,9 +66,7 @@ export async function markLessonComplete(
   }
 
   if (!classroomId) {
-    // Teachers / owner previewing content have no classroom_members row.
-    // We succeed silently (no XP, no progress write) so the player UI
-    // completes cleanly instead of throwing a confusing error.
+    // Teachers previewing content: silently no-op.
     const { data: prof } = await admin
       .from("profiles")
       .select("role")
@@ -82,37 +80,48 @@ export async function markLessonComplete(
         alreadyCompleted: false as const,
       };
     }
-    return { error: "You're not in a classroom yet." };
+    // Students without a classroom still get full progress + XP +
+    // streak tracking (migration 028 allows classroom_id = NULL on
+    // lesson_progress / xp_events). They simply don't contribute to
+    // any classroom-scoped analytics until a teacher assigns them.
   }
 
   // 1. lesson_progress — detect first-time completion so XP is only awarded once.
-  const { data: existing, error: existingErr } = await admin
+  let progressQuery = admin
     .from("lesson_progress")
     .select("id, started_at, completed_at")
     .eq("student_id", user.id)
-    .eq("classroom_id", classroomId)
-    .eq("lesson_slug", parsed.data.lessonSlug)
-    .maybeSingle();
+    .eq("lesson_slug", parsed.data.lessonSlug);
+  progressQuery = classroomId
+    ? progressQuery.eq("classroom_id", classroomId)
+    : progressQuery.is("classroom_id", null);
+  const { data: existing, error: existingErr } = await progressQuery.maybeSingle();
   if (existingErr) {
     console.error("lesson_progress select error:", existingErr);
     return { error: `Could not read progress: ${existingErr.message}` };
   }
   const isFirstCompletion = !existing || !existing.completed_at;
 
-  const { error: upErr } = await admin.from("lesson_progress").upsert(
-    {
-      student_id: user.id,
-      classroom_id: classroomId,
-      lesson_slug: parsed.data.lessonSlug,
-      started_at:
-        (existing as { started_at?: string } | null)?.started_at ??
-        new Date().toISOString(),
-      completed_at: new Date().toISOString(),
-      completed_exercises: 0,
-      total_exercises: 0,
-    },
-    { onConflict: "student_id,lesson_slug,classroom_id" }
-  );
+  // upsert's onConflict only handles non-null uniqueness; when the
+  // student has no classroom we insert fresh if no row exists, else
+  // update in place by primary key.
+  const existingId = (existing as { id?: string } | null)?.id ?? null;
+  const row = {
+    student_id: user.id,
+    classroom_id: classroomId,
+    lesson_slug: parsed.data.lessonSlug,
+    started_at:
+      (existing as { started_at?: string } | null)?.started_at ??
+      new Date().toISOString(),
+    completed_at: new Date().toISOString(),
+    completed_exercises: 0,
+    total_exercises: 0,
+  };
+  const { error: upErr } = existingId
+    ? await admin.from("lesson_progress").update(row).eq("id", existingId)
+    : await admin
+        .from("lesson_progress")
+        .upsert(row, { onConflict: "student_id,lesson_slug,classroom_id" });
   if (upErr) {
     console.error("lesson_progress upsert error:", upErr);
     return { error: `Could not save progress: ${upErr.message}` };
@@ -135,34 +144,35 @@ export async function markLessonComplete(
     // xp_events is best-effort; the core progress is already recorded.
   }
 
-  // 3. Flip matching lesson_assignments row to completed. Match per-student,
-  // per-roster, and classroom-wide rows.
+  // 3. Flip matching lesson_assignments row to completed. Classroom-wide
+  // and classroom-scoped matchers only apply when we have a classroom;
+  // per-student and per-roster assignments work in both cases.
   const assignmentMatchers = [
-    // per-auth-student
     admin
       .from("lesson_assignments")
       .update({ status: "completed" })
-      .eq("classroom_id", classroomId)
       .eq("lesson_slug", parsed.data.lessonSlug)
       .eq("student_id", user.id),
-    // classroom-wide (only if student hasn't explicitly skipped it)
-    admin
-      .from("lesson_assignments")
-      .update({ status: "completed" })
-      .eq("classroom_id", classroomId)
-      .eq("lesson_slug", parsed.data.lessonSlug)
-      .is("student_id", null)
-      .is("roster_student_id", null)
-      .neq("status", "skipped"),
   ];
-  if (rosterId) {
+  if (classroomId) {
     assignmentMatchers.push(
       admin
         .from("lesson_assignments")
         .update({ status: "completed" })
         .eq("classroom_id", classroomId)
         .eq("lesson_slug", parsed.data.lessonSlug)
-        .eq("roster_student_id", rosterId)
+        .is("student_id", null)
+        .is("roster_student_id", null)
+        .neq("status", "skipped"),
+    );
+  }
+  if (rosterId) {
+    assignmentMatchers.push(
+      admin
+        .from("lesson_assignments")
+        .update({ status: "completed" })
+        .eq("lesson_slug", parsed.data.lessonSlug)
+        .eq("roster_student_id", rosterId),
     );
   }
   await Promise.all(assignmentMatchers);

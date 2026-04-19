@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "description": "10 short dialogs for the Speaking Lab. The AI speaks a line via browser TTS; the user records a spoken response and gets scored against the expected English target. When a dialog is picked the user can tap 'Start dialog' and it plays turn by turn.",
+  "description": "50 short dialogs for the Speaking Lab. The AI speaks a line via browser TTS; the user records a spoken response and gets scored against the expected English target. When a dialog is picked the user can tap 'Start dialog' and it plays turn by turn.",
   "dialogs": [
     {
       "id": "dlg-01",
@@ -9,11 +9,31 @@
       "pt_summary": "Apresentações básicas — o Mr. Kumar te cumprimenta e você responde.",
       "character": "Mr. Kumar",
       "turns": [
-        { "speaker": "ai", "text": "Good morning! Welcome to Amazing School. What is your name?", "pt": "Bom dia! Bem-vindo à Amazing School. Qual é o seu nome?" },
-        { "speaker": "user", "target": "My name is Leo. Nice to meet you.", "pt_hint": "Diga seu nome e 'prazer em conhecer você'." },
-        { "speaker": "ai", "text": "Nice to meet you too, Leo. Where are you from?", "pt": "Prazer em te conhecer também, Leo. De onde você é?" },
-        { "speaker": "user", "target": "I am from Brazil. I live in São Paulo.", "pt_hint": "'Eu sou do Brasil. Eu moro em São Paulo.'" },
-        { "speaker": "ai", "text": "Wonderful. Enjoy your first day.", "pt": "Maravilha. Aproveite seu primeiro dia." }
+        {
+          "speaker": "ai",
+          "text": "Good morning! Welcome to Amazing School. What is your name?",
+          "pt": "Bom dia! Bem-vindo à Amazing School. Qual é o seu nome?"
+        },
+        {
+          "speaker": "user",
+          "target": "My name is Leo. Nice to meet you.",
+          "pt_hint": "Diga seu nome e 'prazer em conhecer você'."
+        },
+        {
+          "speaker": "ai",
+          "text": "Nice to meet you too, Leo. Where are you from?",
+          "pt": "Prazer em te conhecer também, Leo. De onde você é?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am from Brazil. I live in São Paulo.",
+          "pt_hint": "'Eu sou do Brasil. Eu moro em São Paulo.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Wonderful. Enjoy your first day.",
+          "pt": "Maravilha. Aproveite seu primeiro dia."
+        }
       ]
     },
     {
@@ -23,11 +43,31 @@
       "pt_summary": "Pedindo um café em uma cafeteria em inglês.",
       "character": "Barista",
       "turns": [
-        { "speaker": "ai", "text": "Hi, welcome to the coffee shop. What can I get you today?", "pt": "Oi, bem-vindo à cafeteria. O que posso servir hoje?" },
-        { "speaker": "user", "target": "I would like a small coffee with milk, please.", "pt_hint": "Peça um café pequeno com leite, por favor." },
-        { "speaker": "ai", "text": "Sure. Anything to eat?", "pt": "Claro. Algo para comer?" },
-        { "speaker": "user", "target": "Yes, a chocolate muffin, please.", "pt_hint": "Sim, um muffin de chocolate." },
-        { "speaker": "ai", "text": "That will be six dollars. Thank you!", "pt": "Vai dar seis dólares. Obrigado!" }
+        {
+          "speaker": "ai",
+          "text": "Hi, welcome to the coffee shop. What can I get you today?",
+          "pt": "Oi, bem-vindo à cafeteria. O que posso servir hoje?"
+        },
+        {
+          "speaker": "user",
+          "target": "I would like a small coffee with milk, please.",
+          "pt_hint": "Peça um café pequeno com leite, por favor."
+        },
+        {
+          "speaker": "ai",
+          "text": "Sure. Anything to eat?",
+          "pt": "Claro. Algo para comer?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, a chocolate muffin, please.",
+          "pt_hint": "Sim, um muffin de chocolate."
+        },
+        {
+          "speaker": "ai",
+          "text": "That will be six dollars. Thank you!",
+          "pt": "Vai dar seis dólares. Obrigado!"
+        }
       ]
     },
     {
@@ -37,10 +77,26 @@
       "pt_summary": "Pedindo direção para a rodoviária.",
       "character": "Local",
       "turns": [
-        { "speaker": "ai", "text": "Hello there. Can I help you?", "pt": "Olá. Posso ajudar?" },
-        { "speaker": "user", "target": "Excuse me, where is the bus station?", "pt_hint": "Pergunte onde é a rodoviária." },
-        { "speaker": "ai", "text": "It is two blocks to the right, next to the supermarket.", "pt": "Duas quadras à direita, ao lado do supermercado." },
-        { "speaker": "user", "target": "Thank you very much. Have a good day.", "pt_hint": "Agradeça e deseje bom dia." }
+        {
+          "speaker": "ai",
+          "text": "Hello there. Can I help you?",
+          "pt": "Olá. Posso ajudar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Excuse me, where is the bus station?",
+          "pt_hint": "Pergunte onde é a rodoviária."
+        },
+        {
+          "speaker": "ai",
+          "text": "It is two blocks to the right, next to the supermarket.",
+          "pt": "Duas quadras à direita, ao lado do supermercado."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you very much. Have a good day.",
+          "pt_hint": "Agradeça e deseje bom dia."
+        }
       ]
     },
     {
@@ -50,11 +106,31 @@
       "pt_summary": "Fazendo o check-in em um hotel.",
       "character": "Receptionist",
       "turns": [
-        { "speaker": "ai", "text": "Good evening. Do you have a reservation?", "pt": "Boa noite. Você tem reserva?" },
-        { "speaker": "user", "target": "Yes, I have a reservation under my name for two nights.", "pt_hint": "Diga que tem reserva em seu nome por duas noites." },
-        { "speaker": "ai", "text": "Perfect. May I see your passport, please?", "pt": "Perfeito. Posso ver seu passaporte?" },
-        { "speaker": "user", "target": "Of course, here you are.", "pt_hint": "'Claro, aqui está.'" },
-        { "speaker": "ai", "text": "Breakfast is served from seven to ten. Enjoy your stay.", "pt": "Café da manhã das sete às dez. Boa estadia." }
+        {
+          "speaker": "ai",
+          "text": "Good evening. Do you have a reservation?",
+          "pt": "Boa noite. Você tem reserva?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I have a reservation under my name for two nights.",
+          "pt_hint": "Diga que tem reserva em seu nome por duas noites."
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. May I see your passport, please?",
+          "pt": "Perfeito. Posso ver seu passaporte?"
+        },
+        {
+          "speaker": "user",
+          "target": "Of course, here you are.",
+          "pt_hint": "'Claro, aqui está.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Breakfast is served from seven to ten. Enjoy your stay.",
+          "pt": "Café da manhã das sete às dez. Boa estadia."
+        }
       ]
     },
     {
@@ -64,11 +140,31 @@
       "pt_summary": "No food truck do Rafa em Praia do Sol.",
       "character": "Rafa",
       "turns": [
-        { "speaker": "ai", "text": "Welcome to Tropical Bites. What can I get you?", "pt": "Bem-vindo ao Tropical Bites. O que vai querer?" },
-        { "speaker": "user", "target": "I want three chicken tacos, please.", "pt_hint": "Peça três tacos de frango." },
-        { "speaker": "ai", "text": "Spicy or mild?", "pt": "Picante ou suave?" },
-        { "speaker": "user", "target": "Mild, please. And a bottle of water.", "pt_hint": "Suave e uma garrafa de água." },
-        { "speaker": "ai", "text": "That will be twelve dollars. Coming right up.", "pt": "Vai dar doze dólares. Já sai." }
+        {
+          "speaker": "ai",
+          "text": "Welcome to Tropical Bites. What can I get you?",
+          "pt": "Bem-vindo ao Tropical Bites. O que vai querer?"
+        },
+        {
+          "speaker": "user",
+          "target": "I want three chicken tacos, please.",
+          "pt_hint": "Peça três tacos de frango."
+        },
+        {
+          "speaker": "ai",
+          "text": "Spicy or mild?",
+          "pt": "Picante ou suave?"
+        },
+        {
+          "speaker": "user",
+          "target": "Mild, please. And a bottle of water.",
+          "pt_hint": "Suave e uma garrafa de água."
+        },
+        {
+          "speaker": "ai",
+          "text": "That will be twelve dollars. Coming right up.",
+          "pt": "Vai dar doze dólares. Já sai."
+        }
       ]
     },
     {
@@ -78,11 +174,31 @@
       "pt_summary": "Bia te apresenta o esporte antes da primeira onda.",
       "character": "Bia",
       "turns": [
-        { "speaker": "ai", "text": "Hey! Ready for your first surfing lesson?", "pt": "E aí! Pronto para sua primeira aula de surf?" },
-        { "speaker": "user", "target": "Yes, I am very excited but a little nervous.", "pt_hint": "Diga que está animado mas nervoso." },
-        { "speaker": "ai", "text": "Do not worry. Have you ever been on a surfboard?", "pt": "Relaxa. Já ficou em cima de uma prancha?" },
-        { "speaker": "user", "target": "No, I have never tried surfing before.", "pt_hint": "Nunca surfou antes." },
-        { "speaker": "ai", "text": "Perfect. Let's start on the sand.", "pt": "Ótimo. Vamos começar na areia." }
+        {
+          "speaker": "ai",
+          "text": "Hey! Ready for your first surfing lesson?",
+          "pt": "E aí! Pronto para sua primeira aula de surf?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I am very excited but a little nervous.",
+          "pt_hint": "Diga que está animado mas nervoso."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do not worry. Have you ever been on a surfboard?",
+          "pt": "Relaxa. Já ficou em cima de uma prancha?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, I have never tried surfing before.",
+          "pt_hint": "Nunca surfou antes."
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. Let's start on the sand.",
+          "pt": "Ótimo. Vamos começar na areia."
+        }
       ]
     },
     {
@@ -92,11 +208,31 @@
       "pt_summary": "Despachando a mala no balcão do aeroporto.",
       "character": "Agent",
       "turns": [
-        { "speaker": "ai", "text": "Good morning. Where are you flying today?", "pt": "Bom dia. Para onde voa hoje?" },
-        { "speaker": "user", "target": "I am flying to Orlando.", "pt_hint": "Voando para Orlando." },
-        { "speaker": "ai", "text": "Do you have any bags to check in?", "pt": "Tem malas para despachar?" },
-        { "speaker": "user", "target": "Yes, I have one bag to check in and one carry-on.", "pt_hint": "Uma mala e uma de mão." },
-        { "speaker": "ai", "text": "Here is your boarding pass. Gate twelve. Have a safe flight.", "pt": "Aqui está o cartão de embarque. Portão doze. Bom voo." }
+        {
+          "speaker": "ai",
+          "text": "Good morning. Where are you flying today?",
+          "pt": "Bom dia. Para onde voa hoje?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am flying to Orlando.",
+          "pt_hint": "Voando para Orlando."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you have any bags to check in?",
+          "pt": "Tem malas para despachar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I have one bag to check in and one carry-on.",
+          "pt_hint": "Uma mala e uma de mão."
+        },
+        {
+          "speaker": "ai",
+          "text": "Here is your boarding pass. Gate twelve. Have a safe flight.",
+          "pt": "Aqui está o cartão de embarque. Portão doze. Bom voo."
+        }
       ]
     },
     {
@@ -106,11 +242,31 @@
       "pt_summary": "Ligação rápida combinando planos.",
       "character": "Friend",
       "turns": [
-        { "speaker": "ai", "text": "Hi, it's me. Are you free this weekend?", "pt": "Oi, sou eu. Tá livre este fim de semana?" },
-        { "speaker": "user", "target": "Yes, I am free on Saturday afternoon.", "pt_hint": "Livre sábado à tarde." },
-        { "speaker": "ai", "text": "Great. Do you want to watch a movie?", "pt": "Ótimo. Quer ver um filme?" },
-        { "speaker": "user", "target": "Sure, that sounds like a great idea.", "pt_hint": "'Claro, parece uma ótima ideia.'" },
-        { "speaker": "ai", "text": "Cool. I will text you the details.", "pt": "Legal. Te mando os detalhes por mensagem." }
+        {
+          "speaker": "ai",
+          "text": "Hi, it's me. Are you free this weekend?",
+          "pt": "Oi, sou eu. Tá livre este fim de semana?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I am free on Saturday afternoon.",
+          "pt_hint": "Livre sábado à tarde."
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. Do you want to watch a movie?",
+          "pt": "Ótimo. Quer ver um filme?"
+        },
+        {
+          "speaker": "user",
+          "target": "Sure, that sounds like a great idea.",
+          "pt_hint": "'Claro, parece uma ótima ideia.'"
+        },
+        {
+          "speaker": "ai",
+          "text": "Cool. I will text you the details.",
+          "pt": "Legal. Te mando os detalhes por mensagem."
+        }
       ]
     },
     {
@@ -120,11 +276,31 @@
       "pt_summary": "Quebra-gelo de entrevista de emprego em inglês.",
       "character": "Recruiter",
       "turns": [
-        { "speaker": "ai", "text": "Thanks for joining us today. Can you tell me about yourself?", "pt": "Obrigado por vir. Pode se apresentar?" },
-        { "speaker": "user", "target": "I am a software engineer with five years of experience building web apps.", "pt_hint": "Engenheiro de software com cinco anos de experiência." },
-        { "speaker": "ai", "text": "Why do you want to join our company?", "pt": "Por que quer entrar na nossa empresa?" },
-        { "speaker": "user", "target": "Because I believe in your mission and I want to grow with a strong team.", "pt_hint": "Acredita na missão e quer crescer com um bom time." },
-        { "speaker": "ai", "text": "Great answer. We will be in touch soon.", "pt": "Ótima resposta. Entraremos em contato em breve." }
+        {
+          "speaker": "ai",
+          "text": "Thanks for joining us today. Can you tell me about yourself?",
+          "pt": "Obrigado por vir. Pode se apresentar?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am a software engineer with five years of experience building web apps.",
+          "pt_hint": "Engenheiro de software com cinco anos de experiência."
+        },
+        {
+          "speaker": "ai",
+          "text": "Why do you want to join our company?",
+          "pt": "Por que quer entrar na nossa empresa?"
+        },
+        {
+          "speaker": "user",
+          "target": "Because I believe in your mission and I want to grow with a strong team.",
+          "pt_hint": "Acredita na missão e quer crescer com um bom time."
+        },
+        {
+          "speaker": "ai",
+          "text": "Great answer. We will be in touch soon.",
+          "pt": "Ótima resposta. Entraremos em contato em breve."
+        }
       ]
     },
     {
@@ -134,11 +310,1876 @@
       "pt_summary": "Conversa informal na segunda-feira.",
       "character": "Colleague",
       "turns": [
-        { "speaker": "ai", "text": "Hey, how was your weekend?", "pt": "E aí, como foi o fim de semana?" },
-        { "speaker": "user", "target": "It was amazing. I went to the beach with my family.", "pt_hint": "Incrível, foi à praia com a família." },
-        { "speaker": "ai", "text": "Nice. Did you do anything special?", "pt": "Legal. Fez algo especial?" },
-        { "speaker": "user", "target": "Yes, we had a barbecue and watched the sunset.", "pt_hint": "Fez churrasco e viu o pôr do sol." },
-        { "speaker": "ai", "text": "Sounds wonderful. I am glad you enjoyed it.", "pt": "Parece ótimo. Que bom que curtiu." }
+        {
+          "speaker": "ai",
+          "text": "Hey, how was your weekend?",
+          "pt": "E aí, como foi o fim de semana?"
+        },
+        {
+          "speaker": "user",
+          "target": "It was amazing. I went to the beach with my family.",
+          "pt_hint": "Incrível, foi à praia com a família."
+        },
+        {
+          "speaker": "ai",
+          "text": "Nice. Did you do anything special?",
+          "pt": "Legal. Fez algo especial?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, we had a barbecue and watched the sunset.",
+          "pt_hint": "Fez churrasco e viu o pôr do sol."
+        },
+        {
+          "speaker": "ai",
+          "text": "Sounds wonderful. I am glad you enjoyed it.",
+          "pt": "Parece ótimo. Que bom que curtiu."
+        }
+      ]
+    },
+    {
+      "id": "dlg-11",
+      "band": "a1",
+      "title": "At the pharmacy",
+      "pt_summary": "Comprando remédio na farmácia.",
+      "character": "Pharmacist",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Good afternoon. How can I help you?",
+          "pt": "Boa tarde. Como posso ajudar?"
+        },
+        {
+          "speaker": "user",
+          "target": "I need something for a headache, please.",
+          "pt_hint": "Algo para dor de cabeça."
+        },
+        {
+          "speaker": "ai",
+          "text": "We have ibuprofen or paracetamol — which do you prefer?",
+          "pt": "Temos ibuprofeno ou paracetamol."
+        },
+        {
+          "speaker": "user",
+          "target": "Paracetamol is fine, thank you.",
+          "pt_hint": "Paracetamol tá bom."
+        },
+        {
+          "speaker": "ai",
+          "text": "Take one tablet every six hours with water.",
+          "pt": "Um comprimido a cada seis horas com água."
+        }
+      ]
+    },
+    {
+      "id": "dlg-12",
+      "band": "a1",
+      "title": "Buying bus tickets",
+      "pt_summary": "Comprando passagem de ônibus.",
+      "character": "Ticket agent",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Where are you traveling to?",
+          "pt": "Para onde você está viajando?"
+        },
+        {
+          "speaker": "user",
+          "target": "One ticket to São Paulo, please.",
+          "pt_hint": "Uma passagem para São Paulo."
+        },
+        {
+          "speaker": "ai",
+          "text": "One-way or round-trip?",
+          "pt": "Só ida ou ida e volta?"
+        },
+        {
+          "speaker": "user",
+          "target": "Round-trip, returning Sunday.",
+          "pt_hint": "Ida e volta, voltando no domingo."
+        },
+        {
+          "speaker": "ai",
+          "text": "That will be ninety reais. Window or aisle?",
+          "pt": "Noventa reais. Janela ou corredor?"
+        }
+      ]
+    },
+    {
+      "id": "dlg-13",
+      "band": "a2",
+      "title": "Job interview opener",
+      "pt_summary": "Primeira pergunta de entrevista.",
+      "character": "Interviewer",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Thanks for coming in. Could you tell me a little about yourself?",
+          "pt": "Obrigado por vir. Fala um pouco sobre você."
+        },
+        {
+          "speaker": "user",
+          "target": "Sure — I am a software engineer with five years of experience.",
+          "pt_hint": "Sou engenheiro de software com cinco anos de experiência."
+        },
+        {
+          "speaker": "ai",
+          "text": "What brings you to our company?",
+          "pt": "O que te trouxe à nossa empresa?"
+        },
+        {
+          "speaker": "user",
+          "target": "I admire your product and want to work on scalable systems.",
+          "pt_hint": "Admiro o produto e quero trabalhar com sistemas escaláveis."
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. Let's dive into some technical questions.",
+          "pt": "Ótimo. Vamos para as perguntas técnicas."
+        }
+      ]
+    },
+    {
+      "id": "dlg-14",
+      "band": "a2",
+      "title": "Gym registration",
+      "pt_summary": "Matrícula na academia.",
+      "character": "Receptionist",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi there! Are you here to sign up for membership?",
+          "pt": "Oi! Veio se inscrever?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, I would like to know the monthly plans.",
+          "pt_hint": "Sim, quero saber os planos mensais."
+        },
+        {
+          "speaker": "ai",
+          "text": "We have the basic for fifty and the premium for eighty.",
+          "pt": "Básico por cinquenta e premium por oitenta."
+        },
+        {
+          "speaker": "user",
+          "target": "What's included in the premium plan?",
+          "pt_hint": "O que o plano premium inclui?"
+        },
+        {
+          "speaker": "ai",
+          "text": "All group classes, the pool, and personal training sessions.",
+          "pt": "Todas as aulas, a piscina e sessões de personal."
+        }
+      ]
+    },
+    {
+      "id": "dlg-15",
+      "band": "a2",
+      "title": "Tech support call",
+      "pt_summary": "Ligação com suporte técnico.",
+      "character": "Support agent",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Tech support, how can I help you today?",
+          "pt": "Suporte técnico, como posso ajudar?"
+        },
+        {
+          "speaker": "user",
+          "target": "My internet keeps dropping every few minutes.",
+          "pt_hint": "Minha internet cai a cada poucos minutos."
+        },
+        {
+          "speaker": "ai",
+          "text": "When did you first notice the problem?",
+          "pt": "Quando começou o problema?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yesterday evening, right after the storm.",
+          "pt_hint": "Ontem à noite, logo depois da tempestade."
+        },
+        {
+          "speaker": "ai",
+          "text": "I'll send a technician tomorrow between nine and noon.",
+          "pt": "Mando um técnico amanhã entre nove e meio-dia."
+        }
+      ]
+    },
+    {
+      "id": "dlg-16",
+      "band": "b1",
+      "title": "Negotiating a deadline",
+      "pt_summary": "Negociando prazo no trabalho.",
+      "character": "Manager",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "I need the deck ready by Thursday for the client meeting.",
+          "pt": "Preciso do deck pronto quinta para a reunião."
+        },
+        {
+          "speaker": "user",
+          "target": "That is tight — could we push it to Friday morning?",
+          "pt_hint": "Tá apertado — podemos empurrar pra sexta de manhã?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Friday noon at the latest. What's blocking you?",
+          "pt": "Sexta meio-dia no máximo. O que está travando?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am waiting on data from the analytics team.",
+          "pt_hint": "Esperando dados do time de analytics."
+        },
+        {
+          "speaker": "ai",
+          "text": "OK — I'll nudge them. Keep me posted.",
+          "pt": "Ok — falo com eles. Me atualize."
+        }
+      ]
+    },
+    {
+      "id": "dlg-17",
+      "band": "b1",
+      "title": "Apartment hunting",
+      "pt_summary": "Procurando apartamento.",
+      "character": "Real estate agent",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome! What kind of place are you looking for?",
+          "pt": "Bem-vindo! Que tipo de lugar está procurando?"
+        },
+        {
+          "speaker": "user",
+          "target": "A two-bedroom close to public transport, under two thousand.",
+          "pt_hint": "Dois quartos, perto do transporte, abaixo de dois mil."
+        },
+        {
+          "speaker": "ai",
+          "text": "I have three listings that fit. When can you view them?",
+          "pt": "Tenho três opções. Quando pode visitar?"
+        },
+        {
+          "speaker": "user",
+          "target": "How about this Saturday in the afternoon?",
+          "pt_hint": "Que tal sábado à tarde?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect — I'll send you the addresses by email.",
+          "pt": "Perfeito — te mando os endereços por email."
+        }
+      ]
+    },
+    {
+      "id": "dlg-18",
+      "band": "b1",
+      "title": "At the mechanic",
+      "pt_summary": "No mecânico.",
+      "character": "Mechanic",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What seems to be the problem with the car?",
+          "pt": "Qual o problema do carro?"
+        },
+        {
+          "speaker": "user",
+          "target": "It is making a strange noise when I brake.",
+          "pt_hint": "Faz um barulho estranho ao frear."
+        },
+        {
+          "speaker": "ai",
+          "text": "Sounds like the brake pads. How long has this been going on?",
+          "pt": "Parece pastilha. Há quanto tempo isso acontece?"
+        },
+        {
+          "speaker": "user",
+          "target": "About two weeks, getting worse each day.",
+          "pt_hint": "Umas duas semanas, piorando."
+        },
+        {
+          "speaker": "ai",
+          "text": "I'll have it ready by five. It should run you around three hundred.",
+          "pt": "Fica pronto às cinco. Uns trezentos."
+        }
+      ]
+    },
+    {
+      "id": "dlg-19",
+      "band": "a2",
+      "title": "First day at a new job",
+      "pt_summary": "Primeiro dia no trabalho novo.",
+      "character": "New colleague",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi, you must be the new hire! I'm Ana.",
+          "pt": "Oi, você deve ser o novo! Eu sou a Ana."
+        },
+        {
+          "speaker": "user",
+          "target": "Nice to meet you, Ana. I'm Leo.",
+          "pt_hint": "Prazer, Ana. Sou o Leo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Let me show you around — the kitchen is over there.",
+          "pt": "Vou te mostrar o lugar — a cozinha é ali."
+        },
+        {
+          "speaker": "user",
+          "target": "Great, thanks. Where do I sit?",
+          "pt_hint": "Ótimo, obrigado. Onde eu sento?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Your desk is by the window. The team lead will come say hi soon.",
+          "pt": "Sua mesa é perto da janela. O líder vai vir te cumprimentar."
+        },
+        {
+          "speaker": "user",
+          "target": "Sounds good. Is there a welcome packet or anything I should read?",
+          "pt_hint": "Tem algum material de boas-vindas?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, check your email — HR sent everything this morning.",
+          "pt": "Sim, veja o email — o RH mandou tudo hoje."
+        }
+      ]
+    },
+    {
+      "id": "dlg-20",
+      "band": "b1",
+      "title": "Returning a defective product",
+      "pt_summary": "Devolvendo produto com defeito.",
+      "character": "Store clerk",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "How can I help you today?",
+          "pt": "Como posso ajudar?"
+        },
+        {
+          "speaker": "user",
+          "target": "I would like to return this blender — it stopped working after two days.",
+          "pt_hint": "Quero devolver este liquidificador — parou de funcionar em dois dias."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you have the receipt?",
+          "pt": "Tem a nota fiscal?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, here it is, along with the original packaging.",
+          "pt_hint": "Sim, aqui está, com a embalagem original."
+        },
+        {
+          "speaker": "ai",
+          "text": "No problem. Would you like a refund or an exchange?",
+          "pt": "Sem problema. Prefere reembolso ou troca?"
+        },
+        {
+          "speaker": "user",
+          "target": "A refund, please. I don't need it anymore.",
+          "pt_hint": "Reembolso, por favor. Não preciso mais."
+        },
+        {
+          "speaker": "ai",
+          "text": "I'll process that right now. It will show up in five business days.",
+          "pt": "Faço agora. Cai em cinco dias úteis."
+        }
+      ]
+    },
+    {
+      "id": "dlg-21",
+      "band": "b1",
+      "title": "Planning a trip with a friend",
+      "pt_summary": "Planejando uma viagem com um amigo.",
+      "character": "Friend",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "So are we actually going through with the Lisbon trip?",
+          "pt": "Vamos mesmo pra Lisboa?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am in — let's book the flights this week.",
+          "pt_hint": "Tô dentro — vamos comprar as passagens essa semana."
+        },
+        {
+          "speaker": "ai",
+          "text": "Cool! How many days should we stay?",
+          "pt": "Show! Quantos dias?"
+        },
+        {
+          "speaker": "user",
+          "target": "I think seven is perfect — four in Lisbon, three in Porto.",
+          "pt_hint": "Sete é perfeito — quatro em Lisboa, três no Porto."
+        },
+        {
+          "speaker": "ai",
+          "text": "What about accommodation — hotel or Airbnb?",
+          "pt": "E hospedagem — hotel ou Airbnb?"
+        },
+        {
+          "speaker": "user",
+          "target": "Airbnb. Cheaper and we get a kitchen.",
+          "pt_hint": "Airbnb. Mais barato e tem cozinha."
+        },
+        {
+          "speaker": "ai",
+          "text": "Deal — I'll start a shared list and we can divide expenses.",
+          "pt": "Fechou — começo uma lista compartilhada e dividimos as despesas."
+        }
+      ]
+    },
+    {
+      "id": "dlg-22",
+      "band": "b1",
+      "title": "Performance review",
+      "pt_summary": "Avaliação de desempenho.",
+      "character": "Manager",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "How do you feel your last quarter went?",
+          "pt": "Como você avalia o último trimestre?"
+        },
+        {
+          "speaker": "user",
+          "target": "I am proud of the migration project — it shipped on time.",
+          "pt_hint": "Tô orgulhoso da migração — entregou no prazo."
+        },
+        {
+          "speaker": "ai",
+          "text": "We noticed that too. What would you say was your biggest challenge?",
+          "pt": "Notamos. Qual foi seu maior desafio?"
+        },
+        {
+          "speaker": "user",
+          "target": "Balancing the migration with bug fixing was tough.",
+          "pt_hint": "Equilibrar migração com correção de bugs foi difícil."
+        },
+        {
+          "speaker": "ai",
+          "text": "Understood. Where do you want to grow next quarter?",
+          "pt": "Onde quer crescer no próximo trimestre?"
+        },
+        {
+          "speaker": "user",
+          "target": "I'd love to take on more architecture work.",
+          "pt_hint": "Queria pegar mais trabalho de arquitetura."
+        },
+        {
+          "speaker": "ai",
+          "text": "Let's make that a formal goal and revisit in three months.",
+          "pt": "Vamos colocar como meta formal e revisitar em três meses."
+        }
+      ]
+    },
+    {
+      "id": "dlg-23",
+      "band": "a2",
+      "title": "Birthday dinner reservation",
+      "pt_summary": "Reserva para jantar de aniversário.",
+      "character": "Restaurant host",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Thank you for calling Estrela Restaurant. How can I help?",
+          "pt": "Obrigado por ligar. Como posso ajudar?"
+        },
+        {
+          "speaker": "user",
+          "target": "I would like to book a table for six this Saturday.",
+          "pt_hint": "Quero reservar uma mesa para seis sábado."
+        },
+        {
+          "speaker": "ai",
+          "text": "At what time?",
+          "pt": "Que horas?"
+        },
+        {
+          "speaker": "user",
+          "target": "Around eight in the evening, for a birthday celebration.",
+          "pt_hint": "Por volta das oito, aniversário."
+        },
+        {
+          "speaker": "ai",
+          "text": "Wonderful. Would you like the private room?",
+          "pt": "Ótimo. Prefere a sala privativa?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, please — and could you prepare a small cake?",
+          "pt_hint": "Sim, por favor — podem preparar um bolinho?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Of course. Can I have a name and phone number for the reservation?",
+          "pt": "Claro. Me passe o nome e telefone."
+        }
+      ]
+    },
+    {
+      "id": "dlg-24",
+      "band": "b1",
+      "title": "Doctor's appointment (10 turns)",
+      "pt_summary": "Consulta médica detalhada.",
+      "character": "Doctor",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Good morning. What brings you in today?",
+          "pt": "Bom dia. O que te trouxe aqui?"
+        },
+        {
+          "speaker": "user",
+          "target": "I have had a persistent cough for about two weeks.",
+          "pt_hint": "Tô com uma tosse persistente há umas duas semanas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Any fever, shortness of breath, or chest pain?",
+          "pt": "Febre, falta de ar ou dor no peito?"
+        },
+        {
+          "speaker": "user",
+          "target": "A low fever on and off, but no chest pain.",
+          "pt_hint": "Febre baixa de vez em quando, sem dor no peito."
+        },
+        {
+          "speaker": "ai",
+          "text": "Have you traveled recently or been around anyone sick?",
+          "pt": "Viajou recentemente ou esteve com alguém doente?"
+        },
+        {
+          "speaker": "user",
+          "target": "My coworker had the flu last week.",
+          "pt_hint": "Meu colega teve gripe na semana passada."
+        },
+        {
+          "speaker": "ai",
+          "text": "I'll listen to your lungs. Take a deep breath for me.",
+          "pt": "Vou ouvir seus pulmões. Respire fundo."
+        },
+        {
+          "speaker": "user",
+          "target": "Okay, here we go.",
+          "pt_hint": "Tá, lá vai."
+        },
+        {
+          "speaker": "ai",
+          "text": "Your lungs sound clear — likely a lingering viral infection.",
+          "pt": "Pulmões limpos — provavelmente infecção viral residual."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. What do you recommend?",
+          "pt_hint": "Obrigado. O que recomenda?"
+        }
+      ]
+    },
+    {
+      "id": "dlg-25",
+      "band": "b1",
+      "title": "Opening a bank account (10 turns)",
+      "pt_summary": "Abrindo conta bancária.",
+      "character": "Bank teller",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Good afternoon. How can I assist you today?",
+          "pt": "Boa tarde. Como posso ajudar?"
+        },
+        {
+          "speaker": "user",
+          "target": "I would like to open a checking account, please.",
+          "pt_hint": "Quero abrir uma conta corrente."
+        },
+        {
+          "speaker": "ai",
+          "text": "Are you a new customer?",
+          "pt": "Você é cliente novo?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes — I just moved here last month.",
+          "pt_hint": "Sim — me mudei mês passado."
+        },
+        {
+          "speaker": "ai",
+          "text": "I will need your ID, proof of address, and an initial deposit.",
+          "pt": "Preciso do documento, comprovante de endereço e depósito inicial."
+        },
+        {
+          "speaker": "user",
+          "target": "I have my passport, a utility bill, and two hundred dollars.",
+          "pt_hint": "Tenho passaporte, conta de luz e duzentos dólares."
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. Do you want a debit card with the account?",
+          "pt": "Perfeito. Quer cartão de débito?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, and is there a mobile app?",
+          "pt_hint": "Sim — e tem aplicativo?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Yes, it's free to download. Would you like me to help you set it up?",
+          "pt": "Sim, grátis. Quer ajuda pra configurar?"
+        },
+        {
+          "speaker": "user",
+          "target": "That would be great, thank you.",
+          "pt_hint": "Seria ótimo, obrigado."
+        }
+      ]
+    },
+    {
+      "id": "dlg-26",
+      "band": "b2",
+      "title": "Salary negotiation (10 turns)",
+      "pt_summary": "Negociação salarial.",
+      "character": "Recruiter",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "I'd like to discuss the compensation for the offer.",
+          "pt": "Vamos falar da proposta salarial."
+        },
+        {
+          "speaker": "user",
+          "target": "I was hoping we could align on something closer to market rate.",
+          "pt_hint": "Esperava alinhar em algo mais próximo do mercado."
+        },
+        {
+          "speaker": "ai",
+          "text": "What range did you have in mind?",
+          "pt": "Que faixa você tem em mente?"
+        },
+        {
+          "speaker": "user",
+          "target": "Based on my research, ninety to a hundred thousand would be fair.",
+          "pt_hint": "Noventa a cem mil seria justo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Our initial offer was eighty. Can we meet in the middle at eighty-seven?",
+          "pt": "A oferta inicial foi oitenta. Meio-termo em oitenta e sete?"
+        },
+        {
+          "speaker": "user",
+          "target": "Eighty-seven works if we can revisit in six months based on performance.",
+          "pt_hint": "Oitenta e sete funciona se revisitarmos em seis meses."
+        },
+        {
+          "speaker": "ai",
+          "text": "That's reasonable. We also offer a ten percent bonus target.",
+          "pt": "Razoável. Temos também bônus-alvo de dez por cento."
+        },
+        {
+          "speaker": "user",
+          "target": "And what about vacation days and remote work flexibility?",
+          "pt_hint": "E férias, trabalho remoto?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Twenty days, hybrid — three days in the office.",
+          "pt": "Vinte dias, híbrido — três dias no escritório."
+        },
+        {
+          "speaker": "user",
+          "target": "That sounds acceptable. Can you send me an updated offer letter?",
+          "pt_hint": "Aceitável. Pode mandar a carta atualizada?"
+        }
+      ]
+    },
+    {
+      "id": "dlg-27",
+      "band": "b1",
+      "title": "Dinner party planning (15 turns)",
+      "pt_summary": "Planejando um jantar entre amigos.",
+      "character": "Friend",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "So you're hosting dinner Saturday? Who's coming?",
+          "pt": "Você tá recebendo sábado? Quem vem?"
+        },
+        {
+          "speaker": "user",
+          "target": "Ana, Pedro, Clara, and maybe João.",
+          "pt_hint": "Ana, Pedro, Clara e talvez João."
+        },
+        {
+          "speaker": "ai",
+          "text": "Nice group! What are you planning to cook?",
+          "pt": "Boa galera! Vai cozinhar o quê?"
+        },
+        {
+          "speaker": "user",
+          "target": "I was thinking pasta — maybe lasagna.",
+          "pt_hint": "Pensei em macarrão — talvez lasanha."
+        },
+        {
+          "speaker": "ai",
+          "text": "Lasagna is perfect for a crowd. Will you make it from scratch?",
+          "pt": "Lasanha é ótima pra grupo. Vai fazer do zero?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, but I need a good recipe — do you have one?",
+          "pt_hint": "Sim, mas preciso de uma receita boa — tem?"
+        },
+        {
+          "speaker": "ai",
+          "text": "I have my grandmother's. I'll text it to you tonight.",
+          "pt": "Tenho a da minha avó. Mando hoje à noite."
+        },
+        {
+          "speaker": "user",
+          "target": "Amazing — thank you! What should I serve as a starter?",
+          "pt_hint": "Maravilha — obrigado! O que sirvo de entrada?"
+        },
+        {
+          "speaker": "ai",
+          "text": "A simple Caprese salad — tomato, mozzarella, basil.",
+          "pt": "Caprese simples — tomate, mussarela, manjericão."
+        },
+        {
+          "speaker": "user",
+          "target": "Perfect. And any dessert ideas?",
+          "pt_hint": "Perfeito. Sobremesa?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Tiramisu pairs well with lasagna. Have you made it before?",
+          "pt": "Tiramisu combina. Já fez?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, but I can try if it's not too complicated.",
+          "pt_hint": "Não, mas posso tentar se não for complicado."
+        },
+        {
+          "speaker": "ai",
+          "text": "It's just layering coffee-dipped ladyfingers with mascarpone cream.",
+          "pt": "É só intercalar biscoitos com café e creme de mascarpone."
+        },
+        {
+          "speaker": "user",
+          "target": "Got it. What wine should I buy?",
+          "pt_hint": "Entendi. Que vinho eu compro?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Two bottles of Chianti — it's the classic pairing.",
+          "pt": "Duas garrafas de Chianti — combinação clássica."
+        }
+      ]
+    },
+    {
+      "id": "dlg-28",
+      "band": "b2",
+      "title": "Project kickoff meeting (15 turns)",
+      "pt_summary": "Kickoff de projeto.",
+      "character": "Project manager",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Welcome everyone. Let's quickly introduce ourselves — name and role.",
+          "pt": "Bem-vindos. Apresentações rápidas — nome e função."
+        },
+        {
+          "speaker": "user",
+          "target": "I'm Leo, the backend lead on this project.",
+          "pt_hint": "Sou Leo, líder de backend."
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. Leo, can you give us a brief overview of the technical scope?",
+          "pt": "Ótimo. Pode dar uma visão geral do escopo técnico?"
+        },
+        {
+          "speaker": "user",
+          "target": "Sure — we are rebuilding the payments service on a new stack.",
+          "pt_hint": "Claro — estamos reconstruindo o serviço de pagamentos em uma nova stack."
+        },
+        {
+          "speaker": "ai",
+          "text": "What are the main risks you see so far?",
+          "pt": "Quais os principais riscos?"
+        },
+        {
+          "speaker": "user",
+          "target": "Data migration is the biggest. We need zero downtime.",
+          "pt_hint": "Migração de dados é o maior. Precisa de zero downtime."
+        },
+        {
+          "speaker": "ai",
+          "text": "How long do you estimate the migration will take?",
+          "pt": "Quanto tempo estima para a migração?"
+        },
+        {
+          "speaker": "user",
+          "target": "Roughly three months, including testing.",
+          "pt_hint": "Uns três meses, incluindo testes."
+        },
+        {
+          "speaker": "ai",
+          "text": "Can we parallelize any of that work?",
+          "pt": "Dá pra paralelizar algo disso?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes — schema changes and service rewrites can go in parallel.",
+          "pt_hint": "Sim — mudanças de schema e reescrita do serviço podem ir em paralelo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Good. What about dependencies on other teams?",
+          "pt": "Boa. E dependências com outros times?"
+        },
+        {
+          "speaker": "user",
+          "target": "We need the analytics team to update their queries.",
+          "pt_hint": "Precisamos do time de analytics atualizar as queries."
+        },
+        {
+          "speaker": "ai",
+          "text": "I'll reach out to them after this meeting. Anything else?",
+          "pt": "Falo com eles depois. Algo mais?"
+        },
+        {
+          "speaker": "user",
+          "target": "Just that we'll need a dedicated QA resource for the last month.",
+          "pt_hint": "Só que precisaremos de QA dedicado no último mês."
+        },
+        {
+          "speaker": "ai",
+          "text": "Noted. Let's schedule a weekly sync every Tuesday at ten.",
+          "pt": "Anotado. Sync semanal toda terça às dez."
+        }
+      ]
+    },
+    {
+      "id": "dlg-29",
+      "band": "b2",
+      "title": "Apologizing to a friend (15 turns)",
+      "pt_summary": "Pedindo desculpas a um amigo.",
+      "character": "Friend",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hey — do you have a minute? I want to talk.",
+          "pt": "Ei — tem um minuto? Quero conversar."
+        },
+        {
+          "speaker": "user",
+          "target": "Sure, what's on your mind?",
+          "pt_hint": "Claro, o que é?"
+        },
+        {
+          "speaker": "ai",
+          "text": "I feel like we have been drifting apart lately.",
+          "pt": "Sinto que estamos nos afastando."
+        },
+        {
+          "speaker": "user",
+          "target": "Honestly, I feel the same. I think I owe you an apology.",
+          "pt_hint": "Sinceramente, eu também sinto. Te devo desculpas."
+        },
+        {
+          "speaker": "ai",
+          "text": "For what, specifically?",
+          "pt": "Por quê, especificamente?"
+        },
+        {
+          "speaker": "user",
+          "target": "I haven't been showing up for you — I've been too focused on work.",
+          "pt_hint": "Não tenho estado presente — tô focado demais no trabalho."
+        },
+        {
+          "speaker": "ai",
+          "text": "I appreciate you saying that. It did hurt when you missed my birthday.",
+          "pt": "Agradeço. Doeu quando você faltou no meu aniversário."
+        },
+        {
+          "speaker": "user",
+          "target": "I know, and I'm really sorry. It was a terrible excuse.",
+          "pt_hint": "Sei disso, e sinto muito. Foi uma desculpa horrível."
+        },
+        {
+          "speaker": "ai",
+          "text": "Thank you. It means a lot to hear that.",
+          "pt": "Obrigado. Significa muito ouvir isso."
+        },
+        {
+          "speaker": "user",
+          "target": "Can I make it up to you somehow?",
+          "pt_hint": "Tem como compensar?"
+        },
+        {
+          "speaker": "ai",
+          "text": "How about dinner this weekend, just the two of us?",
+          "pt": "Que tal um jantar no fim de semana, só nós dois?"
+        },
+        {
+          "speaker": "user",
+          "target": "Absolutely — Saturday at seven, my treat?",
+          "pt_hint": "Com certeza — sábado às sete, eu pago?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Deal. And thank you for being honest with me.",
+          "pt": "Fechado. E obrigado por ser sincero."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you for giving me another chance.",
+          "pt_hint": "Obrigado por me dar outra chance."
+        },
+        {
+          "speaker": "ai",
+          "text": "Let's not let this happen again, okay?",
+          "pt": "Não deixa isso acontecer de novo, ok?"
+        }
+      ]
+    },
+    {
+      "id": "dlg-30",
+      "band": "a1",
+      "title": "Calling in sick",
+      "pt_summary": "Avisando que está doente.",
+      "character": "Manager",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Morning, what's up?",
+          "pt": "Bom dia, e aí?"
+        },
+        {
+          "speaker": "user",
+          "target": "Hi — I am sick today. I can't make it to the office.",
+          "pt_hint": "Oi — tô doente hoje. Não vou conseguir ir."
+        },
+        {
+          "speaker": "ai",
+          "text": "Sorry to hear that. What's wrong?",
+          "pt": "Que pena. O que aconteceu?"
+        },
+        {
+          "speaker": "user",
+          "target": "A bad sore throat and fever since last night.",
+          "pt_hint": "Dor de garganta e febre desde ontem."
+        },
+        {
+          "speaker": "ai",
+          "text": "Rest up. We'll handle your meetings today.",
+          "pt": "Descansa. Cuidamos das suas reuniões hoje."
+        }
+      ]
+    },
+    {
+      "id": "dlg-31",
+      "band": "a1",
+      "title": "Parent-teacher meeting",
+      "pt_summary": "Reunião com a professora.",
+      "character": "Teacher",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Thanks for coming in today. How do you think your child is doing?",
+          "pt": "Obrigada por vir. Como acha que seu filho está?"
+        },
+        {
+          "speaker": "user",
+          "target": "He says he likes math, but struggles with reading.",
+          "pt_hint": "Ele diz gostar de matemática, mas tem dificuldade com leitura."
+        },
+        {
+          "speaker": "ai",
+          "text": "I've noticed the same. Let's set up some extra practice.",
+          "pt": "Notei o mesmo. Vamos preparar exercícios extras."
+        },
+        {
+          "speaker": "user",
+          "target": "That would be wonderful. Anything we can do at home?",
+          "pt_hint": "Seria ótimo. Algo que possamos fazer em casa?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Reading together for fifteen minutes every night helps a lot.",
+          "pt": "Ler junto quinze minutos por noite ajuda muito."
+        }
+      ]
+    },
+    {
+      "id": "dlg-32",
+      "band": "a2",
+      "title": "Asking someone out",
+      "pt_summary": "Convidando alguém para sair.",
+      "character": "Crush",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hey, did you finish the book I lent you?",
+          "pt": "Ei, terminou o livro que te emprestei?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes! I loved it — can I buy you a coffee to discuss it?",
+          "pt_hint": "Sim! Adorei — posso te pagar um café pra gente conversar?"
+        },
+        {
+          "speaker": "ai",
+          "text": "I'd like that. When were you thinking?",
+          "pt": "Eu gostaria. Quando você pensou?"
+        },
+        {
+          "speaker": "user",
+          "target": "How about Saturday afternoon at the place on Rua Nova?",
+          "pt_hint": "Que tal sábado à tarde no lugar da Rua Nova?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Saturday works. See you at three?",
+          "pt": "Sábado funciona. Três horas?"
+        }
+      ]
+    },
+    {
+      "id": "dlg-33",
+      "band": "a2",
+      "title": "Renting a car",
+      "pt_summary": "Alugando um carro.",
+      "character": "Rental agent",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What type of car are you looking for?",
+          "pt": "Que tipo de carro?"
+        },
+        {
+          "speaker": "user",
+          "target": "A compact with automatic transmission, for three days.",
+          "pt_hint": "Compacto, automático, por três dias."
+        },
+        {
+          "speaker": "ai",
+          "text": "Do you have a driver's license and credit card?",
+          "pt": "Tem CNH e cartão de crédito?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, both here. And I'd like full insurance coverage.",
+          "pt_hint": "Sim, aqui estão. E quero seguro completo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Total is three hundred and twenty dollars. Sign here.",
+          "pt": "Total trezentos e vinte dólares. Assina aqui."
+        }
+      ]
+    },
+    {
+      "id": "dlg-34",
+      "band": "a2",
+      "title": "Grocery shopping with a friend",
+      "pt_summary": "Fazendo compras com um amigo.",
+      "character": "Friend",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Do we need anything else besides vegetables?",
+          "pt": "Precisa de mais alguma coisa além de vegetais?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, some bread and maybe eggs.",
+          "pt_hint": "Sim, pão e talvez ovos."
+        },
+        {
+          "speaker": "ai",
+          "text": "What about drinks? We're out of juice.",
+          "pt": "E bebidas? Acabou suco."
+        },
+        {
+          "speaker": "user",
+          "target": "Good point — let's grab orange juice and water.",
+          "pt_hint": "Boa — pega suco de laranja e água."
+        },
+        {
+          "speaker": "ai",
+          "text": "Anything for dessert?",
+          "pt": "Alguma coisa pra sobremesa?"
+        },
+        {
+          "speaker": "user",
+          "target": "Ice cream, definitely.",
+          "pt_hint": "Sorvete, com certeza."
+        }
+      ]
+    },
+    {
+      "id": "dlg-35",
+      "band": "b1",
+      "title": "Resigning from a job",
+      "pt_summary": "Pedindo demissão.",
+      "character": "Manager",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "You wanted to see me?",
+          "pt": "Queria falar comigo?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes — this isn't easy, but I'm giving my two weeks' notice.",
+          "pt_hint": "Sim — não é fácil, mas tô pedindo demissão com aviso de duas semanas."
+        },
+        {
+          "speaker": "ai",
+          "text": "I'm sorry to hear that. What prompted the decision?",
+          "pt": "Sinto por isso. O que motivou?"
+        },
+        {
+          "speaker": "user",
+          "target": "I have been offered a role that aligns better with my long-term goals.",
+          "pt_hint": "Recebi uma oferta mais alinhada aos meus objetivos."
+        },
+        {
+          "speaker": "ai",
+          "text": "I understand. Let's make sure the transition is smooth.",
+          "pt": "Entendo. Vamos tornar a transição tranquila."
+        },
+        {
+          "speaker": "user",
+          "target": "Absolutely — I'll document everything and train my replacement.",
+          "pt_hint": "Com certeza — documento tudo e treino meu substituto."
+        }
+      ]
+    },
+    {
+      "id": "dlg-36",
+      "band": "b1",
+      "title": "Neighbor complaint",
+      "pt_summary": "Queixa com o vizinho.",
+      "character": "Neighbor",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi — do you have a moment?",
+          "pt": "Oi — tem um minuto?"
+        },
+        {
+          "speaker": "user",
+          "target": "Sure, what's going on?",
+          "pt_hint": "Claro, o que foi?"
+        },
+        {
+          "speaker": "ai",
+          "text": "The music from your apartment last night was really loud.",
+          "pt": "A música do seu apê ontem à noite tava muito alta."
+        },
+        {
+          "speaker": "user",
+          "target": "I'm so sorry — I had no idea it carried. Won't happen again.",
+          "pt_hint": "Desculpa — não fazia ideia que passava tanto. Não acontece de novo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Thanks — I had to wake up early and just couldn't sleep.",
+          "pt": "Obrigado — tive que acordar cedo e não consegui dormir."
+        },
+        {
+          "speaker": "user",
+          "target": "Totally understand. Let me know if it ever happens again.",
+          "pt_hint": "Entendo totalmente. Me avisa se acontecer de novo."
+        }
+      ]
+    },
+    {
+      "id": "dlg-37",
+      "band": "b1",
+      "title": "Getting a haircut",
+      "pt_summary": "Cortando cabelo.",
+      "character": "Barber",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "What are we doing today?",
+          "pt": "O que vamos fazer hoje?"
+        },
+        {
+          "speaker": "user",
+          "target": "Just a trim — take about half an inch off the sides.",
+          "pt_hint": "Só uma aparada — uns dois dedos nas laterais."
+        },
+        {
+          "speaker": "ai",
+          "text": "And the top?",
+          "pt": "E em cima?"
+        },
+        {
+          "speaker": "user",
+          "target": "Keep the length on top, just clean it up.",
+          "pt_hint": "Mantém o comprimento em cima, só dá uma limpada."
+        },
+        {
+          "speaker": "ai",
+          "text": "Want your beard shaped as well?",
+          "pt": "Quer aparar a barba também?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, please — keep it short but defined.",
+          "pt_hint": "Sim — curta mas definida."
+        },
+        {
+          "speaker": "ai",
+          "text": "Coming right up.",
+          "pt": "Já começo."
+        }
+      ]
+    },
+    {
+      "id": "dlg-38",
+      "band": "b1",
+      "title": "Coworker feedback conversation",
+      "pt_summary": "Feedback entre colegas.",
+      "character": "Coworker",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Got a minute? I wanted to share something with you.",
+          "pt": "Tem um minuto? Queria te falar uma coisa."
+        },
+        {
+          "speaker": "user",
+          "target": "Of course — what's on your mind?",
+          "pt_hint": "Claro — o que é?"
+        },
+        {
+          "speaker": "ai",
+          "text": "In the last meeting I felt I didn't get a chance to speak.",
+          "pt": "Na última reunião eu senti que não tive espaço pra falar."
+        },
+        {
+          "speaker": "user",
+          "target": "Really? I didn't notice — can you give me an example?",
+          "pt_hint": "Sério? Não percebi — tem algum exemplo?"
+        },
+        {
+          "speaker": "ai",
+          "text": "When I started answering the client's question, you jumped in.",
+          "pt": "Quando comecei a responder ao cliente, você interrompeu."
+        },
+        {
+          "speaker": "user",
+          "target": "I appreciate you telling me. I'll be more mindful next time.",
+          "pt_hint": "Agradeço por me falar. Vou prestar mais atenção."
+        }
+      ]
+    },
+    {
+      "id": "dlg-39",
+      "band": "b1",
+      "title": "Checking into a clinic",
+      "pt_summary": "Fazendo check-in na clínica.",
+      "character": "Receptionist",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi, do you have an appointment?",
+          "pt": "Oi, tem consulta marcada?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, at eleven with Doctor Silva.",
+          "pt_hint": "Sim, às onze com a Doutora Silva."
+        },
+        {
+          "speaker": "ai",
+          "text": "Can I see your ID and insurance card?",
+          "pt": "Pode me mostrar documento e carteirinha?"
+        },
+        {
+          "speaker": "user",
+          "target": "Here you are.",
+          "pt_hint": "Aqui estão."
+        },
+        {
+          "speaker": "ai",
+          "text": "Please have a seat. The doctor will call you in shortly.",
+          "pt": "Pode sentar. A médica te chama em breve."
+        },
+        {
+          "speaker": "user",
+          "target": "Thank you. Is the wait usually long?",
+          "pt_hint": "Obrigado. A espera costuma ser longa?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Usually about fifteen minutes.",
+          "pt": "Uns quinze minutos."
+        }
+      ]
+    },
+    {
+      "id": "dlg-40",
+      "band": "b2",
+      "title": "Debating a topic",
+      "pt_summary": "Debatendo um tema.",
+      "character": "Debate partner",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Do you think remote work is here to stay?",
+          "pt": "Acha que trabalho remoto veio pra ficar?"
+        },
+        {
+          "speaker": "user",
+          "target": "Absolutely — the productivity data backs it up.",
+          "pt_hint": "Com certeza — os dados de produtividade comprovam."
+        },
+        {
+          "speaker": "ai",
+          "text": "But what about company culture? Doesn't it suffer?",
+          "pt": "Mas e a cultura da empresa? Não sofre?"
+        },
+        {
+          "speaker": "user",
+          "target": "It evolves — culture isn't only built in person anymore.",
+          "pt_hint": "Evolui — cultura não é mais só presencial."
+        },
+        {
+          "speaker": "ai",
+          "text": "What about new hires who need mentorship?",
+          "pt": "E novos funcionários que precisam de mentoria?"
+        },
+        {
+          "speaker": "user",
+          "target": "Companies can schedule quarterly in-person onboarding weeks.",
+          "pt_hint": "Podem fazer semanas presenciais trimestrais."
+        },
+        {
+          "speaker": "ai",
+          "text": "That's a fair point.",
+          "pt": "Ponto justo."
+        }
+      ]
+    },
+    {
+      "id": "dlg-41",
+      "band": "b2",
+      "title": "Arguing for a raise (15 turns)",
+      "pt_summary": "Negociando aumento em profundidade.",
+      "character": "Manager",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "You wanted to talk about compensation?",
+          "pt": "Queria falar sobre salário?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes — I'd like to discuss an adjustment based on my contributions this year.",
+          "pt_hint": "Sim — gostaria de discutir um ajuste baseado nas minhas contribuições esse ano."
+        },
+        {
+          "speaker": "ai",
+          "text": "Tell me more about what you have in mind.",
+          "pt": "Me conta mais o que você tem em mente."
+        },
+        {
+          "speaker": "user",
+          "target": "I have been doing senior-level work for the past nine months.",
+          "pt_hint": "Estou fazendo trabalho sênior há nove meses."
+        },
+        {
+          "speaker": "ai",
+          "text": "What specific examples come to mind?",
+          "pt": "Que exemplos específicos vêm à mente?"
+        },
+        {
+          "speaker": "user",
+          "target": "I led the payments migration and mentored two new engineers.",
+          "pt_hint": "Liderei a migração de pagamentos e mentorei dois engenheiros novos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Both were significant. What number are you thinking of?",
+          "pt": "Ambos relevantes. Que valor você tem em mente?"
+        },
+        {
+          "speaker": "user",
+          "target": "A fifteen percent raise would put me in line with my peers.",
+          "pt_hint": "Quinze por cento me alinharia com meus pares."
+        },
+        {
+          "speaker": "ai",
+          "text": "Fifteen is above our normal band. Can you help me make the case upstream?",
+          "pt": "Quinze está acima da faixa normal. Pode me ajudar a defender isso?"
+        },
+        {
+          "speaker": "user",
+          "target": "Happy to — I can put together a one-pager with impact metrics.",
+          "pt_hint": "Com prazer — preparo um one-pager com métricas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Perfect. When can you send it?",
+          "pt": "Perfeito. Quando você envia?"
+        },
+        {
+          "speaker": "user",
+          "target": "By tomorrow evening.",
+          "pt_hint": "Até amanhã à noite."
+        },
+        {
+          "speaker": "ai",
+          "text": "Great. If leadership signs off, it would be effective next cycle.",
+          "pt": "Ótimo. Se a liderança aprovar, efetiva no próximo ciclo."
+        },
+        {
+          "speaker": "user",
+          "target": "That works. Is there anything else you need from me?",
+          "pt_hint": "Funciona. Precisa de mais alguma coisa?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Just the one-pager for now. Thank you for being direct about this.",
+          "pt": "Por enquanto só o documento. Obrigado por ser direto."
+        }
+      ]
+    },
+    {
+      "id": "dlg-42",
+      "band": "b1",
+      "title": "Comforting a friend",
+      "pt_summary": "Consolando um amigo.",
+      "character": "Friend",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "I don't know what to do — I lost my job today.",
+          "pt": "Não sei o que fazer — perdi o emprego hoje."
+        },
+        {
+          "speaker": "user",
+          "target": "I'm so sorry. Do you want to talk about what happened?",
+          "pt_hint": "Sinto muito. Quer falar sobre o que aconteceu?"
+        },
+        {
+          "speaker": "ai",
+          "text": "They restructured the team and my role got cut.",
+          "pt": "Reestruturaram o time e meu cargo foi cortado."
+        },
+        {
+          "speaker": "user",
+          "target": "That's not your fault at all — that's on the company.",
+          "pt_hint": "Isso não é culpa sua — é da empresa."
+        },
+        {
+          "speaker": "ai",
+          "text": "I just feel so lost right now.",
+          "pt": "Tô muito perdido agora."
+        },
+        {
+          "speaker": "user",
+          "target": "Take a few days before diving into job applications, okay?",
+          "pt_hint": "Tira uns dias antes de correr atrás de vagas, tá?"
+        },
+        {
+          "speaker": "ai",
+          "text": "You're right. Thanks for being here.",
+          "pt": "Você tem razão. Obrigado por estar aqui."
+        }
+      ]
+    },
+    {
+      "id": "dlg-43",
+      "band": "b1",
+      "title": "Meeting in-laws",
+      "pt_summary": "Conhecendo os sogros.",
+      "character": "In-law",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "So, how did you and our daughter meet?",
+          "pt": "Como você e nossa filha se conheceram?"
+        },
+        {
+          "speaker": "user",
+          "target": "We met at a friend's birthday party two years ago.",
+          "pt_hint": "A gente se conheceu numa festa de aniversário faz dois anos."
+        },
+        {
+          "speaker": "ai",
+          "text": "What do you do for a living?",
+          "pt": "O que você faz da vida?"
+        },
+        {
+          "speaker": "user",
+          "target": "I'm a software engineer at a fintech company.",
+          "pt_hint": "Sou engenheiro de software em uma fintech."
+        },
+        {
+          "speaker": "ai",
+          "text": "Interesting. And where is your family from?",
+          "pt": "Interessante. E sua família é de onde?"
+        },
+        {
+          "speaker": "user",
+          "target": "My parents are from Minas Gerais, but I grew up in São Paulo.",
+          "pt_hint": "Meus pais são de Minas Gerais, eu cresci em São Paulo."
+        },
+        {
+          "speaker": "ai",
+          "text": "Lovely — please, come sit with us at the table.",
+          "pt": "Adorei — venha sentar com a gente."
+        }
+      ]
+    },
+    {
+      "id": "dlg-44",
+      "band": "a2",
+      "title": "Checking out at a supermarket",
+      "pt_summary": "Checkout no supermercado.",
+      "character": "Cashier",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Did you find everything okay?",
+          "pt": "Achou tudo que queria?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, thanks. Could I get a bag, please?",
+          "pt_hint": "Sim, obrigado. Pode me dar uma sacola?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Plastic or paper?",
+          "pt": "Plástico ou papel?"
+        },
+        {
+          "speaker": "user",
+          "target": "Paper, please.",
+          "pt_hint": "Papel."
+        },
+        {
+          "speaker": "ai",
+          "text": "That's forty-two dollars total.",
+          "pt": "Quarenta e dois dólares no total."
+        },
+        {
+          "speaker": "user",
+          "target": "I'll pay by card — contactless, please.",
+          "pt_hint": "Vou pagar no cartão — por aproximação."
+        }
+      ]
+    },
+    {
+      "id": "dlg-45",
+      "band": "b1",
+      "title": "Giving bad news to a team",
+      "pt_summary": "Dando uma notícia ruim ao time.",
+      "character": "Team member",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Thanks for gathering on short notice. I have an update.",
+          "pt": "Obrigado por vir com pouca antecedência. Tenho uma atualização."
+        },
+        {
+          "speaker": "user",
+          "target": "Is everything okay?",
+          "pt_hint": "Tá tudo bem?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Unfortunately, the launch is being delayed by a month.",
+          "pt": "Infelizmente, o lançamento vai atrasar um mês."
+        },
+        {
+          "speaker": "user",
+          "target": "What's driving the delay?",
+          "pt_hint": "O que está causando o atraso?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Security audit turned up issues that must be addressed first.",
+          "pt": "Auditoria de segurança apontou problemas que precisam ser resolvidos."
+        },
+        {
+          "speaker": "user",
+          "target": "Do we have bandwidth to fix them or do we need help?",
+          "pt_hint": "Temos banda pra resolver ou precisamos de ajuda?"
+        },
+        {
+          "speaker": "ai",
+          "text": "We'll pull in two engineers from the platform team.",
+          "pt": "Vamos puxar dois engenheiros do time de plataforma."
+        },
+        {
+          "speaker": "user",
+          "target": "Okay — how can I support?",
+          "pt_hint": "Ok — como posso ajudar?"
+        }
+      ]
+    },
+    {
+      "id": "dlg-46",
+      "band": "b2",
+      "title": "Pitching an idea (15 turns)",
+      "pt_summary": "Apresentando uma ideia para investidores.",
+      "character": "Investor",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Thanks for coming in. What are you building?",
+          "pt": "Obrigado por vir. O que está construindo?"
+        },
+        {
+          "speaker": "user",
+          "target": "An AI tutor for Brazilian students learning English.",
+          "pt_hint": "Um tutor de IA para brasileiros aprendendo inglês."
+        },
+        {
+          "speaker": "ai",
+          "text": "There are already several apps like that. What's different?",
+          "pt": "Já tem vários apps assim. O que é diferente?"
+        },
+        {
+          "speaker": "user",
+          "target": "We focus on pronunciation scoring with word-level feedback.",
+          "pt_hint": "Focamos em pronúncia com feedback por palavra."
+        },
+        {
+          "speaker": "ai",
+          "text": "How accurate is the scoring?",
+          "pt": "Quão precisa é a pontuação?"
+        },
+        {
+          "speaker": "user",
+          "target": "We use five parallel transcriptions and majority voting to catch errors.",
+          "pt_hint": "Usamos cinco transcrições paralelas com votação majoritária."
+        },
+        {
+          "speaker": "ai",
+          "text": "Impressive. What's your traction so far?",
+          "pt": "Impressionante. Qual a tração até agora?"
+        },
+        {
+          "speaker": "user",
+          "target": "Five hundred active students and two teacher-led classrooms.",
+          "pt_hint": "Quinhentos alunos ativos e duas turmas com professores."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's your monetization model?",
+          "pt": "Como monetiza?"
+        },
+        {
+          "speaker": "user",
+          "target": "Teacher subscriptions, with a free tier for individual students.",
+          "pt_hint": "Assinaturas para professores, tier grátis para alunos individuais."
+        },
+        {
+          "speaker": "ai",
+          "text": "What's the ask?",
+          "pt": "Qual o pedido?"
+        },
+        {
+          "speaker": "user",
+          "target": "Five hundred thousand for twelve months of runway.",
+          "pt_hint": "Quinhentos mil para doze meses de runway."
+        },
+        {
+          "speaker": "ai",
+          "text": "And what milestones would you hit with that?",
+          "pt": "E que marcos alcançam com isso?"
+        },
+        {
+          "speaker": "user",
+          "target": "Five thousand active students and a self-serve classroom flow.",
+          "pt_hint": "Cinco mil alunos ativos e fluxo self-serve para turmas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Send us a deck and financials — we'll get back to you this week.",
+          "pt": "Nos manda o deck e os números — retornamos essa semana."
+        }
+      ]
+    },
+    {
+      "id": "dlg-47",
+      "band": "a1",
+      "title": "Taxi ride",
+      "pt_summary": "Andando de táxi.",
+      "character": "Driver",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Where to?",
+          "pt": "Pra onde?"
+        },
+        {
+          "speaker": "user",
+          "target": "The airport, please — terminal two.",
+          "pt_hint": "Para o aeroporto — terminal dois."
+        },
+        {
+          "speaker": "ai",
+          "text": "Any highway or surface streets?",
+          "pt": "Rodovia ou vias urbanas?"
+        },
+        {
+          "speaker": "user",
+          "target": "Whatever is fastest.",
+          "pt_hint": "O que for mais rápido."
+        },
+        {
+          "speaker": "ai",
+          "text": "Alright, should be about thirty minutes.",
+          "pt": "Beleza, uns trinta minutos."
+        }
+      ]
+    },
+    {
+      "id": "dlg-48",
+      "band": "a2",
+      "title": "Library sign-up",
+      "pt_summary": "Inscrição na biblioteca.",
+      "character": "Librarian",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Hi! Would you like to sign up for a library card?",
+          "pt": "Oi! Quer fazer a carteirinha da biblioteca?"
+        },
+        {
+          "speaker": "user",
+          "target": "Yes, please. What do I need to bring?",
+          "pt_hint": "Sim. O que preciso trazer?"
+        },
+        {
+          "speaker": "ai",
+          "text": "Just an ID and proof of address.",
+          "pt": "Só documento e comprovante de endereço."
+        },
+        {
+          "speaker": "user",
+          "target": "I have both right here.",
+          "pt_hint": "Tenho os dois aqui."
+        },
+        {
+          "speaker": "ai",
+          "text": "Your card will be ready in five minutes. How many books can you borrow? Up to five at a time.",
+          "pt": "Sua carteirinha fica pronta em cinco minutos. Quantos livros pode pegar? Até cinco por vez."
+        }
+      ]
+    },
+    {
+      "id": "dlg-49",
+      "band": "b1",
+      "title": "Explaining a bug to a coworker",
+      "pt_summary": "Explicando um bug ao colega.",
+      "character": "Coworker",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "So what's going on with the login flow?",
+          "pt": "O que tá acontecendo com o login?"
+        },
+        {
+          "speaker": "user",
+          "target": "Users are getting logged out after two minutes, randomly.",
+          "pt_hint": "Usuários estão sendo deslogados aleatoriamente depois de dois minutos."
+        },
+        {
+          "speaker": "ai",
+          "text": "Does it happen for everyone?",
+          "pt": "Acontece com todo mundo?"
+        },
+        {
+          "speaker": "user",
+          "target": "No, only users on the new session service.",
+          "pt_hint": "Não, só no novo serviço de sessão."
+        },
+        {
+          "speaker": "ai",
+          "text": "Sounds like a token TTL issue.",
+          "pt": "Parece problema de TTL do token."
+        },
+        {
+          "speaker": "user",
+          "target": "Exactly — the TTL is being set to two minutes instead of two hours.",
+          "pt_hint": "Isso — o TTL tá sendo setado pra dois minutos em vez de duas horas."
+        },
+        {
+          "speaker": "ai",
+          "text": "Easy fix. Push the change today?",
+          "pt": "Fácil. Dá pra subir hoje?"
+        }
+      ]
+    },
+    {
+      "id": "dlg-50",
+      "band": "b1",
+      "title": "Ending a service subscription",
+      "pt_summary": "Cancelando assinatura.",
+      "character": "Customer service",
+      "turns": [
+        {
+          "speaker": "ai",
+          "text": "Thanks for calling. How can I help?",
+          "pt": "Obrigada por ligar. Como posso ajudar?"
+        },
+        {
+          "speaker": "user",
+          "target": "I'd like to cancel my subscription, effective next month.",
+          "pt_hint": "Quero cancelar minha assinatura a partir do próximo mês."
+        },
+        {
+          "speaker": "ai",
+          "text": "I'm sorry to see you go. Could I ask the reason?",
+          "pt": "Pena que vai sair. Posso perguntar o motivo?"
+        },
+        {
+          "speaker": "user",
+          "target": "I'm not using the service as much as I expected.",
+          "pt_hint": "Não estou usando tanto quanto esperava."
+        },
+        {
+          "speaker": "ai",
+          "text": "We can offer you a fifty percent discount for three months.",
+          "pt": "Posso oferecer cinquenta por cento de desconto por três meses."
+        },
+        {
+          "speaker": "user",
+          "target": "That's generous, but I'd still like to cancel, thank you.",
+          "pt_hint": "É generoso, mas ainda quero cancelar, obrigado."
+        },
+        {
+          "speaker": "ai",
+          "text": "Understood. I'll process the cancellation — you'll keep access until the twenty-fifth.",
+          "pt": "Entendi. Processo o cancelamento — você mantém acesso até o dia vinte e cinco."
+        }
       ]
     }
   ]
