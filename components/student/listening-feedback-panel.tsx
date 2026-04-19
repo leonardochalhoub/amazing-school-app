@@ -12,14 +12,14 @@ export function ListeningFeedbackPanel({ entries }: Props) {
 
   return (
     <section aria-labelledby="listening-feedback-heading" className="space-y-3">
-      <div className="flex items-baseline justify-between">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h2
           id="listening-feedback-heading"
-          className="text-lg font-semibold tracking-tight"
+          className="min-w-0 break-words text-lg font-semibold tracking-tight"
         >
-          Teacher feedback on your listening responses
+          Teacher feedback
         </h2>
-        <span className="text-xs text-muted-foreground">
+        <span className="shrink-0 text-xs text-muted-foreground">
           {entries.length} submission{entries.length === 1 ? "" : "s"}
         </span>
       </div>

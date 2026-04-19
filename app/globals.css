@@ -202,6 +202,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html,
+  body {
+    /* Belt-and-suspenders: never allow horizontal scroll or page growth
+       past the viewport. Any stray wide child gets clipped instead of
+       pushing the whole page sideways on mobile. */
+    max-width: 100vw;
+    overflow-x: clip;
+  }
   body {
     @apply bg-background text-foreground;
   }

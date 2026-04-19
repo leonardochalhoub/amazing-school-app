@@ -26,14 +26,14 @@ export function MyClassesPanel({ entries }: Props) {
 
   return (
     <section aria-labelledby="my-classes-heading" className="space-y-3">
-      <div className="flex items-baseline justify-between">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h2
           id="my-classes-heading"
-          className="text-lg font-semibold tracking-tight"
+          className="min-w-0 break-words text-lg font-semibold tracking-tight"
         >
           Your recent classes
         </h2>
-        <span className="text-xs text-muted-foreground">
+        <span className="shrink-0 text-xs text-muted-foreground">
           {entries.length} shown
         </span>
       </div>

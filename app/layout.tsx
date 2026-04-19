@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import {
   Geist_Mono,
   Instrument_Serif,
@@ -33,6 +33,15 @@ export const metadata: Metadata = {
   title: "Amazing School - Learn English with AI",
   description:
     "Free, open-source English teaching platform with AI tutoring and gamification for Brazilian students",
+};
+
+// Without this, mobile browsers render at a 980px default viewport and
+// zoom out to fit, which looks like "the page is too big and gets cut".
+// Setting width=device-width makes the layout actually match the screen.
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
