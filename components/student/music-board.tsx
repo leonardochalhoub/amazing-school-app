@@ -224,6 +224,21 @@ export function MusicBoard({
                 {locale === "pt-BR"
                   ? "Clique no botão CC do player para legenda sincronizada."
                   : "Click the CC button on the player for synced captions."}
+                {song.youtube_id ? (
+                  <>
+                    {" · "}
+                    <a
+                      href={`https://www.youtube.com/watch?v=${song.youtube_id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-primary hover:underline"
+                    >
+                      {locale === "pt-BR"
+                        ? "Abrir no YouTube"
+                        : "Watch on YouTube"}
+                    </a>
+                  </>
+                ) : null}
               </p>
               <p className="text-[11px] text-muted-foreground">
                 ⏱{" "}
@@ -232,30 +247,60 @@ export function MusicBoard({
                   : "Timestamps may not be synchronized — edit them via Personalize on the Songs menu."}
               </p>
               <div className="flex flex-wrap gap-3 text-xs">
-                {song.full_lyrics_url ? (
-                  <a
-                    href={song.full_lyrics_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
-                  >
-                    {locale === "pt-BR" ? "Letra completa" : "Full lyrics"} ·{" "}
-                    {hostname}
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                ) : null}
-                <a
-                  href={letrasUrl(song.artist, song.title)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
-                >
-                  {locale === "pt-BR"
-                    ? "Letra + tradução"
-                    : "Lyrics + translation"}{" "}
-                  · letras.mus.br
-                  <ExternalLink className="h-3 w-3" />
-                </a>
+                {(() => {
+                  // If the curated full_lyrics_url is already a
+                  // Letras.mus.br link we don't need a second "Lyrics +
+                  // translation · letras.mus.br" row — same host, same
+                  // page. Show one link labelled for translations.
+                  const curated = song.full_lyrics_url ?? null;
+                  const curatedIsLetras =
+                    !!curated && /letras\.mus\.br/i.test(curated);
+                  if (curatedIsLetras && curated) {
+                    return (
+                      <a
+                        href={curated}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
+                      >
+                        {locale === "pt-BR"
+                          ? "Letra + tradução"
+                          : "Lyrics + translation"}{" "}
+                        · letras.mus.br
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    );
+                  }
+                  return (
+                    <>
+                      {curated ? (
+                        <a
+                          href={curated}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
+                        >
+                          {locale === "pt-BR" ? "Letra completa" : "Full lyrics"}
+                          {" · "}
+                          {hostname}
+                          <ExternalLink className="h-3 w-3" />
+                        </a>
+                      ) : null}
+                      <a
+                        href={letrasUrl(song.artist, song.title)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline"
+                      >
+                        {locale === "pt-BR"
+                          ? "Letra + tradução"
+                          : "Lyrics + translation"}{" "}
+                        · letras.mus.br
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    </>
+                  );
+                })()}
               </div>
             </div>
           </CardContent>
