@@ -94,6 +94,20 @@ const WORD_MISTAKE_PENALTY = clampNum(
 const PERFECT_REQUIRES_ALL_WORDS =
   (process.env.PRONUNCIATION_PERFECT_REQUIRES_ALL_WORDS ?? "true") !== "false";
 
+// When true, we make a second Whisper call with a "verbatim / phonetic"
+// prompt at non-zero temperature. Comparing it with the polished
+// primary transcription surfaces mispronunciations that Whisper's LM
+// rescued (e.g. "tank you" → "thank you"). Doubles the cost/latency of
+// a scoring call, so it's opt-in.
+const PHONETIC_PROBE_ENABLED =
+  (process.env.PRONUNCIATION_PHONETIC_PROBE ?? "true") !== "false";
+const PHONETIC_WORD_PENALTY = clampNum(
+  Number(process.env.PRONUNCIATION_PHONETIC_WORD_PENALTY),
+  0,
+  40,
+  10,
+);
+
 function clampNum(v: number, lo: number, hi: number, fallback: number): number {
   if (!Number.isFinite(v)) return fallback;
   return Math.min(hi, Math.max(lo, v));
@@ -139,44 +153,95 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Missing target phrase" }, { status: 400 });
   }
 
-  const groqForm = new FormData();
-  groqForm.append("file", audio, "recording.webm");
-  groqForm.append("model", "whisper-large-v3");
-  groqForm.append("language", "en");
-  // verbose_json gives us the per-segment log-probabilities we use to
-  // infer how clearly the speaker pronounced the phrase.
-  groqForm.append("response_format", "verbose_json");
-  // Word-level timestamps let us show which specific words had low
-  // per-segment clarity, not just an overall number.
-  groqForm.append("timestamp_granularities[]", "word");
-  groqForm.append("timestamp_granularities[]", "segment");
-  groqForm.append("temperature", "0");
+  // Audio bytes need to be reused for both Whisper calls below — read
+  // once and clone into fresh FormData for each request.
+  const audioBytes = await audio.arrayBuffer();
+  const audioFile = new Blob([audioBytes], { type: audio.type || "audio/webm" });
 
-  const res = await fetch(
-    "https://api.groq.com/openai/v1/audio/transcriptions",
-    {
-      method: "POST",
-      headers: { Authorization: `Bearer ${key}` },
-      body: groqForm,
+  function buildForm(opts: { phonetic: boolean }): FormData {
+    const f = new FormData();
+    f.append("file", audioFile, "recording.webm");
+    f.append("model", "whisper-large-v3");
+    f.append("language", "en");
+    f.append("response_format", "verbose_json");
+    f.append("timestamp_granularities[]", "word");
+    f.append("timestamp_granularities[]", "segment");
+    if (opts.phonetic) {
+      // Phonetic probe — temperature shift + a prompt that asks for
+      // near-verbatim output. Whisper's language-model rescue is
+      // strongest at temp 0 with no prompt; pushing both dials lets
+      // actual mispronunciations surface (e.g. "tank you" stays as
+      // "tank you" instead of being cleaned to "thank you").
+      f.append("temperature", "0.4");
+      f.append(
+        "prompt",
+        "This is a language-learner practice recording. Transcribe exactly what you hear, sound for sound, even when the word choice looks odd or mispronounced. Do not correct obvious typos or swap similar-sounding words.",
+      );
+    } else {
+      f.append("temperature", "0");
     }
-  );
-  if (!res.ok) {
-    const text = await res.text();
-    return NextResponse.json(
-      { error: `Groq ${res.status}: ${text.slice(0, 200)}` },
-      { status: 502 }
-    );
+    return f;
   }
-  const json = (await res.json()) as WhisperVerboseResponse;
-  const transcription = (json.text ?? "").trim();
+
+  async function callWhisper(opts: { phonetic: boolean }) {
+    const r = await fetch(
+      "https://api.groq.com/openai/v1/audio/transcriptions",
+      {
+        method: "POST",
+        headers: { Authorization: `Bearer ${key}` },
+        body: buildForm(opts),
+      },
+    );
+    if (!r.ok) {
+      const text = await r.text();
+      throw new Error(`Groq ${r.status}: ${text.slice(0, 200)}`);
+    }
+    return (await r.json()) as WhisperVerboseResponse;
+  }
+
+  const [primary, phonetic] = await Promise.all([
+    callWhisper({ phonetic: false }),
+    // Phonetic probe is optional (OFF by default) — adds ~1 extra API
+    // call worth of latency + cost. Enable via env when you want
+    // stricter mispronunciation detection.
+    PHONETIC_PROBE_ENABLED
+      ? callWhisper({ phonetic: true }).catch(() => null)
+      : Promise.resolve<WhisperVerboseResponse | null>(null),
+  ]).catch((e: Error) => {
+    throw e;
+  });
+
+  const transcription = (primary.text ?? "").trim();
+  const phoneticTranscription = (phonetic?.text ?? "").trim();
 
   const similarity = similarityScore(transcription, target); // 0–100
-  const clarity = clarityScore(json.segments); // 0–100
+  const clarity = clarityScore(primary.segments); // 0–100
   // Per-word clarity derived from word timestamps falling inside each
   // segment's [start, end]. A word inherits the clarity of its segment.
-  const heardWordClarity = perWordClarity(json.words, json.segments);
+  const heardWordClarity = perWordClarity(primary.words, primary.segments);
   const diff = wordDiff(transcription, target, heardWordClarity);
-  const score = combineScore(similarity, clarity, diff);
+
+  // Phonetic-probe divergence: if Whisper at temperature=0.4 with a
+  // verbatim prompt hears something different from the polished
+  // transcription, the speaker likely mispronounced those words.
+  const phoneticMismatches = phoneticTranscription
+    ? diffPhoneticTokens(transcription, phoneticTranscription)
+    : [];
+  if (phoneticMismatches.length > 0) {
+    // Promote "ok"/"unclear" entries whose heard token differs from the
+    // phonetic probe to a new "suspicious" bucket in the diff. The UI
+    // can render these differently.
+    const mismatchSet = new Set(phoneticMismatches.map((m) => m.normal));
+    for (const op of diff.words) {
+      if (op.heard && mismatchSet.has(normalize(op.heard))) {
+        if (op.status === "ok" || op.status === "unclear") {
+          op.status = "suspicious";
+        }
+      }
+    }
+  }
+
+  const score = combineScore(similarity, clarity, diff, phoneticMismatches.length);
   const feedback = buildFeedback(score, transcription, target, clarity, diff);
 
   return NextResponse.json({
@@ -187,11 +252,14 @@ export async function POST(req: Request) {
     similarity,
     clarity,
     diff,
+    phonetic: phoneticTranscription || null,
+    phoneticMismatches,
     raw: {
       strictness: STRICTNESS,
       clarityWeight: CLARITY_WEIGHT,
       ceiling: SCORE_CEILING,
       wordPenalty: WORD_MISTAKE_PENALTY,
+      phoneticProbe: PHONETIC_PROBE_ENABLED,
     },
   });
 }
@@ -286,6 +354,7 @@ function combineScore(
   similarity: number,
   clarity: number,
   diff: WordDiff,
+  phoneticMismatchCount = 0,
 ): number {
   // Steep curve on similarity so 80% text match ≈ 41, 90% ≈ 69,
   // 95% ≈ 84 (at strictness=3.5).
@@ -317,7 +386,11 @@ function combineScore(
   const mistakes = diff.words.filter(
     (w) => w.status === "wrong" || w.status === "missed" || w.status === "extra",
   ).length;
-  const penalized = blended - mistakes * WORD_MISTAKE_PENALTY - rescuePenalty;
+  // Phonetic-probe mismatches are a separate per-word penalty. Each
+  // word that Whisper "rescued" costs PHONETIC_WORD_PENALTY points.
+  const phoneticPenalty = phoneticMismatchCount * PHONETIC_WORD_PENALTY;
+  const penalized =
+    blended - mistakes * WORD_MISTAKE_PENALTY - rescuePenalty - phoneticPenalty;
 
   // Only award the full ceiling when every target word matched AND the
   // raw numbers say so. "unclear" counts as matched here.
@@ -328,10 +401,40 @@ function combineScore(
 }
 
 // ---------------------------------------------------------------------------
+// Phonetic probe
+// ---------------------------------------------------------------------------
+
+/**
+ * Given two transcriptions of the same audio — one at temp=0 (language-
+ * model rescued) and one at temp>0 with a "transcribe verbatim" prompt —
+ * return the set of words that appear in the polished version but not in
+ * the phonetic version. These are words Whisper's LM "fixed" from the
+ * acoustic evidence, i.e. strong candidates for mispronunciation.
+ */
+function diffPhoneticTokens(
+  polished: string,
+  phonetic: string,
+): Array<{ normal: string; polished: string }> {
+  const polishedTokens = tokenize(polished);
+  const phoneticTokens = new Set(tokenize(phonetic));
+  const out: Array<{ normal: string; polished: string }> = [];
+  for (const t of polishedTokens) {
+    if (!phoneticTokens.has(t)) out.push({ normal: t, polished: t });
+  }
+  return out;
+}
+
+// ---------------------------------------------------------------------------
 // Word-level diff
 // ---------------------------------------------------------------------------
 
-export type WordStatus = "ok" | "unclear" | "missed" | "wrong" | "extra";
+export type WordStatus =
+  | "ok"
+  | "unclear"
+  | "suspicious"
+  | "missed"
+  | "wrong"
+  | "extra";
 
 export interface WordDiffEntry {
   /** Token the target expected (or null for an unexpected extra word). */

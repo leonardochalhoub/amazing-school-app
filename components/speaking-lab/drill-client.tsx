@@ -5,6 +5,7 @@ import { Mic, Square, Loader2, RefreshCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { SpeakButton } from "@/components/lessons/speak-button";
 
 export interface SpeakingDrill {
   id: string;
@@ -36,7 +37,7 @@ function pickMime(): string {
 interface WordDiffEntry {
   target: string | null;
   heard: string | null;
-  status: "ok" | "unclear" | "missed" | "wrong" | "extra";
+  status: "ok" | "unclear" | "suspicious" | "missed" | "wrong" | "extra";
   clarity?: number;
 }
 interface WordDiff {
@@ -186,9 +187,12 @@ export function SpeakingLabDrill({ all }: Props) {
             <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
               Say this out loud
             </p>
-            <p className="text-2xl font-semibold leading-snug tracking-tight">
-              {current.target}
-            </p>
+            <div className="flex items-start gap-2">
+              <SpeakButton text={current.target} className="mt-1" />
+              <p className="text-2xl font-semibold leading-snug tracking-tight">
+                {current.target}
+              </p>
+            </div>
             {current.pt_hint ? (
               <p className="text-xs italic text-muted-foreground">
                 {current.pt_hint}
@@ -286,6 +290,20 @@ export function SpeakingLabDrill({ all }: Props) {
                           </span>
                         );
                       }
+                      if (w.status === "suspicious") {
+                        return (
+                          <span
+                            key={i}
+                            title="Likely mispronounced — the phonetic probe didn't hear this word"
+                            className="rounded-md border border-orange-500/60 bg-orange-500/10 px-2 py-0.5 text-orange-700 dark:text-orange-300"
+                          >
+                            {w.target}
+                            <span className="ml-1 text-[10px] text-muted-foreground">
+                              check
+                            </span>
+                          </span>
+                        );
+                      }
                       if (w.status === "wrong") {
                         return (
                           <span
@@ -327,7 +345,10 @@ export function SpeakingLabDrill({ all }: Props) {
                     clean
                     {"  "}
                     <span className="ml-2 inline-block h-2 w-2 rounded-sm border border-dashed border-amber-500 align-middle" />{" "}
-                    right word · unclear pronunciation
+                    unclear
+                    {"  "}
+                    <span className="ml-2 inline-block h-2 w-2 rounded-sm bg-orange-500/60 align-middle" />{" "}
+                    likely mispronounced
                     {"  "}
                     <span className="ml-2 inline-block h-2 w-2 rounded-sm bg-amber-500/40 align-middle" />{" "}
                     wrong word
