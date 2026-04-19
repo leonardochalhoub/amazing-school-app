@@ -9,7 +9,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
  * `public/` folder. Whitelisted teachers see a toggle on their Profile
  * page that flips `profiles.school_logo_enabled` on/off.
  */
-export const SCHOOL_LOGO_SRC = "/T%20-%202.png";
+export const SCHOOL_LOGO_SRC = "/branding/T%20-%202.png";
 
 const WHITELISTED_EMAILS = ["leochalhoub@hotmail.com"];
 function nameMatchesWhitelist(name: string): boolean {
