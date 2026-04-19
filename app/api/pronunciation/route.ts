@@ -37,7 +37,7 @@ const CLARITY_WEIGHT = clampNum(
   Number(process.env.PRONUNCIATION_CLARITY_WEIGHT),
   0,
   1,
-  0.55,
+  0.2,
 );
 // Logprob range used to map Whisper's per-segment confidence to a 0–100
 // clarity score. Whisper's avg_logprob is negative; closer to 0 = more
@@ -66,13 +66,13 @@ const RESCUE_PENALTY_THRESHOLD = clampNum(
   Number(process.env.PRONUNCIATION_RESCUE_CLARITY_THRESHOLD),
   0,
   100,
-  70,
+  50,
 );
 const RESCUE_PENALTY_WEIGHT = clampNum(
   Number(process.env.PRONUNCIATION_RESCUE_PENALTY_WEIGHT),
   0,
   2,
-  0.6,
+  1.2,
 );
 const SCORE_CEILING = clampNum(
   Number(process.env.PRONUNCIATION_CEILING),
@@ -100,14 +100,24 @@ function clampNum(v: number, lo: number, hi: number, fallback: number): number {
 }
 
 interface WhisperSegment {
+  id?: number;
+  start?: number;
+  end?: number;
   avg_logprob?: number;
   no_speech_prob?: number;
   compression_ratio?: number;
 }
 
+interface WhisperWordTimestamp {
+  word: string;
+  start: number;
+  end: number;
+}
+
 interface WhisperVerboseResponse {
   text?: string;
   segments?: WhisperSegment[];
+  words?: WhisperWordTimestamp[];
 }
 
 export async function POST(req: Request) {
@@ -136,6 +146,10 @@ export async function POST(req: Request) {
   // verbose_json gives us the per-segment log-probabilities we use to
   // infer how clearly the speaker pronounced the phrase.
   groqForm.append("response_format", "verbose_json");
+  // Word-level timestamps let us show which specific words had low
+  // per-segment clarity, not just an overall number.
+  groqForm.append("timestamp_granularities[]", "word");
+  groqForm.append("timestamp_granularities[]", "segment");
   groqForm.append("temperature", "0");
 
   const res = await fetch(
@@ -158,7 +172,10 @@ export async function POST(req: Request) {
 
   const similarity = similarityScore(transcription, target); // 0–100
   const clarity = clarityScore(json.segments); // 0–100
-  const diff = wordDiff(transcription, target);
+  // Per-word clarity derived from word timestamps falling inside each
+  // segment's [start, end]. A word inherits the clarity of its segment.
+  const heardWordClarity = perWordClarity(json.words, json.segments);
+  const diff = wordDiff(transcription, target, heardWordClarity);
   const score = combineScore(similarity, clarity, diff);
   const feedback = buildFeedback(score, transcription, target, clarity, diff);
 
@@ -177,6 +194,52 @@ export async function POST(req: Request) {
       wordPenalty: WORD_MISTAKE_PENALTY,
     },
   });
+}
+
+/**
+ * Match each Whisper word to the segment whose [start, end] contains it
+ * and inherit that segment's avg_logprob → clarity bucket. Returns a map
+ * of normalized word → clarity score (0-100).
+ *
+ * If word timestamps aren't returned, we fall back to an empty map (all
+ * words will render as "unknown clarity").
+ */
+function perWordClarity(
+  words: WhisperWordTimestamp[] | undefined,
+  segments: WhisperSegment[] | undefined,
+): Map<string, number> {
+  const out = new Map<string, number>();
+  if (!words || !segments) return out;
+  // Pre-compute clarity per segment.
+  const segClarity = segments.map((s) => ({
+    start: s.start ?? 0,
+    end: s.end ?? Number.POSITIVE_INFINITY,
+    score: singleSegmentClarity(s),
+  }));
+  // Word-timestamp index tracks duplicate words using (word#occurrence).
+  const seen = new Map<string, number>();
+  for (const w of words) {
+    const norm = normalize(w.word);
+    if (!norm) continue;
+    const occ = (seen.get(norm) ?? 0) + 1;
+    seen.set(norm, occ);
+    const key = occ === 1 ? norm : `${norm}#${occ}`;
+    const mid = (w.start + w.end) / 2;
+    const seg = segClarity.find((s) => mid >= s.start && mid < s.end)
+      ?? segClarity[segClarity.length - 1];
+    out.set(key, seg?.score ?? 50);
+  }
+  return out;
+}
+
+function singleSegmentClarity(s: WhisperSegment): number {
+  const lp = typeof s.avg_logprob === "number" ? s.avg_logprob : -0.3;
+  const noSpeech = typeof s.no_speech_prob === "number" ? s.no_speech_prob : 0;
+  const span = LOGPROB_CEILING - LOGPROB_FLOOR;
+  const mapped = Math.max(0, Math.min(1, (lp - LOGPROB_FLOOR) / span));
+  const base = Math.pow(mapped, 1.6) * 100;
+  const penalty = Math.min(60, Math.round(noSpeech * 100));
+  return Math.max(0, Math.min(100, Math.round(base - penalty)));
 }
 
 /**
@@ -258,7 +321,7 @@ function combineScore(
 // Word-level diff
 // ---------------------------------------------------------------------------
 
-export type WordStatus = "ok" | "missed" | "wrong" | "extra";
+export type WordStatus = "ok" | "unclear" | "missed" | "wrong" | "extra";
 
 export interface WordDiffEntry {
   /** Token the target expected (or null for an unexpected extra word). */
@@ -266,6 +329,8 @@ export interface WordDiffEntry {
   /** What we actually heard aligned to this slot. */
   heard: string | null;
   status: WordStatus;
+  /** 0-100 clarity for this slot (undefined when we couldn't score it). */
+  clarity?: number;
 }
 
 export interface WordDiff {
@@ -287,7 +352,22 @@ function tokenize(s: string): string[] {
  *   missed  — target word has no counterpart in heard
  *   extra   — heard a word that wasn't in the target
  */
-function wordDiff(heardText: string, targetText: string): WordDiff {
+// Below this threshold, a text-matched word is marked "unclear" instead
+// of "ok" — Whisper transcribed it but wasn't confident in the audio,
+// so the user likely mispronounced it even though we can't tell from
+// the text alone.
+const PER_WORD_UNCLEAR_THRESHOLD = clampNum(
+  Number(process.env.PRONUNCIATION_PER_WORD_UNCLEAR_THRESHOLD),
+  0,
+  100,
+  70,
+);
+
+function wordDiff(
+  heardText: string,
+  targetText: string,
+  heardClarity: Map<string, number> = new Map(),
+): WordDiff {
   const want = tokenize(targetText);
   const got = tokenize(heardText);
   const m = want.length;
@@ -310,13 +390,26 @@ function wordDiff(heardText: string, targetText: string): WordDiff {
     }
   }
 
-  // Backtrace to build per-word ops.
+  // Backtrace to build per-word ops. Track duplicate word occurrences so
+  // clarity lookups stay in sync with the tokenizer.
+  const seenCounts = new Map<string, number>();
+  const clarityOf = (word: string): number | undefined => {
+    const occ = (seenCounts.get(word) ?? 0) + 1;
+    seenCounts.set(word, occ);
+    const key = occ === 1 ? word : `${word}#${occ}`;
+    return heardClarity.get(key) ?? heardClarity.get(word);
+  };
+
   const ops: WordDiffEntry[] = [];
   let i = m;
   let j = n;
   while (i > 0 || j > 0) {
     if (i > 0 && j > 0 && want[i - 1] === got[j - 1]) {
-      ops.unshift({ target: want[i - 1], heard: got[j - 1], status: "ok" });
+      ops.unshift({
+        target: want[i - 1],
+        heard: got[j - 1],
+        status: "ok",
+      });
       i--;
       j--;
       continue;
@@ -344,6 +437,19 @@ function wordDiff(heardText: string, targetText: string): WordDiff {
     } else {
       ops.unshift({ target: null, heard: got[j - 1], status: "extra" });
       j--;
+    }
+  }
+
+  // Second pass: attach per-word clarity (from the heard audio) to each
+  // op, and promote "ok" words with low clarity to "unclear" so the UI
+  // colors them differently.
+  seenCounts.clear();
+  for (const op of ops) {
+    if (!op.heard) continue;
+    const c = clarityOf(op.heard);
+    if (typeof c === "number") op.clarity = c;
+    if (op.status === "ok" && typeof c === "number" && c < PER_WORD_UNCLEAR_THRESHOLD) {
+      op.status = "unclear";
     }
   }
 

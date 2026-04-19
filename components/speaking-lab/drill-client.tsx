@@ -36,7 +36,8 @@ function pickMime(): string {
 interface WordDiffEntry {
   target: string | null;
   heard: string | null;
-  status: "ok" | "missed" | "wrong" | "extra";
+  status: "ok" | "unclear" | "missed" | "wrong" | "extra";
+  clarity?: number;
 }
 interface WordDiff {
   words: WordDiffEntry[];
@@ -251,54 +252,90 @@ export function SpeakingLabDrill({ all }: Props) {
             </div>
             <div className="space-y-2 text-sm">
               {result.diff && result.diff.words.length > 0 ? (
-                <div className="flex flex-wrap gap-1">
-                  {result.diff.words.map((w, i) => {
-                    if (w.status === "ok") {
-                      return (
-                        <span
-                          key={i}
-                          className="rounded-md bg-emerald-500/10 px-2 py-0.5 text-emerald-700 dark:text-emerald-300"
-                        >
-                          {w.target}
-                        </span>
-                      );
-                    }
-                    if (w.status === "wrong") {
-                      return (
-                        <span
-                          key={i}
-                          title={`You said "${w.heard}"`}
-                          className="rounded-md bg-amber-500/10 px-2 py-0.5 text-amber-700 dark:text-amber-300"
-                        >
-                          {w.target}
-                          <span className="ml-1 text-[10px] text-muted-foreground">
-                            (heard: {w.heard})
+                <>
+                  <div className="flex flex-wrap gap-1">
+                    {result.diff.words.map((w, i) => {
+                      const clarityLabel =
+                        typeof w.clarity === "number"
+                          ? ` · clarity ${w.clarity}%`
+                          : "";
+                      if (w.status === "ok") {
+                        return (
+                          <span
+                            key={i}
+                            title={`Correct${clarityLabel}`}
+                            className="rounded-md bg-emerald-500/10 px-2 py-0.5 text-emerald-700 dark:text-emerald-300"
+                          >
+                            {w.target}
                           </span>
-                        </span>
-                      );
-                    }
-                    if (w.status === "missed") {
+                        );
+                      }
+                      if (w.status === "unclear") {
+                        return (
+                          <span
+                            key={i}
+                            title={`Right word, but pronunciation was unclear${clarityLabel}`}
+                            className="rounded-md border border-dashed border-amber-500/60 bg-amber-500/5 px-2 py-0.5 text-amber-700 dark:text-amber-300"
+                          >
+                            {w.target}
+                            {typeof w.clarity === "number" ? (
+                              <span className="ml-1 text-[10px] text-muted-foreground">
+                                {w.clarity}%
+                              </span>
+                            ) : null}
+                          </span>
+                        );
+                      }
+                      if (w.status === "wrong") {
+                        return (
+                          <span
+                            key={i}
+                            title={`You said "${w.heard}"${clarityLabel}`}
+                            className="rounded-md bg-amber-500/20 px-2 py-0.5 text-amber-800 dark:text-amber-200"
+                          >
+                            {w.target}
+                            <span className="ml-1 text-[10px] text-muted-foreground">
+                              (heard: {w.heard})
+                            </span>
+                          </span>
+                        );
+                      }
+                      if (w.status === "missed") {
+                        return (
+                          <span
+                            key={i}
+                            title="Word missing in your recording"
+                            className="rounded-md bg-rose-500/10 px-2 py-0.5 text-rose-700 line-through dark:text-rose-300"
+                          >
+                            {w.target}
+                          </span>
+                        );
+                      }
                       return (
                         <span
                           key={i}
-                          title="Word missing in your recording"
-                          className="rounded-md bg-rose-500/10 px-2 py-0.5 text-rose-700 line-through dark:text-rose-300"
+                          title={`Extra word you said${clarityLabel}`}
+                          className="rounded-md bg-muted px-2 py-0.5 italic text-muted-foreground"
                         >
-                          {w.target}
+                          +{w.heard}
                         </span>
                       );
-                    }
-                    return (
-                      <span
-                        key={i}
-                        title="Extra word you said"
-                        className="rounded-md bg-muted px-2 py-0.5 italic text-muted-foreground"
-                      >
-                        +{w.heard}
-                      </span>
-                    );
-                  })}
-                </div>
+                    })}
+                  </div>
+                  <p className="text-[10px] text-muted-foreground">
+                    <span className="inline-block h-2 w-2 rounded-sm bg-emerald-500/60 align-middle" />{" "}
+                    clean
+                    {"  "}
+                    <span className="ml-2 inline-block h-2 w-2 rounded-sm border border-dashed border-amber-500 align-middle" />{" "}
+                    right word · unclear pronunciation
+                    {"  "}
+                    <span className="ml-2 inline-block h-2 w-2 rounded-sm bg-amber-500/40 align-middle" />{" "}
+                    wrong word
+                    {"  "}
+                    <span className="ml-2 inline-block h-2 w-2 rounded-sm bg-rose-500/40 align-middle" />{" "}
+                    missed
+                  </p>
+                </>
               ) : null}
               <p>
                 <span className="text-muted-foreground">Target: </span>
