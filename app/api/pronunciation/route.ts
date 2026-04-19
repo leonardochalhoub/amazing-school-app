@@ -37,7 +37,7 @@ const CLARITY_WEIGHT = clampNum(
   Number(process.env.PRONUNCIATION_CLARITY_WEIGHT),
   0,
   1,
-  0.2,
+  0.1,
 );
 // Logprob range used to map Whisper's per-segment confidence to a 0–100
 // clarity score. Whisper's avg_logprob is negative; closer to 0 = more
@@ -71,8 +71,8 @@ const RESCUE_PENALTY_THRESHOLD = clampNum(
 const RESCUE_PENALTY_WEIGHT = clampNum(
   Number(process.env.PRONUNCIATION_RESCUE_PENALTY_WEIGHT),
   0,
+  3,
   2,
-  1.2,
 );
 const SCORE_CEILING = clampNum(
   Number(process.env.PRONUNCIATION_CEILING),
