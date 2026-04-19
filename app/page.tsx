@@ -69,8 +69,30 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <section className="flex-1 flex flex-col items-center justify-center px-4 py-20 md:py-32">
+      <section className="flex-1 flex flex-col items-center justify-center px-4 py-10 md:py-16">
         <div className="max-w-3xl text-center space-y-8">
+          <div>
+            <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+              {locale === "pt-BR"
+                ? "Ou explore direto ↓"
+                : "Or explore right now ↓"}
+            </p>
+            <DemoAccess
+              teacherLabel={
+                locale === "pt-BR"
+                  ? "Ver como professora"
+                  : "View as a teacher"
+              }
+              studentLabel={
+                locale === "pt-BR"
+                  ? "Ver como estudante"
+                  : "View as a student"
+              }
+              teacherHint={locale === "pt-BR" ? "Demo" : "Live demo"}
+              studentHint={locale === "pt-BR" ? "Demo" : "Live demo"}
+            />
+          </div>
+
           <Badge
             variant="secondary"
             className="px-4 py-1.5 text-sm font-medium border border-border"
@@ -116,28 +138,6 @@ export default function Home() {
                 {t.landing.signIn}
               </Button>
             </Link>
-          </div>
-
-          <div className="pt-6">
-            <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-              {locale === "pt-BR"
-                ? "Ou explore direto ↓"
-                : "Or explore right now ↓"}
-            </p>
-            <DemoAccess
-              teacherLabel={
-                locale === "pt-BR"
-                  ? "Ver como professora"
-                  : "View as a teacher"
-              }
-              studentLabel={
-                locale === "pt-BR"
-                  ? "Ver como estudante"
-                  : "View as a student"
-              }
-              teacherHint={locale === "pt-BR" ? "Demo" : "Live demo"}
-              studentHint={locale === "pt-BR" ? "Demo" : "Live demo"}
-            />
           </div>
 
           {/* Stats — live counts pulled from the database */}
