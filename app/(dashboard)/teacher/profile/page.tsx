@@ -6,10 +6,7 @@ import { PrivacyNotice } from "@/components/shared/privacy-notice";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, GraduationCap, ArrowUpRight, Image as ImageIcon } from "lucide-react";
 import { redirect } from "next/navigation";
-import {
-  isLogoEligible,
-  SCHOOL_LOGO_SRC,
-} from "@/lib/actions/school-logo";
+import { isLogoEligible, SCHOOL_LOGO_SRC } from "@/lib/school-logo";
 import { SchoolLogoToggle } from "@/components/teacher/school-logo-toggle";
 
 export default async function TeacherProfilePage() {

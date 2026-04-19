@@ -13,7 +13,7 @@ import {
   Pie,
   Cell,
 } from "recharts";
-import type { ManagementRow } from "@/lib/actions/payments";
+import type { ManagementRow } from "@/lib/payments-types";
 
 interface Props {
   months: string[]; // newest first

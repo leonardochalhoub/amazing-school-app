@@ -2,7 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
 import { isOwnerEmail } from "@/lib/auth/roles";
-import { isLogoEligible, SCHOOL_LOGO_SRC } from "@/lib/actions/school-logo";
+import { isLogoEligible, SCHOOL_LOGO_SRC } from "@/lib/school-logo";
 import { redirect } from "next/navigation";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";

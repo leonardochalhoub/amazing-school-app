@@ -2,7 +2,7 @@
 
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import type { ManagementData, ManagementRow, StudentPaymentRow } from "./payments";
+import type { ManagementData, ManagementRow, StudentPaymentRow } from "@/lib/payments-types";
 
 function firstOfMonth(d: Date): string {
   const y = d.getFullYear();

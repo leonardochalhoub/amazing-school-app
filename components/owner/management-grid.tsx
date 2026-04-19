@@ -8,11 +8,13 @@ import { Input } from "@/components/ui/input";
 import {
   cyclePaymentState,
   setStudentTuition,
+} from "@/lib/actions/payments";
+import {
   cellStateOf,
   type ManagementRow,
   type PaymentCellState,
   type StudentPaymentRow,
-} from "@/lib/actions/payments";
+} from "@/lib/payments-types";
 
 interface Props {
   months: string[]; // newest first (YYYY-MM-01)

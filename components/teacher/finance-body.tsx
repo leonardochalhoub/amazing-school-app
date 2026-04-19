@@ -13,7 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ManagementGrid } from "@/components/owner/management-grid";
 import { RevenueAnalytics } from "@/components/owner/revenue-analytics";
 import { useI18n } from "@/lib/i18n/context";
-import type { ManagementRow } from "@/lib/actions/payments";
+import type { ManagementRow } from "@/lib/payments-types";
 
 const BRL = (cents: number) =>
   new Intl.NumberFormat("pt-BR", {

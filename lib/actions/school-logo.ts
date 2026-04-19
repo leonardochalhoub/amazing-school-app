@@ -3,31 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-
-/**
- * The white-label logo currently has a single approved filename in the
- * `public/` folder. Whitelisted teachers see a toggle on their Profile
- * page that flips `profiles.school_logo_enabled` on/off.
- */
-export const SCHOOL_LOGO_SRC = "/branding/T%20-%202.png";
-
-const WHITELISTED_EMAILS = ["leochalhoub@hotmail.com"];
-function nameMatchesWhitelist(name: string): boolean {
-  const n = name.toLowerCase().trim();
-  if (!n) return false;
-  if (n === "leonardo chalhoub" || n === "leo chalhoub") return true;
-  if (n.includes("tatiana") && n.includes("sequeira")) return true;
-  return false;
-}
-
-export function isLogoEligible(
-  email: string | null | undefined,
-  fullName: string,
-): boolean {
-  const mail = (email ?? "").toLowerCase().trim();
-  if (WHITELISTED_EMAILS.includes(mail)) return true;
-  return nameMatchesWhitelist(fullName);
-}
+import { isLogoEligible } from "@/lib/school-logo";
 
 export async function setSchoolLogoEnabled(enabled: boolean) {
   const supabase = await createClient();
