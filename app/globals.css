@@ -50,41 +50,51 @@
 }
 
 :root {
-  /* Cool, slightly slate-tinted light palette — easier on the eyes than
-     pure white. Every neutral has a soft chroma pointed at blue (hue
-     ~260) so the UI reads as calm and professional rather than clinical. */
-  --background: oklch(0.965 0.004 260);
-  --foreground: oklch(0.215 0.018 260);
-  --card: oklch(0.985 0.003 260);
-  --card-foreground: oklch(0.215 0.018 260);
-  --popover: oklch(0.985 0.003 260);
-  --popover-foreground: oklch(0.215 0.018 260);
-  --primary: oklch(0.27 0.04 260);
-  --primary-foreground: oklch(0.98 0.002 260);
-  --secondary: oklch(0.93 0.006 260);
-  --secondary-foreground: oklch(0.27 0.04 260);
-  --muted: oklch(0.93 0.006 260);
-  --muted-foreground: oklch(0.5 0.02 260);
-  --accent: oklch(0.92 0.008 260);
-  --accent-foreground: oklch(0.27 0.04 260);
-  --destructive: oklch(0.57 0.22 25);
-  --border: oklch(0.88 0.008 260);
-  --input: oklch(0.89 0.008 260);
-  --ring: oklch(0.68 0.04 260);
-  --chart-1: oklch(0.62 0.18 260);
-  --chart-2: oklch(0.65 0.18 300);
-  --chart-3: oklch(0.65 0.16 170);
-  --chart-4: oklch(0.7 0.17 60);
-  --chart-5: oklch(0.6 0.2 20);
+  /* "Dim paper" light palette — a deeper slate than a typical light mode,
+     tuned for comfortable long reading in any lighting. Every neutral
+     keeps a subtle chroma pointed at blue (hue ~260) with a tiny hint of
+     violet at the accents, so the surface reads as matte and considered
+     rather than bright and clinical.
+
+     Design rails:
+       bg     0.83  — clearly darker than classic "light" mode
+       card   0.88  — just enough lift so cards float above the bg
+       muted  0.81  — pressed / resting pills
+       border 0.72  — visible divider lines at comfortable contrast
+       text   0.19  — deep slate ink
+  */
+  --background: oklch(0.83 0.01 260);
+  --foreground: oklch(0.19 0.024 260);
+  --card: oklch(0.88 0.008 260);
+  --card-foreground: oklch(0.19 0.024 260);
+  --popover: oklch(0.9 0.008 260);
+  --popover-foreground: oklch(0.19 0.024 260);
+  --primary: oklch(0.28 0.06 270);
+  --primary-foreground: oklch(0.97 0.004 260);
+  --secondary: oklch(0.81 0.012 260);
+  --secondary-foreground: oklch(0.28 0.06 270);
+  --muted: oklch(0.81 0.012 260);
+  --muted-foreground: oklch(0.42 0.025 260);
+  --accent: oklch(0.85 0.022 290);
+  --accent-foreground: oklch(0.28 0.06 270);
+  --destructive: oklch(0.55 0.2 25);
+  --border: oklch(0.72 0.018 260);
+  --input: oklch(0.78 0.014 260);
+  --ring: oklch(0.6 0.08 270);
+  --chart-1: oklch(0.58 0.2 270);
+  --chart-2: oklch(0.6 0.2 310);
+  --chart-3: oklch(0.62 0.18 170);
+  --chart-4: oklch(0.68 0.18 60);
+  --chart-5: oklch(0.58 0.22 20);
   --radius: 0.625rem;
-  --sidebar: oklch(0.96 0.005 260);
-  --sidebar-foreground: oklch(0.215 0.018 260);
-  --sidebar-primary: oklch(0.27 0.04 260);
-  --sidebar-primary-foreground: oklch(0.98 0.002 260);
-  --sidebar-accent: oklch(0.92 0.008 260);
-  --sidebar-accent-foreground: oklch(0.27 0.04 260);
-  --sidebar-border: oklch(0.88 0.008 260);
-  --sidebar-ring: oklch(0.68 0.04 260);
+  --sidebar: oklch(0.82 0.012 260);
+  --sidebar-foreground: oklch(0.19 0.024 260);
+  --sidebar-primary: oklch(0.28 0.06 270);
+  --sidebar-primary-foreground: oklch(0.97 0.004 260);
+  --sidebar-accent: oklch(0.85 0.022 290);
+  --sidebar-accent-foreground: oklch(0.28 0.06 270);
+  --sidebar-border: oklch(0.72 0.018 260);
+  --sidebar-ring: oklch(0.6 0.08 270);
 }
 
 .dark {
@@ -142,22 +152,24 @@
   --accent: oklch(0.72 0.2 285);
 }
 
-/* V2: Teacher theme — professional admin register, clean and modern. */
+/* V2: Teacher theme — professional admin register, clean and modern.
+   Light-mode tokens are pulled into the "dim paper" range so the teacher
+   dashboard never flashes white. */
 .theme-teacher {
-  --background: oklch(0.99 0.004 260);
-  --foreground: oklch(0.18 0.01 260);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.01 260);
-  --muted: oklch(0.96 0.005 260);
-  --muted-foreground: oklch(0.48 0.02 260);
+  --background: oklch(0.83 0.01 260);
+  --foreground: oklch(0.19 0.024 260);
+  --card: oklch(0.88 0.008 260);
+  --card-foreground: oklch(0.19 0.024 260);
+  --muted: oklch(0.81 0.012 260);
+  --muted-foreground: oklch(0.42 0.025 260);
   --primary: oklch(0.45 0.19 270);        /* indigo — professional, not sad */
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.005 260);
-  --secondary-foreground: oklch(0.28 0.015 260);
-  --accent: oklch(0.94 0.012 270);
+  --primary-foreground: oklch(0.97 0.004 260);
+  --secondary: oklch(0.81 0.012 260);
+  --secondary-foreground: oklch(0.28 0.02 270);
+  --accent: oklch(0.85 0.022 290);
   --accent-foreground: oklch(0.28 0.02 270);
-  --border: oklch(0.92 0.008 260);
-  --input: oklch(0.92 0.008 260);
+  --border: oklch(0.72 0.018 260);
+  --input: oklch(0.78 0.014 260);
   --ring: oklch(0.45 0.19 270);
   --chart-1: oklch(0.55 0.2 270);          /* indigo */
   --chart-2: oklch(0.62 0.17 165);         /* emerald */
@@ -215,6 +227,17 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Two soft radial washes keep the "dim paper" background from
+       reading as flat gray. The violet + sky tints are under 4% alpha
+       so they add depth without colouring the UI. Disabled inside the
+       dark theme — the dark palette already has gradients in layouts. */
+    background-image:
+      radial-gradient(ellipse 120vw 60vh at 15% -10%, rgba(129, 140, 248, 0.08), transparent 60%),
+      radial-gradient(ellipse 120vw 60vh at 85% 110%, rgba(244, 114, 182, 0.05), transparent 60%);
+    background-attachment: fixed;
+  }
+  .dark body {
+    background-image: none;
   }
   html {
     @apply font-sans;
