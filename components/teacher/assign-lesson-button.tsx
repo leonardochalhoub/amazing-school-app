@@ -334,7 +334,7 @@ export function AssignLessonButton({
           if (!o) reset();
         }}
       >
-        <DialogContent className="max-h-[90vh] max-w-3xl overflow-y-auto">
+        <DialogContent className="max-h-[90vh] w-[95vw] max-w-6xl overflow-y-auto sm:w-[92vw]">
           <DialogHeader>
             <DialogTitle>{t.title}</DialogTitle>
             <DialogDescription>
