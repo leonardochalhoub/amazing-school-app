@@ -230,13 +230,18 @@ export async function claimInvitation(token: string) {
     }
   }
 
-  // Make sure profile has a sensible full_name (prefer roster name).
-  const fullName =
-    rosterData.full_name || inv.display_name || user.email?.split("@")[0] || "Student";
-  await admin
-    .from("profiles")
-    .update({ full_name: fullName })
-    .eq("id", user.id);
+  // Only set full_name when the signed-in user doesn't have one yet (fresh
+  // signup path). NEVER overwrite an existing profile name with the roster
+  // student's — that's how Leonardo's account ended up renamed "Maria Silva"
+  // after claiming Maria's invite.
+  if (!profile?.full_name) {
+    const fullName =
+      rosterData.full_name || inv.display_name || user.email?.split("@")[0] || "Student";
+    await admin
+      .from("profiles")
+      .update({ full_name: fullName })
+      .eq("id", user.id);
+  }
 
   // Add to classroom (idempotent).
   const { error: memErr } = await admin

@@ -340,30 +340,24 @@ export async function getAssignmentsForRosterStudent(
   if (!user) return [];
   const admin = createAdminClient();
 
+  // Verify the roster row belongs to the teacher, then return ONLY the
+  // assignments specifically targeted at this roster student. Classroom-wide
+  // rows (student_id=null, roster_student_id=null) are intentionally excluded:
+  // the per-student profile page must show only that student's own work, not
+  // lessons assigned to the whole classroom.
   const { data: rs } = await admin
     .from("roster_students")
-    .select("classroom_id")
+    .select("id")
     .eq("id", rosterStudentId)
     .eq("teacher_id", user.id)
     .maybeSingle();
-  const classroomId = rs?.classroom_id as string | null | undefined;
+  if (!rs) return [];
 
-  let query;
-  if (classroomId) {
-    query = admin
-      .from("lesson_assignments")
-      .select("*")
-      .or(
-        `roster_student_id.eq.${rosterStudentId},and(classroom_id.eq.${classroomId},student_id.is.null,roster_student_id.is.null)`
-      );
-  } else {
-    query = admin
-      .from("lesson_assignments")
-      .select("*")
-      .eq("roster_student_id", rosterStudentId);
-  }
-
-  const { data } = await query.order("order_index", { ascending: true });
+  const { data } = await admin
+    .from("lesson_assignments")
+    .select("*")
+    .eq("roster_student_id", rosterStudentId)
+    .order("order_index", { ascending: true });
   return (
     (data as (LessonAssignment & { roster_student_id: string | null })[] | null) ??
     []

@@ -29,7 +29,7 @@ export async function getClassroomStudentRows(
       .eq("classroom_id", classroomId),
     admin
       .from("roster_students")
-      .select("id, full_name, has_avatar, classroom_id, age_group, gender")
+      .select("id, full_name, has_avatar, classroom_id, age_group, gender, auth_user_id")
       .eq("classroom_id", classroomId)
       .eq("teacher_id", user.id),
   ]);
@@ -37,8 +37,21 @@ export async function getClassroomStudentRows(
   const authRows = (membersRes.data as unknown as MemberRow[] | null) ?? [];
   const rosterRows = rosterRes.data ?? [];
 
-  const authStudents = authRows.length > 0
-    ? await buildStudentRows(authRows, [classroomId], supabase, admin)
+  // Dedupe: if a roster row is linked to an auth user that's ALSO a
+  // classroom_member, we'd show the same person twice. Keep the roster
+  // variant (it carries the teacher-set avatar/age/gender) and drop the
+  // auth duplicate.
+  const linkedAuthIds = new Set(
+    rosterRows
+      .map((r) => (r as { auth_user_id: string | null }).auth_user_id)
+      .filter((id): id is string => !!id),
+  );
+  const dedupedAuthRows = authRows.filter(
+    (m) => !linkedAuthIds.has(m.student_id),
+  );
+
+  const authStudents = dedupedAuthRows.length > 0
+    ? await buildStudentRows(dedupedAuthRows, [classroomId], supabase, admin)
     : [];
 
   const rosterIds = rosterRows
