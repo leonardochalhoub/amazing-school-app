@@ -19,7 +19,8 @@ export async function getStudentStats(studentId?: string) {
   const { data: xpEvents } = await supabase
     .from("xp_events")
     .select("xp_amount")
-    .eq("student_id", userId);
+    .eq("student_id", userId)
+    .limit(50_000);
 
   const totalXp = xpEvents?.reduce((sum, e) => sum + e.xp_amount, 0) ?? 0;
   const level = getLevel(totalXp);
@@ -67,7 +68,8 @@ export async function getLeaderboard(classroomId: string) {
   const { data: xpEvents } = await supabase
     .from("xp_events")
     .select("student_id, xp_amount")
-    .eq("classroom_id", classroomId);
+    .eq("classroom_id", classroomId)
+    .limit(50_000);
 
   const xpMap: Record<string, number> = {};
   xpEvents?.forEach((e) => {

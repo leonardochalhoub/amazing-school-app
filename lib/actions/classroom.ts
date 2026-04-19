@@ -136,7 +136,8 @@ export async function getClassroomDetails(classroomId: string) {
   const { data: xpData } = await supabase
     .from("xp_events")
     .select("student_id, xp_amount")
-    .eq("classroom_id", classroomId);
+    .eq("classroom_id", classroomId)
+    .limit(50_000);
 
   const studentXp: Record<string, number> = {};
   xpData?.forEach((e) => {

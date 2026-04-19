@@ -184,25 +184,32 @@ async function buildStudentRows(
   if (members.length === 0) return [];
   const studentIds = Array.from(new Set(members.map((m) => m.student_id)));
 
+  // Supabase's default row cap is 1000 — every aggregate-style query below
+  // has to override it explicitly or the very first student's events fill
+  // the page and the rest come back as zero. The hard ceiling is 50k here,
+  // which covers every seeded demo scenario by a wide margin.
   const [xpRes, progressRes, assignRes, activityRes] = await Promise.all([
     admin
       .from("xp_events")
       .select("student_id, classroom_id, xp_amount")
-      .in("classroom_id", classroomIds),
+      .in("classroom_id", classroomIds)
+      .limit(50_000),
     admin
       .from("lesson_progress")
       .select("student_id, classroom_id, completed_at, started_at")
-      .in("classroom_id", classroomIds),
+      .in("classroom_id", classroomIds)
+      .limit(50_000),
     admin
       .from("lesson_assignments")
       .select("student_id, classroom_id, status")
-      .in("classroom_id", classroomIds),
+      .in("classroom_id", classroomIds)
+      .limit(50_000),
     admin
       .from("daily_activity")
       .select("student_id, activity_date")
       .in("student_id", studentIds)
       .order("activity_date", { ascending: false })
-      .limit(studentIds.length * 60),
+      .limit(Math.max(50_000, studentIds.length * 60)),
   ]);
 
   const xpByPair = new Map<string, number>();
@@ -350,17 +357,20 @@ export async function getTeacherDashboardData(): Promise<TeacherDashboardData> {
         "student_id",
         memberRows.map((m) => m.student_id)
       )
-      .eq("activity_date", today),
+      .eq("activity_date", today)
+      .limit(50_000),
     admin
       .from("lesson_progress")
       .select("student_id")
       .in("classroom_id", classroomIds)
-      .gte("completed_at", `${weekAgo}T00:00:00`),
+      .gte("completed_at", `${weekAgo}T00:00:00`)
+      .limit(50_000),
     admin
       .from("xp_events")
       .select("xp_amount")
       .in("classroom_id", classroomIds)
-      .gte("created_at", `${weekAgo}T00:00:00`),
+      .gte("created_at", `${weekAgo}T00:00:00`)
+      .limit(50_000),
   ]);
 
   const activeTodayIds = new Set((dailyRes.data ?? []).map((r) => r.student_id as string));
