@@ -5,9 +5,15 @@
  * sync export (const, sync function, type re-export) crashes the build.
  */
 
-export const SCHOOL_LOGO_SRC = "/branding/T%20-%202.png";
+// Plain filename — no spaces, no dashes — so the URL is bulletproof
+// across proxies, CDNs, and header rewrites. The original file is
+// preserved alongside as `T - 2.png` for history.
+export const SCHOOL_LOGO_SRC = "/branding/school-logo.png";
 
-const WHITELISTED_EMAILS = ["leochalhoub@hotmail.com"];
+const WHITELISTED_EMAILS = [
+  "leochalhoub@hotmail.com",
+  "tatianasequeira@yahoo.com.br",
+];
 
 function nameMatchesWhitelist(name: string): boolean {
   const n = name.toLowerCase().trim();
