@@ -304,13 +304,19 @@ function combineScore(
     rescuePenalty = (RESCUE_PENALTY_THRESHOLD - clarity) * RESCUE_PENALTY_WEIGHT;
   }
 
-  // Per-word penalty — each wrong / missed target word shaves a fixed
-  // amount so the user can't "average out" a fluff-filled recording.
-  const mistakes = diff.words.filter((w) => w.status !== "ok").length;
+  // Per-word penalty — only for real word errors (wrong / missed /
+  // extra). "unclear" means the right word was said with low per-word
+  // clarity, and clarity is already factored into the blend above, so
+  // it must NOT count here (otherwise each unclear word double-hits
+  // the score — the reason "Where did you go…" with clarity 55 was
+  // scoring 14 instead of ~91).
+  const mistakes = diff.words.filter(
+    (w) => w.status === "wrong" || w.status === "missed" || w.status === "extra",
+  ).length;
   const penalized = blended - mistakes * WORD_MISTAKE_PENALTY - rescuePenalty;
 
   // Only award the full ceiling when every target word matched AND the
-  // raw numbers say so.
+  // raw numbers say so. "unclear" counts as matched here.
   const hasAllWords = mistakes === 0;
   const ceiling =
     PERFECT_REQUIRES_ALL_WORDS && !hasAllWords ? SCORE_CEILING - 2 : SCORE_CEILING;
