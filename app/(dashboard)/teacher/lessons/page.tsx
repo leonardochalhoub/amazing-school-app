@@ -298,58 +298,70 @@ export default async function TeacherLessonsPage({
         </div>
       </header>
 
-      <nav className="flex flex-wrap items-center gap-2 rounded-xl border border-border bg-card p-3 shadow-xs">
-        <LessonSearchInput initialValue={query} />
-        <FilterGroup label="Source" name="source" active={source === "all" ? undefined : source}>
-          {(
-            [
-              { key: "all", label: "All" },
-              { key: "library", label: "Library" },
-              { key: "curated", label: "Curated" },
-              { key: "mine", label: "My lessons" },
-              { key: "bank", label: "My exercises" },
-            ] as const
-          ).map((s) => (
-            <FilterPill
-              key={s.key}
-              href={s.key === "all" ? urlWithout("source") : urlWith("source", s.key)}
-              label={s.label}
-              active={source === s.key}
-            />
-          ))}
-        </FilterGroup>
-        <FilterGroup label="CEFR" name="cefr" active={filters.cefrBand}>
-          <FilterPill href={urlWithout("cefr")} label="All" active={!filters.cefrBand} />
-          {CEFR_BANDS.map((b) => (
-            <FilterPill
-              key={b}
-              href={urlWith("cefr", b)}
-              label={b.toUpperCase()}
-              active={filters.cefrBand === b}
-            />
-          ))}
-        </FilterGroup>
-        <FilterGroup label="Skill" name="skill" active={filters.skill}>
-          <FilterPill href={urlWithout("skill")} label="All" active={!filters.skill} />
-          {UI_SKILLS.map((s) => (
-            <FilterPill
-              key={s}
-              href={urlWith("skill", s)}
-              label={s[0].toUpperCase() + s.slice(1)}
-              active={filters.skill === s}
-            />
-          ))}
-        </FilterGroup>
-        <FilterGroup label="Status" name="status" active={filters.status}>
-          {(["all", "draft", "published"] as const).map((s) => (
-            <FilterPill
-              key={s}
-              href={urlWith("status", s)}
-              label={s[0].toUpperCase() + s.slice(1)}
-              active={filters.status === s}
-            />
-          ))}
-        </FilterGroup>
+      <nav className="space-y-2 rounded-xl border border-border bg-card p-3 shadow-xs">
+        {/* One row per filter category — search bar is the last row so
+            the classification pills stay stable while typing. */}
+        <div className="flex flex-wrap items-center gap-2">
+          <FilterGroup label="Source" name="source" active={source === "all" ? undefined : source}>
+            {(
+              [
+                { key: "all", label: "All" },
+                { key: "library", label: "Library" },
+                { key: "curated", label: "Curated" },
+                { key: "mine", label: "My lessons" },
+                { key: "bank", label: "My exercises" },
+              ] as const
+            ).map((s) => (
+              <FilterPill
+                key={s.key}
+                href={s.key === "all" ? urlWithout("source") : urlWith("source", s.key)}
+                label={s.label}
+                active={source === s.key}
+              />
+            ))}
+          </FilterGroup>
+        </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <FilterGroup label="CEFR" name="cefr" active={filters.cefrBand}>
+            <FilterPill href={urlWithout("cefr")} label="All" active={!filters.cefrBand} />
+            {CEFR_BANDS.map((b) => (
+              <FilterPill
+                key={b}
+                href={urlWith("cefr", b)}
+                label={b.toUpperCase()}
+                active={filters.cefrBand === b}
+              />
+            ))}
+          </FilterGroup>
+        </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <FilterGroup label="Skill" name="skill" active={filters.skill}>
+            <FilterPill href={urlWithout("skill")} label="All" active={!filters.skill} />
+            {UI_SKILLS.map((s) => (
+              <FilterPill
+                key={s}
+                href={urlWith("skill", s)}
+                label={s[0].toUpperCase() + s.slice(1)}
+                active={filters.skill === s}
+              />
+            ))}
+          </FilterGroup>
+        </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <FilterGroup label="Status" name="status" active={filters.status}>
+            {(["all", "draft", "published"] as const).map((s) => (
+              <FilterPill
+                key={s}
+                href={urlWith("status", s)}
+                label={s[0].toUpperCase() + s.slice(1)}
+                active={filters.status === s}
+              />
+            ))}
+          </FilterGroup>
+        </div>
+        <div className="flex flex-wrap items-center gap-2 pt-1">
+          <LessonSearchInput initialValue={query} />
+        </div>
       </nav>
 
       {source === "bank" ? (
