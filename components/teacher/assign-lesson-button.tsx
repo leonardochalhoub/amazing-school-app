@@ -334,7 +334,7 @@ export function AssignLessonButton({
           if (!o) reset();
         }}
       >
-        <DialogContent className="max-h-[90vh] w-[95vw] max-w-6xl overflow-y-auto sm:w-[92vw]">
+        <DialogContent className="max-h-[90vh] w-[95vw] max-w-6xl overflow-y-auto sm:w-[92vw] sm:max-w-6xl">
           <DialogHeader>
             <DialogTitle>{t.title}</DialogTitle>
             <DialogDescription>
@@ -540,6 +540,7 @@ export function AssignLessonButton({
                               <button
                                 type="button"
                                 onClick={() => toggleItem(it.slug)}
+                                title={`${it.cefr.toUpperCase()} · ${it.category} · ${it.title}`}
                                 className={`flex w-full items-center gap-2 border-b border-border/60 px-3 py-1.5 text-left text-xs last:border-b-0 transition-colors ${
                                   picked ? "bg-primary/10" : "hover:bg-muted/50"
                                 }`}
@@ -594,6 +595,7 @@ export function AssignLessonButton({
                               <button
                                 type="button"
                                 onClick={() => toggleItem(it.slug)}
+                                title={`${it.cefr.toUpperCase()} · ${it.artist}${it.year ? ` · ${it.year}` : ""} · ${it.title}`}
                                 className={`flex w-full items-center gap-2 border-b border-border/60 px-3 py-1.5 text-left text-xs last:border-b-0 transition-colors ${
                                   picked ? "bg-primary/10" : "hover:bg-muted/50"
                                 }`}
