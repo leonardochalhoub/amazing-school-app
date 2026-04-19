@@ -30,14 +30,14 @@ export function ListeningFeedbackPanel({ entries }: Props) {
             <Card>
               <CardContent className="space-y-2 p-4">
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <div className="flex items-center gap-2 text-sm">
+                  <div className="flex min-w-0 items-center gap-2 text-sm">
                     <Link
                       href={`/student/lessons/${e.lesson_slug}`}
-                      className="font-semibold hover:text-primary"
+                      className="min-w-0 break-all font-semibold hover:text-primary"
                     >
                       {e.lesson_slug}
                     </Link>
-                    <span className="text-[11px] text-muted-foreground">
+                    <span className="shrink-0 text-[11px] text-muted-foreground">
                       · {e.scene_id}
                     </span>
                   </div>

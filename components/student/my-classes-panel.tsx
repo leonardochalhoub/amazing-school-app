@@ -44,30 +44,41 @@ export function MyClassesPanel({ entries }: Props) {
             {entries.map((e) => (
               <li
                 key={e.id}
-                className="flex flex-wrap items-center gap-3 px-4 py-3 text-sm"
+                className="flex flex-col gap-2 px-4 py-3 text-sm sm:flex-row sm:flex-wrap sm:items-center sm:gap-3"
               >
-                <div className="flex min-w-[110px] flex-col">
+                {/* Top row on mobile: date + status pill + (optional) join link. */}
+                <div className="flex min-w-0 flex-wrap items-center gap-2">
                   <span className="inline-flex items-center gap-1 font-medium">
                     <Calendar className="h-3.5 w-3.5 text-muted-foreground" />
                     {e.event_date}
                   </span>
                   {e.event_time ? (
-                    <span className="mt-0.5 inline-flex items-center gap-1 text-[11px] text-muted-foreground">
+                    <span className="inline-flex items-center gap-1 text-[11px] text-muted-foreground">
                       <Clock className="h-3 w-3" />
                       {e.event_time.slice(0, 5)}
                     </span>
                   ) : null}
+                  <span
+                    className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium ${STATUS_COLOR[e.status]}`}
+                  >
+                    {e.status}
+                  </span>
+                  {e.meeting_link ? (
+                    <a
+                      href={e.meeting_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-auto inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+                    >
+                      <ExternalLink className="h-3 w-3" />
+                      Join
+                    </a>
+                  ) : null}
                 </div>
-
-                <span
-                  className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium ${STATUS_COLOR[e.status]}`}
-                >
-                  {e.status}
-                </span>
 
                 <div className="min-w-0 flex-1">
                   {e.lesson_content ? (
-                    <p className="truncate text-xs text-muted-foreground">
+                    <p className="break-words text-xs text-muted-foreground">
                       {e.lesson_content}
                     </p>
                   ) : null}
@@ -91,18 +102,6 @@ export function MyClassesPanel({ entries }: Props) {
                     </p>
                   ) : null}
                 </div>
-
-                {e.meeting_link ? (
-                  <a
-                    href={e.meeting_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
-                  >
-                    <ExternalLink className="h-3 w-3" />
-                    Join
-                  </a>
-                ) : null}
               </li>
             ))}
           </ul>

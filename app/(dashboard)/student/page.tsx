@@ -271,7 +271,7 @@ export default async function StudentHome() {
   const listeningResponses = await listStudentListeningResponses(10);
 
   return (
-    <div className="space-y-8 pb-16">
+    <div className="space-y-8 overflow-x-clip pb-16">
       {/* HERO ===================================================== */}
       <section
         className="relative overflow-hidden rounded-3xl border border-border p-6 md:p-8"
