@@ -6,13 +6,27 @@ import Image from "next/image";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { uploadAvatar, removeAvatar } from "@/lib/actions/avatars";
+import {
+  CartoonAvatar,
+  type AgeGroup,
+  type Gender,
+} from "@/components/shared/cartoon-avatar";
 
 interface AvatarUploaderProps {
   currentSignedUrl?: string | null;
   fullName: string;
+  userId?: string;
+  ageGroup?: AgeGroup | null;
+  gender?: Gender | null;
 }
 
-export function AvatarUploader({ currentSignedUrl, fullName }: AvatarUploaderProps) {
+export function AvatarUploader({
+  currentSignedUrl,
+  fullName,
+  userId,
+  ageGroup,
+  gender,
+}: AvatarUploaderProps) {
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
   const [preview, setPreview] = useState<string | null>(null);
@@ -75,6 +89,13 @@ export function AvatarUploader({ currentSignedUrl, fullName }: AvatarUploaderPro
             sizes="80px"
             className="object-cover"
             unoptimized
+          />
+        ) : ageGroup || gender ? (
+          <CartoonAvatar
+            ageGroup={ageGroup ?? null}
+            gender={gender ?? null}
+            seed={userId ?? fullName}
+            fullName={fullName}
           />
         ) : (
           <span>{initials}</span>

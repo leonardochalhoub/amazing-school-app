@@ -35,6 +35,17 @@ export default async function DashboardLayout({
   const avatarUrl = await resolveMyAvatarUrl(supabase, user.id);
   const isOwner = isOwnerEmail(user.email);
 
+  // Roster-linked students get a cartoon avatar fallback (matches the
+  // one rendered on their dashboard) so the navbar doesn't drop to
+  // initials when they don't have a real photo.
+  const { data: rosterSelf } = await admin
+    .from("roster_students")
+    .select("age_group, gender")
+    .eq("auth_user_id", user.id)
+    .maybeSingle();
+  const rosterAgeGroup = (rosterSelf as { age_group: "kid" | "teen" | "adult" | null } | null)?.age_group ?? null;
+  const rosterGender = (rosterSelf as { gender: "female" | "male" | null } | null)?.gender ?? null;
+
   return (
     <div className="relative flex min-h-screen flex-col overflow-x-clip bg-background">
       <div
@@ -49,6 +60,9 @@ export default async function DashboardLayout({
         role={role}
         avatarUrl={avatarUrl}
         isOwner={isOwner}
+        userId={user.id}
+        ageGroup={rosterAgeGroup}
+        gender={rosterGender}
       />
       <main className="w-full min-w-0 flex-1 overflow-x-clip">
         <div className="mx-auto w-full max-w-7xl min-w-0 overflow-x-clip px-4 py-6 md:px-8 md:py-8">

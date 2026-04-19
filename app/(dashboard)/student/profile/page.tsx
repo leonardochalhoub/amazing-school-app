@@ -20,6 +20,16 @@ export default async function StudentProfilePage() {
   if (!profile) redirect("/login");
 
   const signedUrl = await resolveMyAvatarUrl(supabase, user.id);
+  const { data: rosterSelf } = await admin
+    .from("roster_students")
+    .select("age_group, gender")
+    .eq("auth_user_id", user.id)
+    .maybeSingle();
+  const ageGroup =
+    (rosterSelf as { age_group: "kid" | "teen" | "adult" | null } | null)
+      ?.age_group ?? null;
+  const gender =
+    (rosterSelf as { gender: "female" | "male" | null } | null)?.gender ?? null;
 
   return (
     <div className="space-y-6 max-w-2xl">
@@ -38,6 +48,9 @@ export default async function StudentProfilePage() {
           <AvatarUploader
             currentSignedUrl={signedUrl}
             fullName={profile.full_name}
+            userId={user.id}
+            ageGroup={ageGroup}
+            gender={gender}
           />
           <p className="mt-3 text-xs text-muted-foreground">
             Max 5 MB · JPEG, PNG, or WebP · auto-resized to 512×512.

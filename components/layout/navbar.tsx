@@ -16,6 +16,11 @@ import {
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LocaleToggle } from "@/components/locale-toggle";
 import { BrandMark } from "@/components/layout/brand-mark";
+import {
+  CartoonAvatar,
+  type AgeGroup,
+  type Gender,
+} from "@/components/shared/cartoon-avatar";
 import { cn } from "@/lib/utils";
 
 interface NavbarProps {
@@ -23,9 +28,20 @@ interface NavbarProps {
   role: "teacher" | "student";
   avatarUrl?: string | null;
   isOwner?: boolean;
+  userId: string;
+  ageGroup?: AgeGroup | null;
+  gender?: Gender | null;
 }
 
-export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
+export function Navbar({
+  fullName,
+  role,
+  avatarUrl,
+  isOwner,
+  userId,
+  ageGroup,
+  gender,
+}: NavbarProps) {
   const { locale } = useI18n();
   const pathname = usePathname();
 
@@ -174,9 +190,18 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
 
           <DropdownMenu>
             <DropdownMenuTrigger className="group inline-flex h-9 items-center gap-1.5 rounded-full border border-border/70 bg-background/50 pl-1 pr-2 transition-colors hover:bg-accent">
-              <Avatar className="h-7 w-7">
+              <Avatar className="h-7 w-7 overflow-hidden">
                 {avatarUrl ? (
                   <AvatarImage src={avatarUrl} alt={fullName} />
+                ) : (ageGroup || gender) ? (
+                  <div className="h-full w-full">
+                    <CartoonAvatar
+                      ageGroup={ageGroup ?? null}
+                      gender={gender ?? null}
+                      seed={userId}
+                      fullName={fullName}
+                    />
+                  </div>
                 ) : null}
                 <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-violet-500 text-[10px] font-semibold text-white">
                   {initials}
