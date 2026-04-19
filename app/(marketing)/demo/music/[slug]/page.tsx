@@ -77,7 +77,7 @@ export default async function DemoMusicPage({
             </p>
           </header>
 
-          <div className="grid gap-6 lg:grid-cols-[1fr_300px]">
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
             <MusicBoard
               song={song}
               lessonSlug={`music:${slug}`}
@@ -112,7 +112,7 @@ export default async function DemoMusicPage({
                 </Card>
               ) : null}
 
-              <p className="text-[10px] leading-relaxed text-muted-foreground">
+              <p className="break-words text-[10px] leading-relaxed text-muted-foreground">
                 {song.copyright_notice}
               </p>
             </aside>

@@ -269,7 +269,7 @@ export function BulkAssignList({ rows, classrooms, students }: Props) {
       </div>
 
       {selected.size > 0 && (
-        <div className="fixed bottom-4 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2 rounded-full border border-primary/30 bg-background/95 px-3 py-2 shadow-xl backdrop-blur">
+        <div className="fixed bottom-4 left-1/2 z-50 flex max-w-[calc(100vw-1rem)] -translate-x-1/2 flex-wrap items-center justify-center gap-2 rounded-full border border-primary/30 bg-background/95 px-3 py-2 shadow-xl backdrop-blur">
           <span className="text-sm font-semibold">
             {selected.size} selected
           </span>

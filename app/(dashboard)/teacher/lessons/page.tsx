@@ -12,6 +12,7 @@ import { getTeacherOverview } from "@/lib/actions/teacher-dashboard";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { BulkAssignList } from "@/components/teacher/bulk-assign-list";
 import { LessonRow } from "@/components/teacher/lesson-row";
+import { LessonSearchInput } from "@/components/teacher/lesson-search-input";
 import {
   CEFR_BANDS,
   CEFR_BAND_SET,
@@ -48,6 +49,7 @@ export default async function TeacherLessonsPage({
     status?: string;
     course?: string;
     source?: string;
+    q?: string;
   }>;
 }) {
   const supabase = await createClient();
@@ -102,6 +104,19 @@ export default async function TeacherLessonsPage({
   ).includes(params.source as Source)
     ? (params.source as Source)
     : "all";
+  // Free-text query: matched case-insensitively against a row's title,
+  // slug, category, and CEFR level. Empty / whitespace-only means "no filter".
+  const query = (params.q ?? "").trim().toLowerCase();
+  const matchesQuery = (row: {
+    title: string;
+    slug: string;
+    category: string;
+    cefr_level: string;
+  }): boolean => {
+    if (!query) return true;
+    const hay = `${row.title} ${row.slug} ${row.category} ${row.cefr_level}`.toLowerCase();
+    return hay.includes(query);
+  };
 
   const [curatedAll, myLessons, bankItems, assignable, overview] =
     await Promise.all([
@@ -179,7 +194,7 @@ export default async function TeacherLessonsPage({
   const unified: UnifiedRow[] = [];
   if (source === "all" || source === "library") {
     for (const l of libraryLessons) {
-      unified.push({
+      const row: UnifiedRow = {
         source: "library",
         slug: l.slug,
         title: l.title,
@@ -192,12 +207,13 @@ export default async function TeacherLessonsPage({
         // /student/lessons/{slug}.
         href: `/teacher/lessons/library/${l.slug}`,
         exerciseCount: l.exercise_count,
-      });
+      };
+      if (matchesQuery(row)) unified.push(row);
     }
   }
   if (source === "all" || source === "curated") {
     for (const l of curatedLessons as LessonDraftMeta[]) {
-      unified.push({
+      const row: UnifiedRow = {
         source: "curated",
         slug: l.slug,
         title: l.title,
@@ -206,12 +222,13 @@ export default async function TeacherLessonsPage({
         published: l.published,
         updated_at: l.updated_at,
         href: `/teacher/lessons/${l.slug}`,
-      });
+      };
+      if (matchesQuery(row)) unified.push(row);
     }
   }
   if (source === "all" || source === "mine") {
     for (const l of filteredMine as TeacherLessonRow[]) {
-      unified.push({
+      const row: UnifiedRow = {
         source: "mine",
         slug: l.slug,
         title: l.title,
@@ -221,7 +238,8 @@ export default async function TeacherLessonsPage({
         updated_at: l.updated_at,
         href: `/teacher/lessons/edit/${l.slug}`,
         exerciseCount: l.exercises.length,
-      });
+      };
+      if (matchesQuery(row)) unified.push(row);
     }
   }
 
@@ -280,7 +298,8 @@ export default async function TeacherLessonsPage({
         </div>
       </header>
 
-      <nav className="flex flex-wrap gap-2 rounded-xl border border-border bg-card p-3 shadow-xs">
+      <nav className="flex flex-wrap items-center gap-2 rounded-xl border border-border bg-card p-3 shadow-xs">
+        <LessonSearchInput initialValue={query} />
         <FilterGroup label="Source" name="source" active={source === "all" ? undefined : source}>
           {(
             [
@@ -334,7 +353,10 @@ export default async function TeacherLessonsPage({
       </nav>
 
       {source === "bank" ? (
-        <BankItemsList items={bankItems} filters={{ cefrBand: filters.cefrBand }} />
+        <BankItemsList
+          items={bankItems}
+          filters={{ cefrBand: filters.cefrBand, query }}
+        />
       ) : unified.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-border bg-card/40 p-12 text-center">
           <Sparkles className="mx-auto h-10 w-10 text-muted-foreground" />
@@ -445,10 +467,15 @@ function BankItemsList({
   filters,
 }: {
   items: Awaited<ReturnType<typeof listMyBank>>;
-  filters: { cefrBand?: string };
+  filters: { cefrBand?: string; query?: string };
 }) {
+  const q = (filters.query ?? "").trim().toLowerCase();
   const filtered = items.filter((i) => {
     if (filters.cefrBand && cefrBandOf(i.cefr_level ?? "") !== filters.cefrBand) return false;
+    if (q) {
+      const hay = `${i.title ?? ""} ${i.exercise?.type ?? ""} ${i.cefr_level ?? ""}`.toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
     return true;
   });
   if (filtered.length === 0) {
@@ -521,11 +548,11 @@ function FilterGroup({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex items-center gap-1.5">
+    <div className="flex min-w-0 flex-wrap items-center gap-1.5">
       <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
         {label}
       </span>
-      <div className="flex gap-1">{children}</div>
+      <div className="flex flex-wrap gap-1">{children}</div>
     </div>
   );
 }

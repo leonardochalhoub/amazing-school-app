@@ -51,8 +51,8 @@ export function RosterCard({
     : null;
 
   return (
-    <Link href={`/teacher/students/${id}`} className="group block">
-      <div className="relative flex aspect-square flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl border border-border bg-card p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <Link href={`/teacher/students/${id}`} className="group block w-full">
+      <div className="relative flex aspect-square w-full flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl border border-border bg-card p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
         <div
           className="pointer-events-none absolute inset-0 bg-gradient-to-br from-muted/40 to-transparent opacity-0 transition-opacity group-hover:opacity-100"
           aria-hidden

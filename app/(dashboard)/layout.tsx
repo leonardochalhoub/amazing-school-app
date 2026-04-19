@@ -36,7 +36,7 @@ export default async function DashboardLayout({
   const isOwner = isOwnerEmail(user.email);
 
   return (
-    <div className="relative flex min-h-screen flex-col bg-background">
+    <div className="relative flex min-h-screen flex-col overflow-x-clip bg-background">
       <div
         aria-hidden
         className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"

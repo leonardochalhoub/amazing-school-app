@@ -90,14 +90,14 @@ export default async function StudentMusicPage({
         </p>
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_300px]">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
         <MusicBoard
           song={song}
           lessonSlug={lessonSlug}
           initialResponses={initialResponses}
         />
 
-        <aside className="space-y-4 lg:sticky lg:top-32 lg:self-start">
+        <aside className="min-w-0 space-y-4 lg:sticky lg:top-32 lg:self-start">
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm">Vocabulary</CardTitle>
@@ -124,7 +124,7 @@ export default async function StudentMusicPage({
             </Card>
           ) : null}
 
-          <p className="text-[10px] leading-relaxed text-muted-foreground">
+          <p className="break-words text-[10px] leading-relaxed text-muted-foreground">
             {song.copyright_notice}
           </p>
         </aside>
