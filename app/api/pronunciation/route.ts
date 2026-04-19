@@ -31,13 +31,13 @@ const STRICTNESS = clampNum(
   Number(process.env.PRONUNCIATION_STRICTNESS),
   0.5,
   6,
-  3.5,
+  2,
 );
 const CLARITY_WEIGHT = clampNum(
   Number(process.env.PRONUNCIATION_CLARITY_WEIGHT),
   0,
   1,
-  0.75,
+  0.55,
 );
 // Logprob range used to map Whisper's per-segment confidence to a 0–100
 // clarity score. Whisper's avg_logprob is negative; closer to 0 = more
@@ -50,7 +50,7 @@ const LOGPROB_FLOOR = clampNum(
   Number(process.env.PRONUNCIATION_LOGPROB_FLOOR),
   -3,
   -0.1,
-  -0.5,
+  -0.7,
 );
 const LOGPROB_CEILING = clampNum(
   Number(process.env.PRONUNCIATION_LOGPROB_CEILING),
@@ -66,13 +66,13 @@ const RESCUE_PENALTY_THRESHOLD = clampNum(
   Number(process.env.PRONUNCIATION_RESCUE_CLARITY_THRESHOLD),
   0,
   100,
-  80,
+  70,
 );
 const RESCUE_PENALTY_WEIGHT = clampNum(
   Number(process.env.PRONUNCIATION_RESCUE_PENALTY_WEIGHT),
   0,
   2,
-  0.7,
+  0.6,
 );
 const SCORE_CEILING = clampNum(
   Number(process.env.PRONUNCIATION_CEILING),
@@ -87,7 +87,7 @@ const WORD_MISTAKE_PENALTY = clampNum(
   Number(process.env.PRONUNCIATION_WORD_PENALTY),
   0,
   40,
-  12,
+  7,
 );
 // Require every target word to match before the score can hit 100.
 // When false, a high similarity average + great clarity is enough.
