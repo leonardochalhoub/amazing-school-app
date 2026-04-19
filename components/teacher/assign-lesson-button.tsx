@@ -73,7 +73,7 @@ export function AssignLessonButton({
 
   const t = locale === "pt-BR"
     ? {
-        trigger: label ?? "Atribuir lição",
+        trigger: label ?? "Atribuir lições",
         title: "Atribuir lições",
         description:
           "Escolha uma ou mais lições/músicas. Elas serão atribuídas na ordem em que você clicar.",
@@ -88,6 +88,8 @@ export function AssignLessonButton({
         targetStudent: "Aluno específico",
         pickClassroom: "Selecione uma turma",
         pickStudent: "Selecione um aluno",
+        noClassroomSpecified: "Sem turma definida",
+        classroomLabel: "Turma",
         newClassroom: "Nova turma",
         newClassroomPrompt: "Nome da nova turma",
         classroomCreated: "Turma criada",
@@ -106,7 +108,7 @@ export function AssignLessonButton({
           "Este aluno não está em uma turma — atribuindo direto a ele.",
       }
     : {
-        trigger: label ?? "Assign lesson",
+        trigger: label ?? "Assign lessons",
         title: "Assign lessons",
         description:
           "Pick one or more lessons / songs. They will be assigned in the order you click them.",
@@ -121,6 +123,8 @@ export function AssignLessonButton({
         targetStudent: "Specific student",
         pickClassroom: "Pick a classroom",
         pickStudent: "Pick a student",
+        noClassroomSpecified: "No classroom specified",
+        classroomLabel: "Classroom",
         newClassroom: "New classroom",
         newClassroomPrompt: "Name of the new classroom",
         classroomCreated: "Classroom created",
@@ -184,7 +188,9 @@ export function AssignLessonButton({
     setSelected([]);
     setSearch("");
     setTargetType(singleStudent && !singleStudentHasClassroom ? "student" : "classroom");
-    setClassroomId("");
+    // In single-student mode, pre-fill the classroom dropdown with the
+    // student's existing classroom (empty = "No classroom specified").
+    setClassroomId(singleStudent?.classroomId ?? "");
     setStudentId(singleStudent?.id ?? "");
   }
 
@@ -234,7 +240,9 @@ export function AssignLessonButton({
 
     if (singleStudent) {
       finalRosterStudentId = singleStudent.id;
-      finalClassroomId = singleStudent.classroomId;
+      // Classroom in single-student mode is picked in the dialog — empty
+      // means "no classroom specified" (allowed by migration 024).
+      finalClassroomId = classroomId || null;
     } else if (targetType === "classroom") {
       if (!classroomId) {
         toast.error(t.pickClassroom);
@@ -281,6 +289,7 @@ export function AssignLessonButton({
           if (singleStudent) {
             setStudentId(singleStudent.id);
             setTargetType("student");
+            setClassroomId(singleStudent.classroomId ?? "");
           } else {
             setTargetType("classroom");
           }
@@ -319,10 +328,41 @@ export function AssignLessonButton({
           ) : (
             <div className="space-y-4">
               {singleStudent ? (
-                <p className="rounded-md border border-border bg-muted/40 px-3 py-2 text-xs">
-                  <UserRound className="mr-1.5 inline-block h-3.5 w-3.5" />
-                  {t.assigningToSingle(singleStudent.fullName)}
-                </p>
+                <>
+                  <p className="rounded-md border border-border bg-muted/40 px-3 py-2 text-xs">
+                    <UserRound className="mr-1.5 inline-block h-3.5 w-3.5" />
+                    {t.assigningToSingle(singleStudent.fullName)}
+                  </p>
+                  <div className="space-y-1.5">
+                    <label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                      {t.classroomLabel}
+                    </label>
+                    <div className="flex gap-1.5">
+                      <select
+                        value={classroomId}
+                        onChange={(e) => setClassroomId(e.target.value)}
+                        className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
+                      >
+                        <option value="">{t.noClassroomSpecified}</option>
+                        {classroomOptions.map((c) => (
+                          <option key={c.id} value={c.id}>
+                            {c.name}
+                          </option>
+                        ))}
+                      </select>
+                      <button
+                        type="button"
+                        onClick={createClassroomInline}
+                        disabled={pending}
+                        aria-label={t.newClassroom}
+                        title={t.newClassroom}
+                        className="inline-flex h-9 shrink-0 items-center justify-center rounded-md border border-border bg-card px-2 text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary disabled:opacity-50"
+                      >
+                        <Plus className="h-4 w-4" />
+                      </button>
+                    </div>
+                  </div>
+                </>
               ) : (
                 <div className="space-y-1.5">
                   <label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
