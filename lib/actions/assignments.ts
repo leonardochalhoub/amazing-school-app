@@ -350,26 +350,62 @@ export async function getAssignmentsForRosterStudent(
   if (!user) return [];
   const admin = createAdminClient();
 
-  // Verify the roster row belongs to the teacher, then return ONLY the
-  // assignments specifically targeted at this roster student. Classroom-wide
-  // rows (student_id=null, roster_student_id=null) are intentionally excluded:
-  // the per-student profile page must show only that student's own work, not
-  // lessons assigned to the whole classroom.
+  // Verify the roster row belongs to the teacher. We then return two
+  // buckets merged:
+  //   (a) assignments targeted directly at this roster student
+  //   (b) classroom-wide rows in this student's classroom
+  // Classroom-wide lessons ARE this student's work (everyone in the
+  // class got them) and must appear on the per-student profile too.
   const { data: rs } = await admin
     .from("roster_students")
-    .select("id")
+    .select("id, classroom_id")
     .eq("id", rosterStudentId)
     .eq("teacher_id", user.id)
     .maybeSingle();
   if (!rs) return [];
+  const classroomId = (rs as { classroom_id: string | null }).classroom_id;
 
-  const { data } = await admin
+  const perRosterPromise = admin
     .from("lesson_assignments")
     .select("*")
-    .eq("roster_student_id", rosterStudentId)
-    .order("order_index", { ascending: true });
-  return (
-    (data as (LessonAssignment & { roster_student_id: string | null })[] | null) ??
-    []
+    .eq("roster_student_id", rosterStudentId);
+
+  const classroomWidePromise = classroomId
+    ? admin
+        .from("lesson_assignments")
+        .select("*")
+        .eq("classroom_id", classroomId)
+        .is("student_id", null)
+        .is("roster_student_id", null)
+    : Promise.resolve({ data: [] as LessonAssignment[] });
+
+  const [perRoster, classroomWide] = await Promise.all([
+    perRosterPromise,
+    classroomWidePromise,
+  ]);
+
+  const merged = [
+    ...((perRoster.data as (LessonAssignment & {
+      roster_student_id: string | null;
+    })[] | null) ?? []),
+    ...((classroomWide.data as (LessonAssignment & {
+      roster_student_id: string | null;
+    })[] | null) ?? []),
+  ];
+  // Dedupe by id just in case.
+  const seen = new Set<string>();
+  const unique = merged.filter((a) => {
+    const id = (a as { id: string }).id;
+    if (seen.has(id)) return false;
+    seen.add(id);
+    return true;
+  });
+  // Sort by assignment time descending so the list / recent-10 window
+  // shows the newest first (matches AssignedLessonsList expectations).
+  unique.sort(
+    (a, b) =>
+      new Date((b as { assigned_at: string }).assigned_at).getTime() -
+      new Date((a as { assigned_at: string }).assigned_at).getTime(),
   );
+  return unique;
 }

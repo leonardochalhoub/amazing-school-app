@@ -107,8 +107,8 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
   const showNav = nav.length > 0;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/70 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 md:px-6">
+    <header className="sticky top-0 z-50 w-full overflow-x-clip border-b border-border/70 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+      <div className="mx-auto flex h-16 w-full min-w-0 max-w-7xl items-center justify-between gap-2 px-3 md:px-6">
         <Link
           href={`/${role}`}
           className="group flex shrink-0 items-center gap-2.5"
@@ -153,7 +153,7 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
           <div className="hidden flex-1 md:block" />
         )}
 
-        <div className="flex items-center gap-2">
+        <div className="flex min-w-0 shrink-0 items-center gap-1.5">
           <span
             className={cn(
               "hidden items-center gap-1.5 rounded-full border border-border/70 bg-muted/30 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground lg:inline-flex"
@@ -217,8 +217,8 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
       {/* Mobile nav — wraps onto multiple rows instead of horizontal
           scroll so every item is reachable without sliding. */}
       {showNav ? (
-        <div className="mx-auto max-w-7xl px-4 pb-2 md:hidden">
-          <div className="flex flex-wrap items-center justify-center gap-1 rounded-2xl border border-border/70 bg-background/60 p-1.5 backdrop-blur">
+        <div className="mx-auto w-full max-w-7xl min-w-0 overflow-x-clip px-3 pb-2 md:hidden">
+          <div className="flex w-full min-w-0 flex-wrap items-center justify-center gap-1 rounded-2xl border border-border/70 bg-background/60 p-1.5 backdrop-blur">
             {nav.map((link) => {
               const isActive =
                 link.href === `/${role}`
