@@ -78,6 +78,12 @@ const UpdateSchema = z.object({
     .optional()
     .or(z.literal("")),
   level: LevelSchema.nullable().optional(),
+  endedOn: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .nullable()
+    .optional()
+    .or(z.literal("")),
 });
 
 export async function updateRosterStudent(input: z.input<typeof UpdateSchema>) {
@@ -100,6 +106,8 @@ export async function updateRosterStudent(input: z.input<typeof UpdateSchema>) {
   if (parsed.data.birthday !== undefined)
     patch.birthday = parsed.data.birthday || null;
   if (parsed.data.level !== undefined) patch.level = parsed.data.level;
+  if (parsed.data.endedOn !== undefined)
+    patch.ended_on = parsed.data.endedOn || null;
 
   const { error } = await supabase
     .from("roster_students")

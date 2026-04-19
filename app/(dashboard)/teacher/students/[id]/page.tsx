@@ -200,6 +200,15 @@ export default async function RosterStudentDetailPage({
                   (student as { birthday?: string | null }).birthday ?? null
                 }
                 level={student.level}
+                startingOn={
+                  (student as { billing_starts_on?: string | null })
+                    .billing_starts_on ??
+                  (student as { created_at?: string | null }).created_at ??
+                  null
+                }
+                endedOn={
+                  (student as { ended_on?: string | null }).ended_on ?? null
+                }
                 hasAvatar={hasAvatar}
                 classrooms={classroomList}
               />

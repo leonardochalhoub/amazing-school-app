@@ -39,6 +39,10 @@ interface Props {
   gender: Gender | null;
   birthday: string | null;
   level: Level | null;
+  /** ISO "YYYY-MM-DD", read-only display (date the teacher enrolled them). */
+  startingOn: string | null;
+  /** ISO "YYYY-MM-DD", editable — when the student stopped studying. */
+  endedOn: string | null;
   hasAvatar: boolean;
   classrooms: { id: string; name: string }[];
 }
@@ -54,6 +58,8 @@ export function RosterEditForm({
   gender,
   birthday,
   level,
+  startingOn,
+  endedOn,
   hasAvatar,
   classrooms,
 }: Props) {
@@ -70,6 +76,7 @@ export function RosterEditForm({
   const [genderValue, setGenderValue] = useState<Gender | "">(gender ?? "");
   const [birthdayValue, setBirthdayValue] = useState<string>(birthday ?? "");
   const [levelValue, setLevelValue] = useState<Level | "">(level ?? "");
+  const [endedOnValue, setEndedOnValue] = useState<string>(endedOn ?? "");
   const [classroomOptions, setClassroomOptions] = useState(classrooms);
   const [pending, startTransition] = useTransition();
 
@@ -141,6 +148,7 @@ export function RosterEditForm({
         gender: genderValue || null,
         birthday: birthdayValue || null,
         level: levelValue || null,
+        endedOn: endedOnValue || null,
       });
       if ("error" in result && result.error) {
         toast.error(result.error);
@@ -271,6 +279,45 @@ export function RosterEditForm({
             value={birthdayValue}
             onChange={(e) => setBirthdayValue(e.target.value)}
           />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="space-y-1.5">
+          <Label>
+            {locale === "pt-BR" ? "Data de início" : "Starting date"}
+          </Label>
+          <div className="flex h-9 items-center rounded-md border border-border bg-muted/30 px-3 text-sm text-muted-foreground">
+            {startingOn
+              ? new Date(startingOn).toLocaleDateString(
+                  locale === "pt-BR" ? "pt-BR" : "en-US",
+                  { day: "2-digit", month: "long", year: "numeric" },
+                )
+              : locale === "pt-BR"
+                ? "Ainda não definido"
+                : "Not set yet"}
+          </div>
+          <p className="text-[10px] text-muted-foreground">
+            {locale === "pt-BR"
+              ? "Definido automaticamente na criação do aluno."
+              : "Set automatically when the student was enrolled."}
+          </p>
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="rs-ended-on">
+            {locale === "pt-BR" ? "Último dia" : "Last day"}
+          </Label>
+          <Input
+            id="rs-ended-on"
+            type="date"
+            value={endedOnValue}
+            onChange={(e) => setEndedOnValue(e.target.value)}
+          />
+          <p className="text-[10px] text-muted-foreground">
+            {locale === "pt-BR"
+              ? "Deixe em branco enquanto o aluno continua ativo. Marque quando as aulas terminarem — a matriz de mensalidade trava as células posteriores."
+              : "Leave blank while the student is active. Set it when classes finish — the tuition matrix locks cells after it."}
+          </p>
         </div>
       </div>
 
