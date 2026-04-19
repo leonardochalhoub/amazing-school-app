@@ -158,10 +158,14 @@ export async function POST(req: Request) {
   const audioBytes = await audio.arrayBuffer();
   const audioFile = new Blob([audioBytes], { type: audio.type || "audio/webm" });
 
-  function buildForm(opts: { phonetic: boolean; temperature?: number }): FormData {
+  function buildForm(opts: {
+    phonetic: boolean;
+    temperature?: number;
+    model?: string;
+  }): FormData {
     const f = new FormData();
     f.append("file", audioFile, "recording.webm");
-    f.append("model", "whisper-large-v3");
+    f.append("model", opts.model ?? "whisper-large-v3");
     f.append("language", "en");
     f.append("response_format", "verbose_json");
     f.append("timestamp_granularities[]", "word");
@@ -182,7 +186,11 @@ export async function POST(req: Request) {
     return f;
   }
 
-  async function callWhisper(opts: { phonetic: boolean; temperature?: number }) {
+  async function callWhisper(opts: {
+    phonetic: boolean;
+    temperature?: number;
+    model?: string;
+  }) {
     const r = await fetch(
       "https://api.groq.com/openai/v1/audio/transcriptions",
       {
@@ -198,16 +206,23 @@ export async function POST(req: Request) {
     return (await r.json()) as WhisperVerboseResponse;
   }
 
-  // Two phonetic probes at different temperatures. If BOTH agree with
-  // the primary transcription, Whisper is genuinely confident. If either
-  // differs, that's a strong signal the LM was rescuing the audio.
+  // Three probes in parallel:
+  //   primary   — what we score against
+  //   phonetic1 — high-temp adversarial prompt on whisper-large-v3
+  //   phonetic2 — adversarial prompt on distil-whisper-large-v3-en
+  //               (different model → different LM rescue behavior)
+  // A word is suspicious when it appears in primary but in NEITHER probe.
   const [primary, phonetic1, phonetic2] = await Promise.all([
     callWhisper({ phonetic: false }),
     PHONETIC_PROBE_ENABLED
       ? callWhisper({ phonetic: true, temperature: 1.0 }).catch(() => null)
       : Promise.resolve<WhisperVerboseResponse | null>(null),
     PHONETIC_PROBE_ENABLED
-      ? callWhisper({ phonetic: true, temperature: 0.7 }).catch(() => null)
+      ? callWhisper({
+          phonetic: true,
+          temperature: 0.8,
+          model: "distil-whisper-large-v3-en",
+        }).catch(() => null)
       : Promise.resolve<WhisperVerboseResponse | null>(null),
   ]).catch((e: Error) => {
     throw e;
@@ -229,6 +244,24 @@ export async function POST(req: Request) {
   // segment's [start, end]. A word inherits the clarity of its segment.
   const heardWordClarity = perWordClarity(primary.words, primary.segments);
   const diff = wordDiff(transcription, target, heardWordClarity);
+
+  // Word-duration sanity check: rough syllable-based expected duration
+  // for each heard word. A word said much faster than expected is
+  // usually swallowed/mispronounced; much slower often means hesitation
+  // but we only penalize the fast case since drawls don't hide errors.
+  const durationFlags = detectDurationAnomalies(primary.words);
+  if (durationFlags.size > 0) {
+    for (const op of diff.words) {
+      if (!op.heard) continue;
+      const n = normalize(op.heard);
+      if (
+        durationFlags.has(n) &&
+        (op.status === "ok" || op.status === "unclear")
+      ) {
+        op.status = "suspicious";
+      }
+    }
+  }
 
   // Phonetic-probe divergence: if either high-temp probe with a
   // verbatim prompt hears something different from the polished
@@ -410,6 +443,55 @@ function combineScore(
   const ceiling =
     PERFECT_REQUIRES_ALL_WORDS && !hasAllWords ? SCORE_CEILING - 2 : SCORE_CEILING;
   return Math.max(0, Math.min(ceiling, Math.round(penalized)));
+}
+
+// ---------------------------------------------------------------------------
+// Word duration anomaly detector
+// ---------------------------------------------------------------------------
+
+/**
+ * Rough syllable counter — good enough for duration sanity checking.
+ * English syllable ≈ a contiguous run of vowels (a, e, i, o, u, y),
+ * with trailing silent "e" subtracted. Minimum 1 syllable per word.
+ */
+function syllableCount(word: string): number {
+  const w = word.toLowerCase().replace(/[^a-z]/g, "");
+  if (!w) return 1;
+  const matches = w.match(/[aeiouy]+/g) ?? [];
+  let n = matches.length;
+  // "e" at the end is often silent (studied → stud-ied, not stud-i-ed).
+  if (w.endsWith("e") && n > 1) n -= 1;
+  return Math.max(1, n);
+}
+
+/**
+ * Return a set of normalized heard words whose spoken duration was much
+ * shorter than we'd expect from their syllable count — strong signal
+ * the student swallowed / skipped part of the word.
+ *
+ * Baseline: ~180ms per syllable for careful non-native speech. A word
+ * coming in under 40% of the expected duration AND with at least two
+ * syllables expected is flagged.
+ */
+function detectDurationAnomalies(
+  words: WhisperWordTimestamp[] | undefined,
+): Set<string> {
+  const out = new Set<string>();
+  if (!words || words.length === 0) return out;
+  const MS_PER_SYLLABLE = 180;
+  const FAST_RATIO = 0.4; // below this = suspicious
+  for (const w of words) {
+    if (w.start == null || w.end == null) continue;
+    const durMs = (w.end - w.start) * 1000;
+    if (durMs <= 0) continue;
+    const syll = syllableCount(w.word);
+    if (syll < 2) continue; // single-syllable words are unreliable
+    const expected = syll * MS_PER_SYLLABLE;
+    if (durMs / expected < FAST_RATIO) {
+      out.add(normalize(w.word));
+    }
+  }
+  return out;
 }
 
 // ---------------------------------------------------------------------------
