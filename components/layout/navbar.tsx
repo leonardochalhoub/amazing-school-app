@@ -168,15 +168,19 @@ export function Navbar({
         <div className="flex min-w-0 shrink-0 items-center gap-1.5">
           <span
             className={cn(
-              "hidden items-center gap-1.5 rounded-full border border-border/70 bg-muted/30 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground lg:inline-flex"
+              "hidden items-center gap-2 rounded-full border px-4 py-1 text-[15px] font-bold uppercase tracking-wider lg:inline-flex",
+              role === "teacher"
+                ? "border-emerald-400/70 bg-emerald-500/15 text-emerald-700 shadow-[0_0_20px_-2px_rgba(16,185,129,0.8)] dark:text-emerald-300 presence-glow"
+                : "border-border/70 bg-muted/30 text-muted-foreground",
             )}
           >
             <span
-              className={
+              className={cn(
+                "inline-block h-2.5 w-2.5 rounded-full",
                 role === "teacher"
-                  ? "h-1.5 w-1.5 rounded-full bg-indigo-500"
-                  : "h-1.5 w-1.5 rounded-full bg-emerald-500"
-              }
+                  ? "bg-emerald-500 shadow-[0_0_10px_2px_rgba(16,185,129,0.9)] presence-dot"
+                  : "bg-emerald-500",
+              )}
             />
             {role === "teacher" ? labels.teacher : labels.student}
           </span>

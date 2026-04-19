@@ -1,15 +1,23 @@
 /* eslint-disable no-console */
 /**
- * Seed demo teacher + 6 demo students with realistic, reproducible data
- * reaching back to January 2024. The landing page "Try teacher view" /
- * "Try student view" buttons sign into these accounts.
+ * Seed Luiza Martins (demo teacher) + 13 varied demo students.
  *
  *   npx tsx scripts/seed-demo.ts
  *
- * Needs .env.local with NEXT_PUBLIC_SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY.
- * Uses DEMO_ACCOUNT_PASSWORD if set, otherwise a fixed default.
+ * Idempotent. Safe to rerun — writes to scripts/demo-ids.json and then
+ * reuses those ids on every subsequent run.
  *
- * Idempotent — reruns update existing demo rows in place.
+ * Varied data:
+ *   - Ana is the star student (heaviest data, lots of diary entries,
+ *     scheduled classes, music assignments, full badge collection).
+ *   - One student pays 3× the standard tuition.
+ *   - One student is in multi-month debt.
+ *   - One student studied ~1.5 years then dropped out.
+ *   - Monthly revenue fluctuates with discounts, free months, missed
+ *     payments, reschedules.
+ *   - Every student has a populated "Your activity" — daily rows go
+ *     back to 2024-01-01 or later (their join date).
+ *   - Diary, student history, scheduled classes all populated.
  */
 import { createClient } from "@supabase/supabase-js";
 import sharp from "sharp";
@@ -29,17 +37,18 @@ const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const SERVICE_ROLE = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 const DEMO_PASSWORD =
   process.env.DEMO_ACCOUNT_PASSWORD ?? "demo-explore-amazing-school-2026";
-
 if (!SUPABASE_URL || !SERVICE_ROLE) {
   console.error("Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY");
   process.exit(1);
 }
-
 const admin = createClient(SUPABASE_URL, SERVICE_ROLE, {
   auth: { autoRefreshToken: false, persistSession: false },
 });
 
-// -------- Personas (ids get resolved at runtime + stashed in demo-ids.json) --------
+// ---------------------------------------------------------------------------
+// Personas
+// ---------------------------------------------------------------------------
+
 const TEACHER_SPEC = {
   email: "demo.luiza@amazingschool.app",
   fullName: "Luiza Martins",
@@ -47,35 +56,54 @@ const TEACHER_SPEC = {
     "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
 };
 
-type StudentSpec = {
+type Persona = {
   email: string;
   fullName: string;
   preferred: string;
   ageGroup: "teen" | "adult";
   gender: "female" | "male";
-  level: "a1" | "a2" | "b1" | "b2";
+  level: "a1" | "a2" | "b1" | "b2" | "c1";
   birthday: string;
-  classroomIdx: 0 | 1;
+  classroomIdx: 0 | 1 | 2;
   photo: string;
+  /** Join date for this student (their first day on the platform). */
+  joinedAt: string;
+  /** If present, student stopped on this date (no activity afterwards). */
+  droppedAt?: string;
+  /** 0..1 daily-engagement probability. */
   diligence: number;
+  /** How much homework they actually finish (0..1). */
+  completionRate: number;
+  /** Monthly tuition in cents (BRL). */
   tuitionCents: number;
+  /** Probability of paying in any given month. */
+  payRate: number;
+  /** How many recent months to deliberately leave unpaid (debt). */
+  debtMonths?: number;
+  notes: string;
 };
 
-const STUDENT_SPECS: StudentSpec[] = [
+const STUDENT_SPECS: Persona[] = [
+  // 1. Ana — the star student. Joined Jan 2024, never misses a beat.
   {
     email: "demo.ana@amazingschool.app",
     fullName: "Ana Costa",
     preferred: "Ana",
     ageGroup: "teen",
     gender: "female",
-    level: "a2",
+    level: "b1",
     birthday: "2009-03-14",
     classroomIdx: 0,
     photo:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
-    diligence: 0.82,
-    tuitionCents: 28000,
+    joinedAt: "2024-01-08",
+    diligence: 0.92,
+    completionRate: 0.95,
+    tuitionCents: 32000,
+    payRate: 0.99,
+    notes: "Rockstar — never misses a class, writes diary entries often.",
   },
+  // 2. Bruno — pays 3× the standard tuition (one-on-one executive rate).
   {
     email: "demo.bruno@amazingschool.app",
     fullName: "Bruno Ferreira",
@@ -83,13 +111,18 @@ const STUDENT_SPECS: StudentSpec[] = [
     ageGroup: "adult",
     gender: "male",
     level: "b1",
-    birthday: "1996-08-22",
+    birthday: "1984-08-22",
     classroomIdx: 1,
     photo:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
+    joinedAt: "2024-02-01",
     diligence: 0.55,
-    tuitionCents: 32000,
+    completionRate: 0.6,
+    tuitionCents: 96000, // 3× standard
+    payRate: 0.98,
+    notes: "Executive 1-on-1 — pays premium for flexible scheduling.",
   },
+  // 3. Carla — dedicated, classic B2 student.
   {
     email: "demo.carla@amazingschool.app",
     fullName: "Carla Santos",
@@ -101,23 +134,34 @@ const STUDENT_SPECS: StudentSpec[] = [
     classroomIdx: 1,
     photo:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
-    diligence: 0.9,
+    joinedAt: "2024-01-15",
+    diligence: 0.85,
+    completionRate: 0.82,
     tuitionCents: 36000,
+    payRate: 0.96,
+    notes: "Reliable — prepping for Cambridge FCE.",
   },
+  // 4. Diego — dropped out after ~1.5 years.
   {
     email: "demo.diego@amazingschool.app",
     fullName: "Diego Oliveira",
     preferred: "Di",
     ageGroup: "teen",
     gender: "male",
-    level: "a1",
+    level: "a2",
     birthday: "2008-06-30",
     classroomIdx: 0,
     photo:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
-    diligence: 0.45,
+    joinedAt: "2024-02-10",
+    droppedAt: "2025-08-30",
+    diligence: 0.55,
+    completionRate: 0.5,
     tuitionCents: 28000,
+    payRate: 0.88,
+    notes: "Dropped out mid-2025 after a big schedule change.",
   },
+  // 5. Emily — solid intermediate.
   {
     email: "demo.emily@amazingschool.app",
     fullName: "Emily Pereira",
@@ -129,9 +173,14 @@ const STUDENT_SPECS: StudentSpec[] = [
     classroomIdx: 1,
     photo:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
+    joinedAt: "2024-03-04",
     diligence: 0.7,
+    completionRate: 0.75,
     tuitionCents: 32000,
+    payRate: 0.95,
+    notes: "University student, studies in bursts before exam weeks.",
   },
+  // 6. Felipe — chronic debt case (3 months unpaid).
   {
     email: "demo.felipe@amazingschool.app",
     fullName: "Felipe Rocha",
@@ -143,8 +192,146 @@ const STUDENT_SPECS: StudentSpec[] = [
     classroomIdx: 0,
     photo:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
+    joinedAt: "2024-04-01",
     diligence: 0.62,
+    completionRate: 0.55,
     tuitionCents: 28000,
+    payRate: 0.72,
+    debtMonths: 3,
+    notes: "Payments slipping — needs a gentle chase.",
+  },
+  // 7. Gustavo — started late, fast climber.
+  {
+    email: "demo.gustavo@amazingschool.app",
+    fullName: "Gustavo Lima",
+    preferred: "Gu",
+    ageGroup: "adult",
+    gender: "male",
+    level: "b2",
+    birthday: "1988-12-05",
+    classroomIdx: 1,
+    photo:
+      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
+    joinedAt: "2024-10-14",
+    diligence: 0.88,
+    completionRate: 0.9,
+    tuitionCents: 36000,
+    payRate: 0.99,
+    notes: "Tech lead moving to Dublin — goal-driven, burns through lessons.",
+  },
+  // 8. Helena — seasonal, pauses in December.
+  {
+    email: "demo.helena@amazingschool.app",
+    fullName: "Helena Duarte",
+    preferred: "Helê",
+    ageGroup: "adult",
+    gender: "female",
+    level: "b1",
+    birthday: "1995-05-20",
+    classroomIdx: 1,
+    photo:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
+    joinedAt: "2024-03-18",
+    diligence: 0.66,
+    completionRate: 0.7,
+    tuitionCents: 32000,
+    payRate: 0.93,
+    notes: "Takes December off every year — pays 10/12 months.",
+  },
+  // 9. Isabela — just starting, low level.
+  {
+    email: "demo.isabela@amazingschool.app",
+    fullName: "Isabela Nunes",
+    preferred: "Isa",
+    ageGroup: "adult",
+    gender: "female",
+    level: "a1",
+    birthday: "1998-07-12",
+    classroomIdx: 2,
+    photo:
+      "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
+    joinedAt: "2025-10-01",
+    diligence: 0.6,
+    completionRate: 0.55,
+    tuitionCents: 26000,
+    payRate: 0.95,
+    notes: "Newcomer, still getting used to the alphabet.",
+  },
+  // 10. João — teen, very casual.
+  {
+    email: "demo.joao@amazingschool.app",
+    fullName: "João Almeida",
+    preferred: "Jão",
+    ageGroup: "teen",
+    gender: "male",
+    level: "a1",
+    birthday: "2010-02-09",
+    classroomIdx: 2,
+    photo:
+      "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
+    joinedAt: "2024-07-22",
+    diligence: 0.45,
+    completionRate: 0.4,
+    tuitionCents: 24000,
+    payRate: 0.9,
+    notes: "Plays more than studies — but catches up the day before class.",
+  },
+  // 11. Karina — left 2024, came back in 2025.
+  {
+    email: "demo.karina@amazingschool.app",
+    fullName: "Karina Moraes",
+    preferred: "Kari",
+    ageGroup: "adult",
+    gender: "female",
+    level: "b2",
+    birthday: "1993-04-28",
+    classroomIdx: 1,
+    photo:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
+    joinedAt: "2024-01-22",
+    diligence: 0.75,
+    completionRate: 0.78,
+    tuitionCents: 34000,
+    payRate: 0.95,
+    notes: "Took a 3-month break mid-2024 for maternity, then full-on again.",
+  },
+  // 12. Lucas — advanced C1, infrequent high-quality bursts.
+  {
+    email: "demo.lucas@amazingschool.app",
+    fullName: "Lucas Martins",
+    preferred: "Lu",
+    ageGroup: "adult",
+    gender: "male",
+    level: "c1",
+    birthday: "1986-10-11",
+    classroomIdx: 1,
+    photo:
+      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
+    joinedAt: "2024-05-05",
+    diligence: 0.38,
+    completionRate: 0.85,
+    tuitionCents: 42000,
+    payRate: 0.98,
+    notes: "Polishing C1 — prefers 1h deep-dive sessions.",
+  },
+  // 13. Mariana — kid (close to teen), sporadic.
+  {
+    email: "demo.mariana@amazingschool.app",
+    fullName: "Mariana Araújo",
+    preferred: "Mari",
+    ageGroup: "teen",
+    gender: "female",
+    level: "a2",
+    birthday: "2011-09-18",
+    classroomIdx: 2,
+    photo:
+      "https://images.unsplash.com/photo-1496440737103-cd596325d314?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
+    joinedAt: "2025-03-12",
+    diligence: 0.58,
+    completionRate: 0.6,
+    tuitionCents: 26000,
+    payRate: 0.92,
+    notes: "Loves music lessons more than grammar.",
   },
 ];
 
@@ -161,9 +348,15 @@ const CLASSROOMS = [
       "Intermediate conversation club: opinions, storytelling, phrasal verbs.",
     inviteCode: "DEMO-PM",
   },
+  {
+    name: "A1 Saturday Kids",
+    description:
+      "Saturday-morning group for young learners — songs, games, alphabet.",
+    inviteCode: "DEMO-SAT",
+  },
 ];
 
-const START_DATE = new Date("2024-01-01T12:00:00Z");
+const START_DATE_GLOBAL = new Date("2024-01-01T12:00:00Z");
 const IDS_FILE = resolve("scripts/demo-ids.json");
 
 type DemoIds = {
@@ -172,7 +365,9 @@ type DemoIds = {
   classroomIds: string[];
 };
 
-// -------- Deterministic RNG --------
+// ---------------------------------------------------------------------------
+// RNG / helpers
+// ---------------------------------------------------------------------------
 function mulberry32(seed: number) {
   let t = seed;
   return () => {
@@ -190,15 +385,30 @@ function hashStringToSeed(s: string): number {
   }
   return h >>> 0;
 }
+function daysBetween(a: Date, b: Date): number {
+  return Math.floor((b.getTime() - a.getTime()) / 86_400_000);
+}
+function addDays(d: Date, n: number): Date {
+  return new Date(d.getTime() + n * 86_400_000);
+}
+function isoDate(d: Date): string {
+  return d.toISOString().slice(0, 10);
+}
+function atHour(d: Date, hour: number, rng: () => number): Date {
+  return new Date(
+    d.getTime() + (hour + rng() * 1.5) * 3600_000,
+  );
+}
+function pickOne<T>(rng: () => number, arr: T[]): T {
+  return arr[Math.floor(rng() * arr.length)];
+}
 
-// -------- Helpers --------
 async function fetchBuffer(url: string): Promise<Buffer> {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`fetch ${url}: ${res.status}`);
   const ab = await res.arrayBuffer();
   return Buffer.from(ab);
 }
-
 async function uploadAvatar(userId: string, sourceUrl: string) {
   const raw = await fetchBuffer(sourceUrl);
   const webp = await sharp(raw)
@@ -217,8 +427,6 @@ async function uploadAvatar(userId: string, sourceUrl: string) {
 }
 
 async function findUserByEmail(email: string): Promise<string | null> {
-  // listUsers paginates; we page until found. For demo scale (≤7 demo users)
-  // the first page is plenty.
   for (let page = 1; page <= 5; page++) {
     const { data, error } = await admin.auth.admin.listUsers({
       page,
@@ -231,7 +439,6 @@ async function findUserByEmail(email: string): Promise<string | null> {
   }
   return null;
 }
-
 async function ensureAuthUser(
   email: string,
   password: string,
@@ -268,12 +475,15 @@ function loadMusicSlugs(): { slug: string; level: string }[] {
   return parsed.songs.map((s) => ({ slug: s.slug, level: s.cefr_level }));
 }
 
-// -------- Main --------
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
+
 async function main() {
-  console.log("⏳ Seeding demo teacher + 6 students …");
+  console.log("⏳ Seeding demo teacher + 13 students …");
 
   // 1) Auth users
-  console.log("  ▸ creating/updating auth users …");
+  console.log("  ▸ auth users …");
   const teacherId = await ensureAuthUser(
     TEACHER_SPEC.email,
     DEMO_PASSWORD,
@@ -281,13 +491,17 @@ async function main() {
   );
   const studentIds: string[] = [];
   for (const s of STUDENT_SPECS) {
-    const id = await ensureAuthUser(s.email, DEMO_PASSWORD, s.fullName);
-    studentIds.push(id);
+    studentIds.push(await ensureAuthUser(s.email, DEMO_PASSWORD, s.fullName));
   }
 
-  // 2) Profiles + avatars (needed before classrooms because of FK)
+  // 2) Profiles + avatars (needed before classrooms — FK)
   for (const p of [
-    { id: teacherId, fullName: TEACHER_SPEC.fullName, photo: TEACHER_SPEC.photo, role: "teacher" as const },
+    {
+      id: teacherId,
+      fullName: TEACHER_SPEC.fullName,
+      photo: TEACHER_SPEC.photo,
+      role: "teacher" as const,
+    },
     ...STUDENT_SPECS.map((s, i) => ({
       id: studentIds[i],
       fullName: s.fullName,
@@ -299,11 +513,9 @@ async function main() {
     try {
       await uploadAvatar(p.id, p.photo);
     } catch (e) {
-      console.warn(
-        `    ! avatar failed for ${p.fullName}: ${(e as Error).message}`,
-      );
+      console.warn(`    ! avatar failed: ${(e as Error).message}`);
     }
-    const { error: profileErr } = await admin.from("profiles").upsert(
+    const { error } = await admin.from("profiles").upsert(
       {
         id: p.id,
         full_name: p.fullName,
@@ -312,14 +524,13 @@ async function main() {
       },
       { onConflict: "id" },
     );
-    if (profileErr) throw new Error(`profile ${p.fullName}: ${profileErr.message}`);
+    if (error) throw new Error(`profile ${p.fullName}: ${error.message}`);
   }
 
-  // 3) Classrooms — keep stable ids once created; stash them in demo-ids.json
+  // 3) Classrooms
   const previous = existsSync(IDS_FILE)
     ? (JSON.parse(readFileSync(IDS_FILE, "utf8")) as DemoIds)
     : null;
-
   const classroomIds: string[] = [];
   for (let i = 0; i < CLASSROOMS.length; i++) {
     const c = CLASSROOMS[i];
@@ -357,28 +568,7 @@ async function main() {
     let rosterId: string;
     if (previousRosterId) {
       rosterId = previousRosterId;
-      await admin.from("roster_students").upsert(
-        {
-          id: rosterId,
-          teacher_id: teacherId,
-          classroom_id: classroomIds[s.classroomIdx],
-          full_name: s.fullName,
-          preferred_name: s.preferred,
-          email: s.email,
-          has_avatar: false,
-          age_group: s.ageGroup,
-          gender: s.gender,
-          level: s.level,
-          birthday: s.birthday,
-          auth_user_id: studentId,
-          monthly_tuition_cents: s.tuitionCents,
-          billing_day: 10,
-          billing_starts_on: "2024-01-10",
-        },
-        { onConflict: "id" },
-      );
     } else {
-      // Try to find by (teacher_id, email); else create.
       const { data: hit } = await admin
         .from("roster_students")
         .select("id")
@@ -386,29 +576,29 @@ async function main() {
         .eq("email", s.email)
         .maybeSingle();
       rosterId = (hit as { id: string } | null)?.id ?? crypto.randomUUID();
-      await admin.from("roster_students").upsert(
-        {
-          id: rosterId,
-          teacher_id: teacherId,
-          classroom_id: classroomIds[s.classroomIdx],
-          full_name: s.fullName,
-          preferred_name: s.preferred,
-          email: s.email,
-          has_avatar: false,
-          age_group: s.ageGroup,
-          gender: s.gender,
-          level: s.level,
-          birthday: s.birthday,
-          auth_user_id: studentId,
-          monthly_tuition_cents: s.tuitionCents,
-          billing_day: 10,
-          billing_starts_on: "2024-01-10",
-        },
-        { onConflict: "id" },
-      );
     }
+    await admin.from("roster_students").upsert(
+      {
+        id: rosterId,
+        teacher_id: teacherId,
+        classroom_id: classroomIds[s.classroomIdx],
+        full_name: s.fullName,
+        preferred_name: s.preferred,
+        email: s.email,
+        notes: s.notes,
+        has_avatar: false,
+        age_group: s.ageGroup,
+        gender: s.gender,
+        level: s.level,
+        birthday: s.birthday,
+        auth_user_id: studentId,
+        monthly_tuition_cents: s.tuitionCents,
+        billing_day: 10,
+        billing_starts_on: s.joinedAt,
+      },
+      { onConflict: "id" },
+    );
     rosterIds.push(rosterId);
-
     await admin.from("classroom_members").upsert(
       {
         classroom_id: classroomIds[s.classroomIdx],
@@ -421,7 +611,7 @@ async function main() {
   // 5) Timeline data
   await seedTimeline({ teacherId, studentIds, rosterIds, classroomIds });
 
-  // 6) Stash ids for reuse
+  // 6) Persist ids
   const ids: DemoIds = {
     teacher: { id: teacherId, email: TEACHER_SPEC.email },
     students: STUDENT_SPECS.map((s, i) => ({
@@ -433,11 +623,13 @@ async function main() {
   };
   writeFileSync(IDS_FILE, JSON.stringify(ids, null, 2) + "\n");
   console.log(`✅ Saved ids to ${IDS_FILE}`);
-  console.log(`   Teacher login: ${TEACHER_SPEC.email}  /  ${DEMO_PASSWORD}`);
-  console.log(
-    `   Sample student: ${STUDENT_SPECS[0].email}  /  ${DEMO_PASSWORD}`,
-  );
+  console.log(`   Teacher: ${TEACHER_SPEC.email} / ${DEMO_PASSWORD}`);
+  console.log(`   Ana:     ${STUDENT_SPECS[0].email} / ${DEMO_PASSWORD}`);
 }
+
+// ---------------------------------------------------------------------------
+// Timeline
+// ---------------------------------------------------------------------------
 
 type TimelineArgs = {
   teacherId: string;
@@ -446,23 +638,9 @@ type TimelineArgs = {
   classroomIds: string[];
 };
 
-function daysBetween(a: Date, b: Date): number {
-  return Math.floor((b.getTime() - a.getTime()) / 86_400_000);
-}
-function isoDate(d: Date): string {
-  return d.toISOString().slice(0, 10);
-}
-function addDays(d: Date, n: number): Date {
-  return new Date(d.getTime() + n * 86_400_000);
-}
-
 async function seedTimeline(args: TimelineArgs) {
   const { teacherId, studentIds, rosterIds, classroomIds } = args;
   const now = new Date();
-  const totalDays = daysBetween(START_DATE, now);
-  console.log(
-    `  ▸ generating ${totalDays}+ days of history for 6 students …`,
-  );
 
   const lessonsByLevel = loadLessonSlugsByLevel();
   const allMusic = loadMusicSlugs();
@@ -476,31 +654,37 @@ async function seedTimeline(args: TimelineArgs) {
   const messageRows: Row[] = [];
   const badgeRows: Row[] = [];
   const paymentRows: Row[] = [];
+  const diaryRows: Row[] = [];
+  const historyRows: Row[] = [];
+  const scheduledRows: Row[] = [];
 
-  // 5a) classroom-wide assignments — one every ~10 days per classroom
+  // -----------------------------------------------------------------
+  // 5a) Classroom-wide assignments per classroom, once every ~10 days
+  // -----------------------------------------------------------------
   for (let ci = 0; ci < classroomIds.length; ci++) {
     const classroomId = classroomIds[ci];
-    const roster = STUDENT_SPECS.filter((s) => s.classroomIdx === ci);
-    const levelKey = (roster[0]?.level ?? "a1") as string;
+    const studentsIn = STUDENT_SPECS.filter((s) => s.classroomIdx === ci);
+    const levelKey = studentsIn[0]?.level ?? "a1";
     const pool = (lessonsByLevel[`${levelKey}.1`] ?? []).concat(
       lessonsByLevel[`${levelKey}.2`] ?? [],
     );
     if (pool.length === 0) continue;
     const rng = mulberry32(hashStringToSeed(`cw:${classroomId}`));
+    const totalDays = daysBetween(START_DATE_GLOBAL, now);
     const used = new Set<string>();
-    for (let d = 0; d < totalDays; d += 8 + Math.floor(rng() * 4)) {
+    for (let d = 0; d < totalDays; d += 9 + Math.floor(rng() * 5)) {
       const available = pool.filter((s) => !used.has(s));
-      if (available.length === 0) break; // classroom-wide slug must be unique
+      if (available.length === 0) break;
       const pick = available[Math.floor(rng() * available.length)];
       used.add(pick);
-      const when = addDays(START_DATE, d);
+      const when = addDays(START_DATE_GLOBAL, d);
       assignmentRows.push({
         id: crypto.randomUUID(),
         classroom_id: classroomId,
         lesson_slug: pick,
         assigned_by: teacherId,
         assigned_at: when.toISOString(),
-        due_date: addDays(when, 14).toISOString().slice(0, 10),
+        due_date: isoDate(addDays(when, 14)),
         student_id: null,
         roster_student_id: null,
         order_index: 0,
@@ -509,15 +693,19 @@ async function seedTimeline(args: TimelineArgs) {
     }
   }
 
-  // 5b) Per-student timeline
+  // -----------------------------------------------------------------
+  // 5b) Per-student timeline (activity, XP, assignments, diary, …)
+  // -----------------------------------------------------------------
   for (let i = 0; i < STUDENT_SPECS.length; i++) {
     const s = STUDENT_SPECS[i];
     const studentId = studentIds[i];
     const rosterId = rosterIds[i];
     const classroomId = classroomIds[s.classroomIdx];
+    const joinDate = new Date(`${s.joinedAt}T09:00:00Z`);
+    const stopDate = s.droppedAt ? new Date(`${s.droppedAt}T12:00:00Z`) : now;
+    const activeDays = daysBetween(joinDate, stopDate);
     const rng = mulberry32(hashStringToSeed(`${studentId}:${s.email}`));
 
-    // Targeted assignments (music + per-student lessons)
     const levelPool = (lessonsByLevel[`${s.level}.1`] ?? []).concat(
       lessonsByLevel[`${s.level}.2`] ?? [],
     );
@@ -525,13 +713,29 @@ async function seedTimeline(args: TimelineArgs) {
       .filter((m) => m.level.startsWith(s.level))
       .map((m) => `music:${m.slug}`);
     const targetedPool = [...levelPool, ...musicPool];
-    const used = new Set<string>();
-    for (let d = 14; d < totalDays; d += 18 + Math.floor(rng() * 10)) {
-      const available = targetedPool.filter((x) => !used.has(x));
-      if (available.length === 0) break; // per-roster slug must be unique
+    const usedTargeted = new Set<string>();
+    const isAna = s.preferred === "Ana";
+
+    // Targeted assignments — Ana gets more
+    const cadenceDays = isAna ? 10 : 16 + Math.floor(rng() * 12);
+    for (
+      let d = 5;
+      d < activeDays;
+      d += cadenceDays + Math.floor(rng() * 6)
+    ) {
+      const available = targetedPool.filter((x) => !usedTargeted.has(x));
+      if (available.length === 0) break;
       const pick = available[Math.floor(rng() * available.length)];
-      used.add(pick);
-      const when = addDays(START_DATE, d);
+      usedTargeted.add(pick);
+      const when = addDays(joinDate, d);
+      // Statuses: mostly assigned, some completed, some skipped
+      const r = rng();
+      const status: string =
+        r < s.completionRate
+          ? "completed"
+          : r < s.completionRate + 0.15
+            ? "skipped"
+            : "assigned";
       assignmentRows.push({
         id: crypto.randomUUID(),
         classroom_id: classroomId,
@@ -542,19 +746,26 @@ async function seedTimeline(args: TimelineArgs) {
         student_id: null,
         roster_student_id: rosterId,
         order_index: 0,
-        status: "assigned",
+        status,
       });
     }
 
     // Daily activity + XP + completions
     const completedSlugs = new Set<string>();
-    for (let d = 0; d < totalDays; d++) {
-      const day = addDays(START_DATE, d);
+    let totalCompleted = 0;
+    const firstLessonDates: { slug: string; completedAt: Date }[] = [];
+    for (let d = 0; d < activeDays; d++) {
+      const day = addDays(joinDate, d);
+      if (day > now) break;
       const dow = day.getUTCDay();
       const weekendBias = dow === 0 || dow === 6 ? 0.55 : 1.1;
-      if (rng() > s.diligence * weekendBias) continue;
-      const lessonsDone = rng() < 0.25 ? 2 : 1;
-      const chatMsgs = rng() < 0.4 ? 3 + Math.floor(rng() * 6) : 0;
+      // Ana has a steady pattern; others more bursty
+      const moodMultiplier =
+        0.7 + Math.sin((d + i * 9) / 14) * 0.25 + rng() * 0.2;
+      if (rng() > s.diligence * weekendBias * (isAna ? 1 : moodMultiplier))
+        continue;
+      const lessonsDone = rng() < (isAna ? 0.4 : 0.22) ? 2 : 1;
+      const chatMsgs = rng() < 0.45 ? 3 + Math.floor(rng() * 7) : 0;
       activityRows.push({
         student_id: studentId,
         activity_date: isoDate(day),
@@ -566,30 +777,30 @@ async function seedTimeline(args: TimelineArgs) {
           id: crypto.randomUUID(),
           student_id: studentId,
           classroom_id: classroomId,
-          xp_amount: 20 + Math.floor(rng() * 30),
+          xp_amount:
+            20 + Math.floor(rng() * 30) + (isAna ? Math.floor(rng() * 15) : 0),
           source: "lesson",
           source_id: null,
-          created_at: new Date(
-            day.getTime() + (10 + rng() * 8) * 3600_000,
-          ).toISOString(),
+          created_at: atHour(day, 10 + rng() * 8, rng).toISOString(),
         });
       }
-      if (rng() < 0.15) {
+      if (rng() < 0.18) {
         xpRows.push({
           id: crypto.randomUUID(),
           student_id: studentId,
           classroom_id: classroomId,
-          xp_amount: 10,
+          xp_amount: 10 + Math.floor(rng() * 15),
           source: "streak_bonus",
           source_id: null,
           created_at: day.toISOString(),
         });
       }
-      if (rng() < 0.35 && levelPool.length > 0) {
+      // Completions
+      if (rng() < s.completionRate * 0.6 && levelPool.length > 0) {
         const slug = levelPool[Math.floor(rng() * levelPool.length)];
         if (!completedSlugs.has(slug)) {
           completedSlugs.add(slug);
-          const started = new Date(day.getTime() + 9 * 3600_000);
+          const started = atHour(day, 9 + rng() * 4, rng);
           const completed = new Date(started.getTime() + 25 * 60_000);
           progressRows.push({
             id: crypto.randomUUID(),
@@ -601,21 +812,95 @@ async function seedTimeline(args: TimelineArgs) {
             started_at: started.toISOString(),
             completed_at: completed.toISOString(),
           });
+          firstLessonDates.push({ slug, completedAt: completed });
+          totalCompleted++;
         }
       }
     }
 
-    // Conversations every ~14 days
-    for (let d = 6; d < totalDays; d += 12 + Math.floor(rng() * 10)) {
+    // Ensure EVERY student has at least one completion + activity even if
+    // the random walk produced nothing (happens for very-low-diligence
+    // personas like Diego's last weeks).
+    if (totalCompleted === 0 && levelPool.length > 0) {
+      const firstDay = addDays(joinDate, 2);
+      const slug = levelPool[0];
+      const started = atHour(firstDay, 10, rng);
+      const completed = new Date(started.getTime() + 25 * 60_000);
+      progressRows.push({
+        id: crypto.randomUUID(),
+        student_id: studentId,
+        lesson_slug: slug,
+        classroom_id: classroomId,
+        completed_exercises: 4,
+        total_exercises: 4,
+        started_at: started.toISOString(),
+        completed_at: completed.toISOString(),
+      });
+      completedSlugs.add(slug);
+      firstLessonDates.push({ slug, completedAt: completed });
+      activityRows.push({
+        student_id: studentId,
+        activity_date: isoDate(firstDay),
+        lesson_count: 1,
+        chat_messages: 0,
+      });
+      xpRows.push({
+        id: crypto.randomUUID(),
+        student_id: studentId,
+        classroom_id: classroomId,
+        xp_amount: 25,
+        source: "lesson",
+        source_id: null,
+        created_at: completed.toISOString(),
+      });
+      totalCompleted = 1;
+    }
+
+    // Recent-day guarantee — ensure every (still-active) student has
+    // activity within the last 7 days so "Your activity" is never empty.
+    if (!s.droppedAt) {
+      const within = activityRows
+        .filter(
+          (r) =>
+            r.student_id === studentId &&
+            typeof r.activity_date === "string" &&
+            new Date((r as { activity_date: string }).activity_date as string) >=
+              addDays(now, -7),
+        )
+        .length;
+      if (within === 0) {
+        const recentDay = addDays(now, -2);
+        activityRows.push({
+          student_id: studentId,
+          activity_date: isoDate(recentDay),
+          lesson_count: 1,
+          chat_messages: 2,
+        });
+        xpRows.push({
+          id: crypto.randomUUID(),
+          student_id: studentId,
+          classroom_id: classroomId,
+          xp_amount: 25,
+          source: "lesson",
+          source_id: null,
+          created_at: atHour(recentDay, 16, rng).toISOString(),
+        });
+      }
+    }
+
+    // Conversations (fewer for dropped students)
+    const convGap = isAna ? 9 : 14 + Math.floor(rng() * 10);
+    for (let d = 4; d < activeDays; d += convGap + Math.floor(rng() * 6)) {
       const convId = crypto.randomUUID();
-      const start = addDays(START_DATE, d);
+      const start = addDays(joinDate, d);
+      if (start > now) break;
       conversationRows.push({
         id: convId,
         student_id: studentId,
         classroom_id: classroomId,
         created_at: start.toISOString(),
       });
-      const turns = 4 + Math.floor(rng() * 5);
+      const turns = 4 + Math.floor(rng() * (isAna ? 8 : 5));
       for (let t = 0; t < turns; t++) {
         const when = new Date(start.getTime() + t * 90_000);
         const isUser = t % 2 === 0;
@@ -631,66 +916,266 @@ async function seedTimeline(args: TimelineArgs) {
       }
     }
 
-    // Badges
+    // Badges — First Contact (signup day) + progression badges
     badgeRows.push({
       id: crypto.randomUUID(),
       student_id: studentId,
-      badge_type: "first_lesson",
-      earned_at: addDays(START_DATE, 2).toISOString(),
+      badge_type: "welcome_aboard",
+      earned_at: atHour(joinDate, 9, rng).toISOString(),
     });
+    if (firstLessonDates.length > 0) {
+      badgeRows.push({
+        id: crypto.randomUUID(),
+        student_id: studentId,
+        badge_type: "first_lesson",
+        earned_at: firstLessonDates[0].completedAt.toISOString(),
+      });
+    }
+    if (totalCompleted >= 5) {
+      badgeRows.push({
+        id: crypto.randomUUID(),
+        student_id: studentId,
+        badge_type: "five_lessons",
+        earned_at: firstLessonDates[Math.min(4, firstLessonDates.length - 1)]
+          .completedAt.toISOString(),
+      });
+    }
+    if (totalCompleted >= 25) {
+      badgeRows.push({
+        id: crypto.randomUUID(),
+        student_id: studentId,
+        badge_type: "bookworm",
+        earned_at: firstLessonDates[24].completedAt.toISOString(),
+      });
+    }
     if (s.diligence > 0.7) {
       badgeRows.push({
         id: crypto.randomUUID(),
         student_id: studentId,
-        badge_type: "week_streak",
-        earned_at: addDays(START_DATE, 14).toISOString(),
+        badge_type: "streak_7",
+        earned_at: addDays(joinDate, 14).toISOString(),
+      });
+    }
+    if (s.diligence > 0.82) {
+      badgeRows.push({
+        id: crypto.randomUUID(),
+        student_id: studentId,
+        badge_type: "streak_30",
+        earned_at: addDays(joinDate, 45).toISOString(),
+      });
+    }
+    if (isAna) {
+      badgeRows.push({
+        id: crypto.randomUUID(),
+        student_id: studentId,
+        badge_type: "streak_90",
+        earned_at: addDays(joinDate, 120).toISOString(),
+      });
+      badgeRows.push({
+        id: crypto.randomUUID(),
+        student_id: studentId,
+        badge_type: "music_lover",
+        earned_at: addDays(joinDate, 60).toISOString(),
+      });
+      badgeRows.push({
+        id: crypto.randomUUID(),
+        student_id: studentId,
+        badge_type: "first_chat",
+        earned_at: addDays(joinDate, 3).toISOString(),
+      });
+      badgeRows.push({
+        id: crypto.randomUUID(),
+        student_id: studentId,
+        badge_type: "perfect_lesson",
+        earned_at: addDays(joinDate, 12).toISOString(),
       });
     }
 
-    // Monthly payments
-    const cursor = new Date("2024-01-10T12:00:00Z");
-    while (cursor <= now) {
-      const isPaid = rng() < 0.92;
-      paymentRows.push({
+    // Monthly payments — respect join date, drop date, debt months, seasonal break
+    const firstBill = new Date(
+      Date.UTC(joinDate.getUTCFullYear(), joinDate.getUTCMonth(), 10),
+    );
+    const lastBill = s.droppedAt
+      ? new Date(
+          Date.UTC(
+            new Date(s.droppedAt).getUTCFullYear(),
+            new Date(s.droppedAt).getUTCMonth(),
+            10,
+          ),
+        )
+      : now;
+    const monthsCursor = new Date(firstBill);
+    const paymentsList: Row[] = [];
+    while (monthsCursor <= lastBill) {
+      const ym = monthsCursor.getUTCMonth();
+      const yr = monthsCursor.getUTCFullYear();
+      // Karina's 3-month maternity break (2024-06,07,08)
+      const isKarinaBreak =
+        s.preferred === "Kari" &&
+        yr === 2024 &&
+        (ym === 5 || ym === 6 || ym === 7);
+      // Helena skips December every year
+      const isHelenaBreak = s.preferred === "Helê" && ym === 11;
+      // Some monthly variation: occasional discount or surcharge
+      const variation = rng();
+      let amount = s.tuitionCents;
+      if (variation < 0.08) amount = Math.round(s.tuitionCents * 0.8); // 20% discount
+      else if (variation > 0.93) amount = Math.round(s.tuitionCents * 1.1); // surcharge
+
+      const pay = rng() < s.payRate && !isKarinaBreak && !isHelenaBreak;
+      paymentsList.push({
         id: crypto.randomUUID(),
         roster_student_id: rosterId,
         teacher_id: teacherId,
-        billing_month: isoDate(
-          new Date(Date.UTC(cursor.getUTCFullYear(), cursor.getUTCMonth(), 1)),
-        ),
-        amount_cents: s.tuitionCents,
+        billing_month: isoDate(new Date(Date.UTC(yr, ym, 1))),
+        amount_cents: isKarinaBreak || isHelenaBreak ? 0 : amount,
         currency: "BRL",
-        paid: isPaid,
-        paid_at: isPaid
+        paid: pay,
+        paid_at: pay
           ? new Date(
-              cursor.getTime() + Math.floor(rng() * 5 * 86_400_000),
+              monthsCursor.getTime() +
+                Math.floor(rng() * 7 * 86_400_000),
             ).toISOString()
           : null,
-        notes: null,
+        notes: isKarinaBreak
+          ? "Maternity pause — free month"
+          : isHelenaBreak
+            ? "December break"
+            : null,
       });
-      cursor.setUTCMonth(cursor.getUTCMonth() + 1);
+      monthsCursor.setUTCMonth(monthsCursor.getUTCMonth() + 1);
+    }
+    // Apply "debt months" — force most recent N to unpaid
+    if (s.debtMonths && paymentsList.length >= s.debtMonths) {
+      for (let k = 0; k < s.debtMonths; k++) {
+        const row = paymentsList[paymentsList.length - 1 - k] as {
+          paid: boolean;
+          paid_at: string | null;
+        };
+        row.paid = false;
+        row.paid_at = null;
+      }
+    }
+    paymentRows.push(...paymentsList);
+
+    // Diary entries — sprinkled across the active period, denser for Ana
+    const diaryCadence = isAna ? 10 : 22 + Math.floor(rng() * 18);
+    const diaryPool = isAna ? DIARY_ANA : DIARY_GENERIC;
+    const moodPool: string[] = ["great", "good", "ok", "tough", "rough"];
+    for (let d = 6; d < activeDays; d += diaryCadence + Math.floor(rng() * 8)) {
+      const day = addDays(joinDate, d);
+      if (day > now) break;
+      const text = pickOne(rng, diaryPool);
+      const mood = pickOne(rng, moodPool);
+      diaryRows.push({
+        id: crypto.randomUUID(),
+        roster_student_id: rosterId,
+        teacher_id: teacherId,
+        body: text.replace("{name}", s.preferred),
+        mood,
+        entry_date: isoDate(day),
+        created_at: atHour(day, 18 + rng() * 3, rng).toISOString(),
+        updated_at: atHour(day, 18 + rng() * 3, rng).toISOString(),
+      });
+    }
+
+    // Student history — roughly one entry per week, mix of statuses
+    for (let d = 2; d < activeDays; d += 7) {
+      const day = addDays(joinDate, d);
+      if (day > now) break;
+      const r = rng();
+      const status =
+        r < 0.72
+          ? "Done"
+          : r < 0.8
+            ? "Absent"
+            : r < 0.88
+              ? "Rescheduled by student"
+              : r < 0.93
+                ? "Rescheduled by teacher"
+                : r < 0.98
+                  ? "Make up class"
+                  : "Planned";
+      const skillFocus = pickOne(rng, SKILL_FOCUS_POOL);
+      const lessonContent = pickOne(rng, LESSON_CONTENT_POOL[s.level] ?? LESSON_CONTENT_POOL.a2);
+      historyRows.push({
+        id: crypto.randomUUID(),
+        teacher_id: teacherId,
+        student_id: null,
+        roster_student_id: rosterId,
+        classroom_id: classroomId,
+        event_date: isoDate(day),
+        event_time: "18:00:00",
+        status,
+        lesson_content: lessonContent,
+        skill_focus: skillFocus,
+        meeting_link: `https://meet.google.com/${makeMeetCode(rng)}`,
+        created_at: day.toISOString(),
+        updated_at: day.toISOString(),
+      });
+    }
+
+    // Scheduled classes — a few future sessions for this student's classroom
+    if (!s.droppedAt && i < 3) {
+      // Only seed once per classroom — take the first student per classroom
+      const firstInClassroom = STUDENT_SPECS.findIndex(
+        (x) => x.classroomIdx === s.classroomIdx,
+      );
+      if (firstInClassroom === i) {
+        for (let k = 0; k < 5; k++) {
+          const when = addDays(now, k * 7 - 14);
+          scheduledRows.push({
+            id: crypto.randomUUID(),
+            classroom_id: classroomId,
+            title: pickOne(rng, SCHEDULED_TITLES),
+            meeting_url: `https://meet.google.com/${makeMeetCode(rng)}`,
+            scheduled_at: atHour(when, 18, rng).toISOString(),
+            created_by: teacherId,
+            created_at: addDays(when, -3).toISOString(),
+          });
+        }
+      }
     }
   }
 
   console.log(
-    `    rows — activity:${activityRows.length} xp:${xpRows.length} progress:${progressRows.length} assignments:${assignmentRows.length} conv:${conversationRows.length} msg:${messageRows.length} payments:${paymentRows.length}`,
+    `  ▸ rows — activity:${activityRows.length} xp:${xpRows.length} ` +
+      `progress:${progressRows.length} assignments:${assignmentRows.length} ` +
+      `convos:${conversationRows.length} msgs:${messageRows.length} ` +
+      `badges:${badgeRows.length} payments:${paymentRows.length} ` +
+      `diary:${diaryRows.length} history:${historyRows.length} ` +
+      `scheduled:${scheduledRows.length}`,
   );
 
-  await clearPrior(studentIds, rosterIds, classroomIds);
-  await bulkInsert("daily_activity", activityRows, 500);
+  await clearPrior(studentIds, rosterIds, classroomIds, args.teacherId);
+
+  // Dedup daily_activity (student_id,activity_date) — multiple codepaths can emit the same row.
+  const seenAct = new Set<string>();
+  const dedupedActivity = activityRows.filter((r) => {
+    const k = `${r.student_id}:${r.activity_date}`;
+    if (seenAct.has(k)) return false;
+    seenAct.add(k);
+    return true;
+  });
+
+  await bulkInsert("daily_activity", dedupedActivity, 500);
   await bulkInsert("xp_events", xpRows, 500);
   await bulkInsert("lesson_progress", progressRows, 500);
   await bulkInsert("lesson_assignments", assignmentRows, 500);
   await bulkInsert("conversations", conversationRows, 500);
   await bulkInsert("messages", messageRows, 500);
-  await bulkInsert("badges", badgeRows, 200);
+  await bulkInsert("badges", badgeRows, 300);
   await bulkInsert("student_payments", paymentRows, 300);
+  await bulkInsert("roster_diary", diaryRows, 300);
+  await bulkInsert("student_history", historyRows, 300);
+  await bulkInsert("scheduled_classes", scheduledRows, 200);
 }
 
 async function clearPrior(
   studentIds: string[],
   rosterIds: string[],
   classroomIds: string[],
+  teacherId: string,
 ) {
   const convs = await admin
     .from("conversations")
@@ -713,6 +1198,18 @@ async function clearPrior(
     .from("student_payments")
     .delete()
     .in("roster_student_id", rosterIds);
+  await admin
+    .from("roster_diary")
+    .delete()
+    .in("roster_student_id", rosterIds);
+  await admin
+    .from("student_history")
+    .delete()
+    .eq("teacher_id", teacherId);
+  await admin
+    .from("scheduled_classes")
+    .delete()
+    .in("classroom_id", classroomIds);
 }
 
 async function bulkInsert(
@@ -731,6 +1228,10 @@ async function bulkInsert(
     }
   }
 }
+
+// ---------------------------------------------------------------------------
+// Content pools
+// ---------------------------------------------------------------------------
 
 const STUDENT_LINES = {
   a1: [
@@ -757,8 +1258,13 @@ const STUDENT_LINES = {
     "Can you quiz me on phrasal verbs with 'get'?",
     "I'm unsure about the difference between 'anxious' and 'eager'.",
   ],
+  c1: [
+    "Could you flag any register issues in this cover letter?",
+    "Is 'notwithstanding' overkill in a LinkedIn post?",
+    "Recommend three advanced idioms for business negotiations.",
+    "I want a sharper verb than 'handle' for stakeholder management.",
+  ],
 };
-
 const TUTOR_LINES = {
   a1: [
     "Great! Say 'Good morning! How are you?'",
@@ -784,6 +1290,12 @@ const TUTOR_LINES = {
     "Sure — get over, get on with, get at, get across, get away with…",
     "'Anxious' = worried, 'eager' = excited to. Context matters.",
   ],
+  c1: [
+    "Register is fine — trim 'I would kindly request' to 'I'd appreciate'.",
+    "Too formal for LinkedIn — try 'despite that' or 'even so'.",
+    "Try 'move the needle', 'split the difference', 'bring them along'.",
+    "Use 'orchestrate', 'align', or 'shepherd' depending on the vibe.",
+  ],
 };
 
 function pickStudentLine(rng: () => number, level: string): string {
@@ -792,8 +1304,102 @@ function pickStudentLine(rng: () => number, level: string): string {
   return pool[Math.floor(rng() * pool.length)];
 }
 function pickTutorLine(rng: () => number, level: string): string {
-  const pool = TUTOR_LINES[level as keyof typeof TUTOR_LINES] ?? TUTOR_LINES.a2;
+  const pool =
+    TUTOR_LINES[level as keyof typeof TUTOR_LINES] ?? TUTOR_LINES.a2;
   return pool[Math.floor(rng() * pool.length)];
+}
+
+const DIARY_ANA = [
+  "{name} absolutely nailed the pronunciation drills today — 'th' is finally clicking.",
+  "Had a long chat about the reading homework. {name} noticed three idioms on her own.",
+  "{name} asked for harder material. Giving her B2 listening next week.",
+  "Rough day — tired from school but pushed through. Praised her persistence.",
+  "Breakthrough! {name} used 'used to' naturally in an unprompted story.",
+  "Confidence up — she volunteered to present the article summary first.",
+  "Asked about prepositions of place. We drew a little map. She remembered them all.",
+  "Energy lower than usual. Noted to start next class with a warm-up she likes.",
+  "Loved today's song activity. Wrote the chorus from memory.",
+  "{name} is reading a chapter of 'Charlotte's Web'. Two new idioms found.",
+];
+const DIARY_GENERIC = [
+  "Went over conditional tenses — {name} needs more practice with third conditional.",
+  "{name} nailed the past simple questions today. Great energy.",
+  "Short class — covered vocabulary for ordering food. Homework assigned.",
+  "Reading comprehension: {name} picked up the main idea quickly.",
+  "Focus on connectors next time — {name} overuses 'and'.",
+  "Pronunciation session. Worked on 'th' vs 'f'. Improving slowly.",
+  "Writing exercise: email to a landlord. Solid structure, minor tense slips.",
+  "Role-play: job interview. {name} was surprisingly natural!",
+  "Reviewed phrasal verbs with 'get'. Tomorrow: 'take'.",
+  "Quiet class — asked {name} to prepare a short talk for next session.",
+];
+
+const SKILL_FOCUS_POOL: string[][] = [
+  ["grammar", "listening"],
+  ["reading", "vocabulary"],
+  ["speaking"],
+  ["writing", "grammar"],
+  ["pronunciation", "speaking"],
+  ["listening", "speaking"],
+  ["vocabulary"],
+  ["grammar"],
+  ["writing"],
+];
+const LESSON_CONTENT_POOL: Record<string, string[]> = {
+  a1: [
+    "Greetings and introductions",
+    "Numbers 1–100 and days of the week",
+    "Alphabet & spelling practice",
+    "Verb 'to be' in positive and negative",
+    "Simple present with daily routines",
+  ],
+  a2: [
+    "Past simple irregular verbs",
+    "'Used to' for past habits",
+    "Prepositions of place and movement",
+    "Quantifiers: some, any, much, many",
+    "Comparatives and superlatives",
+  ],
+  b1: [
+    "First vs second conditional",
+    "Connectors for essays: however, moreover, therefore",
+    "Phrasal verbs with 'get'",
+    "Present perfect continuous vs present perfect",
+    "Reported speech — statements and questions",
+  ],
+  b2: [
+    "Third conditional and mixed conditionals",
+    "Cleft sentences for emphasis",
+    "Advanced phrasal verbs — business contexts",
+    "Formal register and hedging",
+    "Essay: argumentative structure",
+  ],
+  c1: [
+    "Nuanced modal verbs for speculation",
+    "Cohesion and coherence in long writing",
+    "Idiomatic language in negotiation",
+    "Advanced collocations for reviews",
+    "Register shifts — academic vs conversational",
+  ],
+};
+
+const SCHEDULED_TITLES = [
+  "Weekly check-in",
+  "Writing feedback session",
+  "Reading club — chapter discussion",
+  "Speaking drill (pronunciation)",
+  "Mock exam review",
+  "Listening lab — podcast analysis",
+  "Q&A and homework review",
+];
+
+function makeMeetCode(rng: () => number): string {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const seg = (n: number) =>
+    Array.from({ length: n }, () =>
+      alphabet[Math.floor(rng() * alphabet.length)],
+    ).join("");
+  return `${seg(3)}-${seg(4)}-${seg(3)}`;
 }
 
 main().catch((e) => {

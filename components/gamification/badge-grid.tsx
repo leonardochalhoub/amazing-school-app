@@ -1,6 +1,5 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import type { BadgeDefinition } from "@/lib/gamification/config";
 
@@ -9,33 +8,84 @@ interface BadgeGridProps {
   allBadges: readonly BadgeDefinition[];
 }
 
+const RARITY_LABEL: Record<string, string> = {
+  common: "Common",
+  rare: "Rare",
+  epic: "Epic",
+  legendary: "Legendary",
+  mythic: "Mythic",
+};
+
 export function BadgeGrid({ earnedBadges, allBadges }: BadgeGridProps) {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+    <div className="grid gap-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
       {allBadges.map((badge) => {
         const earned = earnedBadges.includes(badge.type);
         return (
-          <Card
-            key={badge.type}
-            className={cn(
-              "transition-all",
-              earned
-                ? "border-primary/30 bg-primary/5"
-                : "opacity-50 grayscale"
-            )}
-          >
-            <CardContent className="p-3 text-center space-y-1">
-              <div className="text-2xl">{earned ? badge.icon : "🔒"}</div>
-              <p className="text-xs font-medium truncate">{badge.name}</p>
-              {earned && (
-                <p className="text-[10px] text-muted-foreground">
-                  {badge.description}
-                </p>
-              )}
-            </CardContent>
-          </Card>
+          <BadgeTile key={badge.type} badge={badge} earned={earned} />
         );
       })}
+    </div>
+  );
+}
+
+function BadgeTile({
+  badge,
+  earned,
+}: {
+  badge: BadgeDefinition;
+  earned: boolean;
+}) {
+  return (
+    <div
+      className={cn(
+        "group relative overflow-hidden rounded-2xl border p-3 transition-all",
+        earned
+          ? `border-border bg-gradient-to-br ${badge.gradient} text-white ${badge.glow} hover:-translate-y-0.5`
+          : "border-dashed border-border bg-muted/30 text-muted-foreground",
+      )}
+    >
+      {/* Hexagonal sheen */}
+      {earned ? (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_0%,rgba(255,255,255,0.25),transparent_60%)] opacity-80"
+        />
+      ) : null}
+
+      <div className="relative flex flex-col items-center gap-1.5 text-center">
+        <div
+          className={cn(
+            "flex h-12 w-12 items-center justify-center rounded-full text-2xl",
+            earned
+              ? "bg-white/20 ring-2 ring-white/40 backdrop-blur"
+              : "bg-muted grayscale",
+          )}
+        >
+          {earned ? badge.icon : "🔒"}
+        </div>
+        <p className={cn("truncate text-xs font-semibold", !earned && "opacity-70")}>
+          {badge.name}
+        </p>
+        <p
+          className={cn(
+            "line-clamp-2 text-[10px]",
+            earned ? "text-white/80" : "text-muted-foreground/80",
+          )}
+        >
+          {badge.description}
+        </p>
+        <span
+          className={cn(
+            "mt-1 inline-flex items-center gap-1 rounded-full border px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider",
+            earned
+              ? "border-white/40 bg-white/15 text-white"
+              : "border-border bg-background/60",
+          )}
+        >
+          {RARITY_LABEL[badge.rarity] ?? badge.rarity}
+        </span>
+      </div>
     </div>
   );
 }

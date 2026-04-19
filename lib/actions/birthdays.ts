@@ -34,7 +34,7 @@ export async function getUpcomingBirthdays(
   const { data, error } = await admin
     .from("roster_students")
     .select(
-      "id, full_name, preferred_name, birthday, age_group, gender, classroom_id, has_avatar"
+      "id, full_name, preferred_name, email, birthday, age_group, gender, classroom_id, has_avatar"
     )
     .eq("teacher_id", user.id)
     .not("birthday", "is", null);
@@ -45,6 +45,22 @@ export async function getUpcomingBirthdays(
   today.setHours(0, 0, 0, 0);
   const year = today.getFullYear();
 
+  // Demo-exception: on the seeded demo teacher account, pin three
+  // students' birthdays to nearby offsets from today so the "Upcoming
+  // birthdays" panel is always populated regardless of when the visitor
+  // lands. Ana always shows up first (tomorrow).
+  const isDemoTeacher =
+    (user.email ?? "").toLowerCase() === "demo.luiza@amazingschool.app";
+  const demoBirthdayOffsetsByEmail: Record<string, number> = {
+    "demo.ana@amazingschool.app": 1,
+    "demo.gustavo@amazingschool.app": 5,
+    "demo.mariana@amazingschool.app": 12,
+  };
+  const monthDayFromOffset = (days: number) => {
+    const d = new Date(today.getTime() + days * 86_400_000);
+    return `${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  };
+
   const withAvatars = data.filter(
     (r) => (r as { has_avatar: boolean }).has_avatar
   );
@@ -54,7 +70,14 @@ export async function getUpcomingBirthdays(
 
   const upcoming: UpcomingBirthday[] = [];
   for (const row of data) {
-    const birthdayStr = row.birthday as string;
+    let birthdayStr = row.birthday as string;
+    const rowEmail = (row as { email: string | null }).email ?? "";
+    if (isDemoTeacher) {
+      const offset = demoBirthdayOffsetsByEmail[rowEmail.toLowerCase()];
+      if (typeof offset === "number") {
+        birthdayStr = `${birthdayStr.slice(0, 4)}-${monthDayFromOffset(offset)}`;
+      }
+    }
     const birthDate = new Date(birthdayStr);
     if (Number.isNaN(birthDate.getTime())) continue;
 
