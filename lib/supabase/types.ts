@@ -131,6 +131,7 @@ export interface RosterStudent {
   birthday: string | null;
   level: RosterLevel | null;
   auth_user_id: string | null;
+  ended_on: string | null;
   created_at: string;
   updated_at: string;
 }

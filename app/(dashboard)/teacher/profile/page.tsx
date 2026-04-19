@@ -4,8 +4,13 @@ import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
 import { AvatarUploader } from "@/components/shared/avatar-uploader";
 import { PrivacyNotice } from "@/components/shared/privacy-notice";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, GraduationCap, ArrowUpRight } from "lucide-react";
+import { BookOpen, GraduationCap, ArrowUpRight, Image as ImageIcon } from "lucide-react";
 import { redirect } from "next/navigation";
+import {
+  isLogoEligible,
+  SCHOOL_LOGO_SRC,
+} from "@/lib/actions/school-logo";
+import { SchoolLogoToggle } from "@/components/teacher/school-logo-toggle";
 
 export default async function TeacherProfilePage() {
   const supabase = await createClient();
@@ -17,7 +22,7 @@ export default async function TeacherProfilePage() {
   const admin = createAdminClient();
   const { data: profile } = await admin
     .from("profiles")
-    .select("full_name, avatar_url, role")
+    .select("full_name, avatar_url, role, school_logo_enabled")
     .eq("id", user.id)
     .maybeSingle();
 
@@ -25,6 +30,9 @@ export default async function TeacherProfilePage() {
   if (profile.role !== "teacher") redirect("/student/profile");
 
   const signedUrl = await resolveMyAvatarUrl(supabase, user.id);
+  const logoEligible = isLogoEligible(user.email, profile.full_name);
+  const logoEnabled =
+    (profile as { school_logo_enabled?: boolean }).school_logo_enabled === true;
 
   return (
     <div className="space-y-6 max-w-2xl">
@@ -52,6 +60,23 @@ export default async function TeacherProfilePage() {
           </p>
         </CardContent>
       </Card>
+
+      {logoEligible ? (
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-base">
+              <ImageIcon className="h-4 w-4 text-primary" />
+              School brand logo
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <SchoolLogoToggle
+              initialEnabled={logoEnabled}
+              logoSrc={SCHOOL_LOGO_SRC}
+            />
+          </CardContent>
+        </Card>
+      ) : null}
 
       <Card>
         <CardHeader>

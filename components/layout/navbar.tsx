@@ -31,6 +31,8 @@ interface NavbarProps {
   userId: string;
   ageGroup?: AgeGroup | null;
   gender?: Gender | null;
+  /** Optional white-label school logo shown centered above the nav. */
+  schoolLogoPath?: string | null;
 }
 
 export function Navbar({
@@ -38,6 +40,7 @@ export function Navbar({
   role,
   avatarUrl,
   isOwner,
+  schoolLogoPath,
   userId,
   ageGroup,
   gender,
@@ -119,6 +122,17 @@ export function Navbar({
 
   return (
     <header className="sticky top-0 z-50 w-full overflow-x-clip border-b border-border/70 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
+      {/* White-label school logo — only rendered for whitelisted
+          accounts (Leo + Tatiana). Hidden otherwise. */}
+      {schoolLogoPath ? (
+        <div className="flex w-full justify-center border-b border-border/40 py-2">
+          <img
+            src={schoolLogoPath}
+            alt="School logo"
+            className="h-10 w-auto object-contain md:h-12"
+          />
+        </div>
+      ) : null}
       <div className="mx-auto flex h-16 w-full min-w-0 max-w-7xl items-center justify-between gap-2 px-3 md:px-6">
         <Link
           href={`/${role}`}

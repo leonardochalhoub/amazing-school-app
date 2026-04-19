@@ -37,14 +37,14 @@ export async function getTeacherManagementMatrix(opts?: {
     return { error: "Teacher access only" };
   }
 
-  // Month range: fixed anchor at 2024-01, running through the first of
+  // Month range: fixed anchor at 2025-01, running through the first of
   // NEXT month (so if today is April, May is already visible). Returned
   // DESC (newest first) to match the existing ManagementData contract.
-  // Auto-gen is intentionally removed — payment rows now exist only
-  // after the teacher explicitly clicks a square. An untouched square
-  // is an empty cell.
+  // Whenever the teacher logs in, the current page load regenerates the
+  // months array — missing a month never breaks anything, the next
+  // visit just picks up every month up through current + 1.
   const now = new Date();
-  const anchor = new Date(2024, 0, 1);
+  const anchor = new Date(2025, 0, 1);
   const end = new Date(now.getFullYear(), now.getMonth() + 1, 1); // current + 1
   const ascMonths: string[] = [];
   {
@@ -61,7 +61,7 @@ export async function getTeacherManagementMatrix(opts?: {
   const { data: rosterRaw, error } = await admin
     .from("roster_students")
     .select(
-      "id, full_name, teacher_id, auth_user_id, classroom_id, monthly_tuition_cents, billing_day, billing_starts_on, classrooms(name)"
+      "id, full_name, teacher_id, auth_user_id, classroom_id, monthly_tuition_cents, billing_day, billing_starts_on, ended_on, classrooms(name)"
     )
     .eq("teacher_id", user.id)
     .order("full_name", { ascending: true });
@@ -76,6 +76,7 @@ export async function getTeacherManagementMatrix(opts?: {
     monthly_tuition_cents: number | null;
     billing_day: number | null;
     billing_starts_on: string | null;
+    ended_on: string | null;
     classrooms: { name: string } | { name: string }[] | null;
   }>;
 
@@ -120,6 +121,7 @@ export async function getTeacherManagementMatrix(opts?: {
       monthly_tuition_cents: r.monthly_tuition_cents,
       billing_day: r.billing_day,
       billing_starts_on: r.billing_starts_on,
+      ended_on: r.ended_on,
       payments,
     };
   });

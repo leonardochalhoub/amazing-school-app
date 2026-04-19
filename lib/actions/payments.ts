@@ -77,6 +77,8 @@ export interface ManagementRow {
   monthly_tuition_cents: number | null;
   billing_day: number | null;
   billing_starts_on: string | null;
+  /** Last day of studies — when set, the matrix locks cells after it. */
+  ended_on: string | null;
   payments: Record<string, StudentPaymentRow | null>;
 }
 
@@ -181,7 +183,7 @@ export async function getManagementMatrix(opts?: {
   const { data: rosterRaw, error } = await admin
     .from("roster_students")
     .select(
-      "id, full_name, teacher_id, auth_user_id, classroom_id, monthly_tuition_cents, billing_day, billing_starts_on, classrooms(name)"
+      "id, full_name, teacher_id, auth_user_id, classroom_id, monthly_tuition_cents, billing_day, billing_starts_on, ended_on, classrooms(name)"
     )
     .order("full_name", { ascending: true });
   if (error) return { error: error.message };
@@ -195,6 +197,7 @@ export async function getManagementMatrix(opts?: {
     monthly_tuition_cents: number | null;
     billing_day: number | null;
     billing_starts_on: string | null;
+    ended_on: string | null;
     classrooms: { name: string } | { name: string }[] | null;
   }>;
 
@@ -239,6 +242,7 @@ export async function getManagementMatrix(opts?: {
       monthly_tuition_cents: r.monthly_tuition_cents,
       billing_day: r.billing_day,
       billing_starts_on: r.billing_starts_on,
+      ended_on: r.ended_on,
       payments,
     };
   });

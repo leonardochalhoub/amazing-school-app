@@ -60,9 +60,24 @@ export function ManagementGrid({ months, rows }: Props) {
     });
   }, [rows, query]);
 
-  // ASC order (oldest on the left) — reads naturally left-to-right
-  // through time. Current month + next month live on the right edge.
-  const orderedMonths = useMemo(() => [...months].reverse(), [months]);
+  // Every unique year present in the months array (2025, 2026, …).
+  const availableYears = useMemo(() => {
+    const set = new Set<number>();
+    for (const m of months) set.add(Number(m.slice(0, 4)));
+    return [...set].sort((a, b) => b - a); // newest first
+  }, [months]);
+  const [selectedYear, setSelectedYear] = useState<number>(
+    availableYears[0] ?? new Date().getFullYear(),
+  );
+
+  // Months for the selected year only, ASC (Jan → Dec). Months that
+  // haven't happened yet (e.g. 2025-12 when we're in April) are still
+  // included so teachers can plan ahead.
+  const orderedMonths = useMemo(() => {
+    return [...months]
+      .filter((m) => m.startsWith(`${selectedYear}-`))
+      .reverse();
+  }, [months, selectedYear]);
 
   function cycle(rosterId: string, month: string) {
     const key = `cell-${rosterId}|${month}`;
@@ -123,7 +138,7 @@ export function ManagementGrid({ months, rows }: Props) {
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <Input
           type="search"
           value={query}
@@ -131,8 +146,29 @@ export function ManagementGrid({ months, rows }: Props) {
           placeholder="Filter by student, teacher, or classroom…"
           className="h-9 w-72"
         />
+        <div className="flex items-center gap-2">
+          <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+            Year
+          </span>
+          <div className="inline-flex rounded-lg border border-border bg-card p-0.5 text-xs">
+            {availableYears.map((y) => (
+              <button
+                key={y}
+                type="button"
+                onClick={() => setSelectedYear(y)}
+                className={`rounded-md px-2.5 py-1 font-medium transition-colors ${
+                  selectedYear === y
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {y}
+              </button>
+            ))}
+          </div>
+        </div>
         <p className="text-xs text-muted-foreground">
-          Showing {filtered.length} of {rows.length} students · {orderedMonths.length} months
+          {filtered.length} of {rows.length} students · {orderedMonths.length} months in {selectedYear}
         </p>
       </div>
 
@@ -211,6 +247,13 @@ export function ManagementGrid({ months, rows }: Props) {
                   {orderedMonths.map((m) => {
                     const payment = r.payments[m];
                     const key = `cell-${r.roster_student_id}|${m}`;
+                    // Student's active window. NULL start means "from
+                    // anchor"; NULL end means "still active".
+                    const start = (r.billing_starts_on ?? "0000-00-00").slice(0, 10);
+                    const end = r.ended_on ? r.ended_on.slice(0, 10) : null;
+                    const monthIso = m.slice(0, 10);
+                    const locked =
+                      monthIso < start || (end !== null && monthIso > end);
                     return (
                       <td key={m} className="px-1.5 py-2 text-center">
                         <PaymentCell
@@ -219,6 +262,7 @@ export function ManagementGrid({ months, rows }: Props) {
                           fallbackAmountCents={r.monthly_tuition_cents}
                           studentName={r.student_name}
                           pending={pendingCell === key}
+                          locked={locked}
                           onClick={() => cycle(r.roster_student_id, m)}
                         />
                       </td>
@@ -274,6 +318,7 @@ function PaymentCell({
   fallbackAmountCents,
   studentName,
   pending,
+  locked,
   onClick,
 }: {
   payment: StudentPaymentRow | null;
@@ -281,6 +326,7 @@ function PaymentCell({
   fallbackAmountCents: number | null;
   studentName: string;
   pending: boolean;
+  locked: boolean;
   onClick: () => void;
 }) {
   const state: PaymentCellState = cellStateOf(payment);
@@ -289,8 +335,9 @@ function PaymentCell({
 
   const base =
     "mx-auto flex h-7 w-7 items-center justify-center rounded-md text-xs transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50";
-  const palette =
-    state === "paid"
+  const palette = locked
+    ? "border border-transparent bg-transparent text-muted-foreground/30 cursor-not-allowed"
+    : state === "paid"
       ? "bg-emerald-500 text-white border border-emerald-600 shadow-sm hover:brightness-110"
       : state === "due"
         ? "bg-amber-500 text-white border border-amber-600 shadow-sm hover:brightness-110"
@@ -300,12 +347,17 @@ function PaymentCell({
     <div className="group relative inline-block">
       <button
         type="button"
-        onClick={() => startTransition(onClick)}
-        disabled={pending || isPending}
+        onClick={() => {
+          if (locked) return;
+          startTransition(onClick);
+        }}
+        disabled={pending || isPending || locked}
         className={`${base} ${palette} ${pending || isPending ? "opacity-60" : ""}`}
-        aria-label={`${studentName} · ${monthLong(month)} · ${state}`}
+        aria-label={`${studentName} · ${monthLong(month)} · ${locked ? "outside active window" : state}`}
       >
-        {pending || isPending ? (
+        {locked ? (
+          <span className="text-[10px] opacity-50">—</span>
+        ) : pending || isPending ? (
           <Loader2 className="h-3 w-3 animate-spin" />
         ) : state === "paid" ? (
           <Check className="h-3.5 w-3.5" />
@@ -313,14 +365,16 @@ function PaymentCell({
           <Clock className="h-3 w-3" />
         ) : null}
       </button>
-      <PaymentTooltip
-        state={state}
-        month={month}
-        amountCents={amount}
-        dueMarkedAt={payment?.due_marked_at ?? null}
-        paidAt={payment?.paid_at ?? null}
-        studentName={studentName}
-      />
+      {locked ? null : (
+        <PaymentTooltip
+          state={state}
+          month={month}
+          amountCents={amount}
+          dueMarkedAt={payment?.due_marked_at ?? null}
+          paidAt={payment?.paid_at ?? null}
+          studentName={studentName}
+        />
+      )}
     </div>
   );
 }

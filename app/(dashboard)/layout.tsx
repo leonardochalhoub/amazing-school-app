@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
 import { isOwnerEmail } from "@/lib/auth/roles";
+import { isLogoEligible, SCHOOL_LOGO_SRC } from "@/lib/actions/school-logo";
 import { redirect } from "next/navigation";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -23,7 +24,7 @@ export default async function DashboardLayout({
   const admin = createAdminClient();
   const { data: profile, error } = await admin
     .from("profiles")
-    .select("full_name, role, avatar_url")
+    .select("full_name, role, avatar_url, school_logo_enabled")
     .eq("id", user.id)
     .single();
 
@@ -49,6 +50,17 @@ export default async function DashboardLayout({
 
   const isDemo = (user.email ?? "").toLowerCase().startsWith("demo.");
 
+  // White-label school logo: shown centered at the top of the nav for
+  // whitelisted teacher accounts, only when they've flipped the toggle
+  // on their Profile page. File lives at `public/T - 2.png`.
+  const schoolLogoPath = resolveSchoolLogo({
+    fullName: profile.full_name,
+    email: user.email,
+    enabled:
+      (profile as { school_logo_enabled?: boolean }).school_logo_enabled ===
+      true,
+  });
+
   return (
     <div className="relative flex min-h-screen flex-col overflow-x-clip bg-background">
       <div
@@ -67,6 +79,7 @@ export default async function DashboardLayout({
         userId={user.id}
         ageGroup={rosterAgeGroup}
         gender={rosterGender}
+        schoolLogoPath={schoolLogoPath}
       />
       <main className="w-full min-w-0 flex-1 overflow-x-clip">
         <div className="mx-auto w-full max-w-7xl min-w-0 overflow-x-clip px-4 py-6 md:px-8 md:py-8">
@@ -76,4 +89,23 @@ export default async function DashboardLayout({
       <Footer />
     </div>
   );
+}
+
+// ---------------------------------------------------------------------------
+// White-label branding: the PNG lives at `public/T - 2.png`. Whitelisted
+// teachers (Leo + Tatiana) get a toggle on their Profile page; when ON,
+// this returns the image path, otherwise null.
+// ---------------------------------------------------------------------------
+function resolveSchoolLogo({
+  fullName,
+  email,
+  enabled,
+}: {
+  fullName: string;
+  email: string | null | undefined;
+  enabled: boolean;
+}): string | null {
+  if (!enabled) return null;
+  if (!isLogoEligible(email, fullName)) return null;
+  return SCHOOL_LOGO_SRC;
 }
