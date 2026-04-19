@@ -181,6 +181,11 @@ function logoForTeacher({
   uploadedPath: string | null;
 }): string | null {
   if (!enabled) return null;
+  // Priority: the teacher's own upload wins over the whitelisted
+  // bundled asset. Whitelisted teachers get the bundled file as a
+  // default they can override at any time.
+  const uploaded = schoolLogoPublicUrl(uploadedPath);
+  if (uploaded) return uploaded;
   if (isLogoEligible(email, fullName)) return SCHOOL_LOGO_SRC;
-  return schoolLogoPublicUrl(uploadedPath);
+  return null;
 }

@@ -30,9 +30,13 @@ export function SchoolLogoToggle({
   const [pending, startTransition] = useTransition();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // An uploaded logo always wins over the bundled whitelist asset.
+  // Whitelisted teachers just ship with one pre-set as a default —
+  // they can replace it at any time by uploading a new image.
   const isWhitelisted = !!whitelistLogoSrc;
-  const activeSrc = isWhitelisted ? whitelistLogoSrc : localUploadedUrl;
+  const activeSrc = localUploadedUrl ?? whitelistLogoSrc;
   const hasLogo = !!activeSrc;
+  const usingUpload = !!localUploadedUrl;
 
   function toggle() {
     const next = !enabled;
@@ -115,52 +119,53 @@ export function SchoolLogoToggle({
                 : "Hidden"}
           </p>
           <p className="text-[11px] text-muted-foreground">
-            {isWhitelisted
-              ? "Bundled brand asset · locked by the platform"
-              : localUploadedUrl
-                ? "Your upload · PNG / JPG / WebP / SVG · up to 8 MB"
+            {usingUpload
+              ? "Your upload · PNG / JPG / WebP / SVG · up to 8 MB"
+              : isWhitelisted
+                ? "Bundled default · upload your own to replace it"
                 : "Drop in a PNG, JPG, WebP, or SVG. We auto-resize to fit the navbar."}
           </p>
         </div>
         <div className="flex items-center gap-2">
-          {!isWhitelisted ? (
-            <>
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/png,image/jpeg,image/webp,image/svg+xml"
-                className="sr-only"
-                onChange={(e) => {
-                  const f = e.target.files?.[0];
-                  if (f) upload(f);
-                  e.target.value = "";
-                }}
-              />
-              <button
-                type="button"
-                onClick={pickFile}
-                disabled={pending}
-                className="inline-flex h-9 items-center gap-1.5 rounded-full border border-border bg-background px-3 text-xs font-medium transition-colors hover:bg-muted disabled:opacity-50"
-              >
-                {pending ? (
-                  <Loader2 className="h-3.5 w-3.5 animate-spin" />
-                ) : (
-                  <Upload className="h-3.5 w-3.5" />
-                )}
-                {hasLogo ? "Replace" : "Upload"}
-              </button>
-              {hasLogo ? (
-                <button
-                  type="button"
-                  onClick={remove}
-                  disabled={pending}
-                  className="inline-flex h-9 items-center gap-1.5 rounded-full border border-border bg-background px-3 text-xs font-medium text-rose-600 transition-colors hover:bg-rose-500/10 disabled:opacity-50"
-                >
-                  <Trash2 className="h-3.5 w-3.5" />
-                  Remove
-                </button>
-              ) : null}
-            </>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/png,image/jpeg,image/webp,image/svg+xml"
+            className="sr-only"
+            onChange={(e) => {
+              const f = e.target.files?.[0];
+              if (f) upload(f);
+              e.target.value = "";
+            }}
+          />
+          <button
+            type="button"
+            onClick={pickFile}
+            disabled={pending}
+            className="inline-flex h-9 items-center gap-1.5 rounded-full border border-border bg-background px-3 text-xs font-medium transition-colors hover:bg-muted disabled:opacity-50"
+          >
+            {pending ? (
+              <Loader2 className="h-3.5 w-3.5 animate-spin" />
+            ) : (
+              <Upload className="h-3.5 w-3.5" />
+            )}
+            {hasLogo ? "Replace" : "Upload"}
+          </button>
+          {usingUpload ? (
+            <button
+              type="button"
+              onClick={remove}
+              disabled={pending}
+              className="inline-flex h-9 items-center gap-1.5 rounded-full border border-border bg-background px-3 text-xs font-medium text-rose-600 transition-colors hover:bg-rose-500/10 disabled:opacity-50"
+              title={
+                isWhitelisted
+                  ? "Delete your upload and go back to the bundled logo"
+                  : "Delete your logo"
+              }
+            >
+              <Trash2 className="h-3.5 w-3.5" />
+              {isWhitelisted ? "Revert" : "Remove"}
+            </button>
           ) : null}
           <button
             type="button"
