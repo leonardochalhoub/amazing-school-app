@@ -113,6 +113,13 @@ export interface MusicSong extends MusicMeta {
    *  - "manual": hand-authored fallback (approximate, no synced source)
    */
   timing_source?: "lrclib" | "manual";
+  /**
+   * Vevo-claimed tracks often refuse to embed on youtube-nocookie.com
+   * but still play on the classic youtube.com host. Flip this flag on
+   * any song that shows a "video unavailable / blocked" error so the
+   * board renders it from youtube.com/embed/... instead.
+   */
+  use_classic_embed?: boolean;
   exercises: MusicExercise[];
   teaching_notes_md: string;
   copyright_notice: string;

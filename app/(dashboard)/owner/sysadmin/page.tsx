@@ -324,7 +324,7 @@ export default async function SysadminPage() {
             Most engaged students
           </h2>
           <p className="text-xs text-muted-foreground">
-            First name + XP only. Privacy-scoped.
+            Ranked by XP earned in the last 30 days
           </p>
         </div>
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
@@ -344,6 +344,11 @@ export default async function SysadminPage() {
                 <p className="mt-2 truncate font-semibold leading-tight">
                   {s.displayName}
                 </p>
+                {s.teacherName ? (
+                  <p className="truncate text-[10px] text-muted-foreground">
+                    with {s.teacherName}
+                  </p>
+                ) : null}
                 <p className="mt-1 text-xs tabular-nums text-muted-foreground">
                   {s.xpLast30d.toLocaleString()} XP
                   {s.streak > 0 ? ` · ${s.streak}d streak` : ""}

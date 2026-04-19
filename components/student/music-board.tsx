@@ -145,11 +145,15 @@ export function MusicBoard({
     );
   }, []);
 
-  // youtube-nocookie.com is Google's privacy-enhanced embed domain. Fewer
-  // regional restrictions + fewer cookies + often plays videos that the
-  // regular youtube.com embed refuses (especially on mobile).
+  // Default host is youtube-nocookie.com (privacy-enhanced, fewer
+  // regional blocks, cookie-free). Some tracks — typically Vevo-
+  // claimed videos — refuse that host and play only on the classic
+  // youtube.com/embed/... URL. Songs opt in with `use_classic_embed`.
+  const embedHost = song.use_classic_embed
+    ? "www.youtube.com"
+    : "www.youtube-nocookie.com";
   const embedSrc =
-    `https://www.youtube-nocookie.com/embed/${song.youtube_id}` +
+    `https://${embedHost}/embed/${song.youtube_id}` +
     `?enablejsapi=1&rel=0&modestbranding=1&cc_load_policy=1&cc_lang_pref=en&playsinline=1` +
     (origin ? `&origin=${encodeURIComponent(origin)}` : "");
 

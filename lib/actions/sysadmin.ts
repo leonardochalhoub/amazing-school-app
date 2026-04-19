@@ -63,7 +63,9 @@ export interface SysadminOverview {
   }[];
   topActiveStudents: {
     id: string;
-    displayName: string; // first name only — privacy
+    displayName: string;
+    /** Teacher this student is rostered under. Null if unrostered. */
+    teacherName: string | null;
     xpLast30d: number;
     streak: number;
     cefrLevel: string | null;
@@ -441,7 +443,9 @@ export async function getSysadminOverview(): Promise<
       a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
     );
 
-  // Top active students — by XP last 30 days (first name only)
+  // Top active students — by XP last 30 days. Test users (demo.*)
+  // are already excluded from `students`/`profiles` so we drop any XP
+  // events whose student_id isn't a real profile.
   const xpByStudent = new Map<string, number>();
   const { data: xpPerStudentRes } = await admin
     .from("xp_events")
@@ -452,6 +456,7 @@ export async function getSysadminOverview(): Promise<
     student_id: string;
     xp_amount: number;
   }>) {
+    if (!realUserIds.has(x.student_id)) continue;
     xpByStudent.set(
       x.student_id,
       (xpByStudent.get(x.student_id) ?? 0) + (x.xp_amount ?? 0),
@@ -488,10 +493,13 @@ export async function getSysadminOverview(): Promise<
     .map(([studentId, xp]) => {
       const r = rosterByAuthUser.get(studentId);
       const profile = profiles.find((p) => p.id === studentId);
-      const firstName = (profile?.full_name ?? "Student").split(" ")[0];
+      const teacherName = r?.teacher_id
+        ? teacherNameById.get(r.teacher_id) ?? null
+        : null;
       return {
         id: studentId,
-        displayName: firstName,
+        displayName: profile?.full_name ?? "Unknown",
+        teacherName,
         xpLast30d: xp,
         streak: streakFor(studentId),
         cefrLevel: r?.level ?? null,
