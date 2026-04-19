@@ -472,30 +472,52 @@ function syllableCount(word: string): number {
 }
 
 /**
- * Return a set of normalized heard words whose spoken duration was much
- * shorter than we'd expect from their syllable count — strong signal
- * the student swallowed / skipped part of the word.
+ * Return a set of normalized heard words whose spoken duration is
+ * abnormally short OR abnormally long — both are pronunciation signals:
  *
- * Baseline: ~180ms per syllable for careful non-native speech. A word
- * coming in under 40% of the expected duration AND with at least two
- * syllables expected is flagged.
+ *   FAST  — word said in < 40% of expected time = swallowed/skipped
+ *   SLOW  — word said in > 180% of expected time = extra vowel sound
+ *           (e.g. "river" → "raiver" adds a diphthong)
+ *
+ * Per-speaker adaptive baseline: we compute the mean ms/syllable across
+ * all this recording's words and use that as the "expected" benchmark,
+ * so fast and slow speakers are both treated fairly. A single outlier
+ * word that's much faster/slower than the speaker's own pace for the
+ * same syllable count is flagged.
  */
 function detectDurationAnomalies(
   words: WhisperWordTimestamp[] | undefined,
 ): Set<string> {
   const out = new Set<string>();
   if (!words || words.length === 0) return out;
-  const MS_PER_SYLLABLE = 180;
-  const FAST_RATIO = 0.4; // below this = suspicious
+  const FAST_RATIO = 0.45;
+  const SLOW_RATIO = 1.8;
+
+  // Per-speaker baseline: average ms-per-syllable across all words that
+  // have usable timestamps. Falls back to 180 when the sample is too
+  // small to be reliable.
+  let totalMs = 0;
+  let totalSyll = 0;
+  const valid: Array<{ word: string; durMs: number; syll: number }> = [];
   for (const w of words) {
     if (w.start == null || w.end == null) continue;
     const durMs = (w.end - w.start) * 1000;
     if (durMs <= 0) continue;
     const syll = syllableCount(w.word);
-    if (syll < 2) continue; // single-syllable words are unreliable
-    const expected = syll * MS_PER_SYLLABLE;
-    if (durMs / expected < FAST_RATIO) {
-      out.add(normalize(w.word));
+    totalMs += durMs;
+    totalSyll += syll;
+    valid.push({ word: w.word, durMs, syll });
+  }
+  if (valid.length < 3) return out;
+  const msPerSyll =
+    totalSyll > 0 ? totalMs / totalSyll : 180; // ms per syllable baseline
+
+  for (const v of valid) {
+    if (v.syll < 2 && v.durMs < 120) continue; // single-syllable noise
+    const expected = v.syll * msPerSyll;
+    const ratio = v.durMs / expected;
+    if (ratio < FAST_RATIO || ratio > SLOW_RATIO) {
+      out.add(normalize(v.word));
     }
   }
   return out;
