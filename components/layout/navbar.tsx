@@ -110,12 +110,8 @@ export function Navbar({
   ];
   if (isOwner) {
     teacherNav.push({
-      href: "/owner/users",
-      label: locale === "pt-BR" ? "Usuários" : "Users",
-    });
-    teacherNav.push({
-      href: "/owner/management",
-      label: locale === "pt-BR" ? "Gestão" : "Management",
+      href: "/owner/sysadmin",
+      label: locale === "pt-BR" ? "Sysadmin" : "Sysadmin",
     });
   }
 
