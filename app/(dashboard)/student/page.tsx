@@ -311,15 +311,15 @@ export default async function StudentHome() {
             </div>
           </div>
 
-          <div className="flex-1 space-y-3">
-            <div>
+          <div className="flex-1 min-w-0 space-y-3">
+            <div className="min-w-0">
               {(rosterSelf as { level?: string | null } | null)?.level ? (
                 <p className="mb-1 inline-flex items-center rounded-full bg-indigo-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">
                   {(rosterSelf as { level: string }).level.toUpperCase()}
                 </p>
               ) : null}
               <h1
-                className="font-[family-name:var(--font-display)] text-3xl italic leading-tight tracking-tight md:text-4xl"
+                className="break-words font-[family-name:var(--font-display)] text-3xl italic leading-tight tracking-tight md:text-4xl"
                 style={{ letterSpacing: "-0.01em" }}
               >
                 <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text text-transparent dark:from-indigo-400 dark:via-violet-400 dark:to-pink-400">
@@ -379,20 +379,20 @@ export default async function StudentHome() {
               className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-pink-500/10 transition-opacity group-hover:opacity-80"
             />
             <CardContent className="relative flex flex-wrap items-center justify-between gap-4 p-5">
-              <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <div className="flex min-w-0 flex-1 items-center gap-3">
+                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   {today.kind === "music" ? (
                     <Music2 className="h-5 w-5" />
                   ) : (
                     <BookOpen className="h-5 w-5" />
                   )}
                 </span>
-                <div>
+                <div className="min-w-0">
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-primary">
                     Start here today
                   </p>
-                  <p className="text-lg font-semibold">{today.title}</p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="break-words text-lg font-semibold">{today.title}</p>
+                  <p className="break-words text-xs text-muted-foreground">
                     {today.cefrLevel ? today.cefrLevel.toUpperCase() : "—"}
                     {today.subtitle ? ` · ${today.subtitle}` : ""}
                     {today.minutes ? ` · ${today.minutes} min` : ""}

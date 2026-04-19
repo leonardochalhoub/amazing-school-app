@@ -50,8 +50,8 @@ export default async function DashboardLayout({
         avatarUrl={avatarUrl}
         isOwner={isOwner}
       />
-      <main className="flex-1">
-        <div className="mx-auto max-w-7xl px-4 py-6 md:px-8 md:py-8">
+      <main className="w-full min-w-0 flex-1 overflow-x-clip">
+        <div className="mx-auto w-full max-w-7xl min-w-0 overflow-x-clip px-4 py-6 md:px-8 md:py-8">
           {children}
         </div>
       </main>
