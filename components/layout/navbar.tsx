@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LogOut, ChevronDown, UserCog } from "lucide-react";
-import { signOut } from "@/lib/actions/auth";
+import { signOutStay } from "@/lib/actions/auth";
 import { useI18n } from "@/lib/i18n/context";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -203,7 +203,14 @@ export function Navbar({ fullName, role, avatarUrl, isOwner }: NavbarProps) {
                 {labels.profile}
               </DropdownMenuItem>
               <DropdownMenuItem
-                onClick={() => signOut()}
+                onClick={async () => {
+                  // Use signOutStay (no redirect) then hard-navigate to
+                  // the marketing landing page. A hard nav guarantees
+                  // the middleware re-runs with cleared cookies and the
+                  // user lands on "/" (not "/login").
+                  await signOutStay();
+                  window.location.href = "/";
+                }}
                 className="cursor-pointer text-red-600 focus:text-red-700"
               >
                 <LogOut className="mr-2 h-4 w-4" />

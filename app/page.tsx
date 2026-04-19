@@ -36,22 +36,24 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full overflow-x-clip border-b border-border/50 bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex h-16 w-full min-w-0 max-w-6xl items-center justify-between gap-2 px-3 md:h-20 md:gap-4 md:px-6">
-          <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2 md:gap-3">
+        {/* Phone: two stacked rows — logo first, controls below. md+: one row. */}
+        <div className="mx-auto flex w-full min-w-0 max-w-6xl flex-col items-center gap-2 px-3 py-3 md:h-20 md:flex-row md:items-center md:justify-between md:gap-4 md:px-6 md:py-0">
+          <Link
+            href="/"
+            className="flex min-w-0 items-center gap-2 md:gap-3"
+          >
             <BrandMark className="h-9 w-9 md:h-11 md:w-11" />
-            {/* Wordmark hidden on very narrow screens — steals room from
-                the CTA otherwise. Reappears at sm+. */}
             <span
-              className="hidden truncate bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text font-[family-name:var(--font-display)] text-2xl italic leading-none text-transparent sm:inline-block dark:from-indigo-400 dark:via-violet-400 dark:to-pink-400 md:text-3xl"
+              className="truncate bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text font-[family-name:var(--font-display)] text-2xl italic leading-none text-transparent dark:from-indigo-400 dark:via-violet-400 dark:to-pink-400 md:text-3xl"
               style={{ letterSpacing: "-0.01em" }}
             >
               Amazing School
             </span>
           </Link>
-          <div className="flex min-w-0 shrink-0 items-center gap-1 md:gap-2">
+          <div className="flex w-full flex-wrap items-center justify-center gap-1.5 md:w-auto md:flex-nowrap md:gap-2">
             <LocaleToggle />
             <ThemeToggle />
-            <Link href="/login" className="hidden sm:inline-flex">
+            <Link href="/login">
               <Button variant="ghost" size="sm">
                 {t.landing.signIn}
               </Button>
