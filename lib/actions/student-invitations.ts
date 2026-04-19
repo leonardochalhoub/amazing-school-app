@@ -5,18 +5,23 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
-const CreateSchema = z.object({
-  classroomId: z.string().uuid(),
-  rosterStudentId: z.string().uuid().optional(),
-  email: z.string().email().optional().nullable(),
-  displayName: z.string().min(1).max(120).optional(),
-});
+const CreateSchema = z
+  .object({
+    classroomId: z.string().uuid().nullable().optional(),
+    rosterStudentId: z.string().uuid().optional(),
+    email: z.string().email().optional().nullable(),
+    displayName: z.string().min(1).max(120).optional(),
+  })
+  .refine(
+    (d) => !!(d.rosterStudentId || d.email || d.classroomId),
+    { message: "Provide a roster student, an email, or a classroom" },
+  );
 
 export interface StudentInvitationRow {
   id: string;
   token: string;
   teacher_id: string;
-  classroom_id: string;
+  classroom_id: string | null;
   roster_student_id: string | null;
   email: string | null;
   display_name: string | null;
@@ -51,13 +56,15 @@ export async function createStudentInvitation(
 
   // Verify the teacher owns the classroom and (if given) the roster student.
   const admin = createAdminClient();
-  const { data: classroom } = await admin
-    .from("classrooms")
-    .select("id, teacher_id")
-    .eq("id", parsed.data.classroomId)
-    .maybeSingle();
-  if (!classroom || classroom.teacher_id !== user.id) {
-    return { error: "Classroom not found or not yours" };
+  if (parsed.data.classroomId) {
+    const { data: classroom } = await admin
+      .from("classrooms")
+      .select("id, teacher_id")
+      .eq("id", parsed.data.classroomId)
+      .maybeSingle();
+    if (!classroom || classroom.teacher_id !== user.id) {
+      return { error: "Classroom not found or not yours" };
+    }
   }
   if (parsed.data.rosterStudentId) {
     const { data: roster } = await admin
@@ -74,7 +81,7 @@ export async function createStudentInvitation(
     .from("student_invitations")
     .insert({
       teacher_id: user.id,
-      classroom_id: parsed.data.classroomId,
+      classroom_id: parsed.data.classroomId ?? null,
       roster_student_id: parsed.data.rosterStudentId ?? null,
       email: parsed.data.email ?? null,
       display_name: parsed.data.displayName ?? null,
@@ -140,11 +147,13 @@ export async function previewInvitation(
   }
 
   const [{ data: classroom }, { data: teacherProfile }] = await Promise.all([
-    admin
-      .from("classrooms")
-      .select("id, name")
-      .eq("id", data.classroom_id as string)
-      .maybeSingle(),
+    data.classroom_id
+      ? admin
+          .from("classrooms")
+          .select("id, name")
+          .eq("id", data.classroom_id as string)
+          .maybeSingle()
+      : Promise.resolve({ data: null }),
     admin
       .from("profiles")
       .select("full_name")
@@ -243,17 +252,20 @@ export async function claimInvitation(token: string) {
       .eq("id", user.id);
   }
 
-  // Add to classroom (idempotent).
-  const { error: memErr } = await admin
-    .from("classroom_members")
-    .upsert(
-      {
-        classroom_id: inv.classroom_id as string,
-        student_id: user.id,
-      },
-      { onConflict: "classroom_id,student_id" }
-    );
-  if (memErr) return { error: memErr.message };
+  // Add to classroom (idempotent). Only when the invitation targets one —
+  // a roster-only invite can land the student directly without any class.
+  if (inv.classroom_id) {
+    const { error: memErr } = await admin
+      .from("classroom_members")
+      .upsert(
+        {
+          classroom_id: inv.classroom_id as string,
+          student_id: user.id,
+        },
+        { onConflict: "classroom_id,student_id" }
+      );
+    if (memErr) return { error: memErr.message };
+  }
 
   // Mark invitation accepted.
   await admin
@@ -265,9 +277,11 @@ export async function claimInvitation(token: string) {
     .eq("id", inv.id as string);
 
   revalidatePath("/student");
-  revalidatePath(`/teacher/classroom/${inv.classroom_id}`);
+  if (inv.classroom_id) {
+    revalidatePath(`/teacher/classroom/${inv.classroom_id}`);
+  }
   return {
     success: true as const,
-    classroomId: inv.classroom_id as string,
+    classroomId: (inv.classroom_id as string | null) ?? null,
   };
 }

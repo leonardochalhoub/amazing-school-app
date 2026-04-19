@@ -40,13 +40,9 @@ export function StudentInviteButton({
   }
 
   function generate() {
-    if (!classroomId) {
-      toast.error("Add this student to a classroom first.");
-      return;
-    }
     startTransition(async () => {
       const r = await createStudentInvitation({
-        classroomId,
+        classroomId: classroomId ?? null,
         rosterStudentId,
         email: email.trim() || undefined,
         displayName: prefillName ?? undefined,
@@ -95,11 +91,7 @@ export function StudentInviteButton({
         size="sm"
         variant="outline"
         onClick={() => setOpen(true)}
-        disabled={!classroomId}
         className="gap-1.5"
-        title={
-          !classroomId ? "Assign this student to a classroom first" : undefined
-        }
       >
         <Share2 className="h-4 w-4" />
         Invite to join
