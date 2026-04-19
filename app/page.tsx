@@ -40,11 +40,11 @@ export default function Home() {
         <div className="mx-auto flex w-full min-w-0 max-w-6xl flex-col items-center gap-2 px-3 py-3 md:h-20 md:flex-row md:items-center md:justify-between md:gap-4 md:px-6 md:py-0">
           <Link
             href="/"
-            className="flex min-w-0 items-center gap-2 md:gap-3"
+            className="flex shrink-0 items-center gap-2 whitespace-nowrap md:gap-3"
           >
-            <BrandMark className="h-9 w-9 md:h-11 md:w-11" />
+            <BrandMark className="h-9 w-9 shrink-0 md:h-11 md:w-11" />
             <span
-              className="truncate bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text font-[family-name:var(--font-display)] text-2xl italic leading-none text-transparent dark:from-indigo-400 dark:via-violet-400 dark:to-pink-400 md:text-3xl"
+              className="bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text font-[family-name:var(--font-display)] text-2xl italic leading-none text-transparent dark:from-indigo-400 dark:via-violet-400 dark:to-pink-400 md:text-3xl"
               style={{ letterSpacing: "-0.01em" }}
             >
               Amazing School
