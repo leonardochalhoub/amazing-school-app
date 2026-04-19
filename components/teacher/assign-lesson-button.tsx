@@ -334,7 +334,7 @@ export function AssignLessonButton({
           if (!o) reset();
         }}
       >
-        <DialogContent className="max-w-lg">
+        <DialogContent className="max-h-[90vh] max-w-3xl overflow-y-auto">
           <DialogHeader>
             <DialogTitle>{t.title}</DialogTitle>
             <DialogDescription>
@@ -512,9 +512,10 @@ export function AssignLessonButton({
                 </div>
               ) : null}
 
-              {/* Lessons picker */}
+              {/* Pickers — stacked on mobile, side-by-side on md+. */}
+              <div className="grid gap-4 md:grid-cols-2">
               {lessonItems.length > 0 ? (
-                <div className="space-y-1.5">
+                <div className="min-w-0 space-y-1.5">
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
                     {t.lessonsHeading}
                   </p>
@@ -525,7 +526,7 @@ export function AssignLessonButton({
                     placeholder={t.searchPlaceholder}
                     className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
                   />
-                  <div className="max-h-48 overflow-y-auto rounded-md border border-border">
+                  <div className="h-64 overflow-y-auto rounded-md border border-border">
                     {filteredLessonItems.length === 0 ? (
                       <p className="px-3 py-4 text-center text-xs text-muted-foreground">
                         {t.noMatches}
@@ -568,7 +569,7 @@ export function AssignLessonButton({
 
               {/* Songs picker — separate list, searches by title / artist / year. */}
               {songItems.length > 0 ? (
-                <div className="space-y-1.5">
+                <div className="min-w-0 space-y-1.5">
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
                     {t.songsHeading}
                   </p>
@@ -579,7 +580,7 @@ export function AssignLessonButton({
                     placeholder={t.songSearchPlaceholder}
                     className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
                   />
-                  <div className="max-h-48 overflow-y-auto rounded-md border border-border">
+                  <div className="h-64 overflow-y-auto rounded-md border border-border">
                     {filteredSongItems.length === 0 ? (
                       <p className="px-3 py-4 text-center text-xs text-muted-foreground">
                         {t.noMatches}
@@ -620,6 +621,7 @@ export function AssignLessonButton({
                   </div>
                 </div>
               ) : null}
+              </div>
             </div>
           )}
 
