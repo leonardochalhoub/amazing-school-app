@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { MessageBubble } from "./message-bubble";
 import { SuggestedTopics } from "./suggested-topics";
 
@@ -139,7 +138,10 @@ export function ChatInterface({
   const showRemaining = remaining < 500;
 
   return (
-    <div className="flex flex-col h-[calc(100vh-12rem)]">
+    // min-h-0 + flex-1 on the scroll child is what lets the messages area
+    // actually scroll instead of pushing the whole page down when a second
+    // reply makes the deck taller than the viewport.
+    <div className="flex flex-col h-[calc(100dvh-10rem)] min-h-0 overflow-hidden rounded-xl border border-border bg-card">
       <div className="flex items-center justify-between gap-2 border-b p-2">
         <div className="inline-flex items-center rounded-lg border bg-muted/40 p-0.5 text-xs">
           <button
@@ -182,7 +184,10 @@ export function ChatInterface({
         ) : null}
       </div>
 
-      <ScrollArea className="flex-1 p-4" ref={scrollRef}>
+      <div
+        ref={scrollRef}
+        className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden p-4"
+      >
         <div className="space-y-4">
           {messages.length === 0 && (
             <div className="pt-8">
@@ -226,9 +231,9 @@ export function ChatInterface({
             </div>
           )}
         </div>
-      </ScrollArea>
+      </div>
 
-      <div className="border-t p-4 space-y-2">
+      <div className="shrink-0 border-t p-4 space-y-2">
         {limitReached ? (
           <p className="text-sm text-center text-muted-foreground">
             Daily message limit reached. Come back tomorrow!

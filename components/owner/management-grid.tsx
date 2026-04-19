@@ -1,18 +1,21 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { Check, Loader2 } from "lucide-react";
+import { Check, Clock, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import {
-  togglePaymentPaid,
+  cyclePaymentState,
   setStudentTuition,
+  cellStateOf,
   type ManagementRow,
+  type PaymentCellState,
+  type StudentPaymentRow,
 } from "@/lib/actions/payments";
 
 interface Props {
-  months: string[]; // newest first
+  months: string[]; // newest first (YYYY-MM-01)
   rows: ManagementRow[];
 }
 
@@ -20,6 +23,18 @@ function monthShort(iso: string): string {
   const [y, m] = iso.split("-").map(Number);
   const d = new Date(y, (m ?? 1) - 1, 1);
   return d.toLocaleDateString("en-US", { month: "short", year: "2-digit" });
+}
+function monthLong(iso: string): string {
+  const [y, m] = iso.split("-").map(Number);
+  const d = new Date(y, (m ?? 1) - 1, 1);
+  return d.toLocaleDateString("pt-BR", { month: "long", year: "numeric" });
+}
+function fmtDateTime(iso: string | null): string {
+  if (!iso) return "—";
+  return new Date(iso).toLocaleString("pt-BR", {
+    dateStyle: "short",
+    timeStyle: "short",
+  });
 }
 
 const BRL = (cents: number) =>
@@ -45,21 +60,23 @@ export function ManagementGrid({ months, rows }: Props) {
     });
   }, [rows, query]);
 
-  // Display oldest → newest; cap at 12 to keep the grid readable. Full 24
-  // months still drive the KPIs + charts.
-  const orderedMonths = useMemo(() => [...months].slice(0, 12).reverse(), [months]);
+  // ASC order (oldest on the left) — reads naturally left-to-right
+  // through time. Current month + next month live on the right edge.
+  const orderedMonths = useMemo(() => [...months].reverse(), [months]);
 
-  function togglePaid(rosterId: string, month: string, next: boolean) {
-    const key = `paid-${rosterId}|${month}`;
+  function cycle(rosterId: string, month: string) {
+    const key = `cell-${rosterId}|${month}`;
     setPendingCell(key);
-    togglePaymentPaid({
+    cyclePaymentState({
       rosterStudentId: rosterId,
       billingMonth: month,
-      paid: next,
     }).then((res) => {
       setPendingCell(null);
-      if ("error" in res && res.error) toast.error(res.error);
-      else router.refresh();
+      if ("error" in res && res.error) {
+        toast.error(res.error);
+        return;
+      }
+      router.refresh();
     });
   }
 
@@ -115,7 +132,7 @@ export function ManagementGrid({ months, rows }: Props) {
           className="h-9 w-72"
         />
         <p className="text-xs text-muted-foreground">
-          Showing {filtered.length} of {rows.length} students
+          Showing {filtered.length} of {rows.length} students · {orderedMonths.length} months
         </p>
       </div>
 
@@ -192,42 +209,18 @@ export function ManagementGrid({ months, rows }: Props) {
                     />
                   </td>
                   {orderedMonths.map((m) => {
-                    const p = r.payments[m];
-                    const paid = !!p?.paid;
-                    const exists = !!p;
-                    const key = `paid-${r.roster_student_id}|${m}`;
-                    const pending = pendingCell === key;
-                    const title = p
-                      ? p.paid
-                        ? `Paid ${BRL(p.amount_cents ?? 0)}`
-                        : `Pending ${BRL(p.amount_cents ?? r.monthly_tuition_cents ?? 0)}`
-                      : r.monthly_tuition_cents
-                        ? "Set due day to auto-generate"
-                        : "Set monthly tuition first";
+                    const payment = r.payments[m];
+                    const key = `cell-${r.roster_student_id}|${m}`;
                     return (
-                      <td key={m} className="px-2 py-2 text-center">
-                        <button
-                          type="button"
-                          onClick={() =>
-                            exists &&
-                            togglePaid(r.roster_student_id, m, !paid)
-                          }
-                          disabled={pending || !exists}
-                          title={title}
-                          className={`mx-auto flex h-6 w-6 items-center justify-center rounded-md border text-xs transition-colors ${
-                            paid
-                              ? "border-emerald-500/30 bg-emerald-500 text-white"
-                              : exists
-                                ? "border-amber-500/30 bg-amber-500/10 text-amber-700 hover:bg-amber-500/20"
-                                : "border-dashed border-border bg-muted/20 text-muted-foreground/50"
-                          } ${pending ? "opacity-50" : ""}`}
-                        >
-                          {pending ? (
-                            <Loader2 className="h-3 w-3 animate-spin" />
-                          ) : paid ? (
-                            <Check className="h-3 w-3" />
-                          ) : null}
-                        </button>
+                      <td key={m} className="px-1.5 py-2 text-center">
+                        <PaymentCell
+                          payment={payment}
+                          month={m}
+                          fallbackAmountCents={r.monthly_tuition_cents}
+                          studentName={r.student_name}
+                          pending={pendingCell === key}
+                          onClick={() => cycle(r.roster_student_id, m)}
+                        />
                       </td>
                     );
                   })}
@@ -248,11 +241,150 @@ export function ManagementGrid({ months, rows }: Props) {
         </table>
       </div>
 
-      <p className="text-xs text-muted-foreground">
-        Green = paid. Amber = open debt (click to mark paid). Dashed = no
-        monthly rate yet — set the BRL value and due day to start
-        auto-generating invoices.
+      <div className="flex flex-wrap items-center gap-4 text-[11px] text-muted-foreground">
+        <span className="inline-flex items-center gap-1.5">
+          <span className="inline-block h-3 w-3 rounded border border-dashed border-border bg-muted/20" />
+          Empty — click to mark Due
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <span className="inline-flex h-3 w-3 items-center justify-center rounded bg-amber-500 text-white">
+            <Clock className="h-2 w-2" />
+          </span>
+          Due — click to mark Paid
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <span className="inline-flex h-3 w-3 items-center justify-center rounded bg-emerald-500 text-white">
+            <Check className="h-2 w-2" />
+          </span>
+          Paid — click to reset
+        </span>
+        <span className="ml-auto">Hover a cell to see amounts + timestamps.</span>
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Cell components
+// ---------------------------------------------------------------------------
+
+function PaymentCell({
+  payment,
+  month,
+  fallbackAmountCents,
+  studentName,
+  pending,
+  onClick,
+}: {
+  payment: StudentPaymentRow | null;
+  month: string;
+  fallbackAmountCents: number | null;
+  studentName: string;
+  pending: boolean;
+  onClick: () => void;
+}) {
+  const state: PaymentCellState = cellStateOf(payment);
+  const amount = payment?.amount_cents ?? fallbackAmountCents ?? null;
+  const [isPending, startTransition] = useTransition();
+
+  const base =
+    "mx-auto flex h-7 w-7 items-center justify-center rounded-md text-xs transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50";
+  const palette =
+    state === "paid"
+      ? "bg-emerald-500 text-white border border-emerald-600 shadow-sm hover:brightness-110"
+      : state === "due"
+        ? "bg-amber-500 text-white border border-amber-600 shadow-sm hover:brightness-110"
+        : "border border-dashed border-border bg-muted/10 text-muted-foreground/50 hover:border-primary/50 hover:bg-primary/5";
+
+  return (
+    <div className="group relative inline-block">
+      <button
+        type="button"
+        onClick={() => startTransition(onClick)}
+        disabled={pending || isPending}
+        className={`${base} ${palette} ${pending || isPending ? "opacity-60" : ""}`}
+        aria-label={`${studentName} · ${monthLong(month)} · ${state}`}
+      >
+        {pending || isPending ? (
+          <Loader2 className="h-3 w-3 animate-spin" />
+        ) : state === "paid" ? (
+          <Check className="h-3.5 w-3.5" />
+        ) : state === "due" ? (
+          <Clock className="h-3 w-3" />
+        ) : null}
+      </button>
+      <PaymentTooltip
+        state={state}
+        month={month}
+        amountCents={amount}
+        dueMarkedAt={payment?.due_marked_at ?? null}
+        paidAt={payment?.paid_at ?? null}
+        studentName={studentName}
+      />
+    </div>
+  );
+}
+
+function PaymentTooltip({
+  state,
+  month,
+  amountCents,
+  dueMarkedAt,
+  paidAt,
+  studentName,
+}: {
+  state: PaymentCellState;
+  month: string;
+  amountCents: number | null;
+  dueMarkedAt: string | null;
+  paidAt: string | null;
+  studentName: string;
+}) {
+  const tone =
+    state === "paid"
+      ? "border-emerald-500/50 bg-emerald-500/15 text-emerald-900 dark:text-emerald-100"
+      : state === "due"
+        ? "border-amber-500/60 bg-amber-500/20 text-amber-900 dark:text-amber-100"
+        : "border-border bg-card text-foreground";
+  const label =
+    state === "paid"
+      ? "Paid"
+      : state === "due"
+        ? "Due payment"
+        : "Not tracked yet";
+  return (
+    <div
+      role="tooltip"
+      className={`pointer-events-none invisible absolute left-1/2 top-full z-30 mt-2 w-64 -translate-x-1/2 rounded-lg border p-3 text-left text-[11px] leading-snug shadow-xl backdrop-blur-sm opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100 ${tone}`}
+    >
+      <p className="text-[10px] font-semibold uppercase tracking-wider opacity-70">
+        {studentName}
       </p>
+      <p className="text-sm font-semibold capitalize">{monthLong(month)}</p>
+      <div className="mt-1.5 flex items-center justify-between">
+        <span className="text-[10px] uppercase tracking-wider opacity-70">
+          {label}
+        </span>
+        <span className="font-semibold tabular-nums">
+          {amountCents != null ? BRL(amountCents) : "—"}
+        </span>
+      </div>
+      {state !== "none" ? (
+        <div className="mt-2 space-y-0.5 border-t border-current/20 pt-2">
+          <p className="flex items-center justify-between">
+            <span className="opacity-70">Marked due:</span>
+            <span className="tabular-nums">{fmtDateTime(dueMarkedAt)}</span>
+          </p>
+          <p className="flex items-center justify-between">
+            <span className="opacity-70">Paid:</span>
+            <span className="tabular-nums">{fmtDateTime(paidAt)}</span>
+          </p>
+        </div>
+      ) : (
+        <p className="mt-2 opacity-70">
+          Click to mark this month as a debt.
+        </p>
+      )}
     </div>
   );
 }

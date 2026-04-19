@@ -37,65 +37,26 @@ export async function getTeacherManagementMatrix(opts?: {
     return { error: "Teacher access only" };
   }
 
+  // Month range: fixed anchor at 2024-01, running through the first of
+  // NEXT month (so if today is April, May is already visible). Returned
+  // DESC (newest first) to match the existing ManagementData contract.
+  // Auto-gen is intentionally removed — payment rows now exist only
+  // after the teacher explicitly clicks a square. An untouched square
+  // is an empty cell.
   const now = new Date();
-  const count = opts?.months ?? 24;
-  const months = Array.from({ length: count }, (_, i) =>
-    firstOfMonth(addMonthsDate(now, -i))
-  );
-
-  // Auto-gen missing rows for THIS teacher's students.
-  const { data: active } = await admin
-    .from("roster_students")
-    .select("id, teacher_id, monthly_tuition_cents, billing_starts_on, created_at")
-    .eq("teacher_id", user.id)
-    .not("monthly_tuition_cents", "is", null);
-  const activeRows = (active ?? []) as Array<{
-    id: string;
-    teacher_id: string;
-    monthly_tuition_cents: number;
-    billing_starts_on: string | null;
-    created_at: string;
-  }>;
-
-  if (activeRows.length > 0) {
-    const earliest = months[months.length - 1];
-    const latest = months[0];
-    const { data: existing } = await admin
-      .from("student_payments")
-      .select("roster_student_id, billing_month")
-      .in(
-        "roster_student_id",
-        activeRows.map((r) => r.id)
-      )
-      .gte("billing_month", earliest)
-      .lte("billing_month", latest);
-    const have = new Set<string>();
-    for (const e of (existing ?? []) as Array<{
-      roster_student_id: string;
-      billing_month: string;
-    }>) {
-      have.add(`${e.roster_student_id}|${e.billing_month.slice(0, 10)}`);
-    }
-    const rowsToInsert: Array<Record<string, unknown>> = [];
-    for (const r of activeRows) {
-      const startIso =
-        r.billing_starts_on ?? firstOfMonth(new Date(r.created_at));
-      for (const m of months) {
-        if (m < startIso.slice(0, 10)) continue;
-        if (have.has(`${r.id}|${m}`)) continue;
-        rowsToInsert.push({
-          roster_student_id: r.id,
-          teacher_id: r.teacher_id,
-          billing_month: m,
-          amount_cents: r.monthly_tuition_cents,
-          paid: false,
-        });
-      }
-    }
-    if (rowsToInsert.length > 0) {
-      await admin.from("student_payments").insert(rowsToInsert);
+  const anchor = new Date(2024, 0, 1);
+  const end = new Date(now.getFullYear(), now.getMonth() + 1, 1); // current + 1
+  const ascMonths: string[] = [];
+  {
+    const cursor = new Date(anchor);
+    while (cursor <= end) {
+      ascMonths.push(firstOfMonth(cursor));
+      cursor.setMonth(cursor.getMonth() + 1);
     }
   }
+  const months = [...ascMonths].reverse(); // DESC: newest first
+  void opts; // parameter kept for backward compat; anchor drives the range
+  void addMonthsDate; // helper no longer needed here
 
   const { data: rosterRaw, error } = await admin
     .from("roster_students")
@@ -133,8 +94,9 @@ export async function getTeacherManagementMatrix(opts?: {
       .from("student_payments")
       .select("*")
       .in("roster_student_id", rosterIds)
-      .gte("billing_month", months[months.length - 1])
-      .lte("billing_month", months[0]);
+      .gte("billing_month", months[months.length - 1]) // oldest
+      .lte("billing_month", months[0])                 // newest
+      .limit(50_000);
     paymentRows = (pays ?? []) as StudentPaymentRow[];
   }
   const paymentIndex = new Map<string, StudentPaymentRow>();

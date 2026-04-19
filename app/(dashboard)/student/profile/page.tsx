@@ -4,7 +4,7 @@ import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
 import { AvatarUploader } from "@/components/shared/avatar-uploader";
 import { PrivacyNotice } from "@/components/shared/privacy-notice";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, ArrowUpRight } from "lucide-react";
+import { BookOpen, ArrowUpRight, Calendar } from "lucide-react";
 import { redirect } from "next/navigation";
 
 export default async function StudentProfilePage() {
@@ -24,14 +24,37 @@ export default async function StudentProfilePage() {
   const signedUrl = await resolveMyAvatarUrl(supabase, user.id);
   const { data: rosterSelf } = await admin
     .from("roster_students")
-    .select("age_group, gender")
+    .select("age_group, gender, billing_starts_on, created_at")
     .eq("auth_user_id", user.id)
     .maybeSingle();
-  const ageGroup =
-    (rosterSelf as { age_group: "kid" | "teen" | "adult" | null } | null)
-      ?.age_group ?? null;
-  const gender =
-    (rosterSelf as { gender: "female" | "male" | null } | null)?.gender ?? null;
+  const roster = rosterSelf as
+    | {
+        age_group: "kid" | "teen" | "adult" | null;
+        gender: "female" | "male" | null;
+        billing_starts_on: string | null;
+        created_at: string | null;
+      }
+    | null;
+  const ageGroup = roster?.age_group ?? null;
+  const gender = roster?.gender ?? null;
+  // "Starting date" = the day the teacher enrolled them (billing_starts_on
+  // if set, otherwise the roster row's created_at).
+  const startingDateIso = roster?.billing_starts_on ?? roster?.created_at ?? null;
+  const startingDate = startingDateIso
+    ? new Date(startingDateIso).toLocaleDateString("pt-BR", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+      })
+    : null;
+  const daysStudying = startingDateIso
+    ? Math.max(
+        0,
+        Math.floor(
+          (Date.now() - new Date(startingDateIso).getTime()) / 86_400_000,
+        ),
+      )
+    : null;
 
   return (
     <div className="space-y-6 max-w-2xl">
@@ -62,6 +85,29 @@ export default async function StudentProfilePage() {
           </p>
         </CardContent>
       </Card>
+
+      {startingDate ? (
+        <Card>
+          <CardContent className="flex items-center gap-4 p-4">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-500/15 text-indigo-600 dark:text-indigo-400">
+              <Calendar className="h-5 w-5" />
+            </span>
+            <div className="flex-1 min-w-0">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                Starting date · Data de início
+              </p>
+              <p className="mt-0.5 text-base font-semibold">
+                {startingDate}
+              </p>
+              {daysStudying !== null ? (
+                <p className="text-xs text-muted-foreground">
+                  {daysStudying.toLocaleString("pt-BR")} days with us
+                </p>
+              ) : null}
+            </div>
+          </CardContent>
+        </Card>
+      ) : null}
 
       <Card>
         <CardHeader>

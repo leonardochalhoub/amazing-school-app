@@ -45,9 +45,26 @@ export interface StudentPaymentRow {
   currency: string;
   paid: boolean;
   paid_at: string | null;
+  due_marked_at: string | null;
   notes: string | null;
   created_at: string;
   updated_at: string;
+}
+
+/**
+ * Click-cycle state model used by the Management grid:
+ *   none → due → paid → none
+ * - `none`  = no row, or row exists but paid=false AND due_marked_at IS NULL
+ * - `due`   = paid=false, due_marked_at IS NOT NULL (yellow square)
+ * - `paid`  = paid=true (green square)
+ */
+export type PaymentCellState = "none" | "due" | "paid";
+
+export function cellStateOf(row: StudentPaymentRow | null): PaymentCellState {
+  if (!row) return "none";
+  if (row.paid) return "paid";
+  if (row.due_marked_at) return "due";
+  return "none";
 }
 
 export interface ManagementRow {
@@ -320,4 +337,113 @@ export async function setStudentTuition(input: z.input<typeof SetTuitionSchema>)
   revalidatePath("/owner/management");
   revalidatePath("/teacher/finance");
   return { success: true as const };
+}
+
+// ---------------------------------------------------------------------------
+// V5 — click-cycle tuition state machine
+// ---------------------------------------------------------------------------
+
+const CycleSchema = z.object({
+  rosterStudentId: z.string().uuid(),
+  billingMonth: z.string().regex(/^\d{4}-\d{2}-01$/),
+});
+
+/**
+ * Advance a single payment cell through its state machine:
+ *   none  → due   (create row, due_marked_at=now, paid=false)
+ *   due   → paid  (update paid=true, paid_at=now)
+ *   paid  → none  (delete the row so future clicks start fresh)
+ *
+ * Amount snapshots the student's configured monthly_tuition_cents at the
+ * moment of the click, so later changes to the tuition rate don't
+ * rewrite historical invoices.
+ */
+export async function cyclePaymentState(
+  input: z.input<typeof CycleSchema>,
+): Promise<
+  | { success: true; state: PaymentCellState; payment: StudentPaymentRow | null }
+  | { error: string }
+> {
+  const parsed = CycleSchema.safeParse(input);
+  if (!parsed.success)
+    return { error: parsed.error.issues[0]?.message ?? "Invalid input" };
+
+  const auth = await authorizeForStudent(parsed.data.rosterStudentId);
+  if ("error" in auth) return { error: auth.error };
+
+  const admin = createAdminClient();
+  const { data: roster } = await admin
+    .from("roster_students")
+    .select("teacher_id, monthly_tuition_cents")
+    .eq("id", parsed.data.rosterStudentId)
+    .maybeSingle();
+  if (!roster) return { error: "Student not found" };
+  const r = roster as {
+    teacher_id: string;
+    monthly_tuition_cents: number | null;
+  };
+
+  const { data: existing } = await admin
+    .from("student_payments")
+    .select("*")
+    .eq("roster_student_id", parsed.data.rosterStudentId)
+    .eq("billing_month", parsed.data.billingMonth)
+    .maybeSingle();
+  const current = (existing as StudentPaymentRow | null) ?? null;
+  const state = cellStateOf(current);
+  const now = new Date().toISOString();
+
+  if (state === "none") {
+    const row = {
+      roster_student_id: parsed.data.rosterStudentId,
+      teacher_id: r.teacher_id,
+      billing_month: parsed.data.billingMonth,
+      paid: false,
+      paid_at: null,
+      due_marked_at: now,
+      amount_cents: r.monthly_tuition_cents ?? null,
+    };
+    const { data, error } = await admin
+      .from("student_payments")
+      .upsert(row, { onConflict: "roster_student_id,billing_month" })
+      .select("*")
+      .maybeSingle();
+    if (error) return { error: error.message };
+    revalidatePath("/teacher/admin");
+    return {
+      success: true,
+      state: "due",
+      payment: (data as StudentPaymentRow | null) ?? null,
+    };
+  }
+
+  if (state === "due") {
+    const { data, error } = await admin
+      .from("student_payments")
+      .update({
+        paid: true,
+        paid_at: now,
+        // Preserve due_marked_at, and snapshot amount if it was missing.
+        amount_cents: current?.amount_cents ?? r.monthly_tuition_cents ?? null,
+      })
+      .eq("id", current!.id)
+      .select("*")
+      .maybeSingle();
+    if (error) return { error: error.message };
+    revalidatePath("/teacher/admin");
+    return {
+      success: true,
+      state: "paid",
+      payment: (data as StudentPaymentRow | null) ?? null,
+    };
+  }
+
+  // state === "paid" → reset the cell back to empty
+  const { error } = await admin
+    .from("student_payments")
+    .delete()
+    .eq("id", current!.id);
+  if (error) return { error: error.message };
+  revalidatePath("/teacher/admin");
+  return { success: true, state: "none", payment: null };
 }
