@@ -254,7 +254,7 @@ export default async function TeacherLessonsPage({
   }
 
   return (
-    <div className="space-y-6 pb-16">
+    <div className="space-y-6 overflow-x-clip pb-16">
       <header className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">

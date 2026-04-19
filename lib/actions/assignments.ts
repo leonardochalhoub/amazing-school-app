@@ -98,12 +98,17 @@ export async function bulkAssignToClassroom(input: z.input<typeof BulkSchema>) {
   });
 }
 
-const BulkManySchema = z.object({
-  classroomId: UuidSchema,
-  lessonSlugs: z.array(SlugSchema).min(1).max(60),
-  studentId: UuidSchema.nullable().optional(),
-  rosterStudentId: UuidSchema.nullable().optional(),
-});
+const BulkManySchema = z
+  .object({
+    classroomId: UuidSchema.nullable().optional(),
+    lessonSlugs: z.array(SlugSchema).min(1).max(60),
+    studentId: UuidSchema.nullable().optional(),
+    rosterStudentId: UuidSchema.nullable().optional(),
+  })
+  .refine(
+    (d) => !!(d.classroomId || d.studentId || d.rosterStudentId),
+    { message: "Provide a classroom, a student, or a roster student" },
+  );
 
 /**
  * Assigns MANY lessons to ONE target in a single round-trip. Duplicate
@@ -131,7 +136,7 @@ export async function bulkAssignManyLessons(
 
   const admin = createAdminClient();
   const rows = parsed.data.lessonSlugs.map((slug, i) => ({
-    classroom_id: parsed.data.classroomId,
+    classroom_id: parsed.data.classroomId ?? null,
     lesson_slug: slug,
     student_id: parsed.data.studentId ?? null,
     roster_student_id: parsed.data.rosterStudentId ?? null,
@@ -150,7 +155,7 @@ export async function bulkAssignManyLessons(
   }
 
   bumpPaths(
-    parsed.data.classroomId,
+    parsed.data.classroomId ?? null,
     parsed.data.studentId ?? null,
     parsed.data.rosterStudentId ?? null
   );

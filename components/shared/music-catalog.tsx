@@ -98,7 +98,7 @@ export function MusicCatalog({ songs, variant = "student" }: Props) {
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-start gap-3">
-        <div className="relative max-w-md flex-1 min-w-[240px]">
+        <div className="relative w-full max-w-md flex-1 sm:min-w-[240px]">
           <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
           <Input
             type="search"

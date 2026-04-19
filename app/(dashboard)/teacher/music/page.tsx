@@ -20,7 +20,7 @@ export default async function TeacherMusicIndex() {
   }));
 
   return (
-    <div className="space-y-8 pb-16">
+    <div className="space-y-8 overflow-x-clip pb-16">
       <header className="flex flex-wrap items-end justify-between gap-4">
         <div className="flex flex-col gap-1">
           <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
