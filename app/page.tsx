@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { getPublicStats, type PublicStats } from "@/lib/actions/public-stats";
+import { DemoAccess } from "@/components/landing/demo-access";
 
 const features = [
   { key: "lessons" as const, icon: "📖" },
@@ -106,15 +107,6 @@ export default function Home() {
                 {t.landing.getStarted}
               </Button>
             </Link>
-            <Link href="/demo/teacher">
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto text-base px-8 h-12"
-              >
-                {t.landing.seeTeacherDemo}
-              </Button>
-            </Link>
             <Link href="/login">
               <Button
                 size="lg"
@@ -124,6 +116,28 @@ export default function Home() {
                 {t.landing.signIn}
               </Button>
             </Link>
+          </div>
+
+          <div className="pt-6">
+            <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+              {locale === "pt-BR"
+                ? "Ou explore direto ↓"
+                : "Or explore right now ↓"}
+            </p>
+            <DemoAccess
+              teacherLabel={
+                locale === "pt-BR"
+                  ? "Ver como professora"
+                  : "View as a teacher"
+              }
+              studentLabel={
+                locale === "pt-BR"
+                  ? "Ver como estudante"
+                  : "View as a student"
+              }
+              teacherHint={locale === "pt-BR" ? "Demo" : "Live demo"}
+              studentHint={locale === "pt-BR" ? "Demo" : "Live demo"}
+            />
           </div>
 
           {/* Stats — live counts pulled from the database */}

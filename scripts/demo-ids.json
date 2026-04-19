@@ -1,0 +1,42 @@
+{
+  "teacher": {
+    "id": "0baf4dfa-c877-4bd1-a178-6252e8368579",
+    "email": "demo.luiza@amazingschool.app"
+  },
+  "students": [
+    {
+      "id": "64b1dc72-ebcd-4e65-a330-3a16560e6254",
+      "rosterId": "2ecd3615-0748-4b9b-a578-07c1131deaba",
+      "email": "demo.ana@amazingschool.app"
+    },
+    {
+      "id": "63d916eb-25a0-4c4f-af63-e1bf307c53a7",
+      "rosterId": "dbc23ce2-4e10-4c52-b15a-1ee67c50af8a",
+      "email": "demo.bruno@amazingschool.app"
+    },
+    {
+      "id": "14f268c3-4bbb-43a4-b1ae-c0f892a59f67",
+      "rosterId": "d35b2a69-0c8c-4b8a-843e-34680cd8866c",
+      "email": "demo.carla@amazingschool.app"
+    },
+    {
+      "id": "1424bb59-795e-4436-a50d-cf80e17dc46f",
+      "rosterId": "8e7fed40-ffe8-4518-b6f0-6ccd2e273539",
+      "email": "demo.diego@amazingschool.app"
+    },
+    {
+      "id": "7c6a0929-7ffd-46b4-85bb-8be6fd86eeb9",
+      "rosterId": "1aa271fc-a4b3-4361-9743-6e914aae4017",
+      "email": "demo.emily@amazingschool.app"
+    },
+    {
+      "id": "b4ab17f6-1808-455a-a51e-4a223ef21572",
+      "rosterId": "683d12ce-3de6-4514-83d1-5acdc16d0b0d",
+      "email": "demo.felipe@amazingschool.app"
+    }
+  ],
+  "classroomIds": [
+    "bd559217-6072-4ba7-9e83-4af1bc0fa447",
+    "f6e736ed-600e-4ba9-a30f-c6d1fc1c2052"
+  ]
+}

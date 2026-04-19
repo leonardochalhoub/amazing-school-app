@@ -5,6 +5,7 @@ import { isOwnerEmail } from "@/lib/auth/roles";
 import { redirect } from "next/navigation";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { DemoSwitchBar } from "@/components/demo/demo-switch-bar";
 import type { Role } from "@/lib/supabase/types";
 
 export default async function DashboardLayout({
@@ -46,6 +47,8 @@ export default async function DashboardLayout({
   const rosterAgeGroup = (rosterSelf as { age_group: "kid" | "teen" | "adult" | null } | null)?.age_group ?? null;
   const rosterGender = (rosterSelf as { gender: "female" | "male" | null } | null)?.gender ?? null;
 
+  const isDemo = (user.email ?? "").toLowerCase().startsWith("demo.");
+
   return (
     <div className="relative flex min-h-screen flex-col overflow-x-clip bg-background">
       <div
@@ -55,6 +58,7 @@ export default async function DashboardLayout({
         <div className="absolute -top-40 left-1/2 h-[480px] w-[880px] -translate-x-1/2 rounded-full bg-gradient-to-br from-indigo-500/8 via-violet-500/5 to-pink-500/8 blur-3xl" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.035)_1px,transparent_0)] [background-size:22px_22px] dark:bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.04)_1px,transparent_0)]" />
       </div>
+      {isDemo ? <DemoSwitchBar currentRole={role} /> : null}
       <Navbar
         fullName={profile.full_name}
         role={role}

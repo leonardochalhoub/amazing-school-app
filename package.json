@@ -17,7 +17,8 @@
     "content:validate": "tsx scripts/content/validate-lessons.ts",
     "content:publish": "tsx scripts/content/publish-lessons.ts",
     "content:run": "tsx scripts/content/run.ts",
-    "content:index": "tsx scripts/content/lib/rebuild-index.ts"
+    "content:index": "tsx scripts/content/lib/rebuild-index.ts",
+    "seed:demo": "tsx scripts/seed-demo.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.69",
