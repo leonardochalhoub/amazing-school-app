@@ -62,24 +62,65 @@ export function ManagementGrid({ months, rows }: Props) {
     });
   }, [rows, query]);
 
-  // Every unique year present in the months array (2025, 2026, …).
-  const availableYears = useMemo(() => {
+  // Year picker. Starts with the years actually present in the seed
+  // data (2025, 2026, …) and can be extended with a "+ Add year"
+  // button. Empty added-years can be removed again.
+  const baseYears = useMemo(() => {
     const set = new Set<number>();
     for (const m of months) set.add(Number(m.slice(0, 4)));
-    return [...set].sort((a, b) => b - a); // newest first
+    return [...set].sort((a, b) => a - b); // ascending
   }, [months]);
-  const [selectedYear, setSelectedYear] = useState<number>(
-    availableYears[0] ?? new Date().getFullYear(),
-  );
+  const [extraYears, setExtraYears] = useState<number[]>([]);
+  const availableYears = useMemo(() => {
+    const set = new Set<number>([...baseYears, ...extraYears]);
+    return [...set].sort((a, b) => a - b);
+  }, [baseYears, extraYears]);
+  const [selectedYear, setSelectedYear] = useState<number>(() => {
+    const currentYear = new Date().getFullYear();
+    if (baseYears.includes(currentYear)) return currentYear;
+    return baseYears[baseYears.length - 1] ?? currentYear;
+  });
 
-  // Months for the selected year only, ASC (Jan → Dec). Months that
-  // haven't happened yet (e.g. 2025-12 when we're in April) are still
-  // included so teachers can plan ahead.
+  // Always render all 12 months for the selected year. Cells outside a
+  // student's start → end window will be locked per-row.
   const orderedMonths = useMemo(() => {
-    return [...months]
-      .filter((m) => m.startsWith(`${selectedYear}-`))
-      .reverse();
-  }, [months, selectedYear]);
+    return Array.from({ length: 12 }, (_, i) => {
+      const mm = String(i + 1).padStart(2, "0");
+      return `${selectedYear}-${mm}-01`;
+    });
+  }, [selectedYear]);
+
+  // Does ANY student have a real payment row in the given year? Used
+  // to decide whether "Remove year" is allowed for user-added years.
+  function yearHasAnyPayment(year: number): boolean {
+    for (const r of rows) {
+      for (let m = 1; m <= 12; m++) {
+        const key = `${year}-${String(m).padStart(2, "0")}-01`;
+        if (r.payments[key]) return true;
+      }
+    }
+    return false;
+  }
+
+  function addYear() {
+    const last = availableYears[availableYears.length - 1] ?? new Date().getFullYear();
+    const next = last + 1;
+    setExtraYears((prev) => [...prev, next]);
+    setSelectedYear(next);
+  }
+
+  function removeYear(year: number) {
+    // Only user-added years that are empty can be removed.
+    if (baseYears.includes(year)) return;
+    if (yearHasAnyPayment(year)) return;
+    setExtraYears((prev) => prev.filter((y) => y !== year));
+    if (selectedYear === year) {
+      const fallback =
+        availableYears.filter((y) => y !== year).pop() ??
+        new Date().getFullYear();
+      setSelectedYear(fallback);
+    }
+  }
 
   function cycle(rosterId: string, month: string) {
     const key = `cell-${rosterId}|${month}`;
@@ -152,21 +193,47 @@ export function ManagementGrid({ months, rows }: Props) {
           <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
             Year
           </span>
-          <div className="inline-flex rounded-lg border border-border bg-card p-0.5 text-xs">
-            {availableYears.map((y) => (
-              <button
-                key={y}
-                type="button"
-                onClick={() => setSelectedYear(y)}
-                className={`rounded-md px-2.5 py-1 font-medium transition-colors ${
-                  selectedYear === y
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {y}
-              </button>
-            ))}
+          <div className="inline-flex items-center rounded-lg border border-border bg-card p-0.5 text-xs">
+            {availableYears.map((y) => {
+              const isExtra = !baseYears.includes(y);
+              const canRemove = isExtra && !yearHasAnyPayment(y);
+              return (
+                <span key={y} className="relative inline-flex">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedYear(y)}
+                    className={`rounded-md px-2.5 py-1 font-medium transition-colors ${
+                      selectedYear === y
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                    aria-pressed={selectedYear === y}
+                  >
+                    {y}
+                  </button>
+                  {canRemove ? (
+                    <button
+                      type="button"
+                      onClick={() => removeYear(y)}
+                      title={`Remove ${y} (empty)`}
+                      aria-label={`Remove ${y}`}
+                      className="ml-0.5 inline-flex h-5 w-5 items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-rose-600"
+                    >
+                      ×
+                    </button>
+                  ) : null}
+                </span>
+              );
+            })}
+            <button
+              type="button"
+              onClick={addYear}
+              title="Add year"
+              aria-label="Add year"
+              className="ml-0.5 inline-flex h-7 w-7 items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-primary"
+            >
+              +
+            </button>
           </div>
         </div>
         <p className="text-xs text-muted-foreground">
@@ -249,10 +316,19 @@ export function ManagementGrid({ months, rows }: Props) {
                   {orderedMonths.map((m) => {
                     const payment = r.payments[m];
                     const key = `cell-${r.roster_student_id}|${m}`;
-                    // Student's active window. NULL start means "from
-                    // anchor"; NULL end means "still active".
-                    const start = (r.billing_starts_on ?? "0000-00-00").slice(0, 10);
-                    const end = r.ended_on ? r.ended_on.slice(0, 10) : null;
+                    // Student's active window. Start = billing_starts_on
+                    // when set, otherwise the first day of the month the
+                    // roster row was created. End = ended_on, or open
+                    // when still active. Converting to first-of-month on
+                    // both sides so the compare is purely on MONTH, not
+                    // day — prevents off-by-one on the student's join
+                    // day.
+                    const startSource =
+                      r.billing_starts_on ?? r.roster_created_at ?? "0000-00-01";
+                    const start = `${startSource.slice(0, 7)}-01`;
+                    const end = r.ended_on
+                      ? `${r.ended_on.slice(0, 7)}-01`
+                      : null;
                     const monthIso = m.slice(0, 10);
                     const locked =
                       monthIso < start || (end !== null && monthIso > end);

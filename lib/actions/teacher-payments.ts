@@ -61,7 +61,7 @@ export async function getTeacherManagementMatrix(opts?: {
   const { data: rosterRaw, error } = await admin
     .from("roster_students")
     .select(
-      "id, full_name, teacher_id, auth_user_id, classroom_id, monthly_tuition_cents, billing_day, billing_starts_on, ended_on, classrooms(name)"
+      "id, full_name, teacher_id, auth_user_id, classroom_id, monthly_tuition_cents, billing_day, billing_starts_on, ended_on, created_at, classrooms(name)"
     )
     .eq("teacher_id", user.id)
     .order("full_name", { ascending: true });
@@ -77,6 +77,7 @@ export async function getTeacherManagementMatrix(opts?: {
     billing_day: number | null;
     billing_starts_on: string | null;
     ended_on: string | null;
+    created_at: string;
     classrooms: { name: string } | { name: string }[] | null;
   }>;
 
@@ -122,6 +123,7 @@ export async function getTeacherManagementMatrix(opts?: {
       billing_day: r.billing_day,
       billing_starts_on: r.billing_starts_on,
       ended_on: r.ended_on,
+      roster_created_at: r.created_at,
       payments,
     };
   });

@@ -32,6 +32,8 @@ export interface ManagementRow {
   billing_starts_on: string | null;
   /** Last day of studies — when set, the matrix locks cells after it. */
   ended_on: string | null;
+  /** Fallback floor for the matrix when billing_starts_on is unset. */
+  roster_created_at: string;
   payments: Record<string, StudentPaymentRow | null>;
 }
 
