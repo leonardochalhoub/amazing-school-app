@@ -70,6 +70,14 @@ export interface SysadminOverview {
     streak: number;
     cefrLevel: string | null;
   }[];
+  /** Same shape as topActiveStudents but ranked on lifetime XP. */
+  allTimeTopStudents: {
+    id: string;
+    displayName: string;
+    teacherName: string | null;
+    xpTotal: number;
+    cefrLevel: string | null;
+  }[];
   contentMix: {
     lessonsPerCefr: { level: string; count: number }[];
     songsPerCefr: { level: string; count: number }[];
@@ -506,6 +514,41 @@ export async function getSysadminOverview(): Promise<
       };
     });
 
+  // Lifetime XP — same real-users filter, no date bound. Separate
+  // query so we don't reshape the existing 30-day pipeline.
+  const xpLifetimeByStudent = new Map<string, number>();
+  const { data: xpLifetimeRes } = await admin
+    .from("xp_events")
+    .select("student_id, xp_amount")
+    .limit(200_000);
+  for (const x of (xpLifetimeRes ?? []) as Array<{
+    student_id: string;
+    xp_amount: number;
+  }>) {
+    if (!realUserIds.has(x.student_id)) continue;
+    xpLifetimeByStudent.set(
+      x.student_id,
+      (xpLifetimeByStudent.get(x.student_id) ?? 0) + (x.xp_amount ?? 0),
+    );
+  }
+  const allTimeTopStudents = [...xpLifetimeByStudent.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([studentId, xp]) => {
+      const r = rosterByAuthUser.get(studentId);
+      const profile = profiles.find((p) => p.id === studentId);
+      const teacherName = r?.teacher_id
+        ? teacherNameById.get(r.teacher_id) ?? null
+        : null;
+      return {
+        id: studentId,
+        displayName: profile?.full_name ?? "Unknown",
+        teacherName,
+        xpTotal: xp,
+        cefrLevel: r?.level ?? null,
+      };
+    });
+
   // Content catalog mix — read JSON indexes
   let lessonsPerCefr: { level: string; count: number }[] = [];
   let songsPerCefr: { level: string; count: number }[] = [];
@@ -599,6 +642,7 @@ export async function getSysadminOverview(): Promise<
     topTeachers,
     allTeachers,
     topActiveStudents,
+    allTimeTopStudents,
     contentMix: { lessonsPerCefr, songsPerCefr },
     health: {
       storageAvatarBytes,

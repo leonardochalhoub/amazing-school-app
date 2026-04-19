@@ -51,6 +51,7 @@ export default async function SysadminPage() {
     topTeachers,
     allTeachers,
     topActiveStudents,
+    allTimeTopStudents,
     contentMix,
     health,
   } = overview;
@@ -359,6 +360,52 @@ export default async function SysadminPage() {
           {topActiveStudents.length === 0 ? (
             <p className="text-sm text-muted-foreground sm:col-span-2 lg:col-span-5">
               No XP events in the last 30 days.
+            </p>
+          ) : null}
+        </div>
+      </section>
+
+      {/* ============================ All-time top students ============================ */}
+      <section className="space-y-3">
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            All-time hall of fame
+          </h2>
+          <p className="text-xs text-muted-foreground">
+            Ranked by lifetime XP since their first lesson
+          </p>
+        </div>
+        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
+          {allTimeTopStudents.map((s, i) => (
+            <Card key={s.id}>
+              <CardContent className="p-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-medium text-muted-foreground">
+                    #{i + 1}
+                  </span>
+                  {s.cefrLevel ? (
+                    <Badge variant="outline" className="text-[10px]">
+                      {s.cefrLevel.toUpperCase()}
+                    </Badge>
+                  ) : null}
+                </div>
+                <p className="mt-2 truncate font-semibold leading-tight">
+                  {s.displayName}
+                </p>
+                {s.teacherName ? (
+                  <p className="truncate text-[10px] text-muted-foreground">
+                    with {s.teacherName}
+                  </p>
+                ) : null}
+                <p className="mt-1 text-xs tabular-nums text-muted-foreground">
+                  {s.xpTotal.toLocaleString()} XP lifetime
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+          {allTimeTopStudents.length === 0 ? (
+            <p className="text-sm text-muted-foreground sm:col-span-2 lg:col-span-5">
+              No XP events on the platform yet.
             </p>
           ) : null}
         </div>
