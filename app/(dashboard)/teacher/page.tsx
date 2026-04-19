@@ -103,14 +103,6 @@ export default async function TeacherDashboard() {
       {/* Birthday alert — only renders when there are upcoming birthdays */}
       <BirthdayAlert birthdays={upcomingBirthdays} />
 
-      {/* Quick actions — primary entry point for scheduling future classes */}
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <ScheduleClassButton
-          students={studentOptions}
-          classrooms={classroomOptions}
-        />
-      </div>
-
       {/* KPI STRIP — below hero */}
       <section
         aria-label="Key metrics"
@@ -144,6 +136,16 @@ export default async function TeacherDashboard() {
           Icon={CheckCircle2}
         />
       </section>
+
+      {/* Quick actions — primary entry point for scheduling future classes.
+          Sits between the KPI strip and the Students roster so it's always
+          visible right before the people it acts on. */}
+      <div className="flex flex-wrap items-center justify-end gap-2">
+        <ScheduleClassButton
+          students={studentOptions}
+          classrooms={classroomOptions}
+        />
+      </div>
 
       {/* STUDENTS first — roster cards first, + card last */}
       <section aria-labelledby="students-heading" className="space-y-4">
