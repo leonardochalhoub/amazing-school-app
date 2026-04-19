@@ -77,6 +77,10 @@ export function RosterEditForm({
   const [birthdayValue, setBirthdayValue] = useState<string>(birthday ?? "");
   const [levelValue, setLevelValue] = useState<Level | "">(level ?? "");
   const [endedOnValue, setEndedOnValue] = useState<string>(endedOn ?? "");
+  const [startingOnValue, setStartingOnValue] = useState<string>(
+    // Normalize whatever came in (ISO date OR full timestamp) to yyyy-MM-dd
+    (startingOn ?? "").slice(0, 10),
+  );
   const [classroomOptions, setClassroomOptions] = useState(classrooms);
   const [pending, startTransition] = useTransition();
 
@@ -149,6 +153,7 @@ export function RosterEditForm({
         birthday: birthdayValue || null,
         level: levelValue || null,
         endedOn: endedOnValue || null,
+        billingStartsOn: startingOnValue || null,
       });
       if ("error" in result && result.error) {
         toast.error(result.error);
@@ -284,23 +289,19 @@ export function RosterEditForm({
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="space-y-1.5">
-          <Label>
+          <Label htmlFor="rs-starting-on">
             {locale === "pt-BR" ? "Data de início" : "Starting date"}
           </Label>
-          <div className="flex h-9 items-center rounded-md border border-border bg-muted/30 px-3 text-sm text-muted-foreground">
-            {startingOn
-              ? new Date(startingOn).toLocaleDateString(
-                  locale === "pt-BR" ? "pt-BR" : "en-US",
-                  { day: "2-digit", month: "long", year: "numeric" },
-                )
-              : locale === "pt-BR"
-                ? "Ainda não definido"
-                : "Not set yet"}
-          </div>
+          <Input
+            id="rs-starting-on"
+            type="date"
+            value={startingOnValue}
+            onChange={(e) => setStartingOnValue(e.target.value)}
+          />
           <p className="text-[10px] text-muted-foreground">
             {locale === "pt-BR"
-              ? "Definido automaticamente na criação do aluno."
-              : "Set automatically when the student was enrolled."}
+              ? "Primeiro mês que o aluno pode ser cobrado. Ajuste se as aulas começaram antes do cadastro."
+              : "First month the student can be billed. Set it earlier if classes started before you enrolled them."}
           </p>
         </div>
         <div className="space-y-1.5">

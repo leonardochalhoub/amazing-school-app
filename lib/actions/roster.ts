@@ -84,6 +84,12 @@ const UpdateSchema = z.object({
     .nullable()
     .optional()
     .or(z.literal("")),
+  billingStartsOn: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .nullable()
+    .optional()
+    .or(z.literal("")),
 });
 
 export async function updateRosterStudent(input: z.input<typeof UpdateSchema>) {
@@ -108,6 +114,8 @@ export async function updateRosterStudent(input: z.input<typeof UpdateSchema>) {
   if (parsed.data.level !== undefined) patch.level = parsed.data.level;
   if (parsed.data.endedOn !== undefined)
     patch.ended_on = parsed.data.endedOn || null;
+  if (parsed.data.billingStartsOn !== undefined)
+    patch.billing_starts_on = parsed.data.billingStartsOn || null;
 
   const { error } = await supabase
     .from("roster_students")
