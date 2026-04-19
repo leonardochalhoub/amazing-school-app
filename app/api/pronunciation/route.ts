@@ -526,11 +526,22 @@ function diffPhoneticMajority(
     for (const pt of probeTokens) {
       const exact = pt.includes(t);
       if (exact) continue;
+      // Tightened "close match" rules. A single-character insertion
+      // (e.g. "river" → "raiver") is a real accent-driven mispronun-
+      // ciation, not a probe typo, so we don't let it through.
       const close = pt.some((p) => {
         if (p.length < 2) return false;
         const dist = levenshtein(t, p);
+        if (dist === 0) return true;
+        // 3 chars or fewer: allow 1 edit to tolerate probe spelling
+        // variance on short function words ("to" vs "too").
+        if (t.length <= 3 && p.length <= 3) return dist <= 1;
+        // For 4–6 char words (the "river" range), require exact match.
+        if (t.length <= 6) return false;
+        // For 7+ char words, allow up to 10% edit slack to absorb
+        // probe typos on long words ("studied" vs "studyed").
         const longest = Math.max(t.length, p.length);
-        return dist / longest <= 0.35;
+        return dist / longest <= 0.1;
       });
       if (!close) misses += 1;
     }
