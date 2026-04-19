@@ -37,7 +37,7 @@ const CLARITY_WEIGHT = clampNum(
   Number(process.env.PRONUNCIATION_CLARITY_WEIGHT),
   0,
   1,
-  0.1,
+  0.15,
 );
 // Logprob range used to map Whisper's per-segment confidence to a 0–100
 // clarity score. Whisper's avg_logprob is negative; closer to 0 = more
@@ -50,7 +50,7 @@ const LOGPROB_FLOOR = clampNum(
   Number(process.env.PRONUNCIATION_LOGPROB_FLOOR),
   -3,
   -0.1,
-  -0.7,
+  -0.8,
 );
 const LOGPROB_CEILING = clampNum(
   Number(process.env.PRONUNCIATION_LOGPROB_CEILING),
@@ -66,13 +66,13 @@ const RESCUE_PENALTY_THRESHOLD = clampNum(
   Number(process.env.PRONUNCIATION_RESCUE_CLARITY_THRESHOLD),
   0,
   100,
-  50,
+  60,
 );
 const RESCUE_PENALTY_WEIGHT = clampNum(
   Number(process.env.PRONUNCIATION_RESCUE_PENALTY_WEIGHT),
   0,
   3,
-  2,
+  1.5,
 );
 const SCORE_CEILING = clampNum(
   Number(process.env.PRONUNCIATION_CEILING),
@@ -237,7 +237,7 @@ function singleSegmentClarity(s: WhisperSegment): number {
   const noSpeech = typeof s.no_speech_prob === "number" ? s.no_speech_prob : 0;
   const span = LOGPROB_CEILING - LOGPROB_FLOOR;
   const mapped = Math.max(0, Math.min(1, (lp - LOGPROB_FLOOR) / span));
-  const base = Math.pow(mapped, 1.6) * 100;
+  const base = Math.pow(mapped, 1.3) * 100;
   const penalty = Math.min(60, Math.round(noSpeech * 100));
   return Math.max(0, Math.min(100, Math.round(base - penalty)));
 }
@@ -269,9 +269,11 @@ function clarityScore(segments: WhisperSegment[] | undefined): number {
   const avgLogprob = logprobSum / n;
   const avgNoSpeech = noSpeechSum / n;
 
-  const span = LOGPROB_CEILING - LOGPROB_FLOOR; // e.g. 0.45
+  const span = LOGPROB_CEILING - LOGPROB_FLOOR; // default 0.75
   const lp = Math.max(0, Math.min(1, (avgLogprob - LOGPROB_FLOOR) / span));
-  const logprobScore = Math.pow(lp, 1.6) * 100;
+  // 1.3 is a gentler curve than 1.6 — proficient speech at logprob
+  // around -0.15…-0.2 now lands in the 80s instead of mid-60s.
+  const logprobScore = Math.pow(lp, 1.3) * 100;
 
   // no_speech_prob directly penalizes: 0 = perfect, 0.5 = -50pts.
   const penalty = Math.min(60, Math.round(avgNoSpeech * 100));
@@ -366,7 +368,7 @@ const PER_WORD_UNCLEAR_THRESHOLD = clampNum(
   Number(process.env.PRONUNCIATION_PER_WORD_UNCLEAR_THRESHOLD),
   0,
   100,
-  70,
+  60,
 );
 
 function wordDiff(
