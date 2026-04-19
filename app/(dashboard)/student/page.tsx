@@ -67,7 +67,7 @@ export default async function StudentHome() {
 
   const { data: rosterSelf } = await admin
     .from("roster_students")
-    .select("id, age_group, gender, has_avatar")
+    .select("id, age_group, gender, has_avatar, level")
     .eq("auth_user_id", user.id)
     .maybeSingle();
 
@@ -157,7 +157,7 @@ export default async function StudentHome() {
   }
 
   let resolvedAssignments: ResolvedAssignment[] = [];
-  if (classroomId) {
+  {
     const raw = await getAssignmentsForStudent(classroomId, user.id);
     resolvedAssignments = raw.map((a) => {
       const { kind, slug } = fromAssignmentSlug(a.lesson_slug);
@@ -313,6 +313,11 @@ export default async function StudentHome() {
 
           <div className="flex-1 space-y-3">
             <div>
+              {(rosterSelf as { level?: string | null } | null)?.level ? (
+                <p className="mb-1 inline-flex items-center rounded-full bg-indigo-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">
+                  {(rosterSelf as { level: string }).level.toUpperCase()}
+                </p>
+              ) : null}
               <h1
                 className="font-[family-name:var(--font-display)] text-3xl italic leading-tight tracking-tight md:text-4xl"
                 style={{ letterSpacing: "-0.01em" }}

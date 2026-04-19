@@ -94,6 +94,7 @@ export interface RosterSummary {
   avatarUrl: string | null;
   ageGroup: "kid" | "teen" | "adult" | null;
   gender: "female" | "male" | null;
+  level: "a1" | "a2" | "b1" | "b2" | "c1" | "c2" | "y4" | null;
 }
 
 export interface RecentAssignmentRow {
@@ -383,7 +384,7 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
       .order("created_at", { ascending: false }),
     admin
       .from("roster_students")
-      .select("id, full_name, classroom_id, has_avatar, age_group, gender, auth_user_id")
+      .select("id, full_name, classroom_id, has_avatar, age_group, gender, auth_user_id, level")
       .eq("teacher_id", user.id)
       .order("created_at", { ascending: false })
       .then((res) => (res.error ? { data: [], error: null } : res)),
@@ -487,6 +488,8 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
     ageGroup:
       (r as { age_group: "kid" | "teen" | "adult" | null }).age_group ?? null,
     gender: (r as { gender: "female" | "male" | null }).gender ?? null,
+    level:
+      (r as { level: RosterSummary["level"] }).level ?? null,
   }));
 
   // Dedup every student identity into a single Set so a person represented

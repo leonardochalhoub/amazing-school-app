@@ -183,6 +183,7 @@ export default async function TeacherDashboard() {
               accentIndex={i}
               ageGroup={r.ageGroup}
               gender={r.gender}
+              level={r.level}
             />
           ))}
           <AddStudentButton classrooms={classroomOptions} variant="card" />

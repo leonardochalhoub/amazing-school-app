@@ -131,20 +131,16 @@ export function AssignLessonButton({
     } else {
       const student = students.find((s) => s.id === studentId);
       finalRosterStudentId = studentId;
+      // Inherit the student's classroom when they have one so the lesson
+      // still shows in classroom-level views. For students without a
+      // classroom, we send the assignment with classroom_id=null — the
+      // 023 migration allows it as long as roster_student_id is set.
       finalClassroomId = student?.classroomId ?? null;
-      if (!finalClassroomId) {
-        toast.error(
-          locale === "pt-BR"
-            ? "Esse aluno precisa estar em uma turma para receber lições."
-            : "This student needs to be in a classroom to receive lessons."
-        );
-        return;
-      }
     }
 
     startTransition(async () => {
       const result = await assignLesson({
-        classroomId: finalClassroomId!,
+        classroomId: finalClassroomId,
         lessonSlug,
         rosterStudentId: finalRosterStudentId,
       });
@@ -283,11 +279,7 @@ export function AssignLessonButton({
                   >
                     <option value="">{t.pickStudent}</option>
                     {students.map((s) => (
-                      <option
-                        key={s.id}
-                        value={s.id}
-                        disabled={!s.classroomId}
-                      >
+                      <option key={s.id} value={s.id}>
                         {s.fullName}
                         {s.classroomId
                           ? ""

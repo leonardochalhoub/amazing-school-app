@@ -115,6 +115,8 @@ export interface AiUsage {
   updated_at: string;
 }
 
+export type RosterLevel = "a1" | "a2" | "b1" | "b2" | "c1" | "c2" | "y4";
+
 export interface RosterStudent {
   id: string;
   teacher_id: string;
@@ -127,6 +129,7 @@ export interface RosterStudent {
   age_group: "kid" | "teen" | "adult" | null;
   gender: "female" | "male" | null;
   birthday: string | null;
+  level: RosterLevel | null;
   created_at: string;
   updated_at: string;
 }

@@ -9,24 +9,29 @@ import type { AssignmentStatus, LessonAssignment } from "@/lib/supabase/types";
 const UuidSchema = z.string().uuid();
 const SlugSchema = z.string().min(1).max(120);
 
-const AssignSchema = z.object({
-  classroomId: UuidSchema,
-  lessonSlug: SlugSchema,
-  studentId: UuidSchema.nullable().optional(),
-  rosterStudentId: UuidSchema.nullable().optional(),
-  orderIndex: z.number().int().min(0).default(0),
-  dueDate: z.string().datetime().optional(),
-});
+const AssignSchema = z
+  .object({
+    classroomId: UuidSchema.nullable().optional(),
+    lessonSlug: SlugSchema,
+    studentId: UuidSchema.nullable().optional(),
+    rosterStudentId: UuidSchema.nullable().optional(),
+    orderIndex: z.number().int().min(0).default(0),
+    dueDate: z.string().datetime().optional(),
+  })
+  .refine(
+    (d) => !!(d.classroomId || d.studentId || d.rosterStudentId),
+    { message: "Provide a classroom, a student, or a roster student" },
+  );
 
 export type AssignInput = z.input<typeof AssignSchema>;
 
 function bumpPaths(
-  classroomId: string,
+  classroomId: string | null,
   studentId: string | null,
   rosterStudentId: string | null
 ) {
-  revalidatePath(`/teacher/classroom/${classroomId}`);
-  if (studentId) {
+  if (classroomId) revalidatePath(`/teacher/classroom/${classroomId}`);
+  if (classroomId && studentId) {
     revalidatePath(`/teacher/classroom/${classroomId}/students/${studentId}`);
   }
   if (rosterStudentId) {
@@ -51,7 +56,7 @@ export async function assignLesson(input: AssignInput) {
 
   const admin = createAdminClient();
   const { error } = await admin.from("lesson_assignments").insert({
-    classroom_id: parsed.data.classroomId,
+    classroom_id: parsed.data.classroomId ?? null,
     lesson_slug: parsed.data.lessonSlug,
     student_id: parsed.data.studentId ?? null,
     roster_student_id: parsed.data.rosterStudentId ?? null,
@@ -66,7 +71,7 @@ export async function assignLesson(input: AssignInput) {
   }
 
   bumpPaths(
-    parsed.data.classroomId,
+    parsed.data.classroomId ?? null,
     parsed.data.studentId ?? null,
     parsed.data.rosterStudentId ?? null
   );
@@ -248,7 +253,7 @@ export async function setAssignmentStatus(input: z.input<typeof StatusSchema>) {
 }
 
 export async function getAssignmentsForStudent(
-  classroomId: string,
+  classroomId: string | null,
   studentId: string
 ): Promise<LessonAssignment[]> {
   // Use the admin client so we don't lose rows to RLS edge cases (e.g. a
@@ -266,27 +271,27 @@ export async function getAssignmentsForStudent(
     .maybeSingle();
   const rosterId = (rosterLink as { id: string } | null)?.id ?? null;
 
-  // Build three separate queries and union. This is cleaner than a single
-  // OR with nested and() — PostgREST's OR grammar is picky about embedded
-  // logical groups.
-  const classroomWide = admin
-    .from("lesson_assignments")
-    .select("*")
-    .eq("classroom_id", classroomId)
-    .is("student_id", null)
-    .is("roster_student_id", null);
+  // Classroom-scoped branches only run when the student actually has one.
+  // Classroom-less students still see any per-user or per-roster assignment
+  // targeted at them directly (migration 024 lets classroom_id be null).
+  const classroomWide = classroomId
+    ? admin
+        .from("lesson_assignments")
+        .select("*")
+        .eq("classroom_id", classroomId)
+        .is("student_id", null)
+        .is("roster_student_id", null)
+    : Promise.resolve({ data: [] as LessonAssignment[] });
 
   const perUser = admin
     .from("lesson_assignments")
     .select("*")
-    .eq("classroom_id", classroomId)
     .eq("student_id", studentId);
 
   const perRoster = rosterId
     ? admin
         .from("lesson_assignments")
         .select("*")
-        .eq("classroom_id", classroomId)
         .eq("roster_student_id", rosterId)
     : Promise.resolve({ data: [] as LessonAssignment[] });
 

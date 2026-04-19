@@ -11,6 +11,7 @@ const UuidSchema = z.string().uuid();
 
 const AgeGroupSchema = z.enum(["kid", "teen", "adult"]);
 const GenderSchema = z.enum(["female", "male"]);
+const LevelSchema = z.enum(["a1", "a2", "b1", "b2", "c1", "c2", "y4"]);
 
 const BirthdaySchema = z
   .string()
@@ -27,6 +28,7 @@ const CreateSchema = z.object({
   ageGroup: AgeGroupSchema.optional(),
   gender: GenderSchema.optional(),
   birthday: BirthdaySchema,
+  level: LevelSchema.optional(),
 });
 
 export async function createRosterStudent(input: z.input<typeof CreateSchema>) {
@@ -49,6 +51,7 @@ export async function createRosterStudent(input: z.input<typeof CreateSchema>) {
       age_group: parsed.data.ageGroup ?? null,
       gender: parsed.data.gender ?? null,
       birthday: parsed.data.birthday || null,
+      level: parsed.data.level ?? null,
     })
     .select("id")
     .single();
@@ -74,6 +77,7 @@ const UpdateSchema = z.object({
     .nullable()
     .optional()
     .or(z.literal("")),
+  level: LevelSchema.nullable().optional(),
 });
 
 export async function updateRosterStudent(input: z.input<typeof UpdateSchema>) {
@@ -95,6 +99,7 @@ export async function updateRosterStudent(input: z.input<typeof UpdateSchema>) {
   if (parsed.data.gender !== undefined) patch.gender = parsed.data.gender;
   if (parsed.data.birthday !== undefined)
     patch.birthday = parsed.data.birthday || null;
+  if (parsed.data.level !== undefined) patch.level = parsed.data.level;
 
   const { error } = await supabase
     .from("roster_students")

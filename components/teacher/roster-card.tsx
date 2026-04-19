@@ -17,6 +17,7 @@ export interface RosterCardProps {
   accentIndex?: number;
   ageGroup?: AgeGroup | null;
   gender?: Gender | null;
+  level?: "a1" | "a2" | "b1" | "b2" | "c1" | "c2" | "y4" | null;
 }
 
 const RING_GRADIENTS = [
@@ -40,6 +41,7 @@ export function RosterCard({
   accentIndex = 0,
   ageGroup,
   gender,
+  level,
 }: RosterCardProps) {
   const { locale } = useI18n();
   const gradient = RING_GRADIENTS[accentIndex % RING_GRADIENTS.length];
@@ -49,6 +51,7 @@ export function RosterCard({
       ? AGE_LABELS.pt[ageGroup]
       : AGE_LABELS.en[ageGroup]
     : null;
+  const levelLabel = level ? level.toUpperCase() : null;
 
   return (
     <Link href={`/teacher/students/${id}`} className="group block w-full">
@@ -82,17 +85,22 @@ export function RosterCard({
           <p className="truncate text-sm font-semibold leading-tight">
             {fullName}
           </p>
-          <p className="mt-0.5 truncate text-[11px] text-muted-foreground">
-            {ageLabel ? (
-              <>
-                <span>{ageLabel}</span>
-                {classroomName ? <span> · {classroomName}</span> : null}
-              </>
-            ) : classroomName ? (
-              classroomName
-            ) : (
+          <p className="mt-0.5 flex flex-wrap items-center justify-center gap-x-1 gap-y-0.5 text-[11px] text-muted-foreground">
+            {ageLabel ? <span>{ageLabel}</span> : null}
+            {ageLabel && (classroomName || levelLabel) ? <span>·</span> : null}
+            {classroomName ? (
+              <span className="truncate">{classroomName}</span>
+            ) : ageLabel ? null : (
               <span className="italic">{noClassroomLabel}</span>
             )}
+            {levelLabel ? (
+              <>
+                {(ageLabel || classroomName) ? <span>·</span> : null}
+                <span className="inline-flex items-center rounded-full bg-indigo-500/10 px-1.5 py-0 font-semibold tracking-wide text-indigo-700 dark:text-indigo-300">
+                  {levelLabel}
+                </span>
+              </>
+            ) : null}
           </p>
         </div>
       </div>

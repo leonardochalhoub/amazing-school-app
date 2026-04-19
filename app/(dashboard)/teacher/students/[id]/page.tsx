@@ -115,8 +115,13 @@ export default async function RosterStudentDetailPage({
 
       <header className="flex flex-wrap items-start justify-between gap-3">
         <div className="flex flex-col gap-1">
-          <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            Student
+          <p className="flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+            <span>Student</span>
+            {student.level ? (
+              <span className="inline-flex items-center rounded-full bg-indigo-500/10 px-2 py-0.5 text-[10px] font-semibold tracking-wider text-indigo-700 dark:text-indigo-300">
+                {student.level.toUpperCase()}
+              </span>
+            ) : null}
           </p>
           <h1 className="text-3xl font-semibold tracking-tight">
             {student.full_name}
@@ -181,6 +186,7 @@ export default async function RosterStudentDetailPage({
                 birthday={
                   (student as { birthday?: string | null }).birthday ?? null
                 }
+                level={student.level}
                 hasAvatar={student.has_avatar}
                 classrooms={classroomList}
               />

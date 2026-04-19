@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { Trash2 } from "lucide-react";
+import { Plus, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,10 +12,21 @@ import {
   updateRosterStudent,
   deleteRosterStudent,
 } from "@/lib/actions/roster";
+import { createClassroomQuick } from "@/lib/actions/classroom";
 import { useI18n } from "@/lib/i18n/context";
 
 type AgeGroup = "kid" | "teen" | "adult";
 type Gender = "female" | "male";
+type Level = "a1" | "a2" | "b1" | "b2" | "c1" | "c2" | "y4";
+const LEVEL_OPTIONS: readonly Level[] = [
+  "a1",
+  "a2",
+  "b1",
+  "b2",
+  "c1",
+  "c2",
+  "y4",
+] as const;
 
 interface Props {
   rosterId: string;
@@ -27,6 +38,7 @@ interface Props {
   ageGroup: AgeGroup | null;
   gender: Gender | null;
   birthday: string | null;
+  level: Level | null;
   hasAvatar: boolean;
   classrooms: { id: string; name: string }[];
 }
@@ -41,6 +53,7 @@ export function RosterEditForm({
   ageGroup,
   gender,
   birthday,
+  level,
   hasAvatar,
   classrooms,
 }: Props) {
@@ -56,6 +69,8 @@ export function RosterEditForm({
   );
   const [genderValue, setGenderValue] = useState<Gender | "">(gender ?? "");
   const [birthdayValue, setBirthdayValue] = useState<string>(birthday ?? "");
+  const [levelValue, setLevelValue] = useState<Level | "">(level ?? "");
+  const [classroomOptions, setClassroomOptions] = useState(classrooms);
   const [pending, startTransition] = useTransition();
 
   const t = locale === "pt-BR"
@@ -125,6 +140,7 @@ export function RosterEditForm({
         ageGroup: ageGroupValue || null,
         gender: genderValue || null,
         birthday: birthdayValue || null,
+        level: levelValue || null,
       });
       if ("error" in result && result.error) {
         toast.error(result.error);
@@ -132,6 +148,28 @@ export function RosterEditForm({
         toast.success(t.saved);
         router.refresh();
       }
+    });
+  }
+
+  function createClassroomInline() {
+    const name = window.prompt(
+      locale === "pt-BR"
+        ? "Nome da nova turma"
+        : "Name of the new classroom",
+    );
+    const trimmed = name?.trim();
+    if (!trimmed) return;
+    startTransition(async () => {
+      const res = await createClassroomQuick({ name: trimmed });
+      if ("error" in res) {
+        toast.error(res.error);
+        return;
+      }
+      setClassroomOptions((prev) => [...prev, { id: res.id, name: res.name }]);
+      setClassId(res.id);
+      toast.success(
+        locale === "pt-BR" ? "Turma criada" : "Classroom created",
+      );
     });
   }
 
@@ -193,19 +231,35 @@ export function RosterEditForm({
         </div>
         <div className="space-y-1.5">
           <Label htmlFor="rs-class">{t.classroom}</Label>
-          <select
-            id="rs-class"
-            value={classId}
-            onChange={(e) => setClassId(e.target.value)}
-            className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
-          >
-            <option value="">{t.noClassroom}</option>
-            {classrooms.map((c) => (
-              <option key={c.id} value={c.id}>
-                {c.name}
-              </option>
-            ))}
-          </select>
+          <div className="flex gap-1.5">
+            <select
+              id="rs-class"
+              value={classId}
+              onChange={(e) => setClassId(e.target.value)}
+              className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
+            >
+              <option value="">{t.noClassroom}</option>
+              {classroomOptions.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.name}
+                </option>
+              ))}
+            </select>
+            <button
+              type="button"
+              onClick={createClassroomInline}
+              disabled={pending}
+              aria-label={
+                locale === "pt-BR" ? "Nova turma" : "New classroom"
+              }
+              title={
+                locale === "pt-BR" ? "Nova turma" : "New classroom"
+              }
+              className="inline-flex h-9 shrink-0 items-center justify-center rounded-md border border-border bg-card px-2 text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary disabled:opacity-50"
+            >
+              <Plus className="h-4 w-4" />
+            </button>
+          </div>
         </div>
         <div className="space-y-1.5">
           <Label htmlFor="rs-birthday">
@@ -286,6 +340,39 @@ export function RosterEditForm({
                   }`}
                 >
                   {genderLabels[opt]}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-1.5">
+            <Label>
+              {locale === "pt-BR" ? "Nível CEFR" : "CEFR level"}
+            </Label>
+            <div className="flex flex-wrap gap-1.5">
+              <button
+                type="button"
+                onClick={() => setLevelValue("")}
+                className={`rounded-md border px-3 py-1.5 text-xs font-medium transition-colors ${
+                  levelValue === ""
+                    ? "border-foreground bg-foreground text-background"
+                    : "border-border text-muted-foreground hover:border-foreground/40"
+                }`}
+              >
+                {locale === "pt-BR" ? "—" : "—"}
+              </button>
+              {LEVEL_OPTIONS.map((opt) => (
+                <button
+                  key={opt}
+                  type="button"
+                  onClick={() => setLevelValue(opt)}
+                  className={`rounded-md border px-3 py-1.5 text-xs font-medium uppercase transition-colors ${
+                    levelValue === opt
+                      ? "border-foreground bg-foreground text-background"
+                      : "border-border text-muted-foreground hover:border-foreground/40"
+                  }`}
+                >
+                  {opt}
                 </button>
               ))}
             </div>
