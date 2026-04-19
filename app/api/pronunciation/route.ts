@@ -289,7 +289,7 @@ export async function POST(req: Request) {
     Number(process.env.PRONUNCIATION_MAJORITY_FRACTION),
     0.1,
     1,
-    0.4,
+    0.3,
   );
   const MAJORITY_THRESHOLD = Math.max(
     1,
@@ -313,7 +313,15 @@ export async function POST(req: Request) {
     }
   }
 
-  const score = combineScore(similarity, clarity, diff, phoneticMismatches.length);
+  // Count every suspicious chip shown to the user — whether flagged by
+  // the probe majority vote OR by the duration detector. The UI already
+  // shows these as orange "check" chips, so the score must reflect them
+  // too (previously only probe-based misses were penalized, so duration-
+  // flagged words turned orange while the score stayed at 100).
+  const suspiciousCount = diff.words.filter(
+    (w) => w.status === "suspicious",
+  ).length;
+  const score = combineScore(similarity, clarity, diff, suspiciousCount);
   const feedback = buildFeedback(score, transcription, target, clarity, diff);
 
   return NextResponse.json({
@@ -427,7 +435,7 @@ function combineScore(
   similarity: number,
   clarity: number,
   diff: WordDiff,
-  phoneticMismatchCount = 0,
+  suspiciousCount = 0,
 ): number {
   // Steep curve on similarity so 80% text match ≈ 41, 90% ≈ 69,
   // 95% ≈ 84 (at strictness=3.5).
@@ -459,15 +467,16 @@ function combineScore(
   const mistakes = diff.words.filter(
     (w) => w.status === "wrong" || w.status === "missed" || w.status === "extra",
   ).length;
-  // Phonetic-probe mismatches are a separate per-word penalty. Each
-  // word that Whisper "rescued" costs PHONETIC_WORD_PENALTY points.
-  const phoneticPenalty = phoneticMismatchCount * PHONETIC_WORD_PENALTY;
+  // Per-word penalty for every "suspicious" word — whether it was
+  // flagged by probe majority vote or by the duration anomaly detector.
+  const phoneticPenalty = suspiciousCount * PHONETIC_WORD_PENALTY;
   const penalized =
     blended - mistakes * WORD_MISTAKE_PENALTY - rescuePenalty - phoneticPenalty;
 
-  // Only award the full ceiling when every target word matched AND the
-  // raw numbers say so. "unclear" counts as matched here.
-  const hasAllWords = mistakes === 0;
+  // The full ceiling requires every target word to be clean — neither a
+  // real mismatch nor a suspicious pronunciation. A single orange chip
+  // can now block a 100.
+  const hasAllWords = mistakes === 0 && suspiciousCount === 0;
   const ceiling =
     PERFECT_REQUIRES_ALL_WORDS && !hasAllWords ? SCORE_CEILING - 2 : SCORE_CEILING;
   return Math.max(0, Math.min(ceiling, Math.round(penalized)));
@@ -512,7 +521,7 @@ function detectDurationAnomalies(
   const out = new Set<string>();
   if (!words || words.length === 0) return out;
   const FAST_RATIO = 0.45;
-  const SLOW_RATIO = 1.8;
+  const SLOW_RATIO = 1.5;
 
   // Per-speaker baseline: average ms-per-syllable across all words that
   // have usable timestamps. Falls back to 180 when the sample is too
