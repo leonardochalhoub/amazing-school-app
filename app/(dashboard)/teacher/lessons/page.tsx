@@ -9,6 +9,7 @@ import { listMyBank } from "@/lib/actions/exercise-bank";
 import { getAllLessons } from "@/lib/content/loader";
 import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { getTeacherOverview } from "@/lib/actions/teacher-dashboard";
+import { listMusic } from "@/lib/content/music";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { BulkAssignList } from "@/components/teacher/bulk-assign-list";
 import { LessonRow } from "@/components/teacher/lesson-row";
@@ -277,6 +278,7 @@ export default async function TeacherLessonsPage({
           </Badge>
           <AssignLessonButton
             lessons={assignable}
+            musics={listMusic()}
             classrooms={overview.classrooms.map((c) => ({
               id: c.id,
               name: c.name,
