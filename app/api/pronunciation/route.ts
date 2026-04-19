@@ -206,37 +206,39 @@ export async function POST(req: Request) {
     return (await r.json()) as WhisperVerboseResponse;
   }
 
-  // Three probes in parallel:
-  //   primary   — what we score against
-  //   phonetic1 — high-temp adversarial prompt on whisper-large-v3
-  //   phonetic2 — adversarial prompt on distil-whisper-large-v3-en
-  //               (different model → different LM rescue behavior)
-  // A word is suspicious when it appears in primary but in NEITHER probe.
-  const [primary, phonetic1, phonetic2] = await Promise.all([
+  // Five parallel probes:
+  //   0. primary             — what we score against (whisper-large-v3, temp=0)
+  //   1. adversarial-temp1   — whisper-large-v3, temp=1.0, adversarial prompt
+  //   2. adversarial-temp07  — whisper-large-v3, temp=0.7, adversarial prompt
+  //   3. distil-whisper      — distil-whisper-large-v3-en, temp=0.8, adversarial
+  //   4. whisper-turbo       — whisper-large-v3-turbo, temp=0.6, adversarial
+  // A target word is flagged "suspicious" by MAJORITY VOTING: if 2 or
+  // more of the 4 probes fail to hear it, the LM must have rescued it
+  // across multiple configurations → strong mispronunciation signal.
+  const probeConfigs = [
+    { phonetic: true, temperature: 1.0, model: "whisper-large-v3" },
+    { phonetic: true, temperature: 0.7, model: "whisper-large-v3" },
+    { phonetic: true, temperature: 0.8, model: "distil-whisper-large-v3-en" },
+    { phonetic: true, temperature: 0.6, model: "whisper-large-v3-turbo" },
+  ] as const;
+  const probesPromise = PHONETIC_PROBE_ENABLED
+    ? Promise.all(
+        probeConfigs.map((cfg) =>
+          callWhisper(cfg).catch(() => null as WhisperVerboseResponse | null),
+        ),
+      )
+    : Promise.resolve<(WhisperVerboseResponse | null)[]>([null, null, null, null]);
+  const [primary, probes] = await Promise.all([
     callWhisper({ phonetic: false }),
-    PHONETIC_PROBE_ENABLED
-      ? callWhisper({ phonetic: true, temperature: 1.0 }).catch(() => null)
-      : Promise.resolve<WhisperVerboseResponse | null>(null),
-    PHONETIC_PROBE_ENABLED
-      ? callWhisper({
-          phonetic: true,
-          temperature: 0.8,
-          model: "distil-whisper-large-v3-en",
-        }).catch(() => null)
-      : Promise.resolve<WhisperVerboseResponse | null>(null),
+    probesPromise,
   ]).catch((e: Error) => {
     throw e;
   });
 
   const transcription = (primary.text ?? "").trim();
-  const phonetic1Text = (phonetic1?.text ?? "").trim();
-  const phonetic2Text = (phonetic2?.text ?? "").trim();
-  // Union both probes — any word missing from EITHER probe counts as
-  // suspicious so we don't miss mispronunciations one probe alone
-  // happened to also "rescue".
-  const phoneticTranscription = [phonetic1Text, phonetic2Text]
-    .filter(Boolean)
-    .join(" || ");
+  const probeTranscriptions = probes.map((p) => (p?.text ?? "").trim());
+  const activeProbes = probeTranscriptions.filter(Boolean);
+  const phoneticTranscription = activeProbes.join(" || ");
 
   const similarity = similarityScore(transcription, target); // 0–100
   const clarity = clarityScore(primary.segments); // 0–100
@@ -263,15 +265,19 @@ export async function POST(req: Request) {
     }
   }
 
-  // Phonetic-probe divergence: if either high-temp probe with a
-  // verbatim prompt hears something different from the polished
-  // transcription, the speaker likely mispronounced those words.
-  const combinedPhonetic = [phonetic1Text, phonetic2Text]
-    .filter(Boolean)
-    .join(" ");
-  const phoneticMismatches = combinedPhonetic
-    ? diffPhoneticTokens(transcription, combinedPhonetic)
-    : [];
+  // Majority-vote mispronunciation detection: a target word is flagged
+  // when ≥ MAJORITY_THRESHOLD probes failed to reproduce it. Any single
+  // probe occasionally "rescues" even badly-said words, but if multiple
+  // probes in different configurations all miss the same word, the LM
+  // consistently had to reconstruct it → real mispronunciation.
+  const MAJORITY_THRESHOLD = Math.max(
+    1,
+    Math.ceil((activeProbes.length || 1) / 2),
+  );
+  const phoneticMismatches =
+    activeProbes.length > 0
+      ? diffPhoneticMajority(transcription, activeProbes, MAJORITY_THRESHOLD)
+      : [];
   if (phoneticMismatches.length > 0) {
     // Promote "ok"/"unclear" entries whose heard token differs from the
     // phonetic probe to a new "suspicious" bucket in the diff. The UI
@@ -298,6 +304,7 @@ export async function POST(req: Request) {
     clarity,
     diff,
     phonetic: phoneticTranscription || null,
+    phoneticProbes: probeTranscriptions,
     phoneticMismatches,
     raw: {
       strictness: STRICTNESS,
@@ -499,38 +506,37 @@ function detectDurationAnomalies(
 // ---------------------------------------------------------------------------
 
 /**
- * Given the polished (temp=0) transcription and a concatenated "verbatim"
- * phonetic transcription (may be multiple probes joined), return words
- * that appear in polished but NOT in ANY phonetic probe. These are words
- * every probe had to rescue via the language model — strong candidates
- * for mispronunciation.
- *
- * We also allow a small edit-distance slack so that near-homophones
- * ("thank" vs "tank" = edit 1 in 5 chars = 80%) still flag. The probe's
- * output is often spelled slightly differently — we don't want to miss
- * those because the letters don't match exactly.
+ * Majority-vote version: given the polished transcription and N probe
+ * transcriptions, a target word is "suspicious" only when it's missing
+ * (or not close-enough) in at least `threshold` probes. This reduces
+ * false positives from the occasional probe that coincidentally
+ * "rescued" the word too.
  */
-function diffPhoneticTokens(
+function diffPhoneticMajority(
   polished: string,
-  phonetic: string,
-): Array<{ normal: string; polished: string }> {
+  probes: string[],
+  threshold: number,
+): Array<{ normal: string; polished: string; missCount: number }> {
   const polishedTokens = tokenize(polished);
-  const phoneticTokens = tokenize(phonetic);
-  const out: Array<{ normal: string; polished: string }> = [];
+  const probeTokens = probes.map((p) => tokenize(p));
+  const out: Array<{ normal: string; polished: string; missCount: number }> = [];
   for (const t of polishedTokens) {
-    if (t.length <= 2) continue; // skip short function words ("a", "to")
-    // Require both (a) no exact match and (b) no close phonetic match
-    // in the probe output. A close match = Levenshtein / max(len) < 0.35.
-    const exact = phoneticTokens.includes(t);
-    if (exact) continue;
-    const close = phoneticTokens.some((p) => {
-      if (p.length < 2) return false;
-      const dist = levenshtein(t, p);
-      const longest = Math.max(t.length, p.length);
-      return dist / longest <= 0.35;
-    });
-    if (close) continue;
-    out.push({ normal: t, polished: t });
+    if (t.length <= 2) continue;
+    let misses = 0;
+    for (const pt of probeTokens) {
+      const exact = pt.includes(t);
+      if (exact) continue;
+      const close = pt.some((p) => {
+        if (p.length < 2) return false;
+        const dist = levenshtein(t, p);
+        const longest = Math.max(t.length, p.length);
+        return dist / longest <= 0.35;
+      });
+      if (!close) misses += 1;
+    }
+    if (misses >= threshold) {
+      out.push({ normal: t, polished: t, missCount: misses });
+    }
   }
   return out;
 }
