@@ -102,9 +102,12 @@ export async function markLessonComplete(
   }
   const isFirstCompletion = !existing || !existing.completed_at;
 
-  // upsert's onConflict only handles non-null uniqueness; when the
-  // student has no classroom we insert fresh if no row exists, else
-  // update in place by primary key.
+  // Migration 028 replaced the single UNIQUE constraint with two partial
+  // unique indexes (one for classroom_id != null, one for classroom_id
+  // is null). PostgreSQL's ON CONFLICT needs a matching named constraint
+  // or a columns + predicate inference the Supabase JS client doesn't
+  // expose cleanly, so we skip upsert entirely and do explicit
+  // update-or-insert using the row we already looked up above.
   const existingId = (existing as { id?: string } | null)?.id ?? null;
   const row = {
     student_id: user.id,
@@ -117,14 +120,41 @@ export async function markLessonComplete(
     completed_exercises: 0,
     total_exercises: 0,
   };
-  const { error: upErr } = existingId
+  const upRes = existingId
     ? await admin.from("lesson_progress").update(row).eq("id", existingId)
-    : await admin
-        .from("lesson_progress")
-        .upsert(row, { onConflict: "student_id,lesson_slug,classroom_id" });
+    : await admin.from("lesson_progress").insert(row);
+  const upErr = upRes.error;
   if (upErr) {
-    console.error("lesson_progress upsert error:", upErr);
-    return { error: `Could not save progress: ${upErr.message}` };
+    // A unique-violation here means a concurrent insert landed the row
+    // between our select and our insert. Re-read and update that row.
+    if (upErr.code === "23505") {
+      let requery = admin
+        .from("lesson_progress")
+        .select("id")
+        .eq("student_id", user.id)
+        .eq("lesson_slug", parsed.data.lessonSlug);
+      requery = classroomId
+        ? requery.eq("classroom_id", classroomId)
+        : requery.is("classroom_id", null);
+      const { data: racedRow } = await requery.maybeSingle();
+      const racedId = (racedRow as { id?: string } | null)?.id;
+      if (racedId) {
+        const { error: retryErr } = await admin
+          .from("lesson_progress")
+          .update(row)
+          .eq("id", racedId);
+        if (retryErr) {
+          console.error("lesson_progress retry error:", retryErr);
+          return { error: `Could not save progress: ${retryErr.message}` };
+        }
+      } else {
+        console.error("lesson_progress unique violation but no row found");
+        return { error: `Could not save progress: ${upErr.message}` };
+      }
+    } else {
+      console.error("lesson_progress save error:", upErr);
+      return { error: `Could not save progress: ${upErr.message}` };
+    }
   }
 
   // 2. XP — only award on transition. xp_events schema uses (source, source_id).
