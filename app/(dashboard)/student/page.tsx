@@ -65,11 +65,31 @@ export default async function StudentHome() {
     .maybeSingle();
   if (profile?.role === "teacher") redirect("/teacher");
 
-  const { data: rosterSelf } = await admin
+  let { data: rosterSelf } = await admin
     .from("roster_students")
     .select("id, age_group, gender, has_avatar, level")
     .eq("auth_user_id", user.id)
     .maybeSingle();
+  // Rosângela-style fallback: if the roster row hasn't been linked yet
+  // (invitation was never claimed, or teacher created the roster without
+  // an invite), try matching by email. A match auto-links, so subsequent
+  // loads use the faster auth_user_id path.
+  if (!rosterSelf && user.email) {
+    const { data: byEmail } = await admin
+      .from("roster_students")
+      .select("id, age_group, gender, has_avatar, level")
+      .eq("email", user.email)
+      .is("auth_user_id", null)
+      .maybeSingle();
+    if (byEmail?.id) {
+      await admin
+        .from("roster_students")
+        .update({ auth_user_id: user.id })
+        .eq("id", byEmail.id)
+        .is("auth_user_id", null);
+      rosterSelf = byEmail;
+    }
+  }
 
   const stats = await getStudentStats(user.id);
 
