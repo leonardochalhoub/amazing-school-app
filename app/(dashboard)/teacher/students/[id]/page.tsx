@@ -16,6 +16,8 @@ import { RosterAvatarUploader } from "@/components/teacher/roster-avatar-uploade
 import { RosterEditForm } from "@/components/teacher/roster-edit-form";
 import { DiaryPanel } from "@/components/teacher/diary-panel";
 import { StudentHistoryPanel } from "@/components/teacher/student-history-panel";
+import { RosterLinkUser } from "@/components/teacher/roster-link-user";
+import { listUnlinkedStudentUsers } from "@/lib/actions/roster";
 import { listStudentHistory } from "@/lib/actions/student-history";
 import {
   AssignedLessonsList,
@@ -51,13 +53,16 @@ export default async function RosterStudentDetailPage({
     name: c.name as string,
   }));
 
-  const [signedUrl, diary, rawAssignments, publishedLessons, history] = await Promise.all([
-    student.has_avatar ? getRosterAvatarSignedUrl(id) : Promise.resolve(null),
-    listDiaryForStudent(id),
-    getAssignmentsForRosterStudent(id),
-    getAssignableLessons(),
-    listStudentHistory({ rosterStudentId: id }),
-  ]);
+  const [signedUrl, diary, rawAssignments, publishedLessons, history, unlinkedCandidates] =
+    await Promise.all([
+      student.has_avatar ? getRosterAvatarSignedUrl(id) : Promise.resolve(null),
+      listDiaryForStudent(id),
+      getAssignmentsForRosterStudent(id),
+      getAssignableLessons(),
+      listStudentHistory({ rosterStudentId: id }),
+      // Only fetch the candidate list when we actually need it.
+      student.auth_user_id ? Promise.resolve([]) : listUnlinkedStudentUsers(),
+    ]);
 
   const lessonDraftBySlug = new Map(publishedLessons.map((l) => [l.slug, l]));
 
@@ -137,6 +142,14 @@ export default async function RosterStudentDetailPage({
           prefillName={student.full_name}
         />
       </header>
+
+      {!student.auth_user_id ? (
+        <RosterLinkUser
+          rosterId={id}
+          rosterName={student.full_name}
+          candidates={unlinkedCandidates}
+        />
+      ) : null}
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
         <div className="min-w-0 space-y-6">
