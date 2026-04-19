@@ -104,7 +104,7 @@ export default async function RosterStudentDetailPage({
     : [];
 
   return (
-    <div className="space-y-6 pb-12">
+    <div className="space-y-6 overflow-x-clip pb-12">
       <Link
         href="/teacher"
         className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground"
@@ -138,11 +138,11 @@ export default async function RosterStudentDetailPage({
         />
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
-        <div className="space-y-6">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
+        <div className="min-w-0 space-y-6">
           <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
-              <CardTitle className="text-base">
+            <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-2 space-y-0 pb-3">
+              <CardTitle className="min-w-0 break-words text-base">
                 Assigned lessons
                 {assignments.length > 0 ? (
                   <span className="ml-2 text-sm font-normal text-muted-foreground tabular-nums">
