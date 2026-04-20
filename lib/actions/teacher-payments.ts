@@ -62,7 +62,7 @@ export async function getTeacherManagementMatrix(opts?: {
   const { data: rosterRaw, error } = await admin
     .from("roster_students")
     .select(
-      "id, full_name, teacher_id, auth_user_id, classroom_id, monthly_tuition_cents, billing_day, billing_starts_on, ended_on, created_at, classrooms(name)"
+      "id, full_name, teacher_id, auth_user_id, classroom_id, monthly_tuition_cents, billing_day, billing_starts_on, ended_on, created_at, classrooms(name, deleted_at)"
     )
     .eq("teacher_id", user.id)
     // Include soft-deleted rows — the tuition board needs to keep

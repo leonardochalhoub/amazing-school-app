@@ -39,42 +39,38 @@ async function loadTeacherBrand(
   admin: ReturnType<typeof createAdminClient>,
   teacherId: string,
 ): Promise<TeacherBrand> {
-  const { data } = await admin
-    .from("profiles")
-    .select(
-      "id, full_name, email, school_logo_enabled, school_logo_url, signature_url, signature_enabled",
-    )
-    .eq("id", teacherId)
-    .maybeSingle();
-  const profile = data as {
+  // profiles has no email column — email is auth-only. We query
+  // profiles for the branding/signature fields, then resolve email
+  // + full_name fallbacks from auth.users in parallel.
+  const [profileRes, authRes] = await Promise.all([
+    admin
+      .from("profiles")
+      .select(
+        "id, full_name, school_logo_enabled, school_logo_url, signature_url, signature_enabled",
+      )
+      .eq("id", teacherId)
+      .maybeSingle(),
+    admin.auth.admin.getUserById(teacherId),
+  ]);
+  const profile = profileRes.data as {
     full_name: string | null;
-    email: string | null;
     school_logo_enabled: boolean | null;
     school_logo_url: string | null;
     signature_url: string | null;
     signature_enabled: boolean | null;
   } | null;
 
+  const authUser = authRes.data?.user;
   let fullName = profile?.full_name ?? null;
-  let email = profile?.email ?? null;
+  let email = authUser?.email ?? null;
 
-  // Fallback to the auth user when the profile row is missing bits —
-  // the auth record is the ground truth for email, and usually
-  // carries `user_metadata.full_name` from the signup form.
-  if (!fullName || !email) {
-    const { data: authData } = await admin.auth.admin.getUserById(teacherId);
-    const authUser = authData?.user;
-    if (authUser) {
-      if (!email) email = authUser.email ?? null;
-      if (!fullName) {
-        const metaName =
-          (authUser.user_metadata as { full_name?: string } | undefined)
-            ?.full_name ?? null;
-        fullName =
-          metaName ??
-          (authUser.email ? authUser.email.split("@")[0] ?? null : null);
-      }
-    }
+  if (!fullName && authUser) {
+    const metaName =
+      (authUser.user_metadata as { full_name?: string } | undefined)
+        ?.full_name ?? null;
+    fullName =
+      metaName ??
+      (authUser.email ? authUser.email.split("@")[0] ?? null : null);
   }
 
   const signatureEnabled = profile?.signature_enabled === true;
@@ -180,7 +176,7 @@ export async function getStudentCurriculumReport(
   const { data: rosterRaw, error } = await admin
     .from("roster_students")
     .select(
-      "id, teacher_id, full_name, preferred_name, auth_user_id, classroom_id, level, billing_starts_on, ended_on, created_at, classrooms(name)",
+      "id, teacher_id, full_name, preferred_name, auth_user_id, classroom_id, level, billing_starts_on, ended_on, created_at, classrooms(name, deleted_at)",
     )
     .eq("id", rosterStudentId)
     .maybeSingle();
@@ -415,10 +411,6 @@ export async function getStudentCurriculumReport(
     .filter((y) => y >= 2020 && y <= new Date().getFullYear() + 1)
     .sort((a, b) => a - b);
 
-  const classroom = Array.isArray(roster.classrooms)
-    ? roster.classrooms[0]
-    : roster.classrooms;
-
   return {
     teacher,
     student: {
@@ -426,7 +418,7 @@ export async function getStudentCurriculumReport(
       fullName: roster.full_name,
       preferredName: roster.preferred_name,
       level: roster.level,
-      classroomName: classroom?.name ?? null,
+      classroomName: activeClassroomName(roster.classrooms),
       billingStartsOn: roster.billing_starts_on,
       endedOn: roster.ended_on,
       authUserId: roster.auth_user_id,
@@ -530,7 +522,7 @@ export async function getCohortReport(
 
   const { data: rosterRaw } = await admin
     .from("roster_students")
-    .select("id, full_name, auth_user_id, classroom_id, level, classrooms(name)")
+    .select("id, full_name, auth_user_id, classroom_id, level, classrooms(name, deleted_at)")
     .eq("teacher_id", user.id)
     .is("deleted_at", null)
     .order("full_name", { ascending: true });
@@ -663,7 +655,6 @@ export async function getCohortReport(
   }
 
   const studentRows: CohortStudentRow[] = roster.map((r) => {
-    const classroom = Array.isArray(r.classrooms) ? r.classrooms[0] : r.classrooms;
     const authId = r.auth_user_id;
     const progressCount = authId ? completedByAuth.get(authId) ?? 0 : 0;
     const manualCount = completedAssignmentsByRoster.get(r.id) ?? 0;
@@ -679,7 +670,7 @@ export async function getCohortReport(
     return {
       id: r.id,
       fullName: r.full_name,
-      classroomName: classroom?.name ?? null,
+      classroomName: activeClassroomName(r.classrooms),
       level: r.level,
       totalXp: authId ? xpByAuth.get(authId) ?? 0 : 0,
       lessonsCompleted,
@@ -777,7 +768,7 @@ export async function getFinanceReport(
   const { data: rosterRaw } = await admin
     .from("roster_students")
     .select(
-      "id, full_name, classroom_id, monthly_tuition_cents, billing_starts_on, ended_on, created_at, classrooms(name)",
+      "id, full_name, classroom_id, monthly_tuition_cents, billing_starts_on, ended_on, created_at, classrooms(name, deleted_at)",
     )
     .eq("teacher_id", user.id)
     .order("full_name", { ascending: true });
@@ -816,7 +807,6 @@ export async function getFinanceReport(
   let invoicesPending = 0;
 
   const rows: FinanceReportRow[] = roster.map((r) => {
-    const classroom = Array.isArray(r.classrooms) ? r.classrooms[0] : r.classrooms;
     let rowPaid = 0;
     let rowPending = 0;
     const mappedMonths = months.map((m) => {
@@ -872,7 +862,7 @@ export async function getFinanceReport(
     return {
       rosterStudentId: r.id,
       studentName: r.full_name,
-      classroomName: classroom?.name ?? null,
+      classroomName: activeClassroomName(r.classrooms),
       monthlyTuitionCents: r.monthly_tuition_cents,
       months: mappedMonths,
       paidCents: rowPaid,
@@ -960,7 +950,7 @@ export async function getReceiptData(
   const { data: rosterRaw } = await admin
     .from("roster_students")
     .select(
-      "id, full_name, email, gender, classroom_id, monthly_tuition_cents, auth_user_id, receipts_visible_to_student, classrooms(name)",
+      "id, full_name, email, gender, classroom_id, monthly_tuition_cents, auth_user_id, receipts_visible_to_student, classrooms(name, deleted_at)",
     )
     .eq("id", payment.roster_student_id)
     .maybeSingle();
@@ -995,9 +985,6 @@ export async function getReceiptData(
   }
 
   const teacher = await loadTeacherBrand(admin, payment.teacher_id);
-  const classroom = Array.isArray(roster.classrooms)
-    ? roster.classrooms[0]
-    : roster.classrooms;
 
   // Receipt number — prefer the DB-stored + unique-indexed value
   // (migration 046). Fallback to the derived shape so older rows
@@ -1014,7 +1001,7 @@ export async function getReceiptData(
       fullName: roster.full_name,
       email: roster.email,
       gender: roster.gender,
-      classroomName: classroom?.name ?? null,
+      classroomName: activeClassroomName(roster.classrooms),
     },
     payment: {
       id: payment.id,
@@ -1140,7 +1127,7 @@ export async function listTeacherReceipts(): Promise<TeacherReceiptRow[]> {
   const { data: rosterRows } = await admin
     .from("roster_students")
     .select(
-      "id, full_name, classroom_id, monthly_tuition_cents, receipts_visible_to_student, classrooms(name)",
+      "id, full_name, classroom_id, monthly_tuition_cents, receipts_visible_to_student, classrooms(name, deleted_at)",
     )
     .eq("teacher_id", user.id);
   const rosters = new Map<
@@ -1158,12 +1145,14 @@ export async function listTeacherReceipts(): Promise<TeacherReceiptRow[]> {
     classroom_id: string | null;
     monthly_tuition_cents: number | null;
     receipts_visible_to_student: boolean;
-    classrooms: { name: string } | { name: string }[] | null;
+    classrooms:
+      | { name: string; deleted_at?: string | null }
+      | Array<{ name: string; deleted_at?: string | null }>
+      | null;
   }>) {
-    const c = Array.isArray(r.classrooms) ? r.classrooms[0] : r.classrooms;
     rosters.set(r.id, {
       full_name: r.full_name,
-      classroom_name: c?.name ?? null,
+      classroom_name: activeClassroomName(r.classrooms),
       monthly_tuition_cents: r.monthly_tuition_cents,
       receipts_visible_to_student: r.receipts_visible_to_student === true,
     });
@@ -1444,6 +1433,24 @@ export interface SysadminReportData {
 /** Leo's origin-owner email — excluded from the sysadmin report
     even when his profile.role hasn't been flipped to 'owner' yet. */
 const ORIGIN_OWNER_EMAIL = "leochalhoub@hotmail.com";
+
+/**
+ * Pulls the name of a non-soft-deleted classroom from a roster_students
+ * join result. Returns null if the classroom was deleted — reports
+ * should NOT carry a stale classroom tag after the teacher removed it.
+ */
+function activeClassroomName(
+  c:
+    | { name: string; deleted_at?: string | null }
+    | Array<{ name: string; deleted_at?: string | null }>
+    | null
+    | undefined,
+): string | null {
+  const row = Array.isArray(c) ? c[0] : c;
+  if (!row) return null;
+  if (row.deleted_at) return null;
+  return row.name ?? null;
+}
 
 export async function getSysadminReport(): Promise<
   SysadminReportData | { error: string }

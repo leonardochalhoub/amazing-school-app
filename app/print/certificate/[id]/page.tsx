@@ -605,28 +605,27 @@ function SchoolLogoSlot({
   src: string | null;
   alt: string;
 }) {
-  if (!src) return <div style={{ minWidth: 150 }} />;
+  if (!src) return <div style={{ minWidth: 180 }} />;
   return (
     <div
       style={{
-        height: 60,
+        height: 88,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "#ffffff",
-        border: "1px solid #e5e7eb",
-        borderRadius: 6,
-        padding: "6px 10px",
-        minWidth: 150,
+        padding: 0,
+        minWidth: 180,
       }}
     >
+      {/* Bigger + borderless for certificates — matches the user
+          ask to make the school logo elegant and prominent. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
         alt={alt}
         style={{
-          maxHeight: 46,
-          maxWidth: 140,
+          maxHeight: 78,
+          maxWidth: 220,
           width: "auto",
           objectFit: "contain",
           display: "block",

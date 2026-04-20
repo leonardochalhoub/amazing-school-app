@@ -334,7 +334,7 @@ export async function listCertificatesForTeacher(): Promise<
   const rosterIds = Array.from(new Set(rows.map((r) => r.roster_student_id)));
   const { data: rosterRes } = await admin
     .from("roster_students")
-    .select("id, full_name, classrooms(name)")
+    .select("id, full_name, classrooms(name, deleted_at)")
     .in("id", rosterIds);
   const rosterMap = new Map<
     string,
@@ -450,20 +450,27 @@ export async function getCertificate(
     certificate_number: string | null;
   };
 
-  const [{ data: rosterRaw }, { data: teacherRaw }] = await Promise.all([
-    admin
-      .from("roster_students")
-      .select("full_name, email, classroom_id, auth_user_id, classrooms(name)")
-      .eq("id", row.roster_student_id)
-      .maybeSingle(),
-    admin
-      .from("profiles")
-      .select(
-        "full_name, email, school_logo_enabled, school_logo_url, signature_url, signature_enabled",
-      )
-      .eq("id", row.teacher_id)
-      .maybeSingle(),
-  ]);
+  // profiles.email doesn't exist — email lives in auth.users. Fetch
+  // the teacher's profile (branding + signature) and auth record in
+  // parallel; compose them after the joins come back.
+  const [{ data: rosterRaw }, { data: teacherRaw }, teacherAuthRes] =
+    await Promise.all([
+      admin
+        .from("roster_students")
+        .select(
+          "full_name, email, classroom_id, auth_user_id, classrooms(name, deleted_at)",
+        )
+        .eq("id", row.roster_student_id)
+        .maybeSingle(),
+      admin
+        .from("profiles")
+        .select(
+          "full_name, school_logo_enabled, school_logo_url, signature_url, signature_enabled",
+        )
+        .eq("id", row.teacher_id)
+        .maybeSingle(),
+      admin.auth.admin.getUserById(row.teacher_id),
+    ]);
 
   if (!rosterRaw) return { error: "Aluno não encontrado" };
   const roster = rosterRaw as {
@@ -471,7 +478,10 @@ export async function getCertificate(
     email: string | null;
     classroom_id: string | null;
     auth_user_id: string | null;
-    classrooms: { name: string } | { name: string }[] | null;
+    classrooms:
+      | { name: string; deleted_at?: string | null }
+      | Array<{ name: string; deleted_at?: string | null }>
+      | null;
   };
 
   // Dual-role: teacher who issued OR student linked to the roster.
@@ -479,31 +489,40 @@ export async function getCertificate(
     return { error: "Sem permissão" };
   }
 
-  const teacher = (teacherRaw as {
+  const teacherProfile = (teacherRaw as {
     full_name: string | null;
-    email: string | null;
     school_logo_enabled: boolean | null;
     school_logo_url: string | null;
     signature_url: string | null;
     signature_enabled: boolean | null;
   } | null) ?? {
     full_name: null,
-    email: null,
     school_logo_enabled: false,
     school_logo_url: null,
     signature_url: null,
     signature_enabled: false,
   };
+  const teacherAuth = teacherAuthRes.data?.user ?? null;
+  const teacherFullName =
+    teacherProfile.full_name ??
+    ((teacherAuth?.user_metadata as { full_name?: string } | undefined)
+      ?.full_name ??
+      (teacherAuth?.email ? teacherAuth.email.split("@")[0] ?? null : null));
+  const teacherEmail = teacherAuth?.email ?? null;
 
-  const signatureEnabled = teacher.signature_enabled === true;
+  const signatureEnabled = teacherProfile.signature_enabled === true;
   const signatureUrl =
-    signatureEnabled && teacher.signature_url
+    signatureEnabled && teacherProfile.signature_url
       ? await getSignatureSignedUrl(admin, row.teacher_id)
       : null;
 
-  const classroom = Array.isArray(roster.classrooms)
+  const classroomEntry = Array.isArray(roster.classrooms)
     ? roster.classrooms[0]
     : roster.classrooms;
+  const classroomName =
+    classroomEntry && !classroomEntry.deleted_at
+      ? classroomEntry.name
+      : null;
 
   // Certificate number — prefer the DB-stored + unique-indexed
   // value (migration 046). Fall back to the derived shape for
@@ -529,15 +548,15 @@ export async function getCertificate(
     certificateNumber,
     student: {
       fullName: roster.full_name,
-      classroomName: classroom?.name ?? null,
+      classroomName,
       email: roster.email,
     },
     teacher: {
       id: row.teacher_id,
-      fullName: teacher.full_name,
-      email: teacher.email,
-      schoolLogoEnabled: teacher.school_logo_enabled ?? false,
-      schoolLogoUrl: teacher.school_logo_url,
+      fullName: teacherFullName,
+      email: teacherEmail,
+      schoolLogoEnabled: teacherProfile.school_logo_enabled ?? false,
+      schoolLogoUrl: teacherProfile.school_logo_url,
       signatureUrl,
       signatureEnabled,
     },
