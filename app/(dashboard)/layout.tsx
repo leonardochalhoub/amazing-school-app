@@ -12,6 +12,9 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { DemoSwitchBar } from "@/components/demo/demo-switch-bar";
 import { SessionHeartbeat } from "@/components/shared/session-heartbeat";
+import { FillLocationPrompt } from "@/components/shared/fill-location-prompt";
+import { UpcomingClassPrompt } from "@/components/shared/upcoming-class-prompt";
+import { getMyNextClass } from "@/lib/actions/upcoming-class";
 import type { Role } from "@/lib/supabase/types";
 
 export default async function DashboardLayout({
@@ -78,6 +81,22 @@ export default async function DashboardLayout({
 
   const isDemo = (user.email ?? "").toLowerCase().startsWith("demo.");
 
+  // Profile location — fetched separately so the layout still renders
+  // when migration 051 hasn't been applied yet.
+  const { data: locationRow } = await admin
+    .from("profiles")
+    .select("location")
+    .eq("id", user.id)
+    .maybeSingle();
+  const hasLocation =
+    (
+      (locationRow as { location?: string | null } | null)?.location ?? ""
+    ).trim().length > 0;
+
+  // Next scheduled class within the next 4 days (either taught or
+  // attended by this user). Null when nothing qualifies.
+  const nextClass = await getMyNextClass();
+
   // White-label school logo resolution:
   //   Teacher signed in → their own profile row
   //   Student signed in → find their teacher via roster_students, then
@@ -122,6 +141,8 @@ export default async function DashboardLayout({
         gender={rosterGender}
         schoolLogoPath={schoolLogoPath}
       />
+      <UpcomingClassPrompt ctx={nextClass} />
+      <FillLocationPrompt show={!hasLocation} role={role} />
       <main className="w-full min-w-0 flex-1 overflow-x-clip">
         <div className="mx-auto w-full max-w-7xl min-w-0 overflow-x-clip px-4 py-6 md:px-8 md:py-8">
           {children}
