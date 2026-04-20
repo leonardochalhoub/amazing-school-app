@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, User } from "lucide-react";
 import { notFound, redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
@@ -222,7 +222,7 @@ export default async function RosterStudentDetailPage({
             </CardContent>
           </Card>
 
-          <Card>
+          <Card id="student-details">
             <CardHeader>
               <CardTitle className="text-base">Details</CardTitle>
             </CardHeader>
@@ -273,6 +273,18 @@ export default async function RosterStudentDetailPage({
         </div>
 
         <div className="space-y-6 lg:sticky lg:top-32 lg:self-start">
+          {/* Quick jump — anchors the teacher to the Details card
+              on the left column. Useful on tall pages where the
+              student's actual profile form is far from the top of
+              the sidebar. */}
+          <Link
+            href={`/teacher/students/${id}#student-details`}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-medium transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <User className="h-4 w-4" />
+            Perfil do aluno
+          </Link>
+
           <Card>
             <CardHeader>
               <CardTitle className="text-base">Photo</CardTitle>
