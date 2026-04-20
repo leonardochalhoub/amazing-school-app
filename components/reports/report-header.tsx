@@ -50,7 +50,9 @@ export function ReportHeader({
             className="report-logo-box"
             aria-label={teacher?.fullName ?? undefined}
           >
-            {/* Plain <img>: next/image can drop assets in print. */}
+            {/* No inline size override — rely on the shared
+                .report-logo-box img rule in print.css so every
+                shell report picks up the same size automatically. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={teacherLogo}
@@ -59,12 +61,6 @@ export function ReportHeader({
                   ? `${teacher.fullName} — logo`
                   : "School logo"
               }
-              style={{
-                maxHeight: 30,
-                width: "auto",
-                objectFit: "contain",
-                display: "block",
-              }}
             />
           </div>
         ) : null}
