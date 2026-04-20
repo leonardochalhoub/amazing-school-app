@@ -1,4 +1,4 @@
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, Plus } from "lucide-react";
 import { IssueCertificateButton } from "@/components/reports/issue-certificate-button";
 import { CertificatesManager } from "@/components/reports/certificates-manager";
 import { CertificateDownloadButton } from "@/components/reports/certificate-download-button";
@@ -20,16 +20,27 @@ interface Props {
   }>;
 }
 
+const TOP = 3;
+
+function fmtDateTime(iso: string): string {
+  return new Date(iso).toLocaleString("pt-BR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
 /**
- * Inline "Certificados" card for the Management page — shows the 10
- * most recent as a compact table (Student, Date, Title, Grade),
- * with an inline "Emitir" action and a "Ver todos" button that
- * opens the full manager dialog. Replaces the per-student panel
- * placement — certificates are moments, not daily noise.
+ * Inline "Certificados" card on the Management page — shows the
+ * 3 most recent certificates (descending by issued_at) with
+ * date + time, then a "+" button that opens the full manager
+ * dialog when the teacher wants to see the rest.
  */
 export function CertificatesSection({ certificates, students }: Props) {
-  const top = certificates.slice(0, 10);
-  const hasMore = certificates.length > 10;
+  const top = certificates.slice(0, TOP);
+  const remainder = Math.max(0, certificates.length - TOP);
 
   return (
     <section className="space-y-3">
@@ -45,12 +56,6 @@ export function CertificatesSection({ certificates, students }: Props) {
         </h2>
         <div className="flex flex-wrap items-center gap-2">
           <IssueCertificateButton students={students} variant="subtle" />
-          <CertificatesManager
-            certificates={certificates}
-            students={students}
-            triggerLabelEn={hasMore ? "See all" : "Open manager"}
-            triggerLabelPt={hasMore ? "Ver todos" : "Abrir painel"}
-          />
         </div>
       </div>
 
@@ -62,76 +67,72 @@ export function CertificatesSection({ certificates, students }: Props) {
           />
         </p>
       ) : (
-        <div className="overflow-hidden rounded-xl border border-border">
-          <table className="w-full text-xs">
-            <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
-              <tr>
-                <th className="px-3 py-2">
-                  <T en="Student" pt="Aluno" />
-                </th>
-                <th className="px-3 py-2">
-                  <T en="Issued on" pt="Emitido em" />
-                </th>
-                <th className="px-3 py-2">
-                  <T en="Title" pt="Título" />
-                </th>
-                <th className="px-3 py-2 text-center">
-                  <T en="Grade" pt="Conceito" />
-                </th>
-                <th className="px-3 py-2 text-right">PDF</th>
-              </tr>
-            </thead>
-            <tbody>
-              {top.map((c) => {
-                const lvl = findCertificateLevel(c.level);
-                const g = findGrade(c.grade);
-                const isCustom = c.level === "custom";
-                const title = isCustom
-                  ? (c.title ?? "—")
-                  : (c.title ??
-                    `${lvl?.codeLabel ?? c.level.toUpperCase()} · ${lvl?.title ?? c.level}`);
-                return (
-                  <tr key={c.id} className="border-t border-border">
-                    <td className="px-3 py-2 font-medium">
-                      {c.studentName}
-                      {c.classroomName ? (
-                        <span className="ml-1 text-[10px] font-normal text-muted-foreground">
-                          · {c.classroomName}
-                        </span>
-                      ) : null}
-                    </td>
-                    <td className="px-3 py-2 text-muted-foreground tabular-nums">
-                      {new Date(c.issuedAt).toLocaleDateString("pt-BR")}
-                    </td>
-                    <td className="px-3 py-2">
-                      {title}
-                      {c.totalHours ? (
-                        <span className="ml-1 text-muted-foreground">
-                          · {c.totalHours}h
-                        </span>
-                      ) : null}
-                    </td>
-                    <td className="px-3 py-2 text-center">
-                      <span
-                        className="inline-flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold text-white"
-                        style={{ background: g?.color ?? "#64748b" }}
-                        aria-label={`Grade ${c.grade}`}
-                      >
-                        {c.grade}
+        <ul className="divide-y divide-border overflow-hidden rounded-xl border border-border">
+          {top.map((c) => {
+            const lvl = findCertificateLevel(c.level);
+            const g = findGrade(c.grade);
+            const isCustom = c.level === "custom";
+            const title = isCustom
+              ? (c.title ?? "—")
+              : (c.title ??
+                `${lvl?.codeLabel ?? c.level.toUpperCase()} · ${lvl?.title ?? c.level}`);
+            return (
+              <li
+                key={c.id}
+                className="flex flex-wrap items-center gap-3 px-3 py-3 text-xs"
+              >
+                <div
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
+                  style={{ background: g?.color ?? "#64748b" }}
+                  aria-label={`Grade ${c.grade}`}
+                >
+                  {c.grade}
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="truncate font-semibold">
+                    {c.studentName}
+                    {c.classroomName ? (
+                      <span className="ml-1 text-[10px] font-normal text-muted-foreground">
+                        · {c.classroomName}
                       </span>
-                    </td>
-                    <td className="px-3 py-2">
-                      <div className="flex items-center justify-end gap-1.5">
-                        <CertificateDownloadButton certificateId={c.id} />
-                        <DeleteCertificateButton id={c.id} />
-                      </div>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+                    ) : null}
+                  </p>
+                  <p className="truncate text-muted-foreground">
+                    {title}
+                    {c.totalHours ? (
+                      <span className="ml-1">· {c.totalHours}h</span>
+                    ) : null}
+                  </p>
+                  <p className="text-[10.5px] text-muted-foreground tabular-nums">
+                    <T en="Issued" pt="Emitido" />:{" "}
+                    {fmtDateTime(c.issuedAt)}
+                  </p>
+                </div>
+                <div className="flex shrink-0 items-center gap-1.5">
+                  <CertificateDownloadButton certificateId={c.id} />
+                  <DeleteCertificateButton id={c.id} />
+                </div>
+              </li>
+            );
+          })}
+          {/* "+" row — opens the full manager dialog if there are
+              more certificates to see. Wraps CertificatesManager so
+              the trigger button renders inline with a plus sign
+              instead of the default "Ver todos" label. */}
+          {remainder > 0 ? (
+            <li className="flex items-center justify-center bg-muted/30 px-3 py-2 text-xs">
+              <div className="inline-flex items-center gap-2">
+                <Plus className="h-3 w-3 text-muted-foreground" />
+                <CertificatesManager
+                  certificates={certificates}
+                  students={students}
+                  triggerLabelPt={`Mais ${remainder}`}
+                  triggerLabelEn={`+${remainder} more`}
+                />
+              </div>
+            </li>
+          ) : null}
+        </ul>
       )}
     </section>
   );

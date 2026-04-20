@@ -171,17 +171,6 @@ export default async function TeacherManagementPage() {
         receipts={receiptsForQuery}
       />
 
-      {/* ========== CERTIFICATES — central hub ========== */}
-      <CertificatesSection
-        certificates={certificatesForTeacher}
-        students={rows.map((r) => ({
-          id: r.roster_student_id,
-          fullName: r.student_name,
-          billingStartsOn: r.billing_starts_on,
-          createdAt: r.roster_created_at,
-        }))}
-      />
-
       {/* ========== PEOPLE & LEARNING ========== */}
       <section className="space-y-3">
         <div className="flex items-baseline justify-between">
@@ -497,6 +486,20 @@ export default async function TeacherManagementPage() {
 
       {/* ========== Deleted students archive ========== */}
       <DeletedStudentsPanel entries={deletedStudents} />
+
+      {/* ========== CERTIFICATES — moved to the bottom at the
+           teacher's request. Emitting a certificate is a
+           milestone, not a daily task, so it sits below the
+           everyday matrices + panels. */}
+      <CertificatesSection
+        certificates={certificatesForTeacher}
+        students={rows.map((r) => ({
+          id: r.roster_student_id,
+          fullName: r.student_name,
+          billingStartsOn: r.billing_starts_on,
+          createdAt: r.roster_created_at,
+        }))}
+      />
     </div>
   );
 }
