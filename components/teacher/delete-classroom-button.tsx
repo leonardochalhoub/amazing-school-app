@@ -86,14 +86,21 @@ export function DeleteClassroomButton({
           <DialogTitle>Delete {classroomName}?</DialogTitle>
           <DialogDescription className="space-y-2 pt-2 text-sm">
             <span className="block">
-              This permanently removes the classroom along with its
-              assignments, XP events, scheduled classes, and notes.
+              The classroom itself, its pending invitations, and its
+              scheduled meetings go away permanently.
+            </span>
+            <span className="block rounded-md border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-700 dark:text-emerald-400">
+              Student history is kept: assignments, lessons completed,
+              XP earned, notes, and AI-tutor chats stay on each
+              student's record — the classroom tag on those entries
+              just drops to "none".
             </span>
             {studentCount > 0 ? (
               <span className="block rounded-md border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-xs text-amber-700 dark:text-amber-400">
-                {studentCount} student{studentCount === 1 ? "" : "s"} will be
-                removed from this classroom. Their accounts + history stay
-                intact — they just lose the classroom link.
+                {studentCount} student{studentCount === 1 ? "" : "s"}{" "}
+                lose{studentCount === 1 ? "s" : ""} their membership in
+                this classroom. Their accounts and everything above
+                remain on your roster.
               </span>
             ) : null}
             <span className="block">
