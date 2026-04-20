@@ -8,6 +8,7 @@ import {
   DrillList,
   PlusCreateDrillButton,
 } from "@/components/speaking-lab/drill-editor";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export default async function MyDrillsPage() {
   const supabase = await createClient();
@@ -22,7 +23,7 @@ export default async function MyDrillsPage() {
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") redirect("/speaking-lab");
+  if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/speaking-lab");
 
   const drills = await listMyCustomDrills();
 

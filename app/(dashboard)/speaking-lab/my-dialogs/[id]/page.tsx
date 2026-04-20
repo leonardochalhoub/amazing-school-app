@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { listMyCustomDialogs } from "@/lib/actions/custom-dialogs";
 import { CustomDialogEditor } from "@/components/speaking-lab/dialog-editor";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export default async function EditDialogPage({
   params,
@@ -23,7 +24,7 @@ export default async function EditDialogPage({
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") redirect("/speaking-lab");
+  if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/speaking-lab");
 
   const mine = await listMyCustomDialogs();
   const dialog = mine.find((d) => d.id === id);

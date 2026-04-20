@@ -3,6 +3,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { revalidatePath } from "next/cache";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export interface CustomDrill {
   id: string;
@@ -40,7 +41,7 @@ async function requireTeacher(): Promise<TeacherAuth> {
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") return { ok: false, error: "Teachers only" };
+  if (!isTeacherRole(profile?.role as string | null | undefined)) return { ok: false, error: "Teachers only" };
   return { ok: true, user, admin };
 }
 
@@ -143,7 +144,7 @@ export async function listAvailableCustomDrills(): Promise<CustomDrill[]> {
     .eq("id", user.id)
     .maybeSingle();
 
-  if (profile?.role === "teacher") {
+  if (isTeacherRole(profile?.role as string | null | undefined)) {
     const { data } = await admin
       .from("custom_speaking_drills")
       .select(

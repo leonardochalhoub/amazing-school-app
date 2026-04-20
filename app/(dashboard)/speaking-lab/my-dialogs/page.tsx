@@ -4,10 +4,8 @@ import { ArrowLeft } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { listMyCustomDialogs } from "@/lib/actions/custom-dialogs";
-import {
-  CustomDialogList,
-  PlusCreateButton,
-} from "@/components/speaking-lab/dialog-editor";
+import { CustomDialogList, PlusCreateButton } from "@/components/speaking-lab/dialog-editor";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export default async function MyDialogsPage() {
   const supabase = await createClient();
@@ -22,7 +20,7 @@ export default async function MyDialogsPage() {
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") redirect("/speaking-lab");
+  if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/speaking-lab");
 
   const dialogs = await listMyCustomDialogs();
 

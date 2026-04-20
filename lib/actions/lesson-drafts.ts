@@ -12,6 +12,7 @@ import {
   type CefrLevel,
   type Skill,
 } from "@/lib/content/schema";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export interface LessonDraftRow {
   slug: string;
@@ -62,7 +63,7 @@ async function requireTeacher(): Promise<string | null> {
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") return null;
+  if (!isTeacherRole(profile?.role as string | null | undefined)) return null;
   return user.id;
 }
 

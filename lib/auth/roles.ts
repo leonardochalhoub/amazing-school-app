@@ -18,6 +18,15 @@ import { createAdminClient } from "@/lib/supabase/admin";
  */
 const ORIGIN_OWNER_EMAIL = "leochalhoub@hotmail.com";
 
+/**
+ * Owner is a super-set of teacher — anything a teacher can see, an
+ * owner can see too. Every `role !== "teacher"` gate in the app uses
+ * this helper so the ownership model stays consistent.
+ */
+export function isTeacherRole(role: string | null | undefined): boolean {
+  return role === "teacher" || role === "owner";
+}
+
 export const isOwner = cache(async (): Promise<boolean> => {
   const supabase = await createClient();
   const {

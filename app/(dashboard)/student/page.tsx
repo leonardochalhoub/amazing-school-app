@@ -63,7 +63,7 @@ export default async function StudentHome() {
     .select("full_name, avatar_url, role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role === "teacher") redirect("/teacher");
+  if (profile?.role === "teacher" || profile?.role === "owner") redirect("/teacher");
 
   let { data: rosterSelf } = await admin
     .from("roster_students")

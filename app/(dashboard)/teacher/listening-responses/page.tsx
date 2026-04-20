@@ -3,6 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { listTeacherListeningResponses } from "@/lib/actions/listening-responses";
 import { ListeningReviewList } from "@/components/teacher/listening-review-list";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export default async function TeacherListeningResponsesPage() {
   const supabase = await createClient();
@@ -17,7 +18,7 @@ export default async function TeacherListeningResponsesPage() {
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") redirect("/student");
+  if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/student");
 
   const rows = await listTeacherListeningResponses();
   const pending = rows.filter((r) => !r.reviewed_at).length;

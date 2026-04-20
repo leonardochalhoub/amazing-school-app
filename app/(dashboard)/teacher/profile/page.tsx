@@ -26,7 +26,7 @@ export default async function TeacherProfilePage() {
     .maybeSingle();
 
   if (!profile) redirect("/login");
-  if (profile.role !== "teacher") redirect("/student/profile");
+  if (profile.role !== "teacher" && profile.role !== "owner") redirect("/student/profile");
 
   const signedUrl = await resolveMyAvatarUrl(supabase, user.id);
   const logoEligible = isLogoEligible(user.email, profile.full_name);

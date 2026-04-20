@@ -2,6 +2,7 @@
 
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export type CustomDialogTurn =
   | { speaker: "ai"; text: string; pt?: string }
@@ -72,7 +73,7 @@ export async function saveCustomDialog(
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") return { error: "Teachers only" };
+  if (!isTeacherRole(profile?.role as string | null | undefined)) return { error: "Teachers only" };
 
   const title = input.title.trim();
   if (!title) return { error: "Title required" };
@@ -194,7 +195,7 @@ export async function listAvailableCustomDialogs(): Promise<CustomDialog[]> {
     .eq("id", user.id)
     .maybeSingle();
 
-  if (profile?.role === "teacher") {
+  if (isTeacherRole(profile?.role as string | null | undefined)) {
     return listMyCustomDialogs();
   }
 

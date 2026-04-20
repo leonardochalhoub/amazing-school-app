@@ -32,6 +32,7 @@ import {
   CircleDollarSign,
   CalendarClock,
 } from "lucide-react";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export const dynamic = "force-dynamic";
 
@@ -48,7 +49,7 @@ export default async function TeacherManagementPage() {
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") redirect("/");
+  if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/");
 
   const [dashboardData, financeData, listeningResponses] = await Promise.all([
     getTeacherDashboardData(),

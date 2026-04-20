@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { DrillEditor } from "@/components/speaking-lab/drill-editor";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export default async function NewDrillPage() {
   const supabase = await createClient();
@@ -17,7 +18,7 @@ export default async function NewDrillPage() {
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") redirect("/speaking-lab");
+  if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/speaking-lab");
 
   return (
     <div className="mx-auto max-w-2xl space-y-6 pb-12">

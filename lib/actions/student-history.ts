@@ -9,6 +9,7 @@ import {
   type SkillFocus,
   type StudentHistoryEntry,
 } from "./student-history-types";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 interface SaveHistoryInput {
   id?: string;
@@ -48,7 +49,7 @@ export async function saveHistoryEntry(
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") return { error: "Teachers only" };
+  if (!isTeacherRole(profile?.role as string | null | undefined)) return { error: "Teachers only" };
 
   if (!input.event_date) return { error: "Date is required" };
   if (!HISTORY_STATUSES.includes(input.status as HistoryStatus)) {
@@ -390,7 +391,7 @@ export async function scheduleClassroomClass(
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") return { error: "Teachers only" };
+  if (!isTeacherRole(profile?.role as string | null | undefined)) return { error: "Teachers only" };
 
   const { data: classroom } = await admin
     .from("classrooms")

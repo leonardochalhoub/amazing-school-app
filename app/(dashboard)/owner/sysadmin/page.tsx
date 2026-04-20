@@ -226,8 +226,8 @@ export default async function SysadminPage() {
             Ranked by active students in the last 30 days. No revenue data.
           </p>
         </div>
-        <div className="overflow-hidden rounded-xl border">
-          <table className="w-full text-sm">
+        <div className="overflow-x-auto rounded-xl border">
+          <table className="min-w-[640px] w-full text-sm">
             <thead className="bg-muted/40 text-left text-xs uppercase tracking-wider text-muted-foreground">
               <tr>
                 <th className="px-4 py-2">Teacher</th>
@@ -280,8 +280,8 @@ export default async function SysadminPage() {
             {allTeachers.length} total · sorted by name · no revenue data
           </p>
         </div>
-        <div className="overflow-hidden rounded-xl border">
-          <table className="w-full text-sm">
+        <div className="overflow-x-auto rounded-xl border">
+          <table className="min-w-[640px] w-full text-sm">
             <thead className="bg-muted/40 text-left text-xs uppercase tracking-wider text-muted-foreground">
               <tr>
                 <th className="px-4 py-2">Teacher</th>

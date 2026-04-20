@@ -26,6 +26,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { LessonDraftMeta } from "@/lib/actions/lesson-drafts";
 import type { TeacherLessonRow } from "@/lib/actions/teacher-lessons-types";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 type Source = "all" | "library" | "curated" | "mine" | "bank";
 
@@ -63,7 +64,7 @@ export default async function TeacherLessonsPage({
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") redirect("/student");
+  if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/student");
 
   const params = await searchParams;
   const cefrBand = CEFR_BAND_SET.has(params.cefr ?? "")
@@ -603,4 +604,3 @@ function urlWith(key: string, value: string): string {
 function urlWithout(_key: string): string {
   return `/teacher/lessons`;
 }
-

@@ -38,7 +38,7 @@ export default async function SpeakingLabPage() {
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  const isTeacher = profile?.role === "teacher";
+  const isTeacher = profile?.role === "teacher" || profile?.role === "owner";
 
   const [builtInDrills, builtInDialogs, customDialogs, customDrills] =
     await Promise.all([

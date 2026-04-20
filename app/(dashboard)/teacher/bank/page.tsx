@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { listMyBank, listPublicBank } from "@/lib/actions/exercise-bank";
 import { BankBrowser } from "@/components/teacher/bank-browser";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export default async function TeacherBankPage() {
   const supabase = await createClient();
@@ -19,7 +20,7 @@ export default async function TeacherBankPage() {
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") redirect("/student");
+  if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/student");
 
   const [mine, publicItems] = await Promise.all([
     listMyBank(),

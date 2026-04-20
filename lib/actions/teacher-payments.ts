@@ -3,6 +3,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { ManagementData, ManagementRow, StudentPaymentRow } from "@/lib/payments-types";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 function firstOfMonth(d: Date): string {
   const y = d.getFullYear();
@@ -33,7 +34,7 @@ export async function getTeacherManagementMatrix(opts?: {
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if ((profile as { role?: string } | null)?.role !== "teacher") {
+  if (!isTeacherRole((profile as { role?: string } | null)?.role)) {
     return { error: "Teacher access only" };
   }
 

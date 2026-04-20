@@ -7,6 +7,7 @@ import { MusicOverrideEditor } from "@/components/teacher/music-override-editor"
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { MusicExercise, SingAlongPrompt } from "@/lib/content/music";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export default async function TeacherMusicEditPage({
   params,
@@ -25,7 +26,7 @@ export default async function TeacherMusicEditPage({
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") redirect("/student");
+  if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/student");
 
   const { slug } = await params;
   const song = await loadMusicSong(slug);

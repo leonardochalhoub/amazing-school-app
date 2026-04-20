@@ -4,6 +4,7 @@ import sharp from "sharp";
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 /**
  * Teachers can always toggle the brand logo on/off. The whitelist only
@@ -23,7 +24,7 @@ export async function setSchoolLogoEnabled(enabled: boolean) {
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if ((profile as { role?: string } | null)?.role !== "teacher") {
+  if (!isTeacherRole((profile as { role?: string } | null)?.role)) {
     return { error: "Teacher only" };
   }
 
@@ -64,7 +65,7 @@ export async function uploadSchoolLogo(formData: FormData) {
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if ((profile as { role?: string } | null)?.role !== "teacher") {
+  if (!isTeacherRole((profile as { role?: string } | null)?.role)) {
     return { error: "Teacher only" };
   }
 

@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { DrillEditor } from "@/components/speaking-lab/drill-editor";
 import type { CustomDrill } from "@/lib/actions/custom-drills";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export default async function EditDrillPage({
   params,
@@ -23,7 +24,7 @@ export default async function EditDrillPage({
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") redirect("/speaking-lab");
+  if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/speaking-lab");
 
   const { data: drill } = await admin
     .from("custom_speaking_drills")

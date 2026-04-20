@@ -53,7 +53,11 @@ export async function updateSession(request: NextRequest) {
       .single();
 
     const url = request.nextUrl.clone();
-    url.pathname = profile?.role === "teacher" ? "/teacher" : "/student";
+    // Owner is treated as a super-teacher for routing purposes — they
+    // land on /teacher just like any teacher, with the Sysadmin nav
+    // entry available from there.
+    const r = profile?.role;
+    url.pathname = r === "teacher" || r === "owner" ? "/teacher" : "/student";
     return NextResponse.redirect(url);
   }
 

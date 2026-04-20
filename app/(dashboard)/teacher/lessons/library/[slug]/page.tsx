@@ -19,6 +19,7 @@ import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { isTeacherRole } from "@/lib/auth/roles";
 
 export default async function TeacherLibraryLessonPage({
   params,
@@ -37,7 +38,7 @@ export default async function TeacherLibraryLessonPage({
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role !== "teacher") redirect("/student");
+  if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/student");
 
   const { slug } = await params;
   const lesson = await getLesson(slug);
