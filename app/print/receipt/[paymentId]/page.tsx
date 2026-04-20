@@ -9,6 +9,11 @@ import { formatBRL, amountInWordsBRL } from "@/lib/reports/brl";
 import { reportFilename, slugifyForFilename } from "@/lib/reports/filename";
 import { schoolLogoPublicUrl, SCHOOL_LOGO_SRC, isLogoEligible } from "@/lib/school-logo";
 import { AmazingSchoolMark } from "@/components/reports/amazing-school-mark";
+import {
+  inferGenderFromName,
+  teacherTitle,
+  studentTitle,
+} from "@/lib/reports/gendered-titles";
 
 export const dynamic = "force-dynamic";
 
@@ -158,7 +163,7 @@ export default async function ReceiptPrintPage({
         <section style={{ lineHeight: 1.7, fontSize: "11.5pt" }}>
           <p>
             Eu,{" "}
-            <strong>{data.teacher.fullName || data.teacher.email || "—"}</strong>
+            <strong>{data.teacher.fullName || data.teacher.email || "o professor responsável"}</strong>
             {data.teacher.email ? (
               <span className="report-muted"> ({data.teacher.email})</span>
             ) : null}
@@ -255,9 +260,15 @@ export default async function ReceiptPrintPage({
                 fontSize: "9.5pt",
               }}
             >
-              {data.teacher.fullName || data.teacher.email || "Professor(a)"}
+              <span style={{ fontWeight: 600 }}>
+                {data.teacher.fullName || data.teacher.email || "o professor responsável"}
+              </span>
               <br />
-              <span className="report-muted">Quem recebeu</span>
+              <span className="report-muted">
+                {/* Professor / Professora — inferred from the
+                    teacher's first name (see gendered-titles.ts). */}
+                {teacherTitle(inferGenderFromName(data.teacher.fullName))}
+              </span>
             </div>
           </div>
           <div style={{ flex: 1, textAlign: "center" }}>
@@ -269,9 +280,16 @@ export default async function ReceiptPrintPage({
                 fontSize: "9.5pt",
               }}
             >
-              {data.student.fullName}
+              <span style={{ fontWeight: 600 }}>{data.student.fullName}</span>
               <br />
-              <span className="report-muted">Quem pagou</span>
+              <span className="report-muted">
+                {/* Aluno / Aluna — from roster_students.gender when
+                    set, fallback to name heuristic. */}
+                {studentTitle(
+                  data.student.gender ??
+                    inferGenderFromName(data.student.fullName),
+                )}
+              </span>
             </div>
           </div>
         </section>

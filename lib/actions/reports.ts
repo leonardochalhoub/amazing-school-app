@@ -46,24 +46,49 @@ async function loadTeacherBrand(
     )
     .eq("id", teacherId)
     .maybeSingle();
-  const signatureEnabled =
-    (data as { signature_enabled?: boolean } | null)?.signature_enabled ===
-    true;
-  const hasUpload =
-    !!(data as { signature_url?: string | null } | null)?.signature_url;
+  const profile = data as {
+    full_name: string | null;
+    email: string | null;
+    school_logo_enabled: boolean | null;
+    school_logo_url: string | null;
+    signature_url: string | null;
+    signature_enabled: boolean | null;
+  } | null;
+
+  let fullName = profile?.full_name ?? null;
+  let email = profile?.email ?? null;
+
+  // Fallback to the auth user when the profile row is missing bits —
+  // the auth record is the ground truth for email, and usually
+  // carries `user_metadata.full_name` from the signup form.
+  if (!fullName || !email) {
+    const { data: authData } = await admin.auth.admin.getUserById(teacherId);
+    const authUser = authData?.user;
+    if (authUser) {
+      if (!email) email = authUser.email ?? null;
+      if (!fullName) {
+        const metaName =
+          (authUser.user_metadata as { full_name?: string } | undefined)
+            ?.full_name ?? null;
+        fullName =
+          metaName ??
+          (authUser.email ? authUser.email.split("@")[0] ?? null : null);
+      }
+    }
+  }
+
+  const signatureEnabled = profile?.signature_enabled === true;
   const signatureUrl =
-    signatureEnabled && hasUpload
+    signatureEnabled && profile?.signature_url
       ? await getSignatureSignedUrl(admin, teacherId)
       : null;
+
   return {
     id: teacherId,
-    fullName: (data as { full_name?: string } | null)?.full_name ?? null,
-    email: (data as { email?: string } | null)?.email ?? null,
-    schoolLogoEnabled:
-      (data as { school_logo_enabled?: boolean } | null)?.school_logo_enabled ??
-      false,
-    schoolLogoUrl:
-      (data as { school_logo_url?: string } | null)?.school_logo_url ?? null,
+    fullName,
+    email,
+    schoolLogoEnabled: profile?.school_logo_enabled ?? false,
+    schoolLogoUrl: profile?.school_logo_url ?? null,
     signatureUrl,
     signatureEnabled,
   };
@@ -796,6 +821,7 @@ export interface ReceiptData {
     id: string;
     fullName: string;
     email: string | null;
+    gender: "female" | "male" | null;
     classroomName: string | null;
   };
   payment: {
@@ -834,7 +860,9 @@ export async function getReceiptData(
     .eq("id", paymentId)
     .maybeSingle();
   if (!paymentRaw) return { error: "Pagamento não encontrado" };
-  const payment = paymentRaw as StudentPaymentRow;
+  const payment = paymentRaw as StudentPaymentRow & {
+    receipt_number?: string | null;
+  };
   if (!payment.paid) {
     return {
       error:
@@ -845,7 +873,7 @@ export async function getReceiptData(
   const { data: rosterRaw } = await admin
     .from("roster_students")
     .select(
-      "id, full_name, email, classroom_id, monthly_tuition_cents, auth_user_id, receipts_visible_to_student, classrooms(name)",
+      "id, full_name, email, gender, classroom_id, monthly_tuition_cents, auth_user_id, receipts_visible_to_student, classrooms(name)",
     )
     .eq("id", payment.roster_student_id)
     .maybeSingle();
@@ -854,6 +882,7 @@ export async function getReceiptData(
     id: string;
     full_name: string;
     email: string | null;
+    gender: "female" | "male" | null;
     classroom_id: string | null;
     monthly_tuition_cents: number | null;
     auth_user_id: string | null;
@@ -883,17 +912,13 @@ export async function getReceiptData(
     ? roster.classrooms[0]
     : roster.classrooms;
 
-  // Deterministic receipt number: AS-YYYYMM-<first 8 hex of uuid>.
-  // 8 hex chars = 4.29B possible suffixes, so the combined
-  // (billing_month, suffix) pair is unique in practice even at
-  // millions-of-receipts-per-month scale. Also — because each
-  // student_payment row already has a unique UUID *and* only one
-  // row per (roster_student, billing_month) can exist (unique
-  // constraint in migration 019), the receipt number is guaranteed
-  // unique on our side.
+  // Receipt number — prefer the DB-stored + unique-indexed value
+  // (migration 046). Fallback to the derived shape so older rows
+  // still render the same number they had before the migration.
   const month = payment.billing_month.slice(0, 7).replace("-", "");
   const suffix = payment.id.replace(/-/g, "").slice(0, 8).toUpperCase();
-  const receiptNumber = `AS-${month}-${suffix}`;
+  const receiptNumber =
+    payment.receipt_number?.trim() || `AS-${month}-${suffix}`;
 
   return {
     teacher,
@@ -901,6 +926,7 @@ export async function getReceiptData(
       id: roster.id,
       fullName: roster.full_name,
       email: roster.email,
+      gender: roster.gender,
       classroomName: classroom?.name ?? null,
     },
     payment: {

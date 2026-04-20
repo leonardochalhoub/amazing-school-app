@@ -421,7 +421,7 @@ export async function getCertificate(
   const { data: rowRaw } = await admin
     .from("certificates")
     .select(
-      "id, roster_student_id, teacher_id, level, grade, course_start_on, course_end_on, title, remarks, total_hours, issued_at",
+      "id, roster_student_id, teacher_id, level, grade, course_start_on, course_end_on, title, remarks, total_hours, issued_at, certificate_number",
     )
     .eq("id", certificateId)
     .maybeSingle();
@@ -438,6 +438,7 @@ export async function getCertificate(
     remarks: string | null;
     total_hours: number | null;
     issued_at: string;
+    certificate_number: string | null;
   };
 
   const [{ data: rosterRaw }, { data: teacherRaw }] = await Promise.all([
@@ -495,12 +496,13 @@ export async function getCertificate(
     ? roster.classrooms[0]
     : roster.classrooms;
 
-  // Certificate number — stable + sortable. 8 hex chars give us
-  // ~4.29B possible suffixes, practically collision-free even at
-  // platform-wide scale.
+  // Certificate number — prefer the DB-stored + unique-indexed
+  // value (migration 046). Fall back to the derived shape for
+  // rows written before the migration landed.
   const month = row.issued_at.slice(0, 7).replace("-", "");
   const suffix = row.id.replace(/-/g, "").slice(0, 8).toUpperCase();
-  const certificateNumber = `AS-CERT-${month}-${suffix}`;
+  const certificateNumber =
+    row.certificate_number?.trim() || `AS-CERT-${month}-${suffix}`;
 
   return {
     id: row.id,
