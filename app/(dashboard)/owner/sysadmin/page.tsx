@@ -9,6 +9,7 @@ import { LoginLogPanel } from "@/components/owner/login-log-panel";
 import { SysadminCharts } from "@/components/owner/sysadmin-charts";
 import { PlatformAccessCard } from "@/components/owner/platform-access-card";
 import { TopAssignedTable } from "@/components/owner/top-assigned-table";
+import { AiChatUsageTable } from "@/components/owner/ai-chat-usage-table";
 import {
   Users,
   GraduationCap,
@@ -76,6 +77,7 @@ export default async function SysadminPage() {
     allTimeTopStudents,
     timeOnSite,
     topAssigned,
+    aiChatUsage,
     contentMix,
     health,
   } = overview;
@@ -414,6 +416,33 @@ export default async function SysadminPage() {
               Songs ({topAssigned.songs.length})
             </h3>
             <TopAssignedTable rows={topAssigned.songs} unit="song" />
+          </div>
+        </div>
+      </section>
+
+      {/* ============================ AI chat usage ============================ */}
+      <section className="space-y-4">
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            AI tutor usage
+          </h2>
+          <p className="text-xs text-muted-foreground">
+            User-role messages only · sorted descending · top 10 shown.
+            Days = distinct calendar days the user sent a message.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="space-y-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Teachers ({aiChatUsage.teachers.length})
+            </h3>
+            <AiChatUsageTable rows={aiChatUsage.teachers} kind="teacher" />
+          </div>
+          <div className="space-y-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Students ({aiChatUsage.students.length})
+            </h3>
+            <AiChatUsageTable rows={aiChatUsage.students} kind="student" />
           </div>
         </div>
       </section>

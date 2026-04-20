@@ -114,6 +114,27 @@ export interface SysadminOverview {
     lessons: { slug: string; title: string; cefr: string | null; count: number }[];
     songs: { slug: string; title: string; cefr: string | null; count: number }[];
   };
+  /**
+   * Top AI-tutor users, split by role. Only user-role messages
+   * count (assistant replies don't represent engagement). "Days"
+   * = distinct YYYY-MM-DD dates on which the user sent at least
+   * one message. Sorted descending by message count.
+   */
+  aiChatUsage: {
+    teachers: {
+      id: string;
+      name: string;
+      messages: number;
+      activeDays: number;
+    }[];
+    students: {
+      id: string;
+      displayName: string;
+      teacherName: string | null;
+      messages: number;
+      activeDays: number;
+    }[];
+  };
   contentMix: {
     lessonsPerCefr: { level: string; count: number }[];
     songsPerCefr: { level: string; count: number }[];
@@ -641,6 +662,8 @@ export async function getSysadminOverview(): Promise<
     assignmentsAllRes,
     diaryRes,
     historyRes,
+    aiConvosRes,
+    aiMessagesRes,
   ] = await Promise.all([
     admin
       .from("session_heartbeats")
@@ -664,6 +687,15 @@ export async function getSysadminOverview(): Promise<
       .from("student_history")
       .select("teacher_id, created_at")
       .limit(200_000),
+    admin
+      .from("conversations")
+      .select("id, student_id")
+      .limit(500_000),
+    admin
+      .from("messages")
+      .select("conversation_id, created_at")
+      .eq("role", "user")
+      .limit(500_000),
   ]);
 
   const heartbeatMinutes = new Map<string, number>();
@@ -844,6 +876,62 @@ export async function getSysadminOverview(): Promise<
     })
     .sort((a, b) => b.minutes - a.minutes);
 
+  // -----------------------------------------------------------------
+  // AI-tutor usage — aggregate user-role messages per profile and
+  // split teachers vs students. "Days" is the number of distinct
+  // calendar days they sent at least one message.
+  // -----------------------------------------------------------------
+  const convoToUser = new Map<string, string>();
+  for (const c of (aiConvosRes.data ?? []) as Array<{
+    id: string;
+    student_id: string;
+  }>) {
+    convoToUser.set(c.id, c.student_id);
+  }
+  const chatMsgCount = new Map<string, number>();
+  const chatDays = new Map<string, Set<string>>();
+  for (const m of (aiMessagesRes.data ?? []) as Array<{
+    conversation_id: string;
+    created_at: string;
+  }>) {
+    const uid = convoToUser.get(m.conversation_id);
+    if (!uid) continue;
+    chatMsgCount.set(uid, (chatMsgCount.get(uid) ?? 0) + 1);
+    let days = chatDays.get(uid);
+    if (!days) {
+      days = new Set();
+      chatDays.set(uid, days);
+    }
+    days.add(m.created_at.slice(0, 10));
+  }
+
+  const aiChatTeachers = teachers
+    .map((t) => ({
+      id: t.id,
+      name: t.full_name,
+      messages: chatMsgCount.get(t.id) ?? 0,
+      activeDays: chatDays.get(t.id)?.size ?? 0,
+    }))
+    .filter((r) => r.messages > 0)
+    .sort((a, b) => b.messages - a.messages);
+
+  const aiChatStudents = students
+    .map((p) => {
+      const r = rosterByAuthUser.get(p.id);
+      const teacherName = r?.teacher_id
+        ? teacherNameById.get(r.teacher_id) ?? null
+        : null;
+      return {
+        id: p.id,
+        displayName: p.full_name,
+        teacherName,
+        messages: chatMsgCount.get(p.id) ?? 0,
+        activeDays: chatDays.get(p.id)?.size ?? 0,
+      };
+    })
+    .filter((r) => r.messages > 0)
+    .sort((a, b) => b.messages - a.messages);
+
   // Health signals
   const accountsWithoutAvatar = profiles.filter((p) => !p.avatar_url).length;
   const classroomsWithoutStudents =
@@ -908,6 +996,10 @@ export async function getSysadminOverview(): Promise<
     topAssigned: {
       lessons: topLessons,
       songs: topSongs,
+    },
+    aiChatUsage: {
+      teachers: aiChatTeachers,
+      students: aiChatStudents,
     },
     contentMix: { lessonsPerCefr, songsPerCefr },
     health: {
