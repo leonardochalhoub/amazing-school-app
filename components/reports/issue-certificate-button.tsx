@@ -89,6 +89,7 @@ export function IssueCertificateButton({
   const [remarks, setRemarks] = useState<string>("");
   const [totalHours, setTotalHours] = useState<string>("");
   const [teacherCredentials, setTeacherCredentials] = useState<string>("");
+  const [teacherCpf, setTeacherCpf] = useState<string>("");
   const [platformMinutes, setPlatformMinutes] = useState<number | null>(null);
 
   // Pull the platform-estimated minutes whenever the dialog opens
@@ -152,6 +153,7 @@ export function IssueCertificateButton({
         totalHours: hoursNum,
         issuedOn,
         teacherTitle: teacherCredentials,
+        teacherCpf,
       });
       if ("error" in res && res.error) {
         toast.error(res.error);
@@ -418,8 +420,28 @@ export function IssueCertificateButton({
                 maxLength={200}
               />
               <p className="text-[11px] text-muted-foreground">
-                Aparece entre o seu nome e &ldquo;Professor(a)
-                Responsável&rdquo; na linha da assinatura.
+                Aparece entre o seu nome e &ldquo;Professor
+                Responsável&rdquo; na linha da assinatura. Traduzida
+                automaticamente para a versão em inglês.
+              </p>
+            </div>
+
+            <div className="grid gap-2">
+              <Label htmlFor="cert-teacher-cpf">
+                Seu CPF{" "}
+                <span className="text-muted-foreground">(opcional)</span>
+              </Label>
+              <Input
+                id="cert-teacher-cpf"
+                placeholder="123.456.789-00"
+                value={teacherCpf}
+                onChange={(e) => setTeacherCpf(e.target.value)}
+                inputMode="numeric"
+                maxLength={20}
+              />
+              <p className="text-[11px] text-muted-foreground">
+                Aparece logo abaixo do seu nome na linha da assinatura
+                do certificado. Não é obrigatório.
               </p>
             </div>
 

@@ -6,6 +6,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isTeacherRole } from "@/lib/auth/roles";
 import { getSignatureSignedUrl } from "@/lib/signature";
+import { translatePtToEn } from "@/lib/ai/translate";
 import {
   CERTIFICATE_LEVELS,
   GRADE_OPTIONS,
@@ -23,10 +24,18 @@ export interface CertificateRecord {
   courseEndOn: string;
   title: string | null;
   remarks: string | null;
+  /** English translation of `remarks`, cached at insert time.
+      Falls back to `remarks` when the translation step failed
+      (e.g. AI not configured). */
+  remarksEn: string | null;
   totalHours: number | null;
   /** Teacher's academic credentials line — printed between the
       name and the "Professor(a) Responsável" role. Optional. */
   teacherTitle: string | null;
+  teacherTitleEn: string | null;
+  /** Optional teacher CPF (Brazilian tax id) shown below the
+      teacher name on the signature block. Stored as a string. */
+  teacherCpf: string | null;
   issuedAt: string;
   certificateNumber: string;
   student: {
@@ -83,6 +92,10 @@ const InputSchema = z.object({
       Letras Português-Inglês pela UFRJ". Rendered between the
       teacher name and the responsible-teacher role on the PDF. */
   teacherTitle: z.string().max(200).optional().or(z.literal("")),
+  /** Optional teacher CPF — stored as entered (digits, dots and
+      dashes all allowed). Max 20 chars to accommodate any
+      formatted variant like 123.456.789-00. */
+  teacherCpf: z.string().max(20).optional().or(z.literal("")),
 });
 
 export async function createCertificate(input: z.input<typeof InputSchema>) {
@@ -130,6 +143,15 @@ export async function createCertificate(input: z.input<typeof InputSchema>) {
     ? `${parsed.data.issuedOn}T12:00:00Z`
     : undefined;
 
+  // Translate the two free-text fields to English in parallel
+  // before the INSERT so the EN certificate PDF renders without
+  // another round-trip. Best-effort: failures just leave the EN
+  // columns null and the print page falls back to PT text.
+  const [remarksEn, teacherTitleEn] = await Promise.all([
+    translatePtToEn(parsed.data.remarks || null),
+    translatePtToEn(parsed.data.teacherTitle || null),
+  ]);
+
   const { data, error } = await admin
     .from("certificates")
     .insert({
@@ -141,8 +163,11 @@ export async function createCertificate(input: z.input<typeof InputSchema>) {
       course_end_on: parsed.data.courseEndOn,
       title: parsed.data.title || null,
       remarks: parsed.data.remarks || null,
+      remarks_en: remarksEn,
       total_hours: parsed.data.totalHours ?? null,
       teacher_title: parsed.data.teacherTitle || null,
+      teacher_title_en: teacherTitleEn,
+      teacher_cpf: (parsed.data.teacherCpf || "").trim() || null,
       ...(issuedAtISO ? { issued_at: issuedAtISO } : {}),
     })
     .select("id")
@@ -429,7 +454,7 @@ export async function getCertificate(
   const { data: rowRaw } = await admin
     .from("certificates")
     .select(
-      "id, roster_student_id, teacher_id, level, grade, course_start_on, course_end_on, title, remarks, total_hours, teacher_title, issued_at, certificate_number",
+      "id, roster_student_id, teacher_id, level, grade, course_start_on, course_end_on, title, remarks, remarks_en, total_hours, teacher_title, teacher_title_en, teacher_cpf, issued_at, certificate_number",
     )
     .eq("id", certificateId)
     .maybeSingle();
@@ -444,8 +469,11 @@ export async function getCertificate(
     course_end_on: string;
     title: string | null;
     remarks: string | null;
+    remarks_en: string | null;
     total_hours: number | null;
     teacher_title: string | null;
+    teacher_title_en: string | null;
+    teacher_cpf: string | null;
     issued_at: string;
     certificate_number: string | null;
   };
@@ -542,8 +570,11 @@ export async function getCertificate(
     courseEndOn: row.course_end_on,
     title: row.title,
     remarks: row.remarks,
+    remarksEn: row.remarks_en ?? null,
     totalHours: row.total_hours ?? null,
     teacherTitle: row.teacher_title ?? null,
+    teacherTitleEn: row.teacher_title_en ?? null,
+    teacherCpf: row.teacher_cpf ?? null,
     issuedAt: row.issued_at,
     certificateNumber,
     student: {

@@ -437,28 +437,34 @@ export default async function CertificatePrintPage({
         {/* Remarks sit in the natural flow, right after the body.
             A flex spacer below pushes the footer + brand band to
             the bottom so long remarks can never overlap either. */}
-        {data.remarks ? (
-          <section
-            style={{
-              position: "relative",
-              zIndex: 1,
-              margin: "22px auto 0",
-              maxWidth: 720,
-              textAlign: "center",
-            }}
-          >
-            <p
+        {(() => {
+          const quote =
+            lang === "en"
+              ? (data.remarksEn ?? data.remarks)
+              : data.remarks;
+          return quote ? (
+            <section
               style={{
-                fontSize: "10.5pt",
-                color: "#374151",
-                lineHeight: 1.6,
-                fontStyle: "italic",
+                position: "relative",
+                zIndex: 1,
+                margin: "22px auto 0",
+                maxWidth: 720,
+                textAlign: "center",
               }}
             >
-              &ldquo;{data.remarks}&rdquo;
-            </p>
-          </section>
-        ) : null}
+              <p
+                style={{
+                  fontSize: "10.5pt",
+                  color: "#374151",
+                  lineHeight: 1.6,
+                  fontStyle: "italic",
+                }}
+              >
+                &ldquo;{quote}&rdquo;
+              </p>
+            </section>
+          ) : null;
+        })()}
 
         {/* Flex spacer — whatever room is left between the last
             body section and the footer. Guarantees the signature
@@ -545,16 +551,34 @@ export default async function CertificatePrintPage({
                   >
                     {displayedName}
                   </div>
-                  {data.teacherTitle ? (
+                  {(() => {
+                    const credential =
+                      lang === "en"
+                        ? (data.teacherTitleEn ?? data.teacherTitle)
+                        : data.teacherTitle;
+                    return credential ? (
+                      <p
+                        style={{
+                          fontSize: "9pt",
+                          color: "#4b5563",
+                          marginTop: 2,
+                          fontStyle: "italic",
+                        }}
+                      >
+                        {credential}
+                      </p>
+                    ) : null;
+                  })()}
+                  {data.teacherCpf ? (
                     <p
                       style={{
-                        fontSize: "9pt",
-                        color: "#4b5563",
-                        marginTop: 2,
-                        fontStyle: "italic",
+                        fontSize: "8.5pt",
+                        color: "#6b7280",
+                        marginTop: 1,
+                        fontVariantNumeric: "tabular-nums",
                       }}
                     >
-                      {data.teacherTitle}
+                      CPF: {data.teacherCpf}
                     </p>
                   ) : null}
                   <p
