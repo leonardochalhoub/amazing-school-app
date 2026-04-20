@@ -7,7 +7,6 @@ import {
   BookOpen,
   Bot,
   Trophy,
-  UserRound,
   GraduationCap,
   type LucideIcon,
 } from "lucide-react";
@@ -32,7 +31,6 @@ const studentLinks: NavLink[] = [
   { href: "/student/lessons", label: "My Lessons", icon: BookOpen },
   { href: "/student/chat", label: "AI Tutor", icon: Bot },
   { href: "/student/leaderboard", label: "Leaderboard", icon: Trophy },
-  { href: "/student/profile", label: "Profile", icon: UserRound },
 ];
 
 export function Sidebar({ role }: SidebarProps) {

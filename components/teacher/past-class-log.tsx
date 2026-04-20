@@ -7,6 +7,7 @@ import {
   CalendarX,
   CalendarClock,
   Pencil,
+  Plus,
   Save,
   X,
 } from "lucide-react";
@@ -26,6 +27,9 @@ export interface PastClass {
 
 interface Props {
   classes: PastClass[];
+  /** When set, shows only the last N classes (already desc-sorted by
+   *  caller) and surfaces a "+ show more" toggle for the rest. */
+  initialLimit?: number;
 }
 
 type Status = NonNullable<PastClass["completion_status"]>;
@@ -39,13 +43,14 @@ const STATUS_META: Record<
   rescheduled: { color: "text-amber-600 dark:text-amber-300", Icon: CalendarClock },
 };
 
-export function PastClassLog({ classes }: Props) {
+export function PastClassLog({ classes, initialLimit }: Props) {
   const { locale } = useI18n();
   const [openId, setOpenId] = useState<string | null>(null);
   const [obs, setObs] = useState("");
   const [status, setStatus] = useState<Status | "">("");
   const [pending, startTransition] = useTransition();
   const [local, setLocal] = useState(classes);
+  const [expanded, setExpanded] = useState(false);
 
   const t = locale === "pt-BR"
     ? {
@@ -64,6 +69,8 @@ export function PastClassLog({ classes }: Props) {
         edit: "Editar",
         cancel: "Cancelar",
         saved: "Entrada salva",
+        showMore: (n: number) => `Ver mais ${n}`,
+        showLess: "Ver menos",
       }
     : {
         heading: "Past classes",
@@ -82,6 +89,8 @@ export function PastClassLog({ classes }: Props) {
         edit: "Edit",
         cancel: "Cancel",
         saved: "Log saved",
+        showMore: (n: number) => `Show ${n} more`,
+        showLess: "Show less",
       };
 
   function beginEdit(c: PastClass) {
@@ -141,13 +150,21 @@ export function PastClassLog({ classes }: Props) {
         <p className="text-[11px] text-muted-foreground">{t.hint}</p>
       </div>
 
-      {local.length === 0 ? (
-        <p className="rounded-lg border border-dashed border-border py-8 text-center text-xs text-muted-foreground">
-          {t.empty}
-        </p>
-      ) : (
+      {(() => {
+        if (local.length === 0) {
+          return (
+            <p className="rounded-lg border border-dashed border-border py-8 text-center text-xs text-muted-foreground">
+              {t.empty}
+            </p>
+          );
+        }
+        const limit = initialLimit ?? local.length;
+        const visible = expanded ? local : local.slice(0, limit);
+        const overflow = local.length - limit;
+        return (
+          <>
         <ul className="space-y-3">
-          {local.map((c) => {
+          {visible.map((c) => {
             const isEditing = openId === c.id;
             const statusMeta = c.completion_status
               ? STATUS_META[c.completion_status]
@@ -279,7 +296,23 @@ export function PastClassLog({ classes }: Props) {
             );
           })}
         </ul>
-      )}
+            {overflow > 0 ? (
+              <button
+                type="button"
+                onClick={() => setExpanded((v) => !v)}
+                className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/5 px-2.5 py-1 text-[11px] font-medium text-primary transition-colors hover:bg-primary/15"
+              >
+                <Plus
+                  className={`h-3 w-3 transition-transform ${
+                    expanded ? "rotate-45" : ""
+                  }`}
+                />
+                {expanded ? t.showLess : t.showMore(overflow)}
+              </button>
+            ) : null}
+          </>
+        );
+      })()}
     </div>
   );
 }

@@ -9,6 +9,7 @@ import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { RealtimeGrid } from "@/components/teacher/realtime-grid";
 import { DeleteClassroomButton } from "@/components/teacher/delete-classroom-button";
+import { ExpandableList } from "@/components/teacher/expandable-list";
 import { AddStudentsToClassroomButton } from "@/components/teacher/add-students-to-classroom-button";
 import { RemoveStudentsFromClassroomButton } from "@/components/teacher/remove-students-from-classroom-button";
 import {
@@ -54,9 +55,6 @@ export default async function ClassroomDetail({
 
   const allLessons = getAllLessons();
   const allMusic = listMusic();
-  const classroomWideAssigned = assignments
-    .filter((a) => a.student_id === null)
-    .map((a) => a.lesson_slug);
 
   function prettyAssignmentTitle(slug: string): string {
     const parsed = fromAssignmentSlug(slug);
@@ -66,6 +64,24 @@ export default async function ClassroomDetail({
     }
     return allLessons.find((l) => l.slug === slug)?.title ?? slug;
   }
+
+  // Classroom-wide rows already come sorted desc by assigned_at from
+  // the action. Keep the pretty title + date for the list rendering.
+  const classroomWideAssigned = assignments
+    .filter((a) => a.student_id === null)
+    .map((a) => ({
+      id: a.id,
+      title: prettyAssignmentTitle(a.lesson_slug),
+      assignedAt: a.assigned_at,
+    }));
+
+  const assignedAtFmt = new Intl.DateTimeFormat("pt-BR", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
   const rosterStudents = rows
     .filter(
@@ -80,8 +96,8 @@ export default async function ClassroomDetail({
 
   return (
     <div className="space-y-4">
-      <div className="flex items-start justify-between gap-4">
-        <div>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+        <div className="min-w-0">
           <h1 className="text-xl font-semibold tracking-tight">
             {classroom.name}
           </h1>
@@ -90,7 +106,7 @@ export default async function ClassroomDetail({
               {classroom.description}
             </p>
           ) : null}
-          <div className="mt-2 flex items-center gap-2">
+          <div className="mt-2 flex flex-wrap items-center gap-2">
             <Badge variant="secondary" className="font-mono text-[10px]">
               {classroom.invite_code}
             </Badge>
@@ -99,7 +115,7 @@ export default async function ClassroomDetail({
             </span>
           </div>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2 sm:justify-end">
           <AddStudentsToClassroomButton
             classroomId={id}
             classroomName={classroom.name}
@@ -155,19 +171,24 @@ export default async function ClassroomDetail({
                 No classroom-wide lessons yet.
               </p>
             ) : (
-              <ul className="text-sm divide-y divide-border">
-                {classroomWideAssigned.map((slug) => (
-                  <li
-                    key={slug}
-                    className="py-1.5 flex items-center justify-between"
-                  >
-                    <span className="truncate">{prettyAssignmentTitle(slug)}</span>
+              <ExpandableList
+                items={classroomWideAssigned}
+                initial={10}
+                getKey={(a) => a.id}
+                render={(a) => (
+                  <div className="py-1.5 flex items-center justify-between gap-3">
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate">{a.title}</p>
+                      <p className="text-[10px] text-muted-foreground tabular-nums">
+                        {assignedAtFmt.format(new Date(a.assignedAt))}
+                      </p>
+                    </div>
                     <Badge variant="outline" className="text-[10px]">
                       All students
                     </Badge>
-                  </li>
-                ))}
-              </ul>
+                  </div>
+                )}
+              />
             )}
           </CardContent>
         </Card>
@@ -199,7 +220,7 @@ export default async function ClassroomDetail({
 
       <Card>
         <CardContent className="py-5">
-          <PastClassLog classes={past} />
+          <PastClassLog classes={past} initialLimit={5} />
         </CardContent>
       </Card>
     </div>

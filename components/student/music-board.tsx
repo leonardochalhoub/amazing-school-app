@@ -462,7 +462,7 @@ function ExerciseCard({
       <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
         {locale === "pt-BR" ? "Exercício" : "Exercise"} {index + 1}
       </p>
-      <p className="mt-1 text-sm font-medium">{prompt}</p>
+      <p className="mt-1 text-xs font-medium break-words sm:text-sm">{prompt}</p>
       <div className="mt-4">
         {exercise.type === "listen_and_fill" ? (
           <ListenAndFill
@@ -625,7 +625,7 @@ function ListenAndFill({
           : `Play ${fmt(exercise.youtube_start)} – ${fmt(exercise.youtube_end)}`}
       </button>
 
-      <div className="flex flex-wrap items-center gap-2 text-sm">
+      <div className="flex flex-wrap items-center gap-2 text-xs break-words sm:text-sm">
         <span>{exercise.excerpt_before}</span>
         <Input
           value={value}
@@ -634,7 +634,7 @@ function ListenAndFill({
             setChecked(null);
           }}
           placeholder={exercise.blank_hint}
-          className="h-8 w-40"
+          className="h-8 w-full min-w-0 sm:w-40"
         />
         <span>{exercise.excerpt_after}</span>
       </div>

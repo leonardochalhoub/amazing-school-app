@@ -90,12 +90,14 @@ export function Navbar({
   // sent to them. No lessons catalog (they only consume what was assigned;
   // the per-lesson page at /student/lessons/[slug] is still reachable via
   // deep link). Music catalog stays so they can revisit assigned songs.
+  // Profile link lives only in the avatar dropdown — no dedicated tab
+  // in the main student nav. Music catalog stays since students revisit
+  // assigned songs there.
   const studentNav = [
     { href: "/student", label: labels.dashboard },
     { href: "/student/music", label: labels.music },
     { href: "/speaking-lab", label: labels.speakingLab },
     { href: "/student/chat", label: labels.aiTutor },
-    { href: "/student/profile", label: labels.profile },
   ];
 
   const teacherNav: { href: string; label: string }[] = [
