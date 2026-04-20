@@ -256,20 +256,18 @@ export async function deleteClassroom(input: {
     return { error: "Delete didn't take effect. Try reloading the page." };
   }
 
-  // Also drop every active classroom_members row so the 2 students
-  // no longer appear in the classroom; roster + lesson history
-  // remain intact because those tables' FKs are SET NULL / nullable.
+  // Drop live classroom_members rows so students lose the
+  // membership link on auth-user side. Roster rows stay pointing
+  // at the soft-deleted classroom_id on purpose — that way
+  // getAssignmentsForRosterStudent can still pull classroom-wide
+  // assignments when the student opens their profile, and the
+  // payment/history joins keep resolving the classroom name.
+  // Active-classroom queries filter `deleted_at IS NULL` on the
+  // classroom side, so the soft-deleted row hides from pickers
+  // and lists without severing the historical link.
   await admin
     .from("classroom_members")
     .delete()
-    .eq("classroom_id", parsed.data);
-
-  // Null the classroom_id on roster_students so the students
-  // appear in the teacher's roster as "no classroom" — the teacher
-  // can then add them to another one.
-  await admin
-    .from("roster_students")
-    .update({ classroom_id: null })
     .eq("classroom_id", parsed.data);
 
   // Invalidate every surface that lists classrooms.

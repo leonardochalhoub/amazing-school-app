@@ -44,6 +44,7 @@ export default async function RosterStudentDetailPage({
     .from("classrooms")
     .select("id, name")
     .eq("teacher_id", user.id)
+    .is("deleted_at", null)
     .order("created_at", { ascending: false });
 
   const classroomList = (classrooms ?? []).map((c) => ({
