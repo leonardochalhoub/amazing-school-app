@@ -13,13 +13,21 @@ import {
   YAxis,
 } from "recharts";
 
-const PALETTE = [
-  "#6366f1", // indigo
-  "#ec4899", // pink
+// Two distinct palettes so the bar chart and the pie never share a
+// hue — otherwise viewers mistake "Lições" (bar series) for "A1"
+// (pie slice) at a glance.
+const BAR_PALETTE = [
+  "#6366f1", // indigo — Lições
+  "#ec4899", // pink   — Músicas
+];
+
+const PIE_PALETTE = [
   "#10b981", // emerald
-  "#f59e0b", // amber
   "#06b6d4", // cyan
+  "#f59e0b", // amber
   "#a855f7", // violet
+  "#ef4444", // red
+  "#f97316", // orange
 ];
 
 interface MonthlyBarsProps {
@@ -59,8 +67,8 @@ export function MonthlyCompletionsChart({
         iconType="square"
         iconSize={10}
       />
-      <Bar dataKey="lessons" stackId="a" fill={PALETTE[0]} name="Lições" />
-      <Bar dataKey="music" stackId="a" fill={PALETTE[1]} name="Músicas" />
+      <Bar dataKey="lessons" stackId="a" fill={BAR_PALETTE[0]} name="Lições" />
+      <Bar dataKey="music" stackId="a" fill={BAR_PALETTE[1]} name="Músicas" />
     </BarChart>
   );
 }
@@ -125,7 +133,7 @@ export function CefrMixChart({
           labelLine={{ stroke: "#9ca3af", strokeWidth: 1 }}
         >
           {pieData.map((_, i) => (
-            <Cell key={i} fill={PALETTE[i % PALETTE.length]} />
+            <Cell key={i} fill={PIE_PALETTE[i % PIE_PALETTE.length]} />
           ))}
         </Pie>
       </PieChart>
@@ -160,7 +168,7 @@ export function CefrMixChart({
                   height: 10,
                   flexShrink: 0,
                   borderRadius: 2,
-                  background: PALETTE[i % PALETTE.length],
+                  background: PIE_PALETTE[i % PIE_PALETTE.length],
                 }}
               />
               <span

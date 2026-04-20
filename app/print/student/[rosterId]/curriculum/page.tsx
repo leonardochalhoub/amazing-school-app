@@ -9,6 +9,10 @@ import {
 } from "@/components/reports/charts";
 import { parseYear, yearLabel } from "@/lib/reports/period";
 import { reportFilename, slugifyForFilename } from "@/lib/reports/filename";
+import {
+  inferGenderFromName,
+  teacherTitle,
+} from "@/lib/reports/gendered-titles";
 
 export const dynamic = "force-dynamic";
 
@@ -100,29 +104,51 @@ export default async function StudentCurriculumPrintPage({
         <Kpi label="Períodos" value={stats.byMonth.length} sub="meses ativos" />
       </section>
 
-      {/* Charts */}
+      {/* Charts — forced side by side, each gets half the inner
+          page width. No flex-wrap so the A4 preview never stacks
+          them awkwardly. */}
       {stats.byMonth.length > 0 || stats.byCefr.length > 0 ? (
         <section className="report-avoid-break">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
             Atividade
           </h2>
-          <div className="mt-3 flex flex-wrap items-start gap-4">
-            {stats.byMonth.length > 0 ? (
-              <div>
-                <p className="mb-1 text-xs text-slate-500">
-                  Conclusões por mês
-                </p>
-                <MonthlyCompletionsChart data={stats.byMonth} width={420} height={200} />
-              </div>
-            ) : null}
-            {stats.byCefr.length > 0 ? (
-              <div>
-                <p className="mb-1 text-xs text-slate-500">
-                  Mix CEFR (atribuídas)
-                </p>
-                <CefrMixChart data={stats.byCefr} width={260} height={200} />
-              </div>
-            ) : null}
+          <div
+            style={{
+              marginTop: 12,
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 16,
+              alignItems: "start",
+            }}
+          >
+            <div>
+              <p className="mb-1 text-xs text-slate-500">
+                Conclusões por mês
+              </p>
+              {stats.byMonth.length > 0 ? (
+                <MonthlyCompletionsChart
+                  data={stats.byMonth}
+                  width={320}
+                  height={200}
+                />
+              ) : (
+                <p className="text-xs text-slate-400">Sem conclusões no período.</p>
+              )}
+            </div>
+            <div>
+              <p className="mb-1 text-xs text-slate-500">
+                Mix CEFR (atribuídas)
+              </p>
+              {stats.byCefr.length > 0 ? (
+                <CefrMixChart
+                  data={stats.byCefr}
+                  width={320}
+                  height={200}
+                />
+              ) : (
+                <p className="text-xs text-slate-400">Sem itens classificados.</p>
+              )}
+            </div>
           </div>
         </section>
       ) : null}
@@ -173,11 +199,11 @@ export default async function StudentCurriculumPrintPage({
               <span style={{ fontWeight: 600 }}>
                 {teacher.fullName || teacher.email || "—"}
               </span>
-              {/* When only an email is available, drop the "@domain"
-                  so the signature line reads like a real name rather
-                  than an address. */}
               <br />
-              <span className="report-muted">Professor(a) responsável</span>
+              <span className="report-muted">
+                {teacherTitle(inferGenderFromName(teacher.fullName))}{" "}
+                Responsável
+              </span>
             </div>
           </div>
         </div>

@@ -7,6 +7,10 @@ import { reportFilename, slugifyForFilename } from "@/lib/reports/filename";
 import { schoolLogoPublicUrl, SCHOOL_LOGO_SRC, isLogoEligible } from "@/lib/school-logo";
 import { AmazingSchoolMark } from "@/components/reports/amazing-school-mark";
 import {
+  inferGenderFromName,
+  teacherTitle,
+} from "@/lib/reports/gendered-titles";
+import {
   findCertificateLevel,
   findGrade,
 } from "@/lib/reports/certificate-levels";
@@ -53,7 +57,10 @@ const T = {
     hours: (h: number) => `Carga horária total: ${h} horas.`,
     gradeLabel: "Conceito",
     issuedOn: "Data de emissão",
-    responsible: "Professor(a) responsável",
+    // Filled in dynamically below from teacher.fullName →
+    // teacherTitle() so pt-BR certificates read "Professor
+    // Responsável" or "Professora Responsável" correctly.
+    responsible: "",
     certificateNumber: "Certificado nº",
   },
   en: {
@@ -550,7 +557,11 @@ export default async function CertificatePrintPage({
                 (lang === "pt-BR" ? "Professor(a)" : "Instructor")}
             </div>
             <p style={{ fontSize: "9pt", color: "#6b7280", marginTop: 2 }}>
-              {dict.responsible}
+              {/* Responsible teacher title — gendered in pt-BR,
+                  plain "Teaching instructor" in English. */}
+              {lang === "pt-BR"
+                ? `${teacherTitle(inferGenderFromName(data.teacher.fullName))} Responsável`
+                : "Teaching instructor"}
             </p>
           </div>
 
