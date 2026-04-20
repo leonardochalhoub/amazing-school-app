@@ -3,24 +3,26 @@ import { cookies } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
 
 /**
- * GET /api/demo-signout
+ * POST /api/demo-signout
  *
- * Used by the middleware to evict a lingering demo session when the
- * visitor navigates to /login or /signup. Calling supabase.auth.signOut
- * from middleware doesn't reliably clear cookies in the browser — the
- * request cookies get mutated but the response the user sees still
- * carries the old sb-* tokens. A dedicated route handler runs in a
- * normal server context where both the Supabase cookie bridge AND the
- * response Set-Cookie headers line up, so the signOut actually takes
- * effect and the redirect that follows reaches /login with no session.
+ * Signs the current demo session out and redirects (303) to either
+ * /login (default) or a ?to=/... path override. The middleware bounces
+ * demo users off /login and /signup here when they try to sign into
+ * a real account, and the DemoSwitchBar's "Exit & create account"
+ * button submits here to end the demo.
+ *
+ * POST-only because this route has a side effect (clearing cookies).
+ * A GET variant would get prefetched by Next.js <Link> hover /
+ * autoprefetch, quietly killing the demo session before the user
+ * actually clicked anything.
  */
-export async function GET(request: NextRequest) {
+export async function POST(request: NextRequest) {
   const supabase = await createClient();
   await supabase.auth.signOut();
-  // Accept an optional ?to= override so the demo banner's "Back to
-  // home" button can drop the visitor on the landing page with its
-  // signup CTA instead of the login form. Paths only — never allow
-  // an external redirect target.
+  // Accept an optional ?to= override so the demo banner's "Exit"
+  // button can drop the visitor on the landing page with its signup
+  // CTA instead of the login form. Paths only — never allow an
+  // external redirect target.
   const raw = request.nextUrl.searchParams.get("to");
   const safePath = raw && raw.startsWith("/") && !raw.startsWith("//")
     ? raw

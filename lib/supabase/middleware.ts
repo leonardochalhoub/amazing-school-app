@@ -50,16 +50,27 @@ export async function updateSession(request: NextRequest) {
     // Demo sessions bleed through the landing page otherwise: a
     // visitor who explored as Luiza, closed the tab, and then hit
     // "Sign in" would be redirected straight back into Luiza without
-    // ever seeing the login form. Bounce demo users to a dedicated
-    // signout endpoint that properly clears sb-* cookies before
-    // landing them on /login — doing signOut() here in middleware
-    // doesn't reliably clear the browser cookies in the same cycle.
+    // ever seeing the login form. When a demo user hits /login or
+    // /signup we null every sb-* cookie on the redirect response so
+    // the browser forgets the session, then let them land on the
+    // form. This runs inline (no side-effect sub-route) because a
+    // GET route with side effects gets clobbered by Next.js Link
+    // prefetch.
     const isDemoEmail = (user.email ?? "").toLowerCase().startsWith("demo.");
     if (isDemoEmail) {
       const url = request.nextUrl.clone();
-      url.pathname = "/api/demo-signout";
-      url.search = "";
-      return NextResponse.redirect(url);
+      const redirect = NextResponse.redirect(url);
+      for (const c of request.cookies.getAll()) {
+        if (c.name.startsWith("sb-")) {
+          redirect.cookies.set({
+            name: c.name,
+            value: "",
+            path: "/",
+            maxAge: 0,
+          });
+        }
+      }
+      return redirect;
     }
 
     const { data: profile } = await supabase

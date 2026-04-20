@@ -115,28 +115,39 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
         </div>
       </div>
 
-      <div className="relative" style={{ height: H }}>
-        {/* Horizontal gridlines + left-side integer labels. One
-            rung per integer up to yMax so the reader can count
-            completions against the axis. Gridline positions use the
-            same scale as bar heights so the n=yMax line sits
-            exactly at the top of the tallest bar. */}
+      <div className="relative pl-7" style={{ height: H }}>
+        {/* Horizontal gridlines — one rung per integer up to yMax so
+            the reader can count completions against the axis.
+            Gridline positions use the same unit as bar heights so
+            the n=yMax line sits at the top of a max-day bar. */}
         {Array.from({ length: yMax + 1 }, (_, n) => n).map((n) => (
           <div
             key={n}
             aria-hidden
-            className="absolute inset-x-0 flex items-center"
+            className="absolute right-0 left-7 border-t border-border/40"
             style={{ bottom: `${n * unitPx}px` }}
+          />
+        ))}
+        {/* Y-axis integer labels — rendered in the left 28px gutter.
+            Positioned by transform so the baseline sits on the
+            matching gridline, not 6px above it. */}
+        {Array.from({ length: yMax + 1 }, (_, n) => n).map((n) => (
+          <span
+            key={`label-${n}`}
+            aria-hidden
+            className="absolute left-0 w-6 text-right text-[10px] font-medium tabular-nums text-muted-foreground"
+            style={{
+              bottom: `${n * unitPx}px`,
+              transform: "translateY(50%)",
+              lineHeight: 1,
+            }}
           >
-            <span className="-ml-1 w-6 shrink-0 text-right text-[9px] tabular-nums text-muted-foreground/60">
-              {n}
-            </span>
-            <div className="h-px flex-1 border-t border-border/25" />
-          </div>
+            {n}
+          </span>
         ))}
 
         <div
-          className="relative grid h-full items-end pl-7"
+          className="relative grid h-full items-end"
           style={{
             gap: buckets.length > 200 ? 0 : buckets.length > 80 ? 1 : 2,
             gridTemplateColumns: `repeat(${buckets.length}, minmax(0, 1fr))`,
@@ -208,22 +219,22 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
       {/* Month tick strip — positions labels along the x-axis so the
           user can read "this busy patch was in May 2025" at a glance
           instead of only seeing the two edge dates. */}
-      <div
-        className="relative h-4 text-[9px] text-muted-foreground tabular-nums"
-        aria-hidden
-      >
-        {monthTicks.map(({ i, label }) => (
-          <span
-            key={`${i}-${label}`}
-            className="absolute whitespace-nowrap"
-            style={{
-              left: `${(i / Math.max(1, buckets.length - 1)) * 100}%`,
-              transform: "translateX(-50%)",
-            }}
-          >
-            {label}
-          </span>
-        ))}
+      <div className="flex h-4 text-[9px] text-muted-foreground tabular-nums">
+        <div aria-hidden className="w-7 shrink-0" />
+        <div className="relative h-4 flex-1" aria-hidden>
+          {monthTicks.map(({ i, label }) => (
+            <span
+              key={`${i}-${label}`}
+              className="absolute whitespace-nowrap"
+              style={{
+                left: `${(i / Math.max(1, buckets.length - 1)) * 100}%`,
+                transform: "translateX(-50%)",
+              }}
+            >
+              {label}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );
