@@ -252,7 +252,7 @@ export default async function SysadminPage() {
             All teachers ({allTeachers.length})
           </h2>
           <p className="text-xs text-muted-foreground">
-            Sorted by name · no revenue data
+            Sorted by join date (newest first) · no revenue data
           </p>
         </div>
         <div className="overflow-x-auto rounded-xl border border-border">
@@ -280,7 +280,9 @@ export default async function SysadminPage() {
                   </td>
                 </tr>
               ) : null}
-              {allTeachers.map((t) => (
+              {[...allTeachers]
+                .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+                .map((t) => (
                 <tr key={t.id} className="border-t">
                   <td className="px-4 py-2 font-medium">
                     {titleCase(t.name)}
@@ -297,8 +299,14 @@ export default async function SysadminPage() {
                   <td className="px-4 py-2 text-right tabular-nums">
                     {t.activeStudentsLast30d}
                   </td>
-                  <td className="px-4 py-2 text-right text-xs text-muted-foreground">
-                    {t.createdAt.slice(0, 10)}
+                  <td className="px-4 py-2 text-right text-xs text-muted-foreground tabular-nums whitespace-nowrap">
+                    {new Date(t.createdAt).toLocaleString("pt-BR", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}
                   </td>
                 </tr>
               ))}
