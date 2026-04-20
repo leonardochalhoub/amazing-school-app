@@ -1,9 +1,10 @@
 "use client";
 
 import { useMemo, useState, useTransition } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { Check, Clock, Loader2 } from "lucide-react";
+import { Check, Clock, FileText, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import {
   cyclePaymentState,
@@ -276,7 +277,14 @@ export function ManagementGrid({ months, rows }: Props) {
               return (
                 <tr key={r.roster_student_id} className="border-t">
                   <td className="sticky left-0 z-10 whitespace-nowrap bg-background px-3 py-2 font-medium">
-                    {r.student_name}
+                    {/* Click the name to jump into the per-student page,
+                        where the curriculum PDF + receipts live. */}
+                    <Link
+                      href={`/teacher/students/${r.roster_student_id}`}
+                      className="hover:text-primary hover:underline"
+                    >
+                      {r.student_name}
+                    </Link>
                     {!r.has_auth ? (
                       <span className="ml-1 text-[10px] text-muted-foreground">
                         (invite pending)
@@ -443,6 +451,22 @@ function PaymentCell({
           <Clock className="h-3 w-3" />
         ) : null}
       </button>
+      {/* Receipt download — visible on hover whenever the month is
+          paid. stopPropagation so clicking the doc icon doesn't also
+          cycle the payment state. */}
+      {state === "paid" && payment?.id ? (
+        <a
+          href={`/print/receipt/${payment.id}?autoprint=1`}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          title="Baixar recibo"
+          aria-label={`Baixar recibo · ${studentName} · ${monthLong(month)}`}
+          className="absolute -right-1.5 -top-1.5 z-20 hidden h-4 w-4 items-center justify-center rounded-full bg-slate-900 text-white opacity-0 shadow-sm transition-opacity hover:bg-slate-700 group-hover:flex group-hover:opacity-100"
+        >
+          <FileText className="h-2.5 w-2.5" />
+        </a>
+      ) : null}
       {locked ? null : (
         <PaymentTooltip
           state={state}

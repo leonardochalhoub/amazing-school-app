@@ -135,6 +135,7 @@ export interface RosterStudent {
   billing_day: number | null;
   billing_starts_on: string | null;
   ended_on: string | null;
+  receipts_visible_to_student: boolean;
   created_at: string;
   updated_at: string;
 }

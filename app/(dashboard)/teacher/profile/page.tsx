@@ -5,10 +5,13 @@ import { AvatarUploader } from "@/components/shared/avatar-uploader";
 import { ChangePasswordCard } from "@/components/shared/change-password-card";
 import { PrivacyNotice } from "@/components/shared/privacy-notice";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, GraduationCap, ArrowUpRight, Image as ImageIcon } from "lucide-react";
+import { BookOpen, GraduationCap, ArrowUpRight, Image as ImageIcon, PenTool } from "lucide-react";
 import { redirect } from "next/navigation";
 import { isLogoEligible, SCHOOL_LOGO_SRC } from "@/lib/school-logo";
 import { SchoolLogoToggle } from "@/components/teacher/school-logo-toggle";
+import { SignatureUploader } from "@/components/teacher/signature-uploader";
+import { CefrExplainerCard } from "@/components/reports/cefr-explainer-card";
+import { getSignatureSignedUrl } from "@/lib/signature";
 
 export default async function TeacherProfilePage() {
   const supabase = await createClient();
@@ -21,7 +24,7 @@ export default async function TeacherProfilePage() {
   const { data: profile } = await admin
     .from("profiles")
     .select(
-      "full_name, avatar_url, role, school_logo_enabled, school_logo_url",
+      "full_name, avatar_url, role, school_logo_enabled, school_logo_url, signature_url, signature_enabled",
     )
     .eq("id", user.id)
     .maybeSingle();
@@ -35,6 +38,12 @@ export default async function TeacherProfilePage() {
     (profile as { school_logo_enabled?: boolean }).school_logo_enabled === true;
   const uploadedLogoPath =
     (profile as { school_logo_url?: string | null }).school_logo_url ?? null;
+  const signatureEnabled =
+    (profile as { signature_enabled?: boolean }).signature_enabled === true;
+  const signatureSignedUrl = (profile as { signature_url?: string | null })
+    .signature_url
+    ? await getSignatureSignedUrl(admin, user.id)
+    : null;
 
   return (
     <div className="space-y-6 max-w-2xl">
@@ -82,6 +91,24 @@ export default async function TeacherProfilePage() {
           />
         </CardContent>
       </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-base">
+            <PenTool className="h-4 w-4 text-primary" />
+            Assinatura digital
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <SignatureUploader
+            initialEnabled={signatureEnabled}
+            initialSignedUrl={signatureSignedUrl}
+            teacherName={profile.full_name}
+          />
+        </CardContent>
+      </Card>
+
+      <CefrExplainerCard />
 
       <Card>
         <CardHeader>

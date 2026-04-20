@@ -1,5 +1,6 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isTeacherRole } from "@/lib/auth/roles";
@@ -7,6 +8,7 @@ import { isOwner } from "@/lib/auth/roles";
 import { findMeta as findLessonMeta } from "@/lib/content/loader";
 import { fromAssignmentSlug, getMusic } from "@/lib/content/music";
 import { yearBounds, type Year } from "@/lib/reports/period";
+import { getSignatureSignedUrl } from "@/lib/signature";
 import type { StudentPaymentRow } from "@/lib/payments-types";
 
 /**
@@ -26,6 +28,11 @@ interface TeacherBrand {
   email: string | null;
   schoolLogoEnabled: boolean;
   schoolLogoUrl: string | null;
+  /** Signed URL for the teacher's signature image, or null when the
+      teacher hasn't opted in / hasn't uploaded. Expires ~10 min
+      after the report is rendered. */
+  signatureUrl: string | null;
+  signatureEnabled: boolean;
 }
 
 async function loadTeacherBrand(
@@ -34,9 +41,20 @@ async function loadTeacherBrand(
 ): Promise<TeacherBrand> {
   const { data } = await admin
     .from("profiles")
-    .select("id, full_name, email, school_logo_enabled, school_logo_url")
+    .select(
+      "id, full_name, email, school_logo_enabled, school_logo_url, signature_url, signature_enabled",
+    )
     .eq("id", teacherId)
     .maybeSingle();
+  const signatureEnabled =
+    (data as { signature_enabled?: boolean } | null)?.signature_enabled ===
+    true;
+  const hasUpload =
+    !!(data as { signature_url?: string | null } | null)?.signature_url;
+  const signatureUrl =
+    signatureEnabled && hasUpload
+      ? await getSignatureSignedUrl(admin, teacherId)
+      : null;
   return {
     id: teacherId,
     fullName: (data as { full_name?: string } | null)?.full_name ?? null,
@@ -46,6 +64,8 @@ async function loadTeacherBrand(
       false,
     schoolLogoUrl:
       (data as { school_logo_url?: string } | null)?.school_logo_url ?? null,
+    signatureUrl,
+    signatureEnabled,
   };
 }
 
@@ -114,9 +134,7 @@ export async function getStudentCurriculumReport(
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (!isTeacherRole((profile as { role?: string } | null)?.role)) {
-    return { error: "Acesso apenas para professores" };
-  }
+  const role = (profile as { role?: string } | null)?.role ?? "";
 
   const { data: rosterRaw, error } = await admin
     .from("roster_students")
@@ -139,8 +157,17 @@ export async function getStudentCurriculumReport(
     created_at: string;
     classrooms: { name: string } | { name: string }[] | null;
   };
-  if (roster.teacher_id !== user.id) {
-    return { error: "Aluno não pertence a este professor" };
+
+  // Dual-role access: a teacher sees curricula for their own roster,
+  // and a student sees their own curriculum (matched by auth_user_id).
+  const isTeacher = isTeacherRole(role);
+  const isSelf = roster.auth_user_id === user.id;
+  if (isTeacher) {
+    if (roster.teacher_id !== user.id) {
+      return { error: "Aluno não pertence a este professor" };
+    }
+  } else if (!isSelf) {
+    return { error: "Sem permissão" };
   }
 
   const teacher = await loadTeacherBrand(admin, roster.teacher_id);
@@ -717,9 +744,7 @@ export async function getReceiptData(
     .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  if (!isTeacherRole((profile as { role?: string } | null)?.role)) {
-    return { error: "Acesso apenas para professores" };
-  }
+  const role = (profile as { role?: string } | null)?.role ?? "";
 
   const { data: paymentRaw } = await admin
     .from("student_payments")
@@ -728,9 +753,6 @@ export async function getReceiptData(
     .maybeSingle();
   if (!paymentRaw) return { error: "Pagamento não encontrado" };
   const payment = paymentRaw as StudentPaymentRow;
-  if (payment.teacher_id !== user.id) {
-    return { error: "Sem permissão sobre este pagamento" };
-  }
   if (!payment.paid) {
     return {
       error:
@@ -741,7 +763,7 @@ export async function getReceiptData(
   const { data: rosterRaw } = await admin
     .from("roster_students")
     .select(
-      "id, full_name, email, classroom_id, monthly_tuition_cents, classrooms(name)",
+      "id, full_name, email, classroom_id, monthly_tuition_cents, auth_user_id, receipts_visible_to_student, classrooms(name)",
     )
     .eq("id", payment.roster_student_id)
     .maybeSingle();
@@ -752,8 +774,27 @@ export async function getReceiptData(
     email: string | null;
     classroom_id: string | null;
     monthly_tuition_cents: number | null;
+    auth_user_id: string | null;
+    receipts_visible_to_student: boolean;
     classrooms: { name: string } | { name: string }[] | null;
   };
+
+  // Dual-role access. Teacher sees their own roster's receipts; the
+  // linked student sees their own when their teacher has enabled
+  // receipts_visible_to_student. Every other caller is rejected.
+  const isTeacher = isTeacherRole(role);
+  if (isTeacher) {
+    if (payment.teacher_id !== user.id) {
+      return { error: "Sem permissão sobre este pagamento" };
+    }
+  } else {
+    if (roster.auth_user_id !== user.id) {
+      return { error: "Sem permissão" };
+    }
+    if (!roster.receipts_visible_to_student) {
+      return { error: "Recibo não liberado pelo professor" };
+    }
+  }
 
   const teacher = await loadTeacherBrand(admin, payment.teacher_id);
   const classroom = Array.isArray(roster.classrooms)
@@ -848,6 +889,154 @@ export async function listPaidInvoicesForStudent(
     paymentId: p.id,
     billingMonth: p.billing_month.slice(0, 10),
     amountCents: p.amount_cents ?? fallbackCents,
+    paidAt: p.paid_at,
+  }));
+}
+
+// -----------------------------------------------------------------------------
+// Per-student "receipts visible to student" toggle — owned by teacher.
+// -----------------------------------------------------------------------------
+
+export async function setReceiptsVisibleToStudent(
+  rosterStudentId: string,
+  visible: boolean,
+): Promise<{ success: true } | { error: string }> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Não autenticado" };
+
+  const admin = createAdminClient();
+  const { data: profile } = await admin
+    .from("profiles")
+    .select("role")
+    .eq("id", user.id)
+    .maybeSingle();
+  if (!isTeacherRole((profile as { role?: string } | null)?.role)) {
+    return { error: "Acesso apenas para professores" };
+  }
+
+  const { data: roster } = await admin
+    .from("roster_students")
+    .select("teacher_id")
+    .eq("id", rosterStudentId)
+    .maybeSingle();
+  if (!roster) return { error: "Aluno não encontrado" };
+  if ((roster as { teacher_id: string }).teacher_id !== user.id) {
+    return { error: "Sem permissão" };
+  }
+
+  const { error } = await admin
+    .from("roster_students")
+    .update({ receipts_visible_to_student: visible })
+    .eq("id", rosterStudentId);
+  if (error) return { error: error.message };
+
+  revalidatePath(`/teacher/students/${rosterStudentId}`);
+  revalidatePath("/student/profile");
+  return { success: true as const };
+}
+
+// -----------------------------------------------------------------------------
+// Student-side: resolve own roster + list receipts (when visible).
+// -----------------------------------------------------------------------------
+
+export interface MyRosterIdentity {
+  rosterId: string | null;
+  receiptsVisible: boolean;
+  billingStartsOn: string | null;
+  createdAt: string | null;
+}
+
+export async function getMyRosterIdentity(): Promise<MyRosterIdentity> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) {
+    return {
+      rosterId: null,
+      receiptsVisible: false,
+      billingStartsOn: null,
+      createdAt: null,
+    };
+  }
+  const admin = createAdminClient();
+  const { data } = await admin
+    .from("roster_students")
+    .select(
+      "id, receipts_visible_to_student, billing_starts_on, created_at",
+    )
+    .eq("auth_user_id", user.id)
+    .is("deleted_at", null)
+    .limit(1)
+    .maybeSingle();
+  if (!data) {
+    return {
+      rosterId: null,
+      receiptsVisible: false,
+      billingStartsOn: null,
+      createdAt: null,
+    };
+  }
+  const row = data as {
+    id: string;
+    receipts_visible_to_student: boolean;
+    billing_starts_on: string | null;
+    created_at: string | null;
+  };
+  return {
+    rosterId: row.id,
+    receiptsVisible: row.receipts_visible_to_student,
+    billingStartsOn: row.billing_starts_on,
+    createdAt: row.created_at,
+  };
+}
+
+/**
+ * Student-facing paid-invoices list. Returns an empty array unless
+ * the teacher has toggled `receipts_visible_to_student = true`.
+ */
+export async function listMyReceipts(): Promise<PaidInvoiceRow[]> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return [];
+  const admin = createAdminClient();
+  const { data: roster } = await admin
+    .from("roster_students")
+    .select("id, receipts_visible_to_student, monthly_tuition_cents")
+    .eq("auth_user_id", user.id)
+    .is("deleted_at", null)
+    .limit(1)
+    .maybeSingle();
+  if (!roster) return [];
+  const r = roster as {
+    id: string;
+    receipts_visible_to_student: boolean;
+    monthly_tuition_cents: number | null;
+  };
+  if (!r.receipts_visible_to_student) return [];
+
+  const { data: pays } = await admin
+    .from("student_payments")
+    .select("id, billing_month, amount_cents, paid, paid_at")
+    .eq("roster_student_id", r.id)
+    .eq("paid", true)
+    .order("billing_month", { ascending: false })
+    .limit(240);
+  return ((pays ?? []) as Array<{
+    id: string;
+    billing_month: string;
+    amount_cents: number | null;
+    paid: boolean;
+    paid_at: string | null;
+  }>).map((p) => ({
+    paymentId: p.id,
+    billingMonth: p.billing_month.slice(0, 10),
+    amountCents: p.amount_cents ?? r.monthly_tuition_cents ?? 0,
     paidAt: p.paid_at,
   }));
 }

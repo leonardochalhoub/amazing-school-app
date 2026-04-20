@@ -207,7 +207,9 @@ export default async function ReceiptPrintPage({
           </div>
         </section>
 
-        {/* Signature block */}
+        {/* Signature block — teacher side can carry the digitised
+            signature image when the teacher opted in; otherwise only
+            the printed name is shown. */}
         <section
           style={{
             marginTop: 42,
@@ -220,8 +222,24 @@ export default async function ReceiptPrintPage({
           <div style={{ flex: 1, textAlign: "center" }}>
             <div
               style={{
+                height: 56,
+                display: "flex",
+                alignItems: "flex-end",
+                justifyContent: "center",
+              }}
+            >
+              {data.teacher.signatureEnabled && data.teacher.signatureUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={data.teacher.signatureUrl}
+                  alt={`Assinatura de ${data.teacher.fullName ?? "professor"}`}
+                  style={{ maxHeight: 50, maxWidth: "100%", objectFit: "contain" }}
+                />
+              ) : null}
+            </div>
+            <div
+              style={{
                 borderTop: "1px solid #9ca3af",
-                marginTop: 24,
                 paddingTop: 6,
                 fontSize: "9.5pt",
               }}
@@ -232,10 +250,10 @@ export default async function ReceiptPrintPage({
             </div>
           </div>
           <div style={{ flex: 1, textAlign: "center" }}>
+            <div style={{ height: 56 }} />
             <div
               style={{
                 borderTop: "1px solid #9ca3af",
-                marginTop: 24,
                 paddingTop: 6,
                 fontSize: "9.5pt",
               }}

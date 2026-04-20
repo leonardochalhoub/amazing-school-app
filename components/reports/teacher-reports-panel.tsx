@@ -39,9 +39,7 @@ export function TeacherReportsPanel({ seedDates }: TeacherReportsPanelProps) {
           <div className="mt-3">
             <YearSelector
               years={years}
-              buildHref={(y) =>
-                `/print/teacher/cohort?year=${y}&autoprint=1`
-              }
+              hrefTemplate="/print/teacher/cohort?year={year}&autoprint=1"
               label="Baixar visão"
             />
           </div>
@@ -60,9 +58,7 @@ export function TeacherReportsPanel({ seedDates }: TeacherReportsPanelProps) {
             <YearSelector
               years={years}
               includeAll={false}
-              buildHref={(y) =>
-                `/print/teacher/finance?year=${y}&autoprint=1`
-              }
+              hrefTemplate="/print/teacher/finance?year={year}&autoprint=1"
               label="Baixar financeiro"
             />
           </div>

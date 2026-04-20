@@ -7,6 +7,11 @@ import { PrivacyNotice } from "@/components/shared/privacy-notice";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, ArrowUpRight, Calendar } from "lucide-react";
 import { redirect } from "next/navigation";
+import { MyDocumentsCard } from "@/components/reports/my-documents-card";
+import { CertificatesPanel } from "@/components/reports/certificates-panel";
+import { CefrExplainerCard } from "@/components/reports/cefr-explainer-card";
+import { getMyRosterIdentity, listMyReceipts } from "@/lib/actions/reports";
+import { listMyCertificates } from "@/lib/actions/certificates";
 
 export default async function StudentProfilePage() {
   const supabase = await createClient();
@@ -22,12 +27,25 @@ export default async function StudentProfilePage() {
 
   if (!profile) redirect("/login");
 
-  const signedUrl = await resolveMyAvatarUrl(supabase, user.id);
-  const { data: rosterSelf } = await admin
-    .from("roster_students")
-    .select("age_group, gender, billing_starts_on, ended_on, created_at")
-    .eq("auth_user_id", user.id)
-    .maybeSingle();
+  const [
+    signedUrl,
+    rosterSelfRes,
+    myRoster,
+    myReceipts,
+    myCertificates,
+  ] = await Promise.all([
+    resolveMyAvatarUrl(supabase, user.id),
+    admin
+      .from("roster_students")
+      .select("age_group, gender, billing_starts_on, ended_on, created_at")
+      .eq("auth_user_id", user.id)
+      .maybeSingle(),
+    getMyRosterIdentity(),
+    listMyReceipts(),
+    listMyCertificates(),
+  ]);
+  const { data: rosterSelf } = rosterSelfRes;
+  const studentFullName = profile.full_name;
   const roster = rosterSelf as
     | {
         age_group: "kid" | "teen" | "adult" | null;
@@ -93,6 +111,29 @@ export default async function StudentProfilePage() {
       <ChangePasswordCard
         isDemo={(user.email ?? "").toLowerCase().startsWith("demo.")}
       />
+
+      {/* Meu currículo + (opcional) meus recibos. Só aparece quando
+          o aluno está vinculado a um registro de aluno (roster). */}
+      {myRoster.rosterId ? (
+        <>
+          <MyDocumentsCard
+            rosterId={myRoster.rosterId}
+            rosterCreatedAt={myRoster.createdAt}
+            billingStartsOn={myRoster.billingStartsOn}
+            receiptsVisible={myRoster.receiptsVisible}
+            receipts={myReceipts}
+          />
+          <CertificatesPanel
+            rosterStudentId={myRoster.rosterId}
+            studentName={studentFullName}
+            defaultStartOn={myRoster.billingStartsOn ?? myRoster.createdAt}
+            certificates={myCertificates}
+            readOnly
+          />
+        </>
+      ) : null}
+
+      <CefrExplainerCard />
 
       {startingDate ? (
         <Card>

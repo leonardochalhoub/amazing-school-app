@@ -9,9 +9,11 @@ interface YearSelectorProps {
   years: number[];
   /** Currently-selected year (undefined → default to latest). */
   initial?: number | "all";
-  /** Called with the URL to open in a new tab. Implementer builds
-      the URL using the chosen year so the print page picks it up. */
-  buildHref: (year: number | "all") => string;
+  /** URL template containing `{year}` which will be substituted with
+      the chosen year. A template string is used instead of a closure
+      because React Server Components cannot pass plain functions
+      across to client components. */
+  hrefTemplate: string;
   /** Button label (usually "Baixar PDF" / "Download PDF"). */
   label?: string;
   /** Whether to include an "All time" option. Default true. */
@@ -28,7 +30,7 @@ interface YearSelectorProps {
 export function YearSelector({
   years,
   initial,
-  buildHref,
+  hrefTemplate,
   label = "Baixar PDF",
   includeAll = true,
   className,
@@ -78,7 +80,7 @@ export function YearSelector({
         ) : null}
       </div>
       <a
-        href={buildHref(year)}
+        href={hrefTemplate.replaceAll("{year}", String(year))}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground shadow-sm hover:bg-primary/90"

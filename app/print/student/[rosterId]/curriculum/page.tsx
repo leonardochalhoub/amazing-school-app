@@ -126,6 +126,56 @@ export default async function StudentCurriculumPrintPage({
         </section>
       ) : null}
 
+      {/* Teacher sign-off — optional signature image + printed name,
+          anchored at the top of the body so it reads as an official
+          document endorsement regardless of page count. */}
+      <section className="report-avoid-break" style={{ marginTop: 4 }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "flex-end",
+            gap: 12,
+          }}
+        >
+          <div style={{ textAlign: "right" }}>
+            {teacher.signatureEnabled && teacher.signatureUrl ? (
+              <div
+                style={{
+                  height: 44,
+                  display: "flex",
+                  alignItems: "flex-end",
+                  justifyContent: "flex-end",
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={teacher.signatureUrl}
+                  alt={`Assinatura de ${teacher.fullName ?? "professor"}`}
+                  style={{
+                    maxHeight: 40,
+                    maxWidth: 200,
+                    objectFit: "contain",
+                  }}
+                />
+              </div>
+            ) : null}
+            <div
+              style={{
+                borderTop: "1px solid #9ca3af",
+                paddingTop: 4,
+                fontSize: "9.5pt",
+                minWidth: 200,
+              }}
+            >
+              {teacher.fullName ?? "Professor(a) responsável"}
+              <br />
+              <span className="report-muted">Professor(a) responsável</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Curriculum table */}
       <section>
         <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500">

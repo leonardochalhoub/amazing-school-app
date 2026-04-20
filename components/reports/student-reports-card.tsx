@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, Receipt } from "lucide-react";
 import { YearSelector } from "@/components/reports/year-selector";
 import { PdfButton } from "@/components/reports/pdf-button";
+import { ReceiptsVisibilityToggle } from "@/components/reports/receipts-visibility-toggle";
 import { availableYears } from "@/lib/reports/period";
 import { formatBRL } from "@/lib/reports/brl";
 import type { PaidInvoiceRow } from "@/lib/actions/reports";
@@ -11,6 +12,7 @@ interface StudentReportsCardProps {
   rosterCreatedAt: string | null;
   billingStartsOn: string | null;
   paidInvoices: PaidInvoiceRow[];
+  receiptsVisibleToStudent: boolean;
 }
 
 const MONTHS_PT = [
@@ -43,6 +45,7 @@ export function StudentReportsCard({
   rosterCreatedAt,
   billingStartsOn,
   paidInvoices,
+  receiptsVisibleToStudent,
 }: StudentReportsCardProps) {
   const years = availableYears([
     billingStartsOn,
@@ -69,9 +72,7 @@ export function StudentReportsCard({
           </div>
           <YearSelector
             years={years}
-            buildHref={(y) =>
-              `/print/student/${rosterId}/curriculum?year=${y}&autoprint=1`
-            }
+            hrefTemplate={`/print/student/${rosterId}/curriculum?year={year}&autoprint=1`}
             label="Baixar currículo"
           />
         </div>
@@ -87,6 +88,10 @@ export function StudentReportsCard({
               Um recibo formal por mensalidade quitada.
             </p>
           </div>
+          <ReceiptsVisibilityToggle
+            rosterId={rosterId}
+            initialVisible={receiptsVisibleToStudent}
+          />
           {paidInvoices.length === 0 ? (
             <p className="rounded-md border border-dashed border-border px-3 py-4 text-xs text-muted-foreground">
               Nenhuma mensalidade paga até o momento. Marque uma célula
