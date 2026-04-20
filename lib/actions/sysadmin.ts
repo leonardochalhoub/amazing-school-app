@@ -257,12 +257,19 @@ export async function getSysadminOverview(): Promise<
   const profiles = (profilesRes.data ?? []) as Array<{
     id: string;
     full_name: string;
-    role: "teacher" | "student";
+    role: "teacher" | "student" | "owner";
     avatar_url: string | null;
     created_at: string;
   }>;
 
-  const teachers = profiles.filter((p) => p.role === "teacher");
+  // Owners are super-teachers for every analytics bucket — they run
+  // classrooms like any other teacher, so treating role='owner' as
+  // a kind of teacher here is what keeps Leo visible in the AI-tutor
+  // usage / time-on-site / all-teachers tables. The sole separate
+  // role we track in the profile is "student".
+  const teachers = profiles.filter(
+    (p) => p.role === "teacher" || p.role === "owner",
+  );
   const students = profiles.filter((p) => p.role === "student");
   const demoAccounts = profiles.filter((p) =>
     p.full_name ? false : false,

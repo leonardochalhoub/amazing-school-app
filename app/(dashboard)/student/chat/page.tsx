@@ -22,13 +22,12 @@ export default async function ChatPage() {
     .single();
 
   if (!conversation) {
-    // Resolve a classroom to anchor the conversation to. Students
-    // get it from classroom_members (the classrooms they belong to);
-    // teachers have no membership row, so fall back to the first
-    // classroom they OWN. Without this fallback teacher chats never
-    // get a conversationId and the chat API silently drops the
-    // messages — the sysadmin AI tutor usage table was reading
-    // empty for teachers as a result.
+    // Resolve the classroom_id that anchors the conversation row.
+    // Classrooms are NOT semantically linked to the AI tutor — this
+    // is only here because the conversations table's NOT NULL
+    // constraint requires a value. Students pick it up from their
+    // classroom_members row; teachers / owners fall back to the
+    // first classroom they own (classrooms.teacher_id = auth.uid()).
     let classroomId: string | null = null;
     const { data: membership } = await supabase
       .from("classroom_members")
