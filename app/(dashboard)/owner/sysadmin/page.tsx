@@ -472,7 +472,7 @@ export default async function SysadminPage() {
             descending · top 10 shown, click Show all for the rest.
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-2">
           <div className="space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Lessons ({topAssigned.lessons.length})
@@ -499,7 +499,7 @@ export default async function SysadminPage() {
             Days = distinct calendar days the user sent a message.
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-2">
           <div className="space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Teachers ({aiChatUsage.teachers.length})
@@ -529,12 +529,12 @@ export default async function SysadminPage() {
           </p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-2">
           <div className="space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Teachers
             </h3>
-            <div className="overflow-x-auto rounded-xl border">
+            <div className="overflow-x-auto rounded-xl border border-border">
               <table className="min-w-[440px] w-full text-sm">
                 <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
                   <tr>
@@ -578,7 +578,7 @@ export default async function SysadminPage() {
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Students
             </h3>
-            <div className="overflow-x-auto rounded-xl border">
+            <div className="overflow-x-auto rounded-xl border border-border">
               <table className="min-w-[520px] w-full text-sm">
                 <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
                   <tr>
