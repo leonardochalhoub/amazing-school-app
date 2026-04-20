@@ -1087,15 +1087,30 @@ export async function getSysadminOverview(): Promise<
   const classroomsWithoutStudents =
     realClassroomIds.size - realClassroomMemberIds.size;
   const rosterWithoutAuthUser = realRoster.filter((r) => !r.auth_user_id).length;
-  // Storage bytes — list prefix "avatars" is expensive to iterate server side;
-  // we skip the exact byte count and just report object count via list().
+  // Storage bytes — list prefix "avatars" is expensive to iterate
+  // server side; we skip the exact byte count and just report object
+  // count via list(). Entries are keyed by `${userId}.webp` for auth
+  // users and `roster/${rosterId}.webp` for roster avatars, so we
+  // match against realUserIds / realRoster to drop Leo's + demo
+  // avatars from the health count.
   let storageAvatarCount = 0;
   const storageAvatarBytes = 0;
+  const realRosterIds = new Set(realRoster.map((r) => r.id));
   try {
     const { data: list } = await admin.storage
       .from("avatars")
       .list("", { limit: 1000 });
-    storageAvatarCount = list?.length ?? 0;
+    for (const f of list ?? []) {
+      const name = (f as { name?: string }).name ?? "";
+      if (!name) continue;
+      if (name.startsWith("roster/")) {
+        const rosterId = name.slice("roster/".length).replace(/\.webp$/, "");
+        if (realRosterIds.has(rosterId)) storageAvatarCount += 1;
+      } else {
+        const userId = name.replace(/\.webp$/, "");
+        if (realUserIds.has(userId)) storageAvatarCount += 1;
+      }
+    }
   } catch {
     /* no-op */
   }
