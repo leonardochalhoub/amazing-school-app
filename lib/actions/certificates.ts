@@ -68,6 +68,14 @@ const InputSchema = z.object({
     .max(10_000)
     .optional()
     .nullable(),
+  /** Optional override — if the teacher picks a specific emission
+      date in the dialog, we stamp issued_at to that date (noon UTC
+      so the day-part is stable in every locale). */
+  issuedOn: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .optional()
+    .or(z.literal("")),
 });
 
 export async function createCertificate(input: z.input<typeof InputSchema>) {
@@ -111,6 +119,10 @@ export async function createCertificate(input: z.input<typeof InputSchema>) {
     return { error: "Sem permissão" };
   }
 
+  const issuedAtISO = parsed.data.issuedOn
+    ? `${parsed.data.issuedOn}T12:00:00Z`
+    : undefined;
+
   const { data, error } = await admin
     .from("certificates")
     .insert({
@@ -123,6 +135,7 @@ export async function createCertificate(input: z.input<typeof InputSchema>) {
       title: parsed.data.title || null,
       remarks: parsed.data.remarks || null,
       total_hours: parsed.data.totalHours ?? null,
+      ...(issuedAtISO ? { issued_at: issuedAtISO } : {}),
     })
     .select("id")
     .single();
@@ -131,6 +144,56 @@ export async function createCertificate(input: z.input<typeof InputSchema>) {
   revalidatePath(`/teacher/students/${parsed.data.rosterStudentId}`);
   revalidatePath("/student/profile");
   return { success: true as const, id: data.id as string };
+}
+
+/**
+ * Estimate the number of on-platform hours a student has clocked:
+ * sum of `estimated_minutes` on every lesson they finished, plus a
+ * 5-minute floor per completed music entry (the songs don't carry a
+ * minutes field — 5 min is the roughly-correct average for a full
+ * play-along). Returns minutes so the caller can decide how to
+ * render the number.
+ */
+export async function estimatePlatformMinutes(
+  rosterStudentId: string,
+): Promise<number> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return 0;
+  const admin = createAdminClient();
+  const { data: roster } = await admin
+    .from("roster_students")
+    .select("teacher_id, auth_user_id")
+    .eq("id", rosterStudentId)
+    .maybeSingle();
+  if (!roster) return 0;
+  const r = roster as { teacher_id: string; auth_user_id: string | null };
+  if (r.teacher_id !== user.id && r.auth_user_id !== user.id) return 0;
+  if (!r.auth_user_id) return 0;
+
+  const { data: prog } = await admin
+    .from("lesson_progress")
+    .select("lesson_slug, completed_at")
+    .eq("student_id", r.auth_user_id)
+    .not("completed_at", "is", null)
+    .limit(10_000);
+
+  let minutes = 0;
+  const { findMeta } = await import("@/lib/content/loader");
+  for (const p of (prog ?? []) as Array<{
+    lesson_slug: string;
+    completed_at: string;
+  }>) {
+    if (p.lesson_slug.startsWith("music:")) {
+      minutes += 5;
+      continue;
+    }
+    const meta = findMeta(p.lesson_slug);
+    minutes += meta?.estimated_minutes ?? 8;
+  }
+  return minutes;
 }
 
 export async function deleteCertificate(certificateId: string) {

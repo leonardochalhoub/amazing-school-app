@@ -213,41 +213,15 @@ export default async function CertificatePrintPage({
             paddingBottom: 16,
           }}
         >
-          {/* LEFT — teacher's school logo. */}
-          {teacherLogo ? (
-            <div
-              style={{
-                height: 60,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#ffffff",
-                border: "1px solid #e5e7eb",
-                borderRadius: 6,
-                padding: "6px 10px",
-                minWidth: 150,
-              }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={teacherLogo}
-                alt={
-                  data.teacher.fullName
-                    ? `${data.teacher.fullName} — logo`
-                    : "School logo"
-                }
-                style={{
-                  maxHeight: 46,
-                  maxWidth: 140,
-                  width: "auto",
-                  objectFit: "contain",
-                  display: "block",
-                }}
-              />
-            </div>
-          ) : (
-            <div style={{ minWidth: 150 }} />
-          )}
+          {/* LEFT — teacher's school logo (mirror copy on the right). */}
+          <SchoolLogoSlot
+            src={teacherLogo}
+            alt={
+              data.teacher.fullName
+                ? `${data.teacher.fullName} — logo`
+                : "School logo"
+            }
+          />
 
           <div style={{ textAlign: "center", flex: 1 }}>
             <p
@@ -268,17 +242,18 @@ export default async function CertificatePrintPage({
             ) : null}
           </div>
 
-          {/* RIGHT — Amazing School mark. */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-end",
-              minWidth: 170,
-            }}
-          >
-            <AmazingSchoolMark size={28} />
-          </div>
+          {/* RIGHT — teacher's school logo doubled for institutional
+              symmetry. Amazing School mark moves to a dedicated band
+              above the footer so the platform identity stays visible
+              without competing with the teacher's brand up top. */}
+          <SchoolLogoSlot
+            src={teacherLogo}
+            alt={
+              data.teacher.fullName
+                ? `${data.teacher.fullName} — logo`
+                : "School logo"
+            }
+          />
         </header>
 
         <section
@@ -445,22 +420,77 @@ export default async function CertificatePrintPage({
             </span>
           </div>
 
-          {data.remarks ? (
+        </section>
+
+        {/* Remarks live BETWEEN the body and the footer so they
+            cannot overlap the signature line — previously the
+            footer was absolutely-positioned and long remarks ran
+            under the signature. */}
+        {data.remarks ? (
+          <section
+            style={{
+              position: "relative",
+              zIndex: 1,
+              margin: "22px auto 0",
+              maxWidth: 720,
+              textAlign: "center",
+            }}
+          >
             <p
               style={{
-                marginTop: 18,
                 fontSize: "10.5pt",
                 color: "#374151",
                 lineHeight: 1.6,
-                maxWidth: 680,
-                margin: "18px auto 0",
                 fontStyle: "italic",
               }}
             >
               &ldquo;{data.remarks}&rdquo;
             </p>
-          ) : null}
-        </section>
+          </section>
+        ) : null}
+
+        {/* Amazing School brand band — thin pill above the footer,
+            carrying the purple mark + tagline. Second anchor point
+            for the platform identity on the certificate. */}
+        <div
+          style={{
+            position: "absolute",
+            left: "26mm",
+            right: "26mm",
+            bottom: "60mm",
+            zIndex: 1,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 10,
+              background: "#ffffff",
+              border: "1px solid #e5e7eb",
+              borderRadius: 999,
+              padding: "4px 14px 4px 6px",
+              boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
+            }}
+          >
+            <AmazingSchoolMark size={18} />
+            <span
+              style={{
+                fontSize: "8.5pt",
+                color: "#4b5563",
+                letterSpacing: "0.02em",
+                fontWeight: 500,
+              }}
+            >
+              {lang === "pt-BR"
+                ? "Emitido por Amazing School · amazing-school-app.vercel.app"
+                : "Issued by Amazing School · amazing-school-app.vercel.app"}
+            </span>
+          </div>
+        </div>
 
         <footer
           style={{
@@ -542,6 +572,44 @@ export default async function CertificatePrintPage({
         </footer>
       </article>
     </>
+  );
+}
+
+function SchoolLogoSlot({
+  src,
+  alt,
+}: {
+  src: string | null;
+  alt: string;
+}) {
+  if (!src) return <div style={{ minWidth: 150 }} />;
+  return (
+    <div
+      style={{
+        height: 60,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "#ffffff",
+        border: "1px solid #e5e7eb",
+        borderRadius: 6,
+        padding: "6px 10px",
+        minWidth: 150,
+      }}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={alt}
+        style={{
+          maxHeight: 46,
+          maxWidth: 140,
+          width: "auto",
+          objectFit: "contain",
+          display: "block",
+        }}
+      />
+    </div>
   );
 }
 

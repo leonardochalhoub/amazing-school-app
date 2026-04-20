@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { GraduationCap, Loader2, Info, Plus, BookMarked } from "lucide-react";
@@ -16,7 +16,10 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { createCertificate } from "@/lib/actions/certificates";
+import {
+  createCertificate,
+  estimatePlatformMinutes,
+} from "@/lib/actions/certificates";
 import {
   CERTIFICATE_LEVELS,
   CERTIFICATE_LEVEL_CHOICES,
@@ -81,9 +84,31 @@ export function IssueCertificateButton({
     );
   });
   const [endOn, setEndOn] = useState<string>(todayISO());
+  const [issuedOn, setIssuedOn] = useState<string>(todayISO());
   const [title, setTitle] = useState<string>("");
   const [remarks, setRemarks] = useState<string>("");
   const [totalHours, setTotalHours] = useState<string>("");
+  const [platformMinutes, setPlatformMinutes] = useState<number | null>(null);
+
+  // Pull the platform-estimated minutes whenever the dialog opens
+  // for a given student. Shown as a hint next to the Hours field.
+  useEffect(() => {
+    if (!open) return;
+    const targetId = rosterStudentId ?? selectedStudentId;
+    if (!targetId) return;
+    let cancelled = false;
+    estimatePlatformMinutes(targetId).then((m) => {
+      if (!cancelled) setPlatformMinutes(m);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [open, rosterStudentId, selectedStudentId]);
+
+  const platformHoursLabel =
+    platformMinutes == null
+      ? null
+      : `${Math.floor(platformMinutes / 60)}h ${platformMinutes % 60}min`;
 
   const cefrChoices = CERTIFICATE_LEVEL_CHOICES.map(
     (c) => CERTIFICATE_LEVELS.find((l) => l.code === c)!,
@@ -124,6 +149,7 @@ export function IssueCertificateButton({
         title,
         remarks,
         totalHours: hoursNum,
+        issuedOn,
       });
       if ("error" in res && res.error) {
         toast.error(res.error);
@@ -291,7 +317,7 @@ export function IssueCertificateButton({
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-3 gap-3">
               <div className="grid gap-2">
                 <Label htmlFor="cert-start">Início do curso</Label>
                 <Input
@@ -310,6 +336,15 @@ export function IssueCertificateButton({
                   onChange={(e) => setEndOn(e.target.value)}
                 />
               </div>
+              <div className="grid gap-2">
+                <Label htmlFor="cert-issued">Data de emissão</Label>
+                <Input
+                  id="cert-issued"
+                  type="date"
+                  value={issuedOn}
+                  onChange={(e) => setIssuedOn(e.target.value)}
+                />
+              </div>
             </div>
 
             <div className="grid gap-2">
@@ -325,13 +360,32 @@ export function IssueCertificateButton({
                 step={1}
                 value={totalHours}
                 onChange={(e) => setTotalHours(e.target.value)}
-                placeholder="Ex.: 40"
+                placeholder={
+                  platformMinutes
+                    ? `Ex.: ${Math.round(platformMinutes / 60)}`
+                    : "Ex.: 40"
+                }
               />
-              <p className="text-[11px] text-muted-foreground">
-                Inclui aulas ao vivo, lições na plataforma, música, tarefa
-                de casa. A carga estimada dos conteúdos concluídos está no
-                currículo em PDF.
-              </p>
+              <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-muted-foreground">
+                <p>
+                  Inclui aulas ao vivo, lições da plataforma, música e
+                  tarefa de casa.
+                </p>
+                {platformHoursLabel ? (
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setTotalHours(
+                        String(Math.round((platformMinutes ?? 0) / 60)),
+                      )
+                    }
+                    className="inline-flex items-center gap-1 rounded-md border border-dashed border-border bg-background/60 px-2 py-0.5 text-[10.5px] font-medium hover:bg-muted"
+                    title="Usar como ponto de partida"
+                  >
+                    Plataforma: <strong>{platformHoursLabel}</strong>
+                  </button>
+                ) : null}
+              </div>
             </div>
 
             {mode === "cefr" ? (

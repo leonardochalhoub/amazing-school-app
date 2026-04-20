@@ -22,13 +22,13 @@ export const CERTIFICATE_LEVELS = [
   // Canonical set — what the dropdown shows today.
   { code: "a1", codeLabel: "A1", title: "Iniciante", en: "Beginner" },
   { code: "a2", codeLabel: "A2", title: "Pré-Intermediário", en: "Pre-Intermediate" },
-  { code: "a", codeLabel: "A", title: "Básico · completo (A1 + A2)", en: "Basic · full (A1 + A2)" },
+  { code: "a", codeLabel: "A", title: "Básico", en: "Basic" },
   { code: "b1", codeLabel: "B1", title: "Intermediário", en: "Intermediate" },
   { code: "b2", codeLabel: "B2", title: "Intermediário Superior", en: "Upper-Intermediate" },
-  { code: "b", codeLabel: "B", title: "Independente · completo (B1 + B2)", en: "Independent · full (B1 + B2)" },
+  { code: "b", codeLabel: "B", title: "Intermediário", en: "Intermediate" },
   { code: "c1", codeLabel: "C1", title: "Avançado", en: "Advanced" },
   { code: "c2", codeLabel: "C2", title: "Proficiente", en: "Proficient" },
-  { code: "c", codeLabel: "C", title: "Proficiente · completo (C1 + C2)", en: "Proficient · full (C1 + C2)" },
+  { code: "c", codeLabel: "C", title: "Avançado", en: "Advanced" },
   // Custom marker — used when the teacher issues a non-CEFR certificate
   // (e.g. "English for Tech Professionals"). The UI reads `title` for
   // the display name in that case.
