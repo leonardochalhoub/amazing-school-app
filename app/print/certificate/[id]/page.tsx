@@ -569,18 +569,6 @@ export default async function CertificatePrintPage({
                       </p>
                     ) : null;
                   })()}
-                  {data.teacherCpf ? (
-                    <p
-                      style={{
-                        fontSize: "8.5pt",
-                        color: "#6b7280",
-                        marginTop: 1,
-                        fontVariantNumeric: "tabular-nums",
-                      }}
-                    >
-                      CPF: {data.teacherCpf}
-                    </p>
-                  ) : null}
                   <p
                     style={{
                       fontSize: "9pt",
@@ -591,6 +579,21 @@ export default async function CertificatePrintPage({
                   >
                     {role}
                   </p>
+                  {/* CPF — last line of the signature block so it
+                      sits below the name, the credential, and the
+                      responsible-teacher role. */}
+                  {data.teacherCpf ? (
+                    <p
+                      style={{
+                        fontSize: "8.5pt",
+                        color: "#6b7280",
+                        marginTop: 2,
+                        fontVariantNumeric: "tabular-nums",
+                      }}
+                    >
+                      CPF: {data.teacherCpf}
+                    </p>
+                  ) : null}
                 </>
               );
             })()}
