@@ -130,11 +130,16 @@ export default async function TeacherManagementPage() {
       if (last6.includes(m)) revenueTrailing6Cents += amt;
     }
   }
-  // Debt = sum of unpaid invoices OLDER than the current billing month.
+  // Debt = unpaid invoices strictly OLDER than the current calendar
+  // month. The old code used months.slice(1) which worked when
+  // months[0] was current, but now the matrix leaks one month past
+  // today for advance marking — slice(1) started AT the current
+  // month and counted it as past-due, inflating the debt KPI.
   let debtCentsTotal = 0;
   const studentsInDebt = new Set<string>();
   for (const r of rows) {
-    for (const m of months.slice(1)) {
+    for (const m of months) {
+      if (m >= currentMonth) continue;
       const p = r.payments[m];
       if (p && !p.paid) {
         debtCentsTotal += p.amount_cents ?? r.monthly_tuition_cents ?? 0;
