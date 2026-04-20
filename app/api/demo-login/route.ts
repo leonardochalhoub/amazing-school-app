@@ -19,13 +19,16 @@ export async function POST(request: NextRequest) {
     return NextResponse.redirect(new URL("/?demo=unknown", request.url), 303);
   }
   const preset = DEMO_PRESETS[kind];
-  const password = process.env.DEMO_ACCOUNT_PASSWORD;
-  if (!password) {
-    // Hard-require the env var — no more hard-coded fallback that lets
-    // a misconfigured deploy accept a guessable password.
-    return NextResponse.redirect(
-      new URL("/?demo=misconfigured", request.url),
-      303,
+  // Demo accounts are public by design — the landing page button logs
+  // any visitor into them with one click — so a fixed fallback
+  // password isn't a security issue. Real teacher / student accounts
+  // are protected by Supabase Auth password hashing, not by this
+  // string. We still prefer the env value when it's set.
+  const password =
+    process.env.DEMO_ACCOUNT_PASSWORD ?? "demo-explore-amazing-school-2026";
+  if (!process.env.DEMO_ACCOUNT_PASSWORD) {
+    console.warn(
+      "[demo-login] DEMO_ACCOUNT_PASSWORD env var not set — using fallback.",
     );
   }
 

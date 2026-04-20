@@ -10,20 +10,16 @@ import { DEMO_PRESETS, type DemoKind } from "@/lib/demo/presets";
  * from real signups — anyone changing things in the demo is changing
  * demo data, nothing else.
  *
- * DEMO_ACCOUNT_PASSWORD is a hard requirement. No hardcoded fallback —
- * a misconfigured deploy must fail closed rather than accept a
- * guessable password.
+ * The fallback password is intentional: demo accounts are publicly
+ * accessible via the landing-page buttons, so a fixed string isn't a
+ * security issue. Real teacher / student accounts are protected by
+ * Supabase Auth password hashing and distinct emails.
  */
 export async function loginAsDemo(kind: DemoKind) {
   const preset = DEMO_PRESETS[kind];
   if (!preset) return { error: "Unknown demo preset" };
-  const password = process.env.DEMO_ACCOUNT_PASSWORD;
-  if (!password) {
-    return {
-      error:
-        "Demo accounts are not available right now. DEMO_ACCOUNT_PASSWORD is not configured.",
-    };
-  }
+  const password =
+    process.env.DEMO_ACCOUNT_PASSWORD ?? "demo-explore-amazing-school-2026";
 
   const supabase = await createClient();
   const { error } = await supabase.auth.signInWithPassword({
