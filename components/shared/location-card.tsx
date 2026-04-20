@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { Loader2, MapPin, Save, X } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { BrazilCityPicker } from "@/components/shared/brazil-city-picker";
 import { updateMyLocation } from "@/lib/actions/profile";
 
 interface Props {
@@ -59,17 +59,18 @@ export function LocationCard({ initial }: Props) {
       </CardHeader>
       <CardContent className="space-y-3">
         <p className="text-xs text-muted-foreground">
-          Cidade ou país — por exemplo, "São Paulo, SP" ou "Tokyo".
-          Visible to your teacher.
+          Comece a digitar o nome da cidade — a lista filtra automaticamente
+          as ~5.5k cidades do IBGE. Pode digitar livremente se estiver fora
+          do Brasil (ex.: "Tokyo").
         </p>
         {editing ? (
           <div className="space-y-3">
-            <Input
+            <BrazilCityPicker
               value={value}
-              onChange={(e) => setValue(e.target.value)}
-              maxLength={80}
-              placeholder="São Paulo, SP"
+              onChange={setValue}
               disabled={pending}
+              placeholder="São Paulo, SP"
+              maxLength={80}
             />
             <div className="flex justify-end gap-2">
               {initial ? (

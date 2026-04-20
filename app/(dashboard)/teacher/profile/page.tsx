@@ -3,6 +3,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
 import { AvatarUploader } from "@/components/shared/avatar-uploader";
 import { ChangePasswordCard } from "@/components/shared/change-password-card";
+import { LocationCard } from "@/components/shared/location-card";
 import { PrivacyNotice } from "@/components/shared/privacy-notice";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, GraduationCap, ArrowUpRight, Image as ImageIcon, PenTool } from "lucide-react";
@@ -31,6 +32,16 @@ export default async function TeacherProfilePage() {
 
   if (!profile) redirect("/login");
   if (profile.role !== "teacher" && profile.role !== "owner") redirect("/student/profile");
+
+  // Location column is fetched separately so the page still renders
+  // if the 051 migration hasn't been applied yet.
+  const { data: locationRow } = await admin
+    .from("profiles")
+    .select("location")
+    .eq("id", user.id)
+    .maybeSingle();
+  const location =
+    (locationRow as { location?: string | null } | null)?.location ?? null;
 
   const signedUrl = await resolveMyAvatarUrl(supabase, user.id);
   const logoEligible = isLogoEligible(user.email, profile.full_name);
@@ -71,6 +82,8 @@ export default async function TeacherProfilePage() {
           </p>
         </CardContent>
       </Card>
+
+      <LocationCard initial={location} />
 
       <ChangePasswordCard
         isDemo={(user.email ?? "").toLowerCase().startsWith("demo.")}

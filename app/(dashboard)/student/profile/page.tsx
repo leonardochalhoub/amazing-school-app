@@ -22,11 +22,22 @@ export default async function StudentProfilePage() {
   const admin = createAdminClient();
   const { data: profile } = await admin
     .from("profiles")
-    .select("full_name, avatar_url, location")
+    .select("full_name, avatar_url")
     .eq("id", user.id)
     .maybeSingle();
 
   if (!profile) redirect("/login");
+
+  // Location is fetched separately so the page still renders if the
+  // 051 migration hasn't been applied yet — a missing column would
+  // otherwise null out the whole profile row and bounce the user.
+  const { data: locationRow } = await admin
+    .from("profiles")
+    .select("location")
+    .eq("id", user.id)
+    .maybeSingle();
+  const location =
+    (locationRow as { location?: string | null } | null)?.location ?? null;
 
   const [
     signedUrl,
@@ -109,7 +120,7 @@ export default async function StudentProfilePage() {
         </CardContent>
       </Card>
 
-      <LocationCard initial={(profile as { location?: string | null }).location ?? null} />
+      <LocationCard initial={location} />
 
       <ChangePasswordCard
         isDemo={(user.email ?? "").toLowerCase().startsWith("demo.")}
