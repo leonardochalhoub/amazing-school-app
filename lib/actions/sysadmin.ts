@@ -277,33 +277,10 @@ export async function getSysadminOverview(): Promise<
     created_at: string;
   }>;
 
-  // Sysadmin analytics scope: real teachers only. Platform owners
-  // (role='owner') and demo profiles (is_test=true) get dropped
-  // here so every downstream statistic auto-excludes them. The
-  // dedicated owner-management surfaces (Platform access card,
-  // owner-grants actions) fetch owners on their own — they don't
-  // read from this `teachers` array.
-  const teachers = profiles.filter((p) => p.role === "teacher");
-  const students = profiles.filter((p) => p.role === "student");
-  const demoAccounts = profiles.filter((p) =>
-    p.full_name ? false : false,
-  ).length;
-
-  // Excluded-from-stats teacher set: every platform owner + every
-  // demo/test profile (is_test=true — those never hit `profiles`
-  // above because of the upstream filter, so we fetch them in a
-  // small separate query here). Leo's students exist for platform
-  // testing, not real teaching, so they shouldn't skew CEFR mix,
-  // engagement, DAU/WAU/MAU, top-active rankings, etc. Demo
-  // teachers (Luiza) are caught by the is_test side of the union.
-  const { data: excludedTeachersRes } = await admin
-    .from("profiles")
-    .select("id")
-    .or("is_test.eq.true,role.eq.owner");
-  const excludedTeacherIds = new Set(
-    ((excludedTeachersRes ?? []) as Array<{ id: string }>).map((t) => t.id),
-  );
-  // Demo detection is by email prefix — we need auth data for that.
+  // Auth-user list fuels several downstream lookups: demo detection
+  // by email prefix, origin-owner backstop by exact email, and the
+  // All-teachers directory's email column. Fetch it first so every
+  // filter below can reference it.
   const { data: authList } = await admin.auth.admin.listUsers({
     page: 1,
     perPage: 1000,
@@ -314,6 +291,47 @@ export async function getSysadminOverview(): Promise<
       .map((u) => u.id),
   );
   const demoCount = demoIds.size;
+
+  // Excluded-from-stats superset. Must catch every flavour of
+  // "not a real user" the platform has on record:
+  //   1. profiles.is_test = true      (demo / staging)
+  //   2. profiles.role    = 'owner'   (migration 035 already ran)
+  //   3. auth email starts with 'demo.' (fallback for rows where
+  //      is_test wasn't set)
+  //   4. auth email is the origin-owner backstop — migration 035
+  //      may not have run yet, so Leo's profile.role could still be
+  //      'teacher'. Matching his email drops him regardless.
+  // Rules 3 + 4 are why Leo kept leaking through earlier passes:
+  // the DB filter alone missed anyone whose flag wasn't set.
+  const ORIGIN_OWNER_EMAIL = "leochalhoub@hotmail.com";
+  const { data: excludedTeachersRes } = await admin
+    .from("profiles")
+    .select("id")
+    .or("is_test.eq.true,role.eq.owner");
+  const excludedTeacherIds = new Set(
+    ((excludedTeachersRes ?? []) as Array<{ id: string }>).map((t) => t.id),
+  );
+  for (const u of authList?.users ?? []) {
+    const email = (u.email ?? "").toLowerCase().trim();
+    if (!email) continue;
+    if (email.startsWith("demo.") || email === ORIGIN_OWNER_EMAIL) {
+      excludedTeacherIds.add(u.id);
+    }
+  }
+
+  // Now derive real teachers / students with the excluded set in
+  // hand. `teachers` = role='teacher' minus excluded (catches Leo
+  // even when his profile.role wasn't migrated to 'owner' yet).
+  // `students` = role='student' minus demo email.
+  const teachers = profiles.filter(
+    (p) => p.role === "teacher" && !excludedTeacherIds.has(p.id),
+  );
+  const students = profiles.filter(
+    (p) => p.role === "student" && !demoIds.has(p.id),
+  );
+  const demoAccounts = profiles.filter((p) =>
+    p.full_name ? false : false,
+  ).length;
 
   const classrooms = (classroomsRes.data ?? []) as Array<{
     id: string;
