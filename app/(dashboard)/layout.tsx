@@ -6,6 +6,7 @@ import {
   schoolLogoPublicUrl,
   SCHOOL_LOGO_SRC,
 } from "@/lib/school-logo";
+import { isOwner as checkIsOwner } from "@/lib/auth/roles";
 import { redirect } from "next/navigation";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -38,10 +39,10 @@ export default async function DashboardLayout({
 
   const role = (profile.role === "owner" ? "teacher" : profile.role) as Role;
   const avatarUrl = await resolveMyAvatarUrl(supabase, user.id);
-  // Owner == an authenticated profile whose role is 'owner' on
-  // profiles. Bootstrap seed lives in migration 035. The layout
-  // passes this into the Navbar so the Sysadmin menu item shows up.
-  const isOwner = profile.role === "owner";
+  // Owner check reuses the same helper that gates every sysadmin
+  // action — DB role OR the origin-owner email backstop, memoised
+  // per request via React.cache so this adds zero extra latency.
+  const isOwner = await checkIsOwner();
 
   // Roster-linked students get a cartoon avatar fallback (matches the
   // one rendered on their dashboard) so the navbar doesn't drop to
