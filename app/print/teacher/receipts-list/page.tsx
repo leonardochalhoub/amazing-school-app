@@ -88,15 +88,17 @@ export default async function ReceiptsListPrintPage({
   const admin = createAdminClient();
   const { data: teacherRow } = await admin
     .from("profiles")
-    .select("full_name, school_logo_enabled, school_logo_url")
+    .select("full_name, email, school_logo_enabled, school_logo_url")
     .eq("id", user.id)
     .maybeSingle();
   const teacher = (teacherRow as {
     full_name: string | null;
+    email: string | null;
     school_logo_enabled: boolean | null;
     school_logo_url: string | null;
   } | null) ?? {
     full_name: null,
+    email: null,
     school_logo_enabled: null,
     school_logo_url: null,
   };
@@ -117,6 +119,7 @@ export default async function ReceiptsListPrintPage({
       subtitle={q ? `Filtro: "${q}"` : "Todos os pagamentos registrados"}
       teacher={{
         fullName: teacher.full_name,
+        email: teacher.email,
         schoolLogoEnabled: teacher.school_logo_enabled,
         schoolLogoUrl: teacher.school_logo_url,
       }}

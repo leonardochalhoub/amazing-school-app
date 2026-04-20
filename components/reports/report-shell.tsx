@@ -12,6 +12,7 @@ interface ReportShellProps {
     schoolLogoEnabled?: boolean | null;
     schoolLogoUrl?: string | null;
     fullName?: string | null;
+    email?: string | null;
   } | null;
   /** Default filename shown in the preview toolbar — browsers use
       document.title for the actual Save-as-PDF default, which should

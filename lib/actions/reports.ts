@@ -1354,16 +1354,22 @@ export interface SysadminReportData {
   }>;
 }
 
+/** Leo's origin-owner email — excluded from the sysadmin report
+    even when his profile.role hasn't been flipped to 'owner' yet. */
+const ORIGIN_OWNER_EMAIL = "leochalhoub@hotmail.com";
+
 export async function getSysadminReport(): Promise<
   SysadminReportData | { error: string }
 > {
   const owner = await isOwner();
   if (!owner) return { error: "Apenas sysadmin" };
 
-  // The dashboard action aggressively excludes "not real" activity
-  // (origin owner, demo accounts, is_test). On an owner's OWN exported
-  // report those filters make the numbers all zero. For the PDF the
-  // owner wants raw platform totals — no filter, show everything.
+  // The report excludes:
+  //   - the origin-owner account (Leo)
+  //   - any profile flagged is_test=true or role='owner'
+  //   - demo accounts (email prefix "demo.")
+  // so the KPIs + directory reflect real paying teachers only.
+  // Students rostered under excluded teachers are filtered too.
 
   const admin = createAdminClient();
   const now = new Date();
@@ -1391,7 +1397,7 @@ export async function getSysadminReport(): Promise<
   ] = await Promise.all([
     admin
       .from("profiles")
-      .select("id, full_name, role, created_at")
+      .select("id, full_name, role, is_test, created_at")
       .order("created_at", { ascending: false }),
     admin
       .from("classrooms")
@@ -1399,21 +1405,21 @@ export async function getSysadminReport(): Promise<
       .is("deleted_at", null),
     admin
       .from("roster_students")
-      .select("id, teacher_id")
+      .select("id, teacher_id, auth_user_id")
       .is("deleted_at", null),
     admin
       .from("xp_events")
-      .select("xp_amount, created_at")
+      .select("student_id, xp_amount, created_at")
       .gte("created_at", thirtyDaysAgoISO)
       .limit(100_000),
     admin
       .from("lesson_assignments")
-      .select("id, assigned_at")
+      .select("id, classroom_id, assigned_at")
       .gte("assigned_at", thirtyDaysAgoISO)
       .limit(100_000),
     admin
       .from("lesson_progress")
-      .select("id, completed_at")
+      .select("id, student_id, completed_at")
       .not("completed_at", "is", null)
       .gte("completed_at", thirtyDaysAgoISO)
       .limit(100_000),
@@ -1440,15 +1446,46 @@ export async function getSysadminReport(): Promise<
     id: string;
     full_name: string | null;
     role: string;
+    is_test: boolean | null;
     created_at: string;
   }>;
-  const teachers = profiles.filter((p) => p.role === "teacher" || p.role === "owner");
-  const students = profiles.filter((p) => p.role === "student");
 
-  const classrooms = (classroomsRes.data ?? []) as Array<{
+  // Build the exclusion set. Auth list gives us emails; we use it
+  // both for Leo's origin-owner backstop and for the demo-prefix
+  // heuristic. is_test + role='owner' come from the profile itself.
+  const { data: authList } = await admin.auth.admin.listUsers({
+    page: 1,
+    perPage: 1000,
+  });
+  const authUserById = new Map<string, { email: string | null }>();
+  for (const u of authList?.users ?? []) {
+    authUserById.set(u.id, { email: u.email ?? null });
+  }
+
+  const excludedTeacherIds = new Set<string>();
+  for (const p of profiles) {
+    const email = (authUserById.get(p.id)?.email ?? "").toLowerCase().trim();
+    const isDemo = email.startsWith("demo.");
+    const isOwnerRole = p.role === "owner";
+    const isLeo = email === ORIGIN_OWNER_EMAIL;
+    if (p.is_test === true || isOwnerRole || isDemo || isLeo) {
+      excludedTeacherIds.add(p.id);
+    }
+  }
+
+  const teachers = profiles.filter(
+    (p) =>
+      (p.role === "teacher" || p.role === "owner") &&
+      !excludedTeacherIds.has(p.id),
+  );
+  const students = profiles.filter(
+    (p) => p.role === "student" && !excludedTeacherIds.has(p.id),
+  );
+
+  const classrooms = ((classroomsRes.data ?? []) as Array<{
     id: string;
     teacher_id: string;
-  }>;
+  }>).filter((c) => !excludedTeacherIds.has(c.teacher_id));
   const classroomsByTeacher = new Map<string, number>();
   const classroomTeacherById = new Map<string, string>();
   for (const c of classrooms) {
@@ -1459,41 +1496,64 @@ export async function getSysadminReport(): Promise<
     classroomTeacherById.set(c.id, c.teacher_id);
   }
 
-  const rosterRows = (rosterRes.data ?? []) as Array<{ teacher_id: string }>;
+  const rosterRows = ((rosterRes.data ?? []) as Array<{
+    teacher_id: string;
+    auth_user_id: string | null;
+  }>).filter((r) => !excludedTeacherIds.has(r.teacher_id));
   const rosterByTeacher = new Map<string, number>();
+  // Students (auth users) linked to included rosters — used to
+  // filter XP / activity / progress numbers below.
+  const includedStudentAuthIds = new Set<string>();
   for (const r of rosterRows) {
     rosterByTeacher.set(
       r.teacher_id,
       (rosterByTeacher.get(r.teacher_id) ?? 0) + 1,
     );
+    if (r.auth_user_id) includedStudentAuthIds.add(r.auth_user_id);
   }
 
-  const xpLast30d = (xpRes.data ?? []).reduce(
-    (s, r) => s + ((r as { xp_amount: number | null }).xp_amount ?? 0),
-    0,
-  );
-  const lessonsAssignedLast30d = (assignmentsRes.data ?? []).length;
-  const lessonsCompletedLast30d = (progressRes.data ?? []).length;
+  // KPIs — xp_events / lesson_progress / daily_activity are all
+  // student-scoped. We keep only rows whose student_id belongs to
+  // an included roster so Leo's and demo activity never leak in.
+  const xpLast30d = (xpRes.data ?? [])
+    .filter((r) =>
+      includedStudentAuthIds.has(
+        (r as { student_id?: string }).student_id ?? "",
+      ),
+    )
+    .reduce(
+      (s, r) => s + ((r as { xp_amount: number | null }).xp_amount ?? 0),
+      0,
+    );
+  // lesson_assignments doesn't carry a direct student_id, so we
+  // filter via classroom_id → included classrooms.
+  const includedClassroomIds = new Set(classrooms.map((c) => c.id));
+  const lessonsAssignedLast30d = (assignmentsRes.data ?? []).filter((r) =>
+    includedClassroomIds.has(
+      (r as { classroom_id?: string }).classroom_id ?? "",
+    ),
+  ).length;
+  const lessonsCompletedLast30d = (progressRes.data ?? []).filter((r) =>
+    includedStudentAuthIds.has(
+      (r as { student_id?: string }).student_id ?? "",
+    ),
+  ).length;
   const aiMessagesLast30d = (messagesRes.data ?? []).length;
   const newAccountsLast30d = profiles.filter(
-    (p) => p.created_at >= thirtyDaysAgoISO,
+    (p) => p.created_at >= thirtyDaysAgoISO && !excludedTeacherIds.has(p.id),
   ).length;
 
-  const dau = new Set(
-    (dailyTodayRes.data ?? []).map(
-      (r) => (r as { student_id: string }).student_id,
-    ),
-  ).size;
-  const wau = new Set(
-    (dailyWeekRes.data ?? []).map(
-      (r) => (r as { student_id: string }).student_id,
-    ),
-  ).size;
-  const mau = new Set(
-    (dailyMonthRes.data ?? []).map(
-      (r) => (r as { student_id: string }).student_id,
-    ),
-  ).size;
+  function activeSize(rows: { data: unknown[] | null } | { data: null }) {
+    const ids = new Set(
+      ((rows.data ?? []) as Array<{ student_id: string }>)
+        .map((r) => r.student_id)
+        .filter((id) => includedStudentAuthIds.has(id)),
+    );
+    return ids.size;
+  }
+  const dau = activeSize(dailyTodayRes);
+  const wau = activeSize(dailyWeekRes);
+  const mau = activeSize(dailyMonthRes);
 
   // Teacher directory (active-student-count scoped to last 30d).
   const activeStudentsByTeacher = new Map<string, Set<string>>();
@@ -1518,15 +1578,15 @@ export async function getSysadminReport(): Promise<
     activeStudentsByTeacher.get(t)!.add(m.student_id);
   }
 
+  // Emails already fetched upstream in `authUserById`, reuse that
+  // instead of calling listUsers a second time.
   const teacherEmailById = new Map<string, string | null>();
-  const { data: authList } = await admin.auth.admin.listUsers({
-    page: 1,
-    perPage: 1000,
-  });
-  for (const u of authList?.users ?? []) {
-    teacherEmailById.set(u.id, (u.email ?? null) as string | null);
+  for (const [id, info] of authUserById) {
+    teacherEmailById.set(id, info.email ?? null);
   }
 
+  // Teacher directory — ranked by student count (desc) so the most
+  // engaged schools come first. Ties fall back to name alpha.
   const teacherRows = teachers
     .map((t) => ({
       id: t.id,
@@ -1537,7 +1597,12 @@ export async function getSysadminReport(): Promise<
       activeStudentsLast30d: activeStudentsByTeacher.get(t.id)?.size ?? 0,
       createdAt: t.created_at,
     }))
-    .sort((a, b) => (a.name ?? "").localeCompare(b.name ?? ""));
+    .sort((a, b) => {
+      if (b.studentCount !== a.studentCount) {
+        return b.studentCount - a.studentCount;
+      }
+      return (a.name ?? "").localeCompare(b.name ?? "");
+    });
 
   // Catalogue counts come from static JSON (content/ dir), read
   // synchronously so a platform without a published-drafts table

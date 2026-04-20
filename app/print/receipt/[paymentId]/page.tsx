@@ -110,6 +110,26 @@ export default async function ReceiptPrintPage({
       >
         <header className="report-header" style={{ marginBottom: 16 }}>
           <div className="report-header-left">
+            {/* LEFT — Amazing School platform mark. */}
+            <div className="report-logo-box" style={{ paddingInline: 10 }}>
+              <AmazingSchoolMark size={22} />
+            </div>
+            <div>
+              <h1 className="report-title" style={{ fontSize: "16pt" }}>
+                Recibo
+              </h1>
+              <p className="report-subtitle">Nº {data.receiptNumber}</p>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+              gap: 6,
+            }}
+          >
+            {/* RIGHT — teacher's own school logo. */}
             {teacherLogo ? (
               <div className="report-logo-box">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -129,22 +149,6 @@ export default async function ReceiptPrintPage({
                 />
               </div>
             ) : null}
-            <div>
-              <h1 className="report-title" style={{ fontSize: "16pt" }}>
-                Recibo
-              </h1>
-              <p className="report-subtitle">Nº {data.receiptNumber}</p>
-            </div>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-end",
-              gap: 4,
-            }}
-          >
-            <AmazingSchoolMark size={22} />
             <div className="report-meta">
               <div>
                 <span className="report-muted">Valor: </span>

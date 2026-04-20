@@ -5,8 +5,6 @@ interface ReportHeaderProps {
   title: string;
   subtitle?: string | null;
   meta?: Array<{ label: string; value: string }>;
-  /** Teacher's profile — drives which school logo appears on the
-      left. Uploaded logo beats the whitelisted bundled one. */
   teacher?: {
     schoolLogoEnabled?: boolean | null;
     schoolLogoUrl?: string | null;
@@ -19,12 +17,13 @@ interface ReportHeaderProps {
  * Every shell-based report header follows the same three-part
  * structure:
  *
- *   [teacher school logo]  [title]          [Amazing School mark]
+ *   [Amazing School mark]  [title]          [teacher school logo]
  *
- * Teacher logo is on the LEFT — the school's own brand. The
- * Amazing School mark (purple smiley + italic wordmark) sits on
- * the RIGHT so the platform mark is always visible on the paper.
- * This is the hard rule documented in .claude/CLAUDE.md.
+ * Amazing School (purple smiley + italic wordmark) sits on the
+ * LEFT because the platform identity reads first. The teacher's
+ * own school brand goes on the RIGHT, mirroring the canonical
+ * "institutional letterhead" look. Both are always printed — this
+ * is the hard rule documented in .claude/CLAUDE.md.
  */
 export function ReportHeader({
   title,
@@ -47,6 +46,26 @@ export function ReportHeader({
   return (
     <header className="report-header">
       <div className="report-header-left">
+        {/* LEFT — Amazing School platform mark. */}
+        <div className="report-logo-box" style={{ paddingInline: 10 }}>
+          <AmazingSchoolMark size={22} />
+        </div>
+        <div className="min-w-0">
+          <h1 className="report-title">{title}</h1>
+          {subtitle ? <p className="report-subtitle">{subtitle}</p> : null}
+        </div>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-end",
+          gap: 6,
+        }}
+      >
+        {/* RIGHT — teacher's own school logo. Always shown when the
+            teacher has one configured (uploaded > whitelisted). */}
         {teacherLogo ? (
           <div
             className="report-logo-box"
@@ -70,23 +89,6 @@ export function ReportHeader({
             />
           </div>
         ) : null}
-        <div className="min-w-0">
-          <h1 className="report-title">{title}</h1>
-          {subtitle ? <p className="report-subtitle">{subtitle}</p> : null}
-        </div>
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-end",
-          gap: 4,
-        }}
-      >
-        {/* Platform brand — always printed, left-right balances the
-            teacher's own school logo on the opposite side. */}
-        <AmazingSchoolMark size={22} />
         {meta && meta.length > 0 ? (
           <div className="report-meta">
             {meta.map((m) => (
