@@ -110,12 +110,25 @@ export interface CurriculumEntry {
   slug: string;
   kind: "lesson" | "music";
   title: string;
+  /** Normalised CEFR family (A1, A2, B1, B2, C1, C2). Never "A1.1"
+      etc. — the sub-semester split is collapsed at the data layer
+      so the report column is official. */
   cefr: string | null;
   category: string | null;
+  estimatedMinutes: number | null;
   status: "assigned" | "skipped" | "completed";
   assignedAt: string | null;
   completedAt: string | null;
   xpEarned: number | null;
+}
+
+export interface CurriculumBreakdownRow {
+  key: string;
+  label: string;
+  assigned: number;
+  completed: number;
+  estimatedMinutes: number;
+  xp: number;
 }
 
 export interface CurriculumReportData {
@@ -137,6 +150,9 @@ export interface CurriculumReportData {
     totalAssigned: number;
     totalCompleted: number;
     totalXp: number;
+    totalEstimatedMinutes: number;
+    byType: CurriculumBreakdownRow[];
+    bySkill: CurriculumBreakdownRow[];
     byCefr: Array<{ cefr: string; assigned: number; completed: number }>;
     byMonth: Array<{ month: string; lessons: number; music: number }>;
   };
@@ -211,12 +227,12 @@ export async function getStudentCurriculumReport(
     .or(orClauses.join(","))
     .order("assigned_at", { ascending: true });
 
-  // Completion timestamps — pulled from lesson_progress for the
-  // linked auth user (if any). Students without an auth_user_id have
-  // no progress yet so this falls back gracefully. XP is summed from
-  // xp_events below (the canonical gamification source-of-truth);
-  // lesson_progress has no xp column.
+  // Completion timestamps + per-lesson XP — both pulled from the
+  // same auth user. XP lives in xp_events; we key by source_id
+  // (the lesson_slug) so each curriculum entry can display what
+  // it actually earned.
   const progressBySlug = new Map<string, { completedAt: string }>();
+  const xpBySlug = new Map<string, number>();
   let totalXp = 0;
   if (roster.auth_user_id) {
     const [progRes, xpRes] = await Promise.all([
@@ -228,7 +244,7 @@ export async function getStudentCurriculumReport(
         .limit(10_000),
       admin
         .from("xp_events")
-        .select("xp_amount, created_at")
+        .select("xp_amount, source, source_id, created_at")
         .eq("student_id", roster.auth_user_id)
         .limit(50_000),
     ]);
@@ -243,34 +259,54 @@ export async function getStudentCurriculumReport(
     }
     for (const ev of (xpRes.data ?? []) as Array<{
       xp_amount: number;
+      source: string | null;
+      source_id: string | null;
       created_at: string;
     }>) {
       if (!withinYear(ev.created_at, year)) continue;
-      totalXp += ev.xp_amount ?? 0;
+      const amount = ev.xp_amount ?? 0;
+      totalXp += amount;
+      if (ev.source === "lesson" && ev.source_id) {
+        xpBySlug.set(ev.source_id, (xpBySlug.get(ev.source_id) ?? 0) + amount);
+      }
     }
+  }
+
+  /** Collapse CEFR sub-semester codes (A1.1, A1.2, …) into the
+      canonical family (A1, A2, B1, B2, C1, C2). Returns null for
+      unclassified content (filtered out of the curriculum below). */
+  function cefrFamily(raw: string | null | undefined): string | null {
+    if (!raw) return null;
+    const match = raw.toUpperCase().match(/^[A-Z][0-9]/);
+    return match ? match[0] : null;
   }
 
   const rawEntries: CurriculumEntry[] = (assignments ?? []).map((a) => {
     const { kind, slug } = fromAssignmentSlug(a.lesson_slug as string);
     const prog = progressBySlug.get(a.lesson_slug as string);
-    // When the teacher marked status=completed but the student never
-    // self-completed (no lesson_progress row), fall back to the
-    // assignment date so the lesson still lands in a month bucket.
     const completedAt =
       prog?.completedAt ??
       (a.status === "completed" ? (a.assigned_at as string) : null);
+    // Per-entry XP — for music the slug is "music:<slug>", which is
+    // what xp_events.source_id stores too. Lessons match by bare slug.
+    const xpKey =
+      kind === "music" ? `music:${slug}` : (a.lesson_slug as string);
+    const xpEarned = xpBySlug.get(xpKey) ?? null;
     if (kind === "music") {
       const m = getMusic(slug);
       return {
         slug,
         kind: "music" as const,
         title: m ? `${m.artist} — ${m.title}` : slug,
-        cefr: m?.cefr_level ?? null,
+        cefr: cefrFamily(m?.cefr_level ?? null),
         category: "music",
+        // Music has no explicit minutes field; assume ~5 min per song
+        // so the totals line up with the gamification engine's estimate.
+        estimatedMinutes: m ? 5 : null,
         status: a.status as "assigned" | "skipped" | "completed",
         assignedAt: a.assigned_at as string,
         completedAt,
-        xpEarned: null,
+        xpEarned,
       };
     }
     const meta = findLessonMeta(slug);
@@ -278,42 +314,77 @@ export async function getStudentCurriculumReport(
       slug,
       kind: "lesson" as const,
       title: meta?.title ?? slug,
-      cefr: meta?.cefr_level ?? null,
+      cefr: cefrFamily(meta?.cefr_level ?? null),
       category: meta?.category ?? null,
+      estimatedMinutes: meta?.estimated_minutes ?? null,
       status: a.status as "assigned" | "skipped" | "completed",
       assignedAt: a.assigned_at as string,
       completedAt,
-      xpEarned: null,
+      xpEarned,
     };
   });
 
-  // Filter to the selected year. An entry counts if EITHER it was
-  // assigned OR completed inside the window — this keeps lessons
-  // that were assigned late last year but finished this year
-  // visible on the current year's curriculum.
-  //
-  // Second rule: entries without a CEFR level are considered
-  // unclassified content and are excluded from the printed
-  // curriculum entirely. An official transcript should not carry
-  // rows with "—" in the level column.
+  // Filter to the selected year + drop unclassified rows.
   const entries = rawEntries.filter(
     (e) =>
       !!e.cefr &&
       (withinYear(e.assignedAt, year) || withinYear(e.completedAt, year)),
   );
 
-  // Stats. CEFR is aggregated by course family (A1, A2, B1, B2, C1,
-  // C2) rather than by half-semester (A1.1, A1.2, …) — that makes
-  // the pie chart readable at print size.
+  // Stats. CEFR already aggregated at the entry level (A1/A2/B1/...).
   const byCefrMap = new Map<string, { assigned: number; completed: number }>();
   const byMonthMap = new Map<string, { lessons: number; music: number }>();
+  // New: breakdowns by Type (Lição / Música) and by Skill category
+  // (grammar, speaking, etc.). Each carries count, completed, XP,
+  // and estimated time — the "Resumo" section on the print page
+  // renders these as two side-by-side summary tables.
+  const TYPE_LABEL: Record<"lesson" | "music", string> = {
+    lesson: "Lição",
+    music: "Música",
+  };
+  const SKILL_LABEL: Record<string, string> = {
+    grammar: "Gramática",
+    vocabulary: "Vocabulário",
+    reading: "Leitura",
+    listening: "Escuta",
+    narrative: "Narrativa",
+    speaking: "Conversação",
+    dialog: "Diálogo",
+    music: "Música",
+  };
+  const byTypeMap = new Map<string, CurriculumBreakdownRow>();
+  const bySkillMap = new Map<string, CurriculumBreakdownRow>();
+  let totalEstimatedMinutes = 0;
+
+  function bumpBreakdown(
+    map: Map<string, CurriculumBreakdownRow>,
+    key: string,
+    label: string,
+    entry: CurriculumEntry,
+  ) {
+    const row = map.get(key) ?? {
+      key,
+      label,
+      assigned: 0,
+      completed: 0,
+      estimatedMinutes: 0,
+      xp: 0,
+    };
+    row.assigned += 1;
+    if (entry.status === "completed") {
+      row.completed += 1;
+      row.xp += entry.xpEarned ?? 0;
+      row.estimatedMinutes += entry.estimatedMinutes ?? 0;
+    }
+    map.set(key, row);
+  }
+
   for (const e of entries) {
-    const upper = (e.cefr ?? "").toUpperCase();
-    const family = upper.match(/^[A-Z][0-9]/)?.[0] ?? "—";
-    const slot = byCefrMap.get(family) ?? { assigned: 0, completed: 0 };
+    const slot = byCefrMap.get(e.cefr ?? "—") ?? { assigned: 0, completed: 0 };
     slot.assigned += 1;
     if (e.status === "completed") {
       slot.completed += 1;
+      totalEstimatedMinutes += e.estimatedMinutes ?? 0;
       if (e.completedAt) {
         const m = e.completedAt.slice(0, 7);
         const bucket = byMonthMap.get(m) ?? { lessons: 0, music: 0 };
@@ -322,7 +393,16 @@ export async function getStudentCurriculumReport(
         byMonthMap.set(m, bucket);
       }
     }
-    byCefrMap.set(family, slot);
+    byCefrMap.set(e.cefr ?? "—", slot);
+
+    bumpBreakdown(byTypeMap, e.kind, TYPE_LABEL[e.kind], e);
+    const skillKey = (e.category ?? "mixed").toLowerCase();
+    bumpBreakdown(
+      bySkillMap,
+      skillKey,
+      SKILL_LABEL[skillKey] ?? skillKey,
+      e,
+    );
   }
 
   const years = new Set<number>();
@@ -360,6 +440,13 @@ export async function getStudentCurriculumReport(
       totalAssigned: entries.length,
       totalCompleted: entries.filter((e) => e.status === "completed").length,
       totalXp,
+      totalEstimatedMinutes,
+      byType: Array.from(byTypeMap.values()).sort(
+        (a, b) => b.completed - a.completed,
+      ),
+      bySkill: Array.from(bySkillMap.values()).sort(
+        (a, b) => b.completed - a.completed,
+      ),
       byCefr: Array.from(byCefrMap.entries())
         .map(([cefr, v]) => ({ cefr, ...v }))
         .sort((a, b) => a.cefr.localeCompare(b.cefr)),

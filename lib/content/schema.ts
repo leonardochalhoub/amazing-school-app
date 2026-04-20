@@ -1,22 +1,31 @@
 import { z } from "zod";
 
-export const SKILLS = ["grammar", "vocabulary", "reading", "listening", "narrative"] as const;
-export const SKILL_SET = new Set<string>(SKILLS);
-
 /**
- * UI-only skills. Real lessons are tagged with one of SKILLS as their
- * `category`, but in the filter dropdown we also expose virtual skills
- * that match on SCENE content rather than category:
- *   - "speaking" matches lessons with a `pronunciation` scene.
- *   - "dialog"   matches lessons with a `dialog_pronunciation` scene.
+ * Official skill categories a teacher can pick when authoring a
+ * lesson. Used by the lesson builder, the content validator, and
+ * the curriculum-report breakdown.
+ *
+ * - speaking / dialog — started as filter-only virtual skills but
+ *   are now first-class category values so teachers can label a
+ *   lesson by its practice mode directly.
  */
-export const UI_SKILLS = [
-  ...SKILLS,
+export const SKILLS = [
+  "grammar",
+  "vocabulary",
+  "reading",
+  "listening",
+  "narrative",
   "speaking",
   "dialog",
 ] as const;
+export const SKILL_SET = new Set<string>(SKILLS);
+
+// Kept for backwards-compatibility with earlier filter code. The UI
+// set is identical to SKILLS now that every option is a real
+// category; exports stay so other modules don't need to change.
+export const UI_SKILLS = SKILLS;
 export type UISkill = (typeof UI_SKILLS)[number];
-export const UI_SKILL_SET = new Set<string>(UI_SKILLS);
+export const UI_SKILL_SET = SKILL_SET;
 
 export const CEFR_LEVELS = [
   "a1.1", "a1.2",

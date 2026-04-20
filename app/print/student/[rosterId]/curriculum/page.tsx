@@ -101,8 +101,107 @@ export default async function StudentCurriculumPrintPage({
           label="XP acumulado"
           value={stats.totalXp.toLocaleString("pt-BR")}
         />
-        <Kpi label="Períodos" value={stats.byMonth.length} sub="meses ativos" />
+        <Kpi
+          label="Tempo estimado"
+          value={fmtHours(stats.totalEstimatedMinutes)}
+          sub="conteúdos concluídos"
+        />
       </section>
+
+      {/* ===== Resumo por tipo (Lição / Música) ===== */}
+      {stats.byType.length > 0 ? (
+        <section className="report-avoid-break">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+            Resumo por tipo
+          </h2>
+          <table className="mt-2">
+            <thead>
+              <tr>
+                <th style={{ width: "30%" }}>Tipo</th>
+                <th style={{ width: "17.5%", textAlign: "right" }}>
+                  Atribuídas
+                </th>
+                <th style={{ width: "17.5%", textAlign: "right" }}>
+                  Concluídas
+                </th>
+                <th style={{ width: "17.5%", textAlign: "right" }}>
+                  Tempo estimado
+                </th>
+                <th style={{ width: "17.5%", textAlign: "right" }}>XP</th>
+              </tr>
+            </thead>
+            <tbody>
+              {stats.byType.map((row) => (
+                <BreakdownRow key={row.key} row={row} />
+              ))}
+              <tr>
+                <td style={{ fontWeight: 600 }}>Total</td>
+                <td style={{ textAlign: "right", fontWeight: 600 }} className="tabular-nums">
+                  {stats.totalAssigned}
+                </td>
+                <td style={{ textAlign: "right", fontWeight: 600 }} className="tabular-nums">
+                  {stats.totalCompleted}
+                </td>
+                <td style={{ textAlign: "right", fontWeight: 600 }} className="tabular-nums">
+                  {fmtHours(stats.totalEstimatedMinutes)}
+                </td>
+                <td style={{ textAlign: "right", fontWeight: 600 }} className="tabular-nums">
+                  {stats.totalXp.toLocaleString("pt-BR")}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      ) : null}
+
+      {/* ===== Resumo por categoria (Grammar, Listening, …) + pizza ===== */}
+      {stats.bySkill.length > 0 ? (
+        <section className="report-avoid-break">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+            Resumo por categoria
+          </h2>
+          <div
+            style={{
+              marginTop: 12,
+              display: "grid",
+              gridTemplateColumns: "1.35fr 1fr",
+              gap: 16,
+              alignItems: "start",
+            }}
+          >
+            <table>
+              <thead>
+                <tr>
+                  <th style={{ width: "34%" }}>Categoria</th>
+                  <th style={{ width: "16%", textAlign: "right" }}>Atrib.</th>
+                  <th style={{ width: "16%", textAlign: "right" }}>Concl.</th>
+                  <th style={{ width: "17%", textAlign: "right" }}>Tempo</th>
+                  <th style={{ width: "17%", textAlign: "right" }}>XP</th>
+                </tr>
+              </thead>
+              <tbody>
+                {stats.bySkill.map((row) => (
+                  <BreakdownRow key={row.key} row={row} />
+                ))}
+              </tbody>
+            </table>
+            <div>
+              <p className="mb-1 text-xs text-slate-500">
+                Distribuição (atribuídas)
+              </p>
+              <CefrMixChart
+                data={stats.bySkill.map((r) => ({
+                  cefr: r.label,
+                  assigned: r.assigned,
+                  completed: r.completed,
+                }))}
+                width={300}
+                height={210}
+              />
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* Charts — forced side by side, each gets half the inner
           page width. No flex-wrap so the A4 preview never stacks
@@ -219,15 +318,16 @@ export default async function StudentCurriculumPrintPage({
             Nenhum conteúdo atribuído no período selecionado.
           </p>
         ) : (
-          <table className="mt-2">
+          <table className="mt-2" style={{ fontSize: "9.5pt" }}>
             <thead>
               <tr>
-                <th style={{ width: "42%" }}>Conteúdo</th>
-                <th style={{ width: "10%" }}>Tipo</th>
-                <th style={{ width: "9%" }}>Nível</th>
-                <th style={{ width: "14%" }}>Atribuído em</th>
-                <th style={{ width: "14%" }}>Concluído em</th>
-                <th style={{ width: "11%", textAlign: "right" }}>XP</th>
+                <th style={{ width: "36%" }}>Conteúdo</th>
+                <th style={{ width: "8%" }}>Tipo</th>
+                <th style={{ width: "7%" }}>Nível</th>
+                <th style={{ width: "11%" }}>Atribuído</th>
+                <th style={{ width: "11%" }}>Concluído</th>
+                <th style={{ width: "11%", textAlign: "right" }}>Tempo</th>
+                <th style={{ width: "8%", textAlign: "right" }}>XP</th>
               </tr>
             </thead>
             <tbody>
@@ -240,7 +340,7 @@ export default async function StudentCurriculumPrintPage({
                     ) : null}
                   </td>
                   <td>{e.kind === "music" ? "Música" : "Lição"}</td>
-                  <td>{(e.cefr ?? "—").toUpperCase()}</td>
+                  <td>{e.cefr ?? ""}</td>
                   <td>{fmtDate(e.assignedAt)}</td>
                   <td>
                     {e.status === "completed" ? (
@@ -252,6 +352,11 @@ export default async function StudentCurriculumPrintPage({
                     ) : (
                       <span className="report-muted">Pendente</span>
                     )}
+                  </td>
+                  <td style={{ textAlign: "right" }} className="tabular-nums">
+                    {e.estimatedMinutes
+                      ? `${e.estimatedMinutes} min`
+                      : "—"}
                   </td>
                   <td style={{ textAlign: "right" }} className="tabular-nums">
                     {e.status === "completed" && e.xpEarned != null
@@ -293,4 +398,49 @@ function fmtDate(iso: string | null): string {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return "—";
   return d.toLocaleDateString("pt-BR");
+}
+
+function fmtHours(totalMinutes: number): string {
+  if (!totalMinutes) return "0 min";
+  const h = Math.floor(totalMinutes / 60);
+  const m = totalMinutes % 60;
+  if (h === 0) return `${m} min`;
+  if (m === 0) return `${h} h`;
+  return `${h}h ${m}min`;
+}
+
+/**
+ * Shared row shape for the "Resumo por tipo" + "Resumo por
+ * categoria" tables. All 5 columns are tabular-nums so the totals
+ * line up cleanly when the page is zoomed.
+ */
+function BreakdownRow({
+  row,
+}: {
+  row: {
+    key: string;
+    label: string;
+    assigned: number;
+    completed: number;
+    estimatedMinutes: number;
+    xp: number;
+  };
+}) {
+  return (
+    <tr>
+      <td style={{ fontWeight: 500 }}>{row.label}</td>
+      <td style={{ textAlign: "right" }} className="tabular-nums">
+        {row.assigned}
+      </td>
+      <td style={{ textAlign: "right" }} className="tabular-nums">
+        {row.completed}
+      </td>
+      <td style={{ textAlign: "right" }} className="tabular-nums">
+        {fmtHours(row.estimatedMinutes)}
+      </td>
+      <td style={{ textAlign: "right" }} className="tabular-nums">
+        {row.xp.toLocaleString("pt-BR")}
+      </td>
+    </tr>
+  );
 }

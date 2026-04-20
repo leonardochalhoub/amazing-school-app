@@ -274,8 +274,9 @@ export function LessonBuilder({ initial }: Props) {
                 <option value="vocabulary">Vocabulary</option>
                 <option value="reading">Reading</option>
                 <option value="listening">Listening</option>
-                <option value="conversation">Conversation</option>
-                <option value="custom">Custom</option>
+                <option value="narrative">Narrative</option>
+                <option value="speaking">Speaking</option>
+                <option value="dialog">Dialog</option>
               </select>
             </div>
             <div className="space-y-1.5">
