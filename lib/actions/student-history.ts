@@ -223,19 +223,17 @@ export async function listAllTeacherHistory(
     rows = [];
   }
 
-  // Union PAST scheduled_classes so a teacher who scheduled a class
-  // via the Schedule button also sees it in the dashboard class log
-  // — otherwise that record lived only inside the per-classroom
-  // "Past classes" card and never surfaced globally.
+  // Union scheduled_classes (past AND future) so the dashboard
+  // class log shows every meeting a teacher has scheduled, not
+  // just what's in the per-student history panel.
   if (myClassroomIds.length > 0) {
-    const nowIso = new Date().toISOString();
+    const now = Date.now();
     const { data: scheduled } = await admin
       .from("scheduled_classes")
       .select(
         "id, classroom_id, title, observations, completion_status, meeting_url, scheduled_at, created_at",
       )
       .in("classroom_id", myClassroomIds)
-      .lte("scheduled_at", nowIso)
       .order("scheduled_at", { ascending: false })
       .limit(limit);
     for (const s of (scheduled ?? []) as Array<{
@@ -251,6 +249,10 @@ export async function listAllTeacherHistory(
       const at = new Date(s.scheduled_at);
       const eventDate = at.toISOString().slice(0, 10);
       const eventTime = at.toISOString().slice(11, 16);
+      const isPast = at.getTime() < now;
+      // Map the explicit completion_status if set. Fall back by
+      // time: past meetings default to "Done" (happened), future
+      // ones stay "Planned" until the teacher marks them.
       const status: HistoryStatus =
         s.completion_status === "done"
           ? "Done"
@@ -260,7 +262,9 @@ export async function listAllTeacherHistory(
               ? "Rescheduled by student"
               : s.completion_status === "rescheduled_teacher"
                 ? "Rescheduled by teacher"
-                : "Planned";
+                : isPast
+                  ? "Done"
+                  : "Planned";
       rows.push({
         id: `sch:${s.id}`,
         teacher_id: user.id,
@@ -270,12 +274,17 @@ export async function listAllTeacherHistory(
         event_date: eventDate,
         event_time: eventTime,
         status,
+        // The "Student / Class" column uses classroom_name_snapshot
+        // for these rows; lesson_content stays a free-form summary
+        // of what was taught / what's planned.
+        classroom_name_snapshot:
+          classroomNameById.get(s.classroom_id) ?? null,
         lesson_content: s.observations ?? s.title ?? null,
         skill_focus: [],
         meeting_link: s.meeting_url,
         created_at: s.created_at,
         updated_at: s.created_at,
-      });
+      } as Record<string, unknown>);
     }
   }
 
@@ -317,27 +326,37 @@ export async function listAllTeacherHistory(
     }
   }
 
-  return rows.map((r) => ({
-    id: r.id as string,
-    teacher_id: r.teacher_id as string,
-    student_id: (r.student_id as string | null) ?? null,
-    roster_student_id: (r.roster_student_id as string | null) ?? null,
-    classroom_id: (r.classroom_id as string | null) ?? null,
-    event_date: r.event_date as string,
-    event_time: (r.event_time as string | null) ?? null,
-    status: r.status as HistoryStatus,
-    lesson_content: (r.lesson_content as string | null) ?? null,
-    skill_focus: Array.isArray(r.skill_focus)
-      ? sanitizeSkillFocus(r.skill_focus as string[])
-      : [],
-    meeting_link: (r.meeting_link as string | null) ?? null,
-    created_at: r.created_at as string,
-    updated_at: r.updated_at as string,
-    student_name:
+  return rows.map((r) => {
+    const classroomId = (r.classroom_id as string | null) ?? null;
+    // Prefer a live student name. For scheduled-class rows (no
+    // student id on either side) fall back to the classroom name
+    // so the "Student / Class" column never shows a bare dash.
+    const personName =
       nameById.get((r.student_id as string) ?? "") ||
       nameById.get((r.roster_student_id as string) ?? "") ||
-      null,
-  }));
+      null;
+    const classroomName =
+      (r.classroom_name_snapshot as string | null | undefined) ??
+      (classroomId ? classroomNameById.get(classroomId) ?? null : null);
+    return {
+      id: r.id as string,
+      teacher_id: r.teacher_id as string,
+      student_id: (r.student_id as string | null) ?? null,
+      roster_student_id: (r.roster_student_id as string | null) ?? null,
+      classroom_id: classroomId,
+      event_date: r.event_date as string,
+      event_time: (r.event_time as string | null) ?? null,
+      status: r.status as HistoryStatus,
+      lesson_content: (r.lesson_content as string | null) ?? null,
+      skill_focus: Array.isArray(r.skill_focus)
+        ? sanitizeSkillFocus(r.skill_focus as string[])
+        : [],
+      meeting_link: (r.meeting_link as string | null) ?? null,
+      created_at: r.created_at as string,
+      updated_at: r.updated_at as string,
+      student_name: personName ?? classroomName ?? null,
+    };
+  });
 }
 
 /**

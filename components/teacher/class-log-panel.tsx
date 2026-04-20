@@ -79,7 +79,7 @@ export function ClassLogPanel({ entries }: Props) {
             <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
               <tr>
                 <th className="px-3 py-2">Date</th>
-                <th className="px-3 py-2">Student</th>
+                <th className="px-3 py-2">Student / Class</th>
                 <th className="px-3 py-2">Status</th>
                 <th className="px-3 py-2">Content</th>
                 <th className="px-3 py-2">Skills</th>
