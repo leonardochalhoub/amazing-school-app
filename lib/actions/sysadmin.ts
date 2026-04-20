@@ -212,7 +212,10 @@ export async function getSysadminOverview(): Promise<
       // across the dashboard.
       .eq("is_test", false)
       .order("created_at", { ascending: false }),
-    admin.from("classrooms").select("id, teacher_id, created_at"),
+    admin
+      .from("classrooms")
+      .select("id, teacher_id, created_at")
+      .is("deleted_at", null),
     admin
       .from("roster_students")
       .select(

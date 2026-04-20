@@ -71,7 +71,8 @@ export async function listTeacherListeningResponses(): Promise<
   const { data: classrooms } = await admin
     .from("classrooms")
     .select("id")
-    .eq("teacher_id", user.id);
+    .eq("teacher_id", user.id)
+    .is("deleted_at", null);
   if (!classrooms || classrooms.length === 0) return [];
   const classroomIds = classrooms.map((c) => c.id as string);
 
@@ -200,7 +201,8 @@ export async function reviewListeningResponse(
   const { data: classrooms } = await admin
     .from("classrooms")
     .select("id")
-    .eq("teacher_id", user.id);
+    .eq("teacher_id", user.id)
+    .is("deleted_at", null);
   const classroomIds = (classrooms ?? []).map((c) => c.id as string);
   if (classroomIds.length === 0) return { error: "No classrooms" };
 

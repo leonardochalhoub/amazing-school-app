@@ -75,6 +75,7 @@ export async function joinClassroom(formData: FormData) {
     .from("classrooms")
     .select("id")
     .eq("invite_code", inviteCode)
+    .is("deleted_at", null)
     .single();
 
   if (findError || !classroom) {
@@ -113,6 +114,7 @@ export async function getTeacherClassrooms() {
     .from("classrooms")
     .select("*, classroom_members(count)")
     .eq("teacher_id", user.id)
+    .is("deleted_at", null)
     .order("created_at", { ascending: false });
 
   return data ?? [];
@@ -125,6 +127,7 @@ export async function getClassroomDetails(classroomId: string) {
     .from("classrooms")
     .select("*")
     .eq("id", classroomId)
+    .is("deleted_at", null)
     .single();
 
   if (!classroom) return null;
@@ -203,18 +206,25 @@ export async function deleteClassroom(input: {
   const admin = createAdminClient();
   const { data: classroom } = await admin
     .from("classrooms")
-    .select("id, teacher_id")
+    .select("id, teacher_id, deleted_at")
     .eq("id", parsed.data)
     .maybeSingle();
   if (!classroom) return { error: "Classroom not found" };
-  if ((classroom as { teacher_id: string }).teacher_id !== user.id) {
+  const c = classroom as {
+    id: string;
+    teacher_id: string;
+    deleted_at: string | null;
+  };
+  if (c.teacher_id !== user.id) {
     return { error: "You don't own this classroom" };
   }
+  if (c.deleted_at) return { error: "Classroom is already deleted" };
 
-  // Drop FUTURE scheduled meetings only. Past meetings stay so the
-  // class log keeps the history; migration 039 flipped the FK to
-  // SET NULL so those orphaned rows survive the classroom delete
-  // with classroom_id = NULL.
+  // Clear FUTURE scheduled meetings — they're planned events for a
+  // classroom that's going away. Past meetings stay untouched so
+  // the class log keeps the historical record, and because we
+  // soft-delete the classroom below, the row is still joinable for
+  // the classroom NAME those past rows display.
   const nowIso = new Date().toISOString();
   const { error: futureErr } = await admin
     .from("scheduled_classes")
@@ -226,31 +236,43 @@ export async function deleteClassroom(input: {
     return { error: futureErr.message };
   }
 
+  // Soft delete: stamp deleted_at instead of removing the row. Every
+  // active-classroom query filters `deleted_at IS NULL`; every
+  // historical surface joins classrooms(name) and still resolves
+  // the original classroom name because the row lives on.
   const { error, count } = await admin
     .from("classrooms")
-    .delete({ count: "exact" })
-    .eq("id", parsed.data);
+    .update({ deleted_at: nowIso }, { count: "exact" })
+    .eq("id", parsed.data)
+    .is("deleted_at", null);
   if (error) {
     console.error("[deleteClassroom]", error);
     return { error: error.message };
   }
   if (!count) {
-    // Matched nothing — either the row vanished mid-request or a
-    // policy / trigger quietly refused the delete. Either way the
-    // UI should NOT claim success since the classroom would still
-    // reappear on refresh.
-    console.error("[deleteClassroom] delete affected 0 rows", {
+    console.error("[deleteClassroom] update affected 0 rows", {
       classroomId: parsed.data,
     });
     return { error: "Delete didn't take effect. Try reloading the page." };
   }
 
-  // Invalidate every surface that lists or reads classrooms so the
-  // deleted row can't return from a cached layout. Covers:
-  //   /teacher              — teacher dashboard
-  //   /teacher/admin        — management tab (classrooms card)
-  //   /teacher/classroom/*  — classroom detail pages
-  //   /owner/sysadmin       — sysadmin all-teachers + health
+  // Also drop every active classroom_members row so the 2 students
+  // no longer appear in the classroom; roster + lesson history
+  // remain intact because those tables' FKs are SET NULL / nullable.
+  await admin
+    .from("classroom_members")
+    .delete()
+    .eq("classroom_id", parsed.data);
+
+  // Null the classroom_id on roster_students so the students
+  // appear in the teacher's roster as "no classroom" — the teacher
+  // can then add them to another one.
+  await admin
+    .from("roster_students")
+    .update({ classroom_id: null })
+    .eq("classroom_id", parsed.data);
+
+  // Invalidate every surface that lists classrooms.
   revalidatePath("/teacher");
   revalidatePath("/teacher/admin");
   revalidatePath("/teacher/classroom", "layout");

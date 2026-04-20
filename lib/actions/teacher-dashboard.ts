@@ -298,6 +298,7 @@ export async function getTeacherDashboardData(): Promise<TeacherDashboardData> {
     .from("classrooms")
     .select("id, name, description, invite_code")
     .eq("teacher_id", user.id)
+    .is("deleted_at", null)
     .order("created_at", { ascending: false });
 
   const rows = classrooms ?? [];
@@ -431,6 +432,7 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
       .from("classrooms")
       .select("id, name, description, invite_code")
       .eq("teacher_id", user.id)
+      .is("deleted_at", null)
       .order("created_at", { ascending: false }),
     admin
       .from("roster_students")

@@ -34,7 +34,10 @@ export async function getPublicStats(): Promise<PublicStats> {
       .select("id", { count: "exact", head: true })
       .eq("role", "teacher")
       .eq("is_test", false),
-    admin.from("classrooms").select("id", { count: "exact", head: true }),
+    admin
+      .from("classrooms")
+      .select("id", { count: "exact", head: true })
+      .is("deleted_at", null),
   ]);
 
   return {

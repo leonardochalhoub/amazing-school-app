@@ -57,7 +57,8 @@ export async function listAllUsers(): Promise<UserRow[] | { error: string }> {
     const { data: classrooms } = await admin
       .from("classrooms")
       .select("id, teacher_id")
-      .in("teacher_id", teacherIds);
+      .in("teacher_id", teacherIds)
+      .is("deleted_at", null);
     const classroomByTeacher = new Map<string, string[]>();
     for (const c of (classrooms ?? []) as Array<{
       id: string;

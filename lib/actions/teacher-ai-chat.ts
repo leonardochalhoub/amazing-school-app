@@ -41,7 +41,11 @@ export async function getTeacherAiChatStats(): Promise<TeacherAiChatRow[]> {
   const admin = createAdminClient();
 
   const [classroomsRes, rosterRes] = await Promise.all([
-    admin.from("classrooms").select("id, name").eq("teacher_id", user.id),
+    admin
+      .from("classrooms")
+      .select("id, name")
+      .eq("teacher_id", user.id)
+      .is("deleted_at", null),
     admin
       .from("roster_students")
       .select("auth_user_id")

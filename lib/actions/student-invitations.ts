@@ -59,11 +59,14 @@ export async function createStudentInvitation(
   if (parsed.data.classroomId) {
     const { data: classroom } = await admin
       .from("classrooms")
-      .select("id, teacher_id")
+      .select("id, teacher_id, deleted_at")
       .eq("id", parsed.data.classroomId)
       .maybeSingle();
     if (!classroom || classroom.teacher_id !== user.id) {
       return { error: "Classroom not found or not yours" };
+    }
+    if ((classroom as { deleted_at: string | null }).deleted_at) {
+      return { error: "That classroom has been deleted" };
     }
   }
   if (parsed.data.rosterStudentId) {
