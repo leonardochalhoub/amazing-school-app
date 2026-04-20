@@ -26,6 +26,7 @@ import {
   GRADE_OPTIONS,
   findCertificateLevel,
 } from "@/lib/reports/certificate-levels";
+import { formatCpf } from "@/lib/reports/cpf";
 
 interface Props {
   /** Single student — fixed selection, no student picker. */
@@ -433,15 +434,23 @@ export function IssueCertificateButton({
               </Label>
               <Input
                 id="cert-teacher-cpf"
-                placeholder="123.456.789-00"
+                placeholder="000.000.000-00"
                 value={teacherCpf}
-                onChange={(e) => setTeacherCpf(e.target.value)}
+                onChange={(e) =>
+                  // Live mask: whatever the teacher types (bare
+                  // digits, partial formatted, full formatted) gets
+                  // normalised to the 999.888.777-00 shape so the
+                  // stored value is always canonical.
+                  setTeacherCpf(formatCpf(e.target.value))
+                }
                 inputMode="numeric"
-                maxLength={20}
+                maxLength={14}
               />
               <p className="text-[11px] text-muted-foreground">
                 Aparece logo abaixo do seu nome na linha da assinatura
-                do certificado. Não é obrigatório.
+                do certificado, sempre no formato{" "}
+                <span className="font-semibold">999.888.777-00</span>.
+                Não é obrigatório.
               </p>
             </div>
 

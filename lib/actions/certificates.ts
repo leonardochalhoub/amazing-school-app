@@ -9,6 +9,10 @@ import { getSignatureSignedUrl } from "@/lib/signature";
 import { translatePtToEn } from "@/lib/ai/translate";
 import { certificateBadgeTypes } from "@/lib/gamification/config";
 import {
+  formatCpf,
+  normalizeCpfForStorage,
+} from "@/lib/reports/cpf";
+import {
   CERTIFICATE_LEVELS,
   GRADE_OPTIONS,
   type CertificateLevelCode,
@@ -172,7 +176,10 @@ export async function createCertificate(input: z.input<typeof InputSchema>) {
       total_hours: parsed.data.totalHours ?? null,
       teacher_title: parsed.data.teacherTitle || null,
       teacher_title_en: teacherTitleEn,
-      teacher_cpf: (parsed.data.teacherCpf || "").trim() || null,
+      // Always persist the canonical 999.888.777-00 shape. Returns
+      // null for blank or under-11-digit input, which keeps garbage
+      // out of the DB.
+      teacher_cpf: normalizeCpfForStorage(parsed.data.teacherCpf),
       ...(issuedAtISO ? { issued_at: issuedAtISO } : {}),
     })
     .select("id")
@@ -597,7 +604,9 @@ export async function getCertificate(
     totalHours: row.total_hours ?? null,
     teacherTitle: row.teacher_title ?? null,
     teacherTitleEn: row.teacher_title_en ?? null,
-    teacherCpf: row.teacher_cpf ?? null,
+    // Re-format on read so legacy rows stored with raw digits
+    // (pre-masking) still print as 999.888.777-00.
+    teacherCpf: row.teacher_cpf ? formatCpf(row.teacher_cpf) : null,
     issuedAt: row.issued_at,
     certificateNumber,
     student: {
