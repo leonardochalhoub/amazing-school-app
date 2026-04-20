@@ -396,10 +396,11 @@ export default async function SysadminPage() {
             Time on site
           </h2>
           <p className="text-xs text-muted-foreground">
-            Sorted descending · stops counting when the tab closes.
-            Students: actual lesson work time (started_at →
-            completed_at). Teachers: 15 min × active days they
-            authored something.
+            Sorted descending · ticks only while the tab is focused
+            (pauses on tab-switch, stops on tab close). Real numbers
+            come from session heartbeats; when a user has none yet
+            we fall back to a rough estimate from completion
+            timestamps / authoring days so the table still reads.
           </p>
         </div>
 

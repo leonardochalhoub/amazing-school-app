@@ -610,36 +610,62 @@ export async function getSysadminOverview(): Promise<
   }
 
   // -----------------------------------------------------------------
-  // Time on site — the only real session signal we have today is the
-  // lesson_progress (completed_at − started_at) delta for students.
-  // When a student closes the tab mid-lesson, started_at stays set
-  // and completed_at never lands, so nothing gets counted — exactly
-  // the behaviour we want. Teachers have no per-session table yet,
-  // so we approximate from distinct calendar days they authored
-  // something (assignments / diary / history) at 15 min per active
-  // day. Both lists are sorted descending.
+  // Time on site — preferred source is public.session_heartbeats
+  // (every ~30s while the user's tab is focused, flushed on pagehide
+  // via sendBeacon / fetch keepalive). That gives real pause-on-
+  // background-tab semantics, which the old proxies couldn't do.
+  //
+  // Fallbacks still run so historical / demo data without heartbeats
+  // keeps the tables populated:
+  //   - student fallback: sum (completed_at − started_at) from
+  //     lesson_progress, clamped 0..120 min per lesson
+  //   - teacher fallback: distinct authoring days × 15 min
+  //
+  // The fallback only kicks in when heartbeats for that user are
+  // zero, so the moment a real session ticks in, the real number
+  // replaces the estimate.
   // -----------------------------------------------------------------
-  const [progressAllRes, assignmentsAllRes, diaryRes, historyRes] =
-    await Promise.all([
-      admin
-        .from("lesson_progress")
-        .select("student_id, started_at, completed_at")
-        .not("completed_at", "is", null)
-        .not("started_at", "is", null)
-        .limit(200_000),
-      admin
-        .from("lesson_assignments")
-        .select("assigned_by, assigned_at")
-        .limit(200_000),
-      admin
-        .from("roster_diary")
-        .select("teacher_id, created_at")
-        .limit(200_000),
-      admin
-        .from("student_history")
-        .select("teacher_id, created_at")
-        .limit(200_000),
-    ]);
+  const [
+    heartbeatRes,
+    progressAllRes,
+    assignmentsAllRes,
+    diaryRes,
+    historyRes,
+  ] = await Promise.all([
+    admin
+      .from("session_heartbeats")
+      .select("user_id, seconds")
+      .limit(500_000),
+    admin
+      .from("lesson_progress")
+      .select("student_id, started_at, completed_at")
+      .not("completed_at", "is", null)
+      .not("started_at", "is", null)
+      .limit(200_000),
+    admin
+      .from("lesson_assignments")
+      .select("assigned_by, assigned_at")
+      .limit(200_000),
+    admin
+      .from("roster_diary")
+      .select("teacher_id, created_at")
+      .limit(200_000),
+    admin
+      .from("student_history")
+      .select("teacher_id, created_at")
+      .limit(200_000),
+  ]);
+
+  const heartbeatMinutes = new Map<string, number>();
+  for (const h of (heartbeatRes.data ?? []) as Array<{
+    user_id: string;
+    seconds: number;
+  }>) {
+    heartbeatMinutes.set(
+      h.user_id,
+      (heartbeatMinutes.get(h.user_id) ?? 0) + h.seconds / 60,
+    );
+  }
 
   const studentMinutes = new Map<string, number>();
   const studentLessons = new Map<string, number>();
@@ -700,18 +726,24 @@ export async function getSysadminOverview(): Promise<
   const teacherTimeRows = teachers
     .map((t) => {
       const days = teacherDays.get(t.id)?.size ?? 0;
+      const heartbeat = Math.round(heartbeatMinutes.get(t.id) ?? 0);
+      // Prefer real heartbeat minutes; fall back to the 15 min/day
+      // proxy only when no heartbeats have landed yet.
+      const minutes = heartbeat > 0 ? heartbeat : days * 15;
       return {
         id: t.id,
         name: t.full_name,
         activeDays: days,
-        minutes: days * 15,
+        minutes,
       };
     })
     .sort((a, b) => b.minutes - a.minutes);
 
   const studentTimeRows = students
     .map((p) => {
-      const minutes = Math.round(studentMinutes.get(p.id) ?? 0);
+      const heartbeat = Math.round(heartbeatMinutes.get(p.id) ?? 0);
+      const fromProgress = Math.round(studentMinutes.get(p.id) ?? 0);
+      const minutes = heartbeat > 0 ? heartbeat : fromProgress;
       const lessons = studentLessons.get(p.id) ?? 0;
       const r = rosterByAuthUser.get(p.id);
       const teacherName = r?.teacher_id
