@@ -556,9 +556,21 @@ export default async function CertificatePrintPage({
                 data.teacher.email ||
                 (lang === "pt-BR" ? "Professor(a)" : "Instructor")}
             </div>
+            {/* Optional teacher credentials line — prints between
+                the name and the responsible-teacher role. */}
+            {data.teacherTitle ? (
+              <p
+                style={{
+                  fontSize: "8.5pt",
+                  color: "#4b5563",
+                  marginTop: 1,
+                  fontStyle: "italic",
+                }}
+              >
+                {data.teacherTitle}
+              </p>
+            ) : null}
             <p style={{ fontSize: "9pt", color: "#6b7280", marginTop: 2 }}>
-              {/* Responsible teacher title — gendered in pt-BR,
-                  plain "Teaching instructor" in English. */}
               {lang === "pt-BR"
                 ? `${teacherTitle(inferGenderFromName(data.teacher.fullName))} Responsável`
                 : "Teaching instructor"}

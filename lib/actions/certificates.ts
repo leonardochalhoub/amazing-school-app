@@ -24,6 +24,9 @@ export interface CertificateRecord {
   title: string | null;
   remarks: string | null;
   totalHours: number | null;
+  /** Teacher's academic credentials line — printed between the
+      name and the "Professor(a) Responsável" role. Optional. */
+  teacherTitle: string | null;
   issuedAt: string;
   certificateNumber: string;
   student: {
@@ -76,6 +79,10 @@ const InputSchema = z.object({
     .regex(/^\d{4}-\d{2}-\d{2}$/)
     .optional()
     .or(z.literal("")),
+  /** Optional academic credentials line — e.g. "Especialista em
+      Letras Português-Inglês pela UFRJ". Rendered between the
+      teacher name and the responsible-teacher role on the PDF. */
+  teacherTitle: z.string().max(200).optional().or(z.literal("")),
 });
 
 export async function createCertificate(input: z.input<typeof InputSchema>) {
@@ -135,6 +142,7 @@ export async function createCertificate(input: z.input<typeof InputSchema>) {
       title: parsed.data.title || null,
       remarks: parsed.data.remarks || null,
       total_hours: parsed.data.totalHours ?? null,
+      teacher_title: parsed.data.teacherTitle || null,
       ...(issuedAtISO ? { issued_at: issuedAtISO } : {}),
     })
     .select("id")
@@ -421,7 +429,7 @@ export async function getCertificate(
   const { data: rowRaw } = await admin
     .from("certificates")
     .select(
-      "id, roster_student_id, teacher_id, level, grade, course_start_on, course_end_on, title, remarks, total_hours, issued_at, certificate_number",
+      "id, roster_student_id, teacher_id, level, grade, course_start_on, course_end_on, title, remarks, total_hours, teacher_title, issued_at, certificate_number",
     )
     .eq("id", certificateId)
     .maybeSingle();
@@ -437,6 +445,7 @@ export async function getCertificate(
     title: string | null;
     remarks: string | null;
     total_hours: number | null;
+    teacher_title: string | null;
     issued_at: string;
     certificate_number: string | null;
   };
@@ -515,6 +524,7 @@ export async function getCertificate(
     title: row.title,
     remarks: row.remarks,
     totalHours: row.total_hours ?? null,
+    teacherTitle: row.teacher_title ?? null,
     issuedAt: row.issued_at,
     certificateNumber,
     student: {

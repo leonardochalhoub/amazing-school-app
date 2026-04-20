@@ -88,6 +88,7 @@ export function IssueCertificateButton({
   const [title, setTitle] = useState<string>("");
   const [remarks, setRemarks] = useState<string>("");
   const [totalHours, setTotalHours] = useState<string>("");
+  const [teacherCredentials, setTeacherCredentials] = useState<string>("");
   const [platformMinutes, setPlatformMinutes] = useState<number | null>(null);
 
   // Pull the platform-estimated minutes whenever the dialog opens
@@ -150,6 +151,7 @@ export function IssueCertificateButton({
         remarks,
         totalHours: hoursNum,
         issuedOn,
+        teacherTitle: teacherCredentials,
       });
       if ("error" in res && res.error) {
         toast.error(res.error);
@@ -402,6 +404,24 @@ export function IssueCertificateButton({
                 />
               </div>
             ) : null}
+
+            <div className="grid gap-2">
+              <Label htmlFor="cert-teacher-title">
+                Sua titulação{" "}
+                <span className="text-muted-foreground">(opcional)</span>
+              </Label>
+              <Input
+                id="cert-teacher-title"
+                placeholder="Ex.: Especialista em Letras Português-Inglês pela UFRJ"
+                value={teacherCredentials}
+                onChange={(e) => setTeacherCredentials(e.target.value)}
+                maxLength={200}
+              />
+              <p className="text-[11px] text-muted-foreground">
+                Aparece entre o seu nome e &ldquo;Professor(a)
+                Responsável&rdquo; na linha da assinatura.
+              </p>
+            </div>
 
             <div className="grid gap-2">
               <Label htmlFor="cert-remarks">
