@@ -22,7 +22,7 @@ const CSP = [
   "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' data: https://fonts.gstatic.com",
-  "img-src 'self' data: blob: https://*.supabase.co https://images.unsplash.com",
+  "img-src 'self' data: blob: https://*.supabase.co https://images.unsplash.com https://image.pollinations.ai",
   "media-src 'self' blob:",
   "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://api.groq.com https://api.anthropic.com https://generativelanguage.googleapis.com https://dictionary.cambridge.org https://mymemory.translated.net",
   "frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com",
