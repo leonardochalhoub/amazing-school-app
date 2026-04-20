@@ -70,10 +70,10 @@ export default async function SysadminPage() {
     growth,
     engagement,
     levelMix,
-    topTeachers,
     allTeachers,
     topActiveStudents,
     allTimeTopStudents,
+    timeOnSite,
     contentMix,
     health,
   } = overview;
@@ -236,62 +236,6 @@ export default async function SysadminPage() {
         songsPerCefr={contentMix.songsPerCefr}
       />
 
-      {/* ============================ Top teachers ============================ */}
-      <section className="space-y-3">
-        <div className="flex items-baseline justify-between">
-          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            Most active teachers
-          </h2>
-          <p className="text-xs text-muted-foreground">
-            Ranked by active students in the last 30 days. No revenue data.
-          </p>
-        </div>
-        <div className="overflow-x-auto rounded-xl border">
-          <table className="min-w-[640px] w-full text-sm">
-            <thead className="bg-muted/40 text-left text-xs uppercase tracking-wider text-muted-foreground">
-              <tr>
-                <th className="px-4 py-2">Teacher</th>
-                <th className="px-4 py-2 text-right">Classrooms</th>
-                <th className="px-4 py-2 text-right">Roster</th>
-                <th className="px-4 py-2 text-right">Active · 30d</th>
-                <th className="px-4 py-2 text-right">Joined</th>
-              </tr>
-            </thead>
-            <tbody>
-              {topTeachers.length === 0 ? (
-                <tr>
-                  <td
-                    colSpan={5}
-                    className="px-4 py-6 text-center text-sm text-muted-foreground"
-                  >
-                    No teachers yet.
-                  </td>
-                </tr>
-              ) : null}
-              {topTeachers.map((t) => (
-                <tr key={t.id} className="border-t">
-                  <td className="px-4 py-2 font-medium">
-                    {titleCase(t.name)}
-                  </td>
-                  <td className="px-4 py-2 text-right tabular-nums">
-                    {t.classroomsCount}
-                  </td>
-                  <td className="px-4 py-2 text-right tabular-nums">
-                    {t.studentCount}
-                  </td>
-                  <td className="px-4 py-2 text-right tabular-nums">
-                    {t.activeStudentsLast30d}
-                  </td>
-                  <td className="px-4 py-2 text-right text-xs text-muted-foreground">
-                    {t.createdAt.slice(0, 10)}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
       {/* ============================ All teachers directory ============================ */}
       <section className="space-y-3">
         <div className="flex items-baseline justify-between">
@@ -303,13 +247,14 @@ export default async function SysadminPage() {
           </p>
         </div>
         <div className="overflow-x-auto rounded-xl border">
-          <table className="min-w-[640px] w-full text-sm">
+          <table className="min-w-[720px] w-full text-sm">
             <thead className="bg-muted/40 text-left text-xs uppercase tracking-wider text-muted-foreground">
               <tr>
                 <th className="px-4 py-2">Teacher</th>
                 <th className="px-4 py-2">Email</th>
                 <th className="px-4 py-2 text-right">Students</th>
                 <th className="px-4 py-2 text-right">Classrooms</th>
+                <th className="px-4 py-2 text-right">Active · 30d</th>
                 <th className="px-4 py-2 text-right">Joined</th>
               </tr>
             </thead>
@@ -317,7 +262,7 @@ export default async function SysadminPage() {
               {allTeachers.length === 0 ? (
                 <tr>
                   <td
-                    colSpan={5}
+                    colSpan={6}
                     className="px-4 py-6 text-center text-sm text-muted-foreground"
                   >
                     No teachers yet.
@@ -337,6 +282,9 @@ export default async function SysadminPage() {
                   </td>
                   <td className="px-4 py-2 text-right tabular-nums">
                     {t.classroomsCount}
+                  </td>
+                  <td className="px-4 py-2 text-right tabular-nums">
+                    {t.activeStudentsLast30d}
                   </td>
                   <td className="px-4 py-2 text-right text-xs text-muted-foreground">
                     {t.createdAt.slice(0, 10)}
@@ -438,6 +386,111 @@ export default async function SysadminPage() {
               No XP events on the platform yet.
             </p>
           ) : null}
+        </div>
+      </section>
+
+      {/* ============================ Time on site ============================ */}
+      <section className="space-y-4">
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            Time on site
+          </h2>
+          <p className="text-xs text-muted-foreground">
+            Sorted descending · stops counting when the tab closes.
+            Students: actual lesson work time (started_at →
+            completed_at). Teachers: 15 min × active days they
+            authored something.
+          </p>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="space-y-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Teachers
+            </h3>
+            <div className="overflow-x-auto rounded-xl border">
+              <table className="min-w-[440px] w-full text-sm">
+                <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
+                  <tr>
+                    <th className="px-4 py-2">Teacher</th>
+                    <th className="px-4 py-2 text-right">Active days</th>
+                    <th className="px-4 py-2 text-right">Minutes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {timeOnSite.teachers.length === 0 ? (
+                    <tr>
+                      <td
+                        colSpan={3}
+                        className="px-4 py-6 text-center text-xs text-muted-foreground"
+                      >
+                        No teacher activity tracked yet.
+                      </td>
+                    </tr>
+                  ) : null}
+                  {timeOnSite.teachers.map((t) => (
+                    <tr key={t.id} className="border-t">
+                      <td className="px-4 py-2 font-medium">
+                        {titleCase(t.name)}
+                      </td>
+                      <td className="px-4 py-2 text-right tabular-nums">
+                        {t.activeDays}
+                      </td>
+                      <td className="px-4 py-2 text-right font-semibold tabular-nums">
+                        {t.minutes.toLocaleString()}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Students
+            </h3>
+            <div className="overflow-x-auto rounded-xl border">
+              <table className="min-w-[480px] w-full text-sm">
+                <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
+                  <tr>
+                    <th className="px-4 py-2">Student</th>
+                    <th className="px-4 py-2">Teacher</th>
+                    <th className="px-4 py-2 text-right">Lessons</th>
+                    <th className="px-4 py-2 text-right">Minutes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {timeOnSite.students.length === 0 ? (
+                    <tr>
+                      <td
+                        colSpan={4}
+                        className="px-4 py-6 text-center text-xs text-muted-foreground"
+                      >
+                        No completed lessons yet.
+                      </td>
+                    </tr>
+                  ) : null}
+                  {timeOnSite.students.map((s) => (
+                    <tr key={s.id} className="border-t">
+                      <td className="px-4 py-2 font-medium">
+                        {titleCase(s.displayName)}
+                      </td>
+                      <td className="px-4 py-2 text-xs text-muted-foreground">
+                        {s.teacherName ? titleCase(s.teacherName) : "—"}
+                      </td>
+                      <td className="px-4 py-2 text-right tabular-nums">
+                        {s.lessons}
+                      </td>
+                      <td className="px-4 py-2 text-right font-semibold tabular-nums">
+                        {s.minutes.toLocaleString()}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </section>
 

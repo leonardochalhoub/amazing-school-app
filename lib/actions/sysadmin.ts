@@ -59,6 +59,7 @@ export interface SysadminOverview {
     email: string | null;
     studentCount: number;
     classroomsCount: number;
+    activeStudentsLast30d: number;
     createdAt: string;
   }[];
   topActiveStudents: {
@@ -78,6 +79,31 @@ export interface SysadminOverview {
     xpTotal: number;
     cefrLevel: string | null;
   }[];
+  /**
+   * Estimated minutes spent on the platform per user. For students
+   * we sum the actual (completed_at − started_at) deltas across
+   * their lesson_progress rows — real work time. For teachers we
+   * count distinct calendar days they touched the platform
+   * (assignments / diary / history rows they authored) and credit
+   * 15 minutes per active day as a conservative proxy since we
+   * don't log teacher sessions directly. Both arrays are sorted
+   * descending by minutes.
+   */
+  timeOnSite: {
+    teachers: {
+      id: string;
+      name: string;
+      minutes: number;
+      activeDays: number;
+    }[];
+    students: {
+      id: string;
+      displayName: string;
+      teacherName: string | null;
+      minutes: number;
+      lessons: number;
+    }[];
+  };
   contentMix: {
     lessonsPerCefr: { level: string; count: number }[];
     songsPerCefr: { level: string; count: number }[];
@@ -442,14 +468,11 @@ export async function getSysadminOverview(): Promise<
     });
 
   // Full directory — sort alphabetically by name for easy scanning.
-  const allTeachers = [...allTeachersFull]
-    .map(({ activeStudentsLast30d: _unused, ...row }) => {
-      void _unused;
-      return row;
-    })
-    .sort((a, b) =>
-      a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
-    );
+  // Keeps activeStudentsLast30d so the table can show engagement
+  // per teacher without needing a separate "most active" ranking.
+  const allTeachers = [...allTeachersFull].sort((a, b) =>
+    a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
+  );
 
   // Top active students — by XP last 30 days. Test users (demo.*)
   // are already excluded from `students`/`profiles` so we drop any XP
@@ -586,6 +609,124 @@ export async function getSysadminOverview(): Promise<
     // Non-fatal: the content files live in the deployed build, missing on edge.
   }
 
+  // -----------------------------------------------------------------
+  // Time on site — the only real session signal we have today is the
+  // lesson_progress (completed_at − started_at) delta for students.
+  // When a student closes the tab mid-lesson, started_at stays set
+  // and completed_at never lands, so nothing gets counted — exactly
+  // the behaviour we want. Teachers have no per-session table yet,
+  // so we approximate from distinct calendar days they authored
+  // something (assignments / diary / history) at 15 min per active
+  // day. Both lists are sorted descending.
+  // -----------------------------------------------------------------
+  const [progressAllRes, assignmentsAllRes, diaryRes, historyRes] =
+    await Promise.all([
+      admin
+        .from("lesson_progress")
+        .select("student_id, started_at, completed_at")
+        .not("completed_at", "is", null)
+        .not("started_at", "is", null)
+        .limit(200_000),
+      admin
+        .from("lesson_assignments")
+        .select("assigned_by, assigned_at")
+        .limit(200_000),
+      admin
+        .from("roster_diary")
+        .select("teacher_id, created_at")
+        .limit(200_000),
+      admin
+        .from("student_history")
+        .select("teacher_id, created_at")
+        .limit(200_000),
+    ]);
+
+  const studentMinutes = new Map<string, number>();
+  const studentLessons = new Map<string, number>();
+  for (const r of (progressAllRes.data ?? []) as Array<{
+    student_id: string;
+    started_at: string;
+    completed_at: string;
+  }>) {
+    const startMs = new Date(r.started_at).getTime();
+    const endMs = new Date(r.completed_at).getTime();
+    if (!Number.isFinite(startMs) || !Number.isFinite(endMs)) continue;
+    // Clamp the delta: a malformed row with completed_at before
+    // started_at (or days-long gaps from the seed's cluster logic)
+    // shouldn't poison the total. 0 < delta ≤ 120 min per lesson.
+    const deltaMin = Math.max(0, Math.min(120, (endMs - startMs) / 60_000));
+    studentMinutes.set(
+      r.student_id,
+      (studentMinutes.get(r.student_id) ?? 0) + deltaMin,
+    );
+    studentLessons.set(
+      r.student_id,
+      (studentLessons.get(r.student_id) ?? 0) + 1,
+    );
+  }
+
+  // Teacher active-day signal: union distinct (teacher_id, YYYY-MM-DD)
+  // keys across every authored row type.
+  const teacherDays = new Map<string, Set<string>>();
+  function addTeacherDay(teacherId: string | null, iso: string | null) {
+    if (!teacherId || !iso) return;
+    const day = iso.slice(0, 10);
+    let s = teacherDays.get(teacherId);
+    if (!s) {
+      s = new Set();
+      teacherDays.set(teacherId, s);
+    }
+    s.add(day);
+  }
+  for (const r of (assignmentsAllRes.data ?? []) as Array<{
+    assigned_by: string | null;
+    assigned_at: string | null;
+  }>) {
+    addTeacherDay(r.assigned_by, r.assigned_at);
+  }
+  for (const r of (diaryRes.data ?? []) as Array<{
+    teacher_id: string | null;
+    created_at: string | null;
+  }>) {
+    addTeacherDay(r.teacher_id, r.created_at);
+  }
+  for (const r of (historyRes.data ?? []) as Array<{
+    teacher_id: string | null;
+    created_at: string | null;
+  }>) {
+    addTeacherDay(r.teacher_id, r.created_at);
+  }
+
+  const teacherTimeRows = teachers
+    .map((t) => {
+      const days = teacherDays.get(t.id)?.size ?? 0;
+      return {
+        id: t.id,
+        name: t.full_name,
+        activeDays: days,
+        minutes: days * 15,
+      };
+    })
+    .sort((a, b) => b.minutes - a.minutes);
+
+  const studentTimeRows = students
+    .map((p) => {
+      const minutes = Math.round(studentMinutes.get(p.id) ?? 0);
+      const lessons = studentLessons.get(p.id) ?? 0;
+      const r = rosterByAuthUser.get(p.id);
+      const teacherName = r?.teacher_id
+        ? teacherNameById.get(r.teacher_id) ?? null
+        : null;
+      return {
+        id: p.id,
+        displayName: p.full_name,
+        teacherName,
+        minutes,
+        lessons,
+      };
+    })
+    .sort((a, b) => b.minutes - a.minutes);
+
   // Health signals
   const accountsWithoutAvatar = profiles.filter((p) => !p.avatar_url).length;
   const classroomsWithoutStudents =
@@ -643,6 +784,10 @@ export async function getSysadminOverview(): Promise<
     allTeachers,
     topActiveStudents,
     allTimeTopStudents,
+    timeOnSite: {
+      teachers: teacherTimeRows,
+      students: studentTimeRows,
+    },
     contentMix: { lessonsPerCefr, songsPerCefr },
     health: {
       storageAvatarBytes,
