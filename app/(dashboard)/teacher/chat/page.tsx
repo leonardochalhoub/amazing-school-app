@@ -10,6 +10,45 @@ export default async function TeacherChatPage() {
 
   if (!user) return null;
 
+  // Reuse the most recent conversation if the teacher has one,
+  // otherwise create a fresh row. Mirrors /student/chat — without
+  // a real conversationId the /api/chat onFinish hook silently
+  // drops every message, which is why the sysadmin AI-tutor
+  // usage table read empty for teachers even after they chatted.
+  let { data: conversation } = await supabase
+    .from("conversations")
+    .select("id")
+    .eq("student_id", user.id)
+    .order("created_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+
+  if (!conversation) {
+    // Best-effort classroom anchor. classroom_id is nullable now
+    // (migration 037), so null is fine when the teacher doesn't
+    // own any classroom yet.
+    let classroomId: string | null = null;
+    const { data: owned } = await supabase
+      .from("classrooms")
+      .select("id")
+      .eq("teacher_id", user.id)
+      .order("created_at", { ascending: true })
+      .limit(1)
+      .maybeSingle();
+    if (owned) classroomId = (owned as { id: string }).id;
+
+    const { data: newConv, error: convErr } = await supabase
+      .from("conversations")
+      .insert({
+        student_id: user.id,
+        classroom_id: classroomId,
+      })
+      .select("id")
+      .single();
+    if (convErr) console.error("[teacher chat] conv insert failed", convErr);
+    conversation = newConv;
+  }
+
   const ai = getAiProviderInfo();
 
   return (
@@ -25,7 +64,7 @@ export default async function TeacherChatPage() {
         sounding board. Switch to Open chat for unrestricted conversation.
       </p>
       <ChatInterface
-        conversationId=""
+        conversationId={conversation?.id ?? ""}
         remainingMessages={9999}
         aiLabel={ai.label}
       />

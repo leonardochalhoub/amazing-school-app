@@ -45,16 +45,26 @@ export function SessionHeartbeat() {
           const blob = new Blob([body], { type: "application/json" });
           navigator.sendBeacon("/api/heartbeat", blob);
         } else {
-          await fetch("/api/heartbeat", {
+          const res = await fetch("/api/heartbeat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body,
             keepalive: true,
           });
+          if (!res.ok) {
+            const text = await res.text().catch(() => "");
+            console.error(
+              "[heartbeat] POST failed",
+              res.status,
+              text.slice(0, 200),
+            );
+          }
         }
-      } catch {
+      } catch (err) {
         // Network blips are fine — the accumulator already reset;
-        // next ping will carry fresh time.
+        // next ping will carry fresh time. Log so we can tell the
+        // difference between 'blip' and 'misconfigured'.
+        console.error("[heartbeat] POST threw", err);
       }
     }
 
