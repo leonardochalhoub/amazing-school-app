@@ -1,9 +1,13 @@
 /**
- * Brazilian municipalities (~5,570) sourced from the public IBGE API.
- * Fetched client-side on first use and cached in sessionStorage so a
- * page reload doesn't re-hit the network.
+ * Brazilian municipalities (~5.5k) pre-baked from the IBGE API at
+ * build time and shipped as a compact JSON under /public/data. The
+ * static file loads from our own CDN in a few hundred ms, while
+ * hitting IBGE directly from the browser took 2–5s on slower
+ * connections and sometimes stalled entirely.
  *
- * API: https://servicodados.ibge.gov.br/api/v1/localidades/municipios
+ * The on-disk format is `[[name, uf], …]` to keep the payload small
+ * (~120 KB / ~30 KB gzipped). In-memory we widen it back to objects
+ * so call sites read naturally.
  */
 
 export interface BrazilCity {
@@ -12,38 +16,14 @@ export interface BrazilCity {
   uf: string;
 }
 
-const CACHE_KEY = "brazil_cities_v1";
-const IBGE_URL =
-  "https://servicodados.ibge.gov.br/api/v1/localidades/municipios?orderBy=nome";
-
-interface IbgeMunicipio {
-  nome: string;
-  microrregiao?: {
-    mesorregiao?: {
-      UF?: { sigla?: string };
-    };
-  };
-  // Newer IBGE responses sometimes surface the UF at a different nesting
-  // (regiao-imediata). Captured here so the mapper can fall back safely.
-  "regiao-imediata"?: {
-    "regiao-intermediaria"?: {
-      UF?: { sigla?: string };
-    };
-  };
-}
-
-function extractUf(m: IbgeMunicipio): string {
-  return (
-    m.microrregiao?.mesorregiao?.UF?.sigla ??
-    m["regiao-imediata"]?.["regiao-intermediaria"]?.UF?.sigla ??
-    ""
-  );
-}
+const CACHE_KEY = "brazil_cities_v2";
+const DATA_URL = "/data/brazil-cities.json";
 
 /**
- * Returns the full municipality list, hitting sessionStorage first and
- * the IBGE API only on cache miss. Never throws — on failure returns
- * an empty array so the picker falls back to free-form input.
+ * Returns the full municipality list. sessionStorage is tried first
+ * so a second picker on the same page doesn't re-download. Never
+ * throws — on failure returns an empty array so the picker falls
+ * back to free-form input.
  */
 export async function loadBrazilCities(): Promise<BrazilCity[]> {
   if (typeof window === "undefined") return [];
@@ -57,13 +37,10 @@ export async function loadBrazilCities(): Promise<BrazilCity[]> {
     // sessionStorage can throw in private mode — just fall through.
   }
   try {
-    const res = await fetch(IBGE_URL);
+    const res = await fetch(DATA_URL);
     if (!res.ok) return [];
-    const rows = (await res.json()) as IbgeMunicipio[];
-    const cities: BrazilCity[] = rows
-      .map((m) => ({ name: m.nome, uf: extractUf(m) }))
-      .filter((c) => c.name && c.uf)
-      .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+    const rows = (await res.json()) as [string, string][];
+    const cities: BrazilCity[] = rows.map(([name, uf]) => ({ name, uf }));
     try {
       window.sessionStorage.setItem(CACHE_KEY, JSON.stringify(cities));
     } catch {
