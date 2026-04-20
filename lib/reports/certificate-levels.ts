@@ -73,6 +73,7 @@ export const GRADE_OPTIONS = [
     value: "A",
     label: "A — Excelente",
     caption: "Excelente",
+    captionEn: "Excellent",
     color: "#059669", // emerald
     gradient: "from-emerald-500/20 to-emerald-500/5",
   },
@@ -80,6 +81,7 @@ export const GRADE_OPTIONS = [
     value: "B",
     label: "B — Muito bom",
     caption: "Muito bom",
+    captionEn: "Very good",
     color: "#2563eb", // blue
     gradient: "from-sky-500/20 to-sky-500/5",
   },
@@ -87,6 +89,7 @@ export const GRADE_OPTIONS = [
     value: "C",
     label: "C — Satisfatório",
     caption: "Satisfatório",
+    captionEn: "Satisfactory",
     color: "#d97706", // amber
     gradient: "from-amber-500/20 to-amber-500/5",
   },

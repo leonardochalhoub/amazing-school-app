@@ -428,7 +428,8 @@ export default async function CertificatePrintPage({
                 fontWeight: 600,
               }}
             >
-              {dict.gradeLabel} · {grade?.caption ?? ""}
+              {dict.gradeLabel} ·{" "}
+              {(lang === "en" ? grade?.captionEn : grade?.caption) ?? ""}
             </span>
           </div>
 
