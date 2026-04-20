@@ -257,8 +257,8 @@ export default async function CertificatePrintPage({
               school logo is the visual anchor. */}
           <div
             style={{
-              height: 114,
-              minWidth: 220,
+              height: 137,
+              minWidth: 264,
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-end",
@@ -667,28 +667,27 @@ function SchoolLogoSlot({
   src: string | null;
   alt: string;
 }) {
-  if (!src) return <div style={{ minWidth: 220 }} />;
+  if (!src) return <div style={{ minWidth: 264 }} />;
   return (
     <div
       style={{
-        height: 114,
+        height: 137,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         padding: 0,
-        minWidth: 220,
+        minWidth: 264,
       }}
     >
-      {/* Borderless + 30% bigger than the prior size so the
-          school logo stays the dominant visual anchor of the
-          certificate. */}
+      {/* Borderless + bumped 20% so the school logo stays the
+          dominant visual anchor of the certificate. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
         alt={alt}
         style={{
-          maxHeight: 102,
-          maxWidth: 280,
+          maxHeight: 122,
+          maxWidth: 336,
           width: "auto",
           objectFit: "contain",
           display: "block",
