@@ -475,7 +475,11 @@ export default async function CertificatePrintPage({
         >
           <div style={{ textAlign: "left", fontSize: "10pt", color: "#374151" }}>
             <p style={{ fontWeight: 600 }}>
-              {fmtLongDate(data.courseEndOn, lang)}
+              {/* Actual issue date stamped on the certificate, not
+                  the course end date — they can differ when a
+                  teacher emits a certificate weeks after the course
+                  finished. */}
+              {fmtLongDate(data.issuedAt, lang)}
             </p>
             <p style={{ color: "#6b7280", fontSize: "9pt" }}>
               {dict.issuedOn}
