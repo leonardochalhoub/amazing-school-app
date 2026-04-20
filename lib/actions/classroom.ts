@@ -220,15 +220,71 @@ export async function deleteClassroom(input: {
   }
   if (c.deleted_at) return { error: "Classroom is already deleted" };
 
-  // NOTE: an earlier version of this action materialized every
-  // classroom-wide assignment into per-student rows before the
-  // soft-delete, so students would still see their assignments
-  // even if the roster ⇄ classroom link later broke. That ended
-  // up creating VISIBLE DUPLICATES (student saw the same lesson
-  // once as 'Whole class' and once as 'Individual') because the
-  // classroom-wide row still existed alongside the new per-student
-  // copy. With soft-delete the roster link is preserved, so the
-  // materialization was redundant. Keeping the block removed.
+  // Convert classroom-wide assignments into per-student rows, THEN
+  // drop the classroom-wide originals. Each student leaves the
+  // deleted classroom owning explicit per-student rows pinned to
+  // their roster_student_id — the view doesn't depend on the
+  // roster-to-classroom link staying intact. Previous attempt at
+  // this duplicated rows because we kept the classroom-wide
+  // originals around; deleting them here avoids that.
+  {
+    const { data: rosterInClass } = await admin
+      .from("roster_students")
+      .select("id")
+      .eq("classroom_id", parsed.data)
+      .is("deleted_at", null);
+    const rosterIds = ((rosterInClass ?? []) as Array<{ id: string }>).map(
+      (r) => r.id,
+    );
+    const { data: cwRows } = await admin
+      .from("lesson_assignments")
+      .select("id, lesson_slug, status, due_date, assigned_by, order_index")
+      .eq("classroom_id", parsed.data)
+      .is("student_id", null)
+      .is("roster_student_id", null);
+    const cwList = (cwRows ?? []) as Array<{
+      id: string;
+      lesson_slug: string;
+      status: "assigned" | "skipped" | "completed";
+      due_date: string | null;
+      assigned_by: string | null;
+      order_index: number | null;
+    }>;
+
+    if (rosterIds.length > 0 && cwList.length > 0) {
+      // 1. Insert one per (student × cw assignment). Dup collisions
+      //    on the unique constraint (classroom_id, lesson_slug,
+      //    roster_student_id) are silently accepted — already pinned.
+      for (const cw of cwList) {
+        for (const rid of rosterIds) {
+          const { error: insErr } = await admin
+            .from("lesson_assignments")
+            .insert({
+              classroom_id: parsed.data,
+              lesson_slug: cw.lesson_slug,
+              assigned_by: cw.assigned_by ?? user.id,
+              roster_student_id: rid,
+              student_id: null,
+              order_index: cw.order_index ?? 0,
+              status: cw.status ?? "assigned",
+              due_date: cw.due_date ?? null,
+            });
+          if (insErr && insErr.code !== "23505") {
+            console.warn("[deleteClassroom] materialize row failed", insErr);
+          }
+        }
+      }
+      // 2. Delete the now-redundant classroom-wide originals. This
+      //    is what makes the net change additive (no duplicates).
+      await admin
+        .from("lesson_assignments")
+        .delete()
+        .in(
+          "id",
+          cwList.map((c) => c.id),
+        );
+    }
+  }
 
   // Clear FUTURE scheduled meetings — they're planned events for a
   // classroom that's going away. Past meetings stay untouched so
