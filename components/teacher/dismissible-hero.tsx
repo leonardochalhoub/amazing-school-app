@@ -5,6 +5,8 @@ import { Sparkles, X } from "lucide-react";
 import { useI18n } from "@/lib/i18n/context";
 import { HeroTagline } from "@/components/teacher/hero-tagline";
 import { AddStudentButton } from "@/components/teacher/add-student-button";
+import { CuteFlourish } from "@/components/teacher/cute-flourish";
+import { inferGenderFromName } from "@/lib/reports/gendered-titles";
 
 const STORAGE_KEY = "teacher-hero-dismissed";
 
@@ -54,7 +56,13 @@ export function DismissibleHero({ firstName, classrooms }: Props) {
     );
   }
 
-  const kicker = locale === "pt-BR" ? "Painel do professor" : "Teacher dashboard";
+  const isFemale = inferGenderFromName(firstName) === "female";
+  const kicker =
+    locale === "pt-BR"
+      ? isFemale
+        ? "Painel da professora"
+        : "Painel do professor"
+      : "Teacher dashboard";
   const closeLabel = locale === "pt-BR" ? "Fechar saudação" : "Dismiss welcome";
 
   return (
@@ -67,6 +75,17 @@ export function DismissibleHero({ firstName, classrooms }: Props) {
         aria-hidden
         className="pointer-events-none absolute -bottom-32 -left-32 h-64 w-64 rounded-full bg-gradient-to-tr from-emerald-500/20 via-teal-500/10 to-sky-500/20 blur-3xl"
       />
+
+      {/* Bouquet flourish — female teachers only. Tucked into the
+          empty space on the right of the hero above the dismiss
+          button; hidden on narrow screens so the title never
+          wraps around it. */}
+      {isFemale ? (
+        <CuteFlourish
+          size={170}
+          className="pointer-events-none absolute right-4 bottom-4 hidden opacity-80 md:block"
+        />
+      ) : null}
 
       <button
         type="button"

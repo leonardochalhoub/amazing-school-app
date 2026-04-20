@@ -8,6 +8,7 @@ import {
   formatToday,
   pickMessage,
 } from "@/lib/i18n/greetings";
+import { inferGenderFromName } from "@/lib/reports/gendered-titles";
 
 interface Props {
   firstName: string;
@@ -27,8 +28,25 @@ export function HeroTagline({ firstName }: Props) {
     return () => window.clearInterval(id);
   }, []);
 
-  const welcome = locale === "pt-BR" ? "Bem-vindo de volta" : "Welcome back";
-  const roleLabel = locale === "pt-BR" ? "professor" : "teacher";
+  // Gender inferred from first name (same heuristic as receipts +
+  // certificates). Drives the pt-BR "Bem-vinda" / "professora"
+  // switch. English only has a single "teacher" so it's ignored
+  // there.
+  const gender = inferGenderFromName(firstName);
+  const isFemale = gender === "female";
+
+  const welcome =
+    locale === "pt-BR"
+      ? isFemale
+        ? "Bem-vinda de volta"
+        : "Bem-vindo de volta"
+      : "Welcome back";
+  const roleLabel =
+    locale === "pt-BR"
+      ? isFemale
+        ? "professora"
+        : "professor"
+      : "teacher";
   const subtitle =
     locale === "pt-BR"
       ? "Gerencie seus alunos e turmas. Clique em qualquer quadrado para ver detalhes — adicionar, editar cadastros, enviar fotos e acompanhar o progresso."
