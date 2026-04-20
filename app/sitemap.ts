@@ -44,9 +44,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...base,
     },
     {
-      url: `${SITE_URL}/demo/student`,
-      changeFrequency: "monthly",
-      priority: 0.7,
+      url: `${SITE_URL}/demo/lessons`,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      ...base,
+    },
+    {
+      url: `${SITE_URL}/demo/music`,
+      changeFrequency: "weekly",
+      priority: 0.8,
       ...base,
     },
   ];

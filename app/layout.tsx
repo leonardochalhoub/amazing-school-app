@@ -5,6 +5,8 @@ import {
   Plus_Jakarta_Sans,
 } from "next/font/google";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n/context";
 import { CookieConsent } from "@/components/shared/cookie-consent";
@@ -180,6 +182,13 @@ export default function RootLayout({
           </I18nProvider>
         </ThemeProvider>
         <Toaster richColors position="top-right" closeButton />
+        {/* Vercel Analytics — page views + events. No PII, no
+            cookie banner required. Scripts are only loaded in
+            production so local dev stays clean. */}
+        <Analytics />
+        {/* Speed Insights — Core Web Vitals (LCP, INP, CLS) per
+            route. Shows up under Vercel Project → Speed Insights. */}
+        <SpeedInsights />
       </body>
     </html>
   );
