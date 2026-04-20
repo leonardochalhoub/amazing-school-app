@@ -24,6 +24,7 @@ import { findMeta as findLessonMeta } from "@/lib/content/loader";
 import { fromAssignmentSlug, getMusic } from "@/lib/content/music";
 import { getAvatarSignedUrls } from "@/lib/supabase/signed-urls";
 import { getLevel, getXpForNextLevel } from "@/lib/gamification/engine";
+import { BADGE_BY_TYPE } from "@/lib/gamification/config";
 import {
   ActivityChart,
   type ActivityBucket,
@@ -226,7 +227,11 @@ export default async function StudentHome() {
     });
   }
 
-  const active = resolvedAssignments.filter((a) => a.status !== "skipped");
+  const active = resolvedAssignments
+    .filter((a) => a.status !== "skipped")
+    // Newest assignment first so what the teacher just pushed is at
+    // the top of the grid instead of buried behind months-old work.
+    .sort((a, b) => (b.assignedAt ?? "").localeCompare(a.assignedAt ?? ""));
   const notDone = active.filter((a) => a.status !== "completed");
   const completedCount = active.filter((a) => a.status === "completed").length;
   const totalCount = active.length;
@@ -287,7 +292,10 @@ export default async function StudentHome() {
     else activityBuckets[idx].lessons++;
   }
 
-  const ownHistory = await listOwnHistory(5);
+  // Fetch a larger window so the MyClassesPanel "Show all" toggle has
+  // meaningful history to reveal. It still renders the most-recent 3
+  // by default.
+  const ownHistory = await listOwnHistory(200);
   const listeningResponses = await listStudentListeningResponses(10);
 
   return (
@@ -366,6 +374,30 @@ export default async function StudentHome() {
                 />
               </div>
             </div>
+
+            {/* Earned badges — rendered inline in the hero so the
+                student sees the medals the moment they land. Each
+                chip uses the badge's own gradient + glow from the
+                catalog so rarity reads at a glance. Unknown / stale
+                types fall through gracefully. */}
+            {stats?.earnedBadges && stats.earnedBadges.length > 0 ? (
+              <div className="flex flex-wrap gap-1.5">
+                {stats.earnedBadges.map((type) => {
+                  const def = BADGE_BY_TYPE[type];
+                  if (!def) return null;
+                  return (
+                    <span
+                      key={type}
+                      title={`${def.name} · ${def.description}`}
+                      className={`inline-flex items-center gap-1 rounded-full bg-gradient-to-br ${def.gradient} ${def.glow} px-2.5 py-0.5 text-[11px] font-semibold text-white`}
+                    >
+                      <span aria-hidden>{def.icon}</span>
+                      {def.name}
+                    </span>
+                  );
+                })}
+              </div>
+            ) : null}
           </div>
 
           <div className="flex items-center gap-4 md:flex-col md:gap-3">
@@ -570,6 +602,15 @@ function AssignmentTile({ a }: { a: ResolvedAssignment }) {
               </Badge>
             ) : null}
           </div>
+          {a.assignedAt ? (
+            <p className="text-[10px] tabular-nums text-muted-foreground">
+              Assigned{" "}
+              {new Date(a.assignedAt).toLocaleString("pt-BR", {
+                dateStyle: "short",
+                timeStyle: "short",
+              })}
+            </p>
+          ) : null}
           <Button
             size="sm"
             variant={isDone ? "outline" : "default"}
