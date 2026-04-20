@@ -111,29 +111,37 @@ export default async function SysadminPrintPage({ searchParams }: PageProps) {
               </tr>
             </thead>
             <tbody>
-              {data.teachers.map((t) => (
-                <tr key={t.id}>
-                  <td style={{ fontWeight: 500 }}>{t.name ?? "—"}</td>
-                  <td className="report-muted" style={{ fontSize: "9pt" }}>
-                    {t.email ?? "—"}
-                  </td>
-                  <td style={{ textAlign: "right" }} className="tabular-nums">
-                    {t.studentCount}
-                  </td>
-                  <td style={{ textAlign: "right" }} className="tabular-nums">
-                    {t.classroomsCount}
-                  </td>
-                  <td style={{ textAlign: "right" }} className="tabular-nums">
-                    {t.activeStudentsLast30d}
-                  </td>
-                  <td
-                    style={{ textAlign: "right", fontSize: "9pt" }}
-                    className="report-muted"
-                  >
-                    {t.createdAt.slice(0, 10)}
-                  </td>
-                </tr>
-              ))}
+              {[...data.teachers]
+                .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+                .map((t) => (
+                  <tr key={t.id}>
+                    <td style={{ fontWeight: 500 }}>{t.name ?? "—"}</td>
+                    <td className="report-muted" style={{ fontSize: "9pt" }}>
+                      {t.email ?? "—"}
+                    </td>
+                    <td style={{ textAlign: "right" }} className="tabular-nums">
+                      {t.studentCount}
+                    </td>
+                    <td style={{ textAlign: "right" }} className="tabular-nums">
+                      {t.classroomsCount}
+                    </td>
+                    <td style={{ textAlign: "right" }} className="tabular-nums">
+                      {t.activeStudentsLast30d}
+                    </td>
+                    <td
+                      style={{ textAlign: "right", fontSize: "9pt" }}
+                      className="report-muted tabular-nums"
+                    >
+                      {new Date(t.createdAt).toLocaleString("pt-BR", {
+                        day: "2-digit",
+                        month: "2-digit",
+                        year: "numeric",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         )}
