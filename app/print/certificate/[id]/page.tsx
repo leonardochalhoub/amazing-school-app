@@ -482,7 +482,7 @@ export default async function CertificatePrintPage({
             </p>
           </div>
 
-          <div style={{ textAlign: "center", minWidth: 260 }}>
+          <div style={{ textAlign: "center", minWidth: 280 }}>
             <div
               style={{
                 height: 50,
@@ -504,38 +504,65 @@ export default async function CertificatePrintPage({
                 />
               ) : null}
             </div>
-            <div
-              style={{
-                borderTop: "1px solid #9ca3af",
-                paddingTop: 5,
-                fontSize: "10pt",
-                fontWeight: 600,
-                color: "#0a0a0a",
-              }}
-            >
-              {data.teacher.fullName ||
-                data.teacher.email ||
-                (lang === "pt-BR" ? "Professor(a)" : "Instructor")}
-            </div>
-            {/* Optional teacher credentials line — prints between
-                the name and the responsible-teacher role. */}
-            {data.teacherTitle ? (
-              <p
-                style={{
-                  fontSize: "8.5pt",
-                  color: "#4b5563",
-                  marginTop: 1,
-                  fontStyle: "italic",
-                }}
-              >
-                {data.teacherTitle}
-              </p>
-            ) : null}
-            <p style={{ fontSize: "9pt", color: "#6b7280", marginTop: 2 }}>
-              {lang === "pt-BR"
-                ? `${teacherTitle(inferGenderFromName(data.teacher.fullName))} Responsável`
-                : "Teaching instructor"}
-            </p>
+            {/* Teacher name — the headline of this block. Goes
+                larger + serif-italic so it reads as an endorsement
+                signature rather than a line label. Falls back to
+                the email local-part when the profile has no name. */}
+            {(() => {
+              const fallbackFromEmail = data.teacher.email
+                ? data.teacher.email.split("@")[0]
+                : null;
+              const displayedName =
+                data.teacher.fullName ||
+                fallbackFromEmail ||
+                (lang === "pt-BR" ? "Professor" : "Instructor");
+              const gender = inferGenderFromName(data.teacher.fullName);
+              const role = lang === "pt-BR"
+                ? `${teacherTitle(gender)} Responsável`
+                : "Teaching instructor";
+              return (
+                <>
+                  <div
+                    style={{
+                      borderTop: "1px solid #9ca3af",
+                      paddingTop: 6,
+                      fontFamily:
+                        'var(--font-display), "Georgia", serif',
+                      fontStyle: "italic",
+                      fontSize: "15pt",
+                      fontWeight: 500,
+                      letterSpacing: "-0.005em",
+                      color: "#0a0a0a",
+                      lineHeight: 1.15,
+                    }}
+                  >
+                    {displayedName}
+                  </div>
+                  {data.teacherTitle ? (
+                    <p
+                      style={{
+                        fontSize: "9pt",
+                        color: "#4b5563",
+                        marginTop: 2,
+                        fontStyle: "italic",
+                      }}
+                    >
+                      {data.teacherTitle}
+                    </p>
+                  ) : null}
+                  <p
+                    style={{
+                      fontSize: "9pt",
+                      color: "#6b7280",
+                      marginTop: 3,
+                      letterSpacing: "0.02em",
+                    }}
+                  >
+                    {role}
+                  </p>
+                </>
+              );
+            })()}
           </div>
 
           <div

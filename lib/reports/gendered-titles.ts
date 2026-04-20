@@ -42,14 +42,17 @@ export function inferGenderFromName(name: string | null | undefined): GenderedRo
   return "male";
 }
 
+// Fallbacks default to the masculine form rather than the dual
+// "(a)" one — formal documents (receipts, certificates, curriculum)
+// read cleaner without the parenthetical, and the name-based
+// heuristic already handles most cases.
 export function teacherTitle(
   gender: GenderedRole,
   locale: "pt-BR" | "en" = "pt-BR",
 ): string {
   if (locale === "en") return "Teacher";
   if (gender === "female") return "Professora";
-  if (gender === "male") return "Professor";
-  return "Professor(a)";
+  return "Professor";
 }
 
 export function studentTitle(
@@ -58,6 +61,5 @@ export function studentTitle(
 ): string {
   if (locale === "en") return "Student";
   if (gender === "female") return "Aluna";
-  if (gender === "male") return "Aluno";
-  return "Aluno(a)";
+  return "Aluno";
 }
