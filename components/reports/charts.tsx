@@ -5,19 +5,13 @@ import {
   BarChart,
   CartesianGrid,
   Cell,
+  Legend,
   Pie,
   PieChart,
   Tooltip,
   XAxis,
   YAxis,
 } from "recharts";
-
-/**
- * Charts tuned for print — fixed width/height (no ResponsiveContainer)
- * because Recharts' responsive sizing racing against window.print()
- * produces blank frames in the PDF. Colours come from a single palette
- * shared with the teacher dashboard so the reports feel of-a-piece.
- */
 
 const PALETTE = [
   "#6366f1", // indigo
@@ -39,7 +33,6 @@ export function MonthlyCompletionsChart({
   width = 700,
   height = 220,
 }: MonthlyBarsProps) {
-  // Use short month labels (e.g. "jan/25") so ticks fit a print page.
   const labelled = data.map((d) => ({
     ...d,
     label: formatMonthLabel(d.month),
@@ -61,6 +54,11 @@ export function MonthlyCompletionsChart({
           borderRadius: 6,
         }}
       />
+      <Legend
+        wrapperStyle={{ fontSize: 10 }}
+        iconType="square"
+        iconSize={10}
+      />
       <Bar dataKey="lessons" stackId="a" fill={PALETTE[0]} name="Lições" />
       <Bar dataKey="music" stackId="a" fill={PALETTE[1]} name="Músicas" />
     </BarChart>
@@ -69,34 +67,123 @@ export function MonthlyCompletionsChart({
 
 interface CefrMixProps {
   data: Array<{ cefr: string; assigned: number; completed: number }>;
+  /** Total chart width — the pie takes the left half, the custom
+      legend takes the right. */
   width?: number;
   height?: number;
 }
 
+/**
+ * Custom-legend donut. Stopped relying on Recharts' built-in Legend
+ * because the typing wouldn't let us inject per-slice % + count. The
+ * wrapper renders a small table to the right: color swatch ·
+ * label · count · percent. Labels directly on the slices stay as
+ * "LEVEL · PCT%" so the chart is self-describing even if the legend
+ * gets clipped at print size.
+ */
 export function CefrMixChart({
   data,
-  width = 320,
+  width = 360,
   height = 220,
 }: CefrMixProps) {
   const pieData = data
     .filter((d) => d.assigned > 0)
-    .map((d) => ({ name: d.cefr, value: d.assigned }));
+    .map((d) => ({
+      name: d.cefr || "—",
+      value: d.assigned,
+    }));
+  const total = pieData.reduce((s, d) => s + d.value, 0) || 1;
+
+  const pieWidth = Math.max(180, Math.floor(width * 0.55));
+  const legendWidth = Math.max(140, width - pieWidth - 12);
+
   return (
-    <PieChart width={width} height={height}>
-      <Pie
-        data={pieData}
-        dataKey="value"
-        nameKey="name"
-        outerRadius={80}
-        innerRadius={40}
-        label={({ name, value }) => `${name}·${value}`}
-        labelLine={false}
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 12,
+        width,
+      }}
+    >
+      <PieChart width={pieWidth} height={height}>
+        <Pie
+          data={pieData}
+          dataKey="value"
+          nameKey="name"
+          cx="50%"
+          cy="50%"
+          outerRadius={Math.min(85, Math.floor(height / 2) - 16)}
+          innerRadius={Math.min(42, Math.floor(height / 2) - 50)}
+          label={({ name, percent, value }) => {
+            const pct =
+              typeof percent === "number"
+                ? Math.round(percent * 100)
+                : Math.round(((value as number) / total) * 100);
+            return `${name} · ${pct}%`;
+          }}
+          labelLine={{ stroke: "#9ca3af", strokeWidth: 1 }}
+        >
+          {pieData.map((_, i) => (
+            <Cell key={i} fill={PALETTE[i % PALETTE.length]} />
+          ))}
+        </Pie>
+      </PieChart>
+      <ul
+        aria-label="Legenda"
+        style={{
+          listStyle: "none",
+          padding: 0,
+          margin: 0,
+          fontSize: 11,
+          width: legendWidth,
+          display: "grid",
+          gap: 4,
+        }}
       >
-        {pieData.map((_, i) => (
-          <Cell key={i} fill={PALETTE[i % PALETTE.length]} />
-        ))}
-      </Pie>
-    </PieChart>
+        {pieData.map((d, i) => {
+          const pct = Math.round((d.value / total) * 100);
+          return (
+            <li
+              key={d.name}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 6,
+                lineHeight: 1.25,
+              }}
+            >
+              <span
+                aria-hidden
+                style={{
+                  width: 10,
+                  height: 10,
+                  flexShrink: 0,
+                  borderRadius: 2,
+                  background: PALETTE[i % PALETTE.length],
+                }}
+              />
+              <span
+                style={{
+                  fontWeight: 600,
+                  minWidth: 28,
+                }}
+              >
+                {d.name}
+              </span>
+              <span
+                style={{
+                  color: "#6b7280",
+                  fontVariantNumeric: "tabular-nums",
+                }}
+              >
+                {d.value} · {pct}%
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 }
 

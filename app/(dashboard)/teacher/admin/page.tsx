@@ -19,7 +19,9 @@ import {
 import { ManagementGrid } from "@/components/owner/management-grid";
 import { RevenueAnalytics } from "@/components/owner/revenue-analytics";
 import { TeacherReportsPanel } from "@/components/reports/teacher-reports-panel";
+import { CertificatesSection } from "@/components/reports/certificates-section";
 import { listTeacherReceipts } from "@/lib/actions/reports";
+import { listCertificatesForTeacher } from "@/lib/actions/certificates";
 import {
   Users,
   Flame,
@@ -64,6 +66,7 @@ export default async function TeacherManagementPage() {
     aiChatStats,
     deletedStudents,
     receiptsForQuery,
+    certificatesForTeacher,
   ] = await Promise.all([
     getTeacherDashboardData(),
     getTeacherManagementMatrix({ months: 24 }),
@@ -71,6 +74,7 @@ export default async function TeacherManagementPage() {
     getTeacherAiChatStats(),
     listDeletedRosterStudents(),
     listTeacherReceipts(),
+    listCertificatesForTeacher(),
   ]);
 
   const financeAvailable = !("error" in financeData);
@@ -165,6 +169,17 @@ export default async function TeacherManagementPage() {
           ...months,
         ]}
         receipts={receiptsForQuery}
+      />
+
+      {/* ========== CERTIFICATES — central hub ========== */}
+      <CertificatesSection
+        certificates={certificatesForTeacher}
+        students={rows.map((r) => ({
+          id: r.roster_student_id,
+          fullName: r.student_name,
+          billingStartsOn: r.billing_starts_on,
+          createdAt: r.roster_created_at,
+        }))}
       />
 
       {/* ========== PEOPLE & LEARNING ========== */}

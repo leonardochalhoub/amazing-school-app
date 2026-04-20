@@ -25,9 +25,20 @@ import {
 } from "@/lib/reports/certificate-levels";
 
 interface Props {
-  rosterStudentId: string;
-  studentName: string;
-  defaultStartOn: string | null;
+  /** Single student — fixed selection, no student picker. */
+  rosterStudentId?: string;
+  studentName?: string;
+  defaultStartOn?: string | null;
+  /** Central mode — pass the full roster; the dialog renders a
+      student picker at the top so a teacher can issue from
+      Management without hopping to a per-student page. */
+  students?: Array<{
+    id: string;
+    fullName: string;
+    billingStartsOn?: string | null;
+    createdAt?: string | null;
+  }>;
+  variant?: "default" | "subtle";
 }
 
 function todayISO(): string {
@@ -41,17 +52,34 @@ export function IssueCertificateButton({
   rosterStudentId,
   studentName,
   defaultStartOn,
+  students,
+  variant = "default",
 }: Props) {
   const [open, setOpen] = useState(false);
   const [pending, startTransition] = useTransition();
   const router = useRouter();
 
+  // In roster mode the caller passes a list of students; the dialog
+  // renders a picker at the top and we resolve start-date from the
+  // chosen row. In single mode we lock to the roster id we received.
+  const isRosterMode = !rosterStudentId && !!students && students.length > 0;
+  const [selectedStudentId, setSelectedStudentId] = useState<string>(
+    rosterStudentId ?? students?.[0]?.id ?? "",
+  );
+
   const [mode, setMode] = useState<Mode>("cefr");
   const [level, setLevel] = useState<string>("b1");
   const [grade, setGrade] = useState<string>("A");
-  const [startOn, setStartOn] = useState<string>(
-    defaultStartOn?.slice(0, 10) ?? todayISO(),
-  );
+  const [startOn, setStartOn] = useState<string>(() => {
+    const picked =
+      students?.find((s) => s.id === selectedStudentId) ?? null;
+    return (
+      picked?.billingStartsOn?.slice(0, 10) ??
+      picked?.createdAt?.slice(0, 10) ??
+      defaultStartOn?.slice(0, 10) ??
+      todayISO()
+    );
+  });
   const [endOn, setEndOn] = useState<string>(todayISO());
   const [title, setTitle] = useState<string>("");
   const [remarks, setRemarks] = useState<string>("");
@@ -61,7 +89,22 @@ export function IssueCertificateButton({
     (c) => CERTIFICATE_LEVELS.find((l) => l.code === c)!,
   );
 
+  function onPickStudent(id: string) {
+    setSelectedStudentId(id);
+    const picked = students?.find((s) => s.id === id);
+    const nextStart =
+      picked?.billingStartsOn?.slice(0, 10) ??
+      picked?.createdAt?.slice(0, 10) ??
+      todayISO();
+    setStartOn(nextStart);
+  }
+
   function submit() {
+    const targetRosterId = rosterStudentId ?? selectedStudentId;
+    if (!targetRosterId) {
+      toast.error("Selecione um aluno");
+      return;
+    }
     const hoursNum = totalHours.trim() ? Number(totalHours) : null;
     if (hoursNum !== null && (!Number.isFinite(hoursNum) || hoursNum < 0)) {
       toast.error("Horas inválidas");
@@ -73,7 +116,7 @@ export function IssueCertificateButton({
     }
     startTransition(async () => {
       const res = await createCertificate({
-        rosterStudentId,
+        rosterStudentId: targetRosterId,
         level: mode === "custom" ? "custom" : level,
         grade,
         courseStartOn: startOn,
@@ -92,12 +135,17 @@ export function IssueCertificateButton({
     });
   }
 
+  const activeStudentName =
+    studentName ??
+    students?.find((s) => s.id === selectedStudentId)?.fullName ??
+    "—";
+
   return (
     <>
       <Button
         type="button"
         size="sm"
-        variant="default"
+        variant={variant === "subtle" ? "outline" : "default"}
         onClick={() => setOpen(true)}
         className="gap-1.5"
       >
@@ -110,12 +158,36 @@ export function IssueCertificateButton({
           <DialogHeader>
             <DialogTitle>Emitir certificado</DialogTitle>
             <DialogDescription>
-              Para <span className="font-medium">{studentName}</span>. Gera
-              duas versões em PDF (pt-BR e inglês) quando o aluno baixar.
+              {isRosterMode ? (
+                <>Selecione o aluno e emita o certificado.</>
+              ) : (
+                <>
+                  Para{" "}
+                  <span className="font-medium">{activeStudentName}</span>.
+                </>
+              )}
             </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-4 py-2">
+            {isRosterMode ? (
+              <div className="grid gap-2">
+                <Label htmlFor="cert-student">Aluno</Label>
+                <select
+                  id="cert-student"
+                  value={selectedStudentId}
+                  onChange={(e) => onPickStudent(e.target.value)}
+                  className="h-10 rounded-md border border-input bg-background px-3 text-sm"
+                >
+                  {(students ?? []).map((s) => (
+                    <option key={s.id} value={s.id}>
+                      {s.fullName}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            ) : null}
+
             {/* Mode toggle */}
             <div
               role="tablist"

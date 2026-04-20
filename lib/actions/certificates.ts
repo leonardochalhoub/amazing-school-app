@@ -211,6 +211,94 @@ export async function listCertificatesForStudent(
   }));
 }
 
+/**
+ * Flat list of every certificate issued by the current teacher —
+ * used by the Management-page Certificates dialog. Includes the
+ * student name + classroom so the UI can filter/sort without a
+ * second round-trip.
+ */
+export interface TeacherCertificateRow extends CertificateSummary {
+  rosterStudentId: string;
+  studentName: string;
+  classroomName: string | null;
+}
+
+export async function listCertificatesForTeacher(): Promise<
+  TeacherCertificateRow[]
+> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return [];
+  const admin = createAdminClient();
+  const { data: profile } = await admin
+    .from("profiles")
+    .select("role")
+    .eq("id", user.id)
+    .maybeSingle();
+  if (!isTeacherRole((profile as { role?: string } | null)?.role)) return [];
+
+  const { data } = await admin
+    .from("certificates")
+    .select(
+      "id, roster_student_id, level, grade, course_start_on, course_end_on, title, total_hours, issued_at",
+    )
+    .eq("teacher_id", user.id)
+    .order("issued_at", { ascending: false })
+    .limit(2_000);
+  const rows = (data ?? []) as Array<{
+    id: string;
+    roster_student_id: string;
+    level: string;
+    grade: string;
+    course_start_on: string;
+    course_end_on: string;
+    title: string | null;
+    total_hours: number | null;
+    issued_at: string;
+  }>;
+  if (rows.length === 0) return [];
+
+  const rosterIds = Array.from(new Set(rows.map((r) => r.roster_student_id)));
+  const { data: rosterRes } = await admin
+    .from("roster_students")
+    .select("id, full_name, classrooms(name)")
+    .in("id", rosterIds);
+  const rosterMap = new Map<
+    string,
+    { name: string; classroom: string | null }
+  >();
+  for (const r of (rosterRes ?? []) as Array<{
+    id: string;
+    full_name: string;
+    classrooms: { name: string } | { name: string }[] | null;
+  }>) {
+    const c = Array.isArray(r.classrooms) ? r.classrooms[0] : r.classrooms;
+    rosterMap.set(r.id, {
+      name: r.full_name,
+      classroom: c?.name ?? null,
+    });
+  }
+
+  return rows.map((d) => {
+    const ros = rosterMap.get(d.roster_student_id);
+    return {
+      id: d.id,
+      rosterStudentId: d.roster_student_id,
+      studentName: ros?.name ?? "—",
+      classroomName: ros?.classroom ?? null,
+      level: d.level,
+      grade: d.grade as Grade,
+      courseStartOn: d.course_start_on,
+      courseEndOn: d.course_end_on,
+      title: d.title,
+      totalHours: d.total_hours ?? null,
+      issuedAt: d.issued_at,
+    };
+  });
+}
+
 export async function listMyCertificates(): Promise<CertificateSummary[]> {
   const supabase = await createClient();
   const {

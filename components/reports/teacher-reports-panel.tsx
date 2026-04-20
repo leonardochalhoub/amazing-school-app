@@ -22,7 +22,7 @@ export function TeacherReportsPanel({
         <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
           <T en="PDF reports" pt="Relatórios em PDF" />
         </h2>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <ReceiptsQueryDialog receipts={receipts} />
           <p className="text-[11px] text-muted-foreground">
             <T
