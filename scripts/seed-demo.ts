@@ -806,11 +806,23 @@ async function seedTimeline(args: TimelineArgs) {
       const windowEndD = Math.min(activeDays, (li + 1) * levelSpanDays);
       const span = Math.max(1, windowEndD - windowStartD);
 
+      // Ana — the rockstar persona — does marathon sessions: 3-4
+      // lessons + a music track crammed into a single afternoon.
+      // We cluster her timeline into groups so her completions pile
+      // onto the same day, giving the activity chart those tall
+      // stacked "busy day" spikes instead of one matchstick per day.
+      const clusterSize = isAna ? 3 + Math.floor(rng() * 2) : 1;
+
       for (let k = 0; k < timeline.length; k++) {
         const pick = timeline[k];
         if (usedTargeted.has(pick)) continue;
         usedTargeted.add(pick);
-        const t = k / Math.max(1, timeline.length - 1);
+        const cluster = Math.floor(k / clusterSize);
+        const totalClusters = Math.max(
+          1,
+          Math.ceil(timeline.length / clusterSize),
+        );
+        const t = cluster / Math.max(1, totalClusters - 1);
         const d = windowStartD + Math.floor(t * (span - 1));
         const when = addDays(joinDate, d);
         if (when > stopDate) break;
@@ -847,11 +859,18 @@ async function seedTimeline(args: TimelineArgs) {
 
         if (status === "completed" && !completedSlugs.has(pick)) {
           completedSlugs.add(pick);
-          const started = atHour(when, 9 + rng() * 4, rng);
-          // Students finish most lessons the day after assignment,
-          // some same-day, some a few days later — matches how real
-          // class cadence spreads around the assigned date.
-          const lagDays = rng() < 0.3 ? 0 : 1 + Math.floor(rng() * 4);
+          // Ana's cluster-mates share the SAME calendar day (just
+          // stagger the hour). Everyone else gets the usual small
+          // lag between assigned-at and completed-at.
+          const slotInCluster = k % clusterSize;
+          const started = isAna
+            ? atHour(when, 9 + slotInCluster * 1.3, rng)
+            : atHour(when, 9 + rng() * 4, rng);
+          const lagDays = isAna
+            ? 0
+            : rng() < 0.3
+              ? 0
+              : 1 + Math.floor(rng() * 4);
           const completed = new Date(
             addDays(started, lagDays).getTime() + 25 * 60_000,
           );
