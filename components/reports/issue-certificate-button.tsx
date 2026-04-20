@@ -3,7 +3,7 @@
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { GraduationCap, Loader2, Info } from "lucide-react";
+import { GraduationCap, Loader2, Info, Plus, BookMarked } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -19,7 +19,9 @@ import {
 import { createCertificate } from "@/lib/actions/certificates";
 import {
   CERTIFICATE_LEVELS,
+  CERTIFICATE_LEVEL_CHOICES,
   GRADE_OPTIONS,
+  findCertificateLevel,
 } from "@/lib/reports/certificate-levels";
 
 interface Props {
@@ -30,11 +32,10 @@ interface Props {
 
 function todayISO(): string {
   const d = new Date();
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  return `${y}-${m}-${day}`;
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
+
+type Mode = "cefr" | "custom";
 
 export function IssueCertificateButton({
   rosterStudentId,
@@ -45,7 +46,8 @@ export function IssueCertificateButton({
   const [pending, startTransition] = useTransition();
   const router = useRouter();
 
-  const [level, setLevel] = useState<string>("b1_1");
+  const [mode, setMode] = useState<Mode>("cefr");
+  const [level, setLevel] = useState<string>("b1");
   const [grade, setGrade] = useState<string>("A");
   const [startOn, setStartOn] = useState<string>(
     defaultStartOn?.slice(0, 10) ?? todayISO(),
@@ -53,17 +55,32 @@ export function IssueCertificateButton({
   const [endOn, setEndOn] = useState<string>(todayISO());
   const [title, setTitle] = useState<string>("");
   const [remarks, setRemarks] = useState<string>("");
+  const [totalHours, setTotalHours] = useState<string>("");
+
+  const cefrChoices = CERTIFICATE_LEVEL_CHOICES.map(
+    (c) => CERTIFICATE_LEVELS.find((l) => l.code === c)!,
+  );
 
   function submit() {
+    const hoursNum = totalHours.trim() ? Number(totalHours) : null;
+    if (hoursNum !== null && (!Number.isFinite(hoursNum) || hoursNum < 0)) {
+      toast.error("Horas inválidas");
+      return;
+    }
+    if (mode === "custom" && !title.trim()) {
+      toast.error("Informe o título do certificado personalizado");
+      return;
+    }
     startTransition(async () => {
       const res = await createCertificate({
         rosterStudentId,
-        level,
+        level: mode === "custom" ? "custom" : level,
         grade,
         courseStartOn: startOn,
         courseEndOn: endOn,
         title,
         remarks,
+        totalHours: hoursNum,
       });
       if ("error" in res && res.error) {
         toast.error(res.error);
@@ -89,45 +106,97 @@ export function IssueCertificateButton({
       </Button>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="sm:max-w-lg">
+        <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>Emitir certificado</DialogTitle>
             <DialogDescription>
-              Para <span className="font-medium">{studentName}</span>. O
-              certificado fica disponível no perfil do aluno para download.
+              Para <span className="font-medium">{studentName}</span>. Gera
+              duas versões em PDF (pt-BR e inglês) quando o aluno baixar.
             </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-4 py-2">
-            {/* CEFR context so teachers know what scale they're awarding on. */}
-            <div className="flex items-start gap-2 rounded-md border border-sky-500/30 bg-sky-500/5 p-2.5 text-[11px] text-sky-800 dark:text-sky-200">
-              <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" />
-              <p>
-                Curso alinhado ao{" "}
-                <span className="font-semibold">
-                  Common European Framework of Reference for Languages
-                  (CEFR)
-                </span>{" "}
-                — A1 a C2, adotado por Cambridge, Cultura Inglesa e demais
-                escolas de referência.
-              </p>
+            {/* Mode toggle */}
+            <div
+              role="tablist"
+              className="grid grid-cols-2 gap-1 rounded-lg border border-border p-0.5 text-xs"
+            >
+              <button
+                role="tab"
+                aria-selected={mode === "cefr"}
+                onClick={() => setMode("cefr")}
+                className={`rounded-md px-3 py-1.5 font-medium transition-colors ${
+                  mode === "cefr"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <BookMarked className="mr-1.5 inline h-3 w-3" />
+                Nível CEFR
+              </button>
+              <button
+                role="tab"
+                aria-selected={mode === "custom"}
+                onClick={() => setMode("custom")}
+                className={`rounded-md px-3 py-1.5 font-medium transition-colors ${
+                  mode === "custom"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <Plus className="mr-1.5 inline h-3 w-3" />
+                Personalizado
+              </button>
             </div>
 
-            <div className="grid gap-2">
-              <Label htmlFor="certificate-level">Nível concluído</Label>
-              <select
-                id="certificate-level"
-                value={level}
-                onChange={(e) => setLevel(e.target.value)}
-                className="h-10 rounded-md border border-input bg-background px-3 text-sm"
-              >
-                {CERTIFICATE_LEVELS.map((l) => (
-                  <option key={l.code} value={l.code}>
-                    {l.codeLabel} · {l.title}
-                  </option>
-                ))}
-              </select>
-            </div>
+            {mode === "cefr" ? (
+              <>
+                <div className="flex items-start gap-2 rounded-md border border-sky-500/30 bg-sky-500/5 p-2.5 text-[11px] text-sky-800 dark:text-sky-200">
+                  <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+                  <p>
+                    Curso alinhado ao{" "}
+                    <span className="font-semibold">CEFR</span> — A1 a C2,
+                    adotado por Cambridge, Cultura Inglesa e demais
+                    escolas de referência.
+                  </p>
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="cert-level">Nível concluído</Label>
+                  <select
+                    id="cert-level"
+                    value={level}
+                    onChange={(e) => setLevel(e.target.value)}
+                    className="h-10 rounded-md border border-input bg-background px-3 text-sm"
+                  >
+                    {cefrChoices.map((l) => (
+                      <option key={l.code} value={l.code}>
+                        {l.codeLabel} · {l.title}
+                      </option>
+                    ))}
+                  </select>
+                  <p className="text-[11px] text-muted-foreground">
+                    {findCertificateLevel(level)?.en}
+                  </p>
+                </div>
+              </>
+            ) : (
+              <div className="grid gap-2">
+                <Label htmlFor="cert-custom-title">
+                  Título do certificado
+                </Label>
+                <Input
+                  id="cert-custom-title"
+                  placeholder="Ex.: English for Tech Professionals · 20h"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  autoFocus
+                />
+                <p className="text-[11px] text-muted-foreground">
+                  Texto que aparece no corpo do certificado. Use livremente —
+                  cursos temáticos, intensivos, módulos de conversação, etc.
+                </p>
+              </div>
+            )}
 
             <div className="grid gap-2">
               <Label>Conceito</Label>
@@ -152,18 +221,18 @@ export function IssueCertificateButton({
 
             <div className="grid grid-cols-2 gap-3">
               <div className="grid gap-2">
-                <Label htmlFor="certificate-start">Início do curso</Label>
+                <Label htmlFor="cert-start">Início do curso</Label>
                 <Input
-                  id="certificate-start"
+                  id="cert-start"
                   type="date"
                   value={startOn}
                   onChange={(e) => setStartOn(e.target.value)}
                 />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="certificate-end">Conclusão</Label>
+                <Label htmlFor="cert-end">Conclusão</Label>
                 <Input
-                  id="certificate-end"
+                  id="cert-end"
                   type="date"
                   value={endOn}
                   onChange={(e) => setEndOn(e.target.value)}
@@ -172,25 +241,49 @@ export function IssueCertificateButton({
             </div>
 
             <div className="grid gap-2">
-              <Label htmlFor="certificate-title">
-                Título personalizado{" "}
+              <Label htmlFor="cert-hours">
+                Carga horária total{" "}
                 <span className="text-muted-foreground">(opcional)</span>
               </Label>
               <Input
-                id="certificate-title"
-                placeholder="Ex.: Certificado de Conclusão · Intermediário B1"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                id="cert-hours"
+                type="number"
+                min={0}
+                max={10000}
+                step={1}
+                value={totalHours}
+                onChange={(e) => setTotalHours(e.target.value)}
+                placeholder="Ex.: 40"
               />
+              <p className="text-[11px] text-muted-foreground">
+                Inclui aulas ao vivo, lições na plataforma, música, tarefa
+                de casa. A carga estimada dos conteúdos concluídos está no
+                currículo em PDF.
+              </p>
             </div>
 
+            {mode === "cefr" ? (
+              <div className="grid gap-2">
+                <Label htmlFor="cert-title">
+                  Título personalizado{" "}
+                  <span className="text-muted-foreground">(opcional)</span>
+                </Label>
+                <Input
+                  id="cert-title"
+                  placeholder="Ex.: Certificado de Conclusão · Intermediário"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                />
+              </div>
+            ) : null}
+
             <div className="grid gap-2">
-              <Label htmlFor="certificate-remarks">
+              <Label htmlFor="cert-remarks">
                 Observações{" "}
                 <span className="text-muted-foreground">(opcional)</span>
               </Label>
               <Textarea
-                id="certificate-remarks"
+                id="cert-remarks"
                 placeholder="Frase de destaque do professor — aparece no rodapé do certificado."
                 value={remarks}
                 onChange={(e) => setRemarks(e.target.value)}

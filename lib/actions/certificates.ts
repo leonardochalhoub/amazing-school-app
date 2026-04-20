@@ -23,8 +23,8 @@ export interface CertificateRecord {
   courseEndOn: string;
   title: string | null;
   remarks: string | null;
+  totalHours: number | null;
   issuedAt: string;
-  /** Human-readable certificate number — derived, not stored. */
   certificateNumber: string;
   student: {
     fullName: string;
@@ -49,6 +49,7 @@ export interface CertificateSummary {
   courseStartOn: string;
   courseEndOn: string;
   title: string | null;
+  totalHours: number | null;
   issuedAt: string;
 }
 
@@ -60,6 +61,13 @@ const InputSchema = z.object({
   courseEndOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   title: z.string().max(160).optional().or(z.literal("")),
   remarks: z.string().max(600).optional().or(z.literal("")),
+  totalHours: z
+    .number()
+    .int()
+    .min(0)
+    .max(10_000)
+    .optional()
+    .nullable(),
 });
 
 export async function createCertificate(input: z.input<typeof InputSchema>) {
@@ -69,6 +77,12 @@ export async function createCertificate(input: z.input<typeof InputSchema>) {
   }
   if (parsed.data.courseEndOn < parsed.data.courseStartOn) {
     return { error: "A data de término deve ser posterior ao início" };
+  }
+  // Custom certificates require a free-form title — that's what the
+  // face of the certificate reads. CEFR certificates use the level's
+  // own label when title is blank.
+  if (parsed.data.level === "custom" && !(parsed.data.title ?? "").trim()) {
+    return { error: "Certificados personalizados exigem um título" };
   }
 
   const supabase = await createClient();
@@ -108,6 +122,7 @@ export async function createCertificate(input: z.input<typeof InputSchema>) {
       course_end_on: parsed.data.courseEndOn,
       title: parsed.data.title || null,
       remarks: parsed.data.remarks || null,
+      total_hours: parsed.data.totalHours ?? null,
     })
     .select("id")
     .single();
@@ -171,7 +186,7 @@ export async function listCertificatesForStudent(
   const { data } = await admin
     .from("certificates")
     .select(
-      "id, level, grade, course_start_on, course_end_on, title, issued_at",
+      "id, level, grade, course_start_on, course_end_on, title, total_hours, issued_at",
     )
     .eq("roster_student_id", rosterStudentId)
     .order("issued_at", { ascending: false });
@@ -183,6 +198,7 @@ export async function listCertificatesForStudent(
     course_end_on: string;
     title: string | null;
     issued_at: string;
+    total_hours: number | null;
   }>).map((d) => ({
     id: d.id,
     level: d.level,
@@ -190,6 +206,7 @@ export async function listCertificatesForStudent(
     courseStartOn: d.course_start_on,
     courseEndOn: d.course_end_on,
     title: d.title,
+    totalHours: d.total_hours ?? null,
     issuedAt: d.issued_at,
   }));
 }
@@ -215,7 +232,7 @@ export async function listMyCertificates(): Promise<CertificateSummary[]> {
   const { data } = await admin
     .from("certificates")
     .select(
-      "id, level, grade, course_start_on, course_end_on, title, issued_at",
+      "id, level, grade, course_start_on, course_end_on, title, total_hours, issued_at",
     )
     .eq("roster_student_id", rosterId)
     .order("issued_at", { ascending: false });
@@ -227,6 +244,7 @@ export async function listMyCertificates(): Promise<CertificateSummary[]> {
     course_end_on: string;
     title: string | null;
     issued_at: string;
+    total_hours: number | null;
   }>).map((d) => ({
     id: d.id,
     level: d.level,
@@ -234,6 +252,7 @@ export async function listMyCertificates(): Promise<CertificateSummary[]> {
     courseStartOn: d.course_start_on,
     courseEndOn: d.course_end_on,
     title: d.title,
+    totalHours: d.total_hours ?? null,
     issuedAt: d.issued_at,
   }));
 }
@@ -251,7 +270,7 @@ export async function getCertificate(
   const { data: rowRaw } = await admin
     .from("certificates")
     .select(
-      "id, roster_student_id, teacher_id, level, grade, course_start_on, course_end_on, title, remarks, issued_at",
+      "id, roster_student_id, teacher_id, level, grade, course_start_on, course_end_on, title, remarks, total_hours, issued_at",
     )
     .eq("id", certificateId)
     .maybeSingle();
@@ -266,6 +285,7 @@ export async function getCertificate(
     course_end_on: string;
     title: string | null;
     remarks: string | null;
+    total_hours: number | null;
     issued_at: string;
   };
 
@@ -341,6 +361,7 @@ export async function getCertificate(
     courseEndOn: row.course_end_on,
     title: row.title,
     remarks: row.remarks,
+    totalHours: row.total_hours ?? null,
     issuedAt: row.issued_at,
     certificateNumber,
     student: {

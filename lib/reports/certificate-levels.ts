@@ -12,24 +12,55 @@
  * condensed two semesters into one.
  */
 
+/**
+ * Full lookup table — includes legacy half-semester codes (x1_1 /
+ * x1_2) so certificates issued under the old model still render
+ * their labels correctly. The dropdown only offers the simplified
+ * 9-entry set (see CERTIFICATE_LEVEL_CHOICES below).
+ */
 export const CERTIFICATE_LEVELS = [
-  { code: "a1_1", codeLabel: "A1.1", title: "Iniciante · 1º semestre", en: "Beginner · 1st semester" },
-  { code: "a1_2", codeLabel: "A1.2", title: "Iniciante · 2º semestre", en: "Beginner · 2nd semester" },
-  { code: "a1", codeLabel: "A1", title: "Iniciante · completo", en: "Beginner · full year" },
-  { code: "a2_1", codeLabel: "A2.1", title: "Pré-Intermediário · 1º semestre", en: "Pre-Intermediate · 1st semester" },
-  { code: "a2_2", codeLabel: "A2.2", title: "Pré-Intermediário · 2º semestre", en: "Pre-Intermediate · 2nd semester" },
-  { code: "a2", codeLabel: "A2", title: "Pré-Intermediário · completo", en: "Pre-Intermediate · full year" },
-  { code: "b1_1", codeLabel: "B1.1", title: "Intermediário · 1º semestre", en: "Intermediate · 1st semester" },
-  { code: "b1_2", codeLabel: "B1.2", title: "Intermediário · 2º semestre", en: "Intermediate · 2nd semester" },
-  { code: "b1", codeLabel: "B1", title: "Intermediário · completo", en: "Intermediate · full year" },
-  { code: "b2_1", codeLabel: "B2.1", title: "Intermediário Superior · 1º semestre", en: "Upper-Intermediate · 1st semester" },
-  { code: "b2_2", codeLabel: "B2.2", title: "Intermediário Superior · 2º semestre", en: "Upper-Intermediate · 2nd semester" },
-  { code: "b2", codeLabel: "B2", title: "Intermediário Superior · completo", en: "Upper-Intermediate · full year" },
+  // Canonical set — what the dropdown shows today.
+  { code: "a1", codeLabel: "A1", title: "Iniciante", en: "Beginner" },
+  { code: "a2", codeLabel: "A2", title: "Pré-Intermediário", en: "Pre-Intermediate" },
+  { code: "a", codeLabel: "A", title: "Básico · completo (A1 + A2)", en: "Basic · full (A1 + A2)" },
+  { code: "b1", codeLabel: "B1", title: "Intermediário", en: "Intermediate" },
+  { code: "b2", codeLabel: "B2", title: "Intermediário Superior", en: "Upper-Intermediate" },
+  { code: "b", codeLabel: "B", title: "Independente · completo (B1 + B2)", en: "Independent · full (B1 + B2)" },
   { code: "c1", codeLabel: "C1", title: "Avançado", en: "Advanced" },
   { code: "c2", codeLabel: "C2", title: "Proficiente", en: "Proficient" },
+  { code: "c", codeLabel: "C", title: "Proficiente · completo (C1 + C2)", en: "Proficient · full (C1 + C2)" },
+  // Custom marker — used when the teacher issues a non-CEFR certificate
+  // (e.g. "English for Tech Professionals"). The UI reads `title` for
+  // the display name in that case.
+  { code: "custom", codeLabel: "Custom", title: "Curso personalizado", en: "Custom course" },
+  // Legacy half-semester codes — kept so older certificates still
+  // find a label match via findCertificateLevel().
+  { code: "a1_1", codeLabel: "A1.1", title: "Iniciante · 1º semestre", en: "Beginner · 1st semester" },
+  { code: "a1_2", codeLabel: "A1.2", title: "Iniciante · 2º semestre", en: "Beginner · 2nd semester" },
+  { code: "a2_1", codeLabel: "A2.1", title: "Pré-Intermediário · 1º semestre", en: "Pre-Intermediate · 1st semester" },
+  { code: "a2_2", codeLabel: "A2.2", title: "Pré-Intermediário · 2º semestre", en: "Pre-Intermediate · 2nd semester" },
+  { code: "b1_1", codeLabel: "B1.1", title: "Intermediário · 1º semestre", en: "Intermediate · 1st semester" },
+  { code: "b1_2", codeLabel: "B1.2", title: "Intermediário · 2º semestre", en: "Intermediate · 2nd semester" },
+  { code: "b2_1", codeLabel: "B2.1", title: "Intermediário Superior · 1º semestre", en: "Upper-Intermediate · 1st semester" },
+  { code: "b2_2", codeLabel: "B2.2", title: "Intermediário Superior · 2º semestre", en: "Upper-Intermediate · 2nd semester" },
 ] as const;
 
 export type CertificateLevelCode = (typeof CERTIFICATE_LEVELS)[number]["code"];
+
+/** Codes actually offered in the issue-certificate dialog. Legacy
+    half-semester variants are excluded so new certificates follow
+    the simplified CEFR track + the custom escape hatch. */
+export const CERTIFICATE_LEVEL_CHOICES = [
+  "a1",
+  "a2",
+  "a",
+  "b1",
+  "b2",
+  "b",
+  "c1",
+  "c2",
+  "c",
+] as const;
 
 export function findCertificateLevel(
   code: string,

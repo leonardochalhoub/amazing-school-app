@@ -13,35 +13,92 @@ import {
 
 export const dynamic = "force-dynamic";
 
+type Lang = "pt-BR" | "en";
+
 interface PageProps {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ autoprint?: string | string[] }>;
+  searchParams: Promise<{
+    autoprint?: string | string[];
+    lang?: string | string[];
+  }>;
 }
 
-function fmtLongDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("pt-BR", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  });
+function readLang(raw: string | string[] | undefined): Lang {
+  const v = Array.isArray(raw) ? raw[0] : raw;
+  return v === "en" ? "en" : "pt-BR";
 }
+
+function fmtLongDate(iso: string, lang: Lang): string {
+  return new Date(iso).toLocaleDateString(
+    lang === "pt-BR" ? "pt-BR" : "en-US",
+    { day: "2-digit", month: "long", year: "numeric" },
+  );
+}
+
+// ---- i18n dictionaries ----------------------------------------------------
+
+const T = {
+  "pt-BR": {
+    programme: "Amazing School · Programa de Inglês",
+    cefrCaption:
+      "Alinhado ao Common European Framework of Reference for Languages (CEFR)",
+    mainTitle: "Certificado de Conclusão",
+    subTitle: "Certificate of Completion",
+    prelude: "Este documento certifica que",
+    cefrBody: (level: string, levelTitle: string, classroom: string | null) =>
+      `concluiu com êxito o nível ${level} — ${levelTitle}${classroom ? ` na turma ${classroom}` : ""}, cumprindo todas as avaliações e atividades previstas no período de`,
+    customBody: (classroom: string | null) =>
+      `concluiu com êxito o programa${classroom ? ` na turma ${classroom}` : ""}, cumprindo todas as avaliações e atividades previstas no período de`,
+    connector: "a",
+    hours: (h: number) => `Carga horária total: ${h} horas.`,
+    gradeLabel: "Conceito",
+    issuedOn: "Data de emissão",
+    responsible: "Professor(a) responsável",
+    certificateNumber: "Certificado nº",
+  },
+  en: {
+    programme: "Amazing School · English Programme",
+    cefrCaption:
+      "Aligned with the Common European Framework of Reference for Languages (CEFR)",
+    mainTitle: "Certificate of Completion",
+    subTitle: "Certificado de Conclusão",
+    prelude: "This is to certify that",
+    cefrBody: (level: string, levelTitle: string, classroom: string | null) =>
+      `has successfully completed the ${level} level — ${levelTitle}${classroom ? ` in the ${classroom} class` : ""}, fulfilling every assessment and activity required during the period from`,
+    customBody: (classroom: string | null) =>
+      `has successfully completed the programme${classroom ? ` in the ${classroom} class` : ""}, fulfilling every assessment and activity required during the period from`,
+    connector: "to",
+    hours: (h: number) => `Total workload: ${h} hours.`,
+    gradeLabel: "Grade",
+    issuedOn: "Issue date",
+    responsible: "Teaching instructor",
+    certificateNumber: "Certificate no.",
+  },
+} as const;
+
+// ---- Metadata (filename) --------------------------------------------------
 
 export async function generateMetadata({
   params,
+  searchParams,
 }: PageProps): Promise<Metadata> {
   const { id } = await params;
+  const sp = await searchParams;
+  const lang = readLang(sp.lang);
   const data = await getCertificate(id);
-  if ("error" in data) return { title: "Certificado · Amazing School" };
+  if ("error" in data) return { title: "Certificate · Amazing School" };
   const lvl = findCertificateLevel(data.level);
-  return {
-    title: reportFilename([
-      "certificado",
-      slugifyForFilename(data.student.fullName),
-      lvl?.codeLabel ?? data.level,
-      data.grade,
-    ]),
-  };
+  const baseParts = [
+    lang === "pt-BR" ? "certificado" : "certificate",
+    slugifyForFilename(data.student.fullName),
+    lvl?.codeLabel ?? data.level,
+    data.grade,
+    lang === "pt-BR" ? "pt-br" : "en",
+  ];
+  return { title: reportFilename(baseParts) };
 }
+
+// ---- Page -----------------------------------------------------------------
 
 export default async function CertificatePrintPage({
   params,
@@ -50,17 +107,31 @@ export default async function CertificatePrintPage({
   const { id } = await params;
   const sp = await searchParams;
   const autoprint = sp.autoprint === "1";
+  const lang = readLang(sp.lang);
   const data = await getCertificate(id);
   if ("error" in data) notFound();
 
+  const dict = T[lang];
   const lvl = findCertificateLevel(data.level);
   const grade = findGrade(data.grade);
+  const isCustom = data.level === "custom";
+  // Level label + description — language-dependent for CEFR, raw
+  // text for custom certificates (teacher already wrote it).
+  const levelCode = isCustom
+    ? (data.title ?? "Custom")
+    : (lvl?.codeLabel ?? data.level.toUpperCase());
+  const levelDescription = isCustom
+    ? ""
+    : lang === "pt-BR"
+      ? (lvl?.title ?? "")
+      : (lvl?.en ?? "");
 
   const filename = reportFilename([
-    "certificado",
+    lang === "pt-BR" ? "certificado" : "certificate",
     slugifyForFilename(data.student.fullName),
     lvl?.codeLabel ?? data.level,
     data.grade,
+    lang === "pt-BR" ? "pt-br" : "en",
   ]);
 
   const teacherLogo =
@@ -72,8 +143,6 @@ export default async function CertificatePrintPage({
     <>
       <PrintToolbar filename={filename} />
       <AutoPrint enabled={autoprint} />
-      {/* Landscape A4 — certificates read best wide. The inline style
-          overrides the default portrait .report-page sizing. */}
       <style>{`
         @page { size: A4 landscape; margin: 10mm; }
         @media print {
@@ -100,7 +169,6 @@ export default async function CertificatePrintPage({
           padding: "28mm 26mm",
         }}
       >
-        {/* Outer double-rule frame — the classic institutional look. */}
         <div
           aria-hidden
           style={{
@@ -122,13 +190,11 @@ export default async function CertificatePrintPage({
           }}
         />
 
-        {/* Corner flourishes — minimal SVG ornaments, no external fonts. */}
         <CornerFlourish style={{ top: 22, left: 22 }} rotation={0} />
         <CornerFlourish style={{ top: 22, right: 22 }} rotation={90} />
         <CornerFlourish style={{ bottom: 22, left: 22 }} rotation={-90} />
         <CornerFlourish style={{ bottom: 22, right: 22 }} rotation={180} />
 
-        {/* Header — logos + house-marks */}
         <header
           style={{
             position: "relative",
@@ -173,12 +239,13 @@ export default async function CertificatePrintPage({
                 fontWeight: 600,
               }}
             >
-              Amazing School · English Programme
+              {dict.programme}
             </p>
-            <p style={{ fontSize: "9pt", color: "#6b7280", marginTop: 2 }}>
-              Alinhado ao Common European Framework of Reference for
-              Languages (CEFR)
-            </p>
+            {!isCustom ? (
+              <p style={{ fontSize: "9pt", color: "#6b7280", marginTop: 2 }}>
+                {dict.cefrCaption}
+              </p>
+            ) : null}
           </div>
 
           {teacherLogo ? (
@@ -212,20 +279,19 @@ export default async function CertificatePrintPage({
           )}
         </header>
 
-        {/* Body */}
         <section
           style={{
             position: "relative",
             zIndex: 1,
             textAlign: "center",
-            marginTop: 28,
+            marginTop: 24,
           }}
         >
           <h1
             style={{
               fontFamily: 'var(--font-display), "Georgia", serif',
               fontStyle: "italic",
-              fontSize: "40pt",
+              fontSize: "38pt",
               fontWeight: 400,
               letterSpacing: "-0.01em",
               lineHeight: 1,
@@ -233,40 +299,34 @@ export default async function CertificatePrintPage({
               margin: 0,
             }}
           >
-            Certificado de Conclusão
+            {dict.mainTitle}
           </h1>
           <p
             style={{
               marginTop: 4,
-              fontSize: "12pt",
+              fontSize: "11pt",
               color: "#6b5b24",
               fontStyle: "italic",
             }}
           >
-            Certificate of Completion
+            {dict.subTitle}
+          </p>
+
+          <p style={{ marginTop: 20, fontSize: "11pt", color: "#4b5563" }}>
+            {dict.prelude}
           </p>
 
           <p
             style={{
-              marginTop: 22,
-              fontSize: "11pt",
-              color: "#4b5563",
-            }}
-          >
-            Este documento certifica que
-          </p>
-
-          <p
-            style={{
-              marginTop: 10,
+              marginTop: 8,
               fontFamily: 'var(--font-display), "Georgia", serif',
               fontStyle: "italic",
-              fontSize: "30pt",
+              fontSize: "28pt",
               fontWeight: 400,
               letterSpacing: "-0.01em",
               lineHeight: 1.1,
               color: "#0a0a0a",
-              margin: "10px auto 0",
+              margin: "8px auto 0",
               maxWidth: "85%",
             }}
           >
@@ -287,31 +347,51 @@ export default async function CertificatePrintPage({
               fontSize: "12pt",
               color: "#1f2937",
               lineHeight: 1.7,
-              maxWidth: 720,
-              margin: "14px auto 0",
+              maxWidth: 780,
+              margin: "12px auto 0",
             }}
           >
-            concluiu com êxito o nível{" "}
-            <strong style={{ fontSize: "14pt" }}>
-              {lvl?.codeLabel ?? data.level.toUpperCase()}
-            </strong>{" "}
-            — <span style={{ fontStyle: "italic" }}>{lvl?.title ?? ""}</span>
-            {data.student.classroomName ? (
+            {isCustom ? (
               <>
-                {" "}na turma{" "}
-                <strong>{data.student.classroomName}</strong>
+                {dict.customBody(data.student.classroomName)}{" "}
+                <strong>{fmtLongDate(data.courseStartOn, lang)}</strong>{" "}
+                {dict.connector}{" "}
+                <strong>{fmtLongDate(data.courseEndOn, lang)}</strong>.{" "}
+                <span style={{ display: "block", marginTop: 6 }}>
+                  <strong style={{ fontSize: "13pt" }}>{levelCode}</strong>
+                </span>
               </>
-            ) : null}
-            , cumprindo todas as avaliações e atividades previstas no
-            período de{" "}
-            <strong>{fmtLongDate(data.courseStartOn)}</strong> a{" "}
-            <strong>{fmtLongDate(data.courseEndOn)}</strong>.
+            ) : (
+              <>
+                {dict.cefrBody(
+                  levelCode,
+                  levelDescription,
+                  data.student.classroomName,
+                )}{" "}
+                <strong>{fmtLongDate(data.courseStartOn, lang)}</strong>{" "}
+                {dict.connector}{" "}
+                <strong>{fmtLongDate(data.courseEndOn, lang)}</strong>.
+              </>
+            )}
           </p>
 
-          {data.title ? (
+          {data.totalHours && data.totalHours > 0 ? (
             <p
               style={{
-                marginTop: 14,
+                marginTop: 6,
+                fontSize: "11pt",
+                color: "#6b5b24",
+                fontWeight: 500,
+              }}
+            >
+              {dict.hours(data.totalHours)}
+            </p>
+          ) : null}
+
+          {data.title && !isCustom ? (
+            <p
+              style={{
+                marginTop: 10,
                 fontSize: "10.5pt",
                 color: "#6b7280",
                 fontStyle: "italic",
@@ -321,10 +401,9 @@ export default async function CertificatePrintPage({
             </p>
           ) : null}
 
-          {/* Grade badge */}
           <div
             style={{
-              marginTop: 26,
+              marginTop: 22,
               display: "inline-flex",
               flexDirection: "column",
               alignItems: "center",
@@ -336,13 +415,13 @@ export default async function CertificatePrintPage({
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
-                width: 96,
-                height: 96,
+                width: 90,
+                height: 90,
                 borderRadius: "50%",
                 border: "3px solid #c4a74e",
                 background: `linear-gradient(135deg, ${grade?.color ?? "#111827"}15, #ffffff)`,
                 color: grade?.color ?? "#111827",
-                fontSize: "44pt",
+                fontSize: "40pt",
                 fontWeight: 700,
                 fontFamily: 'var(--font-display), "Georgia", serif',
                 lineHeight: 1,
@@ -360,19 +439,19 @@ export default async function CertificatePrintPage({
                 fontWeight: 600,
               }}
             >
-              Conceito · {grade?.caption ?? ""}
+              {dict.gradeLabel} · {grade?.caption ?? ""}
             </span>
           </div>
 
           {data.remarks ? (
             <p
               style={{
-                marginTop: 22,
+                marginTop: 18,
                 fontSize: "10.5pt",
                 color: "#374151",
                 lineHeight: 1.6,
                 maxWidth: 680,
-                margin: "22px auto 0",
+                margin: "18px auto 0",
                 fontStyle: "italic",
               }}
             >
@@ -381,7 +460,6 @@ export default async function CertificatePrintPage({
           ) : null}
         </section>
 
-        {/* Footer — date + signature + certificate number */}
         <footer
           style={{
             position: "absolute",
@@ -397,10 +475,10 @@ export default async function CertificatePrintPage({
         >
           <div style={{ textAlign: "left", fontSize: "10pt", color: "#374151" }}>
             <p style={{ fontWeight: 600 }}>
-              {fmtLongDate(data.courseEndOn)}
+              {fmtLongDate(data.courseEndOn, lang)}
             </p>
             <p style={{ color: "#6b7280", fontSize: "9pt" }}>
-              Data de emissão
+              {dict.issuedOn}
             </p>
           </div>
 
@@ -417,7 +495,7 @@ export default async function CertificatePrintPage({
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={data.teacher.signatureUrl}
-                  alt={`Assinatura de ${data.teacher.fullName ?? "professor"}`}
+                  alt={`${data.teacher.fullName ?? "teacher"} signature`}
                   style={{
                     maxHeight: 46,
                     maxWidth: 240,
@@ -435,10 +513,12 @@ export default async function CertificatePrintPage({
                 color: "#0a0a0a",
               }}
             >
-              {data.teacher.fullName || data.teacher.email || "Professor(a)"}
+              {data.teacher.fullName ||
+                data.teacher.email ||
+                (lang === "pt-BR" ? "Professor(a)" : "Instructor")}
             </div>
             <p style={{ fontSize: "9pt", color: "#6b7280", marginTop: 2 }}>
-              Professor(a) responsável
+              {dict.responsible}
             </p>
           </div>
 
@@ -451,7 +531,7 @@ export default async function CertificatePrintPage({
             }}
           >
             <p style={{ fontWeight: 600, color: "#374151" }}>
-              Certificado nº
+              {dict.certificateNumber}
             </p>
             <p style={{ fontFamily: "monospace" }}>
               {data.certificateNumber}
@@ -483,7 +563,6 @@ function CornerFlourish({
         ...style,
       }}
     >
-      {/* Inward-facing corner motif: diagonal bars + small diamond. */}
       <path
         d="M 6 6 L 20 6 M 6 6 L 6 20 M 10 10 L 16 16"
         stroke="currentColor"

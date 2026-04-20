@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { GraduationCap, FileText } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import { IssueCertificateButton } from "@/components/reports/issue-certificate-button";
 import { DeleteCertificateButton } from "@/components/reports/delete-certificate-button";
+import { CertificateDownloadButton } from "@/components/reports/certificate-download-button";
 import { T } from "@/components/reports/t";
 import {
   findCertificateLevel,
@@ -91,6 +92,7 @@ export function CertificatesPanel({
             {certificates.map((d) => {
               const lvl = findCertificateLevel(d.level);
               const g = findGrade(d.grade);
+              const isCustom = d.level === "custom";
               return (
                 <li
                   key={d.id}
@@ -105,24 +107,23 @@ export function CertificatesPanel({
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="truncate font-semibold">
-                      {d.title ??
-                        `${lvl?.codeLabel ?? d.level.toUpperCase()}`}
+                      {isCustom
+                        ? (d.title ?? "—")
+                        : (d.title ??
+                          `${lvl?.codeLabel ?? d.level.toUpperCase()}`)}
                     </p>
                     <p className="truncate text-muted-foreground">
-                      {lvl?.title ?? d.level} ·{" "}
+                      {isCustom
+                        ? ""
+                        : `${lvl?.title ?? d.level} · `}
                       {fmtDateRange(d.courseStartOn, d.courseEndOn)}
+                      {d.totalHours
+                        ? ` · ${d.totalHours}h`
+                        : ""}
                     </p>
                   </div>
                   <div className="flex shrink-0 items-center gap-1.5">
-                    <a
-                      href={`/print/certificate/${d.id}?autoprint=1`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-2.5 py-1 text-[11px] font-medium hover:bg-muted"
-                    >
-                      <FileText className="h-3 w-3" />
-                      <T en="Download" pt="Baixar" />
-                    </a>
+                    <CertificateDownloadButton certificateId={d.id} />
                     {!readOnly ? <DeleteCertificateButton id={d.id} /> : null}
                   </div>
                 </li>

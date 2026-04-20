@@ -102,6 +102,26 @@ tests/
 - shadcn/ui components — don't build custom UI when a shadcn component exists
 - Environment variables: NEXT_PUBLIC_ prefix for client-safe, plain for server-only
 
+## Reports — hard rules
+
+**Every report generated under `/print/*` (curriculum, cohort, finance,
+receipt, receipts-list, certificate, sysadmin) MUST prominently display
+the Amazing School logo (`/branding/school-logo.png` — the purple
+wordmark).** No exception.
+
+- Shell-based reports render it through `<ReportHeader>` (top-left
+  card). `<ReportShell>` already wires this up — just pass `teacher={...}`
+  and the header appears.
+- The certificate print page does NOT use `<ReportShell>` (it's a
+  landscape A4 with its own chrome) — the logo is rendered manually
+  in the header `<div className="report-logo-box">`.
+- Every report also carries `<BrandWatermark />` at the bottom — a
+  subtle pill with the logo + `amazing-school-app.vercel.app` tagline.
+
+If you touch a `/print/*` route, confirm BOTH the header logo AND
+the `<BrandWatermark />` are present before finishing. Reports that
+print without the Amazing School mark are a bug.
+
 ## Knowledge Base Domains
 
 | Domain | Purpose |
