@@ -24,6 +24,8 @@ import {
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { StudentInviteButton } from "@/components/teacher/student-invite-button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { StudentReportsCard } from "@/components/reports/student-reports-card";
+import { listPaidInvoicesForStudent } from "@/lib/actions/reports";
 
 export default async function RosterStudentDetailPage({
   params,
@@ -61,14 +63,21 @@ export default async function RosterStudentDetailPage({
       })()
     : null;
 
-  const [rosterSigned, diary, rawAssignments, publishedLessons, history] =
-    await Promise.all([
-      student.has_avatar ? getRosterAvatarSignedUrl(id) : Promise.resolve(null),
-      listDiaryForStudent(id),
-      getAssignmentsForRosterStudent(id),
-      getAssignableLessons(),
-      listStudentHistory({ rosterStudentId: id }),
-    ]);
+  const [
+    rosterSigned,
+    diary,
+    rawAssignments,
+    publishedLessons,
+    history,
+    paidInvoices,
+  ] = await Promise.all([
+    student.has_avatar ? getRosterAvatarSignedUrl(id) : Promise.resolve(null),
+    listDiaryForStudent(id),
+    getAssignmentsForRosterStudent(id),
+    getAssignableLessons(),
+    listStudentHistory({ rosterStudentId: id }),
+    listPaidInvoicesForStudent(id),
+  ]);
 
   const signedUrl = rosterSigned ?? selfUploadUrl;
   const hasAvatar = student.has_avatar || !!selfUploadUrl;
@@ -278,6 +287,18 @@ export default async function RosterStudentDetailPage({
               />
             </CardContent>
           </Card>
+
+          <StudentReportsCard
+            rosterId={id}
+            rosterCreatedAt={
+              (student as { created_at?: string | null }).created_at ?? null
+            }
+            billingStartsOn={
+              (student as { billing_starts_on?: string | null })
+                .billing_starts_on ?? null
+            }
+            paidInvoices={paidInvoices}
+          />
         </div>
       </div>
     </div>

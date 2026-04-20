@@ -2,19 +2,16 @@
 
 import { cn } from "@/lib/utils";
 import type { BadgeDefinition } from "@/lib/gamification/config";
+import {
+  translateBadge,
+  translateRarity,
+} from "@/lib/gamification/badge-i18n";
+import { useI18n } from "@/lib/i18n/context";
 
 interface BadgeGridProps {
   earnedBadges: string[];
   allBadges: readonly BadgeDefinition[];
 }
-
-const RARITY_LABEL: Record<string, string> = {
-  common: "Common",
-  rare: "Rare",
-  epic: "Epic",
-  legendary: "Legendary",
-  mythic: "Mythic",
-};
 
 export function BadgeGrid({ earnedBadges, allBadges }: BadgeGridProps) {
   return (
@@ -36,6 +33,12 @@ function BadgeTile({
   badge: BadgeDefinition;
   earned: boolean;
 }) {
+  const { locale } = useI18n();
+  const text = translateBadge(badge.type, locale, {
+    name: badge.name,
+    description: badge.description,
+  });
+  const rarityLabel = translateRarity(badge.rarity, locale);
   return (
     <div
       className={cn(
@@ -65,7 +68,7 @@ function BadgeTile({
           {earned ? badge.icon : "🔒"}
         </div>
         <p className={cn("truncate text-xs font-semibold", !earned && "opacity-70")}>
-          {badge.name}
+          {text.name}
         </p>
         <p
           className={cn(
@@ -73,7 +76,7 @@ function BadgeTile({
             earned ? "text-white/80" : "text-muted-foreground/80",
           )}
         >
-          {badge.description}
+          {text.description}
         </p>
         <span
           className={cn(
@@ -83,7 +86,7 @@ function BadgeTile({
               : "border-border bg-background/60",
           )}
         >
-          {RARITY_LABEL[badge.rarity] ?? badge.rarity}
+          {rarityLabel}
         </span>
       </div>
     </div>

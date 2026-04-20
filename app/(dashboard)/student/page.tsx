@@ -21,7 +21,7 @@ import { findMeta as findLessonMeta } from "@/lib/content/loader";
 import { fromAssignmentSlug, getMusic } from "@/lib/content/music";
 import { getAvatarSignedUrls } from "@/lib/supabase/signed-urls";
 import { getLevel, getXpForNextLevel } from "@/lib/gamification/engine";
-import { BADGE_BY_TYPE } from "@/lib/gamification/config";
+import { BadgeChip } from "@/components/gamification/badge-chip";
 import {
   ActivityChart,
   type ActivityBucket,
@@ -437,20 +437,9 @@ export default async function StudentHome() {
                 types fall through gracefully. */}
             {stats?.earnedBadges && stats.earnedBadges.length > 0 ? (
               <div className="flex flex-wrap gap-1.5">
-                {stats.earnedBadges.map((type) => {
-                  const def = BADGE_BY_TYPE[type];
-                  if (!def) return null;
-                  return (
-                    <span
-                      key={type}
-                      title={`${def.name} · ${def.description}`}
-                      className={`inline-flex items-center gap-1 rounded-full bg-gradient-to-br ${def.gradient} ${def.glow} px-2.5 py-0.5 text-[11px] font-semibold text-white`}
-                    >
-                      <span aria-hidden>{def.icon}</span>
-                      {def.name}
-                    </span>
-                  );
-                })}
+                {stats.earnedBadges.map((type) => (
+                  <BadgeChip key={type} type={type} />
+                ))}
               </div>
             ) : null}
           </div>

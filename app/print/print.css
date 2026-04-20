@@ -1,0 +1,223 @@
+/* =============================================================
+   Print / PDF foundation — shared across every /print/* report.
+
+   Dual goal:
+   (a) On screen the report looks like an A4 page floating on a
+       neutral workspace so the teacher can preview + review it
+       before printing.
+   (b) At print time the browser lays it out on real A4 paper
+       with no chrome, no buttons, no sidebars.
+
+   Tailwind v4 handles most of the layout; this file covers only
+   what Tailwind can't: @page, page breaks, print-only visibility,
+   and the on-screen "paper" chrome.
+   ============================================================= */
+
+@page {
+  size: A4;
+  margin: 14mm 12mm;
+}
+
+/* ---------- On-screen preview ---------- */
+.report-workspace {
+  background: #e6e6ec;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.report-page {
+  /* A4 at 96dpi = 794×1123px; we size the preview to match.
+     Print removes these constraints (print media rule below). */
+  width: 794px;
+  min-height: 1123px;
+  margin: 0 auto 1.25rem;
+  background: #ffffff;
+  color: #0a0a0a;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 8px 24px -6px rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  padding: 28mm 18mm;
+  /* Keep an explicit serif + numeric feel inside reports so they
+     read like a document, not a dashboard tile. */
+  font-family: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.45;
+}
+
+.report-page h1,
+.report-page h2,
+.report-page h3 {
+  color: #0a0a0a;
+  letter-spacing: -0.01em;
+}
+
+.report-page table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.report-page table th,
+.report-page table td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.report-page table th {
+  font-size: 9pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #4b5563;
+  background: #f8fafc;
+}
+
+.report-page .report-hline {
+  border: 0;
+  border-top: 1px solid #d1d5db;
+  margin: 12px 0;
+}
+
+.report-page .report-muted {
+  color: #6b7280;
+}
+
+/* Page-break helpers to keep report sections together. */
+.report-avoid-break {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.report-page-break {
+  break-before: page;
+  page-break-before: always;
+}
+
+/* Compact, printable KPI tiles — look good both on-screen and on paper. */
+.report-kpi {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: #ffffff;
+}
+.report-kpi-label {
+  font-size: 8.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  font-weight: 600;
+}
+.report-kpi-value {
+  font-size: 16pt;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.report-kpi-sub {
+  font-size: 8.5pt;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* Header + footer — designed to compress nicely on paper. */
+.report-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #0f172a;
+}
+
+.report-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.report-logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 6px 8px;
+  height: 44px;
+}
+
+.report-logo-box img {
+  max-height: 30px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.report-title {
+  font-size: 18pt;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.report-subtitle {
+  font-size: 9.5pt;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.report-meta {
+  font-size: 9pt;
+  color: #6b7280;
+  text-align: right;
+  line-height: 1.35;
+}
+
+.report-footer {
+  margin-top: 28px;
+  padding-top: 10px;
+  border-top: 1px solid #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 8.5pt;
+  color: #6b7280;
+}
+
+/* ---------- Print media — strip chrome, reset sizing ---------- */
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .report-workspace {
+    background: #ffffff !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+  }
+  .report-page {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}

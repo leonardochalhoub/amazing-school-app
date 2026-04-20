@@ -10,6 +10,7 @@ import { SysadminCharts } from "@/components/owner/sysadmin-charts";
 import { PlatformAccessCard } from "@/components/owner/platform-access-card";
 import { TopAssignedTable } from "@/components/owner/top-assigned-table";
 import { AiChatUsageTable } from "@/components/owner/ai-chat-usage-table";
+import { SysadminReportsPanel } from "@/components/reports/sysadmin-reports-panel";
 import {
   Users,
   GraduationCap,
@@ -112,6 +113,9 @@ export default async function SysadminPage() {
           Privacy-scoped
         </Badge>
       </header>
+
+      {/* ============================ REPORTS ============================ */}
+      <SysadminReportsPanel />
 
       {/* ============================ ROW 1 — scale ============================ */}
       <section className="space-y-2">

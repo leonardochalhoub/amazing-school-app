@@ -18,6 +18,7 @@ import {
 } from "@/components/teacher/kpi-tile";
 import { ManagementGrid } from "@/components/owner/management-grid";
 import { RevenueAnalytics } from "@/components/owner/revenue-analytics";
+import { TeacherReportsPanel } from "@/components/reports/teacher-reports-panel";
 import {
   Users,
   Flame,
@@ -152,6 +153,15 @@ export default async function TeacherManagementPage() {
           </p>
         </div>
       </header>
+
+      {/* ========== REPORTS ========== */}
+      <TeacherReportsPanel
+        seedDates={[
+          ...rows.map((r) => r.roster_created_at),
+          ...rows.map((r) => r.billing_starts_on),
+          ...months,
+        ]}
+      />
 
       {/* ========== PEOPLE & LEARNING ========== */}
       <section className="space-y-3">
