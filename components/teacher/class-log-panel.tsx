@@ -1,5 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
-import { Calendar, Clock, ExternalLink, User } from "lucide-react";
+import {
+  Calendar,
+  ChevronDown,
+  Clock,
+  ExternalLink,
+  User,
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type {
@@ -22,8 +31,14 @@ interface Props {
   entries: Row[];
 }
 
+const PREVIEW = 15;
+
 export function ClassLogPanel({ entries }: Props) {
+  const [showAll, setShowAll] = useState(false);
   const planned = entries.filter((e) => e.status === "Planned").length;
+  const visible = showAll ? entries : entries.slice(0, PREVIEW);
+  const hidden = entries.length - visible.length;
+
   return (
     <section aria-labelledby="class-log-heading" className="space-y-3">
       <div className="flex items-baseline justify-between gap-3">
@@ -35,7 +50,9 @@ export function ClassLogPanel({ entries }: Props) {
             Class log
           </h2>
           <p className="text-xs text-muted-foreground">
-            Every scheduled / past session you created across all students.
+            {showAll
+              ? `All ${entries.length} sessions across every student.`
+              : `Showing the ${Math.min(PREVIEW, entries.length)} most recent of ${entries.length}.`}{" "}
             Syncs live with the History panel inside each student profile.
             {planned > 0 ? (
               <>
@@ -52,8 +69,8 @@ export function ClassLogPanel({ entries }: Props) {
       {entries.length === 0 ? (
         <Card>
           <CardContent className="p-5 text-center text-sm text-muted-foreground">
-            No classes scheduled yet. Use{" "}
-            <strong>Schedule class</strong> above to create the first one.
+            No classes scheduled yet. Use <strong>Schedule class</strong>{" "}
+            above to create the first one.
           </CardContent>
         </Card>
       ) : (
@@ -70,7 +87,7 @@ export function ClassLogPanel({ entries }: Props) {
               </tr>
             </thead>
             <tbody>
-              {entries.map((e) => {
+              {visible.map((e) => {
                 const profileHref = e.roster_student_id
                   ? `/teacher/students/${e.roster_student_id}`
                   : null;
@@ -154,6 +171,25 @@ export function ClassLogPanel({ entries }: Props) {
               })}
             </tbody>
           </table>
+          {entries.length > PREVIEW ? (
+            <button
+              type="button"
+              onClick={() => setShowAll((v) => !v)}
+              className="flex w-full items-center justify-center gap-1.5 border-t border-border py-2.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted/40 hover:text-foreground"
+            >
+              {showAll
+                ? "Show less"
+                : `Show all ${entries.length} sessions`}
+              <ChevronDown
+                className={`h-3.5 w-3.5 transition-transform ${showAll ? "rotate-180" : ""}`}
+              />
+              {!showAll && hidden > 0 ? (
+                <span className="text-[10px] tabular-nums text-muted-foreground/70">
+                  (+{hidden})
+                </span>
+              ) : null}
+            </button>
+          ) : null}
         </div>
       )}
     </section>

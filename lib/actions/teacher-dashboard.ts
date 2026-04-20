@@ -639,7 +639,10 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
       )
       .in("classroom_id", classroomIds)
       .order("assigned_at", { ascending: false })
-      .limit(8);
+      // Big ceiling — the UI hides everything past the 15 most
+      // recent by default and reveals the rest via "Show all".
+      // The old .limit(8) silently truncated 3-year histories.
+      .limit(500);
 
     const authStudentIds = Array.from(
       new Set(

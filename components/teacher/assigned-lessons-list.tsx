@@ -39,7 +39,7 @@ interface Props {
   canUnassign?: boolean;
 }
 
-const RECENT_DEFAULT = 10;
+const RECENT_DEFAULT = 15;
 
 export function AssignedLessonsList({ assignments, canUnassign = true }: Props) {
   const { locale } = useI18n();
