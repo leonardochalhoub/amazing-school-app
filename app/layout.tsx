@@ -29,10 +29,91 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
 });
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://amazingschool.app";
+const SITE_NAME = "Amazing School";
+const DEFAULT_TITLE =
+  "Amazing School — Learn English with AI · Aprenda inglês com IA";
+const DEFAULT_DESCRIPTION =
+  "Free, open-source English teaching platform for Brazilian students: structured CEFR lessons, AI tutor, speaking lab with pronunciation scoring, gamification, and classroom tools for teachers.";
+const DEFAULT_KEYWORDS = [
+  "aprender inglês",
+  "curso de inglês online",
+  "inglês para brasileiros",
+  "professor de inglês",
+  "AI English tutor",
+  "learn English",
+  "English teaching platform",
+  "CEFR",
+  "speaking practice",
+  "pronunciation scoring",
+  "gamified English",
+  "Amazing School",
+];
+
 export const metadata: Metadata = {
-  title: "Amazing School - Learn English with AI",
-  description:
-    "Free, open-source English teaching platform with AI tutoring and gamification for Brazilian students",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: "%s · Amazing School",
+  },
+  description: DEFAULT_DESCRIPTION,
+  keywords: DEFAULT_KEYWORDS,
+  applicationName: SITE_NAME,
+  authors: [{ name: "Amazing School" }],
+  creator: "Amazing School",
+  publisher: "Amazing School",
+  alternates: {
+    canonical: "/",
+    languages: {
+      "pt-BR": "/",
+      en: "/",
+      "x-default": "/",
+    },
+  },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    url: SITE_URL,
+    locale: "pt_BR",
+    alternateLocale: ["en_US"],
+    images: [
+      {
+        url: "/branding/school-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Amazing School — English learning platform",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: ["/branding/school-logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  category: "education",
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
 };
 
 // Without this, mobile browsers render at a 980px default viewport and
@@ -42,6 +123,32 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+};
+
+// JSON-LD: EducationalOrganization — anchors the site in Google's
+// Knowledge Graph. Served inline in <head> so it's indexed on the
+// very first crawl, no rehydration race with client scripts.
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/branding/school-logo.png`,
+  description: DEFAULT_DESCRIPTION,
+  sameAs: [],
+  areaServed: { "@type": "Country", name: "Brazil" },
+  availableLanguage: ["pt-BR", "en"],
+};
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  inLanguage: ["pt-BR", "en"],
 };
 
 export default function RootLayout({
@@ -51,10 +158,20 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pt-BR"
       suppressHydrationWarning
       className={`${jakarta.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          // The two objects live in a single array so Google treats
+          // them as a set of linked entities for the same site.
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([organizationJsonLd, websiteJsonLd]),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider>
           <I18nProvider>
