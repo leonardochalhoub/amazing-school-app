@@ -116,19 +116,19 @@ function AssignmentTile({ a }: { a: AssignmentGridEntry }) {
             ) : null}
           </div>
           <div className="space-y-0.5">
-            {a.assignedAt ? (
-              <p className="text-[10px] tabular-nums text-muted-foreground">
-                Assigned{" "}
-                {new Date(a.assignedAt).toLocaleString("pt-BR", {
+            {isDone && a.completedAt ? (
+              <p className="text-[10px] tabular-nums text-emerald-600 dark:text-emerald-400">
+                Done{" "}
+                {new Date(a.completedAt).toLocaleString("pt-BR", {
                   dateStyle: "short",
                   timeStyle: "short",
                 })}
               </p>
             ) : null}
-            {isDone && a.completedAt ? (
-              <p className="text-[10px] tabular-nums text-emerald-600 dark:text-emerald-400">
-                Done{" "}
-                {new Date(a.completedAt).toLocaleString("pt-BR", {
+            {a.assignedAt ? (
+              <p className="text-[10px] tabular-nums text-muted-foreground">
+                Assigned{" "}
+                {new Date(a.assignedAt).toLocaleString("pt-BR", {
                   dateStyle: "short",
                   timeStyle: "short",
                 })}
