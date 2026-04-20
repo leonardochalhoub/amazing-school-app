@@ -82,11 +82,12 @@ export function ReportHeader({
           gap: 6,
         }}
       >
-        {/* RIGHT — Amazing School platform mark, sized to match the
-            bumped school-logo box on the left so both logos sit on
-            the same visual baseline. */}
+        {/* RIGHT — Amazing School platform mark. Stays at 22pt
+            (small + elegant as originally designed); the 56px
+            report-logo-box on both sides keeps the two logos
+            vertically aligned on the same baseline. */}
         <div className="report-logo-box">
-          <AmazingSchoolMark size={34} />
+          <AmazingSchoolMark size={22} />
         </div>
         {meta && meta.length > 0 ? (
           <div className="report-meta">

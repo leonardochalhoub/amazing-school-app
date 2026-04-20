@@ -251,7 +251,10 @@ export default async function CertificatePrintPage({
             ) : null}
           </div>
 
-          {/* RIGHT — Amazing School platform mark. */}
+          {/* RIGHT — Amazing School platform mark. Small + elegant;
+              the 88px alignment wrapper matches the SchoolLogoSlot
+              height on the left so the two logos share a baseline
+              even though the school logo is the visual anchor. */}
           <div
             style={{
               height: 88,
@@ -261,7 +264,7 @@ export default async function CertificatePrintPage({
               justifyContent: "flex-end",
             }}
           >
-            <AmazingSchoolMark size={34} />
+            <AmazingSchoolMark size={24} />
           </div>
         </header>
 
