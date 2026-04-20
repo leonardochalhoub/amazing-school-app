@@ -65,7 +65,11 @@ export function AssignLessonButton({
   const [selected, setSelected] = useState<string[]>([]); // ordered slugs
   const [search, setSearch] = useState("");
   const [targetType, setTargetType] = useState<TargetType>("classroom");
-  const [classroomId, setClassroomId] = useState("");
+  // When the dialog is scoped to a single classroom (e.g. opened from
+  // inside /teacher/classroom/[id]), pre-select it — no point making
+  // the teacher re-pick the only option.
+  const singleClassroom = classrooms.length === 1 ? classrooms[0] : null;
+  const [classroomId, setClassroomId] = useState(singleClassroom?.id ?? "");
   const [studentId, setStudentId] = useState("");
   const [classroomOptions, setClassroomOptions] = useState(classrooms);
   const [pending, startTransition] = useTransition();
@@ -216,8 +220,12 @@ export function AssignLessonButton({
     setSongSearch("");
     setTargetType(singleStudent && !singleStudentHasClassroom ? "student" : "classroom");
     // In single-student mode, pre-fill the classroom dropdown with the
-    // student's existing classroom (empty = "No classroom specified").
-    setClassroomId(singleStudent?.classroomId ?? "");
+    // student's existing classroom. In single-classroom mode (dialog
+    // opened from a specific classroom page), pre-fill with that
+    // classroom. Otherwise empty = "Pick a classroom" / "No classroom".
+    setClassroomId(
+      singleStudent?.classroomId ?? singleClassroom?.id ?? "",
+    );
     setStudentId(singleStudent?.id ?? "");
   }
 
@@ -226,7 +234,10 @@ export function AssignLessonButton({
       return; // guarded — button is disabled too, but belt-and-suspenders
     }
     setTargetType(next);
-    setClassroomId("");
+    // Keep the classroom pre-selected in single-classroom mode when
+    // flipping back to the classroom tab — otherwise the teacher
+    // would have to pick it again from a dropdown of one.
+    setClassroomId(singleClassroom?.id ?? "");
     if (!singleStudent) setStudentId("");
   }
 
@@ -319,6 +330,10 @@ export function AssignLessonButton({
             setClassroomId(singleStudent.classroomId ?? "");
           } else {
             setTargetType("classroom");
+            // Single-classroom mode (opened from inside a classroom) —
+            // pre-select the only classroom so the teacher doesn't
+            // have to pick it from a one-item dropdown.
+            setClassroomId(singleClassroom?.id ?? "");
           }
           setOpen(true);
         }}
