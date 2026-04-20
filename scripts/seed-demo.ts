@@ -748,6 +748,26 @@ async function seedTimeline(args: TimelineArgs) {
         order_index: 0,
         status,
       });
+      // If this targeted assignment is a MUSIC lesson that we marked
+      // completed, also emit a matching lesson_progress row — without
+      // it the activity chart can't plot the pink "music" bars and
+      // the student's Done count under-represents their real work.
+      // Regular lessons get their own progress rows further down in
+      // the daily random-walk loop.
+      if (status === "completed" && pick.startsWith("music:")) {
+        const completed = new Date(when.getTime() + 2 * 60 * 60_000);
+        const started = new Date(completed.getTime() - 25 * 60_000);
+        progressRows.push({
+          id: crypto.randomUUID(),
+          student_id: studentId,
+          lesson_slug: pick,
+          classroom_id: classroomId,
+          completed_exercises: 4,
+          total_exercises: 4,
+          started_at: started.toISOString(),
+          completed_at: completed.toISOString(),
+        });
+      }
     }
 
     // Daily activity + XP + completions
@@ -795,25 +815,31 @@ async function seedTimeline(args: TimelineArgs) {
           created_at: day.toISOString(),
         });
       }
-      // Completions
-      if (rng() < s.completionRate * 0.6 && levelPool.length > 0) {
-        const slug = levelPool[Math.floor(rng() * levelPool.length)];
-        if (!completedSlugs.has(slug)) {
-          completedSlugs.add(slug);
-          const started = atHour(day, 9 + rng() * 4, rng);
-          const completed = new Date(started.getTime() + 25 * 60_000);
-          progressRows.push({
-            id: crypto.randomUUID(),
-            student_id: studentId,
-            lesson_slug: slug,
-            classroom_id: classroomId,
-            completed_exercises: 4,
-            total_exercises: 4,
-            started_at: started.toISOString(),
-            completed_at: completed.toISOString(),
-          });
-          firstLessonDates.push({ slug, completedAt: completed });
-          totalCompleted++;
+      // Completions — pick from lessons most of the time, but mix in
+      // music ~30% of the time so the activity chart shows the pink
+      // music band beside the indigo lessons band.
+      if (rng() < s.completionRate * 0.6) {
+        const useMusic = rng() < 0.3 && musicPool.length > 0;
+        const pool = useMusic ? musicPool : levelPool;
+        if (pool.length > 0) {
+          const slug = pool[Math.floor(rng() * pool.length)];
+          if (!completedSlugs.has(slug)) {
+            completedSlugs.add(slug);
+            const started = atHour(day, 9 + rng() * 4, rng);
+            const completed = new Date(started.getTime() + 25 * 60_000);
+            progressRows.push({
+              id: crypto.randomUUID(),
+              student_id: studentId,
+              lesson_slug: slug,
+              classroom_id: classroomId,
+              completed_exercises: 4,
+              total_exercises: 4,
+              started_at: started.toISOString(),
+              completed_at: completed.toISOString(),
+            });
+            firstLessonDates.push({ slug, completedAt: completed });
+            totalCompleted++;
+          }
         }
       }
     }

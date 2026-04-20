@@ -277,87 +277,41 @@ export default async function StudentHome() {
   const firstName =
     profile?.full_name?.split(" ")[0] ?? user.email?.split("@")[0] ?? "there";
 
-  // Activity chart — we already fetched every completion above
-  // (`allCompletions`) so the chart can render the student's full
-  // history, not just a fixed 60-day window. If the oldest completion
-  // is more than 60 days old we fall back to monthly buckets covering
-  // the whole span; otherwise we render 60 daily buckets ending today.
-  // All times are resolved in Brazil local time (UTC-3) so a completion
-  // logged at 22:00 BRT lands in the right calendar bucket.
+  // Activity chart — fixed window of the last 2 years, one bar per
+  // day, in Brazil local time (UTC-3). Music exercises are treated as
+  // lessons for accounting purposes: from the student's perspective
+  // they are both "things I completed", so the chart presents a
+  // single unified count instead of splitting them into two series.
   const BRT_OFFSET_MS = -3 * 60 * 60 * 1000;
   const msPerDay = 24 * 60 * 60 * 1000;
   const brtToday = new Date(
     Math.floor((Date.now() + BRT_OFFSET_MS) / msPerDay) * msPerDay
   );
+  const DAYS = 730; // ~2 calendar years
+  const rangeStart = new Date(brtToday.getTime() - (DAYS - 1) * msPerDay);
 
-  const sixtyDaysAgo = new Date(brtToday.getTime() - 59 * msPerDay);
-  const oldest = (allCompletions ?? []).reduce<number | null>((acc, c) => {
-    const t = new Date((c as { completed_at: string }).completed_at).getTime();
-    return acc === null || t < acc ? t : acc;
-  }, null);
-  const useMonthly =
-    oldest !== null && oldest < sixtyDaysAgo.getTime();
-
-  let activityBuckets: ActivityBucket[] = [];
-  let activityGranularity: "day" | "month" = "day";
-
-  if (useMonthly && oldest !== null) {
-    activityGranularity = "month";
-    // Walk month-by-month from the oldest completion's month up to the
-    // current month. Keys are "YYYY-MM".
-    const first = new Date(oldest);
-    let yr = first.getUTCFullYear();
-    let mo = first.getUTCMonth();
-    const endYr = new Date(brtToday.getTime() - BRT_OFFSET_MS).getUTCFullYear();
-    const endMo = new Date(brtToday.getTime() - BRT_OFFSET_MS).getUTCMonth();
-    const indexByKey = new Map<string, number>();
-    while (yr < endYr || (yr === endYr && mo <= endMo)) {
-      const key = `${yr}-${String(mo + 1).padStart(2, "0")}`;
-      indexByKey.set(key, activityBuckets.length);
-      activityBuckets.push({
-        start: `${key}-01`,
-        lessons: 0,
-        music: 0,
-      });
-      mo++;
-      if (mo > 11) {
-        mo = 0;
-        yr++;
-      }
-    }
-    for (const c of allCompletions ?? []) {
-      const row = c as { lesson_slug: string; completed_at: string };
-      const t = new Date(row.completed_at);
-      const key = `${t.getUTCFullYear()}-${String(t.getUTCMonth() + 1).padStart(2, "0")}`;
-      const idx = indexByKey.get(key);
-      if (idx === undefined) continue;
-      if (row.lesson_slug.startsWith("music:"))
-        activityBuckets[idx].music++;
-      else activityBuckets[idx].lessons++;
-    }
-  } else {
-    activityGranularity = "day";
-    const DAYS = 60;
-    const rangeStart = new Date(brtToday.getTime() - (DAYS - 1) * msPerDay);
-    for (let i = 0; i < DAYS; i++) {
-      const d = new Date(rangeStart.getTime() + i * msPerDay);
-      activityBuckets.push({
-        start: d.toISOString().slice(0, 10),
-        lessons: 0,
-        music: 0,
-      });
-    }
-    for (const c of allCompletions ?? []) {
-      const row = c as { lesson_slug: string; completed_at: string };
-      const t = new Date(row.completed_at);
-      const tDay =
-        Math.floor((t.getTime() + BRT_OFFSET_MS) / msPerDay) * msPerDay;
-      const idx = Math.floor((tDay - rangeStart.getTime()) / msPerDay);
-      if (idx < 0 || idx >= activityBuckets.length) continue;
-      if (row.lesson_slug.startsWith("music:"))
-        activityBuckets[idx].music++;
-      else activityBuckets[idx].lessons++;
-    }
+  const activityBuckets: ActivityBucket[] = [];
+  for (let i = 0; i < DAYS; i++) {
+    const d = new Date(rangeStart.getTime() + i * msPerDay);
+    activityBuckets.push({
+      start: d.toISOString().slice(0, 10),
+      lessons: 0,
+      music: 0,
+    });
+  }
+  for (const c of allCompletions ?? []) {
+    const row = c as { lesson_slug: string; completed_at: string };
+    const t = new Date(row.completed_at);
+    const tDay =
+      Math.floor((t.getTime() + BRT_OFFSET_MS) / msPerDay) * msPerDay;
+    const idx = Math.floor((tDay - rangeStart.getTime()) / msPerDay);
+    if (idx < 0 || idx >= activityBuckets.length) continue;
+    // Music and regular lessons are both "completions" but plot on
+    // different colors so the student can see their listening vs.
+    // reading mix at a glance. Music slugs carry the "music:" prefix
+    // (see MUSIC_SLUG_PREFIX in lib/content/music.ts).
+    if (row.lesson_slug.startsWith("music:")) activityBuckets[idx].music++;
+    else activityBuckets[idx].lessons++;
   }
 
   // Fetch a larger window so the MyClassesPanel "Show all" toggle has
@@ -589,10 +543,7 @@ export default async function StudentHome() {
       {/* ACTIVITY CHART =========================================== */}
       <section className="space-y-3">
         <h2 className="text-lg font-semibold tracking-tight">Your activity</h2>
-        <ActivityChart
-          buckets={activityBuckets}
-          granularity={activityGranularity}
-        />
+        <ActivityChart buckets={activityBuckets} granularity="day" />
       </section>
     </div>
   );
