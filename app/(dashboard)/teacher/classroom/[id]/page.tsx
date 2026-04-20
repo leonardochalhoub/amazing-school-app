@@ -7,6 +7,7 @@ import { getAllLessons } from "@/lib/content/loader";
 import { RealtimeGrid } from "@/components/teacher/realtime-grid";
 import { BulkAssignButton } from "@/components/teacher/bulk-assign-button";
 import { DeleteClassroomButton } from "@/components/teacher/delete-classroom-button";
+import { AddStudentsToClassroomButton } from "@/components/teacher/add-students-to-classroom-button";
 import {
   PastClassLog,
   type PastClass,
@@ -74,6 +75,10 @@ export default async function ClassroomDetail({
           </div>
         </div>
         <div className="flex gap-2">
+          <AddStudentsToClassroomButton
+            classroomId={id}
+            classroomName={classroom.name}
+          />
           <BulkAssignButton
             classroomId={id}
             lessons={allLessons}

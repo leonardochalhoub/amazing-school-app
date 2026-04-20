@@ -456,3 +456,125 @@ export async function getRosterAvatarSignedUrls(
   for (const [id, url] of results) if (url) out[id] = url;
   return out;
 }
+
+const AddToClassroomSchema = z.object({
+  classroomId: UuidSchema,
+  rosterStudentIds: z.array(UuidSchema).min(1).max(200),
+});
+
+export interface AvailableRosterStudent {
+  id: string;
+  full_name: string;
+  email: string | null;
+  current_classroom_name: string | null;
+  has_avatar: boolean;
+}
+
+/**
+ * For the "Add students" dialog on a classroom page. Lists every
+ * active roster student owned by the caller, excluding those
+ * already placed in the given classroom. Includes the student's
+ * current classroom name when applicable so the teacher knows
+ * they're MOVING the student rather than creating a duplicate.
+ */
+export async function listRosterStudentsAvailableForClassroom(
+  classroomId: string,
+): Promise<AvailableRosterStudent[]> {
+  if (!UuidSchema.safeParse(classroomId).success) return [];
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return [];
+
+  const admin = createAdminClient();
+  const { data } = await admin
+    .from("roster_students")
+    .select(
+      "id, full_name, email, classroom_id, has_avatar, classrooms(name)",
+    )
+    .eq("teacher_id", user.id)
+    .is("deleted_at", null)
+    .order("full_name", { ascending: true });
+
+  type Row = {
+    id: string;
+    full_name: string;
+    email: string | null;
+    classroom_id: string | null;
+    has_avatar: boolean;
+    classrooms: { name: string } | { name: string }[] | null;
+  };
+  return ((data ?? []) as Row[])
+    .filter((r) => r.classroom_id !== classroomId)
+    .map((r) => {
+      const c = Array.isArray(r.classrooms) ? r.classrooms[0] : r.classrooms;
+      return {
+        id: r.id,
+        full_name: r.full_name,
+        email: r.email,
+        current_classroom_name: c?.name ?? null,
+        has_avatar: r.has_avatar,
+      };
+    });
+}
+
+/**
+ * Move one or more roster students into a classroom. Validates
+ * ownership on every row: the classroom and every student must
+ * belong to the caller. Sets roster_students.classroom_id — if a
+ * student was in another classroom of the same teacher they move,
+ * no history is lost because all child rows (assignments, XP,
+ * history, payments) are keyed by student_id / roster_student_id,
+ * not by classroom.
+ */
+export async function addRosterStudentsToClassroom(
+  input: z.input<typeof AddToClassroomSchema>,
+): Promise<{ moved: number } | { error: string }> {
+  const parsed = AddToClassroomSchema.safeParse(input);
+  if (!parsed.success) return { error: "Invalid input" };
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" };
+
+  const admin = createAdminClient();
+
+  const { data: classroom } = await admin
+    .from("classrooms")
+    .select("id, teacher_id, deleted_at")
+    .eq("id", parsed.data.classroomId)
+    .maybeSingle();
+  const c = classroom as {
+    id: string;
+    teacher_id: string;
+    deleted_at: string | null;
+  } | null;
+  if (!c) return { error: "Classroom not found" };
+  if (c.teacher_id !== user.id) return { error: "Not your classroom" };
+  if (c.deleted_at) return { error: "Classroom is deleted" };
+
+  const { data: owned } = await admin
+    .from("roster_students")
+    .select("id")
+    .in("id", parsed.data.rosterStudentIds)
+    .eq("teacher_id", user.id)
+    .is("deleted_at", null);
+  const ownedIds = ((owned ?? []) as Array<{ id: string }>).map((r) => r.id);
+  if (ownedIds.length === 0) {
+    return { error: "No valid students selected" };
+  }
+
+  const { error } = await admin
+    .from("roster_students")
+    .update({ classroom_id: parsed.data.classroomId })
+    .in("id", ownedIds);
+  if (error) return { error: error.message };
+
+  revalidatePath("/teacher");
+  revalidatePath("/teacher/admin");
+  revalidatePath(`/teacher/classroom/${parsed.data.classroomId}`);
+  return { moved: ownedIds.length };
+}
