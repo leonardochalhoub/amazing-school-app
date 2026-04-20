@@ -252,13 +252,13 @@ export default async function CertificatePrintPage({
           </div>
 
           {/* RIGHT — Amazing School platform mark. Small + elegant;
-              the 88px alignment wrapper matches the SchoolLogoSlot
-              height on the left so the two logos share a baseline
-              even though the school logo is the visual anchor. */}
+              the wrapper's height matches SchoolLogoSlot so the
+              two logos share the same top baseline even though the
+              school logo is the visual anchor. */}
           <div
             style={{
-              height: 88,
-              minWidth: 180,
+              height: 114,
+              minWidth: 220,
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-end",
@@ -640,27 +640,28 @@ function SchoolLogoSlot({
   src: string | null;
   alt: string;
 }) {
-  if (!src) return <div style={{ minWidth: 180 }} />;
+  if (!src) return <div style={{ minWidth: 220 }} />;
   return (
     <div
       style={{
-        height: 88,
+        height: 114,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         padding: 0,
-        minWidth: 180,
+        minWidth: 220,
       }}
     >
-      {/* Bigger + borderless for certificates — matches the user
-          ask to make the school logo elegant and prominent. */}
+      {/* Borderless + 30% bigger than the prior size so the
+          school logo stays the dominant visual anchor of the
+          certificate. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
         alt={alt}
         style={{
-          maxHeight: 78,
-          maxWidth: 220,
+          maxHeight: 102,
+          maxWidth: 280,
           width: "auto",
           objectFit: "contain",
           display: "block",

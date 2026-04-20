@@ -126,7 +126,11 @@
 /* Header + footer — designed to compress nicely on paper. */
 .report-header {
   display: flex;
-  align-items: center;
+  /* flex-start so both logos sit on the SAME top baseline across
+     the header, rather than centering each column separately
+     (which misaligns the logos when the left column's title + sub
+     stack is taller than the right column's meta stack). */
+  align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
   padding-bottom: 14px;
@@ -141,21 +145,21 @@
   min-width: 0;
 }
 
-/* Borderless logo slot — just the image. Earlier versions framed
-   the logo in a card but the teacher asked for a cleaner look;
-   images from the school-logos bucket already ship on a white
-   backdrop. 30% bigger than the original 36px so the school brand
-   reads on paper. */
+/* Borderless logo slot — just the image. Images from the
+   school-logos bucket already ship on a white backdrop so no card
+   framing needed. Sized so the school brand reads prominently on
+   paper while leaving room for the Amazing School mark on the
+   opposite side. */
 .report-logo-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
+  height: 72px;
   padding: 0;
 }
 
 .report-logo-box img {
-  max-height: 48px;
+  max-height: 62px;
   width: auto;
   object-fit: contain;
   display: block;
