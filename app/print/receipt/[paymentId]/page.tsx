@@ -269,9 +269,11 @@ export default async function ReceiptPrintPage({
               </span>
               <br />
               <span className="report-muted">
-                {/* Professor / Professora — inferred from the
-                    teacher's first name (see gendered-titles.ts). */}
-                {teacherTitle(inferGenderFromName(data.teacher.fullName))}
+                {/* Professor Responsável / Professora Responsável —
+                    gender inferred from first name (see
+                    gendered-titles.ts). */}
+                {teacherTitle(inferGenderFromName(data.teacher.fullName))}{" "}
+                Responsável
               </span>
             </div>
           </div>
