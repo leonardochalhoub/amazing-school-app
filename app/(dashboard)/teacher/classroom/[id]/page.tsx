@@ -172,22 +172,23 @@ export default async function ClassroomDetail({
               </p>
             ) : (
               <ExpandableList
-                items={classroomWideAssigned}
                 initial={10}
-                getKey={(a) => a.id}
-                render={(a) => (
-                  <div className="py-1.5 flex items-center justify-between gap-3">
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate">{a.title}</p>
-                      <p className="text-[10px] text-muted-foreground tabular-nums">
-                        {assignedAtFmt.format(new Date(a.assignedAt))}
-                      </p>
+                items={classroomWideAssigned.map((a) => ({
+                  key: a.id,
+                  node: (
+                    <div className="py-1.5 flex items-center justify-between gap-3">
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate">{a.title}</p>
+                        <p className="text-[10px] text-muted-foreground tabular-nums">
+                          {assignedAtFmt.format(new Date(a.assignedAt))}
+                        </p>
+                      </div>
+                      <Badge variant="outline" className="text-[10px]">
+                        All students
+                      </Badge>
                     </div>
-                    <Badge variant="outline" className="text-[10px]">
-                      All students
-                    </Badge>
-                  </div>
-                )}
+                  ),
+                }))}
               />
             )}
           </CardContent>

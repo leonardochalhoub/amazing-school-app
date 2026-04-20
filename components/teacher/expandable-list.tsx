@@ -4,24 +4,20 @@ import { useState, type ReactNode } from "react";
 import { Plus } from "lucide-react";
 import { useI18n } from "@/lib/i18n/context";
 
-interface Props<T> {
-  items: T[];
+interface Item {
+  key: string | number;
+  node: ReactNode;
+}
+
+interface Props {
+  items: Item[];
   initial: number;
-  render: (item: T, index: number) => ReactNode;
-  /** When non-empty, overrides the auto-generated key from render order. */
-  getKey?: (item: T, index: number) => string | number;
   /** Classes applied to the outer list container. Defaults to a stacked
    *  divider — can be overridden when the caller wants cards. */
   listClassName?: string;
 }
 
-export function ExpandableList<T>({
-  items,
-  initial,
-  render,
-  getKey,
-  listClassName,
-}: Props<T>) {
+export function ExpandableList({ items, initial, listClassName }: Props) {
   const { locale } = useI18n();
   const [expanded, setExpanded] = useState(false);
   const overflow = items.length - initial;
@@ -40,8 +36,8 @@ export function ExpandableList<T>({
   return (
     <div className="space-y-2">
       <ul className={listClassName ?? "text-sm divide-y divide-border"}>
-        {visible.map((item, i) => (
-          <li key={getKey ? getKey(item, i) : i}>{render(item, i)}</li>
+        {visible.map((item) => (
+          <li key={item.key}>{item.node}</li>
         ))}
       </ul>
       {overflow > 0 ? (

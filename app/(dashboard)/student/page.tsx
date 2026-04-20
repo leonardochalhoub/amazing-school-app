@@ -404,21 +404,28 @@ export default async function StudentHome() {
               </h1>
             </div>
 
-            {/* XP progress bar */}
+            {/* XP progress bar — `progress` from getXpForNextLevel is
+                already a percentage (0..100), so no extra *100 here. */}
             <div className="space-y-1.5">
               <div className="flex items-center justify-between text-[11px] tabular-nums">
-                <span className="inline-flex items-center gap-1 text-muted-foreground">
+                <span className="inline-flex items-center gap-1 font-semibold">
                   <Zap className="h-3 w-3 text-amber-500" />
-                  {totalXp} XP
+                  Level {level} · {totalXp} XP
                 </span>
                 <span className="text-muted-foreground">
-                  {currentLevelXp}/{nextLevelXp} to level {level + 1}
+                  {currentLevelXp} / {nextLevelXp} to Lv {level + 1}
                 </span>
               </div>
-              <div className="relative h-2.5 w-full overflow-hidden rounded-full bg-muted">
+              <div
+                role="progressbar"
+                aria-valuenow={Math.round(progress)}
+                aria-valuemin={0}
+                aria-valuemax={100}
+                className="relative h-3 w-full overflow-hidden rounded-full bg-muted ring-1 ring-border/60"
+              >
                 <div
                   className="h-full rounded-full bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500 shadow-[0_0_12px_rgba(139,92,246,0.5)] transition-[width] duration-700"
-                  style={{ width: `${Math.min(100, progress * 100)}%` }}
+                  style={{ width: `${Math.max(0, Math.min(100, progress))}%` }}
                 />
               </div>
             </div>
