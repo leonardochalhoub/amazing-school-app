@@ -277,14 +277,13 @@ export async function getSysadminOverview(): Promise<
     created_at: string;
   }>;
 
-  // Owners are super-teachers for every analytics bucket — they run
-  // classrooms like any other teacher, so treating role='owner' as
-  // a kind of teacher here is what keeps Leo visible in the AI-tutor
-  // usage / time-on-site / all-teachers tables. The sole separate
-  // role we track in the profile is "student".
-  const teachers = profiles.filter(
-    (p) => p.role === "teacher" || p.role === "owner",
-  );
+  // Sysadmin analytics scope: real teachers only. Platform owners
+  // (role='owner') and demo profiles (is_test=true) get dropped
+  // here so every downstream statistic auto-excludes them. The
+  // dedicated owner-management surfaces (Platform access card,
+  // owner-grants actions) fetch owners on their own — they don't
+  // read from this `teachers` array.
+  const teachers = profiles.filter((p) => p.role === "teacher");
   const students = profiles.filter((p) => p.role === "student");
   const demoAccounts = profiles.filter((p) =>
     p.full_name ? false : false,
@@ -451,11 +450,17 @@ export async function getSysadminOverview(): Promise<
     (p) => !p.paid && p.billing_month === startOfMonth,
   ).length;
 
+  // New-accounts KPIs + growth chart: only count profiles that are
+  // in realUserIds (excludes owners + demo test accounts + students
+  // rostered under excluded teachers). Keeps Leo and his students
+  // out of every signup-flavoured number.
   const newAccountsThisMonth = profiles.filter(
-    (p) => p.created_at.slice(0, 10) >= startOfMonth,
+    (p) =>
+      realUserIds.has(p.id) && p.created_at.slice(0, 10) >= startOfMonth,
   ).length;
   const newAccountsLast30d = profiles.filter(
-    (p) => p.created_at.slice(0, 10) >= thirtyDaysAgo,
+    (p) =>
+      realUserIds.has(p.id) && p.created_at.slice(0, 10) >= thirtyDaysAgo,
   ).length;
 
   // Growth — last 12 weeks, bucket by Monday
@@ -466,6 +471,7 @@ export async function getSysadminOverview(): Promise<
     weekBuckets.set(monday, { newAccounts: 0, newLessons: 0 });
   }
   for (const p of profiles) {
+    if (!realUserIds.has(p.id)) continue;
     if (new Date(p.created_at) < twelveWeeksAgo) continue;
     const key = getMonday(new Date(p.created_at));
     const e = weekBuckets.get(key);
@@ -750,7 +756,7 @@ export async function getSysadminOverview(): Promise<
       .limit(200_000),
     admin
       .from("lesson_assignments")
-      .select("assigned_by, assigned_at, lesson_slug")
+      .select("assigned_by, assigned_at, lesson_slug, classroom_id")
       .limit(200_000),
     admin
       .from("roster_diary")
@@ -827,14 +833,18 @@ export async function getSysadminOverview(): Promise<
     addTeacherDay(r.assigned_by, r.assigned_at);
   }
 
-  // Top assigned — group every assignment by lesson_slug, split
-  // lessons vs songs on the "music:" prefix. Titles resolved from
-  // the catalog JSON files we've already loaded upstream in the
-  // sysadmin build (catalogLessons / catalogSongs).
+  // Top assigned — group assignments by lesson_slug, split lessons
+  // vs songs on the "music:" prefix. Only counts assignments from
+  // real classrooms (realClassroomIds already excludes owner + demo
+  // teachers' classrooms), so Leo's testing assignments and every
+  // Luiza-demo assignment drop out. Titles resolved from the
+  // catalog JSON files loaded upstream.
   const assignedCountBySlug = new Map<string, number>();
   for (const r of (assignmentsAllRes.data ?? []) as Array<{
     lesson_slug: string;
+    classroom_id: string | null;
   }>) {
+    if (!r.classroom_id || !realClassroomIds.has(r.classroom_id)) continue;
     const key = r.lesson_slug;
     assignedCountBySlug.set(key, (assignedCountBySlug.get(key) ?? 0) + 1);
   }
@@ -1064,11 +1074,19 @@ export async function getSysadminOverview(): Promise<
     );
 
   // Health signals
-  const accountsWithoutAvatar = profiles.filter((p) => !p.avatar_url).length;
+  const accountsWithoutAvatar = profiles.filter(
+    (p) => realUserIds.has(p.id) && !p.avatar_url,
+  ).length;
+  // Health signals respect the real-scope too — Leo's own empty
+  // testing classroom shouldn't show up as "empty classroom".
+  const realClassroomMemberIds = new Set(
+    members
+      .filter((m) => realClassroomIds.has(m.classroom_id))
+      .map((m) => m.classroom_id),
+  );
   const classroomsWithoutStudents =
-    classrooms.length -
-    new Set(members.map((m) => m.classroom_id)).size;
-  const rosterWithoutAuthUser = roster.filter((r) => !r.auth_user_id).length;
+    realClassroomIds.size - realClassroomMemberIds.size;
+  const rosterWithoutAuthUser = realRoster.filter((r) => !r.auth_user_id).length;
   // Storage bytes — list prefix "avatars" is expensive to iterate server side;
   // we skip the exact byte count and just report object count via list().
   let storageAvatarCount = 0;
