@@ -4,10 +4,12 @@ import { Card, CardContent } from "@/components/ui/card";
 type Tone = "emerald" | "amber" | "rose" | "indigo" | "sky" | "violet" | "default";
 
 interface Props {
-  label: string;
+  /** Label accepts ReactNode so callers can wrap with <T en pt />
+      for locale-aware strings without refactoring the tile. */
+  label: React.ReactNode;
   value: string | number;
   /** Optional secondary explainer. Kept short — one phrase. */
-  sub?: string;
+  sub?: React.ReactNode;
   icon?: React.ReactNode;
   /** Full human value, surfaced via title= for truncated compact numbers. */
   fullValue?: string;

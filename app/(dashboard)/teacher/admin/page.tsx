@@ -24,6 +24,7 @@ import { ServiceReceiptsSection } from "@/components/reports/service-receipts-se
 import { listTeacherReceipts } from "@/lib/actions/reports";
 import { listCertificatesForTeacher } from "@/lib/actions/certificates";
 import { listServiceReceiptsForTeacher } from "@/lib/actions/service-receipts";
+import { T } from "@/components/reports/t";
 import {
   Users,
   Flame,
@@ -178,13 +179,16 @@ export default async function TeacherManagementPage() {
       <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            Teacher
+            <T en="Teacher" pt="Professor" />
           </p>
-          <h1 className="text-3xl font-semibold tracking-tight">Management</h1>
+          <h1 className="text-3xl font-semibold tracking-tight">
+            <T en="Management" pt="Gestão" />
+          </h1>
           <p className="max-w-2xl text-sm text-muted-foreground">
-            Your command centre — people on the left, money on the right. Set
-            tuition once, click a cell when the payment lands, and watch the
-            cohort breathe day by day.
+            <T
+              en="Your command centre — people on the left, money on the right. Set tuition once, click a cell when the payment lands, and watch the cohort breathe day by day."
+              pt="Seu centro de comando — pessoas à esquerda, dinheiro à direita. Defina a mensalidade uma vez, clique em uma célula quando o pagamento chegar, e acompanhe a turma respirar dia a dia."
+            />
           </p>
         </div>
       </header>
@@ -203,68 +207,93 @@ export default async function TeacherManagementPage() {
       <section className="space-y-3">
         <div className="flex items-baseline justify-between">
           <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-            People &amp; Learning
+            <T en="People & Learning" pt="Pessoas & Aprendizado" />
           </h2>
           <p className="text-[11px] text-muted-foreground">
-            Live from the last 7 days
+            <T
+              en="Live from the last 7 days"
+              pt="Dados ao vivo dos últimos 7 dias"
+            />
           </p>
         </div>
         <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
           <KpiTile
-            label="Students"
+            label={<T en="Students" pt="Alunos" />}
             value={compactNumber(dashboardData.kpis.totalStudents)}
             fullValue={String(dashboardData.kpis.totalStudents)}
-            sub={`${dashboardData.kpis.totalClassrooms} classrooms`}
+            sub={
+              <T
+                en={`${dashboardData.kpis.totalClassrooms} classrooms`}
+                pt={`${dashboardData.kpis.totalClassrooms} turmas`}
+              />
+            }
             icon={<Users className="h-3.5 w-3.5" />}
             tone="indigo"
           />
           <KpiTile
-            label="Active today"
+            label={<T en="Active today" pt="Ativos hoje" />}
             value={compactNumber(dashboardData.kpis.activeToday)}
             fullValue={String(dashboardData.kpis.activeToday)}
             sub={
-              dashboardData.kpis.totalStudents > 0
-                ? `${Math.round(
+              dashboardData.kpis.totalStudents > 0 ? (
+                <T
+                  en={`${Math.round(
                     (dashboardData.kpis.activeToday /
                       dashboardData.kpis.totalStudents) *
                       100,
-                  )}% of cohort`
-                : undefined
+                  )}% of cohort`}
+                  pt={`${Math.round(
+                    (dashboardData.kpis.activeToday /
+                      dashboardData.kpis.totalStudents) *
+                      100,
+                  )}% da turma`}
+                />
+              ) : undefined
             }
             icon={<Flame className="h-3.5 w-3.5" />}
             tone="rose"
           />
           <KpiTile
-            label="Avg streak"
+            label={<T en="Avg streak" pt="Sequência média" />}
             value={dashboardData.kpis.avgStreak.toLocaleString("pt-BR", {
               minimumFractionDigits: 1,
               maximumFractionDigits: 1,
             })}
-            sub="days / student"
+            sub={<T en="days / student" pt="dias / aluno" />}
             icon={<Sparkles className="h-3.5 w-3.5" />}
             tone="amber"
           />
           <KpiTile
-            label="Lessons / week"
+            label={<T en="Lessons / week" pt="Lições / semana" />}
             value={compactNumber(dashboardData.kpis.lessonsThisWeek)}
             fullValue={String(dashboardData.kpis.lessonsThisWeek)}
-            sub="completed"
+            sub={<T en="completed" pt="concluídas" />}
             icon={<BookOpen className="h-3.5 w-3.5" />}
             tone="sky"
           />
           <KpiTile
-            label="XP / week"
+            label={<T en="XP / week" pt="XP / semana" />}
             value={compactNumber(dashboardData.kpis.xpThisWeek)}
             fullValue={String(dashboardData.kpis.xpThisWeek)}
-            sub="earned across cohort"
+            sub={<T en="earned across cohort" pt="ganho pela turma" />}
             icon={<Trophy className="h-3.5 w-3.5" />}
             tone="violet"
           />
           <KpiTile
-            label="Listening to review"
+            label={
+              <T
+                en="Listening to review"
+                pt="Áudios para revisar"
+              />
+            }
             value={compactNumber(pendingResponses.length)}
             fullValue={String(pendingResponses.length)}
-            sub={`of ${listeningResponses.length} submissions`}
+            sub={
+              <T
+                en={`of ${listeningResponses.length} submissions`}
+                pt={`de ${listeningResponses.length} envios`}
+              />
+            }
             icon={<Headphones className="h-3.5 w-3.5" />}
             tone={pendingResponses.length > 0 ? "amber" : "emerald"}
           />
@@ -276,65 +305,101 @@ export default async function TeacherManagementPage() {
         <section className="space-y-3">
           <div className="flex items-baseline justify-between">
             <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Money this month · {monthLabel}
+              <T en="Money this month" pt="Dinheiro neste mês" /> ·{" "}
+              {monthLabel}
             </h2>
             <p className="text-[11px] text-muted-foreground">
-              Everything below stays private — only you see it.
+              <T
+                en="Everything below stays private — only you see it."
+                pt="Tudo abaixo é privado — só você visualiza."
+              />
             </p>
           </div>
           <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
             <KpiTile
-              label="Paid"
+              label={<T en="Paid" pt="Recebido" />}
               value={compactBRL(paidCentsMonth)}
               fullValue={fullBRL(paidCentsMonth)}
-              sub={`${paidCount} of ${rows.length} students`}
+              sub={
+                <T
+                  en={`${paidCount} of ${rows.length} students`}
+                  pt={`${paidCount} de ${rows.length} alunos`}
+                />
+              }
               icon={<CheckCircle2 className="h-3.5 w-3.5" />}
               tone="emerald"
             />
             <KpiTile
-              label="Pending"
+              label={<T en="Pending" pt="Pendente" />}
               value={compactBRL(pendingCentsMonth)}
               fullValue={fullBRL(pendingCentsMonth)}
-              sub={`${pendingCount} outstanding`}
+              sub={
+                <T
+                  en={`${pendingCount} outstanding`}
+                  pt={`${pendingCount} em aberto`}
+                />
+              }
               icon={<Clock className="h-3.5 w-3.5" />}
               tone="amber"
             />
             <KpiTile
-              label="Debt (past due)"
+              label={<T en="Debt (past due)" pt="Dívida (vencida)" />}
               value={compactBRL(debtCentsTotal)}
               fullValue={fullBRL(debtCentsTotal)}
-              sub={`${studentsInDebt.size} student${studentsInDebt.size === 1 ? "" : "s"}`}
+              sub={
+                <T
+                  en={`${studentsInDebt.size} student${studentsInDebt.size === 1 ? "" : "s"}`}
+                  pt={`${studentsInDebt.size} aluno${studentsInDebt.size === 1 ? "" : "s"}`}
+                />
+              }
               icon={<AlertTriangle className="h-3.5 w-3.5" />}
               tone={debtCentsTotal > 0 ? "rose" : "emerald"}
             />
             <KpiTile
-              label="Monthly baseline"
+              label={<T en="Monthly baseline" pt="Base mensal" />}
               value={compactBRL(monthlyBaselineCents)}
               fullValue={fullBRL(monthlyBaselineCents)}
-              sub={`${activeTuitionSeats} active seats`}
+              sub={
+                <T
+                  en={`${activeTuitionSeats} active seats`}
+                  pt={`${activeTuitionSeats} assentos ativos`}
+                />
+              }
               icon={<Wallet className="h-3.5 w-3.5" />}
             />
             <KpiTile
-              label="Revenue · 6 mo"
+              label={<T en="Revenue · 6 mo" pt="Receita · 6 meses" />}
               value={compactBRL(revenueTrailing6Cents)}
               fullValue={fullBRL(revenueTrailing6Cents)}
-              sub="Paid invoices, trailing"
+              sub={
+                <T
+                  en="Paid invoices, trailing"
+                  pt="Faturas pagas no período"
+                />
+              }
               icon={<Sigma className="h-3.5 w-3.5" />}
               tone="emerald"
             />
             <KpiTile
-              label="Revenue · 12 mo"
+              label={<T en="Revenue · 12 mo" pt="Receita · 12 meses" />}
               value={compactBRL(revenueTrailing12Cents)}
               fullValue={fullBRL(revenueTrailing12Cents)}
-              sub="Paid invoices, trailing"
+              sub={
+                <T
+                  en="Paid invoices, trailing"
+                  pt="Faturas pagas no período"
+                />
+              }
               icon={<Sigma className="h-3.5 w-3.5" />}
               tone="indigo"
             />
             <KpiTile
-              label="Avg tuition"
+              label={<T en="Avg tuition" pt="Mensalidade média" />}
               value={compactBRL(avgTuitionCents)}
               fullValue={fullBRL(avgTuitionCents)}
-              sub="Across active seats"
+              sub={
+                <T en="Across active seats" pt="Entre assentos ativos" />
+              }
               icon={<CircleDollarSign className="h-3.5 w-3.5" />}
             />
           </div>
@@ -343,18 +408,38 @@ export default async function TeacherManagementPage() {
           {monthlyBaselineCents > 0 ? (
             <div className="grid gap-3 grid-cols-2 lg:grid-cols-2">
               <KpiTile
-                label="Expected · next 6 months"
+                label={
+                  <T
+                    en="Expected · next 6 months"
+                    pt="Projeção · próximos 6 meses"
+                  />
+                }
                 value={compactBRL(monthlyBaselineCents * 6)}
                 fullValue={fullBRL(monthlyBaselineCents * 6)}
-                sub="Straight-line projection"
+                sub={
+                  <T
+                    en="Straight-line projection"
+                    pt="Projeção linear"
+                  />
+                }
                 icon={<CalendarClock className="h-3.5 w-3.5" />}
                 tone="sky"
               />
               <KpiTile
-                label="Expected · next 24 months"
+                label={
+                  <T
+                    en="Expected · next 24 months"
+                    pt="Projeção · próximos 24 meses"
+                  />
+                }
                 value={compactBRL(monthlyBaselineCents * 24)}
                 fullValue={fullBRL(monthlyBaselineCents * 24)}
-                sub="Straight-line projection"
+                sub={
+                  <T
+                    en="Straight-line projection"
+                    pt="Projeção linear"
+                  />
+                }
                 icon={<TrendingUp className="h-3.5 w-3.5" />}
                 tone="violet"
               />
@@ -374,11 +459,16 @@ export default async function TeacherManagementPage() {
                 </div>
                 <div>
                   <p className="font-medium">
-                    {pendingResponses.length} listening response
-                    {pendingResponses.length === 1 ? "" : "s"} waiting for you
+                    <T
+                      en={`${pendingResponses.length} listening response${pendingResponses.length === 1 ? "" : "s"} waiting for you`}
+                      pt={`${pendingResponses.length} áudio${pendingResponses.length === 1 ? "" : "s"} de escuta esperando sua revisão`}
+                    />
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    Review and leave feedback so the student can move on.
+                    <T
+                      en="Review and leave feedback so the student can move on."
+                      pt="Revise e deixe o feedback para o aluno seguir em frente."
+                    />
                   </p>
                 </div>
               </div>
@@ -386,7 +476,7 @@ export default async function TeacherManagementPage() {
                 href="/teacher/listening-responses"
                 className="inline-flex h-9 items-center gap-1.5 rounded-md bg-primary px-3 text-xs font-medium text-primary-foreground shadow hover:bg-primary/90"
               >
-                Review now
+                <T en="Review now" pt="Revisar agora" />
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </CardContent>
@@ -399,11 +489,13 @@ export default async function TeacherManagementPage() {
         <section className="space-y-3">
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-              Tuition matrix
+              <T en="Tuition matrix" pt="Matriz de mensalidades" />
             </h2>
             <p className="text-xs text-muted-foreground">
-              Click any cell to toggle paid / pending. Future months appear
-              automatically at every billing day.
+              <T
+                en="Click any cell to toggle paid / pending. Future months appear automatically at every billing day."
+                pt="Clique em qualquer célula para alternar entre pago e pendente. Meses futuros aparecem automaticamente a cada dia de cobrança."
+              />
             </p>
           </div>
           <ManagementGrid months={months} rows={rows} />
@@ -418,18 +510,28 @@ export default async function TeacherManagementPage() {
       {/* ========== Top students by XP ========== */}
       <section className="space-y-3">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-          Top students by XP
+          <T en="Top students by XP" pt="Ranking de alunos por XP" />
         </h2>
         <div className="overflow-hidden rounded-xl border">
           <table className="w-full text-sm">
             <thead className="bg-muted/40 text-left text-xs uppercase tracking-wider text-muted-foreground">
               <tr>
-                <th className="px-4 py-2">Student</th>
-                <th className="px-4 py-2">Classroom</th>
+                <th className="px-4 py-2">
+                  <T en="Student" pt="Aluno" />
+                </th>
+                <th className="px-4 py-2">
+                  <T en="Classroom" pt="Turma" />
+                </th>
                 <th className="px-4 py-2 text-right">XP</th>
-                <th className="px-4 py-2 text-right">Lessons</th>
-                <th className="px-4 py-2 text-right">Streak</th>
-                <th className="px-4 py-2 text-right">Last active</th>
+                <th className="px-4 py-2 text-right">
+                  <T en="Lessons" pt="Lições" />
+                </th>
+                <th className="px-4 py-2 text-right">
+                  <T en="Streak" pt="Sequência" />
+                </th>
+                <th className="px-4 py-2 text-right">
+                  <T en="Last active" pt="Última atividade" />
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -466,7 +568,7 @@ export default async function TeacherManagementPage() {
                     colSpan={6}
                     className="px-4 py-6 text-center text-sm text-muted-foreground"
                   >
-                    No students yet.
+                    <T en="No students yet." pt="Ainda sem alunos." />
                   </td>
                 </tr>
               ) : null}
@@ -479,11 +581,16 @@ export default async function TeacherManagementPage() {
       <section className="space-y-3">
         <div className="flex items-baseline justify-between">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            AI tutor — per-student usage
+            <T
+              en="AI tutor — per-student usage"
+              pt="Tutor de IA — uso por aluno"
+            />
           </h2>
           <p className="text-[11px] text-muted-foreground">
-            Scoped to your classrooms · sorted by messages · user-role
-            only
+            <T
+              en="Scoped to your classrooms · sorted by messages · user-role only"
+              pt="Apenas suas turmas · ordenado por mensagens · somente mensagens do aluno"
+            />
           </p>
         </div>
         <AiChatStatsTable rows={aiChatStats} />
@@ -492,7 +599,7 @@ export default async function TeacherManagementPage() {
       {/* ========== Classrooms ========== */}
       <section className="space-y-3">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-          Classrooms
+          <T en="Classrooms" pt="Turmas" />
         </h2>
         <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
           {dashboardData.classrooms.map((c) => (
@@ -503,8 +610,10 @@ export default async function TeacherManagementPage() {
                   <p className="truncate font-medium">{c.name}</p>
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  {c.studentCount} student{c.studentCount === 1 ? "" : "s"} ·
-                  invite{" "}
+                  <T
+                    en={`${c.studentCount} student${c.studentCount === 1 ? "" : "s"} · invite `}
+                    pt={`${c.studentCount} aluno${c.studentCount === 1 ? "" : "s"} · convite `}
+                  />
                   <code className="rounded bg-muted px-1 py-0.5 text-[10px] uppercase">
                     {c.inviteCode}
                   </code>
@@ -514,7 +623,10 @@ export default async function TeacherManagementPage() {
           ))}
           {dashboardData.classrooms.length === 0 ? (
             <p className="text-sm text-muted-foreground">
-              No classrooms yet. Create your first one from the dashboard.
+              <T
+                en="No classrooms yet. Create your first one from the dashboard."
+                pt="Ainda sem turmas. Crie a primeira no painel inicial."
+              />
             </p>
           ) : null}
         </div>
