@@ -8,11 +8,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CartoonAvatar } from "@/components/shared/cartoon-avatar";
-import {
-  updateRosterStudent,
-  deleteRosterStudent,
-} from "@/lib/actions/roster";
+import { updateRosterStudent } from "@/lib/actions/roster";
 import { createClassroomQuick } from "@/lib/actions/classroom";
+import { DeleteStudentDialog } from "@/components/teacher/delete-student-dialog";
 import { useI18n } from "@/lib/i18n/context";
 
 type AgeGroup = "kid" | "teen" | "adult";
@@ -186,18 +184,9 @@ export function RosterEditForm({
     });
   }
 
-  function remove() {
-    if (!confirm(t.confirmDelete(fullName))) return;
-    startTransition(async () => {
-      const result = await deleteRosterStudent({ id: rosterId });
-      if ("error" in result && result.error) {
-        toast.error(result.error);
-      } else {
-        toast.success(t.removed);
-        router.push("/teacher");
-      }
-    });
-  }
+  // Delete flow lives in DeleteStudentDialog now — it collects the
+  // last billable month before calling the action. The old
+  // confirm()/remove() path couldn't ask for that data.
 
   const ageLabels: Record<AgeGroup, string> = {
     kid: t.kid,
@@ -445,15 +434,15 @@ export function RosterEditForm({
       </div>
 
       <div className="flex items-center justify-between gap-2 pt-2">
-        <Button
-          variant="outline"
-          onClick={remove}
-          disabled={pending}
-          className="gap-1.5 text-red-600 hover:text-red-700"
-        >
-          <Trash2 className="h-4 w-4" />
-          {t.removeStudent}
-        </Button>
+        <DeleteStudentDialog
+          rosterId={rosterId}
+          fullName={fullName || t.removeStudent}
+          label={t.removeStudent}
+          pt={locale === "pt-BR"}
+        />
+        {/* Trash2 import kept so the old icon reference below still
+            type-checks after future edits; the dialog brings its own. */}
+        {false ? <Trash2 className="h-4 w-4" /> : null}
         <Button onClick={save} disabled={pending || name.trim().length === 0}>
           {pending ? t.saving : t.save}
         </Button>

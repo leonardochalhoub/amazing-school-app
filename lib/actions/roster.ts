@@ -129,7 +129,23 @@ export async function updateRosterStudent(input: z.input<typeof UpdateSchema>) {
   return { success: true as const };
 }
 
-const DeleteSchema = z.object({ id: UuidSchema });
+const DeleteSchema = z.object({
+  id: UuidSchema,
+  /** YYYY-MM-DD — last billable day. Defaults to today when omitted. */
+  endedOn: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .optional(),
+});
+
+const ReactivateSchema = z.object({
+  id: UuidSchema,
+  /** YYYY-MM-DD — day billing resumes. Defaults to today when omitted. */
+  startOn: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .optional(),
+});
 
 export interface DeletedRosterRow {
   id: string;
@@ -203,9 +219,9 @@ export async function listDeletedRosterStudents(): Promise<DeletedRosterRow[]> {
  * caller doesn't own the row or if the row isn't actually deleted.
  */
 export async function reactivateRosterStudent(
-  input: z.input<typeof DeleteSchema>,
+  input: z.input<typeof ReactivateSchema>,
 ): Promise<{ success: true } | { error: string }> {
-  const parsed = DeleteSchema.safeParse(input);
+  const parsed = ReactivateSchema.safeParse(input);
   if (!parsed.success) return { error: "Invalid input" };
 
   const supabase = await createClient();
@@ -229,9 +245,20 @@ export async function reactivateRosterStudent(
   if (row.teacher_id !== user.id) return { error: "Not yours" };
   if (!row.deleted_at) return { error: "Student isn't deleted" };
 
+  // billing_starts_on = the first billable day after return. The
+  // student's active window slides forward to that date, so the
+  // tuition matrix unlocks cells from startOn on. ended_on is
+  // cleared so there's no right edge on the active window anymore.
+  const today = new Date().toISOString().slice(0, 10);
+  const startOn = parsed.data.startOn ?? today;
+
   const { error } = await admin
     .from("roster_students")
-    .update({ deleted_at: null })
+    .update({
+      deleted_at: null,
+      ended_on: null,
+      billing_starts_on: startOn,
+    })
     .eq("id", parsed.data.id);
   if (error) return { error: error.message };
 
@@ -272,9 +299,22 @@ export async function deleteRosterStudent(input: z.input<typeof DeleteSchema>) {
   if (row.teacher_id !== user.id) return { error: "Not yours to delete" };
   if (row.deleted_at) return { error: "Student is already deleted" };
 
+  // ended_on = last billable day the teacher picked, or today if
+  // they didn't specify. Tuition matrix uses this as the right
+  // edge of the student's active window: cells after ended_on lock
+  // (red squares) so no payment can be allocated.
+  const today = new Date().toISOString().slice(0, 10);
+  const endedOn = parsed.data.endedOn ?? today;
+
   const { error, count } = await supabase
     .from("roster_students")
-    .update({ deleted_at: new Date().toISOString() }, { count: "exact" })
+    .update(
+      {
+        deleted_at: new Date().toISOString(),
+        ended_on: endedOn,
+      },
+      { count: "exact" },
+    )
     .eq("id", parsed.data.id)
     .is("deleted_at", null);
 

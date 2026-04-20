@@ -9,13 +9,32 @@ import {
   Loader2,
   RotateCcw,
   UserRound,
+  X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
   reactivateRosterStudent,
   type DeletedRosterRow,
 } from "@/lib/actions/roster";
+
+function firstOfMonth(ym: string): string {
+  return `${ym}-01`;
+}
+function currentYm(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+}
 
 interface Props {
   entries: DeletedRosterRow[];
@@ -32,6 +51,10 @@ export function DeletedStudentsPanel({ entries }: Props) {
   const [open, setOpen] = useState(false);
   const [pending, startTransition] = useTransition();
   const [pendingId, setPendingId] = useState<string | null>(null);
+  const [restoreTarget, setRestoreTarget] = useState<
+    DeletedRosterRow | null
+  >(null);
+  const [restoreMonth, setRestoreMonth] = useState(currentYm);
 
   function restore(id: string, name: string) {
     setPendingId(id);

@@ -65,7 +65,10 @@ export async function getTeacherManagementMatrix(opts?: {
       "id, full_name, teacher_id, auth_user_id, classroom_id, monthly_tuition_cents, billing_day, billing_starts_on, ended_on, created_at, classrooms(name)"
     )
     .eq("teacher_id", user.id)
-    .is("deleted_at", null)
+    // Include soft-deleted rows — the tuition board needs to keep
+    // showing them for history. Display-side uses ended_on to lock
+    // cells after the student left, and the year filter hides them
+    // from years outside their active window.
     .order("full_name", { ascending: true });
   if (error) return { error: error.message };
 
