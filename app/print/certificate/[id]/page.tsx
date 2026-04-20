@@ -632,12 +632,14 @@ export default async function CertificatePrintPage({
         >
           <div
             style={{
+              // Transparent — the ivory certificate background
+              // shows through so the tagline blends into the
+              // page instead of floating on a white card.
               display: "inline-flex",
               alignItems: "center",
               gap: 10,
-              background: "#ffffff",
-              borderRadius: 999,
-              padding: "3px 14px 3px 6px",
+              background: "transparent",
+              padding: "3px 6px",
             }}
           >
             <AmazingSchoolMark size={16} />
