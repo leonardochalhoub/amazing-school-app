@@ -177,7 +177,90 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
     gradient: "from-teal-300 via-emerald-500 to-cyan-600",
     glow: "shadow-[0_0_25px_-3px_rgba(45,212,191,0.8)]",
   },
+
+  // ─── CEFR certificate badges ─────────────────────────────────
+  // Awarded automatically when a teacher issues a certificate at
+  // the matching CEFR family. Full-band certs ("a", "b", "c")
+  // award BOTH badges in the band. Each gradient progresses from
+  // cool / ascending (A1) to warm / culminating (C2) so the
+  // badge rail on a student's profile reads as a visible journey.
+  {
+    type: "cert_a1",
+    name: "Ignição",
+    description: "Certificado CEFR A1 · Iniciante",
+    icon: "🚀",
+    unlock: { kind: "auto" },
+    rarity: "common",
+    gradient: "from-sky-400 via-blue-500 to-indigo-600",
+    glow: "shadow-[0_0_25px_-5px_rgba(59,130,246,0.8)]",
+  },
+  {
+    type: "cert_a2",
+    name: "Órbita",
+    description: "Certificado CEFR A2 · Pré-Intermediário",
+    icon: "📡",
+    unlock: { kind: "auto" },
+    rarity: "rare",
+    gradient: "from-violet-400 via-purple-500 to-fuchsia-600",
+    glow: "shadow-[0_0_28px_-4px_rgba(168,85,247,0.85)]",
+  },
+  {
+    type: "cert_b1",
+    name: "Trajetória",
+    description: "Certificado CEFR B1 · Intermediário",
+    icon: "🛰️",
+    unlock: { kind: "auto" },
+    rarity: "rare",
+    gradient: "from-emerald-400 via-teal-500 to-cyan-600",
+    glow: "shadow-[0_0_28px_-4px_rgba(20,184,166,0.9)]",
+  },
+  {
+    type: "cert_b2",
+    name: "Navegador",
+    description: "Certificado CEFR B2 · Intermediário Superior",
+    icon: "🧭",
+    unlock: { kind: "auto" },
+    rarity: "epic",
+    gradient: "from-amber-400 via-orange-500 to-red-500",
+    glow: "shadow-[0_0_32px_-3px_rgba(249,115,22,0.95)]",
+  },
+  {
+    type: "cert_c1",
+    name: "Maestria",
+    description: "Certificado CEFR C1 · Avançado",
+    icon: "👑",
+    unlock: { kind: "auto" },
+    rarity: "epic",
+    gradient: "from-fuchsia-500 via-pink-500 to-rose-600",
+    glow: "shadow-[0_0_34px_-2px_rgba(236,72,153,1)]",
+  },
+  {
+    type: "cert_c2",
+    name: "Proficiência",
+    description: "Certificado CEFR C2 · Proficiente",
+    icon: "🌌",
+    unlock: { kind: "auto" },
+    rarity: "mythic",
+    gradient: "from-yellow-300 via-amber-400 to-orange-500",
+    glow: "shadow-[0_0_42px_0px_rgba(252,211,77,1)]",
+  },
 ];
+
+/**
+ * Maps a certificate level code (a1, a1_1, a2, a, b2, custom, …)
+ * to the badge type(s) the student should earn. Full-band codes
+ * ("a" / "b" / "c") award both badges in the band; half-semester
+ * codes collapse to the parent family (a1_1 → cert_a1). "custom"
+ * and unrecognised codes yield no badge.
+ */
+export function certificateBadgeTypes(level: string): string[] {
+  const family = level.toLowerCase().match(/^[a-c][12]/)?.[0];
+  if (family) return [`cert_${family}`];
+  if (level === "a") return ["cert_a1", "cert_a2"];
+  if (level === "b") return ["cert_b1", "cert_b2"];
+  if (level === "c") return ["cert_c1", "cert_c2"];
+  return [];
+}
 
 export const BADGE_BY_TYPE: Record<string, BadgeDefinition> =
   Object.fromEntries(BADGE_DEFINITIONS.map((b) => [b.type, b]));

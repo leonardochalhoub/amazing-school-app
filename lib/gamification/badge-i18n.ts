@@ -64,6 +64,30 @@ const BADGE_I18N: Record<Locale, Record<string, BadgeText>> = {
       name: "Clean Sweep",
       description: "Finished a lesson with zero mistakes",
     },
+    cert_a1: {
+      name: "Ignition",
+      description: "CEFR A1 certificate · Beginner",
+    },
+    cert_a2: {
+      name: "Orbit",
+      description: "CEFR A2 certificate · Pre-Intermediate",
+    },
+    cert_b1: {
+      name: "Trajectory",
+      description: "CEFR B1 certificate · Intermediate",
+    },
+    cert_b2: {
+      name: "Navigator",
+      description: "CEFR B2 certificate · Upper-Intermediate",
+    },
+    cert_c1: {
+      name: "Mastery",
+      description: "CEFR C1 certificate · Advanced",
+    },
+    cert_c2: {
+      name: "Proficiency",
+      description: "CEFR C2 certificate · Proficient",
+    },
   },
   "pt-BR": {
     welcome_aboard: {
@@ -121,6 +145,30 @@ const BADGE_I18N: Record<Locale, Record<string, BadgeText>> = {
     perfect_lesson: {
       name: "Gabaritou",
       description: "Terminou uma lição sem errar nenhuma",
+    },
+    cert_a1: {
+      name: "Ignição",
+      description: "Certificado CEFR A1 · Iniciante",
+    },
+    cert_a2: {
+      name: "Órbita",
+      description: "Certificado CEFR A2 · Pré-Intermediário",
+    },
+    cert_b1: {
+      name: "Trajetória",
+      description: "Certificado CEFR B1 · Intermediário",
+    },
+    cert_b2: {
+      name: "Navegador",
+      description: "Certificado CEFR B2 · Intermediário Superior",
+    },
+    cert_c1: {
+      name: "Maestria",
+      description: "Certificado CEFR C1 · Avançado",
+    },
+    cert_c2: {
+      name: "Proficiência",
+      description: "Certificado CEFR C2 · Proficiente",
     },
   },
 };

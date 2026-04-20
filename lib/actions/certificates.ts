@@ -7,6 +7,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { isTeacherRole } from "@/lib/auth/roles";
 import { getSignatureSignedUrl } from "@/lib/signature";
 import { translatePtToEn } from "@/lib/ai/translate";
+import { certificateBadgeTypes } from "@/lib/gamification/config";
 import {
   CERTIFICATE_LEVELS,
   GRADE_OPTIONS,
@@ -131,11 +132,15 @@ export async function createCertificate(input: z.input<typeof InputSchema>) {
 
   const { data: roster } = await admin
     .from("roster_students")
-    .select("teacher_id")
+    .select("teacher_id, auth_user_id")
     .eq("id", parsed.data.rosterStudentId)
     .maybeSingle();
   if (!roster) return { error: "Aluno não encontrado" };
-  if ((roster as { teacher_id: string }).teacher_id !== user.id) {
+  const rosterOwn = roster as {
+    teacher_id: string;
+    auth_user_id: string | null;
+  };
+  if (rosterOwn.teacher_id !== user.id) {
     return { error: "Sem permissão" };
   }
 
@@ -173,6 +178,24 @@ export async function createCertificate(input: z.input<typeof InputSchema>) {
     .select("id")
     .single();
   if (error) return { error: error.message };
+
+  // Badge award — CEFR certificates unlock a matching badge on the
+  // student's profile. Only fires when the student has a linked
+  // auth user (signed up / claimed the invite). Fire-and-forget:
+  // the UNIQUE (student_id, badge_type) index blocks duplicates
+  // on its own, so re-issuing the same level just no-ops.
+  if (rosterOwn.auth_user_id) {
+    const badges = certificateBadgeTypes(parsed.data.level);
+    if (badges.length > 0) {
+      await admin.from("badges").upsert(
+        badges.map((badge_type) => ({
+          student_id: rosterOwn.auth_user_id as string,
+          badge_type,
+        })),
+        { onConflict: "student_id,badge_type", ignoreDuplicates: true },
+      );
+    }
+  }
 
   revalidatePath(`/teacher/students/${parsed.data.rosterStudentId}`);
   revalidatePath("/student/profile");
