@@ -22,12 +22,10 @@ export default async function ChatPage() {
     .single();
 
   if (!conversation) {
-    // Resolve the classroom_id that anchors the conversation row.
-    // Classrooms are NOT semantically linked to the AI tutor — this
-    // is only here because the conversations table's NOT NULL
-    // constraint requires a value. Students pick it up from their
-    // classroom_members row; teachers / owners fall back to the
-    // first classroom they own (classrooms.teacher_id = auth.uid()).
+    // classroom_id on conversations is nullable (migration 037) —
+    // the tutor isn't tied to any classroom. We still best-effort
+    // attach one if the caller happens to be a member of (or own)
+    // a classroom, purely for context. Null is fine when not.
     let classroomId: string | null = null;
     const { data: membership } = await supabase
       .from("classroom_members")
@@ -48,17 +46,16 @@ export default async function ChatPage() {
       if (owned) classroomId = (owned as { id: string }).id;
     }
 
-    if (classroomId) {
-      const { data: newConv } = await supabase
-        .from("conversations")
-        .insert({
-          student_id: user.id,
-          classroom_id: classroomId,
-        })
-        .select("id")
-        .single();
-      conversation = newConv;
-    }
+    const { data: newConv, error: convErr } = await supabase
+      .from("conversations")
+      .insert({
+        student_id: user.id,
+        classroom_id: classroomId,
+      })
+      .select("id")
+      .single();
+    if (convErr) console.error("[chat] conversation insert failed", convErr);
+    conversation = newConv;
   }
 
   const ai = getAiProviderInfo();

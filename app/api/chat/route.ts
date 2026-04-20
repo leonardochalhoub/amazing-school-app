@@ -73,9 +73,18 @@ export async function POST(req: Request) {
         console.error("[ai chat] streamText error:", error);
       },
       onFinish: async ({ text }) => {
-        if (conversationId && text) {
-          const userMessage = messages[messages.length - 1];
-          await supabase.from("messages").insert([
+        if (!conversationId) {
+          console.warn("[ai chat] no conversationId — messages not stored");
+          return;
+        }
+        if (!text) {
+          console.warn("[ai chat] empty model reply — messages not stored");
+          return;
+        }
+        const userMessage = messages[messages.length - 1];
+        const { error: msgErr } = await supabase
+          .from("messages")
+          .insert([
             {
               conversation_id: conversationId,
               role: "user",
@@ -87,8 +96,13 @@ export async function POST(req: Request) {
               content: text,
             },
           ]);
+        if (msgErr) {
+          console.error("[ai chat] messages insert failed", msgErr);
+        }
 
-          await supabase.from("daily_activity").upsert(
+        const { error: actErr } = await supabase
+          .from("daily_activity")
+          .upsert(
             {
               student_id: user.id,
               activity_date: new Date().toISOString().split("T")[0],
@@ -97,6 +111,8 @@ export async function POST(req: Request) {
             },
             { onConflict: "student_id,activity_date" }
           );
+        if (actErr) {
+          console.error("[ai chat] daily_activity upsert failed", actErr);
         }
       },
     });
