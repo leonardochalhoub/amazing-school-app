@@ -289,6 +289,21 @@ export async function getSysadminOverview(): Promise<
   const demoAccounts = profiles.filter((p) =>
     p.full_name ? false : false,
   ).length;
+
+  // Excluded-from-stats teacher set: every platform owner + every
+  // demo/test profile (is_test=true — those never hit `profiles`
+  // above because of the upstream filter, so we fetch them in a
+  // small separate query here). Leo's students exist for platform
+  // testing, not real teaching, so they shouldn't skew CEFR mix,
+  // engagement, DAU/WAU/MAU, top-active rankings, etc. Demo
+  // teachers (Luiza) are caught by the is_test side of the union.
+  const { data: excludedTeachersRes } = await admin
+    .from("profiles")
+    .select("id")
+    .or("is_test.eq.true,role.eq.owner");
+  const excludedTeacherIds = new Set(
+    ((excludedTeachersRes ?? []) as Array<{ id: string }>).map((t) => t.id),
+  );
   // Demo detection is by email prefix — we need auth data for that.
   const { data: authList } = await admin.auth.admin.listUsers({
     page: 1,
@@ -318,6 +333,16 @@ export async function getSysadminOverview(): Promise<
     monthly_tuition_cents: number | null;
     created_at: string;
   }>;
+  // Real-roster view is what every student-aggregate query reads
+  // from to honour the "exclude demo + owner rosters" rule above.
+  const realRoster = roster.filter(
+    (r) => !excludedTeacherIds.has(r.teacher_id),
+  );
+  const realStudentAuthIds = new Set<string>(
+    realRoster
+      .map((r) => r.auth_user_id)
+      .filter((x): x is string => !!x),
+  );
   const members = (classroomMembersRes.data ?? []) as Array<{
     classroom_id: string;
     student_id: string;
@@ -331,16 +356,34 @@ export async function getSysadminOverview(): Promise<
   const draftLessons = drafts.filter((d) => d.status !== "published").length;
 
   // Build sets of real (non-test) user / classroom ids so every
-  // aggregation that follows can drop demo rows in memory. We already
-  // filtered `profiles` by is_test = false upstream; these sets come
-  // from those filtered lists.
+  // aggregation that follows can drop demo rows in memory.
+  //   - profiles is already filtered is_test=false upstream
+  //   - we additionally remove students rostered under an excluded
+  //     teacher (demo teachers + platform owners), so Leo's testing
+  //     students don't inflate DAU / WAU / MAU / CEFR mix / etc.
+  //   - classrooms owned by excluded teachers drop out too
+  const excludedStudentAuthIds = new Set<string>();
+  for (const r of roster) {
+    if (excludedTeacherIds.has(r.teacher_id) && r.auth_user_id) {
+      excludedStudentAuthIds.add(r.auth_user_id);
+    }
+  }
+  // "Real" students for every statistics/aggregate use — drops
+  // anyone rostered under a demo or owner teacher.
+  const realStudents = students.filter(
+    (s) => !excludedStudentAuthIds.has(s.id),
+  );
   const realUserIds = new Set<string>([
     ...teachers.map((p) => p.id),
-    ...students.map((p) => p.id),
+    ...realStudents.map((p) => p.id),
   ]);
   const realClassroomIds = new Set<string>(
     classrooms
-      .filter((c) => teachers.some((t) => t.id === c.teacher_id))
+      .filter(
+        (c) =>
+          teachers.some((t) => t.id === c.teacher_id) &&
+          !excludedTeacherIds.has(c.teacher_id),
+      )
       .map((c) => c.id),
   );
 
@@ -451,9 +494,9 @@ export async function getSysadminOverview(): Promise<
     .sort((a, b) => a[0].localeCompare(b[0]))
     .map(([date, set]) => ({ date, activeStudents: set.size }));
 
-  // CEFR level mix
+  // CEFR level mix — only counts students under a real teacher.
   const levelCounts = new Map<string, number>();
-  for (const r of roster) {
+  for (const r of realRoster) {
     if (!r.level) continue;
     levelCounts.set(r.level, (levelCounts.get(r.level) ?? 0) + 1);
   }
@@ -523,12 +566,12 @@ export async function getSysadminOverview(): Promise<
     });
 
   // Full directory — sort alphabetically by name, case + accent
-  // insensitive. Keeps activeStudentsLast30d so the table can show
-  // engagement per teacher without needing a separate "most active"
-  // ranking. numeric:true handles mixed-case / pt-BR diacritics
-  // cleanly so "Álvaro" sorts near "Alvaro" not at the end.
+  // insensitive. Leading/trailing whitespace trimmed so a row
+  // like " edvaldo" doesn't jump ahead of "Alice". numeric:true
+  // handles mixed-case / pt-BR diacritics cleanly so "Álvaro"
+  // sorts near "Alvaro" not at the end.
   const allTeachers = [...allTeachersFull].sort((a, b) =>
-    (a.name ?? "").localeCompare(b.name ?? "", "pt-BR", {
+    (a.name ?? "").trim().localeCompare((b.name ?? "").trim(), "pt-BR", {
       sensitivity: "base",
       numeric: true,
     }),
@@ -883,7 +926,7 @@ export async function getSysadminOverview(): Promise<
     }))
     .sort((a, b) => b.minutes - a.minutes);
 
-  const studentTimeRows = students
+  const studentTimeRows = realStudents
     .map((p) => {
       const r = rosterByAuthUser.get(p.id);
       const teacherName = r?.teacher_id
@@ -938,7 +981,7 @@ export async function getSysadminOverview(): Promise<
     .filter((r) => r.messages > 0)
     .sort((a, b) => b.messages - a.messages);
 
-  const aiChatStudents = students
+  const aiChatStudents = realStudents
     .map((p) => {
       const r = rosterByAuthUser.get(p.id);
       const teacherName = r?.teacher_id
@@ -1014,7 +1057,7 @@ export async function getSysadminOverview(): Promise<
       signedUp: !!r.auth_user_id,
     }))
     .sort((a, b) =>
-      a.fullName.localeCompare(b.fullName, "pt-BR", {
+      a.fullName.trim().localeCompare(b.fullName.trim(), "pt-BR", {
         sensitivity: "base",
         numeric: true,
       }),
@@ -1042,7 +1085,7 @@ export async function getSysadminOverview(): Promise<
   return {
     kpis: {
       teachers: teachers.length,
-      students: students.length,
+      students: realStudents.length,
       classrooms: classrooms.filter((c) =>
         teachers.some((t) => t.id === c.teacher_id),
       ).length,
