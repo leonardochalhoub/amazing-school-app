@@ -188,33 +188,52 @@ export async function getStudentCurriculumReport(
 
   // Completion timestamps — pulled from lesson_progress for the
   // linked auth user (if any). Students without an auth_user_id have
-  // no progress yet so this falls back gracefully.
-  const progressByslug = new Map<string, { completedAt: string; xp: number }>();
+  // no progress yet so this falls back gracefully. XP is summed from
+  // xp_events below (the canonical gamification source-of-truth);
+  // lesson_progress has no xp column.
+  const progressBySlug = new Map<string, { completedAt: string }>();
+  let totalXp = 0;
   if (roster.auth_user_id) {
-    const { data: prog } = await admin
-      .from("lesson_progress")
-      .select("lesson_slug, completed_at, xp_earned")
-      .eq("student_id", roster.auth_user_id)
-      .not("completed_at", "is", null)
-      .limit(10_000);
-    for (const p of (prog ?? []) as Array<{
+    const [progRes, xpRes] = await Promise.all([
+      admin
+        .from("lesson_progress")
+        .select("lesson_slug, completed_at")
+        .eq("student_id", roster.auth_user_id)
+        .not("completed_at", "is", null)
+        .limit(10_000),
+      admin
+        .from("xp_events")
+        .select("xp_amount, created_at")
+        .eq("student_id", roster.auth_user_id)
+        .limit(50_000),
+    ]);
+    for (const p of (progRes.data ?? []) as Array<{
       lesson_slug: string;
       completed_at: string;
-      xp_earned: number | null;
     }>) {
-      const existing = progressByslug.get(p.lesson_slug);
+      const existing = progressBySlug.get(p.lesson_slug);
       if (!existing || existing.completedAt < p.completed_at) {
-        progressByslug.set(p.lesson_slug, {
-          completedAt: p.completed_at,
-          xp: p.xp_earned ?? 0,
-        });
+        progressBySlug.set(p.lesson_slug, { completedAt: p.completed_at });
       }
+    }
+    for (const ev of (xpRes.data ?? []) as Array<{
+      xp_amount: number;
+      created_at: string;
+    }>) {
+      if (!withinYear(ev.created_at, year)) continue;
+      totalXp += ev.xp_amount ?? 0;
     }
   }
 
   const rawEntries: CurriculumEntry[] = (assignments ?? []).map((a) => {
     const { kind, slug } = fromAssignmentSlug(a.lesson_slug as string);
-    const prog = progressByslug.get(a.lesson_slug as string);
+    const prog = progressBySlug.get(a.lesson_slug as string);
+    // When the teacher marked status=completed but the student never
+    // self-completed (no lesson_progress row), fall back to the
+    // assignment date so the lesson still lands in a month bucket.
+    const completedAt =
+      prog?.completedAt ??
+      (a.status === "completed" ? (a.assigned_at as string) : null);
     if (kind === "music") {
       const m = getMusic(slug);
       return {
@@ -225,8 +244,8 @@ export async function getStudentCurriculumReport(
         category: "music",
         status: a.status as "assigned" | "skipped" | "completed",
         assignedAt: a.assigned_at as string,
-        completedAt: prog?.completedAt ?? null,
-        xpEarned: prog?.xp ?? null,
+        completedAt,
+        xpEarned: null,
       };
     }
     const meta = findLessonMeta(slug);
@@ -238,8 +257,8 @@ export async function getStudentCurriculumReport(
       category: meta?.category ?? null,
       status: a.status as "assigned" | "skipped" | "completed",
       assignedAt: a.assigned_at as string,
-      completedAt: prog?.completedAt ?? null,
-      xpEarned: prog?.xp ?? null,
+      completedAt,
+      xpEarned: null,
     };
   });
 
@@ -251,17 +270,18 @@ export async function getStudentCurriculumReport(
     (e) => withinYear(e.assignedAt, year) || withinYear(e.completedAt, year),
   );
 
-  // Stats
-  let totalXp = 0;
+  // Stats. CEFR is aggregated by course family (A1, A2, B1, B2, C1,
+  // C2) rather than by half-semester (A1.1, A1.2, …) — that makes
+  // the pie chart readable at print size.
   const byCefrMap = new Map<string, { assigned: number; completed: number }>();
   const byMonthMap = new Map<string, { lessons: number; music: number }>();
   for (const e of entries) {
-    const cefr = (e.cefr ?? "—").toUpperCase();
-    const slot = byCefrMap.get(cefr) ?? { assigned: 0, completed: 0 };
+    const upper = (e.cefr ?? "").toUpperCase();
+    const family = upper.match(/^[A-Z][0-9]/)?.[0] ?? "—";
+    const slot = byCefrMap.get(family) ?? { assigned: 0, completed: 0 };
     slot.assigned += 1;
     if (e.status === "completed") {
       slot.completed += 1;
-      totalXp += e.xpEarned ?? 0;
       if (e.completedAt) {
         const m = e.completedAt.slice(0, 7);
         const bucket = byMonthMap.get(m) ?? { lessons: 0, music: 0 };
@@ -270,7 +290,7 @@ export async function getStudentCurriculumReport(
         byMonthMap.set(m, bucket);
       }
     }
-    byCefrMap.set(cefr, slot);
+    byCefrMap.set(family, slot);
   }
 
   const years = new Set<number>();
@@ -417,8 +437,10 @@ export async function getCohortReport(
     classroomIds.length > 0
       ? admin
           .from("lesson_assignments")
-          .select("id, classroom_id, roster_student_id, student_id, status, assigned_at")
-          .in("classroom_id", classroomIds.concat([])) // Type coercion; classrooms.length>0 enforced
+          .select(
+            "id, classroom_id, roster_student_id, student_id, status, assigned_at",
+          )
+          .in("classroom_id", classroomIds.concat([]))
           .gte("assigned_at", fromIso)
           .lt("assigned_at", toIso)
           .limit(50_000)
@@ -426,7 +448,7 @@ export async function getCohortReport(
     studentAuthIds.length > 0
       ? admin
           .from("lesson_progress")
-          .select("student_id, completed_at, xp_earned")
+          .select("student_id, completed_at")
           .in("student_id", studentAuthIds)
           .not("completed_at", "is", null)
           .gte("completed_at", fromIso)
@@ -436,7 +458,7 @@ export async function getCohortReport(
     studentAuthIds.length > 0
       ? admin
           .from("xp_events")
-          .select("student_id, amount, created_at")
+          .select("student_id, xp_amount, created_at")
           .in("student_id", studentAuthIds)
           .gte("created_at", fromIso)
           .lt("created_at", toIso)
@@ -445,57 +467,106 @@ export async function getCohortReport(
   ]);
 
   const assignmentsByRoster = new Map<string, number>();
+  // Teacher-marked-completed counts — mirror the student dashboard
+  // so the cohort totals match what the UI shows elsewhere. We count
+  // per-student assignments directly and classroom-wide ones against
+  // every roster member of that classroom.
+  const completedAssignmentsByRoster = new Map<string, number>();
+  const assignmentLastDateByRoster = new Map<string, string>();
+
   for (const a of (assignmentsRes.data ?? []) as Array<{
     roster_student_id: string | null;
     classroom_id: string | null;
+    status: string;
+    assigned_at: string;
   }>) {
-    // Classroom-wide → attribute to every roster student in that room
     if (a.roster_student_id) {
       assignmentsByRoster.set(
         a.roster_student_id,
         (assignmentsByRoster.get(a.roster_student_id) ?? 0) + 1,
       );
+      if (a.status === "completed") {
+        completedAssignmentsByRoster.set(
+          a.roster_student_id,
+          (completedAssignmentsByRoster.get(a.roster_student_id) ?? 0) + 1,
+        );
+        const prev = assignmentLastDateByRoster.get(a.roster_student_id);
+        if (!prev || prev < a.assigned_at) {
+          assignmentLastDateByRoster.set(a.roster_student_id, a.assigned_at);
+        }
+      }
     } else if (a.classroom_id) {
       for (const r of roster.filter((x) => x.classroom_id === a.classroom_id)) {
         assignmentsByRoster.set(r.id, (assignmentsByRoster.get(r.id) ?? 0) + 1);
+        if (a.status === "completed") {
+          completedAssignmentsByRoster.set(
+            r.id,
+            (completedAssignmentsByRoster.get(r.id) ?? 0) + 1,
+          );
+          const prev = assignmentLastDateByRoster.get(r.id);
+          if (!prev || prev < a.assigned_at) {
+            assignmentLastDateByRoster.set(r.id, a.assigned_at);
+          }
+        }
       }
     }
   }
 
+  // Student-self-completed (lesson_progress) by auth id. We MERGE this
+  // with the teacher-marked completions — whichever is larger wins,
+  // so teachers who track everything manually see meaningful numbers.
   const completedByAuth = new Map<string, number>();
   const lastActivityByAuth = new Map<string, string>();
   for (const p of (progressRes.data ?? []) as Array<{
     student_id: string;
     completed_at: string;
   }>) {
-    completedByAuth.set(p.student_id, (completedByAuth.get(p.student_id) ?? 0) + 1);
+    completedByAuth.set(
+      p.student_id,
+      (completedByAuth.get(p.student_id) ?? 0) + 1,
+    );
     const prev = lastActivityByAuth.get(p.student_id);
     if (!prev || prev < p.completed_at) {
       lastActivityByAuth.set(p.student_id, p.completed_at);
     }
   }
 
+  // XP — xp_events.xp_amount is the canonical column (not "amount").
   const xpByAuth = new Map<string, number>();
   for (const ev of (xpRes.data ?? []) as Array<{
     student_id: string;
-    amount: number;
+    xp_amount: number | null;
   }>) {
-    xpByAuth.set(ev.student_id, (xpByAuth.get(ev.student_id) ?? 0) + (ev.amount ?? 0));
+    xpByAuth.set(
+      ev.student_id,
+      (xpByAuth.get(ev.student_id) ?? 0) + (ev.xp_amount ?? 0),
+    );
   }
 
   const studentRows: CohortStudentRow[] = roster.map((r) => {
     const classroom = Array.isArray(r.classrooms) ? r.classrooms[0] : r.classrooms;
     const authId = r.auth_user_id;
+    const progressCount = authId ? completedByAuth.get(authId) ?? 0 : 0;
+    const manualCount = completedAssignmentsByRoster.get(r.id) ?? 0;
+    const lessonsCompleted = Math.max(progressCount, manualCount);
+    const lastProgress = authId ? lastActivityByAuth.get(authId) ?? null : null;
+    const lastManual = assignmentLastDateByRoster.get(r.id) ?? null;
+    const lastActivity =
+      lastProgress && lastManual
+        ? lastProgress > lastManual
+          ? lastProgress
+          : lastManual
+        : lastProgress ?? lastManual;
     return {
       id: r.id,
       fullName: r.full_name,
       classroomName: classroom?.name ?? null,
       level: r.level,
       totalXp: authId ? xpByAuth.get(authId) ?? 0 : 0,
-      lessonsCompleted: authId ? completedByAuth.get(authId) ?? 0 : 0,
+      lessonsCompleted,
       lessonsAssigned: assignmentsByRoster.get(r.id) ?? 0,
-      streak: 0, // streak is out-of-period; omitted for yearly report
-      lastActivity: authId ? lastActivityByAuth.get(authId) ?? null : null,
+      streak: 0,
+      lastActivity,
     };
   });
   studentRows.sort((a, b) => b.totalXp - a.totalXp);
@@ -657,11 +728,15 @@ export async function getFinanceReport(
         };
       }
 
+      // Only months the teacher officially tracked count toward the
+      // totals — a "none" cell (never clicked) means there's no
+      // invoice to collect, and shouldn't drag the collection rate
+      // down. Paid + due are the two official states.
       if (state === "paid") {
         rowPaid += amt ?? 0;
         invoicesPaid += 1;
         paidCents += amt ?? 0;
-      } else if (amt && amt > 0) {
+      } else if (state === "due" && amt && amt > 0) {
         rowPending += amt;
         invoicesPending += 1;
         pendingCents += amt;
@@ -801,9 +876,16 @@ export async function getReceiptData(
     ? roster.classrooms[0]
     : roster.classrooms;
 
-  // Deterministic receipt number: AS-YYYYMM-<first 6 of uuid>
+  // Deterministic receipt number: AS-YYYYMM-<first 8 hex of uuid>.
+  // 8 hex chars = 4.29B possible suffixes, so the combined
+  // (billing_month, suffix) pair is unique in practice even at
+  // millions-of-receipts-per-month scale. Also — because each
+  // student_payment row already has a unique UUID *and* only one
+  // row per (roster_student, billing_month) can exist (unique
+  // constraint in migration 019), the receipt number is guaranteed
+  // unique on our side.
   const month = payment.billing_month.slice(0, 7).replace("-", "");
-  const suffix = payment.id.replace(/-/g, "").slice(0, 6).toUpperCase();
+  const suffix = payment.id.replace(/-/g, "").slice(0, 8).toUpperCase();
   const receiptNumber = `AS-${month}-${suffix}`;
 
   return {
@@ -839,6 +921,9 @@ export interface PaidInvoiceRow {
   billingMonth: string; // YYYY-MM-01
   amountCents: number;
   paidAt: string | null;
+  /** Only meaningful on the teacher-side list — student-side only
+      returns already-shared rows, so this field is always true there. */
+  sharedWithStudent: boolean;
 }
 
 export async function listPaidInvoicesForStudent(
@@ -873,7 +958,9 @@ export async function listPaidInvoicesForStudent(
 
   const { data: pays } = await admin
     .from("student_payments")
-    .select("id, billing_month, amount_cents, paid, paid_at")
+    .select(
+      "id, billing_month, amount_cents, paid, paid_at, shared_with_student",
+    )
     .eq("roster_student_id", rosterStudentId)
     .eq("paid", true)
     .order("billing_month", { ascending: false })
@@ -885,12 +972,65 @@ export async function listPaidInvoicesForStudent(
     amount_cents: number | null;
     paid: boolean;
     paid_at: string | null;
+    shared_with_student: boolean | null;
   }>).map((p) => ({
     paymentId: p.id,
     billingMonth: p.billing_month.slice(0, 10),
     amountCents: p.amount_cents ?? fallbackCents,
     paidAt: p.paid_at,
+    sharedWithStudent: p.shared_with_student === true,
   }));
+}
+
+/**
+ * Teacher flips a single paid receipt "shared with student" on or
+ * off. The master `receipts_visible_to_student` flag on the roster
+ * row is a prerequisite — without it, the student never sees any
+ * receipt regardless of the per-payment state.
+ */
+export async function setReceiptSharedWithStudent(
+  paymentId: string,
+  shared: boolean,
+): Promise<{ success: true } | { error: string }> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Não autenticado" };
+
+  const admin = createAdminClient();
+  const { data: profile } = await admin
+    .from("profiles")
+    .select("role")
+    .eq("id", user.id)
+    .maybeSingle();
+  if (!isTeacherRole((profile as { role?: string } | null)?.role)) {
+    return { error: "Acesso apenas para professores" };
+  }
+
+  const { data: payment } = await admin
+    .from("student_payments")
+    .select("teacher_id, roster_student_id")
+    .eq("id", paymentId)
+    .maybeSingle();
+  if (!payment) return { error: "Pagamento não encontrado" };
+  if ((payment as { teacher_id: string }).teacher_id !== user.id) {
+    return { error: "Sem permissão" };
+  }
+
+  const { error } = await admin
+    .from("student_payments")
+    .update({
+      shared_with_student: shared,
+      shared_with_student_at: shared ? new Date().toISOString() : null,
+    })
+    .eq("id", paymentId);
+  if (error) return { error: error.message };
+
+  const rosterId = (payment as { roster_student_id: string }).roster_student_id;
+  revalidatePath(`/teacher/students/${rosterId}`);
+  revalidatePath("/student/profile");
+  return { success: true as const };
 }
 
 // -----------------------------------------------------------------------------
@@ -1020,11 +1160,14 @@ export async function listMyReceipts(): Promise<PaidInvoiceRow[]> {
   };
   if (!r.receipts_visible_to_student) return [];
 
+  // Student-side: only return receipts the teacher has explicitly
+  // opted to share. Desc by billing_month so newest shows first.
   const { data: pays } = await admin
     .from("student_payments")
     .select("id, billing_month, amount_cents, paid, paid_at")
     .eq("roster_student_id", r.id)
     .eq("paid", true)
+    .eq("shared_with_student", true)
     .order("billing_month", { ascending: false })
     .limit(240);
   return ((pays ?? []) as Array<{
@@ -1038,6 +1181,7 @@ export async function listMyReceipts(): Promise<PaidInvoiceRow[]> {
     billingMonth: p.billing_month.slice(0, 10),
     amountCents: p.amount_cents ?? r.monthly_tuition_cents ?? 0,
     paidAt: p.paid_at,
+    sharedWithStudent: true,
   }));
 }
 
@@ -1082,39 +1226,213 @@ export async function getSysadminReport(): Promise<
   const owner = await isOwner();
   if (!owner) return { error: "Apenas sysadmin" };
 
-  // Reuse the existing overview action — same numbers the dashboard
-  // shows, which keeps the two surfaces in agreement.
-  const { getSysadminOverview } = await import("@/lib/actions/sysadmin");
-  const overview = await getSysadminOverview();
-  if ("error" in overview) return { error: overview.error };
+  // The dashboard action aggressively excludes "not real" activity
+  // (origin owner, demo accounts, is_test). On an owner's OWN exported
+  // report those filters make the numbers all zero. For the PDF the
+  // owner wants raw platform totals — no filter, show everything.
+
+  const admin = createAdminClient();
+  const now = new Date();
+  const thirtyDaysAgoISO = new Date(
+    now.getTime() - 30 * 86_400_000,
+  ).toISOString();
+  const todayISO = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+    .toISOString()
+    .slice(0, 10);
+  const sevenDaysAgoISO = new Date(now.getTime() - 7 * 86_400_000)
+    .toISOString()
+    .slice(0, 10);
+
+  const [
+    profilesRes,
+    classroomsRes,
+    rosterRes,
+    xpRes,
+    assignmentsRes,
+    progressRes,
+    messagesRes,
+    dailyTodayRes,
+    dailyWeekRes,
+    dailyMonthRes,
+  ] = await Promise.all([
+    admin
+      .from("profiles")
+      .select("id, full_name, role, created_at")
+      .order("created_at", { ascending: false }),
+    admin
+      .from("classrooms")
+      .select("id, teacher_id")
+      .is("deleted_at", null),
+    admin
+      .from("roster_students")
+      .select("id, teacher_id")
+      .is("deleted_at", null),
+    admin
+      .from("xp_events")
+      .select("xp_amount, created_at")
+      .gte("created_at", thirtyDaysAgoISO)
+      .limit(100_000),
+    admin
+      .from("lesson_assignments")
+      .select("id, assigned_at")
+      .gte("assigned_at", thirtyDaysAgoISO)
+      .limit(100_000),
+    admin
+      .from("lesson_progress")
+      .select("id, completed_at")
+      .not("completed_at", "is", null)
+      .gte("completed_at", thirtyDaysAgoISO)
+      .limit(100_000),
+    admin
+      .from("messages")
+      .select("id, created_at")
+      .gte("created_at", thirtyDaysAgoISO)
+      .limit(100_000),
+    admin
+      .from("daily_activity")
+      .select("student_id")
+      .eq("activity_date", todayISO),
+    admin
+      .from("daily_activity")
+      .select("student_id")
+      .gte("activity_date", sevenDaysAgoISO),
+    admin
+      .from("daily_activity")
+      .select("student_id")
+      .gte("activity_date", thirtyDaysAgoISO.slice(0, 10)),
+  ]);
+
+  const profiles = (profilesRes.data ?? []) as Array<{
+    id: string;
+    full_name: string | null;
+    role: string;
+    created_at: string;
+  }>;
+  const teachers = profiles.filter((p) => p.role === "teacher" || p.role === "owner");
+  const students = profiles.filter((p) => p.role === "student");
+
+  const classrooms = (classroomsRes.data ?? []) as Array<{
+    id: string;
+    teacher_id: string;
+  }>;
+  const classroomsByTeacher = new Map<string, number>();
+  const classroomTeacherById = new Map<string, string>();
+  for (const c of classrooms) {
+    classroomsByTeacher.set(
+      c.teacher_id,
+      (classroomsByTeacher.get(c.teacher_id) ?? 0) + 1,
+    );
+    classroomTeacherById.set(c.id, c.teacher_id);
+  }
+
+  const rosterRows = (rosterRes.data ?? []) as Array<{ teacher_id: string }>;
+  const rosterByTeacher = new Map<string, number>();
+  for (const r of rosterRows) {
+    rosterByTeacher.set(
+      r.teacher_id,
+      (rosterByTeacher.get(r.teacher_id) ?? 0) + 1,
+    );
+  }
+
+  const xpLast30d = (xpRes.data ?? []).reduce(
+    (s, r) => s + ((r as { xp_amount: number | null }).xp_amount ?? 0),
+    0,
+  );
+  const lessonsAssignedLast30d = (assignmentsRes.data ?? []).length;
+  const lessonsCompletedLast30d = (progressRes.data ?? []).length;
+  const aiMessagesLast30d = (messagesRes.data ?? []).length;
+  const newAccountsLast30d = profiles.filter(
+    (p) => p.created_at >= thirtyDaysAgoISO,
+  ).length;
+
+  const dau = new Set(
+    (dailyTodayRes.data ?? []).map(
+      (r) => (r as { student_id: string }).student_id,
+    ),
+  ).size;
+  const wau = new Set(
+    (dailyWeekRes.data ?? []).map(
+      (r) => (r as { student_id: string }).student_id,
+    ),
+  ).size;
+  const mau = new Set(
+    (dailyMonthRes.data ?? []).map(
+      (r) => (r as { student_id: string }).student_id,
+    ),
+  ).size;
+
+  // Teacher directory (active-student-count scoped to last 30d).
+  const activeStudentsByTeacher = new Map<string, Set<string>>();
+  const { data: membersRes } = await admin
+    .from("classroom_members")
+    .select("student_id, classroom_id")
+    .limit(100_000);
+  const activeStudentIds30d = new Set(
+    (dailyMonthRes.data ?? []).map(
+      (r) => (r as { student_id: string }).student_id,
+    ),
+  );
+  for (const m of (membersRes ?? []) as Array<{
+    student_id: string;
+    classroom_id: string;
+  }>) {
+    if (!activeStudentIds30d.has(m.student_id)) continue;
+    const t = classroomTeacherById.get(m.classroom_id);
+    if (!t) continue;
+    if (!activeStudentsByTeacher.has(t))
+      activeStudentsByTeacher.set(t, new Set());
+    activeStudentsByTeacher.get(t)!.add(m.student_id);
+  }
+
+  const teacherEmailById = new Map<string, string | null>();
+  const { data: authList } = await admin.auth.admin.listUsers({
+    page: 1,
+    perPage: 1000,
+  });
+  for (const u of authList?.users ?? []) {
+    teacherEmailById.set(u.id, (u.email ?? null) as string | null);
+  }
+
+  const teacherRows = teachers
+    .map((t) => ({
+      id: t.id,
+      name: t.full_name,
+      email: teacherEmailById.get(t.id) ?? null,
+      studentCount: rosterByTeacher.get(t.id) ?? 0,
+      classroomsCount: classroomsByTeacher.get(t.id) ?? 0,
+      activeStudentsLast30d: activeStudentsByTeacher.get(t.id)?.size ?? 0,
+      createdAt: t.created_at,
+    }))
+    .sort((a, b) => (a.name ?? "").localeCompare(b.name ?? ""));
+
+  // Catalogue counts come from static JSON (content/ dir), read
+  // synchronously so a platform without a published-drafts table
+  // still shows real totals on the sysadmin report.
+  const { getAllLessons } = await import("@/lib/content/loader");
+  const { listMusic } = await import("@/lib/content/music");
+  const catalogLessons = getAllLessons().length;
+  const catalogSongs = listMusic().length;
+
   return {
     generatedAt: new Date().toISOString(),
     scale: {
-      teachers: overview.kpis.teachers,
-      students: overview.kpis.students,
-      classrooms: overview.kpis.classrooms,
-      rosterEntries: overview.kpis.rosterEntries,
-      catalogLessons: overview.kpis.catalogLessons,
-      catalogSongs: overview.kpis.catalogSongs,
+      teachers: teachers.length,
+      students: students.length,
+      classrooms: classrooms.length,
+      rosterEntries: rosterRows.length,
+      catalogLessons,
+      catalogSongs,
     },
     activity: {
-      dau: overview.kpis.dau,
-      wau: overview.kpis.wau,
-      mau: overview.kpis.mau,
-      xpLast30d: overview.kpis.xpLast30d,
-      lessonsAssignedLast30d: overview.kpis.lessonsAssignedLast30d,
-      lessonsCompletedLast30d: overview.kpis.lessonsCompletedLast30d,
-      aiMessagesLast30d: overview.kpis.aiMessagesLast30d,
-      newAccountsLast30d: overview.kpis.newAccountsLast30d,
+      dau,
+      wau,
+      mau,
+      xpLast30d,
+      lessonsAssignedLast30d,
+      lessonsCompletedLast30d,
+      aiMessagesLast30d,
+      newAccountsLast30d,
     },
-    teachers: overview.allTeachers.map((t) => ({
-      id: t.id,
-      name: t.name,
-      email: t.email,
-      studentCount: t.studentCount,
-      classroomsCount: t.classroomsCount,
-      activeStudentsLast30d: t.activeStudentsLast30d,
-      createdAt: t.createdAt,
-    })),
+    teachers: teacherRows,
   };
 }

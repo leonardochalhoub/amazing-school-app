@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getStudentCurriculumReport } from "@/lib/actions/reports";
 import { ReportShell } from "@/components/reports/report-shell";
+import { BrandWatermark } from "@/components/reports/brand-watermark";
 import {
   CefrMixChart,
   MonthlyCompletionsChart,
@@ -126,9 +127,7 @@ export default async function StudentCurriculumPrintPage({
         </section>
       ) : null}
 
-      {/* Teacher sign-off — optional signature image + printed name,
-          anchored at the top of the body so it reads as an official
-          document endorsement regardless of page count. */}
+      {/* Teacher sign-off — optional signature image + printed name. */}
       <section className="report-avoid-break" style={{ marginTop: 4 }}>
         <div
           style={{
@@ -168,7 +167,15 @@ export default async function StudentCurriculumPrintPage({
                 minWidth: 200,
               }}
             >
-              {teacher.fullName ?? "Professor(a) responsável"}
+              {/* Name line always prints; the label line below is
+                  purely descriptive. Falling back to email prevents
+                  the old "label duplicated on both lines" bug. */}
+              <span style={{ fontWeight: 600 }}>
+                {teacher.fullName || teacher.email || "—"}
+              </span>
+              {/* When only an email is available, drop the "@domain"
+                  so the signature line reads like a real name rather
+                  than an address. */}
               <br />
               <span className="report-muted">Professor(a) responsável</span>
             </div>
@@ -231,6 +238,8 @@ export default async function StudentCurriculumPrintPage({
           </table>
         )}
       </section>
+
+      <BrandWatermark tagline="Currículo gerado por Amazing School · amazingschool.app" />
     </ReportShell>
   );
 }

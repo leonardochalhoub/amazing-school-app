@@ -324,9 +324,11 @@ export async function getCertificate(
     ? roster.classrooms[0]
     : roster.classrooms;
 
-  // Certificate number — stable + sortable.
+  // Certificate number — stable + sortable. 8 hex chars give us
+  // ~4.29B possible suffixes, practically collision-free even at
+  // platform-wide scale.
   const month = row.issued_at.slice(0, 7).replace("-", "");
-  const suffix = row.id.replace(/-/g, "").slice(0, 6).toUpperCase();
+  const suffix = row.id.replace(/-/g, "").slice(0, 8).toUpperCase();
   const certificateNumber = `AS-CERT-${month}-${suffix}`;
 
   return {

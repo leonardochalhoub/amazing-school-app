@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getFinanceReport } from "@/lib/actions/reports";
 import { ReportShell } from "@/components/reports/report-shell";
+import { BrandWatermark } from "@/components/reports/brand-watermark";
 import { formatBRL } from "@/lib/reports/brl";
 import { reportFilename, slugifyForFilename } from "@/lib/reports/filename";
 
@@ -175,8 +176,14 @@ export default async function FinancePrintPage({ searchParams }: PageProps) {
           <LegendDot state="paid" label="Pago" />
           <LegendDot state="due" label="Vencendo" />
           <LegendDot state="none" label="—" />
+          <span style={{ marginLeft: "auto" }}>
+            Taxa de cobrança considera apenas meses marcados como Pago
+            ou Vencendo (células vazias não contam).
+          </span>
         </div>
       </section>
+
+      <BrandWatermark tagline="Relatório financeiro gerado por Amazing School · amazingschool.app" />
     </ReportShell>
   );
 }

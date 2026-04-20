@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getSysadminReport } from "@/lib/actions/reports";
 import { ReportShell } from "@/components/reports/report-shell";
+import { BrandWatermark } from "@/components/reports/brand-watermark";
 import { reportFilename } from "@/lib/reports/filename";
 
 export const dynamic = "force-dynamic";
@@ -137,6 +138,8 @@ export default async function SysadminPrintPage({ searchParams }: PageProps) {
           </table>
         )}
       </section>
+
+      <BrandWatermark tagline="Relatório de plataforma · Amazing School · amazingschool.app" />
     </ReportShell>
   );
 }

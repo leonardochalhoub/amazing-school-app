@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Printer } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useI18n } from "@/lib/i18n/context";
 
 interface YearSelectorProps {
   /** Years to offer — usually seeded from the data's earliest timestamp. */
@@ -14,7 +15,10 @@ interface YearSelectorProps {
       because React Server Components cannot pass plain functions
       across to client components. */
   hrefTemplate: string;
-  /** Button label (usually "Baixar PDF" / "Download PDF"). */
+  /** Button label — pass both locales; the active one is picked
+      via `useI18n()`. Legacy `label` still works for PT-only uses. */
+  labelEn?: string;
+  labelPt?: string;
   label?: string;
   /** Whether to include an "All time" option. Default true. */
   includeAll?: boolean;
@@ -31,18 +35,26 @@ export function YearSelector({
   years,
   initial,
   hrefTemplate,
-  label = "Baixar PDF",
+  label,
+  labelEn,
+  labelPt,
   includeAll = true,
   className,
 }: YearSelectorProps) {
+  const { locale } = useI18n();
   const latest = years[years.length - 1] ?? new Date().getFullYear();
   const [year, setYear] = useState<number | "all">(initial ?? latest);
+
+  const resolvedLabel =
+    (locale === "pt-BR" ? labelPt : labelEn) ??
+    label ??
+    (locale === "pt-BR" ? "Baixar PDF" : "Download PDF");
 
   return (
     <div className={cn("flex flex-wrap items-center gap-2", className)}>
       <div
         role="tablist"
-        aria-label="Período"
+        aria-label={locale === "pt-BR" ? "Período" : "Period"}
         className="inline-flex items-center gap-1 rounded-lg border border-border bg-background p-0.5"
       >
         {years.map((y) => (
@@ -75,7 +87,7 @@ export function YearSelector({
                 : "text-muted-foreground hover:bg-muted hover:text-foreground",
             )}
           >
-            Tudo
+            {locale === "pt-BR" ? "Tudo" : "All time"}
           </button>
         ) : null}
       </div>
@@ -86,7 +98,7 @@ export function YearSelector({
         className="inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground shadow-sm hover:bg-primary/90"
       >
         <Printer className="h-3.5 w-3.5" />
-        {label}
+        {resolvedLabel}
       </a>
     </div>
   );

@@ -2,25 +2,30 @@
 
 import { Printer } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useI18n } from "@/lib/i18n/context";
 
 interface PdfButtonProps {
   href: string;
   label?: string;
+  labelEn?: string;
+  labelPt?: string;
   variant?: "default" | "subtle";
   className?: string;
 }
 
-/**
- * Thin client-side button that opens a /print/* route in a new tab
- * with `autoprint=1` so the browser print dialog fires immediately.
- * Use on dashboard pages where no period/year selector is needed.
- */
 export function PdfButton({
   href,
-  label = "Baixar PDF",
+  label,
+  labelEn,
+  labelPt,
   variant = "default",
   className,
 }: PdfButtonProps) {
+  const { locale } = useI18n();
+  const resolvedLabel =
+    (locale === "pt-BR" ? labelPt : labelEn) ??
+    label ??
+    (locale === "pt-BR" ? "Baixar PDF" : "Download PDF");
   const withAutoprint = href.includes("?")
     ? `${href}&autoprint=1`
     : `${href}?autoprint=1`;
@@ -38,7 +43,7 @@ export function PdfButton({
       )}
     >
       <Printer className="h-3.5 w-3.5" />
-      {label}
+      {resolvedLabel}
     </a>
   );
 }

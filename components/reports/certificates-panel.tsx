@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap, FileText } from "lucide-react";
 import { IssueCertificateButton } from "@/components/reports/issue-certificate-button";
 import { DeleteCertificateButton } from "@/components/reports/delete-certificate-button";
+import { T } from "@/components/reports/t";
 import {
   findCertificateLevel,
   findGrade,
@@ -13,7 +14,6 @@ interface Props {
   studentName: string;
   defaultStartOn: string | null;
   certificates: CertificateSummary[];
-  /** When true the panel becomes read-only (used on student profile). */
   readOnly?: boolean;
 }
 
@@ -23,10 +23,6 @@ function fmtDateRange(start: string, end: string): string {
   return `${s} → ${e}`;
 }
 
-/**
- * Certificates card — teacher side exposes "Emitir certificado" plus
- * per-row delete; student side is read-only.
- */
 export function CertificatesPanel({
   rosterStudentId,
   studentName,
@@ -39,7 +35,7 @@ export function CertificatesPanel({
       <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-2 space-y-0 pb-3">
         <CardTitle className="flex items-center gap-2 text-base">
           <GraduationCap className="h-4 w-4 text-primary" />
-          Certificados
+          <T en="Certificates" pt="Certificados" />
           {certificates.length > 0 ? (
             <span className="ml-1 text-xs font-normal text-muted-foreground tabular-nums">
               {certificates.length}
@@ -56,15 +52,39 @@ export function CertificatesPanel({
       </CardHeader>
       <CardContent>
         <p className="mb-3 text-[11px] text-muted-foreground">
-          Alinhado ao <span className="font-semibold">CEFR</span> (Common
-          European Framework of Reference for Languages) — mesma escala
-          usada por Cambridge, Cultura Inglesa e demais escolas.
+          <T
+            en={
+              <>
+                Aligned with <span className="font-semibold">CEFR</span>{" "}
+                (Common European Framework of Reference for Languages) — the
+                same scale used by Cambridge, Cultura Inglesa, and the
+                leading language schools.
+              </>
+            }
+            pt={
+              <>
+                Alinhado ao <span className="font-semibold">CEFR</span>{" "}
+                (Common European Framework of Reference for Languages) —
+                mesma escala usada por Cambridge, Cultura Inglesa e demais
+                escolas.
+              </>
+            }
+          />
         </p>
         {certificates.length === 0 ? (
           <p className="rounded-md border border-dashed border-border px-3 py-6 text-center text-xs text-muted-foreground">
-            {readOnly
-              ? "Nenhum certificado emitido ainda. Seu professor pode emitir quando um módulo for concluído."
-              : "Nenhum certificado emitido ainda. Emita o primeiro quando o aluno concluir um nível."}
+            <T
+              en={
+                readOnly
+                  ? "No certificate issued yet. Your teacher can issue one when a level is complete."
+                  : "No certificate issued yet. Issue the first one when the student completes a level."
+              }
+              pt={
+                readOnly
+                  ? "Nenhum certificado emitido ainda. Seu professor pode emitir quando um módulo for concluído."
+                  : "Nenhum certificado emitido ainda. Emita o primeiro quando o aluno concluir um nível."
+              }
+            />
           </p>
         ) : (
           <ul className="divide-y divide-border overflow-hidden rounded-md border border-border">
@@ -79,14 +99,14 @@ export function CertificatesPanel({
                   <div
                     className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
                     style={{ background: g?.color ?? "#64748b" }}
-                    aria-label={`Conceito ${d.grade}`}
+                    aria-label={`Grade ${d.grade}`}
                   >
                     {d.grade}
                   </div>
                   <div className="min-w-0 flex-1">
                     <p className="truncate font-semibold">
                       {d.title ??
-                        `Certificado · ${lvl?.codeLabel ?? d.level.toUpperCase()}`}
+                        `${lvl?.codeLabel ?? d.level.toUpperCase()}`}
                     </p>
                     <p className="truncate text-muted-foreground">
                       {lvl?.title ?? d.level} ·{" "}
@@ -101,7 +121,7 @@ export function CertificatesPanel({
                       className="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-2.5 py-1 text-[11px] font-medium hover:bg-muted"
                     >
                       <FileText className="h-3 w-3" />
-                      Baixar
+                      <T en="Download" pt="Baixar" />
                     </a>
                     {!readOnly ? <DeleteCertificateButton id={d.id} /> : null}
                   </div>

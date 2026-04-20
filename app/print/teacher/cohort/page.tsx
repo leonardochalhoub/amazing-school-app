@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getCohortReport } from "@/lib/actions/reports";
 import { ReportShell } from "@/components/reports/report-shell";
+import { BrandWatermark } from "@/components/reports/brand-watermark";
 import { parseYear, yearLabel } from "@/lib/reports/period";
 import { reportFilename, slugifyForFilename } from "@/lib/reports/filename";
 
@@ -162,6 +163,8 @@ export default async function CohortPrintPage({ searchParams }: PageProps) {
           </table>
         )}
       </section>
+
+      <BrandWatermark tagline="Relatório gerado por Amazing School · amazingschool.app" />
     </ReportShell>
   );
 }

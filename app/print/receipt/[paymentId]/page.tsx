@@ -5,6 +5,7 @@ import { getReceiptData } from "@/lib/actions/reports";
 import { AutoPrint } from "@/components/reports/auto-print";
 import { PrintToolbar } from "@/components/reports/print-toolbar";
 import { ReportFooter } from "@/components/reports/report-footer";
+import { BrandWatermark } from "@/components/reports/brand-watermark";
 import { formatBRL, amountInWordsBRL } from "@/lib/reports/brl";
 import { reportFilename, slugifyForFilename } from "@/lib/reports/filename";
 import { schoolLogoPublicUrl, SCHOOL_LOGO_SRC } from "@/lib/school-logo";
@@ -147,7 +148,7 @@ export default async function ReceiptPrintPage({
         <section style={{ lineHeight: 1.7, fontSize: "11.5pt" }}>
           <p>
             Eu,{" "}
-            <strong>{data.teacher.fullName ?? "—"}</strong>
+            <strong>{data.teacher.fullName || data.teacher.email || "—"}</strong>
             {data.teacher.email ? (
               <span className="report-muted"> ({data.teacher.email})</span>
             ) : null}
@@ -244,7 +245,7 @@ export default async function ReceiptPrintPage({
                 fontSize: "9.5pt",
               }}
             >
-              {data.teacher.fullName ?? "Professor(a)"}
+              {data.teacher.fullName || data.teacher.email || "Professor(a)"}
               <br />
               <span className="report-muted">Quem recebeu</span>
             </div>
@@ -265,9 +266,11 @@ export default async function ReceiptPrintPage({
           </div>
         </section>
 
+        <BrandWatermark tagline="Recibo emitido por Amazing School · amazingschool.app" />
+
         <ReportFooter
           generatedAt={data.generatedAt}
-          left={data.teacher.fullName}
+          left={data.teacher.fullName || data.teacher.email}
         />
       </article>
     </>

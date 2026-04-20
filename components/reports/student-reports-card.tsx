@@ -3,6 +3,8 @@ import { FileText, Receipt } from "lucide-react";
 import { YearSelector } from "@/components/reports/year-selector";
 import { PdfButton } from "@/components/reports/pdf-button";
 import { ReceiptsVisibilityToggle } from "@/components/reports/receipts-visibility-toggle";
+import { ShareReceiptToggle } from "@/components/reports/share-receipt-toggle";
+import { T } from "@/components/reports/t";
 import { availableYears } from "@/lib/reports/period";
 import { formatBRL } from "@/lib/reports/brl";
 import type { PaidInvoiceRow } from "@/lib/actions/reports";
@@ -15,31 +17,13 @@ interface StudentReportsCardProps {
   receiptsVisibleToStudent: boolean;
 }
 
-const MONTHS_PT = [
-  "Jan",
-  "Fev",
-  "Mar",
-  "Abr",
-  "Mai",
-  "Jun",
-  "Jul",
-  "Ago",
-  "Set",
-  "Out",
-  "Nov",
-  "Dez",
-];
+const MONTHS_PT = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
 
 function monthLabel(iso: string): string {
   const m = Number(iso.slice(5, 7));
   return `${MONTHS_PT[m - 1] ?? iso.slice(5, 7)}/${iso.slice(0, 4)}`;
 }
 
-/**
- * "Documentos" card on the per-student teacher page. Exposes the
- * student curriculum report (with a year selector) plus a list of
- * printable receipts for every month they've paid.
- */
 export function StudentReportsCard({
   rosterId,
   rosterCreatedAt,
@@ -58,34 +42,41 @@ export function StudentReportsCard({
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-base">
           <FileText className="h-4 w-4 text-primary" />
-          Documentos
+          <T en="Documents" pt="Documentos" />
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-5">
-        {/* Curriculum report */}
         <div className="space-y-2">
           <div className="flex items-baseline justify-between gap-3">
-            <p className="text-sm font-semibold">Currículo em PDF</p>
+            <p className="text-sm font-semibold">
+              <T en="Curriculum PDF" pt="Currículo em PDF" />
+            </p>
             <p className="text-[11px] text-muted-foreground">
-              Escolha o período e gere o relatório com o logo da escola.
+              <T
+                en="Pick the period and generate the report with the school logo."
+                pt="Escolha o período e gere o relatório com o logo da escola."
+              />
             </p>
           </div>
           <YearSelector
             years={years}
             hrefTemplate={`/print/student/${rosterId}/curriculum?year={year}&autoprint=1`}
-            label="Baixar currículo"
+            labelEn="Download curriculum"
+            labelPt="Baixar currículo"
           />
         </div>
 
-        {/* Receipts list */}
         <div className="space-y-2">
           <div className="flex items-baseline justify-between gap-3">
             <p className="flex items-center gap-1.5 text-sm font-semibold">
               <Receipt className="h-3.5 w-3.5" />
-              Recibos de pagamento
+              <T en="Payment receipts" pt="Recibos de pagamento" />
             </p>
             <p className="text-[11px] text-muted-foreground">
-              Um recibo formal por mensalidade quitada.
+              <T
+                en="One formal receipt per paid month."
+                pt="Um recibo formal por mensalidade quitada."
+              />
             </p>
           </div>
           <ReceiptsVisibilityToggle
@@ -94,8 +85,10 @@ export function StudentReportsCard({
           />
           {paidInvoices.length === 0 ? (
             <p className="rounded-md border border-dashed border-border px-3 py-4 text-xs text-muted-foreground">
-              Nenhuma mensalidade paga até o momento. Marque uma célula
-              como paga na matriz para liberar o recibo.
+              <T
+                en="No paid month yet. Mark a cell as paid in the matrix to unlock the receipt."
+                pt="Nenhuma mensalidade paga até o momento. Marque uma célula como paga na matriz para liberar o recibo."
+              />
             </p>
           ) : (
             <ul className="divide-y divide-border overflow-hidden rounded-md border border-border">
@@ -104,24 +97,32 @@ export function StudentReportsCard({
                   key={inv.paymentId}
                   className="flex items-center justify-between gap-2 px-3 py-2 text-xs"
                 >
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-semibold capitalize">
                       {monthLabel(inv.billingMonth)}
                     </p>
                     <p className="text-muted-foreground tabular-nums">
                       {formatBRL(inv.amountCents)}
                       {inv.paidAt
-                        ? ` · Pago em ${new Date(inv.paidAt).toLocaleDateString(
+                        ? ` · ${new Date(inv.paidAt).toLocaleDateString(
                             "pt-BR",
                           )}`
                         : ""}
                     </p>
                   </div>
-                  <PdfButton
-                    href={`/print/receipt/${inv.paymentId}`}
-                    label="Recibo"
-                    variant="subtle"
-                  />
+                  <div className="flex shrink-0 items-center gap-1.5">
+                    <ShareReceiptToggle
+                      paymentId={inv.paymentId}
+                      initialShared={inv.sharedWithStudent}
+                      masterSwitchOn={receiptsVisibleToStudent}
+                    />
+                    <PdfButton
+                      href={`/print/receipt/${inv.paymentId}`}
+                      labelEn="Receipt"
+                      labelPt="Recibo"
+                      variant="subtle"
+                    />
+                  </div>
                 </li>
               ))}
             </ul>

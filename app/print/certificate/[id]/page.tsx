@@ -435,7 +435,7 @@ export default async function CertificatePrintPage({
                 color: "#0a0a0a",
               }}
             >
-              {data.teacher.fullName ?? "Professor(a)"}
+              {data.teacher.fullName || data.teacher.email || "Professor(a)"}
             </div>
             <p style={{ fontSize: "9pt", color: "#6b7280", marginTop: 2 }}>
               Professor(a) responsável
