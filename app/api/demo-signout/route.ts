@@ -17,7 +17,15 @@ import { createClient } from "@/lib/supabase/server";
 export async function GET(request: NextRequest) {
   const supabase = await createClient();
   await supabase.auth.signOut();
-  const target = new URL("/login", request.url);
+  // Accept an optional ?to= override so the demo banner's "Back to
+  // home" button can drop the visitor on the landing page with its
+  // signup CTA instead of the login form. Paths only — never allow
+  // an external redirect target.
+  const raw = request.nextUrl.searchParams.get("to");
+  const safePath = raw && raw.startsWith("/") && !raw.startsWith("//")
+    ? raw
+    : "/login";
+  const target = new URL(safePath, request.url);
   const response = NextResponse.redirect(target, 303);
   // Belt-and-suspenders: null every sb-* cookie on the response so
   // even if the signOut cookie-clear didn't land, the browser still
