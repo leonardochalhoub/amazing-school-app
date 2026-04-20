@@ -48,7 +48,7 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
       <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
         <p className="font-medium text-foreground">
           {granularity === "month"
-            ? "Activity · last 5 years"
+            ? `Activity · last ${buckets.length} months`
             : `Activity · last ${buckets.length} days`}{" "}
           <span className="ml-1 font-normal text-muted-foreground">
             ({granularity === "month" ? "per month" : "per day"})

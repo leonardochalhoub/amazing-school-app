@@ -270,7 +270,9 @@ export default async function SysadminPage() {
               ) : null}
               {topTeachers.map((t) => (
                 <tr key={t.id} className="border-t">
-                  <td className="px-4 py-2 font-medium">{t.name}</td>
+                  <td className="px-4 py-2 font-medium">
+                    {titleCase(t.name)}
+                  </td>
                   <td className="px-4 py-2 text-right tabular-nums">
                     {t.classroomsCount}
                   </td>

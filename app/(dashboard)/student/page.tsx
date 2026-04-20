@@ -186,7 +186,11 @@ export default async function StudentHome() {
     .select("lesson_slug, completed_at")
     .eq("student_id", user.id)
     .not("completed_at", "is", null)
-    .order("completed_at", { ascending: false });
+    .order("completed_at", { ascending: false })
+    // Supabase's default select cap is 1000 — an active student can
+    // blow past that across a long enrollment. Set a generous ceiling
+    // so the chart never silently drops the oldest history.
+    .limit(10_000);
   const completedAtBySlug = new Map<string, string>();
   for (const c of (allCompletions ?? []) as Array<{
     lesson_slug: string;
