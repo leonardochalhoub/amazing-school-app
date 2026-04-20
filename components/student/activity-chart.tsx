@@ -99,7 +99,13 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
               : granularity === "week"
                 ? "per week"
                 : "per day"}{" "}
-            · {activeDays} active)
+            · {activeDays} active{" "}
+            {granularity === "month"
+              ? "months"
+              : granularity === "week"
+                ? "weeks"
+                : "days"}
+            )
           </span>
         </p>
         <div className="flex items-center gap-3 text-[10px] text-muted-foreground">
@@ -111,7 +117,14 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
             className="bg-pink-500"
             label={`Music · ${totalMusic}`}
           />
-          <span className="tabular-nums">Peak · {max}/day</span>
+          <span className="tabular-nums">
+            Peak · {max}/
+            {granularity === "month"
+              ? "mo"
+              : granularity === "week"
+                ? "wk"
+                : "day"}
+          </span>
         </div>
       </div>
 

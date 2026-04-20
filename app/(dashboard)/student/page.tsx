@@ -277,44 +277,54 @@ export default async function StudentHome() {
   const firstName =
     profile?.full_name?.split(" ")[0] ?? user.email?.split("@")[0] ?? "there";
 
-  // Activity chart — 2-year window, one bar per day, stacked lessons
-  // (indigo) + music (pink). All times resolve in Brazil local time
-  // (UTC-3) so a completion at 22:00 BRT lands in the right day.
+  // Activity chart — 24 monthly buckets ending on the current
+  // month, stacked lessons (indigo) + music (pink). Aggregating by
+  // month turns the chart from a 730-bar matchstick forest into a
+  // readable bar chart where bar height reflects monthly volume.
+  // All times resolve in Brazil local time (UTC-3) so a completion
+  // just after midnight local still lands in the right month.
   const BRT_OFFSET_MS = -3 * 60 * 60 * 1000;
-  const msPerDay = 24 * 60 * 60 * 1000;
-  const brtToday = new Date(
-    Math.floor((Date.now() + BRT_OFFSET_MS) / msPerDay) * msPerDay
-  );
-  const DAYS = 730; // ~2 calendar years
-  const rangeStart = new Date(brtToday.getTime() - (DAYS - 1) * msPerDay);
+  const MONTHS = 24;
+  const now = new Date(Date.now() + BRT_OFFSET_MS);
+  const currentYear = now.getUTCFullYear();
+  const currentMonth = now.getUTCMonth();
 
   const activityBuckets: ActivityBucket[] = [];
-  for (let i = 0; i < DAYS; i++) {
-    const d = new Date(rangeStart.getTime() + i * msPerDay);
+  const bucketIndexByKey = new Map<string, number>();
+  for (let i = MONTHS - 1; i >= 0; i--) {
+    let y = currentYear;
+    let m = currentMonth - i;
+    while (m < 0) {
+      m += 12;
+      y -= 1;
+    }
+    const key = `${y}-${String(m + 1).padStart(2, "0")}`;
+    bucketIndexByKey.set(key, activityBuckets.length);
     activityBuckets.push({
-      start: d.toISOString().slice(0, 10),
+      start: `${key}-01`,
       lessons: 0,
       music: 0,
     });
   }
+
+  function monthKey(d: Date): string {
+    // Shift into BRT before extracting year/month so completions at
+    // 22:30 BRT on Jan 31 don't leak into February.
+    const brt = new Date(d.getTime() + BRT_OFFSET_MS);
+    return `${brt.getUTCFullYear()}-${String(brt.getUTCMonth() + 1).padStart(2, "0")}`;
+  }
+
   // Activity events come from two sources, merged:
-  //   1. lesson_progress rows — the canonical "student finished
-  //      lesson X at time T" record, populated by the completion
-  //      action both for regular lessons and music.
+  //   1. lesson_progress rows — canonical "student finished X at T".
   //   2. Assignment rows with status="completed" that have no
-  //      matching lesson_progress — can happen on demo data (seed
-  //      used to skip music progress rows) and on legacy entries.
-  //      We fall back to assigned_at as the event date so at least
-  //      the chart reflects the real volume of work done.
+  //      matching lesson_progress (demo seed edge cases + legacy).
+  //      Fallback to assigned_at as the event date.
   const slugsWithProgress = new Set<string>();
   for (const c of allCompletions ?? []) {
     const row = c as { lesson_slug: string; completed_at: string };
-    const t = new Date(row.completed_at);
-    const tDay =
-      Math.floor((t.getTime() + BRT_OFFSET_MS) / msPerDay) * msPerDay;
-    const idx = Math.floor((tDay - rangeStart.getTime()) / msPerDay);
+    const idx = bucketIndexByKey.get(monthKey(new Date(row.completed_at)));
     slugsWithProgress.add(row.lesson_slug);
-    if (idx < 0 || idx >= activityBuckets.length) continue;
+    if (idx === undefined) continue;
     if (row.lesson_slug.startsWith("music:")) activityBuckets[idx].music++;
     else activityBuckets[idx].lessons++;
   }
@@ -322,11 +332,8 @@ export default async function StudentHome() {
     if (a.status !== "completed") continue;
     const fullSlug = a.kind === "music" ? `music:${a.slug}` : a.slug;
     if (slugsWithProgress.has(fullSlug)) continue;
-    const t = new Date(a.assignedAt);
-    const tDay =
-      Math.floor((t.getTime() + BRT_OFFSET_MS) / msPerDay) * msPerDay;
-    const idx = Math.floor((tDay - rangeStart.getTime()) / msPerDay);
-    if (idx < 0 || idx >= activityBuckets.length) continue;
+    const idx = bucketIndexByKey.get(monthKey(new Date(a.assignedAt)));
+    if (idx === undefined) continue;
     if (a.kind === "music") activityBuckets[idx].music++;
     else activityBuckets[idx].lessons++;
   }
@@ -560,7 +567,7 @@ export default async function StudentHome() {
       {/* ACTIVITY CHART =========================================== */}
       <section className="space-y-3">
         <h2 className="text-lg font-semibold tracking-tight">Your activity</h2>
-        <ActivityChart buckets={activityBuckets} granularity="day" />
+        <ActivityChart buckets={activityBuckets} granularity="month" />
       </section>
     </div>
   );
