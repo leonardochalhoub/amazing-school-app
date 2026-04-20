@@ -99,33 +99,6 @@ export function PrivacyNotice() {
               ))}
             </div>
 
-            <div className="mt-6 rounded-lg bg-muted/40 p-3 text-xs text-muted-foreground">
-              {isPt ? (
-                <>
-                  <strong className="text-foreground">Quer apagar tudo?</strong>{" "}
-                  Mande um e-mail para{" "}
-                  <a
-                    className="underline"
-                    href="mailto:leochalhoub@hotmail.com"
-                  >
-                    leochalhoub@hotmail.com
-                  </a>{" "}
-                  e a conta é removida em até 72h.
-                </>
-              ) : (
-                <>
-                  <strong className="text-foreground">Want everything deleted?</strong>{" "}
-                  Email{" "}
-                  <a
-                    className="underline"
-                    href="mailto:leochalhoub@hotmail.com"
-                  >
-                    leochalhoub@hotmail.com
-                  </a>{" "}
-                  and the account is wiped within 72h.
-                </>
-              )}
-            </div>
           </div>
         </div>
       ) : null}
