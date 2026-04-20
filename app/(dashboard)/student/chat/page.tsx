@@ -22,20 +22,39 @@ export default async function ChatPage() {
     .single();
 
   if (!conversation) {
-    // Get student's first classroom
+    // Resolve a classroom to anchor the conversation to. Students
+    // get it from classroom_members (the classrooms they belong to);
+    // teachers have no membership row, so fall back to the first
+    // classroom they OWN. Without this fallback teacher chats never
+    // get a conversationId and the chat API silently drops the
+    // messages — the sysadmin AI tutor usage table was reading
+    // empty for teachers as a result.
+    let classroomId: string | null = null;
     const { data: membership } = await supabase
       .from("classroom_members")
       .select("classroom_id")
       .eq("student_id", user.id)
       .limit(1)
-      .single();
-
+      .maybeSingle();
     if (membership) {
+      classroomId = (membership as { classroom_id: string }).classroom_id;
+    } else {
+      const { data: owned } = await supabase
+        .from("classrooms")
+        .select("id")
+        .eq("teacher_id", user.id)
+        .order("created_at", { ascending: true })
+        .limit(1)
+        .maybeSingle();
+      if (owned) classroomId = (owned as { id: string }).id;
+    }
+
+    if (classroomId) {
       const { data: newConv } = await supabase
         .from("conversations")
         .insert({
           student_id: user.id,
-          classroom_id: membership.classroom_id,
+          classroom_id: classroomId,
         })
         .select("id")
         .single();
