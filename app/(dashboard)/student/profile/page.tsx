@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
 import { AvatarUploader } from "@/components/shared/avatar-uploader";
+import { ChangePasswordCard } from "@/components/shared/change-password-card";
 import { PrivacyNotice } from "@/components/shared/privacy-notice";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, ArrowUpRight, Calendar } from "lucide-react";
@@ -88,6 +89,10 @@ export default async function StudentProfilePage() {
           </p>
         </CardContent>
       </Card>
+
+      <ChangePasswordCard
+        isDemo={(user.email ?? "").toLowerCase().startsWith("demo.")}
+      />
 
       {startingDate ? (
         <Card>
