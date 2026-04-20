@@ -13,6 +13,7 @@ import {
   Calendar,
   Clock,
   ExternalLink,
+  ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -94,6 +95,10 @@ export function StudentHistoryPanel({
   const router = useRouter();
   const [draft, setDraft] = useState<DraftEntry | null>(null);
   const [pending, startTransition] = useTransition();
+  const [showAll, setShowAll] = useState(false);
+  const PREVIEW = 10;
+  const visible = showAll ? entries : entries.slice(0, PREVIEW);
+  const hidden = entries.length - visible.length;
 
   function openNew() {
     setDraft(emptyDraft());
@@ -320,7 +325,7 @@ export function StudentHistoryPanel({
               </tr>
             </thead>
             <tbody>
-              {entries.map((e) => (
+              {visible.map((e) => (
                 <tr key={e.id} className="border-t align-top">
                   <td className="px-3 py-2 whitespace-nowrap">
                     <div className="inline-flex items-center gap-1 font-medium">
@@ -402,6 +407,23 @@ export function StudentHistoryPanel({
               ))}
             </tbody>
           </table>
+          {entries.length > PREVIEW ? (
+            <button
+              type="button"
+              onClick={() => setShowAll((v) => !v)}
+              className="flex w-full items-center justify-center gap-1.5 border-t border-border py-2.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted/40 hover:text-foreground"
+            >
+              {showAll ? "Show less" : `Show all ${entries.length} entries`}
+              <ChevronDown
+                className={`h-3.5 w-3.5 transition-transform ${showAll ? "rotate-180" : ""}`}
+              />
+              {!showAll && hidden > 0 ? (
+                <span className="text-[10px] tabular-nums text-muted-foreground/70">
+                  (+{hidden})
+                </span>
+              ) : null}
+            </button>
+          ) : null}
         </div>
       )}
     </section>

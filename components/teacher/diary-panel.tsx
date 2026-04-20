@@ -10,6 +10,7 @@ import {
   PartyPopper,
   Cloud,
   Trash2,
+  ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n/context";
@@ -55,6 +56,8 @@ const STRINGS = {
     confirmDelete: "Delete this diary entry?",
     added: "Diary entry saved",
     deleted: "Entry deleted",
+    showAll: (n: number) => `Show all ${n} entries`,
+    showLess: "Show less",
   },
   "pt-BR": {
     heading: "Diário",
@@ -76,6 +79,8 @@ const STRINGS = {
     confirmDelete: "Apagar esta entrada?",
     added: "Entrada salva",
     deleted: "Entrada apagada",
+    showAll: (n: number) => `Ver todas as ${n} entradas`,
+    showLess: "Ver menos",
   },
 } as const;
 
@@ -87,6 +92,9 @@ export function DiaryPanel({ rosterStudentId, entries }: Props) {
   const [mood, setMood] = useState<Mood | null>(null);
   const [local, setLocal] = useState<DiaryEntry[]>(entries);
   const [pending, startTransition] = useTransition();
+  const [showAll, setShowAll] = useState(false);
+  const PREVIEW = 10;
+  const visible = showAll ? local : local.slice(0, PREVIEW);
 
   function save() {
     if (body.trim().length === 0) return;
@@ -208,7 +216,7 @@ export function DiaryPanel({ rosterStudentId, entries }: Props) {
         </p>
       ) : (
         <ol className="space-y-3">
-          {local.map((entry) => {
+          {visible.map((entry) => {
             const moodItem = entry.mood
               ? MOOD_OPTIONS.find((m) => m.value === entry.mood)
               : null;
@@ -254,6 +262,20 @@ export function DiaryPanel({ rosterStudentId, entries }: Props) {
               </li>
             );
           })}
+          {local.length > PREVIEW ? (
+            <li>
+              <button
+                type="button"
+                onClick={() => setShowAll((v) => !v)}
+                className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-dashed border-border py-2.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted/40 hover:text-foreground"
+              >
+                {showAll ? t.showLess : t.showAll(local.length)}
+                <ChevronDown
+                  className={`h-3.5 w-3.5 transition-transform ${showAll ? "rotate-180" : ""}`}
+                />
+              </button>
+            </li>
+          ) : null}
         </ol>
       )}
     </div>

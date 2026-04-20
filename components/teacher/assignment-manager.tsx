@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { toast } from "sonner";
+import { ChevronDown } from "lucide-react";
 import type { LessonAssignment } from "@/lib/supabase/types";
 import type { LessonMeta } from "@/lib/content/loader";
 import {
@@ -40,6 +41,9 @@ export function AssignmentManager({
   const [open, setOpen] = useState(false);
   const [pending, startTransition] = useTransition();
   const [local, setLocal] = useState<AssignmentRow[]>(assignments);
+  const [showAll, setShowAll] = useState(false);
+  const PREVIEW = 10;
+  const visible = showAll ? local : local.slice(0, PREVIEW);
 
   const assignedSlugs = local.map((a) => a.lesson_slug);
 
@@ -131,7 +135,7 @@ export function AssignmentManager({
         </p>
       ) : (
         <ul className="divide-y divide-border rounded border border-border">
-          {local.map((a, i) => (
+          {visible.map((a, i) => (
             <li
               key={a.id}
               className="flex items-center gap-3 px-3 py-2 text-sm"
@@ -193,6 +197,22 @@ export function AssignmentManager({
               </div>
             </li>
           ))}
+          {local.length > PREVIEW ? (
+            <li>
+              <button
+                type="button"
+                onClick={() => setShowAll((v) => !v)}
+                className="flex w-full items-center justify-center gap-1.5 py-2.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted/40 hover:text-foreground"
+              >
+                {showAll
+                  ? "Show less"
+                  : `Show all ${local.length} lessons`}
+                <ChevronDown
+                  className={`h-3.5 w-3.5 transition-transform ${showAll ? "rotate-180" : ""}`}
+                />
+              </button>
+            </li>
+          ) : null}
         </ul>
       )}
     </div>
