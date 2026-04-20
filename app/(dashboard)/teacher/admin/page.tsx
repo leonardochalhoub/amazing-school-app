@@ -19,6 +19,7 @@ import {
 import { ManagementGrid } from "@/components/owner/management-grid";
 import { RevenueAnalytics } from "@/components/owner/revenue-analytics";
 import { TeacherReportsPanel } from "@/components/reports/teacher-reports-panel";
+import { listTeacherReceipts } from "@/lib/actions/reports";
 import {
   Users,
   Flame,
@@ -62,12 +63,14 @@ export default async function TeacherManagementPage() {
     listeningResponses,
     aiChatStats,
     deletedStudents,
+    receiptsForQuery,
   ] = await Promise.all([
     getTeacherDashboardData(),
     getTeacherManagementMatrix({ months: 24 }),
     listTeacherListeningResponses(),
     getTeacherAiChatStats(),
     listDeletedRosterStudents(),
+    listTeacherReceipts(),
   ]);
 
   const financeAvailable = !("error" in financeData);
@@ -161,6 +164,7 @@ export default async function TeacherManagementPage() {
           ...rows.map((r) => r.billing_starts_on),
           ...months,
         ]}
+        receipts={receiptsForQuery}
       />
 
       {/* ========== PEOPLE & LEARNING ========== */}

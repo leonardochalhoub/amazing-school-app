@@ -983,6 +983,107 @@ export async function listPaidInvoicesForStudent(
 }
 
 /**
+ * Flat list of every paid receipt across the teacher's roster,
+ * joined with the student name + master-visibility flag. Ordered by
+ * paid_at DESC (falls back to billing_month) so the newest receipt
+ * reads first in the query dialog.
+ */
+export interface TeacherReceiptRow {
+  paymentId: string;
+  rosterStudentId: string;
+  studentName: string;
+  classroomName: string | null;
+  billingMonth: string;
+  amountCents: number;
+  paidAt: string | null;
+  sharedWithStudent: boolean;
+  receiptsVisibleToStudent: boolean;
+}
+
+export async function listTeacherReceipts(): Promise<TeacherReceiptRow[]> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return [];
+
+  const admin = createAdminClient();
+  const { data: profile } = await admin
+    .from("profiles")
+    .select("role")
+    .eq("id", user.id)
+    .maybeSingle();
+  if (!isTeacherRole((profile as { role?: string } | null)?.role)) return [];
+
+  // Pull the teacher's roster first so we can resolve names + the
+  // master visibility flag in one round-trip.
+  const { data: rosterRows } = await admin
+    .from("roster_students")
+    .select(
+      "id, full_name, classroom_id, monthly_tuition_cents, receipts_visible_to_student, classrooms(name)",
+    )
+    .eq("teacher_id", user.id);
+  const rosters = new Map<
+    string,
+    {
+      full_name: string;
+      classroom_name: string | null;
+      monthly_tuition_cents: number | null;
+      receipts_visible_to_student: boolean;
+    }
+  >();
+  for (const r of (rosterRows ?? []) as Array<{
+    id: string;
+    full_name: string;
+    classroom_id: string | null;
+    monthly_tuition_cents: number | null;
+    receipts_visible_to_student: boolean;
+    classrooms: { name: string } | { name: string }[] | null;
+  }>) {
+    const c = Array.isArray(r.classrooms) ? r.classrooms[0] : r.classrooms;
+    rosters.set(r.id, {
+      full_name: r.full_name,
+      classroom_name: c?.name ?? null,
+      monthly_tuition_cents: r.monthly_tuition_cents,
+      receipts_visible_to_student: r.receipts_visible_to_student === true,
+    });
+  }
+  if (rosters.size === 0) return [];
+
+  const { data: pays } = await admin
+    .from("student_payments")
+    .select(
+      "id, roster_student_id, billing_month, amount_cents, paid_at, shared_with_student",
+    )
+    .in("roster_student_id", Array.from(rosters.keys()))
+    .eq("paid", true)
+    .order("paid_at", { ascending: false, nullsFirst: false })
+    .limit(5_000);
+
+  return ((pays ?? []) as Array<{
+    id: string;
+    roster_student_id: string;
+    billing_month: string;
+    amount_cents: number | null;
+    paid_at: string | null;
+    shared_with_student: boolean | null;
+  }>).map((p) => {
+    const r = rosters.get(p.roster_student_id);
+    return {
+      paymentId: p.id,
+      rosterStudentId: p.roster_student_id,
+      studentName: r?.full_name ?? "—",
+      classroomName: r?.classroom_name ?? null,
+      billingMonth: p.billing_month.slice(0, 10),
+      amountCents: p.amount_cents ?? r?.monthly_tuition_cents ?? 0,
+      paidAt: p.paid_at,
+      sharedWithStudent: p.shared_with_student === true,
+      receiptsVisibleToStudent: r?.receipts_visible_to_student ?? false,
+    };
+  });
+}
+
+/**
  * Teacher flips a single paid receipt "shared with student" on or
  * off. The master `receipts_visible_to_student` flag on the roster
  * row is a prerequisite — without it, the student never sees any

@@ -239,7 +239,7 @@ export default async function StudentCurriculumPrintPage({
         )}
       </section>
 
-      <BrandWatermark tagline="Currículo gerado por Amazing School · amazingschool.app" />
+      <BrandWatermark tagline="Currículo gerado por Amazing School · amazing-school-app.vercel.app" />
     </ReportShell>
   );
 }

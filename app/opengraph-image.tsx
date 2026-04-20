@@ -106,7 +106,7 @@ export default async function OG() {
             color: "rgba(255,255,255,0.6)",
           }}
         >
-          <div>amazingschool.app</div>
+          <div>amazing-school-app.vercel.app</div>
           <div style={{ display: "flex", gap: 16 }}>
             <span>A1 → B2</span>
             <span>·</span>

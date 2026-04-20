@@ -32,7 +32,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://amazingschool.app";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://amazing-school-app.vercel.app";
 const SITE_NAME = "Amazing School";
 const DEFAULT_TITLE =
   "Amazing School — Learn English with AI · Aprenda inglês com IA";

@@ -11,7 +11,7 @@ import { SCHOOL_LOGO_SRC } from "@/lib/school-logo";
  * report feels institutionally endorsed rather than overdesigned.
  */
 export function BrandWatermark({
-  tagline = "Emitido por Amazing School · amazingschool.app",
+  tagline = "Emitido por Amazing School · amazing-school-app.vercel.app",
 }: {
   tagline?: string;
 }) {

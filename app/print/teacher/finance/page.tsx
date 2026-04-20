@@ -183,7 +183,7 @@ export default async function FinancePrintPage({ searchParams }: PageProps) {
         </div>
       </section>
 
-      <BrandWatermark tagline="Relatório financeiro gerado por Amazing School · amazingschool.app" />
+      <BrandWatermark tagline="Relatório financeiro gerado por Amazing School · amazing-school-app.vercel.app" />
     </ReportShell>
   );
 }

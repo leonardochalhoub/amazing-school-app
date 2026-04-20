@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://amazingschool.app";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://amazing-school-app.vercel.app";
 
 /**
  * Crawlers see the public marketing surface + auth entry points,

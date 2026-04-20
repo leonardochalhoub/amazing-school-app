@@ -266,7 +266,7 @@ export default async function ReceiptPrintPage({
           </div>
         </section>
 
-        <BrandWatermark tagline="Recibo emitido por Amazing School · amazingschool.app" />
+        <BrandWatermark tagline="Recibo emitido por Amazing School · amazing-school-app.vercel.app" />
 
         <ReportFooter
           generatedAt={data.generatedAt}

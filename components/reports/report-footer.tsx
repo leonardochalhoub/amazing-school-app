@@ -3,7 +3,7 @@ interface ReportFooterProps {
   generatedAt?: string;
   /** Free-form left-hand footer string — e.g. teacher or school name. */
   left?: string | null;
-  /** Free-form right-hand footer string — e.g. "Amazing School · amazingschool.app". */
+  /** Free-form right-hand footer string — e.g. "Amazing School · amazing-school-app.vercel.app". */
   right?: string | null;
 }
 
@@ -30,7 +30,7 @@ export function ReportFooter({
         </span>
       </span>
       <span className="report-muted">
-        {right ?? "Amazing School · amazingschool.app"}
+        {right ?? "Amazing School · amazing-school-app.vercel.app"}
       </span>
     </footer>
   );

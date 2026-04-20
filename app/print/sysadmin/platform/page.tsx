@@ -139,7 +139,7 @@ export default async function SysadminPrintPage({ searchParams }: PageProps) {
         )}
       </section>
 
-      <BrandWatermark tagline="Relatório de plataforma · Amazing School · amazingschool.app" />
+      <BrandWatermark tagline="Relatório de plataforma · Amazing School · amazing-school-app.vercel.app" />
     </ReportShell>
   );
 }

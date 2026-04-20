@@ -164,7 +164,7 @@ export default async function CohortPrintPage({ searchParams }: PageProps) {
         )}
       </section>
 
-      <BrandWatermark tagline="Relatório gerado por Amazing School · amazingschool.app" />
+      <BrandWatermark tagline="Relatório gerado por Amazing School · amazing-school-app.vercel.app" />
     </ReportShell>
   );
 }
