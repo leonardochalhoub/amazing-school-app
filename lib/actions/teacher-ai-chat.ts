@@ -16,10 +16,20 @@ export interface TeacherAiChatRow {
 
 /**
  * Per-student AI-tutor usage summary for the signed-in teacher.
- * Scoped to conversations belonging to students in classrooms this
- * teacher owns. "activeDays" is the count of distinct calendar
- * days that student sent at least one user-role message;
- * messagesPerDay is total messages ÷ activeDays (0 when inactive).
+ * Scoped to every person this teacher has any claim over:
+ *   - themselves (teachers using the tutor personally)
+ *   - students rostered under them (roster_students.teacher_id),
+ *     including roster students with no classroom yet
+ *   - students enrolled in classrooms they own (classroom_members)
+ *
+ * We aggregate user-role messages per student_id. "activeDays" is
+ * the count of distinct calendar days that student sent at least
+ * one message; messagesPerDay is total ÷ activeDays (0 when inactive).
+ *
+ * Scoping by student list (not by conversation.classroom_id) is
+ * intentional — roster-only students have no classroom and their
+ * conversations carry classroom_id = NULL, so a classroom-based
+ * filter would silently drop them.
  */
 export async function getTeacherAiChatStats(): Promise<TeacherAiChatRow[]> {
   const supabase = await createClient();
@@ -30,27 +40,50 @@ export async function getTeacherAiChatStats(): Promise<TeacherAiChatRow[]> {
 
   const admin = createAdminClient();
 
-  const { data: classrooms } = await admin
-    .from("classrooms")
-    .select("id, name")
-    .eq("teacher_id", user.id);
-  const classroomIds = (classrooms ?? []).map(
-    (c) => (c as { id: string }).id,
-  );
-  if (classroomIds.length === 0) return [];
+  const [classroomsRes, rosterRes] = await Promise.all([
+    admin.from("classrooms").select("id, name").eq("teacher_id", user.id),
+    admin
+      .from("roster_students")
+      .select("auth_user_id")
+      .eq("teacher_id", user.id)
+      .not("auth_user_id", "is", null),
+  ]);
+
+  const classrooms = (classroomsRes.data ?? []) as Array<{
+    id: string;
+    name: string;
+  }>;
+  const classroomIds = classrooms.map((c) => c.id);
   const classroomNameById = new Map<string, string>();
-  for (const c of classrooms ?? []) {
-    const row = c as { id: string; name: string };
-    classroomNameById.set(row.id, row.name);
+  for (const c of classrooms) classroomNameById.set(c.id, c.name);
+
+  const rosterUserIds = ((rosterRes.data ?? []) as Array<{
+    auth_user_id: string | null;
+  }>)
+    .map((r) => r.auth_user_id)
+    .filter((x): x is string => !!x);
+
+  let memberUserIds: string[] = [];
+  if (classroomIds.length > 0) {
+    const { data: members } = await admin
+      .from("classroom_members")
+      .select("student_id")
+      .in("classroom_id", classroomIds);
+    memberUserIds = ((members ?? []) as Array<{ student_id: string }>).map(
+      (m) => m.student_id,
+    );
   }
 
-  // Conversations scoped to this teacher's classrooms. Student_id
-  // resolves to a profile (could be a student OR a teacher exploring
-  // their own AI tutor under their auth user — we show both).
+  // Set of every person the teacher has any claim over.
+  const scopedUserIds = Array.from(
+    new Set<string>([user.id, ...rosterUserIds, ...memberUserIds]),
+  );
+  if (scopedUserIds.length === 0) return [];
+
   const { data: conversations } = await admin
     .from("conversations")
     .select("id, student_id, classroom_id")
-    .in("classroom_id", classroomIds)
+    .in("student_id", scopedUserIds)
     .limit(100_000);
 
   const convoToStudent = new Map<string, string>();
