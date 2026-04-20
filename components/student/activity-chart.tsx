@@ -13,12 +13,14 @@ export interface ActivityBucket {
 
 interface Props {
   buckets: ActivityBucket[];
-  /** "month" for monthly buckets, "day" for daily. */
-  granularity?: "month" | "day";
+  /** "month" | "week" | "day" — affects header copy + tooltip format. */
+  granularity?: "month" | "week" | "day";
 }
 
 export function ActivityChart({ buckets, granularity = "month" }: Props) {
-  const [hover, setHover] = useState<ActivityBucket | null>(null);
+  const [hover, setHover] = useState<{ b: ActivityBucket; i: number } | null>(
+    null,
+  );
 
   const { max, totalLessons, totalMusic, activeDays } = useMemo(() => {
     let m = 0;
@@ -44,12 +46,41 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
     );
   }
 
-  // Chart height — a hair taller than before so daily bar heights
-  // actually read. The stacked bar uses absolute pixels for each
-  // segment (not %) so small counts stay distinguishable from big
-  // ones even when max is 2 or 3.
+  // Y axis: fixed scale with headroom so a 1-event day is a short
+  // bar and a 4-event day is a tall bar. Without the floor at 4 a
+  // student who only ever did 1 lesson/day would see every bar
+  // maxing the chart, which is what made the 2-year view look
+  // "crazy" (every filled day read identically).
+  const yMax = Math.max(4, max + 1);
   const H = 140;
-  const unitPx = Math.max(4, Math.floor((H - 8) / Math.max(1, max)));
+  const unitPx = (H - 12) / yMax;
+
+  // Month tick positions — index of the first bucket that starts a
+  // new month, so we can drop a label under the chart. Works for any
+  // granularity where bucket.start parses as a date.
+  const monthTicks = useMemo(() => {
+    const ticks: { i: number; label: string }[] = [];
+    let lastMonth = -1;
+    for (let i = 0; i < buckets.length; i++) {
+      const d = new Date(buckets[i].start + "T00:00:00Z");
+      const m = d.getUTCFullYear() * 12 + d.getUTCMonth();
+      if (m !== lastMonth) {
+        lastMonth = m;
+        ticks.push({
+          i,
+          label: d.toLocaleDateString("en-US", {
+            month: "short",
+            year:
+              d.getUTCMonth() === 0 && i > 0 ? "2-digit" : undefined,
+            timeZone: "UTC",
+          }),
+        });
+      }
+    }
+    // Keep the density readable on long ranges — cap to ~24 labels.
+    const step = Math.max(1, Math.ceil(ticks.length / 24));
+    return ticks.filter((_, idx) => idx % step === 0);
+  }, [buckets]);
 
   return (
     <div className="space-y-2 rounded-xl border border-border bg-card p-4 shadow-xs">
@@ -57,10 +88,17 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
         <p className="font-medium text-foreground">
           {granularity === "month"
             ? `Activity · last ${buckets.length} months`
-            : `Activity · last ${buckets.length} days`}{" "}
+            : granularity === "week"
+              ? `Activity · last ${buckets.length} weeks`
+              : `Activity · last ${buckets.length} days`}{" "}
           <span className="ml-1 font-normal text-muted-foreground">
-            ({granularity === "month" ? "per month" : "per day"} ·{" "}
-            {activeDays} active)
+            (
+            {granularity === "month"
+              ? "per month"
+              : granularity === "week"
+                ? "per week"
+                : "per day"}{" "}
+            · {activeDays} active)
           </span>
         </p>
         <div className="flex items-center gap-3 text-[10px] text-muted-foreground">
@@ -75,79 +113,107 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
         </div>
       </div>
 
-      <div
-        className="relative grid items-end"
-        style={{
-          gap: buckets.length > 200 ? 0 : buckets.length > 80 ? 1 : 2,
-          gridTemplateColumns: `repeat(${buckets.length}, minmax(0, 1fr))`,
-          height: H,
-        }}
-      >
-        {buckets.map((b, i) => {
-          const total = b.lessons + b.music;
-          if (total === 0) {
-            // Empty day: no bar, no background — the daily cadence
-            // reads as presence/absence against the card background.
-            return <div key={i} aria-hidden className="h-full" />;
-          }
-          // Stacked bar: lessons at the bottom (the "ground floor")
-          // and music stacked on top. Each unit of completion is a
-          // fixed pixel height (unitPx) so a 4-lesson day is
-          // visibly taller than a 1-lesson day instead of both
-          // saturating to the container.
-          const lessonPx = b.lessons * unitPx;
-          const musicPx = b.music * unitPx;
-          return (
-            <div
-              key={i}
-              onMouseEnter={() => setHover(b)}
-              onMouseLeave={() => setHover(null)}
-              onFocus={() => setHover(b)}
-              onBlur={() => setHover(null)}
-              tabIndex={0}
-              title={`${formatBucket(b.start, granularity)} · ${b.lessons} lessons · ${b.music} music`}
-              className="group relative flex h-full flex-col justify-end"
-            >
-              <div className="flex w-full flex-col-reverse overflow-hidden rounded-sm">
-                {lessonPx > 0 ? (
-                  <div
-                    className="w-full bg-indigo-500"
-                    style={{ height: `${lessonPx}px` }}
-                  />
-                ) : null}
-                {musicPx > 0 ? (
-                  <div
-                    className="w-full bg-pink-500"
-                    style={{ height: `${musicPx}px` }}
-                  />
-                ) : null}
-              </div>
-            </div>
-          );
-        })}
+      <div className="relative" style={{ height: H }}>
+        {/* Horizontal gridlines — one per integer up to yMax. Helps
+            the eye read "this day had 3 completions" without hovering. */}
+        {Array.from({ length: yMax }, (_, n) => n + 1).map((n) => (
+          <div
+            key={n}
+            aria-hidden
+            className="absolute inset-x-0 border-t border-border/25"
+            style={{ bottom: `${(n / yMax) * H}px` }}
+          />
+        ))}
 
+        <div
+          className="relative grid h-full items-end"
+          style={{
+            gap: buckets.length > 200 ? 0 : buckets.length > 80 ? 1 : 2,
+            gridTemplateColumns: `repeat(${buckets.length}, minmax(0, 1fr))`,
+          }}
+        >
+          {buckets.map((b, i) => {
+            const total = b.lessons + b.music;
+            if (total === 0) {
+              return <div key={i} aria-hidden className="h-full" />;
+            }
+            // Stacked bar: lessons anchor the ground floor, music
+            // stacks on top. Each unit is unitPx (~27px at yMax=4)
+            // so a 1-event day is a stub and a 4-event day tops out.
+            const lessonPx = b.lessons * unitPx;
+            const musicPx = b.music * unitPx;
+            const isHover = hover?.i === i;
+            return (
+              <div
+                key={i}
+                onMouseEnter={() => setHover({ b, i })}
+                onMouseLeave={() => setHover(null)}
+                onFocus={() => setHover({ b, i })}
+                onBlur={() => setHover(null)}
+                tabIndex={0}
+                title={`${formatBucket(b.start, granularity)} · ${b.lessons} lessons · ${b.music} music`}
+                className="group relative flex h-full flex-col justify-end"
+              >
+                <div
+                  className={`flex w-full flex-col-reverse overflow-hidden rounded-sm transition-opacity ${
+                    isHover ? "opacity-100" : "opacity-90"
+                  }`}
+                >
+                  {lessonPx > 0 ? (
+                    <div
+                      className="w-full bg-indigo-500"
+                      style={{ height: `${lessonPx}px` }}
+                    />
+                  ) : null}
+                  {musicPx > 0 ? (
+                    <div
+                      className="w-full bg-pink-500"
+                      style={{ height: `${musicPx}px` }}
+                    />
+                  ) : null}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Hover tooltip pinned to top of chart area. */}
         {hover ? (
-          <div className="pointer-events-none absolute inset-x-0 top-0 text-center">
+          <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
             <div className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-2 py-1 text-[10px] shadow-sm">
-              <strong>{formatBucket(hover.start, granularity)}</strong>
+              <strong>{formatBucket(hover.b.start, granularity)}</strong>
               <span className="inline-flex items-center gap-1">
                 <span className="inline-block h-2 w-2 rounded-sm bg-indigo-500" />
-                {hover.lessons} lesson{hover.lessons === 1 ? "" : "s"}
+                {hover.b.lessons} lesson{hover.b.lessons === 1 ? "" : "s"}
               </span>
               <span className="inline-flex items-center gap-1">
                 <span className="inline-block h-2 w-2 rounded-sm bg-pink-500" />
-                {hover.music} music
+                {hover.b.music} music
               </span>
             </div>
           </div>
         ) : null}
       </div>
 
-      <div className="flex items-center justify-between text-[10px] text-muted-foreground tabular-nums">
-        <span>{formatBucket(buckets[0].start, granularity)}</span>
-        <span>
-          {formatBucket(buckets[buckets.length - 1].start, granularity)}
-        </span>
+      {/* Month tick strip — positions labels along the x-axis so the
+          user can read "this busy patch was in May 2025" at a glance
+          instead of only seeing the two edge dates. */}
+      <div
+        className="relative h-4 text-[9px] text-muted-foreground tabular-nums"
+        aria-hidden
+      >
+        {monthTicks.map(({ i, label }) => (
+          <span
+            key={`${i}-${label}`}
+            className="absolute whitespace-nowrap"
+            style={{
+              left: `${(i / Math.max(1, buckets.length - 1)) * 100}%`,
+              transform: "translateX(-50%)",
+            }}
+          >
+            {label}
+          </span>
+        ))}
       </div>
     </div>
   );
@@ -168,7 +234,10 @@ function LegendSwatch({
   );
 }
 
-function formatBucket(start: string, granularity: "month" | "day"): string {
+function formatBucket(
+  start: string,
+  granularity: "month" | "week" | "day",
+): string {
   const d = new Date(start + "T00:00:00Z");
   if (granularity === "month") {
     return d.toLocaleDateString("en-US", {
@@ -180,6 +249,7 @@ function formatBucket(start: string, granularity: "month" | "day"): string {
   return d.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
+    year: "2-digit",
     timeZone: "UTC",
   });
 }

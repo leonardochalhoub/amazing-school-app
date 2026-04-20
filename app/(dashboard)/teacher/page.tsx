@@ -57,7 +57,10 @@ export default async function TeacherDashboard() {
     getTeacherOverview(),
     getAssignableLessons(),
     getUpcomingBirthdays(14),
-    listAllTeacherHistory(20),
+    // Broad window — the Class log panel hides all but the 15 most
+    // recent by default and the toggle reveals the rest. Anything
+    // shorter was quietly truncating 3-year teacher histories.
+    listAllTeacherHistory(500),
   ]);
   const musics = listMusic();
 

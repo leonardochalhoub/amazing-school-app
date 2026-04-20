@@ -277,11 +277,9 @@ export default async function StudentHome() {
   const firstName =
     profile?.full_name?.split(" ")[0] ?? user.email?.split("@")[0] ?? "there";
 
-  // Activity chart — fixed window of the last 2 years, one bar per
-  // day, in Brazil local time (UTC-3). Music exercises are treated as
-  // lessons for accounting purposes: from the student's perspective
-  // they are both "things I completed", so the chart presents a
-  // single unified count instead of splitting them into two series.
+  // Activity chart — 2-year window, one bar per day, stacked lessons
+  // (indigo) + music (pink). All times resolve in Brazil local time
+  // (UTC-3) so a completion at 22:00 BRT lands in the right day.
   const BRT_OFFSET_MS = -3 * 60 * 60 * 1000;
   const msPerDay = 24 * 60 * 60 * 1000;
   const brtToday = new Date(
