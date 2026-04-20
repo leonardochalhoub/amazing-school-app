@@ -498,11 +498,16 @@ export async function getSysadminOverview(): Promise<
       return row;
     });
 
-  // Full directory — sort alphabetically by name for easy scanning.
-  // Keeps activeStudentsLast30d so the table can show engagement
-  // per teacher without needing a separate "most active" ranking.
+  // Full directory — sort alphabetically by name, case + accent
+  // insensitive. Keeps activeStudentsLast30d so the table can show
+  // engagement per teacher without needing a separate "most active"
+  // ranking. numeric:true handles mixed-case / pt-BR diacritics
+  // cleanly so "Álvaro" sorts near "Alvaro" not at the end.
   const allTeachers = [...allTeachersFull].sort((a, b) =>
-    a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
+    (a.name ?? "").localeCompare(b.name ?? "", "pt-BR", {
+      sensitivity: "base",
+      numeric: true,
+    }),
   );
 
   // Top active students — by XP last 30 days. Test users (demo.*)

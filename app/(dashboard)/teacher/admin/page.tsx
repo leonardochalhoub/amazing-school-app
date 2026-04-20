@@ -5,6 +5,8 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { getTeacherDashboardData } from "@/lib/actions/teacher-dashboard";
 import { getTeacherManagementMatrix } from "@/lib/actions/teacher-payments";
 import { listTeacherListeningResponses } from "@/lib/actions/listening-responses";
+import { getTeacherAiChatStats } from "@/lib/actions/teacher-ai-chat";
+import { AiChatStatsTable } from "@/components/teacher/ai-chat-stats-table";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   KpiTile,
@@ -51,11 +53,13 @@ export default async function TeacherManagementPage() {
     .maybeSingle();
   if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/");
 
-  const [dashboardData, financeData, listeningResponses] = await Promise.all([
-    getTeacherDashboardData(),
-    getTeacherManagementMatrix({ months: 24 }),
-    listTeacherListeningResponses(),
-  ]);
+  const [dashboardData, financeData, listeningResponses, aiChatStats] =
+    await Promise.all([
+      getTeacherDashboardData(),
+      getTeacherManagementMatrix({ months: 24 }),
+      listTeacherListeningResponses(),
+      getTeacherAiChatStats(),
+    ]);
 
   const financeAvailable = !("error" in financeData);
   const finance =
@@ -407,6 +411,20 @@ export default async function TeacherManagementPage() {
             </tbody>
           </table>
         </div>
+      </section>
+
+      {/* ========== AI tutor usage ========== */}
+      <section className="space-y-3">
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            AI tutor — per-student usage
+          </h2>
+          <p className="text-[11px] text-muted-foreground">
+            Scoped to your classrooms · sorted by messages · user-role
+            only
+          </p>
+        </div>
+        <AiChatStatsTable rows={aiChatStats} />
       </section>
 
       {/* ========== Classrooms ========== */}
