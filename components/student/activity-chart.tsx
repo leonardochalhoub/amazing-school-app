@@ -46,12 +46,13 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
     );
   }
 
-  // Y axis: fixed scale with headroom so a 1-event day is a short
-  // bar and a 4-event day is a tall bar. Without the floor at 4 a
-  // student who only ever did 1 lesson/day would see every bar
-  // maxing the chart, which is what made the 2-year view look
-  // "crazy" (every filled day read identically).
-  const yMax = Math.max(4, max + 1);
+  // Y axis scales to THIS student's personal record. The busiest
+  // day sets the top of the chart — if their all-time best is 3
+  // completions, a 3-event day fills the chart; the first day they
+  // pull off a 5, the chart re-renders with yMax=5 and that day
+  // hits the ceiling. All rungs are integers (1, 2, 3, …) so the
+  // reader can literally count completions against the gridlines.
+  const yMax = Math.max(1, max);
   const H = 140;
   const unitPx = (H - 12) / yMax;
 
@@ -110,23 +111,32 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
             className="bg-pink-500"
             label={`Music · ${totalMusic}`}
           />
+          <span className="tabular-nums">Peak · {max}/day</span>
         </div>
       </div>
 
       <div className="relative" style={{ height: H }}>
-        {/* Horizontal gridlines — one per integer up to yMax. Helps
-            the eye read "this day had 3 completions" without hovering. */}
-        {Array.from({ length: yMax }, (_, n) => n + 1).map((n) => (
+        {/* Horizontal gridlines + left-side integer labels. One
+            rung per integer up to yMax so the reader can count
+            completions against the axis. Gridline positions use the
+            same scale as bar heights so the n=yMax line sits
+            exactly at the top of the tallest bar. */}
+        {Array.from({ length: yMax + 1 }, (_, n) => n).map((n) => (
           <div
             key={n}
             aria-hidden
-            className="absolute inset-x-0 border-t border-border/25"
-            style={{ bottom: `${(n / yMax) * H}px` }}
-          />
+            className="absolute inset-x-0 flex items-center"
+            style={{ bottom: `${n * unitPx}px` }}
+          >
+            <span className="-ml-1 w-6 shrink-0 text-right text-[9px] tabular-nums text-muted-foreground/60">
+              {n}
+            </span>
+            <div className="h-px flex-1 border-t border-border/25" />
+          </div>
         ))}
 
         <div
-          className="relative grid h-full items-end"
+          className="relative grid h-full items-end pl-7"
           style={{
             gap: buckets.length > 200 ? 0 : buckets.length > 80 ? 1 : 2,
             gridTemplateColumns: `repeat(${buckets.length}, minmax(0, 1fr))`,
