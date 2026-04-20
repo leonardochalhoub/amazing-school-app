@@ -42,22 +42,28 @@ export function BrazilCityPicker({
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (cities || loading) return;
+    // Guard only on `cities` — not on `loading`. In React 19 StrictMode
+    // the effect mounts, cleans up, then remounts; if we also gated on
+    // `loading` the remount would short-circuit while the first mount's
+    // fetch was still in flight, leaving `loading` stuck at true.
+    if (cities) return;
     if (!open) return;
-    let cancelled = false;
+    let alive = true;
     setLoading(true);
     loadBrazilCities()
       .then((rows) => {
-        if (cancelled) return;
+        if (!alive) return;
         setCities(rows);
       })
       .finally(() => {
-        if (!cancelled) setLoading(false);
+        // Unconditional — even after unmount we want loading to flip,
+        // so a subsequent mount doesn't inherit a stale true.
+        setLoading(false);
       });
     return () => {
-      cancelled = true;
+      alive = false;
     };
-  }, [open, cities, loading]);
+  }, [open, cities]);
 
   useEffect(() => {
     function onDocClick(e: MouseEvent) {
