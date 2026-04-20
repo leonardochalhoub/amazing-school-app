@@ -54,8 +54,10 @@ export default async function CohortPrintPage({ searchParams }: PageProps) {
       footerLeft={data.teacher.fullName}
       meta={[
         { label: "Período", value: yearLabel(year) },
-        { label: "Alunos", value: String(data.totals.students) },
-        { label: "Turmas", value: String(data.totals.classrooms) },
+        {
+          label: "Alunos",
+          value: `${data.totals.students} · Turmas: ${data.totals.classrooms}`,
+        },
       ]}
     >
       {/* Totals */}

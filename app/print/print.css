@@ -144,17 +144,18 @@
 /* Borderless logo slot — just the image. Earlier versions framed
    the logo in a card but the teacher asked for a cleaner look;
    images from the school-logos bucket already ship on a white
-   backdrop. */
+   backdrop. 30% bigger than the original 36px so the school brand
+   reads on paper. */
 .report-logo-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 44px;
+  height: 56px;
   padding: 0;
 }
 
 .report-logo-box img {
-  max-height: 36px;
+  max-height: 48px;
   width: auto;
   object-fit: contain;
   display: block;

@@ -82,9 +82,11 @@ export function ReportHeader({
           gap: 6,
         }}
       >
-        {/* RIGHT — Amazing School platform mark. */}
-        <div className="report-logo-box" style={{ paddingInline: 10 }}>
-          <AmazingSchoolMark size={22} />
+        {/* RIGHT — Amazing School platform mark, sized to match the
+            bumped school-logo box on the left so both logos sit on
+            the same visual baseline. */}
+        <div className="report-logo-box">
+          <AmazingSchoolMark size={34} />
         </div>
         {meta && meta.length > 0 ? (
           <div className="report-meta">
