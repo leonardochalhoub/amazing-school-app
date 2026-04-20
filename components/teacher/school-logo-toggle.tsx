@@ -120,17 +120,17 @@ export function SchoolLogoToggle({
           </p>
           <p className="text-[11px] text-muted-foreground">
             {usingUpload
-              ? "Your upload · PNG / JPG / WebP / SVG · up to 8 MB"
+              ? "Your upload · PNG / JPG / WebP · up to 8 MB"
               : isWhitelisted
                 ? "Bundled default · upload your own to replace it"
-                : "Drop in a PNG, JPG, WebP, or SVG. We auto-resize to fit the navbar."}
+                : "Drop in a PNG, JPG, or WebP. We auto-resize to fit the navbar."}
           </p>
         </div>
         <div className="flex items-center gap-2">
           <input
             ref={fileInputRef}
             type="file"
-            accept="image/png,image/jpeg,image/webp,image/svg+xml"
+            accept="image/png,image/jpeg,image/webp"
             className="sr-only"
             onChange={(e) => {
               const f = e.target.files?.[0];

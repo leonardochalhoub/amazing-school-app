@@ -43,7 +43,13 @@ export async function setSchoolLogoEnabled(enabled: boolean) {
 // ---------------------------------------------------------------------------
 
 const MAX_BYTES = 8 * 1024 * 1024;
-const ALLOWED = ["image/png", "image/jpeg", "image/webp", "image/svg+xml"] as const;
+// SVG is intentionally not on the list: librsvg inside sharp has a
+// history of CPU-bomb CVEs when fed a malicious vector. Teachers can
+// still upload their logos as PNG, JPG, or WebP — which is every
+// photo-format in the wild. Vector-only assets can be exported to
+// PNG locally before upload.
+const ALLOWED = ["image/png", "image/jpeg", "image/webp"] as const;
+const SHARP_TIMEOUT_MS = 10_000;
 
 export async function uploadSchoolLogo(formData: FormData) {
   const supabase = await createClient();
@@ -67,20 +73,30 @@ export async function uploadSchoolLogo(formData: FormData) {
   if (file.size === 0) return { error: "Empty file" };
   if (file.size > MAX_BYTES) return { error: "File too large (max 8 MB)" };
   if (!ALLOWED.includes(file.type as (typeof ALLOWED)[number])) {
-    return { error: "Unsupported image type (PNG, JPEG, WebP, SVG)" };
+    return { error: "Unsupported image type (PNG, JPEG, or WebP)" };
   }
 
   // Normalise to a wide landscape webp capped at 1600 x 400 so navbar
-  // rendering stays fast regardless of what the teacher uploads.
+  // rendering stays fast regardless of what the teacher uploads. The
+  // whole sharp pipeline is wrapped in a 10s timeout so a malicious
+  // (or just gigantic) image can't pin a Next.js worker.
   const buf = Buffer.from(await file.arrayBuffer());
   let webp: Buffer;
   try {
-    webp = await sharp(buf)
-      .rotate()
-      .resize(1600, 400, { fit: "inside", withoutEnlargement: true })
-      .trim({ threshold: 8 })
-      .webp({ quality: 88 })
-      .toBuffer();
+    webp = await Promise.race<Buffer>([
+      sharp(buf)
+        .rotate()
+        .resize(1600, 400, { fit: "inside", withoutEnlargement: true })
+        .trim({ threshold: 8 })
+        .webp({ quality: 88 })
+        .toBuffer(),
+      new Promise<Buffer>((_, reject) =>
+        setTimeout(
+          () => reject(new Error("sharp timeout")),
+          SHARP_TIMEOUT_MS,
+        ),
+      ),
+    ]);
   } catch {
     return { error: "Image processing failed" };
   }

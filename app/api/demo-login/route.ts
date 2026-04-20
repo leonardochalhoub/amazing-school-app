@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { cookies } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
 import { DEMO_PRESETS, type DemoKind } from "@/lib/demo/presets";
 
@@ -6,11 +7,10 @@ import { DEMO_PRESETS, type DemoKind } from "@/lib/demo/presets";
  * POST /api/demo-login
  *
  * Invoked by a form on the landing page with `target="_blank"`, so the
- * signup cookie is set inside the NEW tab — the original landing tab keeps
- * its own (anonymous) session. In the same browser the two demo tabs still
- * share the session, so flipping between teacher and student requires
- * re-clicking the corresponding button, or using a private window for the
- * second persona.
+ * auth cookie is written inside the NEW tab. We then downgrade every
+ * Supabase-session cookie to a "session cookie" (no Max-Age, no
+ * Expires) so it dies the moment the visitor closes the tab / window /
+ * browser — no lingering demo session, no stale cart of private data.
  */
 export async function POST(request: NextRequest) {
   const formData = await request.formData();
@@ -19,8 +19,15 @@ export async function POST(request: NextRequest) {
     return NextResponse.redirect(new URL("/?demo=unknown", request.url), 303);
   }
   const preset = DEMO_PRESETS[kind];
-  const password =
-    process.env.DEMO_ACCOUNT_PASSWORD ?? "demo-explore-amazing-school-2026";
+  const password = process.env.DEMO_ACCOUNT_PASSWORD;
+  if (!password) {
+    // Hard-require the env var — no more hard-coded fallback that lets
+    // a misconfigured deploy accept a guessable password.
+    return NextResponse.redirect(
+      new URL("/?demo=misconfigured", request.url),
+      303,
+    );
+  }
 
   const supabase = await createClient();
   // Sign out any existing session first so Switch works cleanly: the
@@ -38,5 +45,25 @@ export async function POST(request: NextRequest) {
     );
   }
   const target = preset.role === "teacher" ? "/teacher" : "/student";
-  return NextResponse.redirect(new URL(target, request.url), 303);
+  const response = NextResponse.redirect(new URL(target, request.url), 303);
+
+  // Demote every Supabase auth cookie to session-scope (no Max-Age /
+  // Expires), so closing the tab / window / browser ends the demo
+  // session. Pull the just-updated values from next/headers cookies()
+  // — createClient() above wrote them there via the bridge.
+  const store = await cookies();
+  for (const c of store.getAll()) {
+    if (!c.name.startsWith("sb-")) continue;
+    response.cookies.set({
+      name: c.name,
+      value: c.value,
+      httpOnly: true,
+      sameSite: "lax",
+      secure: request.nextUrl.protocol === "https:",
+      path: "/",
+      // Omit maxAge / expires → session cookie, vanishes on close.
+    });
+  }
+
+  return response;
 }

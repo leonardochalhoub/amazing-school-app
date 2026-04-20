@@ -20,15 +20,20 @@ export interface PublicStats {
 export async function getPublicStats(): Promise<PublicStats> {
   const admin = createAdminClient();
 
+  // Exclude test accounts — demo teachers/students are non-humans
+  // and would inflate the marketing counter that's visible to anyone
+  // visiting the landing page.
   const [studentsRes, teachersRes, classroomsRes] = await Promise.all([
     admin
       .from("profiles")
       .select("id", { count: "exact", head: true })
-      .eq("role", "student"),
+      .eq("role", "student")
+      .eq("is_test", false),
     admin
       .from("profiles")
       .select("id", { count: "exact", head: true })
-      .eq("role", "teacher"),
+      .eq("role", "teacher")
+      .eq("is_test", false),
     admin.from("classrooms").select("id", { count: "exact", head: true }),
   ]);
 
