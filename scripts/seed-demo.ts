@@ -81,7 +81,34 @@ type Persona = {
   /** How many recent months to deliberately leave unpaid (debt). */
   debtMonths?: number;
   notes: string;
+  /**
+   * Current curriculum level the student is working on. All levels
+   * below this one in LEVEL_ORDER are treated as complete (assignments
+   * + lesson_progress rows emitted chronologically); the current
+   * level is partway done; anything above is untouched. This is what
+   * drives the "lessons assigned in order A, B, C, Y4" behaviour —
+   * every student has a realistic backlog trail showing how they
+   * got to where they are today.
+   */
+  progression:
+    | "a1.1" | "a1.2" | "a2.1" | "a2.2"
+    | "b1.1" | "b1.2" | "b2.1" | "b2.2"
+    | "c1.1" | "c1.2" | "c2.1" | "c2.2"
+    | "y4.1" | "y4.2";
 };
+
+// Ordered curriculum — students walk through this sequence.
+// Matches the keys in content/lessons/by-cefr.json. "y4" sits at
+// the top as the school's capstone track.
+const LEVEL_ORDER = [
+  "a1.1", "a1.2",
+  "a2.1", "a2.2",
+  "b1.1", "b1.2",
+  "b2.1", "b2.2",
+  "c1.1", "c1.2",
+  "c2.1", "c2.2",
+  "y4.1", "y4.2",
+] as const;
 
 const STUDENT_SPECS: Persona[] = [
   // 1. Ana — the star student. Joined Jan 2024, never misses a beat.
@@ -96,11 +123,12 @@ const STUDENT_SPECS: Persona[] = [
     classroomIdx: 0,
     photo:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
-    joinedAt: "2024-01-08",
+    joinedAt: "2023-04-10",
     diligence: 0.92,
     completionRate: 0.95,
     tuitionCents: 32000,
     payRate: 0.99,
+    progression: "b1.2",
     notes: "Rockstar — never misses a class, writes diary entries often.",
   },
   // 2. Bruno — pays 3× the standard tuition (one-on-one executive rate).
@@ -115,11 +143,12 @@ const STUDENT_SPECS: Persona[] = [
     classroomIdx: 1,
     photo:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
-    joinedAt: "2024-02-01",
+    joinedAt: "2023-07-01",
     diligence: 0.55,
     completionRate: 0.6,
     tuitionCents: 96000, // 3× standard
     payRate: 0.98,
+    progression: "b1.1",
     notes: "Executive 1-on-1 — pays premium for flexible scheduling.",
   },
   // 3. Carla — dedicated, classic B2 student.
@@ -134,11 +163,12 @@ const STUDENT_SPECS: Persona[] = [
     classroomIdx: 1,
     photo:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
-    joinedAt: "2024-01-15",
+    joinedAt: "2023-05-20",
     diligence: 0.85,
     completionRate: 0.82,
     tuitionCents: 36000,
     payRate: 0.96,
+    progression: "b2.1",
     notes: "Reliable — prepping for Cambridge FCE.",
   },
   // 4. Diego — dropped out after ~1.5 years.
@@ -153,12 +183,13 @@ const STUDENT_SPECS: Persona[] = [
     classroomIdx: 0,
     photo:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
-    joinedAt: "2024-02-10",
+    joinedAt: "2023-09-10",
     droppedAt: "2025-08-30",
     diligence: 0.55,
     completionRate: 0.5,
     tuitionCents: 28000,
     payRate: 0.88,
+    progression: "a2.2",
     notes: "Dropped out mid-2025 after a big schedule change.",
   },
   // 5. Emily — solid intermediate.
@@ -173,11 +204,12 @@ const STUDENT_SPECS: Persona[] = [
     classroomIdx: 1,
     photo:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
-    joinedAt: "2024-03-04",
+    joinedAt: "2023-09-04",
     diligence: 0.7,
     completionRate: 0.75,
     tuitionCents: 32000,
     payRate: 0.95,
+    progression: "b1.1",
     notes: "University student, studies in bursts before exam weeks.",
   },
   // 6. Felipe — chronic debt case (3 months unpaid).
@@ -192,12 +224,13 @@ const STUDENT_SPECS: Persona[] = [
     classroomIdx: 0,
     photo:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
-    joinedAt: "2024-04-01",
+    joinedAt: "2024-01-10",
     diligence: 0.62,
     completionRate: 0.55,
     tuitionCents: 28000,
     payRate: 0.72,
     debtMonths: 3,
+    progression: "a2.2",
     notes: "Payments slipping — needs a gentle chase.",
   },
   // 7. Gustavo — started late, fast climber.
@@ -217,6 +250,7 @@ const STUDENT_SPECS: Persona[] = [
     completionRate: 0.9,
     tuitionCents: 36000,
     payRate: 0.99,
+    progression: "b2.2",
     notes: "Tech lead moving to Dublin — goal-driven, burns through lessons.",
   },
   // 8. Helena — seasonal, pauses in December.
@@ -231,11 +265,12 @@ const STUDENT_SPECS: Persona[] = [
     classroomIdx: 1,
     photo:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
-    joinedAt: "2024-03-18",
+    joinedAt: "2023-06-18",
     diligence: 0.66,
     completionRate: 0.7,
     tuitionCents: 32000,
     payRate: 0.93,
+    progression: "b1.2",
     notes: "Takes December off every year — pays 10/12 months.",
   },
   // 9. Isabela — just starting, low level.
@@ -255,6 +290,7 @@ const STUDENT_SPECS: Persona[] = [
     completionRate: 0.55,
     tuitionCents: 26000,
     payRate: 0.95,
+    progression: "a1.1",
     notes: "Newcomer, still getting used to the alphabet.",
   },
   // 10. João — teen, very casual.
@@ -269,11 +305,12 @@ const STUDENT_SPECS: Persona[] = [
     classroomIdx: 2,
     photo:
       "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
-    joinedAt: "2024-07-22",
+    joinedAt: "2023-11-22",
     diligence: 0.45,
     completionRate: 0.4,
     tuitionCents: 24000,
     payRate: 0.9,
+    progression: "a1.2",
     notes: "Plays more than studies — but catches up the day before class.",
   },
   // 11. Karina — left 2024, came back in 2025.
@@ -288,11 +325,12 @@ const STUDENT_SPECS: Persona[] = [
     classroomIdx: 1,
     photo:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&h=800&fit=crop&crop=faces&auto=format&q=80",
-    joinedAt: "2024-01-22",
+    joinedAt: "2023-04-22",
     diligence: 0.75,
     completionRate: 0.78,
     tuitionCents: 34000,
     payRate: 0.95,
+    progression: "b2.1",
     notes: "Took a 3-month break mid-2024 for maternity, then full-on again.",
   },
   // 12. Lucas — advanced C1, infrequent high-quality bursts.
@@ -312,6 +350,7 @@ const STUDENT_SPECS: Persona[] = [
     completionRate: 0.85,
     tuitionCents: 42000,
     payRate: 0.98,
+    progression: "c1.2",
     notes: "Polishing C1 — prefers 1h deep-dive sessions.",
   },
   // 13. Mariana — kid (close to teen), sporadic.
@@ -331,6 +370,7 @@ const STUDENT_SPECS: Persona[] = [
     completionRate: 0.6,
     tuitionCents: 26000,
     payRate: 0.92,
+    progression: "a2.1",
     notes: "Loves music lessons more than grammar.",
   },
 ];
@@ -356,7 +396,10 @@ const CLASSROOMS = [
   },
 ];
 
-const START_DATE_GLOBAL = new Date("2024-01-01T12:00:00Z");
+// 3 years of history — classroom-wide assignments fan out from this
+// date even for students who joined later, so the classroom looks
+// like a living thing with a past rather than a fresh install.
+const START_DATE_GLOBAL = new Date("2023-04-01T12:00:00Z");
 const IDS_FILE = resolve("scripts/demo-ids.json");
 
 type DemoIds = {
@@ -706,105 +749,175 @@ async function seedTimeline(args: TimelineArgs) {
     const activeDays = daysBetween(joinDate, stopDate);
     const rng = mulberry32(hashStringToSeed(`${studentId}:${s.email}`));
 
-    const levelPool = (lessonsByLevel[`${s.level}.1`] ?? []).concat(
-      lessonsByLevel[`${s.level}.2`] ?? [],
-    );
-    const musicPool = allMusic
-      .filter((m) => m.level.startsWith(s.level))
-      .map((m) => `music:${m.slug}`);
-    const targetedPool = [...levelPool, ...musicPool];
-    const usedTargeted = new Set<string>();
     const isAna = s.preferred === "Ana";
 
-    // Targeted assignments — Ana gets more
-    const cadenceDays = isAna ? 10 : 16 + Math.floor(rng() * 12);
-    for (
-      let d = 5;
-      d < activeDays;
-      d += cadenceDays + Math.floor(rng() * 6)
-    ) {
-      const available = targetedPool.filter((x) => !usedTargeted.has(x));
-      if (available.length === 0) break;
-      const pick = available[Math.floor(rng() * available.length)];
-      usedTargeted.add(pick);
-      const when = addDays(joinDate, d);
-      // Statuses: mostly assigned, some completed, some skipped
-      const r = rng();
-      const status: string =
-        r < s.completionRate
-          ? "completed"
-          : r < s.completionRate + 0.15
-            ? "skipped"
-            : "assigned";
-      assignmentRows.push({
-        id: crypto.randomUUID(),
-        classroom_id: classroomId,
-        lesson_slug: pick,
-        assigned_by: teacherId,
-        assigned_at: when.toISOString(),
-        due_date: null,
-        student_id: null,
-        roster_student_id: rosterId,
-        order_index: 0,
-        status,
-      });
-      // If this targeted assignment is a MUSIC lesson that we marked
-      // completed, also emit a matching lesson_progress row — without
-      // it the activity chart can't plot the pink "music" bars and
-      // the student's Done count under-represents their real work.
-      // Regular lessons get their own progress rows further down in
-      // the daily random-walk loop.
-      if (status === "completed" && pick.startsWith("music:")) {
-        const completed = new Date(when.getTime() + 2 * 60 * 60_000);
-        const started = new Date(completed.getTime() - 25 * 60_000);
-        progressRows.push({
-          id: crypto.randomUUID(),
-          student_id: studentId,
-          lesson_slug: pick,
-          classroom_id: classroomId,
-          completed_exercises: 4,
-          total_exercises: 4,
-          started_at: started.toISOString(),
-          completed_at: completed.toISOString(),
-        });
-      }
-    }
-
-    // Daily activity + XP + completions
+    // -----------------------------------------------------------------
+    // CEFR-ordered assignment walk. Each student has a `progression`
+    // pointing to the level they're CURRENTLY working through. We
+    // walk LEVEL_ORDER from a1.1 up to their current, slicing the
+    // active timeline into even chunks per level so older levels
+    // landed in the earliest months and the current level fills the
+    // most recent stretch. Completion status cascades:
+    //   - past levels: mostly completed, a sprinkle of skipped
+    //   - current level: front half completed, middle mixed, tail
+    //                    still "assigned" (not done yet)
+    //   - music from the level's CEFR band is interleaved so the
+    //     chart's music band actually fires
+    // Every lesson_progress row we emit carries an XP event tied to
+    // it — no free-floating XP anywhere. Same for music completions.
+    // -----------------------------------------------------------------
+    const progressionIdx = LEVEL_ORDER.indexOf(s.progression);
+    const activeLevels = LEVEL_ORDER.slice(0, progressionIdx + 1);
+    const usedTargeted = new Set<string>();
     const completedSlugs = new Set<string>();
     let totalCompleted = 0;
     const firstLessonDates: { slug: string; completedAt: Date }[] = [];
+    const levelSpanDays = Math.max(
+      30,
+      Math.floor(activeDays / Math.max(1, activeLevels.length)),
+    );
+
+    for (let li = 0; li < activeLevels.length; li++) {
+      const levelKey = activeLevels[li];
+      const isCurrent = li === activeLevels.length - 1;
+      const slugs = [...(lessonsByLevel[levelKey] ?? [])];
+      // Attach music from this CEFR band to the rotation. Music and
+      // grammar lessons coexist in the ordered timeline at roughly
+      // 1 music per 3 lessons.
+      const levelPrefix = levelKey.slice(0, 2); // "a1" | "a2" | ...
+      const levelMusic = allMusic
+        .filter((m) => m.level.startsWith(levelPrefix))
+        .map((m) => `music:${m.slug}`)
+        // Limit how much music lands in any single level's window
+        .slice(0, Math.max(2, Math.floor(slugs.length / 3)));
+      const timeline: string[] = [];
+      let musicIdx = 0;
+      for (let k = 0; k < slugs.length; k++) {
+        timeline.push(slugs[k]);
+        if ((k + 1) % 3 === 0 && musicIdx < levelMusic.length) {
+          timeline.push(levelMusic[musicIdx++]);
+        }
+      }
+      while (musicIdx < levelMusic.length) {
+        timeline.push(levelMusic[musicIdx++]);
+      }
+
+      const windowStartD = li * levelSpanDays;
+      const windowEndD = Math.min(activeDays, (li + 1) * levelSpanDays);
+      const span = Math.max(1, windowEndD - windowStartD);
+
+      for (let k = 0; k < timeline.length; k++) {
+        const pick = timeline[k];
+        if (usedTargeted.has(pick)) continue;
+        usedTargeted.add(pick);
+        const t = k / Math.max(1, timeline.length - 1);
+        const d = windowStartD + Math.floor(t * (span - 1));
+        const when = addDays(joinDate, d);
+        if (when > stopDate) break;
+
+        let status: "completed" | "skipped" | "assigned";
+        if (!isCurrent) {
+          // Past level — mostly done, occasional skip.
+          status = rng() < 0.9 ? "completed" : "skipped";
+        } else {
+          // Current level — front completed, middle mixed, tail
+          // still assigned so the student has visible TODOs.
+          if (t < 0.55) {
+            status = rng() < 0.9 ? "completed" : "skipped";
+          } else if (t < 0.75) {
+            const r = rng();
+            status = r < 0.45 ? "completed" : r < 0.7 ? "skipped" : "assigned";
+          } else {
+            status = "assigned";
+          }
+        }
+
+        assignmentRows.push({
+          id: crypto.randomUUID(),
+          classroom_id: classroomId,
+          lesson_slug: pick,
+          assigned_by: teacherId,
+          assigned_at: when.toISOString(),
+          due_date: null,
+          student_id: null,
+          roster_student_id: rosterId,
+          order_index: k,
+          status,
+        });
+
+        if (status === "completed" && !completedSlugs.has(pick)) {
+          completedSlugs.add(pick);
+          const started = atHour(when, 9 + rng() * 4, rng);
+          // Students finish most lessons the day after assignment,
+          // some same-day, some a few days later — matches how real
+          // class cadence spreads around the assigned date.
+          const lagDays = rng() < 0.3 ? 0 : 1 + Math.floor(rng() * 4);
+          const completed = new Date(
+            addDays(started, lagDays).getTime() + 25 * 60_000,
+          );
+          if (completed <= stopDate) {
+            progressRows.push({
+              id: crypto.randomUUID(),
+              student_id: studentId,
+              lesson_slug: pick,
+              classroom_id: classroomId,
+              completed_exercises: 4,
+              total_exercises: 4,
+              started_at: started.toISOString(),
+              completed_at: completed.toISOString(),
+            });
+            firstLessonDates.push({ slug: pick, completedAt: completed });
+            totalCompleted++;
+            // XP event — tied 1:1 to the progress row. Music pays a
+            // little less than lessons because the exercises are
+            // shorter, which matches lesson-completion.ts in prod.
+            const xpForThis = pick.startsWith("music:")
+              ? 25 + Math.floor(rng() * 15)
+              : 35 + Math.floor(rng() * 25);
+            xpRows.push({
+              id: crypto.randomUUID(),
+              student_id: studentId,
+              classroom_id: classroomId,
+              xp_amount: xpForThis,
+              source: "lesson",
+              source_id: pick,
+              created_at: completed.toISOString(),
+            });
+          }
+        }
+      }
+    }
+
+    // Daily activity + chat XP — the lesson XP is already recorded
+    // per-completion above, so this pass only tracks engagement
+    // (daily_activity rows + streak bonuses). lesson_count on the
+    // activity row is just an engagement signal for the chart, not
+    // a duplicate XP source.
+    const completionsByDate = new Map<string, number>();
+    for (const p of progressRows.filter((r) => r.student_id === studentId)) {
+      const iso = (p as { completed_at: string }).completed_at.slice(0, 10);
+      completionsByDate.set(iso, (completionsByDate.get(iso) ?? 0) + 1);
+    }
     for (let d = 0; d < activeDays; d++) {
       const day = addDays(joinDate, d);
       if (day > now) break;
       const dow = day.getUTCDay();
       const weekendBias = dow === 0 || dow === 6 ? 0.55 : 1.1;
-      // Ana has a steady pattern; others more bursty
       const moodMultiplier =
         0.7 + Math.sin((d + i * 9) / 14) * 0.25 + rng() * 0.2;
-      if (rng() > s.diligence * weekendBias * (isAna ? 1 : moodMultiplier))
-        continue;
-      const lessonsDone = rng() < (isAna ? 0.4 : 0.22) ? 2 : 1;
-      const chatMsgs = rng() < 0.45 ? 3 + Math.floor(rng() * 7) : 0;
+      const keyIso = isoDate(day);
+      const lessonsThisDay = completionsByDate.get(keyIso) ?? 0;
+      const chatActive =
+        rng() <= s.diligence * weekendBias * (isAna ? 1 : moodMultiplier);
+      if (lessonsThisDay === 0 && !chatActive) continue;
+      const chatMsgs = chatActive && rng() < 0.55 ? 3 + Math.floor(rng() * 7) : 0;
       activityRows.push({
         student_id: studentId,
-        activity_date: isoDate(day),
-        lesson_count: lessonsDone,
+        activity_date: keyIso,
+        lesson_count: lessonsThisDay,
         chat_messages: chatMsgs,
       });
-      for (let k = 0; k < lessonsDone; k++) {
-        xpRows.push({
-          id: crypto.randomUUID(),
-          student_id: studentId,
-          classroom_id: classroomId,
-          xp_amount:
-            20 + Math.floor(rng() * 30) + (isAna ? Math.floor(rng() * 15) : 0),
-          source: "lesson",
-          source_id: null,
-          created_at: atHour(day, 10 + rng() * 8, rng).toISOString(),
-        });
-      }
-      if (rng() < 0.18) {
+      if (lessonsThisDay > 0 && rng() < 0.18) {
         xpRows.push({
           id: crypto.randomUUID(),
           student_id: studentId,
@@ -812,74 +925,9 @@ async function seedTimeline(args: TimelineArgs) {
           xp_amount: 10 + Math.floor(rng() * 15),
           source: "streak_bonus",
           source_id: null,
-          created_at: day.toISOString(),
+          created_at: atHour(day, 20, rng).toISOString(),
         });
       }
-      // Completions — pick from lessons most of the time, but mix in
-      // music ~30% of the time so the activity chart shows the pink
-      // music band beside the indigo lessons band.
-      if (rng() < s.completionRate * 0.6) {
-        const useMusic = rng() < 0.3 && musicPool.length > 0;
-        const pool = useMusic ? musicPool : levelPool;
-        if (pool.length > 0) {
-          const slug = pool[Math.floor(rng() * pool.length)];
-          if (!completedSlugs.has(slug)) {
-            completedSlugs.add(slug);
-            const started = atHour(day, 9 + rng() * 4, rng);
-            const completed = new Date(started.getTime() + 25 * 60_000);
-            progressRows.push({
-              id: crypto.randomUUID(),
-              student_id: studentId,
-              lesson_slug: slug,
-              classroom_id: classroomId,
-              completed_exercises: 4,
-              total_exercises: 4,
-              started_at: started.toISOString(),
-              completed_at: completed.toISOString(),
-            });
-            firstLessonDates.push({ slug, completedAt: completed });
-            totalCompleted++;
-          }
-        }
-      }
-    }
-
-    // Ensure EVERY student has at least one completion + activity even if
-    // the random walk produced nothing (happens for very-low-diligence
-    // personas like Diego's last weeks).
-    if (totalCompleted === 0 && levelPool.length > 0) {
-      const firstDay = addDays(joinDate, 2);
-      const slug = levelPool[0];
-      const started = atHour(firstDay, 10, rng);
-      const completed = new Date(started.getTime() + 25 * 60_000);
-      progressRows.push({
-        id: crypto.randomUUID(),
-        student_id: studentId,
-        lesson_slug: slug,
-        classroom_id: classroomId,
-        completed_exercises: 4,
-        total_exercises: 4,
-        started_at: started.toISOString(),
-        completed_at: completed.toISOString(),
-      });
-      completedSlugs.add(slug);
-      firstLessonDates.push({ slug, completedAt: completed });
-      activityRows.push({
-        student_id: studentId,
-        activity_date: isoDate(firstDay),
-        lesson_count: 1,
-        chat_messages: 0,
-      });
-      xpRows.push({
-        id: crypto.randomUUID(),
-        student_id: studentId,
-        classroom_id: classroomId,
-        xp_amount: 25,
-        source: "lesson",
-        source_id: null,
-        created_at: completed.toISOString(),
-      });
-      totalCompleted = 1;
     }
 
     // Recent-day guarantee — ensure every (still-active) student has
@@ -1141,15 +1189,20 @@ async function seedTimeline(args: TimelineArgs) {
       });
     }
 
-    // Scheduled classes — a few future sessions for this student's classroom
-    if (!s.droppedAt && i < 3) {
-      // Only seed once per classroom — take the first student per classroom
+    // Scheduled classes — seed exactly once per classroom (first
+    // student we encounter for that classroom). Generates a mix of
+    // past sessions (going back ~6 weeks) and at least two upcoming
+    // ones so the "Next class" widget always has something real to
+    // point at, and the log shows real history.
+    if (!s.droppedAt) {
       const firstInClassroom = STUDENT_SPECS.findIndex(
         (x) => x.classroomIdx === s.classroomIdx,
       );
       if (firstInClassroom === i) {
-        for (let k = 0; k < 5; k++) {
-          const when = addDays(now, k * 7 - 14);
+        // 6 past sessions (weeks -6 .. -1) + 2 future (+1, +2).
+        const offsets = [-42, -35, -28, -21, -14, -7, 7, 14];
+        for (const off of offsets) {
+          const when = addDays(now, off);
           scheduledRows.push({
             id: crypto.randomUUID(),
             classroom_id: classroomId,
@@ -1184,10 +1237,33 @@ async function seedTimeline(args: TimelineArgs) {
     return true;
   });
 
+  // Dedup lesson_progress on (student_id, lesson_slug, classroom_id)
+  // to respect the table's unique constraint. The CEFR walk protects
+  // against dupes within a student, but belt-and-suspenders here keeps
+  // insert from exploding if any future code path ever overlaps.
+  const seenProgress = new Set<string>();
+  const dedupedProgress = progressRows.filter((r) => {
+    const k = `${r.student_id}:${r.lesson_slug}:${r.classroom_id}`;
+    if (seenProgress.has(k)) return false;
+    seenProgress.add(k);
+    return true;
+  });
+
+  // Dedup lesson_assignments on (classroom_id, lesson_slug, roster_student_id)
+  // so classroom-wide + per-roster walks can't produce two tiles
+  // for the same lesson (teacher UI would look broken).
+  const seenAssign = new Set<string>();
+  const dedupedAssign = assignmentRows.filter((r) => {
+    const k = `${r.classroom_id}:${r.lesson_slug}:${r.roster_student_id ?? "classroom"}`;
+    if (seenAssign.has(k)) return false;
+    seenAssign.add(k);
+    return true;
+  });
+
   await bulkInsert("daily_activity", dedupedActivity, 500);
   await bulkInsert("xp_events", xpRows, 500);
-  await bulkInsert("lesson_progress", progressRows, 500);
-  await bulkInsert("lesson_assignments", assignmentRows, 500);
+  await bulkInsert("lesson_progress", dedupedProgress, 500);
+  await bulkInsert("lesson_assignments", dedupedAssign, 500);
   await bulkInsert("conversations", conversationRows, 500);
   await bulkInsert("messages", messageRows, 500);
   await bulkInsert("badges", badgeRows, 300);
