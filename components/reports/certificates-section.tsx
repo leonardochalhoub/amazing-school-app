@@ -2,6 +2,7 @@ import { GraduationCap } from "lucide-react";
 import { IssueCertificateButton } from "@/components/reports/issue-certificate-button";
 import { CertificatesManager } from "@/components/reports/certificates-manager";
 import { CertificateDownloadButton } from "@/components/reports/certificate-download-button";
+import { DeleteCertificateButton } from "@/components/reports/delete-certificate-button";
 import { T } from "@/components/reports/t";
 import {
   findCertificateLevel,
@@ -119,8 +120,11 @@ export function CertificatesSection({ certificates, students }: Props) {
                         {c.grade}
                       </span>
                     </td>
-                    <td className="px-3 py-2 text-right">
-                      <CertificateDownloadButton certificateId={c.id} />
+                    <td className="px-3 py-2">
+                      <div className="flex items-center justify-end gap-1.5">
+                        <CertificateDownloadButton certificateId={c.id} />
+                        <DeleteCertificateButton id={c.id} />
+                      </div>
                     </td>
                   </tr>
                 );
