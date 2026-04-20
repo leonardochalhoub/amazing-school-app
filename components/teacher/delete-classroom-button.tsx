@@ -86,14 +86,14 @@ export function DeleteClassroomButton({
           <DialogTitle>Delete {classroomName}?</DialogTitle>
           <DialogDescription className="space-y-2 pt-2 text-sm">
             <span className="block">
-              The classroom itself, its pending invitations, and its
-              scheduled meetings go away permanently.
+              The classroom itself, its pending invitations, and any
+              upcoming (not-yet-held) meetings go away permanently.
             </span>
             <span className="block rounded-md border border-emerald-500/30 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-700 dark:text-emerald-400">
-              Student history is kept: assignments, lessons completed,
-              XP earned, notes, and AI-tutor chats stay on each
-              student's record — the classroom tag on those entries
-              just drops to "none".
+              History is kept: past meetings stay in the class log,
+              and each student keeps their assignments, lessons
+              completed, XP earned, notes, and AI-tutor chats. The
+              classroom tag on those entries just drops to "none".
             </span>
             {studentCount > 0 ? (
               <span className="block rounded-md border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-xs text-amber-700 dark:text-amber-400">

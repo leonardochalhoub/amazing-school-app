@@ -211,6 +211,21 @@ export async function deleteClassroom(input: {
     return { error: "You don't own this classroom" };
   }
 
+  // Drop FUTURE scheduled meetings only. Past meetings stay so the
+  // class log keeps the history; migration 039 flipped the FK to
+  // SET NULL so those orphaned rows survive the classroom delete
+  // with classroom_id = NULL.
+  const nowIso = new Date().toISOString();
+  const { error: futureErr } = await admin
+    .from("scheduled_classes")
+    .delete()
+    .eq("classroom_id", parsed.data)
+    .gt("scheduled_at", nowIso);
+  if (futureErr) {
+    console.error("[deleteClassroom] future-meetings cleanup", futureErr);
+    return { error: futureErr.message };
+  }
+
   const { error, count } = await admin
     .from("classrooms")
     .delete({ count: "exact" })
