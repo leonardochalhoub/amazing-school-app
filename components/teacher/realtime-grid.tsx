@@ -13,6 +13,16 @@ export function RealtimeGrid({
 }) {
   const [rows, setRows] = useState<StudentRow[]>(initial);
 
+  // Re-sync local state whenever the server re-renders with a new
+  // roster snapshot. Without this, router.refresh() after "Add
+  // student" or "Remove student" would refresh the count in the
+  // header but leave the grid showing the initial-mount list until
+  // a full F5. Identity-only dep (not JSON-stringified) is fine —
+  // the parent rebuilds the array when anything actually changes.
+  useEffect(() => {
+    setRows(initial);
+  }, [initial]);
+
   useEffect(() => {
     const supabase = createClient();
     const channel = supabase

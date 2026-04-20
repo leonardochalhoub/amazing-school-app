@@ -618,3 +618,64 @@ export async function addRosterStudentsToClassroom(
   revalidatePath(`/teacher/classroom/${parsed.data.classroomId}`);
   return { moved: ownedIds.length };
 }
+
+const RemoveFromClassroomSchema = z.object({
+  classroomId: UuidSchema,
+  rosterStudentIds: z.array(UuidSchema).min(1).max(200),
+});
+
+/**
+ * Detach one or more roster students from a classroom without
+ * touching anything else. classroom_id drops to NULL; the student
+ * stays on the teacher's roster, their historical rows (lesson
+ * assignments, XP, progress, payments, notes) keep their existing
+ * classroom_id so the trail of "what happened inside that
+ * classroom" stays legible.
+ *
+ * Ownership check on every row — only the teacher who owns both
+ * the classroom and the roster entries can do this.
+ */
+export async function removeRosterStudentsFromClassroom(
+  input: z.input<typeof RemoveFromClassroomSchema>,
+): Promise<{ removed: number } | { error: string }> {
+  const parsed = RemoveFromClassroomSchema.safeParse(input);
+  if (!parsed.success) return { error: "Invalid input" };
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" };
+
+  const admin = createAdminClient();
+
+  const { data: classroom } = await admin
+    .from("classrooms")
+    .select("id, teacher_id")
+    .eq("id", parsed.data.classroomId)
+    .maybeSingle();
+  const c = classroom as { id: string; teacher_id: string } | null;
+  if (!c) return { error: "Classroom not found" };
+  if (c.teacher_id !== user.id) return { error: "Not your classroom" };
+
+  const { data: owned } = await admin
+    .from("roster_students")
+    .select("id")
+    .in("id", parsed.data.rosterStudentIds)
+    .eq("teacher_id", user.id)
+    .eq("classroom_id", parsed.data.classroomId)
+    .is("deleted_at", null);
+  const ownedIds = ((owned ?? []) as Array<{ id: string }>).map((r) => r.id);
+  if (ownedIds.length === 0) return { error: "No valid students selected" };
+
+  const { error } = await admin
+    .from("roster_students")
+    .update({ classroom_id: null })
+    .in("id", ownedIds);
+  if (error) return { error: error.message };
+
+  revalidatePath("/teacher");
+  revalidatePath("/teacher/admin");
+  revalidatePath(`/teacher/classroom/${parsed.data.classroomId}`);
+  return { removed: ownedIds.length };
+}

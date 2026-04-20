@@ -11,17 +11,19 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { LessonPicker } from "./lesson-picker";
+import { LessonPicker, type PickerMusic } from "./lesson-picker";
 
 interface Props {
   classroomId: string;
   lessons: LessonMeta[];
+  music?: PickerMusic[];
   alreadyAssignedSlugs?: string[];
 }
 
 export function BulkAssignButton({
   classroomId,
   lessons,
+  music = [],
   alreadyAssignedSlugs = [],
 }: Props) {
   const [open, setOpen] = useState(false);
@@ -54,6 +56,7 @@ export function BulkAssignButton({
         </DialogHeader>
           <LessonPicker
             lessons={lessons}
+            music={music}
             onPick={pick}
             pending={pending}
             excludeSlugs={alreadyAssignedSlugs}

@@ -4,10 +4,12 @@ import { getClassroomStudentRows } from "@/lib/actions/teacher-dashboard";
 import { getAssignmentsForClassroom } from "@/lib/actions/assignments";
 import { getUpcomingClasses, getPastClasses } from "@/lib/actions/schedule";
 import { getAllLessons } from "@/lib/content/loader";
+import { listMusic } from "@/lib/content/music";
 import { RealtimeGrid } from "@/components/teacher/realtime-grid";
 import { BulkAssignButton } from "@/components/teacher/bulk-assign-button";
 import { DeleteClassroomButton } from "@/components/teacher/delete-classroom-button";
 import { AddStudentsToClassroomButton } from "@/components/teacher/add-students-to-classroom-button";
+import { RemoveStudentsFromClassroomButton } from "@/components/teacher/remove-students-from-classroom-button";
 import {
   PastClassLog,
   type PastClass,
@@ -49,6 +51,13 @@ export default async function ClassroomDetail({
   }));
 
   const allLessons = getAllLessons();
+  const allMusic = listMusic().map((m) => ({
+    slug: m.slug,
+    title: m.title,
+    artist: m.artist,
+    cefr_level: m.cefr_level,
+    duration_seconds: m.duration_seconds,
+  }));
   const classroomWideAssigned = assignments
     .filter((a) => a.student_id === null)
     .map((a) => a.lesson_slug);
@@ -79,9 +88,23 @@ export default async function ClassroomDetail({
             classroomId={id}
             classroomName={classroom.name}
           />
+          <RemoveStudentsFromClassroomButton
+            classroomId={id}
+            classroomName={classroom.name}
+            students={rows
+              .filter(
+                (r): r is typeof r & { rosterStudentId: string } =>
+                  !!(r as { rosterStudentId?: string }).rosterStudentId,
+              )
+              .map((r) => ({
+                rosterStudentId: r.rosterStudentId,
+                fullName: r.fullName,
+              }))}
+          />
           <BulkAssignButton
             classroomId={id}
             lessons={allLessons}
+            music={allMusic}
             alreadyAssignedSlugs={classroomWideAssigned}
           />
           <Link href={`/teacher/classroom/${id}/schedule`}>
