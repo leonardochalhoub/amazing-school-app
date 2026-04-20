@@ -263,11 +263,18 @@ export async function getStudentCurriculumReport(
   });
 
   // Filter to the selected year. An entry counts if EITHER it was
-  // assigned OR completed inside the window — this keeps lessons that
-  // were assigned late last year but finished this year visible on the
-  // current year's curriculum.
+  // assigned OR completed inside the window — this keeps lessons
+  // that were assigned late last year but finished this year
+  // visible on the current year's curriculum.
+  //
+  // Second rule: entries without a CEFR level are considered
+  // unclassified content and are excluded from the printed
+  // curriculum entirely. An official transcript should not carry
+  // rows with "—" in the level column.
   const entries = rawEntries.filter(
-    (e) => withinYear(e.assignedAt, year) || withinYear(e.completedAt, year),
+    (e) =>
+      !!e.cefr &&
+      (withinYear(e.assignedAt, year) || withinYear(e.completedAt, year)),
   );
 
   // Stats. CEFR is aggregated by course family (A1, A2, B1, B2, C1,

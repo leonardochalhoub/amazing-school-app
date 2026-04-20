@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { getReceiptData } from "@/lib/actions/reports";
 import { AutoPrint } from "@/components/reports/auto-print";
 import { PrintToolbar } from "@/components/reports/print-toolbar";
@@ -8,7 +7,8 @@ import { ReportFooter } from "@/components/reports/report-footer";
 import { BrandWatermark } from "@/components/reports/brand-watermark";
 import { formatBRL, amountInWordsBRL } from "@/lib/reports/brl";
 import { reportFilename, slugifyForFilename } from "@/lib/reports/filename";
-import { schoolLogoPublicUrl, SCHOOL_LOGO_SRC } from "@/lib/school-logo";
+import { schoolLogoPublicUrl, SCHOOL_LOGO_SRC, isLogoEligible } from "@/lib/school-logo";
+import { AmazingSchoolMark } from "@/components/reports/amazing-school-mark";
 
 export const dynamic = "force-dynamic";
 
@@ -69,10 +69,17 @@ export default async function ReceiptPrintPage({
     data.receiptNumber,
   ]);
 
-  const teacherLogo =
+  const uploadedTeacherLogo =
     data.teacher.schoolLogoEnabled && data.teacher.schoolLogoUrl
       ? schoolLogoPublicUrl(data.teacher.schoolLogoUrl)
       : null;
+  const whitelistTeacherLogo =
+    data.teacher.schoolLogoEnabled &&
+    !uploadedTeacherLogo &&
+    isLogoEligible(data.teacher.email ?? null, data.teacher.fullName ?? "")
+      ? SCHOOL_LOGO_SRC
+      : null;
+  const teacherLogo = uploadedTeacherLogo ?? whitelistTeacherLogo;
 
   const monthLabel = monthNameFromISO(data.payment.billingMonth);
   const amountText = formatBRL(data.payment.amountCents);
@@ -96,31 +103,24 @@ export default async function ReceiptPrintPage({
           paddingBottom: "20mm",
         }}
       >
-        {/* Compact header with both logos */}
         <header className="report-header" style={{ marginBottom: 16 }}>
           <div className="report-header-left">
-            <div className="report-logo-box">
-              <Image
-                src={SCHOOL_LOGO_SRC}
-                alt="Amazing School"
-                width={100}
-                height={32}
-                unoptimized
-                priority
-              />
-            </div>
             {teacherLogo ? (
               <div className="report-logo-box">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={teacherLogo}
                   alt={
                     data.teacher.fullName
                       ? `${data.teacher.fullName} — logo`
                       : "School logo"
                   }
-                  width={100}
-                  height={32}
-                  unoptimized
+                  style={{
+                    maxHeight: 30,
+                    width: "auto",
+                    objectFit: "contain",
+                    display: "block",
+                  }}
                 />
               </div>
             ) : null}
@@ -131,14 +131,24 @@ export default async function ReceiptPrintPage({
               <p className="report-subtitle">Nº {data.receiptNumber}</p>
             </div>
           </div>
-          <div className="report-meta">
-            <div>
-              <span className="report-muted">Valor: </span>
-              <strong style={{ fontSize: "13pt" }}>{amountText}</strong>
-            </div>
-            <div>
-              <span className="report-muted">Referente a: </span>
-              <span style={{ textTransform: "capitalize" }}>{monthLabel}</span>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+              gap: 4,
+            }}
+          >
+            <AmazingSchoolMark size={22} />
+            <div className="report-meta">
+              <div>
+                <span className="report-muted">Valor: </span>
+                <strong style={{ fontSize: "13pt" }}>{amountText}</strong>
+              </div>
+              <div>
+                <span className="report-muted">Referente a: </span>
+                <span style={{ textTransform: "capitalize" }}>{monthLabel}</span>
+              </div>
             </div>
           </div>
         </header>

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { getCertificate } from "@/lib/actions/certificates";
 import { AutoPrint } from "@/components/reports/auto-print";
 import { PrintToolbar } from "@/components/reports/print-toolbar";
 import { reportFilename, slugifyForFilename } from "@/lib/reports/filename";
-import { schoolLogoPublicUrl, SCHOOL_LOGO_SRC } from "@/lib/school-logo";
+import { schoolLogoPublicUrl, SCHOOL_LOGO_SRC, isLogoEligible } from "@/lib/school-logo";
+import { AmazingSchoolMark } from "@/components/reports/amazing-school-mark";
 import {
   findCertificateLevel,
   findGrade,
@@ -134,10 +134,17 @@ export default async function CertificatePrintPage({
     lang === "pt-BR" ? "pt-br" : "en",
   ]);
 
-  const teacherLogo =
+  const uploadedTeacherLogo =
     data.teacher.schoolLogoEnabled && data.teacher.schoolLogoUrl
       ? schoolLogoPublicUrl(data.teacher.schoolLogoUrl)
       : null;
+  const whitelistTeacherLogo =
+    data.teacher.schoolLogoEnabled &&
+    !uploadedTeacherLogo &&
+    isLogoEligible(data.teacher.email ?? null, data.teacher.fullName ?? "")
+      ? SCHOOL_LOGO_SRC
+      : null;
+  const teacherLogo = uploadedTeacherLogo ?? whitelistTeacherLogo;
 
   return (
     <>
@@ -206,28 +213,41 @@ export default async function CertificatePrintPage({
             paddingBottom: 16,
           }}
         >
-          <div
-            style={{
-              height: 60,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              background: "#ffffff",
-              border: "1px solid #e5e7eb",
-              borderRadius: 6,
-              padding: "6px 10px",
-              minWidth: 150,
-            }}
-          >
-            <Image
-              src={SCHOOL_LOGO_SRC}
-              alt="Amazing School"
-              width={130}
-              height={42}
-              unoptimized
-              priority
-            />
-          </div>
+          {/* LEFT — teacher's school logo. */}
+          {teacherLogo ? (
+            <div
+              style={{
+                height: 60,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                background: "#ffffff",
+                border: "1px solid #e5e7eb",
+                borderRadius: 6,
+                padding: "6px 10px",
+                minWidth: 150,
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={teacherLogo}
+                alt={
+                  data.teacher.fullName
+                    ? `${data.teacher.fullName} — logo`
+                    : "School logo"
+                }
+                style={{
+                  maxHeight: 46,
+                  maxWidth: 140,
+                  width: "auto",
+                  objectFit: "contain",
+                  display: "block",
+                }}
+              />
+            </div>
+          ) : (
+            <div style={{ minWidth: 150 }} />
+          )}
 
           <div style={{ textAlign: "center", flex: 1 }}>
             <p
@@ -248,35 +268,17 @@ export default async function CertificatePrintPage({
             ) : null}
           </div>
 
-          {teacherLogo ? (
-            <div
-              style={{
-                height: 60,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#ffffff",
-                border: "1px solid #e5e7eb",
-                borderRadius: 6,
-                padding: "6px 10px",
-                minWidth: 150,
-              }}
-            >
-              <Image
-                src={teacherLogo}
-                alt={
-                  data.teacher.fullName
-                    ? `${data.teacher.fullName} — logo`
-                    : "School logo"
-                }
-                width={130}
-                height={42}
-                unoptimized
-              />
-            </div>
-          ) : (
-            <div style={{ minWidth: 150 }} />
-          )}
+          {/* RIGHT — Amazing School mark. */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-end",
+              minWidth: 170,
+            }}
+          >
+            <AmazingSchoolMark size={28} />
+          </div>
         </header>
 
         <section
