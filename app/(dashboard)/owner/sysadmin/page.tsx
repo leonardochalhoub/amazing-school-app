@@ -473,13 +473,13 @@ export default async function SysadminPage() {
           </p>
         </div>
         <div className="grid gap-4 lg:grid-cols-2">
-          <div className="space-y-2">
+          <div className="min-w-0 space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Lessons ({topAssigned.lessons.length})
             </h3>
             <TopAssignedTable rows={topAssigned.lessons} unit="lesson" />
           </div>
-          <div className="space-y-2">
+          <div className="min-w-0 space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Songs ({topAssigned.songs.length})
             </h3>
@@ -500,13 +500,13 @@ export default async function SysadminPage() {
           </p>
         </div>
         <div className="grid gap-4 lg:grid-cols-2">
-          <div className="space-y-2">
+          <div className="min-w-0 space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Teachers ({aiChatUsage.teachers.length})
             </h3>
             <AiChatUsageTable rows={aiChatUsage.teachers} kind="teacher" />
           </div>
-          <div className="space-y-2">
+          <div className="min-w-0 space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Students ({aiChatUsage.students.length})
             </h3>
@@ -530,7 +530,7 @@ export default async function SysadminPage() {
         </div>
 
         <div className="grid gap-4 lg:grid-cols-2">
-          <div className="space-y-2">
+          <div className="min-w-0 space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Teachers
             </h3>
@@ -574,7 +574,7 @@ export default async function SysadminPage() {
             </div>
           </div>
 
-          <div className="space-y-2">
+          <div className="min-w-0 space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Students
             </h3>
