@@ -2,10 +2,12 @@ import { redirect } from "next/navigation";
 import { isOwner } from "@/lib/auth/roles";
 import { getSysadminOverview } from "@/lib/actions/sysadmin";
 import { listRecentLogins } from "@/lib/actions/login-log";
+import { listOwners, listRoleAuditLog } from "@/lib/actions/owner-grants";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { LoginLogPanel } from "@/components/owner/login-log-panel";
 import { SysadminCharts } from "@/components/owner/sysadmin-charts";
+import { PlatformAccessCard } from "@/components/owner/platform-access-card";
 import {
   Users,
   GraduationCap,
@@ -55,7 +57,11 @@ export default async function SysadminPage() {
     contentMix,
     health,
   } = overview;
-  const logins = await listRecentLogins(100);
+  const [logins, owners, audit] = await Promise.all([
+    listRecentLogins(100),
+    listOwners(),
+    listRoleAuditLog(25),
+  ]);
 
   return (
     <div className="space-y-10 pb-16">
@@ -462,6 +468,8 @@ export default async function SysadminPage() {
           hint="Awaiting teacher review. Never shown to students."
         />
       </section>
+
+      <PlatformAccessCard currentOwners={owners} audit={audit} />
 
       <LoginLogPanel entries={logins} />
     </div>

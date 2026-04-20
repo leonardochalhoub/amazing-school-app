@@ -1,22 +1,42 @@
+import { cache } from "react";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 /**
- * Email of the platform owner — has access to the Management CRM on top of
- * everything a teacher can see. Intentionally hard-coded (not DB-driven)
- * because there's exactly one owner and we want zero-risk-of-escalation.
+ * Platform-owner access is now a role on profiles (`role = 'owner'`)
+ * rather than a hardcoded email. Grants and revokes go through the
+ * owner-management server action and land in public.role_audit_log.
+ *
+ * Both helpers here are memoised per request via React.cache so the
+ * same signed-in user only pays one DB round-trip per render pass.
  */
-export const OWNER_EMAIL = "leochalhoub@hotmail.com";
 
-export async function isOwner(): Promise<boolean> {
+export const isOwner = cache(async (): Promise<boolean> => {
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user?.email) return false;
-  return user.email.toLowerCase().trim() === OWNER_EMAIL;
-}
+  if (!user) return false;
+  const admin = createAdminClient();
+  const { data } = await admin
+    .from("profiles")
+    .select("role")
+    .eq("id", user.id)
+    .maybeSingle();
+  return (data as { role?: string } | null)?.role === "owner";
+});
 
-export function isOwnerEmail(email: string | null | undefined): boolean {
-  if (!email) return false;
-  return email.toLowerCase().trim() === OWNER_EMAIL;
-}
+/**
+ * Variant that takes a specific user id — useful for server components
+ * that already have it and want to skip the auth-fetch round trip.
+ */
+export const isOwnerById = cache(async (userId: string): Promise<boolean> => {
+  if (!userId) return false;
+  const admin = createAdminClient();
+  const { data } = await admin
+    .from("profiles")
+    .select("role")
+    .eq("id", userId)
+    .maybeSingle();
+  return (data as { role?: string } | null)?.role === "owner";
+});

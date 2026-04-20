@@ -1,5 +1,13 @@
 import { NextResponse } from "next/server";
-import { OWNER_EMAIL } from "@/lib/auth/roles";
+
+/**
+ * MyMemory wants a contact email via the `de=` param to bump the quota
+ * from 5k to 50k chars/day/IP. This is a throttling hint, not an
+ * authentication signal — env-overridable so a fork doesn't ship with
+ * our email.
+ */
+const MYMEMORY_CONTACT_EMAIL =
+  process.env.MYMEMORY_CONTACT_EMAIL ?? "leochalhoub@hotmail.com";
 
 /**
  * Free EN→PT-BR translation proxy backed by MyMemory.
@@ -22,7 +30,7 @@ async function translateOne(term: string): Promise<string | null> {
   const params = new URLSearchParams({
     q: term,
     langpair: "en|pt-BR",
-    de: OWNER_EMAIL,
+    de: MYMEMORY_CONTACT_EMAIL,
   });
   try {
     const res = await fetch(`${MYMEMORY_URL}?${params.toString()}`);

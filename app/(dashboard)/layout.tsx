@@ -1,7 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
-import { isOwnerEmail } from "@/lib/auth/roles";
 import {
   isLogoEligible,
   schoolLogoPublicUrl,
@@ -37,9 +36,12 @@ export default async function DashboardLayout({
     redirect("/login");
   }
 
-  const role = profile.role as Role;
+  const role = (profile.role === "owner" ? "teacher" : profile.role) as Role;
   const avatarUrl = await resolveMyAvatarUrl(supabase, user.id);
-  const isOwner = isOwnerEmail(user.email);
+  // Owner == an authenticated profile whose role is 'owner' on
+  // profiles. Bootstrap seed lives in migration 035. The layout
+  // passes this into the Navbar so the Sysadmin menu item shows up.
+  const isOwner = profile.role === "owner";
 
   // Roster-linked students get a cartoon avatar fallback (matches the
   // one rendered on their dashboard) so the navbar doesn't drop to
