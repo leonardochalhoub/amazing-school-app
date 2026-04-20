@@ -20,8 +20,10 @@ import { ManagementGrid } from "@/components/owner/management-grid";
 import { RevenueAnalytics } from "@/components/owner/revenue-analytics";
 import { TeacherReportsPanel } from "@/components/reports/teacher-reports-panel";
 import { CertificatesSection } from "@/components/reports/certificates-section";
+import { ServiceReceiptsSection } from "@/components/reports/service-receipts-section";
 import { listTeacherReceipts } from "@/lib/actions/reports";
 import { listCertificatesForTeacher } from "@/lib/actions/certificates";
+import { listServiceReceiptsForTeacher } from "@/lib/actions/service-receipts";
 import {
   Users,
   Flame,
@@ -67,6 +69,7 @@ export default async function TeacherManagementPage() {
     deletedStudents,
     receiptsForQuery,
     certificatesForTeacher,
+    serviceReceipts,
   ] = await Promise.all([
     getTeacherDashboardData(),
     getTeacherManagementMatrix({ months: 24 }),
@@ -75,6 +78,7 @@ export default async function TeacherManagementPage() {
     listDeletedRosterStudents(),
     listTeacherReceipts(),
     listCertificatesForTeacher(),
+    listServiceReceiptsForTeacher(),
   ]);
 
   const financeAvailable = !("error" in financeData);
@@ -530,6 +534,18 @@ export default async function TeacherManagementPage() {
           fullName: r.student_name,
           billingStartsOn: r.billing_starts_on,
           createdAt: r.roster_created_at,
+        }))}
+      />
+
+      {/* ========== SERVICE RECEIPTS — sits below the certificates
+           block per the teacher's request. Ad-hoc recibos for
+           consultoria, tradução, mentoria — anything that doesn't
+           fit the tuition matrix. */}
+      <ServiceReceiptsSection
+        receipts={serviceReceipts}
+        students={rows.map((r) => ({
+          id: r.roster_student_id,
+          fullName: r.student_name,
         }))}
       />
     </div>
