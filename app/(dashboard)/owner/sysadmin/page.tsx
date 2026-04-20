@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { LoginLogPanel } from "@/components/owner/login-log-panel";
 import { SysadminCharts } from "@/components/owner/sysadmin-charts";
 import { PlatformAccessCard } from "@/components/owner/platform-access-card";
+import { TopAssignedTable } from "@/components/owner/top-assigned-table";
 import {
   Users,
   GraduationCap,
@@ -74,6 +75,7 @@ export default async function SysadminPage() {
     topActiveStudents,
     allTimeTopStudents,
     timeOnSite,
+    topAssigned,
     contentMix,
     health,
   } = overview;
@@ -386,6 +388,33 @@ export default async function SysadminPage() {
               No XP events on the platform yet.
             </p>
           ) : null}
+        </div>
+      </section>
+
+      {/* ============================ Top assigned lessons + songs ============================ */}
+      <section className="space-y-4">
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            Top assigned
+          </h2>
+          <p className="text-xs text-muted-foreground">
+            Most-assigned across every teacher and classroom. Sorted
+            descending · top 10 shown, click Show all for the rest.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="space-y-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Lessons ({topAssigned.lessons.length})
+            </h3>
+            <TopAssignedTable rows={topAssigned.lessons} unit="lesson" />
+          </div>
+          <div className="space-y-2">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Songs ({topAssigned.songs.length})
+            </h3>
+            <TopAssignedTable rows={topAssigned.songs} unit="song" />
+          </div>
         </div>
       </section>
 

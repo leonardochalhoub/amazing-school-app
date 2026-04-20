@@ -104,6 +104,16 @@ export interface SysadminOverview {
       lessons: number;
     }[];
   };
+  /**
+   * Top assigned lessons + songs, grouped separately. Counts rows
+   * in lesson_assignments per lesson_slug across every teacher and
+   * classroom. Sorted descending by assigned-count so the sysadmin
+   * can see which titles dominate the curriculum.
+   */
+  topAssigned: {
+    lessons: { slug: string; title: string; cefr: string | null; count: number }[];
+    songs: { slug: string; title: string; cefr: string | null; count: number }[];
+  };
   contentMix: {
     lessonsPerCefr: { level: string; count: number }[];
     songsPerCefr: { level: string; count: number }[];
@@ -644,7 +654,7 @@ export async function getSysadminOverview(): Promise<
       .limit(200_000),
     admin
       .from("lesson_assignments")
-      .select("assigned_by, assigned_at")
+      .select("assigned_by, assigned_at, lesson_slug")
       .limit(200_000),
     admin
       .from("roster_diary")
@@ -707,9 +717,84 @@ export async function getSysadminOverview(): Promise<
   for (const r of (assignmentsAllRes.data ?? []) as Array<{
     assigned_by: string | null;
     assigned_at: string | null;
+    lesson_slug: string;
   }>) {
     addTeacherDay(r.assigned_by, r.assigned_at);
   }
+
+  // Top assigned — group every assignment by lesson_slug, split
+  // lessons vs songs on the "music:" prefix. Titles resolved from
+  // the catalog JSON files we've already loaded upstream in the
+  // sysadmin build (catalogLessons / catalogSongs).
+  const assignedCountBySlug = new Map<string, number>();
+  for (const r of (assignmentsAllRes.data ?? []) as Array<{
+    lesson_slug: string;
+  }>) {
+    const key = r.lesson_slug;
+    assignedCountBySlug.set(key, (assignedCountBySlug.get(key) ?? 0) + 1);
+  }
+  const lessonTitleBySlug = new Map<string, { title: string; cefr: string | null }>();
+  const songTitleBySlug = new Map<string, { title: string; cefr: string | null }>();
+  try {
+    const { readFileSync } = await import("node:fs");
+    const { resolve } = await import("node:path");
+    const lessonsIdx = JSON.parse(
+      readFileSync(resolve("content/lessons/index.json"), "utf8"),
+    ) as Array<{ slug: string; title?: string; cefr_level?: string }>;
+    for (const l of lessonsIdx) {
+      lessonTitleBySlug.set(l.slug, {
+        title: l.title ?? l.slug,
+        cefr: l.cefr_level ?? null,
+      });
+    }
+    const musicIdx = JSON.parse(
+      readFileSync(resolve("content/music/index.json"), "utf8"),
+    ) as {
+      songs: Array<{ slug: string; title: string; artist?: string; cefr_level?: string }>;
+    };
+    for (const s of musicIdx.songs) {
+      songTitleBySlug.set(s.slug, {
+        title: s.artist ? `${s.artist} — ${s.title}` : s.title,
+        cefr: s.cefr_level ?? null,
+      });
+    }
+  } catch {
+    /* Non-fatal — catalog files may be missing on some edges. */
+  }
+  const topLessons: Array<{
+    slug: string;
+    title: string;
+    cefr: string | null;
+    count: number;
+  }> = [];
+  const topSongs: Array<{
+    slug: string;
+    title: string;
+    cefr: string | null;
+    count: number;
+  }> = [];
+  for (const [rawSlug, count] of assignedCountBySlug.entries()) {
+    if (rawSlug.startsWith("music:")) {
+      const slug = rawSlug.slice("music:".length);
+      const meta = songTitleBySlug.get(slug);
+      topSongs.push({
+        slug,
+        title: meta?.title ?? slug,
+        cefr: meta?.cefr ?? null,
+        count,
+      });
+    } else {
+      const meta = lessonTitleBySlug.get(rawSlug);
+      topLessons.push({
+        slug: rawSlug,
+        title: meta?.title ?? rawSlug,
+        cefr: meta?.cefr ?? null,
+        count,
+      });
+    }
+  }
+  topLessons.sort((a, b) => b.count - a.count);
+  topSongs.sort((a, b) => b.count - a.count);
   for (const r of (diaryRes.data ?? []) as Array<{
     teacher_id: string | null;
     created_at: string | null;
@@ -819,6 +904,10 @@ export async function getSysadminOverview(): Promise<
     timeOnSite: {
       teachers: teacherTimeRows,
       students: studentTimeRows,
+    },
+    topAssigned: {
+      lessons: topLessons,
+      songs: topSongs,
     },
     contentMix: { lessonsPerCefr, songsPerCefr },
     health: {
