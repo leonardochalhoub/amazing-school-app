@@ -186,6 +186,24 @@ export async function listAllTeacherHistory(
   if (!user) return [];
 
   const admin = createAdminClient();
+
+  // Resolve THIS teacher's classrooms (including soft-deleted ones
+  // so the history keeps their name tag). scheduled_classes rows
+  // are scoped by classroom_id, not teacher_id, so we need the list
+  // to union them in below.
+  const { data: myClassrooms } = await admin
+    .from("classrooms")
+    .select("id, name")
+    .eq("teacher_id", user.id);
+  const myClassroomIds = (myClassrooms ?? []).map(
+    (c) => (c as { id: string }).id,
+  );
+  const classroomNameById = new Map<string, string>();
+  for (const c of myClassrooms ?? []) {
+    const row = c as { id: string; name: string };
+    classroomNameById.set(row.id, row.name);
+  }
+
   // Defensive: if migration 023 hasn't been applied yet, the query fails
   // and the build can't collect page data for /teacher. Swallow errors
   // so the dashboard still renders with an empty log.
@@ -204,6 +222,72 @@ export async function listAllTeacherHistory(
   } catch {
     rows = [];
   }
+
+  // Union PAST scheduled_classes so a teacher who scheduled a class
+  // via the Schedule button also sees it in the dashboard class log
+  // — otherwise that record lived only inside the per-classroom
+  // "Past classes" card and never surfaced globally.
+  if (myClassroomIds.length > 0) {
+    const nowIso = new Date().toISOString();
+    const { data: scheduled } = await admin
+      .from("scheduled_classes")
+      .select(
+        "id, classroom_id, title, observations, completion_status, meeting_url, scheduled_at, created_at",
+      )
+      .in("classroom_id", myClassroomIds)
+      .lte("scheduled_at", nowIso)
+      .order("scheduled_at", { ascending: false })
+      .limit(limit);
+    for (const s of (scheduled ?? []) as Array<{
+      id: string;
+      classroom_id: string;
+      title: string | null;
+      observations: string | null;
+      completion_status: string | null;
+      meeting_url: string | null;
+      scheduled_at: string;
+      created_at: string;
+    }>) {
+      const at = new Date(s.scheduled_at);
+      const eventDate = at.toISOString().slice(0, 10);
+      const eventTime = at.toISOString().slice(11, 16);
+      const status: HistoryStatus =
+        s.completion_status === "done"
+          ? "Done"
+          : s.completion_status === "absent"
+            ? "Absent"
+            : s.completion_status === "rescheduled_student"
+              ? "Rescheduled by student"
+              : s.completion_status === "rescheduled_teacher"
+                ? "Rescheduled by teacher"
+                : "Planned";
+      rows.push({
+        id: `sch:${s.id}`,
+        teacher_id: user.id,
+        student_id: null,
+        roster_student_id: null,
+        classroom_id: s.classroom_id,
+        event_date: eventDate,
+        event_time: eventTime,
+        status,
+        lesson_content: s.observations ?? s.title ?? null,
+        skill_focus: [],
+        meeting_link: s.meeting_url,
+        created_at: s.created_at,
+        updated_at: s.created_at,
+      });
+    }
+  }
+
+  // Re-sort the merged set newest-first and trim to `limit` so the
+  // caller gets a stable ordering whether the row came from
+  // student_history or scheduled_classes.
+  rows.sort((a, b) => {
+    const dateA = `${a.event_date as string} ${(a.event_time as string) ?? ""}`;
+    const dateB = `${b.event_date as string} ${(b.event_time as string) ?? ""}`;
+    return dateB.localeCompare(dateA);
+  });
+  rows = rows.slice(0, limit);
   if (rows.length === 0) return [];
 
   // Resolve display names from profiles (auth students) + roster_students.
