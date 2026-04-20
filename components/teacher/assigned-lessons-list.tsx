@@ -211,9 +211,15 @@ export function AssignedLessonsList({ assignments, canUnassign = true }: Props) 
                 ) : (
                   <UserRound className="h-3 w-3" />
                 )}
-                {a.scope === "classroom-wide" && a.classroomName
-                  ? a.classroomName
-                  : t.scope[a.scope]}
+                {/* Prefer the classroom name whenever we have one —
+                    works for classroom-wide rows AND for per-student
+                    rows that inherited a classroom_id (e.g. the
+                    materialized rows from a deleted classroom, or
+                    an explicit per-student assignment made inside
+                    an active classroom). Falls back to the generic
+                    "Whole class / Individual" label only when no
+                    classroom context exists. */}
+                {a.classroomName ?? t.scope[a.scope]}
               </span>
               <span>·</span>
               <span className="inline-flex items-center gap-1 tabular-nums">
