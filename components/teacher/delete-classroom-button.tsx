@@ -38,7 +38,16 @@ export function DeleteClassroomButton({
   const [open, setOpen] = useState(false);
   const [confirmText, setConfirmText] = useState("");
   const [pending, startTransition] = useTransition();
-  const canDelete = confirmText.trim() === classroomName;
+  // Accept case-insensitive match and collapse whitespace on both
+  // sides — so a classroom saved with a trailing space, double
+  // spaces, or slightly different casing ("Paulo Roberto" saved as
+  // "paulo roberto" or " Paulo  Roberto ") still confirms. The
+  // safeguard's point is to kill accidental click-through, not to
+  // demand a forensic match.
+  const normalize = (s: string) =>
+    s.trim().replace(/\s+/g, " ").toLowerCase();
+  const canDelete =
+    confirmText.length > 0 && normalize(confirmText) === normalize(classroomName);
 
   function close() {
     if (pending) return;
