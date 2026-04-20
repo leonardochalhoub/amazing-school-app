@@ -52,6 +52,12 @@ export default async function TeacherLessonsPage({
     course?: string;
     source?: string;
     q?: string;
+    /** Preselect a classroom in the bulk-assign dialog. When set,
+     *  the BulkAssignList defaults its target to that classroom
+     *  and hides the picker — use case: teacher clicks Bulk
+     *  Assign inside a specific classroom and lands here scoped
+     *  to it. */
+    classroom?: string;
   }>;
 }) {
   const supabase = await createClient();
@@ -405,6 +411,7 @@ export default async function TeacherLessonsPage({
             fullName: r.fullName,
             classroomId: r.classroomId,
           }))}
+          presetClassroomId={params.classroom}
         />
       )}
     </div>

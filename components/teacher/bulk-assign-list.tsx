@@ -50,16 +50,26 @@ interface Props {
   rows: BulkRow[];
   classrooms: Classroom[];
   students: Student[];
+  /** When set, the bulk-assign dialog defaults to this classroom
+   *  as the target and skips the classroom picker. Used when the
+   *  teacher clicks "Bulk Assign" from inside a classroom page
+   *  and lands here with ?classroom=<id>. */
+  presetClassroomId?: string;
 }
 
-export function BulkAssignList({ rows, classrooms, students }: Props) {
+export function BulkAssignList({
+  rows,
+  classrooms,
+  students,
+  presetClassroomId,
+}: Props) {
   const router = useRouter();
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [dialogOpen, setDialogOpen] = useState(false);
   const [targetType, setTargetType] = useState<"classroom" | "student">(
-    "classroom"
+    "classroom",
   );
-  const [classroomId, setClassroomId] = useState("");
+  const [classroomId, setClassroomId] = useState(presetClassroomId ?? "");
   const [studentId, setStudentId] = useState("");
   const [pending, startTransition] = useTransition();
 

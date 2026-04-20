@@ -101,12 +101,13 @@ export default async function ClassroomDetail({
                 fullName: r.fullName,
               }))}
           />
-          <BulkAssignButton
-            classroomId={id}
-            lessons={allLessons}
-            music={allMusic}
-            alreadyAssignedSlugs={classroomWideAssigned}
-          />
+          {/* The richer bulk-assign lives on /teacher/lessons — full
+              library with lessons + songs, multi-select, CEFR band
+              grouping. We hand the classroom id over as a query
+              param so the picker pre-scopes to this classroom. */}
+          <Link href={`/teacher/lessons?classroom=${id}`}>
+            <Button size="sm">Bulk assign</Button>
+          </Link>
           <Link href={`/teacher/classroom/${id}/schedule`}>
             <Button size="sm" variant="outline">Schedule</Button>
           </Link>
