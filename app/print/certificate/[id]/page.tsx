@@ -181,6 +181,8 @@ export default async function CertificatePrintPage({
           fontFamily:
             'var(--font-sans), "Helvetica Neue", Arial, sans-serif',
           padding: "28mm 26mm",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
         <div
@@ -429,10 +431,9 @@ export default async function CertificatePrintPage({
 
         </section>
 
-        {/* Remarks live BETWEEN the body and the footer so they
-            cannot overlap the signature line — previously the
-            footer was absolutely-positioned and long remarks ran
-            under the signature. */}
+        {/* Remarks sit in the natural flow, right after the body.
+            A flex spacer below pushes the footer + brand band to
+            the bottom so long remarks can never overlap either. */}
         {data.remarks ? (
           <section
             style={{
@@ -456,60 +457,20 @@ export default async function CertificatePrintPage({
           </section>
         ) : null}
 
-        {/* Amazing School brand band — thin pill above the footer,
-            carrying the purple mark + tagline. Second anchor point
-            for the platform identity on the certificate. */}
-        <div
-          style={{
-            position: "absolute",
-            left: "26mm",
-            right: "26mm",
-            bottom: "60mm",
-            zIndex: 1,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 10,
-              background: "#ffffff",
-              border: "1px solid #e5e7eb",
-              borderRadius: 999,
-              padding: "4px 14px 4px 6px",
-              boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
-            }}
-          >
-            <AmazingSchoolMark size={18} />
-            <span
-              style={{
-                fontSize: "8.5pt",
-                color: "#4b5563",
-                letterSpacing: "0.02em",
-                fontWeight: 500,
-              }}
-            >
-              {lang === "pt-BR"
-                ? "Emitido por Amazing School · amazing-school-app.vercel.app"
-                : "Issued by Amazing School · amazing-school-app.vercel.app"}
-            </span>
-          </div>
-        </div>
+        {/* Flex spacer — whatever room is left between the last
+            body section and the footer. Guarantees the signature
+            block never rides up into the remarks / body. */}
+        <div style={{ flex: 1, minHeight: 24 }} />
 
         <footer
           style={{
-            position: "absolute",
-            left: "26mm",
-            right: "26mm",
-            bottom: "22mm",
+            position: "relative",
             zIndex: 1,
             display: "flex",
             alignItems: "flex-end",
             justifyContent: "space-between",
             gap: 24,
+            marginTop: 12,
           }}
         >
           <div style={{ textAlign: "left", fontSize: "10pt", color: "#374151" }}>
@@ -593,6 +554,46 @@ export default async function CertificatePrintPage({
             </p>
           </div>
         </footer>
+
+        {/* Amazing School brand band — LAST element of the article,
+            sits at the real bottom of the page below the signature.
+            The flex-column layout up top keeps everything else in
+            place regardless of how long remarks / body runs. */}
+        <div
+          style={{
+            position: "relative",
+            zIndex: 1,
+            marginTop: 14,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 10,
+              background: "#ffffff",
+              borderRadius: 999,
+              padding: "3px 14px 3px 6px",
+            }}
+          >
+            <AmazingSchoolMark size={16} />
+            <span
+              style={{
+                fontSize: "8pt",
+                color: "#6b5b24",
+                letterSpacing: "0.04em",
+                fontWeight: 500,
+              }}
+            >
+              {lang === "pt-BR"
+                ? "Emitido por Amazing School · amazing-school-app.vercel.app"
+                : "Issued by Amazing School · amazing-school-app.vercel.app"}
+            </span>
+          </div>
+        </div>
       </article>
     </>
   );
