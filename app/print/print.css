@@ -154,16 +154,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 64px;
+  height: 52px;
   padding: 0;
 }
 
 .report-logo-box img {
-  max-height: 56px;
+  max-height: 45px;
   /* Wide cap so landscape logos (e.g. "Tatiana Sequeira — English
      Language Solutions" ships at 813×164, ratio ~5:1) can hit the
-     56px height without the max-width clipping them shorter. */
-  max-width: 300px;
+     45px height without the max-width clipping them shorter. */
+  max-width: 240px;
   width: auto;
   object-fit: contain;
   display: block;
