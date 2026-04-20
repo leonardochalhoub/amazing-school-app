@@ -153,7 +153,12 @@ export async function listDeletedRosterStudents(): Promise<DeletedRosterRow[]> {
   if (!user) return [];
 
   const admin = createAdminClient();
-  const { data } = await admin
+  // Defensive: if migration 041 hasn't been applied yet the
+  // deleted_at column doesn't exist and every query here would
+  // 500. Swallow that specific shape of error and return an empty
+  // archive so the card still renders with its "no deleted
+  // students yet" empty state.
+  const { data, error } = await admin
     .from("roster_students")
     .select(
       "id, full_name, email, classroom_id, deleted_at, monthly_tuition_cents, classrooms(name)",
@@ -161,6 +166,13 @@ export async function listDeletedRosterStudents(): Promise<DeletedRosterRow[]> {
     .eq("teacher_id", user.id)
     .not("deleted_at", "is", null)
     .order("deleted_at", { ascending: false });
+  if (error) {
+    console.warn(
+      "[listDeletedRosterStudents] query failed (migration 041?)",
+      error.message,
+    );
+    return [];
+  }
 
   return ((data ?? []) as Array<{
     id: string;
