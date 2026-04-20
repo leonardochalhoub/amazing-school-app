@@ -299,18 +299,37 @@ export default async function StudentHome() {
       music: 0,
     });
   }
+  // Activity events come from two sources, merged:
+  //   1. lesson_progress rows — the canonical "student finished
+  //      lesson X at time T" record, populated by the completion
+  //      action both for regular lessons and music.
+  //   2. Assignment rows with status="completed" that have no
+  //      matching lesson_progress — can happen on demo data (seed
+  //      used to skip music progress rows) and on legacy entries.
+  //      We fall back to assigned_at as the event date so at least
+  //      the chart reflects the real volume of work done.
+  const slugsWithProgress = new Set<string>();
   for (const c of allCompletions ?? []) {
     const row = c as { lesson_slug: string; completed_at: string };
     const t = new Date(row.completed_at);
     const tDay =
       Math.floor((t.getTime() + BRT_OFFSET_MS) / msPerDay) * msPerDay;
     const idx = Math.floor((tDay - rangeStart.getTime()) / msPerDay);
+    slugsWithProgress.add(row.lesson_slug);
     if (idx < 0 || idx >= activityBuckets.length) continue;
-    // Music and regular lessons are both "completions" but plot on
-    // different colors so the student can see their listening vs.
-    // reading mix at a glance. Music slugs carry the "music:" prefix
-    // (see MUSIC_SLUG_PREFIX in lib/content/music.ts).
     if (row.lesson_slug.startsWith("music:")) activityBuckets[idx].music++;
+    else activityBuckets[idx].lessons++;
+  }
+  for (const a of resolvedAssignments) {
+    if (a.status !== "completed") continue;
+    const fullSlug = a.kind === "music" ? `music:${a.slug}` : a.slug;
+    if (slugsWithProgress.has(fullSlug)) continue;
+    const t = new Date(a.assignedAt);
+    const tDay =
+      Math.floor((t.getTime() + BRT_OFFSET_MS) / msPerDay) * msPerDay;
+    const idx = Math.floor((tDay - rangeStart.getTime()) / msPerDay);
+    if (idx < 0 || idx >= activityBuckets.length) continue;
+    if (a.kind === "music") activityBuckets[idx].music++;
     else activityBuckets[idx].lessons++;
   }
 

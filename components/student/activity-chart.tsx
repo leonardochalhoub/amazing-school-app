@@ -61,8 +61,13 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
       </div>
 
       <div
-        className="relative grid items-end gap-[2px]"
+        className="relative grid items-end"
         style={{
+          // Tight-pack bars with no gap when the chart is dense
+          // (daily buckets over a long range) so each bar is at least
+          // a pixel wide instead of dissolving into gap. Sparse
+          // monthly charts still breathe thanks to the rounded-sm.
+          gap: buckets.length > 120 ? 0 : 2,
           gridTemplateColumns: `repeat(${buckets.length}, minmax(0, 1fr))`,
           height: H,
         }}
@@ -86,8 +91,13 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
                 className="w-full overflow-hidden rounded-sm transition-opacity group-hover:opacity-100"
                 style={{
                   height: `${totalPct}%`,
-                  minHeight: total > 0 ? 2 : 0,
-                  opacity: total === 0 ? 0.08 : 0.9,
+                  // Bump empty-bar visibility + the minimum height of
+                  // a single completion so a sparse student's activity
+                  // still reads at a glance on a 2-year daily chart
+                  // (one event in 730 buckets otherwise renders as
+                  // essentially zero pixels).
+                  minHeight: total > 0 ? 8 : 0,
+                  opacity: total === 0 ? 0.15 : 0.95,
                 }}
               >
                 <div
