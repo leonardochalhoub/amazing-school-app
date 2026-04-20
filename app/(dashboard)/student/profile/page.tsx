@@ -3,6 +3,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
 import { AvatarUploader } from "@/components/shared/avatar-uploader";
 import { ChangePasswordCard } from "@/components/shared/change-password-card";
+import { LocationCard } from "@/components/shared/location-card";
 import { PrivacyNotice } from "@/components/shared/privacy-notice";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, ArrowUpRight, Calendar } from "lucide-react";
@@ -21,7 +22,7 @@ export default async function StudentProfilePage() {
   const admin = createAdminClient();
   const { data: profile } = await admin
     .from("profiles")
-    .select("full_name, avatar_url")
+    .select("full_name, avatar_url, location")
     .eq("id", user.id)
     .maybeSingle();
 
@@ -107,6 +108,8 @@ export default async function StudentProfilePage() {
           </p>
         </CardContent>
       </Card>
+
+      <LocationCard initial={(profile as { location?: string | null }).location ?? null} />
 
       <ChangePasswordCard
         isDemo={(user.email ?? "").toLowerCase().startsWith("demo.")}

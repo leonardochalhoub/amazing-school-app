@@ -34,7 +34,7 @@ export default async function StudentDetailPage({
 
   const { data: profile } = await admin
     .from("profiles")
-    .select("full_name, avatar_url")
+    .select("full_name, avatar_url, location")
     .eq("id", studentId)
     .maybeSingle();
 
@@ -113,6 +113,11 @@ export default async function StudentDetailPage({
           <p className="text-xs text-muted-foreground tabular-nums">
             Lv.{getLevel(totalXp)} · {totalXp} XP · {completedSlugs.size} lessons completed
           </p>
+          {(profile as { location?: string | null }).location ? (
+            <p className="mt-0.5 text-xs text-muted-foreground">
+              {(profile as { location?: string | null }).location}
+            </p>
+          ) : null}
           <div className="mt-1 flex gap-1">
             <Badge variant="secondary" className="text-[10px]">
               {enrichedAssignments.length} assigned
