@@ -117,7 +117,12 @@ export function BulkAssignList({ rows, classrooms, students }: Props) {
       toast.error("Pick at least one lesson");
       return;
     }
-    let finalClassroomId = "";
+    // Classroom mode → required classroom id.
+    // Per-student mode → roster student id required; classroom is
+    // optional (a roster-only student with no classroom is still a
+    // valid assignment target since migration 024 made
+    // lesson_assignments.classroom_id nullable).
+    let finalClassroomId: string | null = null;
     let rosterStudentId: string | null = null;
     if (targetType === "classroom") {
       if (!classroomId) return toast.error("Pick a classroom");
@@ -125,14 +130,13 @@ export function BulkAssignList({ rows, classrooms, students }: Props) {
     } else {
       if (!studentId) return toast.error("Pick a student");
       const s = students.find((x) => x.id === studentId);
-      if (!s?.classroomId) return toast.error("That student has no classroom");
       rosterStudentId = studentId;
-      finalClassroomId = s.classroomId;
+      finalClassroomId = s?.classroomId ?? null;
     }
 
     startTransition(async () => {
       const res = await bulkAssignManyLessons({
-        classroomId: finalClassroomId,
+        classroomId: finalClassroomId ?? undefined,
         lessonSlugs: [...selected],
         rosterStudentId,
       });
