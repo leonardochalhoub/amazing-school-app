@@ -220,6 +220,70 @@ export async function deleteClassroom(input: {
   }
   if (c.deleted_at) return { error: "Classroom is already deleted" };
 
+  // Materialize classroom-wide assignments as per-roster rows
+  // BEFORE the soft-delete so each student's profile keeps showing
+  // them even if some future flow (or legacy data) severs the
+  // roster ⇄ classroom link. We INSERT one row per (student × cw
+  // assignment), copying status/due_date/order so the new rows
+  // look identical to per-student assignments.
+  const [{ data: cwAssignments }, { data: rosterInClass }] = await Promise.all(
+    [
+      admin
+        .from("lesson_assignments")
+        .select("lesson_slug, status, due_date, assigned_by, order_index")
+        .eq("id", parsed.data) // placeholder, replaced below
+        .limit(0),
+      admin
+        .from("roster_students")
+        .select("id")
+        .eq("classroom_id", parsed.data)
+        .is("deleted_at", null),
+    ],
+  );
+  // Real fetch (replaces the limit-0 warm-up; keeping the dual
+  // Promise.all shape for readability as we grow the cleanup).
+  const { data: cwReal } = await admin
+    .from("lesson_assignments")
+    .select("lesson_slug, status, due_date, assigned_by, order_index")
+    .eq("classroom_id", parsed.data)
+    .is("student_id", null)
+    .is("roster_student_id", null);
+  void cwAssignments;
+  const rosterIds = ((rosterInClass ?? []) as Array<{ id: string }>).map(
+    (r) => r.id,
+  );
+  if (rosterIds.length > 0 && (cwReal ?? []).length > 0) {
+    const rows: Array<Record<string, unknown>> = [];
+    for (const cw of cwReal ?? []) {
+      for (const rid of rosterIds) {
+        rows.push({
+          classroom_id: parsed.data,
+          lesson_slug: (cw as { lesson_slug: string }).lesson_slug,
+          assigned_by:
+            (cw as { assigned_by: string | null }).assigned_by ?? user.id,
+          roster_student_id: rid,
+          student_id: null,
+          order_index:
+            (cw as { order_index: number | null }).order_index ?? 0,
+          status:
+            (cw as { status: "assigned" | "skipped" | "completed" }).status ??
+            "assigned",
+          due_date: (cw as { due_date: string | null }).due_date ?? null,
+        });
+      }
+    }
+    // Duplicates (23505) on (classroom_id, lesson_slug, roster_student_id)
+    // are fine — the row already exists per-student, nothing to copy.
+    for (const row of rows) {
+      const { error: insErr } = await admin
+        .from("lesson_assignments")
+        .insert(row);
+      if (insErr && insErr.code !== "23505") {
+        console.warn("[deleteClassroom] materialize row failed", insErr);
+      }
+    }
+  }
+
   // Clear FUTURE scheduled meetings — they're planned events for a
   // classroom that's going away. Past meetings stay untouched so
   // the class log keeps the historical record, and because we

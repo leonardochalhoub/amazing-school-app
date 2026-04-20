@@ -358,26 +358,68 @@ export async function getAssignmentsForRosterStudent(
   // class got them) and must appear on the per-student profile too.
   const { data: rs } = await admin
     .from("roster_students")
-    .select("id, classroom_id")
+    .select("id, classroom_id, auth_user_id")
     .eq("id", rosterStudentId)
     .eq("teacher_id", user.id)
     .maybeSingle();
   if (!rs) return [];
-  const classroomId = (rs as { classroom_id: string | null }).classroom_id;
+  const rosterRow = rs as {
+    id: string;
+    classroom_id: string | null;
+    auth_user_id: string | null;
+  };
+
+  // Collect every classroom the student has EVER been in. Historical
+  // rows pin the student to a classroom implicitly:
+  //   - their roster.classroom_id (current)
+  //   - lesson_progress rows (auth user finished work in a classroom)
+  //   - student_history entries authored for them
+  // Without this union, classroom-wide assignments disappear once a
+  // student's roster.classroom_id gets nulled — which used to happen
+  // on classroom delete before c47c8ac, and could also happen if a
+  // teacher manually moves the student to "no classroom".
+  const classroomIds = new Set<string>();
+  if (rosterRow.classroom_id) classroomIds.add(rosterRow.classroom_id);
+
+  const [progressClassrooms, historyClassrooms] = await Promise.all([
+    rosterRow.auth_user_id
+      ? admin
+          .from("lesson_progress")
+          .select("classroom_id")
+          .eq("student_id", rosterRow.auth_user_id)
+          .not("classroom_id", "is", null)
+          .limit(10_000)
+      : Promise.resolve({ data: [] as { classroom_id: string | null }[] }),
+    admin
+      .from("student_history")
+      .select("classroom_id")
+      .eq("roster_student_id", rosterStudentId)
+      .not("classroom_id", "is", null)
+      .limit(1_000),
+  ]);
+  for (const r of progressClassrooms.data ?? []) {
+    const cid = (r as { classroom_id: string | null }).classroom_id;
+    if (cid) classroomIds.add(cid);
+  }
+  for (const r of historyClassrooms.data ?? []) {
+    const cid = (r as { classroom_id: string | null }).classroom_id;
+    if (cid) classroomIds.add(cid);
+  }
 
   const perRosterPromise = admin
     .from("lesson_assignments")
     .select("*")
     .eq("roster_student_id", rosterStudentId);
 
-  const classroomWidePromise = classroomId
-    ? admin
-        .from("lesson_assignments")
-        .select("*")
-        .eq("classroom_id", classroomId)
-        .is("student_id", null)
-        .is("roster_student_id", null)
-    : Promise.resolve({ data: [] as LessonAssignment[] });
+  const classroomWidePromise =
+    classroomIds.size > 0
+      ? admin
+          .from("lesson_assignments")
+          .select("*")
+          .in("classroom_id", [...classroomIds])
+          .is("student_id", null)
+          .is("roster_student_id", null)
+      : Promise.resolve({ data: [] as LessonAssignment[] });
 
   const [perRoster, classroomWide] = await Promise.all([
     perRosterPromise,
