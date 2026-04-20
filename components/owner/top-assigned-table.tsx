@@ -29,8 +29,8 @@ export function TopAssignedTable({ rows, unit }: Props) {
   const unitLabel = unit === "lesson" ? "lessons" : "songs";
 
   return (
-    <div className="overflow-x-auto rounded-xl border">
-      <table className="min-w-[420px] w-full text-sm">
+    <div className="overflow-x-auto rounded-xl border border-border">
+      <table className="min-w-[480px] w-full text-sm">
         <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
           <tr>
             <th className="w-10 px-3 py-2 text-right">#</th>
