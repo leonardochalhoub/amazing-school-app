@@ -222,7 +222,7 @@ export default async function CertificatePrintPage({
             paddingBottom: 16,
           }}
         >
-          {/* LEFT — teacher's school logo (mirror copy on the right). */}
+          {/* LEFT — teacher's school logo. */}
           <SchoolLogoSlot
             src={teacherLogo}
             alt={
@@ -251,18 +251,18 @@ export default async function CertificatePrintPage({
             ) : null}
           </div>
 
-          {/* RIGHT — teacher's school logo doubled for institutional
-              symmetry. Amazing School mark moves to a dedicated band
-              above the footer so the platform identity stays visible
-              without competing with the teacher's brand up top. */}
-          <SchoolLogoSlot
-            src={teacherLogo}
-            alt={
-              data.teacher.fullName
-                ? `${data.teacher.fullName} — logo`
-                : "School logo"
-            }
-          />
+          {/* RIGHT — Amazing School platform mark. */}
+          <div
+            style={{
+              height: 88,
+              minWidth: 180,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-end",
+            }}
+          >
+            <AmazingSchoolMark size={34} />
+          </div>
         </header>
 
         <section
