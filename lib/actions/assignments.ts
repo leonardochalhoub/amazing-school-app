@@ -434,37 +434,18 @@ export async function getAssignmentsForRosterStudent(
       roster_student_id: string | null;
     })[] | null) ?? []),
   ];
-  // Dedupe twice:
-  //   1. By assignment row id (the merge can overlap if a per-student
-  //      row also happens to live under the same classroom we queried
-  //      classroom-wide for).
-  //   2. By lesson_slug — a student should only ever see a given
-  //      lesson ONCE. If we have both a per-student row AND a
-  //      classroom-wide row for the same slug (happens when a teacher
-  //      assigns to the class and later re-assigns to a specific
-  //      student, or when the defunct materialize-on-delete flow
-  //      duplicated entries), prefer the per-student row: it has
-  //      completion status tied to THIS student, and a
-  //      roster_student_id which lets Skip / Remove actions work.
-  const byId = new Set<string>();
-  const bySlug = new Map<string, (typeof merged)[number]>();
-  for (const a of merged) {
+  // Dedupe by assignment row id only. Teachers may legitimately
+  // assign the same lesson both classroom-wide AND to a specific
+  // student (explicit per-student override), and the student list
+  // should reflect both entries. The trash icon on each row lets
+  // the teacher remove any accidental duplicate directly.
+  const seen = new Set<string>();
+  const unique = merged.filter((a) => {
     const id = (a as { id: string }).id;
-    if (byId.has(id)) continue;
-    byId.add(id);
-    const slug = (a as { lesson_slug: string }).lesson_slug;
-    const existing = bySlug.get(slug);
-    if (!existing) {
-      bySlug.set(slug, a);
-      continue;
-    }
-    const existingIsPerStudent = !!(existing as { roster_student_id: string | null })
-      .roster_student_id;
-    const aIsPerStudent = !!(a as { roster_student_id: string | null })
-      .roster_student_id;
-    if (aIsPerStudent && !existingIsPerStudent) bySlug.set(slug, a);
-  }
-  const unique = [...bySlug.values()];
+    if (seen.has(id)) return false;
+    seen.add(id);
+    return true;
+  });
   // Sort by assignment time descending so the list / recent-10 window
   // shows the newest first (matches AssignedLessonsList expectations).
   unique.sort(
