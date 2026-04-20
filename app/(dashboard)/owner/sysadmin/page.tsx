@@ -35,6 +35,26 @@ import {
 
 export const dynamic = "force-dynamic";
 
+// Normalize teacher display names to Title Case so the sysadmin
+// directory reads consistently even when signups used all-lowercase
+// ("edvaldo gomes vieira"). We keep acronyms like "de", "da", "do"
+// lowercase inside the phrase when they aren't the first word — this
+// is the Brazilian naming convention ("Leonardo Nunes Moreira do
+// Valle"). First word is always capitalized.
+function titleCase(name: string | null | undefined): string {
+  if (!name) return "—";
+  const lowers = new Set(["de", "da", "do", "das", "dos", "e"]);
+  return name
+    .trim()
+    .split(/\s+/)
+    .map((word, i) => {
+      const lower = word.toLowerCase();
+      if (i > 0 && lowers.has(lower)) return lower;
+      return lower.charAt(0).toUpperCase() + lower.slice(1);
+    })
+    .join(" ");
+}
+
 export default async function SysadminPage() {
   const owner = await isOwner();
   if (!owner) redirect("/");
@@ -274,10 +294,10 @@ export default async function SysadminPage() {
       <section className="space-y-3">
         <div className="flex items-baseline justify-between">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            All teachers
+            All teachers ({allTeachers.length})
           </h2>
           <p className="text-xs text-muted-foreground">
-            {allTeachers.length} total · sorted by name · no revenue data
+            Sorted by name · no revenue data
           </p>
         </div>
         <div className="overflow-x-auto rounded-xl border">
@@ -304,7 +324,9 @@ export default async function SysadminPage() {
               ) : null}
               {allTeachers.map((t) => (
                 <tr key={t.id} className="border-t">
-                  <td className="px-4 py-2 font-medium">{t.name}</td>
+                  <td className="px-4 py-2 font-medium">
+                    {titleCase(t.name)}
+                  </td>
                   <td className="px-4 py-2 text-xs text-muted-foreground">
                     {t.email ?? "—"}
                   </td>

@@ -22,7 +22,14 @@ function relative(iso: string): string {
 
 function absolute(iso: string): string {
   if (!iso) return "—";
-  return new Date(iso).toLocaleString();
+  // Render in America/Sao_Paulo (UTC-3) so the "Last login"
+  // column matches the operator's wall clock, not the Vercel
+  // region's UTC.
+  return new Date(iso).toLocaleString("pt-BR", {
+    timeZone: "America/Sao_Paulo",
+    dateStyle: "short",
+    timeStyle: "short",
+  });
 }
 
 export function LoginLogPanel({ entries }: Props) {
@@ -59,14 +66,16 @@ export function LoginLogPanel({ entries }: Props) {
           </CardContent>
         </Card>
       ) : (
-        <div className="overflow-hidden rounded-xl border border-border">
-          <table className="w-full text-sm">
+        <div className="overflow-x-auto rounded-xl border border-border">
+          <table className="min-w-[640px] w-full text-sm">
             <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
               <tr>
                 <th className="px-4 py-2">User</th>
                 <th className="px-4 py-2">Email</th>
                 <th className="px-4 py-2">Role</th>
-                <th className="px-4 py-2 text-right">Last login</th>
+                <th className="px-4 py-2 text-right whitespace-nowrap">
+                  Last login · BRT
+                </th>
                 <th className="px-4 py-2 text-right whitespace-nowrap">
                   When
                 </th>

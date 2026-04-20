@@ -12,12 +12,9 @@ import {
 } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { CartoonAvatar } from "@/components/shared/cartoon-avatar";
 import { getStudentStats } from "@/lib/actions/gamification";
-import { getStudentClassrooms } from "@/lib/actions/classroom";
 import { getAssignmentsForStudent } from "@/lib/actions/assignments";
 import { touchDailyActivity } from "@/lib/actions/daily-activity";
 import { findMeta as findLessonMeta } from "@/lib/content/loader";
@@ -30,6 +27,7 @@ import {
   type ActivityBucket,
 } from "@/components/student/activity-chart";
 import { MyClassesPanel } from "@/components/student/my-classes-panel";
+import { AssignmentsGrid } from "@/components/student/assignments-grid";
 import { listOwnHistory } from "@/lib/actions/student-history";
 import { ListeningFeedbackPanel } from "@/components/student/listening-feedback-panel";
 import { listStudentListeningResponses } from "@/lib/actions/listening-responses";
@@ -46,6 +44,7 @@ interface ResolvedAssignment {
   scope: "classroom-wide" | "per-student";
   href: string;
   assignedAt: string;
+  completedAt: string | null;
 }
 
 export default async function StudentHome() {
@@ -177,11 +176,33 @@ export default async function StudentHome() {
     avatarUrl = await getRosterAvatarSignedUrl(rosterSelf.id as string);
   }
 
+  // Completion timestamps for every lesson this student has ever
+  // finished — used to surface "Done on dd/mm hh:mm" on assignment
+  // cards. Keyed by lesson_slug (same key the assignments table uses).
+  // We take the most recent completion per slug if they happen to have
+  // finished the same lesson twice.
+  const { data: allCompletions } = await admin
+    .from("lesson_progress")
+    .select("lesson_slug, completed_at")
+    .eq("student_id", user.id)
+    .not("completed_at", "is", null)
+    .order("completed_at", { ascending: false });
+  const completedAtBySlug = new Map<string, string>();
+  for (const c of (allCompletions ?? []) as Array<{
+    lesson_slug: string;
+    completed_at: string;
+  }>) {
+    if (!completedAtBySlug.has(c.lesson_slug)) {
+      completedAtBySlug.set(c.lesson_slug, c.completed_at);
+    }
+  }
+
   let resolvedAssignments: ResolvedAssignment[] = [];
   {
     const raw = await getAssignmentsForStudent(classroomId, user.id);
     resolvedAssignments = raw.map((a) => {
       const { kind, slug } = fromAssignmentSlug(a.lesson_slug);
+      const completedAt = completedAtBySlug.get(a.lesson_slug) ?? null;
       if (kind === "music") {
         const m = getMusic(slug);
         return {
@@ -203,6 +224,7 @@ export default async function StudentHome() {
               : "per-student",
           href: `/student/music/${slug}`,
           assignedAt: a.assigned_at,
+          completedAt,
         };
       }
       const meta = findLessonMeta(slug);
@@ -223,6 +245,7 @@ export default async function StudentHome() {
             : "per-student",
         href: `/student/lessons/${slug}`,
         assignedAt: a.assigned_at,
+        completedAt,
       };
     });
   }
@@ -250,46 +273,87 @@ export default async function StudentHome() {
   const firstName =
     profile?.full_name?.split(" ")[0] ?? user.email?.split("@")[0] ?? "there";
 
-  // Activity chart — 60 daily buckets ending today in Brazil local time
-  // (America/Sao_Paulo, UTC-3). Vercel runs UTC, dev may run anywhere —
-  // pin the display TZ so a completion at 22:00 BRT doesn't slide to the
-  // next day's UTC bucket.
-  const DAYS = 60;
+  // Activity chart — we already fetched every completion above
+  // (`allCompletions`) so the chart can render the student's full
+  // history, not just a fixed 60-day window. If the oldest completion
+  // is more than 60 days old we fall back to monthly buckets covering
+  // the whole span; otherwise we render 60 daily buckets ending today.
+  // All times are resolved in Brazil local time (UTC-3) so a completion
+  // logged at 22:00 BRT lands in the right calendar bucket.
   const BRT_OFFSET_MS = -3 * 60 * 60 * 1000;
   const msPerDay = 24 * 60 * 60 * 1000;
-  // Convert real-time UTC to a "BRT-naive" timestamp, then truncate to the
-  // BRT calendar day. rangeStart is a UTC Date whose toISOString().slice(0,10)
-  // reads as the BRT calendar date.
   const brtToday = new Date(
     Math.floor((Date.now() + BRT_OFFSET_MS) / msPerDay) * msPerDay
   );
-  const rangeStart = new Date(brtToday.getTime() - (DAYS - 1) * msPerDay);
 
-  const { data: completions } = await admin
-    .from("lesson_progress")
-    .select("lesson_slug, completed_at")
-    .eq("student_id", user.id)
-    .not("completed_at", "is", null)
-    .gte("completed_at", new Date(rangeStart.getTime() - BRT_OFFSET_MS).toISOString());
+  const sixtyDaysAgo = new Date(brtToday.getTime() - 59 * msPerDay);
+  const oldest = (allCompletions ?? []).reduce<number | null>((acc, c) => {
+    const t = new Date((c as { completed_at: string }).completed_at).getTime();
+    return acc === null || t < acc ? t : acc;
+  }, null);
+  const useMonthly =
+    oldest !== null && oldest < sixtyDaysAgo.getTime();
 
-  const activityBuckets: ActivityBucket[] = [];
-  for (let i = 0; i < DAYS; i++) {
-    const d = new Date(rangeStart.getTime() + i * msPerDay);
-    activityBuckets.push({
-      start: d.toISOString().slice(0, 10),
-      lessons: 0,
-      music: 0,
-    });
-  }
-  for (const c of completions ?? []) {
-    const t = new Date(c.completed_at as string);
-    const tDay =
-      Math.floor((t.getTime() + BRT_OFFSET_MS) / msPerDay) * msPerDay;
-    const idx = Math.floor((tDay - rangeStart.getTime()) / msPerDay);
-    if (idx < 0 || idx >= activityBuckets.length) continue;
-    const isMusic = (c.lesson_slug as string).startsWith("music:");
-    if (isMusic) activityBuckets[idx].music++;
-    else activityBuckets[idx].lessons++;
+  let activityBuckets: ActivityBucket[] = [];
+  let activityGranularity: "day" | "month" = "day";
+
+  if (useMonthly && oldest !== null) {
+    activityGranularity = "month";
+    // Walk month-by-month from the oldest completion's month up to the
+    // current month. Keys are "YYYY-MM".
+    const first = new Date(oldest);
+    let yr = first.getUTCFullYear();
+    let mo = first.getUTCMonth();
+    const endYr = new Date(brtToday.getTime() - BRT_OFFSET_MS).getUTCFullYear();
+    const endMo = new Date(brtToday.getTime() - BRT_OFFSET_MS).getUTCMonth();
+    const indexByKey = new Map<string, number>();
+    while (yr < endYr || (yr === endYr && mo <= endMo)) {
+      const key = `${yr}-${String(mo + 1).padStart(2, "0")}`;
+      indexByKey.set(key, activityBuckets.length);
+      activityBuckets.push({
+        start: `${key}-01`,
+        lessons: 0,
+        music: 0,
+      });
+      mo++;
+      if (mo > 11) {
+        mo = 0;
+        yr++;
+      }
+    }
+    for (const c of allCompletions ?? []) {
+      const row = c as { lesson_slug: string; completed_at: string };
+      const t = new Date(row.completed_at);
+      const key = `${t.getUTCFullYear()}-${String(t.getUTCMonth() + 1).padStart(2, "0")}`;
+      const idx = indexByKey.get(key);
+      if (idx === undefined) continue;
+      if (row.lesson_slug.startsWith("music:"))
+        activityBuckets[idx].music++;
+      else activityBuckets[idx].lessons++;
+    }
+  } else {
+    activityGranularity = "day";
+    const DAYS = 60;
+    const rangeStart = new Date(brtToday.getTime() - (DAYS - 1) * msPerDay);
+    for (let i = 0; i < DAYS; i++) {
+      const d = new Date(rangeStart.getTime() + i * msPerDay);
+      activityBuckets.push({
+        start: d.toISOString().slice(0, 10),
+        lessons: 0,
+        music: 0,
+      });
+    }
+    for (const c of allCompletions ?? []) {
+      const row = c as { lesson_slug: string; completed_at: string };
+      const t = new Date(row.completed_at);
+      const tDay =
+        Math.floor((t.getTime() + BRT_OFFSET_MS) / msPerDay) * msPerDay;
+      const idx = Math.floor((tDay - rangeStart.getTime()) / msPerDay);
+      if (idx < 0 || idx >= activityBuckets.length) continue;
+      if (row.lesson_slug.startsWith("music:"))
+        activityBuckets[idx].music++;
+      else activityBuckets[idx].lessons++;
+    }
   }
 
   // Fetch a larger window so the MyClassesPanel "Show all" toggle has
@@ -498,13 +562,20 @@ export default async function StudentHome() {
             </p>
           </div>
         ) : (
-          <ul className="grid gap-3 md:grid-cols-2">
-            {active.map((a) => (
-              <li key={a.assignmentId}>
-                <AssignmentTile a={a} />
-              </li>
-            ))}
-          </ul>
+          <AssignmentsGrid
+            entries={active.map((a) => ({
+              assignmentId: a.assignmentId,
+              kind: a.kind,
+              title: a.title,
+              subtitle: a.subtitle,
+              cefrLevel: a.cefrLevel,
+              minutes: a.minutes,
+              status: a.status,
+              href: a.href,
+              assignedAt: a.assignedAt,
+              completedAt: a.completedAt,
+            }))}
+          />
         )}
       </section>
 
@@ -514,7 +585,10 @@ export default async function StudentHome() {
       {/* ACTIVITY CHART =========================================== */}
       <section className="space-y-3">
         <h2 className="text-lg font-semibold tracking-tight">Your activity</h2>
-        <ActivityChart buckets={activityBuckets} granularity="day" />
+        <ActivityChart
+          buckets={activityBuckets}
+          granularity={activityGranularity}
+        />
       </section>
     </div>
   );
@@ -548,79 +622,3 @@ function StatChip({
   );
 }
 
-function AssignmentTile({ a }: { a: ResolvedAssignment }) {
-  const isDone = a.status === "completed";
-  return (
-    <Link href={a.href} className="group block">
-      <Card
-        className={`transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md ${
-          isDone ? "opacity-70" : ""
-        }`}
-      >
-        <CardContent className="space-y-3 p-4">
-          <div className="flex items-start justify-between gap-3">
-            <div className="flex min-w-0 items-start gap-2">
-              <span
-                className={`mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${
-                  isDone
-                    ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
-                    : a.kind === "music"
-                      ? "bg-primary/10 text-primary"
-                      : "bg-muted text-muted-foreground"
-                }`}
-              >
-                {a.kind === "music" ? (
-                  <Music2 className="h-4 w-4" />
-                ) : (
-                  <BookOpen className="h-4 w-4" />
-                )}
-              </span>
-              <div className="min-w-0">
-                <p className="truncate text-sm font-semibold leading-tight">
-                  {a.title}
-                </p>
-                <p className="mt-0.5 flex flex-wrap gap-x-1.5 text-[11px] text-muted-foreground">
-                  {a.cefrLevel ? <span>{a.cefrLevel.toUpperCase()}</span> : null}
-                  {a.subtitle ? (
-                    <>
-                      <span>·</span>
-                      <span>{a.subtitle}</span>
-                    </>
-                  ) : null}
-                  {a.minutes ? (
-                    <>
-                      <span>·</span>
-                      <span className="tabular-nums">{a.minutes} min</span>
-                    </>
-                  ) : null}
-                </p>
-              </div>
-            </div>
-            {isDone ? (
-              <Badge variant="default" className="text-[10px]">
-                Done
-              </Badge>
-            ) : null}
-          </div>
-          {a.assignedAt ? (
-            <p className="text-[10px] tabular-nums text-muted-foreground">
-              Assigned{" "}
-              {new Date(a.assignedAt).toLocaleString("pt-BR", {
-                dateStyle: "short",
-                timeStyle: "short",
-              })}
-            </p>
-          ) : null}
-          <Button
-            size="sm"
-            variant={isDone ? "outline" : "default"}
-            className="w-full gap-1.5 text-xs"
-          >
-            {isDone ? "Review" : "Open"}
-            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-          </Button>
-        </CardContent>
-      </Card>
-    </Link>
-  );
-}

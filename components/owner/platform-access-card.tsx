@@ -104,25 +104,39 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
                 className="flex flex-wrap items-center gap-3 rounded-lg border border-border bg-card/60 p-3"
               >
                 <div className="flex-1 min-w-0">
-                  <p className="truncate text-sm font-semibold">
+                  <p className="flex flex-wrap items-center gap-1.5 truncate text-sm font-semibold">
                     {o.fullName}
+                    {o.isOrigin ? (
+                      <span className="rounded-full bg-indigo-500/10 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">
+                        Origin owner
+                      </span>
+                    ) : null}
                   </p>
                   <p className="truncate text-[11px] text-muted-foreground">
-                    {o.email ?? "—"} · granted{" "}
-                    {o.grantedAt ? fmtDateTime(o.grantedAt) : "unknown"}
+                    {o.email ?? "—"} ·{" "}
+                    {o.isOrigin
+                      ? "bootstrap seed, permanent"
+                      : `granted ${o.grantedAt ? fmtDateTime(o.grantedAt) : "unknown"}`}
                   </p>
                 </div>
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={() => revoke(o.id, o.fullName)}
-                  disabled={pending || currentOwners.length <= 1}
-                  className="gap-1.5 text-xs"
-                >
-                  <UserMinus className="h-3.5 w-3.5" />
-                  Revoke
-                </Button>
+                {o.isOrigin ? (
+                  <span className="inline-flex items-center gap-1 rounded-md border border-border/60 px-2 py-1 text-[11px] text-muted-foreground">
+                    <Shield className="h-3 w-3" />
+                    Locked
+                  </span>
+                ) : (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    onClick={() => revoke(o.id, o.fullName)}
+                    disabled={pending || currentOwners.length <= 1}
+                    className="gap-1.5 text-xs"
+                  >
+                    <UserMinus className="h-3.5 w-3.5" />
+                    Revoke
+                  </Button>
+                )}
               </div>
             ))}
           </div>

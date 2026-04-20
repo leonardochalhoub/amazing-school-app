@@ -6,6 +6,12 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isOwner } from "@/lib/auth/roles";
 
+// Origin owner: always counted as an owner regardless of what
+// profiles.role says. Mirrors the backstop in lib/auth/roles.ts
+// so that listOwners/revoke etc. stay consistent even when
+// migration 035 hasn't run in this environment yet.
+const ORIGIN_OWNER_EMAIL = "leochalhoub@hotmail.com";
+
 /**
  * Grant / revoke owner privileges. Every state change lands in
  * public.role_audit_log so there's a permanent trail of who gave
@@ -115,6 +121,16 @@ export async function revokeOwnerRole(
     .maybeSingle();
   const subj = subject as { id: string; role: string } | null;
   if (!subj) return { error: "Subject profile not found" };
+
+  // Origin-owner guard: the bootstrap seed account is permanent.
+  // Even if their profile.role still reads "teacher" (pre-035),
+  // they count as an owner and can't be revoked here.
+  const { data: subjAuth } = await admin.auth.admin.getUserById(subj.id);
+  const subjEmail = (subjAuth?.user?.email ?? "").toLowerCase().trim();
+  if (subjEmail === ORIGIN_OWNER_EMAIL) {
+    return { error: "Can't revoke the origin owner." };
+  }
+
   if (subj.role !== "owner") return { error: "Subject is not an owner" };
 
   // Lockout guard: never demote the last remaining owner.
@@ -160,6 +176,10 @@ export interface OwnerRow {
   fullName: string;
   email: string | null;
   grantedAt: string | null;
+  // The origin owner is the bootstrap seed — they can never be
+  // revoked, even if they are not the only owner. Keeps at least
+  // one deterministic lockout-proof account on the platform.
+  isOrigin?: boolean;
 }
 
 export interface AuditRow {
@@ -175,20 +195,42 @@ export interface AuditRow {
 export async function listOwners(): Promise<OwnerRow[]> {
   if (!(await isOwner())) return [];
   const admin = createAdminClient();
+
+  // Auth list first so we can resolve the origin-owner id regardless
+  // of what their profile.role currently says.
+  const { data: userList } = await admin.auth.admin.listUsers({
+    page: 1,
+    perPage: 1000,
+  });
+  const emailById = new Map<string, string | null>();
+  const idByEmail = new Map<string, string>();
+  for (const u of userList?.users ?? []) {
+    const email = u.email ?? null;
+    emailById.set(u.id, email);
+    if (email) idByEmail.set(email.toLowerCase().trim(), u.id);
+  }
+  const originOwnerId = idByEmail.get(ORIGIN_OWNER_EMAIL) ?? null;
+
   const { data: owners } = await admin
     .from("profiles")
     .select("id, full_name")
     .eq("role", "owner")
     .order("full_name", { ascending: true });
   const rows = (owners ?? []) as Array<{ id: string; full_name: string }>;
-  if (rows.length === 0) return [];
 
-  const { data: userList } = await admin.auth.admin.listUsers({
-    page: 1,
-    perPage: 1000,
-  });
-  const emailById = new Map<string, string | null>();
-  for (const u of userList?.users ?? []) emailById.set(u.id, u.email ?? null);
+  // Fold in the origin owner even if their profile still says
+  // "teacher" (migration 035 may not have run yet on this env).
+  if (originOwnerId && !rows.some((r) => r.id === originOwnerId)) {
+    const { data: originProfile } = await admin
+      .from("profiles")
+      .select("id, full_name")
+      .eq("id", originOwnerId)
+      .maybeSingle();
+    const op = originProfile as { id: string; full_name: string } | null;
+    if (op) rows.unshift(op);
+  }
+
+  if (rows.length === 0) return [];
 
   // Most recent grant timestamp per owner.
   const ids = rows.map((r) => r.id);
@@ -211,6 +253,7 @@ export async function listOwners(): Promise<OwnerRow[]> {
     fullName: r.full_name,
     email: emailById.get(r.id) ?? null,
     grantedAt: grantedAt.get(r.id) ?? null,
+    isOrigin: originOwnerId === r.id,
   }));
 }
 
