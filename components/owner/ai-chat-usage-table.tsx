@@ -53,17 +53,17 @@ export function AiChatUsageTable({ rows, kind }: Props) {
 
   return (
     <div className="overflow-x-auto rounded-xl border">
-      <table className="min-w-[440px] w-full text-sm">
+      <table className="w-full text-sm">
         <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
           <tr>
-            <th className="w-10 px-3 py-2 text-right">#</th>
+            <th className="hidden w-10 px-3 py-2 text-right sm:table-cell">#</th>
             <th className="px-3 py-2">
               {kind === "teacher" ? "Teacher" : "Student"}
             </th>
             {kind === "student" ? (
-              <th className="px-3 py-2">Teacher</th>
+              <th className="hidden px-3 py-2 md:table-cell">Teacher</th>
             ) : null}
-            <th className="px-3 py-2 text-right">Days</th>
+            <th className="hidden px-3 py-2 text-right sm:table-cell">Days</th>
             <th className="px-3 py-2 text-right">Messages</th>
           </tr>
         </thead>
@@ -79,21 +79,31 @@ export function AiChatUsageTable({ rows, kind }: Props) {
             </tr>
           ) : null}
           {visible.map((r, i) => (
-            <tr key={r.id} className="border-t">
-              <td className="px-3 py-2 text-right text-xs text-muted-foreground tabular-nums">
+            <tr key={r.id} className="border-t align-top">
+              <td className="hidden px-3 py-2 text-right text-xs text-muted-foreground tabular-nums sm:table-cell">
                 {i + 1}
               </td>
-              <td className="px-3 py-2 font-medium">
+              <td className="break-words px-3 py-2 font-medium">
                 {titleCaseLocal(
                   isStudentRow(r) ? r.displayName : r.name,
                 )}
+                {isStudentRow(r) ? (
+                  <div className="mt-0.5 text-[10px] text-muted-foreground md:hidden">
+                    {r.teacherName ? titleCaseLocal(r.teacherName) : "—"} ·{" "}
+                    {r.activeDays} day{r.activeDays === 1 ? "" : "s"}
+                  </div>
+                ) : (
+                  <div className="mt-0.5 text-[10px] text-muted-foreground sm:hidden">
+                    {r.activeDays} day{r.activeDays === 1 ? "" : "s"}
+                  </div>
+                )}
               </td>
               {isStudentRow(r) ? (
-                <td className="px-3 py-2 text-xs text-muted-foreground">
+                <td className="hidden break-words px-3 py-2 text-xs text-muted-foreground md:table-cell">
                   {r.teacherName ? titleCaseLocal(r.teacherName) : "—"}
                 </td>
               ) : null}
-              <td className="px-3 py-2 text-right tabular-nums">
+              <td className="hidden px-3 py-2 text-right tabular-nums sm:table-cell">
                 {r.activeDays}
               </td>
               <td className="px-3 py-2 text-right font-semibold tabular-nums">

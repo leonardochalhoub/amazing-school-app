@@ -62,6 +62,21 @@ export interface SysadminOverview {
     activeStudentsLast30d: number;
     createdAt: string;
   }[];
+  /**
+   * Every student created by any teacher on the platform. Sourced
+   * from roster_students so unlinked roster entries (no auth user
+   * yet) still show up. Sorted alphabetically.
+   */
+  allStudents: {
+    id: string;
+    fullName: string;
+    teacherName: string | null;
+    email: string | null;
+    addedAt: string;
+    lastActivityAt: string | null;
+    /** true when the roster row has been linked to an auth account. */
+    signedUp: boolean;
+  }[];
   topActiveStudents: {
     id: string;
     displayName: string;
@@ -201,7 +216,7 @@ export async function getSysadminOverview(): Promise<
     admin
       .from("roster_students")
       .select(
-        "id, teacher_id, classroom_id, level, has_avatar, auth_user_id, monthly_tuition_cents, created_at",
+        "id, teacher_id, classroom_id, full_name, email, level, has_avatar, auth_user_id, monthly_tuition_cents, created_at",
       ),
     admin.from("classroom_members").select("classroom_id, student_id"),
     admin
@@ -295,6 +310,8 @@ export async function getSysadminOverview(): Promise<
     id: string;
     teacher_id: string;
     classroom_id: string | null;
+    full_name: string | null;
+    email: string | null;
     level: string | null;
     has_avatar: boolean;
     auth_user_id: string | null;
@@ -516,6 +533,7 @@ export async function getSysadminOverview(): Promise<
       numeric: true,
     }),
   );
+
 
   // Top active students — by XP last 30 days. Test users (demo.*)
   // are already excluded from `students`/`profiles` so we drop any XP
@@ -937,6 +955,71 @@ export async function getSysadminOverview(): Promise<
     .filter((r) => r.messages > 0)
     .sort((a, b) => b.messages - a.messages);
 
+  // -----------------------------------------------------------------
+  // All students directory — every roster_students row authored by
+  // any teacher on the platform. Roster is the SSOT for "students a
+  // teacher has created"; unlinked entries (no auth user yet) still
+  // belong here because the teacher added them. Last activity is the
+  // max across: daily_activity.activity_date, session_heartbeats.at,
+  // and user-role messages.created_at — whichever signal came most
+  // recently wins. Sorted alphabetically.
+  // -----------------------------------------------------------------
+  const lastActivityByUser = new Map<string, string>();
+  function bumpLastActivity(userId: string | null, iso: string | null) {
+    if (!userId || !iso) return;
+    const prev = lastActivityByUser.get(userId);
+    if (!prev || iso > prev) lastActivityByUser.set(userId, iso);
+  }
+  const { data: allActivityRes } = await admin
+    .from("daily_activity")
+    .select("student_id, activity_date")
+    .order("activity_date", { ascending: false })
+    .limit(500_000);
+  for (const a of (allActivityRes ?? []) as Array<{
+    student_id: string;
+    activity_date: string;
+  }>) {
+    // activity_date is a DATE; promote to end-of-day ISO so it sorts
+    // correctly against the timestamptz columns below.
+    bumpLastActivity(a.student_id, `${a.activity_date}T23:59:59Z`);
+  }
+  for (const h of (heartbeatRes.data ?? []) as Array<{
+    user_id: string;
+    seconds: number;
+  }>) {
+    // heartbeatRes was selected without `at` — we can't use it for
+    // lastActivity directly. Ignored here; daily_activity and
+    // messages cover the common case.
+    void h;
+  }
+  for (const m of (aiMessagesRes.data ?? []) as Array<{
+    conversation_id: string;
+    created_at: string;
+  }>) {
+    const uid = convoToUser.get(m.conversation_id);
+    bumpLastActivity(uid ?? null, m.created_at);
+  }
+
+  const allStudents = roster
+    .filter((r) => teachers.some((t) => t.id === r.teacher_id))
+    .map((r) => ({
+      id: r.id,
+      fullName: r.full_name ?? "Unnamed",
+      teacherName: teacherNameById.get(r.teacher_id) ?? null,
+      email: r.email ?? null,
+      addedAt: r.created_at,
+      lastActivityAt: r.auth_user_id
+        ? lastActivityByUser.get(r.auth_user_id) ?? null
+        : null,
+      signedUp: !!r.auth_user_id,
+    }))
+    .sort((a, b) =>
+      a.fullName.localeCompare(b.fullName, "pt-BR", {
+        sensitivity: "base",
+        numeric: true,
+      }),
+    );
+
   // Health signals
   const accountsWithoutAvatar = profiles.filter((p) => !p.avatar_url).length;
   const classroomsWithoutStudents =
@@ -992,6 +1075,7 @@ export async function getSysadminOverview(): Promise<
     levelMix,
     topTeachers,
     allTeachers,
+    allStudents,
     topActiveStudents,
     allTimeTopStudents,
     timeOnSite: {

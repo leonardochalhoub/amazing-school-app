@@ -73,6 +73,7 @@ export default async function SysadminPage() {
     engagement,
     levelMix,
     allTeachers,
+    allStudents,
     topActiveStudents,
     allTimeTopStudents,
     timeOnSite,
@@ -251,15 +252,19 @@ export default async function SysadminPage() {
           </p>
         </div>
         <div className="overflow-x-auto rounded-xl border">
-          <table className="min-w-[720px] w-full text-sm">
-            <thead className="bg-muted/40 text-left text-xs uppercase tracking-wider text-muted-foreground">
+          <table className="w-full text-sm">
+            <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
               <tr>
-                <th className="px-4 py-2">Teacher</th>
-                <th className="px-4 py-2">Email</th>
-                <th className="px-4 py-2 text-right">Students</th>
-                <th className="px-4 py-2 text-right">Classrooms</th>
-                <th className="px-4 py-2 text-right">Active · 30d</th>
-                <th className="px-4 py-2 text-right">Joined</th>
+                <th className="px-3 py-2">Teacher</th>
+                <th className="hidden px-3 py-2 sm:table-cell">Email</th>
+                <th className="px-3 py-2 text-right">Students</th>
+                <th className="hidden px-3 py-2 text-right md:table-cell">
+                  Classrooms
+                </th>
+                <th className="px-3 py-2 text-right">Active&nbsp;30d</th>
+                <th className="hidden px-3 py-2 text-right md:table-cell">
+                  Joined
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -267,7 +272,7 @@ export default async function SysadminPage() {
                 <tr>
                   <td
                     colSpan={6}
-                    className="px-4 py-6 text-center text-sm text-muted-foreground"
+                    className="px-3 py-6 text-center text-sm text-muted-foreground"
                   >
                     No teachers yet.
                   </td>
@@ -275,23 +280,101 @@ export default async function SysadminPage() {
               ) : null}
               {allTeachers.map((t) => (
                 <tr key={t.id} className="border-t">
-                  <td className="px-4 py-2 font-medium">
+                  <td className="break-words px-3 py-2 font-medium">
                     {titleCase(t.name)}
+                    <div className="mt-0.5 break-all text-[10px] text-muted-foreground sm:hidden">
+                      {t.email ?? "—"}
+                    </div>
                   </td>
-                  <td className="px-4 py-2 text-xs text-muted-foreground">
+                  <td className="hidden break-all px-3 py-2 text-xs text-muted-foreground sm:table-cell">
                     {t.email ?? "—"}
                   </td>
-                  <td className="px-4 py-2 text-right tabular-nums">
+                  <td className="px-3 py-2 text-right tabular-nums">
                     {t.studentCount}
                   </td>
-                  <td className="px-4 py-2 text-right tabular-nums">
+                  <td className="hidden px-3 py-2 text-right tabular-nums md:table-cell">
                     {t.classroomsCount}
                   </td>
-                  <td className="px-4 py-2 text-right tabular-nums">
+                  <td className="px-3 py-2 text-right tabular-nums">
                     {t.activeStudentsLast30d}
                   </td>
-                  <td className="px-4 py-2 text-right text-xs text-muted-foreground">
+                  <td className="hidden px-3 py-2 text-right text-xs text-muted-foreground md:table-cell">
                     {t.createdAt.slice(0, 10)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* ============================ All students directory ============================ */}
+      <section className="space-y-3">
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            All students ({allStudents.length})
+          </h2>
+          <p className="text-xs text-muted-foreground">
+            Every student any teacher has created · sorted by name
+          </p>
+        </div>
+        <div className="overflow-x-auto rounded-xl border">
+          <table className="w-full text-sm">
+            <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
+              <tr>
+                <th className="px-3 py-2">Student</th>
+                <th className="hidden px-3 py-2 sm:table-cell">Teacher</th>
+                <th className="hidden px-3 py-2 md:table-cell">Email</th>
+                <th className="px-3 py-2 text-right">Added</th>
+                <th className="hidden px-3 py-2 text-right sm:table-cell">
+                  Last active
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {allStudents.length === 0 ? (
+                <tr>
+                  <td
+                    colSpan={5}
+                    className="px-3 py-6 text-center text-sm text-muted-foreground"
+                  >
+                    No students yet.
+                  </td>
+                </tr>
+              ) : null}
+              {allStudents.map((s) => (
+                <tr key={s.id} className="border-t align-top">
+                  <td className="break-words px-3 py-2 font-medium">
+                    {titleCase(s.fullName)}
+                    {!s.signedUp ? (
+                      <span className="ml-1.5 rounded-full bg-amber-500/10 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-400">
+                        Invite pending
+                      </span>
+                    ) : null}
+                    <div className="mt-0.5 text-[10px] text-muted-foreground sm:hidden">
+                      {s.teacherName ? titleCase(s.teacherName) : "—"}
+                      {s.email ? (
+                        <span className="break-all"> · {s.email}</span>
+                      ) : null}
+                    </div>
+                    <div className="mt-0.5 text-[10px] text-muted-foreground sm:hidden">
+                      Last active{" "}
+                      {s.lastActivityAt
+                        ? s.lastActivityAt.slice(0, 10)
+                        : "—"}
+                    </div>
+                  </td>
+                  <td className="hidden break-words px-3 py-2 text-xs text-muted-foreground sm:table-cell">
+                    {s.teacherName ? titleCase(s.teacherName) : "—"}
+                  </td>
+                  <td className="hidden break-all px-3 py-2 text-xs text-muted-foreground md:table-cell">
+                    {s.email ?? "—"}
+                  </td>
+                  <td className="px-3 py-2 text-right text-xs text-muted-foreground tabular-nums">
+                    {s.addedAt.slice(0, 10)}
+                  </td>
+                  <td className="hidden px-3 py-2 text-right text-xs text-muted-foreground tabular-nums sm:table-cell">
+                    {s.lastActivityAt ? s.lastActivityAt.slice(0, 10) : "—"}
                   </td>
                 </tr>
               ))}
@@ -467,12 +550,14 @@ export default async function SysadminPage() {
               Teachers
             </h3>
             <div className="overflow-x-auto rounded-xl border">
-              <table className="min-w-[440px] w-full text-sm">
+              <table className="w-full text-sm">
                 <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
                   <tr>
-                    <th className="px-4 py-2">Teacher</th>
-                    <th className="px-4 py-2 text-right">Active days</th>
-                    <th className="px-4 py-2 text-right">Minutes</th>
+                    <th className="px-3 py-2">Teacher</th>
+                    <th className="hidden px-3 py-2 text-right sm:table-cell">
+                      Active days
+                    </th>
+                    <th className="px-3 py-2 text-right">Minutes</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -480,21 +565,25 @@ export default async function SysadminPage() {
                     <tr>
                       <td
                         colSpan={3}
-                        className="px-4 py-6 text-center text-xs text-muted-foreground"
+                        className="px-3 py-6 text-center text-xs text-muted-foreground"
                       >
                         No teacher activity tracked yet.
                       </td>
                     </tr>
                   ) : null}
                   {timeOnSite.teachers.map((t) => (
-                    <tr key={t.id} className="border-t">
-                      <td className="px-4 py-2 font-medium">
+                    <tr key={t.id} className="border-t align-top">
+                      <td className="break-words px-3 py-2 font-medium">
                         {titleCase(t.name)}
+                        <div className="mt-0.5 text-[10px] text-muted-foreground sm:hidden">
+                          {t.activeDays} active day
+                          {t.activeDays === 1 ? "" : "s"}
+                        </div>
                       </td>
-                      <td className="px-4 py-2 text-right tabular-nums">
+                      <td className="hidden px-3 py-2 text-right tabular-nums sm:table-cell">
                         {t.activeDays}
                       </td>
-                      <td className="px-4 py-2 text-right font-semibold tabular-nums">
+                      <td className="px-3 py-2 text-right font-semibold tabular-nums">
                         {t.minutes.toLocaleString()}
                       </td>
                     </tr>
@@ -509,13 +598,15 @@ export default async function SysadminPage() {
               Students
             </h3>
             <div className="overflow-x-auto rounded-xl border">
-              <table className="min-w-[480px] w-full text-sm">
+              <table className="w-full text-sm">
                 <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
                   <tr>
-                    <th className="px-4 py-2">Student</th>
-                    <th className="px-4 py-2">Teacher</th>
-                    <th className="px-4 py-2 text-right">Lessons</th>
-                    <th className="px-4 py-2 text-right">Minutes</th>
+                    <th className="px-3 py-2">Student</th>
+                    <th className="hidden px-3 py-2 md:table-cell">Teacher</th>
+                    <th className="hidden px-3 py-2 text-right sm:table-cell">
+                      Lessons
+                    </th>
+                    <th className="px-3 py-2 text-right">Minutes</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -523,24 +614,28 @@ export default async function SysadminPage() {
                     <tr>
                       <td
                         colSpan={4}
-                        className="px-4 py-6 text-center text-xs text-muted-foreground"
+                        className="px-3 py-6 text-center text-xs text-muted-foreground"
                       >
                         No completed lessons yet.
                       </td>
                     </tr>
                   ) : null}
                   {timeOnSite.students.map((s) => (
-                    <tr key={s.id} className="border-t">
-                      <td className="px-4 py-2 font-medium">
+                    <tr key={s.id} className="border-t align-top">
+                      <td className="break-words px-3 py-2 font-medium">
                         {titleCase(s.displayName)}
+                        <div className="mt-0.5 text-[10px] text-muted-foreground md:hidden">
+                          {s.teacherName ? titleCase(s.teacherName) : "—"} ·{" "}
+                          {s.lessons} lesson{s.lessons === 1 ? "" : "s"}
+                        </div>
                       </td>
-                      <td className="px-4 py-2 text-xs text-muted-foreground">
+                      <td className="hidden break-words px-3 py-2 text-xs text-muted-foreground md:table-cell">
                         {s.teacherName ? titleCase(s.teacherName) : "—"}
                       </td>
-                      <td className="px-4 py-2 text-right tabular-nums">
+                      <td className="hidden px-3 py-2 text-right tabular-nums sm:table-cell">
                         {s.lessons}
                       </td>
-                      <td className="px-4 py-2 text-right font-semibold tabular-nums">
+                      <td className="px-3 py-2 text-right font-semibold tabular-nums">
                         {s.minutes.toLocaleString()}
                       </td>
                     </tr>
