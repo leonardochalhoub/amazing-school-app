@@ -113,6 +113,10 @@ export default async function ReceiptPrintPage({
             {/* LEFT — teacher's school logo. */}
             {teacherLogo ? (
               <div className="report-logo-box">
+                {/* No inline size override — rely on the shared
+                    .report-logo-box img CSS so the recibo's school
+                    logo scales to the same 80px as the other
+                    reports. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={teacherLogo}
@@ -121,12 +125,6 @@ export default async function ReceiptPrintPage({
                       ? `${data.teacher.fullName} — logo`
                       : "School logo"
                   }
-                  style={{
-                    maxHeight: 30,
-                    width: "auto",
-                    objectFit: "contain",
-                    display: "block",
-                  }}
                 />
               </div>
             ) : null}
@@ -167,10 +165,12 @@ export default async function ReceiptPrintPage({
         <section style={{ lineHeight: 1.7, fontSize: "11.5pt" }}>
           <p>
             Eu,{" "}
-            <strong>{data.teacher.fullName || data.teacher.email || "o professor responsável"}</strong>
-            {data.teacher.email ? (
-              <span className="report-muted"> ({data.teacher.email})</span>
-            ) : null}
+            <strong>
+              {data.teacher.fullName ||
+                (data.teacher.email
+                  ? data.teacher.email.split("@")[0]
+                  : "o professor responsável")}
+            </strong>
             , declaro que recebi de{" "}
             <strong>{data.student.fullName}</strong>
             {data.student.classroomName ? (
