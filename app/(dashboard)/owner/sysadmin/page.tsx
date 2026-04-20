@@ -455,10 +455,9 @@ export default async function SysadminPage() {
           </h2>
           <p className="text-xs text-muted-foreground">
             Sorted descending · ticks only while the tab is focused
-            (pauses on tab-switch, stops on tab close). Real numbers
-            come from session heartbeats; when a user has none yet
-            we fall back to a rough estimate from completion
-            timestamps / authoring days so the table still reads.
+            (pauses on tab-switch, stops on tab close). Real session
+            heartbeats only — zero until the user loads a page on
+            the new build.
           </p>
         </div>
 

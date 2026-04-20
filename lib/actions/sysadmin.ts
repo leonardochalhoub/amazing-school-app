@@ -852,28 +852,21 @@ export async function getSysadminOverview(): Promise<
     addTeacherDay(r.teacher_id, r.created_at);
   }
 
+  // Heartbeats are the single source of truth now. No proxy, no
+  // fallback — a user who hasn't had a heartbeat land yet reads
+  // 0 minutes. Once they load any authenticated page with the
+  // tab focused, their row starts accumulating in real time.
   const teacherTimeRows = teachers
-    .map((t) => {
-      const days = teacherDays.get(t.id)?.size ?? 0;
-      const heartbeat = Math.round(heartbeatMinutes.get(t.id) ?? 0);
-      // Prefer real heartbeat minutes; fall back to the 15 min/day
-      // proxy only when no heartbeats have landed yet.
-      const minutes = heartbeat > 0 ? heartbeat : days * 15;
-      return {
-        id: t.id,
-        name: t.full_name,
-        activeDays: days,
-        minutes,
-      };
-    })
+    .map((t) => ({
+      id: t.id,
+      name: t.full_name,
+      activeDays: teacherDays.get(t.id)?.size ?? 0,
+      minutes: Math.round(heartbeatMinutes.get(t.id) ?? 0),
+    }))
     .sort((a, b) => b.minutes - a.minutes);
 
   const studentTimeRows = students
     .map((p) => {
-      const heartbeat = Math.round(heartbeatMinutes.get(p.id) ?? 0);
-      const fromProgress = Math.round(studentMinutes.get(p.id) ?? 0);
-      const minutes = heartbeat > 0 ? heartbeat : fromProgress;
-      const lessons = studentLessons.get(p.id) ?? 0;
       const r = rosterByAuthUser.get(p.id);
       const teacherName = r?.teacher_id
         ? teacherNameById.get(r.teacher_id) ?? null
@@ -882,8 +875,8 @@ export async function getSysadminOverview(): Promise<
         id: p.id,
         displayName: p.full_name,
         teacherName,
-        minutes,
-        lessons,
+        minutes: Math.round(heartbeatMinutes.get(p.id) ?? 0),
+        lessons: studentLessons.get(p.id) ?? 0,
       };
     })
     .sort((a, b) => b.minutes - a.minutes);
