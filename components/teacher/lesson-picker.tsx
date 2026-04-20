@@ -119,50 +119,49 @@ export function LessonPicker({
 
   return (
     <div className="space-y-3">
+      {/* Filter row: three equal-sized selects + summary count on
+          the right. Keeps the top of the dialog tidy and the count
+          chip legible on any viewport. */}
       <div className="flex flex-wrap items-center gap-2">
-        <select
-          className="h-8 rounded border border-border bg-background px-2 text-xs"
-          value={kindFilter}
-          onChange={(e) =>
-            setKindFilter(e.target.value as "all" | "lesson" | "music")
-          }
-        >
-          <option value="all">Lessons + songs</option>
-          <option value="lesson">Only lessons</option>
-          <option value="music">Only songs</option>
-        </select>
-        <select
-          className="h-8 rounded border border-border bg-background px-2 text-xs"
-          value={cefr}
-          onChange={(e) => setCefr(e.target.value)}
-        >
-          <option value="all">All CEFR</option>
-          {CEFR_BANDS.map((b) => (
-            <option key={b} value={b}>
-              {b.toUpperCase()}
-            </option>
-          ))}
-        </select>
-        <select
-          className="h-8 rounded border border-border bg-background px-2 text-xs"
-          value={skill}
-          onChange={(e) => setSkill(e.target.value)}
-          title="Skill filter only applies to lessons"
-        >
-          <option value="all">All skills</option>
-          {SKILLS.map((s) => (
-            <option key={s} value={s}>
-              {s}
-            </option>
-          ))}
-        </select>
-        <Input
-          className="h-8 w-full max-w-xs text-xs"
-          placeholder="Search title or artist…"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-        />
-        <span className="ml-auto text-[11px] text-muted-foreground tabular-nums">
+        <div className="grid flex-1 grid-cols-3 gap-2 min-w-[260px]">
+          <select
+            className="h-9 rounded-md border border-border bg-background px-2 text-xs"
+            value={kindFilter}
+            onChange={(e) =>
+              setKindFilter(e.target.value as "all" | "lesson" | "music")
+            }
+          >
+            <option value="all">Lessons + songs</option>
+            <option value="lesson">Only lessons</option>
+            <option value="music">Only songs</option>
+          </select>
+          <select
+            className="h-9 rounded-md border border-border bg-background px-2 text-xs"
+            value={cefr}
+            onChange={(e) => setCefr(e.target.value)}
+          >
+            <option value="all">All CEFR</option>
+            {CEFR_BANDS.map((b) => (
+              <option key={b} value={b}>
+                {b.toUpperCase()}
+              </option>
+            ))}
+          </select>
+          <select
+            className="h-9 rounded-md border border-border bg-background px-2 text-xs"
+            value={skill}
+            onChange={(e) => setSkill(e.target.value)}
+            title="Skill filter only applies to lessons"
+          >
+            <option value="all">All skills</option>
+            {SKILLS.map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
+        </div>
+        <span className="shrink-0 text-[11px] tabular-nums text-muted-foreground">
           {filtered.length} items
           {music.length > 0
             ? ` · ${lessonCount} lessons · ${musicCount} songs`
@@ -170,9 +169,19 @@ export function LessonPicker({
         </span>
       </div>
 
-      <div className="max-h-80 overflow-y-auto rounded border border-border">
+      {/* Search on its own row, full width. Separating search from
+          the filters stops the row from wrapping awkwardly when
+          the count chip grows. */}
+      <Input
+        className="h-9 text-xs"
+        placeholder="Search title or artist…"
+        value={q}
+        onChange={(e) => setQ(e.target.value)}
+      />
+
+      <div className="max-h-[22rem] overflow-y-auto rounded-lg border border-border">
         {filtered.length === 0 ? (
-          <p className="p-4 text-sm text-muted-foreground text-center">
+          <p className="p-6 text-sm text-muted-foreground text-center">
             Nothing matches the filters.
           </p>
         ) : (
@@ -180,44 +189,48 @@ export function LessonPicker({
             {filtered.map((r) => (
               <li
                 key={r.slug}
-                className="flex items-center justify-between gap-3 px-3 py-2 text-sm"
+                className="flex items-center gap-3 px-3 py-2.5 text-sm"
               >
-                <div className="flex min-w-0 items-start gap-2">
-                  <span
-                    className={`mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md ${
-                      r.kind === "music"
-                        ? "bg-pink-500/10 text-pink-600 dark:text-pink-400"
-                        : "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400"
-                    }`}
-                  >
-                    {r.kind === "music" ? (
-                      <Music2 className="h-3.5 w-3.5" />
-                    ) : (
-                      <BookOpen className="h-3.5 w-3.5" />
-                    )}
-                  </span>
-                  <div className="min-w-0">
-                    <p className="truncate font-medium">{r.title}</p>
-                    <p className="text-[11px] text-muted-foreground tabular-nums">
+                <span
+                  className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${
+                    r.kind === "music"
+                      ? "bg-pink-500/15 text-pink-600 dark:text-pink-300"
+                      : "bg-indigo-500/15 text-indigo-600 dark:text-indigo-300"
+                  }`}
+                >
+                  {r.kind === "music" ? (
+                    <Music2 className="h-4 w-4" />
+                  ) : (
+                    <BookOpen className="h-4 w-4" />
+                  )}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <p className="truncate font-medium leading-tight">
+                    {r.title}
+                  </p>
+                  <p className="mt-0.5 truncate text-[11px] text-muted-foreground tabular-nums">
+                    <span className="font-semibold text-foreground/70">
                       {r.cefr_level.toUpperCase()}
-                      {r.kind === "lesson"
-                        ? ` · ${r.category} · ${r.exercise_count} ex · ${r.estimated_minutes} min`
-                        : ` · song · ${r.estimated_minutes} min`}
-                    </p>
-                  </div>
+                    </span>
+                    {r.kind === "lesson"
+                      ? ` · ${r.category} · ${r.exercise_count} ex · ${r.estimated_minutes} min`
+                      : ` · song · ${r.estimated_minutes} min`}
+                  </p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Badge variant="secondary" className="text-[10px]">
-                    {r.xp_reward} XP
-                  </Badge>
-                  <Button
-                    size="sm"
-                    onClick={() => onPick(r.slug)}
-                    disabled={pending}
-                  >
-                    {pickLabel}
-                  </Button>
-                </div>
+                <Badge
+                  variant="secondary"
+                  className="shrink-0 text-[10px] tabular-nums"
+                >
+                  {r.xp_reward} XP
+                </Badge>
+                <Button
+                  size="sm"
+                  onClick={() => onPick(r.slug)}
+                  disabled={pending}
+                  className="shrink-0"
+                >
+                  {pickLabel}
+                </Button>
               </li>
             ))}
           </ul>

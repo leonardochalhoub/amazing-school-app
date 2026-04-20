@@ -75,8 +75,36 @@ export default async function RosterStudentDetailPage({
 
   const lessonDraftBySlug = new Map(publishedLessons.map((l) => [l.slug, l]));
 
+  // Build a classroom lookup that also includes soft-deleted rooms,
+  // so assignments from a now-archived classroom still render with
+  // the original name tag on the student's profile.
+  const assignmentClassroomIds = Array.from(
+    new Set(
+      (rawAssignments ?? [])
+        .map((a) => a.classroom_id)
+        .filter((x): x is string => !!x),
+    ),
+  );
+  const classroomNameById = new Map<string, string>();
+  for (const c of classroomList) classroomNameById.set(c.id, c.name);
+  const missing = assignmentClassroomIds.filter(
+    (cid) => !classroomNameById.has(cid),
+  );
+  if (missing.length > 0) {
+    const { data: extra } = await admin
+      .from("classrooms")
+      .select("id, name")
+      .in("id", missing);
+    for (const c of (extra ?? []) as Array<{ id: string; name: string }>) {
+      classroomNameById.set(c.id, c.name);
+    }
+  }
+
   const assignments: AssignedLessonMeta[] = rawAssignments.map((a) => {
     const { kind, slug } = fromAssignmentSlug(a.lesson_slug);
+    const classroomName = a.classroom_id
+      ? classroomNameById.get(a.classroom_id) ?? null
+      : null;
     if (kind === "music") {
       const m = getMusic(slug);
       return {
@@ -91,6 +119,7 @@ export default async function RosterStudentDetailPage({
         previewHref: m ? `/student/music/${m.slug}` : null,
         status: a.status,
         scope: a.roster_student_id === id ? "per-student" : "classroom-wide",
+        classroomName,
         assignedAt: a.assigned_at,
       };
     }
@@ -109,6 +138,7 @@ export default async function RosterStudentDetailPage({
       previewHref: `/student/lessons/${slug}`,
       status: a.status,
       scope: a.roster_student_id === id ? "per-student" : "classroom-wide",
+      classroomName,
       assignedAt: a.assigned_at,
     };
   });

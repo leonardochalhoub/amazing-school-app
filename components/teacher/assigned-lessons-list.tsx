@@ -31,6 +31,9 @@ export interface AssignedLessonMeta {
   previewHref?: string | null;
   status: "assigned" | "skipped" | "completed";
   scope: "classroom-wide" | "per-student";
+  /** Human-readable classroom name for the tag under the lesson.
+   *  Null when the assignment has no classroom context. */
+  classroomName?: string | null;
   assignedAt: string;
 }
 
@@ -208,7 +211,9 @@ export function AssignedLessonsList({ assignments, canUnassign = true }: Props) 
                 ) : (
                   <UserRound className="h-3 w-3" />
                 )}
-                {t.scope[a.scope]}
+                {a.scope === "classroom-wide" && a.classroomName
+                  ? a.classroomName
+                  : t.scope[a.scope]}
               </span>
               <span>·</span>
               <span className="inline-flex items-center gap-1 tabular-nums">
