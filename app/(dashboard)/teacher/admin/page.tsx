@@ -7,6 +7,8 @@ import { getTeacherManagementMatrix } from "@/lib/actions/teacher-payments";
 import { listTeacherListeningResponses } from "@/lib/actions/listening-responses";
 import { getTeacherAiChatStats } from "@/lib/actions/teacher-ai-chat";
 import { AiChatStatsTable } from "@/components/teacher/ai-chat-stats-table";
+import { listDeletedRosterStudents } from "@/lib/actions/roster";
+import { DeletedStudentsPanel } from "@/components/teacher/deleted-students-panel";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   KpiTile,
@@ -53,13 +55,19 @@ export default async function TeacherManagementPage() {
     .maybeSingle();
   if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/");
 
-  const [dashboardData, financeData, listeningResponses, aiChatStats] =
-    await Promise.all([
-      getTeacherDashboardData(),
-      getTeacherManagementMatrix({ months: 24 }),
-      listTeacherListeningResponses(),
-      getTeacherAiChatStats(),
-    ]);
+  const [
+    dashboardData,
+    financeData,
+    listeningResponses,
+    aiChatStats,
+    deletedStudents,
+  ] = await Promise.all([
+    getTeacherDashboardData(),
+    getTeacherManagementMatrix({ months: 24 }),
+    listTeacherListeningResponses(),
+    getTeacherAiChatStats(),
+    listDeletedRosterStudents(),
+  ]);
 
   const financeAvailable = !("error" in financeData);
   const finance =
@@ -457,6 +465,9 @@ export default async function TeacherManagementPage() {
           ) : null}
         </div>
       </section>
+
+      {/* ========== Deleted students archive ========== */}
+      <DeletedStudentsPanel entries={deletedStudents} />
     </div>
   );
 }

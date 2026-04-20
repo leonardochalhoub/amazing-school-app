@@ -39,6 +39,26 @@ export default async function DashboardLayout({
   }
 
   const role = (profile.role === "owner" ? "teacher" : profile.role) as Role;
+
+  // Soft-deleted-student gate: if a student's only roster rows are
+  // all marked deleted (teacher removed them from the list), they
+  // can't reach the student dashboard. Send them to the warm
+  // "you've been removed" page. Students who were never rostered
+  // pass through — they just have no teacher attached.
+  if (role === "student") {
+    const { data: rosterRows } = await admin
+      .from("roster_students")
+      .select("id, deleted_at")
+      .eq("auth_user_id", user.id);
+    const rows = (rosterRows ?? []) as Array<{
+      id: string;
+      deleted_at: string | null;
+    }>;
+    const hasActive = rows.some((r) => !r.deleted_at);
+    const hadAnyRoster = rows.length > 0;
+    if (!hasActive && hadAnyRoster) redirect("/removed");
+  }
+
   const avatarUrl = await resolveMyAvatarUrl(supabase, user.id);
   // Owner check reuses the same helper that gates every sysadmin
   // action — DB role OR the origin-owner email backstop, memoised

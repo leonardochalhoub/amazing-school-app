@@ -131,6 +131,105 @@ export async function updateRosterStudent(input: z.input<typeof UpdateSchema>) {
 
 const DeleteSchema = z.object({ id: UuidSchema });
 
+export interface DeletedRosterRow {
+  id: string;
+  full_name: string;
+  email: string | null;
+  classroom_name: string | null;
+  deleted_at: string;
+  monthly_tuition_cents: number | null;
+}
+
+/**
+ * List every roster row the current teacher soft-deleted, with
+ * enough metadata to decide whether to restore or leave alone.
+ * Ordered by most-recently deleted first.
+ */
+export async function listDeletedRosterStudents(): Promise<DeletedRosterRow[]> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return [];
+
+  const admin = createAdminClient();
+  const { data } = await admin
+    .from("roster_students")
+    .select(
+      "id, full_name, email, classroom_id, deleted_at, monthly_tuition_cents, classrooms(name)",
+    )
+    .eq("teacher_id", user.id)
+    .not("deleted_at", "is", null)
+    .order("deleted_at", { ascending: false });
+
+  return ((data ?? []) as Array<{
+    id: string;
+    full_name: string;
+    email: string | null;
+    classroom_id: string | null;
+    deleted_at: string;
+    monthly_tuition_cents: number | null;
+    classrooms: { name: string } | { name: string }[] | null;
+  }>).map((r) => {
+    const classroom = Array.isArray(r.classrooms)
+      ? r.classrooms[0]
+      : r.classrooms;
+    return {
+      id: r.id,
+      full_name: r.full_name,
+      email: r.email,
+      classroom_name: classroom?.name ?? null,
+      deleted_at: r.deleted_at,
+      monthly_tuition_cents: r.monthly_tuition_cents,
+    };
+  });
+}
+
+/**
+ * Bring a soft-deleted roster row back to life. Clears deleted_at
+ * and revalidates every active-roster surface. Fails cleanly if the
+ * caller doesn't own the row or if the row isn't actually deleted.
+ */
+export async function reactivateRosterStudent(
+  input: z.input<typeof DeleteSchema>,
+): Promise<{ success: true } | { error: string }> {
+  const parsed = DeleteSchema.safeParse(input);
+  if (!parsed.success) return { error: "Invalid input" };
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" };
+
+  const admin = createAdminClient();
+  const { data: own } = await admin
+    .from("roster_students")
+    .select("id, teacher_id, deleted_at")
+    .eq("id", parsed.data.id)
+    .maybeSingle();
+  if (!own) return { error: "Student not found" };
+  const row = own as {
+    id: string;
+    teacher_id: string;
+    deleted_at: string | null;
+  };
+  if (row.teacher_id !== user.id) return { error: "Not yours" };
+  if (!row.deleted_at) return { error: "Student isn't deleted" };
+
+  const { error } = await admin
+    .from("roster_students")
+    .update({ deleted_at: null })
+    .eq("id", parsed.data.id);
+  if (error) return { error: error.message };
+
+  revalidatePath("/teacher");
+  revalidatePath("/teacher/admin");
+  revalidatePath(`/teacher/students/${parsed.data.id}`);
+  revalidatePath("/owner/sysadmin");
+  return { success: true };
+}
+
 export async function deleteRosterStudent(input: z.input<typeof DeleteSchema>) {
   const parsed = DeleteSchema.safeParse(input);
   if (!parsed.success) return { error: "Invalid input" };
