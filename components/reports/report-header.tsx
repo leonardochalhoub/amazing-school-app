@@ -14,16 +14,14 @@ interface ReportHeaderProps {
 }
 
 /**
- * Every shell-based report header follows the same three-part
- * structure:
+ * Every shell-based report header follows this three-part layout:
  *
- *   [Amazing School mark]  [title]          [teacher school logo]
+ *   [teacher school logo]  [title]          [Amazing School mark]
  *
- * Amazing School (purple smiley + italic wordmark) sits on the
- * LEFT because the platform identity reads first. The teacher's
- * own school brand goes on the RIGHT, mirroring the canonical
- * "institutional letterhead" look. Both are always printed — this
- * is the hard rule documented in .claude/CLAUDE.md.
+ * Teacher's own school brand reads first on the LEFT (the document
+ * belongs to that school), and the Amazing School mark sits on the
+ * RIGHT as the "powered-by" platform identity. Both are always
+ * printed — hard rule documented in .claude/CLAUDE.md.
  */
 export function ReportHeader({
   title,
@@ -46,26 +44,7 @@ export function ReportHeader({
   return (
     <header className="report-header">
       <div className="report-header-left">
-        {/* LEFT — Amazing School platform mark. */}
-        <div className="report-logo-box" style={{ paddingInline: 10 }}>
-          <AmazingSchoolMark size={22} />
-        </div>
-        <div className="min-w-0">
-          <h1 className="report-title">{title}</h1>
-          {subtitle ? <p className="report-subtitle">{subtitle}</p> : null}
-        </div>
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-end",
-          gap: 6,
-        }}
-      >
-        {/* RIGHT — teacher's own school logo. Always shown when the
-            teacher has one configured (uploaded > whitelisted). */}
+        {/* LEFT — teacher's school logo. */}
         {teacherLogo ? (
           <div
             className="report-logo-box"
@@ -89,6 +68,24 @@ export function ReportHeader({
             />
           </div>
         ) : null}
+        <div className="min-w-0">
+          <h1 className="report-title">{title}</h1>
+          {subtitle ? <p className="report-subtitle">{subtitle}</p> : null}
+        </div>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-end",
+          gap: 6,
+        }}
+      >
+        {/* RIGHT — Amazing School platform mark. */}
+        <div className="report-logo-box" style={{ paddingInline: 10 }}>
+          <AmazingSchoolMark size={22} />
+        </div>
         {meta && meta.length > 0 ? (
           <div className="report-meta">
             {meta.map((m) => (
