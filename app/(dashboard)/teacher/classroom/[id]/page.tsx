@@ -6,6 +6,7 @@ import { getUpcomingClasses, getPastClasses } from "@/lib/actions/schedule";
 import { getAllLessons } from "@/lib/content/loader";
 import { RealtimeGrid } from "@/components/teacher/realtime-grid";
 import { BulkAssignButton } from "@/components/teacher/bulk-assign-button";
+import { DeleteClassroomButton } from "@/components/teacher/delete-classroom-button";
 import {
   PastClassLog,
   type PastClass,
@@ -81,6 +82,11 @@ export default async function ClassroomDetail({
           <Link href={`/teacher/classroom/${id}/schedule`}>
             <Button size="sm" variant="outline">Schedule</Button>
           </Link>
+          <DeleteClassroomButton
+            classroomId={id}
+            classroomName={classroom.name}
+            studentCount={rows.length}
+          />
         </div>
       </div>
 

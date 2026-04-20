@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
@@ -170,4 +171,53 @@ export async function getStudentClassrooms() {
     .eq("student_id", user.id);
 
   return memberships?.map((m) => m.classrooms) ?? [];
+}
+
+const UuidSchema = z.string().uuid();
+
+/**
+ * Delete a classroom the caller owns. FK cascade handles the child
+ * rows (classroom_members, lesson_assignments, lesson_progress,
+ * xp_events, conversations, scheduled_classes, student_notes,
+ * student_history). roster_students.classroom_id is ON DELETE SET
+ * NULL — rostered students survive the classroom deletion and stay
+ * linked to their teacher, so no data loss on the people side.
+ *
+ * Hard-coded safety check on the DB: we fetch the classroom row and
+ * verify teacher_id === caller before deleting. RLS alone is not
+ * enough — we want to surface a clean 'not yours' error instead of
+ * a silent RLS noop.
+ */
+export async function deleteClassroom(input: {
+  classroomId: string;
+}): Promise<{ success: true } | { error: string }> {
+  const parsed = UuidSchema.safeParse(input.classroomId);
+  if (!parsed.success) return { error: "Invalid classroom id" };
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Not signed in" };
+
+  const admin = createAdminClient();
+  const { data: classroom } = await admin
+    .from("classrooms")
+    .select("id, teacher_id")
+    .eq("id", parsed.data)
+    .maybeSingle();
+  if (!classroom) return { error: "Classroom not found" };
+  if ((classroom as { teacher_id: string }).teacher_id !== user.id) {
+    return { error: "You don't own this classroom" };
+  }
+
+  const { error } = await admin
+    .from("classrooms")
+    .delete()
+    .eq("id", parsed.data);
+  if (error) return { error: error.message };
+
+  revalidatePath("/teacher");
+  revalidatePath("/teacher/admin");
+  return { success: true };
 }
