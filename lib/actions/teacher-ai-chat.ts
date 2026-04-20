@@ -50,6 +50,7 @@ export async function getTeacherAiChatStats(): Promise<TeacherAiChatRow[]> {
       .from("roster_students")
       .select("auth_user_id")
       .eq("teacher_id", user.id)
+      .is("deleted_at", null)
       .not("auth_user_id", "is", null),
   ]);
 

@@ -69,6 +69,7 @@ export default async function StudentHome() {
     .from("roster_students")
     .select("id, age_group, gender, has_avatar, level")
     .eq("auth_user_id", user.id)
+    .is("deleted_at", null)
     .maybeSingle();
   // Rosângela-style fallback: if the roster row hasn't been linked yet
   // (invitation was never claimed, or teacher created the roster without
@@ -80,6 +81,7 @@ export default async function StudentHome() {
       .select("id, age_group, gender, has_avatar, level")
       .eq("email", user.email)
       .is("auth_user_id", null)
+      .is("deleted_at", null)
       .maybeSingle();
     if (byEmail?.id) {
       await admin

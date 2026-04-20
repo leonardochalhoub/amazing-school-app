@@ -220,7 +220,8 @@ export async function getSysadminOverview(): Promise<
       .from("roster_students")
       .select(
         "id, teacher_id, classroom_id, full_name, email, level, has_avatar, auth_user_id, monthly_tuition_cents, created_at",
-      ),
+      )
+      .is("deleted_at", null),
     admin.from("classroom_members").select("classroom_id, student_id"),
     admin
       .from("lesson_drafts")

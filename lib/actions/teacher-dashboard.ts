@@ -49,7 +49,8 @@ export async function getClassroomStudentRows(
       .from("roster_students")
       .select("id, full_name, has_avatar, classroom_id, age_group, gender, auth_user_id")
       .eq("classroom_id", classroomId)
-      .eq("teacher_id", user.id),
+      .eq("teacher_id", user.id)
+      .is("deleted_at", null),
   ]);
 
   const authRows = (membersRes.data as unknown as MemberRow[] | null) ?? [];
@@ -438,6 +439,7 @@ export async function getTeacherOverview(): Promise<TeacherOverview> {
       .from("roster_students")
       .select("id, full_name, classroom_id, has_avatar, age_group, gender, auth_user_id, level")
       .eq("teacher_id", user.id)
+      .is("deleted_at", null)
       .order("created_at", { ascending: false })
       .then((res) => (res.error ? { data: [], error: null } : res)),
   ]);

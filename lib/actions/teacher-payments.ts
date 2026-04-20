@@ -65,6 +65,7 @@ export async function getTeacherManagementMatrix(opts?: {
       "id, full_name, teacher_id, auth_user_id, classroom_id, monthly_tuition_cents, billing_day, billing_starts_on, ended_on, created_at, classrooms(name)"
     )
     .eq("teacher_id", user.id)
+    .is("deleted_at", null)
     .order("full_name", { ascending: true });
   if (error) return { error: error.message };
 

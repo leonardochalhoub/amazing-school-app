@@ -72,11 +72,14 @@ export async function createStudentInvitation(
   if (parsed.data.rosterStudentId) {
     const { data: roster } = await admin
       .from("roster_students")
-      .select("id, teacher_id, full_name, email")
+      .select("id, teacher_id, full_name, email, deleted_at")
       .eq("id", parsed.data.rosterStudentId)
       .maybeSingle();
     if (!roster || roster.teacher_id !== user.id) {
       return { error: "Roster student not found or not yours" };
+    }
+    if ((roster as { deleted_at: string | null }).deleted_at) {
+      return { error: "That student has been deleted" };
     }
   }
 
@@ -232,6 +235,7 @@ export async function claimInvitation(token: string) {
       .from("roster_students")
       .select("full_name, age_group, gender, birthday, has_avatar, email")
       .eq("id", inv.roster_student_id as string)
+      .is("deleted_at", null)
       .maybeSingle();
     if (roster) {
       rosterData = roster;

@@ -139,16 +139,42 @@ export async function deleteRosterStudent(input: z.input<typeof DeleteSchema>) {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { error: "Unauthorized" };
 
-  await supabase.storage.from("avatars").remove([`roster/${parsed.data.id}.webp`]);
-
-  const { error } = await supabase
+  // Soft-delete (migration 041). Stamp deleted_at instead of
+  // removing the row — all historical joins on this student
+  // (assignments, XP, lesson completions, AI chats, diary,
+  // class log, payments) keep resolving the name because the
+  // row lives on. Active-roster queries filter `deleted_at
+  // IS NULL` so the student vanishes from the teacher's UI.
+  //
+  // Only the teacher who owns the roster can delete it.
+  const { data: own } = await supabase
     .from("roster_students")
-    .delete()
-    .eq("id", parsed.data.id);
+    .select("id, teacher_id, deleted_at")
+    .eq("id", parsed.data.id)
+    .maybeSingle();
+  if (!own) return { error: "Student not found" };
+  const row = own as {
+    id: string;
+    teacher_id: string;
+    deleted_at: string | null;
+  };
+  if (row.teacher_id !== user.id) return { error: "Not yours to delete" };
+  if (row.deleted_at) return { error: "Student is already deleted" };
+
+  const { error, count } = await supabase
+    .from("roster_students")
+    .update({ deleted_at: new Date().toISOString() }, { count: "exact" })
+    .eq("id", parsed.data.id)
+    .is("deleted_at", null);
 
   if (error) return { error: error.message };
+  if (!count)
+    return { error: "Delete didn't take effect. Try reloading the page." };
 
   revalidatePath("/teacher");
+  revalidatePath("/teacher/admin");
+  revalidatePath(`/teacher/students/${parsed.data.id}`);
+  revalidatePath("/owner/sysadmin");
   return { success: true as const };
 }
 
@@ -261,6 +287,7 @@ export async function getRosterStudent(id: string): Promise<RosterStudent | null
     .select("*")
     .eq("id", id)
     .eq("teacher_id", user.id)
+    .is("deleted_at", null)
     .maybeSingle();
 
   return (data as RosterStudent | null) ?? null;
