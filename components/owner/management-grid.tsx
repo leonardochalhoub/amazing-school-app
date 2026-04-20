@@ -539,7 +539,14 @@ function AmountInput({
         value={value}
         onChange={(e) => setValue(e.target.value)}
         onBlur={() => {
-          if (value !== defaultValue) onSave(value);
+          const normalized = value.trim() === ""
+            ? ""
+            : (() => {
+                const n = parseFloat(value.replace(",", "."));
+                return Number.isFinite(n) ? n.toFixed(2) : value;
+              })();
+          if (normalized !== value) setValue(normalized);
+          if (normalized !== defaultValue) onSave(normalized);
         }}
         onKeyDown={(e) => {
           if (e.key === "Enter") (e.target as HTMLInputElement).blur();

@@ -4,9 +4,10 @@ import { getClassroomStudentRows } from "@/lib/actions/teacher-dashboard";
 import { getAssignmentsForClassroom } from "@/lib/actions/assignments";
 import { getUpcomingClasses, getPastClasses } from "@/lib/actions/schedule";
 import { getAllLessons } from "@/lib/content/loader";
-import { listMusic } from "@/lib/content/music";
+import { listMusic, fromAssignmentSlug, getMusic } from "@/lib/content/music";
+import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
+import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { RealtimeGrid } from "@/components/teacher/realtime-grid";
-import { BulkAssignButton } from "@/components/teacher/bulk-assign-button";
 import { DeleteClassroomButton } from "@/components/teacher/delete-classroom-button";
 import { AddStudentsToClassroomButton } from "@/components/teacher/add-students-to-classroom-button";
 import { RemoveStudentsFromClassroomButton } from "@/components/teacher/remove-students-from-classroom-button";
@@ -34,11 +35,12 @@ export default async function ClassroomDetail({
   }
 
   const { classroom } = data;
-  const [rows, assignments, upcoming, pastRaw] = await Promise.all([
+  const [rows, assignments, upcoming, pastRaw, publishedLessons] = await Promise.all([
     getClassroomStudentRows(id),
     getAssignmentsForClassroom(id),
     getUpcomingClasses(id),
     getPastClasses(id),
+    getAssignableLessons(),
   ]);
 
   const past: PastClass[] = (pastRaw as PastClass[]).map((c) => ({
@@ -51,16 +53,30 @@ export default async function ClassroomDetail({
   }));
 
   const allLessons = getAllLessons();
-  const allMusic = listMusic().map((m) => ({
-    slug: m.slug,
-    title: m.title,
-    artist: m.artist,
-    cefr_level: m.cefr_level,
-    duration_seconds: m.duration_seconds,
-  }));
+  const allMusic = listMusic();
   const classroomWideAssigned = assignments
     .filter((a) => a.student_id === null)
     .map((a) => a.lesson_slug);
+
+  function prettyAssignmentTitle(slug: string): string {
+    const parsed = fromAssignmentSlug(slug);
+    if (parsed.kind === "music") {
+      const m = getMusic(parsed.slug);
+      return m ? `${m.title} — ${m.artist}` : slug;
+    }
+    return allLessons.find((l) => l.slug === slug)?.title ?? slug;
+  }
+
+  const rosterStudents = rows
+    .filter(
+      (r): r is typeof r & { rosterStudentId: string } =>
+        !!(r as { rosterStudentId?: string }).rosterStudentId,
+    )
+    .map((r) => ({
+      id: r.rosterStudentId,
+      fullName: r.fullName,
+      classroomId: id,
+    }));
 
   return (
     <div className="space-y-4">
@@ -101,13 +117,13 @@ export default async function ClassroomDetail({
                 fullName: r.fullName,
               }))}
           />
-          {/* The richer bulk-assign lives on /teacher/lessons — full
-              library with lessons + songs, multi-select, CEFR band
-              grouping. We hand the classroom id over as a query
-              param so the picker pre-scopes to this classroom. */}
-          <Link href={`/teacher/lessons?classroom=${id}`}>
-            <Button size="sm">Bulk assign</Button>
-          </Link>
+          <AssignLessonButton
+            lessons={publishedLessons}
+            musics={allMusic}
+            classrooms={[{ id, name: classroom.name }]}
+            students={rosterStudents}
+            label="Bulk assign"
+          />
           <Link href={`/teacher/classroom/${id}/schedule`}>
             <Button size="sm" variant="outline">Schedule</Button>
           </Link>
@@ -145,9 +161,7 @@ export default async function ClassroomDetail({
                     key={slug}
                     className="py-1.5 flex items-center justify-between"
                   >
-                    <span className="truncate">
-                      {allLessons.find((l) => l.slug === slug)?.title ?? slug}
-                    </span>
+                    <span className="truncate">{prettyAssignmentTitle(slug)}</span>
                     <Badge variant="outline" className="text-[10px]">
                       All students
                     </Badge>
