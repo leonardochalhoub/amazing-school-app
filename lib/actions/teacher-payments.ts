@@ -83,7 +83,10 @@ export async function getTeacherManagementMatrix(opts?: {
     billing_starts_on: string | null;
     ended_on: string | null;
     created_at: string;
-    classrooms: { name: string } | { name: string }[] | null;
+    classrooms:
+      | { name: string; deleted_at?: string | null }
+      | Array<{ name: string; deleted_at?: string | null }>
+      | null;
   }>;
 
   const { data: teacherProfile } = await admin
@@ -113,6 +116,10 @@ export async function getTeacherManagementMatrix(opts?: {
 
   const rows: ManagementRow[] = roster.map((r) => {
     const classroom = Array.isArray(r.classrooms) ? r.classrooms[0] : r.classrooms;
+    // Soft-deleted classrooms should not show on the tuition
+    // matrix — the class no longer exists.
+    const classroomName =
+      classroom && !classroom.deleted_at ? classroom.name : null;
     const payments: Record<string, StudentPaymentRow | null> = {};
     for (const m of months) {
       payments[m] = paymentIndex.get(`${r.id}|${m}`) ?? null;
@@ -122,7 +129,7 @@ export async function getTeacherManagementMatrix(opts?: {
       student_name: r.full_name,
       teacher_id: r.teacher_id,
       teacher_name: teacherName,
-      classroom_name: classroom?.name ?? null,
+      classroom_name: classroomName,
       has_auth: !!r.auth_user_id,
       monthly_tuition_cents: r.monthly_tuition_cents,
       billing_day: r.billing_day,

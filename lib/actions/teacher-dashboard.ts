@@ -388,7 +388,21 @@ export async function getTeacherDashboardData(): Promise<TeacherDashboardData> {
       ? streaks.reduce((a, b) => a + b, 0) / streaks.length
       : 0;
 
-  const totalStudents = new Set(memberRows.map((m) => m.student_id)).size;
+  // Teachers intuitively expect "Students" to match the roster
+  // they see on /teacher — including rostered students who never
+  // signed up (no classroom_members row). Classroom_members alone
+  // undercounts teachers who add people via the roster without
+  // sending invites (e.g. Tatiana's setup). We count the roster
+  // directly and use classroom_members only as a secondary
+  // source for the activeToday KPI.
+  const { count: rosterCount } = await admin
+    .from("roster_students")
+    .select("id", { count: "exact", head: true })
+    .eq("teacher_id", user.id)
+    .is("deleted_at", null);
+  const memberStudentCount = new Set(memberRows.map((m) => m.student_id))
+    .size;
+  const totalStudents = Math.max(rosterCount ?? 0, memberStudentCount);
 
   return {
     kpis: {

@@ -9,29 +9,22 @@ import { setReceiptSharedWithStudent } from "@/lib/actions/reports";
 interface Props {
   paymentId: string;
   initialShared: boolean;
-  /** Disabled when the master switch is off — the UI still renders
-      so teachers see the control exists, but flipping is blocked. */
-  masterSwitchOn: boolean;
+  /** Kept on the API for the moment but no longer gates toggling
+      — the teacher can flip "Enviar" freely and the master switch
+      only decides whether the student's profile surface lists
+      receipts at all. */
+  masterSwitchOn?: boolean;
 }
 
 export function ShareReceiptToggle({
   paymentId,
   initialShared,
-  masterSwitchOn,
 }: Props) {
   const { locale } = useI18n();
   const [shared, setShared] = useState(initialShared);
   const [pending, startTransition] = useTransition();
 
   function toggle() {
-    if (!masterSwitchOn) {
-      toast.error(
-        locale === "pt-BR"
-          ? "Ative a liberação geral de recibos primeiro."
-          : "Enable the master receipts toggle first.",
-      );
-      return;
-    }
     const next = !shared;
     setShared(next);
     startTransition(async () => {
@@ -44,11 +37,11 @@ export function ShareReceiptToggle({
       toast.success(
         next
           ? locale === "pt-BR"
-            ? "Recibo enviado ao aluno"
-            : "Receipt shared with student"
+            ? "Recibo marcado como enviado"
+            : "Receipt marked as shared"
           : locale === "pt-BR"
-            ? "Recibo ocultado do aluno"
-            : "Receipt hidden from student",
+            ? "Recibo desmarcado"
+            : "Receipt unmarked",
       );
     });
   }
@@ -65,14 +58,7 @@ export function ShareReceiptToggle({
     <button
       type="button"
       onClick={toggle}
-      disabled={pending || !masterSwitchOn}
-      title={
-        masterSwitchOn
-          ? undefined
-          : locale === "pt-BR"
-            ? "Ative a liberação geral primeiro"
-            : "Turn on the master switch first"
-      }
+      disabled={pending}
       className={`inline-flex h-7 items-center gap-1 rounded-md border px-2 text-[10.5px] font-medium transition-colors ${
         shared
           ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/15 dark:text-emerald-300"

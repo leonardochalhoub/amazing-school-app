@@ -25,9 +25,7 @@ import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { StudentInviteButton } from "@/components/teacher/student-invite-button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { StudentReportsCard } from "@/components/reports/student-reports-card";
-import { CertificatesPanel } from "@/components/reports/certificates-panel";
 import { listPaidInvoicesForStudent } from "@/lib/actions/reports";
-import { listCertificatesForStudent } from "@/lib/actions/certificates";
 
 export default async function RosterStudentDetailPage({
   params,
@@ -72,7 +70,6 @@ export default async function RosterStudentDetailPage({
     publishedLessons,
     history,
     paidInvoices,
-    certificates,
   ] = await Promise.all([
     student.has_avatar ? getRosterAvatarSignedUrl(id) : Promise.resolve(null),
     listDiaryForStudent(id),
@@ -80,7 +77,6 @@ export default async function RosterStudentDetailPage({
     getAssignableLessons(),
     listStudentHistory({ rosterStudentId: id }),
     listPaidInvoicesForStudent(id),
-    listCertificatesForStudent(id),
   ]);
 
   const signedUrl = rosterSigned ?? selfUploadUrl;
@@ -306,19 +302,10 @@ export default async function RosterStudentDetailPage({
               (student as { receipts_visible_to_student?: boolean })
                 .receipts_visible_to_student === true
             }
+            studentHasAccount={!!student.auth_user_id}
+            studentEmail={student.email}
           />
 
-          <CertificatesPanel
-            rosterStudentId={id}
-            studentName={student.full_name}
-            defaultStartOn={
-              (student as { billing_starts_on?: string | null })
-                .billing_starts_on ??
-              (student as { created_at?: string | null }).created_at ??
-              null
-            }
-            certificates={certificates}
-          />
         </div>
       </div>
     </div>
