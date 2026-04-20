@@ -84,7 +84,15 @@ export default async function TeacherManagementPage() {
       : { months: [], rows: [] as [] };
   const months = finance.months;
   const rows = finance.rows;
-  const currentMonth = months[0];
+  // "Current month" for the Money-this-month KPI means the actual
+  // calendar month on the wall clock — NOT months[0]. The finance
+  // matrix extends one month past today so teachers can mark next
+  // month's cells in advance; that last column is "next month",
+  // not the month we KPI against.
+  const today = new Date();
+  const currentMonth = `${today.getFullYear()}-${String(
+    today.getMonth() + 1,
+  ).padStart(2, "0")}-01`;
 
   // -------- Finance aggregates --------
   let paidCount = 0;
@@ -103,12 +111,23 @@ export default async function TeacherManagementPage() {
       pendingCentsMonth += amt;
     }
   }
+  // Trailing-revenue aggregates — compute the 6- and 12-month
+  // windows ending on the CURRENT calendar month (inclusive).
+  // The finance matrix is DESC and leaks one month past today
+  // (for advance marking), so we exclude anything after
+  // currentMonth before summing.
+  const pastMonths = months.filter((m) => m <= currentMonth);
+  const last6 = pastMonths.slice(0, 6);
+  const last12 = pastMonths.slice(0, 12);
+  let revenueTrailing6Cents = 0;
   let revenueTrailing12Cents = 0;
-  const last12 = months.slice(0, 12);
   for (const r of rows) {
     for (const m of last12) {
       const p = r.payments[m];
-      if (p?.paid) revenueTrailing12Cents += p.amount_cents ?? r.monthly_tuition_cents ?? 0;
+      if (!p?.paid) continue;
+      const amt = p.amount_cents ?? r.monthly_tuition_cents ?? 0;
+      revenueTrailing12Cents += amt;
+      if (last6.includes(m)) revenueTrailing6Cents += amt;
     }
   }
   // Debt = sum of unpaid invoices OLDER than the current billing month.
@@ -285,6 +304,14 @@ export default async function TeacherManagementPage() {
               fullValue={fullBRL(monthlyBaselineCents)}
               sub={`${activeTuitionSeats} active seats`}
               icon={<Wallet className="h-3.5 w-3.5" />}
+            />
+            <KpiTile
+              label="Revenue · 6 mo"
+              value={compactBRL(revenueTrailing6Cents)}
+              fullValue={fullBRL(revenueTrailing6Cents)}
+              sub="Paid invoices, trailing"
+              icon={<Sigma className="h-3.5 w-3.5" />}
+              tone="emerald"
             />
             <KpiTile
               label="Revenue · 12 mo"
