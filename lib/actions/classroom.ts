@@ -211,13 +211,34 @@ export async function deleteClassroom(input: {
     return { error: "You don't own this classroom" };
   }
 
-  const { error } = await admin
+  const { error, count } = await admin
     .from("classrooms")
-    .delete()
+    .delete({ count: "exact" })
     .eq("id", parsed.data);
-  if (error) return { error: error.message };
+  if (error) {
+    console.error("[deleteClassroom]", error);
+    return { error: error.message };
+  }
+  if (!count) {
+    // Matched nothing — either the row vanished mid-request or a
+    // policy / trigger quietly refused the delete. Either way the
+    // UI should NOT claim success since the classroom would still
+    // reappear on refresh.
+    console.error("[deleteClassroom] delete affected 0 rows", {
+      classroomId: parsed.data,
+    });
+    return { error: "Delete didn't take effect. Try reloading the page." };
+  }
 
+  // Invalidate every surface that lists or reads classrooms so the
+  // deleted row can't return from a cached layout. Covers:
+  //   /teacher              — teacher dashboard
+  //   /teacher/admin        — management tab (classrooms card)
+  //   /teacher/classroom/*  — classroom detail pages
+  //   /owner/sysadmin       — sysadmin all-teachers + health
   revalidatePath("/teacher");
   revalidatePath("/teacher/admin");
+  revalidatePath("/teacher/classroom", "layout");
+  revalidatePath("/owner/sysadmin");
   return { success: true };
 }
