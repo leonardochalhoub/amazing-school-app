@@ -119,6 +119,11 @@ export function LessonBuilder({ initial }: Props) {
   const [description, setDescription] = useState(initial?.description ?? "");
   const [cefr, setCefr] = useState(initial?.cefr_level ?? "a1.1");
   const [category, setCategory] = useState(initial?.category ?? "grammar");
+  const [estimatedMinutes, setEstimatedMinutes] = useState<string>(
+    initial?.estimated_minutes != null
+      ? String(initial.estimated_minutes)
+      : "10",
+  );
   const [published, setPublished] = useState(initial?.published ?? false);
   const [exercises, setExercises] = useState<ExerciseBlock[]>(
     initial?.exercises ?? []
@@ -160,6 +165,14 @@ export function LessonBuilder({ initial }: Props) {
       toast.error("Slug is required.");
       return;
     }
+    // Parse the expected-duration input — blank / non-numeric
+    // becomes undefined (the schema treats it as optional).
+    const minutesInt = Number(estimatedMinutes);
+    const minutes =
+      estimatedMinutes.trim() === "" || !Number.isFinite(minutesInt)
+        ? undefined
+        : Math.max(1, Math.min(240, Math.round(minutesInt)));
+
     startTransition(async () => {
       const r = await saveTeacherLesson({
         id: initial?.id,
@@ -168,6 +181,7 @@ export function LessonBuilder({ initial }: Props) {
         description: description.trim() || undefined,
         cefr_level: cefr,
         category,
+        estimated_minutes: minutes,
         exercises,
         published: asPublished,
       });
@@ -287,6 +301,31 @@ export function LessonBuilder({ initial }: Props) {
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="optional"
               />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+            <div className="space-y-1.5">
+              <Label htmlFor="lesson-minutes">
+                Duração estimada{" "}
+                <span className="text-xs text-muted-foreground">
+                  (minutos)
+                </span>
+              </Label>
+              <Input
+                id="lesson-minutes"
+                type="number"
+                inputMode="numeric"
+                min={1}
+                max={240}
+                step={1}
+                value={estimatedMinutes}
+                onChange={(e) => setEstimatedMinutes(e.target.value)}
+                placeholder="10"
+              />
+              <p className="text-[11px] text-muted-foreground">
+                Aparece no currículo do aluno e soma na carga horária
+                total dos certificados.
+              </p>
             </div>
           </div>
         </CardContent>

@@ -81,6 +81,15 @@ export const TeacherLessonSchema = z.object({
   description: z.string().max(1000).optional(),
   cefr_level: z.string().max(10).optional(),
   category: z.string().max(40).optional(),
+  /** Expected duration of the practice in minutes. Feeds the
+      curriculum "Tempo estimado" column + certificate platform-
+      hours estimate. Optional so drafts in progress still save. */
+  estimated_minutes: z
+    .number()
+    .int()
+    .min(1)
+    .max(240)
+    .optional(),
   exercises: z.array(ExerciseBlockSchema).max(50),
   published: z.boolean().optional(),
 });
@@ -95,6 +104,7 @@ export interface TeacherLessonRow {
   description: string | null;
   cefr_level: string | null;
   category: string | null;
+  estimated_minutes: number | null;
   exercises: ExerciseBlock[];
   published: boolean;
   created_at: string;

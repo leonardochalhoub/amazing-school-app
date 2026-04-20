@@ -26,6 +26,7 @@ export async function saveTeacherLesson(input: TeacherLessonInput) {
     description: parsed.data.description ?? null,
     cefr_level: parsed.data.cefr_level ?? null,
     category: parsed.data.category ?? null,
+    estimated_minutes: parsed.data.estimated_minutes ?? null,
     exercises: parsed.data.exercises,
     published: parsed.data.published ?? false,
   };
