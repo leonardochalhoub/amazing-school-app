@@ -22,6 +22,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { CertificatesPanel } from "@/components/reports/certificates-panel";
 import { CefrExplainerCard } from "@/components/reports/cefr-explainer-card";
 import { listCertificatesForStudent } from "@/lib/actions/certificates";
+import { getAssignmentsForRosterStudent } from "@/lib/actions/assignments";
 import { getLevel, getXpForNextLevel } from "@/lib/gamification/engine";
 
 /**
@@ -89,19 +90,28 @@ export default async function StudentViewAsStudent({
   let lastClassDate: string | null = null;
   let nextClassDate: string | null = null;
   let daysActiveLast30 = 0;
+  // Assignments via the shared helper so we pick up BOTH per-roster
+  // rows and classroom-wide rows (+ historic classroom membership) —
+  // the same union the teacher's per-student page uses. A direct
+  // .eq("classroom_id", rosterRow.classroom_id) query returns zero
+  // when a student was moved / roster was relinked, which was why
+  // the count showed 0 for Tati even though she had live assignments.
+  const allAssignments = await getAssignmentsForRosterStudent(id);
+  assignedCount = allAssignments.length;
+  completedCount = allAssignments.filter((a) => a.status === "completed")
+    .length;
+  pendingAssignments = allAssignments
+    .filter((a) => a.status !== "completed")
+    .slice(0, 5)
+    .map((a) => a.lesson_slug);
+
   if (studentAuthId) {
-    const [xpRes, assignRes, progRes, badgeRes, historyRes, activityRes] =
+    const [xpRes, progRes, badgeRes, historyRes, activityRes] =
       await Promise.all([
         admin
           .from("xp_events")
           .select("xp_amount")
           .eq("student_id", studentAuthId),
-        admin
-          .from("lesson_assignments")
-          .select("lesson_slug, status, created_at")
-          .eq("classroom_id", student.classroom_id ?? "")
-          .order("created_at", { ascending: false })
-          .limit(200),
         admin
           .from("lesson_progress")
           .select("lesson_slug, completed_at")
@@ -143,15 +153,13 @@ export default async function StudentViewAsStudent({
     );
     const completedSlugs = new Set(completedRows.map((r) => r.lesson_slug));
     recentCompletions = completedRows.slice(0, 5);
-    const assigned = (assignRes.data ?? []) as Array<{
-      lesson_slug: string;
-      status: string | null;
-    }>;
-    assignedCount = assigned.length;
-    completedCount = assigned.filter(
+    // Refine completedCount with lesson_progress evidence — an
+    // assignment stuck on 'assigned' but with a progress row is
+    // effectively done.
+    completedCount = allAssignments.filter(
       (a) => a.status === "completed" || completedSlugs.has(a.lesson_slug),
     ).length;
-    pendingAssignments = assigned
+    pendingAssignments = allAssignments
       .filter(
         (a) =>
           a.status !== "completed" && !completedSlugs.has(a.lesson_slug),
