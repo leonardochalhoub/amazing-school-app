@@ -4,6 +4,12 @@ import {
   type PublicClickKind,
 } from "@/lib/actions/public-clicks";
 
+// Force every GET through the Node runtime — otherwise Vercel's edge
+// cache serves the first 302 to every subsequent visitor and our
+// insert never fires, dropping the counter to 1.
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 /**
  * Thin trackable redirect: /r/<slug> logs one public_click_events row
  * then 302s to the real asset. Used for documentation links so the
