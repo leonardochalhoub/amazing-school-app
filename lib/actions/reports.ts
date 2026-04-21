@@ -387,13 +387,14 @@ export async function getStudentCurriculumReport(
   }
   rawEntries.push(...liveEntries);
 
-  // Filter to the selected year + drop unclassified rows. Live
-  // entries with no inferable CEFR (student.level missing) still
-  // pass through — they get a "—" CEFR slot but still count toward
-  // type/skill aggregates and totalEstimatedMinutes.
+  // Filter to the selected year + drop unclassified rows. Live and
+  // music entries without an inferable CEFR still pass through —
+  // they get a "—" CEFR slot but still count toward type/skill
+  // aggregates and totalEstimatedMinutes. Only catalog *lessons*
+  // missing a CEFR are dropped (they're treated as drafts).
   const entries = rawEntries.filter(
     (e) =>
-      (e.kind === "live" || !!e.cefr) &&
+      (e.kind === "live" || e.kind === "music" || !!e.cefr) &&
       (withinYear(e.assignedAt, year) || withinYear(e.completedAt, year)),
   );
 
