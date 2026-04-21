@@ -136,22 +136,35 @@
 
   .logo-dot { width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(135deg, var(--indigo), var(--accent), var(--emerald)); display: inline-block; box-shadow: 0 0 18px var(--accent); }
 
-  /* Surgical mobile fix — ONLY the slide marked `mobile-fit` is
-     allowed to overflow + shrink its typography (slide 3 here).
-     Every other slide keeps its original look. */
-  @media (max-width: 700px) {
+  /* Surgical mobile fix — ONLY the slide marked `mobile-fit` shrinks
+     on phones (slide 3 here). Fixed-px sizes + !important so the
+     scoped rules beat the default clamps that were still landing at
+     their mobile floor values. */
+  @media (max-width: 768px) {
     .slide.mobile-fit {
-      height: auto;
+      height: auto !important;
       min-height: 100dvh;
-      overflow-y: auto;
-      padding: clamp(24px,4vh,32px) 20px clamp(56px,8vh,80px) !important;
+      overflow-y: auto !important;
+      padding: 20px 16px 64px !important;
       justify-content: flex-start !important;
     }
-    .slide.mobile-fit h2.section { font-size: clamp(28px, 7vw, 44px); line-height: 1.12; }
-    .slide.mobile-fit p.lede { font-size: clamp(15px, 4vw, 19px); }
-    .slide.mobile-fit .list-clean li { font-size: clamp(13px, 3.4vw, 16px); }
-    .slide.mobile-fit .card h3 { font-size: clamp(15px, 4vw, 18px); }
-    .slide.mobile-fit .card p { font-size: clamp(12px, 3vw, 14px); }
+    .slide.mobile-fit .kicker { font-size: 10px !important; }
+    .slide.mobile-fit h2.section {
+      font-size: 24px !important;
+      line-height: 1.2 !important;
+      letter-spacing: -0.005em !important;
+    }
+    .slide.mobile-fit p.lede {
+      font-size: 14px !important;
+      line-height: 1.45 !important;
+    }
+    .slide.mobile-fit .list-clean { gap: 10px !important; max-width: 100% !important; margin-top: 8px !important; }
+    .slide.mobile-fit .list-clean li { font-size: 12.5px !important; line-height: 1.5 !important; }
+    .slide.mobile-fit .list-clean li::before { font-size: 12px !important; }
+    .slide.mobile-fit .card { padding: 12px !important; }
+    .slide.mobile-fit .card h3 { font-size: 14px !important; margin-bottom: 4px !important; }
+    .slide.mobile-fit .card p { font-size: 11.5px !important; line-height: 1.4 !important; }
+    .slide.mobile-fit .footer-note { bottom: 12px !important; font-size: 9px !important; letter-spacing: 0.15em !important; }
   }
 </style>
 </head>

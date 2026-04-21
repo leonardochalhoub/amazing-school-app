@@ -144,22 +144,32 @@
 
   .logo-dot { width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(135deg, var(--indigo), var(--accent), var(--pink)); display: inline-block; box-shadow: 0 0 18px var(--accent); }
 
-  /* Surgical mobile fix — ONLY slides marked `mobile-fit` get allowed
-     to overflow + shrink their typography. Every other slide keeps
-     its original look on phone and desktop. The class goes on the
-     specific slides we know clip (slide 2 here) so the rest of the
-     deck stays exactly as designed. */
-  @media (max-width: 700px) {
+  /* Surgical mobile fix — ONLY slides marked `mobile-fit` shrink on
+     phones. Every other slide keeps its original look. Fixed-px sizes
+     + !important so the scoped rules beat the default clamps that
+     were still landing at their mobile floor values (≥ 36px h2).   */
+  @media (max-width: 768px) {
     .slide.mobile-fit {
-      height: auto;
+      height: auto !important;
       min-height: 100dvh;
-      overflow-y: auto;
-      padding: clamp(24px,4vh,32px) 20px clamp(56px,8vh,80px) !important;
+      overflow-y: auto !important;
+      padding: 20px 16px 64px !important;
       justify-content: flex-start !important;
     }
-    .slide.mobile-fit h2.section { font-size: clamp(28px, 7vw, 44px); line-height: 1.12; }
-    .slide.mobile-fit p.lede { font-size: clamp(15px, 4vw, 19px); }
-    .slide.mobile-fit .list-clean li { font-size: clamp(13px, 3.4vw, 16px); }
+    .slide.mobile-fit .kicker { font-size: 10px !important; }
+    .slide.mobile-fit h2.section {
+      font-size: 24px !important;
+      line-height: 1.2 !important;
+      letter-spacing: -0.005em !important;
+    }
+    .slide.mobile-fit p.lede {
+      font-size: 14px !important;
+      line-height: 1.45 !important;
+    }
+    .slide.mobile-fit .list-clean { gap: 10px !important; max-width: 100% !important; margin-top: 8px !important; }
+    .slide.mobile-fit .list-clean li { font-size: 12.5px !important; line-height: 1.5 !important; }
+    .slide.mobile-fit .list-clean li::before { font-size: 12px !important; }
+    .slide.mobile-fit .footer-note { bottom: 12px !important; font-size: 9px !important; letter-spacing: 0.15em !important; }
   }
 </style>
 </head>
