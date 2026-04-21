@@ -3,7 +3,136 @@
 import { useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import { useI18n } from "@/lib/i18n/context";
-import type { CityPeoplePoint } from "@/lib/actions/teachers-map";
+import type {
+  CityPeoplePoint,
+  CityPerson,
+} from "@/lib/actions/teachers-map";
+
+/**
+ * Hover-tooltip builder. Plotly keeps basic HTML so we lean on <b>,
+ * <i> and <br> to give it structure. Output reads:
+ *
+ *   São Paulo · SP
+ *   ───────────────
+ *   4 pessoas
+ *   2 profs · 2 alunos
+ *   ───────────────
+ *   Professores
+ *     • Leonardo Chalhoub
+ *     • Tatiana Sequeira
+ *   Alunos
+ *     • Ana Costa
+ *
+ * When the role filter is active we only render the relevant list.
+ * Names are capped at 12 per role with "+ N a mais" to keep the box
+ * reasonable for large cities.
+ */
+const NAME_LIMIT_PER_ROLE = 12;
+
+function roleLabel(p: CityPerson, pt: boolean): string {
+  if (p.role === "teacher") {
+    if (!pt) return "Teacher";
+    return p.gender === "female" ? "Professora" : "Professor";
+  }
+  if (!pt) return "Student";
+  return p.gender === "female" ? "Aluna" : "Aluno";
+}
+
+function renderNameRows(
+  people: CityPerson[],
+  pt: boolean,
+): string {
+  const visible = people.slice(0, NAME_LIMIT_PER_ROLE);
+  const extra = people.length - visible.length;
+  const lines = visible.map(
+    (p) => `&nbsp;&nbsp;• ${p.name} — <i>${roleLabel(p, pt)}</i>`,
+  );
+  if (extra > 0) {
+    lines.push(
+      pt
+        ? `&nbsp;&nbsp;<i>+ ${extra} a mais</i>`
+        : `&nbsp;&nbsp;<i>+ ${extra} more</i>`,
+    );
+  }
+  return lines.join("<br>");
+}
+
+function buildTooltip(
+  point: CityPeoplePoint,
+  pt: boolean,
+  filter: "all" | "teachers" | "students",
+): string {
+  const divider =
+    '<span style="color:rgba(167,139,250,0.4);">──────────────</span>';
+  const teachers = point.people.filter((p) => p.role === "teacher");
+  const students = point.people.filter((p) => p.role === "student");
+
+  const header = `<b>${point.name} · ${point.uf}</b>`;
+
+  const visibleCount =
+    filter === "teachers"
+      ? point.teachers
+      : filter === "students"
+        ? point.students
+        : point.total;
+
+  const summary =
+    filter === "all"
+      ? pt
+        ? `<b>${point.total} ${point.total === 1 ? "pessoa" : "pessoas"}</b><br>${
+            point.teachers
+          } ${point.teachers === 1 ? "professor(a)" : "professores"} · ${
+            point.students
+          } ${point.students === 1 ? "aluno(a)" : "alunos"}`
+        : `<b>${point.total} ${point.total === 1 ? "person" : "people"}</b><br>${
+            point.teachers
+          } ${point.teachers === 1 ? "teacher" : "teachers"} · ${
+            point.students
+          } ${point.students === 1 ? "student" : "students"}`
+      : pt
+        ? `<b>${visibleCount} ${
+            filter === "teachers"
+              ? visibleCount === 1
+                ? "professor(a)"
+                : "professores"
+              : visibleCount === 1
+                ? "aluno(a)"
+                : "alunos"
+          }</b>`
+        : `<b>${visibleCount} ${
+            filter === "teachers"
+              ? visibleCount === 1
+                ? "teacher"
+                : "teachers"
+              : visibleCount === 1
+                ? "student"
+                : "students"
+          }</b>`;
+
+  const lists: string[] = [];
+  if (filter !== "students" && teachers.length > 0) {
+    lists.push(
+      `<b>${pt ? "Professores" : "Teachers"}</b><br>${renderNameRows(
+        teachers,
+        pt,
+      )}`,
+    );
+  }
+  if (filter !== "teachers" && students.length > 0) {
+    lists.push(
+      `<b>${pt ? "Alunos" : "Students"}</b><br>${renderNameRows(
+        students,
+        pt,
+      )}`,
+    );
+  }
+
+  const segments = [header, divider, summary];
+  if (lists.length > 0) {
+    segments.push(divider, lists.join("<br>"));
+  }
+  return segments.join("<br>");
+}
 
 // Plotly is heavy and client-only — dynamic import with ssr:false
 // so it never enters the server bundle and only loads when a user
@@ -155,32 +284,18 @@ export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
         mode: "markers" as const,
         lon: filtered.map((p) => p.lng),
         lat: filtered.map((p) => p.lat),
-        text: filtered.map((p) => {
-          const header = `<b>${p.name} · ${p.uf}</b>`;
-          if (pt) {
-            const rows: string[] = [];
-            if (p.teachers > 0)
-              rows.push(
-                `${p.teachers} ${p.teachers === 1 ? "professor" : "professores"}`,
-              );
-            if (p.students > 0)
-              rows.push(
-                `${p.students} ${p.students === 1 ? "aluno" : "alunos"}`,
-              );
-            return `${header}<br>${rows.join("<br>")}`;
-          }
-          const rows: string[] = [];
-          if (p.teachers > 0)
-            rows.push(
-              `${p.teachers} ${p.teachers === 1 ? "teacher" : "teachers"}`,
-            );
-          if (p.students > 0)
-            rows.push(
-              `${p.students} ${p.students === 1 ? "student" : "students"}`,
-            );
-          return `${header}<br>${rows.join("<br>")}`;
-        }),
+        text: filtered.map((p) => buildTooltip(p, pt, filter)),
         hoverinfo: "text" as const,
+        hoverlabel: {
+          bgcolor: "rgba(19,19,28,0.95)",
+          bordercolor: "rgba(167,139,250,0.35)",
+          font: {
+            family: "system-ui, -apple-system, sans-serif",
+            size: 12,
+            color: "#ecebff",
+          },
+          align: "left" as const,
+        },
         marker: {
           size: sizes,
           color: filtered.map((p) => p.value),

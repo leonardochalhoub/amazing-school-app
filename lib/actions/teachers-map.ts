@@ -5,6 +5,12 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { isOwner } from "@/lib/auth/roles";
 import { locateCity } from "@/lib/data/brazil-city-coords";
 
+export interface CityPerson {
+  name: string;
+  role: "teacher" | "student";
+  gender: "female" | "male" | null;
+}
+
 export interface CityPeoplePoint {
   name: string;
   uf: string;
@@ -14,6 +20,8 @@ export interface CityPeoplePoint {
   students: number;
   /** teachers + students — used for bubble size. */
   total: number;
+  /** Actual people anchored to this city, surfaced in the tooltip. */
+  people: CityPerson[];
 }
 
 /**
@@ -63,7 +71,7 @@ export async function getPeopleByCity(): Promise<CityPeoplePoint[]> {
 
   const { data, error } = await admin
     .from("profiles")
-    .select("id, role, location")
+    .select("id, full_name, role, gender, location")
     .in("role", ["teacher", "owner", "student"]);
   if (error || !data) return [];
 
@@ -74,12 +82,15 @@ export async function getPeopleByCity(): Promise<CityPeoplePoint[]> {
     lng: number;
     teachers: number;
     students: number;
+    people: CityPerson[];
   };
   const buckets = new Map<string, Bucket>();
 
   for (const row of data as Array<{
     id: string;
+    full_name: string | null;
     role: string | null;
+    gender: string | null;
     location: string | null;
   }>) {
     if (excludedIds.has(row.id)) continue;
@@ -95,11 +106,20 @@ export async function getPeopleByCity(): Promise<CityPeoplePoint[]> {
         lng: coord.lng,
         teachers: 0,
         students: 0,
+        people: [],
       };
       buckets.set(key, bucket);
     }
-    if (row.role === "teacher" || row.role === "owner") bucket.teachers += 1;
-    else if (row.role === "student") bucket.students += 1;
+    const personRole: CityPerson["role"] =
+      row.role === "student" ? "student" : "teacher";
+    if (personRole === "teacher") bucket.teachers += 1;
+    else bucket.students += 1;
+    bucket.people.push({
+      name: row.full_name ?? "—",
+      role: personRole,
+      gender:
+        row.gender === "female" || row.gender === "male" ? row.gender : null,
+    });
   }
 
   return [...buckets.values()]
@@ -144,7 +164,7 @@ export async function getMyStudentsByCity(): Promise<CityPeoplePoint[]> {
 
   const { data: profiles } = await admin
     .from("profiles")
-    .select("id, location")
+    .select("id, full_name, gender, location")
     .in("id", studentIds);
 
   type Bucket = {
@@ -153,11 +173,14 @@ export async function getMyStudentsByCity(): Promise<CityPeoplePoint[]> {
     lat: number;
     lng: number;
     students: number;
+    people: CityPerson[];
   };
   const buckets = new Map<string, Bucket>();
 
   for (const row of (profiles ?? []) as Array<{
     id: string;
+    full_name: string | null;
+    gender: string | null;
     location: string | null;
   }>) {
     const coord = locateCity(row.location);
@@ -171,10 +194,17 @@ export async function getMyStudentsByCity(): Promise<CityPeoplePoint[]> {
         lat: coord.lat,
         lng: coord.lng,
         students: 0,
+        people: [],
       };
       buckets.set(key, bucket);
     }
     bucket.students += 1;
+    bucket.people.push({
+      name: row.full_name ?? "—",
+      role: "student",
+      gender:
+        row.gender === "female" || row.gender === "male" ? row.gender : null,
+    });
   }
 
   return [...buckets.values()]
