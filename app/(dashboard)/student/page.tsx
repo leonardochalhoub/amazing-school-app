@@ -15,6 +15,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { Card, CardContent } from "@/components/ui/card";
 import { CartoonAvatar } from "@/components/shared/cartoon-avatar";
 import { CuteArtBadge } from "@/components/student/cute-art";
+import { T } from "@/components/reports/t";
 import { getStudentStats } from "@/lib/actions/gamification";
 import { getAssignmentsForStudent } from "@/lib/actions/assignments";
 import { touchDailyActivity } from "@/lib/actions/daily-activity";
@@ -460,7 +461,7 @@ export default async function StudentHome() {
                 style={{ letterSpacing: "-0.01em" }}
               >
                 <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text text-transparent dark:from-indigo-400 dark:via-violet-400 dark:to-pink-400">
-                  Hi, {firstName}
+                  <T en={`Hi, ${firstName}`} pt={`Olá, ${firstName}`} />
                 </span>
               </h1>
             </div>
@@ -471,10 +472,16 @@ export default async function StudentHome() {
               <div className="flex items-center justify-between text-[11px] tabular-nums">
                 <span className="inline-flex items-center gap-1 font-semibold">
                   <Zap className="h-3 w-3 text-amber-500" />
-                  Level {level} · {totalXp} XP
+                  <T
+                    en={`Level ${level} · ${totalXp} XP`}
+                    pt={`Nível ${level} · ${totalXp} XP`}
+                  />
                 </span>
                 <span className="text-muted-foreground">
-                  {currentLevelXp} / {nextLevelXp} to Lv {level + 1}
+                  <T
+                    en={`${Math.max(0, nextLevelXp - currentLevelXp)} XP to Lv ${level + 1}`}
+                    pt={`Faltam ${Math.max(0, nextLevelXp - currentLevelXp)} XP para o Nv ${level + 1}`}
+                  />
                 </span>
               </div>
               <div
@@ -510,15 +517,25 @@ export default async function StudentHome() {
               icon={Flame}
               iconClass="text-amber-500"
               value={streak}
-              label={streak === 1 ? "day" : "days"}
-              sub="streak"
+              label={
+                <T
+                  en={streak === 1 ? "day" : "days"}
+                  pt={streak === 1 ? "dia" : "dias"}
+                />
+              }
+              sub={<T en="streak" pt="sequência" />}
             />
             <StatChip
               icon={Star}
               iconClass="text-violet-500"
               value={stats?.lessonsCompleted ?? 0}
-              label={(stats?.lessonsCompleted ?? 0) === 1 ? "lesson" : "lessons"}
-              sub="done"
+              label={
+                <T
+                  en={(stats?.lessonsCompleted ?? 0) === 1 ? "lesson" : "lessons"}
+                  pt={(stats?.lessonsCompleted ?? 0) === 1 ? "lição" : "lições"}
+                />
+              }
+              sub={<T en="done" pt="feitas" />}
             />
           </div>
         </div>
@@ -546,7 +563,7 @@ export default async function StudentHome() {
                 </span>
                 <div className="min-w-0">
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-primary">
-                    Start here today
+                    <T en="Start here today" pt="Comece por aqui hoje" />
                   </p>
                   <p className="break-words text-lg font-semibold">{today.title}</p>
                   <p className="break-words text-xs text-muted-foreground">
@@ -557,7 +574,7 @@ export default async function StudentHome() {
                 </div>
               </div>
               <div className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-background/60 px-4 py-1.5 text-sm font-medium transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                Open
+                <T en="Open" pt="Abrir" />
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </div>
             </CardContent>
@@ -570,9 +587,14 @@ export default async function StudentHome() {
               <Sparkles className="h-5 w-5" />
             </span>
             <div>
-              <p className="font-semibold">All caught up!</p>
+              <p className="font-semibold">
+                <T en="All caught up!" pt="Tudo em dia!" />
+              </p>
               <p className="text-xs text-muted-foreground">
-                You&apos;ve finished every assignment. Check back tomorrow.
+                <T
+                  en="You've finished every assignment. Check back tomorrow."
+                  pt="Você concluiu tudo que foi atribuído. Volte amanhã."
+                />
               </p>
             </div>
           </CardContent>
@@ -583,7 +605,7 @@ export default async function StudentHome() {
       <section className="space-y-3">
         <div className="flex items-baseline justify-between">
           <h2 className="text-lg font-semibold tracking-tight">
-            Assigned to you
+            <T en="Assigned to you" pt="Atribuídas para você" />
             <span className="ml-2 text-sm font-normal text-muted-foreground tabular-nums">
               {active.length}
             </span>
@@ -596,10 +618,14 @@ export default async function StudentHome() {
         </div>
         {active.length === 0 ? (
           <div className="rounded-xl border border-dashed border-border p-8 text-center">
-            <p className="text-sm font-medium">No assignments yet</p>
+            <p className="text-sm font-medium">
+              <T en="No assignments yet" pt="Nenhuma atribuição ainda" />
+            </p>
             <p className="mt-1 text-xs text-muted-foreground">
-              Your teacher hasn&apos;t sent anything your way yet. Check back
-              soon.
+              <T
+                en="Your teacher hasn't sent anything your way yet. Check back soon."
+                pt="Seu professor ainda não enviou nada. Volte em breve."
+              />
             </p>
           </div>
         ) : (
@@ -625,7 +651,9 @@ export default async function StudentHome() {
 
       {/* ACTIVITY CHART =========================================== */}
       <section className="space-y-3">
-        <h2 className="text-lg font-semibold tracking-tight">Your activity</h2>
+        <h2 className="text-lg font-semibold tracking-tight">
+          <T en="Your activity" pt="Sua atividade" />
+        </h2>
         <ActivityChart buckets={activityBuckets} granularity="month" />
       </section>
     </div>
@@ -642,8 +670,8 @@ function StatChip({
   icon: React.ComponentType<{ className?: string }>;
   iconClass: string;
   value: number;
-  label: string;
-  sub: string;
+  label: React.ReactNode;
+  sub: React.ReactNode;
 }) {
   return (
     <div className="flex items-center gap-2 rounded-2xl border border-border bg-background/60 px-3 py-1.5 shadow-xs">
