@@ -68,7 +68,7 @@ export function ChangePasswordCard({ isDemo = false }: Props) {
           Password
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-3">
+      <CardContent className="space-y-4 pb-6">
         <p className="text-xs text-muted-foreground">
           Choose a strong password — at least 8 characters. You'll stay
           signed in here; use the new password next time.
@@ -80,16 +80,36 @@ export function ChangePasswordCard({ isDemo = false }: Props) {
             account to manage credentials.
           </p>
         ) : !open ? (
-          <Button
-            type="button"
-            variant="outline"
-            size="sm"
-            onClick={() => setOpen(true)}
-            className="gap-1.5"
-          >
-            <KeyRound className="h-3.5 w-3.5" />
-            Change password
-          </Button>
+          <>
+            <div>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => setOpen(true)}
+                className="gap-1.5"
+              >
+                <KeyRound className="h-3.5 w-3.5" />
+                Change password
+              </Button>
+            </div>
+            <ul className="space-y-1.5 rounded-lg border border-border/60 bg-muted/30 p-3 text-[11px] leading-relaxed text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-primary">•</span>
+                Mix upper and lower case, numbers, and at least one symbol.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-primary">•</span>
+                Don't reuse passwords from other sites — each account
+                deserves its own.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-primary">•</span>
+                A password manager (1Password, Bitwarden, Apple Keychain)
+                makes this painless.
+              </li>
+            </ul>
+          </>
         ) : (
           <div className="space-y-3">
             <div className="space-y-1.5">

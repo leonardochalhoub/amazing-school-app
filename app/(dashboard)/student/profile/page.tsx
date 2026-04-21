@@ -14,6 +14,7 @@ import { CertificatesPanel } from "@/components/reports/certificates-panel";
 import { CefrExplainerCard } from "@/components/reports/cefr-explainer-card";
 import { getMyRosterIdentity, listMyReceipts } from "@/lib/actions/reports";
 import { listMyCertificates } from "@/lib/actions/certificates";
+import { T } from "@/components/reports/t";
 
 export default async function StudentProfilePage() {
   const supabase = await createClient();
@@ -114,9 +115,14 @@ export default async function StudentProfilePage() {
       {/* Header */}
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold sm:text-3xl">Profile</h1>
+          <h1 className="text-2xl font-bold sm:text-3xl">
+            <T en="Profile" pt="Perfil" />
+          </h1>
           <p className="text-sm text-muted-foreground">
-            Manage your photo, preferences, and account details.
+            <T
+              en="Manage your photo, preferences, and account details."
+              pt="Gerencie sua foto, preferências e detalhes da conta."
+            />
           </p>
         </div>
         <PrivacyNotice />
@@ -206,13 +212,13 @@ export default async function StudentProfilePage() {
               readOnly
             />
           ) : null}
+          <CefrExplainerCard />
         </div>
         <div className="space-y-4">
           <UpcomingWindowCard initial={upcomingWindow} />
           <ChangePasswordCard
             isDemo={(user.email ?? "").toLowerCase().startsWith("demo.")}
           />
-          <CefrExplainerCard />
         </div>
       </div>
 

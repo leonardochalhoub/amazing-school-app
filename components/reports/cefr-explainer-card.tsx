@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookMarked } from "lucide-react";
+import { BookMarked, ExternalLink } from "lucide-react";
 import { T } from "@/components/reports/t";
 
 interface CefrRow {
@@ -125,6 +125,24 @@ export function CefrExplainerCard() {
             }
           />
         </p>
+
+        <div className="flex items-center justify-between gap-2 rounded-lg border border-border/60 bg-muted/30 px-3 py-2 text-[11px]">
+          <span className="text-muted-foreground">
+            <T
+              en="Official source — Council of Europe"
+              pt="Fonte oficial — Conselho da Europa"
+            />
+          </span>
+          <a
+            href="https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+          >
+            coe.int/cefr
+            <ExternalLink className="h-3 w-3" />
+          </a>
+        </div>
       </CardContent>
     </Card>
   );
