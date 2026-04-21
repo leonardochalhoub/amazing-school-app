@@ -94,8 +94,16 @@ export default async function DashboardLayout({
     ).trim().length > 0;
 
   // Next scheduled class within the next 4 days (either taught or
-  // attended by this user). Null when nothing qualifies.
-  const nextClass = await getMyNextClass();
+  // attended by this user). Null when nothing qualifies. Wrapped
+  // defensively — a failure here must not break the whole dashboard
+  // layout, which is what would happen if the action threw and we
+  // let it bubble up into the Server Component render.
+  let nextClass: Awaited<ReturnType<typeof getMyNextClass>> = null;
+  try {
+    nextClass = await getMyNextClass();
+  } catch (err) {
+    console.warn("[upcoming-class] layout err", err);
+  }
 
   // White-label school logo resolution:
   //   Teacher signed in → their own profile row
