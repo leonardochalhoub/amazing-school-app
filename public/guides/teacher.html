@@ -144,32 +144,22 @@
 
   .logo-dot { width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(135deg, var(--indigo), var(--accent), var(--pink)); display: inline-block; box-shadow: 0 0 18px var(--accent); }
 
-  /* Phone-size overrides. Slides keep snap-to-top but grow tall enough
-     to host their content and scroll internally — the fixed 100dvh
-     height was clipping content on slides with big headings + lede +
-     list (slide 2 especially). Caps on heading/lede/list fonts so
-     nothing blows past the viewport edges. Decorative side rails and
-     footer stamp are hidden on mobile where they just eat space. */
+  /* Surgical mobile fix — ONLY slides marked `mobile-fit` get allowed
+     to overflow + shrink their typography. Every other slide keeps
+     its original look on phone and desktop. The class goes on the
+     specific slides we know clip (slide 2 here) so the rest of the
+     deck stays exactly as designed. */
   @media (max-width: 700px) {
-    .slide {
+    .slide.mobile-fit {
       height: auto;
       min-height: 100dvh;
       overflow-y: auto;
-      padding: clamp(24px,4vh,32px) 18px clamp(56px,8vh,80px);
+      padding: clamp(24px,4vh,32px) 20px clamp(56px,8vh,80px) !important;
       justify-content: flex-start !important;
     }
-    h1.title { font-size: clamp(36px, 9vw, 56px) !important; }
-    h2.section { font-size: clamp(26px, 7vw, 40px) !important; line-height: 1.12; }
-    p.lede { font-size: clamp(15px, 4vw, 19px) !important; }
-    p.body { font-size: clamp(13px, 3.4vw, 16px) !important; }
-    .quote { font-size: clamp(17px, 4.5vw, 22px); padding-left: 16px; }
-    .list-clean li { font-size: clamp(13px, 3.4vw, 16px); }
-    .card h3 { font-size: clamp(15px, 4vw, 18px) !important; }
-    .card p { font-size: clamp(12px, 3vw, 14px) !important; }
-    .stat { font-size: clamp(40px, 11vw, 64px); }
-    .hero-meta { flex-direction: column; gap: 6px; margin-top: 20px; }
-    .deck-dots { display: none; }
-    .footer-note { font-size: 9px; bottom: 10px; left: 18px; }
+    .slide.mobile-fit h2.section { font-size: clamp(28px, 7vw, 44px); line-height: 1.12; }
+    .slide.mobile-fit p.lede { font-size: clamp(15px, 4vw, 19px); }
+    .slide.mobile-fit .list-clean li { font-size: clamp(13px, 3.4vw, 16px); }
   }
 </style>
 </head>
@@ -222,7 +212,7 @@
 <!-- ============================================================
      SLIDE 2 — THE IDEA
      ============================================================ -->
-<section class="slide" style="
+<section class="slide mobile-fit" style="
     background-image:
       radial-gradient(ellipse at 20% 20%, rgba(167,139,250,0.08) 0%, transparent 50%),
       radial-gradient(ellipse at 85% 80%, rgba(56,189,248,0.05) 0%, transparent 40%);
