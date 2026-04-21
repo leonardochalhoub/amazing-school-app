@@ -18,7 +18,9 @@ interface Props {
   ctx: UpcomingClassContext | null;
 }
 
-const DISMISS_STORAGE_PREFIX = "upcoming_class_dismissed_";
+// Versioned so old dismissals from earlier iterations don't
+// silently hide a freshly-working popup.
+const DISMISS_STORAGE_PREFIX = "upcoming_class_dismissed_v2_";
 
 /**
  * Floating corner toast for the next scheduled class. Small card
@@ -80,6 +82,7 @@ export function UpcomingClassPrompt({ ctx }: Props) {
 
   const when = new Date(ctx.scheduledAt);
   const dateLabel = when.toLocaleString("pt-BR", {
+    timeZone: "America/Sao_Paulo",
     weekday: "short",
     day: "2-digit",
     month: "short",
