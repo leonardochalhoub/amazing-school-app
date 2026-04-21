@@ -9,6 +9,7 @@ import { BrandMark } from "@/components/layout/brand-mark";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { BrazilCityPicker } from "@/components/shared/brazil-city-picker";
 import {
   Card,
   CardContent,
@@ -23,12 +24,23 @@ export default function SignUpPage() {
   const { t, locale } = useI18n();
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [location, setLocation] = useState("");
 
   async function handleSubmit(formData: FormData) {
     setLoading(true);
     setError(null);
     // Public signup is teacher-only. Students join through an invitation link.
     formData.set("role", "teacher");
+    formData.set("location", location.trim());
+    if (!location.trim()) {
+      setError(
+        locale === "pt-BR"
+          ? "Escolha sua cidade (obrigatório)."
+          : "Pick your city (required).",
+      );
+      setLoading(false);
+      return;
+    }
     const result = await signUp(formData);
     if (result?.error) {
       setError(result.error);
@@ -92,6 +104,27 @@ export default function SignUpPage() {
                 minLength={6}
                 required
               />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="location">
+                {locale === "pt-BR"
+                  ? "Cidade (obrigatório)"
+                  : "City (required)"}
+              </Label>
+              <BrazilCityPicker
+                value={location}
+                onChange={setLocation}
+                placeholder={
+                  locale === "pt-BR"
+                    ? "São Paulo, SP"
+                    : "Pick your city"
+                }
+              />
+              <p className="text-[11px] text-muted-foreground">
+                {locale === "pt-BR"
+                  ? "Comece a digitar — a lista filtra as cidades brasileiras. Para outras cidades, digite livremente."
+                  : "Start typing — the list filters Brazilian cities. Type freely for anywhere else."}
+              </p>
             </div>
           </CardContent>
           <CardFooter className="flex flex-col gap-4">

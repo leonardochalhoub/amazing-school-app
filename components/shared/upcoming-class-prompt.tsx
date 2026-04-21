@@ -92,7 +92,7 @@ export function UpcomingClassPrompt({ ctx }: Props) {
     : ctx.counterpart.teacherName ?? "Seu professor";
 
   return (
-    <div className="pointer-events-none fixed bottom-4 right-4 z-[60] flex max-w-[calc(100%-2rem)] sm:max-w-sm">
+    <div className="pointer-events-none fixed right-4 top-20 z-[100] flex max-w-[calc(100%-2rem)] sm:max-w-sm">
       <div className="pointer-events-auto relative w-full overflow-hidden rounded-2xl border border-border/60 bg-card shadow-2xl ring-1 ring-border">
         <button
           type="button"

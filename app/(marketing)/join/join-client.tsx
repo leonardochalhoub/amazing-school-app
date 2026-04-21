@@ -8,6 +8,7 @@ import { AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { BrazilCityPicker } from "@/components/shared/brazil-city-picker";
 import { signOutStay, signUp } from "@/lib/actions/auth";
 import { claimInvitation } from "@/lib/actions/student-invitations";
 
@@ -33,6 +34,7 @@ export function JoinClient({
   const [email, setEmail] = useState(prefillEmail ?? "");
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState(prefillName ?? "");
+  const [location, setLocation] = useState("");
 
   function handleSignOutAndStay() {
     startTransition(async () => {
@@ -49,11 +51,16 @@ export function JoinClient({
       toast.error("Enter your email and a password of at least 6 characters.");
       return;
     }
+    if (!location.trim()) {
+      toast.error("Escolha sua cidade (obrigatório).");
+      return;
+    }
     startTransition(async () => {
       const fd = new FormData();
       fd.append("email", email.trim());
       fd.append("password", password);
       fd.append("fullName", fullName.trim() || email.split("@")[0]);
+      fd.append("location", location.trim());
       fd.append("role", "student");
       fd.append("inviteToken", token);
       const res = await signUp(fd);
@@ -138,6 +145,18 @@ export function JoinClient({
             onChange={(e) => setPassword(e.target.value)}
             placeholder="At least 6 characters"
           />
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="join-location">Cidade · City (obrigatório)</Label>
+          <BrazilCityPicker
+            value={location}
+            onChange={setLocation}
+            placeholder="São Paulo, SP"
+          />
+          <p className="text-[11px] text-muted-foreground">
+            Comece a digitar — a lista filtra as cidades brasileiras.
+            Se estiver fora do Brasil, digite livremente.
+          </p>
         </div>
       </div>
       <Button

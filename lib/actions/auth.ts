@@ -22,6 +22,17 @@ export async function signUp(formData: FormData) {
   const fullName = formData.get("fullName") as string;
   const requestedRole = (formData.get("role") as Role | null) ?? "teacher";
   const inviteToken = (formData.get("inviteToken") as string | null) ?? "";
+  const location = ((formData.get("location") as string | null) ?? "").trim();
+
+  // Location is required for every new account — teacher or student.
+  // The column caps at 80 chars; anything longer is clipped.
+  if (!location) {
+    return {
+      error:
+        "A localização (cidade) é obrigatória no cadastro. Escolha na lista.",
+    };
+  }
+  const locationTrimmed = location.slice(0, 80);
 
   let role: Role = "teacher";
   // Full invitation row (not just the validation subset) so we can link
@@ -90,6 +101,7 @@ export async function signUp(formData: FormData) {
     full_name: fullName,
     role,
     avatar_url: null,
+    location: locationTrimmed,
   });
 
   if (profileError) {
