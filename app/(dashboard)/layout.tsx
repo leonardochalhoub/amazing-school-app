@@ -44,9 +44,10 @@ export default async function DashboardLayout({
   // Self-heal the role: if a profile is marked 'teacher' but the
   // user is actually referenced by a non-deleted roster_students
   // row, they're a student whose signup slipped through with the
-  // wrong default. Flip the row now (cheap, one-shot) so every
-  // downstream check sees the correct role and the person stops
-  // landing on the teacher dashboard.
+  // wrong default. Flip the row now and bounce the user to the
+  // student dashboard — otherwise the middleware (which routes on
+  // role after login) would have already steered them to /teacher
+  // and they'd see a confusing mixed-state layout.
   let effectiveRole = profile.role as "teacher" | "student" | "owner";
   if (effectiveRole === "teacher") {
     const { data: asStudent } = await admin
@@ -61,7 +62,7 @@ export default async function DashboardLayout({
         .from("profiles")
         .update({ role: "student" })
         .eq("id", user.id);
-      effectiveRole = "student";
+      redirect("/student");
     }
   }
 

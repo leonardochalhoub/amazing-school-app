@@ -63,7 +63,23 @@ export default async function StudentHome() {
     .select("full_name, avatar_url, role")
     .eq("id", user.id)
     .maybeSingle();
-  if (profile?.role === "teacher" || profile?.role === "owner") redirect("/teacher");
+
+  // Only redirect real teachers/owners back to their dashboard —
+  // a profile flagged 'teacher' that is ALSO referenced by a roster
+  // row is a mis-roled student (signup slipped through the default),
+  // and should be treated as a student. The dashboard layout also
+  // self-heals the role on the fly, but we check here too so this
+  // page doesn't redirect before the layout's update commits.
+  if (profile?.role === "teacher" || profile?.role === "owner") {
+    const { data: asStudent } = await admin
+      .from("roster_students")
+      .select("id")
+      .eq("auth_user_id", user.id)
+      .is("deleted_at", null)
+      .limit(1)
+      .maybeSingle();
+    if (!asStudent) redirect("/teacher");
+  }
 
   let { data: rosterSelf } = await admin
     .from("roster_students")
