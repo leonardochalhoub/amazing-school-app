@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 /**
@@ -21,19 +22,85 @@ export const PUBLIC_CLICK_KINDS: PublicClickKind[] = [
   "doc_student_en",
 ];
 
+export interface PublicClickMetadata {
+  userId?: string | null;
+  userAgent?: string | null;
+  referer?: string | null;
+  country?: string | null;
+  city?: string | null;
+  locale?: string | null;
+  ip?: string | null;
+}
+
+function hashIp(ip: string | null | undefined): string | null {
+  if (!ip) return null;
+  const salt = process.env.CLICK_IP_SALT ?? "amazing-school-default-salt";
+  return createHash("sha256").update(`${salt}:${ip}`).digest("hex");
+}
+
 /**
  * Fire-and-forget click logger. Swallows errors — missing table or
  * transient failures must never break the demo login or a
  * documentation redirect. Callers should not await the promise on
  * the critical path.
+ *
+ * Metadata is opportunistic — every field is nullable, so partial
+ * context (e.g. missing locale cookie) still produces a valid row.
  */
-export async function logPublicClick(kind: PublicClickKind): Promise<void> {
+export async function logPublicClick(
+  kind: PublicClickKind,
+  meta: PublicClickMetadata = {},
+): Promise<void> {
   try {
     const admin = createAdminClient();
-    await admin.from("public_click_events").insert({ kind });
+    await admin.from("public_click_events").insert({
+      kind,
+      user_id: meta.userId ?? null,
+      ip_hash: hashIp(meta.ip),
+      country: meta.country ?? null,
+      city: meta.city ?? null,
+      locale: meta.locale ?? null,
+      referer: meta.referer ?? null,
+      user_agent: meta.userAgent ?? null,
+    });
   } catch (err) {
     console.error("[public-clicks] insert failed", err);
   }
+}
+
+/**
+ * Pulls standard metadata out of a Next.js Request + an optional
+ * signed-in user id. Handles Vercel's IP / geo headers and the
+ * `locale` cookie set by the in-app toggle.
+ */
+export function extractClickMetadata(
+  req: Request,
+  userId: string | null = null,
+): PublicClickMetadata {
+  const h = req.headers;
+  const ip =
+    h.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+    h.get("x-real-ip") ??
+    h.get("cf-connecting-ip") ??
+    null;
+  return {
+    userId,
+    ip,
+    userAgent: h.get("user-agent"),
+    referer: h.get("referer"),
+    country: h.get("x-vercel-ip-country") ?? h.get("cf-ipcountry"),
+    city: h.get("x-vercel-ip-city"),
+    locale: parseLocaleFromCookie(h.get("cookie")),
+  };
+}
+
+function parseLocaleFromCookie(cookieHeader: string | null): string | null {
+  if (!cookieHeader) return null;
+  // The I18n context writes locale directly to localStorage, not a
+  // cookie — but we still check both a `locale` cookie and the
+  // `accept-language` header downstream if the app ever switches.
+  const m = cookieHeader.match(/(?:^|;\s*)locale=([^;]+)/);
+  return m ? decodeURIComponent(m[1]) : null;
 }
 
 export interface PublicClickCounts {

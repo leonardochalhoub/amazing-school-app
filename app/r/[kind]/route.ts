@@ -1,8 +1,10 @@
 import { NextResponse } from "next/server";
 import {
+  extractClickMetadata,
   logPublicClick,
   type PublicClickKind,
 } from "@/lib/actions/public-clicks";
+import { createClient } from "@/lib/supabase/server";
 
 // Force every GET through the Node runtime — otherwise Vercel's edge
 // cache serves the first 302 to every subsequent visitor and our
@@ -43,7 +45,21 @@ export async function GET(
   const { kind } = await params;
   const target = TARGET[kind];
   if (!target) return NextResponse.redirect(new URL("/", req.url));
+
+  // Pull the signed-in user id opportunistically so we can tag
+  // clicks from logged-in users. Anonymous visitors stay null.
+  let userId: string | null = null;
+  try {
+    const supabase = await createClient();
+    const { data } = await supabase.auth.getUser();
+    userId = data.user?.id ?? null;
+  } catch {
+    /* anonymous */
+  }
+
   // Fire-and-forget — don't block the redirect on the insert.
-  logPublicClick(target.kind).catch(() => {});
+  logPublicClick(target.kind, extractClickMetadata(req, userId)).catch(
+    () => {},
+  );
   return NextResponse.redirect(new URL(target.href, req.url));
 }
