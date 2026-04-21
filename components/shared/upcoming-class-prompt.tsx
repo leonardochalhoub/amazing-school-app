@@ -154,13 +154,35 @@ export function UpcomingClassPrompt({ items, debug }: Props) {
   );
 }
 
+/**
+ * Calendar-day aware countdown. "Tomorrow 10:00" and "Tomorrow 23:00"
+ * both read as "Amanhã" — using raw hour math was rounding both of
+ * those to "1 dia" while a class two calendar days ahead at 10:00
+ * also rounded to "1 dia".
+ *
+ * Everything resolves in BRT (America/Sao_Paulo, UTC-3) so a class
+ * scheduled for 22:00 local doesn't jump forward a day because the
+ * server ran in UTC.
+ */
 function describeCountdown(targetMs: number, nowMs: number): string {
   const delta = targetMs - nowMs;
   if (delta <= 0) return "Em andamento";
-  const min = Math.round(delta / 60_000);
+  const min = Math.floor(delta / 60_000);
   if (min < 60) return `Em ${min} min`;
-  const h = Math.round(min / 60);
-  if (h < 24) return `Em ${h} h`;
-  const d = Math.round(h / 24);
-  return `Em ${d} dia${d === 1 ? "" : "s"}`;
+
+  const BRT_OFFSET_MS = -3 * 60 * 60 * 1000;
+  const toBrtDay = (ms: number) => {
+    const d = new Date(ms + BRT_OFFSET_MS);
+    return Date.UTC(
+      d.getUTCFullYear(),
+      d.getUTCMonth(),
+      d.getUTCDate(),
+    );
+  };
+  const days = Math.round(
+    (toBrtDay(targetMs) - toBrtDay(nowMs)) / 86_400_000,
+  );
+  if (days === 0) return "Hoje";
+  if (days === 1) return "Amanhã";
+  return `Em ${days} dias`;
 }
