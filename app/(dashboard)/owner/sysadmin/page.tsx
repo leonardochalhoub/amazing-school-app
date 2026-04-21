@@ -98,6 +98,20 @@ export default async function SysadminPage() {
     getPublicClickCounts(),
   ]);
 
+  // Human-readable "April 2026" / "abril de 2026" for the public-access
+  // KPI sublines. Capitalised first letter in both locales.
+  const now = new Date();
+  const monthYearEn = now.toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+  });
+  const monthYearPtRaw = now.toLocaleDateString("pt-BR", {
+    month: "long",
+    year: "numeric",
+  });
+  const monthYearPt =
+    monthYearPtRaw.charAt(0).toUpperCase() + monthYearPtRaw.slice(1);
+
   return (
     <div className="space-y-10 pb-16">
       <header className="flex flex-wrap items-end justify-between gap-3">
@@ -287,11 +301,11 @@ export default async function SysadminPage() {
                 pt="Demo Luiza (professora)"
               />
             }
-            value={clickCounts.allTime.demo_teacher.toLocaleString("pt-BR")}
+            value={clickCounts.thisMonth.demo_teacher.toLocaleString("pt-BR")}
             sub={
               <T
-                en={`Total · ${clickCounts.thisMonth.demo_teacher.toLocaleString("pt-BR")} this month`}
-                pt={`Total · ${clickCounts.thisMonth.demo_teacher.toLocaleString("pt-BR")} este mês`}
+                en={`in ${monthYearEn} · All-time Total: ${clickCounts.allTime.demo_teacher.toLocaleString("pt-BR")}`}
+                pt={`em ${monthYearPt} · Total geral: ${clickCounts.allTime.demo_teacher.toLocaleString("pt-BR")}`}
               />
             }
             tone="emerald"
@@ -301,11 +315,11 @@ export default async function SysadminPage() {
             label={
               <T en="Ana demo (student)" pt="Demo Ana (aluna)" />
             }
-            value={clickCounts.allTime.demo_student.toLocaleString("pt-BR")}
+            value={clickCounts.thisMonth.demo_student.toLocaleString("pt-BR")}
             sub={
               <T
-                en={`Total · ${clickCounts.thisMonth.demo_student.toLocaleString("pt-BR")} this month`}
-                pt={`Total · ${clickCounts.thisMonth.demo_student.toLocaleString("pt-BR")} este mês`}
+                en={`in ${monthYearEn} · All-time Total: ${clickCounts.allTime.demo_student.toLocaleString("pt-BR")}`}
+                pt={`em ${monthYearPt} · Total geral: ${clickCounts.allTime.demo_student.toLocaleString("pt-BR")}`}
               />
             }
             tone="indigo"
@@ -315,11 +329,11 @@ export default async function SysadminPage() {
             label={
               <T en="Teacher docs · EN" pt="Doc professor · EN" />
             }
-            value={clickCounts.allTime.doc_teacher.toLocaleString("pt-BR")}
+            value={clickCounts.thisMonth.doc_teacher.toLocaleString("pt-BR")}
             sub={
               <T
-                en={`Total · ${clickCounts.thisMonth.doc_teacher.toLocaleString("pt-BR")} this month`}
-                pt={`Total · ${clickCounts.thisMonth.doc_teacher.toLocaleString("pt-BR")} este mês`}
+                en={`in ${monthYearEn} · All-time Total: ${clickCounts.allTime.doc_teacher.toLocaleString("pt-BR")}`}
+                pt={`em ${monthYearPt} · Total geral: ${clickCounts.allTime.doc_teacher.toLocaleString("pt-BR")}`}
               />
             }
           />
@@ -328,11 +342,11 @@ export default async function SysadminPage() {
             label={
               <T en="Student docs · PT" pt="Doc aluno · PT" />
             }
-            value={clickCounts.allTime.doc_student_pt.toLocaleString("pt-BR")}
+            value={clickCounts.thisMonth.doc_student_pt.toLocaleString("pt-BR")}
             sub={
               <T
-                en={`Total · ${clickCounts.thisMonth.doc_student_pt.toLocaleString("pt-BR")} this month`}
-                pt={`Total · ${clickCounts.thisMonth.doc_student_pt.toLocaleString("pt-BR")} este mês`}
+                en={`in ${monthYearEn} · All-time Total: ${clickCounts.allTime.doc_student_pt.toLocaleString("pt-BR")}`}
+                pt={`em ${monthYearPt} · Total geral: ${clickCounts.allTime.doc_student_pt.toLocaleString("pt-BR")}`}
               />
             }
           />
@@ -341,11 +355,11 @@ export default async function SysadminPage() {
             label={
               <T en="Student docs · EN" pt="Doc aluno · EN" />
             }
-            value={clickCounts.allTime.doc_student_en.toLocaleString("pt-BR")}
+            value={clickCounts.thisMonth.doc_student_en.toLocaleString("pt-BR")}
             sub={
               <T
-                en={`Total · ${clickCounts.thisMonth.doc_student_en.toLocaleString("pt-BR")} this month`}
-                pt={`Total · ${clickCounts.thisMonth.doc_student_en.toLocaleString("pt-BR")} este mês`}
+                en={`in ${monthYearEn} · All-time Total: ${clickCounts.allTime.doc_student_en.toLocaleString("pt-BR")}`}
+                pt={`em ${monthYearPt} · Total geral: ${clickCounts.allTime.doc_student_en.toLocaleString("pt-BR")}`}
               />
             }
           />
