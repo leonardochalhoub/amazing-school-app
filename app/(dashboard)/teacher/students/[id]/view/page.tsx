@@ -4,6 +4,7 @@ import {
   ArrowLeft,
   MapPin,
   Calendar,
+  CalendarClock,
   Eye,
   Flame,
   Zap,
@@ -81,40 +82,66 @@ export default async function StudentViewAsStudent({
   let assignedCount = 0;
   let completedCount = 0;
   let badges: Array<{ type: string; earned_at: string }> = [];
+  let recentCompletions: Array<{ lesson_slug: string; completed_at: string }> =
+    [];
+  let pendingAssignments: string[] = [];
+  let lastClassDate: string | null = null;
+  let nextClassDate: string | null = null;
+  let daysActiveLast30 = 0;
   if (studentAuthId) {
-    const [xpRes, assignRes, progRes, badgeRes] = await Promise.all([
-      admin
-        .from("xp_events")
-        .select("xp_amount")
-        .eq("student_id", studentAuthId),
-      admin
-        .from("lesson_assignments")
-        .select("lesson_slug, status")
-        .eq("classroom_id", student.classroom_id ?? "")
-        .limit(200),
-      admin
-        .from("lesson_progress")
-        .select("lesson_slug, completed_at")
-        .eq("student_id", studentAuthId),
-      admin
-        .from("badges")
-        .select("type, earned_at")
-        .eq("student_id", studentAuthId)
-        .order("earned_at", { ascending: false })
-        .limit(12),
-    ]);
+    const [xpRes, assignRes, progRes, badgeRes, historyRes, activityRes] =
+      await Promise.all([
+        admin
+          .from("xp_events")
+          .select("xp_amount")
+          .eq("student_id", studentAuthId),
+        admin
+          .from("lesson_assignments")
+          .select("lesson_slug, status, created_at")
+          .eq("classroom_id", student.classroom_id ?? "")
+          .order("created_at", { ascending: false })
+          .limit(200),
+        admin
+          .from("lesson_progress")
+          .select("lesson_slug, completed_at")
+          .eq("student_id", studentAuthId)
+          .order("completed_at", { ascending: false })
+          .limit(50),
+        admin
+          .from("badges")
+          .select("type, earned_at")
+          .eq("student_id", studentAuthId)
+          .order("earned_at", { ascending: false })
+          .limit(12),
+        admin
+          .from("student_history")
+          .select("event_date, status")
+          .eq("roster_student_id", id)
+          .order("event_date", { ascending: false })
+          .limit(100),
+        admin
+          .from("daily_activity")
+          .select("activity_date")
+          .eq("student_id", studentAuthId)
+          .gte(
+            "activity_date",
+            new Date(Date.now() - 30 * 86_400_000)
+              .toISOString()
+              .slice(0, 10),
+          ),
+      ]);
     totalXp = ((xpRes.data ?? []) as Array<{ xp_amount: number }>).reduce(
       (sum, r) => sum + (r.xp_amount ?? 0),
       0,
     );
-    const completedSlugs = new Set(
-      ((progRes.data ?? []) as Array<{
-        lesson_slug: string;
-        completed_at: string | null;
-      }>)
-        .filter((r) => r.completed_at)
-        .map((r) => r.lesson_slug),
+    const completedRows = ((progRes.data ?? []) as Array<{
+      lesson_slug: string;
+      completed_at: string | null;
+    }>).filter((r): r is { lesson_slug: string; completed_at: string } =>
+      Boolean(r.completed_at),
     );
+    const completedSlugs = new Set(completedRows.map((r) => r.lesson_slug));
+    recentCompletions = completedRows.slice(0, 5);
     const assigned = (assignRes.data ?? []) as Array<{
       lesson_slug: string;
       status: string | null;
@@ -123,6 +150,34 @@ export default async function StudentViewAsStudent({
     completedCount = assigned.filter(
       (a) => a.status === "completed" || completedSlugs.has(a.lesson_slug),
     ).length;
+    pendingAssignments = assigned
+      .filter(
+        (a) =>
+          a.status !== "completed" && !completedSlugs.has(a.lesson_slug),
+      )
+      .slice(0, 5)
+      .map((a) => a.lesson_slug);
+    // Class history: figure out the most recent done/absent and the
+    // next planned one.
+    const history = (historyRes.data ?? []) as Array<{
+      event_date: string;
+      status: string;
+    }>;
+    const todayISO = new Date().toISOString().slice(0, 10);
+    lastClassDate =
+      history.find(
+        (h) => h.event_date <= todayISO && h.status !== "Planned",
+      )?.event_date ?? null;
+    nextClassDate =
+      [...history]
+        .reverse()
+        .find((h) => h.event_date > todayISO && h.status === "Planned")
+        ?.event_date ?? null;
+    daysActiveLast30 = new Set(
+      ((activityRes.data ?? []) as Array<{ activity_date: string }>).map(
+        (r) => r.activity_date,
+      ),
+    ).size;
     badges = (badgeRes.data ?? []) as Array<{
       type: string;
       earned_at: string;
@@ -227,8 +282,8 @@ export default async function StudentViewAsStudent({
               </CardContent>
             </Card>
 
-            {/* Assignments */}
-            <div className="grid gap-3 sm:grid-cols-2">
+            {/* Assignments + activity KPIs */}
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <Card>
                 <CardContent className="flex items-center gap-3 p-4">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-500/15 text-sky-600 dark:text-sky-400">
@@ -259,7 +314,124 @@ export default async function StudentViewAsStudent({
                   </div>
                 </CardContent>
               </Card>
+              <Card>
+                <CardContent className="flex items-center gap-3 p-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-500/15 text-violet-600 dark:text-violet-400">
+                    <Flame className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                      Dias ativos · 30d
+                    </p>
+                    <p className="text-lg font-semibold tabular-nums">
+                      {daysActiveLast30}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="flex items-center gap-3 p-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rose-500/15 text-rose-600 dark:text-rose-400">
+                    <CalendarClock className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                      Próxima aula
+                    </p>
+                    <p className="text-sm font-semibold">
+                      {nextClassDate
+                        ? new Date(nextClassDate).toLocaleDateString("pt-BR", {
+                            day: "2-digit",
+                            month: "short",
+                          })
+                        : "—"}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
+
+            {/* Last class + recent activity side-by-side */}
+            <div className="grid gap-3 lg:grid-cols-2">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-base">
+                    <CalendarClock className="h-4 w-4 text-primary" />
+                    Última aula
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  {lastClassDate ? (
+                    <p className="text-sm font-semibold">
+                      {new Date(lastClassDate).toLocaleDateString("pt-BR", {
+                        day: "2-digit",
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </p>
+                  ) : (
+                    <p className="text-sm text-muted-foreground">
+                      Nenhuma aula registrada ainda.
+                    </p>
+                  )}
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-base">
+                    <CheckCircle2 className="h-4 w-4 text-primary" />
+                    Atividade recente
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  {recentCompletions.length === 0 ? (
+                    <p className="text-sm text-muted-foreground">
+                      Ainda sem lições concluídas.
+                    </p>
+                  ) : (
+                    <ul className="space-y-1.5 text-sm">
+                      {recentCompletions.map((c) => (
+                        <li
+                          key={c.lesson_slug}
+                          className="flex items-center justify-between gap-2"
+                        >
+                          <span className="truncate font-medium">
+                            {humanize(c.lesson_slug)}
+                          </span>
+                          <span className="shrink-0 text-[11px] text-muted-foreground tabular-nums">
+                            {new Date(c.completed_at).toLocaleDateString(
+                              "pt-BR",
+                              { day: "2-digit", month: "short" },
+                            )}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Pending assignments preview */}
+            {pendingAssignments.length > 0 ? (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-base">
+                    <BookOpen className="h-4 w-4 text-primary" />
+                    Lições pendentes
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-1 text-sm">
+                    {pendingAssignments.map((slug) => (
+                      <li key={slug} className="truncate font-medium">
+                        {humanize(slug)}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ) : null}
 
             {/* Badges */}
             <Card>
@@ -413,4 +585,18 @@ export default async function StudentViewAsStudent({
       </div>
     </div>
   );
+}
+
+function humanize(slug: string): string {
+  if (slug.startsWith("music:")) {
+    const title = slug.slice("music:".length);
+    return title
+      .split("-")
+      .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
+      .join(" ");
+  }
+  return slug
+    .split("-")
+    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
+    .join(" ");
 }
