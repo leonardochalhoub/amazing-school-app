@@ -41,7 +41,17 @@ export async function updateSession(request: NextRequest) {
     request.nextUrl.pathname.startsWith("/api/demo-login") ||
     request.nextUrl.pathname.startsWith("/api/demo-signout");
 
-  if (!user && !isAuthPage && !isPublicMarketing) {
+  // PWA manifest + app icons get fetched by the browser with no
+  // session. Let them through so we don't redirect JSON requests
+  // to the /login HTML (browsers then fail to parse it as a manifest).
+  const isPwaAsset =
+    request.nextUrl.pathname === "/manifest.webmanifest" ||
+    request.nextUrl.pathname === "/icon" ||
+    request.nextUrl.pathname === "/apple-icon" ||
+    request.nextUrl.pathname === "/robots.txt" ||
+    request.nextUrl.pathname === "/sitemap.xml";
+
+  if (!user && !isAuthPage && !isPublicMarketing && !isPwaAsset) {
     const url = request.nextUrl.clone();
     url.pathname = "/login";
     return NextResponse.redirect(url);

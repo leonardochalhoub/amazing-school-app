@@ -57,13 +57,13 @@ export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
     | "owner";
   const isTeacher = role === "teacher" || role === "owner";
 
-  // The popup is only interesting when a class is genuinely near — if
-  // the next scheduled meeting is still a week out, nagging about it
-  // every page load is noise. 4 days matches how most teachers here
-  // plan ahead.
+  // Near-future window: 1 hour grace after start (so the popup
+  // persists through class time) through 14 days ahead. Earlier
+  // 4-day cap was too tight — teachers here sometimes only touch
+  // the app weekly, so a class 5 days out was invisible.
   const graceWindow = new Date(Date.now() - 60 * 60 * 1000).toISOString();
   const windowEnd = new Date(
-    Date.now() + 4 * 24 * 60 * 60 * 1000,
+    Date.now() + 14 * 24 * 60 * 60 * 1000,
   ).toISOString();
 
   let classroomIds: string[] = [];
