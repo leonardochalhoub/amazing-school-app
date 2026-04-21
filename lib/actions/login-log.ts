@@ -45,7 +45,40 @@ export async function listRecentLogins(
   });
   if (error || !users) return [];
 
-  const allIds = users.users.map((u) => u.id);
+  // Exclusion rules for the "Atividade recente" panel:
+  //   1. Demo accounts (email prefix `demo.`) — platform vitrine,
+  //      not real users.
+  //   2. The platform owner (Leo) and every student he coaches —
+  //      Leo uses the site for dev + QA so his sessions flood the
+  //      panel and drown out other teachers' activity.
+  //
+  // Step 1 — resolve Leo's user id from his whitelisted email, then
+  // find all roster_students he owns so we can hide their auth ids too.
+  const OWNER_EMAIL = "leochalhoub@hotmail.com";
+  const ownerUser = users.users.find(
+    (u) => (u.email ?? "").toLowerCase() === OWNER_EMAIL,
+  );
+  const excludedIds = new Set<string>();
+  if (ownerUser) {
+    excludedIds.add(ownerUser.id);
+    const { data: leoStudents } = await admin
+      .from("roster_students")
+      .select("auth_user_id")
+      .eq("teacher_id", ownerUser.id)
+      .not("auth_user_id", "is", null);
+    for (const r of (leoStudents ?? []) as { auth_user_id: string }[]) {
+      if (r.auth_user_id) excludedIds.add(r.auth_user_id);
+    }
+  }
+
+  const isDemoEmail = (email: string | null | undefined) =>
+    (email ?? "").toLowerCase().startsWith("demo.");
+
+  const visibleUsers = users.users.filter(
+    (u) => !excludedIds.has(u.id) && !isDemoEmail(u.email),
+  );
+
+  const allIds = visibleUsers.map((u) => u.id);
   const [{ data: profiles }, { data: heartbeats }] = await Promise.all([
     admin.from("profiles").select("id, full_name, role").in("id", allIds),
     admin
@@ -82,7 +115,7 @@ export async function listRecentLogins(
     return new Date(hb).getTime() > new Date(signIn).getTime() ? hb : signIn;
   };
 
-  const sorted = [...users.users]
+  const sorted = [...visibleUsers]
     .filter((u) => effectiveAt(u))
     .sort((a, b) => {
       const ta = new Date(effectiveAt(a) ?? 0).getTime();
