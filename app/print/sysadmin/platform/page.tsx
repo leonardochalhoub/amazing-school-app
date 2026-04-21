@@ -137,6 +137,7 @@ export default async function SysadminPrintPage({ searchParams }: PageProps) {
                       className="report-muted tabular-nums"
                     >
                       {new Date(t.createdAt).toLocaleString("pt-BR", {
+                        timeZone: "America/Sao_Paulo",
                         day: "2-digit",
                         month: "2-digit",
                         year: "numeric",

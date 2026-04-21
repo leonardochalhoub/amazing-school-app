@@ -305,6 +305,7 @@ export default async function SysadminPage() {
                   </td>
                   <td className="px-4 py-2 text-right text-xs text-muted-foreground tabular-nums whitespace-nowrap">
                     {new Date(t.createdAt).toLocaleString("pt-BR", {
+                      timeZone: "America/Sao_Paulo",
                       day: "2-digit",
                       month: "2-digit",
                       year: "numeric",
