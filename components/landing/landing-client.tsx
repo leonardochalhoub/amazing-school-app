@@ -7,6 +7,7 @@ import { LocaleToggle } from "@/components/locale-toggle";
 import { BrandMark } from "@/components/layout/brand-mark";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { BookOpen, GraduationCap, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { getPublicStats, type PublicStats } from "@/lib/actions/public-stats";
 import { DemoAccess } from "@/components/landing/demo-access";
@@ -91,20 +92,57 @@ export function LandingClient() {
             teacherHint={locale === "pt-BR" ? "Demo" : "Live demo"}
             studentHint={locale === "pt-BR" ? "Demo" : "Live demo"}
           />
+
+          {/* Documentation links — slim pill buttons underneath the
+              demo cards. Teacher guide is always the English version,
+              student guide is always the pt-BR version. */}
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs">
+            <a
+              href="/guides/teacher.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-card/60 px-3 py-1 font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+            >
+              <GraduationCap className="h-3.5 w-3.5" />
+              <span>
+                {locale === "pt-BR"
+                  ? "Doc do professor · EN"
+                  : "Teacher docs · EN"}
+              </span>
+              <ExternalLink className="h-3 w-3 opacity-60" />
+            </a>
+            <a
+              href="/guides/student.pt.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-card/60 px-3 py-1 font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+            >
+              <BookOpen className="h-3.5 w-3.5" />
+              <span>
+                {locale === "pt-BR"
+                  ? "Doc do aluno · PT-BR"
+                  : "Student docs · PT-BR"}
+              </span>
+              <ExternalLink className="h-3 w-3 opacity-60" />
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Hero */}
-      <section className="flex-1 flex flex-col items-center justify-center px-4 py-8 md:py-12">
-        <div className="max-w-3xl text-center space-y-8">
+      <section className="flex-1 flex flex-col items-center justify-center px-4 py-6 md:py-12">
+        <div className="max-w-3xl text-center space-y-6 sm:space-y-8">
           <Badge
             variant="secondary"
-            className="px-4 py-1.5 text-sm font-medium border border-border"
+            className="px-3 py-1 text-xs sm:px-4 sm:py-1.5 sm:text-sm font-medium border border-border"
           >
             {t.landing.badge}
           </Badge>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
+          {/* Mobile title is ~20% smaller than it used to be so the
+              hero no longer pushes the stats and demo cards off the
+              fold on phones. Scales back up on sm+. */}
+          <h1 className="text-[2rem] leading-tight sm:text-6xl lg:text-7xl font-bold tracking-tight sm:leading-[1.1]">
             {t.landing.title.split(" ").map((word, i) => {
               if (word === "AI" || word === "IA") {
                 return (
@@ -120,7 +158,7 @@ export function LandingClient() {
             })}
           </h1>
 
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {t.landing.subtitle}
           </p>
 
