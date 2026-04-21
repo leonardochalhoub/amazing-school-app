@@ -75,6 +75,9 @@ export interface SysadminOverview {
     email: string | null;
     addedAt: string;
     lastActivityAt: string | null;
+    /** Resolved from profiles.location when the roster row is
+     *  linked to an auth user; null for invite-pending rows. */
+    location: string | null;
     /** true when the roster row has been linked to an auth account. */
     signedUp: boolean;
   }[];
@@ -1078,6 +1081,31 @@ export async function getSysadminOverview(): Promise<
     bumpLastActivity(uid ?? null, m.created_at);
   }
 
+  // Student city/state lives on profiles.location (set at signup via
+  // the BrazilCityPicker). We fetch locations for every linked
+  // roster row in one shot so the All-students directory can render
+  // a "Localização" column. Invite-pending rows stay null.
+  const linkedStudentAuthIds = [
+    ...new Set(
+      roster
+        .filter((r) => r.auth_user_id)
+        .map((r) => r.auth_user_id as string),
+    ),
+  ];
+  const studentLocationById = new Map<string, string | null>();
+  if (linkedStudentAuthIds.length > 0) {
+    const { data: studentLocRows } = await admin
+      .from("profiles")
+      .select("id, location")
+      .in("id", linkedStudentAuthIds);
+    for (const row of (studentLocRows ?? []) as Array<{
+      id: string;
+      location: string | null;
+    }>) {
+      studentLocationById.set(row.id, row.location ?? null);
+    }
+  }
+
   const allStudents = roster
     .filter((r) => teachers.some((t) => t.id === r.teacher_id))
     .map((r) => ({
@@ -1088,6 +1116,9 @@ export async function getSysadminOverview(): Promise<
       addedAt: r.created_at,
       lastActivityAt: r.auth_user_id
         ? lastActivityByUser.get(r.auth_user_id) ?? null
+        : null,
+      location: r.auth_user_id
+        ? studentLocationById.get(r.auth_user_id) ?? null
         : null,
       signedUp: !!r.auth_user_id,
     }))

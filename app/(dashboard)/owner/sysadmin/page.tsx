@@ -506,6 +506,9 @@ export default async function SysadminPage() {
                 <th className="px-4 py-2">
                   <T en="Teacher" pt="Professor" />
                 </th>
+                <th className="px-4 py-2">
+                  <T en="Location" pt="Localização" />
+                </th>
                 <th className="px-4 py-2">Email</th>
                 <th className="px-4 py-2 text-right whitespace-nowrap">
                   <T en="Added" pt="Cadastrado em" />
@@ -519,7 +522,7 @@ export default async function SysadminPage() {
               {allStudents.length === 0 ? (
                 <tr>
                   <td
-                    colSpan={5}
+                    colSpan={6}
                     className="px-4 py-6 text-center text-sm text-muted-foreground"
                   >
                     <T en="No students yet." pt="Ainda sem alunos." />
@@ -547,6 +550,9 @@ export default async function SysadminPage() {
                   </td>
                   <td className="px-4 py-2 text-xs text-muted-foreground">
                     {s.teacherName ? titleCase(s.teacherName) : "—"}
+                  </td>
+                  <td className="px-4 py-2 text-xs text-muted-foreground">
+                    {s.location ?? "—"}
                   </td>
                   <td className="px-4 py-2 text-xs text-muted-foreground">
                     {s.email ?? "—"}
