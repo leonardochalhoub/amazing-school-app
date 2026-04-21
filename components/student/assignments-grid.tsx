@@ -120,6 +120,7 @@ function AssignmentTile({ a }: { a: AssignmentGridEntry }) {
               <p className="text-[10px] tabular-nums text-emerald-600 dark:text-emerald-400">
                 Done{" "}
                 {new Date(a.completedAt).toLocaleString("pt-BR", {
+                  timeZone: "America/Sao_Paulo",
                   dateStyle: "short",
                   timeStyle: "short",
                 })}
@@ -129,6 +130,7 @@ function AssignmentTile({ a }: { a: AssignmentGridEntry }) {
               <p className="text-[10px] tabular-nums text-muted-foreground">
                 Assigned{" "}
                 {new Date(a.assignedAt).toLocaleString("pt-BR", {
+                  timeZone: "America/Sao_Paulo",
                   dateStyle: "short",
                   timeStyle: "short",
                 })}

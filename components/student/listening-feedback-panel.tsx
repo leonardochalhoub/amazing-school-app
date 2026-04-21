@@ -80,9 +80,18 @@ export function ListeningFeedbackPanel({ entries }: Props) {
                 ) : null}
 
                 <p className="text-[10px] text-muted-foreground">
-                  Submitted {new Date(e.submitted_at).toLocaleString()}
+                  Submitted{" "}
+                  {new Date(e.submitted_at).toLocaleString("pt-BR", {
+                    timeZone: "America/Sao_Paulo",
+                    dateStyle: "short",
+                    timeStyle: "short",
+                  })}
                   {e.reviewed_at
-                    ? ` · Reviewed ${new Date(e.reviewed_at).toLocaleString()}`
+                    ? ` · Reviewed ${new Date(e.reviewed_at).toLocaleString("pt-BR", {
+                        timeZone: "America/Sao_Paulo",
+                        dateStyle: "short",
+                        timeStyle: "short",
+                      })}`
                     : ""}
                 </p>
               </CardContent>

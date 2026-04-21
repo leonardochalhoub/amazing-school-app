@@ -859,9 +859,17 @@ function TranslateLine({
 
 function formatWhen(iso: string, locale: string): string {
   const d = new Date(iso);
+  const opts = {
+    timeZone: "America/Sao_Paulo",
+    dateStyle: "short",
+    timeStyle: "short",
+  } as const;
   return locale === "pt-BR"
-    ? d.toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" })
-    : d.toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" });
+    ? d.toLocaleString("pt-BR", opts)
+    : d.toLocaleString("en-US", {
+        ...opts,
+        dateStyle: "medium",
+      });
 }
 
 function Discussion({
