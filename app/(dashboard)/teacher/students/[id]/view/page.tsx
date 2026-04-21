@@ -1,14 +1,26 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { ArrowLeft, MapPin, Calendar, Eye } from "lucide-react";
+import {
+  ArrowLeft,
+  MapPin,
+  Calendar,
+  Eye,
+  Flame,
+  Zap,
+  CheckCircle2,
+  BookOpen,
+  Award,
+} from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getRosterStudent, getRosterAvatarSignedUrl } from "@/lib/actions/roster";
 import { AvatarDisplay } from "@/components/shared/avatar-display";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { CertificatesPanel } from "@/components/reports/certificates-panel";
 import { CefrExplainerCard } from "@/components/reports/cefr-explainer-card";
 import { listCertificatesForStudent } from "@/lib/actions/certificates";
+import { getLevel, getXpForNextLevel } from "@/lib/gamification/engine";
 
 /**
  * Teacher's read-only view of a student's profile — rendered exactly
@@ -61,6 +73,64 @@ export default async function StudentViewAsStudent({
 
   const certificates = await listCertificatesForStudent(id);
 
+  // Main-page data: XP, level, assignment counts, badges. Scoped to
+  // this roster student (by auth_user_id when the invite was
+  // claimed; numbers land as zero otherwise).
+  const studentAuthId = student.auth_user_id ?? null;
+  let totalXp = 0;
+  let assignedCount = 0;
+  let completedCount = 0;
+  let badges: Array<{ type: string; earned_at: string }> = [];
+  if (studentAuthId) {
+    const [xpRes, assignRes, progRes, badgeRes] = await Promise.all([
+      admin
+        .from("xp_events")
+        .select("xp_amount")
+        .eq("student_id", studentAuthId),
+      admin
+        .from("lesson_assignments")
+        .select("lesson_slug, status")
+        .eq("classroom_id", student.classroom_id ?? "")
+        .limit(200),
+      admin
+        .from("lesson_progress")
+        .select("lesson_slug, completed_at")
+        .eq("student_id", studentAuthId),
+      admin
+        .from("badges")
+        .select("type, earned_at")
+        .eq("student_id", studentAuthId)
+        .order("earned_at", { ascending: false })
+        .limit(12),
+    ]);
+    totalXp = ((xpRes.data ?? []) as Array<{ xp_amount: number }>).reduce(
+      (sum, r) => sum + (r.xp_amount ?? 0),
+      0,
+    );
+    const completedSlugs = new Set(
+      ((progRes.data ?? []) as Array<{
+        lesson_slug: string;
+        completed_at: string | null;
+      }>)
+        .filter((r) => r.completed_at)
+        .map((r) => r.lesson_slug),
+    );
+    const assigned = (assignRes.data ?? []) as Array<{
+      lesson_slug: string;
+      status: string | null;
+    }>;
+    assignedCount = assigned.length;
+    completedCount = assigned.filter(
+      (a) => a.status === "completed" || completedSlugs.has(a.lesson_slug),
+    ).length;
+    badges = (badgeRes.data ?? []) as Array<{
+      type: string;
+      earned_at: string;
+    }>;
+  }
+  const level = getLevel(totalXp);
+  const xpProg = getXpForNextLevel(totalXp);
+
   const fmtDate = (iso: string) =>
     new Date(iso).toLocaleDateString("pt-BR", {
       day: "2-digit",
@@ -109,15 +179,147 @@ export default async function StudentViewAsStudent({
         </div>
       </div>
 
-      <div className="mx-auto max-w-2xl space-y-6">
-        <div>
-          <h1 className="text-2xl font-bold">Profile</h1>
-          <p className="text-sm text-muted-foreground">
-            Como o {studentWord} vê essa página. Somente leitura.
-          </p>
-        </div>
+      <div className="mx-auto max-w-2xl">
+        <Tabs defaultValue="main" className="gap-4">
+          <TabsList className="w-full">
+            <TabsTrigger value="main">Página principal</TabsTrigger>
+            <TabsTrigger value="profile">
+              Perfil {studentArticle} {studentWord}
+            </TabsTrigger>
+          </TabsList>
 
-        <Card>
+          <TabsContent value="main" className="space-y-6">
+            <div>
+              <h1 className="text-2xl font-bold">
+                Olá, {student.full_name.split(" ")[0]}
+              </h1>
+              <p className="text-sm text-muted-foreground">
+                Resumo que {isFemale ? "a" : "o"} {studentWord} vê ao entrar.
+                Somente leitura.
+              </p>
+            </div>
+
+            {/* XP + level summary */}
+            <Card>
+              <CardContent className="flex items-center gap-4 p-4">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 text-white">
+                  <Zap className="h-7 w-7" />
+                </span>
+                <div className="flex-1 space-y-1">
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                    Nível · XP
+                  </p>
+                  <p className="text-xl font-semibold tabular-nums">
+                    Lv.{level} · {totalXp.toLocaleString("pt-BR")} XP
+                  </p>
+                  <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
+                    <div
+                      className="h-full bg-gradient-to-r from-indigo-500 to-violet-500 transition-all"
+                      style={{
+                        width: `${Math.min(100, Math.round(xpProg.progress * 100))}%`,
+                      }}
+                    />
+                  </div>
+                  <p className="text-[11px] text-muted-foreground tabular-nums">
+                    {xpProg.current}/{xpProg.needed} XP para o próximo nível
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Assignments */}
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Card>
+                <CardContent className="flex items-center gap-3 p-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-500/15 text-sky-600 dark:text-sky-400">
+                    <BookOpen className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                      Lições atribuídas
+                    </p>
+                    <p className="text-lg font-semibold tabular-nums">
+                      {assignedCount}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="flex items-center gap-3 p-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
+                    <CheckCircle2 className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                      Concluídas
+                    </p>
+                    <p className="text-lg font-semibold tabular-nums">
+                      {completedCount}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Badges */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-base">
+                  <Award className="h-4 w-4 text-primary" />
+                  Medalhas · {badges.length}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                {badges.length === 0 ? (
+                  <p className="text-sm text-muted-foreground">
+                    Ainda não conquistou nenhuma medalha.
+                  </p>
+                ) : (
+                  <div className="flex flex-wrap gap-1.5">
+                    {badges.map((b, i) => (
+                      <span
+                        key={`${b.type}-${i}`}
+                        className="rounded-full border border-border/70 bg-muted/40 px-2.5 py-1 text-[11px] font-medium"
+                      >
+                        {b.type}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+
+            {/* Starting date (surfaced here so the teacher sees study tenure
+                at a glance on the main tab too) */}
+            {startingDate ? (
+              <Card>
+                <CardContent className="flex items-center gap-4 p-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/15 text-amber-600 dark:text-amber-400">
+                    <Flame className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                      Dias conosco
+                    </p>
+                    <p className="text-lg font-semibold tabular-nums">
+                      {(daysStudying ?? 0).toLocaleString("pt-BR")}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            ) : null}
+          </TabsContent>
+
+          <TabsContent value="profile" className="space-y-6">
+            <div>
+              <h1 className="text-2xl font-bold">Profile</h1>
+              <p className="text-sm text-muted-foreground">
+                Como {isFemale ? "a" : "o"} {studentWord} vê essa página.
+                Somente leitura.
+              </p>
+            </div>
+
+            <Card>
           <CardHeader>
             <CardTitle className="text-base">Profile photo</CardTitle>
           </CardHeader>
@@ -205,7 +407,9 @@ export default async function StudentViewAsStudent({
           readOnly
         />
 
-        <CefrExplainerCard />
+            <CefrExplainerCard />
+          </TabsContent>
+        </Tabs>
       </div>
     </div>
   );
