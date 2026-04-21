@@ -25,6 +25,7 @@ export default function SignUpPage() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [location, setLocation] = useState("");
+  const [gender, setGender] = useState<"female" | "male" | "">("");
 
   async function handleSubmit(formData: FormData) {
     setLoading(true);
@@ -32,11 +33,21 @@ export default function SignUpPage() {
     // Public signup is teacher-only. Students join through an invitation link.
     formData.set("role", "teacher");
     formData.set("location", location.trim());
+    formData.set("gender", gender);
     if (!location.trim()) {
       setError(
         locale === "pt-BR"
           ? "Escolha sua cidade (obrigatório)."
           : "Pick your city (required).",
+      );
+      setLoading(false);
+      return;
+    }
+    if (gender !== "female" && gender !== "male") {
+      setError(
+        locale === "pt-BR"
+          ? "Selecione o gênero: masculino ou feminino."
+          : "Select a gender: male or female.",
       );
       setLoading(false);
       return;
@@ -124,6 +135,40 @@ export default function SignUpPage() {
                 {locale === "pt-BR"
                   ? "Comece a digitar — a lista filtra as cidades brasileiras. Para outras cidades, digite livremente."
                   : "Start typing — the list filters Brazilian cities. Type freely for anywhere else."}
+              </p>
+            </div>
+            <div className="space-y-2">
+              <Label>
+                {locale === "pt-BR" ? "Gênero (obrigatório)" : "Gender (required)"}
+              </Label>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onClick={() => setGender("male")}
+                  className={`rounded-md border px-3 py-2 text-sm font-medium transition-colors ${
+                    gender === "male"
+                      ? "border-primary bg-primary/10 text-primary"
+                      : "border-border bg-background hover:bg-muted"
+                  }`}
+                >
+                  {locale === "pt-BR" ? "Masculino" : "Male"}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setGender("female")}
+                  className={`rounded-md border px-3 py-2 text-sm font-medium transition-colors ${
+                    gender === "female"
+                      ? "border-primary bg-primary/10 text-primary"
+                      : "border-border bg-background hover:bg-muted"
+                  }`}
+                >
+                  {locale === "pt-BR" ? "Feminino" : "Female"}
+                </button>
+              </div>
+              <p className="text-[11px] text-muted-foreground">
+                {locale === "pt-BR"
+                  ? "Usamos apenas para o tratamento em português (Professor / Professora)."
+                  : "Used only for gendered Portuguese wording (Professor / Professora)."}
               </p>
             </div>
           </CardContent>

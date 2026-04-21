@@ -22,6 +22,7 @@ import { redirect } from "next/navigation";
 import { isLogoEligible, SCHOOL_LOGO_SRC } from "@/lib/school-logo";
 import { SchoolLogoToggle } from "@/components/teacher/school-logo-toggle";
 import { SignatureUploader } from "@/components/teacher/signature-uploader";
+import { TeacherGenderPicker } from "@/components/teacher/teacher-gender-picker";
 import { CefrExplainerCard } from "@/components/reports/cefr-explainer-card";
 import { getSignatureSignedUrl } from "@/lib/signature";
 import { T } from "@/components/reports/t";
@@ -181,6 +182,7 @@ export default async function TeacherProfilePage() {
                   />
                 )}
               </p>
+              <TeacherGenderPicker initial={teacherGender} />
               <p className="text-[11px] text-muted-foreground">
                 <T
                   en="Your photo is visible to your students across the platform."

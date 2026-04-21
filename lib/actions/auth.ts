@@ -24,6 +24,7 @@ export async function signUp(formData: FormData) {
   const requestedRole = (formData.get("role") as Role | null) ?? "teacher";
   const inviteToken = (formData.get("inviteToken") as string | null) ?? "";
   const location = ((formData.get("location") as string | null) ?? "").trim();
+  const genderRaw = ((formData.get("gender") as string | null) ?? "").trim();
 
   // Location is required for every new account — teacher or student.
   // The column caps at 80 chars; anything longer is clipped.
@@ -34,6 +35,18 @@ export async function signUp(formData: FormData) {
     };
   }
   const locationTrimmed = location.slice(0, 80);
+
+  // Gender — required for teacher signup (drives pt-BR wording:
+  // Professor vs Professora). Students join via invite, where the
+  // teacher sets gender on the roster row instead, so we only enforce
+  // it when role === 'teacher'.
+  const gender: "female" | "male" | null =
+    genderRaw === "female" || genderRaw === "male" ? genderRaw : null;
+  if (requestedRole === "teacher" && !gender) {
+    return {
+      error: "Selecione o gênero (masculino ou feminino) — obrigatório.",
+    };
+  }
 
   let role: Role = "teacher";
   // Full invitation row (not just the validation subset) so we can link
@@ -102,6 +115,7 @@ export async function signUp(formData: FormData) {
     full_name: fullName,
     role,
     avatar_url: null,
+    gender,
     location: locationTrimmed,
   });
 
