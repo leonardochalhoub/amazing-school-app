@@ -109,7 +109,6 @@ export default async function TeacherLibraryLessonPage({
               classroomId: r.classroomId,
             }))}
             variant="primary"
-            label="Assign"
           />
         </div>
       </header>

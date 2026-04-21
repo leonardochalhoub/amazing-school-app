@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { MessageBubble } from "./message-bubble";
 import { SuggestedTopics } from "./suggested-topics";
+import { useI18n } from "@/lib/i18n/context";
 
 interface Message {
   id: string;
@@ -25,6 +26,8 @@ export function ChatInterface({
   remainingMessages: initialRemaining,
   aiLabel,
 }: ChatInterfaceProps) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const scrollRef = useRef<HTMLDivElement>(null);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -73,7 +76,9 @@ export function ChatInterface({
         if (res.status === 429) {
           setRemaining(0);
         }
-        let errorText = `AI tutor error (${res.status}). Please try again.`;
+        let errorText = pt
+          ? `Erro no tutor de IA (${res.status}). Tente novamente.`
+          : `AI tutor error (${res.status}). Please try again.`;
         try {
           const errBody = await res.json();
           if (errBody?.error) errorText = errBody.error;
@@ -116,8 +121,9 @@ export function ChatInterface({
       }
 
       if (assistantMessage.content.trim().length === 0) {
-        assistantMessage.content =
-          "⚠️ The AI tutor returned no text. This usually means the API key has no quota attached, or the configured model (AI_MODEL) isn't available for this key. Check the server logs for the exact error, or create a new free key at https://aistudio.google.com/apikey.";
+        assistantMessage.content = pt
+          ? "⚠️ O tutor de IA não retornou nenhum texto. Normalmente isso significa que a chave da API está sem cota, ou o modelo configurado (AI_MODEL) não está disponível para esta chave. Verifique os logs do servidor ou crie uma nova chave gratuita em https://aistudio.google.com/apikey."
+          : "⚠️ The AI tutor returned no text. This usually means the API key has no quota attached, or the configured model (AI_MODEL) isn't available for this key. Check the server logs for the exact error, or create a new free key at https://aistudio.google.com/apikey.";
         setMessages((prev) => {
           const updated = [...prev];
           updated[updated.length - 1] = { ...assistantMessage };
@@ -158,7 +164,7 @@ export function ChatInterface({
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            📘 Tutor
+            📘 {pt ? "Tutor" : "Tutor"}
           </button>
           <button
             type="button"
@@ -174,7 +180,7 @@ export function ChatInterface({
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            💬 Open chat
+            💬 {pt ? "Chat aberto" : "Open chat"}
           </button>
         </div>
         {aiLabel ? (
@@ -192,12 +198,22 @@ export function ChatInterface({
           {messages.length === 0 && (
             <div className="pt-8">
               <h3 className="text-lg font-semibold text-center mb-4">
-                {mode === "tutor" ? "🤖 AI English Tutor" : "💬 Open chat"}
+                {mode === "tutor"
+                  ? pt
+                    ? "🤖 Tutor de Inglês com IA"
+                    : "🤖 AI English Tutor"
+                  : pt
+                    ? "💬 Chat aberto"
+                    : "💬 Open chat"}
               </h3>
               <p className="text-sm text-muted-foreground text-center mb-6">
                 {mode === "tutor"
-                  ? "Practice your English! I'll help you with grammar, vocabulary, and conversation skills."
-                  : "Talk about anything — coding, science, life. I'll reply in English by default (ask in Portuguese if you prefer)."}
+                  ? pt
+                    ? "Pratique seu inglês! Vou te ajudar com gramática, vocabulário e conversação."
+                    : "Practice your English! I'll help you with grammar, vocabulary, and conversation skills."
+                  : pt
+                    ? "Fale sobre qualquer coisa — programação, ciência, vida. Respondo em inglês por padrão (pergunte em português se preferir)."
+                    : "Talk about anything — coding, science, life. I'll reply in English by default (ask in Portuguese if you prefer)."}
               </p>
               {mode === "tutor" ? (
                 <SuggestedTopics onSelect={(topic) => sendMessage(topic)} />
@@ -236,7 +252,9 @@ export function ChatInterface({
       <div className="shrink-0 border-t p-4 space-y-2">
         {limitReached ? (
           <p className="text-sm text-center text-muted-foreground">
-            Daily message limit reached. Come back tomorrow!
+            {pt
+              ? "Limite diário de mensagens atingido. Volte amanhã!"
+              : "Daily message limit reached. Come back tomorrow!"}
           </p>
         ) : (
           <>
@@ -244,16 +262,22 @@ export function ChatInterface({
               <Input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Type your message in English..."
+                placeholder={
+                  pt
+                    ? "Digite sua mensagem em inglês..."
+                    : "Type your message in English..."
+                }
                 disabled={isLoading}
               />
               <Button type="submit" disabled={isLoading || !input.trim()}>
-                Send
+                {pt ? "Enviar" : "Send"}
               </Button>
             </form>
             {showRemaining ? (
               <p className="text-xs text-muted-foreground text-center">
-                {remaining} messages remaining today
+                {pt
+                  ? `${remaining} mensagens restantes hoje`
+                  : `${remaining} messages remaining today`}
               </p>
             ) : null}
           </>

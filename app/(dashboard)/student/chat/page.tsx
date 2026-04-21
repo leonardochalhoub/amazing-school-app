@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { getAiProviderInfo } from "@/lib/ai/provider-info";
 import { ChatInterface } from "@/components/chat/chat-interface";
+import { T } from "@/components/reports/t";
 
 export default async function ChatPage() {
   const supabase = await createClient();
@@ -63,7 +64,9 @@ export default async function ChatPage() {
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-        <h1 className="text-2xl font-bold">AI English Tutor</h1>
+        <h1 className="text-2xl font-bold">
+          <T en="AI English Tutor" pt="Tutor de Inglês com IA" />
+        </h1>
         <span className="text-xs font-medium text-muted-foreground">
           · {ai.label}
         </span>

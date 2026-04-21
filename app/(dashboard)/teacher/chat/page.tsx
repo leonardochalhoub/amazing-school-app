@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { getAiProviderInfo } from "@/lib/ai/provider-info";
 import { ChatInterface } from "@/components/chat/chat-interface";
+import { T } from "@/components/reports/t";
 
 export default async function TeacherChatPage() {
   const supabase = await createClient();
@@ -54,14 +55,18 @@ export default async function TeacherChatPage() {
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-        <h1 className="text-2xl font-bold">AI Tutor</h1>
+        <h1 className="text-2xl font-bold">
+          <T en="AI Tutor" pt="Tutor de IA" />
+        </h1>
         <span className="text-xs font-medium text-muted-foreground">
           · {ai.label}
         </span>
       </div>
       <p className="text-sm text-muted-foreground">
-        Use as a lesson-planning assistant, quick translator, or general
-        sounding board. Switch to Open chat for unrestricted conversation.
+        <T
+          en="Use as a lesson-planning assistant, quick translator, or general sounding board. Switch to Open chat for unrestricted conversation."
+          pt="Use como assistente de planejamento de aulas, tradutor rápido ou um espaço para pensar em voz alta. Mude para o chat aberto para conversas sem restrições."
+        />
       </p>
       <ChatInterface
         conversationId={conversation?.id ?? ""}

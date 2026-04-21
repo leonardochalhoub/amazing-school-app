@@ -300,7 +300,6 @@ export default async function TeacherLessonsPage({
               classroomId: r.classroomId,
             }))}
             variant="primary"
-            label="Assign"
           />
           <Link href="/teacher/lessons/new">
             <Button size="sm" variant="outline" className="gap-1.5">
