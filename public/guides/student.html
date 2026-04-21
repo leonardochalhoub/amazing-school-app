@@ -142,23 +142,6 @@
 
   .xp-bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; margin-top: 8px; }
   .xp-bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--violet), var(--pink)); }
-
-  /* Surgical mobile fix — only applies to slides marked `mobile-fit`
-     (slide 3 here). Other slides keep their original design. */
-  @media (max-width: 700px) {
-    .slide.mobile-fit {
-      height: auto;
-      min-height: 100dvh;
-      overflow-y: auto;
-      padding: clamp(24px,4vh,32px) 20px clamp(56px,8vh,80px) !important;
-      justify-content: flex-start !important;
-    }
-    .slide.mobile-fit h2.section { font-size: clamp(28px, 7vw, 44px); line-height: 1.12; }
-    .slide.mobile-fit p.lede { font-size: clamp(15px, 4vw, 19px); }
-    .slide.mobile-fit .list-clean li { font-size: clamp(13px, 3.4vw, 16px); }
-    .slide.mobile-fit .card h3 { font-size: clamp(15px, 4vw, 18px); }
-    .slide.mobile-fit .card p { font-size: clamp(12px, 3vw, 14px); }
-  }
 </style>
 </head>
 <body>
@@ -234,7 +217,7 @@
 <!-- ============================================================
      SLIDE 3 — YOUR DASHBOARD
      ============================================================ -->
-<section class="slide mobile-fit"
+<section class="slide"
   style="background-image:
     radial-gradient(ellipse at 70% 20%, rgba(167,139,250,0.08) 0%, transparent 45%),
     radial-gradient(ellipse at 25% 85%, rgba(52,211,153,0.05) 0%, transparent 40%);">
