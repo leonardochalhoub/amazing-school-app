@@ -7,6 +7,7 @@ import { getTeacherManagementMatrix } from "@/lib/actions/teacher-payments";
 import { listTeacherListeningResponses } from "@/lib/actions/listening-responses";
 import { getTeacherAiChatStats } from "@/lib/actions/teacher-ai-chat";
 import { AiChatStatsTable } from "@/components/teacher/ai-chat-stats-table";
+import { XpLeaderboardTable } from "@/components/teacher/xp-leaderboard-table";
 import { getTeacherSpeakingStats } from "@/lib/actions/speaking-events";
 import { SpeakingStatsTable } from "@/components/teacher/speaking-stats-table";
 import { listDeletedRosterStudents } from "@/lib/actions/roster";
@@ -520,78 +521,7 @@ export default async function TeacherManagementPage() {
         <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
           <T en="Top students by XP" pt="Ranking de alunos por XP" />
         </h2>
-        <div className="overflow-hidden rounded-xl border">
-          <table className="w-full text-sm">
-            <thead className="bg-muted/40 text-left text-xs uppercase tracking-wider text-muted-foreground">
-              <tr>
-                <th className="px-4 py-2">
-                  <T en="Student" pt="Aluno" />
-                </th>
-                <th className="px-4 py-2">
-                  <T en="Classroom" pt="Turma" />
-                </th>
-                <th className="px-4 py-2 text-right">XP</th>
-                <th className="px-4 py-2 text-right">
-                  <T en="Lessons" pt="Lições" />
-                </th>
-                <th className="px-4 py-2 text-right">
-                  <T en="Streak" pt="Sequência" />
-                </th>
-                <th className="px-4 py-2 text-right">
-                  <T en="Last active" pt="Última atividade" />
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {students.map((s) => (
-                <tr key={s.studentId} className="border-t">
-                  <td className="px-4 py-2 font-medium">
-                    <Link
-                      href={`/teacher/students/${s.studentId}`}
-                      className="hover:text-primary hover:underline"
-                    >
-                      {s.fullName}
-                    </Link>
-                  </td>
-                  <td className="px-4 py-2 text-muted-foreground">
-                    {s.classroomName ?? "—"}
-                  </td>
-                  <td className="px-4 py-2 text-right tabular-nums">
-                    {s.totalXp.toLocaleString("pt-BR")}
-                  </td>
-                  <td className="px-4 py-2 text-right tabular-nums">
-                    {s.completed}/{s.assigned}
-                  </td>
-                  <td className="px-4 py-2 text-right tabular-nums">
-                    {s.streak}
-                  </td>
-                  <td className="px-4 py-2 text-right text-xs text-muted-foreground tabular-nums">
-                    {s.lastActivity
-                      ? new Date(s.lastActivity).toLocaleString("pt-BR", {
-                          timeZone: "America/Sao_Paulo",
-                          day: "2-digit",
-                          month: "2-digit",
-                          year: "2-digit",
-                          hour: "2-digit",
-                          minute: "2-digit",
-                        })
-                      : "—"}
-                  </td>
-                </tr>
-              ))}
-              {students.length === 0 ? (
-                <tr>
-                  <td
-                    colSpan={6}
-                    className="px-4 py-6 text-center text-sm text-muted-foreground"
-                  >
-                    <T en="No students yet." pt="Ainda sem alunos." />
-                  </td>
-                </tr>
-              ) : null}
-            </tbody>
-          </table>
-        </div>
+        <XpLeaderboardTable rows={students} />
       </section>
 
       {/* ========== AI tutor usage ========== */}
