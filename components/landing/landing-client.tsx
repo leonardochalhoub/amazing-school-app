@@ -126,7 +126,7 @@ export function LandingClient() {
               student guide is always the pt-BR version. */}
           <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs">
             <a
-              href="/guides/teacher.html"
+              href="/r/teacher-docs"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-card/60 px-3 py-1 font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
@@ -140,7 +140,7 @@ export function LandingClient() {
               <ExternalLink className="h-3 w-3 opacity-60" />
             </a>
             <a
-              href="/guides/student.pt.html"
+              href="/r/student-docs-pt"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-card/60 px-3 py-1 font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"

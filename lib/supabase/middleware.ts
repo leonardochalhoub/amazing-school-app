@@ -38,6 +38,8 @@ export async function updateSession(request: NextRequest) {
     request.nextUrl.pathname.startsWith("/demo") ||
     request.nextUrl.pathname.startsWith("/join") ||
     request.nextUrl.pathname.startsWith("/removed") ||
+    request.nextUrl.pathname.startsWith("/guides/") ||
+    request.nextUrl.pathname.startsWith("/r/") ||
     request.nextUrl.pathname.startsWith("/api/demo-login") ||
     request.nextUrl.pathname.startsWith("/api/demo-signout");
 

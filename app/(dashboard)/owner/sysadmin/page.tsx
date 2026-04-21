@@ -14,6 +14,7 @@ import { SpeakingStatsTable } from "@/components/teacher/speaking-stats-table";
 import { getAllSpeakingStats } from "@/lib/actions/speaking-events";
 import { SysadminReportsPanel } from "@/components/reports/sysadmin-reports-panel";
 import { T } from "@/components/reports/t";
+import { getPublicClickCounts } from "@/lib/actions/public-clicks";
 import {
   Users,
   GraduationCap,
@@ -37,6 +38,9 @@ import {
   Database,
   AlertTriangle,
   ShieldCheck,
+  Sparkle,
+  BookOpen as BookOpenIcon,
+  MousePointerClick,
 } from "lucide-react";
 
 export const dynamic = "force-dynamic";
@@ -86,11 +90,12 @@ export default async function SysadminPage() {
     contentMix,
     health,
   } = overview;
-  const [logins, owners, audit, speakingStats] = await Promise.all([
+  const [logins, owners, audit, speakingStats, clickCounts] = await Promise.all([
     listRecentLogins(100),
     listOwners(),
     listRoleAuditLog(25),
     getAllSpeakingStats().catch(() => []),
+    getPublicClickCounts(),
   ]);
 
   return (
@@ -263,6 +268,95 @@ export default async function SysadminPage() {
           value={`${kpis.paidInvoicesThisMonth} / ${kpis.paidInvoicesThisMonth + kpis.pendingInvoicesThisMonth}`}
           sub={<T en="Paid / total (aggregate)" pt="Pagas / total (agregado)" />}
         />
+      </section>
+
+      {/* ============================ Public funnel clicks ============================ */}
+      <section className="space-y-2">
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+          <T
+            en="Public access — demos & documentation"
+            pt="Acesso público — demos e documentação"
+          />
+        </h2>
+        <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-5">
+          <Kpi
+            icon={<Sparkle className="h-4 w-4" />}
+            label={
+              <T
+                en="Luiza demo (teacher)"
+                pt="Demo Luiza (professora)"
+              />
+            }
+            value={clickCounts.allTime.demo_teacher.toLocaleString("pt-BR")}
+            sub={
+              <T
+                en={`${clickCounts.thisMonth.demo_teacher.toLocaleString("pt-BR")} this month · all-time`}
+                pt={`${clickCounts.thisMonth.demo_teacher.toLocaleString("pt-BR")} este mês · total`}
+              />
+            }
+            tone="emerald"
+          />
+          <Kpi
+            icon={<Sparkle className="h-4 w-4" />}
+            label={
+              <T en="Ana demo (student)" pt="Demo Ana (aluna)" />
+            }
+            value={clickCounts.allTime.demo_student.toLocaleString("pt-BR")}
+            sub={
+              <T
+                en={`${clickCounts.thisMonth.demo_student.toLocaleString("pt-BR")} this month · all-time`}
+                pt={`${clickCounts.thisMonth.demo_student.toLocaleString("pt-BR")} este mês · total`}
+              />
+            }
+            tone="indigo"
+          />
+          <Kpi
+            icon={<BookOpenIcon className="h-4 w-4" />}
+            label={
+              <T en="Teacher docs · EN" pt="Doc professor · EN" />
+            }
+            value={clickCounts.allTime.doc_teacher.toLocaleString("pt-BR")}
+            sub={
+              <T
+                en={`${clickCounts.thisMonth.doc_teacher.toLocaleString("pt-BR")} this month · all-time`}
+                pt={`${clickCounts.thisMonth.doc_teacher.toLocaleString("pt-BR")} este mês · total`}
+              />
+            }
+          />
+          <Kpi
+            icon={<BookOpenIcon className="h-4 w-4" />}
+            label={
+              <T en="Student docs · PT" pt="Doc aluno · PT" />
+            }
+            value={clickCounts.allTime.doc_student_pt.toLocaleString("pt-BR")}
+            sub={
+              <T
+                en={`${clickCounts.thisMonth.doc_student_pt.toLocaleString("pt-BR")} this month · all-time`}
+                pt={`${clickCounts.thisMonth.doc_student_pt.toLocaleString("pt-BR")} este mês · total`}
+              />
+            }
+          />
+          <Kpi
+            icon={<BookOpenIcon className="h-4 w-4" />}
+            label={
+              <T en="Student docs · EN" pt="Doc aluno · EN" />
+            }
+            value={clickCounts.allTime.doc_student_en.toLocaleString("pt-BR")}
+            sub={
+              <T
+                en={`${clickCounts.thisMonth.doc_student_en.toLocaleString("pt-BR")} this month · all-time`}
+                pt={`${clickCounts.thisMonth.doc_student_en.toLocaleString("pt-BR")} este mês · total`}
+              />
+            }
+          />
+        </div>
+        <p className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+          <MousePointerClick className="h-3 w-3" />
+          <T
+            en="Counted on every click — links stay stable even when content changes."
+            pt="Contados a cada clique — os links permanecem estáveis mesmo se o conteúdo mudar."
+          />
+        </p>
       </section>
 
       {/* ============================ Charts ============================ */}

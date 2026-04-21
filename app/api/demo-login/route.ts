@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { cookies } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
 import { DEMO_PRESETS, type DemoKind } from "@/lib/demo/presets";
+import { logPublicClick } from "@/lib/actions/public-clicks";
 
 /**
  * POST /api/demo-login
@@ -47,6 +48,12 @@ export async function POST(request: NextRequest) {
       303,
     );
   }
+  // Counter bump — fire-and-forget. Every successful demo login is
+  // one row in public_click_events keyed to the demo persona, so the
+  // sysadmin dashboard can show Luiza / Ana access counts.
+  logPublicClick(
+    kind === "teacher" ? "demo_teacher" : "demo_student",
+  ).catch(() => {});
   const target = preset.role === "teacher" ? "/teacher" : "/student";
   const response = NextResponse.redirect(new URL(target, request.url), 303);
 

@@ -286,7 +286,7 @@ export default async function TeacherProfilePage() {
           </p>
           <div className="grid gap-3 sm:grid-cols-3">
             <a
-              href="/guides/teacher.html"
+              href="/r/teacher-docs"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between gap-3 rounded-xl border border-border bg-card/60 p-3 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
@@ -307,7 +307,7 @@ export default async function TeacherProfilePage() {
               <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-primary" />
             </a>
             <a
-              href="/guides/student.pt.html"
+              href="/r/student-docs-pt"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between gap-3 rounded-xl border border-border bg-card/60 p-3 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
@@ -328,7 +328,7 @@ export default async function TeacherProfilePage() {
               <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-primary" />
             </a>
             <a
-              href="/guides/student.html"
+              href="/r/student-docs-en"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between gap-3 rounded-xl border border-border bg-card/60 p-3 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
