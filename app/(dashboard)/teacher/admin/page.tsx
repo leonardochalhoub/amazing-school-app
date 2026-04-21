@@ -47,6 +47,8 @@ import {
   CalendarClock,
 } from "lucide-react";
 import { isTeacherRole } from "@/lib/auth/roles";
+import { getMyStudentsByCity } from "@/lib/actions/teachers-map";
+import { BrazilTeachersMap } from "@/components/owner/brazil-teachers-map";
 
 export const dynamic = "force-dynamic";
 
@@ -75,6 +77,7 @@ export default async function TeacherManagementPage() {
     receiptsForQuery,
     certificatesForTeacher,
     serviceReceipts,
+    studentMapPoints,
   ] = await Promise.all([
     getTeacherDashboardData(),
     getTeacherManagementMatrix({ months: 24 }),
@@ -85,6 +88,7 @@ export default async function TeacherManagementPage() {
     listTeacherReceipts(),
     listCertificatesForTeacher(),
     listServiceReceiptsForTeacher(),
+    getMyStudentsByCity().catch(() => []),
   ]);
 
   const financeAvailable = !("error" in financeData);
@@ -515,6 +519,9 @@ export default async function TeacherManagementPage() {
       {financeAvailable && rows.length > 0 ? (
         <RevenueAnalytics months={months} rows={rows} groupBy="student" />
       ) : null}
+
+      {/* ========== Brazil map — teacher's own students ========== */}
+      <BrazilTeachersMap points={studentMapPoints} mode="teacher" />
 
       {/* ========== Top students by XP ========== */}
       <section className="space-y-3">

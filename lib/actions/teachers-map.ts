@@ -1,5 +1,6 @@
 "use server";
 
+import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isOwner } from "@/lib/auth/roles";
 import { locateCity } from "@/lib/data/brazil-city-coords";
@@ -71,6 +72,81 @@ export async function getPeopleByCity(): Promise<CityPeoplePoint[]> {
 
   return [...buckets.values()]
     .map((b) => ({ ...b, total: b.teachers + b.students }))
+    .filter((p) => p.total > 0)
+    .sort((a, b) => b.total - a.total);
+}
+
+/**
+ * Per-teacher version used on /teacher/admin. Only the signed-in
+ * teacher's own students are plotted. The data structure matches
+ * CityPeoplePoint so the same map component can render it — the
+ * "teachers" bucket is always 0 in this mode; every point is a
+ * student count.
+ */
+export async function getMyStudentsByCity(): Promise<CityPeoplePoint[]> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return [];
+
+  const admin = createAdminClient();
+
+  // Pull roster rows the teacher owns that are linked to an auth
+  // user — only linked students have a profiles.location to locate.
+  const { data: roster } = await admin
+    .from("roster_students")
+    .select("auth_user_id")
+    .eq("teacher_id", user.id)
+    .is("deleted_at", null)
+    .not("auth_user_id", "is", null);
+
+  const studentIds = [
+    ...new Set(
+      ((roster ?? []) as { auth_user_id: string }[])
+        .map((r) => r.auth_user_id)
+        .filter(Boolean),
+    ),
+  ];
+  if (studentIds.length === 0) return [];
+
+  const { data: profiles } = await admin
+    .from("profiles")
+    .select("id, location")
+    .in("id", studentIds);
+
+  type Bucket = {
+    name: string;
+    uf: string;
+    lat: number;
+    lng: number;
+    students: number;
+  };
+  const buckets = new Map<string, Bucket>();
+
+  for (const row of (profiles ?? []) as Array<{
+    id: string;
+    location: string | null;
+  }>) {
+    const coord = locateCity(row.location);
+    if (!coord) continue;
+    const key = `${coord.name.toLowerCase()}|${coord.uf.toUpperCase()}`;
+    let bucket = buckets.get(key);
+    if (!bucket) {
+      bucket = {
+        name: coord.name,
+        uf: coord.uf,
+        lat: coord.lat,
+        lng: coord.lng,
+        students: 0,
+      };
+      buckets.set(key, bucket);
+    }
+    bucket.students += 1;
+  }
+
+  return [...buckets.values()]
+    .map((b) => ({ ...b, teachers: 0, total: b.students }))
     .filter((p) => p.total > 0)
     .sort((a, b) => b.total - a.total);
 }

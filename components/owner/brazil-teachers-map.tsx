@@ -34,6 +34,59 @@ const Plot = dynamic(
 
 interface Props {
   points: CityPeoplePoint[];
+  /**
+   * - "owner" shows the full toggle set (All / Teachers / Students)
+   *   and the page title mentions both roles.
+   * - "teacher" hides the role filter, fixes view to students only,
+   *   and retitles the section to "Seus alunos pelo Brasil".
+   */
+  mode?: "owner" | "teacher";
+}
+
+/**
+ * Smart bounds: zoom in when every point fits a small region, fall
+ * back to the whole Brazil box when the cluster spans the country.
+ * Padding scales with the cluster size so single-city views get a
+ * comfortable 2° halo while multi-state views keep their spacing.
+ */
+const BRAZIL_BOUNDS = {
+  lon: [-75, -33] as [number, number],
+  lat: [-34, 6] as [number, number],
+};
+
+function computeBounds(points: { lat: number; lng: number }[]): {
+  lon: [number, number];
+  lat: [number, number];
+} {
+  if (points.length === 0) return BRAZIL_BOUNDS;
+  let minLat = Infinity;
+  let maxLat = -Infinity;
+  let minLng = Infinity;
+  let maxLng = -Infinity;
+  for (const p of points) {
+    if (p.lat < minLat) minLat = p.lat;
+    if (p.lat > maxLat) maxLat = p.lat;
+    if (p.lng < minLng) minLng = p.lng;
+    if (p.lng > maxLng) maxLng = p.lng;
+  }
+  const latSpread = maxLat - minLat;
+  const lngSpread = maxLng - minLng;
+  // If the cluster already covers most of Brazil just use the full
+  // box — tighter framing wouldn't help and would push pins to the
+  // edges.
+  if (latSpread > 25 || lngSpread > 25) return BRAZIL_BOUNDS;
+  // Single-point or ultra-tight cluster → enforce a minimum ~2.5°
+  // halo in each direction so the pin doesn't sit on the very edge.
+  const latPad = Math.max(1.5, latSpread * 0.35);
+  const lngPad = Math.max(2.5, lngSpread * 0.35);
+  // Clamp to Brazil so a coastal city doesn't zoom out into the
+  // Atlantic beyond the country outline.
+  const clampLat = (v: number) => Math.max(-34, Math.min(6, v));
+  const clampLng = (v: number) => Math.max(-75, Math.min(-33, v));
+  return {
+    lon: [clampLng(minLng - lngPad), clampLng(maxLng + lngPad)],
+    lat: [clampLat(minLat - latPad), clampLat(maxLat + latPad)],
+  };
 }
 
 /**
@@ -62,11 +115,13 @@ const SCALES = {
 type ScaleKey = keyof typeof SCALES;
 type FilterKey = "all" | "teachers" | "students";
 
-export function BrazilTeachersMap({ points }: Props) {
+export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
   const { locale } = useI18n();
   const pt = locale === "pt-BR";
   const [scale, setScale] = useState<ScaleKey>("viridis");
-  const [filter, setFilter] = useState<FilterKey>("all");
+  const [filter, setFilter] = useState<FilterKey>(
+    mode === "teacher" ? "students" : "all",
+  );
 
   // Apply role filter — if filter is teachers/students we only plot
   // cities that actually have that role, and the bubble value
@@ -155,6 +210,8 @@ export function BrazilTeachersMap({ points }: Props) {
     ];
   }, [filtered, scale, pt, filter]);
 
+  const bounds = useMemo(() => computeBounds(filtered), [filtered]);
+
   const layout = useMemo(
     () => ({
       autosize: true,
@@ -174,8 +231,8 @@ export function BrazilTeachersMap({ points }: Props) {
         showlakes: true,
         lakecolor: "#0a0a12",
         showframe: false,
-        lonaxis: { range: [-75, -33] },
-        lataxis: { range: [-34, 6] },
+        lonaxis: { range: bounds.lon },
+        lataxis: { range: bounds.lat },
         bgcolor: "rgba(0,0,0,0)",
       },
       paper_bgcolor: "rgba(0,0,0,0)",
@@ -187,7 +244,7 @@ export function BrazilTeachersMap({ points }: Props) {
       },
       showlegend: false,
     }),
-    [],
+    [bounds],
   );
 
   const totals = useMemo(() => {
@@ -205,38 +262,50 @@ export function BrazilTeachersMap({ points }: Props) {
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            {pt ? "Pessoas pelo Brasil" : "People across Brazil"}
+            {mode === "teacher"
+              ? pt
+                ? "Seus alunos pelo Brasil"
+                : "Your students across Brazil"
+              : pt
+                ? "Pessoas pelo Brasil"
+                : "People across Brazil"}
           </h2>
           <p className="text-xs text-muted-foreground">
-            {pt
-              ? `${totals.teachers} ${totals.teachers === 1 ? "professor" : "professores"} · ${totals.students} ${totals.students === 1 ? "aluno" : "alunos"} · ${totals.cities} ${totals.cities === 1 ? "cidade" : "cidades"} · passe o mouse para detalhes.`
-              : `${totals.teachers} ${totals.teachers === 1 ? "teacher" : "teachers"} · ${totals.students} ${totals.students === 1 ? "student" : "students"} · ${totals.cities} ${totals.cities === 1 ? "city" : "cities"} · hover for details.`}
+            {mode === "teacher"
+              ? pt
+                ? `${totals.students} ${totals.students === 1 ? "aluno" : "alunos"} em ${totals.cities} ${totals.cities === 1 ? "cidade" : "cidades"} · passe o mouse para detalhes.`
+                : `${totals.students} ${totals.students === 1 ? "student" : "students"} in ${totals.cities} ${totals.cities === 1 ? "city" : "cities"} · hover for details.`
+              : pt
+                ? `${totals.teachers} ${totals.teachers === 1 ? "professor" : "professores"} · ${totals.students} ${totals.students === 1 ? "aluno" : "alunos"} · ${totals.cities} ${totals.cities === 1 ? "cidade" : "cidades"} · passe o mouse para detalhes.`
+                : `${totals.teachers} ${totals.teachers === 1 ? "teacher" : "teachers"} · ${totals.students} ${totals.students === 1 ? "student" : "students"} · ${totals.cities} ${totals.cities === 1 ? "city" : "cities"} · hover for details.`}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          {/* Role filter */}
-          <div className="inline-flex rounded-md border border-border bg-background p-0.5 text-xs">
-            {(
-              [
-                { k: "all", en: "Both", pt: "Todos" },
-                { k: "teachers", en: "Teachers", pt: "Professores" },
-                { k: "students", en: "Students", pt: "Alunos" },
-              ] as const
-            ).map((opt) => (
-              <button
-                key={opt.k}
-                type="button"
-                onClick={() => setFilter(opt.k)}
-                className={`rounded px-3 py-1 font-medium transition-colors ${
-                  filter === opt.k
-                    ? "bg-foreground text-background"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {pt ? opt.pt : opt.en}
-              </button>
-            ))}
-          </div>
+          {/* Role filter — only shown on owner/sysadmin map. */}
+          {mode === "owner" ? (
+            <div className="inline-flex rounded-md border border-border bg-background p-0.5 text-xs">
+              {(
+                [
+                  { k: "all", en: "Both", pt: "Todos" },
+                  { k: "teachers", en: "Teachers", pt: "Professores" },
+                  { k: "students", en: "Students", pt: "Alunos" },
+                ] as const
+              ).map((opt) => (
+                <button
+                  key={opt.k}
+                  type="button"
+                  onClick={() => setFilter(opt.k)}
+                  className={`rounded px-3 py-1 font-medium transition-colors ${
+                    filter === opt.k
+                      ? "bg-foreground text-background"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {pt ? opt.pt : opt.en}
+                </button>
+              ))}
+            </div>
+          ) : null}
           {/* Palette toggle */}
           <div className="inline-flex rounded-md border border-border bg-background p-0.5 text-xs">
             <button
