@@ -7,7 +7,7 @@ import { LocationCard } from "@/components/shared/location-card";
 import { UpcomingWindowCard } from "@/components/shared/upcoming-window-card";
 import { PrivacyNotice } from "@/components/shared/privacy-notice";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, ArrowUpRight, Calendar } from "lucide-react";
+import { BookOpen, ArrowUpRight, Calendar, Flame } from "lucide-react";
 import { redirect } from "next/navigation";
 import { MyDocumentsCard } from "@/components/reports/my-documents-card";
 import { CertificatesPanel } from "@/components/reports/certificates-panel";
@@ -110,123 +110,123 @@ export default async function StudentProfilePage() {
     : null;
 
   return (
-    <div className="space-y-6 max-w-2xl">
+    <div className="mx-auto w-full max-w-5xl space-y-6 pb-10">
+      {/* Header */}
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-bold">Profile</h1>
+          <h1 className="text-2xl font-bold sm:text-3xl">Profile</h1>
           <p className="text-sm text-muted-foreground">
-            Manage your photo — visible to your teacher and classmates.
+            Manage your photo, preferences, and account details.
           </p>
         </div>
         <PrivacyNotice />
       </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base">Profile photo</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <AvatarUploader
-            currentSignedUrl={signedUrl}
-            fullName={profile.full_name}
-            userId={user.id}
-            ageGroup={ageGroup}
-            gender={gender}
+      {/* Identity hero — avatar + name + age/gender + tenure stats
+          all in one horizontal card at the top. Stacks on mobile. */}
+      <Card className="overflow-hidden">
+        <div className="relative">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-pink-500/10"
           />
-          <p className="mt-3 text-xs text-muted-foreground">
-            Max 5 MB · JPEG, PNG, or WebP · auto-resized to 512×512.
-          </p>
-        </CardContent>
+          <CardContent className="relative grid gap-5 p-5 sm:grid-cols-[auto_1fr] sm:p-6 lg:grid-cols-[auto_1fr_auto]">
+            <div className="flex items-center justify-center sm:block">
+              <AvatarUploader
+                currentSignedUrl={signedUrl}
+                fullName={profile.full_name}
+                userId={user.id}
+                ageGroup={ageGroup}
+                gender={gender}
+              />
+            </div>
+            <div className="min-w-0 space-y-1.5 self-center">
+              <p className="truncate text-lg font-semibold sm:text-xl">
+                {studentFullName}
+              </p>
+              <p className="text-xs text-muted-foreground">
+                {ageGroup ? `${ageGroup} · ` : ""}
+                {gender ?? "—"}
+              </p>
+              <p className="text-[11px] text-muted-foreground">
+                Max 5 MB · JPEG / PNG / WebP · auto-resized to 512×512.
+              </p>
+            </div>
+            {startingDate ? (
+              <div className="grid gap-2 self-center sm:col-span-2 sm:grid-cols-3 lg:col-span-1 lg:grid-cols-1 lg:gap-3">
+                <TenureStat
+                  icon={<Flame className="h-4 w-4" />}
+                  tone="amber"
+                  label="Days with us · Dias conosco"
+                  value={(daysStudying ?? 0).toLocaleString("pt-BR")}
+                />
+                <TenureStat
+                  icon={<Calendar className="h-4 w-4" />}
+                  tone="indigo"
+                  label="Starting · Início"
+                  value={startingDate}
+                />
+                <TenureStat
+                  icon={<Calendar className="h-4 w-4" />}
+                  tone="zinc"
+                  label="Last day · Último"
+                  value={
+                    endDate ?? (
+                      <span className="text-emerald-600 dark:text-emerald-400">
+                        Active · Ativo
+                      </span>
+                    )
+                  }
+                />
+              </div>
+            ) : null}
+          </CardContent>
+        </div>
       </Card>
 
-      <LocationCard initial={location} />
-
-      <UpcomingWindowCard initial={upcomingWindow} />
-
-      <ChangePasswordCard
-        isDemo={(user.email ?? "").toLowerCase().startsWith("demo.")}
-      />
-
-      {/* Meu currículo + (opcional) meus recibos. Só aparece quando
-          o aluno está vinculado a um registro de aluno (roster). */}
-      {myRoster.rosterId ? (
-        <>
-          <MyDocumentsCard
-            rosterId={myRoster.rosterId}
-            rosterCreatedAt={myRoster.createdAt}
-            billingStartsOn={myRoster.billingStartsOn}
-            receiptsVisible={myRoster.receiptsVisible}
-            receipts={myReceipts}
+      {/* Preferences + documents in two columns on lg */}
+      <div className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+        <div className="space-y-4">
+          <LocationCard initial={location} />
+          {myRoster.rosterId ? (
+            <MyDocumentsCard
+              rosterId={myRoster.rosterId}
+              rosterCreatedAt={myRoster.createdAt}
+              billingStartsOn={myRoster.billingStartsOn}
+              receiptsVisible={myRoster.receiptsVisible}
+              receipts={myReceipts}
+            />
+          ) : null}
+          {myRoster.rosterId ? (
+            <CertificatesPanel
+              rosterStudentId={myRoster.rosterId}
+              studentName={studentFullName}
+              defaultStartOn={myRoster.billingStartsOn ?? myRoster.createdAt}
+              certificates={myCertificates}
+              readOnly
+            />
+          ) : null}
+        </div>
+        <div className="space-y-4">
+          <UpcomingWindowCard initial={upcomingWindow} />
+          <ChangePasswordCard
+            isDemo={(user.email ?? "").toLowerCase().startsWith("demo.")}
           />
-          <CertificatesPanel
-            rosterStudentId={myRoster.rosterId}
-            studentName={studentFullName}
-            defaultStartOn={myRoster.billingStartsOn ?? myRoster.createdAt}
-            certificates={myCertificates}
-            readOnly
-          />
-        </>
-      ) : null}
+          <CefrExplainerCard />
+        </div>
+      </div>
 
-      <CefrExplainerCard />
-
-      {startingDate ? (
-        <Card>
-          <CardContent className="space-y-3 p-4">
-            <div className="flex items-center gap-4">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-500/15 text-indigo-600 dark:text-indigo-400">
-                <Calendar className="h-5 w-5" />
-              </span>
-              <div className="flex-1 min-w-0">
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                  Starting date · Data de início
-                </p>
-                <p className="mt-0.5 text-base font-semibold">
-                  {startingDate}
-                </p>
-                {daysStudying !== null ? (
-                  <p className="text-xs text-muted-foreground">
-                    {daysStudying.toLocaleString("pt-BR")} days with us
-                  </p>
-                ) : null}
-              </div>
-            </div>
-            <div className="flex items-center gap-4 border-t border-border pt-3">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-muted text-muted-foreground">
-                <Calendar className="h-5 w-5" />
-              </span>
-              <div className="flex-1 min-w-0">
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                  Last day · Último dia
-                </p>
-                <p className="mt-0.5 text-base font-semibold">
-                  {endDate ?? (
-                    <span className="text-emerald-600 dark:text-emerald-400">
-                      Active · Ativo
-                    </span>
-                  )}
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  {endDate
-                    ? "Set by your teacher"
-                    : "Your teacher will set this when your classes finish."}
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      ) : null}
-
+      {/* Onboarding guides — compact, full-width at the bottom */}
       <Card>
         <CardHeader>
           <CardTitle className="text-base">
-            Como usar a Amazing School · How to use Amazing School
+            How to use Amazing School · Como usar
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
           <p className="text-xs text-muted-foreground">
-            Passeio rápido de ~10 minutos pelo painel, laboratório de
-            fala, medalhas e tutor de IA. Abre em uma nova aba.
+            Quick ~10-minute tour of the dashboard, speaking lab, badges,
+            and AI tutor. Opens in a new tab.
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
             <a
@@ -274,6 +274,39 @@ export default async function StudentProfilePage() {
           </div>
         </CardContent>
       </Card>
+    </div>
+  );
+}
+
+function TenureStat({
+  icon,
+  tone,
+  label,
+  value,
+}: {
+  icon: React.ReactNode;
+  tone: "amber" | "indigo" | "zinc";
+  label: string;
+  value: React.ReactNode;
+}) {
+  const toneClass: Record<typeof tone, string> = {
+    amber: "bg-amber-500/15 text-amber-600 dark:text-amber-400",
+    indigo: "bg-indigo-500/15 text-indigo-600 dark:text-indigo-400",
+    zinc: "bg-muted text-muted-foreground",
+  };
+  return (
+    <div className="flex items-center gap-2.5 rounded-xl border border-border/60 bg-background/60 p-3">
+      <span
+        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${toneClass[tone]}`}
+      >
+        {icon}
+      </span>
+      <div className="min-w-0">
+        <p className="truncate text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+          {label}
+        </p>
+        <p className="truncate text-sm font-semibold">{value}</p>
+      </div>
     </div>
   );
 }
