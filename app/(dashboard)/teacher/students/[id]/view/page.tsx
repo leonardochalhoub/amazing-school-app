@@ -333,8 +333,8 @@ export default async function StudentViewAsStudent({
                   </div>
                   <p className="text-[11px] text-muted-foreground tabular-nums">
                     <T
-                      en={`${xpProg.current}/${xpProg.needed} XP to next level`}
-                      pt={`${xpProg.current}/${xpProg.needed} XP para o próximo nível`}
+                      en={`${Math.max(0, xpProg.needed - xpProg.current)} XP to next level`}
+                      pt={`Faltam ${Math.max(0, xpProg.needed - xpProg.current)} XP para o próximo nível`}
                     />
                   </p>
                 </div>
