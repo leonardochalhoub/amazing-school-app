@@ -28,8 +28,10 @@ import {
 import {
   HISTORY_STATUSES,
   SKILL_FOCUS_OPTIONS,
+  CEFR_LEVELS,
   type HistoryStatus,
   type SkillFocus,
+  type CefrLevel,
   type StudentHistoryEntry,
 } from "@/lib/actions/student-history-types";
 
@@ -46,7 +48,9 @@ interface DraftEntry {
   id?: string;
   event_date: string;
   event_time: string;
+  end_time: string;
   status: HistoryStatus;
+  cefr_level: CefrLevel | "";
   lesson_content: string;
   skill_focus: SkillFocus[];
   meeting_link: string;
@@ -61,7 +65,12 @@ function fromEntry(e: StudentHistoryEntry): DraftEntry {
     id: e.id,
     event_date: e.event_date,
     event_time: e.event_time ?? "",
+    end_time: (e as { end_time?: string | null }).end_time ?? "",
     status: e.status,
+    cefr_level:
+      ((e as { cefr_level?: CefrLevel | null }).cefr_level as
+        | CefrLevel
+        | null) ?? "",
     lesson_content: e.lesson_content ?? "",
     skill_focus: e.skill_focus,
     meeting_link: e.meeting_link ?? "",
@@ -72,7 +81,9 @@ function emptyDraft(): DraftEntry {
   return {
     event_date: todayISO(),
     event_time: "",
+    end_time: "",
     status: "Done",
+    cefr_level: "",
     lesson_content: "",
     skill_focus: [],
     meeting_link: "",
@@ -120,10 +131,12 @@ export function StudentHistoryPanel({
         classroom_id: classroomId ?? null,
         event_date: draft.event_date,
         event_time: draft.event_time || null,
+        end_time: draft.end_time || null,
         status: draft.status,
         lesson_content: draft.lesson_content,
         skill_focus: draft.skill_focus,
         meeting_link: draft.meeting_link,
+        cefr_level: draft.cefr_level || null,
       });
       if ("error" in res) {
         toast.error(res.error);
@@ -199,12 +212,22 @@ export function StudentHistoryPanel({
                 />
               </div>
               <div className="space-y-1.5">
-                <Label>Time (optional)</Label>
+                <Label>Início · Start</Label>
                 <Input
                   type="time"
                   value={draft.event_time}
                   onChange={(e) =>
                     setDraft({ ...draft, event_time: e.target.value })
+                  }
+                />
+              </div>
+              <div className="space-y-1.5">
+                <Label>Fim · End</Label>
+                <Input
+                  type="time"
+                  value={draft.end_time}
+                  onChange={(e) =>
+                    setDraft({ ...draft, end_time: e.target.value })
                   }
                 />
               </div>
@@ -223,6 +246,26 @@ export function StudentHistoryPanel({
                   {HISTORY_STATUSES.map((s) => (
                     <option key={s} value={s}>
                       {s}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="space-y-1.5">
+                <Label>CEFR level</Label>
+                <select
+                  value={draft.cefr_level}
+                  onChange={(e) =>
+                    setDraft({
+                      ...draft,
+                      cefr_level: e.target.value as CefrLevel | "",
+                    })
+                  }
+                  className="h-9 w-full rounded-md border border-border bg-background px-2 text-sm"
+                >
+                  <option value="">—</option>
+                  {CEFR_LEVELS.map((lvl) => (
+                    <option key={lvl} value={lvl}>
+                      {lvl}
                     </option>
                   ))}
                 </select>
