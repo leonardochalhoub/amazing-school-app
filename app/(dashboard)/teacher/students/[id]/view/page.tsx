@@ -21,6 +21,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { CertificatesPanel } from "@/components/reports/certificates-panel";
 import { CefrExplainerCard } from "@/components/reports/cefr-explainer-card";
+import { BadgeChip } from "@/components/gamification/badge-chip";
 import { listCertificatesForStudent } from "@/lib/actions/certificates";
 import { getAssignmentsForRosterStudent } from "@/lib/actions/assignments";
 import { getLevel, getXpForNextLevel } from "@/lib/gamification/engine";
@@ -124,9 +125,10 @@ export default async function StudentViewAsStudent({
           .eq("student_id", studentAuthId)
           .order("earned_at", { ascending: false })
           .limit(12),
+        // Per-roster-student events.
         admin
           .from("student_history")
-          .select("event_date, status")
+          .select("event_date, status, classroom_id, roster_student_id")
           .eq("roster_student_id", id)
           .order("event_date", { ascending: false })
           .limit(100),
@@ -167,11 +169,30 @@ export default async function StudentViewAsStudent({
       .slice(0, 5)
       .map((a) => a.lesson_slug);
     // Class history: figure out the most recent done/absent and the
-    // next planned one.
-    const history = (historyRes.data ?? []) as Array<{
+    // next planned one. Pulls per-roster rows AND classroom-wide
+    // rows for the student's classroom (the Schedule-class flow
+    // writes either, depending on whether the teacher targeted the
+    // student or the whole class).
+    const perStudentHist = (historyRes.data ?? []) as Array<{
       event_date: string;
       status: string;
+      classroom_id: string | null;
+      roster_student_id: string | null;
     }>;
+    let classroomWideHist: typeof perStudentHist = [];
+    if (student.classroom_id) {
+      const { data } = await admin
+        .from("student_history")
+        .select("event_date, status, classroom_id, roster_student_id")
+        .eq("classroom_id", student.classroom_id)
+        .is("roster_student_id", null)
+        .order("event_date", { ascending: false })
+        .limit(100);
+      classroomWideHist = (data as typeof perStudentHist) ?? [];
+    }
+    const history = [...perStudentHist, ...classroomWideHist].sort((a, b) =>
+      b.event_date.localeCompare(a.event_date),
+    );
     const todayISO = new Date().toISOString().slice(0, 10);
     lastClassDate =
       history.find(
@@ -180,7 +201,7 @@ export default async function StudentViewAsStudent({
     nextClassDate =
       [...history]
         .reverse()
-        .find((h) => h.event_date > todayISO && h.status === "Planned")
+        .find((h) => h.event_date >= todayISO && h.status === "Planned")
         ?.event_date ?? null;
     daysActiveLast30 = new Set(
       ((activityRes.data ?? []) as Array<{ activity_date: string }>).map(
@@ -288,11 +309,17 @@ export default async function StudentViewAsStudent({
                   <p className="text-xl font-semibold tabular-nums">
                     Lv.{level} · {totalXp.toLocaleString("pt-BR")} XP
                   </p>
-                  <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
+                  <div
+                    role="progressbar"
+                    aria-valuenow={Math.round(xpProg.progress)}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    className="relative h-3 w-full overflow-hidden rounded-full bg-muted ring-1 ring-border/60"
+                  >
                     <div
-                      className="h-full bg-gradient-to-r from-indigo-500 to-violet-500 transition-all"
+                      className="h-full rounded-full bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500 shadow-[0_0_12px_rgba(139,92,246,0.5)] transition-[width] duration-700"
                       style={{
-                        width: `${Math.min(100, Math.round(xpProg.progress * 100))}%`,
+                        width: `${Math.max(0, Math.min(100, xpProg.progress))}%`,
                       }}
                     />
                   </div>
@@ -530,12 +557,10 @@ export default async function StudentViewAsStudent({
                 ) : (
                   <div className="flex flex-wrap gap-1.5">
                     {badges.map((b, i) => (
-                      <span
+                      <BadgeChip
                         key={`${b.badge_type}-${i}`}
-                        className="rounded-full border border-border/70 bg-muted/40 px-2.5 py-1 text-[11px] font-medium"
-                      >
-                        {b.badge_type}
-                      </span>
+                        type={b.badge_type}
+                      />
                     ))}
                   </div>
                 )}
