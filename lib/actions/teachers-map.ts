@@ -30,6 +30,37 @@ export async function getPeopleByCity(): Promise<CityPeoplePoint[]> {
   if (!ok) return [];
 
   const admin = createAdminClient();
+
+  // Resolve the exclusion set up front — same rules as the login-log
+  // panel: hide demo personas, hide the platform owner (Leo), and
+  // hide every student Leo coaches. The map should only count real
+  // third-party teachers and their own students.
+  const OWNER_EMAIL = "leochalhoub@hotmail.com";
+  const { data: authList } = await admin.auth.admin.listUsers({
+    page: 1,
+    perPage: 1000,
+  });
+  const excludedIds = new Set<string>();
+  let ownerId: string | null = null;
+  for (const u of authList?.users ?? []) {
+    const email = (u.email ?? "").toLowerCase();
+    if (email.startsWith("demo.")) excludedIds.add(u.id);
+    if (email === OWNER_EMAIL) {
+      excludedIds.add(u.id);
+      ownerId = u.id;
+    }
+  }
+  if (ownerId) {
+    const { data: leoStudents } = await admin
+      .from("roster_students")
+      .select("auth_user_id")
+      .eq("teacher_id", ownerId)
+      .not("auth_user_id", "is", null);
+    for (const r of (leoStudents ?? []) as { auth_user_id: string }[]) {
+      if (r.auth_user_id) excludedIds.add(r.auth_user_id);
+    }
+  }
+
   const { data, error } = await admin
     .from("profiles")
     .select("id, role, location")
@@ -51,6 +82,7 @@ export async function getPeopleByCity(): Promise<CityPeoplePoint[]> {
     role: string | null;
     location: string | null;
   }>) {
+    if (excludedIds.has(row.id)) continue;
     const coord = locateCity(row.location);
     if (!coord) continue;
     const key = `${coord.name.toLowerCase()}|${coord.uf.toUpperCase()}`;

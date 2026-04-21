@@ -12,21 +12,15 @@ import type { CityPeoplePoint } from "@/lib/actions/teachers-map";
 // initialization issues with certain Next.js + React 19 combos, and
 // the full bundle loads reliably. A ~700KB difference on a
 // rarely-visited owner surface is an acceptable trade.
-const Plot = dynamic(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  () =>
-    import("react-plotly.js").then(
-      (m) => m.default as unknown as React.ComponentType<Record<string, unknown>>,
-    ),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex h-[520px] items-center justify-center text-xs text-muted-foreground">
-        carregando mapa…
-      </div>
-    ),
-  },
-);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Plot = dynamic(() => import("react-plotly.js") as any, {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-[520px] items-center justify-center text-xs text-muted-foreground">
+      carregando mapa…
+    </div>
+  ),
+}) as React.ComponentType<Record<string, unknown>>;
 
 interface Props {
   points: CityPeoplePoint[];
@@ -94,12 +88,14 @@ function computeBounds(points: { lat: number; lng: number }[]): {
  *   · reds      : white → dark red (magma-ish)
  */
 const SCALES = {
+  // Cividis — bright yellow → dark blue. Colorblind-safe and
+  // monotonic brightness → luminance, as requested.
   viridis: [
-    [0, "#fde725"],
-    [0.25, "#5ec962"],
-    [0.5, "#21918c"],
-    [0.75, "#3b528b"],
-    [1, "#440154"],
+    [0, "#fee838"],
+    [0.25, "#c3b369"],
+    [0.5, "#707173"],
+    [0.75, "#3b496c"],
+    [1, "#00224e"],
   ] as [number, string][],
   grayscale: [
     [0, "#ffffff"],
@@ -214,6 +210,12 @@ export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
             y: 0.5,
             tickfont: { size: 9 },
             outlinewidth: 0,
+            // Counts are whole people — force integer ticks so the
+            // colorbar never shows 0.5 / 1.5 when the range is small.
+            tickmode: "linear" as const,
+            tick0: 1,
+            dtick: Math.max(1, Math.ceil(maxCount / 5)),
+            tickformat: "d",
           },
         },
       },
