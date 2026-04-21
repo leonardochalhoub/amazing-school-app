@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { CalendarClock, X, Users, GraduationCap } from "lucide-react";
+import { useI18n } from "@/lib/i18n/context";
 import type {
   UpcomingClassItem,
   UpcomingClassDebug,
@@ -20,6 +21,8 @@ const DISMISS_KEY = "upcoming_class_prompt_dismissed_v3";
  * message + countdown + counterpart.
  */
 export function UpcomingClassPrompt({ items, debug }: Props) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [mounted, setMounted] = useState(false);
   const [closed, setClosed] = useState(false);
   const [now, setNow] = useState<number | null>(null);
@@ -80,7 +83,7 @@ export function UpcomingClassPrompt({ items, debug }: Props) {
       <div className="pointer-events-auto relative w-full overflow-hidden rounded-2xl border border-border/60 bg-card shadow-2xl ring-1 ring-border">
         <button
           type="button"
-          aria-label="Fechar"
+          aria-label={pt ? "Fechar" : "Close"}
           onClick={dismiss}
           className="absolute right-2 top-2 z-10 inline-flex h-6 w-6 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/20 hover:text-white"
         >
@@ -96,9 +99,13 @@ export function UpcomingClassPrompt({ items, debug }: Props) {
             </span>
             <div className="min-w-0 flex-1">
               <p className="text-[10px] font-semibold uppercase tracking-wider text-white/80">
-                {items.length === 1
-                  ? "Próxima aula"
-                  : `Próximas ${items.length} aulas`}
+                {pt
+                  ? items.length === 1
+                    ? "Próxima aula"
+                    : `Próximas ${items.length} aulas`
+                  : items.length === 1
+                    ? "Upcoming class"
+                    : `Next ${items.length} classes`}
               </p>
             </div>
           </div>
@@ -108,16 +115,20 @@ export function UpcomingClassPrompt({ items, debug }: Props) {
         <ul className="divide-y divide-border/50">
           {items.map((it) => {
             const when = new Date(it.scheduledAt);
-            const countdown = describeCountdown(when.getTime(), now);
-            const dateLabel = when.toLocaleString("pt-BR", {
-              timeZone: "America/Sao_Paulo",
-              weekday: "short",
-              day: "2-digit",
-              month: "short",
-              hour: "2-digit",
-              minute: "2-digit",
-            });
+            const countdown = describeCountdown(when.getTime(), now, pt);
+            const dateLabel = when.toLocaleString(
+              pt ? "pt-BR" : "en-US",
+              {
+                timeZone: "America/Sao_Paulo",
+                weekday: "short",
+                day: "2-digit",
+                month: "short",
+                hour: "2-digit",
+                minute: "2-digit",
+              },
+            );
             const isTeacher = it.role === "teacher";
+            const counterpart = translateCounterpart(it.counterpart, pt);
             return (
               <li key={it.id} className="space-y-1 px-4 py-3 text-xs">
                 <p className="text-sm font-semibold leading-tight">
@@ -138,7 +149,7 @@ export function UpcomingClassPrompt({ items, debug }: Props) {
                   ) : (
                     <GraduationCap className="h-3 w-3" />
                   )}
-                  <span className="truncate">{it.counterpart}</span>
+                  <span className="truncate">{counterpart}</span>
                 </p>
                 {it.content ? (
                   <p className="mt-1 whitespace-pre-wrap rounded-md border border-border/60 bg-muted/40 p-2 text-[11px] leading-relaxed text-muted-foreground">
@@ -164,11 +175,15 @@ export function UpcomingClassPrompt({ items, debug }: Props) {
  * scheduled for 22:00 local doesn't jump forward a day because the
  * server ran in UTC.
  */
-function describeCountdown(targetMs: number, nowMs: number): string {
+function describeCountdown(
+  targetMs: number,
+  nowMs: number,
+  pt: boolean,
+): string {
   const delta = targetMs - nowMs;
-  if (delta <= 0) return "Em andamento";
+  if (delta <= 0) return pt ? "Em andamento" : "In progress";
   const min = Math.floor(delta / 60_000);
-  if (min < 60) return `Em ${min} min`;
+  if (min < 60) return pt ? `Em ${min} min` : `In ${min} min`;
 
   const BRT_OFFSET_MS = -3 * 60 * 60 * 1000;
   const toBrtDay = (ms: number) => {
@@ -182,7 +197,19 @@ function describeCountdown(targetMs: number, nowMs: number): string {
   const days = Math.round(
     (toBrtDay(targetMs) - toBrtDay(nowMs)) / 86_400_000,
   );
-  if (days === 0) return "Hoje";
-  if (days === 1) return "Amanhã";
-  return `Em ${days} dias`;
+  if (days === 0) return pt ? "Hoje" : "Today";
+  if (days === 1) return pt ? "Amanhã" : "Tomorrow";
+  return pt ? `Em ${days} dias` : `In ${days} days`;
+}
+
+/** Only the empty-roster fallback strings ("0 alunos" / "Nenhum…")
+ *  need translation — real names carry through unchanged. */
+function translateCounterpart(raw: string, pt: boolean): string {
+  if (pt) return raw;
+  const m = raw.match(/^(\d+)\s+alunos?$/);
+  if (m) {
+    const n = Number(m[1]);
+    return `${n} student${n === 1 ? "" : "s"}`;
+  }
+  return raw;
 }
