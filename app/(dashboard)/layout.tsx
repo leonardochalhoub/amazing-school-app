@@ -175,7 +175,7 @@ export default async function DashboardLayout({
         schoolLogoPath={schoolLogoPath}
       />
       <UpcomingClassPrompt
-        ctx={nextClass?.ctx ?? null}
+        items={nextClass?.items ?? []}
         debug={nextClass?.debug ?? null}
       />
       <FillLocationPrompt show={!hasLocation} role={role} />

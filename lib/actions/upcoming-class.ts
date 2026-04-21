@@ -12,29 +12,27 @@ export interface UpcomingClassDebug {
   userId: string | null;
 }
 
-export interface UpcomingClassContext {
+export interface UpcomingClassItem {
   id: string;
   title: string;
+  /** Full lesson content / notes for the class, when the teacher
+   *  filled it in. Null when blank. */
+  content: string | null;
+  /** Empty string when the class isn't tied to a classroom. */
   classroomId: string;
-  classroomName: string;
+  /** Display label — classroom name, or the target student's name
+   *  for per-student sessions, or a generic fallback. */
+  label: string;
   scheduledAt: string;
   meetingUrl: string;
+  /** Counterpart name(s). For teachers: the students attending. For
+   *  students: the teacher's full name. */
+  counterpart: string;
   role: "teacher" | "student";
-  counterpart: {
-    teacherName?: string;
-    students?: Array<{ name: string; avatarUrl: string | null }>;
-    totalStudents?: number;
-  };
-  prepLessons: Array<{
-    slug: string;
-    title: string;
-    cefrLevel: string | null;
-  }>;
-  previousNote: string | null;
 }
 
 export interface UpcomingClassResult {
-  ctx: UpcomingClassContext | null;
+  items: UpcomingClassItem[];
   debug: UpcomingClassDebug;
 }
 
@@ -54,7 +52,7 @@ export async function getMyNextClass(): Promise<UpcomingClassResult> {
   } = await supabase.auth.getUser();
   if (!user) {
     debug.reason = "no-user";
-    return { ctx: null, debug };
+    return { items: [], debug };
   }
   debug.userId = user.id;
 
@@ -71,31 +69,28 @@ export async function getMyNextClass(): Promise<UpcomingClassResult> {
   debug.role = role;
   const isTeacher = role === "teacher" || role === "owner";
 
-  const graceWindow = new Date(Date.now() - 60 * 60 * 1000).toISOString();
-  const windowEnd = new Date(
-    Date.now() + 14 * 24 * 60 * 60 * 1000,
+  const nowMs = Date.now();
+  const graceISO = new Date(nowMs - 60 * 60 * 1000).toISOString();
+  const windowEndISO = new Date(
+    nowMs + 14 * 24 * 60 * 60 * 1000,
   ).toISOString();
+  const todayDateISO = new Date().toISOString().slice(0, 10);
+  const windowEndDateISO = windowEndISO.slice(0, 10);
 
+  // ---------------------------------------------------------------
+  // Identity lookups
+  // ---------------------------------------------------------------
   let classroomIds: string[] = [];
-  let rosterStudentIds: string[] = []; // students we care about (teacher)
-  let myRosterId: string | null = null; // student-side identity
+  let myRosterId: string | null = null;
   if (isTeacher) {
     const { data: rooms } = await admin
       .from("classrooms")
-      .select("id")
+      .select("id, name")
       .eq("teacher_id", user.id)
       .is("deleted_at", null);
     classroomIds = ((rooms as Array<{ id: string }> | null) ?? []).map(
       (r) => r.id,
     );
-    const { data: teacherRoster } = await admin
-      .from("roster_students")
-      .select("id")
-      .eq("teacher_id", user.id)
-      .is("deleted_at", null);
-    rosterStudentIds = (
-      (teacherRoster as Array<{ id: string }> | null) ?? []
-    ).map((r) => r.id);
   } else {
     const { data: roster } = await admin
       .from("roster_students")
@@ -103,78 +98,21 @@ export async function getMyNextClass(): Promise<UpcomingClassResult> {
       .eq("auth_user_id", user.id)
       .is("deleted_at", null)
       .maybeSingle();
-    const row = roster as {
-      id: string;
-      classroom_id: string | null;
-    } | null;
+    const row = roster as { id: string; classroom_id: string | null } | null;
     if (row) {
       myRosterId = row.id;
       if (row.classroom_id) classroomIds.push(row.classroom_id);
     }
   }
   debug.classroomCount = classroomIds.length;
-  if (
-    classroomIds.length === 0 &&
-    rosterStudentIds.length === 0 &&
-    !myRosterId
-  ) {
+  if (classroomIds.length === 0 && !myRosterId && !isTeacher) {
     debug.reason = "no-classrooms";
-    return { ctx: null, debug };
+    return { items: [], debug };
   }
 
-  // Two independent sources of "upcoming classes" in this app:
-  //   1. scheduled_classes — classroom-wide legacy rows with a Zoom/
-  //      Meet link, `scheduled_at` timestamp.
-  //   2. student_history with status='Planned' — what the Schedule
-  //      class button actually writes (per-student or classroom-wide
-  //      with event_date + event_time).
-  // Query both and pick the nearest. Most teachers here use (2), which
-  // is why the popup was always silent when looking only at (1).
-  const todayISO = new Date().toISOString().slice(0, 10);
-  const windowEndDateISO = new Date(Date.now() + 14 * 24 * 60 * 60 * 1000)
-    .toISOString()
-    .slice(0, 10);
-
-  // Fetch scheduled_classes via classroom list, and student_history
-  // via teacher_id (teacher path) or roster_student_id (student
-  // path) — the second path catches planned classes even when the
-  // classroom_id is null.
-  const [scheduledRes, historyRes] = await Promise.all([
-    classroomIds.length > 0
-      ? admin
-          .from("scheduled_classes")
-          .select("id, classroom_id, title, meeting_url, scheduled_at")
-          .in("classroom_id", classroomIds)
-          .gte("scheduled_at", graceWindow)
-          .lte("scheduled_at", windowEnd)
-          .order("scheduled_at", { ascending: true })
-          .limit(5)
-      : Promise.resolve({
-          data: [] as Array<{
-            id: string;
-            classroom_id: string;
-            title: string;
-            meeting_url: string;
-            scheduled_at: string;
-          }>,
-        }),
-    (() => {
-      const base = admin
-        .from("student_history")
-        .select(
-          "id, classroom_id, roster_student_id, event_date, event_time, meeting_link, lesson_content, status, teacher_id",
-        )
-        .eq("status", "Planned")
-        .gte("event_date", todayISO)
-        .lte("event_date", windowEndDateISO)
-        .order("event_date", { ascending: true })
-        .limit(10);
-      if (isTeacher) return base.eq("teacher_id", user.id);
-      if (myRosterId) return base.eq("roster_student_id", myRosterId);
-      return Promise.resolve({ data: [] });
-    })(),
-  ]);
-
+  // ---------------------------------------------------------------
+  // Fetch both sources
+  // ---------------------------------------------------------------
   type SchedRow = {
     id: string;
     classroom_id: string;
@@ -192,175 +130,224 @@ export async function getMyNextClass(): Promise<UpcomingClassResult> {
     lesson_content: string | null;
     status: string;
   };
+
+  const scheduledReq =
+    classroomIds.length > 0
+      ? admin
+          .from("scheduled_classes")
+          .select("id, classroom_id, title, meeting_url, scheduled_at")
+          .in("classroom_id", classroomIds)
+          .gte("scheduled_at", graceISO)
+          .lte("scheduled_at", windowEndISO)
+          .order("scheduled_at", { ascending: true })
+          .limit(10)
+      : Promise.resolve({ data: [] as SchedRow[] });
+
+  const historyBase = admin
+    .from("student_history")
+    .select(
+      "id, classroom_id, roster_student_id, event_date, event_time, meeting_link, lesson_content, status",
+    )
+    .eq("status", "Planned")
+    .gte("event_date", todayDateISO)
+    .lte("event_date", windowEndDateISO)
+    .order("event_date", { ascending: true })
+    .limit(20);
+  const historyReq = isTeacher
+    ? historyBase.eq("teacher_id", user.id)
+    : myRosterId
+      ? historyBase.eq("roster_student_id", myRosterId)
+      : Promise.resolve({ data: [] as HistRow[] });
+
+  const [scheduledRes, historyRes] = await Promise.all([
+    scheduledReq,
+    historyReq,
+  ]);
   const scheduled = (scheduledRes.data ?? []) as SchedRow[];
   const history = (historyRes.data ?? []) as HistRow[];
 
-  type Merged = {
-    id: string;
-    classroomId: string;
-    title: string;
-    meetingUrl: string;
-    scheduledAt: string;
-  };
-  const merged: Merged[] = [
-    ...scheduled.map((r) => ({
-      id: r.id,
-      classroomId: r.classroom_id,
-      title: r.title,
-      meetingUrl: r.meeting_url,
-      scheduledAt: r.scheduled_at,
-    })),
-    // Accept rows with or without a classroom_id — the Schedule class
-    // flow stores the classroom_id most of the time but can be null
-    // for one-off per-student sessions. classroomId falls back to ""
-    // when missing; the UI hides the "Abrir turma" link in that case.
-    ...history.map((r) => ({
-      id: r.id,
-      classroomId: r.classroom_id ?? "",
-      title: r.lesson_content?.slice(0, 80) || "Aula",
-      meetingUrl: r.meeting_link ?? "",
-      scheduledAt: r.event_time
-        ? `${r.event_date}T${r.event_time}-03:00`
-        : `${r.event_date}T10:00-03:00`,
-    })),
-  ]
-    .filter((m) => new Date(m.scheduledAt).getTime() >= Date.now() - 60 * 60 * 1000)
-    .sort((a, b) => a.scheduledAt.localeCompare(b.scheduledAt));
-
-  debug.upcomingRowCount = merged.length;
-
-  if (merged.length === 0) {
-    const future = isTeacher
-      ? admin
-          .from("student_history")
-          .select("event_date")
-          .eq("teacher_id", user.id)
-          .eq("status", "Planned")
-          .gte("event_date", todayISO)
-          .order("event_date", { ascending: true })
-          .limit(1)
-      : myRosterId
-        ? admin
-            .from("student_history")
-            .select("event_date")
-            .eq("roster_student_id", myRosterId)
-            .eq("status", "Planned")
-            .gte("event_date", todayISO)
-            .order("event_date", { ascending: true })
-            .limit(1)
-        : Promise.resolve({ data: [] });
-    const { data: anyFuture } = await future;
-    debug.nextFuture =
-      (anyFuture as Array<{ event_date: string }> | null)?.[0]?.event_date ??
-      null;
-    debug.reason = "no-rows-in-window";
-    return { ctx: null, debug };
-  }
-
-  const next = {
-    id: merged[0].id,
-    classroom_id: merged[0].classroomId,
-    title: merged[0].title,
-    meeting_url: merged[0].meetingUrl,
-    scheduled_at: merged[0].scheduledAt,
-  };
-
-  const { data: classroom } = next.classroom_id
-    ? await admin
-        .from("classrooms")
-        .select("name, teacher_id")
-        .eq("id", next.classroom_id)
-        .maybeSingle()
-    : { data: null };
-  const room = (classroom as {
-    name: string;
-    teacher_id: string;
-  } | null) ?? { name: isTeacher ? "Aula avulsa" : "Aula", teacher_id: user.id };
-
-  const counterpart: UpcomingClassContext["counterpart"] = {};
-  if (isTeacher) {
-    const { data: rosterRows } = next.classroom_id
-      ? await admin
-          .from("roster_students")
-          .select("full_name, has_avatar, id")
-          .eq("classroom_id", next.classroom_id)
-          .is("deleted_at", null)
-      : { data: [] as Array<{
-          full_name: string;
-          has_avatar: boolean | null;
-          id: string;
-        }> };
-    const rows = (rosterRows as Array<{
-      full_name: string;
-      has_avatar: boolean | null;
+  // ---------------------------------------------------------------
+  // Enrichment lookups (resolve classroom names + student names in
+  // a single batch per table)
+  // ---------------------------------------------------------------
+  const allClassroomIds = Array.from(
+    new Set(
+      [
+        ...scheduled.map((r) => r.classroom_id),
+        ...history.map((r) => r.classroom_id).filter((id): id is string => !!id),
+      ].filter(Boolean),
+    ),
+  );
+  const classroomNameById = new Map<string, string>();
+  const classroomTeacherById = new Map<string, string>();
+  if (allClassroomIds.length > 0) {
+    const { data } = await admin
+      .from("classrooms")
+      .select("id, name, teacher_id")
+      .in("id", allClassroomIds);
+    for (const row of (data ?? []) as Array<{
       id: string;
-    }> | null) ?? [];
-    counterpart.totalStudents = rows.length;
-    counterpart.students = rows.slice(0, 6).map((r) => ({
-      name: r.full_name,
-      avatarUrl: null,
-    }));
-  } else {
-    const { data: teacher } = await admin
-      .from("profiles")
-      .select("full_name")
-      .eq("id", room.teacher_id)
-      .maybeSingle();
-    counterpart.teacherName =
-      (teacher as { full_name?: string } | null)?.full_name ?? "";
+      name: string;
+      teacher_id: string;
+    }>) {
+      classroomNameById.set(row.id, row.name);
+      classroomTeacherById.set(row.id, row.teacher_id);
+    }
   }
 
-  const { data: assignments } = await admin
-    .from("lesson_assignments")
-    .select("lesson_slug, status, created_at")
-    .eq("classroom_id", next.classroom_id)
-    .neq("status", "completed")
-    .order("created_at", { ascending: false })
-    .limit(6);
-  const prepLessons = (
-    (assignments as Array<{
-      lesson_slug: string;
-      status: string;
-    }> | null) ?? []
-  ).map((a) => ({
-    slug: a.lesson_slug,
-    title: humanizeSlug(a.lesson_slug),
-    cefrLevel: null,
-  }));
+  const rosterIdsToLookup = Array.from(
+    new Set(
+      history
+        .map((r) => r.roster_student_id)
+        .filter((id): id is string => !!id),
+    ),
+  );
+  const rosterNameById = new Map<string, string>();
+  const rosterClassroomById = new Map<string, string | null>();
+  if (rosterIdsToLookup.length > 0) {
+    const { data } = await admin
+      .from("roster_students")
+      .select("id, full_name, classroom_id")
+      .in("id", rosterIdsToLookup);
+    for (const row of (data ?? []) as Array<{
+      id: string;
+      full_name: string;
+      classroom_id: string | null;
+    }>) {
+      rosterNameById.set(row.id, row.full_name);
+      rosterClassroomById.set(row.id, row.classroom_id);
+    }
+  }
 
-  const { data: prior } = await admin
-    .from("scheduled_classes")
-    .select("observations, scheduled_at")
-    .eq("classroom_id", next.classroom_id)
-    .lt("scheduled_at", new Date().toISOString())
-    .not("observations", "is", null)
-    .order("scheduled_at", { ascending: false })
-    .limit(1);
-  const previousNote =
-    (prior as Array<{ observations: string | null }> | null)?.[0]
-      ?.observations ?? null;
+  // Per-classroom roster counterpart cache (teacher view — list of
+  // students in the classroom).
+  const classroomRosterCache = new Map<string, string>();
+  async function classroomRosterSummary(classroomId: string): Promise<string> {
+    const cached = classroomRosterCache.get(classroomId);
+    if (cached !== undefined) return cached;
+    const { data } = await admin
+      .from("roster_students")
+      .select("full_name")
+      .eq("classroom_id", classroomId)
+      .is("deleted_at", null);
+    const names = ((data as Array<{ full_name: string }> | null) ?? []).map(
+      (r) => r.full_name,
+    );
+    const summary =
+      names.length === 0
+        ? "0 alunos"
+        : names.length === 1
+          ? names[0]
+          : names.length <= 3
+            ? names.join(" · ")
+            : `${names.slice(0, 2).join(" · ")} +${names.length - 2}`;
+    classroomRosterCache.set(classroomId, summary);
+    return summary;
+  }
+
+  // Teacher name cache (student view).
+  let myTeacherName: string | null = null;
+  if (!isTeacher) {
+    const teacherIds = Array.from(
+      new Set(
+        [...allClassroomIds.map((id) => classroomTeacherById.get(id))].filter(
+          (t): t is string => !!t,
+        ),
+      ),
+    );
+    if (teacherIds.length > 0) {
+      const { data } = await admin
+        .from("profiles")
+        .select("full_name")
+        .eq("id", teacherIds[0])
+        .maybeSingle();
+      myTeacherName =
+        (data as { full_name?: string } | null)?.full_name ?? null;
+    }
+  }
+
+  // ---------------------------------------------------------------
+  // Merge + normalise + deduplicate
+  // ---------------------------------------------------------------
+  const items: UpcomingClassItem[] = [];
+
+  for (const r of scheduled) {
+    const classroomId = r.classroom_id;
+    const label = classroomNameById.get(classroomId) ?? "Turma";
+    items.push({
+      id: r.id,
+      title: r.title || "Aula",
+      content: null,
+      classroomId,
+      label,
+      scheduledAt: r.scheduled_at,
+      meetingUrl: r.meeting_url,
+      counterpart: isTeacher
+        ? await classroomRosterSummary(classroomId)
+        : (myTeacherName ?? "Professor"),
+      role: isTeacher ? "teacher" : "student",
+    });
+  }
+
+  for (const r of history) {
+    const classroomId =
+      r.classroom_id ??
+      (r.roster_student_id
+        ? rosterClassroomById.get(r.roster_student_id) ?? ""
+        : "");
+    const studentName = r.roster_student_id
+      ? rosterNameById.get(r.roster_student_id) ?? null
+      : null;
+    const classroomName = classroomId
+      ? classroomNameById.get(classroomId) ?? null
+      : null;
+    const label =
+      classroomName ??
+      (studentName ? studentName : "Aula");
+    const scheduledAt = r.event_time
+      ? `${r.event_date}T${r.event_time}-03:00`
+      : `${r.event_date}T10:00-03:00`;
+
+    let counterpart: string;
+    if (isTeacher) {
+      counterpart = studentName
+        ? studentName
+        : classroomId
+          ? await classroomRosterSummary(classroomId)
+          : "—";
+    } else {
+      counterpart = myTeacherName ?? "Professor";
+    }
+
+    const contentText = (r.lesson_content ?? "").trim() || null;
+    const firstLine = contentText ? contentText.split("\n")[0] : "";
+    items.push({
+      id: r.id,
+      title: firstLine.slice(0, 80) || "Aula",
+      content: contentText,
+      classroomId,
+      label,
+      scheduledAt,
+      meetingUrl: r.meeting_link ?? "",
+      counterpart,
+      role: isTeacher ? "teacher" : "student",
+    });
+  }
+
+  // Drop anything before the grace window and sort by time.
+  const filtered = items
+    .filter(
+      (m) => new Date(m.scheduledAt).getTime() >= nowMs - 60 * 60 * 1000,
+    )
+    .sort((a, b) => a.scheduledAt.localeCompare(b.scheduledAt))
+    .slice(0, 5);
+
+  debug.upcomingRowCount = filtered.length;
+  if (filtered.length === 0) {
+    debug.reason = "no-rows-in-window";
+    return { items: [], debug };
+  }
 
   debug.reason = "ok";
-  return {
-    ctx: {
-      id: next.id,
-      title: next.title,
-      classroomId: next.classroom_id,
-      classroomName: room.name,
-      scheduledAt: next.scheduled_at,
-      meetingUrl: next.meeting_url,
-      role: isTeacher ? "teacher" : "student",
-      counterpart,
-      prepLessons,
-      previousNote,
-    },
-    debug,
-  };
-}
-
-function humanizeSlug(slug: string): string {
-  return slug
-    .split("-")
-    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
-    .join(" ");
+  return { items: filtered, debug };
 }

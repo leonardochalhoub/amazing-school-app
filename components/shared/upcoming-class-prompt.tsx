@@ -1,117 +1,79 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
-import {
-  CalendarClock,
-  Video,
-  X,
-  Users,
-  GraduationCap,
-} from "lucide-react";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
+import { CalendarClock, X, Users, GraduationCap } from "lucide-react";
 import type {
-  UpcomingClassContext,
+  UpcomingClassItem,
   UpcomingClassDebug,
 } from "@/lib/actions/upcoming-class";
 
 interface Props {
-  /** Null when there's nothing to show. */
-  ctx: UpcomingClassContext | null;
-  /** Optional server-side diagnostic. When ctx is null, we log this
-   *  to the browser console so the reason is easy to see in devtools. */
+  items: UpcomingClassItem[];
   debug?: UpcomingClassDebug | null;
 }
 
-// Versioned so old dismissals from earlier iterations don't
-// silently hide a freshly-working popup.
-const DISMISS_STORAGE_PREFIX = "upcoming_class_dismissed_v2_";
+const DISMISS_KEY = "upcoming_class_prompt_dismissed_v3";
 
 /**
- * Floating corner toast for the next scheduled class. Small card
- * anchored to the bottom-right of the viewport — no backdrop, no
- * modal, just a notification the user can glance at and dismiss.
- * Dismissal per class-id sticks in sessionStorage so it doesn't
- * re-pop across route changes in the same session.
+ * Info-only corner toast listing the next scheduled classes (up to
+ * five) for the signed-in user. No join/open buttons — just the
+ * message + countdown + counterpart.
  */
-export function UpcomingClassPrompt({ ctx, debug }: Props) {
+export function UpcomingClassPrompt({ items, debug }: Props) {
   const [mounted, setMounted] = useState(false);
   const [closed, setClosed] = useState(false);
   const [now, setNow] = useState<number | null>(null);
 
+  // Build a stable signature of the items so we can key the
+  // sessionStorage dismissal to "this batch" — when the class list
+  // changes (new class scheduled, one starts), the popup re-pops.
+  const signature = useMemo(
+    () => items.map((i) => `${i.id}:${i.scheduledAt}`).join("|"),
+    [items],
+  );
+
   useEffect(() => {
     setMounted(true);
     setNow(Date.now());
-    if (!ctx) {
-      // Visible in browser devtools. Makes it easy to see WHY the
-      // popup isn't showing without having to dig into server logs.
+    if (items.length === 0) {
       // eslint-disable-next-line no-console
-      console.info("[upcoming-class] no ctx · server debug:", debug);
+      console.info("[upcoming-class] no items · server debug:", debug);
       return;
     }
     // eslint-disable-next-line no-console
-    console.info("[upcoming-class] ctx received:", {
-      id: ctx.id,
-      title: ctx.title,
-      scheduledAt: ctx.scheduledAt,
-      role: ctx.role,
-    });
+    console.info(
+      "[upcoming-class] items received:",
+      items.map((i) => ({
+        id: i.id,
+        scheduledAt: i.scheduledAt,
+        label: i.label,
+      })),
+    );
     try {
-      if (
-        window.sessionStorage.getItem(
-          `${DISMISS_STORAGE_PREFIX}${ctx.id}`,
-        ) === "1"
-      ) {
+      if (window.sessionStorage.getItem(DISMISS_KEY) === signature) {
         setClosed(true);
       }
     } catch {
       /* no-op */
     }
-  }, [ctx, debug]);
-
-  const visible = mounted && ctx !== null && !closed && now !== null;
+  }, [items, signature, debug]);
 
   useEffect(() => {
-    if (!visible) return;
-    const t = window.setInterval(() => setNow(Date.now()), 30_000);
+    if (closed || !mounted || items.length === 0) return;
+    const t = window.setInterval(() => setNow(Date.now()), 60_000);
     return () => window.clearInterval(t);
-  }, [visible]);
-
-  const countdown = useMemo(() => {
-    if (!ctx || now === null) return "";
-    return describeCountdown(new Date(ctx.scheduledAt).getTime(), now);
-  }, [ctx, now]);
+  }, [closed, mounted, items.length]);
 
   function dismiss() {
     try {
-      if (ctx) {
-        window.sessionStorage.setItem(
-          `${DISMISS_STORAGE_PREFIX}${ctx.id}`,
-          "1",
-        );
-      }
+      window.sessionStorage.setItem(DISMISS_KEY, signature);
     } catch {
       /* no-op */
     }
     setClosed(true);
   }
 
-  if (!visible || !ctx) return null;
-
-  const when = new Date(ctx.scheduledAt);
-  const dateLabel = when.toLocaleString("pt-BR", {
-    timeZone: "America/Sao_Paulo",
-    weekday: "short",
-    day: "2-digit",
-    month: "short",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-  const isTeacher = ctx.role === "teacher";
-  const counterpart = isTeacher
-    ? `${ctx.counterpart.totalStudents ?? 0} aluno${(ctx.counterpart.totalStudents ?? 0) === 1 ? "" : "s"}`
-    : ctx.counterpart.teacherName ?? "Seu professor";
+  if (!mounted || closed || now === null || items.length === 0) return null;
 
   return (
     <div className="pointer-events-none fixed right-4 top-20 z-[100] flex max-w-[calc(100%-2rem)] sm:max-w-sm">
@@ -120,75 +82,73 @@ export function UpcomingClassPrompt({ ctx, debug }: Props) {
           type="button"
           aria-label="Fechar"
           onClick={dismiss}
-          className="absolute right-2 top-2 z-10 inline-flex h-6 w-6 items-center justify-center rounded-full text-white/70 transition-colors hover:bg-white/20 hover:text-white"
+          className="absolute right-2 top-2 z-10 inline-flex h-6 w-6 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/20 hover:text-white"
         >
           <X className="h-3.5 w-3.5" />
         </button>
 
-        {/* Hero band with countdown + title */}
+        {/* Hero band */}
         <div className="relative bg-gradient-to-br from-indigo-500 via-violet-500 to-pink-500 px-4 py-3 text-white">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent_55%)]" />
-          <div className="relative flex items-start gap-2.5">
+          <div className="relative flex items-center gap-2.5 pr-6">
             <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/20 backdrop-blur">
               <CalendarClock className="h-4 w-4" />
             </span>
-            <div className="min-w-0 flex-1 pr-6">
+            <div className="min-w-0 flex-1">
               <p className="text-[10px] font-semibold uppercase tracking-wider text-white/80">
-                Próxima aula
-              </p>
-              <p className="truncate text-sm font-semibold leading-tight">
-                {ctx.title}
+                {items.length === 1
+                  ? "Próxima aula"
+                  : `Próximas ${items.length} aulas`}
               </p>
             </div>
           </div>
-          <p className="relative mt-1.5 text-[11px] text-white/90">
-            <span className="mr-1 font-semibold">{countdown}</span>
-            <span>· {dateLabel}</span>
-          </p>
         </div>
 
-        {/* Body */}
-        <div className="space-y-1.5 px-4 py-3 text-xs">
-          <p className="flex items-center gap-1.5 text-muted-foreground">
-            <span className="font-semibold text-foreground">
-              {ctx.classroomName}
-            </span>
-          </p>
-          <p className="flex items-center gap-1.5 text-muted-foreground">
-            {isTeacher ? (
-              <Users className="h-3 w-3" />
-            ) : (
-              <GraduationCap className="h-3 w-3" />
-            )}
-            <span className="truncate">{counterpart}</span>
-          </p>
-        </div>
-
-        {/* Footer action */}
-        <div className="border-t border-border/60 bg-muted/30 px-4 py-2">
-          <a
-            href={ctx.meetingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setClosed(true)}
-            className={cn(
-              buttonVariants({ variant: "default", size: "sm" }),
-              "w-full justify-center gap-1.5 bg-gradient-to-br from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700",
-            )}
-          >
-            <Video className="h-3.5 w-3.5" />
-            Entrar na aula
-          </a>
-          {isTeacher ? (
-            <Link
-              href={`/teacher/classroom/${ctx.classroomId}`}
-              onClick={() => setClosed(true)}
-              className="mt-1.5 block text-center text-[11px] font-medium text-muted-foreground hover:text-foreground"
-            >
-              Abrir turma →
-            </Link>
-          ) : null}
-        </div>
+        {/* Items list */}
+        <ul className="divide-y divide-border/50">
+          {items.map((it) => {
+            const when = new Date(it.scheduledAt);
+            const countdown = describeCountdown(when.getTime(), now);
+            const dateLabel = when.toLocaleString("pt-BR", {
+              timeZone: "America/Sao_Paulo",
+              weekday: "short",
+              day: "2-digit",
+              month: "short",
+              hour: "2-digit",
+              minute: "2-digit",
+            });
+            const isTeacher = it.role === "teacher";
+            return (
+              <li key={it.id} className="space-y-1 px-4 py-3 text-xs">
+                <p className="text-sm font-semibold leading-tight">
+                  {it.title}
+                </p>
+                <p className="tabular-nums">
+                  <span className="font-semibold text-foreground">
+                    {countdown}
+                  </span>
+                  <span className="text-muted-foreground"> · {dateLabel}</span>
+                </p>
+                <p className="flex items-center gap-1.5 text-muted-foreground">
+                  <span className="font-medium">{it.label}</span>
+                </p>
+                <p className="flex items-center gap-1.5 text-muted-foreground">
+                  {isTeacher ? (
+                    <Users className="h-3 w-3" />
+                  ) : (
+                    <GraduationCap className="h-3 w-3" />
+                  )}
+                  <span className="truncate">{it.counterpart}</span>
+                </p>
+                {it.content ? (
+                  <p className="mt-1 whitespace-pre-wrap rounded-md border border-border/60 bg-muted/40 p-2 text-[11px] leading-relaxed text-muted-foreground">
+                    {it.content}
+                  </p>
+                ) : null}
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );
