@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft, User } from "lucide-react";
+import { T } from "@/components/reports/t";
 import { notFound, redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
@@ -284,9 +285,14 @@ export default async function RosterStudentDetailPage({
             className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-medium transition-colors hover:border-primary/50 hover:bg-primary/5"
           >
             <User className="h-4 w-4" />
-            {student.gender === "female"
-              ? "Perfil da aluna"
-              : "Perfil do aluno"}
+            <T
+              en="Student profile"
+              pt={
+                student.gender === "female"
+                  ? "Perfil da aluna"
+                  : "Perfil do aluno"
+              }
+            />
           </a>
 
           <Card>

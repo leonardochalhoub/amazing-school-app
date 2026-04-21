@@ -35,24 +35,18 @@ export function UpcomingClassPrompt({ ctx }: Props) {
   useEffect(() => {
     setMounted(true);
     setNow(Date.now());
-    // Diagnostic — visible in the browser devtools console. Helps
-    // confirm that the ctx reached the client at all.
-    // eslint-disable-next-line no-console
-    console.info(
-      "[upcoming-class] ctx on client:",
-      ctx
-        ? {
-            id: ctx.id,
-            title: ctx.title,
-            scheduledAt: ctx.scheduledAt,
-            role: ctx.role,
-          }
-        : null,
-    );
-    // Session dismissal intentionally disabled while we debug why
-    // the popup wasn't showing — a stale dismissal key from earlier
-    // iterations was keeping it hidden. Re-enable once visibility
-    // is confirmed working.
+    if (!ctx) return;
+    try {
+      if (
+        window.sessionStorage.getItem(
+          `${DISMISS_STORAGE_PREFIX}${ctx.id}`,
+        ) === "1"
+      ) {
+        setClosed(true);
+      }
+    } catch {
+      /* no-op */
+    }
   }, [ctx]);
 
   const visible = mounted && ctx !== null && !closed && now !== null;

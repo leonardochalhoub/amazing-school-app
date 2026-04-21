@@ -14,6 +14,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { Card, CardContent } from "@/components/ui/card";
 import { CartoonAvatar } from "@/components/shared/cartoon-avatar";
+import { CuteArtBadge } from "@/components/student/cute-art";
 import { getStudentStats } from "@/lib/actions/gamification";
 import { getAssignmentsForStudent } from "@/lib/actions/assignments";
 import { touchDailyActivity } from "@/lib/actions/daily-activity";
@@ -373,6 +374,18 @@ export default async function StudentHome() {
         }}
       >
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+
+        {/* Decorative cute art for female students. Re-seeds per
+            page render via Math.random so every reload picks a
+            different motif (dogs, pandas, flowers, makeup, sweets…). */}
+        {rosterSelf?.gender === "female" ? (
+          <div className="pointer-events-none absolute -top-4 right-4 md:right-10">
+            <CuteArtBadge
+              seed={Math.floor(Math.random() * 1_000_000)}
+              size={140}
+            />
+          </div>
+        ) : null}
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-8">
           <div className="relative">
             <div className="h-24 w-24 overflow-hidden rounded-full bg-muted shadow-lg ring-4 ring-background md:h-28 md:w-28">

@@ -108,6 +108,22 @@ export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
     .limit(1);
   if (upcomingErr)
     console.warn("[upcoming-class] upcoming err", upcomingErr.message);
+  if (!upcoming || upcoming.length === 0) {
+    // Secondary lookup that ignores the time window — helps diagnose
+    // whether the data exists at all but is outside the next-4-days
+    // cutoff.
+    const { data: any } = await admin
+      .from("scheduled_classes")
+      .select("scheduled_at")
+      .in("classroom_id", classroomIds)
+      .gte("scheduled_at", new Date().toISOString())
+      .order("scheduled_at", { ascending: true })
+      .limit(1);
+    const nextAny = (any as Array<{ scheduled_at: string }> | null)?.[0];
+    console.info(
+      `[upcoming-class] ${role} ${user.id} · no class in 4d window (rooms=${classroomIds.length}, nextFuture=${nextAny?.scheduled_at ?? "none"})`,
+    );
+  }
   const next = (upcoming as Array<{
     id: string;
     classroom_id: string;
