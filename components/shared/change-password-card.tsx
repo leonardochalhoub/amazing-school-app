@@ -68,10 +68,10 @@ export function ChangePasswordCard({ isDemo = false }: Props) {
           Password
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4 pb-6">
-        <p className="text-xs text-muted-foreground">
+      <CardContent className="space-y-5 pb-8">
+        <p className="text-xs leading-relaxed text-muted-foreground">
           Choose a strong password — at least 8 characters. You'll stay
-          signed in here; use the new password next time.
+          signed in here; use the new password next time you log in.
         </p>
         {isDemo ? (
           <p className="rounded-md border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-xs text-amber-700 dark:text-amber-400">
@@ -93,7 +93,7 @@ export function ChangePasswordCard({ isDemo = false }: Props) {
                 Change password
               </Button>
             </div>
-            <ul className="space-y-1.5 rounded-lg border border-border/60 bg-muted/30 p-3 text-[11px] leading-relaxed text-muted-foreground">
+            <ul className="space-y-2 rounded-lg border border-border/60 bg-muted/30 p-4 text-[11px] leading-relaxed text-muted-foreground">
               <li className="flex items-start gap-2">
                 <span className="mt-0.5 text-primary">•</span>
                 Mix upper and lower case, numbers, and at least one symbol.
@@ -107,6 +107,16 @@ export function ChangePasswordCard({ isDemo = false }: Props) {
                 <span className="mt-0.5 text-primary">•</span>
                 A password manager (1Password, Bitwarden, Apple Keychain)
                 makes this painless.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-primary">•</span>
+                Avoid names, birthdays, and anything that shows on your
+                public social profile — those are the first guesses.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-primary">•</span>
+                If you ever suspect someone knows your password, change
+                it immediately — it only takes a minute.
               </li>
             </ul>
           </>

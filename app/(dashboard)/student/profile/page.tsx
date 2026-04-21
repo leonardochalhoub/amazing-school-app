@@ -212,7 +212,6 @@ export default async function StudentProfilePage() {
               readOnly
             />
           ) : null}
-          <CefrExplainerCard />
         </div>
         <div className="space-y-4">
           <UpcomingWindowCard initial={upcomingWindow} />
@@ -221,6 +220,10 @@ export default async function StudentProfilePage() {
           />
         </div>
       </div>
+
+      {/* CEFR scale — full page width so the 6-up grid gets maximum
+          horizontal room to breathe. */}
+      <CefrExplainerCard />
 
       {/* Onboarding guides — compact, full-width at the bottom */}
       <Card>
