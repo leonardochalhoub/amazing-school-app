@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Mic, MessagesSquare } from "lucide-react";
 import { SpeakingLabDrill, type SpeakingDrill } from "./drill-client";
 import { SpeakingLabDialogRunner, type SpeakingDialog } from "./dialog-runner";
+import { useI18n } from "@/lib/i18n/context";
 
 type Tab = "drills" | "dialogs";
 
@@ -13,6 +14,8 @@ interface Props {
 }
 
 export function SpeakingLabTabs({ drills, dialogs }: Props) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [tab, setTab] = useState<Tab>("drills");
 
   return (
@@ -22,15 +25,15 @@ export function SpeakingLabTabs({ drills, dialogs }: Props) {
           active={tab === "drills"}
           onClick={() => setTab("drills")}
           icon={<Mic className="h-3.5 w-3.5" />}
-          label={`Drills (${drills.length})`}
-          hint="One phrase at a time"
+          label={`${pt ? "Drills" : "Drills"} (${drills.length})`}
+          hint={pt ? "Uma frase por vez" : "One phrase at a time"}
         />
         <TabButton
           active={tab === "dialogs"}
           onClick={() => setTab("dialogs")}
           icon={<MessagesSquare className="h-3.5 w-3.5" />}
-          label={`Dialogs (${dialogs.length})`}
-          hint="Multi-turn conversations"
+          label={`${pt ? "Diálogos" : "Dialogs"} (${dialogs.length})`}
+          hint={pt ? "Conversas com várias rodadas" : "Multi-turn conversations"}
         />
       </nav>
 

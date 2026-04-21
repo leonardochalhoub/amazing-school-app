@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/dialog";
 import { bulkAssignManyLessons } from "@/lib/actions/assignments";
 import { CEFR_BAND_LABEL, cefrBandOf, type CefrBand } from "@/lib/content/schema";
+import { useI18n } from "@/lib/i18n/context";
 
 export interface BulkRow {
   slug: string;
@@ -64,6 +65,8 @@ export function BulkAssignList({
   presetClassroomId,
 }: Props) {
   const router = useRouter();
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [dialogOpen, setDialogOpen] = useState(false);
   const [targetType, setTargetType] = useState<"classroom" | "student">(
@@ -124,21 +127,18 @@ export function BulkAssignList({
 
   function submit() {
     if (selected.size === 0) {
-      toast.error("Pick at least one lesson");
+      toast.error(pt ? "Selecione ao menos uma lição" : "Pick at least one lesson");
       return;
     }
-    // Classroom mode → required classroom id.
-    // Per-student mode → roster student id required; classroom is
-    // optional (a roster-only student with no classroom is still a
-    // valid assignment target since migration 024 made
-    // lesson_assignments.classroom_id nullable).
     let finalClassroomId: string | null = null;
     let rosterStudentId: string | null = null;
     if (targetType === "classroom") {
-      if (!classroomId) return toast.error("Pick a classroom");
+      if (!classroomId)
+        return toast.error(pt ? "Selecione uma turma" : "Pick a classroom");
       finalClassroomId = classroomId;
     } else {
-      if (!studentId) return toast.error("Pick a student");
+      if (!studentId)
+        return toast.error(pt ? "Selecione um aluno" : "Pick a student");
       const s = students.find((x) => x.id === studentId);
       rosterStudentId = studentId;
       finalClassroomId = s?.classroomId ?? null;
@@ -155,8 +155,11 @@ export function BulkAssignList({
         return;
       }
       toast.success(
-        `Assigned ${res.assigned} lesson${res.assigned === 1 ? "" : "s"}` +
-          (res.skipped > 0 ? ` · ${res.skipped} already assigned` : "")
+        pt
+          ? `${res.assigned} ${res.assigned === 1 ? "lição atribuída" : "lições atribuídas"}` +
+              (res.skipped > 0 ? ` · ${res.skipped} já atribuídas` : "")
+          : `Assigned ${res.assigned} lesson${res.assigned === 1 ? "" : "s"}` +
+              (res.skipped > 0 ? ` · ${res.skipped} already assigned` : "")
       );
       setDialogOpen(false);
       clearAll();
@@ -176,12 +179,22 @@ export function BulkAssignList({
             onClick={allSelected ? clearAll : selectAllVisible}
             className="font-medium text-primary hover:underline"
           >
-            {allSelected ? "Clear all" : "Select all visible"}
+            {allSelected
+              ? pt
+                ? "Limpar tudo"
+                : "Clear all"
+              : pt
+                ? "Selecionar todas"
+                : "Select all visible"}
           </button>
           <span className="text-muted-foreground">
-            {selected.size > 0
-              ? `${selected.size} selected`
-              : `${rows.length} lessons`}
+            {pt
+              ? selected.size > 0
+                ? `${selected.size} selecionadas`
+                : `${rows.length} ${rows.length === 1 ? "lição" : "lições"}`
+              : selected.size > 0
+                ? `${selected.size} selected`
+                : `${rows.length} lessons`}
           </span>
         </div>
       </div>
@@ -191,14 +204,18 @@ export function BulkAssignList({
           const group = byBand.get(band)!;
           const heading =
             band === "other"
-              ? "Other"
+              ? pt
+                ? "Outro"
+                : "Other"
               : CEFR_BAND_LABEL[band];
           return (
           <section key={band} className="space-y-2">
             <h2 className="text-lg font-bold tracking-tight">
               {heading}
               <span className="ml-2 text-sm font-normal text-muted-foreground tabular-nums">
-                {group.length} lesson{group.length === 1 ? "" : "s"}
+                {pt
+                  ? `${group.length} ${group.length === 1 ? "lição" : "lições"}`
+                  : `${group.length} lesson${group.length === 1 ? "" : "s"}`}
               </span>
             </h2>
             <div className="space-y-2">
@@ -207,10 +224,19 @@ export function BulkAssignList({
                 const isDraft = row.published === false;
                 const sourceBadge =
                   row.source === "library"
-                    ? { label: "Core", variant: "default" as const }
+                    ? {
+                        label: pt ? "Principal" : "Core",
+                        variant: "default" as const,
+                      }
                     : row.source === "curated"
-                      ? { label: "Curated", variant: "secondary" as const }
-                      : { label: "Mine", variant: "outline" as const };
+                      ? {
+                          label: pt ? "Curadas" : "Curated",
+                          variant: "secondary" as const,
+                        }
+                      : {
+                          label: pt ? "Minhas" : "Mine",
+                          variant: "outline" as const,
+                        };
                 return (
                   <div
                     key={row.slug}
@@ -229,7 +255,9 @@ export function BulkAssignList({
                       disabled={isDraft}
                       title={
                         isDraft
-                          ? "Publish this lesson before assigning"
+                          ? pt
+                            ? "Publique esta lição antes de atribuir"
+                            : "Publish this lesson before assigning"
                           : undefined
                       }
                       className="h-4 w-4 shrink-0 rounded border-border accent-primary disabled:cursor-not-allowed"
@@ -285,7 +313,7 @@ export function BulkAssignList({
       {selected.size > 0 && (
         <div className="fixed bottom-4 left-1/2 z-50 flex max-w-[calc(100vw-1rem)] -translate-x-1/2 flex-wrap items-center justify-center gap-2 rounded-full border border-primary/30 bg-background/95 px-3 py-2 shadow-xl backdrop-blur">
           <span className="text-sm font-semibold">
-            {selected.size} selected
+            {pt ? `${selected.size} selecionadas` : `${selected.size} selected`}
           </span>
           <Button
             size="sm"
@@ -293,12 +321,12 @@ export function BulkAssignList({
             className="gap-1.5"
           >
             <Users2 className="h-4 w-4" />
-            Assign {selected.size}
+            {pt ? `Atribuir ${selected.size}` : `Assign ${selected.size}`}
           </Button>
           <button
             type="button"
             onClick={clearAll}
-            aria-label="Clear selection"
+            aria-label={pt ? "Limpar seleção" : "Clear selection"}
             className="rounded-full p-1 text-muted-foreground hover:bg-muted"
           >
             <X className="h-4 w-4" />
@@ -309,9 +337,15 @@ export function BulkAssignList({
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle>Assign {selected.size} lessons</DialogTitle>
+            <DialogTitle>
+              {pt
+                ? `Atribuir ${selected.size} ${selected.size === 1 ? "lição" : "lições"}`
+                : `Assign ${selected.size} lessons`}
+            </DialogTitle>
             <DialogDescription>
-              Pick a classroom or a specific student.
+              {pt
+                ? "Selecione uma turma ou um aluno específico."
+                : "Pick a classroom or a specific student."}
             </DialogDescription>
           </DialogHeader>
 
@@ -326,7 +360,7 @@ export function BulkAssignList({
                     : "text-muted-foreground"
                 }`}
               >
-                Classroom
+                {pt ? "Turma" : "Classroom"}
               </button>
               <button
                 type="button"
@@ -337,7 +371,7 @@ export function BulkAssignList({
                     : "text-muted-foreground"
                 }`}
               >
-                One student
+                {pt ? "Um aluno" : "One student"}
               </button>
             </div>
 
@@ -347,7 +381,9 @@ export function BulkAssignList({
                 onChange={(e) => setClassroomId(e.target.value)}
                 className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
               >
-                <option value="">Pick a classroom…</option>
+                <option value="">
+                  {pt ? "Selecione uma turma…" : "Pick a classroom…"}
+                </option>
                 {classrooms.map((c) => (
                   <option key={c.id} value={c.id}>
                     {c.name}
@@ -360,7 +396,9 @@ export function BulkAssignList({
                 onChange={(e) => setStudentId(e.target.value)}
                 className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
               >
-                <option value="">Pick a student…</option>
+                <option value="">
+                  {pt ? "Selecione um aluno…" : "Pick a student…"}
+                </option>
                 {students.map((s) => (
                   <option key={s.id} value={s.id}>
                     {s.fullName}
@@ -371,7 +409,9 @@ export function BulkAssignList({
 
             <p className="rounded-lg bg-muted/30 p-2 text-[11px] text-muted-foreground">
               <CheckCircle2 className="mr-1 inline h-3 w-3" />
-              Already-assigned lessons will be skipped silently.
+              {pt
+                ? "Lições já atribuídas serão ignoradas silenciosamente."
+                : "Already-assigned lessons will be skipped silently."}
             </p>
           </div>
 
@@ -381,7 +421,7 @@ export function BulkAssignList({
               onClick={() => setDialogOpen(false)}
               disabled={pending}
             >
-              Cancel
+              {pt ? "Cancelar" : "Cancel"}
             </Button>
             <Button onClick={submit} disabled={pending} className="gap-1">
               {pending ? (
@@ -389,7 +429,7 @@ export function BulkAssignList({
               ) : (
                 <Users2 className="h-4 w-4" />
               )}
-              Assign
+              {pt ? "Atribuir" : "Assign"}
             </Button>
           </DialogFooter>
         </DialogContent>

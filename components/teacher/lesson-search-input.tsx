@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Search, X } from "lucide-react";
+import { useI18n } from "@/lib/i18n/context";
 
 interface Props {
   /** Default value shown on first paint — typically the `q` URL param. */
@@ -20,11 +21,15 @@ interface Props {
 export function LessonSearchInput({
   initialValue = "",
   debounceMs = 250,
-  placeholder = "Search lessons…",
+  placeholder,
 }: Props) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
+  const effectivePlaceholder =
+    placeholder ?? (pt ? "Buscar lições…" : "Search lessons…");
   const [value, setValue] = useState(initialValue);
   // Track whether the current value came from user input vs URL sync so
   // we don't fire an extra router.push when switching routes.
@@ -51,13 +56,13 @@ export function LessonSearchInput({
         type="search"
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        placeholder={placeholder}
+        placeholder={effectivePlaceholder}
         className="h-8 w-full rounded-full border border-border bg-background pl-8 pr-8 text-[12px] outline-none ring-0 transition-colors placeholder:text-muted-foreground focus:border-foreground/50"
       />
       {value.length > 0 ? (
         <button
           type="button"
-          aria-label="Clear search"
+          aria-label={pt ? "Limpar busca" : "Clear search"}
           onClick={() => setValue("")}
           className="absolute right-2 inline-flex h-5 w-5 items-center justify-center rounded-full text-muted-foreground hover:bg-muted hover:text-foreground"
         >

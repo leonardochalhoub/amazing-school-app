@@ -19,6 +19,7 @@ import {
 } from "@/lib/actions/exercise-bank";
 import type { BankItemRow } from "@/lib/actions/teacher-lessons-types";
 import { CEFR_BANDS, cefrBandOf } from "@/lib/content/schema";
+import { useI18n } from "@/lib/i18n/context";
 
 type Tab = "mine" | "public";
 
@@ -28,6 +29,8 @@ interface Props {
 }
 
 export function BankBrowser({ mine, publicItems }: Props) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [tab, setTab] = useState<Tab>("mine");
   const [cefrFilter, setCefrFilter] = useState<string>("");
   const router = useRouter();
@@ -53,20 +56,33 @@ export function BankBrowser({ mine, publicItems }: Props) {
         return;
       }
       toast.success(
-        item.is_public ? "Made private." : "Published to the public bank."
+        item.is_public
+          ? pt
+            ? "Tornado privado."
+            : "Made private."
+          : pt
+            ? "Publicado no banco público."
+            : "Published to the public bank."
       );
       router.refresh();
     });
   }
   function remove(item: BankItemRow) {
-    if (!confirm(`Delete "${item.title}"? This cannot be undone.`)) return;
+    if (
+      !confirm(
+        pt
+          ? `Excluir "${item.title}"? Esta ação não pode ser desfeita.`
+          : `Delete "${item.title}"? This cannot be undone.`,
+      )
+    )
+      return;
     startTransition(async () => {
       const r = await deleteBankItem(item.id);
       if ("error" in r && r.error) {
         toast.error(r.error);
         return;
       }
-      toast.success("Deleted.");
+      toast.success(pt ? "Excluído." : "Deleted.");
       router.refresh();
     });
   }
@@ -75,10 +91,16 @@ export function BankBrowser({ mine, publicItems }: Props) {
       await navigator.clipboard.writeText(
         `${window.location.origin}/teacher/lessons/new?import=${item.id}`
       );
-      toast.success("Import link copied to clipboard.");
+      toast.success(
+        pt
+          ? "Link de importação copiado."
+          : "Import link copied to clipboard.",
+      );
       await incrementBankUsage(item.id);
     } catch {
-      toast.error("Couldn't copy to clipboard.");
+      toast.error(
+        pt ? "Não foi possível copiar." : "Couldn't copy to clipboard.",
+      );
     }
   }
 
@@ -95,7 +117,7 @@ export function BankBrowser({ mine, publicItems }: Props) {
           }`}
         >
           <Lock className="mr-1 inline-block h-3 w-3" />
-          My bank ({mine.length})
+          {pt ? `Meu banco (${mine.length})` : `My bank (${mine.length})`}
         </button>
         <button
           type="button"
@@ -107,13 +129,17 @@ export function BankBrowser({ mine, publicItems }: Props) {
           }`}
         >
           <Globe className="mr-1 inline-block h-3 w-3" />
-          Public bank ({publicItems.length})
+          {pt
+            ? `Banco público (${publicItems.length})`
+            : `Public bank (${publicItems.length})`}
         </button>
       </nav>
 
       {cefrOptions.length > 0 ? (
         <div className="flex flex-wrap items-center gap-2 text-xs">
-          <span className="text-muted-foreground">Filter by CEFR:</span>
+          <span className="text-muted-foreground">
+            {pt ? "Filtrar por CEFR:" : "Filter by CEFR:"}
+          </span>
           <button
             type="button"
             onClick={() => setCefrFilter("")}
@@ -123,7 +149,7 @@ export function BankBrowser({ mine, publicItems }: Props) {
                 : "border-border text-muted-foreground hover:border-foreground/40"
             }`}
           >
-            All
+            {pt ? "Todos" : "All"}
           </button>
           {cefrOptions.map((c) => (
             <button
@@ -146,19 +172,35 @@ export function BankBrowser({ mine, publicItems }: Props) {
         <div className="rounded-xl border border-dashed border-border p-8 text-center">
           {tab === "mine" ? (
             <>
-              <p className="text-sm font-medium">Your bank is empty</p>
+              <p className="text-sm font-medium">
+                {pt ? "Seu banco está vazio" : "Your bank is empty"}
+              </p>
               <p className="mt-1 text-xs text-muted-foreground">
-                Open any exercise in the lesson builder and click{" "}
-                <em>Save to bank</em> to reuse it across lessons.
+                {pt ? (
+                  <>
+                    Abra qualquer exercício no editor de lições e clique em{" "}
+                    <em>Salvar no banco</em> para reutilizá-lo em outras
+                    lições.
+                  </>
+                ) : (
+                  <>
+                    Open any exercise in the lesson builder and click{" "}
+                    <em>Save to bank</em> to reuse it across lessons.
+                  </>
+                )}
               </p>
             </>
           ) : (
             <>
               <p className="text-sm font-medium">
-                Nothing public at this level yet
+                {pt
+                  ? "Ainda não há itens públicos neste nível"
+                  : "Nothing public at this level yet"}
               </p>
               <p className="mt-1 text-xs text-muted-foreground">
-                Other teachers can share exercises here to help the community.
+                {pt
+                  ? "Outros professores podem compartilhar exercícios aqui para ajudar a comunidade."
+                  : "Other teachers can share exercises here to help the community."}
               </p>
             </>
           )}

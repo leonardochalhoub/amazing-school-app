@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import type { MusicMeta } from "@/lib/content/music";
+import { useI18n } from "@/lib/i18n/context";
 
 const CEFR_ORDER = [
   "a1.1","a1.2","a2.1","a2.2","b1.1","b1.2","b2.1","b2.2","c1.1","c1.2",
@@ -29,6 +30,8 @@ type CefrGroup = (typeof CEFR_GROUPS)[number] | "all";
 const TOP_GENRES_LIMIT = 10;
 
 export function MusicCatalog({ songs, variant = "student" }: Props) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [query, setQuery] = useState("");
   const [levelFilter, setLevelFilter] = useState<CefrGroup>("all");
   const [genreFilter, setGenreFilter] = useState<string>("all");
@@ -104,7 +107,11 @@ export function MusicCatalog({ songs, variant = "student" }: Props) {
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Filter by song title, artist, or year…"
+            placeholder={
+              pt
+                ? "Filtrar por título, artista ou ano…"
+                : "Filter by song title, artist, or year…"
+            }
             className="h-9 pl-8"
           />
         </div>
@@ -124,7 +131,7 @@ export function MusicCatalog({ songs, variant = "student" }: Props) {
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
-                {g === "all" ? "All" : g.toUpperCase()}
+                {g === "all" ? (pt ? "Todos" : "All") : g.toUpperCase()}
                 <span className="ml-1 text-[10px] opacity-60 tabular-nums">
                   {count}
                 </span>
@@ -144,7 +151,7 @@ export function MusicCatalog({ songs, variant = "student" }: Props) {
               : "border border-border/60 text-muted-foreground hover:border-primary/40 hover:text-foreground"
           }`}
         >
-          All genres
+          {pt ? "Todos os gêneros" : "All genres"}
         </button>
         {topGenres.map(([g, n]) => {
           const active = genreFilter === g;
@@ -168,15 +175,21 @@ export function MusicCatalog({ songs, variant = "student" }: Props) {
 
       {isFiltering && (
         <p className="-mt-4 text-xs text-muted-foreground">
-          {sorted.length} match{sorted.length === 1 ? "" : "es"}
+          {pt
+            ? `${sorted.length} ${sorted.length === 1 ? "resultado" : "resultados"}`
+            : `${sorted.length} match${sorted.length === 1 ? "" : "es"}`}
         </p>
       )}
 
       {sorted.length === 0 ? (
         <p className="rounded-lg border border-dashed px-4 py-10 text-center text-sm text-muted-foreground">
-          {query
-            ? `No songs match "${query}"${levelFilter !== "all" ? ` at ${levelFilter.toUpperCase()}` : ""}.`
-            : `No songs at ${levelFilter.toUpperCase()} yet.`}
+          {pt
+            ? query
+              ? `Nenhuma música encontrada para "${query}"${levelFilter !== "all" ? ` em ${levelFilter.toUpperCase()}` : ""}.`
+              : `Ainda não há músicas em ${levelFilter.toUpperCase()}.`
+            : query
+              ? `No songs match "${query}"${levelFilter !== "all" ? ` at ${levelFilter.toUpperCase()}` : ""}.`
+              : `No songs at ${levelFilter.toUpperCase()} yet.`}
         </p>
       ) : (
         Array.from(byLevel.entries()).map(([level, levelSongs]) => (

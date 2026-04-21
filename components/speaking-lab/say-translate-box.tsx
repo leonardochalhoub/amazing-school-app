@@ -139,7 +139,7 @@ export function SayTranslateBox() {
         title: "Diga em voz alta · Traduza",
         desc:
           "Cole ou digite uma frase em inglês. Clique no microfone para ouvir a IA falar, ou em traduzir para a versão em português.",
-        placeholder: "Type any English sentence here…",
+        placeholder: "Digite uma frase em inglês aqui…",
         speak: "Falar",
         stop: "Parar",
         translate: "Traduzir para PT-BR",
