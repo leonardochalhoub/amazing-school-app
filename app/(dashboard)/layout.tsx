@@ -104,6 +104,27 @@ export default async function DashboardLayout({
   const rosterAgeGroup = (rosterSelf as { age_group: "kid" | "teen" | "adult" | null } | null)?.age_group ?? null;
   const rosterGender = (rosterSelf as { gender: "female" | "male" | null } | null)?.gender ?? null;
 
+  // Teacher gender lives on profiles.gender (migration 057). Fetched
+  // separately so the layout still renders if the column doesn't
+  // exist yet — falls back to null which reads as masculine pt-BR
+  // wording.
+  let teacherGender: "female" | "male" | null = null;
+  if (role === "teacher") {
+    try {
+      const { data: genderRow } = await admin
+        .from("profiles")
+        .select("gender")
+        .eq("id", user.id)
+        .maybeSingle();
+      const raw = (genderRow as { gender?: string | null } | null)?.gender ?? null;
+      if (raw === "female" || raw === "male") teacherGender = raw;
+    } catch {
+      /* column may be absent until migration 057 lands */
+    }
+  }
+  const navbarGender: "female" | "male" | null =
+    role === "teacher" ? teacherGender : rosterGender;
+
   const isDemo = (user.email ?? "").toLowerCase().startsWith("demo.");
 
   // Profile location — fetched separately so the layout still renders
@@ -171,7 +192,7 @@ export default async function DashboardLayout({
         isOwner={isOwner}
         userId={user.id}
         ageGroup={rosterAgeGroup}
-        gender={rosterGender}
+        gender={navbarGender}
         schoolLogoPath={schoolLogoPath}
       />
       <UpcomingClassPrompt

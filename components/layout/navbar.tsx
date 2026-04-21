@@ -55,6 +55,7 @@ export function Navbar({
     .toUpperCase()
     .slice(0, 2);
 
+  const isFemale = gender === "female";
   const labels =
     locale === "pt-BR"
       ? {
@@ -68,8 +69,8 @@ export function Navbar({
           speakingLab: "Lab de Fala",
           signedInAs: "Conectado como",
           signOut: "Sair",
-          teacher: "Professor",
-          student: "Aluno",
+          teacher: isFemale ? "Professora" : "Professor",
+          student: isFemale ? "Aluna" : "Aluno",
         }
       : {
           dashboard: "Dashboard",
