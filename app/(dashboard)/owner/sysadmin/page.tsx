@@ -15,6 +15,8 @@ import { getAllSpeakingStats } from "@/lib/actions/speaking-events";
 import { SysadminReportsPanel } from "@/components/reports/sysadmin-reports-panel";
 import { T } from "@/components/reports/t";
 import { getPublicClickCounts } from "@/lib/actions/public-clicks";
+import { getPeopleByCity } from "@/lib/actions/teachers-map";
+import { BrazilTeachersMap } from "@/components/owner/brazil-teachers-map";
 import {
   Users,
   GraduationCap,
@@ -90,13 +92,15 @@ export default async function SysadminPage() {
     contentMix,
     health,
   } = overview;
-  const [logins, owners, audit, speakingStats, clickCounts] = await Promise.all([
-    listRecentLogins(100),
-    listOwners(),
-    listRoleAuditLog(25),
-    getAllSpeakingStats().catch(() => []),
-    getPublicClickCounts(),
-  ]);
+  const [logins, owners, audit, speakingStats, clickCounts, mapPoints] =
+    await Promise.all([
+      listRecentLogins(100),
+      listOwners(),
+      listRoleAuditLog(25),
+      getAllSpeakingStats().catch(() => []),
+      getPublicClickCounts(),
+      getPeopleByCity().catch(() => []),
+    ]);
 
   // Human-readable "April 2026" / "abril de 2026" for the public-access
   // KPI sublines. Capitalised first letter in both locales.
@@ -381,6 +385,9 @@ export default async function SysadminPage() {
         lessonsPerCefr={contentMix.lessonsPerCefr}
         songsPerCefr={contentMix.songsPerCefr}
       />
+
+      {/* ============================ Brazil map (teachers + students) ============================ */}
+      <BrazilTeachersMap points={mapPoints} />
 
       {/* ============================ All teachers directory ============================ */}
       <section className="space-y-3">
