@@ -105,14 +105,25 @@ export function CefrExplainerCard() {
           ))}
         </div>
 
-        <p className="text-[11px] text-muted-foreground">
+        <p className="text-[11px] leading-relaxed text-muted-foreground">
           <T
             en={
               <>
                 Each level can be split into two semesters (e.g.{" "}
                 <span className="font-semibold">B1.1</span> and{" "}
                 <span className="font-semibold">B1.2</span>) — your teacher
-                picks the slice that fits the class best.
+                picks the slice that fits the class best. Official source —
+                Council of Europe:{" "}
+                <a
+                  href="https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+                >
+                  coe.int/cefr
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+                .
               </>
             }
             pt={
@@ -121,28 +132,21 @@ export function CefrExplainerCard() {
                 <span className="font-semibold">B1.1</span> e{" "}
                 <span className="font-semibold">B1.2</span>) — o seu
                 professor define o recorte que melhor se encaixa na turma.
+                Fonte oficial — Conselho da Europa:{" "}
+                <a
+                  href="https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+                >
+                  coe.int/cefr
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+                .
               </>
             }
           />
         </p>
-
-        <div className="flex items-center justify-between gap-2 rounded-lg border border-border/60 bg-muted/30 px-3 py-2 text-[11px]">
-          <span className="text-muted-foreground">
-            <T
-              en="Official source — Council of Europe"
-              pt="Fonte oficial — Conselho da Europa"
-            />
-          </span>
-          <a
-            href="https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
-          >
-            coe.int/cefr
-            <ExternalLink className="h-3 w-3" />
-          </a>
-        </div>
       </CardContent>
     </Card>
   );
