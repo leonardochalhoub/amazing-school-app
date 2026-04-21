@@ -277,13 +277,17 @@ export default async function RosterStudentDetailPage({
               on the left column. Useful on tall pages where the
               student's actual profile form is far from the top of
               the sidebar. */}
-          <Link
-            href={`/teacher/students/${id}#student-details`}
+          <a
+            href={`/teacher/students/${id}/view`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-medium transition-colors hover:border-primary/50 hover:bg-primary/5"
           >
             <User className="h-4 w-4" />
-            Perfil do aluno
-          </Link>
+            {student.gender === "female"
+              ? "Perfil da aluna"
+              : "Perfil do aluno"}
+          </a>
 
           <Card>
             <CardHeader>
