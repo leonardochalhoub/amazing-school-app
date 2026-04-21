@@ -110,8 +110,8 @@ export function CefrExplainerCard() {
             en={
               <>
                 Each level can be split into two semesters (e.g.{" "}
-                <span className="font-semibold">B1.1</span> and{" "}
-                <span className="font-semibold">B1.2</span>) — your teacher
+                <span className="font-semibold">B1</span> and{" "}
+                <span className="font-semibold">B2</span>) — your teacher
                 picks the slice that fits the class best. Official source —
                 Council of Europe:{" "}
                 <a
@@ -129,8 +129,8 @@ export function CefrExplainerCard() {
             pt={
               <>
                 Cada nível pode ser dividido em dois semestres (ex.:{" "}
-                <span className="font-semibold">B1.1</span> e{" "}
-                <span className="font-semibold">B1.2</span>) — o seu
+                <span className="font-semibold">B1</span> e{" "}
+                <span className="font-semibold">B2</span>) — o seu
                 professor define o recorte que melhor se encaixa na turma.
                 Fonte oficial — Conselho da Europa:{" "}
                 <a
