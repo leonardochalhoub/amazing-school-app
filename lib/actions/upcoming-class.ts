@@ -42,7 +42,10 @@ export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) return null;
+  if (!user) {
+    console.info("[upcoming-class] no signed-in user");
+    return null;
+  }
 
   const admin = createAdminClient();
 
@@ -56,6 +59,9 @@ export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
     | "student"
     | "owner";
   const isTeacher = role === "teacher" || role === "owner";
+  console.info(
+    `[upcoming-class] resolving for ${role} ${user.id} (${user.email ?? "no-email"})`,
+  );
 
   // Near-future window: 1 hour grace after start (so the popup
   // persists through class time) through 14 days ahead. Earlier
@@ -98,6 +104,9 @@ export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
     return null;
   }
 
+  console.info(
+    `[upcoming-class] classroomIds=${JSON.stringify(classroomIds)} window=${graceWindow}..${windowEnd}`,
+  );
   const { data: upcoming, error: upcomingErr } = await admin
     .from("scheduled_classes")
     .select("id, classroom_id, title, meeting_url, scheduled_at")
@@ -108,6 +117,9 @@ export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
     .limit(1);
   if (upcomingErr)
     console.warn("[upcoming-class] upcoming err", upcomingErr.message);
+  console.info(
+    `[upcoming-class] upcoming rows=${upcoming?.length ?? 0}`,
+  );
   if (!upcoming || upcoming.length === 0) {
     // Secondary lookup that ignores the time window — helps diagnose
     // whether the data exists at all but is outside the next-4-days
