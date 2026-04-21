@@ -27,6 +27,10 @@ import { getAssignmentsForRosterStudent } from "@/lib/actions/assignments";
 import { getLiveClassSummaryForRoster } from "@/lib/actions/live-class-hours";
 import { formatHoursMinutes } from "@/lib/actions/student-history-types";
 import { getLevel, getXpForNextLevel } from "@/lib/gamification/engine";
+import {
+  ActivityChart,
+  type ActivityBucket,
+} from "@/components/student/activity-chart";
 
 /**
  * Teacher's read-only view of a student's profile — rendered exactly
@@ -106,6 +110,84 @@ export default async function StudentViewAsStudent({
     bySkill: {},
     monthly: [],
   }));
+
+  // Build the same 24-month activity buckets the student sees on their
+  // own /student dashboard. Lessons + Music + Live Classes stack
+  // monthly so the teacher sees identical data to the student.
+  const BRT_OFFSET_MS = -3 * 60 * 60 * 1000;
+  const ACTIVITY_MONTHS = 24;
+  const _now = new Date(Date.now() + BRT_OFFSET_MS);
+  const _curYear = _now.getUTCFullYear();
+  const _curMonth = _now.getUTCMonth();
+  const activityBuckets: ActivityBucket[] = [];
+  const bucketIndexByKey = new Map<string, number>();
+  for (let i = ACTIVITY_MONTHS - 1; i >= 0; i--) {
+    let y = _curYear;
+    let m = _curMonth - i;
+    while (m < 0) {
+      m += 12;
+      y -= 1;
+    }
+    const key = `${y}-${String(m + 1).padStart(2, "0")}`;
+    bucketIndexByKey.set(key, activityBuckets.length);
+    activityBuckets.push({
+      start: `${key}-01`,
+      lessons: 0,
+      music: 0,
+      live: 0,
+    });
+  }
+  function _monthKey(d: Date): string {
+    const brt = new Date(d.getTime() + BRT_OFFSET_MS);
+    return `${brt.getUTCFullYear()}-${String(brt.getUTCMonth() + 1).padStart(2, "0")}`;
+  }
+  // Seed lessons + music from this student's lesson_progress rows.
+  if (student.auth_user_id) {
+    const { data: completions } = await admin
+      .from("lesson_progress")
+      .select("lesson_slug, completed_at")
+      .eq("student_id", student.auth_user_id)
+      .not("completed_at", "is", null)
+      .limit(10_000);
+    for (const c of (completions ?? []) as Array<{
+      lesson_slug: string;
+      completed_at: string;
+    }>) {
+      const idx = bucketIndexByKey.get(_monthKey(new Date(c.completed_at)));
+      if (idx === undefined) continue;
+      if (c.lesson_slug.startsWith("music:"))
+        activityBuckets[idx].music++;
+      else activityBuckets[idx].lessons++;
+    }
+  }
+  // Seed live classes from student_history (per-roster + classroom-wide).
+  {
+    type LiveRow = { event_date: string };
+    const [perRes, classRes] = await Promise.all([
+      admin
+        .from("student_history")
+        .select("event_date")
+        .eq("roster_student_id", id)
+        .not("duration_minutes", "is", null),
+      student.classroom_id
+        ? admin
+            .from("student_history")
+            .select("event_date")
+            .eq("classroom_id", student.classroom_id)
+            .is("roster_student_id", null)
+            .not("duration_minutes", "is", null)
+        : Promise.resolve({ data: [] as LiveRow[] }),
+    ]);
+    const liveRows = [
+      ...((perRes.data ?? []) as LiveRow[]),
+      ...((classRes.data ?? []) as LiveRow[]),
+    ];
+    for (const lr of liveRows) {
+      const idx = bucketIndexByKey.get(_monthKey(new Date(lr.event_date)));
+      if (idx === undefined) continue;
+      activityBuckets[idx].live = (activityBuckets[idx].live ?? 0) + 1;
+    }
+  }
   assignedCount = allAssignments.length;
   completedCount = allAssignments.filter((a) => a.status === "completed")
     .length;
@@ -276,7 +358,7 @@ export default async function StudentViewAsStudent({
         </div>
       </div>
 
-      <div className="mx-auto max-w-2xl">
+      <div className="mx-auto w-full max-w-6xl">
         <Tabs defaultValue="main" className="gap-4">
           <TabsList className="w-full">
             <TabsTrigger value="main">
@@ -291,362 +373,351 @@ export default async function StudentViewAsStudent({
           </TabsList>
 
           <TabsContent value="main" className="space-y-6">
-            <div>
-              <h1 className="text-2xl font-bold">
-                <T en="Hi, " pt="Olá, " />
-                {student.full_name.split(" ")[0]}
-              </h1>
-              <p className="text-sm text-muted-foreground">
-                <T
-                  en={`Overview the student sees. Read-only.`}
-                  pt={`Resumo que ${isFemale ? "a" : "o"} ${studentWord} vê ao entrar. Somente leitura.`}
+            {/* HERO — avatar + name + level + XP bar in one card so the
+                top of the page reads at a glance, mobile or desktop. */}
+            <Card className="overflow-hidden">
+              <div className="relative">
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-pink-500/10"
                 />
-              </p>
-            </div>
-
-            {/* XP + level summary */}
-            <Card>
-              <CardContent className="flex items-center gap-4 p-4">
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 text-white">
-                  <Zap className="h-7 w-7" />
-                </span>
-                <div className="flex-1 space-y-1">
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                    <T en="Level · XP" pt="Nível · XP" />
-                  </p>
-                  <p className="text-xl font-semibold tabular-nums">
-                    Lv.{level} · {totalXp.toLocaleString("pt-BR")} XP
-                  </p>
-                  <div
-                    role="progressbar"
-                    aria-valuenow={Math.round(xpProg.progress)}
-                    aria-valuemin={0}
-                    aria-valuemax={100}
-                    className="relative h-3 w-full overflow-hidden rounded-full bg-muted ring-1 ring-border/60"
-                  >
-                    <div
-                      className="h-full rounded-full bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500 shadow-[0_0_12px_rgba(139,92,246,0.5)] transition-[width] duration-700"
-                      style={{
-                        width: `${Math.max(0, Math.min(100, xpProg.progress))}%`,
-                      }}
+                <CardContent className="relative flex flex-col gap-5 p-5 sm:flex-row sm:items-center sm:p-6">
+                  <div className="relative shrink-0">
+                    <AvatarDisplay
+                      fullName={student.full_name}
+                      signedUrl={avatarUrl}
+                      className="h-20 w-20 ring-4 ring-background sm:h-24 sm:w-24"
                     />
+                    <span
+                      className="absolute -bottom-1 -right-1 inline-flex h-8 min-w-8 items-center justify-center rounded-full border-2 border-background bg-gradient-to-br from-indigo-500 via-violet-500 to-pink-500 px-1.5 text-xs font-bold text-white shadow"
+                      title={`Level ${level}`}
+                    >
+                      {level}
+                    </span>
                   </div>
-                  <p className="text-[11px] text-muted-foreground tabular-nums">
-                    <T
-                      en={`${Math.max(0, xpProg.needed - xpProg.current)} XP to next level`}
-                      pt={`Faltam ${Math.max(0, xpProg.needed - xpProg.current)} XP para o próximo nível`}
-                    />
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Assignments + activity KPIs */}
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              <Card>
-                <CardContent className="flex items-center gap-3 p-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-500/15 text-sky-600 dark:text-sky-400">
-                    <BookOpen className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                      <T en="Assigned lessons" pt="Lições atribuídas" />
-                    </p>
-                    <p className="text-lg font-semibold tabular-nums">
-                      {assignedCount}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="flex items-center gap-3 p-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
-                    <CheckCircle2 className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                      <T en="Completed" pt="Concluídas" />
-                    </p>
-                    <p className="text-lg font-semibold tabular-nums">
-                      {completedCount}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="flex items-center gap-3 p-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-500/15 text-violet-600 dark:text-violet-400">
-                    <Flame className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                      <T en="Active days · 30d" pt="Dias ativos · 30d" />
-                    </p>
-                    <p className="text-lg font-semibold tabular-nums">
-                      {daysActiveLast30}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="flex items-center gap-3 p-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-rose-500/15 text-rose-600 dark:text-rose-400">
-                    <CalendarClock className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                      <T en="Next class" pt="Próxima aula" />
-                    </p>
-                    <p className="text-sm font-semibold">
-                      {nextClassDate ? (
+                  <div className="min-w-0 flex-1 space-y-2">
+                    <div>
+                      <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                        <T en="Hi," pt="Olá," />
+                      </p>
+                      <h1 className="truncate text-2xl font-bold sm:text-3xl">
+                        {student.full_name.split(" ")[0]}
+                      </h1>
+                      <p className="text-xs text-muted-foreground">
                         <T
-                          en={new Date(nextClassDate).toLocaleDateString(
-                            "en-US",
-                            {
-                              timeZone: "America/Sao_Paulo",
-                              day: "2-digit",
-                              month: "short",
-                            },
-                          )}
-                          pt={new Date(nextClassDate).toLocaleDateString(
-                            "pt-BR",
-                            {
-                              timeZone: "America/Sao_Paulo",
-                              day: "2-digit",
-                              month: "short",
-                            },
-                          )}
+                          en="Overview the student sees · read-only"
+                          pt={`Resumo que ${isFemale ? "a" : "o"} ${studentWord} vê · somente leitura`}
                         />
-                      ) : (
-                        "—"
-                      )}
-                    </p>
+                      </p>
+                    </div>
+                    <div className="space-y-1.5">
+                      <div className="flex items-center justify-between text-[11px] tabular-nums">
+                        <span className="inline-flex items-center gap-1 font-semibold">
+                          <Zap className="h-3 w-3 text-amber-500" />
+                          Lv.{level} · {totalXp.toLocaleString("pt-BR")} XP
+                        </span>
+                        <span className="text-muted-foreground">
+                          <T
+                            en={`${Math.max(0, xpProg.needed - xpProg.current)} to Lv ${level + 1}`}
+                            pt={`faltam ${Math.max(0, xpProg.needed - xpProg.current)} para Lv ${level + 1}`}
+                          />
+                        </span>
+                      </div>
+                      <div
+                        role="progressbar"
+                        aria-valuenow={Math.round(xpProg.progress)}
+                        aria-valuemin={0}
+                        aria-valuemax={100}
+                        className="relative h-3 w-full overflow-hidden rounded-full bg-muted ring-1 ring-border/60"
+                      >
+                        <div
+                          className="h-full rounded-full bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500 shadow-[0_0_12px_rgba(139,92,246,0.5)] transition-[width] duration-700"
+                          style={{
+                            width: `${Math.max(0, Math.min(100, xpProg.progress))}%`,
+                          }}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
-              </Card>
-            </div>
-
-            {/* Last class + recent activity side-by-side */}
-            <div className="grid gap-3 lg:grid-cols-2">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-base">
-                    <CalendarClock className="h-4 w-4 text-primary" />
-                    <T en="Last class" pt="Última aula" />
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {lastClassDate ? (
-                    <p className="text-sm font-semibold">
-                      <T
-                        en={new Date(lastClassDate).toLocaleDateString(
-                          "en-US",
-                          {
-                            timeZone: "America/Sao_Paulo",
-                            day: "2-digit",
-                            month: "long",
-                            year: "numeric",
-                          },
-                        )}
-                        pt={new Date(lastClassDate).toLocaleDateString(
-                          "pt-BR",
-                          {
-                            timeZone: "America/Sao_Paulo",
-                            day: "2-digit",
-                            month: "long",
-                            year: "numeric",
-                          },
-                        )}
-                      />
-                    </p>
-                  ) : (
-                    <p className="text-sm text-muted-foreground">
-                      <T
-                        en="No classes logged yet."
-                        pt="Nenhuma aula registrada ainda."
-                      />
-                    </p>
-                  )}
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-base">
-                    <CheckCircle2 className="h-4 w-4 text-primary" />
-                    <T en="Recent activity" pt="Atividade recente" />
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {recentCompletions.length === 0 ? (
-                    <p className="text-sm text-muted-foreground">
-                      <T
-                        en="No lessons completed yet."
-                        pt="Ainda sem lições concluídas."
-                      />
-                    </p>
-                  ) : (
-                    <ul className="space-y-1.5 text-sm">
-                      {recentCompletions.map((c) => (
-                        <li
-                          key={c.lesson_slug}
-                          className="flex items-center justify-between gap-2"
-                        >
-                          <span className="truncate font-medium">
-                            {humanize(c.lesson_slug)}
-                          </span>
-                          <span className="shrink-0 text-[11px] text-muted-foreground tabular-nums">
-                            <T
-                              en={new Date(c.completed_at).toLocaleDateString(
-                                "en-US",
-                                {
-                                  timeZone: "America/Sao_Paulo",
-                                  day: "2-digit",
-                                  month: "short",
-                                },
-                              )}
-                              pt={new Date(c.completed_at).toLocaleDateString(
-                                "pt-BR",
-                                {
-                                  timeZone: "America/Sao_Paulo",
-                                  day: "2-digit",
-                                  month: "short",
-                                },
-                              )}
-                            />
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Pending assignments preview */}
-            {pendingAssignments.length > 0 ? (
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-base">
-                    <BookOpen className="h-4 w-4 text-primary" />
-                    <T en="Pending lessons" pt="Lições pendentes" />
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-1 text-sm">
-                    {pendingAssignments.map((slug) => (
-                      <li key={slug} className="truncate font-medium">
-                        {humanize(slug)}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ) : null}
-
-            {/* Badges */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-base">
-                  <Award className="h-4 w-4 text-primary" />
-                  <T
-                    en={`Badges · ${badges.length}`}
-                    pt={`Medalhas · ${badges.length}`}
-                  />
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                {badges.length === 0 ? (
-                  <p className="text-sm text-muted-foreground">
-                    <T
-                      en="No badges earned yet."
-                      pt="Ainda não conquistou nenhuma medalha."
-                    />
-                  </p>
-                ) : (
-                  <div className="flex flex-wrap gap-1.5">
-                    {badges.map((b, i) => (
-                      <BadgeChip
-                        key={`${b.badge_type}-${i}`}
-                        type={b.badge_type}
-                      />
-                    ))}
-                  </div>
-                )}
-              </CardContent>
+              </div>
             </Card>
 
-            {/* Live-class hours — total + this month + per-skill split */}
-            {liveClasses.totalMinutes > 0 ? (
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-base">
-                    <CalendarClock className="h-4 w-4 text-primary" />
-                    <T en="Live class hours" pt="Horas de aula ao vivo" />
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    <div className="rounded-xl border border-border/70 bg-muted/40 p-3">
-                      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-                        <T en="Total" pt="Total" />
-                      </p>
-                      <p className="mt-1 text-lg font-semibold tabular-nums">
-                        {formatHoursMinutes(liveClasses.totalMinutes)}
-                      </p>
-                    </div>
-                    <div className="rounded-xl border border-border/70 bg-muted/40 p-3">
-                      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-                        <T en="This month" pt="Este mês" />
-                      </p>
-                      <p className="mt-1 text-lg font-semibold tabular-nums">
-                        {formatHoursMinutes(liveClasses.thisMonthMinutes)}
-                      </p>
-                    </div>
-                  </div>
-                  {Object.keys(liveClasses.bySkill).length > 0 ? (
-                    <div className="space-y-1.5">
-                      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-                        <T en="By skill" pt="Por habilidade" />
-                      </p>
-                      <ul className="space-y-1 text-sm">
-                        {Object.entries(liveClasses.bySkill)
-                          .sort((a, b) => b[1] - a[1])
-                          .map(([skill, minutes]) => (
-                            <li
-                              key={skill}
-                              className="flex items-center justify-between gap-2"
-                            >
-                              <span className="font-medium">{skill}</span>
-                              <span className="tabular-nums text-muted-foreground">
-                                {formatHoursMinutes(minutes)}
-                              </span>
-                            </li>
-                          ))}
-                      </ul>
-                    </div>
-                  ) : null}
-                </CardContent>
-              </Card>
-            ) : null}
+            {/* KPI strip — 2-up on mobile, 4-up on tablet+ */}
+            <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
+              <KpiTile
+                icon={<BookOpen className="h-5 w-5" />}
+                tone="sky"
+                label={<T en="Assigned" pt="Atribuídas" />}
+                value={assignedCount}
+              />
+              <KpiTile
+                icon={<CheckCircle2 className="h-5 w-5" />}
+                tone="emerald"
+                label={<T en="Completed" pt="Concluídas" />}
+                value={completedCount}
+              />
+              <KpiTile
+                icon={<Flame className="h-5 w-5" />}
+                tone="violet"
+                label={<T en="Active · 30d" pt="Ativos · 30d" />}
+                value={daysActiveLast30}
+              />
+              <KpiTile
+                icon={<CalendarClock className="h-5 w-5" />}
+                tone="rose"
+                label={<T en="Next class" pt="Próxima aula" />}
+                value={
+                  nextClassDate
+                    ? new Date(nextClassDate).toLocaleDateString("pt-BR", {
+                        timeZone: "America/Sao_Paulo",
+                        day: "2-digit",
+                        month: "short",
+                      })
+                    : "—"
+                }
+                small
+              />
+            </div>
 
-            {/* Starting date */}
-            {startingDate ? (
-              <Card>
-                <CardContent className="flex items-center gap-4 p-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/15 text-amber-600 dark:text-amber-400">
-                    <Flame className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                      <T en="Days with us" pt="Dias conosco" />
-                    </p>
-                    <p className="text-lg font-semibold tabular-nums">
-                      {(daysStudying ?? 0).toLocaleString("pt-BR")}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ) : null}
+            {/* Two-column body — main column gets the time-series cards,
+                side column gets badges + live class summary + tenure. */}
+            <div className="grid gap-4 lg:grid-cols-3">
+              <div className="space-y-4 lg:col-span-2">
+                {/* Activity chart — exact same component the student
+                    sees on /student. Stacked bars by month: lessons,
+                    music, live classes. */}
+                <ActivityChart
+                  buckets={activityBuckets}
+                  granularity="month"
+                />
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2 text-base">
+                        <CalendarClock className="h-4 w-4 text-primary" />
+                        <T en="Last class" pt="Última aula" />
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      {lastClassDate ? (
+                        <p className="text-sm font-semibold">
+                          <T
+                            en={new Date(lastClassDate).toLocaleDateString(
+                              "en-US",
+                              {
+                                timeZone: "America/Sao_Paulo",
+                                day: "2-digit",
+                                month: "long",
+                                year: "numeric",
+                              },
+                            )}
+                            pt={new Date(lastClassDate).toLocaleDateString(
+                              "pt-BR",
+                              {
+                                timeZone: "America/Sao_Paulo",
+                                day: "2-digit",
+                                month: "long",
+                                year: "numeric",
+                              },
+                            )}
+                          />
+                        </p>
+                      ) : (
+                        <p className="text-sm text-muted-foreground">
+                          <T
+                            en="No classes logged yet."
+                            pt="Nenhuma aula registrada ainda."
+                          />
+                        </p>
+                      )}
+                    </CardContent>
+                  </Card>
+                  {startingDate ? (
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2 text-base">
+                          <Flame className="h-4 w-4 text-amber-500" />
+                          <T en="Days with us" pt="Dias conosco" />
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="space-y-1">
+                        <p className="text-2xl font-semibold tabular-nums">
+                          {(daysStudying ?? 0).toLocaleString("pt-BR")}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          <T
+                            en={`Since ${startingDate}`}
+                            pt={`Desde ${startingDate}`}
+                          />
+                        </p>
+                      </CardContent>
+                    </Card>
+                  ) : null}
+                </div>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-base">
+                      <CheckCircle2 className="h-4 w-4 text-primary" />
+                      <T en="Recent activity" pt="Atividade recente" />
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {recentCompletions.length === 0 ? (
+                      <p className="text-sm text-muted-foreground">
+                        <T
+                          en="No lessons completed yet."
+                          pt="Ainda sem lições concluídas."
+                        />
+                      </p>
+                    ) : (
+                      <ul className="space-y-1.5 text-sm">
+                        {recentCompletions.map((c) => (
+                          <li
+                            key={c.lesson_slug}
+                            className="flex items-center justify-between gap-2"
+                          >
+                            <span className="truncate font-medium">
+                              {humanize(c.lesson_slug)}
+                            </span>
+                            <span className="shrink-0 text-[11px] text-muted-foreground tabular-nums">
+                              <T
+                                en={new Date(c.completed_at).toLocaleDateString(
+                                  "en-US",
+                                  {
+                                    timeZone: "America/Sao_Paulo",
+                                    day: "2-digit",
+                                    month: "short",
+                                  },
+                                )}
+                                pt={new Date(c.completed_at).toLocaleDateString(
+                                  "pt-BR",
+                                  {
+                                    timeZone: "America/Sao_Paulo",
+                                    day: "2-digit",
+                                    month: "short",
+                                  },
+                                )}
+                              />
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </CardContent>
+                </Card>
+
+                {pendingAssignments.length > 0 ? (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2 text-base">
+                        <BookOpen className="h-4 w-4 text-primary" />
+                        <T en="Pending lessons" pt="Lições pendentes" />
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-1 text-sm">
+                        {pendingAssignments.map((slug) => (
+                          <li key={slug} className="truncate font-medium">
+                            {humanize(slug)}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                ) : null}
+              </div>
+
+              <div className="space-y-4">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-base">
+                      <Award className="h-4 w-4 text-primary" />
+                      <T
+                        en={`Badges · ${badges.length}`}
+                        pt={`Medalhas · ${badges.length}`}
+                      />
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {badges.length === 0 ? (
+                      <p className="text-sm text-muted-foreground">
+                        <T
+                          en="No badges earned yet."
+                          pt="Ainda não conquistou nenhuma medalha."
+                        />
+                      </p>
+                    ) : (
+                      <div className="flex flex-wrap gap-1.5">
+                        {badges.map((b, i) => (
+                          <BadgeChip
+                            key={`${b.badge_type}-${i}`}
+                            type={b.badge_type}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+
+                {liveClasses.totalMinutes > 0 ? (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2 text-base">
+                        <CalendarClock className="h-4 w-4 text-primary" />
+                        <T en="Live class hours" pt="Horas de aula ao vivo" />
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <div className="grid gap-2 grid-cols-2">
+                        <div className="rounded-xl border border-border/70 bg-muted/40 p-3">
+                          <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                            <T en="Total" pt="Total" />
+                          </p>
+                          <p className="mt-1 text-base font-semibold tabular-nums">
+                            {formatHoursMinutes(liveClasses.totalMinutes)}
+                          </p>
+                        </div>
+                        <div className="rounded-xl border border-border/70 bg-muted/40 p-3">
+                          <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                            <T en="This month" pt="Este mês" />
+                          </p>
+                          <p className="mt-1 text-base font-semibold tabular-nums">
+                            {formatHoursMinutes(liveClasses.thisMonthMinutes)}
+                          </p>
+                        </div>
+                      </div>
+                      {Object.keys(liveClasses.bySkill).length > 0 ? (
+                        <div className="space-y-1.5">
+                          <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                            <T en="By skill" pt="Por habilidade" />
+                          </p>
+                          <ul className="space-y-1 text-sm">
+                            {Object.entries(liveClasses.bySkill)
+                              .sort((a, b) => b[1] - a[1])
+                              .map(([skill, minutes]) => (
+                                <li
+                                  key={skill}
+                                  className="flex items-center justify-between gap-2"
+                                >
+                                  <span className="font-medium capitalize">
+                                    {skill}
+                                  </span>
+                                  <span className="tabular-nums text-muted-foreground">
+                                    {formatHoursMinutes(minutes)}
+                                  </span>
+                                </li>
+                              ))}
+                          </ul>
+                        </div>
+                      ) : null}
+                    </CardContent>
+                  </Card>
+                ) : null}
+              </div>
+            </div>
           </TabsContent>
 
           <TabsContent value="profile" className="space-y-6">
@@ -759,6 +830,49 @@ export default async function StudentViewAsStudent({
         </Tabs>
       </div>
     </div>
+  );
+}
+
+function KpiTile({
+  icon,
+  tone,
+  label,
+  value,
+  small = false,
+}: {
+  icon: React.ReactNode;
+  tone: "sky" | "emerald" | "violet" | "rose" | "amber";
+  label: React.ReactNode;
+  value: React.ReactNode;
+  small?: boolean;
+}) {
+  const toneClass: Record<typeof tone, string> = {
+    sky: "bg-sky-500/15 text-sky-600 dark:text-sky-400",
+    emerald: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400",
+    violet: "bg-violet-500/15 text-violet-600 dark:text-violet-400",
+    rose: "bg-rose-500/15 text-rose-600 dark:text-rose-400",
+    amber: "bg-amber-500/15 text-amber-600 dark:text-amber-400",
+  };
+  return (
+    <Card>
+      <CardContent className="flex items-center gap-3 p-3 sm:p-4">
+        <span
+          className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${toneClass[tone]}`}
+        >
+          {icon}
+        </span>
+        <div className="min-w-0">
+          <p className="truncate text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+            {label}
+          </p>
+          <p
+            className={`truncate font-semibold tabular-nums ${small ? "text-sm" : "text-lg"}`}
+          >
+            {value}
+          </p>
+        </div>
+      </CardContent>
+    </Card>
   );
 }
 
