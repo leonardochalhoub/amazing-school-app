@@ -69,10 +69,34 @@ export async function getMyNextClass(): Promise<UpcomingClassResult> {
   debug.role = role;
   const isTeacher = role === "teacher" || role === "owner";
 
+  // User-tunable window. Defaults to 5 days when the 053 migration
+  // hasn't been applied yet OR the user hasn't chosen a value. A
+  // 0-day window is the user's opt-out — return nothing.
+  let windowDays = 5;
+  try {
+    const { data: winRow } = await admin
+      .from("profiles")
+      .select("upcoming_class_window_days")
+      .eq("id", user.id)
+      .maybeSingle();
+    const raw = (
+      winRow as { upcoming_class_window_days?: number | null } | null
+    )?.upcoming_class_window_days;
+    if (typeof raw === "number" && raw >= 0 && raw <= 30) {
+      windowDays = raw;
+    }
+  } catch {
+    /* column may not exist yet — keep default */
+  }
+  if (windowDays === 0) {
+    debug.reason = "opted-out";
+    return { items: [], debug };
+  }
+
   const nowMs = Date.now();
   const graceISO = new Date(nowMs - 60 * 60 * 1000).toISOString();
   const windowEndISO = new Date(
-    nowMs + 14 * 24 * 60 * 60 * 1000,
+    nowMs + windowDays * 24 * 60 * 60 * 1000,
   ).toISOString();
   const todayDateISO = new Date().toISOString().slice(0, 10);
   const windowEndDateISO = windowEndISO.slice(0, 10);

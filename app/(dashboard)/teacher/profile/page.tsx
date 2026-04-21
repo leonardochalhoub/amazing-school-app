@@ -4,6 +4,7 @@ import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
 import { AvatarUploader } from "@/components/shared/avatar-uploader";
 import { ChangePasswordCard } from "@/components/shared/change-password-card";
 import { LocationCard } from "@/components/shared/location-card";
+import { UpcomingWindowCard } from "@/components/shared/upcoming-window-card";
 import { PrivacyNotice } from "@/components/shared/privacy-notice";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, GraduationCap, ArrowUpRight, Image as ImageIcon, PenTool } from "lucide-react";
@@ -42,6 +43,21 @@ export default async function TeacherProfilePage() {
     .maybeSingle();
   const location =
     (locationRow as { location?: string | null } | null)?.location ?? null;
+
+  let upcomingWindow = 5;
+  try {
+    const { data: winRow } = await admin
+      .from("profiles")
+      .select("upcoming_class_window_days")
+      .eq("id", user.id)
+      .maybeSingle();
+    const raw = (
+      winRow as { upcoming_class_window_days?: number | null } | null
+    )?.upcoming_class_window_days;
+    if (typeof raw === "number") upcomingWindow = raw;
+  } catch {
+    /* column may be absent */
+  }
 
   const signedUrl = await resolveMyAvatarUrl(supabase, user.id);
   const logoEligible = isLogoEligible(user.email, profile.full_name);
@@ -84,6 +100,8 @@ export default async function TeacherProfilePage() {
       </Card>
 
       <LocationCard initial={location} />
+
+      <UpcomingWindowCard initial={upcomingWindow} />
 
       <ChangePasswordCard
         isDemo={(user.email ?? "").toLowerCase().startsWith("demo.")}
