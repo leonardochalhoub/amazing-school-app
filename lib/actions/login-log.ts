@@ -31,36 +31,35 @@ export async function listRecentLogins(
 
   const admin = createAdminClient();
 
-  // auth.audit_log_entries is not exposed via PostgREST by default. We use
-  // a plain SQL query via the rpc('exec_sql') style is not standard, so
-  // fall back to selecting from auth.users + our own derived trail:
-  // Supabase exposes `last_sign_in_at` per user, and a full audit trail
-  // requires executing SQL. Use the service role to query the table
-  // directly via the REST endpoint if the admin client was created with
-  // the schema set; otherwise use auth.admin.listUsers and sort by
-  // last_sign_in_at — that gives the equivalent ranking for recent logins.
+  // Supabase's `last_sign_in_at` only updates on a fresh sign-in —
+  // when a user comes back with an unexpired cookie, their token is
+  // silently refreshed and the field stays put. That makes
+  // last_sign_in_at useless as a "when were you last here" metric.
+  // We merge it with the most recent row in session_heartbeats (the
+  // 30s ping every authenticated page writes) and surface whichever
+  // is newer, so a visit that reuses an existing session still
+  // registers on this log.
   const { data: users, error } = await admin.auth.admin.listUsers({
     page: 1,
     perPage: Math.min(limit, 1000),
   });
   if (error || !users) return [];
 
-  // Sort by last_sign_in_at desc.
-  const sorted = [...users.users]
-    .filter((u) => u.last_sign_in_at)
-    .sort((a, b) => {
-      const ta = new Date(a.last_sign_in_at ?? 0).getTime();
-      const tb = new Date(b.last_sign_in_at ?? 0).getTime();
-      return tb - ta;
-    })
-    .slice(0, limit);
+  const allIds = users.users.map((u) => u.id);
+  const [{ data: profiles }, { data: heartbeats }] = await Promise.all([
+    admin.from("profiles").select("id, full_name, role").in("id", allIds),
+    admin
+      .from("session_heartbeats")
+      .select("user_id, at")
+      .in("user_id", allIds)
+      .order("at", { ascending: false })
+      .limit(2000),
+  ]);
 
-  const userIds = sorted.map((u) => u.id);
-  const { data: profiles } = await admin
-    .from("profiles")
-    .select("id, full_name, role")
-    .in("id", userIds);
-  const byId = new Map<string, { full_name: string | null; role: string | null }>();
+  const byId = new Map<
+    string,
+    { full_name: string | null; role: string | null }
+  >();
   for (const p of profiles ?? []) {
     byId.set(p.id as string, {
       full_name: (p.full_name as string | null) ?? null,
@@ -68,11 +67,35 @@ export async function listRecentLogins(
     });
   }
 
+  // Most recent heartbeat per user — the query is ordered desc so the
+  // first row for a given user_id is the one we want.
+  const lastHb = new Map<string, string>();
+  for (const h of (heartbeats ?? []) as { user_id: string; at: string }[]) {
+    if (!lastHb.has(h.user_id)) lastHb.set(h.user_id, h.at);
+  }
+
+  const effectiveAt = (u: (typeof users.users)[number]): string | null => {
+    const signIn = u.last_sign_in_at ?? null;
+    const hb = lastHb.get(u.id) ?? null;
+    if (!signIn) return hb;
+    if (!hb) return signIn;
+    return new Date(hb).getTime() > new Date(signIn).getTime() ? hb : signIn;
+  };
+
+  const sorted = [...users.users]
+    .filter((u) => effectiveAt(u))
+    .sort((a, b) => {
+      const ta = new Date(effectiveAt(a) ?? 0).getTime();
+      const tb = new Date(effectiveAt(b) ?? 0).getTime();
+      return tb - ta;
+    })
+    .slice(0, limit);
+
   return sorted.map((u) => {
     const p = byId.get(u.id) ?? { full_name: null, role: null };
     return {
       id: u.id,
-      at: (u.last_sign_in_at as string) ?? "",
+      at: effectiveAt(u) ?? "",
       email: u.email ?? null,
       fullName: p.full_name,
       role: p.role,

@@ -45,13 +45,14 @@ export function LoginLogPanel({ entries }: Props) {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            {pt ? "Registro de logins" : "Login log"}
+            {pt ? "Atividade recente" : "Recent activity"}
           </h2>
           <p className="text-xs text-muted-foreground">
             {pt ? (
               <>
-                Login mais recente por usuário. {entries.length} usuários
-                monitorados ·{" "}
+                Última vez que cada usuário esteve na plataforma
+                (considera login + ping de sessão).{" "}
+                {entries.length} monitorados ·{" "}
                 <span className="font-medium text-foreground">
                   {last24h} ativos nas últimas 24h
                 </span>
@@ -59,7 +60,8 @@ export function LoginLogPanel({ entries }: Props) {
               </>
             ) : (
               <>
-                Most recent sign-in per user. {entries.length} tracked users ·{" "}
+                Last time each user was on the platform (sign-in +
+                session ping combined). {entries.length} tracked ·{" "}
                 <span className="font-medium text-foreground">
                   {last24h} active in last 24h
                 </span>
@@ -89,7 +91,7 @@ export function LoginLogPanel({ entries }: Props) {
                 <th className="px-4 py-2">Email</th>
                 <th className="px-4 py-2">{pt ? "Função" : "Role"}</th>
                 <th className="px-4 py-2 text-right whitespace-nowrap">
-                  {pt ? "Último login · BRT" : "Last login · BRT"}
+                  {pt ? "Última atividade · BRT" : "Last active · BRT"}
                 </th>
                 <th className="px-4 py-2 text-right whitespace-nowrap">
                   {pt ? "Quando" : "When"}
