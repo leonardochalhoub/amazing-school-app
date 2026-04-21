@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { EditClassDialog } from "@/components/teacher/edit-class-dialog";
 import type {
   HistoryStatus,
   StudentHistoryEntry,
@@ -84,6 +85,7 @@ export function ClassLogPanel({ entries }: Props) {
                 <th className="px-3 py-2">Content</th>
                 <th className="px-3 py-2">Skills</th>
                 <th className="px-3 py-2">Link</th>
+                <th className="px-3 py-2"></th>
               </tr>
             </thead>
             <tbody>
@@ -165,6 +167,9 @@ export function ClassLogPanel({ entries }: Props) {
                           —
                         </span>
                       )}
+                    </td>
+                    <td className="px-3 py-2 whitespace-nowrap">
+                      <EditClassDialog entry={e} />
                     </td>
                   </tr>
                 );

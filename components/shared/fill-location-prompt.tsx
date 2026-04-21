@@ -22,16 +22,16 @@ interface Props {
 }
 
 /**
- * Pops a closable dialog nudging the user to fill their location.
- * Opens on every dashboard page load until location is set, skips
- * on the /profile page itself so it doesn't block the form the
- * user is about to fill, and closes on X / "Later" / navigating
- * away. Gated on a mount flag to dodge React #418 hydration
- * mismatches with the rest of the dashboard layout.
+ * Closable Dialog nudging the user to fill their location. Opens on
+ * every dashboard page render until location is set; skips the
+ * /profile page so it never covers the form.
+ *
+ * The Dialog initial state is `open=false` on both SSR and the first
+ * client paint, so no hydration mismatch. An effect then flips it to
+ * open right after mount.
  */
 export function FillLocationPrompt({ show, role }: Props) {
   const pathname = usePathname();
-  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
 
   const profileHref =
@@ -39,13 +39,10 @@ export function FillLocationPrompt({ show, role }: Props) {
   const onProfilePage = pathname === profileHref;
 
   useEffect(() => {
-    setMounted(true);
     if (show && !onProfilePage) setOpen(true);
   }, [show, onProfilePage]);
 
-  if (!mounted) return null;
-  if (!show) return null;
-  if (onProfilePage) return null;
+  if (!show || onProfilePage) return null;
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
