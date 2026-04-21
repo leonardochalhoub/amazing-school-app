@@ -380,10 +380,7 @@ export default async function StudentHome() {
             different motif (dogs, pandas, flowers, makeup, sweets…). */}
         {rosterSelf?.gender === "female" ? (
           <div className="pointer-events-none absolute -top-4 right-4 md:right-10">
-            <CuteArtBadge
-              seed={Math.floor(Math.random() * 1_000_000)}
-              size={140}
-            />
+            <CuteArtBadge size={140} />
           </div>
         ) : null}
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-8">

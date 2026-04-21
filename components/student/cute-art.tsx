@@ -1,4 +1,6 @@
-import type { ReactNode } from "react";
+"use client";
+
+import { useEffect, useState, type ReactNode } from "react";
 
 /**
  * 50 hand-drawn SVG "super cute" illustrations for the female student
@@ -812,17 +814,26 @@ export function pickCuteArtIndex(seed: number): number {
  * Render one of the 50 cute scenes. `size` drives the outer viewBox
  * (200×200 coords). A soft radial halo sits behind every scene so
  * the art reads over any hero gradient.
+ *
+ * The seed is picked on mount — never during SSR — so the server
+ * HTML and the first client render always agree (both empty). That
+ * sidesteps a React #418 hydration text mismatch that happens when
+ * Math.random() ships different SVGs to the server and the browser.
  */
 export function CuteArtBadge({
-  seed,
   size = 160,
   className = "",
 }: {
-  seed: number;
   size?: number;
   className?: string;
 }) {
-  const idx = pickCuteArtIndex(seed);
+  const [idx, setIdx] = useState<number | null>(null);
+
+  useEffect(() => {
+    setIdx(pickCuteArtIndex(Math.floor(Math.random() * 1_000_000)));
+  }, []);
+
+  if (idx === null) return null;
   const Scene = ARTS[idx];
   return (
     <svg
