@@ -18,6 +18,10 @@ interface SaveHistoryInput {
   classroom_id?: string | null;
   event_date: string;
   event_time?: string | null;
+  /** Optional end-of-class wall clock — drives duration_minutes
+   *  (a generated column) when paired with event_time on a Done
+   *  row. */
+  end_time?: string | null;
   status: string;
   lesson_content?: string | null;
   skill_focus?: string[];
@@ -68,6 +72,7 @@ export async function saveHistoryEntry(
     classroom_id: input.classroom_id ?? null,
     event_date: input.event_date,
     event_time: input.event_time || null,
+    end_time: input.end_time || null,
     status: input.status,
     lesson_content: input.lesson_content?.trim() || null,
     skill_focus: sanitizeSkillFocus(input.skill_focus),
@@ -131,7 +136,7 @@ export async function listStudentHistory(
   let query = admin
     .from("student_history")
     .select(
-      "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, status, lesson_content, skill_focus, meeting_link, created_at, updated_at",
+      "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, end_time, duration_minutes, status, lesson_content, skill_focus, meeting_link, created_at, updated_at",
     )
     .eq("teacher_id", user.id)
     .order("event_date", { ascending: false })
@@ -158,6 +163,8 @@ export async function listStudentHistory(
     classroom_id: (r.classroom_id as string | null) ?? null,
     event_date: r.event_date as string,
     event_time: (r.event_time as string | null) ?? null,
+    end_time: (r.end_time as string | null) ?? null,
+    duration_minutes: (r.duration_minutes as number | null) ?? null,
     status: r.status as HistoryStatus,
     lesson_content: (r.lesson_content as string | null) ?? null,
     skill_focus: Array.isArray(r.skill_focus)
@@ -212,7 +219,7 @@ export async function listAllTeacherHistory(
     const { data, error } = await admin
       .from("student_history")
       .select(
-        "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, status, lesson_content, skill_focus, meeting_link, created_at, updated_at",
+        "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, end_time, duration_minutes, status, lesson_content, skill_focus, meeting_link, created_at, updated_at",
       )
       .eq("teacher_id", user.id)
       .order("event_date", { ascending: false })
@@ -346,6 +353,8 @@ export async function listAllTeacherHistory(
       classroom_id: classroomId,
       event_date: r.event_date as string,
       event_time: (r.event_time as string | null) ?? null,
+      end_time: (r.end_time as string | null) ?? null,
+      duration_minutes: (r.duration_minutes as number | null) ?? null,
       status: r.status as HistoryStatus,
       lesson_content: (r.lesson_content as string | null) ?? null,
       skill_focus: Array.isArray(r.skill_focus)
@@ -387,7 +396,7 @@ export async function listOwnHistory(
     let query = admin
       .from("student_history")
       .select(
-        "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, status, lesson_content, skill_focus, meeting_link, created_at, updated_at",
+        "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, end_time, duration_minutes, status, lesson_content, skill_focus, meeting_link, created_at, updated_at",
       )
       .order("event_date", { ascending: false })
       .order("event_time", { ascending: false, nullsFirst: false })
@@ -424,6 +433,8 @@ export async function listOwnHistory(
     classroom_id: (r.classroom_id as string | null) ?? null,
     event_date: r.event_date as string,
     event_time: (r.event_time as string | null) ?? null,
+    end_time: (r.end_time as string | null) ?? null,
+    duration_minutes: (r.duration_minutes as number | null) ?? null,
     status: r.status as HistoryStatus,
     lesson_content: (r.lesson_content as string | null) ?? null,
     skill_focus: Array.isArray(r.skill_focus)

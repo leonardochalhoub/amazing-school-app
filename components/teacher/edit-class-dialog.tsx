@@ -23,10 +23,21 @@ import {
 import {
   HISTORY_STATUSES,
   SKILL_FOCUS_OPTIONS,
+  formatHoursMinutes,
   type HistoryStatus,
   type SkillFocus,
   type StudentHistoryEntry,
 } from "@/lib/actions/student-history-types";
+
+/** Render "1h 30min" between two HH:mm strings on the same day. */
+function formatDuration(startHHmm: string, endHHmm: string): string {
+  const [sh, sm] = startHHmm.split(":").map(Number);
+  const [eh, em] = endHHmm.split(":").map(Number);
+  if ([sh, sm, eh, em].some((n) => Number.isNaN(n))) return "—";
+  const startMin = sh * 60 + sm;
+  const endMin = eh * 60 + em;
+  return formatHoursMinutes(Math.max(0, endMin - startMin));
+}
 
 interface Props {
   entry: StudentHistoryEntry & { student_name?: string | null };
@@ -44,6 +55,9 @@ export function EditClassDialog({ entry, triggerClassName }: Props) {
   const [open, setOpen] = useState(false);
   const [eventDate, setEventDate] = useState(entry.event_date);
   const [eventTime, setEventTime] = useState(entry.event_time ?? "");
+  const [endTime, setEndTime] = useState(
+    (entry as { end_time?: string | null }).end_time ?? "",
+  );
   const [status, setStatus] = useState<HistoryStatus>(entry.status);
   const [meetingLink, setMeetingLink] = useState(entry.meeting_link ?? "");
   const [lessonContent, setLessonContent] = useState(
@@ -74,6 +88,7 @@ export function EditClassDialog({ entry, triggerClassName }: Props) {
         classroom_id: entry.classroom_id,
         event_date: eventDate,
         event_time: eventTime || null,
+        end_time: endTime || null,
         status,
         lesson_content: lessonContent,
         skill_focus: skillFocus,
@@ -126,7 +141,7 @@ export function EditClassDialog({ entry, triggerClassName }: Props) {
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-3">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-3 gap-3">
               <div className="space-y-1.5">
                 <Label htmlFor="edit-date">Data</Label>
                 <Input
@@ -138,7 +153,7 @@ export function EditClassDialog({ entry, triggerClassName }: Props) {
                 />
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="edit-time">Hora</Label>
+                <Label htmlFor="edit-time">Início</Label>
                 <Input
                   id="edit-time"
                   type="time"
@@ -147,7 +162,26 @@ export function EditClassDialog({ entry, triggerClassName }: Props) {
                   disabled={pending}
                 />
               </div>
+              <div className="space-y-1.5">
+                <Label htmlFor="edit-end-time">Fim</Label>
+                <Input
+                  id="edit-end-time"
+                  type="time"
+                  value={endTime}
+                  onChange={(e) => setEndTime(e.target.value)}
+                  disabled={pending}
+                />
+              </div>
             </div>
+            {status === "Done" && eventTime && endTime ? (
+              <p className="text-[11px] text-muted-foreground">
+                Duração:{" "}
+                <span className="font-semibold text-foreground">
+                  {formatDuration(eventTime, endTime)}
+                </span>{" "}
+                — somado às horas de aula ao vivo do aluno.
+              </p>
+            ) : null}
 
             <div className="space-y-1.5">
               <Label htmlFor="edit-status">Status</Label>

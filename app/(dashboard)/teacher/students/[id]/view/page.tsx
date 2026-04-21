@@ -24,6 +24,8 @@ import { CefrExplainerCard } from "@/components/reports/cefr-explainer-card";
 import { BadgeChip } from "@/components/gamification/badge-chip";
 import { listCertificatesForStudent } from "@/lib/actions/certificates";
 import { getAssignmentsForRosterStudent } from "@/lib/actions/assignments";
+import { getLiveClassSummaryForRoster } from "@/lib/actions/live-class-hours";
+import { formatHoursMinutes } from "@/lib/actions/student-history-types";
 import { getLevel, getXpForNextLevel } from "@/lib/gamification/engine";
 
 /**
@@ -98,6 +100,12 @@ export default async function StudentViewAsStudent({
   // when a student was moved / roster was relinked, which was why
   // the count showed 0 for Tati even though she had live assignments.
   const allAssignments = await getAssignmentsForRosterStudent(id);
+  const liveClasses = await getLiveClassSummaryForRoster(id).catch(() => ({
+    totalMinutes: 0,
+    thisMonthMinutes: 0,
+    bySkill: {},
+    monthly: [],
+  }));
   assignedCount = allAssignments.length;
   completedCount = allAssignments.filter((a) => a.status === "completed")
     .length;
@@ -566,6 +574,60 @@ export default async function StudentViewAsStudent({
                 )}
               </CardContent>
             </Card>
+
+            {/* Live-class hours — total + this month + per-skill split */}
+            {liveClasses.totalMinutes > 0 ? (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-base">
+                    <CalendarClock className="h-4 w-4 text-primary" />
+                    <T en="Live class hours" pt="Horas de aula ao vivo" />
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <div className="rounded-xl border border-border/70 bg-muted/40 p-3">
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                        <T en="Total" pt="Total" />
+                      </p>
+                      <p className="mt-1 text-lg font-semibold tabular-nums">
+                        {formatHoursMinutes(liveClasses.totalMinutes)}
+                      </p>
+                    </div>
+                    <div className="rounded-xl border border-border/70 bg-muted/40 p-3">
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                        <T en="This month" pt="Este mês" />
+                      </p>
+                      <p className="mt-1 text-lg font-semibold tabular-nums">
+                        {formatHoursMinutes(liveClasses.thisMonthMinutes)}
+                      </p>
+                    </div>
+                  </div>
+                  {Object.keys(liveClasses.bySkill).length > 0 ? (
+                    <div className="space-y-1.5">
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                        <T en="By skill" pt="Por habilidade" />
+                      </p>
+                      <ul className="space-y-1 text-sm">
+                        {Object.entries(liveClasses.bySkill)
+                          .sort((a, b) => b[1] - a[1])
+                          .map(([skill, minutes]) => (
+                            <li
+                              key={skill}
+                              className="flex items-center justify-between gap-2"
+                            >
+                              <span className="font-medium">{skill}</span>
+                              <span className="tabular-nums text-muted-foreground">
+                                {formatHoursMinutes(minutes)}
+                              </span>
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </CardContent>
+              </Card>
+            ) : null}
 
             {/* Starting date */}
             {startingDate ? (

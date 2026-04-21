@@ -12,15 +12,16 @@ interface Props {
   linkStudents?: boolean;
 }
 
-const PREVIEW = 10;
+const PREVIEW = 5;
 
-function fmtDate(iso: string | null): string {
+function fmtDateTime(iso: string | null, pt: boolean): string {
   if (!iso) return "—";
-  return new Date(iso).toLocaleDateString("pt-BR", {
+  return new Date(iso).toLocaleString(pt ? "pt-BR" : "en-US", {
     timeZone: "America/Sao_Paulo",
     day: "2-digit",
     month: "short",
-    year: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
   });
 }
 
@@ -130,8 +131,8 @@ export function SpeakingStatsTable({ rows, linkStudents = true }: Props) {
               <td className="px-3 py-2 text-right tabular-nums">
                 {r.totalSeconds.toLocaleString(pt ? "pt-BR" : "en-US")}
               </td>
-              <td className="px-3 py-2 text-right text-xs text-muted-foreground whitespace-nowrap">
-                {fmtDate(r.lastAt)}
+              <td className="px-3 py-2 text-right text-xs text-muted-foreground whitespace-nowrap tabular-nums">
+                {fmtDateTime(r.lastAt, pt)}
               </td>
             </tr>
           ))}
