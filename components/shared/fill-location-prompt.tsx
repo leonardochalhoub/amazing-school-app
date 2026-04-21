@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MapPin, ArrowRight } from "lucide-react";
@@ -23,9 +24,16 @@ interface Props {
  */
 export function FillLocationPrompt({ show, role }: Props) {
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   const profileHref =
     role === "teacher" ? "/teacher/profile" : "/student/profile";
 
+  // Skip on SSR so the banner can never cause a hydration mismatch.
+  // First client paint renders nothing; after mount the banner
+  // appears if location is still missing.
+  if (!mounted) return null;
   if (!show) return null;
   if (pathname === profileHref) return null;
 
