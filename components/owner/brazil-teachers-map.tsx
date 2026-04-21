@@ -300,7 +300,7 @@ export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
           size: sizes,
           color: filtered.map((p) => p.value),
           colorscale: SCALES[scale],
-          cmin: 1,
+          cmin: 0,
           cmax: maxCount,
           line: { color: "rgba(10,10,18,0.45)", width: 1 },
           opacity: 0.92,
@@ -325,11 +325,34 @@ export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
             y: 0.5,
             tickfont: { size: 9 },
             outlinewidth: 0,
-            // Counts are whole people — force integer ticks so the
-            // colorbar never shows 0.5 / 1.5 when the range is small.
-            tickmode: "linear" as const,
-            tick0: 1,
-            dtick: Math.max(1, Math.ceil(maxCount / 5)),
+            // Explicit integer ticks anchored at 0 → maxCount so the
+            // colorbar always labels both endpoints (plus a midpoint
+            // when the span is large enough).
+            tickmode: "array" as const,
+            tickvals:
+              maxCount <= 2
+                ? [0, maxCount]
+                : maxCount <= 4
+                  ? [0, Math.ceil(maxCount / 2), maxCount]
+                  : [
+                      0,
+                      Math.round(maxCount / 4),
+                      Math.round(maxCount / 2),
+                      Math.round((3 * maxCount) / 4),
+                      maxCount,
+                    ],
+            ticktext:
+              maxCount <= 2
+                ? ["0", String(maxCount)]
+                : maxCount <= 4
+                  ? ["0", String(Math.ceil(maxCount / 2)), String(maxCount)]
+                  : [
+                      "0",
+                      String(Math.round(maxCount / 4)),
+                      String(Math.round(maxCount / 2)),
+                      String(Math.round((3 * maxCount) / 4)),
+                      String(maxCount),
+                    ],
             tickformat: "d",
           },
         },
