@@ -171,7 +171,11 @@ export default async function TeacherManagementPage() {
         Number(currentMonth.slice(0, 4)),
         Number(currentMonth.slice(5, 7)) - 1,
         1,
-      ).toLocaleDateString("pt-BR", { month: "long", year: "numeric" })
+      ).toLocaleDateString("pt-BR", {
+        timeZone: "America/Sao_Paulo",
+        month: "long",
+        year: "numeric",
+      })
     : "—";
 
   return (

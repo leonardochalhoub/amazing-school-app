@@ -209,7 +209,9 @@ export default async function ClassroomDetail({
                   <li key={cls.id} className="py-1.5">
                     <p className="font-medium">{cls.title}</p>
                     <p className="text-[11px] text-muted-foreground tabular-nums">
-                      {new Date(cls.scheduled_at).toLocaleString("pt-BR")}
+                      {new Date(cls.scheduled_at).toLocaleString("pt-BR", {
+                        timeZone: "America/Sao_Paulo",
+                      })}
                     </p>
                   </li>
                 ))}

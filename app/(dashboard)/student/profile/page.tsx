@@ -71,6 +71,7 @@ export default async function StudentProfilePage() {
   const gender = roster?.gender ?? null;
   const fmtDate = (iso: string) =>
     new Date(iso).toLocaleDateString("pt-BR", {
+      timeZone: "America/Sao_Paulo",
       day: "2-digit",
       month: "long",
       year: "numeric",

@@ -12,6 +12,7 @@ import {
   BookOpen,
   Award,
 } from "lucide-react";
+import { T } from "@/components/reports/t";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getRosterStudent, getRosterAvatarSignedUrl } from "@/lib/actions/roster";
@@ -188,6 +189,7 @@ export default async function StudentViewAsStudent({
 
   const fmtDate = (iso: string) =>
     new Date(iso).toLocaleDateString("pt-BR", {
+      timeZone: "America/Sao_Paulo",
       day: "2-digit",
       month: "long",
       year: "numeric",
@@ -219,7 +221,10 @@ export default async function StudentViewAsStudent({
         <div className="flex min-w-0 items-center gap-2 text-xs">
           <span className="inline-flex h-6 shrink-0 items-center gap-1 rounded-full bg-indigo-500/20 px-2 text-[10px] font-semibold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">
             <Eye className="h-3 w-3" />
-            Perfil {studentArticle} {studentWord} · Student's profile view
+            <T
+              en="Student's profile"
+              pt={`Perfil ${studentArticle} ${studentWord}`}
+            />
           </span>
           <span className="truncate font-medium">{student.full_name}</span>
         </div>
@@ -237,9 +242,14 @@ export default async function StudentViewAsStudent({
       <div className="mx-auto max-w-2xl">
         <Tabs defaultValue="main" className="gap-4">
           <TabsList className="w-full">
-            <TabsTrigger value="main">Página principal</TabsTrigger>
+            <TabsTrigger value="main">
+              <T en="Main page" pt="Página principal" />
+            </TabsTrigger>
             <TabsTrigger value="profile">
-              Perfil {studentArticle} {studentWord}
+              <T
+                en="Profile"
+                pt={`Perfil ${studentArticle} ${studentWord}`}
+              />
             </TabsTrigger>
           </TabsList>
 
@@ -341,6 +351,7 @@ export default async function StudentViewAsStudent({
                     <p className="text-sm font-semibold">
                       {nextClassDate
                         ? new Date(nextClassDate).toLocaleDateString("pt-BR", {
+                            timeZone: "America/Sao_Paulo",
                             day: "2-digit",
                             month: "short",
                           })
@@ -364,6 +375,7 @@ export default async function StudentViewAsStudent({
                   {lastClassDate ? (
                     <p className="text-sm font-semibold">
                       {new Date(lastClassDate).toLocaleDateString("pt-BR", {
+                        timeZone: "America/Sao_Paulo",
                         day: "2-digit",
                         month: "long",
                         year: "numeric",
@@ -401,7 +413,11 @@ export default async function StudentViewAsStudent({
                           <span className="shrink-0 text-[11px] text-muted-foreground tabular-nums">
                             {new Date(c.completed_at).toLocaleDateString(
                               "pt-BR",
-                              { day: "2-digit", month: "short" },
+                              {
+                                timeZone: "America/Sao_Paulo",
+                                day: "2-digit",
+                                month: "short",
+                              },
                             )}
                           </span>
                         </li>

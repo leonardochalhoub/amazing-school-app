@@ -184,12 +184,30 @@ export default async function RosterStudentDetailPage({
             <p className="text-sm text-muted-foreground">{student.email}</p>
           ) : null}
         </div>
-        <StudentInviteButton
-          rosterStudentId={id}
-          classroomId={student.classroom_id}
-          prefillEmail={student.email}
-          prefillName={student.full_name}
-        />
+        <div className="flex flex-wrap items-center gap-2">
+          <a
+            href={`/teacher/students/${id}/view`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-3 py-2 text-sm font-medium transition-colors hover:border-primary/50 hover:bg-primary/5"
+          >
+            <User className="h-4 w-4" />
+            <T
+              en="Student profile"
+              pt={
+                student.gender === "female"
+                  ? "Perfil da aluna"
+                  : "Perfil do aluno"
+              }
+            />
+          </a>
+          <StudentInviteButton
+            rosterStudentId={id}
+            classroomId={student.classroom_id}
+            prefillEmail={student.email}
+            prefillName={student.full_name}
+          />
+        </div>
       </header>
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
@@ -274,27 +292,6 @@ export default async function RosterStudentDetailPage({
         </div>
 
         <div className="space-y-6 lg:sticky lg:top-32 lg:self-start">
-          {/* Quick jump — anchors the teacher to the Details card
-              on the left column. Useful on tall pages where the
-              student's actual profile form is far from the top of
-              the sidebar. */}
-          <a
-            href={`/teacher/students/${id}/view`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-medium transition-colors hover:border-primary/50 hover:bg-primary/5"
-          >
-            <User className="h-4 w-4" />
-            <T
-              en="Student profile"
-              pt={
-                student.gender === "female"
-                  ? "Perfil da aluna"
-                  : "Perfil do aluno"
-              }
-            />
-          </a>
-
           <Card>
             <CardHeader>
               <CardTitle className="text-base">Photo</CardTitle>
