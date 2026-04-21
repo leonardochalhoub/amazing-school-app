@@ -151,11 +151,35 @@ export default async function StudentProfilePage() {
                 {studentFullName}
               </p>
               <p className="text-xs text-muted-foreground">
-                {ageGroup ? `${ageGroup} · ` : ""}
-                {gender ?? "—"}
+                {ageGroup ? (
+                  <>
+                    <T
+                      en={ageGroup}
+                      pt={
+                        ageGroup === "kid"
+                          ? "criança"
+                          : ageGroup === "teen"
+                            ? "adolescente"
+                            : "adulto"
+                      }
+                    />
+                    {" · "}
+                  </>
+                ) : null}
+                {gender ? (
+                  <T
+                    en={gender}
+                    pt={gender === "female" ? "feminino" : "masculino"}
+                  />
+                ) : (
+                  "—"
+                )}
               </p>
               <p className="text-[11px] text-muted-foreground">
-                Max 5 MB · JPEG / PNG / WebP · auto-resized to 512×512.
+                <T
+                  en="Max 5 MB · JPEG / PNG / WebP · auto-resized to 512×512."
+                  pt="Máx. 5 MB · JPEG / PNG / WebP · redimensionada automaticamente para 512×512."
+                />
               </p>
             </div>
             {startingDate ? (
@@ -163,23 +187,23 @@ export default async function StudentProfilePage() {
                 <TenureStat
                   icon={<Flame className="h-4 w-4" />}
                   tone="amber"
-                  label="Days with us · Dias conosco"
+                  label={<T en="Days with us" pt="Dias conosco" />}
                   value={(daysStudying ?? 0).toLocaleString("pt-BR")}
                 />
                 <TenureStat
                   icon={<Calendar className="h-4 w-4" />}
                   tone="indigo"
-                  label="Starting · Início"
+                  label={<T en="Starting" pt="Início" />}
                   value={startingDate}
                 />
                 <TenureStat
                   icon={<Calendar className="h-4 w-4" />}
                   tone="zinc"
-                  label="Last day · Último"
+                  label={<T en="Last day" pt="Último" />}
                   value={
                     endDate ?? (
                       <span className="text-emerald-600 dark:text-emerald-400">
-                        Active · Ativo
+                        <T en="Active" pt="Ativo" />
                       </span>
                     )
                   }
@@ -213,11 +237,13 @@ export default async function StudentProfilePage() {
             />
           ) : null}
         </div>
-        <div className="space-y-4">
+        <div className="flex flex-col gap-4">
           <UpcomingWindowCard initial={upcomingWindow} />
-          <ChangePasswordCard
-            isDemo={(user.email ?? "").toLowerCase().startsWith("demo.")}
-          />
+          <div className="flex flex-1">
+            <ChangePasswordCard
+              isDemo={(user.email ?? "").toLowerCase().startsWith("demo.")}
+            />
+          </div>
         </div>
       </div>
 
@@ -229,13 +255,18 @@ export default async function StudentProfilePage() {
       <Card>
         <CardHeader>
           <CardTitle className="text-base">
-            How to use Amazing School · Como usar
+            <T
+              en="How to use Amazing School"
+              pt="Como usar a Amazing School"
+            />
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
           <p className="text-xs text-muted-foreground">
-            Quick ~10-minute tour of the dashboard, speaking lab, badges,
-            and AI tutor. Opens in a new tab.
+            <T
+              en="Quick ~10-minute tour of the dashboard, speaking lab, badges, and AI tutor. Opens in a new tab."
+              pt="Tour rápido de ~10 minutos pelo painel, laboratório de fala, medalhas e tutor de IA. Abre em uma nova aba."
+            />
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
             <a
@@ -295,7 +326,7 @@ function TenureStat({
 }: {
   icon: React.ReactNode;
   tone: "amber" | "indigo" | "zinc";
-  label: string;
+  label: React.ReactNode;
   value: React.ReactNode;
 }) {
   const toneClass: Record<typeof tone, string> = {

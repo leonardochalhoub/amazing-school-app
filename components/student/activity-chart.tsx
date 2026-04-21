@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useI18n } from "@/lib/i18n/context";
 
 export interface ActivityBucket {
   /** First day of the bucket, YYYY-MM-DD. */
@@ -20,6 +21,8 @@ interface Props {
 }
 
 export function ActivityChart({ buckets, granularity = "month" }: Props) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [hover, setHover] = useState<{ b: ActivityBucket; i: number } | null>(
     null,
   );
@@ -50,8 +53,9 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
   if (buckets.length === 0) {
     return (
       <div className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-        No activity yet — your completed lessons and music exercises will
-        appear here over time.
+        {pt
+          ? "Ainda sem atividade — suas lições e músicas concluídas aparecerão aqui com o tempo."
+          : "No activity yet — your completed lessons and music exercises will appear here over time."}
       </div>
     );
   }
@@ -79,7 +83,7 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
         lastMonth = m;
         ticks.push({
           i,
-          label: d.toLocaleDateString("en-US", {
+          label: d.toLocaleDateString(pt ? "pt-BR" : "en-US", {
             month: "short",
             year:
               d.getUTCMonth() === 0 && i > 0 ? "2-digit" : undefined,
@@ -91,53 +95,79 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
     // Keep the density readable on long ranges — cap to ~24 labels.
     const step = Math.max(1, Math.ceil(ticks.length / 24));
     return ticks.filter((_, idx) => idx % step === 0);
-  }, [buckets]);
+  }, [buckets, pt]);
 
   return (
     <div className="space-y-2 rounded-xl border border-border bg-card p-4 shadow-xs">
       <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
         <p className="font-medium text-foreground">
-          {granularity === "month"
-            ? `Activity · last ${buckets.length} months`
-            : granularity === "week"
-              ? `Activity · last ${buckets.length} weeks`
-              : `Activity · last ${buckets.length} days`}{" "}
+          {pt
+            ? granularity === "month"
+              ? `Atividade · últimos ${buckets.length} meses`
+              : granularity === "week"
+                ? `Atividade · últimas ${buckets.length} semanas`
+                : `Atividade · últimos ${buckets.length} dias`
+            : granularity === "month"
+              ? `Activity · last ${buckets.length} months`
+              : granularity === "week"
+                ? `Activity · last ${buckets.length} weeks`
+                : `Activity · last ${buckets.length} days`}{" "}
           <span className="ml-1 font-normal text-muted-foreground">
             (
-            {granularity === "month"
-              ? "per month"
-              : granularity === "week"
-                ? "per week"
-                : "per day"}{" "}
-            · {activeDays} active{" "}
-            {granularity === "month"
-              ? "months"
-              : granularity === "week"
-                ? "weeks"
-                : "days"}
+            {pt
+              ? granularity === "month"
+                ? "por mês"
+                : granularity === "week"
+                  ? "por semana"
+                  : "por dia"
+              : granularity === "month"
+                ? "per month"
+                : granularity === "week"
+                  ? "per week"
+                  : "per day"}{" "}
+            · {activeDays}{" "}
+            {pt
+              ? granularity === "month"
+                ? "meses ativos"
+                : granularity === "week"
+                  ? "semanas ativas"
+                  : "dias ativos"
+              : `active ${
+                  granularity === "month"
+                    ? "months"
+                    : granularity === "week"
+                      ? "weeks"
+                      : "days"
+                }`}
             )
           </span>
         </p>
         <div className="flex items-center gap-3 text-[10px] text-muted-foreground">
           <LegendSwatch
             className="bg-indigo-500"
-            label={`Lessons · ${totalLessons}`}
+            label={`${pt ? "Lições" : "Lessons"} · ${totalLessons}`}
           />
           <LegendSwatch
             className="bg-pink-500"
-            label={`Music · ${totalMusic}`}
+            label={`${pt ? "Músicas" : "Songs"} · ${totalMusic}`}
           />
           <LegendSwatch
             className="bg-emerald-500"
-            label={`Live Classes · ${totalLive}`}
+            label={`${pt ? "Aulas ao vivo" : "Live Classes"} · ${totalLive}`}
           />
           <span className="tabular-nums">
-            Peak · {max}/
-            {granularity === "month"
-              ? "mo"
-              : granularity === "week"
-                ? "wk"
-                : "day"}
+            {pt ? "Pico" : "Peak"} · {max}/
+            {pt
+              ? granularity === "month"
+                ? "mês"
+                : granularity === "week"
+                  ? "sem"
+                  : "dia"
+              : granularity === "month"
+                ? "mo"
+                : granularity === "week"
+                  ? "wk"
+                  : "day"}
           </span>
         </div>
       </div>
@@ -200,7 +230,7 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
                 onFocus={() => setHover({ b, i })}
                 onBlur={() => setHover(null)}
                 tabIndex={0}
-                title={`${formatBucket(b.start, granularity)} · ${b.lessons} lessons · ${b.music} music · ${live} live`}
+                title={`${formatBucket(b.start, granularity, pt)} · ${b.lessons} ${pt ? "lições" : "lessons"} · ${b.music} ${pt ? "músicas" : "music"} · ${live} ${pt ? "ao vivo" : "live"}`}
                 className="group relative flex h-full flex-col justify-end"
               >
                 <div
@@ -236,18 +266,25 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
         {hover ? (
           <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
             <div className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-2 py-1 text-[10px] shadow-sm">
-              <strong>{formatBucket(hover.b.start, granularity)}</strong>
+              <strong>{formatBucket(hover.b.start, granularity, pt)}</strong>
               <span className="inline-flex items-center gap-1">
                 <span className="inline-block h-2 w-2 rounded-sm bg-indigo-500" />
-                {hover.b.lessons} lesson{hover.b.lessons === 1 ? "" : "s"}
+                {hover.b.lessons}{" "}
+                {pt
+                  ? hover.b.lessons === 1
+                    ? "lição"
+                    : "lições"
+                  : hover.b.lessons === 1
+                    ? "lesson"
+                    : "lessons"}
               </span>
               <span className="inline-flex items-center gap-1">
                 <span className="inline-block h-2 w-2 rounded-sm bg-pink-500" />
-                {hover.b.music} music
+                {hover.b.music} {pt ? "músicas" : "music"}
               </span>
               <span className="inline-flex items-center gap-1">
                 <span className="inline-block h-2 w-2 rounded-sm bg-emerald-500" />
-                {hover.b.live ?? 0} live
+                {hover.b.live ?? 0} {pt ? "ao vivo" : "live"}
               </span>
             </div>
           </div>
@@ -296,16 +333,18 @@ function LegendSwatch({
 function formatBucket(
   start: string,
   granularity: "month" | "week" | "day",
+  pt: boolean,
 ): string {
   const d = new Date(start + "T00:00:00Z");
+  const loc = pt ? "pt-BR" : "en-US";
   if (granularity === "month") {
-    return d.toLocaleDateString("en-US", {
+    return d.toLocaleDateString(loc, {
       month: "short",
       year: "2-digit",
       timeZone: "UTC",
     });
   }
-  return d.toLocaleDateString("en-US", {
+  return d.toLocaleDateString(loc, {
     month: "short",
     day: "numeric",
     year: "2-digit",

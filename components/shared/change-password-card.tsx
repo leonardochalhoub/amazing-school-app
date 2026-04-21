@@ -61,20 +61,20 @@ export function ChangePasswordCard({ isDemo = false }: Props) {
   }
 
   return (
-    <Card>
+    <Card className="flex w-full flex-col">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-base">
           <KeyRound className="h-4 w-4 text-primary" />
           Password
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-5 pb-8">
+      <CardContent className="flex flex-1 flex-col space-y-5 pb-8">
         <p className="text-xs leading-relaxed text-muted-foreground">
           Choose a strong password — at least 8 characters. You'll stay
           signed in here; use the new password next time you log in.
         </p>
         {isDemo ? (
-          <p className="rounded-md border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-xs text-amber-700 dark:text-amber-400">
+          <p className="flex-1 rounded-md border border-amber-500/30 bg-amber-500/10 px-3 py-2 text-xs text-amber-700 dark:text-amber-400">
             Demo accounts share a password across every visitor —
             changing it would lock everyone else out. Create your own
             account to manage credentials.
@@ -93,7 +93,7 @@ export function ChangePasswordCard({ isDemo = false }: Props) {
                 Change password
               </Button>
             </div>
-            <ul className="space-y-2 rounded-lg border border-border/60 bg-muted/30 p-4 text-[11px] leading-relaxed text-muted-foreground">
+            <ul className="flex-1 space-y-2 rounded-lg border border-border/60 bg-muted/30 p-4 text-[11px] leading-relaxed text-muted-foreground">
               <li className="flex items-start gap-2">
                 <span className="mt-0.5 text-primary">•</span>
                 Mix upper and lower case, numbers, and at least one symbol.
