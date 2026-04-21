@@ -22,6 +22,7 @@ import { redirect } from "next/navigation";
 import { isLogoEligible, SCHOOL_LOGO_SRC } from "@/lib/school-logo";
 import { SchoolLogoToggle } from "@/components/teacher/school-logo-toggle";
 import { SignatureUploader } from "@/components/teacher/signature-uploader";
+import { TeacherGenderPicker } from "@/components/teacher/teacher-gender-picker";
 import { CefrExplainerCard } from "@/components/reports/cefr-explainer-card";
 import { getSignatureSignedUrl } from "@/lib/signature";
 import { T } from "@/components/reports/t";
@@ -44,6 +45,22 @@ export default async function TeacherProfilePage() {
 
   if (!profile) redirect("/login");
   if (profile.role !== "teacher" && profile.role !== "owner") redirect("/student/profile");
+
+  // Gender is fetched separately so the page still renders if the
+  // 057 migration hasn't been applied yet — a missing column would
+  // otherwise null out the whole profile row and bounce the user.
+  let teacherGender: "female" | "male" | null = null;
+  try {
+    const { data: genderRow } = await admin
+      .from("profiles")
+      .select("gender")
+      .eq("id", user.id)
+      .maybeSingle();
+    const raw = (genderRow as { gender?: string | null } | null)?.gender ?? null;
+    if (raw === "female" || raw === "male") teacherGender = raw;
+  } catch {
+    /* column may be absent until migration 057 lands */
+  }
 
   const { data: locationRow } = await admin
     .from("profiles")
@@ -151,11 +168,22 @@ export default async function TeacherProfilePage() {
               </p>
               <p className="text-xs text-muted-foreground">
                 {profile.role === "owner" ? (
-                  <T en="Owner · Teacher" pt="Proprietário · Professor" />
+                  <T
+                    en="Owner · Teacher"
+                    pt={
+                      teacherGender === "female"
+                        ? "Proprietária · Professora"
+                        : "Proprietário · Professor"
+                    }
+                  />
                 ) : (
-                  <T en="Teacher" pt="Professor" />
+                  <T
+                    en="Teacher"
+                    pt={teacherGender === "female" ? "Professora" : "Professor"}
+                  />
                 )}
               </p>
+              <TeacherGenderPicker initial={teacherGender} />
               <p className="text-[11px] text-muted-foreground">
                 <T
                   en="Your photo is visible to your students across the platform."

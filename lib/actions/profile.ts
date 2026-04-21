@@ -37,6 +37,34 @@ export async function updateMyLocation(
   return { success: true };
 }
 
+const GenderSchema = z.object({
+  gender: z.enum(["female", "male"]).nullable(),
+});
+
+export async function updateMyGender(
+  input: z.input<typeof GenderSchema>,
+): Promise<{ success: true } | { error: string }> {
+  const parsed = GenderSchema.safeParse(input);
+  if (!parsed.success) {
+    return { error: parsed.error.issues[0]?.message ?? "Invalid input" };
+  }
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Not signed in" };
+
+  const { error } = await supabase
+    .from("profiles")
+    .update({ gender: parsed.data.gender })
+    .eq("id", user.id);
+  if (error) return { error: error.message };
+
+  revalidatePath("/teacher/profile");
+  revalidatePath("/teacher");
+  return { success: true };
+}
+
 const WindowSchema = z.object({
   days: z.number().int().min(0).max(30),
 });
