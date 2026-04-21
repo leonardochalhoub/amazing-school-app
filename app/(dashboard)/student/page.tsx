@@ -379,8 +379,8 @@ export default async function StudentHome() {
             page render via Math.random so every reload picks a
             different motif (dogs, pandas, flowers, makeup, sweets…). */}
         {rosterSelf?.gender === "female" ? (
-          <div className="pointer-events-none absolute -top-4 right-4 md:right-10">
-            <CuteArtBadge size={140} />
+          <div className="pointer-events-none absolute -top-2 right-28 md:right-40 lg:right-56">
+            <CuteArtBadge size={120} />
           </div>
         ) : null}
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-8">
