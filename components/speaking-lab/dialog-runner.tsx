@@ -104,6 +104,7 @@ export function SpeakingLabDialogRunner({ all, initialId }: Props) {
   const [error, setError] = useState("");
 
   const mr = useRef<MediaRecorder | null>(null);
+  const startedAt = useRef<number>(0);
   const chunks = useRef<Blob[]>([]);
   const cancelSpeak = useRef<(() => void) | null>(null);
 
@@ -178,8 +179,21 @@ export function SpeakingLabDialogRunner({ all, initialId }: Props) {
       };
       rec.onstop = () => {
         stream.getTracks().forEach((t) => t.stop());
+        // Log the mic cycle regardless of whether the upload
+        // succeeds. Stop happens exactly once per recording, so
+        // this is the right boundary to capture minutes.
+        void fetch("/api/speaking-event", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            durationMs: Date.now() - startedAt.current,
+            context: `dialog:${current?.id ?? "unknown"}`,
+            startedAtIso: new Date(startedAt.current).toISOString(),
+          }),
+        }).catch(() => {});
         void upload();
       };
+      startedAt.current = Date.now();
       rec.start();
       setPhase("recording");
     } catch (err) {

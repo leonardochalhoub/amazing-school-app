@@ -100,6 +100,18 @@ export function SpeakingLabDrill({ all }: Props) {
       };
       rec.onstop = () => {
         stream.getTracks().forEach((t) => t.stop());
+        // Log the mic cycle right here — independent of whatever
+        // happens with the pronunciation upload. A too-short clip
+        // or a network blip must not swallow the speaking event.
+        void fetch("/api/speaking-event", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            durationMs: Date.now() - startedAt.current,
+            context: `drill:${current.target.slice(0, 60)}`,
+            startedAtIso: new Date(startedAt.current).toISOString(),
+          }),
+        }).catch(() => {});
         upload();
       };
       rec.start();
@@ -117,18 +129,6 @@ export function SpeakingLabDrill({ all }: Props) {
 
   async function upload() {
     const dur = Date.now() - startedAt.current;
-    // Fire-and-forget: log a speaking_events row so teachers can
-    // see per-student mic usage + accumulated minutes. Failure here
-    // (RLS block, network) must not stop the pronunciation upload.
-    void fetch("/api/speaking-event", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        durationMs: dur,
-        context: `drill:${current.target.slice(0, 60)}`,
-        startedAtIso: new Date(startedAt.current).toISOString(),
-      }),
-    }).catch(() => {});
     const blob = new Blob(chunks.current, {
       type: mr.current?.mimeType ?? "audio/webm",
     });
