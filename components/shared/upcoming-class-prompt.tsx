@@ -11,15 +11,8 @@ import {
   Sparkles,
   ArrowRight,
   GraduationCap,
+  X,
 } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-  DialogFooter,
-} from "@/components/ui/dialog";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { UpcomingClassContext } from "@/lib/actions/upcoming-class";
@@ -32,47 +25,75 @@ interface Props {
 const DISMISS_STORAGE_PREFIX = "upcoming_class_dismissed_";
 
 /**
- * Context-rich dialog advertising the next scheduled class. Two
- * variants — teacher sees their roster + previous-class notes +
- * assigned-but-not-done lessons, student sees their teacher +
- * what to prep. Dismissal is remembered in sessionStorage keyed
- * by class id, so switching routes doesn't re-pop the same dialog
- * within one browser session (the next class, once it's past,
- * clears itself automatically).
+ * Plain overlay popup for the next scheduled class. Dropped the
+ * base-ui Dialog entirely — previous iterations wouldn't render
+ * reliably across hydration. Now a fixed backdrop + centered card,
+ * dismissed via the X button, backdrop click, "Depois", or Escape.
+ *
+ * Dismissal per class-id is remembered in sessionStorage so switching
+ * routes doesn't re-pop the same dialog within one browser session.
  */
 export function UpcomingClassPrompt({ ctx }: Props) {
-  const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [closed, setClosed] = useState(false);
   const [now, setNow] = useState<number | null>(null);
 
   useEffect(() => {
-    // All time-based state is populated on the client only — the
-    // server render would differ (different timezone / "now"),
-    // causing a hydration mismatch that crashes the whole tree.
+    setMounted(true);
     setNow(Date.now());
     if (!ctx) return;
-    const dismissed =
-      typeof window !== "undefined" &&
-      window.sessionStorage.getItem(
-        `${DISMISS_STORAGE_PREFIX}${ctx.id}`,
-      ) === "1";
-    if (!dismissed) setOpen(true);
+    try {
+      if (
+        window.sessionStorage.getItem(
+          `${DISMISS_STORAGE_PREFIX}${ctx.id}`,
+        ) === "1"
+      ) {
+        setClosed(true);
+      }
+    } catch {
+      // sessionStorage may throw in private mode; no-op.
+    }
   }, [ctx]);
 
+  const visible = mounted && ctx !== null && !closed && now !== null;
+
   useEffect(() => {
-    if (!open) return;
-    const t = window.setInterval(() => setNow(Date.now()), 30_000);
-    return () => window.clearInterval(t);
-  }, [open]);
+    if (!visible) return;
+    const tick = window.setInterval(() => setNow(Date.now()), 30_000);
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") dismiss();
+    }
+    document.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.clearInterval(tick);
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [visible]);
 
   const countdown = useMemo(() => {
     if (!ctx || now === null) return "";
     return describeCountdown(new Date(ctx.scheduledAt).getTime(), now);
   }, [ctx, now]);
 
-  // Server render: nothing. Only mount content after the client
-  // effect has run so toLocaleString + Date.now use the browser's
-  // timezone consistently.
-  if (!ctx || now === null) return null;
+  function dismiss() {
+    try {
+      if (ctx) {
+        window.sessionStorage.setItem(
+          `${DISMISS_STORAGE_PREFIX}${ctx.id}`,
+          "1",
+        );
+      }
+    } catch {
+      /* no-op */
+    }
+    setClosed(true);
+  }
+
+  if (!visible || !ctx) return null;
 
   const when = new Date(ctx.scheduledAt);
   const dateLabel = when.toLocaleString("pt-BR", {
@@ -84,23 +105,29 @@ export function UpcomingClassPrompt({ ctx }: Props) {
   });
   const isTeacher = ctx.role === "teacher";
 
-  function dismiss() {
-    try {
-      window.sessionStorage.setItem(
-        `${DISMISS_STORAGE_PREFIX}${ctx!.id}`,
-        "1",
-      );
-    } catch {
-      // sessionStorage may throw in private mode — falling back to
-      // just closing this instance is fine.
-    }
-    setOpen(false);
-  }
-
   return (
-    <Dialog open={open} onOpenChange={(v) => (v ? setOpen(true) : dismiss())}>
-      <DialogContent className="max-w-2xl overflow-hidden p-0">
-        {/* Hero band — purple gradient with the countdown pill */}
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="upcoming-class-title"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+    >
+      <button
+        type="button"
+        aria-label="Fechar"
+        onClick={dismiss}
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+      />
+      <div className="relative z-10 w-full max-w-2xl overflow-hidden rounded-2xl bg-card shadow-2xl ring-1 ring-border">
+        <button
+          type="button"
+          aria-label="Fechar"
+          onClick={dismiss}
+          className="absolute right-3 top-3 z-10 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-white transition-colors hover:bg-white/30"
+        >
+          <X className="h-4 w-4" />
+        </button>
+        {/* Hero band */}
         <div className="relative bg-gradient-to-br from-indigo-500 via-violet-500 to-pink-500 px-6 py-5 text-white">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.25),transparent_50%)]" />
           <div className="relative flex items-start gap-3">
@@ -113,7 +140,10 @@ export function UpcomingClassPrompt({ ctx }: Props) {
                   ? "Próxima aula · Upcoming class"
                   : "Sua próxima aula · Your upcoming class"}
               </p>
-              <h2 className="truncate text-lg font-semibold leading-tight">
+              <h2
+                id="upcoming-class-title"
+                className="truncate text-lg font-semibold leading-tight"
+              >
                 {ctx.title}
               </h2>
               <p className="mt-0.5 truncate text-xs text-white/90">
@@ -127,14 +157,6 @@ export function UpcomingClassPrompt({ ctx }: Props) {
         </div>
 
         <div className="space-y-4 px-6 py-5">
-          <DialogHeader className="sr-only">
-            <DialogTitle>{ctx.title}</DialogTitle>
-            <DialogDescription>
-              {isTeacher ? "Próxima aula" : "Sua próxima aula"} ·
-              {ctx.classroomName}
-            </DialogDescription>
-          </DialogHeader>
-
           {/* When + counterpart */}
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="rounded-xl border border-border/70 bg-muted/40 p-3">
@@ -208,14 +230,15 @@ export function UpcomingClassPrompt({ ctx }: Props) {
           ) : null}
         </div>
 
-        <DialogFooter className="gap-2 border-t border-border/60 bg-muted/20 px-6 py-3 sm:justify-between">
+        <div className="flex flex-wrap gap-2 border-t border-border/60 bg-muted/20 px-6 py-3 sm:justify-between">
           <Button type="button" variant="outline" onClick={dismiss}>
             Depois · Later
           </Button>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {isTeacher ? (
               <Link
                 href={`/teacher/classroom/${ctx.classroomId}`}
+                onClick={() => setClosed(true)}
                 className={cn(
                   buttonVariants({ variant: "outline" }),
                   "gap-1.5",
@@ -229,6 +252,7 @@ export function UpcomingClassPrompt({ ctx }: Props) {
               href={ctx.meetingUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => setClosed(true)}
               className={cn(
                 buttonVariants({ variant: "default" }),
                 "gap-1.5 bg-gradient-to-br from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700",
@@ -238,9 +262,9 @@ export function UpcomingClassPrompt({ ctx }: Props) {
               Entrar na aula · Join
             </a>
           </div>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -266,11 +290,6 @@ function TeacherCounterpart({ ctx }: { ctx: UpcomingClassContext }) {
   );
 }
 
-/**
- * Human-friendly countdown used for the pill in the hero band.
- * Negative values (class already started) are reported as
- * "em andamento" until the 60-minute grace window closes upstream.
- */
 function describeCountdown(targetMs: number, nowMs: number): string {
   const delta = targetMs - nowMs;
   if (delta <= 0) return "Em andamento";
