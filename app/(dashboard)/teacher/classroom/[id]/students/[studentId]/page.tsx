@@ -91,13 +91,30 @@ export default async function StudentDetailPage({
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <Link
-          href={`/teacher/classroom/${id}`}
-          className="text-xs text-muted-foreground hover:underline"
-        >
-          ← {classroom.name}
-        </Link>
+      {/* Top bar — prominent so the teacher never loses their way
+          back to the main dashboard while browsing a student's
+          page. Sticky on scroll, dual CTAs (my dashboard + classroom). */}
+      <div className="sticky top-16 z-30 -mx-4 -mt-4 flex flex-wrap items-center justify-between gap-2 border-b border-indigo-400/40 bg-gradient-to-r from-indigo-500/15 via-violet-500/10 to-pink-500/10 px-4 py-2 backdrop-blur md:-mx-8 md:px-8">
+        <div className="flex min-w-0 items-center gap-2 text-xs">
+          <span className="inline-flex h-6 shrink-0 items-center rounded-full bg-indigo-500/20 px-2 text-[10px] font-semibold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">
+            Visualizando aluno
+          </span>
+          <span className="truncate font-medium">{profile.full_name}</span>
+        </div>
+        <div className="flex items-center gap-2 text-xs">
+          <Link
+            href={`/teacher/classroom/${id}`}
+            className="rounded-md border border-border bg-background px-2.5 py-1 font-medium text-muted-foreground transition-colors hover:border-indigo-400 hover:text-foreground"
+          >
+            ← {classroom.name}
+          </Link>
+          <Link
+            href="/teacher"
+            className="rounded-md bg-gradient-to-br from-indigo-600 to-violet-600 px-3 py-1 font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+          >
+            ← Minha página
+          </Link>
+        </div>
       </div>
 
       <div className="flex items-start gap-4">
