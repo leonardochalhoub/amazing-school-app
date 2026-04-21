@@ -142,6 +142,31 @@
 
   .xp-bar { height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; margin-top: 8px; }
   .xp-bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--violet), var(--pink)); }
+
+  /* Phone-size overrides — same policy as the other decks: grow
+     slides vertically and allow internal scrolling so big headings
+     don't clip on small screens. */
+  @media (max-width: 700px) {
+    .slide {
+      height: auto;
+      min-height: 100dvh;
+      overflow-y: auto;
+      padding: clamp(24px,4vh,32px) 18px clamp(56px,8vh,80px);
+      justify-content: flex-start !important;
+    }
+    h1.title { font-size: clamp(36px, 9vw, 56px) !important; }
+    h2.section { font-size: clamp(26px, 7vw, 40px) !important; line-height: 1.12; }
+    p.lede { font-size: clamp(15px, 4vw, 19px) !important; }
+    p.body { font-size: clamp(13px, 3.4vw, 16px) !important; }
+    .quote { font-size: clamp(17px, 4.5vw, 22px); padding-left: 16px; }
+    .list-clean li { font-size: clamp(13px, 3.4vw, 16px); }
+    .card h3 { font-size: clamp(15px, 4vw, 18px) !important; }
+    .card p { font-size: clamp(12px, 3vw, 14px) !important; }
+    .stat { font-size: clamp(40px, 11vw, 64px); }
+    .hero-meta { flex-direction: column; gap: 6px; margin-top: 20px; }
+    .deck-dots { display: none; }
+    .footer-note { font-size: 9px; bottom: 10px; left: 18px; }
+  }
 </style>
 </head>
 <body>

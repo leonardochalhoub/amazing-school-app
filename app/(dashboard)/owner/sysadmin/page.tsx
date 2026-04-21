@@ -290,8 +290,8 @@ export default async function SysadminPage() {
             value={clickCounts.allTime.demo_teacher.toLocaleString("pt-BR")}
             sub={
               <T
-                en={`${clickCounts.thisMonth.demo_teacher.toLocaleString("pt-BR")} this month · all-time`}
-                pt={`${clickCounts.thisMonth.demo_teacher.toLocaleString("pt-BR")} este mês · total`}
+                en={`Total · ${clickCounts.thisMonth.demo_teacher.toLocaleString("pt-BR")} this month`}
+                pt={`Total · ${clickCounts.thisMonth.demo_teacher.toLocaleString("pt-BR")} este mês`}
               />
             }
             tone="emerald"
@@ -304,8 +304,8 @@ export default async function SysadminPage() {
             value={clickCounts.allTime.demo_student.toLocaleString("pt-BR")}
             sub={
               <T
-                en={`${clickCounts.thisMonth.demo_student.toLocaleString("pt-BR")} this month · all-time`}
-                pt={`${clickCounts.thisMonth.demo_student.toLocaleString("pt-BR")} este mês · total`}
+                en={`Total · ${clickCounts.thisMonth.demo_student.toLocaleString("pt-BR")} this month`}
+                pt={`Total · ${clickCounts.thisMonth.demo_student.toLocaleString("pt-BR")} este mês`}
               />
             }
             tone="indigo"
@@ -318,8 +318,8 @@ export default async function SysadminPage() {
             value={clickCounts.allTime.doc_teacher.toLocaleString("pt-BR")}
             sub={
               <T
-                en={`${clickCounts.thisMonth.doc_teacher.toLocaleString("pt-BR")} this month · all-time`}
-                pt={`${clickCounts.thisMonth.doc_teacher.toLocaleString("pt-BR")} este mês · total`}
+                en={`Total · ${clickCounts.thisMonth.doc_teacher.toLocaleString("pt-BR")} this month`}
+                pt={`Total · ${clickCounts.thisMonth.doc_teacher.toLocaleString("pt-BR")} este mês`}
               />
             }
           />
@@ -331,8 +331,8 @@ export default async function SysadminPage() {
             value={clickCounts.allTime.doc_student_pt.toLocaleString("pt-BR")}
             sub={
               <T
-                en={`${clickCounts.thisMonth.doc_student_pt.toLocaleString("pt-BR")} this month · all-time`}
-                pt={`${clickCounts.thisMonth.doc_student_pt.toLocaleString("pt-BR")} este mês · total`}
+                en={`Total · ${clickCounts.thisMonth.doc_student_pt.toLocaleString("pt-BR")} this month`}
+                pt={`Total · ${clickCounts.thisMonth.doc_student_pt.toLocaleString("pt-BR")} este mês`}
               />
             }
           />
@@ -344,8 +344,8 @@ export default async function SysadminPage() {
             value={clickCounts.allTime.doc_student_en.toLocaleString("pt-BR")}
             sub={
               <T
-                en={`${clickCounts.thisMonth.doc_student_en.toLocaleString("pt-BR")} this month · all-time`}
-                pt={`${clickCounts.thisMonth.doc_student_en.toLocaleString("pt-BR")} este mês · total`}
+                en={`Total · ${clickCounts.thisMonth.doc_student_en.toLocaleString("pt-BR")} this month`}
+                pt={`Total · ${clickCounts.thisMonth.doc_student_en.toLocaleString("pt-BR")} este mês`}
               />
             }
           />
