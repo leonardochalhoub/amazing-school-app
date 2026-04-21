@@ -123,7 +123,7 @@ export default async function DashboardLayout({
   // defensively — a failure here must not break the whole dashboard
   // layout, which is what would happen if the action threw and we
   // let it bubble up into the Server Component render.
-  let nextClass: Awaited<ReturnType<typeof getMyNextClass>> = null;
+  let nextClass: Awaited<ReturnType<typeof getMyNextClass>> | null = null;
   try {
     nextClass = await getMyNextClass();
   } catch (err) {
@@ -174,7 +174,10 @@ export default async function DashboardLayout({
         gender={rosterGender}
         schoolLogoPath={schoolLogoPath}
       />
-      <UpcomingClassPrompt ctx={nextClass} />
+      <UpcomingClassPrompt
+        ctx={nextClass?.ctx ?? null}
+        debug={nextClass?.debug ?? null}
+      />
       <FillLocationPrompt show={!hasLocation} role={role} />
       <main className="w-full min-w-0 flex-1 overflow-x-clip">
         <div className="mx-auto w-full max-w-7xl min-w-0 overflow-x-clip px-4 py-6 md:px-8 md:py-8">

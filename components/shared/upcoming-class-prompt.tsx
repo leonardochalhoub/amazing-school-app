@@ -11,11 +11,17 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import type { UpcomingClassContext } from "@/lib/actions/upcoming-class";
+import type {
+  UpcomingClassContext,
+  UpcomingClassDebug,
+} from "@/lib/actions/upcoming-class";
 
 interface Props {
   /** Null when there's nothing to show. */
   ctx: UpcomingClassContext | null;
+  /** Optional server-side diagnostic. When ctx is null, we log this
+   *  to the browser console so the reason is easy to see in devtools. */
+  debug?: UpcomingClassDebug | null;
 }
 
 // Versioned so old dismissals from earlier iterations don't
@@ -29,7 +35,7 @@ const DISMISS_STORAGE_PREFIX = "upcoming_class_dismissed_v2_";
  * Dismissal per class-id sticks in sessionStorage so it doesn't
  * re-pop across route changes in the same session.
  */
-export function UpcomingClassPrompt({ ctx }: Props) {
+export function UpcomingClassPrompt({ ctx, debug }: Props) {
   const [mounted, setMounted] = useState(false);
   const [closed, setClosed] = useState(false);
   const [now, setNow] = useState<number | null>(null);
@@ -37,7 +43,20 @@ export function UpcomingClassPrompt({ ctx }: Props) {
   useEffect(() => {
     setMounted(true);
     setNow(Date.now());
-    if (!ctx) return;
+    if (!ctx) {
+      // Visible in browser devtools. Makes it easy to see WHY the
+      // popup isn't showing without having to dig into server logs.
+      // eslint-disable-next-line no-console
+      console.info("[upcoming-class] no ctx · server debug:", debug);
+      return;
+    }
+    // eslint-disable-next-line no-console
+    console.info("[upcoming-class] ctx received:", {
+      id: ctx.id,
+      title: ctx.title,
+      scheduledAt: ctx.scheduledAt,
+      role: ctx.role,
+    });
     try {
       if (
         window.sessionStorage.getItem(
@@ -49,7 +68,7 @@ export function UpcomingClassPrompt({ ctx }: Props) {
     } catch {
       /* no-op */
     }
-  }, [ctx]);
+  }, [ctx, debug]);
 
   const visible = mounted && ctx !== null && !closed && now !== null;
 

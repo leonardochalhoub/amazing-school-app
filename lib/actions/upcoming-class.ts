@@ -3,6 +3,15 @@
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 
+export interface UpcomingClassDebug {
+  reason: string;
+  role: string;
+  classroomCount: number;
+  upcomingRowCount: number;
+  nextFuture: string | null;
+  userId: string | null;
+}
+
 export interface UpcomingClassContext {
   id: string;
   title: string;
@@ -11,44 +20,45 @@ export interface UpcomingClassContext {
   scheduledAt: string;
   meetingUrl: string;
   role: "teacher" | "student";
-  /** Counterpart name(s): for teachers it's the class roster names,
-   *  for students it's the teacher's full name. */
   counterpart: {
     teacherName?: string;
     students?: Array<{ name: string; avatarUrl: string | null }>;
     totalStudents?: number;
   };
-  /** Lessons the student (or the teacher's students) should prep for
-   *  this class — assigned but not completed yet. */
   prepLessons: Array<{
     slug: string;
     title: string;
     cefrLevel: string | null;
   }>;
-  /** Observations from the previous held class, if any — helps both
-   *  sides pick up the conversation mid-stream. */
   previousNote: string | null;
 }
 
-/**
- * Next upcoming class for the signed-in user (teacher or student).
- * Returns null once the only upcoming class is within the past hour,
- * matching "stops after the class is past" — we give a 60-minute
- * grace window after scheduled_at so a popup doesn't disappear
- * mid-class.
- */
-export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
+export interface UpcomingClassResult {
+  ctx: UpcomingClassContext | null;
+  debug: UpcomingClassDebug;
+}
+
+export async function getMyNextClass(): Promise<UpcomingClassResult> {
+  const debug: UpcomingClassDebug = {
+    reason: "init",
+    role: "unknown",
+    classroomCount: 0,
+    upcomingRowCount: 0,
+    nextFuture: null,
+    userId: null,
+  };
+
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    console.info("[upcoming-class] no signed-in user");
-    return null;
+    debug.reason = "no-user";
+    return { ctx: null, debug };
   }
+  debug.userId = user.id;
 
   const admin = createAdminClient();
-
   const { data: profile } = await admin
     .from("profiles")
     .select("role")
@@ -58,15 +68,9 @@ export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
     | "teacher"
     | "student"
     | "owner";
+  debug.role = role;
   const isTeacher = role === "teacher" || role === "owner";
-  console.info(
-    `[upcoming-class] resolving for ${role} ${user.id} (${user.email ?? "no-email"})`,
-  );
 
-  // Near-future window: 1 hour grace after start (so the popup
-  // persists through class time) through 14 days ahead. Earlier
-  // 4-day cap was too tight — teachers here sometimes only touch
-  // the app weekly, so a class 5 days out was invisible.
   const graceWindow = new Date(Date.now() - 60 * 60 * 1000).toISOString();
   const windowEnd = new Date(
     Date.now() + 14 * 24 * 60 * 60 * 1000,
@@ -74,40 +78,33 @@ export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
 
   let classroomIds: string[] = [];
   if (isTeacher) {
-    const { data: rooms, error: roomsErr } = await admin
+    const { data: rooms } = await admin
       .from("classrooms")
       .select("id")
       .eq("teacher_id", user.id)
       .is("deleted_at", null);
-    if (roomsErr) console.warn("[upcoming-class] rooms err", roomsErr.message);
     classroomIds = ((rooms as Array<{ id: string }> | null) ?? []).map(
       (r) => r.id,
     );
   } else {
-    const { data: roster, error: rosterErr } = await admin
+    const { data: roster } = await admin
       .from("roster_students")
       .select("classroom_id")
       .eq("auth_user_id", user.id)
       .is("deleted_at", null);
-    if (rosterErr)
-      console.warn("[upcoming-class] roster err", rosterErr.message);
     classroomIds = (
       (roster as Array<{ classroom_id: string | null }> | null) ?? []
     )
       .map((r) => r.classroom_id)
       .filter((v): v is string => !!v);
   }
+  debug.classroomCount = classroomIds.length;
   if (classroomIds.length === 0) {
-    console.info(
-      `[upcoming-class] ${role} ${user.id} has no classrooms — skipping popup`,
-    );
-    return null;
+    debug.reason = "no-classrooms";
+    return { ctx: null, debug };
   }
 
-  console.info(
-    `[upcoming-class] classroomIds=${JSON.stringify(classroomIds)} window=${graceWindow}..${windowEnd}`,
-  );
-  const { data: upcoming, error: upcomingErr } = await admin
+  const { data: upcoming } = await admin
     .from("scheduled_classes")
     .select("id, classroom_id, title, meeting_url, scheduled_at")
     .in("classroom_id", classroomIds)
@@ -115,35 +112,30 @@ export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
     .lte("scheduled_at", windowEnd)
     .order("scheduled_at", { ascending: true })
     .limit(1);
-  if (upcomingErr)
-    console.warn("[upcoming-class] upcoming err", upcomingErr.message);
-  console.info(
-    `[upcoming-class] upcoming rows=${upcoming?.length ?? 0}`,
-  );
+  debug.upcomingRowCount = upcoming?.length ?? 0;
+
   if (!upcoming || upcoming.length === 0) {
-    // Secondary lookup that ignores the time window — helps diagnose
-    // whether the data exists at all but is outside the next-4-days
-    // cutoff.
-    const { data: any } = await admin
+    const { data: anyFuture } = await admin
       .from("scheduled_classes")
       .select("scheduled_at")
       .in("classroom_id", classroomIds)
       .gte("scheduled_at", new Date().toISOString())
       .order("scheduled_at", { ascending: true })
       .limit(1);
-    const nextAny = (any as Array<{ scheduled_at: string }> | null)?.[0];
-    console.info(
-      `[upcoming-class] ${role} ${user.id} · no class in 4d window (rooms=${classroomIds.length}, nextFuture=${nextAny?.scheduled_at ?? "none"})`,
-    );
+    debug.nextFuture =
+      (anyFuture as Array<{ scheduled_at: string }> | null)?.[0]
+        ?.scheduled_at ?? null;
+    debug.reason = "no-rows-in-window";
+    return { ctx: null, debug };
   }
-  const next = (upcoming as Array<{
+
+  const next = upcoming[0] as {
     id: string;
     classroom_id: string;
     title: string;
     meeting_url: string;
     scheduled_at: string;
-  }> | null)?.[0];
-  if (!next) return null;
+  };
 
   const { data: classroom } = await admin
     .from("classrooms")
@@ -212,17 +204,21 @@ export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
     (prior as Array<{ observations: string | null }> | null)?.[0]
       ?.observations ?? null;
 
+  debug.reason = "ok";
   return {
-    id: next.id,
-    title: next.title,
-    classroomId: next.classroom_id,
-    classroomName: room.name,
-    scheduledAt: next.scheduled_at,
-    meetingUrl: next.meeting_url,
-    role: isTeacher ? "teacher" : "student",
-    counterpart,
-    prepLessons,
-    previousNote,
+    ctx: {
+      id: next.id,
+      title: next.title,
+      classroomId: next.classroom_id,
+      classroomName: room.name,
+      scheduledAt: next.scheduled_at,
+      meetingUrl: next.meeting_url,
+      role: isTeacher ? "teacher" : "student",
+      counterpart,
+      prepLessons,
+      previousNote,
+    },
+    debug,
   };
 }
 
