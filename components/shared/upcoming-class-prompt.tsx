@@ -13,7 +13,7 @@ interface Props {
   debug?: UpcomingClassDebug | null;
 }
 
-const DISMISS_KEY = "upcoming_class_prompt_dismissed_v3";
+const DISMISS_KEY = "upcoming_class_prompt_dismissed_v4";
 
 /**
  * Info-only corner toast listing the next scheduled classes (up to
@@ -55,6 +55,10 @@ export function UpcomingClassPrompt({ items, debug }: Props) {
     try {
       if (window.sessionStorage.getItem(DISMISS_KEY) === signature) {
         setClosed(true);
+        // eslint-disable-next-line no-console
+        console.info(
+          "[upcoming-class] popup hidden — you dismissed this exact list earlier in this tab. Clear sessionStorage or open a new tab to see it again.",
+        );
       }
     } catch {
       /* no-op */
