@@ -160,7 +160,7 @@ export default async function RosterStudentDetailPage({
     : [];
 
   return (
-    <div className="space-y-6 overflow-x-clip pb-12">
+    <div className="mx-auto w-full max-w-6xl space-y-5 overflow-x-clip pb-12">
       <Link
         href="/teacher"
         className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground"
@@ -169,54 +169,78 @@ export default async function RosterStudentDetailPage({
         Back to dashboard
       </Link>
 
-      <header className="flex flex-wrap items-start justify-between gap-3">
-        <div className="flex flex-col gap-1">
-          <p className="flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            <span>Student</span>
-            {student.level ? (
-              <span className="inline-flex items-center rounded-full bg-indigo-500/10 px-2 py-0.5 text-[10px] font-semibold tracking-wider text-indigo-700 dark:text-indigo-300">
-                {student.level.toUpperCase()}
-              </span>
-            ) : null}
-          </p>
-          <h1 className="text-3xl font-semibold tracking-tight">
-            {student.full_name}
-          </h1>
-          {student.email ? (
-            <p className="text-sm text-muted-foreground">{student.email}</p>
-          ) : null}
-        </div>
-        <div className="flex flex-wrap items-center gap-2">
-          <a
-            href={`/teacher/students/${id}/view`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              buttonVariants({ variant: "outline", size: "sm" }),
-              "gap-1.5",
-            )}
-          >
-            <User className="h-4 w-4" />
-            <T
-              en="Student profile"
-              pt={
-                student.gender === "female"
-                  ? "Perfil da aluna"
-                  : "Perfil do aluno"
-              }
-            />
-          </a>
-          <StudentInviteButton
-            rosterStudentId={id}
-            classroomId={student.classroom_id}
-            prefillEmail={student.email}
-            prefillName={student.full_name}
+      {/* Identity hero — avatar uploader + name + email + level +
+          actions in one responsive card. Stacks on mobile, two-
+          column from sm. */}
+      <Card className="overflow-hidden">
+        <div className="relative">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-pink-500/10"
           />
+          <CardContent className="relative flex flex-col gap-5 p-5 sm:flex-row sm:items-center sm:p-6">
+            <div className="flex items-center justify-center sm:block">
+              <RosterAvatarUploader
+                rosterId={id}
+                currentSignedUrl={signedUrl}
+                fullName={student.full_name}
+                ageGroup={student.age_group}
+                gender={student.gender}
+              />
+            </div>
+            <div className="min-w-0 flex-1 space-y-1.5">
+              <p className="flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                <span>Student</span>
+                {student.level ? (
+                  <span className="inline-flex items-center rounded-full bg-indigo-500/10 px-2 py-0.5 text-[10px] font-semibold tracking-wider text-indigo-700 dark:text-indigo-300">
+                    {student.level.toUpperCase()}
+                  </span>
+                ) : null}
+              </p>
+              <h1 className="break-words text-2xl font-semibold tracking-tight sm:text-3xl">
+                {student.full_name}
+              </h1>
+              {student.email ? (
+                <p className="truncate text-sm text-muted-foreground">
+                  {student.email}
+                </p>
+              ) : null}
+              <div className="flex flex-wrap items-center gap-2 pt-1">
+                <a
+                  href={`/teacher/students/${id}/view`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    buttonVariants({ variant: "outline", size: "sm" }),
+                    "gap-1.5",
+                  )}
+                >
+                  <User className="h-4 w-4" />
+                  <T
+                    en="Student profile"
+                    pt={
+                      student.gender === "female"
+                        ? "Perfil da aluna"
+                        : "Perfil do aluno"
+                    }
+                  />
+                </a>
+                <StudentInviteButton
+                  rosterStudentId={id}
+                  classroomId={student.classroom_id}
+                  prefillEmail={student.email}
+                  prefillName={student.full_name}
+                />
+              </div>
+            </div>
+          </CardContent>
         </div>
-      </header>
+      </Card>
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
-        <div className="min-w-0 space-y-6">
+      {/* Body: main column (lessons / history) + sticky side column
+          (details + reports). Collapses to single column on <lg. */}
+      <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,360px)]">
+        <div className="min-w-0 space-y-5">
           <Card>
             <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-2 space-y-0 pb-3">
               <CardTitle className="min-w-0 break-words text-base">
@@ -246,6 +270,24 @@ export default async function RosterStudentDetailPage({
             </CardContent>
           </Card>
 
+          <Card>
+            <CardContent className="py-5">
+              <StudentHistoryPanel
+                rosterStudentId={id}
+                classroomId={student.classroom_id}
+                entries={history}
+              />
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="py-5">
+              <DiaryPanel rosterStudentId={id} entries={diary} />
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="space-y-5 lg:sticky lg:top-32 lg:self-start">
           <Card id="student-details">
             <CardHeader>
               <CardTitle className="text-base">Details</CardTitle>
@@ -279,39 +321,6 @@ export default async function RosterStudentDetailPage({
             </CardContent>
           </Card>
 
-          <Card>
-            <CardContent className="py-5">
-              <DiaryPanel rosterStudentId={id} entries={diary} />
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="py-5">
-              <StudentHistoryPanel
-                rosterStudentId={id}
-                classroomId={student.classroom_id}
-                entries={history}
-              />
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="space-y-6 lg:sticky lg:top-32 lg:self-start">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-base">Photo</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <RosterAvatarUploader
-                rosterId={id}
-                currentSignedUrl={signedUrl}
-                fullName={student.full_name}
-                ageGroup={student.age_group}
-                gender={student.gender}
-              />
-            </CardContent>
-          </Card>
-
           <StudentReportsCard
             rosterId={id}
             rosterCreatedAt={
@@ -329,7 +338,6 @@ export default async function RosterStudentDetailPage({
             studentHasAccount={!!student.auth_user_id}
             studentEmail={student.email}
           />
-
         </div>
       </div>
     </div>
