@@ -102,12 +102,13 @@ export default async function SysadminPrintPage({ searchParams }: PageProps) {
           <table className="mt-2" style={{ fontSize: "9.5pt" }}>
             <thead>
               <tr>
-                <th style={{ width: "28%" }}>Professor</th>
-                <th style={{ width: "28%" }}>Email</th>
-                <th style={{ textAlign: "right", width: "10%" }}>Alunos</th>
-                <th style={{ textAlign: "right", width: "10%" }}>Turmas</th>
-                <th style={{ textAlign: "right", width: "12%" }}>Ativos 30d</th>
-                <th style={{ textAlign: "right", width: "12%" }}>Cadastro</th>
+                <th style={{ width: "22%" }}>Professor</th>
+                <th style={{ width: "22%" }}>Email</th>
+                <th style={{ width: "16%" }}>Localização</th>
+                <th style={{ textAlign: "right", width: "8%" }}>Alunos</th>
+                <th style={{ textAlign: "right", width: "8%" }}>Turmas</th>
+                <th style={{ textAlign: "right", width: "10%" }}>Ativos 30d</th>
+                <th style={{ textAlign: "right", width: "14%" }}>Cadastro</th>
               </tr>
             </thead>
             <tbody>
@@ -118,6 +119,9 @@ export default async function SysadminPrintPage({ searchParams }: PageProps) {
                     <td style={{ fontWeight: 500 }}>{t.name ?? "—"}</td>
                     <td className="report-muted" style={{ fontSize: "9pt" }}>
                       {t.email ?? "—"}
+                    </td>
+                    <td className="report-muted" style={{ fontSize: "9pt" }}>
+                      {t.location ?? "—"}
                     </td>
                     <td style={{ textAlign: "right" }} className="tabular-nums">
                       {t.studentCount}

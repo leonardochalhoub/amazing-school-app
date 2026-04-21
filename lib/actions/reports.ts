@@ -1423,6 +1423,7 @@ export interface SysadminReportData {
     id: string;
     name: string | null;
     email: string | null;
+    location: string | null;
     studentCount: number;
     classroomsCount: number;
     activeStudentsLast30d: number;
@@ -1491,7 +1492,7 @@ export async function getSysadminReport(): Promise<
   ] = await Promise.all([
     admin
       .from("profiles")
-      .select("id, full_name, role, is_test, created_at")
+      .select("id, full_name, role, is_test, created_at, location")
       .order("created_at", { ascending: false }),
     admin
       .from("classrooms")
@@ -1686,6 +1687,8 @@ export async function getSysadminReport(): Promise<
       id: t.id,
       name: t.full_name,
       email: teacherEmailById.get(t.id) ?? null,
+      location:
+        ((t as { location?: string | null }).location ?? null) || null,
       studentCount: rosterByTeacher.get(t.id) ?? 0,
       classroomsCount: classroomsByTeacher.get(t.id) ?? 0,
       activeStudentsLast30d: activeStudentsByTeacher.get(t.id)?.size ?? 0,

@@ -57,6 +57,7 @@ export interface SysadminOverview {
     id: string;
     name: string;
     email: string | null;
+    location: string | null;
     studentCount: number;
     classroomsCount: number;
     activeStudentsLast30d: number;
@@ -206,7 +207,7 @@ export async function getSysadminOverview(): Promise<
   ] = await Promise.all([
     admin
       .from("profiles")
-      .select("id, full_name, role, avatar_url, created_at")
+      .select("id, full_name, role, avatar_url, created_at, location")
       // Sysadmin view is scoped to REAL users only — demo / staging
       // accounts are marked with is_test=true and hidden everywhere
       // across the dashboard.
@@ -574,6 +575,8 @@ export async function getSysadminOverview(): Promise<
     id: t.id,
     name: t.full_name,
     email: teacherEmailById.get(t.id) ?? null,
+    location:
+      ((t as { location?: string | null }).location ?? null) || null,
     studentCount: studentsByTeacher.get(t.id)?.size ?? 0,
     activeStudentsLast30d: activeStudentsByTeacher.get(t.id)?.size ?? 0,
     classroomsCount: classroomsByTeacher.get(t.id) ?? 0,

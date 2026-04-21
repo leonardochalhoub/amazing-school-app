@@ -261,6 +261,7 @@ export default async function SysadminPage() {
               <tr>
                 <th className="px-4 py-2">Teacher</th>
                 <th className="px-4 py-2">Email</th>
+                <th className="px-4 py-2">Location</th>
                 <th className="px-4 py-2 text-right">Students</th>
                 <th className="px-4 py-2 text-right">Classrooms</th>
                 <th className="px-4 py-2 text-right whitespace-nowrap">
@@ -273,7 +274,7 @@ export default async function SysadminPage() {
               {allTeachers.length === 0 ? (
                 <tr>
                   <td
-                    colSpan={6}
+                    colSpan={7}
                     className="px-4 py-6 text-center text-sm text-muted-foreground"
                   >
                     No teachers yet.
@@ -289,6 +290,9 @@ export default async function SysadminPage() {
                   </td>
                   <td className="px-4 py-2 text-xs text-muted-foreground">
                     {t.email ?? "—"}
+                  </td>
+                  <td className="px-4 py-2 text-xs text-muted-foreground">
+                    {t.location ?? "—"}
                   </td>
                   <td className="px-4 py-2 text-right tabular-nums">
                     {t.studentCount}
