@@ -2,16 +2,22 @@
 
 import { useEffect } from "react";
 
-const FLUSH_INTERVAL_MS = 30_000;
+const FLUSH_INTERVAL_MS = 5_000;
 const MIN_SECONDS = 1;
 const MAX_SECONDS = 300;
 
 /**
  * Mount this anywhere inside an authenticated layout. It measures
  * focused-tab time using the Page Visibility API and posts the
- * elapsed seconds to /api/heartbeat every ~30s plus once on page
+ * elapsed seconds to /api/heartbeat every ~5s plus once on page
  * hide (so closing the tab doesn't lose the trailing chunk). Tab
  * switches pause the timer; switching back resumes it.
+ *
+ * Total accumulated seconds on the server side stay accurate
+ * regardless of flush frequency — each row carries its own seconds
+ * delta, and the time-on-site query sums them. Higher frequency just
+ * means the "last active" / "Atividade recente" panel reflects new
+ * visits within seconds instead of minutes.
  *
  * Renders nothing. Lives as a separate client component so the
  * surrounding layout can stay a server component.
