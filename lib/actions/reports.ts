@@ -341,16 +341,21 @@ export async function getStudentCurriculumReport(
     duration_minutes: number | null;
     skill_focus: string[] | null;
     lesson_content: string | null;
+    cefr_level: string | null;
   };
   const perStudentHist = await admin
     .from("student_history")
-    .select("id, event_date, duration_minutes, skill_focus, lesson_content")
+    .select(
+      "id, event_date, duration_minutes, skill_focus, lesson_content, cefr_level",
+    )
     .eq("roster_student_id", rosterStudentId)
     .not("duration_minutes", "is", null);
   const classroomWideHist = roster.classroom_id
     ? await admin
         .from("student_history")
-        .select("id, event_date, duration_minutes, skill_focus, lesson_content")
+        .select(
+          "id, event_date, duration_minutes, skill_focus, lesson_content, cefr_level",
+        )
         .eq("classroom_id", roster.classroom_id)
         .is("roster_student_id", null)
         .not("duration_minutes", "is", null)
@@ -371,11 +376,14 @@ export async function getStudentCurriculumReport(
     const eachMin = Math.round(minutes / buckets.length);
     for (let i = 0; i < buckets.length; i++) {
       const skill = buckets[i];
+      // Prefer the row's explicit CEFR tag (set by edit/schedule
+      // dialogs); fall back to the student's roster level.
+      const explicitCefr = cefrFamily(r.cefr_level ?? null);
       liveEntries.push({
         slug: `live:${r.id}:${skill}`,
         kind: "live",
         title: (r.lesson_content?.trim() || "Aula ao vivo").slice(0, 120),
-        cefr: roster.level ? cefrFamily(roster.level) : null,
+        cefr: explicitCefr ?? (roster.level ? cefrFamily(roster.level) : null),
         category: skill,
         estimatedMinutes: eachMin,
         status: "completed",

@@ -21,7 +21,9 @@ import {
 } from "@/lib/actions/student-history";
 import {
   SKILL_FOCUS_OPTIONS,
+  CEFR_LEVELS,
   type SkillFocus,
+  type CefrLevel,
 } from "@/lib/actions/student-history-types";
 
 interface StudentOption {
@@ -56,6 +58,7 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
   const [eventTime, setEventTime] = useState("10:00");
   const [meetingLink, setMeetingLink] = useState("");
   const [skillFocus, setSkillFocus] = useState<SkillFocus[]>([]);
+  const [cefrLevel, setCefrLevel] = useState<CefrLevel | "">("");
   const [lessonContent, setLessonContent] = useState("");
   const [pending, startTransition] = useTransition();
 
@@ -67,6 +70,7 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
     setEventTime("10:00");
     setMeetingLink("");
     setSkillFocus([]);
+    setCefrLevel("");
     setLessonContent("");
   }
 
@@ -94,6 +98,7 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
           meeting_link: meetingLink,
           skill_focus: skillFocus,
           lesson_content: lessonContent,
+          cefr_level: cefrLevel || null,
         });
         if ("error" in res) {
           toast.error(res.error);
@@ -112,6 +117,7 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
           meeting_link: meetingLink,
           skill_focus: skillFocus,
           lesson_content: lessonContent,
+          cefr_level: cefrLevel || null,
         });
         if ("error" in res) {
           toast.error(res.error);
@@ -273,6 +279,40 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
                       }`}
                     >
                       {s}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="space-y-1.5">
+              <Label htmlFor="schedule-cefr">CEFR level (optional)</Label>
+              <div className="flex flex-wrap gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => setCefrLevel("")}
+                  className={`rounded-full border px-2.5 py-0.5 text-[11px] font-medium transition-colors ${
+                    cefrLevel === ""
+                      ? "border-foreground bg-foreground text-background"
+                      : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground"
+                  }`}
+                >
+                  —
+                </button>
+                {CEFR_LEVELS.map((lvl) => {
+                  const active = cefrLevel === lvl;
+                  return (
+                    <button
+                      key={lvl}
+                      type="button"
+                      onClick={() => setCefrLevel(lvl)}
+                      className={`rounded-full border px-2.5 py-0.5 text-[11px] font-medium transition-colors ${
+                        active
+                          ? "border-foreground bg-foreground text-background"
+                          : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground"
+                      }`}
+                    >
+                      {lvl}
                     </button>
                   );
                 })}

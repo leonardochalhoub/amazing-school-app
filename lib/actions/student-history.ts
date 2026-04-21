@@ -5,8 +5,10 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import {
   HISTORY_STATUSES,
   SKILL_FOCUS_OPTIONS,
+  CEFR_LEVELS,
   type HistoryStatus,
   type SkillFocus,
+  type CefrLevel,
   type StudentHistoryEntry,
 } from "./student-history-types";
 import { isTeacherRole } from "@/lib/auth/roles";
@@ -26,6 +28,7 @@ interface SaveHistoryInput {
   lesson_content?: string | null;
   skill_focus?: string[];
   meeting_link?: string | null;
+  cefr_level?: string | null;
 }
 
 function sanitizeSkillFocus(list: string[] | undefined): SkillFocus[] {
@@ -65,6 +68,12 @@ export async function saveHistoryEntry(
     return { error: "Must target exactly one student (auth or roster)" };
   }
 
+  const cefrLevel: CefrLevel | null =
+    (input.cefr_level as CefrLevel | null | undefined) &&
+    CEFR_LEVELS.includes(input.cefr_level as CefrLevel)
+      ? (input.cefr_level as CefrLevel)
+      : null;
+
   const payload = {
     teacher_id: user.id,
     student_id: hasStudent ? input.student_id : null,
@@ -77,6 +86,7 @@ export async function saveHistoryEntry(
     lesson_content: input.lesson_content?.trim() || null,
     skill_focus: sanitizeSkillFocus(input.skill_focus),
     meeting_link: input.meeting_link?.trim() || null,
+    cefr_level: cefrLevel,
     updated_at: new Date().toISOString(),
   };
 
@@ -136,7 +146,7 @@ export async function listStudentHistory(
   let query = admin
     .from("student_history")
     .select(
-      "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, end_time, duration_minutes, status, lesson_content, skill_focus, meeting_link, created_at, updated_at",
+      "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, end_time, duration_minutes, status, lesson_content, skill_focus, meeting_link, cefr_level, created_at, updated_at",
     )
     .eq("teacher_id", user.id)
     .order("event_date", { ascending: false })
@@ -165,6 +175,7 @@ export async function listStudentHistory(
     event_time: (r.event_time as string | null) ?? null,
     end_time: (r.end_time as string | null) ?? null,
     duration_minutes: (r.duration_minutes as number | null) ?? null,
+    cefr_level: (r.cefr_level as CefrLevel | null) ?? null,
     status: r.status as HistoryStatus,
     lesson_content: (r.lesson_content as string | null) ?? null,
     skill_focus: Array.isArray(r.skill_focus)
@@ -219,7 +230,7 @@ export async function listAllTeacherHistory(
     const { data, error } = await admin
       .from("student_history")
       .select(
-        "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, end_time, duration_minutes, status, lesson_content, skill_focus, meeting_link, created_at, updated_at",
+        "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, end_time, duration_minutes, status, lesson_content, skill_focus, meeting_link, cefr_level, created_at, updated_at",
       )
       .eq("teacher_id", user.id)
       .order("event_date", { ascending: false })
@@ -355,6 +366,7 @@ export async function listAllTeacherHistory(
       event_time: (r.event_time as string | null) ?? null,
       end_time: (r.end_time as string | null) ?? null,
       duration_minutes: (r.duration_minutes as number | null) ?? null,
+      cefr_level: (r.cefr_level as CefrLevel | null) ?? null,
       status: r.status as HistoryStatus,
       lesson_content: (r.lesson_content as string | null) ?? null,
       skill_focus: Array.isArray(r.skill_focus)
@@ -396,7 +408,7 @@ export async function listOwnHistory(
     let query = admin
       .from("student_history")
       .select(
-        "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, end_time, duration_minutes, status, lesson_content, skill_focus, meeting_link, created_at, updated_at",
+        "id, teacher_id, student_id, roster_student_id, classroom_id, event_date, event_time, end_time, duration_minutes, status, lesson_content, skill_focus, meeting_link, cefr_level, created_at, updated_at",
       )
       .order("event_date", { ascending: false })
       .order("event_time", { ascending: false, nullsFirst: false })
@@ -435,6 +447,7 @@ export async function listOwnHistory(
     event_time: (r.event_time as string | null) ?? null,
     end_time: (r.end_time as string | null) ?? null,
     duration_minutes: (r.duration_minutes as number | null) ?? null,
+    cefr_level: (r.cefr_level as CefrLevel | null) ?? null,
     status: r.status as HistoryStatus,
     lesson_content: (r.lesson_content as string | null) ?? null,
     skill_focus: Array.isArray(r.skill_focus)
@@ -456,6 +469,7 @@ export interface ScheduleClassInput {
   meeting_link?: string | null;
   skill_focus?: string[];
   lesson_content?: string | null;
+  cefr_level?: string | null;
 }
 
 /**
@@ -474,6 +488,7 @@ export async function scheduleClass(
     lesson_content: input.lesson_content ?? null,
     skill_focus: input.skill_focus ?? [],
     meeting_link: input.meeting_link ?? null,
+    cefr_level: input.cefr_level ?? null,
   });
 }
 
@@ -484,6 +499,7 @@ export interface ScheduleClassroomClassInput {
   meeting_link?: string | null;
   skill_focus?: string[];
   lesson_content?: string | null;
+  cefr_level?: string | null;
 }
 
 /**
@@ -523,6 +539,11 @@ export async function scheduleClassroomClass(
   const rosterIds = (rosterRows ?? []).map((r) => r.id as string);
   if (rosterIds.length === 0) return { error: "No students in this classroom" };
 
+  const cefrLevel: CefrLevel | null =
+    (input.cefr_level as CefrLevel | null | undefined) &&
+    CEFR_LEVELS.includes(input.cefr_level as CefrLevel)
+      ? (input.cefr_level as CefrLevel)
+      : null;
   const now = new Date().toISOString();
   const rows = rosterIds.map((rid) => ({
     teacher_id: user.id,
@@ -535,6 +556,7 @@ export async function scheduleClassroomClass(
     lesson_content: input.lesson_content?.trim() || null,
     skill_focus: sanitizeSkillFocus(input.skill_focus),
     meeting_link: input.meeting_link?.trim() || null,
+    cefr_level: cefrLevel,
     updated_at: now,
   }));
 

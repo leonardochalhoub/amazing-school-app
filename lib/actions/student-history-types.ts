@@ -22,6 +22,9 @@ export const SKILL_FOCUS_OPTIONS = [
 ] as const;
 export type SkillFocus = (typeof SKILL_FOCUS_OPTIONS)[number];
 
+export const CEFR_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
+export type CefrLevel = (typeof CEFR_LEVELS)[number];
+
 export interface StudentHistoryEntry {
   id: string;
   teacher_id: string;
@@ -37,6 +40,9 @@ export interface StudentHistoryEntry {
   /** Generated column — minutes between event_time and end_time
    *  when status='Done'. Null otherwise. */
   duration_minutes: number | null;
+  /** Optional CEFR band the class targeted. Feeds the curriculum
+   *  report's per-band live-class attribution. */
+  cefr_level: CefrLevel | null;
   status: HistoryStatus;
   lesson_content: string | null;
   skill_focus: SkillFocus[];

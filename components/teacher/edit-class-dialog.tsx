@@ -23,9 +23,11 @@ import {
 import {
   HISTORY_STATUSES,
   SKILL_FOCUS_OPTIONS,
+  CEFR_LEVELS,
   formatHoursMinutes,
   type HistoryStatus,
   type SkillFocus,
+  type CefrLevel,
   type StudentHistoryEntry,
 } from "@/lib/actions/student-history-types";
 
@@ -59,6 +61,11 @@ export function EditClassDialog({ entry, triggerClassName }: Props) {
     (entry as { end_time?: string | null }).end_time ?? "",
   );
   const [status, setStatus] = useState<HistoryStatus>(entry.status);
+  const [cefrLevel, setCefrLevel] = useState<CefrLevel | "">(
+    ((entry as { cefr_level?: CefrLevel | null }).cefr_level as
+      | CefrLevel
+      | "") ?? "",
+  );
   const [meetingLink, setMeetingLink] = useState(entry.meeting_link ?? "");
   const [lessonContent, setLessonContent] = useState(
     entry.lesson_content ?? "",
@@ -93,6 +100,7 @@ export function EditClassDialog({ entry, triggerClassName }: Props) {
         lesson_content: lessonContent,
         skill_focus: skillFocus,
         meeting_link: meetingLink,
+        cefr_level: cefrLevel || null,
       });
       if ("error" in res) {
         toast.error(res.error);
@@ -183,21 +191,42 @@ export function EditClassDialog({ entry, triggerClassName }: Props) {
               </p>
             ) : null}
 
-            <div className="space-y-1.5">
-              <Label htmlFor="edit-status">Status</Label>
-              <select
-                id="edit-status"
-                value={status}
-                onChange={(e) => setStatus(e.target.value as HistoryStatus)}
-                disabled={pending}
-                className="h-8 w-full rounded-md border border-border bg-background px-2 text-sm"
-              >
-                {HISTORY_STATUSES.map((s) => (
-                  <option key={s} value={s}>
-                    {s}
-                  </option>
-                ))}
-              </select>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="space-y-1.5">
+                <Label htmlFor="edit-status">Status</Label>
+                <select
+                  id="edit-status"
+                  value={status}
+                  onChange={(e) => setStatus(e.target.value as HistoryStatus)}
+                  disabled={pending}
+                  className="h-8 w-full rounded-md border border-border bg-background px-2 text-sm"
+                >
+                  {HISTORY_STATUSES.map((s) => (
+                    <option key={s} value={s}>
+                      {s}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="space-y-1.5">
+                <Label htmlFor="edit-cefr">Nível · CEFR</Label>
+                <select
+                  id="edit-cefr"
+                  value={cefrLevel}
+                  onChange={(e) =>
+                    setCefrLevel(e.target.value as CefrLevel | "")
+                  }
+                  disabled={pending}
+                  className="h-8 w-full rounded-md border border-border bg-background px-2 text-sm"
+                >
+                  <option value="">—</option>
+                  {CEFR_LEVELS.map((lvl) => (
+                    <option key={lvl} value={lvl}>
+                      {lvl}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
 
             <div className="space-y-1.5">
