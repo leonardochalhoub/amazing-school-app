@@ -104,7 +104,10 @@ function withinYear(iso: string | null | undefined, year: Year): boolean {
 
 export interface CurriculumEntry {
   slug: string;
-  kind: "lesson" | "music";
+  /** "lesson" / "music" come from the catalog. "live" is a held
+   *  class (status='Done' with both event_time + end_time set) so
+   *  live-class minutes flow into curriculum totals + skill split. */
+  kind: "lesson" | "music" | "live";
   title: string;
   /** Normalised CEFR family (A1, A2, B1, B2, C1, C2). Never "A1.1"
       etc. — the sub-semester split is collapsed at the data layer
@@ -320,10 +323,72 @@ export async function getStudentCurriculumReport(
     };
   });
 
-  // Filter to the selected year + drop unclassified rows.
+  // -------------------------------------------------------------
+  // Live classes — pull every Done row with a computed duration
+  // for this student (per-roster + classroom-wide) and turn each
+  // into one curriculum entry per skill_focus tag (so a 60-min
+  // class tagged "Listening, Speaking" produces one 30-min row in
+  // each bucket — same split logic as getLiveClassSummaryForRoster).
+  // -------------------------------------------------------------
+  type HistRow = {
+    id: string;
+    event_date: string;
+    duration_minutes: number | null;
+    skill_focus: string[] | null;
+    lesson_content: string | null;
+  };
+  const perStudentHist = await admin
+    .from("student_history")
+    .select("id, event_date, duration_minutes, skill_focus, lesson_content")
+    .eq("roster_student_id", rosterStudentId)
+    .not("duration_minutes", "is", null);
+  const classroomWideHist = roster.classroom_id
+    ? await admin
+        .from("student_history")
+        .select("id, event_date, duration_minutes, skill_focus, lesson_content")
+        .eq("classroom_id", roster.classroom_id)
+        .is("roster_student_id", null)
+        .not("duration_minutes", "is", null)
+    : { data: [] as HistRow[] };
+
+  const liveRows = [
+    ...((perStudentHist.data ?? []) as HistRow[]),
+    ...((classroomWideHist.data ?? []) as HistRow[]),
+  ];
+  const liveEntries: CurriculumEntry[] = [];
+  for (const r of liveRows) {
+    const minutes = r.duration_minutes ?? 0;
+    if (minutes <= 0) continue;
+    const tags = (Array.isArray(r.skill_focus) ? r.skill_focus : [])
+      .map((t) => (t ?? "").toLowerCase())
+      .filter(Boolean);
+    const buckets = tags.length > 0 ? tags : ["live"];
+    const eachMin = Math.round(minutes / buckets.length);
+    for (let i = 0; i < buckets.length; i++) {
+      const skill = buckets[i];
+      liveEntries.push({
+        slug: `live:${r.id}:${skill}`,
+        kind: "live",
+        title: (r.lesson_content?.trim() || "Aula ao vivo").slice(0, 120),
+        cefr: roster.level ? cefrFamily(roster.level) : null,
+        category: skill,
+        estimatedMinutes: eachMin,
+        status: "completed",
+        assignedAt: r.event_date,
+        completedAt: r.event_date,
+        xpEarned: null,
+      });
+    }
+  }
+  rawEntries.push(...liveEntries);
+
+  // Filter to the selected year + drop unclassified rows. Live
+  // entries with no inferable CEFR (student.level missing) still
+  // pass through — they get a "—" CEFR slot but still count toward
+  // type/skill aggregates and totalEstimatedMinutes.
   const entries = rawEntries.filter(
     (e) =>
-      !!e.cefr &&
+      (e.kind === "live" || !!e.cefr) &&
       (withinYear(e.assignedAt, year) || withinYear(e.completedAt, year)),
   );
 
@@ -334,19 +399,22 @@ export async function getStudentCurriculumReport(
   // (grammar, speaking, etc.). Each carries count, completed, XP,
   // and estimated time — the "Resumo" section on the print page
   // renders these as two side-by-side summary tables.
-  const TYPE_LABEL: Record<"lesson" | "music", string> = {
+  const TYPE_LABEL: Record<"lesson" | "music" | "live", string> = {
     lesson: "Lição",
     music: "Música",
+    live: "Aula ao vivo",
   };
   const SKILL_LABEL: Record<string, string> = {
     grammar: "Gramática",
     vocabulary: "Vocabulário",
     reading: "Leitura",
+    writing: "Escrita",
     listening: "Escuta",
     narrative: "Narrativa",
     speaking: "Conversação",
     dialog: "Diálogo",
     music: "Música",
+    live: "Aula ao vivo",
   };
   const byTypeMap = new Map<string, CurriculumBreakdownRow>();
   const bySkillMap = new Map<string, CurriculumBreakdownRow>();
