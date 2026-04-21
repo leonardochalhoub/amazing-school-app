@@ -117,6 +117,18 @@ export function SpeakingLabDrill({ all }: Props) {
 
   async function upload() {
     const dur = Date.now() - startedAt.current;
+    // Fire-and-forget: log a speaking_events row so teachers can
+    // see per-student mic usage + accumulated minutes. Failure here
+    // (RLS block, network) must not stop the pronunciation upload.
+    void fetch("/api/speaking-event", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        durationMs: dur,
+        context: `drill:${current.target.slice(0, 60)}`,
+        startedAtIso: new Date(startedAt.current).toISOString(),
+      }),
+    }).catch(() => {});
     const blob = new Blob(chunks.current, {
       type: mr.current?.mimeType ?? "audio/webm",
     });

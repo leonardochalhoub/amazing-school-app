@@ -7,6 +7,8 @@ import { getTeacherManagementMatrix } from "@/lib/actions/teacher-payments";
 import { listTeacherListeningResponses } from "@/lib/actions/listening-responses";
 import { getTeacherAiChatStats } from "@/lib/actions/teacher-ai-chat";
 import { AiChatStatsTable } from "@/components/teacher/ai-chat-stats-table";
+import { getTeacherSpeakingStats } from "@/lib/actions/speaking-events";
+import { SpeakingStatsTable } from "@/components/teacher/speaking-stats-table";
 import { listDeletedRosterStudents } from "@/lib/actions/roster";
 import { DeletedStudentsPanel } from "@/components/teacher/deleted-students-panel";
 import { Card, CardContent } from "@/components/ui/card";
@@ -67,6 +69,7 @@ export default async function TeacherManagementPage() {
     financeData,
     listeningResponses,
     aiChatStats,
+    speakingStats,
     deletedStudents,
     receiptsForQuery,
     certificatesForTeacher,
@@ -76,6 +79,7 @@ export default async function TeacherManagementPage() {
     getTeacherManagementMatrix({ months: 24 }),
     listTeacherListeningResponses(),
     getTeacherAiChatStats(),
+    getTeacherSpeakingStats().catch(() => []),
     listDeletedRosterStudents(),
     listTeacherReceipts(),
     listCertificatesForTeacher(),
@@ -598,6 +602,25 @@ export default async function TeacherManagementPage() {
           </p>
         </div>
         <AiChatStatsTable rows={aiChatStats} />
+      </section>
+
+      {/* ========== Speaking lab — per-student usage ========== */}
+      <section className="space-y-3">
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            <T
+              en="Speaking lab — per-student usage"
+              pt="Lab de fala — uso por aluno"
+            />
+          </h2>
+          <p className="text-[11px] text-muted-foreground">
+            <T
+              en="Every mic activation + recorded minutes"
+              pt="Cada clique no microfone + minutos gravados"
+            />
+          </p>
+        </div>
+        <SpeakingStatsTable rows={speakingStats} />
       </section>
 
       {/* ========== Classrooms ========== */}

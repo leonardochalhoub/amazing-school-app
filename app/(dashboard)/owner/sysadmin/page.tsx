@@ -10,6 +10,8 @@ import { SysadminCharts } from "@/components/owner/sysadmin-charts";
 import { PlatformAccessCard } from "@/components/owner/platform-access-card";
 import { TopAssignedTable } from "@/components/owner/top-assigned-table";
 import { AiChatUsageTable } from "@/components/owner/ai-chat-usage-table";
+import { SpeakingStatsTable } from "@/components/teacher/speaking-stats-table";
+import { getAllSpeakingStats } from "@/lib/actions/speaking-events";
 import { SysadminReportsPanel } from "@/components/reports/sysadmin-reports-panel";
 import {
   Users,
@@ -83,10 +85,11 @@ export default async function SysadminPage() {
     contentMix,
     health,
   } = overview;
-  const [logins, owners, audit] = await Promise.all([
+  const [logins, owners, audit, speakingStats] = await Promise.all([
     listRecentLogins(100),
     listOwners(),
     listRoleAuditLog(25),
+    getAllSpeakingStats().catch(() => []),
   ]);
 
   return (
@@ -530,6 +533,19 @@ export default async function SysadminPage() {
             <AiChatUsageTable rows={aiChatUsage.students} kind="student" />
           </div>
         </div>
+      </section>
+
+      {/* ============================ Speaking lab usage ============================ */}
+      <section className="space-y-4">
+        <div className="flex items-baseline justify-between">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            Speaking lab — per-user usage
+          </h2>
+          <p className="text-xs text-muted-foreground">
+            Every mic activation + recorded minutes · sorted descending.
+          </p>
+        </div>
+        <SpeakingStatsTable rows={speakingStats} linkStudents={false} />
       </section>
 
       {/* ============================ Time on site ============================ */}

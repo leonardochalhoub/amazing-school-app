@@ -83,7 +83,7 @@ export default async function StudentViewAsStudent({
   let totalXp = 0;
   let assignedCount = 0;
   let completedCount = 0;
-  let badges: Array<{ type: string; earned_at: string }> = [];
+  let badges: Array<{ badge_type: string; earned_at: string }> = [];
   let recentCompletions: Array<{ lesson_slug: string; completed_at: string }> =
     [];
   let pendingAssignments: string[] = [];
@@ -120,7 +120,7 @@ export default async function StudentViewAsStudent({
           .limit(50),
         admin
           .from("badges")
-          .select("type, earned_at")
+          .select("badge_type, earned_at")
           .eq("student_id", studentAuthId)
           .order("earned_at", { ascending: false })
           .limit(12),
@@ -188,7 +188,7 @@ export default async function StudentViewAsStudent({
       ),
     ).size;
     badges = (badgeRes.data ?? []) as Array<{
-      type: string;
+      badge_type: string;
       earned_at: string;
     }>;
   }
@@ -242,7 +242,7 @@ export default async function StudentViewAsStudent({
             className="inline-flex items-center gap-1 rounded-md bg-gradient-to-br from-indigo-600 to-violet-600 px-3 py-1 font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
-            Voltar à gestão
+            <T en="Back to management" pt="Voltar à gestão" />
           </Link>
         </div>
       </div>
@@ -264,11 +264,14 @@ export default async function StudentViewAsStudent({
           <TabsContent value="main" className="space-y-6">
             <div>
               <h1 className="text-2xl font-bold">
-                Olá, {student.full_name.split(" ")[0]}
+                <T en="Hi, " pt="Olá, " />
+                {student.full_name.split(" ")[0]}
               </h1>
               <p className="text-sm text-muted-foreground">
-                Resumo que {isFemale ? "a" : "o"} {studentWord} vê ao entrar.
-                Somente leitura.
+                <T
+                  en={`Overview the student sees. Read-only.`}
+                  pt={`Resumo que ${isFemale ? "a" : "o"} ${studentWord} vê ao entrar. Somente leitura.`}
+                />
               </p>
             </div>
 
@@ -280,7 +283,7 @@ export default async function StudentViewAsStudent({
                 </span>
                 <div className="flex-1 space-y-1">
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                    Nível · XP
+                    <T en="Level · XP" pt="Nível · XP" />
                   </p>
                   <p className="text-xl font-semibold tabular-nums">
                     Lv.{level} · {totalXp.toLocaleString("pt-BR")} XP
@@ -294,7 +297,10 @@ export default async function StudentViewAsStudent({
                     />
                   </div>
                   <p className="text-[11px] text-muted-foreground tabular-nums">
-                    {xpProg.current}/{xpProg.needed} XP para o próximo nível
+                    <T
+                      en={`${xpProg.current}/${xpProg.needed} XP to next level`}
+                      pt={`${xpProg.current}/${xpProg.needed} XP para o próximo nível`}
+                    />
                   </p>
                 </div>
               </CardContent>
@@ -309,7 +315,7 @@ export default async function StudentViewAsStudent({
                   </span>
                   <div>
                     <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                      Lições atribuídas
+                      <T en="Assigned lessons" pt="Lições atribuídas" />
                     </p>
                     <p className="text-lg font-semibold tabular-nums">
                       {assignedCount}
@@ -324,7 +330,7 @@ export default async function StudentViewAsStudent({
                   </span>
                   <div>
                     <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                      Concluídas
+                      <T en="Completed" pt="Concluídas" />
                     </p>
                     <p className="text-lg font-semibold tabular-nums">
                       {completedCount}
@@ -339,7 +345,7 @@ export default async function StudentViewAsStudent({
                   </span>
                   <div>
                     <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                      Dias ativos · 30d
+                      <T en="Active days · 30d" pt="Dias ativos · 30d" />
                     </p>
                     <p className="text-lg font-semibold tabular-nums">
                       {daysActiveLast30}
@@ -354,16 +360,31 @@ export default async function StudentViewAsStudent({
                   </span>
                   <div>
                     <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                      Próxima aula
+                      <T en="Next class" pt="Próxima aula" />
                     </p>
                     <p className="text-sm font-semibold">
-                      {nextClassDate
-                        ? new Date(nextClassDate).toLocaleDateString("pt-BR", {
-                            timeZone: "America/Sao_Paulo",
-                            day: "2-digit",
-                            month: "short",
-                          })
-                        : "—"}
+                      {nextClassDate ? (
+                        <T
+                          en={new Date(nextClassDate).toLocaleDateString(
+                            "en-US",
+                            {
+                              timeZone: "America/Sao_Paulo",
+                              day: "2-digit",
+                              month: "short",
+                            },
+                          )}
+                          pt={new Date(nextClassDate).toLocaleDateString(
+                            "pt-BR",
+                            {
+                              timeZone: "America/Sao_Paulo",
+                              day: "2-digit",
+                              month: "short",
+                            },
+                          )}
+                        />
+                      ) : (
+                        "—"
+                      )}
                     </p>
                   </div>
                 </CardContent>
@@ -376,22 +397,39 @@ export default async function StudentViewAsStudent({
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-base">
                     <CalendarClock className="h-4 w-4 text-primary" />
-                    Última aula
+                    <T en="Last class" pt="Última aula" />
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   {lastClassDate ? (
                     <p className="text-sm font-semibold">
-                      {new Date(lastClassDate).toLocaleDateString("pt-BR", {
-                        timeZone: "America/Sao_Paulo",
-                        day: "2-digit",
-                        month: "long",
-                        year: "numeric",
-                      })}
+                      <T
+                        en={new Date(lastClassDate).toLocaleDateString(
+                          "en-US",
+                          {
+                            timeZone: "America/Sao_Paulo",
+                            day: "2-digit",
+                            month: "long",
+                            year: "numeric",
+                          },
+                        )}
+                        pt={new Date(lastClassDate).toLocaleDateString(
+                          "pt-BR",
+                          {
+                            timeZone: "America/Sao_Paulo",
+                            day: "2-digit",
+                            month: "long",
+                            year: "numeric",
+                          },
+                        )}
+                      />
                     </p>
                   ) : (
                     <p className="text-sm text-muted-foreground">
-                      Nenhuma aula registrada ainda.
+                      <T
+                        en="No classes logged yet."
+                        pt="Nenhuma aula registrada ainda."
+                      />
                     </p>
                   )}
                 </CardContent>
@@ -400,13 +438,16 @@ export default async function StudentViewAsStudent({
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-base">
                     <CheckCircle2 className="h-4 w-4 text-primary" />
-                    Atividade recente
+                    <T en="Recent activity" pt="Atividade recente" />
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   {recentCompletions.length === 0 ? (
                     <p className="text-sm text-muted-foreground">
-                      Ainda sem lições concluídas.
+                      <T
+                        en="No lessons completed yet."
+                        pt="Ainda sem lições concluídas."
+                      />
                     </p>
                   ) : (
                     <ul className="space-y-1.5 text-sm">
@@ -419,14 +460,24 @@ export default async function StudentViewAsStudent({
                             {humanize(c.lesson_slug)}
                           </span>
                           <span className="shrink-0 text-[11px] text-muted-foreground tabular-nums">
-                            {new Date(c.completed_at).toLocaleDateString(
-                              "pt-BR",
-                              {
-                                timeZone: "America/Sao_Paulo",
-                                day: "2-digit",
-                                month: "short",
-                              },
-                            )}
+                            <T
+                              en={new Date(c.completed_at).toLocaleDateString(
+                                "en-US",
+                                {
+                                  timeZone: "America/Sao_Paulo",
+                                  day: "2-digit",
+                                  month: "short",
+                                },
+                              )}
+                              pt={new Date(c.completed_at).toLocaleDateString(
+                                "pt-BR",
+                                {
+                                  timeZone: "America/Sao_Paulo",
+                                  day: "2-digit",
+                                  month: "short",
+                                },
+                              )}
+                            />
                           </span>
                         </li>
                       ))}
@@ -442,7 +493,7 @@ export default async function StudentViewAsStudent({
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-base">
                     <BookOpen className="h-4 w-4 text-primary" />
-                    Lições pendentes
+                    <T en="Pending lessons" pt="Lições pendentes" />
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -462,22 +513,28 @@ export default async function StudentViewAsStudent({
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-base">
                   <Award className="h-4 w-4 text-primary" />
-                  Medalhas · {badges.length}
+                  <T
+                    en={`Badges · ${badges.length}`}
+                    pt={`Medalhas · ${badges.length}`}
+                  />
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 {badges.length === 0 ? (
                   <p className="text-sm text-muted-foreground">
-                    Ainda não conquistou nenhuma medalha.
+                    <T
+                      en="No badges earned yet."
+                      pt="Ainda não conquistou nenhuma medalha."
+                    />
                   </p>
                 ) : (
                   <div className="flex flex-wrap gap-1.5">
                     {badges.map((b, i) => (
                       <span
-                        key={`${b.type}-${i}`}
+                        key={`${b.badge_type}-${i}`}
                         className="rounded-full border border-border/70 bg-muted/40 px-2.5 py-1 text-[11px] font-medium"
                       >
-                        {b.type}
+                        {b.badge_type}
                       </span>
                     ))}
                   </div>
@@ -485,8 +542,7 @@ export default async function StudentViewAsStudent({
               </CardContent>
             </Card>
 
-            {/* Starting date (surfaced here so the teacher sees study tenure
-                at a glance on the main tab too) */}
+            {/* Starting date */}
             {startingDate ? (
               <Card>
                 <CardContent className="flex items-center gap-4 p-4">
@@ -495,7 +551,7 @@ export default async function StudentViewAsStudent({
                   </span>
                   <div>
                     <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                      Dias conosco
+                      <T en="Days with us" pt="Dias conosco" />
                     </p>
                     <p className="text-lg font-semibold tabular-nums">
                       {(daysStudying ?? 0).toLocaleString("pt-BR")}
@@ -510,8 +566,10 @@ export default async function StudentViewAsStudent({
             <div>
               <h1 className="text-2xl font-bold">Profile</h1>
               <p className="text-sm text-muted-foreground">
-                Como {isFemale ? "a" : "o"} {studentWord} vê essa página.
-                Somente leitura.
+                <T
+                  en="How the student sees this page. Read-only."
+                  pt={`Como ${isFemale ? "a" : "o"} ${studentWord} vê essa página. Somente leitura.`}
+                />
               </p>
             </div>
 
@@ -539,7 +597,7 @@ export default async function StudentViewAsStudent({
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-base">
               <MapPin className="h-4 w-4 text-primary" />
-              Location · Localização
+              <T en="Location" pt="Localização" />
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -547,7 +605,10 @@ export default async function StudentViewAsStudent({
               <p className="text-sm font-medium">{profileLocation}</p>
             ) : (
               <p className="text-sm text-muted-foreground">
-                O {studentWord} ainda não preencheu a localização.
+                <T
+                  en="The student hasn't set a location yet."
+                  pt={`${isFemale ? "A" : "O"} ${studentWord} ainda não preencheu a localização.`}
+                />
               </p>
             )}
           </CardContent>
@@ -562,14 +623,17 @@ export default async function StudentViewAsStudent({
                 </span>
                 <div className="flex-1 min-w-0">
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                    Starting date · Data de início
+                    <T en="Starting date" pt="Data de início" />
                   </p>
                   <p className="mt-0.5 text-base font-semibold">
                     {startingDate}
                   </p>
                   {daysStudying !== null ? (
                     <p className="text-xs text-muted-foreground">
-                      {daysStudying.toLocaleString("pt-BR")} dias conosco
+                      <T
+                        en={`${daysStudying.toLocaleString("en-US")} days with us`}
+                        pt={`${daysStudying.toLocaleString("pt-BR")} dias conosco`}
+                      />
                     </p>
                   ) : null}
                 </div>
@@ -580,12 +644,12 @@ export default async function StudentViewAsStudent({
                 </span>
                 <div className="flex-1 min-w-0">
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                    Last day · Último dia
+                    <T en="Last day" pt="Último dia" />
                   </p>
                   <p className="mt-0.5 text-base font-semibold">
                     {endDate ?? (
                       <span className="text-emerald-600 dark:text-emerald-400">
-                        Active · Ativo
+                        <T en="Active" pt="Ativo" />
                       </span>
                     )}
                   </p>
