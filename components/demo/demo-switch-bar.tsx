@@ -20,11 +20,11 @@ export function DemoSwitchBar({ currentRole }: Props) {
 
   const message = isPt
     ? currentRole === "teacher"
-      ? "Você está explorando como professora da Amazing School — dados reais, simulados. Experimente também do lado do aluno:"
-      : "Você está explorando como aluna da Amazing School — tudo real, sem cadastro. Veja como é do lado da professora:"
+      ? "Você está na demonstração da Amazing School como professora. Todos os alunos, aulas e pagamentos são fictícios — é seguro clicar em tudo. Veja também o lado do aluno:"
+      : "Você está na demonstração da Amazing School como aluna. Todos os dados são fictícios — nada que você fizer aqui afeta contas reais. Veja também o lado da professora:"
     : currentRole === "teacher"
-      ? "You're exploring as a teacher at Amazing School — real, seeded data. Now try it from a student's point of view:"
-      : "You're exploring as a student at Amazing School — real, no-signup demo. See it from the teacher side too:";
+      ? "You're in the Amazing School demo as a teacher. Every student, class, and payment is fake — it's safe to click anything. See the student side too:"
+      : "You're in the Amazing School demo as a student. Every piece of data is fake — nothing you do here affects real accounts. See the teacher side too:";
 
   const switchLabel = isPt
     ? currentRole === "teacher"
