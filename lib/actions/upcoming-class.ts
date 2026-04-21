@@ -68,29 +68,37 @@ export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
 
   let classroomIds: string[] = [];
   if (isTeacher) {
-    const { data: rooms } = await admin
+    const { data: rooms, error: roomsErr } = await admin
       .from("classrooms")
       .select("id")
       .eq("teacher_id", user.id)
       .is("deleted_at", null);
+    if (roomsErr) console.warn("[upcoming-class] rooms err", roomsErr.message);
     classroomIds = ((rooms as Array<{ id: string }> | null) ?? []).map(
       (r) => r.id,
     );
   } else {
-    const { data: roster } = await admin
+    const { data: roster, error: rosterErr } = await admin
       .from("roster_students")
       .select("classroom_id")
       .eq("auth_user_id", user.id)
       .is("deleted_at", null);
+    if (rosterErr)
+      console.warn("[upcoming-class] roster err", rosterErr.message);
     classroomIds = (
       (roster as Array<{ classroom_id: string | null }> | null) ?? []
     )
       .map((r) => r.classroom_id)
       .filter((v): v is string => !!v);
   }
-  if (classroomIds.length === 0) return null;
+  if (classroomIds.length === 0) {
+    console.info(
+      `[upcoming-class] ${role} ${user.id} has no classrooms — skipping popup`,
+    );
+    return null;
+  }
 
-  const { data: upcoming } = await admin
+  const { data: upcoming, error: upcomingErr } = await admin
     .from("scheduled_classes")
     .select("id, classroom_id, title, meeting_url, scheduled_at")
     .in("classroom_id", classroomIds)
@@ -98,6 +106,8 @@ export async function getMyNextClass(): Promise<UpcomingClassContext | null> {
     .lte("scheduled_at", windowEnd)
     .order("scheduled_at", { ascending: true })
     .limit(1);
+  if (upcomingErr)
+    console.warn("[upcoming-class] upcoming err", upcomingErr.message);
   const next = (upcoming as Array<{
     id: string;
     classroom_id: string;
