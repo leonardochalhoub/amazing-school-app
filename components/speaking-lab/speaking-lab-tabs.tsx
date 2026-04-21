@@ -25,7 +25,7 @@ export function SpeakingLabTabs({ drills, dialogs }: Props) {
           active={tab === "drills"}
           onClick={() => setTab("drills")}
           icon={<Mic className="h-3.5 w-3.5" />}
-          label={`${pt ? "Drills" : "Drills"} (${drills.length})`}
+          label={`${pt ? "Exercícios" : "Drills"} (${drills.length})`}
           hint={pt ? "Uma frase por vez" : "One phrase at a time"}
         />
         <TabButton

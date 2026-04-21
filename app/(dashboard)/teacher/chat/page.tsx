@@ -56,7 +56,7 @@ export default async function TeacherChatPage() {
     <div className="space-y-4">
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
         <h1 className="text-2xl font-bold">
-          <T en="AI Tutor" pt="Tutor de IA" />
+          <T en="AI Tutor" pt="Tutor IA" />
         </h1>
         <span className="text-xs font-medium text-muted-foreground">
           · {ai.label}

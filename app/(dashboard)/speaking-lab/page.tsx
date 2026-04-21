@@ -81,10 +81,7 @@ export default async function SpeakingLabPage() {
     <div className="space-y-6 overflow-x-clip pb-16">
       <header className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            <T en="Speaking Lab" pt="Laboratório de Fala" />
-          </p>
-          <h1 className="mt-1 text-3xl font-semibold tracking-tight">
+          <h1 className="text-3xl font-semibold tracking-tight">
             <T en="Speaking Lab" pt="Laboratório de Fala" />
           </h1>
           <p className="mt-1 text-sm text-muted-foreground">

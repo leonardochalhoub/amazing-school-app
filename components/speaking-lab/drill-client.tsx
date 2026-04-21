@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SpeakButton } from "@/components/lessons/speak-button";
+import { useI18n } from "@/lib/i18n/context";
 
 export interface SpeakingDrill {
   id: string;
@@ -63,6 +64,8 @@ interface Props {
 }
 
 export function SpeakingLabDrill({ all }: Props) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [current, setCurrent] = useState<SpeakingDrill>(() => pickRandom(all));
   const [state, setState] = useState<"idle" | "recording" | "processing">("idle");
   const [result, setResult] = useState<Result | null>(null);
@@ -197,7 +200,7 @@ export function SpeakingLabDrill({ all }: Props) {
 
           <div className="space-y-2">
             <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-              Say this out loud
+              {pt ? "Diga em voz alta" : "Say this out loud"}
             </p>
             <div className="flex items-start gap-2">
               <SpeakButton text={current.target} className="mt-1" />
@@ -216,7 +219,7 @@ export function SpeakingLabDrill({ all }: Props) {
             {state === "idle" ? (
               <Button onClick={startRecording} size="lg" className="gap-2">
                 <Mic className="h-5 w-5" />
-                Start recording
+                {pt ? "Iniciar gravação" : "Start recording"}
               </Button>
             ) : state === "recording" ? (
               <Button
@@ -226,12 +229,12 @@ export function SpeakingLabDrill({ all }: Props) {
                 className="gap-2"
               >
                 <Square className="h-5 w-5 animate-pulse" />
-                Stop and score
+                {pt ? "Parar e avaliar" : "Stop and score"}
               </Button>
             ) : (
               <Button disabled size="lg" className="gap-2">
                 <Loader2 className="h-5 w-5 animate-spin" />
-                Transcribing…
+                {pt ? "Transcrevendo…" : "Transcribing…"}
               </Button>
             )}
 
@@ -243,7 +246,7 @@ export function SpeakingLabDrill({ all }: Props) {
               disabled={state !== "idle"}
             >
               <RefreshCcw className="h-4 w-4" />
-              Next exercise
+              {pt ? "Próximo exercício" : "Next exercise"}
             </Button>
           </div>
 
