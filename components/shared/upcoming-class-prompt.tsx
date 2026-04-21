@@ -136,7 +136,7 @@ export function UpcomingClassPrompt({ items, debug }: Props) {
             return (
               <li key={it.id} className="space-y-1 px-4 py-3 text-xs">
                 <p className="text-sm font-semibold leading-tight">
-                  {it.title}
+                  {pt ? it.title : translateTitle(it.title)}
                 </p>
                 <p className="tabular-nums">
                   <span className="font-semibold text-foreground">
@@ -215,5 +215,14 @@ function translateCounterpart(raw: string, pt: boolean): string {
     const n = Number(m[1]);
     return `${n} student${n === 1 ? "" : "s"}`;
   }
+  return raw;
+}
+
+/** The server falls back to "Aula" when the teacher didn't fill
+ *  lesson_content. Translate only that generic label for English —
+ *  any custom title the teacher typed passes through verbatim. */
+function translateTitle(raw: string): string {
+  if (raw === "Aula") return "Class";
+  if (raw === "Aula avulsa") return "One-off class";
   return raw;
 }
