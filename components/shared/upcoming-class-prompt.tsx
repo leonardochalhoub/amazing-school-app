@@ -42,9 +42,13 @@ const DISMISS_STORAGE_PREFIX = "upcoming_class_dismissed_";
  */
 export function UpcomingClassPrompt({ ctx }: Props) {
   const [open, setOpen] = useState(false);
-  const [now, setNow] = useState(() => Date.now());
+  const [now, setNow] = useState<number | null>(null);
 
   useEffect(() => {
+    // All time-based state is populated on the client only — the
+    // server render would differ (different timezone / "now"),
+    // causing a hydration mismatch that crashes the whole tree.
+    setNow(Date.now());
     if (!ctx) return;
     const dismissed =
       typeof window !== "undefined" &&
@@ -61,11 +65,14 @@ export function UpcomingClassPrompt({ ctx }: Props) {
   }, [open]);
 
   const countdown = useMemo(() => {
-    if (!ctx) return "";
+    if (!ctx || now === null) return "";
     return describeCountdown(new Date(ctx.scheduledAt).getTime(), now);
   }, [ctx, now]);
 
-  if (!ctx) return null;
+  // Server render: nothing. Only mount content after the client
+  // effect has run so toLocaleString + Date.now use the browser's
+  // timezone consistently.
+  if (!ctx || now === null) return null;
 
   const when = new Date(ctx.scheduledAt);
   const dateLabel = when.toLocaleString("pt-BR", {

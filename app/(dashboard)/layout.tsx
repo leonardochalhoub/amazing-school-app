@@ -41,7 +41,31 @@ export default async function DashboardLayout({
     redirect("/login");
   }
 
-  const role = (profile.role === "owner" ? "teacher" : profile.role) as Role;
+  // Self-heal the role: if a profile is marked 'teacher' but the
+  // user is actually referenced by a non-deleted roster_students
+  // row, they're a student whose signup slipped through with the
+  // wrong default. Flip the row now (cheap, one-shot) so every
+  // downstream check sees the correct role and the person stops
+  // landing on the teacher dashboard.
+  let effectiveRole = profile.role as "teacher" | "student" | "owner";
+  if (effectiveRole === "teacher") {
+    const { data: asStudent } = await admin
+      .from("roster_students")
+      .select("id")
+      .eq("auth_user_id", user.id)
+      .is("deleted_at", null)
+      .limit(1)
+      .maybeSingle();
+    if (asStudent) {
+      await admin
+        .from("profiles")
+        .update({ role: "student" })
+        .eq("id", user.id);
+      effectiveRole = "student";
+    }
+  }
+
+  const role = (effectiveRole === "owner" ? "teacher" : effectiveRole) as Role;
 
   // Soft-deleted-student gate: if a student's only roster rows are
   // all marked deleted (teacher removed them from the list), they
