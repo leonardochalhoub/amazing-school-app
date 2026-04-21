@@ -8,17 +8,20 @@ import {
   formatToday,
   pickMessage,
 } from "@/lib/i18n/greetings";
-import { inferGenderFromName } from "@/lib/reports/gendered-titles";
 
 interface Props {
   firstName: string;
+  /** Explicit profiles.gender. Drives the pt-BR "Bem-vinda" /
+   *  "professora" switch. English only has a single "teacher" so
+   *  it's ignored there. Null = fall back to masculine. */
+  gender?: "female" | "male" | null;
 }
 
 function capitalize(s: string): string {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-export function HeroTagline({ firstName }: Props) {
+export function HeroTagline({ firstName, gender }: Props) {
   const { locale } = useI18n();
   const [now, setNow] = useState<Date | null>(null);
 
@@ -28,11 +31,6 @@ export function HeroTagline({ firstName }: Props) {
     return () => window.clearInterval(id);
   }, []);
 
-  // Gender inferred from first name (same heuristic as receipts +
-  // certificates). Drives the pt-BR "Bem-vinda" / "professora"
-  // switch. English only has a single "teacher" so it's ignored
-  // there.
-  const gender = inferGenderFromName(firstName);
   const isFemale = gender === "female";
 
   const welcome =

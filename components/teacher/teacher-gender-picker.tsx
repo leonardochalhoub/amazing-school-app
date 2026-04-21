@@ -43,6 +43,12 @@ export function TeacherGenderPicker({ initial }: Props) {
     });
   }
 
+  // Once the teacher has picked, the role label above already says
+  // "Professora" / "Professor" — no need to show the picker again.
+  // The value is still editable from the admin / sysadmin surfaces
+  // if it ever needs to change.
+  if (value !== null) return null;
+
   return (
     <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
       <span>{pt ? "Sou:" : "I am:"}</span>

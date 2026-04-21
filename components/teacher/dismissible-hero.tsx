@@ -6,16 +6,18 @@ import { useI18n } from "@/lib/i18n/context";
 import { HeroTagline } from "@/components/teacher/hero-tagline";
 import { AddStudentButton } from "@/components/teacher/add-student-button";
 import { CuteFlourish } from "@/components/teacher/cute-flourish";
-import { inferGenderFromName } from "@/lib/reports/gendered-titles";
 
 const STORAGE_KEY = "teacher-hero-dismissed";
 
 interface Props {
   firstName: string;
   classrooms: { id: string; name: string }[];
+  /** Explicit profiles.gender passed through from the server. Null =
+   *  masculine pt-BR copy. No name-based inference. */
+  gender?: "female" | "male" | null;
 }
 
-export function DismissibleHero({ firstName, classrooms }: Props) {
+export function DismissibleHero({ firstName, classrooms, gender }: Props) {
   const { locale } = useI18n();
   const [dismissed, setDismissed] = useState<boolean | null>(null);
 
@@ -56,7 +58,7 @@ export function DismissibleHero({ firstName, classrooms }: Props) {
     );
   }
 
-  const isFemale = inferGenderFromName(firstName) === "female";
+  const isFemale = gender === "female";
   const kicker =
     locale === "pt-BR"
       ? isFemale
@@ -103,7 +105,7 @@ export function DismissibleHero({ firstName, classrooms }: Props) {
           {kicker}
         </div>
 
-        <HeroTagline firstName={firstName} />
+        <HeroTagline firstName={firstName} gender={gender} />
 
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <AddStudentButton classrooms={classrooms} />

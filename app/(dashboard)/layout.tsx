@@ -7,7 +7,6 @@ import {
   SCHOOL_LOGO_SRC,
 } from "@/lib/school-logo";
 import { isOwner as checkIsOwner } from "@/lib/auth/roles";
-import { inferGenderFromName } from "@/lib/reports/gendered-titles";
 import { redirect } from "next/navigation";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -107,19 +106,15 @@ export default async function DashboardLayout({
   const rosterAgeGroup = (rosterSelf as { age_group: "kid" | "teen" | "adult" | null } | null)?.age_group ?? null;
   const rosterGender = (rosterSelf as { gender: "female" | "male" | null } | null)?.gender ?? null;
 
-  // Teacher gender: explicit `profiles.gender` from the picker wins.
-  // If the teacher hasn't picked yet, fall back to the same name-
-  // based heuristic the welcome banner + receipts already use (most
-  // Brazilian feminine names end in "a"). This way a teacher named
-  // Tatiana walks in with the navbar already showing PROFESSORA.
+  // Teacher gender = explicit profiles.gender only. No name
+  // inference anywhere. If null, pt-BR copy stays masculine until
+  // the column is set (signup / admin / future picker).
   const profileGenderRaw =
     (profile as { gender?: string | null } | null)?.gender ?? null;
-  const explicitTeacherGender: "female" | "male" | null =
+  const teacherGender: "female" | "male" | null =
     profileGenderRaw === "female" || profileGenderRaw === "male"
       ? profileGenderRaw
       : null;
-  const teacherGender: "female" | "male" | null =
-    explicitTeacherGender ?? inferGenderFromName(profile.full_name);
   const navbarGender: "female" | "male" | null =
     role === "teacher" ? teacherGender : rosterGender;
 

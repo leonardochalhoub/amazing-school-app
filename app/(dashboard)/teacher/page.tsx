@@ -35,9 +35,15 @@ export default async function TeacherDashboard() {
   const admin = createAdminClient();
   const { data: profile } = await admin
     .from("profiles")
-    .select("full_name")
+    .select("full_name, gender")
     .eq("id", user.id)
     .maybeSingle();
+  const profileGenderRaw =
+    (profile as { gender?: string | null } | null)?.gender ?? null;
+  const teacherGender: "female" | "male" | null =
+    profileGenderRaw === "female" || profileGenderRaw === "male"
+      ? profileGenderRaw
+      : null;
 
   const [
     { classrooms, roster, kpis, recentAssignments },
@@ -92,7 +98,11 @@ export default async function TeacherDashboard() {
   return (
     <div className="space-y-10 pb-16">
       {/* Welcome hero FIRST */}
-      <DismissibleHero firstName={firstName} classrooms={classroomOptions} />
+      <DismissibleHero
+        firstName={firstName}
+        classrooms={classroomOptions}
+        gender={teacherGender}
+      />
 
       {/* Birthday alert — only renders when there are upcoming birthdays */}
       <BirthdayAlert birthdays={upcomingBirthdays} />
