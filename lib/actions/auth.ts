@@ -2,6 +2,7 @@
 
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { awardEligibleBadges } from "@/lib/gamification/award-badges";
 import { redirect } from "next/navigation";
 import type { Role } from "@/lib/supabase/types";
 
@@ -168,6 +169,16 @@ export async function signUp(formData: FormData) {
       }
     } catch {
       // Non-fatal.
+    }
+  }
+
+  // Evaluate badge rules now so the student walks in with at least the
+  // `welcome_aboard` badge visible on their dashboard. Idempotent.
+  if (role === "student") {
+    try {
+      await awardEligibleBadges(data.user.id);
+    } catch (err) {
+      console.error("signUp awardEligibleBadges error:", err);
     }
   }
 

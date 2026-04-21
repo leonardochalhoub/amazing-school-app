@@ -137,7 +137,7 @@ export default async function StudentProfilePage() {
             className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-pink-500/10"
           />
           <CardContent className="relative grid gap-5 p-5 sm:grid-cols-[auto_1fr] sm:p-6 lg:grid-cols-[auto_1fr_auto]">
-            <div className="flex items-center justify-center sm:block">
+            <div className="flex items-center justify-center">
               <AvatarUploader
                 currentSignedUrl={signedUrl}
                 fullName={profile.full_name}

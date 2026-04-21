@@ -4,10 +4,29 @@ import { useState } from "react";
 import { Calendar, Clock, ExternalLink, User, ChevronDown } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useI18n } from "@/lib/i18n/context";
 import type {
   HistoryStatus,
   StudentHistoryEntry,
 } from "@/lib/actions/student-history-types";
+
+function translateStatus(status: HistoryStatus, pt: boolean): string {
+  if (!pt) return status;
+  switch (status) {
+    case "Planned":
+      return "Agendada";
+    case "Done":
+      return "Concluída";
+    case "Absent":
+      return "Ausente";
+    case "Rescheduled by student":
+      return "Remarcada pelo aluno";
+    case "Rescheduled by teacher":
+      return "Remarcada pelo professor";
+    case "Make up class":
+      return "Aula de reposição";
+  }
+}
 
 type Row = StudentHistoryEntry & { teacher_name: string | null };
 
@@ -27,6 +46,8 @@ interface Props {
 const PREVIEW_COUNT = 3;
 
 export function MyClassesPanel({ entries }: Props) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [showAll, setShowAll] = useState(false);
 
   if (entries.length === 0) return null;
@@ -46,12 +67,16 @@ export function MyClassesPanel({ entries }: Props) {
           id="my-classes-heading"
           className="min-w-0 break-words text-lg font-semibold tracking-tight"
         >
-          Your recent classes
+          {pt ? "Suas aulas recentes" : "Your recent classes"}
         </h2>
         <span className="shrink-0 text-xs text-muted-foreground">
-          {showAll
-            ? `${sorted.length} shown`
-            : `${visible.length} of ${sorted.length} shown`}
+          {pt
+            ? showAll
+              ? `${sorted.length} exibidas`
+              : `${visible.length} de ${sorted.length} exibidas`
+            : showAll
+              ? `${sorted.length} shown`
+              : `${visible.length} of ${sorted.length} shown`}
         </span>
       </div>
 
@@ -78,7 +103,7 @@ export function MyClassesPanel({ entries }: Props) {
                   <span
                     className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium ${STATUS_COLOR[e.status]}`}
                   >
-                    {e.status}
+                    {translateStatus(e.status, pt)}
                   </span>
                   {e.meeting_link ? (
                     <a
@@ -88,7 +113,7 @@ export function MyClassesPanel({ entries }: Props) {
                       className="ml-auto inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
                     >
                       <ExternalLink className="h-3 w-3" />
-                      Join
+                      {pt ? "Entrar" : "Join"}
                     </a>
                   ) : null}
                 </div>
@@ -128,7 +153,13 @@ export function MyClassesPanel({ entries }: Props) {
               onClick={() => setShowAll((v) => !v)}
               className="flex w-full items-center justify-center gap-1.5 border-t border-border py-2.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted/40 hover:text-foreground"
             >
-              {showAll ? "Show less" : `Show all ${sorted.length} classes`}
+              {showAll
+                ? pt
+                  ? "Mostrar menos"
+                  : "Show less"
+                : pt
+                  ? `Mostrar todas as ${sorted.length} aulas`
+                  : `Show all ${sorted.length} classes`}
               <ChevronDown
                 className={`h-3.5 w-3.5 transition-transform ${showAll ? "rotate-180" : ""}`}
               />

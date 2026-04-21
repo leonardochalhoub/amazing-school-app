@@ -2,6 +2,7 @@
 
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { awardEligibleBadges } from "@/lib/gamification/award-badges";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
@@ -215,6 +216,15 @@ export async function markLessonComplete(
       { student_id: user.id, activity_date: today },
       { onConflict: "student_id,activity_date" }
     );
+
+  // 5. Evaluate non-cert badges (welcome_aboard, first_lesson, streak_*,
+  // level_*, music_lover, bookworm, …). Idempotent — safe to call on
+  // every completion. Errors are logged but never block the user.
+  try {
+    await awardEligibleBadges(user.id);
+  } catch (err) {
+    console.error("awardEligibleBadges error:", err);
+  }
 
   revalidatePath("/student");
   revalidatePath(`/student/music/${parsed.data.lessonSlug.replace(/^music:/, "")}`);
