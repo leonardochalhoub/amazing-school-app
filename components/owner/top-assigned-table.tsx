@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { useI18n } from "@/lib/i18n/context";
 
 export interface TopAssignedRow {
   slug: string;
@@ -23,10 +24,14 @@ const PREVIEW = 10;
  * component so the sysadmin page can stay server-rendered.
  */
 export function TopAssignedTable({ rows, unit }: Props) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [showAll, setShowAll] = useState(false);
   const visible = showAll ? rows : rows.slice(0, PREVIEW);
   const hidden = rows.length - visible.length;
-  const unitLabel = unit === "lesson" ? "lessons" : "songs";
+  const unitLabelEn = unit === "lesson" ? "lessons" : "songs";
+  const unitLabelPt = unit === "lesson" ? "lições" : "músicas";
+  const unitLabel = pt ? unitLabelPt : unitLabelEn;
 
   return (
     <div className="overflow-x-auto rounded-xl border border-border">
@@ -34,9 +39,11 @@ export function TopAssignedTable({ rows, unit }: Props) {
         <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
           <tr>
             <th className="w-10 px-3 py-2 text-right">#</th>
-            <th className="px-3 py-2">Title</th>
+            <th className="px-3 py-2">{pt ? "Título" : "Title"}</th>
             <th className="px-3 py-2 text-right">CEFR</th>
-            <th className="px-3 py-2 text-right">Assigned</th>
+            <th className="px-3 py-2 text-right">
+              {pt ? "Atribuídas" : "Assigned"}
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -46,7 +53,9 @@ export function TopAssignedTable({ rows, unit }: Props) {
                 colSpan={4}
                 className="px-3 py-6 text-center text-xs text-muted-foreground"
               >
-                No {unitLabel} assigned yet.
+                {pt
+                  ? `Ainda sem ${unitLabelPt} atribuídas.`
+                  : `No ${unitLabelEn} assigned yet.`}
               </td>
             </tr>
           ) : null}
@@ -72,7 +81,13 @@ export function TopAssignedTable({ rows, unit }: Props) {
           onClick={() => setShowAll((v) => !v)}
           className="flex w-full items-center justify-center gap-1.5 border-t border-border py-2.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted/40 hover:text-foreground"
         >
-          {showAll ? "Show less" : `Show all ${rows.length} ${unitLabel}`}
+          {showAll
+            ? pt
+              ? "Mostrar menos"
+              : "Show less"
+            : pt
+              ? `Mostrar todas as ${rows.length} ${unitLabel}`
+              : `Show all ${rows.length} ${unitLabel}`}
           <ChevronDown
             className={`h-3.5 w-3.5 transition-transform ${showAll ? "rotate-180" : ""}`}
           />

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { useI18n } from "@/lib/i18n/context";
 
 export interface AiChatTeacherRow {
   id: string;
@@ -46,10 +47,13 @@ function titleCaseLocal(name: string): string {
 }
 
 export function AiChatUsageTable({ rows, kind }: Props) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [showAll, setShowAll] = useState(false);
   const visible = showAll ? rows : rows.slice(0, PREVIEW);
   const hidden = rows.length - visible.length;
-  const noun = kind === "teacher" ? "teachers" : "students";
+  const nounEn = kind === "teacher" ? "teachers" : "students";
+  const nounPt = kind === "teacher" ? "professores" : "alunos";
 
   return (
     <div className="overflow-x-auto rounded-xl border border-border">
@@ -60,13 +64,25 @@ export function AiChatUsageTable({ rows, kind }: Props) {
           <tr>
             <th className="w-10 px-4 py-2 text-right">#</th>
             <th className="px-4 py-2">
-              {kind === "teacher" ? "Teacher" : "Student"}
+              {kind === "teacher"
+                ? pt
+                  ? "Professor"
+                  : "Teacher"
+                : pt
+                  ? "Aluno"
+                  : "Student"}
             </th>
             {kind === "student" ? (
-              <th className="px-4 py-2">Teacher</th>
+              <th className="px-4 py-2">
+                {pt ? "Professor" : "Teacher"}
+              </th>
             ) : null}
-            <th className="px-4 py-2 text-right">Days</th>
-            <th className="px-4 py-2 text-right">Messages</th>
+            <th className="px-4 py-2 text-right">
+              {pt ? "Dias" : "Days"}
+            </th>
+            <th className="px-4 py-2 text-right">
+              {pt ? "Mensagens" : "Messages"}
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -76,7 +92,9 @@ export function AiChatUsageTable({ rows, kind }: Props) {
                 colSpan={kind === "student" ? 5 : 4}
                 className="px-4 py-6 text-center text-xs text-muted-foreground"
               >
-                No {noun} have used the AI tutor yet.
+                {pt
+                  ? `Nenhum(a) ${nounPt === "professores" ? "professor" : "aluno"} usou o tutor IA ainda.`
+                  : `No ${nounEn} have used the AI tutor yet.`}
               </td>
             </tr>
           ) : null}
@@ -111,7 +129,13 @@ export function AiChatUsageTable({ rows, kind }: Props) {
           onClick={() => setShowAll((v) => !v)}
           className="flex w-full items-center justify-center gap-1.5 border-t border-border py-2.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted/40 hover:text-foreground"
         >
-          {showAll ? "Show less" : `Show all ${rows.length} ${noun}`}
+          {showAll
+            ? pt
+              ? "Mostrar menos"
+              : "Show less"
+            : pt
+              ? `Mostrar todos(as) os(as) ${rows.length} ${nounPt}`
+              : `Show all ${rows.length} ${nounEn}`}
           <ChevronDown
             className={`h-3.5 w-3.5 transition-transform ${showAll ? "rotate-180" : ""}`}
           />

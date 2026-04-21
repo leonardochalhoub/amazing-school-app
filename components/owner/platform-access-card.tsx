@@ -13,6 +13,7 @@ import {
   type AuditRow,
   type OwnerRow,
 } from "@/lib/actions/owner-grants";
+import { useI18n } from "@/lib/i18n/context";
 
 interface Props {
   currentOwners: OwnerRow[];
@@ -30,6 +31,8 @@ function fmtDateTime(iso: string | null): string {
 
 export function PlatformAccessCard({ currentOwners, audit }: Props) {
   const router = useRouter();
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [email, setEmail] = useState("");
   const [reason, setReason] = useState("");
   const [pending, startTransition] = useTransition();
@@ -46,7 +49,11 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
         toast.error(res.error);
         return;
       }
-      toast.success(`${trimmed} is now an owner`);
+      toast.success(
+        pt
+          ? `${trimmed} agora é proprietário(a)`
+          : `${trimmed} is now an owner`,
+      );
       setEmail("");
       setReason("");
       router.refresh();
@@ -56,7 +63,9 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
   function revoke(subjectId: string, subjectName: string) {
     if (
       !confirm(
-        `Revoke owner access from ${subjectName}? They'll drop to teacher role. The last remaining owner can't be revoked.`,
+        pt
+          ? `Revogar o acesso de proprietário de ${subjectName}? A conta volta a ser apenas professor. O último proprietário não pode ser revogado.`
+          : `Revoke owner access from ${subjectName}? They'll drop to teacher role. The last remaining owner can't be revoked.`,
       )
     )
       return;
@@ -66,7 +75,9 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
         toast.error(res.error);
         return;
       }
-      toast.success(`${subjectName} demoted`);
+      toast.success(
+        pt ? `${subjectName} rebaixado(a)` : `${subjectName} demoted`,
+      );
       router.refresh();
     });
   }
@@ -79,11 +90,13 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
             <Shield className="h-5 w-5" />
           </div>
           <div>
-            <h2 className="text-base font-semibold">Platform access</h2>
+            <h2 className="text-base font-semibold">
+              {pt ? "Acesso à plataforma" : "Platform access"}
+            </h2>
             <p className="text-xs text-muted-foreground">
-              Everyone listed here has owner access — they see the
-              sysadmin board and can grant / revoke other owners. Every
-              change is logged.
+              {pt
+                ? "Todos listados aqui têm acesso de proprietário — veem o painel sysadmin e podem conceder ou revogar acesso de outros. Cada alteração é registrada."
+                : "Everyone listed here has owner access — they see the sysadmin board and can grant / revoke other owners. Every change is logged."}
             </p>
           </div>
         </div>
@@ -91,12 +104,16 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
         {/* Current owners */}
         <div className="space-y-2">
           <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-            Current owners · {currentOwners.length}
+            {pt
+              ? `Proprietários atuais · ${currentOwners.length}`
+              : `Current owners · ${currentOwners.length}`}
           </p>
           <div className="space-y-2">
             {currentOwners.length === 0 ? (
               <p className="text-sm text-muted-foreground">
-                No owners — check the bootstrap migration ran.
+                {pt
+                  ? "Sem proprietários — verifique se a migration de bootstrap rodou."
+                  : "No owners — check the bootstrap migration ran."}
               </p>
             ) : null}
             {currentOwners.map((o) => (
@@ -109,21 +126,25 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
                     {o.fullName}
                     {o.isOrigin ? (
                       <span className="rounded-full bg-indigo-500/10 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-indigo-700 dark:text-indigo-300">
-                        Origin owner
+                        {pt ? "Proprietário original" : "Origin owner"}
                       </span>
                     ) : null}
                   </p>
                   <p className="truncate text-[11px] text-muted-foreground">
                     {o.email ?? "—"} ·{" "}
                     {o.isOrigin
-                      ? "bootstrap seed, permanent"
-                      : `granted ${o.grantedAt ? fmtDateTime(o.grantedAt) : "unknown"}`}
+                      ? pt
+                        ? "seed permanente"
+                        : "bootstrap seed, permanent"
+                      : pt
+                        ? `concedido em ${o.grantedAt ? fmtDateTime(o.grantedAt) : "desconhecido"}`
+                        : `granted ${o.grantedAt ? fmtDateTime(o.grantedAt) : "unknown"}`}
                   </p>
                 </div>
                 {o.isOrigin ? (
                   <span className="inline-flex items-center gap-1 rounded-md border border-border/60 px-2 py-1 text-[11px] text-muted-foreground">
                     <Shield className="h-3 w-3" />
-                    Locked
+                    {pt ? "Bloqueado" : "Locked"}
                   </span>
                 ) : (
                   <Button
@@ -135,7 +156,7 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
                     className="gap-1.5 text-xs"
                   >
                     <UserMinus className="h-3.5 w-3.5" />
-                    Revoke
+                    {pt ? "Revogar" : "Revoke"}
                   </Button>
                 )}
               </div>
@@ -146,14 +167,14 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
         {/* Grant form */}
         <div className="space-y-2 rounded-xl border border-dashed border-border bg-muted/20 p-3">
           <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-            Grant new owner
+            {pt ? "Conceder novo proprietário" : "Grant new owner"}
           </p>
           <div className="flex flex-wrap gap-2">
             <Input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="account email"
+              placeholder={pt ? "email da conta" : "account email"}
               className="h-9 flex-1 min-w-[220px]"
               disabled={pending}
             />
@@ -161,7 +182,11 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
               type="text"
               value={reason}
               onChange={(e) => setReason(e.target.value)}
-              placeholder="optional note for the audit log"
+              placeholder={
+                pt
+                  ? "nota opcional para o log de auditoria"
+                  : "optional note for the audit log"
+              }
               className="h-9 flex-1 min-w-[220px]"
               disabled={pending}
             />
@@ -172,7 +197,7 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
               className="gap-1.5"
             >
               <UserPlus className="h-4 w-4" />
-              Grant
+              {pt ? "Conceder" : "Grant"}
             </Button>
           </div>
         </div>
@@ -181,11 +206,13 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
         <div className="space-y-2">
           <p className="flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
             <Clock className="h-3 w-3" />
-            Recent role changes
+            {pt ? "Alterações recentes de função" : "Recent role changes"}
           </p>
           {audit.length === 0 ? (
             <p className="text-xs text-muted-foreground">
-              No role changes recorded yet.
+              {pt
+                ? "Nenhuma alteração de função registrada ainda."
+                : "No role changes recorded yet."}
             </p>
           ) : (
             <ul className="space-y-1">
@@ -201,7 +228,13 @@ export function PlatformAccessCard({ currentOwners, audit }: Props) {
                     {row.actorName ?? "system"}
                   </span>
                   <span className="text-muted-foreground">
-                    {row.newRole === "owner" ? "granted" : "revoked"}
+                    {row.newRole === "owner"
+                      ? pt
+                        ? "concedeu"
+                        : "granted"
+                      : pt
+                        ? "revogou"
+                        : "revoked"}
                   </span>
                   <span className="font-medium">
                     {row.subjectName ?? "—"}

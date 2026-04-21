@@ -13,6 +13,7 @@ import { AiChatUsageTable } from "@/components/owner/ai-chat-usage-table";
 import { SpeakingStatsTable } from "@/components/teacher/speaking-stats-table";
 import { getAllSpeakingStats } from "@/lib/actions/speaking-events";
 import { SysadminReportsPanel } from "@/components/reports/sysadmin-reports-panel";
+import { T } from "@/components/reports/t";
 import {
   Users,
   GraduationCap,
@@ -100,12 +101,13 @@ export default async function SysadminPage() {
             Sysadmin
           </p>
           <h1 className="text-3xl font-semibold tracking-tight">
-            Platform overview
+            <T en="Platform overview" pt="Visão geral da plataforma" />
           </h1>
           <p className="max-w-xl text-sm text-muted-foreground">
-            Aggregate-only view. Per-student tuition, chat messages, and every
-            teacher's finance matrix stay inside their own dashboards — this
-            page never queries them.
+            <T
+              en="Aggregate-only view. Per-student tuition, chat messages, and every teacher's finance matrix stay inside their own dashboards — this page never queries them."
+              pt="Apenas dados agregados. Mensalidades por aluno, mensagens do tutor e a matriz financeira de cada professor ficam nos respectivos painéis — esta página nunca acessa esses dados."
+            />
           </p>
         </div>
         <Badge
@@ -113,7 +115,7 @@ export default async function SysadminPage() {
           className="border-emerald-500/40 text-emerald-700 dark:text-emerald-300"
         >
           <ShieldCheck className="mr-1 h-3 w-3" />
-          Privacy-scoped
+          <T en="Privacy-scoped" pt="Escopo de privacidade" />
         </Badge>
       </header>
 
@@ -123,41 +125,51 @@ export default async function SysadminPage() {
       {/* ============================ ROW 1 — scale ============================ */}
       <section className="space-y-2">
         <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-          Platform scale
+          <T en="Platform scale" pt="Escala da plataforma" />
         </h2>
         <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6">
           <Kpi
             icon={<GraduationCap className="h-4 w-4" />}
-            label="Teachers"
+            label={<T en="Teachers" pt="Professores" />}
             value={kpis.teachers}
           />
           <Kpi
             icon={<Users className="h-4 w-4" />}
-            label="Students"
+            label={<T en="Students" pt="Alunos" />}
             value={kpis.students}
-            sub={`${kpis.rosterEntries} roster entries`}
+            sub={
+              <T
+                en={`${kpis.rosterEntries} roster entries`}
+                pt={`${kpis.rosterEntries} entradas de lista`}
+              />
+            }
           />
           <Kpi
             icon={<School className="h-4 w-4" />}
-            label="Classrooms"
+            label={<T en="Classrooms" pt="Turmas" />}
             value={kpis.classrooms}
           />
           <Kpi
             icon={<BookOpen className="h-4 w-4" />}
-            label="Lessons in catalog"
+            label={<T en="Lessons in catalog" pt="Lições no catálogo" />}
             value={kpis.catalogLessons}
-            sub={`${kpis.publishedLessons} teacher-published drafts`}
+            sub={
+              <T
+                en={`${kpis.publishedLessons} teacher-published drafts`}
+                pt={`${kpis.publishedLessons} rascunhos publicados por professores`}
+              />
+            }
           />
           <Kpi
             icon={<Music2 className="h-4 w-4" />}
-            label="Songs in catalog"
+            label={<T en="Songs in catalog" pt="Músicas no catálogo" />}
             value={kpis.catalogSongs}
           />
           <Kpi
             icon={<Sparkles className="h-4 w-4" />}
-            label="Demo accounts"
+            label={<T en="Demo accounts" pt="Contas de demonstração" />}
             value={kpis.demoAccounts}
-            sub="Accessible from landing"
+            sub={<T en="Accessible from landing" pt="Acessíveis pela landing" />}
             tone="indigo"
           />
         </div>
@@ -166,46 +178,48 @@ export default async function SysadminPage() {
       {/* ============================ ROW 2 — activity ============================ */}
       <section className="space-y-2">
         <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-          Activity — last 30 days
+          <T en="Activity — last 30 days" pt="Atividade — últimos 30 dias" />
         </h2>
         <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6">
           <Kpi
             icon={<Flame className="h-4 w-4" />}
             label="DAU"
             value={kpis.dau}
-            sub="Active today"
+            sub={<T en="Active today" pt="Ativos hoje" />}
             tone="rose"
           />
           <Kpi
             icon={<Activity className="h-4 w-4" />}
             label="WAU"
             value={kpis.wau}
-            sub="Last 7 days"
+            sub={<T en="Last 7 days" pt="Últimos 7 dias" />}
           />
           <Kpi
             icon={<Calendar className="h-4 w-4" />}
             label="MAU"
             value={kpis.mau}
-            sub="Last 30 days"
+            sub={<T en="Last 30 days" pt="Últimos 30 dias" />}
           />
           <Kpi
             icon={<Trophy className="h-4 w-4" />}
-            label="XP earned"
+            label={<T en="XP earned" pt="XP acumulado" />}
             value={kpis.xpLast30d.toLocaleString()}
-            sub="Aggregate, 30d"
+            sub={<T en="Aggregate, 30d" pt="Agregado, 30 dias" />}
             tone="emerald"
           />
           <Kpi
             icon={<ClipboardList className="h-4 w-4" />}
-            label="Lessons assigned"
+            label={<T en="Lessons assigned" pt="Lições atribuídas" />}
             value={kpis.lessonsAssignedLast30d}
-            sub="30d, all teachers"
+            sub={
+              <T en="30d, all teachers" pt="30 dias · todos os professores" />
+            }
           />
           <Kpi
             icon={<ClipboardCheck className="h-4 w-4" />}
-            label="Lessons completed"
+            label={<T en="Lessons completed" pt="Lições concluídas" />}
             value={kpis.lessonsCompletedLast30d}
-            sub="30d, all students"
+            sub={<T en="30d, all students" pt="30 dias · todos os alunos" />}
             tone="emerald"
           />
         </div>
@@ -215,27 +229,39 @@ export default async function SysadminPage() {
       <section className="grid gap-3 sm:grid-cols-2 md:grid-cols-4">
         <Kpi
           icon={<MessageSquare className="h-4 w-4" />}
-          label="AI chat messages"
+          label={<T en="AI chat messages" pt="Mensagens no tutor IA" />}
           value={kpis.aiMessagesLast30d.toLocaleString()}
-          sub={`${kpis.conversationsLast30d} conversations · 30d`}
+          sub={
+            <T
+              en={`${kpis.conversationsLast30d} conversations · 30d`}
+              pt={`${kpis.conversationsLast30d} conversas · 30 dias`}
+            />
+          }
         />
         <Kpi
           icon={<UserPlus className="h-4 w-4" />}
-          label="New accounts"
+          label={<T en="New accounts" pt="Novas contas" />}
           value={kpis.newAccountsLast30d}
-          sub={`${kpis.newAccountsThisMonth} this calendar month`}
+          sub={
+            <T
+              en={`${kpis.newAccountsThisMonth} this calendar month`}
+              pt={`${kpis.newAccountsThisMonth} neste mês`}
+            />
+          }
         />
         <Kpi
           icon={<CircleDollarSign className="h-4 w-4" />}
-          label="Active tuition seats"
+          label={<T en="Active tuition seats" pt="Mensalidades ativas" />}
           value={kpis.activeTuitionSeats}
-          sub="Count only — no amounts"
+          sub={
+            <T en="Count only — no amounts" pt="Somente a contagem — sem valores" />
+          }
         />
         <Kpi
           icon={<Clock className="h-4 w-4" />}
-          label="Invoices this month"
+          label={<T en="Invoices this month" pt="Faturas neste mês" />}
           value={`${kpis.paidInvoicesThisMonth} / ${kpis.paidInvoicesThisMonth + kpis.pendingInvoicesThisMonth}`}
-          sub="Paid / total (aggregate)"
+          sub={<T en="Paid / total (aggregate)" pt="Pagas / total (agregado)" />}
         />
       </section>
 
@@ -252,25 +278,41 @@ export default async function SysadminPage() {
       <section className="space-y-3">
         <div className="flex items-baseline justify-between">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            All teachers ({allTeachers.length})
+            <T
+              en={`All teachers (${allTeachers.length})`}
+              pt={`Todos os professores (${allTeachers.length})`}
+            />
           </h2>
           <p className="text-xs text-muted-foreground">
-            Sorted by join date (newest first) · no revenue data
+            <T
+              en="Sorted by join date (newest first) · no revenue data"
+              pt="Ordenado por data de cadastro (mais recentes primeiro) · sem dados de receita"
+            />
           </p>
         </div>
         <div className="overflow-x-auto rounded-xl border border-border">
           <table className="min-w-[720px] w-full text-sm">
             <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
               <tr>
-                <th className="px-4 py-2">Teacher</th>
-                <th className="px-4 py-2">Email</th>
-                <th className="px-4 py-2">Location</th>
-                <th className="px-4 py-2 text-right">Students</th>
-                <th className="px-4 py-2 text-right">Classrooms</th>
-                <th className="px-4 py-2 text-right whitespace-nowrap">
-                  Active · 30d
+                <th className="px-4 py-2">
+                  <T en="Teacher" pt="Professor" />
                 </th>
-                <th className="px-4 py-2 text-right">Joined</th>
+                <th className="px-4 py-2">Email</th>
+                <th className="px-4 py-2">
+                  <T en="Location" pt="Localização" />
+                </th>
+                <th className="px-4 py-2 text-right">
+                  <T en="Students" pt="Alunos" />
+                </th>
+                <th className="px-4 py-2 text-right">
+                  <T en="Classrooms" pt="Turmas" />
+                </th>
+                <th className="px-4 py-2 text-right whitespace-nowrap">
+                  <T en="Active · 30d" pt="Ativos · 30d" />
+                </th>
+                <th className="px-4 py-2 text-right">
+                  <T en="Joined" pt="Cadastro" />
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -280,7 +322,7 @@ export default async function SysadminPage() {
                     colSpan={7}
                     className="px-4 py-6 text-center text-sm text-muted-foreground"
                   >
-                    No teachers yet.
+                    <T en="No teachers yet." pt="Ainda sem professores." />
                   </td>
                 </tr>
               ) : null}
@@ -327,24 +369,34 @@ export default async function SysadminPage() {
       <section className="space-y-3">
         <div className="flex items-baseline justify-between">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            All students ({allStudents.length})
+            <T
+              en={`All students (${allStudents.length})`}
+              pt={`Todos os alunos (${allStudents.length})`}
+            />
           </h2>
           <p className="text-xs text-muted-foreground">
-            Every student any teacher has created · sorted by name
+            <T
+              en="Every student any teacher has created · sorted by name"
+              pt="Todos os alunos criados por qualquer professor · ordenados por nome"
+            />
           </p>
         </div>
         <div className="overflow-x-auto rounded-xl border border-border">
           <table className="min-w-[720px] w-full text-sm">
             <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
               <tr>
-                <th className="px-4 py-2">Student</th>
-                <th className="px-4 py-2">Teacher</th>
+                <th className="px-4 py-2">
+                  <T en="Student" pt="Aluno" />
+                </th>
+                <th className="px-4 py-2">
+                  <T en="Teacher" pt="Professor" />
+                </th>
                 <th className="px-4 py-2">Email</th>
                 <th className="px-4 py-2 text-right whitespace-nowrap">
-                  Added
+                  <T en="Added" pt="Cadastrado em" />
                 </th>
                 <th className="px-4 py-2 text-right whitespace-nowrap">
-                  Last active
+                  <T en="Last active" pt="Última atividade" />
                 </th>
               </tr>
             </thead>
@@ -355,7 +407,7 @@ export default async function SysadminPage() {
                     colSpan={5}
                     className="px-4 py-6 text-center text-sm text-muted-foreground"
                   >
-                    No students yet.
+                    <T en="No students yet." pt="Ainda sem alunos." />
                   </td>
                 </tr>
               ) : null}
@@ -374,7 +426,7 @@ export default async function SysadminPage() {
                     {titleCase(s.fullName)}
                     {!s.signedUp ? (
                       <span className="ml-1.5 rounded-full bg-amber-500/10 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-amber-700 dark:text-amber-400">
-                        Invite pending
+                        <T en="Invite pending" pt="Convite pendente" />
                       </span>
                     ) : null}
                   </td>
@@ -417,10 +469,13 @@ export default async function SysadminPage() {
       <section className="space-y-3">
         <div className="flex items-baseline justify-between">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            Most engaged students
+            <T en="Most engaged students" pt="Alunos mais engajados" />
           </h2>
           <p className="text-xs text-muted-foreground">
-            Ranked by XP earned in the last 30 days
+            <T
+              en="Ranked by XP earned in the last 30 days"
+              pt="Ordenados por XP obtido nos últimos 30 dias"
+            />
           </p>
         </div>
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
@@ -442,19 +497,32 @@ export default async function SysadminPage() {
                 </p>
                 {s.teacherName ? (
                   <p className="truncate text-[10px] text-muted-foreground">
-                    with {s.teacherName}
+                    <T
+                      en={`with ${s.teacherName}`}
+                      pt={`com ${s.teacherName}`}
+                    />
                   </p>
                 ) : null}
                 <p className="mt-1 text-xs tabular-nums text-muted-foreground">
                   {s.xpLast30d.toLocaleString()} XP
-                  {s.streak > 0 ? ` · ${s.streak}d streak` : ""}
+                  {s.streak > 0 ? (
+                    <T
+                      en={` · ${s.streak}d streak`}
+                      pt={` · ${s.streak}d de sequência`}
+                    />
+                  ) : (
+                    ""
+                  )}
                 </p>
               </CardContent>
             </Card>
           ))}
           {topActiveStudents.length === 0 ? (
             <p className="text-sm text-muted-foreground sm:col-span-2 lg:col-span-5">
-              No XP events in the last 30 days.
+              <T
+                en="No XP events in the last 30 days."
+                pt="Sem eventos de XP nos últimos 30 dias."
+              />
             </p>
           ) : null}
         </div>
@@ -464,10 +532,13 @@ export default async function SysadminPage() {
       <section className="space-y-3">
         <div className="flex items-baseline justify-between">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            All-time hall of fame
+            <T en="All-time hall of fame" pt="Hall da fama de todos os tempos" />
           </h2>
           <p className="text-xs text-muted-foreground">
-            Ranked by lifetime XP since their first lesson
+            <T
+              en="Ranked by lifetime XP since their first lesson"
+              pt="Ordenados pelo XP total desde a primeira lição"
+            />
           </p>
         </div>
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
@@ -489,18 +560,27 @@ export default async function SysadminPage() {
                 </p>
                 {s.teacherName ? (
                   <p className="truncate text-[10px] text-muted-foreground">
-                    with {s.teacherName}
+                    <T
+                      en={`with ${s.teacherName}`}
+                      pt={`com ${s.teacherName}`}
+                    />
                   </p>
                 ) : null}
                 <p className="mt-1 text-xs tabular-nums text-muted-foreground">
-                  {s.xpTotal.toLocaleString()} XP lifetime
+                  <T
+                    en={`${s.xpTotal.toLocaleString()} XP lifetime`}
+                    pt={`${s.xpTotal.toLocaleString()} XP no total`}
+                  />
                 </p>
               </CardContent>
             </Card>
           ))}
           {allTimeTopStudents.length === 0 ? (
             <p className="text-sm text-muted-foreground sm:col-span-2 lg:col-span-5">
-              No XP events on the platform yet.
+              <T
+                en="No XP events on the platform yet."
+                pt="Ainda sem eventos de XP na plataforma."
+              />
             </p>
           ) : null}
         </div>
@@ -510,23 +590,31 @@ export default async function SysadminPage() {
       <section className="space-y-4">
         <div className="flex items-baseline justify-between">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            Top assigned
+            <T en="Top assigned" pt="Mais atribuídas" />
           </h2>
           <p className="text-xs text-muted-foreground">
-            Most-assigned across every teacher and classroom. Sorted
-            descending · top 10 shown, click Show all for the rest.
+            <T
+              en="Most-assigned across every teacher and classroom. Sorted descending · top 10 shown, click Show all for the rest."
+              pt="Mais atribuídas em todos os professores e turmas. Ordem decrescente · 10 primeiras exibidas; clique em Mostrar todas para ver o restante."
+            />
           </p>
         </div>
         <div className="grid gap-4 lg:grid-cols-2">
           <div className="min-w-0 space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Lessons ({topAssigned.lessons.length})
+              <T
+                en={`Lessons (${topAssigned.lessons.length})`}
+                pt={`Lições (${topAssigned.lessons.length})`}
+              />
             </h3>
             <TopAssignedTable rows={topAssigned.lessons} unit="lesson" />
           </div>
           <div className="min-w-0 space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Songs ({topAssigned.songs.length})
+              <T
+                en={`Songs (${topAssigned.songs.length})`}
+                pt={`Músicas (${topAssigned.songs.length})`}
+              />
             </h3>
             <TopAssignedTable rows={topAssigned.songs} unit="song" />
           </div>
@@ -537,23 +625,31 @@ export default async function SysadminPage() {
       <section className="space-y-4">
         <div className="flex items-baseline justify-between">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            AI tutor usage
+            <T en="AI tutor usage" pt="Uso do tutor IA" />
           </h2>
           <p className="text-xs text-muted-foreground">
-            User-role messages only · sorted descending · top 10 shown.
-            Days = distinct calendar days the user sent a message.
+            <T
+              en="User-role messages only · sorted descending · top 10 shown. Days = distinct calendar days the user sent a message."
+              pt="Apenas mensagens do usuário · ordem decrescente · 10 primeiros exibidos. Dias = dias distintos em que o usuário enviou mensagem."
+            />
           </p>
         </div>
         <div className="grid gap-4 lg:grid-cols-2">
           <div className="min-w-0 space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Teachers ({aiChatUsage.teachers.length})
+              <T
+                en={`Teachers (${aiChatUsage.teachers.length})`}
+                pt={`Professores (${aiChatUsage.teachers.length})`}
+              />
             </h3>
             <AiChatUsageTable rows={aiChatUsage.teachers} kind="teacher" />
           </div>
           <div className="min-w-0 space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Students ({aiChatUsage.students.length})
+              <T
+                en={`Students (${aiChatUsage.students.length})`}
+                pt={`Alunos (${aiChatUsage.students.length})`}
+              />
             </h3>
             <AiChatUsageTable rows={aiChatUsage.students} kind="student" />
           </div>
@@ -564,10 +660,16 @@ export default async function SysadminPage() {
       <section className="space-y-4">
         <div className="flex items-baseline justify-between">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            Speaking lab — per-user usage
+            <T
+              en="Speaking lab — per-user usage"
+              pt="Lab de fala — uso por usuário"
+            />
           </h2>
           <p className="text-xs text-muted-foreground">
-            Every mic activation + recorded minutes · sorted descending.
+            <T
+              en="Every mic activation + recorded minutes · sorted descending."
+              pt="Cada clique no microfone + minutos gravados · ordem decrescente."
+            />
           </p>
         </div>
         <SpeakingStatsTable rows={speakingStats} linkStudents={false} />
@@ -577,30 +679,34 @@ export default async function SysadminPage() {
       <section className="space-y-4">
         <div className="flex items-baseline justify-between">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            Time on site
+            <T en="Time on site" pt="Tempo no site" />
           </h2>
           <p className="text-xs text-muted-foreground">
-            Sorted descending · ticks only while the tab is focused
-            (pauses on tab-switch, stops on tab close). Real session
-            heartbeats only — zero until the user loads a page on
-            the new build.
+            <T
+              en="Sorted descending · ticks only while the tab is focused (pauses on tab-switch, stops on tab close). Real session heartbeats only — zero until the user loads a page on the new build."
+              pt="Ordem decrescente · conta apenas com a aba em foco (pausa ao trocar de aba, para ao fechar). Apenas heartbeats reais — fica zerado até o usuário abrir uma página na nova build."
+            />
           </p>
         </div>
 
         <div className="grid gap-4 lg:grid-cols-2">
           <div className="min-w-0 space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Teachers
+              <T en="Teachers" pt="Professores" />
             </h3>
             <div className="overflow-x-auto rounded-xl border border-border">
               <table className="min-w-[440px] w-full text-sm">
                 <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
                   <tr>
-                    <th className="px-4 py-2">Teacher</th>
-                    <th className="px-4 py-2 text-right whitespace-nowrap">
-                      Active days
+                    <th className="px-4 py-2">
+                      <T en="Teacher" pt="Professor" />
                     </th>
-                    <th className="px-4 py-2 text-right">Minutes</th>
+                    <th className="px-4 py-2 text-right whitespace-nowrap">
+                      <T en="Active days" pt="Dias ativos" />
+                    </th>
+                    <th className="px-4 py-2 text-right">
+                      <T en="Minutes" pt="Minutos" />
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -610,7 +716,10 @@ export default async function SysadminPage() {
                         colSpan={3}
                         className="px-4 py-6 text-center text-xs text-muted-foreground"
                       >
-                        No teacher activity tracked yet.
+                        <T
+                          en="No teacher activity tracked yet."
+                          pt="Nenhuma atividade de professor registrada ainda."
+                        />
                       </td>
                     </tr>
                   ) : null}
@@ -634,16 +743,24 @@ export default async function SysadminPage() {
 
           <div className="min-w-0 space-y-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Students
+              <T en="Students" pt="Alunos" />
             </h3>
             <div className="overflow-x-auto rounded-xl border border-border">
               <table className="min-w-[520px] w-full text-sm">
                 <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
                   <tr>
-                    <th className="px-4 py-2">Student</th>
-                    <th className="px-4 py-2">Teacher</th>
-                    <th className="px-4 py-2 text-right">Lessons</th>
-                    <th className="px-4 py-2 text-right">Minutes</th>
+                    <th className="px-4 py-2">
+                      <T en="Student" pt="Aluno" />
+                    </th>
+                    <th className="px-4 py-2">
+                      <T en="Teacher" pt="Professor" />
+                    </th>
+                    <th className="px-4 py-2 text-right">
+                      <T en="Lessons" pt="Lições" />
+                    </th>
+                    <th className="px-4 py-2 text-right">
+                      <T en="Minutes" pt="Minutos" />
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -653,7 +770,10 @@ export default async function SysadminPage() {
                         colSpan={4}
                         className="px-4 py-6 text-center text-xs text-muted-foreground"
                       >
-                        No completed lessons yet.
+                        <T
+                          en="No completed lessons yet."
+                          pt="Ainda sem lições concluídas."
+                        />
                       </td>
                     </tr>
                   ) : null}
@@ -683,34 +803,38 @@ export default async function SysadminPage() {
       {/* ============================ Health ============================ */}
       <section className="space-y-3">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-          System health
+          <T en="System health" pt="Saúde do sistema" />
         </h2>
         <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-4">
           <Kpi
             icon={<Database className="h-4 w-4" />}
-            label="Avatar objects"
+            label={<T en="Avatar objects" pt="Avatares armazenados" />}
             value={health.storageAvatarCount}
-            sub="In avatars bucket"
+            sub={<T en="In avatars bucket" pt="No bucket de avatares" />}
           />
           <Kpi
             icon={<ImageOff className="h-4 w-4" />}
-            label="No avatar"
+            label={<T en="No avatar" pt="Sem avatar" />}
             value={health.accountsWithoutAvatar}
-            sub="Accounts missing photo"
+            sub={
+              <T en="Accounts missing photo" pt="Contas sem foto" />
+            }
             tone={health.accountsWithoutAvatar > 0 ? "amber" : undefined}
           />
           <Kpi
             icon={<School className="h-4 w-4" />}
-            label="Empty classrooms"
+            label={<T en="Empty classrooms" pt="Turmas vazias" />}
             value={health.classroomsWithoutStudents}
-            sub="No students joined"
+            sub={<T en="No students joined" pt="Sem alunos cadastrados" />}
             tone={health.classroomsWithoutStudents > 0 ? "amber" : undefined}
           />
           <Kpi
             icon={<AlertTriangle className="h-4 w-4" />}
-            label="Unlinked roster"
+            label={<T en="Unlinked roster" pt="Listas não vinculadas" />}
             value={health.rosterWithoutAuthUser}
-            sub="No auth_user_id yet"
+            sub={
+              <T en="No auth_user_id yet" pt="Ainda sem auth_user_id" />
+            }
             tone={health.rosterWithoutAuthUser > 0 ? "amber" : undefined}
           />
         </div>
@@ -720,15 +844,25 @@ export default async function SysadminPage() {
       <section className="grid gap-3 sm:grid-cols-2">
         <InfoCard
           icon={<FileCheck2 className="h-4 w-4 text-emerald-600" />}
-          title="Published drafts"
+          title={<T en="Published drafts" pt="Rascunhos publicados" />}
           value={kpis.publishedLessons}
-          hint="Teacher-reviewed lessons live for their students."
+          hint={
+            <T
+              en="Teacher-reviewed lessons live for their students."
+              pt="Lições revisadas pelo professor, disponíveis aos alunos."
+            />
+          }
         />
         <InfoCard
           icon={<FileClock className="h-4 w-4 text-amber-600" />}
-          title="Unpublished drafts"
+          title={<T en="Unpublished drafts" pt="Rascunhos não publicados" />}
           value={kpis.draftLessons}
-          hint="Awaiting teacher review. Never shown to students."
+          hint={
+            <T
+              en="Awaiting teacher review. Never shown to students."
+              pt="Aguardando revisão do professor. Nunca exibidos aos alunos."
+            />
+          }
         />
       </section>
 
@@ -747,9 +881,9 @@ function Kpi({
   tone,
 }: {
   icon: React.ReactNode;
-  label: string;
+  label: React.ReactNode;
   value: number | string;
-  sub?: string;
+  sub?: React.ReactNode;
   tone?: "emerald" | "amber" | "rose" | "indigo";
 }) {
   const toneClass =
@@ -787,9 +921,9 @@ function InfoCard({
   hint,
 }: {
   icon: React.ReactNode;
-  title: string;
+  title: React.ReactNode;
   value: number;
-  hint: string;
+  hint: React.ReactNode;
 }) {
   return (
     <Card>

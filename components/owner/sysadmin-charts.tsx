@@ -18,6 +18,7 @@ import {
   YAxis,
 } from "recharts";
 import { Card, CardContent } from "@/components/ui/card";
+import { useI18n } from "@/lib/i18n/context";
 
 type GrowthPoint = { week: string; newAccounts: number; newLessons: number };
 type EngagementPoint = { date: string; activeStudents: number };
@@ -48,9 +49,18 @@ export function SysadminCharts({
   lessonsPerCefr,
   songsPerCefr,
 }: Props) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   return (
     <section className="grid gap-4 md:grid-cols-2">
-      <ChartCard title="New accounts · last 12 weeks" subtitle="Weekly, starting Monday">
+      <ChartCard
+        title={
+          pt
+            ? "Novas contas · últimas 12 semanas"
+            : "New accounts · last 12 weeks"
+        }
+        subtitle={pt ? "Semanal, iniciando na segunda" : "Weekly, starting Monday"}
+      >
         <ResponsiveContainer width="100%" height={220}>
           <AreaChart data={growth} margin={{ top: 6, right: 6, bottom: 0, left: -20 }}>
             <defs>
@@ -78,15 +88,23 @@ export function SysadminCharts({
               stroke="#6366f1"
               fill="url(#accGrad)"
               strokeWidth={2}
-              name="New accounts"
+              name={pt ? "Novas contas" : "New accounts"}
             />
           </AreaChart>
         </ResponsiveContainer>
       </ChartCard>
 
       <ChartCard
-        title="Daily active students · last 30 days"
-        subtitle="Unique students with any lesson or chat activity"
+        title={
+          pt
+            ? "Alunos ativos por dia · últimos 30 dias"
+            : "Daily active students · last 30 days"
+        }
+        subtitle={
+          pt
+            ? "Alunos únicos com qualquer lição ou atividade no tutor"
+            : "Unique students with any lesson or chat activity"
+        }
       >
         <ResponsiveContainer width="100%" height={220}>
           <LineChart data={engagement} margin={{ top: 6, right: 6, bottom: 0, left: -20 }}>
@@ -106,15 +124,17 @@ export function SysadminCharts({
               stroke="#10b981"
               strokeWidth={2}
               dot={false}
-              name="Active students"
+              name={pt ? "Alunos ativos" : "Active students"}
             />
           </LineChart>
         </ResponsiveContainer>
       </ChartCard>
 
       <ChartCard
-        title="Students per CEFR level"
-        subtitle="Roster-assigned levels"
+        title={pt ? "Alunos por nível CEFR" : "Students per CEFR level"}
+        subtitle={
+          pt ? "Níveis atribuídos nas listas" : "Roster-assigned levels"
+        }
       >
         <ResponsiveContainer width="100%" height={220}>
           <PieChart>
@@ -142,8 +162,14 @@ export function SysadminCharts({
       </ChartCard>
 
       <ChartCard
-        title="Catalog size by CEFR"
-        subtitle="Lessons (blue) vs. Songs (pink) per level"
+        title={
+          pt ? "Tamanho do catálogo por CEFR" : "Catalog size by CEFR"
+        }
+        subtitle={
+          pt
+            ? "Lições (azul) vs. Músicas (rosa) por nível"
+            : "Lessons (blue) vs. Songs (pink) per level"
+        }
       >
         <ResponsiveContainer width="100%" height={220}>
           <BarChart
@@ -160,8 +186,18 @@ export function SysadminCharts({
             <YAxis tick={{ fontSize: 10 }} tickLine={false} axisLine={false} />
             <Tooltip contentStyle={{ fontSize: 12 }} />
             <Legend wrapperStyle={{ fontSize: 11 }} />
-            <Bar dataKey="lessons" fill="#6366f1" name="Lessons" radius={[4, 4, 0, 0]} />
-            <Bar dataKey="songs" fill="#ec4899" name="Songs" radius={[4, 4, 0, 0]} />
+            <Bar
+              dataKey="lessons"
+              fill="#6366f1"
+              name={pt ? "Lições" : "Lessons"}
+              radius={[4, 4, 0, 0]}
+            />
+            <Bar
+              dataKey="songs"
+              fill="#ec4899"
+              name={pt ? "Músicas" : "Songs"}
+              radius={[4, 4, 0, 0]}
+            />
           </BarChart>
         </ResponsiveContainer>
       </ChartCard>
