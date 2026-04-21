@@ -70,7 +70,11 @@ export function NotesPanel({ classroomId, studentId, notes }: Props) {
               <div className="flex-1">
                 <p className="whitespace-pre-wrap">{n.body}</p>
                 <p className="text-[11px] text-muted-foreground mt-1">
-                  {new Date(n.created_at).toLocaleString()}
+                  {new Date(n.created_at).toLocaleString("pt-BR", {
+                    timeZone: "America/Sao_Paulo",
+                    dateStyle: "short",
+                    timeStyle: "short",
+                  })}
                 </p>
               </div>
               <Button

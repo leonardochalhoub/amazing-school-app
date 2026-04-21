@@ -132,6 +132,7 @@ export function DeletedStudentsPanel({ entries }: Props) {
                       </td>
                       <td className="px-4 py-2 text-right text-xs text-muted-foreground tabular-nums">
                         {new Date(r.deleted_at).toLocaleDateString("pt-BR", {
+                          timeZone: "America/Sao_Paulo",
                           day: "2-digit",
                           month: "short",
                           year: "2-digit",

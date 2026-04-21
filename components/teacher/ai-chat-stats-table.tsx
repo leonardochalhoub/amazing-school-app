@@ -14,6 +14,7 @@ const PREVIEW = 10;
 function fmtDate(iso: string | null): string {
   if (!iso) return "—";
   return new Date(iso).toLocaleDateString("pt-BR", {
+    timeZone: "America/Sao_Paulo",
     day: "2-digit",
     month: "short",
     year: "2-digit",
@@ -75,7 +76,7 @@ export function AiChatStatsTable({ rows }: Props) {
                 })}
               </td>
               <td className="px-3 py-2 text-right font-semibold tabular-nums">
-                {r.messages.toLocaleString()}
+                {r.messages.toLocaleString("pt-BR")}
               </td>
               <td className="px-3 py-2 text-right text-xs text-muted-foreground whitespace-nowrap">
                 {fmtDate(r.lastAt)}

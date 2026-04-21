@@ -89,7 +89,11 @@ function ReviewCard({ row }: { row: ListeningResponseRow }) {
             {row.scene_id}
           </Badge>
           <span className="ml-auto text-[10px] text-muted-foreground tabular-nums">
-            {new Date(row.submitted_at).toLocaleString()}
+            {new Date(row.submitted_at).toLocaleString("pt-BR", {
+              timeZone: "America/Sao_Paulo",
+              dateStyle: "short",
+              timeStyle: "short",
+            })}
           </span>
           {reviewed ? (
             <Badge className="gap-1 text-[10px]">

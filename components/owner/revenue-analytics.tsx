@@ -45,8 +45,12 @@ const PIE_COLORS = [
 
 function monthShort(iso: string): string {
   const [y, m] = iso.split("-").map(Number);
-  const d = new Date(y, (m ?? 1) - 1, 1);
-  return d.toLocaleDateString("en-US", { month: "short", year: "2-digit" });
+  const d = new Date(Date.UTC(y, (m ?? 1) - 1, 1));
+  return d.toLocaleDateString("en-US", {
+    timeZone: "UTC",
+    month: "short",
+    year: "2-digit",
+  });
 }
 
 export function RevenueAnalytics({

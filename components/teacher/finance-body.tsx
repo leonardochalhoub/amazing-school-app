@@ -23,9 +23,9 @@ const BRL = (cents: number) =>
 
 function monthLabel(iso: string, locale: "en" | "pt-BR") {
   const [y, m] = iso.split("-").map(Number);
-  return new Date(y, (m ?? 1) - 1, 1).toLocaleDateString(
+  return new Date(Date.UTC(y, (m ?? 1) - 1, 1)).toLocaleDateString(
     locale === "pt-BR" ? "pt-BR" : "en-US",
-    { month: "long", year: "numeric" }
+    { timeZone: "UTC", month: "long", year: "numeric" },
   );
 }
 

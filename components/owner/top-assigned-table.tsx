@@ -60,7 +60,7 @@ export function TopAssignedTable({ rows, unit }: Props) {
                 {r.cefr ? r.cefr.toUpperCase() : "—"}
               </td>
               <td className="px-3 py-2 text-right font-semibold tabular-nums">
-                {r.count.toLocaleString()}
+                {r.count.toLocaleString("pt-BR")}
               </td>
             </tr>
           ))}

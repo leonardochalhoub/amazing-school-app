@@ -84,6 +84,7 @@ export function RecentAssignmentsPreview({ entries }: Props) {
                   <span>·</span>
                   <span>
                     {new Date(a.assignedAt).toLocaleString("en-US", {
+                      timeZone: "America/Sao_Paulo",
                       dateStyle: "medium",
                       timeStyle: "short",
                     })}

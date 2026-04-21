@@ -24,17 +24,26 @@ interface Props {
 
 function monthShort(iso: string): string {
   const [y, m] = iso.split("-").map(Number);
-  const d = new Date(y, (m ?? 1) - 1, 1);
-  return d.toLocaleDateString("en-US", { month: "short", year: "2-digit" });
+  const d = new Date(Date.UTC(y, (m ?? 1) - 1, 1));
+  return d.toLocaleDateString("en-US", {
+    timeZone: "UTC",
+    month: "short",
+    year: "2-digit",
+  });
 }
 function monthLong(iso: string): string {
   const [y, m] = iso.split("-").map(Number);
-  const d = new Date(y, (m ?? 1) - 1, 1);
-  return d.toLocaleDateString("pt-BR", { month: "long", year: "numeric" });
+  const d = new Date(Date.UTC(y, (m ?? 1) - 1, 1));
+  return d.toLocaleDateString("pt-BR", {
+    timeZone: "UTC",
+    month: "long",
+    year: "numeric",
+  });
 }
 function fmtDateTime(iso: string | null): string {
   if (!iso) return "—";
   return new Date(iso).toLocaleString("pt-BR", {
+    timeZone: "America/Sao_Paulo",
     dateStyle: "short",
     timeStyle: "short",
   });

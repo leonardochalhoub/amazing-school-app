@@ -229,7 +229,7 @@ function StatNumber({
         <div className="mx-auto h-8 w-14 animate-pulse rounded bg-muted" />
       ) : (
         <p className="text-2xl font-bold tabular-nums">
-          {value.toLocaleString()}
+          {value.toLocaleString("pt-BR")}
         </p>
       )}
       <p className="text-sm text-muted-foreground">{label}</p>

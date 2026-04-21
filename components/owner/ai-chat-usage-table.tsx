@@ -99,7 +99,7 @@ export function AiChatUsageTable({ rows, kind }: Props) {
                 {r.activeDays}
               </td>
               <td className="px-4 py-2 text-right font-semibold tabular-nums">
-                {r.messages.toLocaleString()}
+                {r.messages.toLocaleString("pt-BR")}
               </td>
             </tr>
           ))}
