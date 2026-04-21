@@ -7,6 +7,7 @@ import {
   SCHOOL_LOGO_SRC,
 } from "@/lib/school-logo";
 import { isOwner as checkIsOwner } from "@/lib/auth/roles";
+import { inferGenderFromName } from "@/lib/reports/gendered-titles";
 import { redirect } from "next/navigation";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -32,7 +33,9 @@ export default async function DashboardLayout({
   const admin = createAdminClient();
   const { data: profile, error } = await admin
     .from("profiles")
-    .select("full_name, role, avatar_url, school_logo_enabled, school_logo_url")
+    .select(
+      "full_name, role, avatar_url, school_logo_enabled, school_logo_url, gender",
+    )
     .eq("id", user.id)
     .single();
 
@@ -104,24 +107,19 @@ export default async function DashboardLayout({
   const rosterAgeGroup = (rosterSelf as { age_group: "kid" | "teen" | "adult" | null } | null)?.age_group ?? null;
   const rosterGender = (rosterSelf as { gender: "female" | "male" | null } | null)?.gender ?? null;
 
-  // Teacher gender lives on profiles.gender (migration 057). Fetched
-  // separately so the layout still renders if the column doesn't
-  // exist yet — falls back to null which reads as masculine pt-BR
-  // wording.
-  let teacherGender: "female" | "male" | null = null;
-  if (role === "teacher") {
-    try {
-      const { data: genderRow } = await admin
-        .from("profiles")
-        .select("gender")
-        .eq("id", user.id)
-        .maybeSingle();
-      const raw = (genderRow as { gender?: string | null } | null)?.gender ?? null;
-      if (raw === "female" || raw === "male") teacherGender = raw;
-    } catch {
-      /* column may be absent until migration 057 lands */
-    }
-  }
+  // Teacher gender: explicit `profiles.gender` from the picker wins.
+  // If the teacher hasn't picked yet, fall back to the same name-
+  // based heuristic the welcome banner + receipts already use (most
+  // Brazilian feminine names end in "a"). This way a teacher named
+  // Tatiana walks in with the navbar already showing PROFESSORA.
+  const profileGenderRaw =
+    (profile as { gender?: string | null } | null)?.gender ?? null;
+  const explicitTeacherGender: "female" | "male" | null =
+    profileGenderRaw === "female" || profileGenderRaw === "male"
+      ? profileGenderRaw
+      : null;
+  const teacherGender: "female" | "male" | null =
+    explicitTeacherGender ?? inferGenderFromName(profile.full_name);
   const navbarGender: "female" | "male" | null =
     role === "teacher" ? teacherGender : rosterGender;
 
