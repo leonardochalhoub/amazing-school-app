@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Heart, Calendar } from "lucide-react";
 import { BrandMark } from "@/components/layout/brand-mark";
 import { useI18n } from "@/lib/i18n/context";
@@ -38,14 +39,26 @@ const GITHUB_URL =
 const LINKEDIN_URL =
   process.env.NEXT_PUBLIC_LINKEDIN_URL ??
   "https://www.linkedin.com/in/leonardochalhoub/";
-const BUILD_DATE = process.env.NEXT_PUBLIC_BUILD_DATE ?? new Date().toISOString();
+/**
+ * Only use the build-time env var. Falling back to `new Date()` here
+ * trips React #418 because the module evaluates at different moments
+ * on the server vs in the browser bundle — two different ISO strings
+ * for the same "build date" is the textbook hydration mismatch.
+ */
+const BUILD_DATE: string | null =
+  process.env.NEXT_PUBLIC_BUILD_DATE ?? null;
 
 function formatBuildDate(iso: string, locale: "en" | "pt-BR"): string {
   try {
     const d = new Date(iso);
     return new Intl.DateTimeFormat(
       locale === "pt-BR" ? "pt-BR" : "en-US",
-      { month: "short", day: "numeric", year: "numeric" }
+      {
+        timeZone: "America/Sao_Paulo",
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      },
     ).format(d);
   } catch {
     return iso.slice(0, 10);
@@ -54,8 +67,14 @@ function formatBuildDate(iso: string, locale: "en" | "pt-BR"): string {
 
 export function Footer() {
   const { locale } = useI18n();
-  const year = new Date().getFullYear();
-  const builtOn = formatBuildDate(BUILD_DATE, locale === "pt-BR" ? "pt-BR" : "en");
+  // Year is also time-dependent, compute on the client after mount
+  // so the server/client always agree on the initial HTML. A null
+  // year renders as an empty span on first paint.
+  const [year, setYear] = useState<number | null>(null);
+  useEffect(() => setYear(new Date().getFullYear()), []);
+  const builtOn = BUILD_DATE
+    ? formatBuildDate(BUILD_DATE, locale === "pt-BR" ? "pt-BR" : "en")
+    : null;
 
   const t = locale === "pt-BR"
     ? {
@@ -167,15 +186,19 @@ export function Footer() {
             >
               Leonardo Chalhoub
             </a>
-            {" · "}
-            <span>
-              © {year}
-            </span>
+            {year !== null ? (
+              <>
+                {" · "}
+                <span>© {year}</span>
+              </>
+            ) : null}
           </p>
-          <p className="inline-flex items-center gap-1.5 tabular-nums">
-            <Calendar className="h-3 w-3" />
-            {t.lastUpdate}: <span className="font-mono">{builtOn}</span>
-          </p>
+          {builtOn ? (
+            <p className="inline-flex items-center gap-1.5 tabular-nums">
+              <Calendar className="h-3 w-3" />
+              {t.lastUpdate}: <span className="font-mono">{builtOn}</span>
+            </p>
+          ) : null}
         </div>
       </div>
     </footer>
