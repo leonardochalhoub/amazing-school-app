@@ -16,16 +16,17 @@ import {
   type PaymentCellState,
   type StudentPaymentRow,
 } from "@/lib/payments-types";
+import { useI18n } from "@/lib/i18n/context";
 
 interface Props {
   months: string[]; // newest first (YYYY-MM-01)
   rows: ManagementRow[];
 }
 
-function monthShort(iso: string): string {
+function monthShort(iso: string, pt: boolean): string {
   const [y, m] = iso.split("-").map(Number);
   const d = new Date(Date.UTC(y, (m ?? 1) - 1, 1));
-  return d.toLocaleDateString("en-US", {
+  return d.toLocaleDateString(pt ? "pt-BR" : "en-US", {
     timeZone: "UTC",
     month: "short",
     year: "2-digit",
@@ -57,6 +58,8 @@ const BRL = (cents: number) =>
 
 export function ManagementGrid({ months, rows }: Props) {
   const router = useRouter();
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [query, setQuery] = useState("");
   const [pendingCell, setPendingCell] = useState<string | null>(null);
 
@@ -151,7 +154,7 @@ export function ManagementGrid({ months, rows }: Props) {
   function saveAmount(rosterId: string, value: string, billingDay: number | null) {
     const brl = Number(value.replace(",", "."));
     if (!Number.isFinite(brl) || brl < 0) {
-      toast.error("Invalid amount");
+      toast.error(pt ? "Valor inválido" : "Invalid amount");
       return;
     }
     const cents = Math.round(brl * 100);
@@ -172,7 +175,11 @@ export function ManagementGrid({ months, rows }: Props) {
   function saveDay(rosterId: string, value: string, amountCents: number | null) {
     const n = Number(value);
     if (!Number.isInteger(n) || n < 1 || n > 28) {
-      toast.error("Due day must be between 1 and 28");
+      toast.error(
+        pt
+          ? "O dia de vencimento deve estar entre 1 e 28"
+          : "Due day must be between 1 and 28",
+      );
       return;
     }
     const key = `day-${rosterId}`;
@@ -196,12 +203,16 @@ export function ManagementGrid({ months, rows }: Props) {
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Filter by student, teacher, or classroom…"
+          placeholder={
+            pt
+              ? "Filtrar por aluno, professor ou turma…"
+              : "Filter by student, teacher, or classroom…"
+          }
           className="h-9 w-72"
         />
         <div className="flex items-center gap-2">
           <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-            Year
+            {pt ? "Ano" : "Year"}
           </span>
           <div className="inline-flex items-center rounded-lg border border-border bg-card p-0.5 text-xs">
             {availableYears.map((y) => {
@@ -225,8 +236,12 @@ export function ManagementGrid({ months, rows }: Props) {
                     <button
                       type="button"
                       onClick={() => removeYear(y)}
-                      title={`Remove ${y} (empty)`}
-                      aria-label={`Remove ${y}`}
+                      title={
+                        pt
+                          ? `Remover ${y} (vazio)`
+                          : `Remove ${y} (empty)`
+                      }
+                      aria-label={pt ? `Remover ${y}` : `Remove ${y}`}
                       className="ml-0.5 inline-flex h-5 w-5 items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-rose-600"
                     >
                       ×
@@ -238,8 +253,8 @@ export function ManagementGrid({ months, rows }: Props) {
             <button
               type="button"
               onClick={addYear}
-              title="Add year"
-              aria-label="Add year"
+              title={pt ? "Adicionar ano" : "Add year"}
+              aria-label={pt ? "Adicionar ano" : "Add year"}
               className="ml-0.5 inline-flex h-7 w-7 items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-primary"
             >
               +
@@ -247,7 +262,9 @@ export function ManagementGrid({ months, rows }: Props) {
           </div>
         </div>
         <p className="text-xs text-muted-foreground">
-          {filtered.length} of {rows.length} students · {orderedMonths.length} months in {selectedYear}
+          {pt
+            ? `${filtered.length} de ${rows.length} ${rows.length === 1 ? "aluno" : "alunos"} · ${orderedMonths.length} meses em ${selectedYear}`
+            : `${filtered.length} of ${rows.length} students · ${orderedMonths.length} months in ${selectedYear}`}
         </p>
       </div>
 
@@ -256,23 +273,23 @@ export function ManagementGrid({ months, rows }: Props) {
           <thead className="bg-muted/40">
             <tr>
               <th className="sticky left-0 z-10 bg-muted/40 px-3 py-2 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                Student
+                {pt ? "Aluno" : "Student"}
               </th>
               <th className="px-3 py-2 text-left text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                Teacher
+                {pt ? "Professor" : "Teacher"}
               </th>
               <th className="px-3 py-2 text-right text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                Monthly (BRL)
+                {pt ? "Mensal (BRL)" : "Monthly (BRL)"}
               </th>
               <th className="px-3 py-2 text-center text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                Due day
+                {pt ? "Dia de venc." : "Due day"}
               </th>
               {orderedMonths.map((m) => (
                 <th
                   key={m}
                   className="px-2 py-2 text-center text-[11px] font-semibold uppercase tracking-wider text-muted-foreground"
                 >
-                  {monthShort(m)}
+                  {monthShort(m, pt)}
                 </th>
               ))}
             </tr>
@@ -296,7 +313,7 @@ export function ManagementGrid({ months, rows }: Props) {
                     </Link>
                     {!r.has_auth ? (
                       <span className="ml-1 text-[10px] text-muted-foreground">
-                        (invite pending)
+                        {pt ? "(convite pendente)" : "(invite pending)"}
                       </span>
                     ) : null}
                     {r.classroom_name ? (
@@ -372,7 +389,9 @@ export function ManagementGrid({ months, rows }: Props) {
                   colSpan={4 + orderedMonths.length}
                   className="px-4 py-10 text-center text-sm text-muted-foreground"
                 >
-                  No students match your filter.
+                  {pt
+                    ? "Nenhum aluno corresponde ao filtro."
+                    : "No students match your filter."}
                 </td>
               </tr>
             ) : null}
@@ -383,21 +402,29 @@ export function ManagementGrid({ months, rows }: Props) {
       <div className="flex flex-wrap items-center gap-4 text-[11px] text-muted-foreground">
         <span className="inline-flex items-center gap-1.5">
           <span className="inline-block h-3 w-3 rounded border border-dashed border-border bg-muted/20" />
-          Empty — click to mark Due
+          {pt
+            ? "Vazio — clique para marcar como A vencer"
+            : "Empty — click to mark Due"}
         </span>
         <span className="inline-flex items-center gap-1.5">
           <span className="inline-flex h-3 w-3 items-center justify-center rounded bg-amber-500 text-white">
             <Clock className="h-2 w-2" />
           </span>
-          Due — click to mark Paid
+          {pt
+            ? "A vencer — clique para marcar como Pago"
+            : "Due — click to mark Paid"}
         </span>
         <span className="inline-flex items-center gap-1.5">
           <span className="inline-flex h-3 w-3 items-center justify-center rounded bg-emerald-500 text-white">
             <Check className="h-2 w-2" />
           </span>
-          Paid — click to reset
+          {pt ? "Pago — clique para limpar" : "Paid — click to reset"}
         </span>
-        <span className="ml-auto">Hover a cell to see amounts + timestamps.</span>
+        <span className="ml-auto">
+          {pt
+            ? "Passe o mouse em uma célula para ver valores e datas."
+            : "Hover a cell to see amounts + timestamps."}
+        </span>
       </div>
     </div>
   );
