@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import type { TeacherAiChatRow } from "@/lib/actions/teacher-ai-chat";
+import { useI18n } from "@/lib/i18n/context";
 
 interface Props {
   rows: TeacherAiChatRow[];
@@ -11,17 +12,21 @@ interface Props {
 
 const PREVIEW = 10;
 
-function fmtDate(iso: string | null): string {
+function fmtDateTime(iso: string | null, pt: boolean): string {
   if (!iso) return "—";
-  return new Date(iso).toLocaleDateString("pt-BR", {
+  return new Date(iso).toLocaleString(pt ? "pt-BR" : "en-US", {
     timeZone: "America/Sao_Paulo",
     day: "2-digit",
-    month: "short",
+    month: "2-digit",
     year: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
   });
 }
 
 export function AiChatStatsTable({ rows }: Props) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [showAll, setShowAll] = useState(false);
   const visible = showAll ? rows : rows.slice(0, PREVIEW);
   const hidden = rows.length - visible.length;
@@ -29,8 +34,9 @@ export function AiChatStatsTable({ rows }: Props) {
   if (rows.length === 0) {
     return (
       <div className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-        No AI-tutor activity yet — once a student talks to the tutor,
-        their counts will appear here.
+        {pt
+          ? "Ainda sem atividade no Tutor de IA — quando um aluno conversar com o tutor, os números aparecerão aqui."
+          : "No AI-tutor activity yet — once a student talks to the tutor, their counts will appear here."}
       </div>
     );
   }
@@ -41,12 +47,18 @@ export function AiChatStatsTable({ rows }: Props) {
         <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
           <tr>
             <th className="w-10 px-3 py-2 text-right">#</th>
-            <th className="px-3 py-2">Student</th>
-            <th className="px-3 py-2">Classroom</th>
-            <th className="px-3 py-2 text-right">Days</th>
-            <th className="px-3 py-2 text-right">Msgs/day</th>
-            <th className="px-3 py-2 text-right">Messages</th>
-            <th className="px-3 py-2 text-right whitespace-nowrap">Last</th>
+            <th className="px-3 py-2">{pt ? "Aluno" : "Student"}</th>
+            <th className="px-3 py-2">{pt ? "Turma" : "Classroom"}</th>
+            <th className="px-3 py-2 text-right">{pt ? "Dias" : "Days"}</th>
+            <th className="px-3 py-2 text-right">
+              {pt ? "Msgs/dia" : "Msgs/day"}
+            </th>
+            <th className="px-3 py-2 text-right">
+              {pt ? "Mensagens" : "Messages"}
+            </th>
+            <th className="px-3 py-2 text-right whitespace-nowrap">
+              {pt ? "Última" : "Last"}
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -78,8 +90,8 @@ export function AiChatStatsTable({ rows }: Props) {
               <td className="px-3 py-2 text-right font-semibold tabular-nums">
                 {r.messages.toLocaleString("pt-BR")}
               </td>
-              <td className="px-3 py-2 text-right text-xs text-muted-foreground whitespace-nowrap">
-                {fmtDate(r.lastAt)}
+              <td className="px-3 py-2 text-right text-xs text-muted-foreground whitespace-nowrap tabular-nums">
+                {fmtDateTime(r.lastAt, pt)}
               </td>
             </tr>
           ))}
@@ -91,7 +103,13 @@ export function AiChatStatsTable({ rows }: Props) {
           onClick={() => setShowAll((v) => !v)}
           className="flex w-full items-center justify-center gap-1.5 border-t border-border py-2.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted/40 hover:text-foreground"
         >
-          {showAll ? "Show less" : `Show all ${rows.length} students`}
+          {showAll
+            ? pt
+              ? "Mostrar menos"
+              : "Show less"
+            : pt
+              ? `Mostrar todos os ${rows.length} alunos`
+              : `Show all ${rows.length} students`}
           <ChevronDown
             className={`h-3.5 w-3.5 transition-transform ${showAll ? "rotate-180" : ""}`}
           />

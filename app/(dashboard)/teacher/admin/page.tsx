@@ -565,8 +565,17 @@ export default async function TeacherManagementPage() {
                   <td className="px-4 py-2 text-right tabular-nums">
                     {s.streak}
                   </td>
-                  <td className="px-4 py-2 text-right text-xs text-muted-foreground">
-                    {s.lastActivity ? s.lastActivity.slice(0, 10) : "—"}
+                  <td className="px-4 py-2 text-right text-xs text-muted-foreground tabular-nums">
+                    {s.lastActivity
+                      ? new Date(s.lastActivity).toLocaleString("pt-BR", {
+                          timeZone: "America/Sao_Paulo",
+                          day: "2-digit",
+                          month: "2-digit",
+                          year: "2-digit",
+                          hour: "2-digit",
+                          minute: "2-digit",
+                        })
+                      : "—"}
                   </td>
                 </tr>
               ))}

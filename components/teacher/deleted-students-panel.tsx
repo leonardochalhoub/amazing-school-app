@@ -27,6 +27,7 @@ import {
   reactivateRosterStudent,
   type DeletedRosterRow,
 } from "@/lib/actions/roster";
+import { useI18n } from "@/lib/i18n/context";
 
 function firstOfMonth(ym: string): string {
   return `${ym}-01`;
@@ -48,6 +49,8 @@ interface Props {
  */
 export function DeletedStudentsPanel({ entries }: Props) {
   const router = useRouter();
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [open, setOpen] = useState(false);
   const [pending, startTransition] = useTransition();
   const [pendingId, setPendingId] = useState<string | null>(null);
@@ -65,7 +68,7 @@ export function DeletedStudentsPanel({ entries }: Props) {
         toast.error(res.error);
         return;
       }
-      toast.success(`${name} restored.`);
+      toast.success(pt ? `${name} restaurado(a).` : `${name} restored.`);
       router.refresh();
     });
   }
@@ -79,7 +82,9 @@ export function DeletedStudentsPanel({ entries }: Props) {
         <CardTitle className="flex items-center justify-between gap-3 text-base">
           <span className="flex items-center gap-2">
             <Archive className="h-4 w-4 text-muted-foreground" />
-            Deleted students ({entries.length})
+            {pt
+              ? `Alunos excluídos (${entries.length})`
+              : `Deleted students (${entries.length})`}
           </span>
           <ChevronDown
             className={`h-4 w-4 text-muted-foreground transition-transform ${
@@ -91,28 +96,32 @@ export function DeletedStudentsPanel({ entries }: Props) {
       {open ? (
         <CardContent className="space-y-3">
           <p className="text-xs text-muted-foreground">
-            Historical data (payments, lessons, XP, class attendance,
-            diary, AI chats) stays intact. Restoring brings a student
-            back to the active roster exactly where they were.
+            {pt
+              ? "Os dados históricos (pagamentos, lições, XP, presença, diário, conversas com IA) permanecem intactos. Restaurar traz o aluno de volta à lista ativa exatamente onde estava."
+              : "Historical data (payments, lessons, XP, class attendance, diary, AI chats) stays intact. Restoring brings a student back to the active roster exactly where they were."}
           </p>
           {entries.length === 0 ? (
             <div className="rounded-xl border border-dashed border-border p-6 text-center text-xs text-muted-foreground">
-              No deleted students yet. Anyone you remove from the
-              roster later will appear here so you can bring them
-              back without losing any of their history.
+              {pt
+                ? "Ainda não há alunos excluídos. Qualquer aluno que você remover da lista aparecerá aqui para que você possa trazê-lo de volta sem perder o histórico."
+                : "No deleted students yet. Anyone you remove from the roster later will appear here so you can bring them back without losing any of their history."}
             </div>
           ) : (
             <div className="overflow-x-auto rounded-xl border border-border">
               <table className="min-w-[640px] w-full text-sm">
                 <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
                   <tr>
-                    <th className="px-4 py-2">Student</th>
+                    <th className="px-4 py-2">{pt ? "Aluno" : "Student"}</th>
                     <th className="px-4 py-2">Email</th>
-                    <th className="px-4 py-2">Last classroom</th>
-                    <th className="px-4 py-2 text-right whitespace-nowrap">
-                      Deleted
+                    <th className="px-4 py-2">
+                      {pt ? "Última turma" : "Last classroom"}
                     </th>
-                    <th className="px-4 py-2 text-right">Action</th>
+                    <th className="px-4 py-2 text-right whitespace-nowrap">
+                      {pt ? "Excluído em" : "Deleted"}
+                    </th>
+                    <th className="px-4 py-2 text-right">
+                      {pt ? "Ação" : "Action"}
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -152,7 +161,7 @@ export function DeletedStudentsPanel({ entries }: Props) {
                           ) : (
                             <RotateCcw className="h-3.5 w-3.5" />
                           )}
-                          Restore
+                          {pt ? "Restaurar" : "Restore"}
                         </Button>
                       </td>
                     </tr>
