@@ -12,9 +12,10 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { EditClassDialog } from "@/components/teacher/edit-class-dialog";
-import type {
-  HistoryStatus,
-  StudentHistoryEntry,
+import {
+  formatHoursMinutes,
+  type HistoryStatus,
+  type StudentHistoryEntry,
 } from "@/lib/actions/student-history-types";
 
 const STATUS_COLOR: Record<HistoryStatus, string> = {
@@ -84,6 +85,7 @@ export function ClassLogPanel({ entries }: Props) {
                 <th className="px-3 py-2">Status</th>
                 <th className="px-3 py-2">Content</th>
                 <th className="px-3 py-2">Skills</th>
+                <th className="px-3 py-2 whitespace-nowrap">Duration</th>
                 <th className="px-3 py-2">Link</th>
                 <th className="px-3 py-2"></th>
               </tr>
@@ -150,6 +152,11 @@ export function ClassLogPanel({ entries }: Props) {
                           ))
                         )}
                       </div>
+                    </td>
+                    <td className="px-3 py-2 text-right text-xs tabular-nums whitespace-nowrap">
+                      {e.duration_minutes != null
+                        ? formatHoursMinutes(e.duration_minutes)
+                        : "—"}
                     </td>
                     <td className="px-3 py-2 whitespace-nowrap">
                       {e.meeting_link ? (

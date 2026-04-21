@@ -215,7 +215,6 @@ export async function listAllTeacherHistory(
   // and the build can't collect page data for /teacher. Swallow errors
   // so the dashboard still renders with an empty log.
   let rows: Array<Record<string, unknown>> = [];
-  let historyDebug = "";
   try {
     const { data, error } = await admin
       .from("student_history")
@@ -226,29 +225,9 @@ export async function listAllTeacherHistory(
       .order("event_date", { ascending: false })
       .order("event_time", { ascending: false, nullsFirst: false })
       .limit(limit);
-    if (error) historyDebug = `err=${error.message}`;
     if (!error && data) rows = data as Array<Record<string, unknown>>;
-    historyDebug =
-      historyDebug ||
-      `student_history rows=${rows.length}` +
-        (rows.length > 0
-          ? ` first=${rows[0].event_date} last=${rows[rows.length - 1].event_date}`
-          : "");
-  } catch (err) {
+  } catch {
     rows = [];
-    historyDebug = `throw=${err instanceof Error ? err.message : String(err)}`;
-  }
-  console.info(`[class-log] teacher=${user.id} ${historyDebug}`);
-  if (rows.length > 0) {
-    const statuses = rows.reduce(
-      (acc: Record<string, number>, r) => {
-        const s = (r.status as string | undefined) ?? "?";
-        acc[s] = (acc[s] ?? 0) + 1;
-        return acc;
-      },
-      {},
-    );
-    console.info(`[class-log] status breakdown:`, statuses);
   }
 
   // Union scheduled_classes (past AND future) so the dashboard
@@ -256,7 +235,7 @@ export async function listAllTeacherHistory(
   // just what's in the per-student history panel.
   if (myClassroomIds.length > 0) {
     const now = Date.now();
-    const { data: scheduled, error: schedErr } = await admin
+    const { data: scheduled } = await admin
       .from("scheduled_classes")
       .select(
         "id, classroom_id, title, observations, completion_status, meeting_url, scheduled_at, created_at",
@@ -264,11 +243,6 @@ export async function listAllTeacherHistory(
       .in("classroom_id", myClassroomIds)
       .order("scheduled_at", { ascending: false })
       .limit(limit);
-    console.info(
-      `[class-log] scheduled_classes rows=${scheduled?.length ?? 0}` +
-        (schedErr ? ` err=${schedErr.message}` : "") +
-        ` (across ${myClassroomIds.length} classrooms)`,
-    );
     for (const s of (scheduled ?? []) as Array<{
       id: string;
       classroom_id: string;
