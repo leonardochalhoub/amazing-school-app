@@ -4,6 +4,7 @@ import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { getTeacherOverview } from "@/lib/actions/teacher-dashboard";
 import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { MusicCatalog } from "@/components/shared/music-catalog";
+import { T } from "@/components/reports/t";
 
 export default async function TeacherMusicIndex() {
   const [{ classrooms, roster }, publishedLessons] = await Promise.all([
@@ -25,12 +26,28 @@ export default async function TeacherMusicIndex() {
         <div className="flex flex-col gap-1">
           <div className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
             <Music2 className="h-3.5 w-3.5" />
-            <span>Songs catalog</span>
+            <span>
+              <T en="Songs catalog" pt="Catálogo de músicas" />
+            </span>
           </div>
-          <h1 className="text-3xl font-semibold tracking-tight">Songs</h1>
+          <h1 className="text-3xl font-semibold tracking-tight">
+            <T en="Songs" pt="Músicas" />
+          </h1>
           <p className="text-sm text-muted-foreground">
-            {musics.length} songs · assign to a classroom or a single student.
-            Every assignment shows up alongside regular lessons.
+            <T
+              en={
+                <>
+                  {musics.length} songs · assign to a classroom or a single
+                  student. Every assignment shows up alongside regular lessons.
+                </>
+              }
+              pt={
+                <>
+                  {musics.length} músicas · atribua a uma turma ou a um único
+                  aluno. Cada atribuição aparece junto das lições.
+                </>
+              }
+            />
           </p>
         </div>
         <AssignLessonButton

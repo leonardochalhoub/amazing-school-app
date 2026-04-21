@@ -150,6 +150,90 @@ export function Navbar({
     </nav>
   ) : null;
 
+  const rightControls = (
+    <div className="flex min-w-0 shrink-0 items-center justify-end gap-1.5">
+      <span
+        className={cn(
+          "hidden items-center gap-2 rounded-full border px-4 py-1 text-[15px] font-bold uppercase tracking-wider lg:inline-flex",
+          role === "teacher"
+            ? "border-emerald-400/70 bg-emerald-500/15 text-emerald-700 shadow-[0_0_20px_-2px_rgba(16,185,129,0.8)] dark:text-emerald-300 presence-glow"
+            : "border-border/70 bg-muted/30 text-muted-foreground",
+        )}
+      >
+        <span
+          className={cn(
+            "inline-block h-2.5 w-2.5 rounded-full",
+            role === "teacher"
+              ? "bg-emerald-500 shadow-[0_0_10px_2px_rgba(16,185,129,0.9)] presence-dot"
+              : "bg-emerald-500",
+          )}
+        />
+        {role === "teacher" ? labels.teacher : labels.student}
+      </span>
+
+      <LocaleToggle />
+      <ThemeToggle />
+
+      <DropdownMenu>
+        <DropdownMenuTrigger className="group inline-flex h-9 items-center gap-1.5 rounded-full border border-border/70 bg-background/50 pl-1 pr-2 transition-colors hover:bg-accent">
+          {avatarUrl ? (
+            <Avatar className="h-7 w-7 overflow-hidden">
+              <AvatarImage src={avatarUrl} alt={fullName} />
+              <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-violet-500 text-[10px] font-semibold text-white">
+                {initials}
+              </AvatarFallback>
+            </Avatar>
+          ) : ageGroup || gender ? (
+            <div className="h-7 w-7 overflow-hidden rounded-full bg-muted">
+              <CartoonAvatar
+                ageGroup={ageGroup ?? null}
+                gender={gender ?? null}
+                seed={userId}
+                fullName={fullName}
+              />
+            </div>
+          ) : (
+            <Avatar className="h-7 w-7 overflow-hidden">
+              <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-violet-500 text-[10px] font-semibold text-white">
+                {initials}
+              </AvatarFallback>
+            </Avatar>
+          )}
+          <ChevronDown className="h-3.5 w-3.5 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end" className="w-56">
+          <DropdownMenuItem disabled className="flex-col items-start gap-0">
+            <span className="text-[11px] uppercase tracking-wider text-muted-foreground">
+              {labels.signedInAs}
+            </span>
+            <span className="font-medium">{fullName}</span>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem
+            onClick={() => {
+              window.location.href =
+                role === "teacher" ? "/teacher/profile" : "/student/profile";
+            }}
+            className="cursor-pointer"
+          >
+            <UserCog className="mr-2 h-4 w-4" />
+            {labels.profile}
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={async () => {
+              await signOutStay();
+              window.location.href = "/";
+            }}
+            className="cursor-pointer text-red-600 focus:text-red-700"
+          >
+            <LogOut className="mr-2 h-4 w-4" />
+            {labels.signOut}
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
+  );
+
   return (
     <header className="sticky top-0 z-50 w-full overflow-x-clip border-b border-border/70 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div
@@ -201,95 +285,22 @@ export function Navbar({
           <div className="hidden flex-1 md:block" />
         )}
 
-        <div className="flex min-w-0 shrink-0 items-center gap-1.5">
-          <span
-            className={cn(
-              "hidden items-center gap-2 rounded-full border px-4 py-1 text-[15px] font-bold uppercase tracking-wider lg:inline-flex",
-              role === "teacher"
-                ? "border-emerald-400/70 bg-emerald-500/15 text-emerald-700 shadow-[0_0_20px_-2px_rgba(16,185,129,0.8)] dark:text-emerald-300 presence-glow"
-                : "border-border/70 bg-muted/30 text-muted-foreground",
-            )}
-          >
-            <span
-              className={cn(
-                "inline-block h-2.5 w-2.5 rounded-full",
-                role === "teacher"
-                  ? "bg-emerald-500 shadow-[0_0_10px_2px_rgba(16,185,129,0.9)] presence-dot"
-                  : "bg-emerald-500",
-              )}
-            />
-            {role === "teacher" ? labels.teacher : labels.student}
-          </span>
-
-          <LocaleToggle />
-          <ThemeToggle />
-
-          <DropdownMenu>
-            <DropdownMenuTrigger className="group inline-flex h-9 items-center gap-1.5 rounded-full border border-border/70 bg-background/50 pl-1 pr-2 transition-colors hover:bg-accent">
-              {avatarUrl ? (
-                <Avatar className="h-7 w-7 overflow-hidden">
-                  <AvatarImage src={avatarUrl} alt={fullName} />
-                  <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-violet-500 text-[10px] font-semibold text-white">
-                    {initials}
-                  </AvatarFallback>
-                </Avatar>
-              ) : ageGroup || gender ? (
-                // Cartoon avatar is a full-SVG component — sidestep the
-                // Radix Avatar primitive entirely so its fallback-image
-                // timer doesn't render the initials on top of the SVG.
-                <div className="h-7 w-7 overflow-hidden rounded-full bg-muted">
-                  <CartoonAvatar
-                    ageGroup={ageGroup ?? null}
-                    gender={gender ?? null}
-                    seed={userId}
-                    fullName={fullName}
-                  />
-                </div>
-              ) : (
-                <Avatar className="h-7 w-7 overflow-hidden">
-                  <AvatarFallback className="bg-gradient-to-br from-indigo-500 to-violet-500 text-[10px] font-semibold text-white">
-                    {initials}
-                  </AvatarFallback>
-                </Avatar>
-              )}
-              <ChevronDown className="h-3.5 w-3.5 text-muted-foreground transition-transform group-data-[state=open]:rotate-180" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56">
-              <DropdownMenuItem disabled className="flex-col items-start gap-0">
-                <span className="text-[11px] uppercase tracking-wider text-muted-foreground">
-                  {labels.signedInAs}
-                </span>
-                <span className="font-medium">{fullName}</span>
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem
-                onClick={() => {
-                  window.location.href =
-                    role === "teacher" ? "/teacher/profile" : "/student/profile";
-                }}
-                className="cursor-pointer"
-              >
-                <UserCog className="mr-2 h-4 w-4" />
-                {labels.profile}
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={async () => {
-                  // Use signOutStay (no redirect) then hard-navigate to
-                  // the marketing landing page. A hard nav guarantees
-                  // the middleware re-runs with cleared cookies and the
-                  // user lands on "/" (not "/login").
-                  await signOutStay();
-                  window.location.href = "/";
-                }}
-                className="cursor-pointer text-red-600 focus:text-red-700"
-              >
-                <LogOut className="mr-2 h-4 w-4" />
-                {labels.signOut}
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+        {/* Right controls — on desktop they sit inside the top row.
+            On mobile with a school logo, they move to their own
+            row below so they never overlap the centered logo. */}
+        <div className={cn(schoolLogoPath ? "hidden md:flex" : "flex")}>
+          {rightControls}
         </div>
       </div>
+
+      {/* Mobile-only controls row: rendered only when a school logo is
+          set, right-aligned so tapping works without fighting the
+          absolutely-positioned logo above. */}
+      {schoolLogoPath ? (
+        <div className="mx-auto w-full max-w-7xl min-w-0 px-3 pb-2 md:hidden">
+          {rightControls}
+        </div>
+      ) : null}
 
       {/* When a school logo is taking up the center of the top row, the
           nav pills get their own centered row right below so everything

@@ -12,11 +12,49 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { EditClassDialog } from "@/components/teacher/edit-class-dialog";
+import { useI18n } from "@/lib/i18n/context";
 import {
   formatHoursMinutes,
   type HistoryStatus,
+  type SkillFocus,
   type StudentHistoryEntry,
 } from "@/lib/actions/student-history-types";
+
+function translateStatus(status: HistoryStatus, pt: boolean): string {
+  if (!pt) return status;
+  switch (status) {
+    case "Planned":
+      return "Agendada";
+    case "Done":
+      return "Concluída";
+    case "Absent":
+      return "Ausente";
+    case "Rescheduled by student":
+      return "Remarcada pelo aluno";
+    case "Rescheduled by teacher":
+      return "Remarcada pelo professor";
+    case "Make up class":
+      return "Aula de reposição";
+  }
+}
+
+function translateSkill(skill: SkillFocus, pt: boolean): string {
+  if (!pt) return skill;
+  switch (skill) {
+    case "Grammar":
+      return "Gramática";
+    case "Speaking":
+      return "Fala";
+    case "Vocabulary":
+      return "Vocabulário";
+    case "Listening":
+      return "Escuta";
+    case "Reading":
+      return "Leitura";
+    case "Writing":
+      return "Escrita";
+  }
+}
 
 const STATUS_COLOR: Record<HistoryStatus, string> = {
   Planned: "bg-blue-500/10 text-blue-700 dark:text-blue-400",
@@ -36,6 +74,8 @@ interface Props {
 const PREVIEW = 15;
 
 export function ClassLogPanel({ entries }: Props) {
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [showAll, setShowAll] = useState(false);
   const planned = entries.filter((e) => e.status === "Planned").length;
   const visible = showAll ? entries : entries.slice(0, PREVIEW);
@@ -49,18 +89,26 @@ export function ClassLogPanel({ entries }: Props) {
             id="class-log-heading"
             className="text-xl font-semibold tracking-tight"
           >
-            Class log
+            {pt ? "Registro de aulas" : "Class log"}
           </h2>
           <p className="text-xs text-muted-foreground">
-            {showAll
-              ? `All ${entries.length} sessions across every student.`
-              : `Showing the ${Math.min(PREVIEW, entries.length)} most recent of ${entries.length}.`}{" "}
-            Syncs live with the History panel inside each student profile.
+            {pt
+              ? showAll
+                ? `Todas as ${entries.length} aulas de todos os alunos.`
+                : `Mostrando as ${Math.min(PREVIEW, entries.length)} mais recentes de ${entries.length}.`
+              : showAll
+                ? `All ${entries.length} sessions across every student.`
+                : `Showing the ${Math.min(PREVIEW, entries.length)} most recent of ${entries.length}.`}{" "}
+            {pt
+              ? "Sincroniza em tempo real com o painel de Histórico no perfil de cada aluno."
+              : "Syncs live with the History panel inside each student profile."}
             {planned > 0 ? (
               <>
                 {" "}
                 <span className="font-medium text-foreground">
-                  {planned} planned.
+                  {pt
+                    ? `${planned} ${planned === 1 ? "agendada" : "agendadas"}.`
+                    : `${planned} planned.`}
                 </span>
               </>
             ) : null}
@@ -71,8 +119,17 @@ export function ClassLogPanel({ entries }: Props) {
       {entries.length === 0 ? (
         <Card>
           <CardContent className="p-5 text-center text-sm text-muted-foreground">
-            No classes scheduled yet. Use <strong>Schedule class</strong>{" "}
-            above to create the first one.
+            {pt ? (
+              <>
+                Nenhuma aula agendada ainda. Use{" "}
+                <strong>Agendar aula</strong> acima para criar a primeira.
+              </>
+            ) : (
+              <>
+                No classes scheduled yet. Use <strong>Schedule class</strong>{" "}
+                above to create the first one.
+              </>
+            )}
           </CardContent>
         </Card>
       ) : (
@@ -80,13 +137,19 @@ export function ClassLogPanel({ entries }: Props) {
           <table className="w-full min-w-[620px] text-sm">
             <thead className="bg-muted/40 text-left text-[10px] uppercase tracking-wider text-muted-foreground">
               <tr>
-                <th className="px-3 py-2">Date</th>
-                <th className="px-3 py-2">Student / Class</th>
-                <th className="px-3 py-2">Status</th>
-                <th className="px-3 py-2">Content</th>
-                <th className="px-3 py-2">Skills</th>
-                <th className="px-3 py-2 whitespace-nowrap">Duration</th>
-                <th className="px-3 py-2">Link</th>
+                <th className="px-3 py-2">{pt ? "Data" : "Date"}</th>
+                <th className="px-3 py-2">
+                  {pt ? "Aluno / Turma" : "Student / Class"}
+                </th>
+                <th className="px-3 py-2">{pt ? "Status" : "Status"}</th>
+                <th className="px-3 py-2">{pt ? "Conteúdo" : "Content"}</th>
+                <th className="px-3 py-2">
+                  {pt ? "Habilidades" : "Skills"}
+                </th>
+                <th className="px-3 py-2 whitespace-nowrap">
+                  {pt ? "Duração" : "Duration"}
+                </th>
+                <th className="px-3 py-2">{pt ? "Acesso" : "Link"}</th>
                 <th className="px-3 py-2"></th>
               </tr>
             </thead>
@@ -116,7 +179,7 @@ export function ClassLogPanel({ entries }: Props) {
                           className="inline-flex items-center gap-1 text-xs font-medium hover:text-primary"
                         >
                           <User className="h-3 w-3" />
-                          {e.student_name ?? "Student"}
+                          {e.student_name ?? (pt ? "Aluno" : "Student")}
                         </Link>
                       ) : (
                         <span className="text-xs text-muted-foreground">
@@ -128,7 +191,7 @@ export function ClassLogPanel({ entries }: Props) {
                       <span
                         className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium ${STATUS_COLOR[e.status]}`}
                       >
-                        {e.status}
+                        {translateStatus(e.status, pt)}
                       </span>
                     </td>
                     <td className="max-w-xs truncate px-3 py-2 text-xs text-muted-foreground">
@@ -147,7 +210,7 @@ export function ClassLogPanel({ entries }: Props) {
                               variant="secondary"
                               className="text-[10px]"
                             >
-                              {s}
+                              {translateSkill(s, pt)}
                             </Badge>
                           ))
                         )}
@@ -167,7 +230,7 @@ export function ClassLogPanel({ entries }: Props) {
                           className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
                         >
                           <ExternalLink className="h-3 w-3" />
-                          Join
+                          {pt ? "Entrar" : "Join"}
                         </a>
                       ) : (
                         <span className="text-[11px] text-muted-foreground">
@@ -190,8 +253,12 @@ export function ClassLogPanel({ entries }: Props) {
               className="flex w-full items-center justify-center gap-1.5 border-t border-border py-2.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted/40 hover:text-foreground"
             >
               {showAll
-                ? "Show less"
-                : `Show all ${entries.length} sessions`}
+                ? pt
+                  ? "Mostrar menos"
+                  : "Show less"
+                : pt
+                  ? `Mostrar todas as ${entries.length} aulas`
+                  : `Show all ${entries.length} sessions`}
               <ChevronDown
                 className={`h-3.5 w-3.5 transition-transform ${showAll ? "rotate-180" : ""}`}
               />

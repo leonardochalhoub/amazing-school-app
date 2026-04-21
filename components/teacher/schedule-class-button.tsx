@@ -25,6 +25,25 @@ import {
   type SkillFocus,
   type CefrLevel,
 } from "@/lib/actions/student-history-types";
+import { useI18n } from "@/lib/i18n/context";
+
+function translateSkill(s: SkillFocus, pt: boolean): string {
+  if (!pt) return s;
+  switch (s) {
+    case "Grammar":
+      return "Gramática";
+    case "Speaking":
+      return "Fala";
+    case "Vocabulary":
+      return "Vocabulário";
+    case "Listening":
+      return "Escuta";
+    case "Reading":
+      return "Leitura";
+    case "Writing":
+      return "Escrita";
+  }
+}
 
 interface StudentOption {
   id: string;
@@ -50,6 +69,8 @@ type Target = "student" | "classroom";
 
 export function ScheduleClassButton({ students, classrooms }: Props) {
   const router = useRouter();
+  const { locale } = useI18n();
+  const pt = locale === "pt-BR";
   const [open, setOpen] = useState(false);
   const [target, setTarget] = useState<Target>("student");
   const [studentId, setStudentId] = useState<string>("");
@@ -82,11 +103,11 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
 
   function submit() {
     if (target === "student" && !studentId) {
-      toast.error("Pick a student");
+      toast.error(pt ? "Selecione um aluno" : "Pick a student");
       return;
     }
     if (target === "classroom" && !classroomId) {
-      toast.error("Pick a classroom");
+      toast.error(pt ? "Selecione uma turma" : "Pick a classroom");
       return;
     }
     startTransition(async () => {
@@ -105,7 +126,9 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
           return;
         }
         toast.success(
-          `Class scheduled for ${res.created} student${res.created === 1 ? "" : "s"}.`,
+          pt
+            ? `Aula agendada para ${res.created} ${res.created === 1 ? "aluno" : "alunos"}.`
+            : `Class scheduled for ${res.created} student${res.created === 1 ? "" : "s"}.`,
         );
       } else {
         const student = students.find((s) => s.id === studentId);
@@ -123,7 +146,7 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
           toast.error(res.error);
           return;
         }
-        toast.success("Class scheduled.");
+        toast.success(pt ? "Aula agendada." : "Class scheduled.");
       }
       setOpen(false);
       reset();
@@ -140,22 +163,24 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
         className="gap-1.5"
       >
         <CalendarPlus className="h-4 w-4" />
-        Schedule class
+        {pt ? "Agendar aula" : "Schedule class"}
       </Button>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-lg">
           <DialogHeader>
-            <DialogTitle>Schedule a class</DialogTitle>
+            <DialogTitle>
+              {pt ? "Agendar uma aula" : "Schedule a class"}
+            </DialogTitle>
             <DialogDescription>
-              Creates a &lsquo;Planned&rsquo; entry in the student&apos;s
-              history with the meeting link. Edit or mark it done later from
-              the student profile.
+              {pt
+                ? "Cria uma entrada \"Agendada\" no histórico do aluno com o link da reunião. Edite ou marque como concluída depois no perfil do aluno."
+                : "Creates a 'Planned' entry in the student's history with the meeting link. Edit or mark it done later from the student profile."}
             </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-3">
             <div className="space-y-1.5">
-              <Label>Schedule for</Label>
+              <Label>{pt ? "Agendar para" : "Schedule for"}</Label>
               <div className="inline-flex rounded-md border border-border bg-background p-0.5">
                 <button
                   type="button"
@@ -166,7 +191,7 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
-                  One student
+                  {pt ? "Um aluno" : "One student"}
                 </button>
                 <button
                   type="button"
@@ -177,20 +202,22 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
-                  Whole classroom
+                  {pt ? "Turma inteira" : "Whole classroom"}
                 </button>
               </div>
             </div>
 
             {target === "student" ? (
               <div className="space-y-1.5">
-                <Label>Student</Label>
+                <Label>{pt ? "Aluno" : "Student"}</Label>
                 <select
                   value={studentId}
                   onChange={(e) => setStudentId(e.target.value)}
                   className="h-9 w-full rounded-md border border-border bg-background px-2 text-sm"
                 >
-                  <option value="">— Pick a student —</option>
+                  <option value="">
+                    {pt ? "— Selecione um aluno —" : "— Pick a student —"}
+                  </option>
                   {students.map((s) => {
                     const classroom = classrooms.find(
                       (c) => c.id === s.classroomId,
@@ -206,13 +233,17 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
               </div>
             ) : (
               <div className="space-y-1.5">
-                <Label>Classroom (all students)</Label>
+                <Label>
+                  {pt ? "Turma (todos os alunos)" : "Classroom (all students)"}
+                </Label>
                 <select
                   value={classroomId}
                   onChange={(e) => setClassroomId(e.target.value)}
                   className="h-9 w-full rounded-md border border-border bg-background px-2 text-sm"
                 >
-                  <option value="">— Pick a classroom —</option>
+                  <option value="">
+                    {pt ? "— Selecione uma turma —" : "— Pick a classroom —"}
+                  </option>
                   {classrooms.map((c) => (
                     <option key={c.id} value={c.id}>
                       {c.name}
@@ -220,14 +251,16 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
                   ))}
                 </select>
                 <p className="text-[11px] text-muted-foreground">
-                  One history entry is created per student in the classroom.
+                  {pt
+                    ? "Uma entrada de histórico é criada para cada aluno da turma."
+                    : "One history entry is created per student in the classroom."}
                 </p>
               </div>
             )}
 
             <div className="grid gap-3 md:grid-cols-2">
               <div className="space-y-1.5">
-                <Label>Date</Label>
+                <Label>{pt ? "Data" : "Date"}</Label>
                 <Input
                   type="date"
                   value={eventDate}
@@ -235,7 +268,7 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
                 />
               </div>
               <div className="space-y-1.5">
-                <Label>Time</Label>
+                <Label>{pt ? "Hora" : "Time"}</Label>
                 <Input
                   type="time"
                   value={eventTime}
@@ -245,7 +278,11 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
             </div>
 
             <div className="space-y-1.5">
-              <Label>Meeting link (Zoom / Google Meet)</Label>
+              <Label>
+                {pt
+                  ? "Link da reunião (Zoom / Google Meet)"
+                  : "Meeting link (Zoom / Google Meet)"}
+              </Label>
               <Input
                 value={meetingLink}
                 onChange={(e) => setMeetingLink(e.target.value)}
@@ -254,16 +291,28 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
             </div>
 
             <div className="space-y-1.5">
-              <Label>Planned lesson content (optional)</Label>
+              <Label>
+                {pt
+                  ? "Conteúdo planejado (opcional)"
+                  : "Planned lesson content (optional)"}
+              </Label>
               <Input
                 value={lessonContent}
                 onChange={(e) => setLessonContent(e.target.value)}
-                placeholder="e.g. Reported speech review + listening drill"
+                placeholder={
+                  pt
+                    ? "ex.: revisão de discurso indireto + exercício de escuta"
+                    : "e.g. Reported speech review + listening drill"
+                }
               />
             </div>
 
             <div className="space-y-1.5">
-              <Label>Skill focus (optional)</Label>
+              <Label>
+                {pt
+                  ? "Habilidades em foco (opcional)"
+                  : "Skill focus (optional)"}
+              </Label>
               <div className="flex flex-wrap gap-1.5">
                 {SKILL_FOCUS_OPTIONS.map((s) => {
                   const active = skillFocus.includes(s);
@@ -278,7 +327,7 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
                           : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground"
                       }`}
                     >
-                      {s}
+                      {translateSkill(s, pt)}
                     </button>
                   );
                 })}
@@ -286,7 +335,9 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
             </div>
 
             <div className="space-y-1.5">
-              <Label htmlFor="schedule-cefr">CEFR level (optional)</Label>
+              <Label htmlFor="schedule-cefr">
+                {pt ? "Nível CEFR (opcional)" : "CEFR level (optional)"}
+              </Label>
               <div className="flex flex-wrap gap-1.5">
                 <button
                   type="button"
@@ -327,7 +378,7 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
               onClick={() => setOpen(false)}
               disabled={pending}
             >
-              Cancel
+              {pt ? "Cancelar" : "Cancel"}
             </Button>
             <Button
               type="button"
@@ -340,7 +391,7 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
               ) : (
                 <Save className="h-4 w-4" />
               )}
-              Schedule
+              {pt ? "Agendar" : "Schedule"}
             </Button>
           </DialogFooter>
         </DialogContent>

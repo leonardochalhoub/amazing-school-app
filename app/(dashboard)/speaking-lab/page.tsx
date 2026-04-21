@@ -11,6 +11,7 @@ import { SpeakingLabTabs } from "@/components/speaking-lab/speaking-lab-tabs";
 import { SayTranslateBox } from "@/components/speaking-lab/say-translate-box";
 import { listAvailableCustomDialogs } from "@/lib/actions/custom-dialogs";
 import { listAvailableCustomDrills } from "@/lib/actions/custom-drills";
+import { T } from "@/components/reports/t";
 
 async function loadExercises(): Promise<SpeakingDrill[]> {
   const file = join(process.cwd(), "content/speaking-lab/exercises.json");
@@ -81,17 +82,32 @@ export default async function SpeakingLabPage() {
       <header className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            Speaking Lab
+            <T en="Speaking Lab" pt="Laboratório de Fala" />
           </p>
           <h1 className="mt-1 text-3xl font-semibold tracking-tight">
-            Speaking Lab
+            <T en="Speaking Lab" pt="Laboratório de Fala" />
           </h1>
           <p className="mt-1 text-sm text-muted-foreground">
-            Record yourself speaking English and get a score. Use{" "}
-            <span className="font-medium">Drills</span> for single-phrase
-            pronunciation practice, or{" "}
-            <span className="font-medium">Dialogs</span> for multi-turn
-            conversations where the AI speaks and you respond.
+            <T
+              en={
+                <>
+                  Record yourself speaking English and get a score. Use{" "}
+                  <span className="font-medium">Drills</span> for single-phrase
+                  pronunciation practice, or{" "}
+                  <span className="font-medium">Dialogs</span> for multi-turn
+                  conversations where the AI speaks and you respond.
+                </>
+              }
+              pt={
+                <>
+                  Grave-se falando em inglês e receba uma nota. Use{" "}
+                  <span className="font-medium">Drills</span> para prática de
+                  pronúncia de frases curtas, ou{" "}
+                  <span className="font-medium">Diálogos</span> para conversas
+                  em que a IA fala e você responde.
+                </>
+              }
+            />
           </p>
         </div>
         {isTeacher ? (
@@ -101,14 +117,14 @@ export default async function SpeakingLabPage() {
               className="inline-flex h-9 items-center gap-1.5 rounded-md border border-primary/40 bg-primary/10 px-3 text-xs font-medium text-primary transition-colors hover:bg-primary/20"
             >
               <PlusCircle className="h-4 w-4" />
-              My drills
+              <T en="My drills" pt="Meus drills" />
             </Link>
             <Link
               href="/speaking-lab/my-dialogs"
               className="inline-flex h-9 items-center gap-1.5 rounded-md border border-primary/40 bg-primary/10 px-3 text-xs font-medium text-primary transition-colors hover:bg-primary/20"
             >
               <PlusCircle className="h-4 w-4" />
-              My dialogs
+              <T en="My dialogs" pt="Meus diálogos" />
             </Link>
           </div>
         ) : null}

@@ -160,7 +160,9 @@ export default async function StudentProfilePage() {
                           ? "criança"
                           : ageGroup === "teen"
                             ? "adolescente"
-                            : "adulto"
+                            : gender === "female"
+                              ? "adulta"
+                              : "adulto"
                       }
                     />
                     {" · "}

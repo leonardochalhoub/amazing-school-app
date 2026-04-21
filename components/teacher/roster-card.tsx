@@ -28,10 +28,19 @@ const RING_GRADIENTS = [
   "from-pink-500 via-rose-500 to-orange-500",
 ];
 
-const AGE_LABELS = {
-  en: { kid: "Kid", teen: "Teen", adult: "Adult" } as Record<AgeGroup, string>,
-  pt: { kid: "Criança", teen: "Adolescente", adult: "Adulto" } as Record<AgeGroup, string>,
+const AGE_LABELS_EN: Record<AgeGroup, string> = {
+  kid: "Kid",
+  teen: "Teen",
+  adult: "Adult",
 };
+
+function ageLabelPt(ageGroup: AgeGroup, gender: Gender | null | undefined): string {
+  // Only "adult" is gendered in pt-BR (Adulto/Adulta). Kid and teen
+  // use gender-neutral forms.
+  if (ageGroup === "kid") return "Criança";
+  if (ageGroup === "teen") return "Adolescente";
+  return gender === "female" ? "Adulta" : "Adulto";
+}
 
 export function RosterCard({
   id,
@@ -48,8 +57,8 @@ export function RosterCard({
   const noClassroomLabel = locale === "pt-BR" ? "Sem turma" : "No classroom";
   const ageLabel = ageGroup
     ? locale === "pt-BR"
-      ? AGE_LABELS.pt[ageGroup]
-      : AGE_LABELS.en[ageGroup]
+      ? ageLabelPt(ageGroup, gender ?? null)
+      : AGE_LABELS_EN[ageGroup]
     : null;
   const levelLabel = level ? level.toUpperCase() : null;
 

@@ -27,6 +27,7 @@ import { Button } from "@/components/ui/button";
 import type { LessonDraftMeta } from "@/lib/actions/lesson-drafts";
 import type { TeacherLessonRow } from "@/lib/actions/teacher-lessons-types";
 import { isTeacherRole } from "@/lib/auth/roles";
+import { T } from "@/components/reports/t";
 
 type Source = "all" | "library" | "curated" | "mine" | "bank";
 
@@ -266,22 +267,25 @@ export default async function TeacherLessonsPage({
       <header className="flex flex-wrap items-start justify-between gap-4">
         <div>
           <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            Lessons
+            <T en="Lessons" pt="Lições" />
           </p>
           <h1 className="mt-1 text-3xl font-semibold tracking-tight">
-            Lesson library
+            <T en="Lesson library" pt="Biblioteca de lições" />
           </h1>
           <p className="mt-1 text-sm text-muted-foreground">
-            Review AI-generated lessons, edit them, and publish before
-            assigning to students.
+            <T
+              en="Review AI-generated lessons, edit them, and publish before assigning to students."
+              pt="Revise as lições geradas por IA, edite-as e publique antes de atribuí-las aos alunos."
+            />
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="secondary" className="text-[11px]">
-            {publishedCount} published
+            {publishedCount}{" "}
+            <T en="published" pt="publicadas" />
           </Badge>
           <Badge variant="outline" className="text-[11px]">
-            {draftCount} drafts
+            {draftCount} <T en="drafts" pt="rascunhos" />
           </Badge>
           <AssignLessonButton
             lessons={assignable}
@@ -301,7 +305,7 @@ export default async function TeacherLessonsPage({
           <Link href="/teacher/lessons/new">
             <Button size="sm" variant="outline" className="gap-1.5">
               <Plus className="h-4 w-4" />
-              New lesson
+              <T en="New lesson" pt="Nova lição" />
             </Button>
           </Link>
         </div>
@@ -311,59 +315,84 @@ export default async function TeacherLessonsPage({
         {/* One row per filter category — search bar is the last row so
             the classification pills stay stable while typing. */}
         <div className="flex flex-wrap items-center gap-2">
-          <FilterGroup label="Source" name="source" active={source === "all" ? undefined : source}>
+          <FilterGroup
+            labelEn="Source"
+            labelPt="Origem"
+            name="source"
+            active={source === "all" ? undefined : source}
+          >
             {(
               [
-                { key: "all", label: "All" },
-                { key: "library", label: "Library" },
-                { key: "curated", label: "Curated" },
-                { key: "mine", label: "My lessons" },
-                { key: "bank", label: "My exercises" },
+                { key: "all", en: "All", pt: "Todas" },
+                { key: "library", en: "Library", pt: "Biblioteca" },
+                { key: "curated", en: "Curated", pt: "Curadas" },
+                { key: "mine", en: "My lessons", pt: "Minhas lições" },
+                { key: "bank", en: "My exercises", pt: "Meus exercícios" },
               ] as const
             ).map((s) => (
               <FilterPill
                 key={s.key}
                 href={s.key === "all" ? urlWithout("source") : urlWith("source", s.key)}
-                label={s.label}
+                labelEn={s.en}
+                labelPt={s.pt}
                 active={source === s.key}
               />
             ))}
           </FilterGroup>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <FilterGroup label="CEFR" name="cefr" active={filters.cefrBand}>
-            <FilterPill href={urlWithout("cefr")} label="All" active={!filters.cefrBand} />
+          <FilterGroup labelEn="CEFR" labelPt="CEFR" name="cefr" active={filters.cefrBand}>
+            <FilterPill
+              href={urlWithout("cefr")}
+              labelEn="All"
+              labelPt="Todos"
+              active={!filters.cefrBand}
+            />
             {CEFR_BANDS.map((b) => (
               <FilterPill
                 key={b}
                 href={urlWith("cefr", b)}
-                label={b.toUpperCase()}
+                labelEn={b.toUpperCase()}
+                labelPt={b.toUpperCase()}
                 active={filters.cefrBand === b}
               />
             ))}
           </FilterGroup>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <FilterGroup label="Skill" name="skill" active={filters.skill}>
-            <FilterPill href={urlWithout("skill")} label="All" active={!filters.skill} />
+          <FilterGroup labelEn="Skill" labelPt="Habilidade" name="skill" active={filters.skill}>
+            <FilterPill
+              href={urlWithout("skill")}
+              labelEn="All"
+              labelPt="Todas"
+              active={!filters.skill}
+            />
             {UI_SKILLS.map((s) => (
               <FilterPill
                 key={s}
                 href={urlWith("skill", s)}
-                label={s[0].toUpperCase() + s.slice(1)}
+                labelEn={s[0].toUpperCase() + s.slice(1)}
+                labelPt={skillPt(s)}
                 active={filters.skill === s}
               />
             ))}
           </FilterGroup>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <FilterGroup label="Status" name="status" active={filters.status}>
-            {(["all", "draft", "published"] as const).map((s) => (
+          <FilterGroup labelEn="Status" labelPt="Status" name="status" active={filters.status}>
+            {(
+              [
+                { key: "all", en: "All", pt: "Todos" },
+                { key: "draft", en: "Draft", pt: "Rascunho" },
+                { key: "published", en: "Published", pt: "Publicado" },
+              ] as const
+            ).map((s) => (
               <FilterPill
-                key={s}
-                href={urlWith("status", s)}
-                label={s[0].toUpperCase() + s.slice(1)}
-                active={filters.status === s}
+                key={s.key}
+                href={urlWith("status", s.key)}
+                labelEn={s.en}
+                labelPt={s.pt}
+                active={filters.status === s.key}
               />
             ))}
           </FilterGroup>
@@ -381,13 +410,30 @@ export default async function TeacherLessonsPage({
       ) : unified.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-border bg-card/40 p-12 text-center">
           <Sparkles className="mx-auto h-10 w-10 text-muted-foreground" />
-          <p className="mt-3 text-sm font-medium">No lessons match</p>
+          <p className="mt-3 text-sm font-medium">
+            <T en="No lessons match" pt="Nenhuma lição corresponde" />
+          </p>
           <p className="mt-1 text-xs text-muted-foreground">
-            Adjust the filters above, or{" "}
-            <Link href="/teacher/lessons/new" className="underline hover:text-foreground">
-              create a new lesson
-            </Link>
-            .
+            <T
+              en={
+                <>
+                  Adjust the filters above, or{" "}
+                  <Link href="/teacher/lessons/new" className="underline hover:text-foreground">
+                    create a new lesson
+                  </Link>
+                  .
+                </>
+              }
+              pt={
+                <>
+                  Ajuste os filtros acima ou{" "}
+                  <Link href="/teacher/lessons/new" className="underline hover:text-foreground">
+                    crie uma nova lição
+                  </Link>
+                  .
+                </>
+              }
+            />
           </p>
         </div>
       ) : (
@@ -561,10 +607,12 @@ function BankItemsList({
 }
 
 function FilterGroup({
-  label,
+  labelEn,
+  labelPt,
   children,
 }: {
-  label: string;
+  labelEn: string;
+  labelPt: string;
   name: string;
   active: string | undefined;
   children: React.ReactNode;
@@ -572,7 +620,7 @@ function FilterGroup({
   return (
     <div className="flex min-w-0 flex-wrap items-center gap-1.5">
       <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-        {label}
+        <T en={labelEn} pt={labelPt} />
       </span>
       <div className="flex flex-wrap gap-1">{children}</div>
     </div>
@@ -581,11 +629,13 @@ function FilterGroup({
 
 function FilterPill({
   href,
-  label,
+  labelEn,
+  labelPt,
   active,
 }: {
   href: string;
-  label: string;
+  labelEn: string;
+  labelPt: string;
   active?: boolean;
 }) {
   return (
@@ -597,9 +647,30 @@ function FilterPill({
           : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground"
       }`}
     >
-      {label}
+      <T en={labelEn} pt={labelPt} />
     </Link>
   );
+}
+
+function skillPt(skill: string): string {
+  switch (skill) {
+    case "grammar":
+      return "Gramática";
+    case "speaking":
+      return "Fala";
+    case "vocabulary":
+      return "Vocabulário";
+    case "listening":
+      return "Escuta";
+    case "reading":
+      return "Leitura";
+    case "writing":
+      return "Escrita";
+    case "dialog":
+      return "Diálogo";
+    default:
+      return skill[0].toUpperCase() + skill.slice(1);
+  }
 }
 
 // These helpers assume the filter state is URL-based.
