@@ -359,7 +359,16 @@ export default async function SysadminPage() {
                   </td>
                 </tr>
               ) : null}
-              {allStudents.map((s) => (
+              {[...allStudents]
+                .sort((a, b) =>
+                  (a.fullName ?? "")
+                    .trim()
+                    .localeCompare((b.fullName ?? "").trim(), "pt-BR", {
+                      sensitivity: "base",
+                      numeric: true,
+                    }),
+                )
+                .map((s) => (
                 <tr key={s.id} className="border-t">
                   <td className="px-4 py-2 font-medium">
                     {titleCase(s.fullName)}
@@ -375,11 +384,27 @@ export default async function SysadminPage() {
                   <td className="px-4 py-2 text-xs text-muted-foreground">
                     {s.email ?? "—"}
                   </td>
-                  <td className="px-4 py-2 text-right text-xs text-muted-foreground tabular-nums">
-                    {s.addedAt.slice(0, 10)}
+                  <td className="px-4 py-2 text-right text-xs text-muted-foreground tabular-nums whitespace-nowrap">
+                    {new Date(s.addedAt).toLocaleString("pt-BR", {
+                      timeZone: "America/Sao_Paulo",
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })}
                   </td>
-                  <td className="px-4 py-2 text-right text-xs text-muted-foreground tabular-nums">
-                    {s.lastActivityAt ? s.lastActivityAt.slice(0, 10) : "—"}
+                  <td className="px-4 py-2 text-right text-xs text-muted-foreground tabular-nums whitespace-nowrap">
+                    {s.lastActivityAt
+                      ? new Date(s.lastActivityAt).toLocaleString("pt-BR", {
+                          timeZone: "America/Sao_Paulo",
+                          day: "2-digit",
+                          month: "2-digit",
+                          year: "numeric",
+                          hour: "2-digit",
+                          minute: "2-digit",
+                        })
+                      : "—"}
                   </td>
                 </tr>
               ))}
