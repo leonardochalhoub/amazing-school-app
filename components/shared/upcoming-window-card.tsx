@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useI18n } from "@/lib/i18n/context";
 import { updateMyUpcomingWindow } from "@/lib/actions/profile";
 
 interface Props {
@@ -24,10 +25,34 @@ interface Props {
  * many days ahead the popup scans for scheduled classes.
  */
 export function UpcomingWindowCard({ initial }: Props) {
+  const { locale } = useI18n();
   const [days, setDays] = useState<number>(
     Number.isFinite(initial) ? initial : 5,
   );
   const [pending, startTransition] = useTransition();
+
+  const pt = locale === "pt-BR";
+  const t = pt
+    ? {
+        title: "Notificações de aulas",
+        desc:
+          "Quantos dias à frente o pop-up deve olhar para as próximas aulas. Padrão 5. Use 0 para desativar o pop-up.",
+        label: "Dias",
+        save: "Salvar",
+        off: "Notificações desativadas",
+        on: (n: number) =>
+          `Notificações para os próximos ${n} dia${n === 1 ? "" : "s"}`,
+      }
+    : {
+        title: "Class alerts",
+        desc:
+          "How many days ahead the popup looks for upcoming classes. Default 5. Use 0 to turn the popup off.",
+        label: "Days",
+        save: "Save",
+        off: "Alerts disabled",
+        on: (n: number) =>
+          `Alerts on for the next ${n} day${n === 1 ? "" : "s"}`,
+      };
 
   function save() {
     const n = Math.max(0, Math.min(30, Math.round(days)));
@@ -37,11 +62,7 @@ export function UpcomingWindowCard({ initial }: Props) {
         toast.error(res.error);
         return;
       }
-      toast.success(
-        n === 0
-          ? "Notificações desativadas"
-          : `Notificações para os próximos ${n} dia${n === 1 ? "" : "s"}`,
-      );
+      toast.success(n === 0 ? t.off : t.on(n));
     });
   }
 
@@ -50,17 +71,14 @@ export function UpcomingWindowCard({ initial }: Props) {
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-base">
           <BellRing className="h-4 w-4 text-primary" />
-          Notificações de aulas · Class alerts
+          {t.title}
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-3">
-        <p className="text-xs text-muted-foreground">
-          Quantos dias à frente o pop-up deve olhar para as próximas
-          aulas. Padrão 5. Use 0 para desativar o pop-up.
-        </p>
+        <p className="text-xs text-muted-foreground">{t.desc}</p>
         <div className="flex items-end gap-2">
           <div className="flex-1 space-y-1.5">
-            <Label htmlFor="upcoming-days">Dias · Days</Label>
+            <Label htmlFor="upcoming-days">{t.label}</Label>
             <Input
               id="upcoming-days"
               type="number"
@@ -83,7 +101,7 @@ export function UpcomingWindowCard({ initial }: Props) {
             ) : (
               <Save className="h-3.5 w-3.5" />
             )}
-            Salvar
+            {t.save}
           </Button>
         </div>
       </CardContent>
