@@ -8,7 +8,7 @@ export interface SpeakingStatsRow {
   fullName: string;
   classroomName: string | null;
   totalEvents: number;
-  totalMinutes: number;
+  totalSeconds: number;
   activeDays: number;
   eventsPerDay: number;
   firstAt: string | null;
@@ -183,14 +183,14 @@ export async function getTeacherSpeakingStats(): Promise<SpeakingStatsRow[]> {
     const bucket = aggMap.get(sid);
     if (!bucket) continue; // skip students with zero activity
     const days = bucket.days.size;
-    const minutes = Math.round(bucket.durationMs / 60_000);
+    const seconds = Math.round(bucket.durationMs / 1000);
     rows.push({
       studentId: sid,
       fullName: nameById.get(sid) ?? "Unknown",
       classroomName:
         classroomNameById.get(classroomByStudent.get(sid) ?? "") ?? null,
       totalEvents: bucket.total,
-      totalMinutes: minutes,
+      totalSeconds: seconds,
       activeDays: days,
       eventsPerDay:
         days > 0 ? Math.round((bucket.total / days) * 10) / 10 : 0,
@@ -227,13 +227,13 @@ export async function getAllSpeakingStats(): Promise<SpeakingStatsRow[]> {
     const bucket = aggMap.get(p.id);
     if (!bucket) continue;
     const days = bucket.days.size;
-    const minutes = Math.round(bucket.durationMs / 60_000);
+    const seconds = Math.round(bucket.durationMs / 1000);
     rows.push({
       studentId: p.id,
       fullName: p.full_name,
       classroomName: null,
       totalEvents: bucket.total,
-      totalMinutes: minutes,
+      totalSeconds: seconds,
       activeDays: days,
       eventsPerDay:
         days > 0 ? Math.round((bucket.total / days) * 10) / 10 : 0,

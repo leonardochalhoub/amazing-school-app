@@ -45,7 +45,7 @@ export function SpeakingStatsTable({ rows, linkStudents = true }: Props) {
         headDays: "Dias",
         headPerDay: "Eventos/dia",
         headEvents: "Eventos",
-        headMinutes: "Minutos",
+        headSeconds: "Segundos",
         headLast: "Último",
         showLess: "Mostrar menos",
         showAll: (n: number) => `Mostrar todos os ${n} alunos`,
@@ -58,7 +58,7 @@ export function SpeakingStatsTable({ rows, linkStudents = true }: Props) {
         headDays: "Days",
         headPerDay: "Events/day",
         headEvents: "Events",
-        headMinutes: "Minutes",
+        headSeconds: "Seconds",
         headLast: "Last",
         showLess: "Show less",
         showAll: (n: number) => `Show all ${n} students`,
@@ -88,7 +88,7 @@ export function SpeakingStatsTable({ rows, linkStudents = true }: Props) {
             <th className="px-3 py-2 text-right">{t.headDays}</th>
             <th className="px-3 py-2 text-right">{t.headPerDay}</th>
             <th className="px-3 py-2 text-right">{t.headEvents}</th>
-            <th className="px-3 py-2 text-right">{t.headMinutes}</th>
+            <th className="px-3 py-2 text-right">{t.headSeconds}</th>
             <th className="px-3 py-2 text-right whitespace-nowrap">
               {t.headLast}
             </th>
@@ -128,7 +128,7 @@ export function SpeakingStatsTable({ rows, linkStudents = true }: Props) {
                 {r.totalEvents.toLocaleString(pt ? "pt-BR" : "en-US")}
               </td>
               <td className="px-3 py-2 text-right tabular-nums">
-                {r.totalMinutes.toLocaleString(pt ? "pt-BR" : "en-US")}
+                {r.totalSeconds.toLocaleString(pt ? "pt-BR" : "en-US")}
               </td>
               <td className="px-3 py-2 text-right text-xs text-muted-foreground whitespace-nowrap">
                 {fmtDate(r.lastAt)}
