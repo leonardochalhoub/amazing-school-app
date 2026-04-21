@@ -178,12 +178,16 @@ export function Navbar({
         </Link>
 
         {/* Center: either the school logo (when set) OR the nav pills.
-            When a logo is present, pills move to their own row below.
-            The logo lives in a regular flex child (NOT absolute) so it
-            automatically shrinks between the brand and the right-hand
-            controls on narrow screens instead of overlapping them. */}
+            The logo is absolutely positioned so it centers against the
+            viewport, independent of how wide the brand + right-hand
+            controls happen to be. `max-w-[45%]` + a sidebar-aware
+            padding window prevents it from overlapping either cluster
+            on narrow screens. */}
         {schoolLogoPath ? (
-          <div className="pointer-events-none flex flex-1 min-w-0 items-center justify-center px-2">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex max-w-[45%] items-center justify-center"
+          >
             <img
               src={schoolLogoPath}
               alt="School logo"
