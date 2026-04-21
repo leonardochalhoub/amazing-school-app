@@ -153,7 +153,12 @@ export interface CurriculumReportData {
     byType: CurriculumBreakdownRow[];
     bySkill: CurriculumBreakdownRow[];
     byCefr: Array<{ cefr: string; assigned: number; completed: number }>;
-    byMonth: Array<{ month: string; lessons: number; music: number }>;
+    byMonth: Array<{
+      month: string;
+      lessons: number;
+      music: number;
+      live: number;
+    }>;
   };
   generatedAt: string;
 }
@@ -394,7 +399,10 @@ export async function getStudentCurriculumReport(
 
   // Stats. CEFR already aggregated at the entry level (A1/A2/B1/...).
   const byCefrMap = new Map<string, { assigned: number; completed: number }>();
-  const byMonthMap = new Map<string, { lessons: number; music: number }>();
+  const byMonthMap = new Map<
+    string,
+    { lessons: number; music: number; live: number }
+  >();
   // New: breakdowns by Type (Lição / Música) and by Skill category
   // (grammar, speaking, etc.). Each carries count, completed, XP,
   // and estimated time — the "Resumo" section on the print page
@@ -451,8 +459,13 @@ export async function getStudentCurriculumReport(
       totalEstimatedMinutes += e.estimatedMinutes ?? 0;
       if (e.completedAt) {
         const m = e.completedAt.slice(0, 7);
-        const bucket = byMonthMap.get(m) ?? { lessons: 0, music: 0 };
+        const bucket = byMonthMap.get(m) ?? {
+          lessons: 0,
+          music: 0,
+          live: 0,
+        };
         if (e.kind === "music") bucket.music += 1;
+        else if (e.kind === "live") bucket.live += 1;
         else bucket.lessons += 1;
         byMonthMap.set(m, bucket);
       }

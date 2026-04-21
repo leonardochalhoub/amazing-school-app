@@ -30,6 +30,8 @@ import {
 import { MyClassesPanel } from "@/components/student/my-classes-panel";
 import { AssignmentsGrid } from "@/components/student/assignments-grid";
 import { listOwnHistory } from "@/lib/actions/student-history";
+import { getLiveClassSummaryForRoster } from "@/lib/actions/live-class-hours";
+import { formatHoursMinutes } from "@/lib/actions/student-history-types";
 import { ListeningFeedbackPanel } from "@/components/student/listening-feedback-panel";
 import { listStudentListeningResponses } from "@/lib/actions/listening-responses";
 
@@ -84,7 +86,7 @@ export default async function StudentHome() {
 
   let { data: rosterSelf } = await admin
     .from("roster_students")
-    .select("id, age_group, gender, has_avatar, level")
+    .select("id, age_group, gender, has_avatar, level, classroom_id")
     .eq("auth_user_id", user.id)
     .is("deleted_at", null)
     .maybeSingle();
@@ -95,7 +97,7 @@ export default async function StudentHome() {
   if (!rosterSelf && user.email) {
     const { data: byEmail } = await admin
       .from("roster_students")
-      .select("id, age_group, gender, has_avatar, level")
+      .select("id, age_group, gender, has_avatar, level, classroom_id")
       .eq("email", user.email)
       .is("auth_user_id", null)
       .is("deleted_at", null)
@@ -323,6 +325,7 @@ export default async function StudentHome() {
       start: `${key}-01`,
       lessons: 0,
       music: 0,
+      live: 0,
     });
   }
 
@@ -355,6 +358,38 @@ export default async function StudentHome() {
     if (idx === undefined) continue;
     if (a.kind === "music") activityBuckets[idx].music++;
     else activityBuckets[idx].lessons++;
+  }
+
+  // Live classes — count Done classes (with a duration) toward the
+  // student's monthly activity. Pulled both via per-roster row and
+  // classroom-wide rows so a class scheduled for the whole class
+  // counts for every member.
+  if (rosterSelf?.id) {
+    type LiveRow = { event_date: string; duration_minutes: number | null };
+    const [perRes, classRes] = await Promise.all([
+      admin
+        .from("student_history")
+        .select("event_date, duration_minutes")
+        .eq("roster_student_id", rosterSelf.id)
+        .not("duration_minutes", "is", null),
+      rosterSelf?.classroom_id
+        ? admin
+            .from("student_history")
+            .select("event_date, duration_minutes")
+            .eq("classroom_id", rosterSelf.classroom_id)
+            .is("roster_student_id", null)
+            .not("duration_minutes", "is", null)
+        : Promise.resolve({ data: [] as LiveRow[] }),
+    ]);
+    const liveRows = [
+      ...((perRes.data ?? []) as LiveRow[]),
+      ...((classRes.data ?? []) as LiveRow[]),
+    ];
+    for (const lr of liveRows) {
+      const idx = bucketIndexByKey.get(monthKey(new Date(lr.event_date)));
+      if (idx === undefined) continue;
+      activityBuckets[idx].live = (activityBuckets[idx].live ?? 0) + 1;
+    }
   }
 
   // Fetch a larger window so the MyClassesPanel "Show all" toggle has

@@ -31,7 +31,12 @@ const PIE_PALETTE = [
 ];
 
 interface MonthlyBarsProps {
-  data: Array<{ month: string; lessons: number; music: number }>;
+  data: Array<{
+    month: string;
+    lessons: number;
+    music: number;
+    live?: number;
+  }>;
   width?: number;
   height?: number;
 }
@@ -69,6 +74,12 @@ export function MonthlyCompletionsChart({
       />
       <Bar dataKey="lessons" stackId="a" fill={BAR_PALETTE[0]} name="Lições" />
       <Bar dataKey="music" stackId="a" fill={BAR_PALETTE[1]} name="Músicas" />
+      <Bar
+        dataKey="live"
+        stackId="a"
+        fill="#10b981"
+        name="Aulas ao vivo"
+      />
     </BarChart>
   );
 }

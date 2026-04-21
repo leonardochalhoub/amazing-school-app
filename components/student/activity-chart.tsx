@@ -9,6 +9,8 @@ export interface ActivityBucket {
   lessons: number;
   /** Music exercises completed in this bucket. */
   music: number;
+  /** Live classes held in this bucket (Done with duration_minutes set). */
+  live: number;
 }
 
 interface Props {
@@ -22,19 +24,27 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
     null,
   );
 
-  const { max, totalLessons, totalMusic, activeDays } = useMemo(() => {
+  const { max, totalLessons, totalMusic, totalLive, activeDays } = useMemo(() => {
     let m = 0;
     let l = 0;
     let mu = 0;
+    let lv = 0;
     let a = 0;
     for (const b of buckets) {
-      const t = b.lessons + b.music;
+      const t = b.lessons + b.music + (b.live ?? 0);
       if (t > m) m = t;
       if (t > 0) a++;
       l += b.lessons;
       mu += b.music;
+      lv += b.live ?? 0;
     }
-    return { max: m, totalLessons: l, totalMusic: mu, activeDays: a };
+    return {
+      max: m,
+      totalLessons: l,
+      totalMusic: mu,
+      totalLive: lv,
+      activeDays: a,
+    };
   }, [buckets]);
 
   if (buckets.length === 0) {
@@ -117,6 +127,10 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
             className="bg-pink-500"
             label={`Music · ${totalMusic}`}
           />
+          <LegendSwatch
+            className="bg-emerald-500"
+            label={`Live Classes · ${totalLive}`}
+          />
           <span className="tabular-nums">
             Peak · {max}/
             {granularity === "month"
@@ -167,15 +181,16 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
           }}
         >
           {buckets.map((b, i) => {
-            const total = b.lessons + b.music;
+            const live = b.live ?? 0;
+            const total = b.lessons + b.music + live;
             if (total === 0) {
               return <div key={i} aria-hidden className="h-full" />;
             }
-            // Stacked bar: lessons anchor the ground floor, music
-            // stacks on top. Each unit is unitPx (~27px at yMax=4)
-            // so a 1-event day is a stub and a 4-event day tops out.
+            // Stacked bar order from the bottom up:
+            // lessons (indigo) → music (pink) → live (emerald).
             const lessonPx = b.lessons * unitPx;
             const musicPx = b.music * unitPx;
+            const livePx = live * unitPx;
             const isHover = hover?.i === i;
             return (
               <div
@@ -185,7 +200,7 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
                 onFocus={() => setHover({ b, i })}
                 onBlur={() => setHover(null)}
                 tabIndex={0}
-                title={`${formatBucket(b.start, granularity)} · ${b.lessons} lessons · ${b.music} music`}
+                title={`${formatBucket(b.start, granularity)} · ${b.lessons} lessons · ${b.music} music · ${live} live`}
                 className="group relative flex h-full flex-col justify-end"
               >
                 <div
@@ -203,6 +218,12 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
                     <div
                       className="w-full bg-pink-500"
                       style={{ height: `${musicPx}px` }}
+                    />
+                  ) : null}
+                  {livePx > 0 ? (
+                    <div
+                      className="w-full bg-emerald-500"
+                      style={{ height: `${livePx}px` }}
                     />
                   ) : null}
                 </div>
@@ -223,6 +244,10 @@ export function ActivityChart({ buckets, granularity = "month" }: Props) {
               <span className="inline-flex items-center gap-1">
                 <span className="inline-block h-2 w-2 rounded-sm bg-pink-500" />
                 {hover.b.music} music
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <span className="inline-block h-2 w-2 rounded-sm bg-emerald-500" />
+                {hover.b.live ?? 0} live
               </span>
             </div>
           </div>
