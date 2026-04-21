@@ -7,21 +7,17 @@ import type { CityPeoplePoint } from "@/lib/actions/teachers-map";
 
 // Plotly is heavy and client-only — dynamic import with ssr:false
 // so it never enters the server bundle and only loads when a user
-// actually opens /owner/sysadmin. We pair the geo-only plotly bundle
-// (~1.2MB vs 3MB+ for full plotly) via the factory pattern so the
-// chunk only carries the modules scattergeo actually needs.
+// actually opens /owner/sysadmin. Using the default react-plotly.js
+// which pulls in plotly.js — the geo bundle factory pattern had
+// initialization issues with certain Next.js + React 19 combos, and
+// the full bundle loads reliably. A ~700KB difference on a
+// rarely-visited owner surface is an acceptable trade.
 const Plot = dynamic(
-  async () => {
-    const [{ default: createPlotlyComponent }, plotlyModule] = await Promise.all([
-      import("react-plotly.js/factory"),
-      import("plotly.js-geo-dist-min"),
-    ]);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const Plotly = (plotlyModule as any).default ?? plotlyModule;
-    return createPlotlyComponent(Plotly) as unknown as React.ComponentType<
-      Record<string, unknown>
-    >;
-  },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  () =>
+    import("react-plotly.js").then(
+      (m) => m.default as unknown as React.ComponentType<Record<string, unknown>>,
+    ),
   {
     ssr: false,
     loading: () => (
@@ -90,10 +86,12 @@ function computeBounds(points: { lat: number; lng: number }[]): {
 }
 
 /**
- * Sequential palettes — monotonic so brighter/smaller → darker/bigger.
- *   · viridis : colorblind-safe (default)
- *   · blues   : classic single-hue ramp for viewers who prefer a
- *               simpler look
+ * Sequential palettes — every one monotonic, bright → dark as the
+ * count grows.
+ *   · viridis   : colorblind-safe (yellow → dark violet)
+ *   · grayscale : white → black
+ *   · greens    : white → dark green
+ *   · reds      : white → dark red (magma-ish)
  */
 const SCALES = {
   viridis: [
@@ -103,12 +101,24 @@ const SCALES = {
     [0.75, "#3b528b"],
     [1, "#440154"],
   ] as [number, string][],
-  blues: [
-    [0, "#deebf7"],
-    [0.25, "#9ecae1"],
-    [0.5, "#4292c6"],
-    [0.75, "#2171b5"],
-    [1, "#08306b"],
+  grayscale: [
+    [0, "#ffffff"],
+    [0.5, "#888888"],
+    [1, "#000000"],
+  ] as [number, string][],
+  greens: [
+    [0, "#f7fcf5"],
+    [0.25, "#c7e9c0"],
+    [0.5, "#74c476"],
+    [0.75, "#238b45"],
+    [1, "#00441b"],
+  ] as [number, string][],
+  reds: [
+    [0, "#fff5f0"],
+    [0.25, "#fcbba1"],
+    [0.5, "#fb6a4a"],
+    [0.75, "#cb181d"],
+    [1, "#67000d"],
   ] as [number, string][],
 };
 
@@ -306,34 +316,52 @@ export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
               ))}
             </div>
           ) : null}
-          {/* Palette toggle */}
+          {/* Palette toggle — 4 scales. Viridis is the colorblind-safe
+              default; the other three are single-hue ramps for
+              viewers who prefer a simpler look. */}
           <div className="inline-flex rounded-md border border-border bg-background p-0.5 text-xs">
-            <button
-              type="button"
-              onClick={() => setScale("viridis")}
-              className={`rounded px-3 py-1 font-medium transition-colors ${
-                scale === "viridis"
-                  ? "bg-foreground text-background"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-              title={
-                pt ? "Paleta segura para daltônicos" : "Colorblind-safe palette"
-              }
-            >
-              {pt ? "Daltônico" : "Colorblind-safe"}
-            </button>
-            <button
-              type="button"
-              onClick={() => setScale("blues")}
-              className={`rounded px-3 py-1 font-medium transition-colors ${
-                scale === "blues"
-                  ? "bg-foreground text-background"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-              title={pt ? "Tons de azul" : "Single-hue blues"}
-            >
-              {pt ? "Azul simples" : "Simple blues"}
-            </button>
+            {(
+              [
+                {
+                  k: "viridis",
+                  en: "Colorblind-safe",
+                  pt: "Daltônico",
+                  hint: pt ? "Viridis · amarelo → violeta" : "Viridis",
+                },
+                {
+                  k: "grayscale",
+                  en: "B/W",
+                  pt: "P/B",
+                  hint: pt ? "Branco → preto" : "White → black",
+                },
+                {
+                  k: "greens",
+                  en: "Green",
+                  pt: "Verde",
+                  hint: pt ? "Branco → verde escuro" : "White → dark green",
+                },
+                {
+                  k: "reds",
+                  en: "Red",
+                  pt: "Vermelho",
+                  hint: pt ? "Branco → vermelho escuro" : "White → dark red",
+                },
+              ] as const
+            ).map((opt) => (
+              <button
+                key={opt.k}
+                type="button"
+                onClick={() => setScale(opt.k)}
+                title={opt.hint}
+                className={`rounded px-3 py-1 font-medium transition-colors ${
+                  scale === opt.k
+                    ? "bg-foreground text-background"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {pt ? opt.pt : opt.en}
+              </button>
+            ))}
           </div>
         </div>
       </div>
