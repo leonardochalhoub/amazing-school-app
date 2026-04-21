@@ -60,8 +60,10 @@ export async function updateMyGender(
     .eq("id", user.id);
   if (error) return { error: error.message };
 
-  revalidatePath("/teacher/profile");
-  revalidatePath("/teacher");
+  // Revalidate the root layout so the navbar role pill flips
+  // immediately — otherwise the dashboard layout's cached render keeps
+  // serving "Professor" until the user navigates.
+  revalidatePath("/", "layout");
   return { success: true };
 }
 

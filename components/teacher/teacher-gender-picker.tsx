@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { Check, Loader2 } from "lucide-react";
 import { updateMyGender } from "@/lib/actions/profile";
@@ -17,6 +18,7 @@ interface Props {
  * the role label.
  */
 export function TeacherGenderPicker({ initial }: Props) {
+  const router = useRouter();
   const { locale } = useI18n();
   const pt = locale === "pt-BR";
   const [value, setValue] = useState<"female" | "male" | null>(initial);
@@ -34,6 +36,10 @@ export function TeacherGenderPicker({ initial }: Props) {
         return;
       }
       toast.success(pt ? "Salvo" : "Saved");
+      // Force the root layout to re-render so the navbar role pill
+      // picks up the new gender (otherwise the cached server render
+      // keeps showing PROFESSOR until next navigation).
+      router.refresh();
     });
   }
 
