@@ -25,6 +25,8 @@ import {
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { StudentInviteButton } from "@/components/teacher/student-invite-button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { StudentReportsCard } from "@/components/reports/student-reports-card";
 import { listPaidInvoicesForStudent } from "@/lib/actions/reports";
 
@@ -189,7 +191,10 @@ export default async function RosterStudentDetailPage({
             href={`/teacher/students/${id}/view`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-3 py-2 text-sm font-medium transition-colors hover:border-primary/50 hover:bg-primary/5"
+            className={cn(
+              buttonVariants({ variant: "outline", size: "sm" }),
+              "gap-1.5",
+            )}
           >
             <User className="h-4 w-4" />
             <T

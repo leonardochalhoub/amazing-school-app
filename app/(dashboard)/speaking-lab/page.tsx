@@ -8,6 +8,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import type { SpeakingDrill } from "@/components/speaking-lab/drill-client";
 import type { SpeakingDialog } from "@/components/speaking-lab/dialog-runner";
 import { SpeakingLabTabs } from "@/components/speaking-lab/speaking-lab-tabs";
+import { SayTranslateBox } from "@/components/speaking-lab/say-translate-box";
 import { listAvailableCustomDialogs } from "@/lib/actions/custom-dialogs";
 import { listAvailableCustomDrills } from "@/lib/actions/custom-drills";
 
@@ -114,6 +115,10 @@ export default async function SpeakingLabPage() {
       </header>
 
       <SpeakingLabTabs drills={drills} dialogs={mergedDialogs} />
+
+      <section className="space-y-2">
+        <SayTranslateBox />
+      </section>
     </div>
   );
 }
