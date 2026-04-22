@@ -775,7 +775,7 @@ export async function getSysadminOverview(): Promise<
   ] = await Promise.all([
     admin
       .from("session_heartbeats")
-      .select("user_id, seconds")
+      .select("user_id, seconds, at")
       .limit(500_000),
     // user_real_minutes_v (migrations 061 + 066) sums every real
     // time source per user in one view: heartbeat_minutes +
@@ -1103,28 +1103,35 @@ export async function getSysadminOverview(): Promise<
     .select("student_id, activity_date")
     .order("activity_date", { ascending: false })
     .limit(500_000);
-  const nowIso = new Date().toISOString();
+  // Real timestamps come from session_heartbeats.at and
+  // messages.created_at. daily_activity gives us only a DATE, and
+  // the earlier attempts to promote it (T00:00:00Z / T23:59:59Z /
+  // cap-at-now) all produced misleading wall-clock values for
+  // today's row (e.g. Paulo Roberto showing "11:40" just because
+  // the page was loaded at 11:40 — his real last heartbeat was at
+  // 11:07). Skip daily_activity as a lastActivity source; fall
+  // back to its YYYY-MM-DD only when the user has no heartbeat or
+  // message timestamp at all, and tag it visually in the UI (the
+  // current renderer already formats ISO → locale string, so a
+  // T12:00:00Z midday anchor reads as "DD/MM/YYYY 09:00" in BRT —
+  // fine as a "we know it was this day, don't know the hour"
+  // proxy, and past-date-only rows never shift into the future).
+  for (const h of (heartbeatRes.data ?? []) as Array<{
+    user_id: string;
+    seconds: number;
+    at: string;
+  }>) {
+    bumpLastActivity(h.user_id, h.at);
+  }
+  // daily_activity fallback — midday UTC of the date as a stable
+  // anchor. We only use this if nothing else has been recorded yet,
+  // so users with actual heartbeats win.
   for (const a of (allActivityRes ?? []) as Array<{
     student_id: string;
     activity_date: string;
   }>) {
-    // activity_date is a DATE; promote to end-of-day ISO so it
-    // sorts correctly against the timestamptz columns below. Cap
-    // at `now` so a row with today's date doesn't end up
-    // displayed ~24 hours in the future (the bug Paulo Roberto
-    // showed: his "last active" read 20:59 of today at 11:32
-    // because T23:59:59Z renders as 20:59 BRT).
-    const endOfDay = `${a.activity_date}T23:59:59Z`;
-    bumpLastActivity(a.student_id, endOfDay > nowIso ? nowIso : endOfDay);
-  }
-  for (const h of (heartbeatRes.data ?? []) as Array<{
-    user_id: string;
-    seconds: number;
-  }>) {
-    // heartbeatRes was selected without `at` — we can't use it for
-    // lastActivity directly. Ignored here; daily_activity and
-    // messages cover the common case.
-    void h;
+    if (lastActivityByUser.has(a.student_id)) continue;
+    bumpLastActivity(a.student_id, `${a.activity_date}T12:00:00Z`);
   }
   for (const m of (aiMessagesRes.data ?? []) as Array<{
     conversation_id: string;
