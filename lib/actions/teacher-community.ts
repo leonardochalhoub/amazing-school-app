@@ -23,6 +23,7 @@ export interface CommunityPostRow {
     author_id: string;
     author_name: string | null;
     author_location: string | null;
+    author_avatar_url: string | null;
     body: string;
     created_at: string;
   }>;
@@ -147,6 +148,32 @@ export async function listCommunityPosts(opts?: {
     commentsByPost.set(c.post_id, arr);
   }
 
+  // Avatars live in the private `avatars` bucket, so we sign each
+  // author's image with the admin client here. RLS on the bucket
+  // lets only classmates + teachers read peer avatars; the community
+  // feed is cross-classroom, so we bypass that via the service role.
+  const signedAvatarByUser = new Map<string, string>();
+  const authorsWithAvatar = Array.from(profileById.entries()).filter(
+    ([, p]) => (p.avatar_url ?? "").length > 0,
+  );
+  if (authorsWithAvatar.length > 0) {
+    const signed = await Promise.all(
+      authorsWithAvatar.map(async ([id]) => {
+        try {
+          const { data } = await admin.storage
+            .from("avatars")
+            .createSignedUrl(`${id}.webp`, 3600);
+          return [id, data?.signedUrl ?? null] as const;
+        } catch {
+          return [id, null] as const;
+        }
+      }),
+    );
+    for (const [id, url] of signed) {
+      if (url) signedAvatarByUser.set(id, url);
+    }
+  }
+
   return rows.map((r) => {
     const p = profileById.get(r.author_id);
     return {
@@ -154,7 +181,7 @@ export async function listCommunityPosts(opts?: {
       author_id: r.author_id,
       author_name: p?.full_name ?? null,
       author_location: p?.location ?? null,
-      author_avatar_url: p?.avatar_url ?? null,
+      author_avatar_url: signedAvatarByUser.get(r.author_id) ?? null,
       author_role:
         p?.role === "teacher" || p?.role === "owner" ? p.role : null,
       body: r.body,
@@ -172,6 +199,7 @@ export async function listCommunityPosts(opts?: {
           author_id: c.author_id,
           author_name: cp?.full_name ?? null,
           author_location: cp?.location ?? null,
+          author_avatar_url: signedAvatarByUser.get(c.author_id) ?? null,
           body: c.body,
           created_at: c.created_at,
         };

@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { Users2 } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { resolveMyAvatarUrl } from "@/lib/supabase/avatar-resolver";
 import { isTeacherRole } from "@/lib/auth/roles";
 import { listCommunityPosts } from "@/lib/actions/teacher-community";
 import { CommunityFeed } from "@/components/teacher/community-feed";
@@ -27,11 +28,15 @@ export default async function TeacherCommunityPage() {
     .maybeSingle();
   if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/student");
 
-  const initialPosts = await listCommunityPosts({ limit: 10 });
+  const [initialPosts, myAvatar] = await Promise.all([
+    listCommunityPosts({ limit: 10 }),
+    resolveMyAvatarUrl(supabase, user.id),
+  ]);
   const me = {
     id: user.id,
     name: (profile as { full_name?: string | null } | null)?.full_name ?? null,
     location: (profile as { location?: string | null } | null)?.location ?? null,
+    avatarUrl: myAvatar,
   };
 
   return (

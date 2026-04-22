@@ -27,7 +27,12 @@ import { useI18n } from "@/lib/i18n/context";
 
 interface Props {
   initialPosts: CommunityPostRow[];
-  me: { id: string; name: string | null; location: string | null };
+  me: {
+    id: string;
+    name: string | null;
+    location: string | null;
+    avatarUrl: string | null;
+  };
 }
 
 function initials(name: string | null | undefined): string {
@@ -37,6 +42,35 @@ function initials(name: string | null | undefined): string {
     (parts[0]?.[0] ?? "").toUpperCase() +
     (parts[parts.length - 1]?.[0] ?? "").toUpperCase()
   ).slice(0, 2);
+}
+
+function Avatar({
+  src,
+  name,
+  size = "md",
+}: {
+  src: string | null | undefined;
+  name: string | null;
+  size?: "sm" | "md";
+}) {
+  const dim = size === "sm" ? "h-8 w-8 text-[10px]" : "h-10 w-10 text-xs";
+  if (src) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={src}
+        alt={name ?? ""}
+        className={`${dim} shrink-0 rounded-full object-cover`}
+      />
+    );
+  }
+  return (
+    <div
+      className={`${dim} flex shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 via-pink-500 to-violet-500 font-bold text-white`}
+    >
+      {initials(name)}
+    </div>
+  );
 }
 
 function formatRelative(iso: string, pt: boolean): string {
@@ -156,9 +190,7 @@ export function CommunityFeed({ initialPosts, me }: Props) {
       <Card className="overflow-hidden border-primary/30 bg-gradient-to-br from-primary/5 via-transparent to-fuchsia-500/5">
         <CardContent className="space-y-3 p-4">
           <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-fuchsia-500 text-xs font-bold text-white">
-              {initials(me.name)}
-            </div>
+            <Avatar src={me.avatarUrl} name={me.name} />
             <div className="min-w-0">
               <p className="truncate text-sm font-semibold">
                 {me.name ?? (pt ? "Você" : "You")}
@@ -215,9 +247,7 @@ export function CommunityFeed({ initialPosts, me }: Props) {
               <Card>
                 <CardContent className="space-y-3 p-4">
                   <div className="flex items-start gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 via-pink-500 to-violet-500 text-xs font-bold text-white">
-                      {initials(p.author_name)}
-                    </div>
+                    <Avatar src={p.author_avatar_url} name={p.author_name} />
                     <div className="min-w-0 flex-1">
                       <div className="flex flex-wrap items-center gap-2">
                         <p className="truncate text-sm font-semibold">
@@ -296,19 +326,26 @@ export function CommunityFeed({ initialPosts, me }: Props) {
                   {p.comments.length > 0 ? (
                     <ul className="space-y-2 border-l-2 border-border/60 pl-3">
                       {p.comments.map((c) => (
-                        <li key={c.id} className="text-xs">
-                          <p className="text-[11px] font-semibold">
-                            {c.author_name ?? (pt ? "Professor" : "Teacher")}{" "}
-                            {c.author_location ? (
-                              <span className="text-[10px] font-normal text-muted-foreground">
-                                · {c.author_location}
+                        <li key={c.id} className="flex gap-2 text-xs">
+                          <Avatar
+                            src={c.author_avatar_url}
+                            name={c.author_name}
+                            size="sm"
+                          />
+                          <div className="min-w-0 flex-1">
+                            <p className="text-[11px] font-semibold">
+                              {c.author_name ?? (pt ? "Professor" : "Teacher")}{" "}
+                              {c.author_location ? (
+                                <span className="text-[10px] font-normal text-muted-foreground">
+                                  · {c.author_location}
+                                </span>
+                              ) : null}
+                              <span className="ml-1 text-[10px] font-normal text-muted-foreground">
+                                · {formatRelative(c.created_at, pt)}
                               </span>
-                            ) : null}
-                            <span className="ml-1 text-[10px] font-normal text-muted-foreground">
-                              · {formatRelative(c.created_at, pt)}
-                            </span>
-                          </p>
-                          <p className="whitespace-pre-wrap">{c.body}</p>
+                            </p>
+                            <p className="whitespace-pre-wrap">{c.body}</p>
+                          </div>
                         </li>
                       ))}
                     </ul>
