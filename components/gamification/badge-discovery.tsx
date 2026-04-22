@@ -10,7 +10,7 @@ import {
   type BadgeTier,
   type BadgeTheme,
 } from "@/lib/gamification/config";
-import { badgeFlavor } from "@/lib/gamification/badge-flavors";
+import { translateBadge } from "@/lib/gamification/badge-i18n";
 import type { BadgeProgress } from "@/lib/actions/badge-progress";
 
 interface Props {
@@ -330,10 +330,14 @@ function BadgeCard({
         year: "numeric",
       })
     : null;
-  // Evocative hover copy from badge-flavors.ts; null-safe — fall
-  // back to the description so every card still has a tooltip.
-  const flavor = badgeFlavor(def.type, pt ? "pt-BR" : "en");
-  const hoverText = flavor ? `${def.name} — ${flavor}` : def.description;
+  // Locale-aware name + description. Hover shows the plain
+  // description — the functional "what do I need to do" string
+  // (e.g. "5 students added" / "5 alunos adicionados").
+  const text = translateBadge(def.type, pt ? "pt-BR" : "en", {
+    name: def.name,
+    description: def.description,
+  });
+  const hoverText = text.description;
 
   if (earned) {
     return (
@@ -348,8 +352,8 @@ function BadgeCard({
               {def.icon}
             </span>
             <div>
-              <p className="font-semibold leading-tight">{def.name}</p>
-              <p className="mt-0.5 text-[11px] opacity-90">{def.description}</p>
+              <p className="font-semibold leading-tight">{text.name}</p>
+              <p className="mt-0.5 text-[11px] opacity-90">{text.description}</p>
               {earnedDate ? (
                 <p className="mt-2 text-[10px] uppercase tracking-wider opacity-75">
                   {pt ? "Conquistada em" : "Earned"} {earnedDate}
@@ -381,10 +385,10 @@ function BadgeCard({
           </span>
           <div className="min-w-0">
             <p className="font-semibold leading-tight text-muted-foreground">
-              {def.name}
+              {text.name}
             </p>
             <p className="mt-0.5 text-[11px] text-muted-foreground/80">
-              {def.description}
+              {text.description}
             </p>
             <p className="mt-2 text-[11px] font-medium text-foreground/80">
               {pt ? "Como conseguir: " : "How to earn: "}

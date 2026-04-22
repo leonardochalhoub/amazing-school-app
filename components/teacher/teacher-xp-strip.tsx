@@ -1,8 +1,7 @@
 import { Zap } from "lucide-react";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getLevel, getXpForNextLevel } from "@/lib/gamification/engine";
-import { BADGE_BY_TYPE } from "@/lib/gamification/config";
-import { BADGE_FLAVORS } from "@/lib/gamification/badge-flavors";
+import { BadgeChip } from "@/components/gamification/badge-chip";
 import { T } from "@/components/reports/t";
 
 /**
@@ -95,27 +94,13 @@ export async function TeacherXpStrip({ teacherId }: Props) {
             feedback — keeps this strip visually clean. */}
         {badges.length > 0 ? (
           <div className="flex flex-wrap items-center gap-1.5">
-            {badges.map((b) => {
-              const def = BADGE_BY_TYPE[b.badge_type];
-              if (!def) return null;
-              // Server component — no useI18n here. Ship the English
-              // flavor in the tooltip; the discovery page (client
-              // component) localises per locale.
-              const flavor = BADGE_FLAVORS[def.type];
-              const hover = flavor
-                ? `${def.name} — ${flavor.en}`
-                : `${def.name} · ${def.description}`;
-              return (
-                <span
-                  key={b.badge_type}
-                  title={hover}
-                  className={`inline-flex items-center gap-1 rounded-full bg-gradient-to-br ${def.gradient} ${def.glow} px-2.5 py-1 text-[11px] font-semibold text-white`}
-                >
-                  <span aria-hidden>{def.icon}</span>
-                  <span>{def.name}</span>
-                </span>
-              );
-            })}
+            {/* Delegating to BadgeChip (client component) so the
+                locale context drives translated name + hover
+                description without needing SSR translation in this
+                server component. */}
+            {badges.map((b) => (
+              <BadgeChip key={b.badge_type} type={b.badge_type} />
+            ))}
           </div>
         ) : (
           <p className="text-[11px] text-muted-foreground">
