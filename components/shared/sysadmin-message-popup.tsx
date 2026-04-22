@@ -11,6 +11,7 @@ import {
   markThreadRead,
   rejectReviewThread,
   approveSuggestedUpdate,
+  rejectSuggestedUpdate,
 } from "@/lib/actions/sysadmin-messages";
 import type { SysadminMessageWithMeta } from "@/lib/actions/sysadmin-messages";
 import { useI18n } from "@/lib/i18n/context";
@@ -106,10 +107,18 @@ export function SysadminMessagePopup({
     if (!head) return;
     if (!rejectBody.trim()) return;
     startTransition(async () => {
-      const r = await rejectReviewThread({
-        thread_id: head.thread_id,
-        body: rejectBody,
-      });
+      // Sysadmin rejecting a teacher's update request → rejectSuggestedUpdate.
+      // Anyone else (teacher disagreeing with a sysadmin review) → rejectReviewThread.
+      const r =
+        isOwner && isUpdateRequest
+          ? await rejectSuggestedUpdate({
+              thread_id: head.thread_id,
+              body: rejectBody,
+            })
+          : await rejectReviewThread({
+              thread_id: head.thread_id,
+              body: rejectBody,
+            });
       if ("error" in r && r.error) {
         toast.error(r.error);
         return;
@@ -226,15 +235,27 @@ export function SysadminMessagePopup({
               </>
             ) : null}
             {isOwner && isUpdateRequest ? (
-              <Button
-                size="sm"
-                onClick={ownerApproveUpdate}
-                disabled={pending}
-                className="h-8 gap-1.5 bg-emerald-600 text-white hover:bg-emerald-700"
-              >
-                <Check className="h-4 w-4" />
-                {pt ? "Aprovar sugestão" : "Approve suggestion"}
-              </Button>
+              <>
+                <Button
+                  size="sm"
+                  onClick={ownerApproveUpdate}
+                  disabled={pending}
+                  className="h-8 gap-1.5 bg-emerald-600 text-white hover:bg-emerald-700"
+                >
+                  <Check className="h-4 w-4" />
+                  {pt ? "Aprovar" : "Approve"}
+                </Button>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() => setRejectingFor(head.thread_id)}
+                  disabled={pending}
+                  className="h-8 gap-1.5 border-red-500 text-red-600 hover:bg-red-50"
+                >
+                  <X className="h-4 w-4" />
+                  {pt ? "Rejeitar" : "Reject"}
+                </Button>
+              </>
             ) : null}
             <Link
               href={messagesHref}

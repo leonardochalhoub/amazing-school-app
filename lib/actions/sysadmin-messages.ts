@@ -77,7 +77,10 @@ import type {
 export interface SysadminMessageWithMeta extends SysadminMessageRow {
   sender_name: string | null;
   sender_email: string | null;
+  sender_location: string | null;
+  sender_role_actual: "owner" | "teacher" | "student" | null;
   recipient_name: string | null;
+  recipient_location: string | null;
   bank_entry_title: string | null;
 }
 
@@ -232,11 +235,22 @@ async function decorate(
   );
   const { data: profiles } = await admin
     .from("profiles")
-    .select("id, full_name")
+    .select("id, full_name, location, role")
     .in("id", userIds);
   const nameById = new Map<string, string>();
-  for (const p of (profiles ?? []) as Array<{ id: string; full_name: string | null }>) {
+  const locationById = new Map<string, string>();
+  const roleById = new Map<string, "owner" | "teacher" | "student">();
+  for (const p of (profiles ?? []) as Array<{
+    id: string;
+    full_name: string | null;
+    location: string | null;
+    role: string | null;
+  }>) {
     nameById.set(p.id, p.full_name ?? "");
+    if (p.location) locationById.set(p.id, p.location);
+    if (p.role === "owner" || p.role === "teacher" || p.role === "student") {
+      roleById.set(p.id, p.role);
+    }
   }
   const emailById = new Map<string, string>();
   for (const id of userIds) {
@@ -266,7 +280,10 @@ async function decorate(
     ...r,
     sender_name: nameById.get(r.sender_id) ?? null,
     sender_email: emailById.get(r.sender_id) ?? null,
+    sender_location: locationById.get(r.sender_id) ?? null,
+    sender_role_actual: roleById.get(r.sender_id) ?? null,
     recipient_name: nameById.get(r.recipient_id) ?? null,
+    recipient_location: locationById.get(r.recipient_id) ?? null,
     bank_entry_title: r.bank_entry_id ? titleById.get(r.bank_entry_id) ?? null : null,
   }));
 }
@@ -417,6 +434,59 @@ export async function suggestBankEntryUpdate(input: {
   revalidatePath("/teacher/bank");
   revalidatePath("/teacher/profile/messages");
   return { success: true, sent_to: ids.length };
+}
+
+/**
+ * Sysadmin rejects a teacher's update-request thread with a
+ * reason. Flips status to 'rejected' and sends a reply back to the
+ * requesting teacher so they see the motivation in their inbox.
+ */
+export async function rejectSuggestedUpdate(input: {
+  thread_id: string;
+  body: string;
+}): Promise<{ success: true } | { error: string }> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" };
+  const owner = await isOwner();
+  if (!owner) return { error: "Forbidden" };
+  if (!input.body.trim()) return { error: "Reason required." };
+  const admin = createAdminClient();
+
+  const { data: threadRows } = await admin
+    .from("sysadmin_messages")
+    .select("*")
+    .eq("thread_id", input.thread_id)
+    .order("created_at", { ascending: true });
+  const rows = (threadRows ?? []) as SysadminMessageRow[];
+  if (rows.length === 0) return { error: "Thread not found." };
+  const head = rows[0];
+
+  // Author of the request = the teacher who started the thread.
+  const requesterId = head.sender_id;
+
+  await admin.from("sysadmin_messages").insert({
+    thread_id: input.thread_id,
+    sender_id: user.id,
+    sender_role: "owner",
+    recipient_id: requesterId,
+    subject: null,
+    body: input.body.trim().slice(0, 4000),
+    bank_entry_id: head.bank_entry_id,
+    is_reply: true,
+    status: "rejected",
+  });
+
+  await admin
+    .from("sysadmin_messages")
+    .update({ status: "rejected" })
+    .eq("thread_id", input.thread_id);
+
+  revalidatePath("/teacher/profile/messages");
+  revalidatePath("/teacher/bank");
+  return { success: true };
 }
 
 /**

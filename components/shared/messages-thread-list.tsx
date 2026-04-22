@@ -2,7 +2,7 @@
 
 import { useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { Check, MessageSquare, X, Send } from "lucide-react";
+import { Check, MapPin, MessageSquare, X, Send } from "lucide-react";
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,7 @@ import {
   approveReviewThread,
   approveSuggestedUpdate,
   rejectReviewThread,
+  rejectSuggestedUpdate,
   replyInThread,
 } from "@/lib/actions/sysadmin-messages";
 import type { SysadminMessageWithMeta } from "@/lib/actions/sysadmin-messages";
@@ -19,6 +20,51 @@ interface Props {
   messages: SysadminMessageWithMeta[];
   myId: string;
   isOwner: boolean;
+}
+
+function roleLabel(
+  role: "owner" | "teacher" | "student" | null | undefined,
+  pt: boolean,
+): string {
+  if (role === "owner") return "Sysadmin";
+  if (role === "teacher") return pt ? "Professor" : "Teacher";
+  if (role === "student") return pt ? "Aluno" : "Student";
+  return "";
+}
+
+function SenderIdentity({
+  name,
+  location,
+  role,
+  pt,
+}: {
+  name: string | null | undefined;
+  location: string | null | undefined;
+  role: "owner" | "teacher" | "student" | null | undefined;
+  pt: boolean;
+}) {
+  const label = roleLabel(role, pt);
+  return (
+    <span className="inline-flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[11px]">
+      <span className="font-semibold text-foreground">
+        {name || (pt ? "Professor" : "Teacher")}
+      </span>
+      {location ? (
+        <span className="inline-flex items-center gap-0.5 text-[10px] font-normal text-muted-foreground">
+          <MapPin className="h-2.5 w-2.5" />
+          {location}
+        </span>
+      ) : null}
+      {label ? (
+        <Badge
+          variant={role === "owner" ? "default" : "outline"}
+          className="text-[9px]"
+        >
+          {label}
+        </Badge>
+      ) : null}
+    </span>
+  );
 }
 
 // Group messages into threads and sort each thread oldest → newest.
@@ -116,6 +162,24 @@ export function MessagesThreadList({ messages, myId, isOwner }: Props) {
     });
   }
 
+  function rejectSuggestion(threadId: string) {
+    const body = prompt(
+      pt
+        ? "Motivo da rejeição (será enviado ao professor):"
+        : "Rejection reason (sent to the teacher):",
+    );
+    if (!body?.trim()) return;
+    startTransition(async () => {
+      const r = await rejectSuggestedUpdate({ thread_id: threadId, body });
+      if ("error" in r && r.error) {
+        toast.error(r.error);
+        return;
+      }
+      toast.success(pt ? "Sugestão rejeitada." : "Suggestion rejected.");
+      router.refresh();
+    });
+  }
+
   if (threads.length === 0) {
     return (
       <div className="rounded-xl border border-dashed border-border p-8 text-center">
@@ -149,10 +213,20 @@ export function MessagesThreadList({ messages, myId, isOwner }: Props) {
           >
             <div className="flex items-start justify-between gap-2">
               <div className="min-w-0">
-                <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                  {head.sender_role} · {head.sender_name ?? head.sender_email ?? "—"}
-                  {" → "}
-                  {head.recipient_name ?? "—"}
+                <p className="flex flex-wrap items-center gap-x-1 gap-y-0.5 text-[11px]">
+                  <SenderIdentity
+                    name={head.sender_name ?? head.sender_email}
+                    location={head.sender_location}
+                    role={head.sender_role_actual ?? head.sender_role}
+                    pt={pt}
+                  />
+                  <span className="text-muted-foreground">→</span>
+                  <SenderIdentity
+                    name={head.recipient_name}
+                    location={head.recipient_location}
+                    role={null}
+                    pt={pt}
+                  />
                 </p>
                 {head.subject ? (
                   <p className="truncate text-base font-semibold">
@@ -208,10 +282,18 @@ export function MessagesThreadList({ messages, myId, isOwner }: Props) {
                   <ul className="mt-2 space-y-2 border-l-2 border-border pl-3">
                     {rows.slice(1).map((r) => (
                       <li key={r.id} className="text-xs">
-                        <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-                          {r.sender_role} · {new Date(r.created_at).toLocaleString()}
+                        <p className="flex flex-wrap items-center gap-1">
+                          <SenderIdentity
+                            name={r.sender_name ?? r.sender_email}
+                            location={r.sender_location}
+                            role={r.sender_role_actual ?? r.sender_role}
+                            pt={pt}
+                          />
+                          <span className="text-[10px] text-muted-foreground">
+                            · {new Date(r.created_at).toLocaleString()}
+                          </span>
                         </p>
-                        <p className="whitespace-pre-wrap">{r.body}</p>
+                        <p className="mt-0.5 whitespace-pre-wrap">{r.body}</p>
                       </li>
                     ))}
                   </ul>
@@ -243,15 +325,27 @@ export function MessagesThreadList({ messages, myId, isOwner }: Props) {
                 </>
               ) : null}
               {status === "pending" && isOwner && isUpdateRequest ? (
-                <Button
-                  size="sm"
-                  onClick={() => approveSuggestion(threadId)}
-                  disabled={pending}
-                  className="h-7 gap-1.5 bg-emerald-600 text-white hover:bg-emerald-700"
-                >
-                  <Check className="h-3.5 w-3.5" />
-                  {pt ? "Aprovar sugestão" : "Approve suggestion"}
-                </Button>
+                <>
+                  <Button
+                    size="sm"
+                    onClick={() => approveSuggestion(threadId)}
+                    disabled={pending}
+                    className="h-7 gap-1.5 bg-emerald-600 text-white hover:bg-emerald-700"
+                  >
+                    <Check className="h-3.5 w-3.5" />
+                    {pt ? "Aprovar sugestão" : "Approve suggestion"}
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => rejectSuggestion(threadId)}
+                    disabled={pending}
+                    className="h-7 gap-1.5 border-red-500 text-red-600 hover:bg-red-50"
+                  >
+                    <X className="h-3.5 w-3.5" />
+                    {pt ? "Rejeitar" : "Reject"}
+                  </Button>
+                </>
               ) : null}
               <div className="ml-auto flex items-center gap-2">
                 <input
