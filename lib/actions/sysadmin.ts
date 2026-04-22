@@ -829,26 +829,36 @@ export async function getSysadminOverview(): Promise<
     );
   }
 
-  // Total real minutes per user (heartbeat + live + lesson + song +
-  // speaking) — use this for the "Time on site" column so a teacher
-  // whose tab loses focus during a live class on Zoom still gets
-  // credit for the teaching hour, and a student whose session
-  // crashed mid-heartbeat but has logged completions still shows
-  // meaningful minutes. Heartbeats alone undercount both.
+  // Effective time on site = only the MEASURED minute sources.
+  // user_real_minutes_v also carries lesson_minutes and song_minutes,
+  // but those are derived estimates (count × 15 for lessons, count ×
+  // 5 for songs) — they're not real sit-at-the-screen time. A user
+  // who clicks through a lesson in 30 seconds shouldn't read 15 min
+  // on their row here.
+  //
+  // What stays (all three are actual measurements):
+  //   heartbeat_minutes  — focused-tab pings via /api/heartbeat
+  //   live_class_minutes — event_time → end_time on student_history
+  //                        (dedup'd for teachers via migration 066's
+  //                         teacher_class_hours_v so a classroom-wide
+  //                         class counts once, not N times)
+  //   speaking_minutes   — sum of speaking_events.duration_ms
+  //
+  // That means: a teacher who taught for 60 min on Zoom with the
+  // tab backgrounded still gets the 60 min credited (real class
+  // time); a student who clicked through 20 lessons without really
+  // reading them only gets the heartbeat seconds their tab was
+  // actually focused. The right shape for "time on site".
   const totalMinutes = new Map<string, number>();
   for (const r of (realMinutesRes.data ?? []) as Array<{
     user_id: string;
     heartbeat_minutes: number | null;
     live_class_minutes: number | null;
-    lesson_minutes: number | null;
-    song_minutes: number | null;
     speaking_minutes: number | null;
   }>) {
     const sum =
       (r.heartbeat_minutes ?? 0) +
       (r.live_class_minutes ?? 0) +
-      (r.lesson_minutes ?? 0) +
-      (r.song_minutes ?? 0) +
       (r.speaking_minutes ?? 0);
     totalMinutes.set(r.user_id, sum);
   }
