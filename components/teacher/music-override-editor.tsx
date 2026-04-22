@@ -49,7 +49,7 @@ export function MusicOverrideEditor({
   song,
   initialSingAlong,
   initialExercises,
-  hasOverride,
+  hasOverride: initialHasOverride,
 }: Props) {
   const router = useRouter();
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -61,6 +61,10 @@ export function MusicOverrideEditor({
   const [exercises, setExercises] = useState<MusicExercise[]>(initialExercises);
   const [pending, startTransition] = useTransition();
   const [dirty, setDirty] = useState(false);
+  // hasOverride is stateful so the "Share to bank" button appears as
+  // soon as the first save lands — otherwise it would be stuck at the
+  // server-rendered prop value until a full page reload.
+  const [hasOverride, setHasOverride] = useState<boolean>(initialHasOverride);
 
   const embedSrc =
     startAt !== null
@@ -194,6 +198,7 @@ export function MusicOverrideEditor({
       }
       toast.success("Override saved — your classroom will see the new version.");
       setDirty(false);
+      setHasOverride(true);
       router.refresh();
     });
   }
@@ -211,6 +216,7 @@ export function MusicOverrideEditor({
         return;
       }
       toast.success("Reset. Your students will see the canonical version.");
+      setHasOverride(false);
       router.push(`/teacher/music/${song.slug}`);
     });
   }
@@ -228,7 +234,7 @@ export function MusicOverrideEditor({
           </p>
         </div>
         <div className="flex items-center gap-2">
-          {hasOverride && !dirty ? (
+          {hasOverride ? (
             <ShareMusicToBankButton
               musicSlug={song.slug}
               songTitle={song.title}
@@ -236,7 +242,7 @@ export function MusicOverrideEditor({
               songDescription={null}
               disabled={dirty}
               disabledReason={
-                "Save your changes before sharing to the bank."
+                "Save your changes first — the bank takes the latest saved override."
               }
             />
           ) : null}
