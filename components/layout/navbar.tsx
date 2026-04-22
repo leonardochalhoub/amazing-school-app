@@ -33,6 +33,8 @@ interface NavbarProps {
   gender?: Gender | null;
   /** Optional white-label school logo shown centered above the nav. */
   schoolLogoPath?: string | null;
+  /** Teacher's XP opt-in flag. When false, the Badges tab is hidden. */
+  xpEnabled?: boolean;
 }
 
 export function Navbar({
@@ -44,6 +46,7 @@ export function Navbar({
   userId,
   ageGroup,
   gender,
+  xpEnabled = true,
 }: NavbarProps) {
   const { locale } = useI18n();
   const pathname = usePathname();
@@ -114,7 +117,9 @@ export function Navbar({
       label: locale === "pt-BR" ? "Banco" : "Bank",
     },
     { href: "/teacher/chat", label: labels.aiTutor },
-    { href: "/teacher/badges", label: labels.badges },
+    // Teacher-only: Badges tab is hidden when XP is turned off in
+    // their profile. Flipping it back on reveals everything intact.
+    ...(xpEnabled ? [{ href: "/teacher/badges", label: labels.badges }] : []),
     { href: "/teacher/admin", label: locale === "pt-BR" ? "Gestão" : "Management" },
   ];
   if (isOwner) {

@@ -33,7 +33,7 @@ export default async function DashboardLayout({
   const { data: profile, error } = await admin
     .from("profiles")
     .select(
-      "full_name, role, avatar_url, school_logo_enabled, school_logo_url, gender",
+      "full_name, role, avatar_url, school_logo_enabled, school_logo_url, gender, xp_enabled",
     )
     .eq("id", user.id)
     .single();
@@ -187,6 +187,9 @@ export default async function DashboardLayout({
         ageGroup={rosterAgeGroup}
         gender={navbarGender}
         schoolLogoPath={schoolLogoPath}
+        xpEnabled={
+          (profile as { xp_enabled?: boolean }).xp_enabled !== false
+        }
       />
       <UpcomingClassPrompt
         items={nextClass?.items ?? []}

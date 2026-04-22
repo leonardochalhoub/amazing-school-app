@@ -57,6 +57,22 @@ export async function grantTeacherXp(
   if (amount <= 0) return;
 
   const admin = createAdminClient();
+
+  // Opt-in gate — teachers who haven't flipped the XP toggle on in
+  // /teacher/profile skip all writes. Flipping it back on later is
+  // non-destructive (historical rows stay), they just resume from
+  // where they left off. Students never reach here since this helper
+  // is teacher-only; their XP pipeline goes through lesson-completion.
+  const { data: prof } = await admin
+    .from("profiles")
+    .select("xp_enabled, role")
+    .eq("id", teacherId)
+    .maybeSingle();
+  if (!prof) return;
+  const isTeacher = (prof as { role?: string }).role === "teacher";
+  const enabled = (prof as { xp_enabled?: boolean }).xp_enabled !== false;
+  if (isTeacher && !enabled) return;
+
   const { error } = await admin.from("xp_events").insert({
     student_id: teacherId,
     classroom_id: opts.classroomId ?? null,

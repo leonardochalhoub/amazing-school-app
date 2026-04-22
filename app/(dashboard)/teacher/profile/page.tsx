@@ -26,6 +26,7 @@ import { TeacherGenderPicker } from "@/components/teacher/teacher-gender-picker"
 import { CefrExplainerCard } from "@/components/reports/cefr-explainer-card";
 import { getSignatureSignedUrl } from "@/lib/signature";
 import { T } from "@/components/reports/t";
+import { TeacherXpToggle } from "@/components/teacher/teacher-xp-toggle";
 
 export default async function TeacherProfilePage() {
   const supabase = await createClient();
@@ -38,7 +39,7 @@ export default async function TeacherProfilePage() {
   const { data: profile } = await admin
     .from("profiles")
     .select(
-      "full_name, avatar_url, role, school_logo_enabled, school_logo_url, signature_url, signature_enabled, created_at",
+      "full_name, avatar_url, role, school_logo_enabled, school_logo_url, signature_url, signature_enabled, created_at, xp_enabled",
     )
     .eq("id", user.id)
     .maybeSingle();
@@ -221,6 +222,15 @@ export default async function TeacherProfilePage() {
           </CardContent>
         </div>
       </Card>
+
+      {/* XP experience opt-in — owns a full row above the preferences
+          grid. Data is preserved when off; flipping back on resumes
+          from the same spot with every earned badge intact. */}
+      <TeacherXpToggle
+        initialEnabled={
+          (profile as { xp_enabled?: boolean }).xp_enabled !== false
+        }
+      />
 
       {/* Preferences in two columns on lg */}
       <div className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
