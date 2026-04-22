@@ -29,6 +29,8 @@ import {
   type ActivityBucket,
 } from "@/components/student/activity-chart";
 import { MyClassesPanel } from "@/components/student/my-classes-panel";
+import { ClockWeatherCard } from "@/components/shared/clock-weather-card";
+import { locateCity } from "@/lib/data/brazil-city-coords";
 import { AssignmentsGrid } from "@/components/student/assignments-grid";
 import { listOwnHistory } from "@/lib/actions/student-history";
 import { getLiveClassSummaryForRoster } from "@/lib/actions/live-class-hours";
@@ -64,9 +66,11 @@ export default async function StudentHome() {
   const admin = createAdminClient();
   const { data: profile } = await admin
     .from("profiles")
-    .select("full_name, avatar_url, role")
+    .select("full_name, avatar_url, role, location")
     .eq("id", user.id)
     .maybeSingle();
+  const studentLocation =
+    (profile as { location?: string | null } | null)?.location ?? null;
 
   // Only redirect real teachers/owners back to their dashboard —
   // a profile flagged 'teacher' that is ALSO referenced by a roster
@@ -398,9 +402,17 @@ export default async function StudentHome() {
   // by default.
   const ownHistory = await listOwnHistory(200);
   const listeningResponses = await listStudentListeningResponses(10);
+  const studentLocCoord = locateCity(studentLocation);
 
   return (
     <div className="space-y-8 overflow-x-clip pb-16">
+      {/* Local clock + weather — follows the student's location */}
+      <ClockWeatherCard
+        label={studentLocation}
+        lat={studentLocCoord?.lat ?? null}
+        lng={studentLocCoord?.lng ?? null}
+      />
+
       {/* HERO ===================================================== */}
       <section
         className="relative overflow-hidden rounded-3xl border border-border p-6 md:p-8"

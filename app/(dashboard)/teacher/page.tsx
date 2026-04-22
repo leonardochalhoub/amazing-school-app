@@ -19,6 +19,8 @@ import { listAllTeacherHistory } from "@/lib/actions/student-history";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { BirthdayAlert } from "@/components/teacher/birthday-alert";
 import { DismissibleHero } from "@/components/teacher/dismissible-hero";
+import { ClockWeatherCard } from "@/components/shared/clock-weather-card";
+import { locateCity } from "@/lib/data/brazil-city-coords";
 import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { getUpcomingBirthdays } from "@/lib/actions/birthdays";
 import { listMusic } from "@/lib/content/music";
@@ -35,7 +37,7 @@ export default async function TeacherDashboard() {
   const admin = createAdminClient();
   const { data: profile } = await admin
     .from("profiles")
-    .select("full_name, gender")
+    .select("full_name, gender, location")
     .eq("id", user.id)
     .maybeSingle();
   const profileGenderRaw =
@@ -44,6 +46,9 @@ export default async function TeacherDashboard() {
     profileGenderRaw === "female" || profileGenderRaw === "male"
       ? profileGenderRaw
       : null;
+  const profileLocation =
+    (profile as { location?: string | null } | null)?.location ?? null;
+  const locCoord = locateCity(profileLocation);
 
   const [
     { classrooms, roster, kpis, recentAssignments },
@@ -97,6 +102,13 @@ export default async function TeacherDashboard() {
 
   return (
     <div className="space-y-10 pb-16">
+      {/* Live clock + local weather — tiny card, doesn't dominate */}
+      <ClockWeatherCard
+        label={profileLocation}
+        lat={locCoord?.lat ?? null}
+        lng={locCoord?.lng ?? null}
+      />
+
       {/* Welcome hero FIRST */}
       <DismissibleHero
         firstName={firstName}
