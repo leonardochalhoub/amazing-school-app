@@ -229,35 +229,38 @@ export function ClockWeatherCard({ label, lat, lng }: Props) {
         <div className="flex items-stretch gap-2 self-end">
           {forecast.map((d, i) => {
             const isToday = i === 0;
+            // Chip dimensions bumped ~40% (paddings, min-width, and
+            // every font-size tier) so the forecast reads as a proper
+            // card alongside the larger clock digits.
             return (
               <div
                 key={d.date}
-                className={`flex min-w-[68px] flex-col items-center rounded-xl border px-2.5 py-2 text-center transition-colors ${
+                className={`flex min-w-[96px] flex-col items-center rounded-2xl border px-4 py-3 text-center transition-colors ${
                   isToday
-                    ? "border-violet-500/40 bg-gradient-to-b from-violet-500/10 to-transparent shadow-[0_0_18px_-6px_rgba(139,92,246,0.5)]"
+                    ? "border-violet-500/40 bg-gradient-to-b from-violet-500/10 to-transparent shadow-[0_0_22px_-6px_rgba(139,92,246,0.55)]"
                     : "border-border bg-background/40"
                 }`}
               >
-                <p className="text-[9px] font-semibold uppercase tracking-wider text-muted-foreground">
+                <p className="text-[12px] font-semibold uppercase tracking-wider text-muted-foreground">
                   {dayLabel(d.date, i)}
                 </p>
                 <span
                   aria-hidden
-                  className="my-1 text-2xl leading-none drop-shadow-md"
+                  className="my-1.5 text-[2.25rem] leading-none drop-shadow-md"
                   title={pt ? d.condition.pt : d.condition.en}
                 >
                   {d.condition.emoji}
                 </span>
                 {isToday && weather ? (
-                  <p className="text-base font-bold leading-none tabular-nums">
+                  <p className="text-[1.4rem] font-bold leading-none tabular-nums">
                     {weather.temperature}°
                   </p>
                 ) : (
-                  <p className="text-[13px] font-semibold leading-none tabular-nums">
+                  <p className="text-[1.125rem] font-semibold leading-none tabular-nums">
                     {d.hi}°
                   </p>
                 )}
-                <p className="mt-0.5 text-[10px] leading-none tabular-nums text-muted-foreground">
+                <p className="mt-1 text-[13px] leading-none tabular-nums text-muted-foreground">
                   {d.lo}° / {d.hi}°
                 </p>
               </div>
