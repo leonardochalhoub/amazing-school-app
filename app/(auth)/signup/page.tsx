@@ -26,6 +26,7 @@ export default function SignUpPage() {
   const [loading, setLoading] = useState(false);
   const [location, setLocation] = useState("");
   const [gender, setGender] = useState<"female" | "male" | "">("");
+  const [xpEnabled, setXpEnabled] = useState<boolean>(true);
 
   async function handleSubmit(formData: FormData) {
     setLoading(true);
@@ -34,6 +35,7 @@ export default function SignUpPage() {
     formData.set("role", "teacher");
     formData.set("location", location.trim());
     formData.set("gender", gender);
+    formData.set("xpEnabled", xpEnabled ? "on" : "off");
     if (!location.trim()) {
       setError(
         locale === "pt-BR"
@@ -170,6 +172,44 @@ export default function SignUpPage() {
                   ? "Usamos apenas para o tratamento em português (Professor / Professora)."
                   : "Used only for gendered Portuguese wording (Professor / Professora)."}
               </p>
+            </div>
+
+            {/* XP / gamification opt-in — teacher-only. Defaults to
+                ON; the teacher can flip it off in /teacher/profile
+                anytime (and later flip it back on with everything
+                they previously earned preserved). */}
+            <div className="space-y-2 rounded-lg border border-border bg-muted/20 p-3">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <Label className="text-sm font-semibold">
+                    {locale === "pt-BR"
+                      ? "Começar com XP e auto-aprendizado ligados?"
+                      : "Start with XP and self-learning on?"}
+                  </Label>
+                  <p className="mt-1 text-[11px] text-muted-foreground">
+                    {locale === "pt-BR"
+                      ? "Ligado = aulas, lições e conquistas somam XP e abrem medalhas para você. Você pode desligar ou religar no perfil a qualquer momento — nada se perde."
+                      : "On = classes, lessons, and achievements earn you XP and unlock badges. You can flip this in your profile anytime — nothing is lost when it's off."}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  role="switch"
+                  aria-checked={xpEnabled}
+                  onClick={() => setXpEnabled((v) => !v)}
+                  className={`relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors ${
+                    xpEnabled
+                      ? "bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500 shadow-[0_0_18px_-4px_rgba(139,92,246,0.7)]"
+                      : "bg-muted"
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-5 w-5 transform rounded-full bg-white shadow-md transition-transform ${
+                      xpEnabled ? "translate-x-5" : "translate-x-0.5"
+                    }`}
+                  />
+                </button>
+              </div>
             </div>
           </CardContent>
           <CardFooter className="flex flex-col gap-4">

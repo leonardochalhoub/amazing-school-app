@@ -117,14 +117,33 @@ export async function signUp(formData: FormData) {
     return { error: error?.message ?? "Failed to create account" };
   }
 
-  const { error: profileError } = await admin.from("profiles").insert({
+  const profileRow: Record<string, unknown> = {
     id: data.user.id,
     full_name: fullName,
     role,
     avatar_url: null,
     gender,
     location: locationTrimmed,
-  });
+  };
+  // Only attempt to persist xp_enabled when the teacher explicitly
+  // chose OFF. Default is ON for everyone; omit the column so
+  // pre-migration-062 deployments still accept the insert.
+  if (role === "teacher" && !teacherXpEnabled) {
+    profileRow.xp_enabled = false;
+  }
+
+  let profileError: { message: string } | null = null;
+  {
+    const { error } = await admin.from("profiles").insert(profileRow);
+    profileError = error;
+    // If the column doesn't exist yet (fresh DB pre-062), retry
+    // without it rather than failing the signup.
+    if (error && /xp_enabled/i.test(error.message)) {
+      delete profileRow.xp_enabled;
+      const retry = await admin.from("profiles").insert(profileRow);
+      profileError = retry.error;
+    }
+  }
 
   if (profileError) {
     return { error: profileError.message };
