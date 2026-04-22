@@ -54,6 +54,10 @@ interface DraftEntry {
   lesson_content: string;
   skill_focus: SkillFocus[];
   meeting_link: string;
+  /** XP awarded when the class is marked Done — teacher + every
+   *  participant. String-typed so the form can hold an empty value;
+   *  normalised to number/null at save time. */
+  xp_reward: string;
 }
 
 function todayISO(): string {
@@ -61,6 +65,7 @@ function todayISO(): string {
 }
 
 function fromEntry(e: StudentHistoryEntry): DraftEntry {
+  const xpRaw = (e as unknown as { xp_reward?: number | null }).xp_reward;
   return {
     id: e.id,
     event_date: e.event_date,
@@ -74,6 +79,7 @@ function fromEntry(e: StudentHistoryEntry): DraftEntry {
     lesson_content: e.lesson_content ?? "",
     skill_focus: e.skill_focus,
     meeting_link: e.meeting_link ?? "",
+    xp_reward: typeof xpRaw === "number" ? String(xpRaw) : "",
   };
 }
 
@@ -87,6 +93,7 @@ function emptyDraft(): DraftEntry {
     lesson_content: "",
     skill_focus: [],
     meeting_link: "",
+    xp_reward: "",
   };
 }
 
@@ -137,6 +144,11 @@ export function StudentHistoryPanel({
         skill_focus: draft.skill_focus,
         meeting_link: draft.meeting_link,
         cefr_level: draft.cefr_level || null,
+        xp_reward:
+          draft.xp_reward.trim() === "" ||
+          !Number.isFinite(Number(draft.xp_reward))
+            ? null
+            : Math.max(0, Math.min(5000, Math.round(Number(draft.xp_reward)))),
       });
       if ("error" in res) {
         toast.error(res.error);
@@ -316,6 +328,26 @@ export function StudentHistoryPanel({
                 }
                 placeholder="https://meet.google.com/… or https://zoom.us/…"
               />
+            </div>
+
+            <div className="space-y-1.5">
+              <Label>XP · Class XP (optional, integer)</Label>
+              <Input
+                type="number"
+                min={0}
+                max={5000}
+                step={10}
+                value={draft.xp_reward}
+                onChange={(e) =>
+                  setDraft({ ...draft, xp_reward: e.target.value })
+                }
+                placeholder="30 (default)"
+              />
+              <p className="text-[11px] text-muted-foreground">
+                Awarded to the teacher + every participant when the class is
+                marked Done. Teacher portion is skipped if they have XP turned
+                off in profile. Blank = 30 (default).
+              </p>
             </div>
 
             <div className="flex justify-end gap-2">

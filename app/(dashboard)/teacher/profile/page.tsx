@@ -17,6 +17,7 @@ import {
   Calendar,
   School,
   Users,
+  Award,
 } from "lucide-react";
 import { redirect } from "next/navigation";
 import { isLogoEligible, SCHOOL_LOGO_SRC } from "@/lib/school-logo";
@@ -242,6 +243,21 @@ export default async function TeacherProfilePage() {
           grid. Data is preserved when off; flipping back on resumes
           from the same spot with every earned badge intact. */}
       <TeacherXpToggle initialEnabled={xpEnabledFlag} />
+
+      {/* Deep-link to the full badge discovery grid. Only visible
+          when XP is enabled — a locked-XP teacher has nothing to
+          see there. Matches the home-page XP strip which lost its
+          own "Ver todas" link per UX feedback. */}
+      {xpEnabledFlag ? (
+        <a
+          href="/teacher/badges"
+          className="group inline-flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-medium transition-colors hover:bg-accent"
+        >
+          <Award className="h-4 w-4 text-indigo-500" />
+          <T en="See all badges" pt="Ver todas as medalhas" />
+          <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </a>
+      ) : null}
 
       {/* Preferences in two columns on lg */}
       <div className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">

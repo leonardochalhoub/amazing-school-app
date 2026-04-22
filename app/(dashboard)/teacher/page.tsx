@@ -118,11 +118,6 @@ export default async function TeacherDashboard() {
 
   return (
     <div className="space-y-10 pb-16">
-      {/* Teacher XP strip — level, progress bar, latest earned badges
-          + deep-link to /teacher/badges. Only shown when the teacher
-          opted in to gamification (profile toggle). */}
-      {xpEnabled ? <TeacherXpStrip teacherId={user.id} /> : null}
-
       {/* Welcome hero — live clock + local weather are embedded inside
           the card, so dismissing the greeting also hides the readout. */}
       <DismissibleHero
@@ -132,6 +127,14 @@ export default async function TeacherDashboard() {
         lat={locCoord?.lat ?? null}
         lng={locCoord?.lng ?? null}
       />
+
+      {/* Teacher XP strip — level + progress bar + latest earned
+          badges. Sits right below the hero so it follows the eye
+          from greeting → progress. Hidden when the teacher has
+          gamification turned off in their profile. The "All badges"
+          deep-link lives on /teacher/profile instead to keep this
+          row clean. */}
+      {xpEnabled ? <TeacherXpStrip teacherId={user.id} /> : null}
 
       {/* Birthday alert — only renders when there are upcoming birthdays */}
       <BirthdayAlert birthdays={upcomingBirthdays} />

@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { Zap, ArrowRight } from "lucide-react";
+import { Zap } from "lucide-react";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getLevel, getXpForNextLevel } from "@/lib/gamification/engine";
 import { BADGE_BY_TYPE } from "@/lib/gamification/config";
@@ -55,8 +54,11 @@ export async function TeacherXpStrip({ teacherId }: Props) {
       }}
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-      <div className="relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-6">
-        {/* Left: level + XP bar */}
+      {/* Two rows, stacked: XP bar up top, earned-badge chips below.
+          The badges read as "your progress medals" sitting on the
+          shelf directly under the XP bar — tighter visual grouping
+          than the old side-by-side arrangement. */}
+      <div className="relative flex flex-col gap-4">
         <div className="min-w-0 flex-1">
           <div className="flex items-baseline justify-between gap-3 text-[11px] tabular-nums">
             <span className="inline-flex items-center gap-1.5 font-semibold">
@@ -87,38 +89,31 @@ export async function TeacherXpStrip({ teacherId }: Props) {
           </div>
         </div>
 
-        {/* Right: latest badges + link to discovery */}
-        <div className="flex items-center gap-2">
-          {badges.length > 0 ? (
-            <div className="flex flex-wrap items-center gap-1.5">
-              {badges.map((b) => {
-                const def = BADGE_BY_TYPE[b.badge_type];
-                if (!def) return null;
-                return (
-                  <span
-                    key={b.badge_type}
-                    title={def.name}
-                    className={`inline-flex items-center gap-1 rounded-full bg-gradient-to-br ${def.gradient} ${def.glow} px-2 py-0.5 text-[10px] font-semibold text-white`}
-                  >
-                    <span aria-hidden>{def.icon}</span>
-                    <span className="hidden sm:inline">{def.name}</span>
-                  </span>
-                );
-              })}
-            </div>
-          ) : (
-            <p className="text-[11px] text-muted-foreground">
-              <T en="No badges yet" pt="Ainda sem medalhas" />
-            </p>
-          )}
-          <Link
-            href="/teacher/badges"
-            className="inline-flex shrink-0 items-center gap-1 rounded-full border border-border bg-background px-3 py-1 text-[11px] font-medium text-foreground transition-colors hover:bg-accent"
-          >
-            <T en="All badges" pt="Ver todas" />
-            <ArrowRight className="h-3 w-3" />
-          </Link>
-        </div>
+        {/* Earned-badge chips directly below the XP bar. "All
+            badges" deep-link moved to /teacher/profile per UX
+            feedback — keeps this strip visually clean. */}
+        {badges.length > 0 ? (
+          <div className="flex flex-wrap items-center gap-1.5">
+            {badges.map((b) => {
+              const def = BADGE_BY_TYPE[b.badge_type];
+              if (!def) return null;
+              return (
+                <span
+                  key={b.badge_type}
+                  title={def.name}
+                  className={`inline-flex items-center gap-1 rounded-full bg-gradient-to-br ${def.gradient} ${def.glow} px-2.5 py-1 text-[11px] font-semibold text-white`}
+                >
+                  <span aria-hidden>{def.icon}</span>
+                  <span>{def.name}</span>
+                </span>
+              );
+            })}
+          </div>
+        ) : (
+          <p className="text-[11px] text-muted-foreground">
+            <T en="No badges yet — earn your first one below." pt="Ainda sem medalhas — conquiste a primeira abaixo." />
+          </p>
+        )}
       </div>
     </section>
   );

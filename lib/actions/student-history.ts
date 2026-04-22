@@ -506,6 +506,7 @@ export interface ScheduleClassInput {
   skill_focus?: string[];
   lesson_content?: string | null;
   cefr_level?: string | null;
+  xp_reward?: number | null;
 }
 
 /**
@@ -525,6 +526,7 @@ export async function scheduleClass(
     skill_focus: input.skill_focus ?? [],
     meeting_link: input.meeting_link ?? null,
     cefr_level: input.cefr_level ?? null,
+    xp_reward: input.xp_reward ?? null,
   });
 }
 
@@ -536,6 +538,7 @@ export interface ScheduleClassroomClassInput {
   skill_focus?: string[];
   lesson_content?: string | null;
   cefr_level?: string | null;
+  xp_reward?: number | null;
 }
 
 /**
@@ -581,6 +584,10 @@ export async function scheduleClassroomClass(
       ? (input.cefr_level as CefrLevel)
       : null;
   const now = new Date().toISOString();
+  const xpReward =
+    typeof input.xp_reward === "number" && Number.isFinite(input.xp_reward)
+      ? Math.max(0, Math.min(5000, Math.round(input.xp_reward)))
+      : null;
   const rows = rosterIds.map((rid) => ({
     teacher_id: user.id,
     student_id: null,
@@ -593,6 +600,7 @@ export async function scheduleClassroomClass(
     skill_focus: sanitizeSkillFocus(input.skill_focus),
     meeting_link: input.meeting_link?.trim() || null,
     cefr_level: cefrLevel,
+    xp_reward: xpReward,
     updated_at: now,
   }));
 

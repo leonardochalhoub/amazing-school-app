@@ -81,6 +81,7 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
   const [skillFocus, setSkillFocus] = useState<SkillFocus[]>([]);
   const [cefrLevel, setCefrLevel] = useState<CefrLevel | "">("");
   const [lessonContent, setLessonContent] = useState("");
+  const [xpReward, setXpReward] = useState<string>("");
   const [pending, startTransition] = useTransition();
 
   function reset() {
@@ -120,6 +121,10 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
           skill_focus: skillFocus,
           lesson_content: lessonContent,
           cefr_level: cefrLevel || null,
+          xp_reward:
+            xpReward.trim() === "" || !Number.isFinite(Number(xpReward))
+              ? null
+              : Math.max(0, Math.min(5000, Math.round(Number(xpReward)))),
         });
         if ("error" in res) {
           toast.error(res.error);
@@ -141,6 +146,10 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
           skill_focus: skillFocus,
           lesson_content: lessonContent,
           cefr_level: cefrLevel || null,
+          xp_reward:
+            xpReward.trim() === "" || !Number.isFinite(Number(xpReward))
+              ? null
+              : Math.max(0, Math.min(5000, Math.round(Number(xpReward)))),
         });
         if ("error" in res) {
           toast.error(res.error);
@@ -368,6 +377,31 @@ export function ScheduleClassButton({ students, classrooms }: Props) {
                   );
                 })}
               </div>
+            </div>
+
+            {/* Optional integer XP awarded when the class is marked
+                Done. Shared by teacher (gated on xp_enabled) + every
+                participant. Blank = 30 (default). */}
+            <div className="space-y-1.5">
+              <label className="text-xs font-medium">
+                {pt ? "XP da aula (opcional)" : "Class XP (optional)"}
+              </label>
+              <input
+                type="number"
+                min={0}
+                max={5000}
+                step={10}
+                value={xpReward}
+                onChange={(e) => setXpReward(e.target.value)}
+                placeholder={pt ? "30 (padrão)" : "30 (default)"}
+                disabled={pending}
+                className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
+              />
+              <p className="text-[11px] text-muted-foreground">
+                {pt
+                  ? "Atribuído a cada participante (professor e alunos) quando a aula é marcada como concluída. Professor fica de fora se tiver XP desligado no perfil."
+                  : "Awarded to every participant (teacher + students) when the class is marked Done. Teacher skipped if XP is off in profile."}
+              </p>
             </div>
           </div>
 
