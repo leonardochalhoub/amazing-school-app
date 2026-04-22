@@ -310,6 +310,7 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
   { type: "rain_scholar",   name: "I Like to Study While It Rains", description: "Studied on 20 distinct rainy days", icon: "🌧️", unlock: { kind: "composite", description: "20 distinct active days with rain observed" }, rarity: "epic", tier: "hard", audience: "both", theme: "easter_eggs", gradient: "from-slate-400 via-sky-600 to-indigo-700", glow: GLOW.high },
   { type: "meio_besta",     name: "Meio-Besta · Dia 333", description: "333 distinct active days on the platform — half the beast", icon: "😈", unlock: { kind: "composite", description: "333 distinct active days" }, rarity: "legendary", tier: "hard", audience: "both", theme: "easter_eggs", gradient: "from-red-500 via-rose-700 to-stone-900", glow: GLOW.crown },
   { type: "a_besta",        name: "A Besta · 666", description: "666 distinct active days on the platform — the number of the beast", icon: "👹", unlock: { kind: "composite", description: "666 distinct active days" }, rarity: "mythic", tier: "very_hard", audience: "both", theme: "easter_eggs", gradient: "from-red-700 via-neutral-900 to-black", glow: GLOW.crown },
+  { type: "root_of_all_evil", name: "Root of All Evil", description: "192 real hours studied — eight days' worth of the clock. Money is the root of all evil; time is the proof.", icon: "🪙", unlock: { kind: "hours", source: "all", hours: 192 }, rarity: "legendary", tier: "hard", audience: "both", theme: "easter_eggs", gradient: "from-amber-500 via-yellow-700 to-stone-900", glow: GLOW.crown },
 ];
 
 /**

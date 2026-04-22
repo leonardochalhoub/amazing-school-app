@@ -625,6 +625,7 @@ begin
       union all select 'rain_scholar'       where v_rainy_study_days >= 20
       union all select 'meio_besta'         where v_distinct_active_days >= 333
       union all select 'a_besta'            where v_distinct_active_days >= 666
+      union all select 'root_of_all_evil'   where v_all_minutes >= 11520  -- 8 × 24h
     ) t
     on conflict (student_id, badge_type) do nothing
     returning badge_type
