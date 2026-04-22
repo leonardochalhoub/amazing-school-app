@@ -6,6 +6,16 @@ import { getLevel, computeStreak } from "./engine";
  * Evaluates every non-certificate unlock rule for a single student and
  * upserts any newly-earned rows into the `badges` table.
  *
+ * IMPORTANT — database is the authoritative source of truth.
+ * Migration `060_badge_auto_award.sql` installs a PL/pgSQL function
+ * `award_eligible_badges(uuid)` with identical logic, plus triggers on
+ * profiles / lesson_progress / xp_events / daily_activity that fire
+ * it automatically. This TypeScript implementation is kept as a
+ * defense-in-depth safety net — it still runs on signup, lesson
+ * completion, and lazy page reads so badges catch up instantly even
+ * if the DB triggers were ever disabled. If you change the unlock
+ * rules, update BOTH this file AND the migration in lockstep.
+ *
  * - Idempotent: existing rows are detected up-front and upsert with
  *   `ignoreDuplicates` guards against concurrent inserts.
  * - CEFR cert badges (`cert_a1` … `cert_c2`) are deliberately skipped
