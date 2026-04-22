@@ -144,11 +144,32 @@ export async function bulkAssignManyLessons(
   if (!user) return { error: "Unauthorized" };
 
   const admin = createAdminClient();
+
+  // Safety net: if the caller passes a rosterStudentId that doesn't
+  // actually reference a roster_students row (e.g. a teacher trying
+  // to self-assign — their uuid is a profiles.id), reroute it to
+  // studentId so the FK lands on a real target instead of throwing
+  // lesson_assignments_roster_student_id_fkey at the user. Same
+  // guard works for student_invitations bugs, classroom merges, etc.
+  let resolvedStudentId = parsed.data.studentId ?? null;
+  let resolvedRosterStudentId = parsed.data.rosterStudentId ?? null;
+  if (resolvedRosterStudentId) {
+    const { data: rs } = await admin
+      .from("roster_students")
+      .select("id")
+      .eq("id", resolvedRosterStudentId)
+      .maybeSingle();
+    if (!rs) {
+      resolvedStudentId = resolvedRosterStudentId;
+      resolvedRosterStudentId = null;
+    }
+  }
+
   const rows = parsed.data.lessonSlugs.map((slug, i) => ({
     classroom_id: parsed.data.classroomId ?? null,
     lesson_slug: slug,
-    student_id: parsed.data.studentId ?? null,
-    roster_student_id: parsed.data.rosterStudentId ?? null,
+    student_id: resolvedStudentId,
+    roster_student_id: resolvedRosterStudentId,
     order_index: i,
     assigned_by: user.id,
   }));
@@ -165,8 +186,8 @@ export async function bulkAssignManyLessons(
 
   bumpPaths(
     parsed.data.classroomId ?? null,
-    parsed.data.studentId ?? null,
-    parsed.data.rosterStudentId ?? null
+    resolvedStudentId,
+    resolvedRosterStudentId,
   );
   return { success: true, assigned, skipped };
 }
