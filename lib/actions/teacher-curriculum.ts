@@ -3,6 +3,8 @@
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { Year } from "@/lib/reports/period";
+import { fromAssignmentSlug, getMusic } from "@/lib/content/music";
+import { findMeta as findLessonMeta } from "@/lib/content/loader";
 
 /** Local copy of the withinYear helper (not exported from reports.ts). */
 function withinYear(iso: string | null | undefined, year: Year): boolean {
@@ -168,17 +170,46 @@ export async function getTeacherOwnCurriculumReport(
     const landed =
       withinYear(a.assigned_at, year) || withinYear(completedAt, year);
     if (!landed) continue;
-    const isMusic = a.lesson_slug.startsWith("music:");
-    const bareSlug = a.lesson_slug.replace(/^music:/, "");
+
+    // Resolve the real title + CEFR + minutes from the content
+    // library — same path the dashboard's resolvedRecent uses, so
+    // music shows up as "Bruno Mars — The Lazy Song" instead of
+    // "the-lazy-song" and lessons carry their proper
+    // estimated_minutes.
+    const { kind, slug } = fromAssignmentSlug(a.lesson_slug);
+    let title = slug;
+    let cefr: string | null = null;
+    let category: string | null = null;
+    let minutes: number | null = null;
+    if (kind === "music") {
+      const m = getMusic(slug);
+      if (m) {
+        title = `${m.artist} — ${m.title}`;
+        cefr = m.cefr_level ?? null;
+        category = "music";
+        minutes = Math.max(5, Math.round((m.duration_seconds / 60) * 2));
+      } else {
+        category = "music";
+      }
+    } else {
+      const fileMeta = findLessonMeta(slug);
+      if (fileMeta) {
+        title = fileMeta.title ?? slug;
+        cefr = fileMeta.cefr_level ?? null;
+        category = fileMeta.category ?? null;
+        minutes = fileMeta.estimated_minutes ?? null;
+      }
+    }
+
     selfAssigned += 1;
     if (completedAt) selfCompleted += 1;
     entries.push({
-      slug: bareSlug,
-      kind: isMusic ? "music" : "lesson",
-      title: bareSlug,
-      cefr: null,
-      category: isMusic ? "music" : null,
-      minutes: null,
+      slug,
+      kind,
+      title,
+      cefr,
+      category,
+      minutes,
       status: completedAt ? "completed" : "assigned",
       assignedAt: a.assigned_at,
       completedAt,

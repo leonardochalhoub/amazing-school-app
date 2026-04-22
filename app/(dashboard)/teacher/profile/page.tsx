@@ -28,6 +28,7 @@ import { CefrExplainerCard } from "@/components/reports/cefr-explainer-card";
 import { getSignatureSignedUrl } from "@/lib/signature";
 import { T } from "@/components/reports/t";
 import { TeacherXpToggle } from "@/components/teacher/teacher-xp-toggle";
+import { TeacherDocumentsCard } from "@/components/reports/teacher-documents-card";
 
 export default async function TeacherProfilePage() {
   const supabase = await createClient();
@@ -248,36 +249,27 @@ export default async function TeacherProfilePage() {
           when XP is enabled — a locked-XP teacher has nothing to
           see there. Matches the home-page XP strip which lost its
           own "Ver todas" link per UX feedback. */}
-      <div className="flex flex-wrap gap-2">
-        {xpEnabledFlag ? (
-          <a
-            href="/teacher/badges"
-            className="group inline-flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-medium transition-colors hover:bg-accent"
-          >
-            <Award className="h-4 w-4 text-indigo-500" />
-            <T en="See all badges" pt="Ver todas as medalhas" />
-            <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-        ) : null}
-
-        {/* Own-curriculum PDF generator — mirrors the student's
-            "Meu currículo em PDF" button. Opens the printable
-            report (/print/teacher/[id]/curriculum) with autoprint
-            triggered for one-click PDF export. Full year = "all"
-            by default; teachers picking a specific year can switch
-            via URL param once the student-style YearSelector gets
-            ported. */}
+      {xpEnabledFlag ? (
         <a
-          href={`/print/teacher/${user.id}/curriculum?year=all&autoprint=1`}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/teacher/badges"
           className="group inline-flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-medium transition-colors hover:bg-accent"
         >
-          <BookOpen className="h-4 w-4 text-primary" />
-          <T en="Generate my curriculum" pt="Gerar meu currículo" />
+          <Award className="h-4 w-4 text-indigo-500" />
+          <T en="See all badges" pt="Ver todas as medalhas" />
           <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </a>
-      </div>
+      ) : null}
+
+      {/* Curriculum PDF generator — same shape as the student's
+          MyDocumentsCard (YearSelector + Download button). Seed
+          dates come from the profile's created_at so the year list
+          starts from the teacher's first day on the platform. */}
+      <TeacherDocumentsCard
+        teacherId={user.id}
+        seedDates={[
+          (profile as { created_at?: string | null }).created_at ?? null,
+        ]}
+      />
 
 
       {/* Preferences in two columns on lg */}
