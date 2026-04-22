@@ -159,6 +159,20 @@ export interface CurriculumReportData {
       music: number;
       live: number;
     }>;
+    /** Dedicated live-class totals — rolls the skill_focus buckets
+     *  on every "Aula ao vivo" row up to speaking + listening
+     *  minutes, so the curriculum report can render a single
+     *  "Aulas ao vivo" section that already shows the embedded
+     *  Conversação / Escuta time without the reader chasing down
+     *  the by-skill table. Other skills (writing, grammar, …)
+     *  land in `otherMinutes`. */
+    live: {
+      totalMinutes: number;
+      speakingMinutes: number;
+      listeningMinutes: number;
+      otherMinutes: number;
+      classCount: number;
+    };
   };
   generatedAt: string;
 }
@@ -437,6 +451,17 @@ export async function getStudentCurriculumReport(
   const bySkillMap = new Map<string, CurriculumBreakdownRow>();
   let totalEstimatedMinutes = 0;
 
+  // Dedicated live-class aggregates. Each liveEntries item is one
+  // skill-bucket split of a class, so minutes already get the /N
+  // distribution applied upstream. We just re-aggregate by skill
+  // here and keep the total, speaking, and listening counters that
+  // the curriculum section surfaces.
+  let liveTotalMinutes = 0;
+  let liveSpeakingMinutes = 0;
+  let liveListeningMinutes = 0;
+  let liveOtherMinutes = 0;
+  const liveClassIds = new Set<string>();
+
   function bumpBreakdown(
     map: Map<string, CurriculumBreakdownRow>,
     key: string,
@@ -489,6 +514,20 @@ export async function getStudentCurriculumReport(
       SKILL_LABEL[skillKey] ?? skillKey,
       e,
     );
+
+    // Live-class aggregates — total minutes, speaking/listening
+    // subtotals, and a distinct class count (stripping the per-
+    // skill suffix from the slug so a 60-min class tagged
+    // [speaking, listening] counts as one class, not two).
+    if (e.kind === "live" && e.status === "completed") {
+      const mins = e.estimatedMinutes ?? 0;
+      liveTotalMinutes += mins;
+      if (skillKey === "speaking" || skillKey === "dialog") liveSpeakingMinutes += mins;
+      else if (skillKey === "listening") liveListeningMinutes += mins;
+      else liveOtherMinutes += mins;
+      const baseId = e.slug.replace(/^live:/, "").split(":")[0];
+      if (baseId) liveClassIds.add(baseId);
+    }
   }
 
   const years = new Set<number>();
@@ -535,6 +574,13 @@ export async function getStudentCurriculumReport(
       byMonth: Array.from(byMonthMap.entries())
         .map(([month, v]) => ({ month, ...v }))
         .sort((a, b) => a.month.localeCompare(b.month)),
+      live: {
+        totalMinutes: liveTotalMinutes,
+        speakingMinutes: liveSpeakingMinutes,
+        listeningMinutes: liveListeningMinutes,
+        otherMinutes: liveOtherMinutes,
+        classCount: liveClassIds.size,
+      },
     },
     generatedAt: new Date().toISOString(),
   };

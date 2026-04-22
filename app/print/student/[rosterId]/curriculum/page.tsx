@@ -203,6 +203,50 @@ export default async function StudentCurriculumPrintPage({
         </section>
       ) : null}
 
+      {/* Aulas ao vivo — dedicated section with Conversação +
+          Escuta minutes nested inside the live-class total. Only
+          rendered when the student actually attended any live
+          classes in the period. */}
+      {stats.live.classCount > 0 ? (
+        <section className="report-avoid-break">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+            Aulas ao vivo
+          </h2>
+          <div
+            className="mt-3 grid grid-cols-4 gap-3"
+            style={{ alignItems: "stretch" }}
+          >
+            <Kpi
+              label="Aulas"
+              value={stats.live.classCount}
+              sub={`${Math.round(stats.live.totalMinutes / 6) / 10}h no total`}
+            />
+            <Kpi
+              label="Conversação"
+              value={`${Math.round(stats.live.speakingMinutes / 6) / 10}h`}
+              sub={`${stats.live.speakingMinutes} min`}
+            />
+            <Kpi
+              label="Escuta"
+              value={`${Math.round(stats.live.listeningMinutes / 6) / 10}h`}
+              sub={`${stats.live.listeningMinutes} min`}
+            />
+            <Kpi
+              label="Outros focos"
+              value={`${Math.round(stats.live.otherMinutes / 6) / 10}h`}
+              sub={`${stats.live.otherMinutes} min`}
+            />
+          </div>
+          <p className="mt-2 text-[11px] leading-relaxed text-slate-500">
+            Cada aula é registrada com data, horário, duração e foco
+            pedagógico. Conversação e Escuta são somadas a partir dos
+            focos marcados em cada aula — uma aula marcada como
+            Conversação + Escuta tem seu tempo dividido entre os
+            dois.
+          </p>
+        </section>
+      ) : null}
+
       {/* Charts — forced side by side, each gets half the inner
           page width. No flex-wrap so the A4 preview never stacks
           them awkwardly. */}
