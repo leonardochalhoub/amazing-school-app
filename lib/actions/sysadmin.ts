@@ -1103,19 +1103,19 @@ export async function getSysadminOverview(): Promise<
     .select("student_id, activity_date")
     .order("activity_date", { ascending: false })
     .limit(500_000);
-  // Real timestamps come from session_heartbeats.at and
-  // messages.created_at. daily_activity gives us only a DATE, and
-  // the earlier attempts to promote it (T00:00:00Z / T23:59:59Z /
-  // cap-at-now) all produced misleading wall-clock values for
-  // today's row (e.g. Paulo Roberto showing "11:40" just because
-  // the page was loaded at 11:40 — his real last heartbeat was at
-  // 11:07). Skip daily_activity as a lastActivity source; fall
-  // back to its YYYY-MM-DD only when the user has no heartbeat or
-  // message timestamp at all, and tag it visually in the UI (the
-  // current renderer already formats ISO → locale string, so a
-  // T12:00:00Z midday anchor reads as "DD/MM/YYYY 09:00" in BRT —
-  // fine as a "we know it was this day, don't know the hour"
-  // proxy, and past-date-only rows never shift into the future).
+  // SINGLE SOURCE OF TRUTH for "last active". Matches exactly what
+  // components/owner/login-log-panel.tsx uses via login-log.ts:
+  //   max(session_heartbeats.at, auth.users.last_sign_in_at)
+  // with messages.created_at folded in so chat-only students don't
+  // fall through, and daily_activity as a last-resort date-only
+  // anchor (for users who somehow have activity but no heartbeat,
+  // sign-in, or message). Order in the map doesn't matter — every
+  // source feeds through bumpLastActivity which takes MAX.
+  //
+  // The result: every sysadmin table that reads lastActivityByUser
+  // (All Students, All Teachers, etc.) shows the exact same timestamp
+  // the Recent Activity table shows for the same user. No more
+  // "11:07 here / 09:52 there" drift.
   for (const h of (heartbeatRes.data ?? []) as Array<{
     user_id: string;
     seconds: number;
@@ -1123,9 +1123,12 @@ export async function getSysadminOverview(): Promise<
   }>) {
     bumpLastActivity(h.user_id, h.at);
   }
-  // daily_activity fallback — midday UTC of the date as a stable
-  // anchor. We only use this if nothing else has been recorded yet,
-  // so users with actual heartbeats win.
+  for (const u of authList?.users ?? []) {
+    if (u.last_sign_in_at) bumpLastActivity(u.id, u.last_sign_in_at);
+  }
+  // daily_activity fallback — only kicks in for users with no real
+  // timestamp source above. Anchor at midday UTC of the date so
+  // past-date-only rows never drift into the future.
   for (const a of (allActivityRes ?? []) as Array<{
     student_id: string;
     activity_date: string;
