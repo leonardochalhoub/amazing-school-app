@@ -29,6 +29,10 @@ interface Student {
   id: string;
   fullName: string;
   classroomId: string | null;
+  /** When true, the id references profiles.id directly (e.g. a
+   *  teacher self-assigning). Regular students have their id
+   *  treated as roster_students.id (the default). */
+  idIsProfile?: boolean;
 }
 
 interface Props {
@@ -275,9 +279,17 @@ export function AssignLessonButton({
 
     let finalClassroomId: string | null = null;
     let finalRosterStudentId: string | null = null;
+    let finalStudentId: string | null = null;
 
     if (singleStudent) {
-      finalRosterStudentId = singleStudent.id;
+      // When idIsProfile is set (teacher self-assign), the id
+      // references profiles.id so it lands in student_id, not
+      // roster_student_id (which has a FK to roster_students).
+      if (singleStudent.idIsProfile) {
+        finalStudentId = singleStudent.id;
+      } else {
+        finalRosterStudentId = singleStudent.id;
+      }
       // Classroom in single-student mode is picked in the dialog — empty
       // means "no classroom specified" (allowed by migration 024).
       finalClassroomId = classroomId || null;
@@ -293,7 +305,11 @@ export function AssignLessonButton({
         return;
       }
       const student = students.find((s) => s.id === studentId);
-      finalRosterStudentId = studentId;
+      if (student?.idIsProfile) {
+        finalStudentId = studentId;
+      } else {
+        finalRosterStudentId = studentId;
+      }
       finalClassroomId = student?.classroomId ?? null;
     }
 
@@ -302,6 +318,7 @@ export function AssignLessonButton({
         classroomId: finalClassroomId,
         lessonSlugs: selected,
         rosterStudentId: finalRosterStudentId,
+        studentId: finalStudentId,
       });
       if ("error" in result) {
         toast.error(result.error);

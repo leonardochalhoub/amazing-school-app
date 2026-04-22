@@ -63,7 +63,18 @@ export function SelfCurriculumPanel({
           lessons={lessons}
           musics={musics}
           classrooms={[]}
-          students={[{ id: teacher.id, fullName: teacher.fullName, classroomId: null }]}
+          students={[
+            {
+              id: teacher.id,
+              fullName: teacher.fullName,
+              classroomId: null,
+              // Crucial — teacher.id references profiles.id, not
+              // roster_students.id. Without this the picker routes
+              // the id to roster_student_id and the FK rejects
+              // (teachers have no roster_students row for themselves).
+              idIsProfile: true,
+            },
+          ]}
           label={pt ? "Atribuir para mim" : "Assign to myself"}
           variant="subtle"
         />
