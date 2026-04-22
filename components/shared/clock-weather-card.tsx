@@ -147,9 +147,9 @@ export function ClockWeatherCard({ label, lat, lng }: Props) {
       <div className="min-w-0">
         <p
           aria-label="current time"
-          className="font-mono text-[clamp(2.25rem,6vw,3.25rem)] font-light leading-none tracking-tight tabular-nums bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500 bg-clip-text text-transparent"
+          className="font-mono text-[clamp(2.25rem,6vw,3.25rem)] font-bold leading-none tracking-tight tabular-nums bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500 bg-clip-text text-transparent"
           style={{
-            textShadow: "0 1px 32px rgba(167,139,250,0.25)",
+            textShadow: "0 1px 32px rgba(167,139,250,0.35)",
           }}
         >
           {timeStr}

@@ -105,7 +105,6 @@ export default async function TeacherDashboard() {
           the card, so dismissing the greeting also hides the readout. */}
       <DismissibleHero
         firstName={firstName}
-        classrooms={classroomOptions}
         gender={teacherGender}
         locationLabel={profileLocation}
         lat={locCoord?.lat ?? null}
