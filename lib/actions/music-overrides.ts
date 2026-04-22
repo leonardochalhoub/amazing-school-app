@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { revalidatePath } from "next/cache";
 import {
   MusicOverrideSchema,
@@ -55,6 +56,59 @@ export async function getMyMusicOverride(
     .eq("music_slug", musicSlug)
     .maybeSingle();
   return (data as MusicOverrideRow | null) ?? null;
+}
+
+/**
+ * All music overrides authored by the current teacher, newest first.
+ * Used by the "My Songs" tab on /teacher/bank to let the teacher
+ * jump back into any personalized song or share it to the bank.
+ */
+export async function listMyMusicOverrides(): Promise<
+  Array<{
+    music_slug: string;
+    has_override: boolean;
+    is_in_bank: boolean;
+    updated_at: string;
+  }>
+> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return [];
+  const admin = createAdminClient();
+
+  const { data: overrides } = await admin
+    .from("teacher_music_overrides")
+    .select("music_slug, updated_at")
+    .eq("teacher_id", user.id)
+    .order("updated_at", { ascending: false });
+  const rows = (overrides ?? []) as Array<{
+    music_slug: string;
+    updated_at: string;
+  }>;
+  if (rows.length === 0) return [];
+
+  // Tag each override with whether it's already in the lesson bank
+  // so the UI can render "Shared" vs "Share to bank" directly.
+  const { data: bank } = await admin
+    .from("lesson_bank_entries")
+    .select("music_slug")
+    .eq("author_id", user.id)
+    .eq("kind", "music")
+    .is("deleted_at", null);
+  const shared = new Set<string>(
+    ((bank ?? []) as Array<{ music_slug: string | null }>)
+      .map((b) => b.music_slug)
+      .filter((x): x is string => !!x),
+  );
+
+  return rows.map((r) => ({
+    music_slug: r.music_slug,
+    has_override: true,
+    is_in_bank: shared.has(r.music_slug),
+    updated_at: r.updated_at,
+  }));
 }
 
 export async function resetMusicOverride(musicSlug: string) {

@@ -11,8 +11,11 @@ import {
   sysadminListDeletedBankEntries,
 } from "@/lib/actions/lesson-bank";
 import { listMyTeacherLessons } from "@/lib/actions/teacher-lessons";
+import { listMyMusicOverrides } from "@/lib/actions/music-overrides";
+import { getMusic } from "@/lib/content/music";
 import { LessonBankBrowser } from "@/components/teacher/lesson-bank-browser";
 import { MyLessonsBrief } from "@/components/teacher/my-lessons-brief";
+import { MySongsBrief, type MySongRow } from "@/components/teacher/my-songs-brief";
 import { isOwner as checkIsOwner, isTeacherRole } from "@/lib/auth/roles";
 import { T } from "@/components/reports/t";
 import type { LessonBankVersionRow } from "@/lib/actions/lesson-bank-types";
@@ -47,19 +50,26 @@ export default async function TeacherBankPage({
   if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/student");
 
   const params = await searchParams;
-  const view = params.view === "mine" ? "mine" : "bank";
+  const view: "mine" | "songs" | "bank" =
+    params.view === "mine"
+      ? "mine"
+      : params.view === "songs"
+        ? "songs"
+        : "bank";
 
   const owner = await checkIsOwner();
 
   const [
     entries,
     myLessons,
+    myMusicOverridesRaw,
     personalizedLessons,
     musicOverrides,
     deletedEntries,
   ] = await Promise.all([
     listBankEntries({ sort: "recent", limit: 200 }),
     listMyTeacherLessons(),
+    listMyMusicOverrides(),
     owner
       ? sysadminListAllPersonalizedLessons()
       : Promise.resolve([] as Awaited<
@@ -76,6 +86,20 @@ export default async function TeacherBankPage({
           ReturnType<typeof sysadminListDeletedBankEntries>
         >),
   ]);
+
+  // Resolve each override's song title + CEFR from the canonical music
+  // catalog (static JSON). Songs whose slug has since been retired are
+  // still surfaced so the teacher can clean them up.
+  const mySongs: MySongRow[] = myMusicOverridesRaw.map((o) => {
+    const meta = getMusic(o.music_slug);
+    return {
+      music_slug: o.music_slug,
+      title: meta?.title ?? o.music_slug,
+      cefr_level: meta?.cefr_level ?? null,
+      is_in_bank: o.is_in_bank,
+      updated_at: o.updated_at,
+    };
+  });
 
   // Pre-fetch versions for every entry in one pass.
   const versionsByEntry: Record<string, LessonBankVersionRow[]> = {};
@@ -112,7 +136,7 @@ export default async function TeacherBankPage({
         </p>
       </header>
 
-      <nav className="flex items-center gap-1 rounded-full border border-border bg-background p-1 w-max">
+      <nav className="flex flex-wrap items-center gap-1 rounded-full border border-border bg-background p-1 w-max">
         <Link
           href="/teacher/bank?view=mine"
           className={`rounded-full px-4 py-1.5 text-xs font-medium ${
@@ -124,6 +148,19 @@ export default async function TeacherBankPage({
           <T
             en={`My lessons (${myLessons.length})`}
             pt={`Minhas lições (${myLessons.length})`}
+          />
+        </Link>
+        <Link
+          href="/teacher/bank?view=songs"
+          className={`rounded-full px-4 py-1.5 text-xs font-medium ${
+            view === "songs"
+              ? "bg-foreground text-background"
+              : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <T
+            en={`My songs (${mySongs.length})`}
+            pt={`Minhas músicas (${mySongs.length})`}
           />
         </Link>
         <Link
@@ -143,6 +180,8 @@ export default async function TeacherBankPage({
 
       {view === "mine" ? (
         <MyLessonsBrief lessons={myLessons} />
+      ) : view === "songs" ? (
+        <MySongsBrief songs={mySongs} />
       ) : (
         <LessonBankBrowser
           entries={entries}
@@ -156,6 +195,7 @@ export default async function TeacherBankPage({
             migration: null,
           }))}
           personalizedLessons={personalizedLessons}
+          musicOverrides={musicOverrides}
         />
       )}
     </div>
