@@ -19,6 +19,7 @@ import { listAllTeacherHistory } from "@/lib/actions/student-history";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { BirthdayAlert } from "@/components/teacher/birthday-alert";
 import { DismissibleHero } from "@/components/teacher/dismissible-hero";
+import { TeacherXpStrip } from "@/components/teacher/teacher-xp-strip";
 import { locateCity } from "@/lib/data/brazil-city-coords";
 import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { getUpcomingBirthdays } from "@/lib/actions/birthdays";
@@ -48,6 +49,22 @@ export default async function TeacherDashboard() {
   const profileLocation =
     (profile as { location?: string | null } | null)?.location ?? null;
   const locCoord = locateCity(profileLocation);
+
+  // XP opt-in gate — only render the progress strip when the
+  // teacher has flipped it on in /teacher/profile. xp_enabled
+  // lives on profiles post-migration 062; read defensively.
+  let xpEnabled = true;
+  try {
+    const { data: xpRow } = await admin
+      .from("profiles")
+      .select("xp_enabled")
+      .eq("id", user.id)
+      .maybeSingle();
+    const raw = (xpRow as { xp_enabled?: boolean | null } | null)?.xp_enabled;
+    if (raw === false) xpEnabled = false;
+  } catch {
+    /* column absent → default on */
+  }
 
   const [
     { classrooms, roster, kpis, recentAssignments },
@@ -101,6 +118,11 @@ export default async function TeacherDashboard() {
 
   return (
     <div className="space-y-10 pb-16">
+      {/* Teacher XP strip — level, progress bar, latest earned badges
+          + deep-link to /teacher/badges. Only shown when the teacher
+          opted in to gamification (profile toggle). */}
+      {xpEnabled ? <TeacherXpStrip teacherId={user.id} /> : null}
+
       {/* Welcome hero — live clock + local weather are embedded inside
           the card, so dismissing the greeting also hides the readout. */}
       <DismissibleHero
