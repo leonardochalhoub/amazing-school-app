@@ -56,16 +56,22 @@ export default function BrazilTeachersLeaflet({ markers }: Props) {
       minZoom={3}
       maxZoom={12}
       scrollWheelZoom={false}
-      style={{ height: 520, width: "100%", background: "#0a0a12" }}
+      // Touch gestures (pinch-zoom, drag) are on by default. tap is
+      // also on by default but isn't exposed in the react-leaflet
+      // typings, so we omit the explicit prop.
+      touchZoom
+      dragging
+      style={{ width: "100%", background: "#0a0a12" }}
+      className="h-[380px] sm:h-[460px] md:h-[520px]"
       attributionControl={false}
     >
       {/* CartoDB Dark Matter — free, no token required, matches the
-          app's dark palette. The HTTPS tile endpoint survives ad-
-          blockers better than the `{s}.basemaps.cartocdn.com`
-          round-robin. */}
+          app's dark palette. detectRetina picks @2x tiles on high-DPI
+          phones and laptops so the map never looks blurry. */}
       <TileLayer
         url="https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        detectRetina
       />
       <FitToMarkers markers={markers} />
       {markers.map((m, i) => (
