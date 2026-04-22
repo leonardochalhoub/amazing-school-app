@@ -3,15 +3,14 @@
 import { useEffect, useState, type ReactNode } from "react";
 
 /**
- * 50 hand-drawn SVG "super cute" illustrations for the female student
- * hero. Same spirit as `components/teacher/cute-flourish.tsx` — pure
- * SVG shapes, no emojis, no network fetches, palette tuned to the
- * indigo → violet → pink dashboard theme.
+ * 100 hand-drawn SVG "super cute" illustrations for the female student
+ * + teacher heroes. Pure SVG shapes, no emojis, no network fetches,
+ * palette tuned to the indigo → violet → pink dashboard theme.
  *
  * Each art is a tiny scene (10–40 shapes): flower bouquets, puppies,
- * panda faces, teddy bears, cupcakes, makeup, sparkles, ribbons.
- * The picker returns one deterministically by seed so callers can
- * re-pick on every request.
+ * pandas, teddy bears, cupcakes, makeup, sparkles, ribbons, magical
+ * creatures, nature motifs, sweets. The picker returns one by seed so
+ * callers can re-pick on every request.
  */
 
 interface CuteArtProps {
@@ -799,6 +798,618 @@ const ARTS: CuteArtRenderer[] = [
         strokeWidth="4"
         fill="none"
       />
+    </g>
+  ),
+  // 51. Lavender sprig
+  () => (
+    <>
+      <path d="M 100 160 Q 100 120 100 70" stroke="#4ade80" strokeWidth="3" fill="none" />
+      {[70, 82, 94, 106, 118, 130].map((y, i) => (
+        <g key={i}>
+          <circle cx={95} cy={y} r={4} fill="url(#cute-violet)" />
+          <circle cx={105} cy={y + 4} r={4} fill="url(#cute-violet)" />
+        </g>
+      ))}
+      <Leaf x={90} y={148} rot={-30} />
+      <Leaf x={110} y={148} rot={30} />
+    </>
+  ),
+  // 52. Hydrangea cluster
+  () => (
+    <>
+      {[
+        [80, 85], [100, 78], [120, 85], [70, 100], [90, 98],
+        [110, 98], [130, 100], [80, 115], [100, 118], [120, 115],
+      ].map(([x, y], i) => (
+        <Flower key={i} cx={x} cy={y} petalFill="#c4b5fd" r={8} centerFill="#ede9fe" />
+      ))}
+      <Leaf x={60} y={130} rot={30} />
+      <Leaf x={140} y={130} rot={-30} />
+    </>
+  ),
+  // 53. Orchid
+  () => (
+    <g transform="translate(100 100)">
+      <ellipse cx={-16} cy={-8} rx={14} ry={10} fill="url(#cute-rose)" />
+      <ellipse cx={16} cy={-8} rx={14} ry={10} fill="url(#cute-rose)" />
+      <ellipse cx={-12} cy={14} rx={10} ry={12} fill="url(#cute-pink)" />
+      <ellipse cx={12} cy={14} rx={10} ry={12} fill="url(#cute-pink)" />
+      <path d="M -6 6 Q 0 -6 6 6 Q 0 16 -6 6 Z" fill="url(#cute-violet)" />
+      <circle cx={0} cy={2} r={3} fill="#fef3c7" />
+    </g>
+  ),
+  // 54. Hibiscus
+  () => (
+    <g transform="translate(100 100)">
+      {[0, 72, 144, 216, 288].map((a, i) => (
+        <path
+          key={i}
+          d="M 0 0 Q 18 -14 0 -34 Q -18 -14 0 0 Z"
+          fill="url(#cute-rose)"
+          transform={`rotate(${a})`}
+        />
+      ))}
+      <circle cx={0} cy={0} r={4} fill="#fde68a" />
+      <line x1={0} y1={0} x2={0} y2={16} stroke="#fbbf24" strokeWidth={2} />
+    </g>
+  ),
+  // 55. Calla lily
+  () => (
+    <g transform="translate(100 100)">
+      <path
+        d="M -14 14 Q -20 -16 0 -24 Q 20 -16 14 14 Q 6 4 0 16 Q -6 4 -14 14 Z"
+        fill="#fff7ed"
+        stroke="#f9a8d4"
+        strokeWidth={1.5}
+      />
+      <path d="M 0 -4 L 0 14" stroke="#fbbf24" strokeWidth={3} />
+      <Leaf x={20} y={30} rot={30} />
+    </g>
+  ),
+  // 56. Poppy
+  () => (
+    <g transform="translate(100 100)">
+      {[0, 90, 180, 270].map((a, i) => (
+        <path
+          key={i}
+          d="M 0 0 Q 14 -16 0 -26 Q -14 -16 0 0 Z"
+          fill="url(#cute-rose)"
+          transform={`rotate(${a})`}
+        />
+      ))}
+      <circle cx={0} cy={0} r={6} fill="#111827" />
+      <circle cx={0} cy={0} r={3} fill="#f59e0b" />
+    </g>
+  ),
+  // 57. Pansy
+  () => (
+    <g transform="translate(100 100)">
+      <ellipse cx={-14} cy={-10} rx={12} ry={10} fill="url(#cute-violet)" />
+      <ellipse cx={14} cy={-10} rx={12} ry={10} fill="url(#cute-violet)" />
+      <ellipse cx={-10} cy={8} rx={10} ry={10} fill="url(#cute-pink)" />
+      <ellipse cx={10} cy={8} rx={10} ry={10} fill="url(#cute-pink)" />
+      <ellipse cx={0} cy={14} rx={12} ry={10} fill="url(#cute-butter)" />
+      <circle cx={0} cy={-2} r={4} fill="#fde68a" />
+    </g>
+  ),
+  // 58. Camellia
+  () => (
+    <g transform="translate(100 100)">
+      {[0, 40, 80, 120, 160, 200, 240, 280, 320].map((a, i) => (
+        <ellipse
+          key={i}
+          cx={0}
+          cy={-14}
+          rx={7}
+          ry={12}
+          fill="url(#cute-pink)"
+          transform={`rotate(${a})`}
+        />
+      ))}
+      <circle cx={0} cy={0} r={6} fill="url(#cute-butter)" />
+    </g>
+  ),
+  // 59. Gerbera daisy
+  () => (
+    <g transform="translate(100 100)">
+      {Array.from({ length: 12 }).map((_, i) => (
+        <ellipse
+          key={i}
+          cx={0}
+          cy={-22}
+          rx={4}
+          ry={18}
+          fill="url(#cute-peach)"
+          transform={`rotate(${i * 30})`}
+        />
+      ))}
+      <circle cx={0} cy={0} r={8} fill="#f59e0b" />
+      <circle cx={0} cy={0} r={4} fill="#78350f" />
+    </g>
+  ),
+  // 60. Magnolia bud
+  () => (
+    <g transform="translate(100 100)">
+      <path d="M 0 20 Q -22 10 -14 -16 Q 0 -24 14 -16 Q 22 10 0 20 Z" fill="#fff" stroke="#fbcfe8" strokeWidth={2} />
+      <path d="M -8 12 Q 0 -10 8 12 Z" fill="#fbcfe8" opacity={0.7} />
+      <Leaf x={-30} y={30} rot={-40} fill="#4ade80" />
+    </g>
+  ),
+  // 61. Forget-me-not cluster
+  () => (
+    <>
+      {[[80, 90], [110, 80], [95, 110], [125, 105], [75, 120], [140, 90]].map(
+        ([x, y], i) => (
+          <Flower key={i} cx={x} cy={y} petalFill="#60a5fa" centerFill="#fde68a" r={7} />
+        ),
+      )}
+      <Leaf x={60} y={130} rot={20} />
+      <Leaf x={135} y={130} rot={-20} />
+    </>
+  ),
+  // 62. Lily of the valley
+  () => (
+    <>
+      <path d="M 100 160 Q 80 120 60 60" stroke="#4ade80" strokeWidth={3} fill="none" />
+      {[
+        [70, 75], [78, 95], [85, 115], [92, 135],
+      ].map(([x, y], i) => (
+        <g key={i}>
+          <path
+            d={`M ${x - 4} ${y} Q ${x} ${y + 10} ${x + 4} ${y} Q ${x} ${y - 4} ${x - 4} ${y} Z`}
+            fill="#fff"
+            stroke="#d4d4d8"
+            strokeWidth={1}
+          />
+        </g>
+      ))}
+      <Leaf x={110} y={120} rot={-50} />
+    </>
+  ),
+  // 63. Dahlia
+  () => (
+    <g transform="translate(100 100)">
+      {Array.from({ length: 16 }).map((_, i) => (
+        <ellipse
+          key={i}
+          cx={0}
+          cy={-18}
+          rx={5}
+          ry={12}
+          fill={i % 2 ? "url(#cute-rose)" : "url(#cute-pink)"}
+          transform={`rotate(${i * 22.5})`}
+        />
+      ))}
+      <circle cx={0} cy={0} r={6} fill="#f59e0b" />
+    </g>
+  ),
+  // 64. Iris
+  () => (
+    <g transform="translate(100 100)">
+      <path d="M -12 -6 Q -24 -24 -6 -26 Q 0 -12 -12 -6 Z" fill="url(#cute-violet)" />
+      <path d="M 12 -6 Q 24 -24 6 -26 Q 0 -12 12 -6 Z" fill="url(#cute-violet)" />
+      <path d="M 0 -4 Q -14 22 14 22 Q 14 4 0 -4 Z" fill="url(#cute-pink)" />
+      <path d="M 0 0 L 0 14" stroke="#fbbf24" strokeWidth={2} />
+    </g>
+  ),
+  // 65. Wildflower meadow
+  () => (
+    <>
+      <Flower cx={50} cy={110} petalFill="url(#cute-pink)" r={9} />
+      <Flower cx={80} cy={125} petalFill="url(#cute-butter)" r={8} />
+      <Flower cx={115} cy={115} petalFill="url(#cute-violet)" r={10} />
+      <Flower cx={150} cy={128} petalFill="url(#cute-rose)" r={9} />
+      <Flower cx={170} cy={110} petalFill="#60a5fa" r={7} />
+      <path d="M 30 160 Q 100 120 180 160" stroke="#4ade80" strokeWidth={2} fill="none" />
+    </>
+  ),
+  // 66. Butterfly
+  () => (
+    <g transform="translate(100 100)">
+      <ellipse cx={-22} cy={-10} rx={18} ry={16} fill="url(#cute-pink)" />
+      <ellipse cx={22} cy={-10} rx={18} ry={16} fill="url(#cute-pink)" />
+      <ellipse cx={-18} cy={14} rx={14} ry={10} fill="url(#cute-violet)" />
+      <ellipse cx={18} cy={14} rx={14} ry={10} fill="url(#cute-violet)" />
+      <ellipse cx={0} cy={0} rx={3} ry={22} fill="#4c1d95" />
+      <circle cx={-2} cy={-22} r={2} fill="#4c1d95" />
+      <circle cx={2} cy={-22} r={2} fill="#4c1d95" />
+      <Sparkle x={-40} y={-30} s={0.6} />
+      <Sparkle x={46} y={-30} s={0.6} />
+    </g>
+  ),
+  // 67. Ladybug
+  () => (
+    <g transform="translate(100 110)">
+      <ellipse cx={0} cy={0} rx={32} ry={24} fill="#ef4444" />
+      <path d="M 0 -24 L 0 24" stroke="#111827" strokeWidth={2} />
+      <ellipse cx={0} cy={-22} rx={12} ry={10} fill="#111827" />
+      <circle cx={-14} cy={-6} r={4} fill="#111827" />
+      <circle cx={14} cy={-6} r={4} fill="#111827" />
+      <circle cx={-12} cy={10} r={3} fill="#111827" />
+      <circle cx={12} cy={10} r={3} fill="#111827" />
+      <circle cx={-5} cy={-24} r={1.5} fill="#fff" />
+      <circle cx={5} cy={-24} r={1.5} fill="#fff" />
+    </g>
+  ),
+  // 68. Bumblebee
+  () => (
+    <g transform="translate(100 100)">
+      <ellipse cx={0} cy={0} rx={28} ry={20} fill="#fbbf24" />
+      <path d="M -14 -14 Q -14 14 -14 14" stroke="#111827" strokeWidth={6} />
+      <path d="M 0 -18 Q 0 18 0 18" stroke="#111827" strokeWidth={6} />
+      <path d="M 14 -14 Q 14 14 14 14" stroke="#111827" strokeWidth={6} />
+      <ellipse cx={-18} cy={-14} rx={12} ry={8} fill="#e0f2fe" opacity={0.85} />
+      <ellipse cx={18} cy={-14} rx={12} ry={8} fill="#e0f2fe" opacity={0.85} />
+      <circle cx={-24} cy={-2} r={2} fill="#111827" />
+    </g>
+  ),
+  // 69. Dragonfly
+  () => (
+    <g transform="translate(100 100)">
+      <ellipse cx={0} cy={0} rx={3} ry={28} fill="url(#cute-violet)" />
+      <circle cx={0} cy={-26} r={6} fill="url(#cute-violet)" />
+      <ellipse cx={-18} cy={-4} rx={16} ry={6} fill="#c4b5fd" opacity={0.8} />
+      <ellipse cx={18} cy={-4} rx={16} ry={6} fill="#c4b5fd" opacity={0.8} />
+      <ellipse cx={-18} cy={8} rx={14} ry={5} fill="#ddd6fe" opacity={0.7} />
+      <ellipse cx={18} cy={8} rx={14} ry={5} fill="#ddd6fe" opacity={0.7} />
+    </g>
+  ),
+  // 70. Owl
+  () => (
+    <g transform="translate(100 100)">
+      <ellipse cx={0} cy={0} rx={30} ry={36} fill="url(#cute-fawn)" />
+      <ellipse cx={0} cy={-10} rx={28} ry={20} fill="#fde68a" opacity={0.4} />
+      <circle cx={-12} cy={-10} r={10} fill="#fff" />
+      <circle cx={12} cy={-10} r={10} fill="#fff" />
+      <circle cx={-12} cy={-10} r={5} fill="#111827" />
+      <circle cx={12} cy={-10} r={5} fill="#111827" />
+      <circle cx={-10} cy={-12} r={1.5} fill="#fff" />
+      <circle cx={14} cy={-12} r={1.5} fill="#fff" />
+      <path d="M -4 2 L 0 8 L 4 2 Z" fill="#f59e0b" />
+      <path d="M -30 20 L -22 14 L -22 24 Z" fill="url(#cute-fawn)" />
+      <path d="M 30 20 L 22 14 L 22 24 Z" fill="url(#cute-fawn)" />
+    </g>
+  ),
+  // 71. Swan
+  () => (
+    <g transform="translate(100 110)">
+      <path d="M -40 10 Q -30 -10 0 -14 Q 30 -14 40 10 Q 0 30 -40 10 Z" fill="#fff" />
+      <path d="M 10 -14 Q 14 -30 24 -32 Q 30 -24 24 -16 Q 30 -14 28 -10 Q 20 -12 10 -14 Z" fill="#fff" />
+      <path d="M 26 -26 L 34 -26 L 30 -22 Z" fill="#f59e0b" />
+      <circle cx={22} cy={-24} r={1.5} fill="#111827" />
+    </g>
+  ),
+  // 72. Flamingo
+  () => (
+    <g transform="translate(100 100)">
+      <path d="M -10 30 Q -10 -10 10 -20 Q 26 -14 22 2 Q 16 14 4 14 Q -4 28 -10 30 Z" fill="url(#cute-pink)" />
+      <path d="M 20 -14 Q 32 -22 34 -30 Q 26 -30 22 -18 Z" fill="url(#cute-pink)" />
+      <path d="M 30 -30 L 40 -28 L 34 -22 Z" fill="#f59e0b" />
+      <circle cx={28} cy={-28} r={1.5} fill="#111827" />
+      <path d="M -8 30 L -14 44 M 2 30 L 2 44" stroke="#f59e0b" strokeWidth={2} />
+    </g>
+  ),
+  // 73. Deer fawn
+  () => (
+    <g transform="translate(100 100)">
+      <ellipse cx={0} cy={10} rx={28} ry={20} fill="url(#cute-fawn)" />
+      <circle cx={20} cy={-14} r={16} fill="url(#cute-fawn)" />
+      <path d="M 10 -28 L 14 -36 M 26 -28 L 30 -36" stroke="url(#cute-fawn)" strokeWidth={3} />
+      <circle cx={24} cy={-14} r={2} fill="#111827" />
+      <circle cx={14} cy={-14} r={2} fill="#111827" />
+      <circle cx={26} cy={-8} r={1.5} fill="#111827" />
+      <circle cx={-10} cy={6} r={3} fill="#fff" opacity={0.8} />
+      <circle cx={-4} cy={18} r={3} fill="#fff" opacity={0.8} />
+      <circle cx={10} cy={20} r={3} fill="#fff" opacity={0.8} />
+    </g>
+  ),
+  // 74. Hedgehog
+  () => (
+    <g transform="translate(100 106)">
+      <ellipse cx={0} cy={0} rx={30} ry={22} fill="#a16207" />
+      {Array.from({ length: 16 }).map((_, i) => (
+        <path
+          key={i}
+          d={`M ${-26 + i * 3} -18 L ${-24 + i * 3} -28`}
+          stroke="#78350f"
+          strokeWidth={2}
+        />
+      ))}
+      <ellipse cx={-26} cy={4} rx={10} ry={8} fill="#fed7aa" />
+      <circle cx={-30} cy={2} r={2} fill="#111827" />
+      <circle cx={-34} cy={6} r={1.5} fill="#111827" />
+    </g>
+  ),
+  // 75. Fox kit
+  () => (
+    <g transform="translate(100 100)">
+      <ellipse cx={0} cy={12} rx={28} ry={16} fill="url(#cute-peach)" />
+      <circle cx={0} cy={-8} r={18} fill="url(#cute-peach)" />
+      <path d="M -18 -16 L -14 -28 L -8 -18 Z" fill="url(#cute-peach)" />
+      <path d="M 18 -16 L 14 -28 L 8 -18 Z" fill="url(#cute-peach)" />
+      <path d="M -14 -2 Q 0 12 14 -2 Q 0 -2 -14 -2 Z" fill="#fff" />
+      <circle cx={-6} cy={-10} r={2} fill="#111827" />
+      <circle cx={6} cy={-10} r={2} fill="#111827" />
+      <circle cx={0} cy={-2} r={2} fill="#111827" />
+    </g>
+  ),
+  // 76. Squirrel
+  () => (
+    <g transform="translate(100 100)">
+      <path d="M 14 20 Q 40 0 34 -26 Q 18 -24 20 0 Z" fill="url(#cute-fawn)" />
+      <ellipse cx={0} cy={10} rx={18} ry={16} fill="url(#cute-fawn)" />
+      <circle cx={-10} cy={-8} r={14} fill="url(#cute-fawn)" />
+      <path d="M -20 -20 L -16 -26 L -12 -20 Z" fill="url(#cute-fawn)" />
+      <circle cx={-14} cy={-10} r={2} fill="#111827" />
+      <circle cx={-6} cy={-6} r={2} fill="#111827" />
+      <path d="M -2 2 L 2 2 L 0 4 Z" fill="#111827" />
+    </g>
+  ),
+  // 77. Mouse
+  () => (
+    <g transform="translate(100 106)">
+      <ellipse cx={0} cy={0} rx={24} ry={18} fill="#e5e7eb" />
+      <circle cx={-16} cy={-14} r={8} fill="#f3f4f6" />
+      <circle cx={16} cy={-14} r={8} fill="#f3f4f6" />
+      <circle cx={-8} cy={0} r={2} fill="#111827" />
+      <circle cx={6} cy={0} r={2} fill="#111827" />
+      <circle cx={0} cy={10} r={2.5} fill="#fb7185" />
+      <path d="M 20 4 Q 36 10 42 2" stroke="#9ca3af" strokeWidth={2} fill="none" />
+    </g>
+  ),
+  // 78. Toadstool mushroom
+  () => (
+    <g transform="translate(100 100)">
+      <path d="M -28 0 Q -28 -30 0 -32 Q 28 -30 28 0 Z" fill="#ef4444" />
+      <circle cx={-14} cy={-16} r={4} fill="#fff" />
+      <circle cx={8} cy={-10} r={3} fill="#fff" />
+      <circle cx={-4} cy={-24} r={3} fill="#fff" />
+      <circle cx={16} cy={-22} r={2.5} fill="#fff" />
+      <rect x={-8} y={0} width={16} height={24} rx={3} fill="#fef3c7" />
+      <ellipse cx={0} cy={0} rx={14} ry={4} fill="#fbcfe8" opacity={0.6} />
+    </g>
+  ),
+  // 79. Fairy wand
+  () => (
+    <g transform="translate(100 100)">
+      <path
+        d="M 20 -30 L 28 -14 L 44 -12 L 32 0 L 36 16 L 20 8 L 4 16 L 8 0 L -4 -12 L 12 -14 Z"
+        fill="url(#cute-butter)"
+        stroke="#fbbf24"
+        strokeWidth={1.5}
+      />
+      <rect x={16} y={6} width={6} height={40} rx={3} fill="url(#cute-rose)" transform="rotate(30 16 6)" />
+      <Sparkle x={-10} y={20} s={0.7} />
+      <Sparkle x={50} y={30} s={0.6} />
+    </g>
+  ),
+  // 80. Magic potion
+  () => (
+    <g transform="translate(100 100)">
+      <rect x={-10} y={-36} width={20} height={14} rx={2} fill="#a78bfa" />
+      <path
+        d="M -18 -22 Q -28 18 0 28 Q 28 18 18 -22 Z"
+        fill="url(#cute-violet)"
+      />
+      <ellipse cx={0} cy={-8} rx={10} ry={4} fill="#ddd6fe" opacity={0.8} />
+      <Sparkle x={0} y={-46} s={0.6} />
+    </g>
+  ),
+  // 81. Crystal
+  () => (
+    <g transform="translate(100 100)">
+      <path d="M 0 -32 L 14 -10 L 0 30 L -14 -10 Z" fill="url(#cute-violet)" />
+      <path d="M 0 -32 L 14 -10 L 0 -10 Z" fill="#c4b5fd" />
+      <path d="M 0 -32 L -14 -10 L 0 -10 Z" fill="#a78bfa" />
+      <Sparkle x={28} y={-18} s={0.5} />
+      <Sparkle x={-30} y={14} s={0.5} />
+    </g>
+  ),
+  // 82. Moon + stars
+  () => (
+    <g transform="translate(100 100)">
+      <path d="M 0 -30 A 28 28 0 1 0 18 26 A 22 22 0 1 1 0 -30 Z" fill="url(#cute-butter)" />
+      <Sparkle x={-44} y={-20} s={0.6} />
+      <Sparkle x={40} y={10} s={0.8} />
+      <Sparkle x={-20} y={36} s={0.5} />
+    </g>
+  ),
+  // 83. Cloud with heart
+  () => (
+    <g transform="translate(100 100)">
+      <ellipse cx={-20} cy={6} rx={20} ry={14} fill="#fff" />
+      <ellipse cx={4} cy={-2} rx={24} ry={18} fill="#fff" />
+      <ellipse cx={28} cy={6} rx={18} ry={14} fill="#fff" />
+      <ellipse cx={4} cy={14} rx={30} ry={8} fill="#fff" />
+      <Heart x={0} y={-30} s={1.6} fill="url(#cute-rose)" />
+    </g>
+  ),
+  // 84. Balloon bouquet
+  () => (
+    <>
+      <ellipse cx={80} cy={60} rx={14} ry={18} fill="url(#cute-rose)" />
+      <ellipse cx={110} cy={50} rx={14} ry={18} fill="url(#cute-violet)" />
+      <ellipse cx={140} cy={60} rx={14} ry={18} fill="url(#cute-butter)" />
+      <path d="M 80 78 Q 90 120 100 156" stroke="#9ca3af" strokeWidth={1.5} fill="none" />
+      <path d="M 110 68 Q 105 120 100 156" stroke="#9ca3af" strokeWidth={1.5} fill="none" />
+      <path d="M 140 78 Q 120 120 100 156" stroke="#9ca3af" strokeWidth={1.5} fill="none" />
+    </>
+  ),
+  // 85. Umbrella
+  () => (
+    <g transform="translate(100 100)">
+      <path d="M -40 0 Q -40 -30 0 -34 Q 40 -30 40 0 Q 20 -6 0 0 Q -20 -6 -40 0 Z" fill="url(#cute-rose)" />
+      <path d="M 0 0 L 0 30 Q 0 38 10 38" stroke="#9ca3af" strokeWidth={3} fill="none" />
+      <path d="M -20 -2 Q -20 -26 0 -32" stroke="#fff" strokeWidth={1} fill="none" />
+      <path d="M 20 -2 Q 20 -26 0 -32" stroke="#fff" strokeWidth={1} fill="none" />
+    </g>
+  ),
+  // 86. Macaron
+  () => (
+    <g transform="translate(100 100)">
+      <ellipse cx={0} cy={-10} rx={30} ry={10} fill="url(#cute-rose)" />
+      <rect x={-30} y={-4} width={60} height={10} fill="#fef3c7" />
+      <ellipse cx={0} cy={10} rx={30} ry={10} fill="url(#cute-rose)" />
+      <circle cx={-16} cy={-12} r={2} fill="#fff" opacity={0.6} />
+      <circle cx={14} cy={12} r={2} fill="#fff" opacity={0.6} />
+    </g>
+  ),
+  // 87. Cookie
+  () => (
+    <g transform="translate(100 100)">
+      <circle cx={0} cy={0} r={30} fill="url(#cute-fawn)" />
+      <circle cx={-10} cy={-10} r={4} fill="#78350f" />
+      <circle cx={12} cy={-6} r={3} fill="#78350f" />
+      <circle cx={-6} cy={12} r={3} fill="#78350f" />
+      <circle cx={10} cy={10} r={4} fill="#78350f" />
+      <circle cx={-14} cy={6} r={2} fill="#78350f" />
+      <circle cx={2} cy={-14} r={2.5} fill="#78350f" />
+    </g>
+  ),
+  // 88. Tea cup
+  () => (
+    <g transform="translate(100 100)">
+      <path d="M -28 -10 L -24 22 Q -20 30 0 30 Q 20 30 24 22 L 28 -10 Z" fill="#fff" stroke="url(#cute-pink)" strokeWidth={2} />
+      <ellipse cx={0} cy={-10} rx={28} ry={6} fill="#b45309" />
+      <path d="M 24 0 Q 40 0 38 14 Q 36 22 24 20" stroke="url(#cute-pink)" strokeWidth={3} fill="none" />
+      <path d="M -10 -26 Q -6 -20 -10 -14 M 0 -28 Q 4 -22 0 -16" stroke="#e5e7eb" strokeWidth={2} fill="none" />
+    </g>
+  ),
+  // 89. Hot cocoa mug
+  () => (
+    <g transform="translate(100 100)">
+      <rect x={-22} y={-10} width={40} height={32} rx={4} fill="url(#cute-rose)" />
+      <ellipse cx={-2} cy={-10} rx={22} ry={4} fill="#78350f" />
+      <path d="M 18 -4 Q 32 -2 30 10 Q 28 18 18 16" stroke="url(#cute-rose)" strokeWidth={3} fill="none" />
+      <circle cx={-8} cy={-12} r={3} fill="#fff" />
+      <circle cx={4} cy={-12} r={3} fill="#fff" />
+      <circle cx={-2} cy={-14} r={2.5} fill="#fff" />
+      <Heart x={0} y={2} s={0.9} fill="#fff" opacity={0.8} />
+    </g>
+  ),
+  // 90. Pie slice
+  () => (
+    <g transform="translate(100 100)">
+      <path d="M 0 0 L 40 -20 A 44 44 0 0 1 40 20 Z" fill="url(#cute-fawn)" />
+      <path d="M 0 0 L 40 -20" stroke="#78350f" strokeWidth={1.5} />
+      <circle cx={20} cy={-8} r={3} fill="#dc2626" />
+      <circle cx={30} cy={2} r={3} fill="#dc2626" />
+      <circle cx={22} cy={10} r={3} fill="#dc2626" />
+      <path d="M 36 -22 Q 38 -30 42 -22 Q 40 -16 36 -22 Z" fill="#fef3c7" />
+    </g>
+  ),
+  // 91. Cotton candy
+  () => (
+    <g transform="translate(100 100)">
+      <ellipse cx={-10} cy={-14} rx={20} ry={14} fill="url(#cute-pink)" opacity={0.85} />
+      <ellipse cx={10} cy={-10} rx={22} ry={16} fill="url(#cute-rose)" opacity={0.85} />
+      <ellipse cx={0} cy={-20} rx={18} ry={12} fill="#fbcfe8" opacity={0.85} />
+      <rect x={-2} y={-2} width={4} height={32} fill="#9ca3af" />
+    </g>
+  ),
+  // 92. Croissant
+  () => (
+    <g transform="translate(100 100)">
+      <path
+        d="M -30 10 Q -20 -20 0 -20 Q 20 -20 30 10 Q 20 18 10 12 Q 0 18 -10 12 Q -20 18 -30 10 Z"
+        fill="url(#cute-fawn)"
+        stroke="#b45309"
+        strokeWidth={1}
+      />
+      <path d="M -20 0 Q -14 -8 -8 0 M -4 -4 Q 0 -12 4 -4 M 8 0 Q 14 -8 20 0" stroke="#b45309" strokeWidth={1} fill="none" />
+    </g>
+  ),
+  // 93. Tiara
+  () => (
+    <g transform="translate(100 106)">
+      <path d="M -40 10 L -20 -20 L -8 6 L 0 -26 L 8 6 L 20 -20 L 40 10 Z" fill="url(#cute-butter)" stroke="#f59e0b" strokeWidth={1.5} />
+      <circle cx={0} cy={-22} r={4} fill="url(#cute-rose)" />
+      <circle cx={-20} cy={-16} r={3} fill="url(#cute-violet)" />
+      <circle cx={20} cy={-16} r={3} fill="url(#cute-violet)" />
+    </g>
+  ),
+  // 94. Pearl necklace
+  () => (
+    <>
+      <path d="M 30 60 Q 100 160 170 60" stroke="#fbcfe8" strokeWidth={1} fill="none" />
+      {[
+        [30, 60], [46, 86], [64, 110], [84, 128], [100, 136], [116, 128],
+        [136, 110], [154, 86], [170, 60],
+      ].map(([x, y], i) => (
+        <circle key={i} cx={x} cy={y} r={5} fill="#fff" stroke="#fbcfe8" strokeWidth={1} />
+      ))}
+    </>
+  ),
+  // 95. Hair bow
+  () => (
+    <g transform="translate(100 100)">
+      <path d="M -4 0 Q -40 -20 -40 12 Q -40 24 -4 12 Z" fill="url(#cute-rose)" />
+      <path d="M 4 0 Q 40 -20 40 12 Q 40 24 4 12 Z" fill="url(#cute-rose)" />
+      <rect x={-8} y={-6} width={16} height={20} rx={3} fill="url(#cute-pink)" />
+      <path d="M -6 6 L 6 6" stroke="#fff" strokeWidth={1} opacity={0.6} />
+    </g>
+  ),
+  // 96. Scrunchie
+  () => (
+    <g transform="translate(100 100)">
+      <path
+        d="M -36 0 Q -30 -16 0 -16 Q 30 -16 36 0 Q 30 16 0 16 Q -30 16 -36 0 Z"
+        fill="url(#cute-violet)"
+      />
+      {[-28, -14, 0, 14, 28].map((x, i) => (
+        <path key={i} d={`M ${x} -14 Q ${x + 4} 0 ${x} 14`} stroke="#a78bfa" strokeWidth={1.5} fill="none" />
+      ))}
+    </g>
+  ),
+  // 97. Clutch purse
+  () => (
+    <g transform="translate(100 100)">
+      <rect x={-36} y={-12} width={72} height={30} rx={4} fill="url(#cute-rose)" />
+      <path d="M -36 -12 L 0 -28 L 36 -12 Z" fill="url(#cute-pink)" />
+      <circle cx={0} cy={-6} r={3} fill="url(#cute-butter)" />
+      <rect x={-36} y={14} width={72} height={4} fill="#fbbf24" opacity={0.5} />
+    </g>
+  ),
+  // 98. Candle
+  () => (
+    <g transform="translate(100 100)">
+      <rect x={-16} y={-4} width={32} height={36} rx={2} fill="#fff" stroke="#fbcfe8" strokeWidth={1} />
+      <ellipse cx={0} cy={-4} rx={16} ry={4} fill="#fef3c7" />
+      <rect x={-0.5} y={-22} width={1} height={18} fill="#78350f" />
+      <path d="M 0 -30 Q 8 -22 0 -20 Q -8 -22 0 -30 Z" fill="url(#cute-butter)" />
+      <path d="M 0 -28 Q 4 -24 0 -22 Q -4 -24 0 -28 Z" fill="#fff" opacity={0.7} />
+    </g>
+  ),
+  // 99. Mermaid tail
+  () => (
+    <g transform="translate(100 100)">
+      <path
+        d="M 0 -30 Q 20 -10 18 10 Q 16 28 0 34 Q -16 28 -18 10 Q -20 -10 0 -30 Z"
+        fill="url(#cute-sky)"
+      />
+      <path
+        d="M 0 34 Q -30 40 -30 20 Q -10 28 0 34 Z"
+        fill="url(#cute-sky)"
+      />
+      <path
+        d="M 0 34 Q 30 40 30 20 Q 10 28 0 34 Z"
+        fill="url(#cute-sky)"
+      />
+      {[-8, 0, 8].map((y, i) => (
+        <path key={i} d={`M -12 ${y} Q 0 ${y - 4} 12 ${y}`} stroke="#fff" strokeWidth={1} fill="none" opacity={0.7} />
+      ))}
+    </g>
+  ),
+  // 100. Fairy wings
+  () => (
+    <g transform="translate(100 100)">
+      <ellipse cx={-22} cy={-12} rx={20} ry={28} fill="#fbcfe8" opacity={0.75} transform="rotate(-16 -22 -12)" />
+      <ellipse cx={22} cy={-12} rx={20} ry={28} fill="#fbcfe8" opacity={0.75} transform="rotate(16 22 -12)" />
+      <ellipse cx={-20} cy={18} rx={14} ry={22} fill="#e9d5ff" opacity={0.75} transform="rotate(-20 -20 18)" />
+      <ellipse cx={20} cy={18} rx={14} ry={22} fill="#e9d5ff" opacity={0.75} transform="rotate(20 20 18)" />
+      <Sparkle x={0} y={-30} s={0.7} />
+      <Sparkle x={-40} y={20} s={0.5} />
+      <Sparkle x={40} y={20} s={0.5} />
     </g>
   ),
 ];

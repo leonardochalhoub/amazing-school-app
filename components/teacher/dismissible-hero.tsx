@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Sparkles, X } from "lucide-react";
 import { useI18n } from "@/lib/i18n/context";
 import { HeroTagline } from "@/components/teacher/hero-tagline";
-import { CuteFlourish } from "@/components/teacher/cute-flourish";
+import { CuteArtBadge } from "@/components/student/cute-art";
 import { ClockWeatherCard } from "@/components/shared/clock-weather-card";
 
 const STORAGE_KEY = "teacher-hero-dismissed";
@@ -88,14 +88,17 @@ export function DismissibleHero({
         className="pointer-events-none absolute -bottom-32 -left-32 h-64 w-64 rounded-full bg-gradient-to-tr from-emerald-500/20 via-teal-500/10 to-sky-500/20 blur-3xl"
       />
 
-      {/* Bouquet flourish — female teachers only. Tucked into the
-          empty space on the right of the hero above the dismiss
-          button; hidden on narrow screens so the title never
-          wraps around it. */}
+      {/* Feminine flourish — female teachers only. Picks one of 100
+          hand-drawn SVG motifs (bouquets, pandas, butterflies, teddy
+          bears, macarons, fairy wands …) and re-rolls on every load.
+          Parked in the upper-right corner just below the dismiss
+          button so it sits clear of the clock+weather readout at the
+          base of the card. Hidden on narrow screens where the hero
+          is already vertically dense. */}
       {isFemale ? (
-        <CuteFlourish
-          size={170}
-          className="pointer-events-none absolute right-4 bottom-4 hidden opacity-80 md:block"
+        <CuteArtBadge
+          size={130}
+          className="pointer-events-none absolute right-3 top-12 hidden opacity-90 md:block"
         />
       ) : null}
 
