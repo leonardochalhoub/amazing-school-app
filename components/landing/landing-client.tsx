@@ -121,15 +121,19 @@ export function LandingClient() {
             studentHint={locale === "pt-BR" ? "Demo" : "Live demo"}
           />
 
-          {/* Documentation links — slim pill buttons underneath the
-              demo cards. Teacher guide is always the English version,
-              student guide is always the pt-BR version. */}
-          <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs">
+          {/* Documentation links — mirrors the DemoAccess layout
+              directly above so each pill sits under its matching
+              demo card: same flex-col-to-flex-row breakpoint, same
+              justify-center, same min-w-[230px] per button so both
+              line up as a two-column pair regardless of label
+              length. Evens out on mobile too — single column,
+              full-width buttons. */}
+          <div className="mt-3 flex w-full flex-col items-stretch gap-2 text-xs sm:flex-row sm:justify-center">
             <a
               href="/r/teacher-docs"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-card/60 px-3 py-1 font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+              className="inline-flex min-w-[230px] items-center justify-center gap-1.5 rounded-full border border-border/70 bg-card/60 px-3 py-1.5 font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
             >
               <GraduationCap className="h-3.5 w-3.5" />
               <span>
@@ -143,7 +147,7 @@ export function LandingClient() {
               href="/r/student-docs-pt"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-card/60 px-3 py-1 font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+              className="inline-flex min-w-[230px] items-center justify-center gap-1.5 rounded-full border border-border/70 bg-card/60 px-3 py-1.5 font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
             >
               <BookOpen className="h-3.5 w-3.5" />
               <span>

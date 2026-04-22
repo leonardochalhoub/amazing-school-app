@@ -765,6 +765,7 @@ export async function getSysadminOverview(): Promise<
   // -----------------------------------------------------------------
   const [
     heartbeatRes,
+    realMinutesRes,
     progressAllRes,
     assignmentsAllRes,
     diaryRes,
@@ -776,6 +777,18 @@ export async function getSysadminOverview(): Promise<
       .from("session_heartbeats")
       .select("user_id, seconds")
       .limit(500_000),
+    // user_real_minutes_v (migrations 061 + 066) sums every real
+    // time source per user in one view: heartbeat_minutes +
+    // live_class_minutes (dedup'd so classroom-wide classes count
+    // once) + lesson_minutes + song_minutes + speaking_minutes. The
+    // view is the authoritative total for "time on site"; the raw
+    // heartbeat query stays around for the 'heartbeats only' sub-
+    // display where that distinction matters.
+    admin
+      .from("user_real_minutes_v")
+      .select(
+        "user_id, heartbeat_minutes, live_class_minutes, lesson_minutes, song_minutes, speaking_minutes",
+      ),
     admin
       .from("lesson_progress")
       .select("student_id, started_at, completed_at")
@@ -814,6 +827,30 @@ export async function getSysadminOverview(): Promise<
       h.user_id,
       (heartbeatMinutes.get(h.user_id) ?? 0) + h.seconds / 60,
     );
+  }
+
+  // Total real minutes per user (heartbeat + live + lesson + song +
+  // speaking) — use this for the "Time on site" column so a teacher
+  // whose tab loses focus during a live class on Zoom still gets
+  // credit for the teaching hour, and a student whose session
+  // crashed mid-heartbeat but has logged completions still shows
+  // meaningful minutes. Heartbeats alone undercount both.
+  const totalMinutes = new Map<string, number>();
+  for (const r of (realMinutesRes.data ?? []) as Array<{
+    user_id: string;
+    heartbeat_minutes: number | null;
+    live_class_minutes: number | null;
+    lesson_minutes: number | null;
+    song_minutes: number | null;
+    speaking_minutes: number | null;
+  }>) {
+    const sum =
+      (r.heartbeat_minutes ?? 0) +
+      (r.live_class_minutes ?? 0) +
+      (r.lesson_minutes ?? 0) +
+      (r.song_minutes ?? 0) +
+      (r.speaking_minutes ?? 0);
+    totalMinutes.set(r.user_id, sum);
   }
 
   const studentMinutes = new Map<string, number>();
@@ -960,7 +997,7 @@ export async function getSysadminOverview(): Promise<
       id: t.id,
       name: t.full_name,
       activeDays: teacherDays.get(t.id)?.size ?? 0,
-      minutes: Math.round(heartbeatMinutes.get(t.id) ?? 0),
+      minutes: Math.round(totalMinutes.get(t.id) ?? 0),
     }))
     .sort((a, b) => b.minutes - a.minutes);
 
@@ -974,7 +1011,7 @@ export async function getSysadminOverview(): Promise<
         id: p.id,
         displayName: p.full_name,
         teacherName,
-        minutes: Math.round(heartbeatMinutes.get(p.id) ?? 0),
+        minutes: Math.round(totalMinutes.get(p.id) ?? 0),
         lessons: studentLessons.get(p.id) ?? 0,
       };
     })
@@ -1056,13 +1093,19 @@ export async function getSysadminOverview(): Promise<
     .select("student_id, activity_date")
     .order("activity_date", { ascending: false })
     .limit(500_000);
+  const nowIso = new Date().toISOString();
   for (const a of (allActivityRes ?? []) as Array<{
     student_id: string;
     activity_date: string;
   }>) {
-    // activity_date is a DATE; promote to end-of-day ISO so it sorts
-    // correctly against the timestamptz columns below.
-    bumpLastActivity(a.student_id, `${a.activity_date}T23:59:59Z`);
+    // activity_date is a DATE; promote to end-of-day ISO so it
+    // sorts correctly against the timestamptz columns below. Cap
+    // at `now` so a row with today's date doesn't end up
+    // displayed ~24 hours in the future (the bug Paulo Roberto
+    // showed: his "last active" read 20:59 of today at 11:32
+    // because T23:59:59Z renders as 20:59 BRT).
+    const endOfDay = `${a.activity_date}T23:59:59Z`;
+    bumpLastActivity(a.student_id, endOfDay > nowIso ? nowIso : endOfDay);
   }
   for (const h of (heartbeatRes.data ?? []) as Array<{
     user_id: string;
