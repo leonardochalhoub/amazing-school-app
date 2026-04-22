@@ -49,7 +49,10 @@ export async function getStudentStats(studentId?: string) {
   const { data: earnedBadges } = await supabase
     .from("badges")
     .select("badge_type, earned_at")
-    .eq("student_id", userId);
+    .eq("student_id", userId)
+    // Most recent first — every consumer (hero rail, teacher view,
+    // discovery page) surfaces the freshest achievement at the top.
+    .order("earned_at", { ascending: false });
 
   const { data: lessonProgress } = await supabase
     .from("lesson_progress")

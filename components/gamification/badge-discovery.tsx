@@ -258,8 +258,16 @@ export function BadgeDiscovery({ audience, progress }: Props) {
 
       {THEME_ORDER.filter((t) => byTheme.has(t)).map((theme) => {
         const rows = byTheme.get(theme)!;
-        // Sort within the theme by tier then name for predictable layout.
+        // Earned rows first, sorted by most-recently-earned DESC
+        // (matches the hero rail + teacher view). Locked rows follow,
+        // sorted by tier (easy → very_hard) then name.
         rows.sort((a, b) => {
+          const aEarned = progress.earned.has(a.type);
+          const bEarned = progress.earned.has(b.type);
+          if (aEarned !== bEarned) return aEarned ? -1 : 1;
+          if (aEarned && bEarned) {
+            return (progress.earnedAt[b.type] ?? 0) - (progress.earnedAt[a.type] ?? 0);
+          }
           const tc = TIER_ORDER.indexOf(a.tier) - TIER_ORDER.indexOf(b.tier);
           if (tc !== 0) return tc;
           return a.name.localeCompare(b.name);
