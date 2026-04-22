@@ -406,13 +406,6 @@ export default async function StudentHome() {
 
   return (
     <div className="space-y-8 overflow-x-clip pb-16">
-      {/* Local clock + weather — follows the student's location */}
-      <ClockWeatherCard
-        label={studentLocation}
-        lat={studentLocCoord?.lat ?? null}
-        lng={studentLocCoord?.lng ?? null}
-      />
-
       {/* HERO ===================================================== */}
       <section
         className="relative overflow-hidden rounded-3xl border border-border p-6 md:p-8"
@@ -550,6 +543,17 @@ export default async function StudentHome() {
               sub={<T en="done" pt="feitas" />}
             />
           </div>
+        </div>
+
+        {/* Inline clock + local weather readout — sits at the base of
+            the hero card with a subtle top divider so it feels like
+            part of the greeting, not a stray metadata row. */}
+        <div className="mt-6 border-t border-border/60 pt-5">
+          <ClockWeatherCard
+            label={studentLocation}
+            lat={studentLocCoord?.lat ?? null}
+            lng={studentLocCoord?.lng ?? null}
+          />
         </div>
       </section>
 

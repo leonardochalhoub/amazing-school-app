@@ -19,7 +19,6 @@ import { listAllTeacherHistory } from "@/lib/actions/student-history";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { BirthdayAlert } from "@/components/teacher/birthday-alert";
 import { DismissibleHero } from "@/components/teacher/dismissible-hero";
-import { ClockWeatherCard } from "@/components/shared/clock-weather-card";
 import { locateCity } from "@/lib/data/brazil-city-coords";
 import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { getUpcomingBirthdays } from "@/lib/actions/birthdays";
@@ -102,18 +101,15 @@ export default async function TeacherDashboard() {
 
   return (
     <div className="space-y-10 pb-16">
-      {/* Live clock + local weather — tiny card, doesn't dominate */}
-      <ClockWeatherCard
-        label={profileLocation}
-        lat={locCoord?.lat ?? null}
-        lng={locCoord?.lng ?? null}
-      />
-
-      {/* Welcome hero FIRST */}
+      {/* Welcome hero — live clock + local weather are embedded inside
+          the card, so dismissing the greeting also hides the readout. */}
       <DismissibleHero
         firstName={firstName}
         classrooms={classroomOptions}
         gender={teacherGender}
+        locationLabel={profileLocation}
+        lat={locCoord?.lat ?? null}
+        lng={locCoord?.lng ?? null}
       />
 
       {/* Birthday alert — only renders when there are upcoming birthdays */}

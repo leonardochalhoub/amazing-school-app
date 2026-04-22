@@ -2,20 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { useI18n } from "@/lib/i18n/context";
-import { MapPin } from "lucide-react";
 
 interface Props {
-  /** City label used in the card ("São Paulo, SP"). Empty is fine. */
-  label: string | null;
-  lat: number | null;
-  lng: number | null;
+  /** City label shown in the meta line ("São Paulo, SP"). Optional. */
+  label?: string | null;
+  lat?: number | null;
+  lng?: number | null;
 }
 
-/**
- * WMO weather code → pretty label + emoji. Full table at
- * https://open-meteo.com/en/docs — condensed here to the groups
- * that actually occur in Brazil at surface level.
- */
 interface Condition {
   emoji: string;
   pt: string;
@@ -52,14 +46,15 @@ interface WeatherNow {
 }
 
 /**
- * Compact card that shows the local live clock plus the current
- * temperature + sky condition for the student's / teacher's city.
- * Self-contained:
- *   - Clock ticks every second via setInterval (SSR-safe).
- *   - Weather fetched once on mount, then re-polled every 15 min
- *     (Open-Meteo updates its current-conditions payload hourly).
- *   - Gracefully renders clock-only when lat/lng are null or the
- *     API call fails — never swallows the time display.
+ * Inline, futuristic clock + local-weather readout. Designed to sit
+ * flush inside the welcome-hero card — no outer border, no gradient
+ * background of its own, so the host container's styling shows
+ * through. Visually the clock digits pick up a violet→pink gradient
+ * to feel at home against the brand palette.
+ *
+ * Time-zone is pinned to America/Sao_Paulo (Brasília) — the dateline
+ * below the clock says so in both locales so a viewer anywhere on
+ * earth reading this at 3am PT isn't confused.
  */
 export function ClockWeatherCard({ label, lat, lng }: Props) {
   const { locale } = useI18n();
@@ -67,14 +62,12 @@ export function ClockWeatherCard({ label, lat, lng }: Props) {
   const [now, setNow] = useState<Date | null>(null);
   const [weather, setWeather] = useState<WeatherNow | null>(null);
 
-  // Live clock. Initialised after mount so there's no SSR mismatch.
   useEffect(() => {
     setNow(new Date());
     const id = window.setInterval(() => setNow(new Date()), 1000);
     return () => window.clearInterval(id);
   }, []);
 
-  // Weather fetch + refresh.
   useEffect(() => {
     if (lat == null || lng == null) return;
     let alive = true;
@@ -91,7 +84,7 @@ export function ClockWeatherCard({ label, lat, lng }: Props) {
         if (!alive || t == null || c == null) return;
         setWeather({ temperature: Math.round(t), condition: describe(c) });
       } catch {
-        /* offline or blocked — render clock only */
+        /* offline / blocked — render clock only */
       }
     };
     load();
@@ -102,74 +95,102 @@ export function ClockWeatherCard({ label, lat, lng }: Props) {
     };
   }, [lat, lng]);
 
+  // Locale convention: Brazilian Portuguese uses 24-hour (21:45:02),
+  // US English uses 12-hour AM/PM (09:45:02 PM). Pinned to Brasília
+  // regardless, since the zoneLabel below tells the viewer which tz
+  // the numbers refer to.
   const timeStr = now
     ? now.toLocaleTimeString(pt ? "pt-BR" : "en-US", {
         timeZone: "America/Sao_Paulo",
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
-        hour12: false,
+        hour12: !pt,
       })
     : "--:--:--";
+
+  // Editorial date format — NY-executive friendly in English,
+  // natural Brazilian copy in pt. Finishes with an explicit Brasília
+  // tz tag in both so there's no ambiguity.
   const dateStr = now
-    ? now.toLocaleDateString(pt ? "pt-BR" : "en-US", {
-        timeZone: "America/Sao_Paulo",
-        weekday: "long",
-        day: "2-digit",
-        month: "long",
-      })
+    ? pt
+      ? (() => {
+          const weekday = now.toLocaleDateString("pt-BR", {
+            weekday: "long",
+            timeZone: "America/Sao_Paulo",
+          });
+          const day = now.toLocaleDateString("pt-BR", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+            timeZone: "America/Sao_Paulo",
+          });
+          const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+          return `${cap(weekday)}, ${day}`;
+        })()
+      : now.toLocaleDateString("en-US", {
+          weekday: "long",
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+          timeZone: "America/Sao_Paulo",
+        })
     : "";
+
+  const zoneLabel = pt ? "Hora de Brasília (UTC−3)" : "Brasília time (UTC−3)";
 
   const cond = weather?.condition;
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-indigo-500/10 via-violet-500/10 to-pink-500/10 p-4 shadow-sm">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-10 -right-10 h-32 w-32 rounded-full bg-gradient-to-br from-indigo-500/30 via-violet-500/20 to-pink-500/20 blur-3xl"
-      />
-      <div className="relative flex flex-wrap items-center justify-between gap-4">
-        {/* Clock */}
-        <div className="min-w-0">
-          <p className="font-mono text-3xl font-semibold tabular-nums leading-none tracking-tight sm:text-4xl">
-            {timeStr}
-          </p>
-          <p className="mt-1.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-            {dateStr}
-          </p>
-          {label ? (
-            <p className="mt-1 inline-flex items-center gap-1 text-[11px] text-muted-foreground">
-              <MapPin className="h-3 w-3" />
-              {label}
-            </p>
-          ) : null}
-        </div>
-
-        {/* Weather — only when we have a location + data */}
-        {cond && weather ? (
-          <div className="flex items-center gap-3">
-            <span
-              aria-hidden
-              className="text-4xl leading-none drop-shadow-lg"
-              style={{ filter: "drop-shadow(0 4px 12px rgba(167,139,250,0.4))" }}
-            >
-              {cond.emoji}
-            </span>
-            <div className="text-right">
-              <p className="text-2xl font-semibold leading-none tabular-nums">
-                {weather.temperature}°C
-              </p>
-              <p className="mt-1 text-[11px] text-muted-foreground">
-                {pt ? cond.pt : cond.en}
-              </p>
-            </div>
-          </div>
-        ) : lat != null && lng != null ? (
-          <p className="text-[11px] text-muted-foreground">
-            {pt ? "carregando clima…" : "loading weather…"}
-          </p>
-        ) : null}
+    <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-3">
+      {/* Clock block — the hero's focal metadata */}
+      <div className="min-w-0">
+        <p
+          aria-label="current time"
+          className="font-mono text-[clamp(2.25rem,6vw,3.25rem)] font-light leading-none tracking-tight tabular-nums bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500 bg-clip-text text-transparent"
+          style={{
+            textShadow: "0 1px 32px rgba(167,139,250,0.25)",
+          }}
+        >
+          {timeStr}
+        </p>
+        <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
+          {dateStr}
+          <span className="ml-1 text-muted-foreground/70">· {zoneLabel}</span>
+        </p>
       </div>
+
+      {/* Weather block — only when we have coords + a successful fetch */}
+      {cond && weather ? (
+        <div className="flex items-center gap-3 self-end">
+          <span
+            aria-hidden
+            className="text-[2.5rem] leading-none drop-shadow-xl"
+            style={{
+              filter: "drop-shadow(0 6px 14px rgba(167,139,250,0.35))",
+            }}
+          >
+            {cond.emoji}
+          </span>
+          <div className="text-right">
+            <p className="text-2xl font-semibold leading-none tabular-nums">
+              {weather.temperature}°C
+            </p>
+            <p className="mt-1 text-[11px] text-muted-foreground">
+              {pt ? cond.pt : cond.en}
+            </p>
+            {label ? (
+              <p className="mt-0.5 text-[10px] uppercase tracking-wider text-muted-foreground/70">
+                {label}
+              </p>
+            ) : null}
+          </div>
+        </div>
+      ) : lat != null && lng != null ? (
+        <p className="self-end text-[11px] text-muted-foreground">
+          {pt ? "carregando clima…" : "loading weather…"}
+        </p>
+      ) : null}
     </div>
   );
 }

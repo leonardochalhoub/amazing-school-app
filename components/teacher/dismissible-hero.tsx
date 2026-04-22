@@ -6,6 +6,7 @@ import { useI18n } from "@/lib/i18n/context";
 import { HeroTagline } from "@/components/teacher/hero-tagline";
 import { AddStudentButton } from "@/components/teacher/add-student-button";
 import { CuteFlourish } from "@/components/teacher/cute-flourish";
+import { ClockWeatherCard } from "@/components/shared/clock-weather-card";
 
 const STORAGE_KEY = "teacher-hero-dismissed";
 
@@ -15,9 +16,21 @@ interface Props {
   /** Explicit profiles.gender passed through from the server. Null =
    *  masculine pt-BR copy. No name-based inference. */
   gender?: "female" | "male" | null;
+  /** City label + coordinates for the embedded clock/weather readout.
+   *  Null on all three = clock only, no weather. */
+  locationLabel?: string | null;
+  lat?: number | null;
+  lng?: number | null;
 }
 
-export function DismissibleHero({ firstName, classrooms, gender }: Props) {
+export function DismissibleHero({
+  firstName,
+  classrooms,
+  gender,
+  locationLabel,
+  lat,
+  lng,
+}: Props) {
   const { locale } = useI18n();
   const [dismissed, setDismissed] = useState<boolean | null>(null);
 
@@ -106,6 +119,13 @@ export function DismissibleHero({ firstName, classrooms, gender }: Props) {
         </div>
 
         <HeroTagline firstName={firstName} gender={gender} />
+
+        {/* Inline clock + weather — a subtle divider above keeps it
+            feeling like its own readout rather than a stray line of
+            metadata. Sits between the tagline and the primary CTA. */}
+        <div className="mt-6 border-t border-border/60 pt-5">
+          <ClockWeatherCard label={locationLabel} lat={lat} lng={lng} />
+        </div>
 
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <AddStudentButton classrooms={classrooms} />
