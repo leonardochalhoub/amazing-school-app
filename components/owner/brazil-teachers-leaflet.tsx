@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   MapContainer,
   TileLayer,
@@ -56,19 +56,26 @@ function FitToMarkers({ markers }: { markers: PersonMarker[] }) {
 
 export default function BrazilTeachersLeaflet({ markers }: Props) {
   const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
+  // next-themes' resolvedTheme is undefined until the provider has
+  // hydrated. A `mounted` guard ensures we only react to a real
+  // theme value and that the TileLayer re-mounts (via key) on
+  // toggle — otherwise the first paint locks us to the default
+  // light tiles and never flips.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const isDark = mounted && resolvedTheme === "dark";
 
   // Default centre = geographic centre of Brazil — only used before
   // FitToMarkers kicks in on mount.
   const center = useMemo<LatLngTuple>(() => [-14.235, -51.9253], []);
 
-  // CartoDB palettes flip with the app theme. `light_all` and
-  // `dark_all` are the free no-token endpoints; Leaflet swaps the
-  // TileLayer when the `key` changes, so it doesn't try to mutate
-  // tiles in place.
+  // CartoDB endpoint uses sub-domain round-robin (a/b/c/d) + a
+  // {r}etina token. This is the canonical URL from CartoDB's docs
+  // and is more reliable than the flat Fastly alias I was hitting
+  // before (some networks / adblockers silently drop it).
   const tileUrl = isDark
-    ? "https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
-    : "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png";
+    ? "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+    : "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
   const bg = isDark ? "#0a0a12" : "#f5f3ff";
   const popupMuted = isDark ? "#6e6c86" : "#6b7280";
   const popupAccent = isDark ? "#a78bfa" : "#6366f1";
@@ -82,15 +89,20 @@ export default function BrazilTeachersLeaflet({ markers }: Props) {
       scrollWheelZoom={false}
       touchZoom
       dragging
-      style={{ height: 380, width: "100%", background: bg }}
-      className="!h-[380px] sm:!h-[460px] md:!h-[520px]"
+      // Height via className so the Tailwind breakpoint ramps work.
+      // Width + background stay inline because they don't need to
+      // respond to viewport.
+      style={{ width: "100%", background: bg }}
+      className="h-[380px] sm:h-[460px] md:h-[520px]"
       attributionControl={false}
     >
       <TileLayer
         key={isDark ? "dark" : "light"}
         url={tileUrl}
+        subdomains="abcd"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
         detectRetina
+        maxZoom={19}
       />
       <FitToMarkers markers={markers} />
       {markers.map((m, i) => (
