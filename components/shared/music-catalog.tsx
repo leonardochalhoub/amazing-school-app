@@ -2,7 +2,14 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { Clock, Music2, Pencil, Search, ExternalLink } from "lucide-react";
+import {
+  Clock,
+  Music2,
+  Pencil,
+  Search,
+  ExternalLink,
+  CheckCircle2,
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -16,6 +23,10 @@ const CEFR_ORDER = [
 interface Props {
   songs: MusicMeta[];
   variant?: "student" | "teacher";
+  /** Slugs (bare, no 'music:' prefix) the viewer has already finished.
+   *  Renders a small check badge on those cards. Optional — teachers
+   *  usually leave this null. */
+  completedSlugs?: string[];
 }
 
 function normalize(s: string): string {
@@ -29,7 +40,15 @@ const CEFR_GROUPS = ["a1", "a2", "b1", "b2", "c1"] as const;
 type CefrGroup = (typeof CEFR_GROUPS)[number] | "all";
 const TOP_GENRES_LIMIT = 10;
 
-export function MusicCatalog({ songs, variant = "student" }: Props) {
+export function MusicCatalog({
+  songs,
+  variant = "student",
+  completedSlugs,
+}: Props) {
+  const completedSet = useMemo(
+    () => new Set(completedSlugs ?? []),
+    [completedSlugs],
+  );
   const { locale } = useI18n();
   const pt = locale === "pt-BR";
   const [query, setQuery] = useState("");
@@ -199,7 +218,12 @@ export function MusicCatalog({ songs, variant = "student" }: Props) {
             </h2>
             <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {levelSongs.map((s) => (
-                <SongCard key={s.slug} song={s} variant={variant} />
+                <SongCard
+                  key={s.slug}
+                  song={s}
+                  variant={variant}
+                  completed={completedSet.has(s.slug)}
+                />
               ))}
             </div>
           </section>
@@ -212,9 +236,11 @@ export function MusicCatalog({ songs, variant = "student" }: Props) {
 function SongCard({
   song,
   variant,
+  completed = false,
 }: {
   song: MusicMeta;
   variant: "student" | "teacher";
+  completed?: boolean;
 }) {
   const minutes = Math.floor(song.duration_seconds / 60);
   const seconds = song.duration_seconds % 60;
@@ -264,16 +290,32 @@ function SongCard({
 
   return (
     <Link href={`/student/music/${song.slug}`} className="group block">
-      <Card className="h-full transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md">
+      <Card
+        className={`h-full transition-all hover:-translate-y-0.5 hover:shadow-md ${
+          completed
+            ? "border-emerald-500/40 bg-emerald-500/5 hover:border-emerald-500/60"
+            : "hover:border-primary/40"
+        }`}
+      >
         <CardContent className="space-y-3 p-4">
           <div className="flex items-start gap-2">
-            <Music2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+            <Music2
+              className={`mt-0.5 h-4 w-4 shrink-0 ${
+                completed ? "text-emerald-500" : "text-primary"
+              }`}
+            />
             <div className="min-w-0 flex-1">
               <p className="truncate font-medium leading-tight">{song.title}</p>
               <p className="mt-0.5 truncate text-xs text-muted-foreground">
                 {song.artist} · {song.year}
               </p>
             </div>
+            {completed ? (
+              <CheckCircle2
+                className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500"
+                aria-label="Completed"
+              />
+            ) : null}
           </div>
           <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
             <Badge variant="outline" className="text-[10px]">
