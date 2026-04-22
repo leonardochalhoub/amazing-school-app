@@ -11,6 +11,7 @@ import {
   Flame,
   History,
   MessageSquarePlus,
+  Music,
   Pencil,
   RotateCw,
   Send,
@@ -33,6 +34,7 @@ import {
   sysadminListAllPersonalizedLessons,
   sysadminSoftDeleteBankEntry,
   sysadminSpreadLessons,
+  sysadminSpreadMusicOverrides,
   unmigrateBankEntry,
 } from "@/lib/actions/lesson-bank";
 import {
@@ -47,6 +49,27 @@ import { CEFR_BANDS, cefrBandOf } from "@/lib/content/schema";
 
 type Tab = "recent" | "popular" | "mine" | "deleted";
 
+export interface SpreadablePersonalizedLesson {
+  id: string;
+  teacher_id: string;
+  teacher_name: string | null;
+  slug: string;
+  title: string;
+  cefr_level: string | null;
+  category: string | null;
+  published: boolean;
+  created_at: string;
+  already_spread: boolean;
+}
+
+export interface SpreadableMusicOverride {
+  teacher_id: string;
+  teacher_name: string | null;
+  music_slug: string;
+  updated_at: string;
+  already_spread: boolean;
+}
+
 interface Props {
   entries: LessonBankEntryWithAuthor[];
   myAuthorId: string;
@@ -54,18 +77,8 @@ interface Props {
   versionsByEntry: Record<string, LessonBankVersionRow[]>;
   deletedEntries?: LessonBankEntryWithAuthor[];
   // For sysadmin "spread" modal
-  personalizedLessons?: Array<{
-    id: string;
-    teacher_id: string;
-    teacher_name: string | null;
-    slug: string;
-    title: string;
-    cefr_level: string | null;
-    category: string | null;
-    published: boolean;
-    created_at: string;
-    already_spread: boolean;
-  }>;
+  personalizedLessons?: SpreadablePersonalizedLesson[];
+  musicOverrides?: SpreadableMusicOverride[];
 }
 
 export function LessonBankBrowser({
@@ -75,6 +88,7 @@ export function LessonBankBrowser({
   versionsByEntry,
   deletedEntries = [],
   personalizedLessons = [],
+  musicOverrides = [],
 }: Props) {
   const { locale } = useI18n();
   const pt = locale === "pt-BR";
@@ -199,14 +213,17 @@ export function LessonBankBrowser({
   }
 
   function doAssign(entry: LessonBankEntryWithAuthor) {
-    // Teachers assign via the existing assign flow — we just deep-link.
-    // Assignment uses slug prefix "custom:" when the lesson is a
-    // teacher-authored one. For bank entries, the teacher needs to
-    // migrate first to assign to their own students; this is enforced
-    // by the assignment pipeline. Bump the assign counter either way.
+    // Music entries assign through the music catalog — deep-link to the
+    // song page where the teacher's own override (migrated from the
+    // bank) will be served. Lesson entries hit the generic assignment
+    // flow after the teacher has migrated them.
     startTransition(async () => {
       await recordBankAssignment(entry.id);
     });
+    if (entry.kind === "music") {
+      router.push(`/teacher/music/${entry.music_slug ?? ""}`);
+      return;
+    }
     if (entry.migration?.local_lesson_id) {
       router.push(`/teacher/lessons?q=${encodeURIComponent(entry.slug)}`);
     } else {
@@ -317,28 +334,46 @@ export function LessonBankBrowser({
             const versions = versionsByEntry[entry.id] ?? [];
             const isMine = entry.author_id === myAuthorId;
             const isMigrated = !!entry.migration;
+            const isMusic = entry.kind === "music";
             const needsSync =
               isMigrated &&
               entry.migration!.synced_version < entry.current_version;
+            // For music entries the editor lives at /teacher/music/[slug]/edit
+            // and the "assignable" link lands on the song preview page.
+            const editHref = isMusic
+              ? `/teacher/music/${entry.music_slug ?? ""}/edit`
+              : `/teacher/lessons/edit/${entry.slug}`;
+            const displaySlug = isMusic ? entry.music_slug ?? entry.slug : entry.slug;
             return (
               <li key={entry.id}>
                 <Card className="h-full">
                   <CardContent className="space-y-3 p-4">
                     <div className="flex items-start justify-between gap-2">
                       <div className="min-w-0">
-                        <p className="truncate text-sm font-semibold">
+                        <p className="flex items-center gap-1.5 truncate text-sm font-semibold">
+                          {isMusic ? (
+                            <Music className="h-3.5 w-3.5 shrink-0 text-fuchsia-500" />
+                          ) : null}
                           {entry.title}
                         </p>
                         <p className="mt-0.5 font-mono text-[10px] text-muted-foreground">
-                          /{entry.slug}
+                          /{displaySlug}
                         </p>
                         <p className="mt-1 flex flex-wrap gap-1 text-[10px]">
+                          {isMusic ? (
+                            <Badge
+                              variant="default"
+                              className="bg-fuchsia-500/90 text-[10px]"
+                            >
+                              {pt ? "Música" : "Song"}
+                            </Badge>
+                          ) : null}
                           {entry.cefr_level ? (
                             <Badge variant="outline" className="text-[10px]">
                               {entry.cefr_level.toUpperCase()}
                             </Badge>
                           ) : null}
-                          {entry.category ? (
+                          {!isMusic && entry.category ? (
                             <Badge variant="secondary" className="text-[10px]">
                               {entry.category}
                             </Badge>
@@ -405,11 +440,17 @@ export function LessonBankBrowser({
                         <>
                           {isMine ? (
                             <Link
-                              href={`/teacher/lessons/edit/${entry.slug}`}
+                              href={editHref}
                               className="inline-flex h-7 items-center gap-1.5 rounded-md border border-border bg-background px-3 text-[11px] font-medium hover:border-foreground/40"
                             >
                               <Pencil className="h-3 w-3" />
-                              {pt ? "Editar lição" : "Edit lesson"}
+                              {isMusic
+                                ? pt
+                                  ? "Editar música"
+                                  : "Edit song"
+                                : pt
+                                  ? "Editar lição"
+                                  : "Edit lesson"}
                             </Link>
                           ) : !isMigrated ? (
                             <Button
@@ -545,6 +586,7 @@ export function LessonBankBrowser({
       {spreadOpen ? (
         <SpreadModal
           lessons={personalizedLessons}
+          musicOverrides={musicOverrides}
           onClose={() => {
             setSpreadOpen(false);
             router.refresh();
@@ -773,119 +815,218 @@ function ReviewModal({
 
 function SpreadModal({
   lessons,
+  musicOverrides,
   onClose,
 }: {
-  lessons: Array<{
-    id: string;
-    teacher_id: string;
-    teacher_name: string | null;
-    slug: string;
-    title: string;
-    cefr_level: string | null;
-    category: string | null;
-    published: boolean;
-    created_at: string;
-    already_spread: boolean;
-  }>;
+  lessons: SpreadablePersonalizedLesson[];
+  musicOverrides: SpreadableMusicOverride[];
   onClose: () => void;
 }) {
   const { locale } = useI18n();
   const pt = locale === "pt-BR";
-  const [picked, setPicked] = useState<Record<string, boolean>>({});
+  const [tab, setTab] = useState<"lessons" | "music">("lessons");
+  const [pickedLessons, setPickedLessons] = useState<Record<string, boolean>>({});
+  const [pickedMusic, setPickedMusic] = useState<Record<string, boolean>>({});
   const [pending, startTransition] = useTransition();
 
+  function keyFor(m: SpreadableMusicOverride): string {
+    return `${m.teacher_id}|${m.music_slug}`;
+  }
+
   function submit() {
-    const ids = Object.entries(picked)
-      .filter(([, v]) => v)
-      .map(([k]) => k);
-    if (ids.length === 0) return;
     startTransition(async () => {
-      const r = await sysadminSpreadLessons(ids);
+      if (tab === "lessons") {
+        const ids = Object.entries(pickedLessons)
+          .filter(([, v]) => v)
+          .map(([k]) => k);
+        if (ids.length === 0) return;
+        const r = await sysadminSpreadLessons(ids);
+        if ("error" in r) {
+          toast.error(r.error);
+          return;
+        }
+        toast.success(
+          pt
+            ? `${r.inserted} espalhada(s), ${r.skipped} pulada(s) (duplicadas).`
+            : `Spread ${r.inserted} lesson(s); skipped ${r.skipped} duplicate(s).`,
+        );
+        onClose();
+        return;
+      }
+      // Music tab — decode composite key back into teacher_id + music_slug.
+      const picks = Object.entries(pickedMusic)
+        .filter(([, v]) => v)
+        .map(([k]) => {
+          const [teacher_id, music_slug] = k.split("|");
+          return { teacher_id, music_slug };
+        });
+      if (picks.length === 0) return;
+      const r = await sysadminSpreadMusicOverrides(picks);
       if ("error" in r) {
         toast.error(r.error);
         return;
       }
       toast.success(
         pt
-          ? `${r.inserted} espalhada(s), ${r.skipped} pulada(s) (duplicadas).`
-          : `Spread ${r.inserted} lesson(s); skipped ${r.skipped} duplicate(s).`,
+          ? `${r.inserted} espalhada(s), ${r.skipped} pulada(s).`
+          : `Spread ${r.inserted}; skipped ${r.skipped}.`,
       );
       onClose();
     });
   }
+
+  const selectedCount =
+    tab === "lessons"
+      ? Object.values(pickedLessons).filter(Boolean).length
+      : Object.values(pickedMusic).filter(Boolean).length;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
       <div className="flex max-h-[90vh] w-full max-w-3xl flex-col rounded-xl border border-border bg-card shadow-xl">
         <div className="border-b border-border px-5 py-4">
           <h2 className="text-lg font-semibold">
-            {pt ? "Espalhar lições para todos os bancos" : "Spread lessons to every bank"}
+            {pt ? "Espalhar para todos os bancos" : "Spread to every bank"}
           </h2>
           <p className="mt-1 text-xs text-muted-foreground">
             {pt
-              ? "Selecione até 50 lições personalizadas. Cada lição marcada será publicada no banco em nome do autor. Duplicadas são ignoradas."
-              : "Pick up to 50 personalized lessons. Each selected lesson will be published to the bank on behalf of its author. Duplicates are skipped."}
+              ? "Publica lições personalizadas ou músicas personalizadas no banco em nome do autor. Duplicadas são ignoradas."
+              : "Publish personalized lessons OR personalized songs to the bank on behalf of the author. Duplicates are skipped."}
           </p>
+          <nav className="mt-3 flex items-center gap-1 rounded-full border border-border bg-background p-1 w-max">
+            <button
+              type="button"
+              onClick={() => setTab("lessons")}
+              className={`rounded-full px-3 py-1 text-[11px] font-medium ${
+                tab === "lessons"
+                  ? "bg-foreground text-background"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {pt ? `Lições (${lessons.length})` : `Lessons (${lessons.length})`}
+            </button>
+            <button
+              type="button"
+              onClick={() => setTab("music")}
+              className={`rounded-full px-3 py-1 text-[11px] font-medium ${
+                tab === "music"
+                  ? "bg-foreground text-background"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Music className="mr-1 inline-block h-3 w-3" />
+              {pt
+                ? `Músicas (${musicOverrides.length})`
+                : `Songs (${musicOverrides.length})`}
+            </button>
+          </nav>
         </div>
         <div className="max-h-[60vh] flex-1 overflow-y-auto px-5 py-3">
-          {lessons.length === 0 ? (
+          {tab === "lessons" ? (
+            lessons.length === 0 ? (
+              <p className="text-sm text-muted-foreground">
+                {pt ? "Nenhuma lição personalizada ainda." : "No personalized lessons yet."}
+              </p>
+            ) : (
+              <ul className="space-y-1">
+                {lessons.map((l) => (
+                  <li
+                    key={l.id}
+                    className="flex items-center gap-3 rounded-md border border-border/60 bg-background px-3 py-2 text-xs"
+                  >
+                    <input
+                      type="checkbox"
+                      checked={!!pickedLessons[l.id]}
+                      disabled={l.already_spread}
+                      onChange={(e) =>
+                        setPickedLessons((s) => ({ ...s, [l.id]: e.target.checked }))
+                      }
+                      className="h-4 w-4 accent-primary"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate font-medium">{l.title}</p>
+                      <p className="truncate text-[10px] text-muted-foreground">
+                        /{l.slug} · {l.teacher_name ?? "—"} ·{" "}
+                        {new Date(l.created_at).toLocaleDateString()}
+                      </p>
+                    </div>
+                    <div className="flex shrink-0 gap-1">
+                      {l.cefr_level ? (
+                        <Badge variant="outline" className="text-[10px]">
+                          {l.cefr_level.toUpperCase()}
+                        </Badge>
+                      ) : null}
+                      {l.category ? (
+                        <Badge variant="secondary" className="text-[10px]">
+                          {l.category}
+                        </Badge>
+                      ) : null}
+                      {l.already_spread ? (
+                        <Badge variant="default" className="text-[10px]">
+                          {pt ? "Já espalhada" : "Already spread"}
+                        </Badge>
+                      ) : null}
+                      {!l.published ? (
+                        <Badge variant="outline" className="text-[10px]">
+                          {pt ? "Rascunho" : "Draft"}
+                        </Badge>
+                      ) : null}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )
+          ) : musicOverrides.length === 0 ? (
             <p className="text-sm text-muted-foreground">
-              {pt ? "Nenhuma lição personalizada ainda." : "No personalized lessons yet."}
+              {pt ? "Nenhuma música personalizada ainda." : "No personalized songs yet."}
             </p>
           ) : (
             <ul className="space-y-1">
-              {lessons.map((l) => (
-                <li
-                  key={l.id}
-                  className="flex items-center gap-3 rounded-md border border-border/60 bg-background px-3 py-2 text-xs"
-                >
-                  <input
-                    type="checkbox"
-                    checked={!!picked[l.id]}
-                    disabled={l.already_spread}
-                    onChange={(e) =>
-                      setPicked((s) => ({ ...s, [l.id]: e.target.checked }))
-                    }
-                    className="h-4 w-4 accent-primary"
-                  />
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate font-medium">{l.title}</p>
-                    <p className="truncate text-[10px] text-muted-foreground">
-                      /{l.slug} · {l.teacher_name ?? "—"} ·{" "}
-                      {new Date(l.created_at).toLocaleDateString()}
-                    </p>
-                  </div>
-                  <div className="flex shrink-0 gap-1">
-                    {l.cefr_level ? (
-                      <Badge variant="outline" className="text-[10px]">
-                        {l.cefr_level.toUpperCase()}
+              {musicOverrides.map((m) => {
+                const k = keyFor(m);
+                return (
+                  <li
+                    key={k}
+                    className="flex items-center gap-3 rounded-md border border-border/60 bg-background px-3 py-2 text-xs"
+                  >
+                    <input
+                      type="checkbox"
+                      checked={!!pickedMusic[k]}
+                      disabled={m.already_spread}
+                      onChange={(e) =>
+                        setPickedMusic((s) => ({ ...s, [k]: e.target.checked }))
+                      }
+                      className="h-4 w-4 accent-primary"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate font-medium">{m.music_slug}</p>
+                      <p className="truncate text-[10px] text-muted-foreground">
+                        {m.teacher_name ?? "—"} · {pt ? "atualizada em" : "updated"}{" "}
+                        {new Date(m.updated_at).toLocaleDateString()}
+                      </p>
+                    </div>
+                    <div className="flex shrink-0 gap-1">
+                      <Badge
+                        variant="default"
+                        className="bg-fuchsia-500/90 text-[10px]"
+                      >
+                        <Music className="mr-1 h-3 w-3" />
+                        {pt ? "Música" : "Song"}
                       </Badge>
-                    ) : null}
-                    {l.category ? (
-                      <Badge variant="secondary" className="text-[10px]">
-                        {l.category}
-                      </Badge>
-                    ) : null}
-                    {l.already_spread ? (
-                      <Badge variant="default" className="text-[10px]">
-                        {pt ? "Já espalhada" : "Already spread"}
-                      </Badge>
-                    ) : null}
-                    {!l.published ? (
-                      <Badge variant="outline" className="text-[10px]">
-                        {pt ? "Rascunho" : "Draft"}
-                      </Badge>
-                    ) : null}
-                  </div>
-                </li>
-              ))}
+                      {m.already_spread ? (
+                        <Badge variant="default" className="text-[10px]">
+                          {pt ? "Já espalhada" : "Already spread"}
+                        </Badge>
+                      ) : null}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           )}
         </div>
         <div className="flex items-center justify-between gap-2 border-t border-border px-5 py-4">
           <p className="text-[11px] text-muted-foreground">
-            {Object.values(picked).filter(Boolean).length}{" "}
-            {pt ? "selecionada(s)" : "selected"}
+            {selectedCount} {pt ? "selecionada(s)" : "selected"}
           </p>
           <div className="flex gap-2">
             <Button variant="outline" size="sm" onClick={onClose}>

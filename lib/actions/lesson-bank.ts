@@ -177,32 +177,172 @@ async function propagateUpdateToMigrators(
     .eq("bank_entry_id", bankEntryId)
     .eq("auto_sync", true);
   for (const m of (migrations ?? []) as LessonBankMigrationRow[]) {
-    if (!m.local_lesson_id) continue;
-    const skills = fallbackSkills(
-      (e as LessonBankEntryRow & { skills?: string[] | null }).skills,
-      e.category,
-    );
-    await admin
-      .from("teacher_lessons")
-      .update({
-        title: e.title,
-        description: e.description,
-        cefr_level: e.cefr_level,
-        category: e.category,
-        skills,
-        estimated_minutes: e.estimated_minutes ?? 10,
-        xp_award:
-          (e as LessonBankEntryRow & { xp_award?: number | null }).xp_award ??
-          15,
-        exercises: e.exercises,
-      })
-      .eq("id", m.local_lesson_id)
-      .eq("teacher_id", m.teacher_id);
+    if (e.kind === "music") {
+      // Music migrations live in teacher_music_overrides, keyed by
+      // (teacher_id, music_slug). Upsert the latest content so the
+      // classroom sees it on the next page load.
+      if (!m.local_music_slug) continue;
+      await admin
+        .from("teacher_music_overrides")
+        .upsert(
+          {
+            teacher_id: m.teacher_id,
+            music_slug: m.local_music_slug,
+            sing_along: e.sing_along,
+            exercises: e.exercises,
+          },
+          { onConflict: "teacher_id,music_slug" },
+        );
+    } else {
+      if (!m.local_lesson_id) continue;
+      const skills = fallbackSkills(e.skills, e.category);
+      await admin
+        .from("teacher_lessons")
+        .update({
+          title: e.title,
+          description: e.description,
+          cefr_level: e.cefr_level,
+          category: e.category,
+          skills,
+          estimated_minutes: e.estimated_minutes ?? 10,
+          xp_award: e.xp_award ?? 15,
+          exercises: e.exercises,
+        })
+        .eq("id", m.local_lesson_id)
+        .eq("teacher_id", m.teacher_id);
+    }
     await admin
       .from("lesson_bank_migrations")
       .update({ synced_version: newVersion })
       .eq("id", m.id);
   }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Music share
+// ─────────────────────────────────────────────────────────────────────────────
+
+interface SongMeta {
+  title?: string;
+  cefr_level?: string | null;
+  description?: string | null;
+}
+
+/**
+ * Snapshot a teacher's music override into the bank as a music-kind
+ * entry. Each save creates a new version so earlier timings/lyrics
+ * remain recoverable.
+ */
+export async function shareMusicOverrideToBank(input: {
+  music_slug: string;
+  song_meta?: SongMeta;
+  change_note?: string;
+}): Promise<
+  | { success: true; entry: LessonBankEntryRow; version: LessonBankVersionRow }
+  | { error: string }
+> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" };
+  const admin = createAdminClient();
+
+  const { data: override } = await admin
+    .from("teacher_music_overrides")
+    .select("*")
+    .eq("teacher_id", user.id)
+    .eq("music_slug", input.music_slug)
+    .maybeSingle();
+  if (!override) {
+    return {
+      error:
+        "You haven't personalized this song yet — update timings and lyrics first, then share.",
+    };
+  }
+  const ov = override as {
+    music_slug: string;
+    sing_along: SongMeta extends never ? never : unknown;
+    exercises: unknown;
+  };
+
+  // Use `music:{slug}` in the slug column so the (author_id, slug) unique
+  // key keeps its promise without colliding with a lesson of the same name.
+  const bankSlug = `music:${input.music_slug}`;
+  const { data: existing } = await admin
+    .from("lesson_bank_entries")
+    .select("*")
+    .eq("author_id", user.id)
+    .eq("slug", bankSlug)
+    .maybeSingle();
+  const existingEntry = existing as LessonBankEntryRow | null;
+  const nextVersion = (existingEntry?.current_version ?? 0) + 1;
+
+  const title = input.song_meta?.title?.trim() || input.music_slug;
+  const payload = {
+    kind: "music" as const,
+    author_id: user.id,
+    title,
+    slug: bankSlug,
+    description: input.song_meta?.description ?? null,
+    cefr_level: input.song_meta?.cefr_level ?? null,
+    category: "music",
+    skills: ["music"],
+    estimated_minutes: existingEntry?.estimated_minutes ?? 15,
+    xp_award: existingEntry?.xp_award ?? 15,
+    music_slug: input.music_slug,
+    sing_along: ov.sing_along as SongMeta extends never ? never : unknown,
+    exercises: ov.exercises ?? [],
+    current_version: nextVersion,
+  };
+
+  const { data: entry, error: upErr } = existingEntry
+    ? await admin
+        .from("lesson_bank_entries")
+        .update(payload)
+        .eq("id", existingEntry.id)
+        .select("*")
+        .single()
+    : await admin
+        .from("lesson_bank_entries")
+        .insert(payload)
+        .select("*")
+        .single();
+  if (upErr) return { error: upErr.message };
+  const entryRow = entry as LessonBankEntryRow;
+
+  const { data: versionRow, error: vErr } = await admin
+    .from("lesson_bank_versions")
+    .insert({
+      kind: "music",
+      bank_entry_id: entryRow.id,
+      version_no: nextVersion,
+      title,
+      description: payload.description,
+      cefr_level: payload.cefr_level,
+      category: payload.category,
+      skills: payload.skills,
+      estimated_minutes: payload.estimated_minutes,
+      xp_award: payload.xp_award,
+      music_slug: input.music_slug,
+      sing_along: payload.sing_along,
+      exercises: payload.exercises,
+      change_note: input.change_note ?? null,
+    })
+    .select("*")
+    .single();
+  if (vErr) return { error: vErr.message };
+
+  await propagateUpdateToMigrators(entryRow.id, nextVersion);
+
+  revalidatePath("/teacher/bank");
+  revalidatePath(`/teacher/music/${input.music_slug}`);
+  revalidatePath(`/student/music/${input.music_slug}`);
+  return {
+    success: true,
+    entry: entryRow,
+    version: versionRow as LessonBankVersionRow,
+  };
 }
 
 export async function unshareLessonFromBank(
@@ -449,6 +589,39 @@ export async function migrateBankEntry(
     };
   }
 
+  if (e.kind === "music") {
+    // Music migration: upsert the override row for this teacher +
+    // canonical song, and store the slug so the propagator can find
+    // it on future updates.
+    if (!e.music_slug) return { error: "Music entry missing canonical slug." };
+    await admin
+      .from("teacher_music_overrides")
+      .upsert(
+        {
+          teacher_id: user.id,
+          music_slug: e.music_slug,
+          sing_along: e.sing_along,
+          exercises: e.exercises,
+        },
+        { onConflict: "teacher_id,music_slug" },
+      );
+    await admin.from("lesson_bank_migrations").insert({
+      bank_entry_id: entryId,
+      teacher_id: user.id,
+      local_music_slug: e.music_slug,
+      synced_version: e.current_version,
+      auto_sync: true,
+    });
+    await admin
+      .from("lesson_bank_entries")
+      .update({ import_count: e.import_count + 1 })
+      .eq("id", entryId);
+    revalidatePath("/teacher/bank");
+    revalidatePath(`/teacher/music/${e.music_slug}`);
+    revalidatePath(`/student/music/${e.music_slug}`);
+    return { success: true, local_slug: e.music_slug };
+  }
+
   let localSlug = `bank-${e.slug}`;
   const { data: collision } = await admin
     .from("teacher_lessons")
@@ -460,10 +633,7 @@ export async function migrateBankEntry(
     localSlug = `${localSlug}-${Date.now().toString(36).slice(-5)}`;
   }
 
-  const skills = fallbackSkills(
-    (e as LessonBankEntryRow & { skills?: string[] | null }).skills,
-    e.category,
-  );
+  const skills = fallbackSkills(e.skills, e.category);
   const { data: insertedLesson, error: lessonErr } = await admin
     .from("teacher_lessons")
     .insert({
@@ -475,9 +645,7 @@ export async function migrateBankEntry(
       category: e.category ?? skills[0],
       skills,
       estimated_minutes: e.estimated_minutes ?? 10,
-      xp_award:
-        (e as LessonBankEntryRow & { xp_award?: number | null }).xp_award ??
-        15,
+      xp_award: e.xp_award ?? 15,
       exercises: e.exercises,
       published: true,
     })
@@ -529,9 +697,21 @@ export async function unmigrateBankEntry(
       .eq("id", m.local_lesson_id)
       .eq("teacher_id", user.id);
   }
+  if (m.local_music_slug) {
+    // Revert the music override so the canonical song content returns.
+    await admin
+      .from("teacher_music_overrides")
+      .delete()
+      .eq("teacher_id", user.id)
+      .eq("music_slug", m.local_music_slug);
+  }
   await admin.from("lesson_bank_migrations").delete().eq("id", m.id);
   revalidatePath("/teacher/bank");
   revalidatePath("/teacher/lessons");
+  if (m.local_music_slug) {
+    revalidatePath(`/teacher/music/${m.local_music_slug}`);
+    revalidatePath(`/student/music/${m.local_music_slug}`);
+  }
   return { success: true };
 }
 
@@ -782,6 +962,167 @@ export async function sysadminListAllPersonalizedLessons(): Promise<
     teacher_name: nameById.get(r.teacher_id) ?? null,
     already_spread: spreadSet.has(r.id),
   }));
+}
+
+/**
+ * List every teacher music override on the platform, descending by
+ * last update. Sysadmin picks N of these and the spread action
+ * snapshots each into the bank on behalf of its author.
+ */
+export async function sysadminListAllMusicOverrides(): Promise<
+  Array<{
+    teacher_id: string;
+    teacher_name: string | null;
+    music_slug: string;
+    updated_at: string;
+    already_spread: boolean;
+  }>
+> {
+  const owner = await isOwner();
+  if (!owner) return [];
+  const admin = createAdminClient();
+  const { data: rows } = await admin
+    .from("teacher_music_overrides")
+    .select("teacher_id, music_slug, updated_at")
+    .order("updated_at", { ascending: false })
+    .limit(500);
+  const list =
+    ((rows ?? []) as Array<{
+      teacher_id: string;
+      music_slug: string;
+      updated_at: string;
+    }>) ?? [];
+
+  const teacherIds = Array.from(new Set(list.map((r) => r.teacher_id)));
+  const { data: profiles } = await admin
+    .from("profiles")
+    .select("id, full_name")
+    .in(
+      "id",
+      teacherIds.length > 0 ? teacherIds : ["00000000-0000-0000-0000-000000000000"],
+    );
+  const nameById = new Map<string, string>();
+  for (const p of (profiles ?? []) as Array<{ id: string; full_name: string | null }>) {
+    nameById.set(p.id, p.full_name ?? "");
+  }
+
+  // already_spread = exists a bank entry with kind='music' for this
+  // (author, music_slug). Dedup prevents re-spreading on bulk clicks.
+  const { data: existingEntries } = await admin
+    .from("lesson_bank_entries")
+    .select("author_id, music_slug")
+    .eq("kind", "music")
+    .is("deleted_at", null);
+  const spreadKeys = new Set<string>();
+  for (const e of (existingEntries ?? []) as Array<{
+    author_id: string;
+    music_slug: string | null;
+  }>) {
+    if (e.music_slug) spreadKeys.add(`${e.author_id}|${e.music_slug}`);
+  }
+
+  return list.map((r) => ({
+    ...r,
+    teacher_name: nameById.get(r.teacher_id) ?? null,
+    already_spread: spreadKeys.has(`${r.teacher_id}|${r.music_slug}`),
+  }));
+}
+
+/**
+ * Spread a batch of music overrides (identified by teacher + slug) into the bank.
+ * Skips duplicates. Writes a row to sysadmin_audit_log per successful spread.
+ */
+export async function sysadminSpreadMusicOverrides(
+  picks: Array<{ teacher_id: string; music_slug: string }>,
+): Promise<{ success: true; inserted: number; skipped: number } | { error: string }> {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" };
+  const owner = await isOwner();
+  if (!owner) return { error: "Forbidden" };
+  const admin = createAdminClient();
+
+  let inserted = 0;
+  let skipped = 0;
+  for (const { teacher_id, music_slug } of picks) {
+    const { data: existing } = await admin
+      .from("lesson_bank_entries")
+      .select("id")
+      .eq("author_id", teacher_id)
+      .eq("music_slug", music_slug)
+      .eq("kind", "music")
+      .maybeSingle();
+    if (existing) {
+      skipped += 1;
+      continue;
+    }
+    const { data: override } = await admin
+      .from("teacher_music_overrides")
+      .select("sing_along, exercises")
+      .eq("teacher_id", teacher_id)
+      .eq("music_slug", music_slug)
+      .maybeSingle();
+    if (!override) {
+      skipped += 1;
+      continue;
+    }
+    const ov = override as { sing_along: unknown; exercises: unknown };
+
+    const { data: newEntry } = await admin
+      .from("lesson_bank_entries")
+      .insert({
+        kind: "music",
+        author_id: teacher_id,
+        title: music_slug,
+        slug: `music:${music_slug}`,
+        description: null,
+        cefr_level: null,
+        category: "music",
+        skills: ["music"],
+        estimated_minutes: 15,
+        xp_award: 15,
+        music_slug,
+        sing_along: ov.sing_along,
+        exercises: ov.exercises ?? [],
+        current_version: 1,
+        spread_by: user.id,
+      })
+      .select("id")
+      .single();
+    if (!newEntry) {
+      skipped += 1;
+      continue;
+    }
+    const entryId = (newEntry as { id: string }).id;
+    await admin.from("lesson_bank_versions").insert({
+      kind: "music",
+      bank_entry_id: entryId,
+      version_no: 1,
+      title: music_slug,
+      description: null,
+      cefr_level: null,
+      category: "music",
+      skills: ["music"],
+      estimated_minutes: 15,
+      xp_award: 15,
+      music_slug,
+      sing_along: ov.sing_along,
+      exercises: ov.exercises ?? [],
+      change_note: "Spread by sysadmin",
+    });
+    await admin.from("sysadmin_audit_log").insert({
+      actor_id: user.id,
+      action: "spread_music_override",
+      target_type: "teacher_music_override",
+      target_id: null,
+      details: { teacher_id, music_slug, bank_entry_id: entryId },
+    });
+    inserted += 1;
+  }
+  revalidatePath("/teacher/bank");
+  return { success: true, inserted, skipped };
 }
 
 export async function sysadminListDeletedBankEntries(): Promise<

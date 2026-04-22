@@ -1,18 +1,16 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { BookOpen, Sparkles, Plus, Pencil, Library } from "lucide-react";
+import { Sparkles, Plus } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { listLessonDrafts } from "@/lib/actions/lesson-drafts";
 import { listMyTeacherLessons } from "@/lib/actions/teacher-lessons";
-import { listMyBank } from "@/lib/actions/exercise-bank";
 import { getAllLessons } from "@/lib/content/loader";
 import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { getTeacherOverview } from "@/lib/actions/teacher-dashboard";
 import { listMusic } from "@/lib/content/music";
 import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { BulkAssignList } from "@/components/teacher/bulk-assign-list";
-import { LessonRow } from "@/components/teacher/lesson-row";
 import { LessonSearchInput } from "@/components/teacher/lesson-search-input";
 import {
   CEFR_BANDS,
@@ -29,7 +27,7 @@ import type { TeacherLessonRow } from "@/lib/actions/teacher-lessons-types";
 import { isTeacherRole } from "@/lib/auth/roles";
 import { T } from "@/components/reports/t";
 
-type Source = "all" | "library" | "curated" | "mine" | "bank";
+type Source = "all" | "library" | "curated" | "mine";
 
 interface UnifiedRow {
   source: "library" | "curated" | "mine";
@@ -109,7 +107,7 @@ export default async function TeacherLessonsPage({
     courseId: params.course,
   };
   const source: Source = (
-    ["all", "library", "curated", "mine", "bank"] as const
+    ["all", "library", "curated", "mine"] as const
   ).includes(params.source as Source)
     ? (params.source as Source)
     : "all";
@@ -127,20 +125,18 @@ export default async function TeacherLessonsPage({
     return hay.includes(query);
   };
 
-  const [curatedAll, myLessons, bankItems, assignable, overview] =
-    await Promise.all([
-      // Don't push cefr to the DB query — we want band-prefix matching, which
-      // we do in memory after fetching.
-      listLessonDrafts({
-        category: filters.category,
-        status: filters.status,
-        courseId: filters.courseId,
-      }),
-      listMyTeacherLessons(),
-      listMyBank(),
-      getAssignableLessons(),
-      getTeacherOverview(),
-    ]);
+  const [curatedAll, myLessons, assignable, overview] = await Promise.all([
+    // Don't push cefr to the DB query — we want band-prefix matching, which
+    // we do in memory after fetching.
+    listLessonDrafts({
+      category: filters.category,
+      status: filters.status,
+      courseId: filters.courseId,
+    }),
+    listMyTeacherLessons(),
+    getAssignableLessons(),
+    getTeacherOverview(),
+  ]);
 
   const curatedLessons = curatedAll.filter((l) => {
     if (filters.cefrBand && cefrBandOf(l.cefr_level) !== filters.cefrBand) {
@@ -326,7 +322,6 @@ export default async function TeacherLessonsPage({
                 { key: "library", en: "Library", pt: "Biblioteca" },
                 { key: "curated", en: "Curated", pt: "Curadas" },
                 { key: "mine", en: "My lessons", pt: "Minhas lições" },
-                { key: "bank", en: "My exercises", pt: "Meus exercícios" },
               ] as const
             ).map((s) => (
               <FilterPill
@@ -401,12 +396,7 @@ export default async function TeacherLessonsPage({
         </div>
       </nav>
 
-      {source === "bank" ? (
-        <BankItemsList
-          items={bankItems}
-          filters={{ cefrBand: filters.cefrBand, query }}
-        />
-      ) : unified.length === 0 ? (
+      {unified.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-border bg-card/40 p-12 text-center">
           <Sparkles className="mx-auto h-10 w-10 text-muted-foreground" />
           <p className="mt-3 text-sm font-medium">
@@ -459,148 +449,6 @@ export default async function TeacherLessonsPage({
           presetClassroomId={params.classroom}
         />
       )}
-    </div>
-  );
-}
-
-function LibraryLessonRow({ row }: { row: UnifiedRow }) {
-  return (
-    <div className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-3 shadow-xs transition-colors hover:border-primary/40">
-      <Link href={row.href} className="group min-w-0 flex-1">
-        <div className="flex items-center gap-2">
-          <p className="truncate text-sm font-semibold group-hover:text-primary">
-            {row.title}
-          </p>
-          <Badge variant="secondary" className="shrink-0 gap-1 text-[10px]">
-            {row.category === "narrative" ? (
-              <Sparkles className="h-3 w-3" />
-            ) : (
-              <BookOpen className="h-3 w-3" />
-            )}
-            {row.category === "narrative" ? "Story" : "Library"}
-          </Badge>
-        </div>
-        <p className="mt-0.5 truncate text-[11px] text-muted-foreground">
-          {row.cefr_level.toUpperCase()} · {row.category}
-          {row.exerciseCount != null ? ` · ${row.exerciseCount} exercises` : ""}
-        </p>
-      </Link>
-      <div className="flex shrink-0 items-center gap-2">
-        <Badge variant="default" className="text-[10px]">
-          Core
-        </Badge>
-        <Link
-          href={`/teacher?assign=${encodeURIComponent(row.slug)}`}
-          className="rounded-md border border-primary/40 bg-primary/10 px-2 py-1 text-[10px] font-medium text-primary hover:bg-primary/20"
-        >
-          Assign
-        </Link>
-      </div>
-    </div>
-  );
-}
-
-function MyLessonRow({ row }: { row: UnifiedRow }) {
-  return (
-    <Link
-      href={row.href}
-      className="group flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-3 shadow-xs transition-colors hover:border-primary/40"
-    >
-      <div className="min-w-0 flex-1">
-        <div className="flex items-center gap-2">
-          <p className="truncate text-sm font-semibold">{row.title}</p>
-          <Badge variant="secondary" className="shrink-0 gap-1 text-[10px]">
-            <Pencil className="h-3 w-3" />
-            Mine
-          </Badge>
-        </div>
-        <p className="mt-0.5 truncate text-[11px] text-muted-foreground">
-          {row.cefr_level.toUpperCase()} · {row.category}
-          {row.exerciseCount != null ? ` · ${row.exerciseCount} exercises` : ""}
-        </p>
-      </div>
-      <Badge
-        variant={row.published ? "default" : "outline"}
-        className="shrink-0 text-[10px]"
-      >
-        {row.published ? "Published" : "Draft"}
-      </Badge>
-    </Link>
-  );
-}
-
-function BankItemsList({
-  items,
-  filters,
-}: {
-  items: Awaited<ReturnType<typeof listMyBank>>;
-  filters: { cefrBand?: string; query?: string };
-}) {
-  const q = (filters.query ?? "").trim().toLowerCase();
-  const filtered = items.filter((i) => {
-    if (filters.cefrBand && cefrBandOf(i.cefr_level ?? "") !== filters.cefrBand) return false;
-    if (q) {
-      const hay = `${i.title ?? ""} ${i.exercise?.type ?? ""} ${i.cefr_level ?? ""}`.toLowerCase();
-      if (!hay.includes(q)) return false;
-    }
-    return true;
-  });
-  if (filtered.length === 0) {
-    return (
-      <div className="rounded-2xl border border-dashed border-border bg-card/40 p-12 text-center">
-        <Library className="mx-auto h-10 w-10 text-muted-foreground" />
-        <p className="mt-3 text-sm font-medium">Your exercise bank is empty</p>
-        <p className="mt-1 text-xs text-muted-foreground">
-          Save exercises as you build lessons to reuse them later. Manage the
-          full bank at{" "}
-          <Link href="/teacher/bank" className="underline hover:text-foreground">
-            /teacher/bank
-          </Link>
-          .
-        </p>
-      </div>
-    );
-  }
-  return (
-    <div className="space-y-3">
-      <p className="text-xs text-muted-foreground">
-        Your saved exercises (not full lessons). Manage public/private status on{" "}
-        <Link href="/teacher/bank" className="underline hover:text-foreground">
-          the bank page
-        </Link>
-        .
-      </p>
-      <ul className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((item) => (
-          <li
-            key={item.id}
-            className="rounded-xl border border-border bg-card p-4 shadow-xs"
-          >
-            <div className="flex items-start justify-between gap-2">
-              <p className="truncate font-medium">{item.title}</p>
-              <Badge
-                variant={item.is_public ? "default" : "outline"}
-                className="shrink-0 text-[10px]"
-              >
-                {item.is_public ? "Public" : "Private"}
-              </Badge>
-            </div>
-            <p className="mt-1 flex flex-wrap gap-1 text-[10px]">
-              {item.cefr_level ? (
-                <Badge variant="outline" className="text-[10px]">
-                  {item.cefr_level.toUpperCase()}
-                </Badge>
-              ) : null}
-              <Badge variant="secondary" className="text-[10px]">
-                {item.exercise.type.replace(/_/g, " ")}
-              </Badge>
-              <span className="ml-auto text-muted-foreground tabular-nums">
-                {item.uses_count} uses
-              </span>
-            </p>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }

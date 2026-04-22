@@ -19,25 +19,54 @@ async function collectSysadminIds(
   admin: ReturnType<typeof createAdminClient>,
 ): Promise<string[]> {
   const ids = new Set<string>();
-  const { data: roleRows } = await admin
-    .from("profiles")
-    .select("id")
-    .eq("role", "owner");
-  for (const r of (roleRows ?? []) as Array<{ id: string }>) ids.add(r.id);
 
-  // Email backstop: scan the first page of auth users for the origin-owner
-  // address. This is O(page) per call but the sysadmin set is tiny so it's
-  // cheap enough and doesn't depend on the profile role being set correctly.
+  // Primary path: migration 071 ships a SECURITY DEFINER SQL function
+  // that UNIONs owner-role profiles with the backstop-email auth user.
+  // Single round-trip and works even when the profile row hasn't been
+  // flipped to role='owner'.
   try {
-    const { data } = await admin.auth.admin.listUsers({ page: 1, perPage: 200 });
-    for (const u of data?.users ?? []) {
-      if ((u.email ?? "").toLowerCase().trim() === ORIGIN_OWNER_EMAIL) {
-        ids.add(u.id);
+    const { data, error } = await admin.rpc("get_all_sysadmin_ids");
+    if (!error && Array.isArray(data)) {
+      for (const row of data as Array<{ user_id: string }>) {
+        if (row.user_id) ids.add(row.user_id);
       }
     }
   } catch {
-    /* non-fatal */
+    /* fall through to manual lookup */
   }
+
+  // Fallback: owner-role profiles directly (works even without the RPC).
+  if (ids.size === 0) {
+    const { data: roleRows } = await admin
+      .from("profiles")
+      .select("id")
+      .eq("role", "owner");
+    for (const r of (roleRows ?? []) as Array<{ id: string }>) ids.add(r.id);
+  }
+
+  // Last resort: paginate auth users looking for the backstop email.
+  // Capped at 20 pages × 200 = 4 000 users so a huge tenant can't
+  // stall this request.
+  if (ids.size === 0) {
+    try {
+      for (let page = 1; page <= 20; page += 1) {
+        const { data } = await admin.auth.admin.listUsers({
+          page,
+          perPage: 200,
+        });
+        const users = data?.users ?? [];
+        for (const u of users) {
+          if ((u.email ?? "").toLowerCase().trim() === ORIGIN_OWNER_EMAIL) {
+            ids.add(u.id);
+          }
+        }
+        if (users.length < 200) break;
+      }
+    } catch {
+      /* non-fatal */
+    }
+  }
+
   return Array.from(ids);
 }
 import type {

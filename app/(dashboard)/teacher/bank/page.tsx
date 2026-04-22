@@ -6,6 +6,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import {
   getBankEntryVersions,
   listBankEntries,
+  sysadminListAllMusicOverrides,
   sysadminListAllPersonalizedLessons,
   sysadminListDeletedBankEntries,
 } from "@/lib/actions/lesson-bank";
@@ -50,21 +51,31 @@ export default async function TeacherBankPage({
 
   const owner = await checkIsOwner();
 
-  const [entries, myLessons, personalizedLessons, deletedEntries] =
-    await Promise.all([
-      listBankEntries({ sort: "recent", limit: 200 }),
-      listMyTeacherLessons(),
-      owner
-        ? sysadminListAllPersonalizedLessons()
-        : Promise.resolve([] as Awaited<
-            ReturnType<typeof sysadminListAllPersonalizedLessons>
-          >),
-      owner
-        ? sysadminListDeletedBankEntries()
-        : Promise.resolve([] as Awaited<
-            ReturnType<typeof sysadminListDeletedBankEntries>
-          >),
-    ]);
+  const [
+    entries,
+    myLessons,
+    personalizedLessons,
+    musicOverrides,
+    deletedEntries,
+  ] = await Promise.all([
+    listBankEntries({ sort: "recent", limit: 200 }),
+    listMyTeacherLessons(),
+    owner
+      ? sysadminListAllPersonalizedLessons()
+      : Promise.resolve([] as Awaited<
+          ReturnType<typeof sysadminListAllPersonalizedLessons>
+        >),
+    owner
+      ? sysadminListAllMusicOverrides()
+      : Promise.resolve([] as Awaited<
+          ReturnType<typeof sysadminListAllMusicOverrides>
+        >),
+    owner
+      ? sysadminListDeletedBankEntries()
+      : Promise.resolve([] as Awaited<
+          ReturnType<typeof sysadminListDeletedBankEntries>
+        >),
+  ]);
 
   // Pre-fetch versions for every entry in one pass.
   const versionsByEntry: Record<string, LessonBankVersionRow[]> = {};

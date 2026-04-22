@@ -25,6 +25,7 @@ import {
   upsertMusicOverride,
   resetMusicOverride,
 } from "@/lib/actions/music-overrides";
+import { ShareMusicToBankButton } from "@/components/teacher/share-music-to-bank-button";
 import type {
   MusicExercise,
   MusicSong,
@@ -227,6 +228,18 @@ export function MusicOverrideEditor({
           </p>
         </div>
         <div className="flex items-center gap-2">
+          {hasOverride && !dirty ? (
+            <ShareMusicToBankButton
+              musicSlug={song.slug}
+              songTitle={song.title}
+              songCefr={song.cefr_level ?? null}
+              songDescription={null}
+              disabled={dirty}
+              disabledReason={
+                "Save your changes before sharing to the bank."
+              }
+            />
+          ) : null}
           {hasOverride ? (
             <Button
               variant="outline"
