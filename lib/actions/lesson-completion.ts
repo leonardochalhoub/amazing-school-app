@@ -159,7 +159,10 @@ export async function markLessonComplete(
   }
 
   // 2. XP — only award on transition. xp_events schema uses (source, source_id).
-  const xp = parsed.data.xpReward ?? 25;
+  // Use `||` (not `??`) so a lesson shipping with xp_reward=0 in its
+  // content still grants the default 25 — the user saw "Concluído!
+  // +0 XP" when the content file had a zeroed reward field.
+  const xp = parsed.data.xpReward || 25;
   if (isFirstCompletion && xp > 0) {
     const { error: xpErr } = await admin.from("xp_events").insert({
       student_id: user.id,
