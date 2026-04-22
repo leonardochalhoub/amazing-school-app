@@ -70,7 +70,6 @@ export function Navbar({
           profile: "Perfil",
           classrooms: "Turmas",
           speakingLab: "Lab de Fala",
-          badges: "Medalhas",
           signedInAs: "Conectado como",
           signOut: "Sair",
           teacher: isFemale ? "Professora" : "Professor",
@@ -85,7 +84,6 @@ export function Navbar({
           profile: "Profile",
           classrooms: "Classrooms",
           speakingLab: "Speaking Lab",
-          badges: "Badges",
           signedInAs: "Signed in as",
           signOut: "Sign out",
           teacher: "Teacher",
@@ -99,12 +97,14 @@ export function Navbar({
   // Profile link lives only in the avatar dropdown — no dedicated tab
   // in the main student nav. Music catalog stays since students revisit
   // assigned songs there.
+  // Badges/Medalhas moved off the central nav — the discovery page is
+  // now reached via a button on /student/profile and /teacher/profile.
+  // Keeps the main nav focused on surfaces that drive daily action.
   const studentNav = [
     { href: "/student", label: labels.dashboard },
     { href: "/student/music", label: labels.music },
     { href: "/speaking-lab", label: labels.speakingLab },
     { href: "/student/chat", label: labels.aiTutor },
-    { href: "/student/badges", label: labels.badges },
   ];
 
   const teacherNav: { href: string; label: string }[] = [
@@ -117,9 +117,6 @@ export function Navbar({
       label: locale === "pt-BR" ? "Banco" : "Bank",
     },
     { href: "/teacher/chat", label: labels.aiTutor },
-    // Teacher-only: Badges tab is hidden when XP is turned off in
-    // their profile. Flipping it back on reveals everything intact.
-    ...(xpEnabled ? [{ href: "/teacher/badges", label: labels.badges }] : []),
     { href: "/teacher/admin", label: locale === "pt-BR" ? "Gestão" : "Management" },
   ];
   if (isOwner) {

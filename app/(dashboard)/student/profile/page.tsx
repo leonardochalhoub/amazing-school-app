@@ -7,7 +7,7 @@ import { LocationCard } from "@/components/shared/location-card";
 import { UpcomingWindowCard } from "@/components/shared/upcoming-window-card";
 import { PrivacyNotice } from "@/components/shared/privacy-notice";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, ArrowUpRight, Calendar, Flame } from "lucide-react";
+import { BookOpen, ArrowUpRight, Calendar, Flame, Award } from "lucide-react";
 import { redirect } from "next/navigation";
 import { MyDocumentsCard } from "@/components/reports/my-documents-card";
 import { CertificatesPanel } from "@/components/reports/certificates-panel";
@@ -127,6 +127,18 @@ export default async function StudentProfilePage() {
         </div>
         <PrivacyNotice />
       </div>
+
+      {/* Badges discovery shortcut — the full catalog used to live on
+          the central nav; we moved it here to keep the top row focused
+          on daily surfaces. */}
+      <a
+        href="/student/badges"
+        className="group inline-flex w-fit items-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-medium transition-colors hover:bg-accent"
+      >
+        <Award className="h-4 w-4 text-indigo-500" />
+        <T en="See all badges" pt="Ver todas as medalhas" />
+        <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+      </a>
 
       {/* Identity hero — avatar + name + age/gender + tenure stats
           all in one horizontal card at the top. Stacks on mobile. */}

@@ -2,6 +2,7 @@ import { Zap } from "lucide-react";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getLevel, getXpForNextLevel } from "@/lib/gamification/engine";
 import { BADGE_BY_TYPE } from "@/lib/gamification/config";
+import { BADGE_FLAVORS } from "@/lib/gamification/badge-flavors";
 import { T } from "@/components/reports/t";
 
 /**
@@ -97,10 +98,17 @@ export async function TeacherXpStrip({ teacherId }: Props) {
             {badges.map((b) => {
               const def = BADGE_BY_TYPE[b.badge_type];
               if (!def) return null;
+              // Server component — no useI18n here. Ship the English
+              // flavor in the tooltip; the discovery page (client
+              // component) localises per locale.
+              const flavor = BADGE_FLAVORS[def.type];
+              const hover = flavor
+                ? `${def.name} — ${flavor.en}`
+                : `${def.name} · ${def.description}`;
               return (
                 <span
                   key={b.badge_type}
-                  title={def.name}
+                  title={hover}
                   className={`inline-flex items-center gap-1 rounded-full bg-gradient-to-br ${def.gradient} ${def.glow} px-2.5 py-1 text-[11px] font-semibold text-white`}
                 >
                   <span aria-hidden>{def.icon}</span>
