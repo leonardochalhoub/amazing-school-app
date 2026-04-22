@@ -14,26 +14,54 @@ import type {
  * falls back to neutral violet.
  */
 const MALE_COLORS = [
-  "#1d4ed8",
-  "#0e7490",
-  "#0284c7",
-  "#4338ca",
-  "#0891b2",
-  "#1e40af",
-  "#14b8a6",
-  "#155e75",
+  "#1d4ed8", // royal blue
+  "#0e7490", // teal
+  "#0284c7", // sky
+  "#4338ca", // indigo
+  "#0891b2", // cyan-700
+  "#1e40af", // navy
+  "#14b8a6", // emerald-teal
+  "#155e75", // deep teal
+  "#2563eb", // blue-600
+  "#0369a1", // sky-700
+  "#3730a3", // indigo-700
+  "#047857", // emerald-700
 ];
 const FEMALE_COLORS = [
-  "#db2777",
-  "#be185d",
-  "#c026d3",
-  "#9d174d",
-  "#e11d48",
-  "#a21caf",
-  "#f472b6",
-  "#f43f5e",
+  "#db2777", // rose
+  "#be185d", // deep pink
+  "#c026d3", // fuchsia
+  "#9d174d", // burgundy
+  "#e11d48", // rose-red
+  "#a21caf", // magenta
+  "#f472b6", // pink-400
+  "#f43f5e", // rose-red-lighter
+  "#ec4899", // pink-500
+  "#d946ef", // fuchsia-500
+  "#f97316", // orange (warm accent)
+  "#f59e0b", // amber (warm accent)
 ];
-const NEUTRAL_COLORS = ["#7c3aed", "#a78bfa"];
+const NEUTRAL_COLORS = [
+  "#7c3aed",
+  "#a78bfa",
+  "#8b5cf6",
+  "#6d28d9",
+];
+
+/**
+ * Deterministic tiny string-hash. Same name always maps to the same
+ * palette index so hovering / re-rendering never reshuffles the
+ * colour under a pin. FNV-1a because it's 5 lines and good enough
+ * for dispersion across a < 20-item palette.
+ */
+function hashToIndex(str: string, mod: number): number {
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return Math.abs(h) % mod;
+}
 
 function roleLabel(p: CityPerson, pt: boolean): string {
   if (p.role === "teacher") {
@@ -85,9 +113,6 @@ export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
 
   const markers = useMemo<PersonMarker[]>(() => {
     const out: PersonMarker[] = [];
-    let maleIdx = 0;
-    let femaleIdx = 0;
-    let neutralIdx = 0;
     for (const city of points) {
       const peopleInScope = city.people.filter((person) => {
         if (filter === "teachers") return person.role === "teacher";
@@ -104,16 +129,19 @@ export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
           lat += r * Math.sin(angle);
           lng += r * Math.cos(angle);
         }
+        // Hash the name + role so the same person always gets the
+        // same colour across renders, but different people within
+        // the same gender spread across the palette — avoids "every
+        // female is pink-0, every male is blue-0" when the list is
+        // small.
+        const seed = `${person.name}|${person.role}`;
         let color: string;
         if (person.gender === "male") {
-          color = MALE_COLORS[maleIdx % MALE_COLORS.length];
-          maleIdx += 1;
+          color = MALE_COLORS[hashToIndex(seed, MALE_COLORS.length)];
         } else if (person.gender === "female") {
-          color = FEMALE_COLORS[femaleIdx % FEMALE_COLORS.length];
-          femaleIdx += 1;
+          color = FEMALE_COLORS[hashToIndex(seed, FEMALE_COLORS.length)];
         } else {
-          color = NEUTRAL_COLORS[neutralIdx % NEUTRAL_COLORS.length];
-          neutralIdx += 1;
+          color = NEUTRAL_COLORS[hashToIndex(seed, NEUTRAL_COLORS.length)];
         }
         out.push({
           lat,
@@ -205,7 +233,7 @@ export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
         </div>
       </div>
 
-      <div className="overflow-hidden rounded-xl border border-border bg-[#13131c] shadow-sm">
+      <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
         {markers.length === 0 ? (
           <div className="flex h-[480px] items-center justify-center text-sm text-muted-foreground">
             {pt

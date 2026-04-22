@@ -10,6 +10,7 @@ import {
 } from "react-leaflet";
 import type { LatLngBoundsExpression, LatLngTuple } from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { useTheme } from "next-themes";
 
 interface PersonMarker {
   lat: number;
@@ -25,12 +26,20 @@ interface Props {
 }
 
 /**
- * Helper that fits the Leaflet map view to whatever pins are present.
- * If they're tightly clustered (e.g. all in one city), we add a small
- * padding so the pins aren't squashed to the edge of the viewport.
+ * Helper that fits the map to the pins AND forces Leaflet to
+ * invalidate its size. The invalidateSize call fixes the common
+ * "grey squares only" / "tiles don't appear" symptom caused by
+ * Leaflet calculating its layout before the container finishes
+ * laying out (flex/grid parents, tailwind responsive classes,
+ * Next.js dynamic-import mount).
  */
 function FitToMarkers({ markers }: { markers: PersonMarker[] }) {
   const map = useMap();
+  useEffect(() => {
+    map.invalidateSize();
+    const raf = requestAnimationFrame(() => map.invalidateSize());
+    return () => cancelAnimationFrame(raf);
+  }, [map]);
   useEffect(() => {
     if (markers.length === 0) return;
     if (markers.length === 1) {
@@ -46,9 +55,24 @@ function FitToMarkers({ markers }: { markers: PersonMarker[] }) {
 }
 
 export default function BrazilTeachersLeaflet({ markers }: Props) {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
+
   // Default centre = geographic centre of Brazil — only used before
   // FitToMarkers kicks in on mount.
   const center = useMemo<LatLngTuple>(() => [-14.235, -51.9253], []);
+
+  // CartoDB palettes flip with the app theme. `light_all` and
+  // `dark_all` are the free no-token endpoints; Leaflet swaps the
+  // TileLayer when the `key` changes, so it doesn't try to mutate
+  // tiles in place.
+  const tileUrl = isDark
+    ? "https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
+    : "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png";
+  const bg = isDark ? "#0a0a12" : "#f5f3ff";
+  const popupMuted = isDark ? "#6e6c86" : "#6b7280";
+  const popupAccent = isDark ? "#a78bfa" : "#6366f1";
+
   return (
     <MapContainer
       center={center}
@@ -56,20 +80,15 @@ export default function BrazilTeachersLeaflet({ markers }: Props) {
       minZoom={3}
       maxZoom={12}
       scrollWheelZoom={false}
-      // Touch gestures (pinch-zoom, drag) are on by default. tap is
-      // also on by default but isn't exposed in the react-leaflet
-      // typings, so we omit the explicit prop.
       touchZoom
       dragging
-      style={{ width: "100%", background: "#0a0a12" }}
-      className="h-[380px] sm:h-[460px] md:h-[520px]"
+      style={{ height: 380, width: "100%", background: bg }}
+      className="!h-[380px] sm:!h-[460px] md:!h-[520px]"
       attributionControl={false}
     >
-      {/* CartoDB Dark Matter — free, no token required, matches the
-          app's dark palette. detectRetina picks @2x tiles on high-DPI
-          phones and laptops so the map never looks blurry. */}
       <TileLayer
-        url="https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
+        key={isDark ? "dark" : "light"}
+        url={tileUrl}
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
         detectRetina
       />
@@ -80,7 +99,7 @@ export default function BrazilTeachersLeaflet({ markers }: Props) {
           center={[m.lat, m.lng]}
           radius={9}
           pathOptions={{
-            color: "#ecebff",
+            color: isDark ? "#ecebff" : "#1f1b2d",
             weight: 1.5,
             fillColor: m.color,
             fillOpacity: 0.95,
@@ -95,13 +114,13 @@ export default function BrazilTeachersLeaflet({ markers }: Props) {
                 style={{
                   margin: "2px 0 6px",
                   fontSize: 12,
-                  color: "#6366f1",
+                  color: popupAccent,
                   fontStyle: "italic",
                 }}
               >
                 {m.role}
               </p>
-              <p style={{ margin: 0, fontSize: 11, color: "#6e6c86" }}>
+              <p style={{ margin: 0, fontSize: 11, color: popupMuted }}>
                 {m.city}
               </p>
             </div>
