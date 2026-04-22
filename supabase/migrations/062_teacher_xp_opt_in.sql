@@ -21,9 +21,12 @@
 alter table public.profiles
   add column if not exists xp_enabled boolean not null default true;
 
--- Existing teachers: opt them out explicitly. Their prior state was
--- "no teacher XP at all" so this preserves that behaviour until they
--- actively enable it. Students stay on (default true).
-update public.profiles
-  set xp_enabled = false
-  where role = 'teacher' and xp_enabled = true;
+-- Existing teachers default to ON (gamification enabled). Anyone
+-- who wants to turn it off can do so from /teacher/profile — the
+-- flip is fully non-destructive, no xp_events or badges are ever
+-- deleted when the flag is off, so they can resume later right
+-- where they left off.
+-- New teacher signups will be asked explicitly at account creation
+-- (see the teacher signup flow) whether they want gamification on
+-- or off; the default below only governs existing rows + anyone
+-- who lands with no opt-in recorded.

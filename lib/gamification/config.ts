@@ -1,3 +1,5 @@
+import { TEACHER_BADGE_PACK_100 } from "./teacher-badges-pack";
+
 export const XP_REWARDS = {
   // Student-facing
   LESSON_COMPLETE: 25,
@@ -123,7 +125,7 @@ const GLOW = {
 } as const;
 
 /**
- * Catalog. Every badge MUST also appear in migration 061's
+ * Catalog. Every badge MUST also appear in migration 063's
  * award_eligible_badges function with a matching `type` string —
  * otherwise it will never be inserted into the DB. If you add a new
  * unlock kind here, add the corresponding SQL branch too.
@@ -147,12 +149,12 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
   { type: "hundred_chats", name: "Interlocutor", description: "Started 100 AI conversations", icon: "🧠", unlock: { kind: "count", counter: "conversations", threshold: 100 }, rarity: "epic", tier: "hard", audience: "both", theme: "chat", gradient: GRAD.chat, glow: GLOW.high },
 
   // ═══ Music ═══════════════════════════════════════════════════════
-  { type: "first_song",   name: "Opening Chord", description: "Completed your first song", icon: "🎵", unlock: { kind: "count", counter: "music_completed", threshold: 1 }, rarity: "common", tier: "easy", audience: "student", theme: "music", gradient: GRAD.music, glow: GLOW.low },
-  { type: "five_songs",   name: "Playlist Starter", description: "Completed 5 songs", icon: "🎶", unlock: { kind: "count", counter: "music_completed", threshold: 5 }, rarity: "common", tier: "easy", audience: "student", theme: "music", gradient: GRAD.music, glow: GLOW.low },
-  { type: "music_lover",  name: "Soundwave", description: "Completed 5 music lessons", icon: "🎧", unlock: { kind: "count", counter: "music_completed", threshold: 5 }, rarity: "rare", tier: "medium", audience: "student", theme: "music", gradient: GRAD.music, glow: GLOW.med },
-  { type: "twenty_songs", name: "Mixtape", description: "Completed 20 songs", icon: "📻", unlock: { kind: "count", counter: "music_completed", threshold: 20 }, rarity: "rare", tier: "medium_plus", audience: "student", theme: "music", gradient: GRAD.music, glow: GLOW.med },
-  { type: "fifty_songs",  name: "Album Artist", description: "Completed 50 songs", icon: "💿", unlock: { kind: "count", counter: "music_completed", threshold: 50 }, rarity: "epic", tier: "hard", audience: "student", theme: "music", gradient: GRAD.music, glow: GLOW.high },
-  { type: "hundred_songs", name: "Platinum Record", description: "Completed 100 songs", icon: "🏆", unlock: { kind: "count", counter: "music_completed", threshold: 100 }, rarity: "legendary", tier: "very_hard", audience: "student", theme: "music", gradient: GRAD.crown, glow: GLOW.crown },
+  { type: "first_song",   name: "Opening Chord", description: "Completed your first song", icon: "🎵", unlock: { kind: "count", counter: "music_completed", threshold: 1 }, rarity: "common", tier: "easy", audience: "both", theme: "music", gradient: GRAD.music, glow: GLOW.low },
+  { type: "five_songs",   name: "Playlist Starter", description: "Completed 5 songs", icon: "🎶", unlock: { kind: "count", counter: "music_completed", threshold: 5 }, rarity: "common", tier: "easy", audience: "both", theme: "music", gradient: GRAD.music, glow: GLOW.low },
+  { type: "music_lover",  name: "Soundwave", description: "Completed 5 music lessons", icon: "🎧", unlock: { kind: "count", counter: "music_completed", threshold: 5 }, rarity: "rare", tier: "medium", audience: "both", theme: "music", gradient: GRAD.music, glow: GLOW.med },
+  { type: "twenty_songs", name: "Mixtape", description: "Completed 20 songs", icon: "📻", unlock: { kind: "count", counter: "music_completed", threshold: 20 }, rarity: "rare", tier: "medium_plus", audience: "both", theme: "music", gradient: GRAD.music, glow: GLOW.med },
+  { type: "fifty_songs",  name: "Album Artist", description: "Completed 50 songs", icon: "💿", unlock: { kind: "count", counter: "music_completed", threshold: 50 }, rarity: "epic", tier: "hard", audience: "both", theme: "music", gradient: GRAD.music, glow: GLOW.high },
+  { type: "hundred_songs", name: "Platinum Record", description: "Completed 100 songs", icon: "🏆", unlock: { kind: "count", counter: "music_completed", threshold: 100 }, rarity: "legendary", tier: "very_hard", audience: "both", theme: "music", gradient: GRAD.crown, glow: GLOW.crown },
 
   // ═══ Streaks ═════════════════════════════════════════════════════
   { type: "streak_3",   name: "Getting Warm", description: "3-day streak", icon: "🔆", unlock: { kind: "streak", days: 3 }, rarity: "common", tier: "easy", audience: "both", theme: "streaks", gradient: GRAD.streak, glow: GLOW.low },
@@ -188,11 +190,11 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
   { type: "hours_480", name: "Four Semesters Deep", description: "480 real hours — four CEFR semesters of measurable time", icon: "📯", unlock: { kind: "hours", source: "all", hours: 480 }, rarity: "mythic", tier: "very_hard", audience: "both", theme: "real_hours", gradient: GRAD.crown, glow: GLOW.crown },
 
   // ═══ Speaking lab ════════════════════════════════════════════════
-  { type: "speaking_hour", name: "First Speech", description: "1 hour of speaking-lab time", icon: "🎙️", unlock: { kind: "hours", source: "speaking", hours: 1 }, rarity: "rare", tier: "medium", audience: "student", theme: "speaking", gradient: GRAD.speaking, glow: GLOW.med },
-  { type: "speaking_10h",  name: "Orator", description: "10 hours of speaking-lab time", icon: "🗣️", unlock: { kind: "hours", source: "speaking", hours: 10 }, rarity: "epic", tier: "hard", audience: "student", theme: "speaking", gradient: GRAD.speaking, glow: GLOW.high },
+  { type: "speaking_hour", name: "First Speech", description: "1 hour of speaking-lab time", icon: "🎙️", unlock: { kind: "hours", source: "speaking", hours: 1 }, rarity: "rare", tier: "medium", audience: "both", theme: "speaking", gradient: GRAD.speaking, glow: GLOW.med },
+  { type: "speaking_10h",  name: "Orator", description: "10 hours of speaking-lab time", icon: "🗣️", unlock: { kind: "hours", source: "speaking", hours: 10 }, rarity: "epic", tier: "hard", audience: "both", theme: "speaking", gradient: GRAD.speaking, glow: GLOW.high },
 
   // ═══ Listening / songs deep tier ═════════════════════════════════
-  { type: "listening_5h", name: "Trained Ear", description: "5 hours listening to songs on the platform", icon: "👂", unlock: { kind: "hours", source: "songs", hours: 5 }, rarity: "rare", tier: "medium", audience: "student", theme: "music", gradient: GRAD.music, glow: GLOW.med },
+  { type: "listening_5h", name: "Trained Ear", description: "5 hours listening to songs on the platform", icon: "👂", unlock: { kind: "hours", source: "songs", hours: 5 }, rarity: "rare", tier: "medium", audience: "both", theme: "music", gradient: GRAD.music, glow: GLOW.med },
 
   // ═══ Profile polish ══════════════════════════════════════════════
   { type: "profile_avatar",    name: "Face Forward", description: "Uploaded a profile photo", icon: "🪞", unlock: { kind: "profile_flag", flag: "avatar" }, rarity: "common", tier: "easy", audience: "both", theme: "profile", gradient: GRAD.profile, glow: GLOW.low },
@@ -249,7 +251,7 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
   { type: "cert_c2", name: "Proficiência", description: "Certificado CEFR C2 · Proficiente", icon: "🌌", unlock: { kind: "auto" }, rarity: "mythic", tier: "very_hard", audience: "student", theme: "cefr", gradient: GRAD.cefr_end, glow: GLOW.crown },
 
   // ═══ Perfect lessons — kept for when completed_exercises is wired ═
-  { type: "perfect_lesson", name: "Clean Sweep", description: "Finished a lesson with zero mistakes", icon: "💎", unlock: { kind: "count", counter: "perfect_lessons", threshold: 1 }, rarity: "rare", tier: "hard", audience: "student", theme: "milestones", gradient: "from-teal-300 via-emerald-500 to-cyan-600", glow: GLOW.high },
+  { type: "perfect_lesson", name: "Clean Sweep", description: "Finished a lesson with zero mistakes", icon: "💎", unlock: { kind: "count", counter: "perfect_lessons", threshold: 1 }, rarity: "rare", tier: "hard", audience: "both", theme: "milestones", gradient: "from-teal-300 via-emerald-500 to-cyan-600", glow: GLOW.high },
 
   // ═══ Game of Classrooms — GoT-themed "radical attitude" pack ════
   // Unlocked by slightly radical behavior: never-quit streaks,
@@ -276,6 +278,13 @@ export const BADGE_DEFINITIONS: BadgeDefinition[] = [
   { type: "dragon_drogon",   name: "Drogon", description: "Six-hour straight study session — the Unburnt's favorite", icon: "🐉", unlock: { kind: "composite", description: "6+ hours of continuous focused time" }, rarity: "legendary", tier: "hard", audience: "both", theme: "easter_eggs", gradient: "from-red-500 via-rose-600 to-neutral-900", glow: GLOW.crown },
   { type: "dragon_vhagar",   name: "Vhagar", description: "Nine-hour straight study session — the second-largest dragon in Westeros history", icon: "🐲", unlock: { kind: "composite", description: "9+ hours of continuous focused time" }, rarity: "legendary", tier: "very_hard", audience: "both", theme: "easter_eggs", gradient: "from-emerald-600 via-teal-700 to-slate-900", glow: GLOW.crown },
   { type: "dragon_balerion", name: "Balerion the Black Dread", description: "Twelve-hour straight study session — the largest dragon ever to rule Westeros", icon: "🌑", unlock: { kind: "composite", description: "12+ hours of continuous focused time" }, rarity: "mythic", tier: "very_hard", audience: "both", theme: "easter_eggs", gradient: "from-slate-800 via-neutral-900 to-black", glow: GLOW.crown },
+
+  // ═══ Spread the 100 teacher-only ladder pack here ═══════════════
+  // Kept in a sibling file (teacher-badges-pack.ts) so config.ts
+  // stays under ~600 lines. Every entry matches a SQL branch in
+  // migration 063. Audience is teacher-only so they never pollute
+  // the student discovery page.
+  ...TEACHER_BADGE_PACK_100,
 
   // ═══ Sharpe — Cornwell's Napoleonic series ══════════════════════
   // Green-jacket theme: rise-from-the-ranks, tactical discipline, the
