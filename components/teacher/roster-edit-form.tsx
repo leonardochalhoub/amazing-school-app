@@ -85,7 +85,7 @@ export function RosterEditForm({
   const t = locale === "pt-BR"
     ? {
         fullName: "Nome completo",
-        preferred: "Como prefere ser chamado",
+        preferred: "Apelido",
         email: "Email",
         classroom: "Turma",
         noClassroom: "Sem turma",
@@ -111,7 +111,7 @@ export function RosterEditForm({
       }
     : {
         fullName: "Full name",
-        preferred: "How they'd like to be called",
+        preferred: "Nickname",
         email: "Email",
         classroom: "Classroom",
         noClassroom: "No classroom",

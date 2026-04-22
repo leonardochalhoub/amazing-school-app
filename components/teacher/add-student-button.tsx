@@ -221,8 +221,8 @@ export function AddStudentButton({
             <div className="space-y-1.5">
               <Label htmlFor="rs-preferred">
                 {locale === "pt-BR"
-                  ? "Como prefere ser chamado? (opcional)"
-                  : "How they'd like to be called (optional)"}
+                  ? "Apelido (opcional)"
+                  : "Nickname (optional)"}
               </Label>
               <GhostInput
                 id="rs-preferred"
