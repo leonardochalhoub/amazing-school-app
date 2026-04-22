@@ -27,8 +27,6 @@ import type {
  * Names are capped at 12 per role with "+ N a mais" to keep the box
  * reasonable for large cities.
  */
-const NAME_LIMIT_PER_ROLE = 12;
-
 function roleLabel(p: CityPerson, pt: boolean): string {
   if (p.role === "teacher") {
     if (!pt) return "Teacher";
@@ -36,102 +34,6 @@ function roleLabel(p: CityPerson, pt: boolean): string {
   }
   if (!pt) return "Student";
   return p.gender === "female" ? "Aluna" : "Aluno";
-}
-
-function renderNameRows(
-  people: CityPerson[],
-  pt: boolean,
-): string {
-  const visible = people.slice(0, NAME_LIMIT_PER_ROLE);
-  const extra = people.length - visible.length;
-  const lines = visible.map(
-    (p) => `&nbsp;&nbsp;• ${p.name} — <i>${roleLabel(p, pt)}</i>`,
-  );
-  if (extra > 0) {
-    lines.push(
-      pt
-        ? `&nbsp;&nbsp;<i>+ ${extra} a mais</i>`
-        : `&nbsp;&nbsp;<i>+ ${extra} more</i>`,
-    );
-  }
-  return lines.join("<br>");
-}
-
-function buildTooltip(
-  point: CityPeoplePoint,
-  pt: boolean,
-  filter: "all" | "teachers" | "students",
-): string {
-  const divider =
-    '<span style="color:rgba(167,139,250,0.4);">──────────────</span>';
-  const teachers = point.people.filter((p) => p.role === "teacher");
-  const students = point.people.filter((p) => p.role === "student");
-
-  const header = `<b>${point.name} · ${point.uf}</b>`;
-
-  const visibleCount =
-    filter === "teachers"
-      ? point.teachers
-      : filter === "students"
-        ? point.students
-        : point.total;
-
-  const summary =
-    filter === "all"
-      ? pt
-        ? `<b>${point.total} ${point.total === 1 ? "pessoa" : "pessoas"}</b><br>${
-            point.teachers
-          } ${point.teachers === 1 ? "professor(a)" : "professores"} · ${
-            point.students
-          } ${point.students === 1 ? "aluno(a)" : "alunos"}`
-        : `<b>${point.total} ${point.total === 1 ? "person" : "people"}</b><br>${
-            point.teachers
-          } ${point.teachers === 1 ? "teacher" : "teachers"} · ${
-            point.students
-          } ${point.students === 1 ? "student" : "students"}`
-      : pt
-        ? `<b>${visibleCount} ${
-            filter === "teachers"
-              ? visibleCount === 1
-                ? "professor(a)"
-                : "professores"
-              : visibleCount === 1
-                ? "aluno(a)"
-                : "alunos"
-          }</b>`
-        : `<b>${visibleCount} ${
-            filter === "teachers"
-              ? visibleCount === 1
-                ? "teacher"
-                : "teachers"
-              : visibleCount === 1
-                ? "student"
-                : "students"
-          }</b>`;
-
-  const lists: string[] = [];
-  if (filter !== "students" && teachers.length > 0) {
-    lists.push(
-      `<b>${pt ? "Professores" : "Teachers"}</b><br>${renderNameRows(
-        teachers,
-        pt,
-      )}`,
-    );
-  }
-  if (filter !== "teachers" && students.length > 0) {
-    lists.push(
-      `<b>${pt ? "Alunos" : "Students"}</b><br>${renderNameRows(
-        students,
-        pt,
-      )}`,
-    );
-  }
-
-  const segments = [header, divider, summary];
-  if (lists.length > 0) {
-    segments.push(divider, lists.join("<br>"));
-  }
-  return segments.join("<br>");
 }
 
 // Plotly is heavy and client-only — dynamic import with ssr:false
@@ -216,44 +118,48 @@ function computeBounds(points: { lat: number; lng: number }[]): {
  *   · greens    : white → dark green
  *   · reds      : white → dark red (magma-ish)
  */
-const SCALES = {
-  // Cividis — bright yellow → dark blue. Colorblind-safe and
-  // monotonic brightness → luminance, as requested.
-  viridis: [
-    [0, "#fee838"],
-    [0.25, "#c3b369"],
-    [0.5, "#707173"],
-    [0.75, "#3b496c"],
-    [1, "#00224e"],
-  ] as [number, string][],
-  grayscale: [
-    [0, "#ffffff"],
-    [0.5, "#888888"],
-    [1, "#000000"],
-  ] as [number, string][],
-  greens: [
-    [0, "#f7fcf5"],
-    [0.25, "#c7e9c0"],
-    [0.5, "#74c476"],
-    [0.75, "#238b45"],
-    [1, "#00441b"],
-  ] as [number, string][],
-  reds: [
-    [0, "#fff5f0"],
-    [0.25, "#fcbba1"],
-    [0.5, "#fb6a4a"],
-    [0.75, "#cb181d"],
-    [1, "#67000d"],
-  ] as [number, string][],
-};
-
-type ScaleKey = keyof typeof SCALES;
+/**
+ * Pins are now per-person, colour-coded by gender. Men never receive
+ * a colour from the feminine palette and vice-versa — the two sets
+ * are deliberately disjoint. Each set has enough entries to visually
+ * separate several people in the same city before cycling.
+ */
+const MALE_COLORS = [
+  "#1d4ed8", // royal blue
+  "#0e7490", // teal
+  "#0284c7", // sky
+  "#4338ca", // indigo
+  "#0891b2", // cyan-700
+  "#1e40af", // navy
+  "#14b8a6", // emerald-teal
+  "#155e75", // deep teal
+];
+const FEMALE_COLORS = [
+  "#db2777", // rose
+  "#be185d", // deep pink
+  "#c026d3", // fuchsia
+  "#9d174d", // burgundy
+  "#e11d48", // rose-red
+  "#a21caf", // magenta
+  "#f472b6", // pink-400
+  "#f43f5e", // rose-red-lighter
+];
+// When gender is unknown on the profile, fall back to neutral purple
+// tones — visually distinct from both male/female palettes.
+const NEUTRAL_COLORS = ["#7c3aed", "#a78bfa"];
 type FilterKey = "all" | "teachers" | "students";
+
+interface PersonMarker {
+  lat: number;
+  lng: number;
+  color: string;
+  size: number;
+  tooltip: string;
+}
 
 export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
   const { locale } = useI18n();
   const pt = locale === "pt-BR";
-  const [scale, setScale] = useState<ScaleKey>("viridis");
   const [filter, setFilter] = useState<FilterKey>(
     mode === "teacher" ? "students" : "all",
   );
@@ -272,19 +178,68 @@ export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
       .map((p) => ({ ...p, value: p.students }));
   }, [points, filter]);
 
+  // Flatten every city bucket into one marker per person. When a
+  // city has more than one person we fan them on a small circle
+  // around the city centre so they don't overlap into a single pin.
+  const markers = useMemo<PersonMarker[]>(() => {
+    const out: PersonMarker[] = [];
+    let maleIdx = 0;
+    let femaleIdx = 0;
+    let neutralIdx = 0;
+    for (const city of filtered) {
+      const peopleInScope = city.people.filter((person) => {
+        if (filter === "teachers") return person.role === "teacher";
+        if (filter === "students") return person.role === "student";
+        return true;
+      });
+      const count = peopleInScope.length;
+      peopleInScope.forEach((person, i) => {
+        // Jitter only when there's 2+ people — a lone pin stays
+        // dead centre. Circle radius scales lightly with count so
+        // big clusters spread a bit more but don't explode.
+        let lat = city.lat;
+        let lng = city.lng;
+        if (count > 1) {
+          const r = 0.18 + Math.min(0.35, count * 0.025);
+          const angle = (i / count) * 2 * Math.PI;
+          lat += r * Math.sin(angle);
+          lng += r * Math.cos(angle);
+        }
+        let color: string;
+        if (person.gender === "male") {
+          color = MALE_COLORS[maleIdx % MALE_COLORS.length];
+          maleIdx += 1;
+        } else if (person.gender === "female") {
+          color = FEMALE_COLORS[femaleIdx % FEMALE_COLORS.length];
+          femaleIdx += 1;
+        } else {
+          color = NEUTRAL_COLORS[neutralIdx % NEUTRAL_COLORS.length];
+          neutralIdx += 1;
+        }
+        const roleText = roleLabel(person, pt);
+        const header = `<b>${person.name}</b> — <i>${roleText}</i>`;
+        const locationLine = `${city.name} · ${city.uf}`;
+        out.push({
+          lat,
+          lng,
+          color,
+          size: person.role === "teacher" ? 20 : 16,
+          tooltip: `${header}<br><span style="color:rgba(167,139,250,0.85);">${locationLine}</span>`,
+        });
+      });
+    }
+    return out;
+  }, [filtered, filter, pt]);
+
   const data = useMemo(() => {
-    if (filtered.length === 0) return [];
-    const maxCount = Math.max(1, ...filtered.map((p) => p.value));
-    const sizes = filtered.map(
-      (p) => 14 + (p.value / maxCount) * 36,
-    );
+    if (markers.length === 0) return [];
     return [
       {
         type: "scattergeo" as const,
         mode: "markers" as const,
-        lon: filtered.map((p) => p.lng),
-        lat: filtered.map((p) => p.lat),
-        text: filtered.map((p) => buildTooltip(p, pt, filter)),
+        lon: markers.map((m) => m.lng),
+        lat: markers.map((m) => m.lat),
+        text: markers.map((m) => m.tooltip),
         hoverinfo: "text" as const,
         hoverlabel: {
           bgcolor: "rgba(19,19,28,0.95)",
@@ -297,70 +252,17 @@ export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
           align: "left" as const,
         },
         marker: {
-          size: sizes,
-          color: filtered.map((p) => p.value),
-          colorscale: SCALES[scale],
-          cmin: 0,
-          cmax: maxCount,
-          line: { color: "rgba(10,10,18,0.45)", width: 1 },
-          opacity: 0.92,
-          colorbar: {
-            title: {
-              text: pt
-                ? filter === "teachers"
-                  ? "Profs."
-                  : filter === "students"
-                    ? "Alunos"
-                    : "Total"
-                : filter === "teachers"
-                  ? "Teach."
-                  : filter === "students"
-                    ? "Stud."
-                    : "Total",
-              font: { size: 10 },
-            },
-            thickness: 10,
-            len: 0.5,
-            x: 1.02,
-            y: 0.5,
-            tickfont: { size: 9 },
-            outlinewidth: 0,
-            // Explicit integer ticks anchored at 0 → maxCount so the
-            // colorbar always labels both endpoints (plus a midpoint
-            // when the span is large enough).
-            tickmode: "array" as const,
-            tickvals:
-              maxCount <= 2
-                ? [0, maxCount]
-                : maxCount <= 4
-                  ? [0, Math.ceil(maxCount / 2), maxCount]
-                  : [
-                      0,
-                      Math.round(maxCount / 4),
-                      Math.round(maxCount / 2),
-                      Math.round((3 * maxCount) / 4),
-                      maxCount,
-                    ],
-            ticktext:
-              maxCount <= 2
-                ? ["0", String(maxCount)]
-                : maxCount <= 4
-                  ? ["0", String(Math.ceil(maxCount / 2)), String(maxCount)]
-                  : [
-                      "0",
-                      String(Math.round(maxCount / 4)),
-                      String(Math.round(maxCount / 2)),
-                      String(Math.round((3 * maxCount) / 4)),
-                      String(maxCount),
-                    ],
-            tickformat: "d",
-          },
+          size: markers.map((m) => m.size),
+          color: markers.map((m) => m.color),
+          line: { color: "#ecebff", width: 1.2 },
+          opacity: 0.94,
+          showscale: false,
         },
       },
     ];
-  }, [filtered, scale, pt, filter]);
+  }, [markers]);
 
-  const bounds = useMemo(() => computeBounds(filtered), [filtered]);
+  const bounds = useMemo(() => computeBounds(markers), [markers]);
 
   const layout = useMemo(
     () => ({
@@ -463,58 +365,28 @@ export function BrazilTeachersMap({ points, mode = "owner" }: Props) {
               ))}
             </div>
           ) : null}
-          {/* Palette toggle — 4 scales. Viridis is the colorblind-safe
-              default; the other three are single-hue ramps for
-              viewers who prefer a simpler look. */}
-          <div className="inline-flex rounded-md border border-border bg-background p-0.5 text-xs">
-            {(
-              [
-                {
-                  k: "viridis",
-                  en: "Colorblind-safe",
-                  pt: "Daltônico",
-                  hint: pt ? "Viridis · amarelo → violeta" : "Viridis",
-                },
-                {
-                  k: "grayscale",
-                  en: "B/W",
-                  pt: "P/B",
-                  hint: pt ? "Branco → preto" : "White → black",
-                },
-                {
-                  k: "greens",
-                  en: "Green",
-                  pt: "Verde",
-                  hint: pt ? "Branco → verde escuro" : "White → dark green",
-                },
-                {
-                  k: "reds",
-                  en: "Red",
-                  pt: "Vermelho",
-                  hint: pt ? "Branco → vermelho escuro" : "White → dark red",
-                },
-              ] as const
-            ).map((opt) => (
-              <button
-                key={opt.k}
-                type="button"
-                onClick={() => setScale(opt.k)}
-                title={opt.hint}
-                className={`rounded px-3 py-1 font-medium transition-colors ${
-                  scale === opt.k
-                    ? "bg-foreground text-background"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {pt ? opt.pt : opt.en}
-              </button>
-            ))}
+          {/* Tiny legend chip — communicates the gender colour rule. */}
+          <div className="inline-flex items-center gap-3 rounded-md border border-border bg-background px-3 py-1 text-[11px] text-muted-foreground">
+            <span className="inline-flex items-center gap-1.5">
+              <span
+                className="inline-block h-2.5 w-2.5 rounded-full"
+                style={{ background: MALE_COLORS[0] }}
+              />
+              {pt ? "Masculino" : "Male"}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <span
+                className="inline-block h-2.5 w-2.5 rounded-full"
+                style={{ background: FEMALE_COLORS[0] }}
+              />
+              {pt ? "Feminino" : "Female"}
+            </span>
           </div>
         </div>
       </div>
 
       <div className="rounded-xl border border-border bg-[#13131c] p-2 shadow-sm">
-        {filtered.length === 0 ? (
+        {markers.length === 0 ? (
           <div className="flex h-[480px] items-center justify-center text-sm text-muted-foreground">
             {pt
               ? "Nenhuma localização registrada para este filtro."
