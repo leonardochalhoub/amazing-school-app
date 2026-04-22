@@ -11,16 +11,28 @@ export default async function TeacherBadgesPage() {
 
   // XP opt-in gate — if the teacher has XP turned off in their
   // profile, send them back to the toggle rather than showing an
-  // empty scoreboard. Flipping it back on later restores every
-  // historical badge they previously earned.
+  // empty scoreboard. xp_enabled lives on profiles only after
+  // migration 062; select it defensively so a fresh DB still routes
+  // correctly.
   const admin = createAdminClient();
-  const { data: profRow } = await admin
+  const { data: roleRow } = await admin
     .from("profiles")
-    .select("xp_enabled, role")
+    .select("role")
     .eq("id", user.id)
     .maybeSingle();
-  const prof = profRow as { xp_enabled?: boolean; role?: string } | null;
-  if (prof?.role === "teacher" && prof.xp_enabled === false) {
+  let xpEnabled = true;
+  try {
+    const { data: xpRow } = await admin
+      .from("profiles")
+      .select("xp_enabled")
+      .eq("id", user.id)
+      .maybeSingle();
+    const raw = (xpRow as { xp_enabled?: boolean | null } | null)?.xp_enabled;
+    if (raw === false) xpEnabled = false;
+  } catch {
+    /* column absent → assume on */
+  }
+  if ((roleRow as { role?: string } | null)?.role === "teacher" && !xpEnabled) {
     redirect("/teacher/profile");
   }
 

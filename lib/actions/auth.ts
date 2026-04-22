@@ -48,6 +48,13 @@ export async function signUp(formData: FormData) {
     };
   }
 
+  // Teacher-only: opt-in to the XP/gamification + self-learning
+  // experience at signup. Students never see this field (mandatory
+  // for them). Default is ON if the field is absent — keeps the
+  // happy path for non-curious teachers unchanged.
+  const xpEnabledRaw = (formData.get("xpEnabled") as string | null) ?? null;
+  const teacherXpEnabled = xpEnabledRaw !== "off"; // "on" or missing → true
+
   let role: Role = "teacher";
   // Full invitation row (not just the validation subset) so we can link
   // the roster + classroom right after creating the auth user, in the

@@ -59,19 +59,29 @@ export async function grantTeacherXp(
   const admin = createAdminClient();
 
   // Opt-in gate — teachers who haven't flipped the XP toggle on in
-  // /teacher/profile skip all writes. Flipping it back on later is
-  // non-destructive (historical rows stay), they just resume from
-  // where they left off. Students never reach here since this helper
-  // is teacher-only; their XP pipeline goes through lesson-completion.
+  // /teacher/profile skip all writes. xp_enabled only exists after
+  // migration 062; on a fresh DB we treat missing as ON so grants
+  // don't silently disappear. Flipping the flag is non-destructive.
   const { data: prof } = await admin
     .from("profiles")
-    .select("xp_enabled, role")
+    .select("role")
     .eq("id", teacherId)
     .maybeSingle();
   if (!prof) return;
   const isTeacher = (prof as { role?: string }).role === "teacher";
-  const enabled = (prof as { xp_enabled?: boolean }).xp_enabled !== false;
-  if (isTeacher && !enabled) return;
+  if (isTeacher) {
+    try {
+      const { data: xpRow } = await admin
+        .from("profiles")
+        .select("xp_enabled")
+        .eq("id", teacherId)
+        .maybeSingle();
+      const flag = (xpRow as { xp_enabled?: boolean | null } | null)?.xp_enabled;
+      if (flag === false) return;
+    } catch {
+      /* column absent — migration not yet run — default ON */
+    }
+  }
 
   const { error } = await admin.from("xp_events").insert({
     student_id: teacherId,

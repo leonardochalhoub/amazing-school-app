@@ -33,10 +33,25 @@ export default async function DashboardLayout({
   const { data: profile, error } = await admin
     .from("profiles")
     .select(
-      "full_name, role, avatar_url, school_logo_enabled, school_logo_url, gender, xp_enabled",
+      "full_name, role, avatar_url, school_logo_enabled, school_logo_url, gender",
     )
     .eq("id", user.id)
     .single();
+
+  // xp_enabled lives on profiles only after migration 062 has run;
+  // read it defensively so the layout keeps working on a fresh DB.
+  let xpEnabledFlag = true;
+  try {
+    const { data: xpRow } = await admin
+      .from("profiles")
+      .select("xp_enabled")
+      .eq("id", user.id)
+      .maybeSingle();
+    const raw = (xpRow as { xp_enabled?: boolean | null } | null)?.xp_enabled;
+    if (raw === false) xpEnabledFlag = false;
+  } catch {
+    /* column absent → assume on */
+  }
 
   if (!profile) {
     console.error("Profile not found for user", user.id, error);
@@ -187,9 +202,7 @@ export default async function DashboardLayout({
         ageGroup={rosterAgeGroup}
         gender={navbarGender}
         schoolLogoPath={schoolLogoPath}
-        xpEnabled={
-          (profile as { xp_enabled?: boolean }).xp_enabled !== false
-        }
+        xpEnabled={xpEnabledFlag}
       />
       <UpcomingClassPrompt
         items={nextClass?.items ?? []}

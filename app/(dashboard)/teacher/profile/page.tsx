@@ -39,10 +39,25 @@ export default async function TeacherProfilePage() {
   const { data: profile } = await admin
     .from("profiles")
     .select(
-      "full_name, avatar_url, role, school_logo_enabled, school_logo_url, signature_url, signature_enabled, created_at, xp_enabled",
+      "full_name, avatar_url, role, school_logo_enabled, school_logo_url, signature_url, signature_enabled, created_at",
     )
     .eq("id", user.id)
     .maybeSingle();
+
+  // xp_enabled appears on profiles only after migration 062 has run.
+  // Read it defensively so this page still renders on a fresh DB.
+  let xpEnabledFlag = true;
+  try {
+    const { data: xpRow } = await admin
+      .from("profiles")
+      .select("xp_enabled")
+      .eq("id", user.id)
+      .maybeSingle();
+    const raw = (xpRow as { xp_enabled?: boolean | null } | null)?.xp_enabled;
+    if (raw === false) xpEnabledFlag = false;
+  } catch {
+    /* column absent → default on */
+  }
 
   if (!profile) redirect("/login");
   if (profile.role !== "teacher" && profile.role !== "owner") redirect("/student/profile");
@@ -226,11 +241,7 @@ export default async function TeacherProfilePage() {
       {/* XP experience opt-in — owns a full row above the preferences
           grid. Data is preserved when off; flipping back on resumes
           from the same spot with every earned badge intact. */}
-      <TeacherXpToggle
-        initialEnabled={
-          (profile as { xp_enabled?: boolean }).xp_enabled !== false
-        }
-      />
+      <TeacherXpToggle initialEnabled={xpEnabledFlag} />
 
       {/* Preferences in two columns on lg */}
       <div className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
