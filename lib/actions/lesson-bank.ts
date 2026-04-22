@@ -24,8 +24,23 @@ interface TeacherLessonLike {
   description: string | null;
   cefr_level: string | null;
   category: string | null;
+  skills: string[] | null;
   estimated_minutes: number | null;
+  xp_award: number | null;
   exercises: ExerciseBlock[];
+}
+
+// Constraint from migration 068 requires skills[] ≥ 1 on teacher_lessons and
+// we enforce the same in the share/migrate paths so old bank entries with
+// `skills = '{}'` (the default before the column was wired up) still produce
+// valid children.
+function fallbackSkills(
+  skills: string[] | null | undefined,
+  category: string | null | undefined,
+): string[] {
+  if (skills && skills.length > 0) return skills;
+  if (category && category.trim()) return [category];
+  return ["grammar"];
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -58,7 +73,7 @@ export async function shareLessonToBank(input: {
   const { data: lesson } = await admin
     .from("teacher_lessons")
     .select(
-      "id, teacher_id, slug, title, description, cefr_level, category, estimated_minutes, exercises",
+      "id, teacher_id, slug, title, description, cefr_level, category, skills, estimated_minutes, xp_award, exercises",
     )
     .eq("id", input.teacher_lesson_id)
     .maybeSingle();
@@ -78,6 +93,7 @@ export async function shareLessonToBank(input: {
   const existingEntry = existing as LessonBankEntryRow | null;
 
   const nextVersion = (existingEntry?.current_version ?? 0) + 1;
+  const skills = fallbackSkills(src.skills, src.category);
 
   const payload = {
     teacher_lesson_id: src.id,
@@ -87,7 +103,9 @@ export async function shareLessonToBank(input: {
     description: src.description,
     cefr_level: src.cefr_level,
     category: src.category,
-    estimated_minutes: src.estimated_minutes,
+    skills,
+    estimated_minutes: src.estimated_minutes ?? 10,
+    xp_award: src.xp_award ?? 15,
     exercises: src.exercises ?? [],
     current_version: nextVersion,
   };
@@ -117,7 +135,9 @@ export async function shareLessonToBank(input: {
       description: payload.description,
       cefr_level: payload.cefr_level,
       category: payload.category,
+      skills: payload.skills,
       estimated_minutes: payload.estimated_minutes,
+      xp_award: payload.xp_award,
       exercises: payload.exercises,
       change_note: input.change_note ?? null,
     })
@@ -158,6 +178,10 @@ async function propagateUpdateToMigrators(
     .eq("auto_sync", true);
   for (const m of (migrations ?? []) as LessonBankMigrationRow[]) {
     if (!m.local_lesson_id) continue;
+    const skills = fallbackSkills(
+      (e as LessonBankEntryRow & { skills?: string[] | null }).skills,
+      e.category,
+    );
     await admin
       .from("teacher_lessons")
       .update({
@@ -165,7 +189,11 @@ async function propagateUpdateToMigrators(
         description: e.description,
         cefr_level: e.cefr_level,
         category: e.category,
-        estimated_minutes: e.estimated_minutes,
+        skills,
+        estimated_minutes: e.estimated_minutes ?? 10,
+        xp_award:
+          (e as LessonBankEntryRow & { xp_award?: number | null }).xp_award ??
+          15,
         exercises: e.exercises,
       })
       .eq("id", m.local_lesson_id)
@@ -432,6 +460,10 @@ export async function migrateBankEntry(
     localSlug = `${localSlug}-${Date.now().toString(36).slice(-5)}`;
   }
 
+  const skills = fallbackSkills(
+    (e as LessonBankEntryRow & { skills?: string[] | null }).skills,
+    e.category,
+  );
   const { data: insertedLesson, error: lessonErr } = await admin
     .from("teacher_lessons")
     .insert({
@@ -440,8 +472,12 @@ export async function migrateBankEntry(
       title: e.title,
       description: e.description,
       cefr_level: e.cefr_level,
-      category: e.category,
-      estimated_minutes: e.estimated_minutes,
+      category: e.category ?? skills[0],
+      skills,
+      estimated_minutes: e.estimated_minutes ?? 10,
+      xp_award:
+        (e as LessonBankEntryRow & { xp_award?: number | null }).xp_award ??
+        15,
       exercises: e.exercises,
       published: true,
     })
@@ -593,7 +629,7 @@ export async function sysadminSpreadLessons(
     const { data: lesson } = await admin
       .from("teacher_lessons")
       .select(
-        "id, teacher_id, slug, title, description, cefr_level, category, estimated_minutes, exercises",
+        "id, teacher_id, slug, title, description, cefr_level, category, skills, estimated_minutes, xp_award, exercises",
       )
       .eq("id", lessonId)
       .maybeSingle();

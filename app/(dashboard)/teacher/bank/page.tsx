@@ -3,20 +3,29 @@ import { redirect } from "next/navigation";
 import { ArrowLeft, Library } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { listMyBank, listPublicBank } from "@/lib/actions/exercise-bank";
 import {
   getBankEntryVersions,
   listBankEntries,
   sysadminListAllPersonalizedLessons,
   sysadminListDeletedBankEntries,
 } from "@/lib/actions/lesson-bank";
-import { BankBrowser } from "@/components/teacher/bank-browser";
+import { listMyTeacherLessons } from "@/lib/actions/teacher-lessons";
 import { LessonBankBrowser } from "@/components/teacher/lesson-bank-browser";
-import { BankTabs } from "@/components/teacher/bank-tabs";
+import { MyLessonsBrief } from "@/components/teacher/my-lessons-brief";
 import { isOwner as checkIsOwner, isTeacherRole } from "@/lib/auth/roles";
 import { T } from "@/components/reports/t";
 import type { LessonBankVersionRow } from "@/lib/actions/lesson-bank-types";
 
+/**
+ * Unified bank view. Teachers flip between:
+ *   - **My lessons**  → their personalized teacher_lessons (author-only).
+ *   - **Bank lessons** → community-shared snapshots (anyone can read,
+ *                        only the author edits/deletes).
+ *
+ * Everything that used to live in the separate "exercise bank" is now
+ * surfaced through the lesson-level flow; individual exercise reuse
+ * happens inside the lesson builder via import-from-lesson links.
+ */
 export default async function TeacherBankPage({
   searchParams,
 }: {
@@ -37,24 +46,21 @@ export default async function TeacherBankPage({
   if (!isTeacherRole(profile?.role as string | null | undefined)) redirect("/student");
 
   const params = await searchParams;
-  const view = params.view === "exercises" ? "exercises" : "lessons";
+  const view = params.view === "mine" ? "mine" : "bank";
 
   const owner = await checkIsOwner();
 
-  const [mineEx, publicEx, entries, personalizedLessons, deletedEntries] =
+  const [entries, myLessons, personalizedLessons, deletedEntries] =
     await Promise.all([
-      listMyBank(),
-      listPublicBank({ limit: 60 }),
       listBankEntries({ sort: "recent", limit: 200 }),
+      listMyTeacherLessons(),
       owner
         ? sysadminListAllPersonalizedLessons()
         : Promise.resolve([] as Awaited<
             ReturnType<typeof sysadminListAllPersonalizedLessons>
           >),
       owner
-        ? listBankEntries({ limit: 200 }).then(() =>
-            sysadminListDeletedBankEntries(),
-          )
+        ? sysadminListDeletedBankEntries()
         : Promise.resolve([] as Awaited<
             ReturnType<typeof sysadminListDeletedBankEntries>
           >),
@@ -85,19 +91,48 @@ export default async function TeacherBankPage({
           </span>
         </div>
         <h1 className="text-3xl font-semibold tracking-tight">
-          <T en="Lesson & exercise bank" pt="Banco de lições e exercícios" />
+          <T en="Lesson bank" pt="Banco de lições" />
         </h1>
         <p className="text-sm text-muted-foreground">
           <T
-            en="Share lessons with the community, migrate them into your environment with automatic updates when the author revises, and browse the full version history. Exercise blocks live in a separate tab."
-            pt="Compartilhe lições com a comunidade, migre-as para o seu ambiente com atualização automática quando o autor revisar e veja todo o histórico de versões. Blocos de exercícios ficam em outra aba."
+            en="Share lessons with the community, bring other teachers' lessons into your environment with auto-sync when the author revises, and browse the full version history."
+            pt="Compartilhe lições com a comunidade, traga lições de outros professores para o seu ambiente com atualização automática quando o autor revisar e veja todo o histórico de versões."
           />
         </p>
       </header>
 
-      <BankTabs current={view} />
+      <nav className="flex items-center gap-1 rounded-full border border-border bg-background p-1 w-max">
+        <Link
+          href="/teacher/bank?view=mine"
+          className={`rounded-full px-4 py-1.5 text-xs font-medium ${
+            view === "mine"
+              ? "bg-foreground text-background"
+              : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <T
+            en={`My lessons (${myLessons.length})`}
+            pt={`Minhas lições (${myLessons.length})`}
+          />
+        </Link>
+        <Link
+          href="/teacher/bank?view=bank"
+          className={`rounded-full px-4 py-1.5 text-xs font-medium ${
+            view === "bank"
+              ? "bg-foreground text-background"
+              : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <T
+            en={`Bank lessons (${entries.length})`}
+            pt={`Lições do banco (${entries.length})`}
+          />
+        </Link>
+      </nav>
 
-      {view === "lessons" ? (
+      {view === "mine" ? (
+        <MyLessonsBrief lessons={myLessons} />
+      ) : (
         <LessonBankBrowser
           entries={entries}
           myAuthorId={user.id}
@@ -111,8 +146,6 @@ export default async function TeacherBankPage({
           }))}
           personalizedLessons={personalizedLessons}
         />
-      ) : (
-        <BankBrowser mine={mineEx} publicItems={publicEx} />
       )}
     </div>
   );

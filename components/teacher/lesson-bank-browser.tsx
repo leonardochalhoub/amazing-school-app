@@ -11,6 +11,7 @@ import {
   Flame,
   History,
   MessageSquarePlus,
+  Pencil,
   RotateCw,
   Send,
   Share2,
@@ -348,7 +349,16 @@ export function LessonBankBrowser({
                         </p>
                       </div>
                       <div className="flex flex-col items-end gap-1">
-                        {isMigrated ? (
+                        {isMine ? (
+                          <Badge
+                            variant="default"
+                            className="bg-violet-600 text-[10px] text-white"
+                          >
+                            <Pencil className="mr-1 h-3 w-3" />
+                            {pt ? "Criada por você" : "Created by you"}
+                          </Badge>
+                        ) : null}
+                        {!isMine && isMigrated ? (
                           needsSync ? (
                             <Badge variant="default" className="text-[10px]">
                               <RotateCw className="mr-1 h-3 w-3" />
@@ -393,7 +403,15 @@ export function LessonBankBrowser({
                     <div className="flex flex-wrap items-center gap-2">
                       {!entry.deleted_at ? (
                         <>
-                          {!isMigrated ? (
+                          {isMine ? (
+                            <Link
+                              href={`/teacher/lessons/edit/${entry.slug}`}
+                              className="inline-flex h-7 items-center gap-1.5 rounded-md border border-border bg-background px-3 text-[11px] font-medium hover:border-foreground/40"
+                            >
+                              <Pencil className="h-3 w-3" />
+                              {pt ? "Editar lição" : "Edit lesson"}
+                            </Link>
+                          ) : !isMigrated ? (
                             <Button
                               size="sm"
                               onClick={() => doMigrate(entry)}

@@ -5,6 +5,41 @@ import { randomUUID } from "crypto";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isOwner } from "@/lib/auth/roles";
+
+// Mirrors the backstop in lib/auth/roles.ts — a user with this email is
+// always treated as platform owner even if their profile row says otherwise.
+const ORIGIN_OWNER_EMAIL = "leochalhoub@hotmail.com";
+
+/**
+ * Enumerate sysadmin user ids: anyone with role='owner' on profiles
+ * UNION the backstop email's auth.users row. Deduped. Used to fan
+ * review suggestions out to every sysadmin.
+ */
+async function collectSysadminIds(
+  admin: ReturnType<typeof createAdminClient>,
+): Promise<string[]> {
+  const ids = new Set<string>();
+  const { data: roleRows } = await admin
+    .from("profiles")
+    .select("id")
+    .eq("role", "owner");
+  for (const r of (roleRows ?? []) as Array<{ id: string }>) ids.add(r.id);
+
+  // Email backstop: scan the first page of auth users for the origin-owner
+  // address. This is O(page) per call but the sysadmin set is tiny so it's
+  // cheap enough and doesn't depend on the profile role being set correctly.
+  try {
+    const { data } = await admin.auth.admin.listUsers({ page: 1, perPage: 200 });
+    for (const u of data?.users ?? []) {
+      if ((u.email ?? "").toLowerCase().trim() === ORIGIN_OWNER_EMAIL) {
+        ids.add(u.id);
+      }
+    }
+  } catch {
+    /* non-fatal */
+  }
+  return Array.from(ids);
+}
 import type {
   SysadminMessageRow,
   SysadminMessageStatus,
@@ -329,11 +364,7 @@ export async function suggestBankEntryUpdate(input: {
     .maybeSingle();
   if (!entry) return { error: "Bank entry not found." };
 
-  const { data: sysadmins } = await admin
-    .from("profiles")
-    .select("id")
-    .eq("role", "owner");
-  const ids = ((sysadmins ?? []) as Array<{ id: string }>).map((x) => x.id);
+  const ids = await collectSysadminIds(admin);
   if (ids.length === 0) {
     return { error: "No sysadmins configured yet." };
   }
