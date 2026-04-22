@@ -2,6 +2,7 @@
 
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isOwner } from "@/lib/auth/roles";
+import { getLastActiveByUser } from "@/lib/actions/last-active";
 
 /**
  * Owner sysadmin overview — aggregate platform data only. By design, this
@@ -1103,28 +1104,19 @@ export async function getSysadminOverview(): Promise<
     .select("student_id, activity_date")
     .order("activity_date", { ascending: false })
     .limit(500_000);
-  // SINGLE SOURCE OF TRUTH for "last active". Matches exactly what
-  // components/owner/login-log-panel.tsx uses via login-log.ts:
-  //   max(session_heartbeats.at, auth.users.last_sign_in_at)
-  // with messages.created_at folded in so chat-only students don't
-  // fall through, and daily_activity as a last-resort date-only
-  // anchor (for users who somehow have activity but no heartbeat,
-  // sign-in, or message). Order in the map doesn't matter — every
-  // source feeds through bumpLastActivity which takes MAX.
+  // SINGLE SOURCE OF TRUTH — delegated to the shared helper so the
+  // Recent Activity panel and every sysadmin table share the exact
+  // same computation. Merge result is max(session_heartbeats.at,
+  // auth.users.last_sign_in_at) per user.
   //
-  // The result: every sysadmin table that reads lastActivityByUser
-  // (All Students, All Teachers, etc.) shows the exact same timestamp
-  // the Recent Activity table shows for the same user. No more
-  // "11:07 here / 09:52 there" drift.
-  for (const h of (heartbeatRes.data ?? []) as Array<{
-    user_id: string;
-    seconds: number;
-    at: string;
-  }>) {
-    bumpLastActivity(h.user_id, h.at);
-  }
-  for (const u of authList?.users ?? []) {
-    if (u.last_sign_in_at) bumpLastActivity(u.id, u.last_sign_in_at);
+  // messages.created_at and daily_activity still feed this map as
+  // supplementary sources (a chat-only student with no heartbeat or
+  // a pre-heartbeat historical session would otherwise read "—"),
+  // but they only win when they're newer than the authoritative
+  // sources.
+  const sharedLastActive = await getLastActiveByUser();
+  for (const [userId, iso] of sharedLastActive) {
+    bumpLastActivity(userId, iso);
   }
   // daily_activity fallback — only kicks in for users with no real
   // timestamp source above. Anchor at midday UTC of the date so

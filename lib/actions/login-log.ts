@@ -2,6 +2,7 @@
 
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isOwner } from "@/lib/auth/roles";
+import { getLastActiveByUser } from "@/lib/actions/last-active";
 
 export interface LoginLogEntry {
   id: string;
@@ -79,14 +80,11 @@ export async function listRecentLogins(
   );
 
   const allIds = visibleUsers.map((u) => u.id);
-  const [{ data: profiles }, { data: heartbeats }] = await Promise.all([
+  const [{ data: profiles }, sharedLastActive] = await Promise.all([
     admin.from("profiles").select("id, full_name, role").in("id", allIds),
-    admin
-      .from("session_heartbeats")
-      .select("user_id, at")
-      .in("user_id", allIds)
-      .order("at", { ascending: false })
-      .limit(2000),
+    // Shared helper — ensures the Recent Activity panel and every
+    // sysadmin "Last active" column compute identically.
+    getLastActiveByUser(),
   ]);
 
   const byId = new Map<
@@ -100,20 +98,8 @@ export async function listRecentLogins(
     });
   }
 
-  // Most recent heartbeat per user — the query is ordered desc so the
-  // first row for a given user_id is the one we want.
-  const lastHb = new Map<string, string>();
-  for (const h of (heartbeats ?? []) as { user_id: string; at: string }[]) {
-    if (!lastHb.has(h.user_id)) lastHb.set(h.user_id, h.at);
-  }
-
-  const effectiveAt = (u: (typeof users.users)[number]): string | null => {
-    const signIn = u.last_sign_in_at ?? null;
-    const hb = lastHb.get(u.id) ?? null;
-    if (!signIn) return hb;
-    if (!hb) return signIn;
-    return new Date(hb).getTime() > new Date(signIn).getTime() ? hb : signIn;
-  };
+  const effectiveAt = (u: (typeof users.users)[number]): string | null =>
+    sharedLastActive.get(u.id) ?? u.last_sign_in_at ?? null;
 
   const sorted = [...visibleUsers]
     .filter((u) => effectiveAt(u))
