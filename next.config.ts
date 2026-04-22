@@ -22,7 +22,11 @@ const CSP = [
   "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' data: https://fonts.gstatic.com",
-  "img-src 'self' data: blob: https://*.supabase.co https://images.unsplash.com https://image.pollinations.ai",
+  // Leaflet base-map tiles on the sysadmin + teacher map come from
+  // the CartoDB CDN (light/dark Positron + DarkMatter) with OSM
+  // coverage as a fallback — both whitelisted here so the browser
+  // actually loads the PNG tiles under our strict image policy.
+  "img-src 'self' data: blob: https://*.supabase.co https://images.unsplash.com https://image.pollinations.ai https://*.basemaps.cartocdn.com https://*.tile.openstreetmap.org https://cartodb-basemaps-a.global.ssl.fastly.net",
   "media-src 'self' blob:",
   "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://api.groq.com https://api.anthropic.com https://generativelanguage.googleapis.com https://dictionary.cambridge.org https://mymemory.translated.net",
   "frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com",
