@@ -29,6 +29,8 @@ import { getSignatureSignedUrl } from "@/lib/signature";
 import { T } from "@/components/reports/t";
 import { TeacherXpToggle } from "@/components/teacher/teacher-xp-toggle";
 import { TeacherDocumentsCard } from "@/components/reports/teacher-documents-card";
+import { MessagesWithSysadminCard } from "@/components/shared/messages-with-sysadmin-card";
+import { listMyMessages } from "@/lib/actions/sysadmin-messages";
 
 export default async function TeacherProfilePage() {
   const supabase = await createClient();
@@ -323,6 +325,12 @@ export default async function TeacherProfilePage() {
           </div>
         </div>
       </div>
+
+      {/* Messages with sysadmin — full page width, most-recent 5 + expand */}
+      <MessagesWithSysadminCard
+        messages={await listMyMessages({ limit: 50 })}
+        messagesHref="/teacher/profile/messages"
+      />
 
       {/* CEFR scale — full page width */}
       <CefrExplainerCard />

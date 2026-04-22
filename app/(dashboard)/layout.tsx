@@ -14,6 +14,8 @@ import { DemoSwitchBar } from "@/components/demo/demo-switch-bar";
 import { SessionHeartbeat } from "@/components/shared/session-heartbeat";
 import { FillLocationPrompt } from "@/components/shared/fill-location-prompt";
 import { UpcomingClassPrompt } from "@/components/shared/upcoming-class-prompt";
+import { SysadminMessagePopup } from "@/components/shared/sysadmin-message-popup";
+import { listMyInbox } from "@/lib/actions/sysadmin-messages";
 import { getMyNextClass } from "@/lib/actions/upcoming-class";
 import type { Role } from "@/lib/supabase/types";
 
@@ -159,6 +161,19 @@ export default async function DashboardLayout({
     console.warn("[upcoming-class] layout err", err);
   }
 
+  // Pull unread sysadmin-messaging inbox once per layout render so the
+  // floating popup can render without a client fetch. Any failure is
+  // non-fatal — the popup is an enhancement.
+  let unreadMessages: Awaited<ReturnType<typeof listMyInbox>> = [];
+  try {
+    const all = await listMyInbox({ limit: 10 });
+    unreadMessages = all.filter((m) => m.read_at === null);
+  } catch (err) {
+    console.warn("[sysadmin-messages] layout err", err);
+  }
+  const messagesHref =
+    role === "teacher" ? "/teacher/profile/messages" : "/student/profile/messages";
+
   // White-label school logo resolution:
   //   Teacher signed in → their own profile row
   //   Student signed in → find their teacher via roster_students, then
@@ -215,6 +230,13 @@ export default async function DashboardLayout({
         </div>
       </main>
       <Footer />
+      {unreadMessages.length > 0 ? (
+        <SysadminMessagePopup
+          unreadMessages={unreadMessages}
+          isOwner={isOwner}
+          messagesHref={messagesHref}
+        />
+      ) : null}
     </div>
   );
 }

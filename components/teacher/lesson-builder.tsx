@@ -20,19 +20,18 @@ import type {
   ExerciseBlock,
   TeacherLessonRow,
 } from "@/lib/actions/teacher-lessons-types";
+import { LessonNameAiSuggester } from "@/components/teacher/lesson-name-ai-suggester";
+import { ShareToBankButton } from "@/components/teacher/share-to-bank-button";
 
-const CEFR_OPTIONS = [
-  "a1.1",
-  "a1.2",
-  "a2.1",
-  "a2.2",
-  "b1.1",
-  "b1.2",
-  "b2.1",
-  "b2.2",
-  "c1.1",
-  "c1.2",
-];
+import { CEFR_BANDS, cefrBandOf, SKILLS } from "@/lib/content/schema";
+
+// Teacher-authored lessons pick from coarse CEFR bands only —
+// A1, A2, B1, B2, C1, C2, Y4. Sub-levels (a1.1, etc.) are a
+// legacy detail from the curated library and shouldn't surface
+// here. Existing rows that carry `a1.1` get normalized to `a1`
+// on first open via cefrBandOf.
+const CEFR_OPTIONS = [...CEFR_BANDS] as const;
+const SKILL_OPTIONS = [...SKILLS] as const;
 
 const EXERCISE_TYPE_LABELS: Record<ExerciseBlock["type"], string> = {
   multiple_choice: "Multiple choice",
@@ -117,12 +116,24 @@ export function LessonBuilder({ initial }: Props) {
   const [title, setTitle] = useState(initial?.title ?? "");
   const [slug, setSlug] = useState(initial?.slug ?? "");
   const [description, setDescription] = useState(initial?.description ?? "");
-  const [cefr, setCefr] = useState(initial?.cefr_level ?? "a1.1");
-  const [category, setCategory] = useState(initial?.category ?? "grammar");
+  const [cefr, setCefr] = useState<string>(
+    cefrBandOf(initial?.cefr_level ?? "") ?? "a1"
+  );
+  // Skills is the source-of-truth multi-select. Category mirrors skills[0]
+  // to keep legacy single-skill readers (curriculum report, assignable
+  // lessons query) working without rewrites.
+  const [skills, setSkills] = useState<string[]>(() => {
+    if (initial?.skills && initial.skills.length > 0) return initial.skills;
+    if (initial?.category) return [initial.category];
+    return ["grammar"];
+  });
   const [estimatedMinutes, setEstimatedMinutes] = useState<string>(
     initial?.estimated_minutes != null
       ? String(initial.estimated_minutes)
       : "10",
+  );
+  const [xpAward, setXpAward] = useState<string>(
+    initial?.xp_award != null ? String(initial.xp_award) : "15",
   );
   const [published, setPublished] = useState(initial?.published ?? false);
   const [exercises, setExercises] = useState<ExerciseBlock[]>(
@@ -165,13 +176,23 @@ export function LessonBuilder({ initial }: Props) {
       toast.error("Slug is required.");
       return;
     }
-    // Parse the expected-duration input — blank / non-numeric
-    // becomes undefined (the schema treats it as optional).
+    if (skills.length === 0) {
+      toast.error("Pick at least one skill.");
+      return;
+    }
+    // Minutes + XP are required — bail on empty/non-numeric.
     const minutesInt = Number(estimatedMinutes);
-    const minutes =
-      estimatedMinutes.trim() === "" || !Number.isFinite(minutesInt)
-        ? undefined
-        : Math.max(1, Math.min(240, Math.round(minutesInt)));
+    if (!Number.isFinite(minutesInt) || estimatedMinutes.trim() === "") {
+      toast.error("Suggested time in minutes is required.");
+      return;
+    }
+    const minutes = Math.max(1, Math.min(240, Math.round(minutesInt)));
+    const xpInt = Number(xpAward);
+    if (!Number.isFinite(xpInt) || xpAward.trim() === "") {
+      toast.error("XP is required.");
+      return;
+    }
+    const xp = Math.max(0, Math.min(500, Math.round(xpInt)));
 
     startTransition(async () => {
       const r = await saveTeacherLesson({
@@ -180,8 +201,10 @@ export function LessonBuilder({ initial }: Props) {
         title,
         description: description.trim() || undefined,
         cefr_level: cefr,
-        category,
+        category: skills[0],
+        skills,
         estimated_minutes: minutes,
+        xp_award: xp,
         exercises,
         published: asPublished,
       });
@@ -215,6 +238,9 @@ export function LessonBuilder({ initial }: Props) {
           </p>
         </div>
         <div className="flex items-center gap-2">
+          {initial ? (
+            <ShareToBankButton lesson={initial} />
+          ) : null}
           <Button
             variant="outline"
             size="sm"
@@ -236,6 +262,15 @@ export function LessonBuilder({ initial }: Props) {
           </Button>
         </div>
       </div>
+
+      {!initial ? (
+        <LessonNameAiSuggester
+          onApply={(t, s) => {
+            setTitle(t);
+            setSlug(s);
+          }}
+        />
+      ) : null}
 
       <Card>
         <CardContent className="space-y-4 p-5">
@@ -276,22 +311,38 @@ export function LessonBuilder({ initial }: Props) {
                 ))}
               </select>
             </div>
-            <div className="space-y-1.5">
-              <Label htmlFor="lesson-cat">Category</Label>
-              <select
-                id="lesson-cat"
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-                className="h-9 w-full rounded-md border border-border bg-background px-3 text-sm"
-              >
-                <option value="grammar">Grammar</option>
-                <option value="vocabulary">Vocabulary</option>
-                <option value="reading">Reading</option>
-                <option value="listening">Listening</option>
-                <option value="narrative">Narrative</option>
-                <option value="speaking">Speaking</option>
-                <option value="dialog">Dialog</option>
-              </select>
+            <div className="space-y-1.5 md:col-span-2">
+              <Label>Skills (pick one or more — required)</Label>
+              <div className="flex flex-wrap gap-1.5">
+                {SKILL_OPTIONS.map((s) => {
+                  const active = skills.includes(s);
+                  return (
+                    <button
+                      key={s}
+                      type="button"
+                      onClick={() =>
+                        setSkills((prev) =>
+                          active
+                            ? prev.filter((x) => x !== s)
+                            : [...prev, s],
+                        )
+                      }
+                      className={`rounded-full border px-2.5 py-0.5 text-[11px] font-medium capitalize transition-colors ${
+                        active
+                          ? "border-foreground bg-foreground text-background"
+                          : "border-border text-muted-foreground hover:border-foreground/40"
+                      }`}
+                    >
+                      {s}
+                    </button>
+                  );
+                })}
+              </div>
+              {skills.length === 0 ? (
+                <p className="text-[11px] text-destructive">
+                  Select at least one skill.
+                </p>
+              ) : null}
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="lesson-desc">Short description</Label>
@@ -306,9 +357,9 @@ export function LessonBuilder({ initial }: Props) {
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
             <div className="space-y-1.5">
               <Label htmlFor="lesson-minutes">
-                Duração estimada{" "}
+                Duração sugerida{" "}
                 <span className="text-xs text-muted-foreground">
-                  (minutos)
+                  (minutos · obrigatório)
                 </span>
               </Label>
               <Input
@@ -318,6 +369,7 @@ export function LessonBuilder({ initial }: Props) {
                 min={1}
                 max={240}
                 step={1}
+                required
                 value={estimatedMinutes}
                 onChange={(e) => setEstimatedMinutes(e.target.value)}
                 placeholder="10"
@@ -325,6 +377,29 @@ export function LessonBuilder({ initial }: Props) {
               <p className="text-[11px] text-muted-foreground">
                 Aparece no currículo do aluno e soma na carga horária
                 total dos certificados.
+              </p>
+            </div>
+            <div className="space-y-1.5">
+              <Label htmlFor="lesson-xp">
+                XP{" "}
+                <span className="text-xs text-muted-foreground">
+                  (obrigatório)
+                </span>
+              </Label>
+              <Input
+                id="lesson-xp"
+                type="number"
+                inputMode="numeric"
+                min={0}
+                max={500}
+                step={1}
+                required
+                value={xpAward}
+                onChange={(e) => setXpAward(e.target.value)}
+                placeholder="15"
+              />
+              <p className="text-[11px] text-muted-foreground">
+                Recompensa de XP quando o aluno conclui a lição.
               </p>
             </div>
           </div>

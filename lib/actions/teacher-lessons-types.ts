@@ -80,16 +80,23 @@ export const TeacherLessonSchema = z.object({
   title: z.string().min(1).max(200),
   description: z.string().max(1000).optional(),
   cefr_level: z.string().max(10).optional(),
+  /** Retained for backward compat with the curriculum report and the
+      assignable-lessons query — writers mirror skills[0] into `category`
+      so the old code path keeps working. The source of truth for "what
+      does this lesson practice" is `skills`. */
   category: z.string().max(40).optional(),
-  /** Expected duration of the practice in minutes. Feeds the
-      curriculum "Tempo estimado" column + certificate platform-
-      hours estimate. Optional so drafts in progress still save. */
-  estimated_minutes: z
-    .number()
-    .int()
-    .min(1)
-    .max(240)
-    .optional(),
+  /** ≥1 skill required — personalized lessons can no longer be
+      skill-less. Kept as a free-form string array so future skills
+      added by product don't break the schema; the UI limits the picker
+      to the canonical SKILLS list in lib/content/schema. */
+  skills: z.array(z.string().max(40)).min(1, "Select at least one skill"),
+  /** Expected duration in minutes. REQUIRED — feeds the curriculum
+      "Tempo estimado" column + certificate platform-hours estimate. */
+  estimated_minutes: z.number().int().min(1).max(240),
+  /** XP awarded to a student who completes this lesson. Required so the
+      gamification layer never shows a 0-XP lesson unless the author
+      explicitly typed 0. */
+  xp_award: z.number().int().min(0).max(500),
   exercises: z.array(ExerciseBlockSchema).max(50),
   published: z.boolean().optional(),
 });
@@ -104,7 +111,9 @@ export interface TeacherLessonRow {
   description: string | null;
   cefr_level: string | null;
   category: string | null;
+  skills: string[];
   estimated_minutes: number | null;
+  xp_award: number;
   exercises: ExerciseBlock[];
   published: boolean;
   created_at: string;

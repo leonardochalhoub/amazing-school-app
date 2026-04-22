@@ -19,14 +19,17 @@ export async function saveTeacherLesson(input: TeacherLessonInput) {
   } = await supabase.auth.getUser();
   if (!user) return { error: "Unauthorized" };
 
+  const skills = parsed.data.skills.length > 0 ? parsed.data.skills : ["grammar"];
   const record = {
     teacher_id: user.id,
     slug: parsed.data.slug,
     title: parsed.data.title,
     description: parsed.data.description ?? null,
     cefr_level: parsed.data.cefr_level ?? null,
-    category: parsed.data.category ?? null,
-    estimated_minutes: parsed.data.estimated_minutes ?? null,
+    category: parsed.data.category ?? skills[0],
+    skills,
+    estimated_minutes: parsed.data.estimated_minutes,
+    xp_award: parsed.data.xp_award,
     exercises: parsed.data.exercises,
     published: parsed.data.published ?? false,
   };

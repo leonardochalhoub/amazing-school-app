@@ -116,6 +116,10 @@ export function Navbar({
       href: "/teacher/bank",
       label: locale === "pt-BR" ? "Banco" : "Bank",
     },
+    {
+      href: "/teacher/community",
+      label: locale === "pt-BR" ? "Comunidade" : "Community",
+    },
     { href: "/teacher/chat", label: labels.aiTutor },
     { href: "/teacher/admin", label: locale === "pt-BR" ? "Gestão" : "Management" },
   ];
