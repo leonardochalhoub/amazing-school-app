@@ -10,6 +10,7 @@ import {
   type BadgeTier,
   type BadgeTheme,
 } from "@/lib/gamification/config";
+import { badgeFlavor } from "@/lib/gamification/badge-flavors";
 import type { BadgeProgress } from "@/lib/actions/badge-progress";
 
 interface Props {
@@ -329,10 +330,15 @@ function BadgeCard({
         year: "numeric",
       })
     : null;
+  // Evocative hover copy from badge-flavors.ts; null-safe — fall
+  // back to the description so every card still has a tooltip.
+  const flavor = badgeFlavor(def.type, pt ? "pt-BR" : "en");
+  const hoverText = flavor ? `${def.name} — ${flavor}` : def.description;
 
   if (earned) {
     return (
       <div
+        title={hoverText}
         className={`relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br ${def.gradient} ${def.glow} p-4 text-white`}
       >
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-70" />
@@ -361,7 +367,10 @@ function BadgeCard({
   }
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-border bg-muted/20 p-4">
+    <div
+      title={hoverText}
+      className="relative overflow-hidden rounded-2xl border border-border bg-muted/20 p-4"
+    >
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-start gap-3">
           <span
