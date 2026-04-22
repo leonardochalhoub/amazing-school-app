@@ -28,14 +28,6 @@ import { CefrExplainerCard } from "@/components/reports/cefr-explainer-card";
 import { getSignatureSignedUrl } from "@/lib/signature";
 import { T } from "@/components/reports/t";
 import { TeacherXpToggle } from "@/components/teacher/teacher-xp-toggle";
-import {
-  SelfCurriculumPanel,
-  type SelfCurriculumRow,
-} from "@/components/teacher/self-curriculum-panel";
-import { getTeacherSelfAssignments } from "@/lib/actions/teacher-self-assignments";
-import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
-import { listMusic, fromAssignmentSlug, getMusic } from "@/lib/content/music";
-import { findMeta as findLessonMeta } from "@/lib/content/loader";
 
 export default async function TeacherProfilePage() {
   const supabase = await createClient();
@@ -123,47 +115,6 @@ export default async function TeacherProfilePage() {
   ]);
   const classroomCount = classroomsRes.count ?? 0;
   const studentsCount = studentsRes.count ?? 0;
-
-  // Teacher self-curriculum — rows where assigned_by = student_id =
-  // teacher.id. Joined with lesson_progress so "Concluída" on the
-  // panel reflects real completions even when the assignment row
-  // stayed classroom-wide. Lessons + music lists feed the picker
-  // behind the "Atribuir para mim" button.
-  const [selfAssignmentsRaw, assignableLessons] = await Promise.all([
-    getTeacherSelfAssignments(50),
-    getAssignableLessons(),
-  ]);
-  const musicsForPicker = listMusic();
-  const selfCurriculumRows: SelfCurriculumRow[] = selfAssignmentsRaw.map((a) => {
-    const { kind, slug } = fromAssignmentSlug(a.lessonSlug);
-    if (kind === "music") {
-      const m = getMusic(slug);
-      return {
-        assignmentId: a.id,
-        slug,
-        kind,
-        title: m ? `${m.artist} — ${m.title}` : slug,
-        cefr: m?.cefr_level ?? null,
-        category: "music",
-        minutes: m ? Math.max(5, Math.round((m.duration_seconds / 60) * 2)) : null,
-        assignedAt: a.assignedAt ?? "",
-        completedAt: a.completedAt,
-      };
-    }
-    const draft = assignableLessons.find((l) => l.slug === slug);
-    const fileMeta = findLessonMeta(slug);
-    return {
-      assignmentId: a.id,
-      slug,
-      kind: "lesson" as const,
-      title: draft?.title ?? fileMeta?.title ?? slug,
-      cefr: (draft?.cefr_level ?? fileMeta?.cefr_level) ?? null,
-      category: draft?.category ?? fileMeta?.category ?? null,
-      minutes: fileMeta?.estimated_minutes ?? null,
-      assignedAt: a.assignedAt ?? "",
-      completedAt: a.completedAt,
-    };
-  });
 
   const logoEligible = isLogoEligible(user.email, profile.full_name);
   const logoEnabled =
@@ -308,17 +259,6 @@ export default async function TeacherProfilePage() {
         </a>
       ) : null}
 
-      {/* Teacher's own curriculum — self-assignments + "Atribuir
-          para mim" button. Reuses the standard AssignLessonButton
-          dialog in single-student mode, which hides the "whom to
-          assign to" section entirely so every pick lands on the
-          teacher's own profile.id. */}
-      <SelfCurriculumPanel
-        teacher={{ id: user.id, fullName: profile.full_name }}
-        entries={selfCurriculumRows}
-        lessons={assignableLessons}
-        musics={musicsForPicker}
-      />
 
       {/* Preferences in two columns on lg */}
       <div className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">

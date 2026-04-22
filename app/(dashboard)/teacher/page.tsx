@@ -20,6 +20,11 @@ import { AssignLessonButton } from "@/components/teacher/assign-lesson-button";
 import { BirthdayAlert } from "@/components/teacher/birthday-alert";
 import { DismissibleHero } from "@/components/teacher/dismissible-hero";
 import { TeacherXpStrip } from "@/components/teacher/teacher-xp-strip";
+import {
+  SelfCurriculumPanel,
+  type SelfCurriculumRow,
+} from "@/components/teacher/self-curriculum-panel";
+import { getTeacherSelfAssignments } from "@/lib/actions/teacher-self-assignments";
 import { locateCity } from "@/lib/data/brazil-city-coords";
 import { getAssignableLessons } from "@/lib/actions/assignable-lessons";
 import { getUpcomingBirthdays } from "@/lib/actions/birthdays";
@@ -106,6 +111,43 @@ export default async function TeacherDashboard() {
       cefr: (draft?.cefr_level ?? fileMeta?.cefr_level) ?? null,
       category: draft?.category ?? fileMeta?.category ?? null,
       minutes: fileMeta?.estimated_minutes ?? null,
+    };
+  });
+
+  // Teacher's self-curriculum — rows assigned_by = student_id =
+  // teacher.id. Resolved to the same shape the panel expects; the
+  // completedAt is derived from lesson_progress by the action, so
+  // classroom-wide assignments Leo shares with his class don't
+  // mask his personal "Concluída" state on the right column.
+  const selfAssignmentsRaw = await getTeacherSelfAssignments(50);
+  const selfCurriculumRows: SelfCurriculumRow[] = selfAssignmentsRaw.map((a) => {
+    const { kind, slug } = fromAssignmentSlug(a.lessonSlug);
+    if (kind === "music") {
+      const m = getMusic(slug);
+      return {
+        assignmentId: a.id,
+        slug,
+        kind,
+        title: m ? `${m.artist} — ${m.title}` : slug,
+        cefr: m?.cefr_level ?? null,
+        category: "music",
+        minutes: m ? Math.max(5, Math.round((m.duration_seconds / 60) * 2)) : null,
+        assignedAt: a.assignedAt ?? "",
+        completedAt: a.completedAt,
+      };
+    }
+    const draft = publishedLessons.find((l) => l.slug === slug);
+    const fileMeta = findLessonMeta(slug);
+    return {
+      assignmentId: a.id,
+      slug,
+      kind: "lesson" as const,
+      title: draft?.title ?? fileMeta?.title ?? slug,
+      cefr: (draft?.cefr_level ?? fileMeta?.cefr_level) ?? null,
+      category: draft?.category ?? fileMeta?.category ?? null,
+      minutes: fileMeta?.estimated_minutes ?? null,
+      assignedAt: a.assignedAt ?? "",
+      completedAt: a.completedAt,
     };
   });
   const firstName = profile?.full_name?.split(" ")[0] ?? "there";
@@ -264,12 +306,40 @@ export default async function TeacherDashboard() {
         </div>
       </section>
 
-      {resolvedRecent.length > 0 ? (
-        <section aria-labelledby="recent-heading" className="space-y-3">
-          <h2 id="recent-heading" className="text-xl font-bold tracking-tight">
-            <TeacherI18nClient en="Recent assignments" pt="Atribuições recentes" />
-          </h2>
-          <RecentAssignmentsPreview entries={resolvedRecent} />
+      {/* Two-column assignments strip.
+          Left — Atribuições recentes (things the teacher handed out
+          to students). Right — Meu próprio currículo (things the
+          teacher assigned to themselves, with an "Atribuir para
+          mim" button that opens the standard picker locked to
+          student = teacher.id). Stacks on < lg. */}
+      {resolvedRecent.length > 0 || selfCurriculumRows.length > 0 ? (
+        <section
+          aria-label="Assignments overview"
+          className="grid gap-6 lg:grid-cols-2"
+        >
+          {resolvedRecent.length > 0 ? (
+            <div className="space-y-3">
+              <h2
+                id="recent-heading"
+                className="text-xl font-bold tracking-tight"
+              >
+                <TeacherI18nClient
+                  en="Recent assignments"
+                  pt="Atribuições recentes"
+                />
+              </h2>
+              <RecentAssignmentsPreview entries={resolvedRecent} />
+            </div>
+          ) : (
+            <div />
+          )}
+
+          <SelfCurriculumPanel
+            teacher={{ id: user.id, fullName: firstName }}
+            entries={selfCurriculumRows}
+            lessons={publishedLessons}
+            musics={musics}
+          />
         </section>
       ) : null}
 
