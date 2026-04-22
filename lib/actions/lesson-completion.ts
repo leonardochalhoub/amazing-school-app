@@ -67,7 +67,16 @@ export async function markLessonComplete(
   }
 
   if (!classroomId) {
-    // Teachers previewing content: silently no-op.
+    // Teacher gating: previously we unconditionally no-op'd every
+    // teacher completion (treating the UI as a preview). Now the
+    // behaviour depends on the XP opt-in toggle in /teacher/profile:
+    //  - xp_enabled=true  → act like a student. Write lesson_progress,
+    //    grant XP, flow through the badge triggers. Turning off later
+    //    just pauses future writes; the completions earned while on
+    //    stay in place.
+    //  - xp_enabled=false → silent no-op (historical preview mode).
+    //    Flipping back on resumes progression exactly where they left
+    //    off — nothing is deleted.
     const { data: prof } = await admin
       .from("profiles")
       .select("role")
@@ -75,11 +84,28 @@ export async function markLessonComplete(
       .maybeSingle();
     const role = (prof as { role?: string } | null)?.role ?? null;
     if (role === "teacher") {
-      return {
-        success: true as const,
-        awardedXp: 0,
-        alreadyCompleted: false as const,
-      };
+      let teacherXpOn = true;
+      try {
+        const { data: xpRow } = await admin
+          .from("profiles")
+          .select("xp_enabled")
+          .eq("id", user.id)
+          .maybeSingle();
+        const raw = (xpRow as { xp_enabled?: boolean | null } | null)
+          ?.xp_enabled;
+        if (raw === false) teacherXpOn = false;
+      } catch {
+        /* column absent (pre-062) → default on */
+      }
+      if (!teacherXpOn) {
+        return {
+          success: true as const,
+          awardedXp: 0,
+          alreadyCompleted: false as const,
+        };
+      }
+      // Otherwise: fall through, teacher earns XP + progress just
+      // like a student would for this lesson.
     }
     // Students without a classroom still get full progress + XP +
     // streak tracking (migration 028 allows classroom_id = NULL on
