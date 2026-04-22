@@ -104,14 +104,21 @@ export default async function TeacherProfilePage() {
 
   const [signedUrl, classroomsRes, studentsRes] = await Promise.all([
     resolveMyAvatarUrl(supabase, user.id),
+    // Count only live classrooms — soft-deleted rows stay in the
+    // table for history preservation (migration 040 + 038) and
+    // without .is("deleted_at", null) the tile reads inflated
+    // counts like "Classrooms: 8" when the teacher only has 2
+    // active ones. Same filter the dashboard uses.
     admin
       .from("classrooms")
       .select("id", { count: "exact", head: true })
-      .eq("teacher_id", user.id),
+      .eq("teacher_id", user.id)
+      .is("deleted_at", null),
     admin
       .from("roster_students")
       .select("id", { count: "exact", head: true })
       .eq("teacher_id", user.id)
+      .is("deleted_at", null)
       .is("ended_on", null),
   ]);
   const classroomCount = classroomsRes.count ?? 0;
