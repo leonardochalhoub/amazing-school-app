@@ -135,11 +135,12 @@ export function Navbar({
             <Link
               key={link.href}
               href={link.href}
+              aria-current={isActive ? "page" : undefined}
               className={cn(
-                "relative rounded-full px-2.5 py-1 text-[11px] font-medium transition-colors whitespace-nowrap",
+                "relative rounded-full px-3 py-1 text-[11px] font-medium transition-all whitespace-nowrap",
                 isActive
-                  ? "bg-foreground text-background shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500 text-white shadow-[0_0_20px_-4px_rgba(139,92,246,0.7)] ring-1 ring-white/20 dark:ring-white/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-foreground/5"
               )}
             >
               {link.label}
@@ -325,11 +326,12 @@ export function Navbar({
                 <Link
                   key={link.href}
                   href={link.href}
+                  aria-current={isActive ? "page" : undefined}
                   className={cn(
-                    "shrink-0 rounded-full px-3 py-1.5 text-[11px] font-medium transition-colors",
+                    "shrink-0 rounded-full px-3 py-1.5 text-[11px] font-medium transition-all",
                     isActive
-                      ? "bg-foreground text-background"
-                      : "text-muted-foreground hover:text-foreground"
+                      ? "bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500 text-white shadow-[0_0_18px_-4px_rgba(139,92,246,0.65)] ring-1 ring-white/20 dark:ring-white/10"
+                      : "text-muted-foreground hover:text-foreground hover:bg-foreground/5"
                   )}
                 >
                   {link.label}

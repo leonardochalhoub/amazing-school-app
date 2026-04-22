@@ -405,8 +405,8 @@ export default async function StudentViewAsStudent({
                       </h1>
                       <p className="text-xs text-muted-foreground">
                         <T
-                          en="Overview the student sees · read-only"
-                          pt={`Resumo que ${isFemale ? "a" : "o"} ${studentWord} vê · somente leitura`}
+                          en="Summary of what the student sees · read-only"
+                          pt={`Resumo do que ${isFemale ? "a" : "o"} ${studentWord} vê · somente leitura`}
                         />
                       </p>
                     </div>

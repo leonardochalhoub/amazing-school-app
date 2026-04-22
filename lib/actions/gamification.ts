@@ -3,6 +3,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { getLevel, computeStreak } from "@/lib/gamification/engine";
 import { BADGE_DEFINITIONS } from "@/lib/gamification/config";
+import { awardEligibleBadges } from "@/lib/gamification/award-badges";
 
 export async function getStudentStats(studentId?: string) {
   const supabase = await createClient();
@@ -33,6 +34,17 @@ export async function getStudentStats(studentId?: string) {
     .limit(60);
 
   const streak = computeStreak(activities ?? []);
+
+  // Lazy catch-up: students who signed up before the badge hook was
+  // wired (e.g. Tati) otherwise never receive `welcome_aboard` or any
+  // other retroactively-earned badge. `awardEligibleBadges` is
+  // idempotent — existing rows are skipped — so re-running it on
+  // every stats read is cheap and self-healing.
+  try {
+    await awardEligibleBadges(userId);
+  } catch (err) {
+    console.error("getStudentStats lazy badge award:", err);
+  }
 
   const { data: earnedBadges } = await supabase
     .from("badges")

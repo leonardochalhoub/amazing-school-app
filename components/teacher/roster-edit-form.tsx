@@ -311,28 +311,39 @@ export function RosterEditForm({
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-[160px_1fr]">
-        <div className="space-y-2">
-          <Label className="text-[11px] uppercase tracking-wider text-muted-foreground">
-            {t.preview}
-          </Label>
-          <div
-            className={`relative h-24 w-24 overflow-hidden rounded-full p-[3px] shadow-md ${
-              hasAvatar
-                ? "bg-muted opacity-60"
-                : "bg-gradient-to-br from-indigo-500 via-violet-500 to-pink-500"
-            }`}
-          >
-            <div className="h-full w-full overflow-hidden rounded-full bg-card">
-              <CartoonAvatar
-                ageGroup={ageGroupValue || null}
-                gender={genderValue || null}
-                seed={rosterId}
-                fullName={name}
-              />
+      {/* Avatar preview + demographic toggles.
+          Laid out as a compact top row (avatar + hint) with the
+          button groups stacking below at FULL width. The previous
+          `sm:grid-cols-[160px_1fr]` split starved the toggles of
+          horizontal room when the form rendered inside the 360px
+          Details sidebar — labels like "Adolescente" / "Masculino"
+          and the A1–B2 CEFR chips got clipped. Stacking the toggles
+          lets them always use the full card width and wrap cleanly
+          on anything narrower. */}
+      <div className="space-y-4">
+        <div className="flex items-start gap-3">
+          <div className="space-y-1.5">
+            <Label className="text-[11px] uppercase tracking-wider text-muted-foreground">
+              {t.preview}
+            </Label>
+            <div
+              className={`relative h-24 w-24 overflow-hidden rounded-full p-[3px] shadow-md ${
+                hasAvatar
+                  ? "bg-muted opacity-60"
+                  : "bg-gradient-to-br from-indigo-500 via-violet-500 to-pink-500"
+              }`}
+            >
+              <div className="h-full w-full overflow-hidden rounded-full bg-card">
+                <CartoonAvatar
+                  ageGroup={ageGroupValue || null}
+                  gender={genderValue || null}
+                  seed={rosterId}
+                  fullName={name}
+                />
+              </div>
             </div>
           </div>
-          <p className="max-w-[160px] text-[10px] text-muted-foreground">
+          <p className="min-w-0 flex-1 text-[10px] leading-relaxed text-muted-foreground">
             {hasAvatar
               ? locale === "pt-BR"
                 ? "Foto real em uso — o desenho é apenas pré-visualização."
@@ -341,78 +352,76 @@ export function RosterEditForm({
           </p>
         </div>
 
-        <div className="space-y-4">
-          <div className="space-y-1.5">
-            <Label>{t.ageGroup}</Label>
-            <div className="flex gap-1.5">
-              {(["kid", "teen", "adult"] as const).map((opt) => (
-                <button
-                  key={opt}
-                  type="button"
-                  onClick={() => setAgeGroupValue(opt)}
-                  className={`flex-1 rounded-md border px-3 py-1.5 text-xs font-medium transition-colors ${
-                    ageGroupValue === opt
-                      ? "border-foreground bg-foreground text-background"
-                      : "border-border text-muted-foreground hover:border-foreground/40"
-                  }`}
-                >
-                  {ageLabels[opt]}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-1.5">
-            <Label>{t.gender}</Label>
-            <div className="flex gap-1.5">
-              {(["female", "male"] as const).map((opt) => (
-                <button
-                  key={opt}
-                  type="button"
-                  onClick={() => setGenderValue(opt)}
-                  className={`flex-1 rounded-md border px-3 py-1.5 text-xs font-medium transition-colors ${
-                    genderValue === opt
-                      ? "border-foreground bg-foreground text-background"
-                      : "border-border text-muted-foreground hover:border-foreground/40"
-                  }`}
-                >
-                  {genderLabels[opt]}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-1.5">
-            <Label>
-              {locale === "pt-BR" ? "Nível CEFR" : "CEFR level"}
-            </Label>
-            <div className="flex flex-wrap gap-1.5">
+        <div className="space-y-1.5">
+          <Label>{t.ageGroup}</Label>
+          <div className="flex flex-wrap gap-1.5">
+            {(["kid", "teen", "adult"] as const).map((opt) => (
               <button
+                key={opt}
                 type="button"
-                onClick={() => setLevelValue("")}
-                className={`rounded-md border px-3 py-1.5 text-xs font-medium transition-colors ${
-                  levelValue === ""
+                onClick={() => setAgeGroupValue(opt)}
+                className={`flex-1 basis-24 whitespace-nowrap rounded-md border px-3 py-1.5 text-xs font-medium transition-colors ${
+                  ageGroupValue === opt
                     ? "border-foreground bg-foreground text-background"
                     : "border-border text-muted-foreground hover:border-foreground/40"
                 }`}
               >
-                {locale === "pt-BR" ? "—" : "—"}
+                {ageLabels[opt]}
               </button>
-              {LEVEL_OPTIONS.map((opt) => (
-                <button
-                  key={opt}
-                  type="button"
-                  onClick={() => setLevelValue(opt)}
-                  className={`rounded-md border px-3 py-1.5 text-xs font-medium uppercase transition-colors ${
-                    levelValue === opt
-                      ? "border-foreground bg-foreground text-background"
-                      : "border-border text-muted-foreground hover:border-foreground/40"
-                  }`}
-                >
-                  {opt}
-                </button>
-              ))}
-            </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="space-y-1.5">
+          <Label>{t.gender}</Label>
+          <div className="flex flex-wrap gap-1.5">
+            {(["female", "male"] as const).map((opt) => (
+              <button
+                key={opt}
+                type="button"
+                onClick={() => setGenderValue(opt)}
+                className={`flex-1 basis-24 whitespace-nowrap rounded-md border px-3 py-1.5 text-xs font-medium transition-colors ${
+                  genderValue === opt
+                    ? "border-foreground bg-foreground text-background"
+                    : "border-border text-muted-foreground hover:border-foreground/40"
+                }`}
+              >
+                {genderLabels[opt]}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="space-y-1.5">
+          <Label>
+            {locale === "pt-BR" ? "Nível CEFR" : "CEFR level"}
+          </Label>
+          <div className="flex flex-wrap gap-1.5">
+            <button
+              type="button"
+              onClick={() => setLevelValue("")}
+              className={`whitespace-nowrap rounded-md border px-3 py-1.5 text-xs font-medium transition-colors ${
+                levelValue === ""
+                  ? "border-foreground bg-foreground text-background"
+                  : "border-border text-muted-foreground hover:border-foreground/40"
+              }`}
+            >
+              —
+            </button>
+            {LEVEL_OPTIONS.map((opt) => (
+              <button
+                key={opt}
+                type="button"
+                onClick={() => setLevelValue(opt)}
+                className={`whitespace-nowrap rounded-md border px-3 py-1.5 text-xs font-medium uppercase transition-colors ${
+                  levelValue === opt
+                    ? "border-foreground bg-foreground text-background"
+                    : "border-border text-muted-foreground hover:border-foreground/40"
+                }`}
+              >
+                {opt}
+              </button>
+            ))}
           </div>
         </div>
       </div>
