@@ -190,6 +190,21 @@ export async function replyInThread(input: {
       .from("sysadmin_messages")
       .update({ status: input.new_status })
       .eq("thread_id", input.thread_id);
+    // When the sender resolved the thread (approved / rejected), stamp
+    // their own received rows as read so the popup stops surfacing
+    // them. Other parties on the thread still see unread replies.
+    if (
+      input.new_status === "approved" ||
+      input.new_status === "rejected" ||
+      input.new_status === "closed"
+    ) {
+      await admin
+        .from("sysadmin_messages")
+        .update({ read_at: new Date().toISOString() })
+        .eq("thread_id", input.thread_id)
+        .eq("recipient_id", user.id)
+        .is("read_at", null);
+    }
   }
 
   revalidatePath("/teacher/profile");
@@ -288,9 +303,15 @@ async function decorate(
   }));
 }
 
-/** Inbox = messages where I'm the recipient, newest first. */
+/**
+ * Inbox = messages where I'm the recipient. Only pending threads by
+ * default — resolved ones (approved/rejected/closed) shouldn't keep
+ * popping up after the action is decided; they live in the full
+ * /teacher/profile/messages history instead.
+ */
 export async function listMyInbox(opts?: {
   limit?: number;
+  includeResolved?: boolean;
 }): Promise<SysadminMessageWithMeta[]> {
   const supabase = await createClient();
   const {
@@ -298,10 +319,12 @@ export async function listMyInbox(opts?: {
   } = await supabase.auth.getUser();
   if (!user) return [];
   const admin = createAdminClient();
-  const { data } = await admin
+  let q = admin
     .from("sysadmin_messages")
     .select("*")
-    .eq("recipient_id", user.id)
+    .eq("recipient_id", user.id);
+  if (!opts?.includeResolved) q = q.eq("status", "pending");
+  const { data } = await q
     .order("created_at", { ascending: false })
     .limit(opts?.limit ?? 5);
   return decorate((data as SysadminMessageRow[] | null) ?? []);
@@ -484,6 +507,15 @@ export async function rejectSuggestedUpdate(input: {
     .update({ status: "rejected" })
     .eq("thread_id", input.thread_id);
 
+  // Same read-stamp trick as approveSuggestedUpdate — keeps the
+  // popup quiet on the acting sysadmin's next page load.
+  await admin
+    .from("sysadmin_messages")
+    .update({ read_at: new Date().toISOString() })
+    .eq("thread_id", input.thread_id)
+    .eq("recipient_id", user.id)
+    .is("read_at", null);
+
   revalidatePath("/teacher/profile/messages");
   revalidatePath("/teacher/bank");
   return { success: true };
@@ -529,6 +561,16 @@ export async function approveSuggestedUpdate(
     .from("sysadmin_messages")
     .update({ status: "approved" })
     .eq("thread_id", threadId);
+
+  // Stamp read_at for the acting sysadmin so the popup stops
+  // surfacing this thread on their next navigation — even if our
+  // status-filter on listMyInbox ever changes.
+  await admin
+    .from("sysadmin_messages")
+    .update({ read_at: new Date().toISOString() })
+    .eq("thread_id", threadId)
+    .eq("recipient_id", user.id)
+    .is("read_at", null);
 
   // Notify the lesson author with a new thread so they see it in their inbox.
   const notifyThread = randomUUID();
