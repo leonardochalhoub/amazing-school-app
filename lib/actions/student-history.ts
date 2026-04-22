@@ -12,6 +12,7 @@ import {
   type StudentHistoryEntry,
 } from "./student-history-types";
 import { isTeacherRole } from "@/lib/auth/roles";
+import { grantLiveClassXp } from "@/lib/gamification/class-xp";
 
 interface SaveHistoryInput {
   id?: string;
@@ -29,6 +30,10 @@ interface SaveHistoryInput {
   skill_focus?: string[];
   meeting_link?: string | null;
   cefr_level?: string | null;
+  /** XP awarded to teacher + every involved student when this row
+   *  transitions to status='Done'. Null → default 30 in the grant
+   *  helper. Teacher portion is gated on profiles.xp_enabled. */
+  xp_reward?: number | null;
 }
 
 function sanitizeSkillFocus(list: string[] | undefined): SkillFocus[] {
@@ -74,7 +79,13 @@ export async function saveHistoryEntry(
       ? (input.cefr_level as CefrLevel)
       : null;
 
-  const payload = {
+  // Clamp the xp_reward to a sane range; null means "use default".
+  const xpReward =
+    typeof input.xp_reward === "number" && Number.isFinite(input.xp_reward)
+      ? Math.max(0, Math.min(5000, Math.round(input.xp_reward)))
+      : null;
+
+  const payload: Record<string, unknown> = {
     teacher_id: user.id,
     student_id: hasStudent ? input.student_id : null,
     roster_student_id: hasRoster ? input.roster_student_id : null,
@@ -87,27 +98,52 @@ export async function saveHistoryEntry(
     skill_focus: sanitizeSkillFocus(input.skill_focus),
     meeting_link: input.meeting_link?.trim() || null,
     cefr_level: cefrLevel,
+    xp_reward: xpReward,
     updated_at: new Date().toISOString(),
   };
 
-  if (input.id) {
-    const { data, error } = await admin
+  // Retry without xp_reward if the column isn't present yet (pre-064
+  // deployments). Everything else still saves; XP grant silently no-ops.
+  const savePayload = async (p: Record<string, unknown>) => {
+    if (input.id) {
+      return admin
+        .from("student_history")
+        .update(p)
+        .eq("id", input.id)
+        .eq("teacher_id", user.id)
+        .select("id")
+        .maybeSingle();
+    }
+    return admin
       .from("student_history")
-      .update(payload)
-      .eq("id", input.id)
-      .eq("teacher_id", user.id)
+      .insert(p)
       .select("id")
-      .maybeSingle();
-    if (error || !data) return { error: error?.message ?? "Update failed" };
-    return { id: data.id as string };
+      .single();
+  };
+
+  let resp = await savePayload(payload);
+  if (resp.error && /xp_reward/i.test(resp.error.message)) {
+    const { xp_reward: _omit, ...rest } = payload as Record<string, unknown>;
+    void _omit;
+    resp = await savePayload(rest);
   }
-  const { data, error } = await admin
-    .from("student_history")
-    .insert(payload)
-    .select("id")
-    .single();
-  if (error || !data) return { error: error?.message ?? "Insert failed" };
-  return { id: data.id as string };
+  if (resp.error || !resp.data)
+    return { error: resp.error?.message ?? "Save failed" };
+  const rowId = (resp.data as { id: string }).id;
+
+  // Live-class XP fan-out: when the row is Done, grant XP to the
+  // teacher (gated on xp_enabled) and every involved student. Safe
+  // to call on every save — the helper no-ops when status !== 'Done'
+  // and dedupes against past grants for the same row.
+  if (input.status === "Done") {
+    try {
+      await grantLiveClassXp(rowId);
+    } catch (err) {
+      console.error("grantLiveClassXp after save:", err);
+    }
+  }
+
+  return { id: rowId };
 }
 
 export async function deleteHistoryEntry(

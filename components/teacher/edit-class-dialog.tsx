@@ -73,6 +73,10 @@ export function EditClassDialog({ entry, triggerClassName }: Props) {
   const [skillFocus, setSkillFocus] = useState<SkillFocus[]>(
     entry.skill_focus ?? [],
   );
+  const [xpReward, setXpReward] = useState<string>(() => {
+    const raw = (entry as unknown as { xp_reward?: number | null }).xp_reward;
+    return typeof raw === "number" ? String(raw) : "";
+  });
   const [pending, startTransition] = useTransition();
   const [deletePending, startDeleteTransition] = useTransition();
 
@@ -101,6 +105,11 @@ export function EditClassDialog({ entry, triggerClassName }: Props) {
         skill_focus: skillFocus,
         meeting_link: meetingLink,
         cefr_level: cefrLevel || null,
+        xp_reward:
+          xpReward.trim() === "" ||
+          !Number.isFinite(Number(xpReward))
+            ? null
+            : Math.max(0, Math.min(5000, Math.round(Number(xpReward)))),
       });
       if ("error" in res) {
         toast.error(res.error);
@@ -239,6 +248,26 @@ export function EditClassDialog({ entry, triggerClassName }: Props) {
                 placeholder="https://meet.google.com/..."
                 disabled={pending}
               />
+            </div>
+
+            <div className="space-y-1.5">
+              <Label htmlFor="edit-xp">XP da aula</Label>
+              <Input
+                id="edit-xp"
+                type="number"
+                min={0}
+                max={5000}
+                step={10}
+                value={xpReward}
+                onChange={(e) => setXpReward(e.target.value)}
+                placeholder="30 (padrão)"
+                disabled={pending}
+              />
+              <p className="text-[11px] text-muted-foreground">
+                XP atribuído a cada participante quando a aula é marcada como
+                concluída. O professor também recebe — exceto quando ele tem
+                XP desligado no perfil. Em branco = 30 (padrão).
+              </p>
             </div>
 
             <div className="space-y-1.5">
