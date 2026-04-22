@@ -45,22 +45,34 @@ interface WeatherNow {
   condition: Condition;
 }
 
+interface DailyForecast {
+  /** ISO date string "YYYY-MM-DD" (locale-naïve, tz pinned to Brasília). */
+  date: string;
+  hi: number;
+  lo: number;
+  condition: Condition;
+}
+
 /**
- * Inline, futuristic clock + local-weather readout. Designed to sit
+ * Inline, futuristic clock + 3-day weather forecast. Designed to sit
  * flush inside the welcome-hero card — no outer border, no gradient
  * background of its own, so the host container's styling shows
- * through. Visually the clock digits pick up a violet→pink gradient
- * to feel at home against the brand palette.
+ * through. Clock digits pick up a violet→pink gradient to feel at
+ * home against the brand palette.
  *
  * Time-zone is pinned to America/Sao_Paulo (Brasília) — the dateline
  * below the clock says so in both locales so a viewer anywhere on
- * earth reading this at 3am PT isn't confused.
+ * earth reading this at 3am PT isn't confused. Weather data comes
+ * from Open-Meteo (free, no API key); the daily endpoint returns
+ * today + forecast_days, which the card renders as three compact
+ * day chips (today + next 2).
  */
 export function ClockWeatherCard({ label, lat, lng }: Props) {
   const { locale } = useI18n();
   const pt = locale === "pt-BR";
   const [now, setNow] = useState<Date | null>(null);
   const [weather, setWeather] = useState<WeatherNow | null>(null);
+  const [forecast, setForecast] = useState<DailyForecast[]>([]);
 
   useEffect(() => {
     setNow(new Date());
@@ -73,16 +85,42 @@ export function ClockWeatherCard({ label, lat, lng }: Props) {
     let alive = true;
     const load = async () => {
       try {
-        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current=temperature_2m,weather_code&timezone=auto`;
+        // forecast_days=3 → today + next 2. Open-Meteo aligns days to
+        // the `timezone=auto` slot so the three entries match the
+        // student/teacher's local calendar rather than UTC.
+        const url =
+          `https://api.open-meteo.com/v1/forecast` +
+          `?latitude=${lat}&longitude=${lng}` +
+          `&current=temperature_2m,weather_code` +
+          `&daily=temperature_2m_max,temperature_2m_min,weather_code` +
+          `&forecast_days=3&timezone=auto`;
         const res = await fetch(url);
         if (!res.ok) return;
         const json = (await res.json()) as {
           current?: { temperature_2m?: number; weather_code?: number };
+          daily?: {
+            time?: string[];
+            temperature_2m_max?: number[];
+            temperature_2m_min?: number[];
+            weather_code?: number[];
+          };
         };
+        if (!alive) return;
         const t = json.current?.temperature_2m;
         const c = json.current?.weather_code;
-        if (!alive || t == null || c == null) return;
-        setWeather({ temperature: Math.round(t), condition: describe(c) });
+        if (t != null && c != null) {
+          setWeather({ temperature: Math.round(t), condition: describe(c) });
+        }
+        const d = json.daily;
+        if (d?.time && d.temperature_2m_max && d.temperature_2m_min && d.weather_code) {
+          const rows: DailyForecast[] = d.time.slice(0, 3).map((iso, i) => ({
+            date: iso,
+            hi: Math.round(d.temperature_2m_max![i] ?? 0),
+            lo: Math.round(d.temperature_2m_min![i] ?? 0),
+            condition: describe(d.weather_code![i] ?? -1),
+          }));
+          setForecast(rows);
+        }
       } catch {
         /* offline / blocked — render clock only */
       }
@@ -139,7 +177,18 @@ export function ClockWeatherCard({ label, lat, lng }: Props) {
 
   const zoneLabel = pt ? "Hora de Brasília (UTC−3)" : "Brasília time (UTC−3)";
 
-  const cond = weather?.condition;
+  // Per-day label. Today/Tomorrow get their own word; anything else
+  // shows a short weekday abbreviation ("Wed" / "qua").
+  const dayLabel = (iso: string, idx: number): string => {
+    if (idx === 0) return pt ? "Hoje" : "Today";
+    if (idx === 1) return pt ? "Amanhã" : "Tomorrow";
+    const d = new Date(`${iso}T12:00:00-03:00`);
+    const wd = d.toLocaleDateString(pt ? "pt-BR" : "en-US", {
+      weekday: "short",
+      timeZone: "America/Sao_Paulo",
+    });
+    return wd.charAt(0).toUpperCase() + wd.slice(1).replace(".", "");
+  };
 
   return (
     <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-3">
@@ -160,31 +209,52 @@ export function ClockWeatherCard({ label, lat, lng }: Props) {
         </p>
       </div>
 
-      {/* Weather block — only when we have coords + a successful fetch */}
-      {cond && weather ? (
-        <div className="flex items-center gap-3 self-end">
-          <span
-            aria-hidden
-            className="text-[2.5rem] leading-none drop-shadow-xl"
-            style={{
-              filter: "drop-shadow(0 6px 14px rgba(167,139,250,0.35))",
-            }}
-          >
-            {cond.emoji}
-          </span>
-          <div className="text-right">
-            <p className="text-2xl font-semibold leading-none tabular-nums">
-              {weather.temperature}°C
+      {/* Weather block — 3-day forecast strip when we have coords +
+          a successful fetch. Today carries the live current temp in
+          the headline; the next two days show projected hi/lo. */}
+      {forecast.length > 0 ? (
+        <div className="flex items-stretch gap-2 self-end">
+          {forecast.map((d, i) => {
+            const isToday = i === 0;
+            return (
+              <div
+                key={d.date}
+                className={`flex min-w-[68px] flex-col items-center rounded-xl border px-2.5 py-2 text-center transition-colors ${
+                  isToday
+                    ? "border-violet-500/40 bg-gradient-to-b from-violet-500/10 to-transparent shadow-[0_0_18px_-6px_rgba(139,92,246,0.5)]"
+                    : "border-border bg-background/40"
+                }`}
+              >
+                <p className="text-[9px] font-semibold uppercase tracking-wider text-muted-foreground">
+                  {dayLabel(d.date, i)}
+                </p>
+                <span
+                  aria-hidden
+                  className="my-1 text-2xl leading-none drop-shadow-md"
+                  title={pt ? d.condition.pt : d.condition.en}
+                >
+                  {d.condition.emoji}
+                </span>
+                {isToday && weather ? (
+                  <p className="text-base font-bold leading-none tabular-nums">
+                    {weather.temperature}°
+                  </p>
+                ) : (
+                  <p className="text-[13px] font-semibold leading-none tabular-nums">
+                    {d.hi}°
+                  </p>
+                )}
+                <p className="mt-0.5 text-[10px] leading-none tabular-nums text-muted-foreground">
+                  {d.lo}° / {d.hi}°
+                </p>
+              </div>
+            );
+          })}
+          {label ? (
+            <p className="self-end pb-1 text-[10px] uppercase tracking-wider text-muted-foreground/70">
+              {label}
             </p>
-            <p className="mt-1 text-[11px] text-muted-foreground">
-              {pt ? cond.pt : cond.en}
-            </p>
-            {label ? (
-              <p className="mt-0.5 text-[10px] uppercase tracking-wider text-muted-foreground/70">
-                {label}
-              </p>
-            ) : null}
-          </div>
+          ) : null}
         </div>
       ) : lat != null && lng != null ? (
         <p className="self-end text-[11px] text-muted-foreground">
