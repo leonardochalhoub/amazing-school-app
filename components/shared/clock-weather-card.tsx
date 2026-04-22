@@ -1,6 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ComponentType } from "react";
+import {
+  Sun,
+  CloudSun,
+  Cloud,
+  CloudFog,
+  CloudDrizzle,
+  CloudRain,
+  CloudRainWind,
+  CloudSnow,
+  Snowflake,
+  CloudLightning,
+  Zap,
+  Thermometer,
+  type LucideProps,
+} from "lucide-react";
 import { useI18n } from "@/lib/i18n/context";
 
 interface Props {
@@ -11,33 +26,41 @@ interface Props {
 }
 
 interface Condition {
-  emoji: string;
+  /** lucide icon — rendered inline. */
+  Icon: ComponentType<LucideProps>;
+  /** Tailwind color utility for the icon (drives the WMO semantics:
+   *  yellow for sun, slate for cloud, sky-blue for rain, etc.). */
+  color: string;
   pt: string;
   en: string;
 }
+
 function describe(code: number): Condition {
-  if (code === 0) return { emoji: "☀️", pt: "Céu limpo", en: "Clear sky" };
-  if (code === 1) return { emoji: "🌤️", pt: "Quase limpo", en: "Mostly clear" };
+  if (code === 0)
+    return { Icon: Sun, color: "text-amber-400", pt: "Céu limpo", en: "Clear sky" };
+  if (code === 1)
+    return { Icon: Sun, color: "text-amber-300", pt: "Quase limpo", en: "Mostly clear" };
   if (code === 2)
-    return { emoji: "⛅", pt: "Parcialmente nublado", en: "Partly cloudy" };
-  if (code === 3) return { emoji: "☁️", pt: "Nublado", en: "Overcast" };
+    return { Icon: CloudSun, color: "text-amber-300", pt: "Parcialmente nublado", en: "Partly cloudy" };
+  if (code === 3)
+    return { Icon: Cloud, color: "text-slate-400", pt: "Nublado", en: "Overcast" };
   if (code === 45 || code === 48)
-    return { emoji: "🌫️", pt: "Neblina", en: "Fog" };
+    return { Icon: CloudFog, color: "text-slate-400", pt: "Neblina", en: "Fog" };
   if (code >= 51 && code <= 57)
-    return { emoji: "🌦️", pt: "Garoa", en: "Drizzle" };
+    return { Icon: CloudDrizzle, color: "text-sky-400", pt: "Garoa", en: "Drizzle" };
   if (code >= 61 && code <= 67)
-    return { emoji: "🌧️", pt: "Chuva", en: "Rain" };
+    return { Icon: CloudRain, color: "text-sky-500", pt: "Chuva", en: "Rain" };
   if (code >= 71 && code <= 77)
-    return { emoji: "❄️", pt: "Neve", en: "Snow" };
+    return { Icon: Snowflake, color: "text-sky-200", pt: "Neve", en: "Snow" };
   if (code >= 80 && code <= 82)
-    return { emoji: "🌧️", pt: "Pancadas de chuva", en: "Rain showers" };
+    return { Icon: CloudRainWind, color: "text-sky-500", pt: "Pancadas de chuva", en: "Rain showers" };
   if (code >= 85 && code <= 86)
-    return { emoji: "🌨️", pt: "Pancadas de neve", en: "Snow showers" };
+    return { Icon: CloudSnow, color: "text-sky-300", pt: "Pancadas de neve", en: "Snow showers" };
   if (code === 95)
-    return { emoji: "⛈️", pt: "Tempestade", en: "Thunderstorm" };
+    return { Icon: CloudLightning, color: "text-violet-400", pt: "Tempestade", en: "Thunderstorm" };
   if (code === 96 || code === 99)
-    return { emoji: "⛈️", pt: "Tempestade com granizo", en: "Storm w/ hail" };
-  return { emoji: "🌡️", pt: "Tempo indefinido", en: "Weather unknown" };
+    return { Icon: Zap, color: "text-violet-500", pt: "Tempestade com granizo", en: "Storm w/ hail" };
+  return { Icon: Thermometer, color: "text-muted-foreground", pt: "Tempo indefinido", en: "Weather unknown" };
 }
 
 interface WeatherNow {
@@ -244,12 +267,20 @@ export function ClockWeatherCard({ label, lat, lng }: Props) {
                 <p className="text-[12px] font-semibold uppercase tracking-wider text-muted-foreground">
                   {dayLabel(d.date, i)}
                 </p>
+                {/* lucide icon in its semantic color (amber for
+                    sun, slate for cloud, sky for rain, violet for
+                    storms). Replaces the old emoji set with a
+                    consistent vector-icon language matched to the
+                    rest of the app. */}
                 <span
                   aria-hidden
-                  className="my-1.5 text-[2.25rem] leading-none drop-shadow-md"
+                  className="my-2 inline-flex h-9 w-9 items-center justify-center"
                   title={pt ? d.condition.pt : d.condition.en}
                 >
-                  {d.condition.emoji}
+                  <d.condition.Icon
+                    className={`h-8 w-8 ${d.condition.color} drop-shadow-md`}
+                    strokeWidth={1.75}
+                  />
                 </span>
                 {isToday && weather ? (
                   <p className="text-[1.4rem] font-bold leading-none tabular-nums">
