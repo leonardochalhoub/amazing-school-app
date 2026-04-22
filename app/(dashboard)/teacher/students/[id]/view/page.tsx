@@ -27,6 +27,7 @@ import { getAssignmentsForRosterStudent } from "@/lib/actions/assignments";
 import { getLiveClassSummaryForRoster } from "@/lib/actions/live-class-hours";
 import { formatHoursMinutes } from "@/lib/actions/student-history-types";
 import { getLevel, getXpForNextLevel } from "@/lib/gamification/engine";
+import { awardEligibleBadges } from "@/lib/gamification/award-badges";
 import {
   ActivityChart,
   type ActivityBucket,
@@ -197,6 +198,17 @@ export default async function StudentViewAsStudent({
     .map((a) => a.lesson_slug);
 
   if (studentAuthId) {
+    // Lazy catch-up: trigger the same idempotent badge-award pass the
+    // student dashboard runs, so teachers viewing a student who
+    // predates the signup hook (e.g. Tati) see their retroactive
+    // badges materialise without waiting for that student to log in
+    // themselves. Safe to call on every view — existing rows are
+    // skipped inside awardEligibleBadges.
+    try {
+      await awardEligibleBadges(studentAuthId);
+    } catch (err) {
+      console.error("teacher view lazy badge award:", err);
+    }
     const [xpRes, progRes, badgeRes, historyRes, activityRes] =
       await Promise.all([
         admin
