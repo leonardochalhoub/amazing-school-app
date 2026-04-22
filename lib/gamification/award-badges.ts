@@ -109,6 +109,22 @@ export async function awardEligibleBadges(studentId: string): Promise<string[]> 
         else if (r.counter === "perfect_lessons")
           eligible = perfectLessons >= r.threshold;
         break;
+      // The kinds below are handled authoritatively by the
+      // award_eligible_badges PL/pgSQL function installed in
+      // migrations 060 + 061. This TS mirror stays narrow — it
+      // runs only on a few hot code paths (signup, lesson
+      // completion) as a defense-in-depth safety net. If we tried
+      // to evaluate these here we'd need to fan out to heartbeat,
+      // speaking, classroom, certificate queries on every call —
+      // not worth it when the DB is already doing it via triggers.
+      case "hours":
+      case "profile_flag":
+      case "age":
+      case "calendar":
+      case "founder":
+      case "composite":
+        eligible = false;
+        break;
     }
 
     if (eligible)

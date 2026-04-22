@@ -110,6 +110,19 @@ export function ClockWeatherCard({ label, lat, lng }: Props) {
         const c = json.current?.weather_code;
         if (t != null && c != null) {
           setWeather({ temperature: Math.round(t), condition: describe(c) });
+          // Log the observation for weather-themed badges. Fire-and-
+          // forget — the endpoint rate-limits itself to one row per
+          // 10 min per user, so repeated mounts in dev are harmless.
+          try {
+            void fetch("/api/weather/log", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ temp_c: t, weather_code: c }),
+              keepalive: true,
+            });
+          } catch {
+            /* best-effort */
+          }
         }
         const d = json.daily;
         if (d?.time && d.temperature_2m_max && d.temperature_2m_min && d.weather_code) {

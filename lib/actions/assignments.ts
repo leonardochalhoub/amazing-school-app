@@ -5,6 +5,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import type { AssignmentStatus, LessonAssignment } from "@/lib/supabase/types";
+import { grantTeacherXp } from "@/lib/gamification/teacher-xp";
 
 const UuidSchema = z.string().uuid();
 const SlugSchema = z.string().min(1).max(120);
@@ -69,6 +70,14 @@ export async function assignLesson(input: AssignInput) {
     if (error.code === "23505") return { error: "Already assigned" };
     return { error: error.message };
   }
+
+  // Teacher XP — one grant per successful assignment row. The DB
+  // trigger installed in migration 060 re-evaluates badges so the
+  // `teacher_ten_tasks` / `_fifty_tasks` / `_hundred_tasks` chain
+  // fires automatically as the teacher's count crosses thresholds.
+  await grantTeacherXp(user.id, "teacher_assign", {
+    classroomId: parsed.data.classroomId ?? null,
+  });
 
   bumpPaths(
     parsed.data.classroomId ?? null,
