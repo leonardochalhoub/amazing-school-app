@@ -67,6 +67,7 @@ export function Navbar({
           profile: "Perfil",
           classrooms: "Turmas",
           speakingLab: "Lab de Fala",
+          badges: "Medalhas",
           signedInAs: "Conectado como",
           signOut: "Sair",
           teacher: isFemale ? "Professora" : "Professor",
@@ -81,6 +82,7 @@ export function Navbar({
           profile: "Profile",
           classrooms: "Classrooms",
           speakingLab: "Speaking Lab",
+          badges: "Badges",
           signedInAs: "Signed in as",
           signOut: "Sign out",
           teacher: "Teacher",
@@ -99,6 +101,7 @@ export function Navbar({
     { href: "/student/music", label: labels.music },
     { href: "/speaking-lab", label: labels.speakingLab },
     { href: "/student/chat", label: labels.aiTutor },
+    { href: "/student/badges", label: labels.badges },
   ];
 
   const teacherNav: { href: string; label: string }[] = [
@@ -111,6 +114,7 @@ export function Navbar({
       label: locale === "pt-BR" ? "Banco" : "Bank",
     },
     { href: "/teacher/chat", label: labels.aiTutor },
+    { href: "/teacher/badges", label: labels.badges },
     { href: "/teacher/admin", label: locale === "pt-BR" ? "Gestão" : "Management" },
   ];
   if (isOwner) {
