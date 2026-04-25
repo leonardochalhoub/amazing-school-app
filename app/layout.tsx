@@ -108,7 +108,16 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    // Smiley school logo — icon.png is the modern square mark
+    // (1000×1000), favicon.ico stays for legacy browsers and gets
+    // regenerated to match. apple-icon.png is auto-included by
+    // the file-system convention in app/.
+    icon: [
+      { url: "/icon.png", type: "image/png", sizes: "any" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/apple-icon.png",
+    shortcut: "/icon.png",
   },
   category: "education",
   formatDetection: {
