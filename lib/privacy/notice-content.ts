@@ -42,8 +42,8 @@ export const PRIVACY_SECTIONS: {
           pt: "Histórico do chat com IA",
         },
         body: {
-          en: "Your messages to the AI tutor are saved so the conversation can continue where you left off. Only you and your teacher can read them.",
-          pt: "Suas mensagens com a IA são salvas para que a conversa continue de onde parou. Somente você e sua professora podem ler.",
+          en: "Your messages to the AI tutor are saved so the conversation can continue where you left off. Only you can read them — your teacher does NOT see your AI chats.",
+          pt: "Suas mensagens com a IA são salvas para que a conversa continue de onde parou. Somente você pode lê-las — sua professora NÃO vê suas conversas com a IA.",
         },
       },
       {
@@ -119,8 +119,8 @@ export const PRIVACY_SECTIONS: {
       {
         topic: { en: "Your teacher", pt: "Sua professora" },
         body: {
-          en: "Sees the students enrolled in their own classrooms: your progress, your chat with the tutor, and any notes they write.",
-          pt: "Vê apenas os alunos das próprias turmas: progresso, conversas com a IA e anotações que ela mesma escreveu.",
+          en: "Sees the students enrolled in their own classrooms: your assigned lessons, exercise responses, XP, attendance, and any notes they write. Your AI tutor chats are NOT visible to the teacher.",
+          pt: "Vê apenas os alunos das próprias turmas: lições atribuídas, respostas dos exercícios, XP, frequência e anotações que ela mesma escreveu. Suas conversas com a IA NÃO ficam visíveis para a professora.",
         },
       },
       {

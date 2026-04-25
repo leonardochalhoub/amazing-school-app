@@ -18,15 +18,20 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: "pt-BR",
     orientation: "portrait",
     icons: [
+      // Square 1000×1000 smiley logo — Next.js auto-generates link
+      // tags for app/icon.png and app/apple-icon.png; we mirror the
+      // same files here so installed PWAs pick up the same brand mark.
       {
-        src: "/icon",
-        sizes: "64x64",
+        src: "/icon.png",
+        sizes: "1000x1000",
         type: "image/png",
+        purpose: "any",
       },
       {
-        src: "/apple-icon",
-        sizes: "180x180",
+        src: "/apple-icon.png",
+        sizes: "1000x1000",
         type: "image/png",
+        purpose: "any",
       },
     ],
   };
